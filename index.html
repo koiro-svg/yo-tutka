@@ -2,97 +2,94 @@
 <html lang="fi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>koirosvg</title>
-<meta name="description" content="Aapelin työkalut: YO-tutka ja AI-malliopas.">
+<meta name="description" content="Aapelin työkalut: AI-malliopas ja YO-tutka.">
+<meta name="theme-color" content="#081427">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@600&display=swap">
 <style>
-:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>YO-tutka</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
-<style>
+/* Deliberately dark-only: the radar theme is a single visual world. */
 :root{
-  --bg:#F2F3F6; --surface:#FFFFFF; --surface-2:#E8EAEF; --line:#D3D7DF; --line-2:#E4E7EC;
-  --ink:#171A21; --ink-2:#474D5C; --ink-3:#767C8E;
-  --accent:#1D4FA3; --accent-ink:#FFFFFF; --accent-soft:#DCE6F8;
-  --spring:#2C7A4B; --spring-soft:#DCEFE2; --autumn:#B4561A; --autumn-soft:#F7E3D2;
-  --ok:#2C7A4B; --ok-soft:#DCEFE2; --warn:#9E5A0C; --warn-soft:#FBEBD0;
-  --h0:#F4F6FA; --h1:#D5E0F5; --h2:#A6BFEA; --h3:#6E95D6; --h4:#3565B7; --h5:#153B7C;
-  --focus:#1D4FA3;
-  --font-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+  --night:#081427; --night-2:#0E2140; --ring:#1F3B66; --glow:#5CE1C6;
+  --ink:#E6EEF8; --ink-2:#8FA3BF; --card:#0F213D;
+  --font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;
   --font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#13151B; --surface:#1B1E26; --surface-2:#242832; --line:#333845; --line-2:#2B303B;
-    --ink:#EDEFF4; --ink-2:#B3B9C6; --ink-3:#858B9B;
-    --accent:#84A9EC; --accent-ink:#0E1626; --accent-soft:#22334F;
-    --spring:#6FC48F; --spring-soft:#1E3A2A; --autumn:#E58E4E; --autumn-soft:#3D2A1A;
-    --ok:#6FC48F; --ok-soft:#1E3A2A; --warn:#E8B45C; --warn-soft:#3D3220;
-    --h0:#1B1E26; --h1:#22314D; --h2:#2C4A7E; --h3:#3F69B4; --h4:#6E97E4; --h5:#B3CAF6;
-    --focus:#84A9EC;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#13151B; --surface:#1B1E26; --surface-2:#242832; --line:#333845; --line-2:#2B303B;
-  --ink:#EDEFF4; --ink-2:#B3B9C6; --ink-3:#858B9B;
-  --accent:#84A9EC; --accent-ink:#0E1626; --accent-soft:#22334F;
-  --spring:#6FC48F; --spring-soft:#1E3A2A; --autumn:#E58E4E; --autumn-soft:#3D2A1A;
-  --ok:#6FC48F; --ok-soft:#1E3A2A; --warn:#E8B45C; --warn-soft:#3D3220;
-  --h0:#1B1E26; --h1:#22314D; --h2:#2C4A7E; --h3:#3F69B4; --h4:#6E97E4; --h5:#B3CAF6;
-  --focus:#84A9EC;
-}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:20px 60px}
-h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1}
-h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.015em}
-h2{font-size:20px;font-weight:700}
-h3{font-size:16px;font-weight:700}
-p{margin:0}
-a{color:var(--accent)}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-.wrap{max-width:1120px;margin:0 auto;display:grid;gap:24px}
-.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
-.masthead{display:grid;gap:10px;padding-bottom:18px;border-bottom:2px solid var(--ink)}
-.lede{color:var(--ink-2);max-width:62ch;font-size:16px}
-.crumb{font-family:var(--font-mono);font-size:12px;text-decoration:none;color:var(--ink-3)}
-.crumb:hover{color:var(--accent)}
-footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
-body{min-height:100vh;display:grid;align-content:center}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
-.tool{display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
-.tool:hover{border-color:var(--accent);transform:translateY(-2px)}
-.tool .icon{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
-.tool h2{font-size:24px}
-.tool p{color:var(--ink-2)}
-.tool .go{font-weight:700;color:var(--accent)}
-.tool .meta{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+html{background:var(--night)}
+body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--night-2),var(--night) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
+:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.wrap{max-width:1120px;width:100%;margin:0 auto;display:grid;gap:32px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--glow)}
+h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-spacing:-.02em;text-wrap:balance}
+.lede{color:var(--ink-2);max-width:46ch;font-size:16px;margin:0}
+canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:block}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.tool{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:22px;border-radius:14px;background:linear-gradient(180deg,rgba(92,225,198,.07),transparent 60%),var(--card);border:1px solid var(--ring);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+.tool:hover{border-color:var(--glow);transform:translateY(-3px)}
+.tool .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tool h2{margin:0;font:800 22px var(--font-display)}
+.tool .sig{font:600 11px var(--font-mono);color:var(--glow);white-space:nowrap}
+.tool p{margin:0;color:var(--ink-2)}
+.tool .go{font-weight:700;color:var(--glow)}
+@media (max-width:700px){.hero{grid-template-columns:1fr}canvas{max-width:260px}}
+@media (prefers-reduced-motion:reduce){.tool{transition:none}.tool:hover{transform:none}}
 </style>
 </head>
 <body>
 <main class="wrap">
-  <header class="masthead">
-    <div class="eyebrow">koirosvg.com</div>
-    <h1>Mitä haluat tehdä?</h1>
-    <p class="lede">Valitse työkalu.</p>
+  <header class="hero">
+    <div>
+      <div class="eyebrow">koirosvg.com</div>
+      <h1>Näe mikä on tulossa.</h1>
+      <p class="lede">Kaksi tutkaa: toinen seuraa tekoälymallien kärkeä, toinen ylioppilaskokeiden aiheita.</p>
+    </div>
+    <canvas id="radar" width="720" height="720" aria-hidden="true"></canvas>
   </header>
   <nav class="tools" aria-label="Työkalut">
     <a class="tool" href="/ai-opas">
-      <span class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg></span>
-      <h2>AI-malliopas</h2>
-      <p>Mikä tekoälymalli on juuri nyt paras automaatioon, koodaukseen, kirjoittamiseen, kuviin, videoon tai puheeseen. Päivittyy automaattisesti kahden päivän välein.</p>
+      <div class="hd"><h2>AI-malliopas</h2><span class="sig">● päivitys 2 pv välein</span></div>
+      <p>Mikä tekoälymalli on juuri nyt paras automaatioon, koodaukseen, kirjoittamiseen, kuviin, videoon tai puheeseen.</p>
       <span class="go">Avaa opas →</span>
     </a>
     <a class="tool" href="/yo-tutka">
-      <span class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span>
-      <h2>YO-tutka</h2>
-      <p>Ylioppilaskokeiden tehtävät aihealueittain kuudessa aineessa ja arvio siitä, kuinka todennäköisesti aihe tulee seuraavassa kokeessa.</p>
+      <div class="hd"><h2>YO-tutka</h2><span class="sig">● 6 ainetta · 2021S–2026S</span></div>
+      <p>Ylioppilaskokeiden tehtävät aihealueittain ja arvio siitä, kuinka todennäköisesti aihe tulee seuraavassa kokeessa.</p>
       <span class="go">Avaa YO-tutka →</span>
     </a>
   </nav>
 </main>
+<script>
+// Radar: one blip per tool (labelled) plus two unlabelled for atmosphere.
+const cv=document.getElementById('radar'),cx=cv.getContext('2d'),W=720,C=W/2,R=W/2-20;
+const blips=[{a:-0.9,r:.55,t:'AI-opas'},{a:2.2,r:.72,t:'YO-tutka'},{a:0.9,r:.35,t:''},{a:3.9,r:.5,t:''}];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const TAU=Math.PI*2;
+function draw(t){
+  const sw=reduce?-0.6:(t/2400)%TAU;
+  cx.clearRect(0,0,W,W);
+  cx.strokeStyle='#1F3B66';cx.lineWidth=2;
+  for(let i=1;i<=4;i++){cx.beginPath();cx.arc(C,C,R*i/4,0,TAU);cx.stroke()}
+  cx.beginPath();cx.moveTo(C-R,C);cx.lineTo(C+R,C);cx.moveTo(C,C-R);cx.lineTo(C,C+R);cx.stroke();
+  if(cx.createConicGradient){
+    const g=cx.createConicGradient(sw-0.9,C,C);
+    g.addColorStop(0,'rgba(92,225,198,0)');g.addColorStop(0.14,'rgba(92,225,198,.35)');g.addColorStop(0.1433,'rgba(92,225,198,0)');
+    cx.fillStyle=g;cx.beginPath();cx.arc(C,C,R,0,TAU);cx.fill();
+  }
+  cx.strokeStyle='#5CE1C6';cx.lineWidth=3;cx.beginPath();cx.moveTo(C,C);cx.lineTo(C+Math.cos(sw)*R,C+Math.sin(sw)*R);cx.stroke();
+  for(const b of blips){
+    const d=((sw-b.a)%TAU+TAU)%TAU, k=reduce?1:Math.max(.25,1-d/4);
+    const x=C+Math.cos(b.a)*R*b.r, y=C+Math.sin(b.a)*R*b.r;
+    cx.fillStyle='rgba(92,225,198,'+k+')';cx.beginPath();cx.arc(x,y,b.t?11:6,0,TAU);cx.fill();
+    if(b.t){cx.font='600 26px "JetBrains Mono",monospace';cx.fillStyle='rgba(230,238,248,'+Math.max(.5,k)+')';cx.fillText(b.t,x+18,y+8)}
+  }
+  if(!reduce) requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+</script>
 </body>
 </html>

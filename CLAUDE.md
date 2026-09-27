@@ -10,8 +10,9 @@ työkalua: AI-malliopas (`ai-opas.html`) ja YO-tutka (`yo-tutka.html`). Repo on 
   `/ai-opas` ja `/yo-tutka` -polut.
 
 ## Arkkitehtuuri
-- Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Värit/fontit ovat samat
-  tokenit kuin YO-tutkassa – kopioitu jokaiseen sivuun.
+- Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Työkalusivujen värit/fontit ovat samat
+  tokenit kuin YO-tutkassa – kopioitu jokaiseen sivuun. Poikkeus: kotivalikko (`index.html`)
+  on tarkoituksella aina tumma "tutka"-teema (Unbounded + canvas-tutka-animaatio).
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
   `ai-opas.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
@@ -43,3 +44,5 @@ työkalua: AI-malliopas (`ai-opas.html`) ja YO-tutka (`yo-tutka.html`). Repo on 
 - Uusia kenttiä tutkitaan ajamalla workflow `inspect: true` (tulostaa vain kenttien nimet
   ja kattavuuden lokiin, ei päivitä dataa).
 - `data/`-kansio syntyy vasta ensimmäisestä ajosta; skripti luo sen itse (`mkdir`).
+- Kotivalikon tutka-animaatio pysähtyy `prefers-reduced-motion`-asetuksella (piirretään kerran).
+  Uusi työkalu = uusi kortti `.tools`-listaan + uusi nimetty piste `blips`-taulukkoon.
