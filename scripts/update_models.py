@@ -149,10 +149,38 @@ def media_category(rows):
     return {"metric": "Arena ELO", "items": top(its)}
 
 
+def inspect(key):
+    """Print field names and coverage only (no values) to plan new categories."""
+    rows = fetch("llms/models", key)
+    print("LLM-malleja:", len(rows))
+    cov = {}
+    for m in rows:
+        for k, v in m.items():
+            if not isinstance(v, dict):
+                cov[k] = cov.get(k, 0) + (v is not None)
+        for group in ("evaluations", "pricing"):
+            for k, v in (m.get(group) or {}).items():
+                cov[f"{group}.{k}"] = cov.get(f"{group}.{k}", 0) + (num(v) is not None)
+    for k, c in sorted(cov.items()):
+        print(f"  {k}: {c}")
+    for cid, path in MEDIA.items():
+        rows = fetch(path + "?include_categories=true", key)
+        print(f"{cid}: {len(rows)} mallia, kentät {sorted(rows[0]) if rows else []}")
+        cats = {}
+        for m in rows:
+            for c in m.get("categories") or []:
+                label = " / ".join(f"{k}={v}" for k, v in c.items() if k.endswith("_category") and v)
+                cats[label] = cats.get(label, 0) + 1
+        for label, c in sorted(cats.items()):
+            print(f"    {label}: {c}")
+
+
 def main():
     key = os.environ.get("AA_API_KEY")
     if not key:
         sys.exit("AA_API_KEY puuttuu")
+    if "--inspect" in sys.argv:
+        return inspect(key)
     prev = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     cats = dict(prev.get("categories", {}))
     errors = []
