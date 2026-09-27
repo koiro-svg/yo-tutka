@@ -192,6 +192,13 @@ def inspect(key):
                 cats[label] = cats.get(label, 0) + 1
         for label, c in sorted(cats.items()):
             print(f"    {label}: {c}")
+        for m in sorted(rows, key=lambda m: -(num(m.get("elo")) or 0))[:6]:
+            cs = m.get("categories") or []
+            apps = sorted(num(c.get("appearances")) or 0 for c in cs)
+            print(f"    TOP {m.get('name')} rel={m.get('release_date')} app={m.get('appearances')} cats={len(cs)} "
+                  f"cat_app_min={apps[:1]} median={apps[len(apps)//2:len(apps)//2+1]} sample={cs[:1]}")
+    all_apps = sorted(num(c.get("appearances")) or 0 for m in fetch("media/text-to-image?include_categories=true", key) for c in m.get("categories") or [])
+    print("kuva cat appearances quantiles:", [all_apps[int(q * (len(all_apps) - 1))] for q in (0, .1, .25, .5, .75, .9, 1)])
 
 
 def main():
