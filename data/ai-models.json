@@ -1,0 +1,735 @@
+{
+ "updated": "2026-09-27T17:11Z",
+ "source": "https://artificialanalysis.ai/",
+ "errors": [],
+ "categories": {
+  "yleis": {
+   "metric": "Intelligence Index",
+   "items": [
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 57.6,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 96.79,
+     "intelligence": 57.6
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 56,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 86.18,
+     "intelligence": 56
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, High Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 53.6,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 83.1,
+     "intelligence": 53.6
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 53.4,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 70.55,
+     "intelligence": 53.4
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 53.2,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 66.55,
+     "intelligence": 53.2
+    },
+    {
+     "name": "GPT-6 Astra (max)",
+     "creator": "OpenAI",
+     "score": 52.7,
+     "released": "2026-09-03",
+     "price": 20,
+     "speed": 62.87,
+     "intelligence": 52.7
+    },
+    {
+     "name": "GPT-6 Astra (xhigh)",
+     "creator": "OpenAI",
+     "score": 52.4,
+     "released": "2026-09-03",
+     "price": 20,
+     "speed": 56.48,
+     "intelligence": 52.4
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Medium Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 51.2,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 82.86,
+     "intelligence": 51.2
+    }
+   ]
+  },
+  "koodaus": {
+   "metric": "Coding Index",
+   "items": [
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 81.6,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 70.55,
+     "intelligence": 53.4
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 80.7,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 66.55,
+     "intelligence": 53.2
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, High Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 79.1,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 55.18,
+     "intelligence": 51.2
+    },
+    {
+     "name": "GPT-5.6 Sol (xhigh)",
+     "creator": "OpenAI",
+     "score": 78.3,
+     "released": "2026-07-09",
+     "price": 8,
+     "speed": 0,
+     "intelligence": 44
+    },
+    {
+     "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+     "creator": "Anthropic",
+     "score": 78,
+     "released": "2026-07-24",
+     "price": 10,
+     "speed": 0,
+     "intelligence": 50.8
+    },
+    {
+     "name": "GPT-5.6 Sol (max)",
+     "creator": "OpenAI",
+     "score": 77.4,
+     "released": "2026-07-09",
+     "price": 8,
+     "speed": 0,
+     "intelligence": 47
+    },
+    {
+     "name": "GPT-5.6 Sol (high)",
+     "creator": "OpenAI",
+     "score": 77.2,
+     "released": "2026-07-09",
+     "price": 8,
+     "speed": 0,
+     "intelligence": 42.3
+    },
+    {
+     "name": "GPT-6 Astra (high)",
+     "creator": "OpenAI",
+     "score": 77.1,
+     "released": "2026-09-03",
+     "price": 20,
+     "speed": 58.09,
+     "intelligence": 50.9
+    }
+   ]
+  },
+  "matikka": {
+   "metric": "Math Index",
+   "items": [
+    {
+     "name": "GPT-5.2 (xhigh)",
+     "creator": "OpenAI",
+     "score": 99,
+     "released": "2025-12-11",
+     "price": 4.81,
+     "speed": 0,
+     "intelligence": 30.4
+    },
+    {
+     "name": "GPT-5 Codex (high)",
+     "creator": "OpenAI",
+     "score": 98.7,
+     "released": "2025-09-23",
+     "price": 3.44,
+     "speed": 0,
+     "intelligence": 24.9
+    },
+    {
+     "name": "Gemini 3 Flash Preview (Reasoning)",
+     "creator": "Google",
+     "score": 97,
+     "released": "2025-12-17",
+     "price": 1.12,
+     "speed": 0,
+     "intelligence": 26.3
+    },
+    {
+     "name": "GPT-5.2 (medium)",
+     "creator": "OpenAI",
+     "score": 96.7,
+     "released": "2025-12-11",
+     "price": 4.81,
+     "speed": 0,
+     "intelligence": 26.5
+    },
+    {
+     "name": "DeepSeek V3.2 Speciale",
+     "creator": "DeepSeek",
+     "score": 96.7,
+     "released": "2025-12-01",
+     "price": 0,
+     "speed": 0,
+     "intelligence": 14.5
+    },
+    {
+     "name": "MiMo-V2-Flash (Reasoning)",
+     "creator": "Xiaomi",
+     "score": 96.3,
+     "released": "2025-12-16",
+     "price": 0.15,
+     "speed": 0,
+     "intelligence": 20.8
+    },
+    {
+     "name": "Gemini 3 Pro Preview (high)",
+     "creator": "Google",
+     "score": 95.7,
+     "released": "2025-11-18",
+     "price": 4.5,
+     "speed": 0,
+     "intelligence": 28
+    },
+    {
+     "name": "GPT-5.1 Codex (high)",
+     "creator": "OpenAI",
+     "score": 95.7,
+     "released": "2025-11-13",
+     "price": 3.44,
+     "speed": 0,
+     "intelligence": 23.7
+    }
+   ]
+  },
+  "automaatio": {
+   "metric": "tau2, terminalbench_hard, terminalbench_hard+tau2, terminalbench_hard+terminalbench_v2_1+tau2, terminalbench_v2_1, terminalbench_v2_1+tau2",
+   "items": [
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 91.39,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 70.55,
+     "intelligence": 53.4
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 91.01,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 66.55,
+     "intelligence": 53.2
+    },
+    {
+     "name": "Claude Fable 5.1 (Adaptive Reasoning, High Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 89.89,
+     "released": "2026-09-01",
+     "price": 20,
+     "speed": 55.18,
+     "intelligence": 51.2
+    },
+    {
+     "name": "GPT-6 Astra (high)",
+     "creator": "OpenAI",
+     "score": 89.89,
+     "released": "2026-09-03",
+     "price": 20,
+     "speed": 58.09,
+     "intelligence": 50.9
+    },
+    {
+     "name": "GPT-6 Astra (medium)",
+     "creator": "OpenAI",
+     "score": 89.51,
+     "released": "2026-09-03",
+     "price": 20,
+     "speed": 54.53,
+     "intelligence": 49.6
+    },
+    {
+     "name": "GPT-6 Astra (xhigh)",
+     "creator": "OpenAI",
+     "score": 89.14,
+     "released": "2026-09-03",
+     "price": 20,
+     "speed": 56.48,
+     "intelligence": 52.4
+    },
+    {
+     "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+     "creator": "Anthropic",
+     "score": 89.14,
+     "released": "2026-07-24",
+     "price": 10,
+     "speed": 0,
+     "intelligence": 50.8
+    },
+    {
+     "name": "Qwen3.8 Max (0902)",
+     "creator": "Alibaba",
+     "score": 88.76,
+     "released": "2026-09-02",
+     "price": 3,
+     "speed": 37.49,
+     "intelligence": 45.4
+    }
+   ]
+  },
+  "hinta-laatu": {
+   "metric": "$ / 1M tokenia (vähintään 80 % kärjen älykkyydestä)",
+   "items": [
+    {
+     "name": "MiMo-V2.6-Pro",
+     "creator": "Xiaomi",
+     "score": 0.54,
+     "released": "2026-09-21",
+     "price": 0.54,
+     "speed": 42.21,
+     "intelligence": 46.3
+    },
+    {
+     "name": "Muse Spark 1.3 (max)",
+     "creator": "Meta",
+     "score": 2,
+     "released": "2026-09-02",
+     "price": 2,
+     "speed": 158.24,
+     "intelligence": 48.1
+    },
+    {
+     "name": "Grok 4.7 (xhigh)",
+     "creator": "SpaceXAI",
+     "score": 3,
+     "released": "2026-09-21",
+     "price": 3,
+     "speed": 71.9,
+     "intelligence": 46.4
+    },
+    {
+     "name": "Grok 4.7 (high)",
+     "creator": "SpaceXAI",
+     "score": 3,
+     "released": "2026-09-21",
+     "price": 3,
+     "speed": 81.98,
+     "intelligence": 46.3
+    },
+    {
+     "name": "GPT-6 Sol (max)",
+     "creator": "OpenAI",
+     "score": 4,
+     "released": "2026-09-22",
+     "price": 4,
+     "speed": 89.62,
+     "intelligence": 47.5
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 8,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 96.79,
+     "intelligence": 57.6
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 8,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 86.18,
+     "intelligence": 56
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, High Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 8,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 83.1,
+     "intelligence": 53.6
+    }
+   ],
+   "lowerIsBetter": true
+  },
+  "nopeus": {
+   "metric": "tokenia / s (vähintään 70 % kärjen älykkyydestä)",
+   "items": [
+    {
+     "name": "Gemini 3.8 Flash (high)",
+     "creator": "Google",
+     "score": 303.49,
+     "released": "2026-09-02",
+     "price": 1.5,
+     "speed": 303.49,
+     "intelligence": 40.9
+    },
+    {
+     "name": "Muse Spark 1.3 (xhigh)",
+     "creator": "Meta",
+     "score": 242.08,
+     "released": "2026-09-02",
+     "price": 2,
+     "speed": 242.08,
+     "intelligence": 45.1
+    },
+    {
+     "name": "Muse Spark 1.3 (max)",
+     "creator": "Meta",
+     "score": 158.24,
+     "released": "2026-09-02",
+     "price": 2,
+     "speed": 158.24,
+     "intelligence": 48.1
+    },
+    {
+     "name": "GPT-5.6 Terra (max)",
+     "creator": "OpenAI",
+     "score": 97.87,
+     "released": "2026-07-09",
+     "price": 4.5,
+     "speed": 97.87,
+     "intelligence": 42.1
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Max Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 96.79,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 96.79,
+     "intelligence": 57.6
+    },
+    {
+     "name": "GPT-6 Sol (max)",
+     "creator": "OpenAI",
+     "score": 89.62,
+     "released": "2026-09-22",
+     "price": 4,
+     "speed": 89.62,
+     "intelligence": 47.5
+    },
+    {
+     "name": "Claude Opus 5.5 (Adaptive Reasoning, Xhigh Effort, Default Fallback)",
+     "creator": "Anthropic",
+     "score": 86.18,
+     "released": "2026-09-22",
+     "price": 8,
+     "speed": 86.18,
+     "intelligence": 56
+    },
+    {
+     "name": "GLM-5.3 (max)",
+     "creator": "Z AI",
+     "score": 83.56,
+     "released": "2026-08-18",
+     "price": 2.15,
+     "speed": 83.56,
+     "intelligence": 44.8
+    }
+   ]
+  },
+  "kuva": {
+   "metric": "Arena ELO",
+   "items": [
+    {
+     "name": "GPT Image 2.5 Sunburst (max)",
+     "creator": "OpenAI",
+     "score": 1196,
+     "released": "2026-09"
+    },
+    {
+     "name": "GPT Image 2.5 Flare (max)",
+     "creator": "OpenAI",
+     "score": 1190,
+     "released": "2026-09"
+    },
+    {
+     "name": "GPT Image 2 (high)",
+     "creator": "OpenAI",
+     "score": 1171,
+     "released": "2026-04"
+    },
+    {
+     "name": "Grok Imagine Image 2.0",
+     "creator": "SpaceXAI",
+     "score": 1157,
+     "released": "2026-08"
+    },
+    {
+     "name": "MAI-Image-2.6",
+     "creator": "Microsoft AI",
+     "score": 1148,
+     "released": "2026-08"
+    },
+    {
+     "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+     "creator": "Google",
+     "score": 1123,
+     "released": "2026-02"
+    },
+    {
+     "name": "Muse Image",
+     "creator": "Meta",
+     "score": 1111,
+     "released": "2026-07"
+    },
+    {
+     "name": "GPT Image 1.5 (high)",
+     "creator": "OpenAI",
+     "score": 1104,
+     "released": "2025-12"
+    }
+   ]
+  },
+  "kuvanmuokkaus": {
+   "metric": "Arena ELO",
+   "items": [
+    {
+     "name": "GPT Image 2.5 Sunburst (max)",
+     "creator": "OpenAI",
+     "score": 1180,
+     "released": "2026-09"
+    },
+    {
+     "name": "GPT Image 2.5 Flare (max)",
+     "creator": "OpenAI",
+     "score": 1161,
+     "released": "2026-09"
+    },
+    {
+     "name": "MAI-Image-2.6",
+     "creator": "Microsoft AI",
+     "score": 1134,
+     "released": "2026-08"
+    },
+    {
+     "name": "MAI-Image-2.6-Flash",
+     "creator": "Microsoft AI",
+     "score": 1124,
+     "released": "2026-09"
+    },
+    {
+     "name": "GPT Image 2 (high)",
+     "creator": "OpenAI",
+     "score": 1121,
+     "released": "2026-04"
+    },
+    {
+     "name": "Muse Image",
+     "creator": "Meta",
+     "score": 1117,
+     "released": "2026-07"
+    },
+    {
+     "name": "MAI-Image-2.5",
+     "creator": "Microsoft AI",
+     "score": 1112,
+     "released": "2026-06"
+    },
+    {
+     "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+     "creator": "Google",
+     "score": 1107,
+     "released": "2026-02"
+    }
+   ]
+  },
+  "video": {
+   "metric": "Arena ELO",
+   "items": [
+    {
+     "name": "Wan 3.0",
+     "creator": "Alibaba",
+     "score": 1335,
+     "released": "2026-08"
+    },
+    {
+     "name": "Gemini Omni Flash",
+     "creator": "Google",
+     "score": 1332,
+     "released": "2026-05"
+    },
+    {
+     "name": "MiniMax H3",
+     "creator": "MiniMax",
+     "score": 1302,
+     "released": "2026-07"
+    },
+    {
+     "name": "HappyHorse-1.0",
+     "creator": "Alibaba-ATH",
+     "score": 1286,
+     "released": "2026-04"
+    },
+    {
+     "name": "HappyHorse-1.1",
+     "creator": "Alibaba-ATH",
+     "score": 1272,
+     "released": "2026-06"
+    },
+    {
+     "name": "Dreamina Seedance 2.0 720p",
+     "creator": "ByteDance Seed",
+     "score": 1259,
+     "released": "2026-03"
+    },
+    {
+     "name": "Wan2.7-260612",
+     "creator": "Alibaba",
+     "score": 1243,
+     "released": "2026-06"
+    },
+    {
+     "name": "grok-imagine-video",
+     "creator": "SpaceXAI",
+     "score": 1235,
+     "released": "2026-01"
+    }
+   ]
+  },
+  "kuvasta-video": {
+   "metric": "Arena ELO",
+   "items": [
+    {
+     "name": "Gemini Omni Flash",
+     "creator": "Google",
+     "score": 1369,
+     "released": "2026-05"
+    },
+    {
+     "name": "Bach 1.0 Pro",
+     "creator": "Video Rebirth",
+     "score": 1362,
+     "released": "2026-09"
+    },
+    {
+     "name": "Wan 3.0",
+     "creator": "Alibaba",
+     "score": 1362,
+     "released": "2026-08"
+    },
+    {
+     "name": "MiniMax H3",
+     "creator": "MiniMax",
+     "score": 1358,
+     "released": "2026-07"
+    },
+    {
+     "name": "PixVerse V6",
+     "creator": "PixVerse",
+     "score": 1340,
+     "released": "2026-03"
+    },
+    {
+     "name": "Dreamina Seedance 2.0 720p",
+     "creator": "ByteDance Seed",
+     "score": 1340,
+     "released": "2026-03"
+    },
+    {
+     "name": "grok-imagine-video-1.5",
+     "creator": "SpaceXAI",
+     "score": 1330,
+     "released": "2026-05"
+    },
+    {
+     "name": "grok-imagine-video",
+     "creator": "SpaceXAI",
+     "score": 1329,
+     "released": "2026-01"
+    }
+   ]
+  },
+  "puhe": {
+   "metric": "Arena ELO",
+   "items": [
+    {
+     "name": "Sonic 3.6",
+     "creator": "Cartesia",
+     "score": 1277,
+     "released": null
+    },
+    {
+     "name": "Gemini 3.8 Flash TTS",
+     "creator": "Google",
+     "score": 1268,
+     "released": null
+    },
+    {
+     "name": "Qwen-Audio-3.0-TTS-Plus",
+     "creator": "Alibaba",
+     "score": 1259,
+     "released": null
+    },
+    {
+     "name": "Realtime TTS-2",
+     "creator": "Inworld",
+     "score": 1244,
+     "released": null
+    },
+    {
+     "name": "Gemini 3.8 Flash-Lite TTS",
+     "creator": "Google",
+     "score": 1240,
+     "released": null
+    },
+    {
+     "name": "Simba 3.2",
+     "creator": "SpeechifyAI",
+     "score": 1238,
+     "released": null
+    },
+    {
+     "name": "Luna TTS",
+     "creator": "VUI Labs",
+     "score": 1232,
+     "released": null
+    },
+    {
+     "name": "Realtime TTS-2 Flash",
+     "creator": "Inworld",
+     "score": 1212,
+     "released": null
+    }
+   ]
+  }
+ }
+}
