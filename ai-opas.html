@@ -6,44 +6,26 @@
 <title>AI-malliopas</title>
 <meta name="description" content="Mikä tekoälymalli on paras mihinkin tehtävään – päivittyy automaattisesti kahden päivän välein.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 :root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>YO-tutka</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
+/* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
 :root{
-  --bg:#F2F3F6; --surface:#FFFFFF; --surface-2:#E8EAEF; --line:#D3D7DF; --line-2:#E4E7EC;
-  --ink:#171A21; --ink-2:#474D5C; --ink-3:#767C8E;
-  --accent:#1D4FA3; --accent-ink:#FFFFFF; --accent-soft:#DCE6F8;
-  --spring:#2C7A4B; --spring-soft:#DCEFE2; --autumn:#B4561A; --autumn-soft:#F7E3D2;
-  --ok:#2C7A4B; --ok-soft:#DCEFE2; --warn:#9E5A0C; --warn-soft:#FBEBD0;
-  --h0:#F4F6FA; --h1:#D5E0F5; --h2:#A6BFEA; --h3:#6E95D6; --h4:#3565B7; --h5:#153B7C;
-  --focus:#1D4FA3;
-  --font-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+  --bg:#081427; --bg-glow:#0E2140; --surface:#0F213D; --surface-2:#16294A; --line:#1F3B66; --line-2:#182F52;
+  --ink:#E6EEF8; --ink-2:#B4C3D8; --ink-3:#8FA3BF;
+  --accent:#5CE1C6; --accent-ink:#06221C; --accent-soft:#123D45;
+  --spring:#6FC48F; --spring-soft:#173A2E; --autumn:#E58E4E; --autumn-soft:#3A2A22;
+  --ok:#6FC48F; --ok-soft:#173A2E; --warn:#E8B45C; --warn-soft:#3A3222;
+  --h0:#0F213D; --h1:#123A48; --h2:#155A63; --h3:#1E8580; --h4:#3FB9A5; --h5:#8DF0DC;
+  --focus:#5CE1C6;
+  --font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;
   --font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#13151B; --surface:#1B1E26; --surface-2:#242832; --line:#333845; --line-2:#2B303B;
-    --ink:#EDEFF4; --ink-2:#B3B9C6; --ink-3:#858B9B;
-    --accent:#84A9EC; --accent-ink:#0E1626; --accent-soft:#22334F;
-    --spring:#6FC48F; --spring-soft:#1E3A2A; --autumn:#E58E4E; --autumn-soft:#3D2A1A;
-    --ok:#6FC48F; --ok-soft:#1E3A2A; --warn:#E8B45C; --warn-soft:#3D3220;
-    --h0:#1B1E26; --h1:#22314D; --h2:#2C4A7E; --h3:#3F69B4; --h4:#6E97E4; --h5:#B3CAF6;
-    --focus:#84A9EC;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#13151B; --surface:#1B1E26; --surface-2:#242832; --line:#333845; --line-2:#2B303B;
-  --ink:#EDEFF4; --ink-2:#B3B9C6; --ink-3:#858B9B;
-  --accent:#84A9EC; --accent-ink:#0E1626; --accent-soft:#22334F;
-  --spring:#6FC48F; --spring-soft:#1E3A2A; --autumn:#E58E4E; --autumn-soft:#3D2A1A;
-  --ok:#6FC48F; --ok-soft:#1E3A2A; --warn:#E8B45C; --warn-soft:#3D3220;
-  --h0:#1B1E26; --h1:#22314D; --h2:#2C4A7E; --h3:#3F69B4; --h4:#6E97E4; --h5:#B3CAF6;
-  --focus:#84A9EC;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:20px 60px}
@@ -91,6 +73,17 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 .tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
 .empty{color:var(--ink-3);font-size:14px}
 .notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px;font-size:13px}
+
+/* Radar theme surfaces (keep last so they win over the base rules above). */
+html{background:var(--bg)}
+body{background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg)}
+h1{font-weight:800;letter-spacing:-.02em}
+.masthead{border-bottom:1px solid var(--line)}
+.masthead .eyebrow{color:var(--accent)}
+.panel,.card{background:linear-gradient(180deg,rgba(92,225,198,.06),transparent 240px),var(--surface);border-radius:14px}
+.pp.p4,.pp.p3,.cell.h4,.cell.h5{color:var(--accent-ink)}
+.crumb{display:inline-block;padding-block:8px;font-family:var(--font-mono);font-size:13px;text-decoration:none;color:var(--ink-3)}
+.crumb:hover{color:var(--accent)}
 </style>
 </head>
 <body>
