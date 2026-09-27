@@ -12,7 +12,7 @@ OUT = ROOT / "data" / "ai-models.json"
 BASE = "https://artificialanalysis.ai/api/v2/data"
 TOP_N = 8
 
-PRETTY = {"tau2": "τ²-Bench", "terminalbench_hard": "Terminal-Bench Hard", "terminalbench_v2_1": "Terminal-Bench 2.1"}
+PRETTY = {"tau2": "τ²-Bench", "tau_banking": "τ-Banking", "terminalbench_hard": "Terminal-Bench Hard", "terminalbench_v2_1": "Terminal-Bench 2.1"}
 
 MEDIA = {
     "kuva": "media/text-to-image",
@@ -66,31 +66,38 @@ def top(items, n=TOP_N):
     return out
 
 
-AGENTIC_HINTS = ("tau2", "terminalbench", "terminal_bench")
+# Benchmark-based text categories: id -> (label, candidate evaluation keys).
+# When several keys are listed, the ones nearly all current top models have run are
+# averaged (see shared_keys), so every model in a list is scored on the same tests.
+BENCH = {
+    "yleis": ("Intelligence Index", ["artificial_analysis_intelligence_index"]),
+    "koodaus": ("Coding Index", ["artificial_analysis_coding_index"]),
+    "matikka": ("Math Index", ["artificial_analysis_math_index"]),
+    "automaatio": ("Agenttitestit", ["terminalbench_v2_1", "terminalbench_hard"]),
+    "asiakaspalvelu": ("Asiakaspalveluagentit", ["tau2", "tau_banking"]),
+    "ohjeet": ("IFBench", ["ifbench"]),
+    "pitkat-dokumentit": ("Long Context Reasoning (AA-LCR)", ["lcr"]),
+    "tiede": ("GPQA Diamond", ["gpqa"]),
+    "vaikeimmat": ("Humanity's Last Exam", ["hle"]),
+}
 
 
-def agentic_keys(rows, frontier=20):
-    """Pick one comparable benchmark set for everyone: a dedicated agentic index if the API
-    has one, otherwise the agentic benchmarks that nearly all current top models have run.
-    Coverage is measured on the top models so new releases aren't excluded by a retired test."""
+def shared_keys(rows, candidates, frontier=20):
+    """Of the candidate keys, those that >= 80 % of the top models (by intelligence) have.
+    Measured on the top models so new releases aren't excluded by a retired test."""
     def ev(m):
         return m.get("evaluations") or {}
-    def is_agentic(k):
-        return "agentic" in k or any(h in k for h in AGENTIC_HINTS)
     ranked = sorted((m for m in rows if num(ev(m).get("artificial_analysis_intelligence_index")) is not None),
                     key=lambda m: -ev(m)["artificial_analysis_intelligence_index"])[:frontier]
-    counts = {}
-    for m in ranked:
-        for k, v in ev(m).items():
-            if num(v) is not None and is_agentic(k):
-                counts[k] = counts.get(k, 0) + 1
-    index = [k for k in counts if "agentic" in k]
-    if index:
-        return [max(index, key=counts.get)]
-    if not counts:
+    counts = {k: sum(num(ev(m).get(k)) is not None for m in ranked) for k in candidates}
+    if not ranked or not any(counts.values()):
         return []
-    keys = sorted(k for k, c in counts.items() if c >= 0.8 * len(ranked))
+    keys = [k for k in candidates if counts[k] >= 0.8 * len(ranked)]
     return keys or [max(counts, key=counts.get)]
+
+
+def pct(v):
+    return v * 100 if v <= 1 else v
 
 
 def llm_categories(rows):
@@ -103,50 +110,62 @@ def llm_categories(rows):
                          num(pr.get("price_1m_blended_3_to_1")),
                          num(m.get("median_output_tokens_per_second"))))
 
-    def ranked(cid, metric_label, key_fn):
+    for cid, (label, candidates) in BENCH.items():
+        keys = shared_keys(rows, candidates)
         its = []
         for m, ev, intel, price, speed in enriched:
-            s = key_fn(ev)
-            if s is not None:
-                its.append(item(m, s, price=price, speed=speed, intelligence=intel))
+            vals = [num(ev.get(k)) for k in keys]
+            if keys and None not in vals:
+                its.append(item(m, sum(map(pct, vals)) / len(vals), price=price, speed=speed, intelligence=intel))
         its.sort(key=lambda x: -x["score"])
-        cats[cid] = {"metric": metric_label, "items": top(its)}
-
-    ranked("yleis", "Intelligence Index", lambda ev: num(ev.get("artificial_analysis_intelligence_index")))
-    ranked("koodaus", "Coding Index", lambda ev: num(ev.get("artificial_analysis_coding_index")))
-    ranked("matikka", "Math Index", lambda ev: num(ev.get("artificial_analysis_math_index")))
-
-    keys = agentic_keys(rows)
-    def agentic(ev):
-        vals = [num(ev.get(k)) for k in keys]
-        if not keys or None in vals:
-            return None
-        return sum(v * 100 if v <= 1 else v for v in vals) / len(vals)
-    ranked("automaatio", "agentti", agentic)
-    if cats["automaatio"]["items"]:
-        cats["automaatio"]["metric"] = "Agenttitestit: " + " + ".join(PRETTY.get(k, k) for k in keys)
-    else:  # no agentic data in the free API: fall back to general intelligence, labelled honestly
-        cats["automaatio"] = dict(cats["yleis"], metric="Intelligence Index (agenttimittaria ei saatavilla)")
+        if len(candidates) > 1:
+            label += ": " + " + ".join(PRETTY.get(k, k) for k in keys)
+        cats[cid] = {"metric": label, "items": top(its)}
 
     best = max((i for _, _, i, _, _ in enriched if i is not None), default=0)
-    value = [item(m, price, price=price, speed=speed, intelligence=intel)
-             for m, _, intel, price, speed in enriched
-             if intel is not None and price and intel >= 0.8 * best]
-    value.sort(key=lambda x: x["score"])
-    cats["hinta-laatu"] = {"metric": "$ / 1M tokenia (vähintään 80 % kärjen älykkyydestä)", "items": top(value), "lowerIsBetter": True}
+
+    def cheapest(cid, share, label):
+        its = [item(m, price, price=price, speed=speed, intelligence=intel)
+               for m, _, intel, price, speed in enriched
+               if intel is not None and price and intel >= share * best]
+        its.sort(key=lambda x: x["score"])
+        cats[cid] = {"metric": label, "items": top(its), "lowerIsBetter": True, "unit": "$"}
+
+    cheapest("hinta-laatu", 0.8, "$ / 1M tokenia (vähintään 80 % kärjen älykkyydestä)")
+    cheapest("budjetti", 0.6, "$ / 1M tokenia (vähintään 60 % kärjen älykkyydestä)")
 
     fast = [item(m, speed, price=price, speed=speed, intelligence=intel)
             for m, _, intel, price, speed in enriched
             if intel is not None and speed and intel >= 0.7 * best]
     fast.sort(key=lambda x: -x["score"])
     cats["nopeus"] = {"metric": "tokenia / s (vähintään 70 % kärjen älykkyydestä)", "items": top(fast)}
+
+    lat = []
+    for m, _, intel, price, speed in enriched:
+        t = num(m.get("median_time_to_first_answer_token"))
+        if intel is not None and t and intel >= 0.6 * best:
+            lat.append(item(m, t, price=price, speed=speed, intelligence=intel))
+    lat.sort(key=lambda x: x["score"])
+    cats["viive"] = {"metric": "sekuntia ensimmäiseen vastaussanaan (vähintään 60 % kärjen älykkyydestä)",
+                     "items": top(lat), "lowerIsBetter": True, "unit": "s"}
     return cats
 
 
 def media_category(rows):
     its = [item(m, num(m.get("elo"))) for m in rows if num(m.get("elo")) is not None]
     its.sort(key=lambda x: -x["score"])
-    return {"metric": "Arena ELO", "items": top(its)}
+    cat = {"metric": "Arena ELO", "items": top(its)}
+    # Per style/subject breakdowns (include_categories=true), e.g. "Text & Typography".
+    sub = {}
+    for m in rows:
+        for c in m.get("categories") or []:
+            elo = num(c.get("elo"))
+            label = next((v for k, v in c.items() if k.endswith("_category") and v), None)
+            if elo is not None and label:
+                sub.setdefault(label, []).append(item(m, elo))
+    if sub:
+        cat["subcategories"] = {k: top(sorted(v, key=lambda x: -x["score"])) for k, v in sorted(sub.items())}
+    return cat
 
 
 def inspect(key):
@@ -191,7 +210,7 @@ def main():
         errors.append(f"llms: {e}")
     for cid, path in MEDIA.items():
         try:
-            cats[cid] = media_category(fetch(path, key))
+            cats[cid] = media_category(fetch(path + "?include_categories=true", key))
         except Exception as e:
             errors.append(f"{cid}: {e}")
 
