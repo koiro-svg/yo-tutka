@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-malliopas</title>
+<meta name="description" content="Mikä tekoälymalli on paras mihinkin tehtävään – päivittyy automaattisesti kahden päivän välein.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>YO-tutka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F2F3F6; --surface:#FFFFFF; --surface-2:#E8EAEF; --line:#D3D7DF; --line-2:#E4E7EC;
+  --ink:#171A21; --ink-2:#474D5C; --ink-3:#767C8E;
+  --accent:#1D4FA3; --accent-ink:#FFFFFF; --accent-soft:#DCE6F8;
+  --spring:#2C7A4B; --spring-soft:#DCEFE2; --autumn:#B4561A; --autumn-soft:#F7E3D2;
+  --ok:#2C7A4B; --ok-soft:#DCEFE2; --warn:#9E5A0C; --warn-soft:#FBEBD0;
+  --h0:#F4F6FA; --h1:#D5E0F5; --h2:#A6BFEA; --h3:#6E95D6; --h4:#3565B7; --h5:#153B7C;
+  --focus:#1D4FA3;
+  --font-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#13151B; --surface:#1B1E26; --surface-2:#242832; --line:#333845; --line-2:#2B303B;
+    --ink:#EDEFF4; --ink-2:#B3B9C6; --ink-3:#858B9B;
+    --accent:#84A9EC; --accent-ink:#0E1626; --accent-soft:#22334F;
+    --spring:#6FC48F; --spring-soft:#1E3A2A; --autumn:#E58E4E; --autumn-soft:#3D2A1A;
+    --ok:#6FC48F; --ok-soft:#1E3A2A; --warn:#E8B45C; --warn-soft:#3D3220;
+    --h0:#1B1E26; --h1:#22314D; --h2:#2C4A7E; --h3:#3F69B4; --h4:#6E97E4; --h5:#B3CAF6;
+    --focus:#84A9EC;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13151B; --surface:#1B1E26; --surface-2:#242832; --line:#333845; --line-2:#2B303B;
+  --ink:#EDEFF4; --ink-2:#B3B9C6; --ink-3:#858B9B;
+  --accent:#84A9EC; --accent-ink:#0E1626; --accent-soft:#22334F;
+  --spring:#6FC48F; --spring-soft:#1E3A2A; --autumn:#E58E4E; --autumn-soft:#3D2A1A;
+  --ok:#6FC48F; --ok-soft:#1E3A2A; --warn:#E8B45C; --warn-soft:#3D3220;
+  --h0:#1B1E26; --h1:#22314D; --h2:#2C4A7E; --h3:#3F69B4; --h4:#6E97E4; --h5:#B3CAF6;
+  --focus:#84A9EC;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:20px 60px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.015em}
+h2{font-size:20px;font-weight:700}
+h3{font-size:16px;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;display:grid;gap:24px}
+.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.masthead{display:grid;gap:10px;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+.lede{color:var(--ink-2);max-width:62ch;font-size:16px}
+.crumb{font-family:var(--font-mono);font-size:12px;text-decoration:none;color:var(--ink-3)}
+.crumb:hover{color:var(--accent)}
+footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
+.status{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
+.status b{color:var(--ok);font-weight:600}
+.status.stale b{color:var(--warn)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font:inherit;font-weight:700;font-size:14px;color:inherit}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.group{display:grid;gap:12px}
+.group>h2{display:flex;align-items:baseline;gap:10px}
+.group>h2 .eyebrow{font-weight:400}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:12px;align-content:start}
+.card header{display:grid;gap:4px}
+.card .use{color:var(--ink-2);font-size:14px}
+.winner{background:var(--accent-soft);border-radius:8px;padding:12px 14px;display:grid;gap:2px}
+.winner .label{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.winner .name{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1.15;overflow-wrap:anywhere}
+.winner .sub{font-size:13px;color:var(--ink-2)}
+.new{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;background:var(--ok-soft);color:var(--ok);border-radius:4px;padding:1px 5px;vertical-align:middle;margin-left:6px}
+ol.rank{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+ol.rank li{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;font-size:14px}
+ol.rank .n{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
+ol.rank .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ol.rank .nm small{color:var(--ink-3)}
+ol.rank .sc{font-family:var(--font-mono);font-size:12px;color:var(--ink-2)}
+ol.rank .bar{grid-column:2/4;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
+ol.rank .bar i{display:block;height:100%;background:var(--h3)}
+.metric{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
+.empty{color:var(--ink-3);font-size:14px}
+.notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="masthead">
+    <a class="crumb" href="/">← koirosvg.com</a>
+    <div class="eyebrow">AI-malliopas</div>
+    <h1>Mikä malli mihinkin?</h1>
+    <p class="lede">Paras tekoälymalli jokaiseen käyttötarkoitukseen – automaatiot ja bisnesworkflowt, koodaus, kirjoittaminen, kuvat, video ja puhe. Rankingit haetaan riippumattomista vertailuista ja päivittyvät automaattisesti kahden päivän välein, joten uudet mallit nousevat listoille itsestään.</p>
+    <p class="status" id="status">Ladataan…</p>
+  </header>
+
+  <nav class="filters" id="filters" aria-label="Suodata osa-alueen mukaan"></nav>
+  <div id="content"></div>
+
+  <footer>
+    <p>Data: <a href="https://artificialanalysis.ai/" rel="noopener">Artificial Analysis</a> (tekstimallien indeksit, hinnat ja nopeudet sekä kuva-, video- ja puhemallien sokkovertailujen ELO-pisteet).</p>
+    <p>Vinkit ovat yleisohjeita; lopullinen valinta kannattaa aina testata omalla tehtävällä. “Uusi” = julkaistu viimeisen 45 päivän aikana.</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  const GROUPS = [
+    {id:'teksti', name:'Teksti, koodi & agentit'},
+    {id:'kuva', name:'Kuvat'},
+    {id:'video', name:'Video'},
+    {id:'aani', name:'Ääni'},
+  ];
+  const CATS = [
+    {id:'automaatio', group:'teksti', title:'Automaatio & agentit', use:'Automatisoidut workflowt, bisnesprosessit, työkaluja kutsuvat agentit.',
+     tip:'Rakenna työnkulku esim. n8n:llä, Makella, Zapierilla tai Claude Codella ja käytä kärkimallia vaativiin päätöksiin. Jos ajoja on tuhansia päivässä, katso “Paras hinta-laatu”.'},
+    {id:'koodaus', group:'teksti', title:'Koodaus', use:'Ohjelmointi, sovellusten ja nettisivujen rakentaminen, bugien korjaus.',
+     tip:'Parhaimmillaan koodausagentissa (Claude Code, Cursor, Codex), joka lukee ja muokkaa koko projektia.'},
+    {id:'yleis', group:'teksti', title:'Kirjoittaminen, analyysi & tutkimus', use:'Yleisäly: raportit, sisällöntuotanto, päättely, tiedonhaku, strategia.',
+     tip:'Kärjen erot ovat pieniä – valitse se, jonka tyyli miellyttää ja jolla on tarvitsemasi työkalut (haku, tiedostot).'},
+    {id:'matikka', group:'teksti', title:'Matematiikka & päättely', use:'Laskut, todistukset, data-analyysi, monivaiheinen ongelmanratkaisu.',
+     tip:'Käytä “reasoning/thinking”-tilaa – se on hitaampi mutta selvästi tarkempi.'},
+    {id:'hinta-laatu', group:'teksti', title:'Paras hinta-laatu', use:'Isot volyymit: luokittelu, tiivistäminen, massa-automaatio.',
+     tip:'Halvimmat mallit, jotka ovat silti lähellä kärkeä. Hinta = sekahinta ($ / miljoona tokenia, 3:1 syöte:tuotos).'},
+    {id:'nopeus', group:'teksti', title:'Nopein', use:'Chatbotit, asiakaspalvelu, reaaliaikaiset sovellukset.',
+     tip:'Nopeus mitattuna API:sta; mukana vain mallit, jotka ovat vähintään 70 % kärjen älykkyydestä.'},
+    {id:'kuva', group:'kuva', title:'Kuvagenerointi', use:'Kuvat tekstistä: mainokset, somekuvat, thumbnailit, tuotekuvat.',
+     tip:'Tekstiä sisältäviin kuviin (logot, julisteet) testaa kärkikolmikkoa – tekstin laatu vaihtelee eniten.'},
+    {id:'kuvanmuokkaus', group:'kuva', title:'Kuvanmuokkaus', use:'Olemassa olevan kuvan muokkaus ohjeilla: tausta, tyyli, objektit.',
+     tip:'Hyvä tuotekuviin ja UGC-materiaalin varioimiseen.'},
+    {id:'video', group:'video', title:'Videogenerointi', use:'Video tekstistä: mainokset, somevideot, b-roll.',
+     tip:'Hinnat ja pituusrajat vaihtelevat paljon – tarkista ennen isoa ajoa.'},
+    {id:'kuvasta-video', group:'video', title:'Kuvasta videoksi', use:'Liikettä valmiiseen kuvaan: tuote- ja hahmoanimaatiot.',
+     tip:'Tee ensin hyvä kuva kuvagenerointimallilla ja animoi se tällä – johdonmukaisin lopputulos.'},
+    {id:'puhe', group:'aani', title:'Puhe (tekstistä puheeksi)', use:'Selostukset, podcastit, puhelinbotit, videoiden äänet.',
+     tip:'Tarkista suomen kielen tuki – ranking perustuu pääosin englantiin.'},
+  ];
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let data = null, filter = 'all';
+
+  function fmt(v, cat){
+    if (v == null) return '';
+    if (cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
+    return Math.round(v).toLocaleString('fi-FI');
+  }
+  function isNew(d){
+    if (!d) return false;
+    const t = Date.parse(d);
+    return !isNaN(t) && Date.now() - t < 45 * 864e5;
+  }
+  function sub(it, cat){
+    const bits = [esc(it.creator)];
+    if (cat.lowerIsBetter && it.intelligence != null) bits.push('älykkyys ' + Math.round(it.intelligence));
+    else if (!cat.lowerIsBetter && it.price) bits.push('$' + it.price.toFixed(2) + ' / 1M');
+    return bits.filter(Boolean).join(' · ');
+  }
+
+  function card(meta){
+    const cat = data.categories[meta.id] || {items:[]};
+    const its = cat.items || [];
+    if (!its.length) return `<article class="card"><header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header><p class="empty">Ei dataa vielä.</p></article>`;
+    const w = its[0];
+    const scores = its.map(i => i.score);
+    const hi = Math.max(...scores), lo = Math.min(...scores);
+    const pct = s => {
+      if (hi === lo) return 100;
+      const r = cat.lowerIsBetter ? (hi - s) / (hi - lo) : (s - lo) / (hi - lo);
+      return Math.round(35 + 65 * r);
+    };
+    const rest = its.slice(1).map((it, i) => `
+      <li><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(it.released) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>
+      <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
+    return `<article class="card">
+      <header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header>
+      <div class="winner">
+        <span class="label">Paras nyt</span>
+        <span class="name">${esc(w.name)}${isNew(w.released) ? '<span class="new">UUSI</span>' : ''}</span>
+        <span class="sub">${sub(w, cat)} · ${fmt(w.score, cat)}</span>
+      </div>
+      <ol class="rank">${rest}</ol>
+      <p class="metric">Mittari: ${esc(cat.metric)}</p>
+      <p class="tip">${esc(meta.tip)}</p>
+    </article>`;
+  }
+
+  function render(){
+    $('#filters').innerHTML = [{id:'all', name:'Kaikki'}, ...GROUPS].map(g =>
+      `<button type="button" data-f="${g.id}" aria-pressed="${filter === g.id}">${esc(g.name)}</button>`).join('');
+    $('#content').innerHTML = GROUPS.filter(g => filter === 'all' || filter === g.id).map(g => `
+      <section class="group"><h2>${esc(g.name)}</h2>
+        <div class="cards">${CATS.filter(c => c.group === g.id).map(card).join('')}</div>
+      </section>`).join('<div style="height:20px"></div>');
+  }
+
+  function status(){
+    const el = $('#status');
+    const t = Date.parse(data.updated);
+    const ageDays = (Date.now() - t) / 864e5;
+    const when = new Date(t).toLocaleString('fi-FI', {day:'numeric', month:'numeric', year:'numeric', hour:'2-digit', minute:'2-digit'});
+    el.classList.toggle('stale', ageDays > 5);
+    el.innerHTML = `<b>●</b> Päivitetty ${esc(when)}` + (ageDays > 5 ? ' – automaattipäivitys on myöhässä' : ' · seuraava päivitys ~2 päivän päästä');
+  }
+
+  $('#filters').addEventListener('click', e => {
+    const b = e.target.closest('button[data-f]');
+    if (!b) return;
+    filter = b.dataset.f;
+    render();
+    const cur = $(`#filters button[data-f="${filter}"]`);
+    if (cur) cur.focus();
+  });
+
+  fetch('/data/ai-models.json', {cache:'no-cache'})
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { data = d; status(); render(); })
+    .catch(() => {
+      $('#status').textContent = '';
+      $('#content').innerHTML = '<p class="notice">Mallidataa ei ole vielä haettu. Ensimmäinen automaattinen päivitys tuo rankingit tähän.</p>';
+    });
+})();
+</script>
+</body>
+</html>
