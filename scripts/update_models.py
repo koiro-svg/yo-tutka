@@ -69,21 +69,28 @@ def top(items, n=TOP_N):
 AGENTIC_HINTS = ("tau2", "terminalbench", "terminal_bench")
 
 
-def agentic_keys(rows):
+def agentic_keys(rows, frontier=20):
     """Pick one comparable benchmark set for everyone: a dedicated agentic index if the API
-    has one, otherwise the agentic benchmarks that at least half of the covered models share."""
+    has one, otherwise the agentic benchmarks that nearly all current top models have run.
+    Coverage is measured on the top models so new releases aren't excluded by a retired test."""
+    def ev(m):
+        return m.get("evaluations") or {}
+    def is_agentic(k):
+        return "agentic" in k or any(h in k for h in AGENTIC_HINTS)
+    ranked = sorted((m for m in rows if num(ev(m).get("artificial_analysis_intelligence_index")) is not None),
+                    key=lambda m: -ev(m)["artificial_analysis_intelligence_index"])[:frontier]
     counts = {}
-    for m in rows:
-        for k, v in (m.get("evaluations") or {}).items():
-            if num(v) is not None and ("agentic" in k or any(h in k for h in AGENTIC_HINTS)):
+    for m in ranked:
+        for k, v in ev(m).items():
+            if num(v) is not None and is_agentic(k):
                 counts[k] = counts.get(k, 0) + 1
     index = [k for k in counts if "agentic" in k]
     if index:
         return [max(index, key=counts.get)]
     if not counts:
         return []
-    top_count = max(counts.values())
-    return sorted(k for k, c in counts.items() if c >= top_count / 2)
+    keys = sorted(k for k, c in counts.items() if c >= 0.8 * len(ranked))
+    return keys or [max(counts, key=counts.get)]
 
 
 def llm_categories(rows):
