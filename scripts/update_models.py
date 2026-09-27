@@ -151,6 +151,7 @@ def main():
 
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     out = {"updated": now, "source": "https://artificialanalysis.ai/", "errors": errors, "categories": cats}
+    OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"ok: {len(cats)} kategoriaa, {len(errors)} virhettä")
     for e in errors:
