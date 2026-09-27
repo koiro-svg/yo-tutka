@@ -12,6 +12,8 @@ OUT = ROOT / "data" / "ai-models.json"
 BASE = "https://artificialanalysis.ai/api/v2/data"
 TOP_N = 8
 
+PRETTY = {"tau2": "τ²-Bench", "terminalbench_hard": "Terminal-Bench Hard", "terminalbench_v2_1": "Terminal-Bench 2.1"}
+
 MEDIA = {
     "kuva": "media/text-to-image",
     "kuvanmuokkaus": "media/image-editing",
@@ -41,13 +43,18 @@ def creator(m):
 
 
 def item(m, score, **extra):
-    d = {"name": m.get("name") or m.get("slug") or "?", "creator": creator(m),
+    full = m.get("name") or m.get("slug") or "?"
+    base, _, variant = full.partition(" (")
+    d = {"name": base, "creator": creator(m),
          "score": round(score, 2), "released": m.get("release_date")}
+    if variant:  # e.g. "Adaptive Reasoning, Max Effort)" -> shown as a hint, not part of the name
+        d["variant"] = variant.rstrip(")")
     d.update({k: round(v, 2) for k, v in extra.items() if v is not None})
     return d
 
 
 def top(items, n=TOP_N):
+    """Items arrive best-first; keep only the best variant of each base model."""
     seen, out = set(), []
     for it in items:
         if it["name"] in seen:
@@ -59,17 +66,24 @@ def top(items, n=TOP_N):
     return out
 
 
-def agentic_metric(ev):
-    """Prefer a dedicated agentic index; fall back to agentic benchmarks, then intelligence."""
-    for k, v in ev.items():
-        if "agentic" in k and num(v) is not None:
-            return k, v
-    parts = [(k, num(v)) for k, v in ev.items()
-             if any(s in k for s in ("tau2", "terminalbench", "terminal_bench")) and num(v) is not None]
-    if parts:
-        vals = [v * 100 if v <= 1 else v for _, v in parts]
-        return "+".join(k for k, _ in parts), sum(vals) / len(vals)
-    return None, None
+AGENTIC_HINTS = ("tau2", "terminalbench", "terminal_bench")
+
+
+def agentic_keys(rows):
+    """Pick one comparable benchmark set for everyone: a dedicated agentic index if the API
+    has one, otherwise the agentic benchmarks that at least half of the covered models share."""
+    counts = {}
+    for m in rows:
+        for k, v in (m.get("evaluations") or {}).items():
+            if num(v) is not None and ("agentic" in k or any(h in k for h in AGENTIC_HINTS)):
+                counts[k] = counts.get(k, 0) + 1
+    index = [k for k in counts if "agentic" in k]
+    if index:
+        return [max(index, key=counts.get)]
+    if not counts:
+        return []
+    top_count = max(counts.values())
+    return sorted(k for k, c in counts.items() if c >= top_count / 2)
 
 
 def llm_categories(rows):
@@ -95,15 +109,15 @@ def llm_categories(rows):
     ranked("koodaus", "Coding Index", lambda ev: num(ev.get("artificial_analysis_coding_index")))
     ranked("matikka", "Math Index", lambda ev: num(ev.get("artificial_analysis_math_index")))
 
-    used = set()
+    keys = agentic_keys(rows)
     def agentic(ev):
-        k, v = agentic_metric(ev)
-        if k:
-            used.add(k)
-        return v
+        vals = [num(ev.get(k)) for k in keys]
+        if not keys or None in vals:
+            return None
+        return sum(v * 100 if v <= 1 else v for v in vals) / len(vals)
     ranked("automaatio", "agentti", agentic)
     if cats["automaatio"]["items"]:
-        cats["automaatio"]["metric"] = ", ".join(sorted(used))
+        cats["automaatio"]["metric"] = "Agenttitestit: " + " + ".join(PRETTY.get(k, k) for k in keys)
     else:  # no agentic data in the free API: fall back to general intelligence, labelled honestly
         cats["automaatio"] = dict(cats["yleis"], metric="Intelligence Index (agenttimittaria ei saatavilla)")
 

@@ -178,11 +178,11 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
       return Math.round(35 + 65 * r);
     };
     const rest = its.slice(1).map((it, i) => `
-      <li><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(it.released) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>
+      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(it.released) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>
       <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
     return `<article class="card">
       <header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header>
-      <div class="winner">
+      <div class="winner" title="${esc(w.variant || '')}">
         <span class="label">Paras nyt</span>
         <span class="name">${esc(w.name)}${isNew(w.released) ? '<span class="new">UUSI</span>' : ''}</span>
         <span class="sub">${sub(w, cat)} · ${fmt(w.score, cat)}</span>
