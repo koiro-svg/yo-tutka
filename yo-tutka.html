@@ -60,9 +60,11 @@ button,select,input{font:inherit;color:inherit}
 .tiles{display:grid;grid-auto-flow:column;gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .tile{padding:10px 16px;border-left:1px solid var(--line);display:grid;gap:2px}
 .tile:first-child{border-left:0}
+@media (max-width:520px){.tiles{grid-auto-columns:minmax(0,1fr)}.tile{padding:8px 10px}.tile .v{font-size:22px}}
 .tile .v{font-family:var(--font-display);font-size:26px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
 .tile .l{font-size:12px;color:var(--ink-3)}
 .quality{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--ink-2);padding:10px 12px;background:var(--surface-2);border-radius:6px}
+.quality,.sessions,.method,.head .desc{overflow-wrap:anywhere}
 .quality .chips{display:flex;flex-wrap:wrap;gap:4px}
 .chip{display:inline-flex;align-items:center;gap:4px;border-radius:4px;padding:1px 7px;font-family:var(--font-mono);font-size:11px;font-weight:600;line-height:1.7;border:1px solid transparent;white-space:nowrap}
 .chip.K{background:var(--spring-soft);color:var(--spring)}
@@ -73,7 +75,8 @@ button,select,input{font:inherit;color:inherit}
 .controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:14px}
 .controls label{display:inline-flex;align-items:center;gap:6px}
 .controls select,.controls input[type=search]{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:6px 9px}
-.controls input[type=search]{min-width:200px}
+.controls label{flex-wrap:wrap;max-width:100%}
+.controls input[type=search]{min-width:min(200px,100%);max-width:100%}
 .grid2{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px}
 @media (max-width:980px){.grid2{grid-template-columns:1fr}}
 .sec{display:grid;gap:10px;min-width:0}
@@ -105,6 +108,38 @@ td.num,th.num{text-align:right;font-family:var(--font-mono);font-variant-numeric
 .cell.h0{background:var(--h0);color:var(--ink-3)}.cell.h1{background:var(--h1);color:var(--ink)}.cell.h2{background:var(--h2);color:var(--ink)}.cell.h3{background:var(--h3);color:#fff}.cell.h4{background:var(--h4);color:#fff}.cell.h5{background:var(--h5);color:#fff}
 .cell.none{background:transparent;color:var(--ink-3);border:1px dashed var(--line)}
 .cell:hover{outline:2px solid var(--accent);outline-offset:-1px}
+/* Tables fit their column at every width: no inner scrolling. Narrow columns switch layout via container queries. */
+.sec{container-type:inline-size;align-content:start}
+.heat{min-width:0}
+.heat td.name{white-space:normal;position:static;min-width:7em}
+.cell{min-width:0}
+@container (max-width:620px){
+  .topics thead tr{display:flex;flex-wrap:wrap;gap:2px 14px;align-items:baseline}
+  .topics thead th{border:0;padding:2px 0}
+  .topics thead th:last-child{display:none}
+  .topics,.topics tbody{display:block}
+  .topics tbody tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:9px 6px;border-bottom:1px solid var(--line-2)}
+  .topics td{border:0;padding:0;text-align:left}
+  .topics td.name{flex:1 1 calc(100% - 90px);order:0}
+  .topics td:nth-child(6){order:1;margin-left:auto}
+  .topics td:nth-child(n+2):not(:nth-child(6)){order:2}
+  .topics td:nth-child(n+2)::before{display:block;font-family:var(--font-mono);font-size:9px;font-weight:400;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-3)}
+  .topics td:nth-child(2)::before{content:"Tehtäviä"}
+  .topics td:nth-child(3)::before{content:"Kerroilla"}
+  .topics td:nth-child(4)::before{content:"Osuus"}
+  .topics td:nth-child(5)::before{content:"Odot./koe"}
+  .topics td:nth-child(7)::before{content:"Viimeksi"}
+  .topics .bar{display:none}
+}
+@container (max-width:520px){
+  .heat,.heat thead,.heat tbody{display:block}
+  .heat tr{display:grid;grid-template-columns:repeat(var(--n,11),minmax(0,1fr));gap:2px;align-items:center}
+  .heat thead th:first-child{display:none}
+  .heat td,.heat th.sess{padding:0;border:0}
+  .heat td.name{grid-column:1/-1;min-width:0;padding:7px 0 2px}
+  .heat th.sess .chip{padding:0;font-size:9px;justify-content:center;width:100%}
+  .heat .cell{height:24px;font-size:11px}
+}
 .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--ink-3);align-items:center}
 .legend .sw{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin-right:4px}
 .types{display:grid;gap:6px}
@@ -286,7 +321,7 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
       <div class="grid2">
         <section class="sec">
           <div class="sec-head"><h3>Aihealueet ja todennäköisyys</h3><span class="hint">Klikkaa riviä suodattaaksesi tehtävät</span></div>
-          <div style="overflow-x:auto"><table class="topics">
+          <div class="topicswrap"><table class="topics">
             <thead><tr>${th('name','Aihealue')}${th('total','Tehtäviä','num')}${th('hits','Kerroilla','num')}${th('share','Osuus','num')}${th('exp','Odot. / koe','num')}${th('p','Tod.näk.','num')}<th>Viimeksi</th></tr></thead>
             <tbody>${topics.map(t=>`<tr data-topic="${esc(t.id)}" class="${state.topic===t.id?'sel':''}">
               <td class="name">${esc(t.name)}</td>
@@ -303,7 +338,7 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 
         <section class="sec">
           <div class="sec-head"><h3>Esiintymiskartta</h3><span class="hint">Tehtäviä per aihe ja tutkintokerta · klikkaa solua</span></div>
-          <div class="heatwrap"><table class="heat">
+          <div class="heatwrap"><table class="heat" style="--n:${st.ss.length}">
             <thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${x.id.slice(-1)}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
             <tbody>${topics.map(t=>`<tr><td class="name ${state.topic===t.id?'sel':''}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="0" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(st.ss[i].tasks.filter(k=>(k.topics||[]).includes(t.id)).map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>
           </table></div>
