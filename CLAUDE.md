@@ -10,9 +10,10 @@ työkalua: AI-malliopas (`ai-opas.html`) ja YO-tutka (`yo-tutka.html`). Repo on 
   `/ai-opas` ja `/yo-tutka` -polut.
 
 ## Arkkitehtuuri
-- Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Työkalusivujen värit/fontit ovat samat
-  tokenit kuin YO-tutkassa – kopioitu jokaiseen sivuun. Poikkeus: kotivalikko (`index.html`)
-  on tarkoituksella aina tumma "tutka"-teema (Unbounded + canvas-tutka-animaatio).
+- Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki kolme sivua käyttävät samaa
+  tarkoituksella aina tummaa "tutka"-teemaa (tokenit kopioitu jokaiseen sivuun, Unbounded-otsikot,
+  turkoosi `--accent`). Kotivalikossa lisäksi canvas-tutka-animaatio. Työkalusivuilla on
+  `← koirosvg.com`-paluulinkki (`.crumb`) mastheadissa – pidä se jokaisessa uudessa sivussa.
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
   `ai-opas.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
