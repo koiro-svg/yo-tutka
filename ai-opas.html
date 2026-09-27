@@ -90,7 +90,6 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 .metric{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 .tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
 .empty{color:var(--ink-3);font-size:14px}
-.card select{margin-top:6px;width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:7px 8px}
 .notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px;font-size:13px}
 </style>
 </head>
@@ -129,8 +128,6 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
      tip:'Parhaimmillaan koodausagentissa (Claude Code, Cursor, Codex), joka lukee ja muokkaa koko projektia.'},
     {id:'yleis', group:'teksti', title:'Kirjoittaminen, analyysi & tutkimus', use:'Yleisäly: raportit, sisällöntuotanto, päättely, tiedonhaku, strategia.',
      tip:'Kärjen erot ovat pieniä – valitse se, jonka tyyli miellyttää ja jolla on tarvitsemasi työkalut (haku, tiedostot).'},
-    {id:'matikka', group:'teksti', title:'Matematiikka & päättely', use:'Laskut, todistukset, data-analyysi, monivaiheinen ongelmanratkaisu.',
-     tip:'Käytä “reasoning/thinking”-tilaa – se on hitaampi mutta selvästi tarkempi.'},
     {id:'asiakaspalvelu', group:'teksti', title:'Asiakaspalvelubotit', use:'Chat- ja puhelinbotit, jotka hoitavat asiakkaan asian järjestelmien kautta (varaukset, laskut, tuki).',
      tip:'Testit simuloivat oikeaa asiakasta ja yrityksen sääntöjä – hyvä mittari kaikille botteille, jotka tekevät muutoksia asiakkaan puolesta.'},
     {id:'ohjeet', group:'teksti', title:'Ohjeiden tarkka noudattaminen', use:'Tarkat muotovaatimukset: JSON, pituusrajat, tietty rakenne – tärkeää automaatioissa.',
@@ -151,8 +148,6 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
      tip:'Nopeus mitattuna API:sta; mukana vain mallit, jotka ovat vähintään 70 % kärjen älykkyydestä.'},
     {id:'kuva', group:'kuva', title:'Kuvagenerointi', use:'Kuvat tekstistä: mainokset, somekuvat, thumbnailit, tuotekuvat.',
      tip:'Tekstiä sisältäviin kuviin (logot, julisteet) testaa kärkikolmikkoa – tekstin laatu vaihtelee eniten.'},
-    {id:'kuva-tyyli', data:'kuva', sub:true, group:'kuva', title:'Kuva tyylin ja aiheen mukaan', use:'Paras kuvamalli juuri sinun kuvatyyppiisi – valitse listasta.',
-     tip:'Sokkovertailut on jaettu tyyleihin ja aiheisiin. Pienissä kategorioissa vertailuja on vähemmän, joten erot ovat epävarmempia.'},
     {id:'kuvanmuokkaus', group:'kuva', title:'Kuvanmuokkaus', use:'Olemassa olevan kuvan muokkaus ohjeilla: tausta, tyyli, objektit.',
      tip:'Hyvä tuotekuviin ja UGC-materiaalin varioimiseen.'},
     {id:'video', group:'video', title:'Videogenerointi', use:'Video tekstistä: mainokset, somevideot, b-roll.',
@@ -188,28 +183,8 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
     return bits.filter(Boolean).join(' · ');
   }
 
-  const SUBNAMES = {
-    'Anime':'Anime', 'Cartoon & Illustration':'Piirretty & kuvitus', 'General & Photorealistic':'Fotorealistinen',
-    'Graphic Design & Digital Rendering':'Graafinen suunnittelu & 3D', 'Traditional Art':'Perinteinen taide',
-    'Vintage & Retro':'Vintage & retro', 'Commercial':'Mainos- & tuotekuvat', 'Fantasy & Mythical':'Fantasia',
-    'Futuristic & Sci-Fi':'Scifi', 'Nature & Landscapes':'Luonto & maisemat', 'People: Groups & Activities':'Ihmiset: ryhmät & toiminta',
-    'People: Portraits':'Ihmiset: muotokuvat', 'Physical Spaces':'Tilat & arkkitehtuuri', 'Text & Typography':'Teksti & typografia (logot, julisteet)',
-    'UI/UX Design':'Käyttöliittymät (UI/UX)', 'Photorealistic':'Fotorealistinen',
-  };
-  const subPick = {};
   function card(meta){
-    let cat = data.categories[meta.data || meta.id] || {items:[]};
-    let picker = '';
-    if (meta.sub) {
-      const subs = cat.subcategories || {};
-      const keys = Object.keys(subs).sort((a, b) => (SUBNAMES[a] || a).localeCompare(SUBNAMES[b] || b, 'fi'));
-      if (!keys.length) cat = {items:[]};
-      else {
-        const pick = keys.includes(subPick[meta.id]) ? subPick[meta.id] : (keys.includes('Commercial') ? 'Commercial' : keys[0]);
-        picker = `<select data-sub="${meta.id}" aria-label="Kuvatyyppi">${keys.map(k => `<option value="${esc(k)}"${k === pick ? ' selected' : ''}>${esc(SUBNAMES[k] || k)}</option>`).join('')}</select>`;
-        cat = {metric: cat.metric + ' · ' + (SUBNAMES[pick] || pick), items: subs[pick]};
-      }
-    }
+    const cat = data.categories[meta.id] || {items:[]};
     const its = cat.items || [];
     if (!its.length) return `<article class="card"><header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header><p class="empty">Ei dataa vielä.</p></article>`;
     const w = its[0];
@@ -224,14 +199,15 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
       <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(it.released) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>
       <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
     return `<article class="card">
-      <header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p>${picker}</header>
+      <header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header>
       <div class="winner" title="${esc(w.variant || '')}">
         <span class="label">Paras nyt</span>
         <span class="name">${esc(w.name)}${isNew(w.released) ? '<span class="new">UUSI</span>' : ''}</span>
         <span class="sub">${sub(w, cat)} · ${fmt(w.score, cat)}</span>
       </div>
       <ol class="rank">${rest}</ol>
-      <p class="metric">Mittari: ${esc(cat.metric)}</p>${stale(its) ? '<p class="notice">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>' : ''}
+      <p class="metric">Mittari: ${esc(cat.metric)}</p>${stale(its) ? '<p class="notice">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>'
+        : cat.coverage != null && cat.coverage < 0.5 ? `<p class="notice">Vain ${Math.round(cat.coverage * 20)}/20 tämän hetken kärkimallista on ajanut tämän testin – osa uusimmista malleista puuttuu listalta.</p>` : ''}
       <p class="tip">${esc(meta.tip)}</p>
     </article>`;
   }
@@ -261,15 +237,6 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
     render();
     const cur = $(`#filters button[data-f="${filter}"]`);
     if (cur) cur.focus();
-  });
-
-  $('#content').addEventListener('change', e => {
-    const sel = e.target.closest('select[data-sub]');
-    if (!sel) return;
-    subPick[sel.dataset.sub] = sel.value;
-    render();
-    const again = $(`select[data-sub="${sel.dataset.sub}"]`);
-    if (again) again.focus();
   });
 
   fetch('/data/ai-models.json', {cache:'no-cache'})
