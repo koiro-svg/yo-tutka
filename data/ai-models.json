@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-27T17:20Z",
+ "updated": "2026-09-27T17:21Z",
  "source": "https://artificialanalysis.ai/",
  "errors": [],
  "categories": {
@@ -86,7 +86,8 @@
      "speed": 0,
      "intelligence": 47
     }
-   ]
+   ],
+   "coverage": 1.0
   },
   "koodaus": {
    "metric": "Coding Index",
@@ -171,11 +172,8 @@
      "speed": 242.08,
      "intelligence": 45.1
     }
-   ]
-  },
-  "matikka": {
-   "metric": "Math Index",
-   "items": []
+   ],
+   "coverage": 0.75
   },
   "automaatio": {
    "metric": "Agenttitestit: Terminal-Bench 2.1",
@@ -260,7 +258,8 @@
      "speed": 303.49,
      "intelligence": 40.9
     }
-   ]
+   ],
+   "coverage": 0.75
   },
   "hinta-laatu": {
    "metric": "$ / 1M tokenia (vähintään 80 % kärjen älykkyydestä)",
@@ -489,776 +488,7 @@
      "released": "2025-12",
      "variant": "high"
     }
-   ],
-   "subcategories": {
-    "Anime": [
-     {
-      "name": "Nano Banana 2 Lite",
-      "creator": "Google",
-      "score": 1171,
-      "released": "2026-06",
-      "variant": "Gemini 3.1 Flash Lite Image"
-     },
-     {
-      "name": "Nano Banana 2",
-      "creator": "Google",
-      "score": 1165,
-      "released": "2026-02",
-      "variant": "Gemini 3.1 Flash Image"
-     },
-     {
-      "name": "GPT Image 2",
-      "creator": "OpenAI",
-      "score": 1144,
-      "released": "2026-04",
-      "variant": "high"
-     },
-     {
-      "name": "Nano Banana Pro",
-      "creator": "Google",
-      "score": 1120,
-      "released": "2025-11",
-      "variant": "Gemini 3 Pro Image"
-     },
-     {
-      "name": "GPT Image 1.5",
-      "creator": "OpenAI",
-      "score": 1118,
-      "released": "2025-12",
-      "variant": "high"
-     },
-     {
-      "name": "Seedream 5.0 Pro",
-      "creator": "ByteDance Seed",
-      "score": 1112,
-      "released": "2026-07"
-     },
-     {
-      "name": "HiDream-O1-Image-1.5",
-      "creator": "HiDream",
-      "score": 1095,
-      "released": "2026-06"
-     },
-     {
-      "name": "Qwen Image",
-      "creator": "Alibaba",
-      "score": 1061,
-      "released": "2025-08"
-     }
-    ],
-    "Cartoon & Illustration": [
-     {
-      "name": "Vidu Q2",
-      "creator": "Vidu",
-      "score": 1533,
-      "released": "2025-11"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1521,
-      "released": "2025-11"
-     },
-     {
-      "name": "Eigen Image",
-      "creator": "Eigen AI",
-      "score": 1494,
-      "released": "2026-01"
-     },
-     {
-      "name": "HunyuanImage 2.1",
-      "creator": "Tencent",
-      "score": 1483,
-      "released": "2025-09"
-     },
-     {
-      "name": "FLUX1.1 [pro]",
-      "creator": "Black Forest Labs",
-      "score": 1462,
-      "released": "2024-10"
-     },
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1461,
-      "released": "2025-04"
-     },
-     {
-      "name": "Imagen 3",
-      "creator": "Google",
-      "score": 1457,
-      "released": "2024-12",
-      "variant": "v002"
-     },
-     {
-      "name": "Lucid Origin Ultra",
-      "creator": "Leonardo.Ai",
-      "score": 1454,
-      "released": "2025-08"
-     }
-    ],
-    "Commercial": [
-     {
-      "name": "Wan 2.5 Preview",
-      "creator": "Alibaba",
-      "score": 1518,
-      "released": "2025-09"
-     },
-     {
-      "name": "Imagen 4 Ultra",
-      "creator": "Google",
-      "score": 1509,
-      "released": "2025-06"
-     },
-     {
-      "name": "HunyuanImage 2.1",
-      "creator": "Tencent",
-      "score": 1483,
-      "released": "2025-09"
-     },
-     {
-      "name": "Qwen Image 2.0",
-      "creator": "Alibaba",
-      "score": 1459,
-      "released": "2026-03",
-      "variant": "2026-03-03"
-     },
-     {
-      "name": "Vivago 2.1",
-      "creator": "HiDream",
-      "score": 1459,
-      "released": "2025-10"
-     },
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1450,
-      "released": "2025-04"
-     },
-     {
-      "name": "MAI-Image-2",
-      "creator": "Microsoft AI",
-      "score": 1449,
-      "released": "2026-03"
-     },
-     {
-      "name": "Kolors 2.1",
-      "creator": "KlingAI",
-      "score": 1449,
-      "released": "2025-07"
-     }
-    ],
-    "Fantasy & Mythical": [
-     {
-      "name": "Nano Banana 2",
-      "creator": "Google",
-      "score": 1191,
-      "released": "2026-02",
-      "variant": "Gemini 3.1 Flash Image"
-     },
-     {
-      "name": "GPT Image 2",
-      "creator": "OpenAI",
-      "score": 1169,
-      "released": "2026-04",
-      "variant": "high"
-     },
-     {
-      "name": "MAI-Image-2.5-Pro",
-      "creator": "Microsoft AI",
-      "score": 1164,
-      "released": "2026-07"
-     },
-     {
-      "name": "HiDream-O1-Image-1.5",
-      "creator": "HiDream",
-      "score": 1124,
-      "released": "2026-06"
-     },
-     {
-      "name": "Nano Banana Pro",
-      "creator": "Google",
-      "score": 1101,
-      "released": "2025-11",
-      "variant": "Gemini 3 Pro Image"
-     },
-     {
-      "name": "GPT Image 1.5",
-      "creator": "OpenAI",
-      "score": 1092,
-      "released": "2025-12",
-      "variant": "high"
-     },
-     {
-      "name": "Nano Banana 2 Lite",
-      "creator": "Google",
-      "score": 1090,
-      "released": "2026-06",
-      "variant": "Gemini 3.1 Flash Lite Image"
-     },
-     {
-      "name": "MAI-Image-2.5",
-      "creator": "Microsoft AI",
-      "score": 1089,
-      "released": "2026-06"
-     }
-    ],
-    "Futuristic & Sci-Fi": [
-     {
-      "name": "Nano Banana 2",
-      "creator": "Google",
-      "score": 1593,
-      "released": "2026-02",
-      "variant": "Gemini 3.1 Flash Image"
-     },
-     {
-      "name": "MAI-Image-2.5-Pro",
-      "creator": "Microsoft AI",
-      "score": 1577,
-      "released": "2026-07"
-     },
-     {
-      "name": "Seedream 5.0 Pro",
-      "creator": "ByteDance Seed",
-      "score": 1564,
-      "released": "2026-07"
-     },
-     {
-      "name": "HiDream-O1-Image-1.5",
-      "creator": "HiDream",
-      "score": 1541,
-      "released": "2026-06"
-     },
-     {
-      "name": "Qwen Image Max 2512",
-      "creator": "Alibaba",
-      "score": 1532,
-      "released": "2025-12"
-     },
-     {
-      "name": "Krea 2 Large",
-      "creator": "Krea",
-      "score": 1501,
-      "released": "2026-05"
-     },
-     {
-      "name": "MAI-Image-2-Efficient",
-      "creator": "Microsoft AI",
-      "score": 1487,
-      "released": "2026-04"
-     },
-     {
-      "name": "Vivago 2.1",
-      "creator": "HiDream",
-      "score": 1478,
-      "released": "2025-10"
-     }
-    ],
-    "General & Photorealistic": [
-     {
-      "name": "MAI-Image-2-Efficient",
-      "creator": "Microsoft AI",
-      "score": 1465,
-      "released": "2026-04"
-     },
-     {
-      "name": "MAI-Image-2",
-      "creator": "Microsoft AI",
-      "score": 1438,
-      "released": "2026-03"
-     },
-     {
-      "name": "Qwen Image Max 2512",
-      "creator": "Alibaba",
-      "score": 1432,
-      "released": "2025-12"
-     },
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1432,
-      "released": "2025-04"
-     },
-     {
-      "name": "Imagen 4 Ultra",
-      "creator": "Google",
-      "score": 1411,
-      "released": "2025-06"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1397,
-      "released": "2025-11"
-     },
-     {
-      "name": "Kolors 2.1",
-      "creator": "KlingAI",
-      "score": 1392,
-      "released": "2025-07"
-     },
-     {
-      "name": "Imagen 3",
-      "creator": "Google",
-      "score": 1378,
-      "released": "2024-12",
-      "variant": "v002"
-     }
-    ],
-    "Graphic Design & Digital Rendering": [
-     {
-      "name": "Imagen 4 Ultra",
-      "creator": "Google",
-      "score": 1410,
-      "released": "2025-06"
-     },
-     {
-      "name": "MAI-Image-2-Efficient",
-      "creator": "Microsoft AI",
-      "score": 1409,
-      "released": "2026-04"
-     },
-     {
-      "name": "MAI-Image-2",
-      "creator": "Microsoft AI",
-      "score": 1398,
-      "released": "2026-03"
-     },
-     {
-      "name": "Qwen Image Max 2512",
-      "creator": "Alibaba",
-      "score": 1397,
-      "released": "2025-12"
-     },
-     {
-      "name": "Kolors 2.1",
-      "creator": "KlingAI",
-      "score": 1384,
-      "released": "2025-07"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1379,
-      "released": "2025-11"
-     },
-     {
-      "name": "Vivago 2.1",
-      "creator": "HiDream",
-      "score": 1378,
-      "released": "2025-10"
-     },
-     {
-      "name": "Qwen Image Plus 2601",
-      "creator": "Alibaba",
-      "score": 1369,
-      "released": "2026-01"
-     }
-    ],
-    "Nature & Landscapes": [
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1318,
-      "released": "2025-04"
-     },
-     {
-      "name": "Wan 2.5 Preview",
-      "creator": "Alibaba",
-      "score": 1316,
-      "released": "2025-09"
-     },
-     {
-      "name": "MAI Image 1",
-      "creator": "Microsoft AI",
-      "score": 1276,
-      "released": "2025-11"
-     },
-     {
-      "name": "FLUX.1 Kontext [pro]",
-      "creator": "Black Forest Labs",
-      "score": 1273,
-      "released": "2025-05"
-     },
-     {
-      "name": "Dreamina 3.1",
-      "creator": "Bytedance",
-      "score": 1267,
-      "released": "2025-08"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1266,
-      "released": "2025-11"
-     },
-     {
-      "name": "Imagen 3",
-      "creator": "Google",
-      "score": 1260,
-      "released": "2024-12",
-      "variant": "v002"
-     },
-     {
-      "name": "Recraft V3",
-      "creator": "Recraft",
-      "score": 1260,
-      "released": "2024-10"
-     }
-    ],
-    "People: Groups & Activities": [
-     {
-      "name": "grok-imagine-image-quality",
-      "creator": "SpaceXAI",
-      "score": 1688,
-      "released": "2026-05"
-     },
-     {
-      "name": "Vidu Q2",
-      "creator": "Vidu",
-      "score": 1600,
-      "released": "2025-11"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1590,
-      "released": "2025-11"
-     },
-     {
-      "name": "Ming-Image-0.1-Design",
-      "creator": "InclusionAI",
-      "score": 1588,
-      "released": "2026-09"
-     },
-     {
-      "name": "MAI-Image-2.5",
-      "creator": "Microsoft AI",
-      "score": 1583,
-      "released": "2026-06"
-     },
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1574,
-      "released": "2025-04"
-     },
-     {
-      "name": "Vivago 2.0",
-      "creator": "HiDream",
-      "score": 1549,
-      "released": "2025-06"
-     },
-     {
-      "name": "Eigen Image",
-      "creator": "Eigen AI",
-      "score": 1545,
-      "released": "2026-01"
-     }
-    ],
-    "People: Portraits": [
-     {
-      "name": "Imagen 4 Ultra",
-      "creator": "Google",
-      "score": 1514,
-      "released": "2025-06"
-     },
-     {
-      "name": "Vidu Q2",
-      "creator": "Vidu",
-      "score": 1503,
-      "released": "2025-11"
-     },
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1494,
-      "released": "2025-04"
-     },
-     {
-      "name": "HiDream-O1-Image-Dev",
-      "creator": "HiDream",
-      "score": 1478,
-      "released": "2026-05"
-     },
-     {
-      "name": "Qwen Image Max 2512",
-      "creator": "Alibaba",
-      "score": 1475,
-      "released": "2025-12"
-     },
-     {
-      "name": "Wan 2.5 Preview",
-      "creator": "Alibaba",
-      "score": 1469,
-      "released": "2025-09"
-     },
-     {
-      "name": "Imagen 4 Standard",
-      "creator": "Google",
-      "score": 1465,
-      "released": "2025-06"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1443,
-      "released": "2025-11"
-     }
-    ],
-    "Physical Spaces": [
-     {
-      "name": "grok-imagine-image-quality",
-      "creator": "SpaceXAI",
-      "score": 1428,
-      "released": "2026-05"
-     },
-     {
-      "name": "Krea 2 Medium",
-      "creator": "Krea",
-      "score": 1390,
-      "released": "2026-05"
-     },
-     {
-      "name": "MAI-Image-2",
-      "creator": "Microsoft AI",
-      "score": 1378,
-      "released": "2026-03"
-     },
-     {
-      "name": "Kolors 2.1",
-      "creator": "KlingAI",
-      "score": 1355,
-      "released": "2025-07"
-     },
-     {
-      "name": "Qwen Image Max 2512",
-      "creator": "Alibaba",
-      "score": 1352,
-      "released": "2025-12"
-     },
-     {
-      "name": "Seedream 3.0",
-      "creator": "ByteDance Seed",
-      "score": 1347,
-      "released": "2025-04"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1347,
-      "released": "2025-11"
-     },
-     {
-      "name": "Imagen 4 Ultra",
-      "creator": "Google",
-      "score": 1344,
-      "released": "2025-06"
-     }
-    ],
-    "Text & Typography": [
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1430,
-      "released": "2025-11"
-     },
-     {
-      "name": "Imagen 3",
-      "creator": "Google",
-      "score": 1412,
-      "released": "2024-12",
-      "variant": "v002"
-     },
-     {
-      "name": "Recraft V3",
-      "creator": "Recraft",
-      "score": 1354,
-      "released": "2024-10"
-     },
-     {
-      "name": "Ideogram v2",
-      "creator": "Ideogram",
-      "score": 1353,
-      "released": "2024-08"
-     },
-     {
-      "name": "Vidu Q2",
-      "creator": "Vidu",
-      "score": 1337,
-      "released": "2025-11"
-     },
-     {
-      "name": "Luma Photon",
-      "creator": "Luma Labs",
-      "score": 1328,
-      "released": "2024-12"
-     },
-     {
-      "name": "Ideogram v2 Turbo",
-      "creator": "Ideogram",
-      "score": 1315,
-      "released": "2024-08"
-     },
-     {
-      "name": "FLUX.1 [pro]",
-      "creator": "Black Forest Labs",
-      "score": 1301,
-      "released": "2024-08"
-     }
-    ],
-    "Traditional Art": [
-     {
-      "name": "Vidu Q2",
-      "creator": "Vidu",
-      "score": 1344,
-      "released": "2025-11"
-     },
-     {
-      "name": "Midjourney v6.1",
-      "creator": "Midjourney",
-      "score": 1255,
-      "released": "2024-07"
-     },
-     {
-      "name": "Midjourney v6",
-      "creator": "Midjourney",
-      "score": 1203,
-      "released": "2023-12"
-     },
-     {
-      "name": "Stable Diffusion 3.5 Large",
-      "creator": "Stability.ai",
-      "score": 1196,
-      "released": "2024-10"
-     },
-     {
-      "name": "Stable Diffusion 3 Large",
-      "creator": "Stability.ai",
-      "score": 1195,
-      "released": "2024-02"
-     },
-     {
-      "name": "Ideogram v2",
-      "creator": "Ideogram",
-      "score": 1186,
-      "released": "2024-08"
-     },
-     {
-      "name": "Recraft V3",
-      "creator": "Recraft",
-      "score": 1180,
-      "released": "2024-10"
-     },
-     {
-      "name": "FLUX1.1 [pro]",
-      "creator": "Black Forest Labs",
-      "score": 1173,
-      "released": "2024-10"
-     }
-    ],
-    "UI/UX Design": [
-     {
-      "name": "Ideogram v2 Turbo",
-      "creator": "Ideogram",
-      "score": 1425,
-      "released": "2024-08"
-     },
-     {
-      "name": "ImagineArt 1.5 Preview",
-      "creator": "ImagineArt",
-      "score": 1404,
-      "released": "2025-11"
-     },
-     {
-      "name": "Luma Photon",
-      "creator": "Luma Labs",
-      "score": 1387,
-      "released": "2024-12"
-     },
-     {
-      "name": "Phoenix 0.9 Ultra",
-      "creator": "Leonardo.Ai",
-      "score": 1383,
-      "released": "2024-06"
-     },
-     {
-      "name": "Vidu Q2",
-      "creator": "Vidu",
-      "score": 1376,
-      "released": "2025-11"
-     },
-     {
-      "name": "FLUX.1 [dev]",
-      "creator": "Black Forest Labs",
-      "score": 1376,
-      "released": "2024-08"
-     },
-     {
-      "name": "Ideogram v2",
-      "creator": "Ideogram",
-      "score": 1373,
-      "released": "2024-08"
-     },
-     {
-      "name": "FLUX.1 [schnell]",
-      "creator": "Black Forest Labs",
-      "score": 1372,
-      "released": "2024-08"
-     }
-    ],
-    "Vintage & Retro": [
-     {
-      "name": "DALLE 3",
-      "creator": "OpenAI",
-      "score": 1299,
-      "released": "2023-09"
-     },
-     {
-      "name": "Stable Diffusion 3 Large",
-      "creator": "Stability.ai",
-      "score": 1297,
-      "released": "2024-02"
-     },
-     {
-      "name": "Midjourney v6",
-      "creator": "Midjourney",
-      "score": 1281,
-      "released": "2023-12"
-     },
-     {
-      "name": "DALLE 3 HD",
-      "creator": "OpenAI",
-      "score": 1272,
-      "released": "2023-09"
-     },
-     {
-      "name": "Stable Diffusion 3 Large Turbo",
-      "creator": "Stability.ai",
-      "score": 1242,
-      "released": "2024-02"
-     },
-     {
-      "name": "Playground v2.5",
-      "creator": "Playground AI",
-      "score": 1232,
-      "released": "2024-02"
-     },
-     {
-      "name": "Amazon Titan G1",
-      "creator": "Amazon",
-      "score": 1216,
-      "released": "2023-11",
-      "variant": "Standard"
-     },
-     {
-      "name": "Stable Diffusion XL 1.0",
-      "creator": "Stability.ai",
-      "score": 1189,
-      "released": "2023-07"
-     }
-    ]
-   }
+   ]
   },
   "kuvanmuokkaus": {
    "metric": "Arena ELO",
@@ -1368,59 +598,7 @@
      "score": 1235,
      "released": "2026-01"
     }
-   ],
-   "subcategories": {
-    "Photorealistic": [
-     {
-      "name": "Veo 3.1",
-      "creator": "Google",
-      "score": 1352,
-      "released": "2026-01"
-     },
-     {
-      "name": "Veo 3",
-      "creator": "Google",
-      "score": 1309,
-      "released": "2025-07"
-     },
-     {
-      "name": "HappyHorse-1.1",
-      "creator": "Alibaba-ATH",
-      "score": 1276,
-      "released": "2026-06"
-     },
-     {
-      "name": "Gemini Omni Flash",
-      "creator": "Google",
-      "score": 1275,
-      "released": "2026-05"
-     },
-     {
-      "name": "HappyHorse-1.0",
-      "creator": "Alibaba-ATH",
-      "score": 1268,
-      "released": "2026-04"
-     },
-     {
-      "name": "MiniMax H3",
-      "creator": "MiniMax",
-      "score": 1255,
-      "released": "2026-07"
-     },
-     {
-      "name": "PixVerse V5.6",
-      "creator": "PixVerse",
-      "score": 1254,
-      "released": "2026-02"
-     },
-     {
-      "name": "Runway Gen-4.5",
-      "creator": "Runway",
-      "score": 1250,
-      "released": "2025-12"
-     }
-    ]
-   }
+   ]
   },
   "kuvasta-video": {
    "metric": "Arena ELO",
@@ -1473,59 +651,7 @@
      "score": 1329,
      "released": "2026-01"
     }
-   ],
-   "subcategories": {
-    "Photorealistic": [
-     {
-      "name": "Gemini Omni Flash",
-      "creator": "Google",
-      "score": 1370,
-      "released": "2026-05"
-     },
-     {
-      "name": "Bach 1.0 Pro",
-      "creator": "Video Rebirth",
-      "score": 1369,
-      "released": "2026-09"
-     },
-     {
-      "name": "Wan 3.0",
-      "creator": "Alibaba",
-      "score": 1362,
-      "released": "2026-08"
-     },
-     {
-      "name": "MiniMax H3",
-      "creator": "MiniMax",
-      "score": 1362,
-      "released": "2026-07"
-     },
-     {
-      "name": "Dreamina Seedance 2.0 720p",
-      "creator": "ByteDance Seed",
-      "score": 1346,
-      "released": "2026-03"
-     },
-     {
-      "name": "PixVerse V6",
-      "creator": "PixVerse",
-      "score": 1344,
-      "released": "2026-03"
-     },
-     {
-      "name": "grok-imagine-video-1.5",
-      "creator": "SpaceXAI",
-      "score": 1330,
-      "released": "2026-05"
-     },
-     {
-      "name": "grok-imagine-video",
-      "creator": "SpaceXAI",
-      "score": 1324,
-      "released": "2026-01"
-     }
-    ]
-   }
+   ]
   },
   "puhe": {
    "metric": "Arena ELO",
@@ -1660,7 +786,8 @@
      "speed": 55.63,
      "intelligence": 41.8
     }
-   ]
+   ],
+   "coverage": 0.75
   },
   "ohjeet": {
    "metric": "IFBench",
@@ -1741,7 +868,8 @@
      "speed": 30.66,
      "intelligence": 26
     }
-   ]
+   ],
+   "coverage": 0.1
   },
   "pitkat-dokumentit": {
    "metric": "Long Context Reasoning (AA-LCR)",
@@ -1824,7 +952,8 @@
      "speed": 0,
      "intelligence": 39.8
     }
-   ]
+   ],
+   "coverage": 1.0
   },
   "tiede": {
    "metric": "GPQA Diamond",
@@ -1908,7 +1037,8 @@
      "speed": 70.55,
      "intelligence": 53.4
     }
-   ]
+   ],
+   "coverage": 0.75
   },
   "vaikeimmat": {
    "metric": "Humanity's Last Exam",
@@ -1992,7 +1122,8 @@
      "speed": 158.24,
      "intelligence": 48.1
     }
-   ]
+   ],
+   "coverage": 1.0
   },
   "budjetti": {
    "metric": "$ / 1M tokenia (vähintään 60 % kärjen älykkyydestä)",
