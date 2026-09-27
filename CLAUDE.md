@@ -28,3 +28,12 @@ työkalua: AI-malliopas (`ai-opas.html`) ja YO-tutka (`yo-tutka.html`). Repo on 
 - Automaatio-kategoria käyttää agenttimittaria vain jos API sen antaa; muuten
   fallback on Intelligence Index ja se kerrotaan mittarin nimessä. Pidä rehellinen.
 - API-avain vain GitHub-secretissä. Repo on julkinen.
+- Samasta mallista tulee API:sta monta versiota ("Claude Opus 5.5 (Adaptive Reasoning, Max
+  Effort…)"). `item()` pilkkoo sulkeiden edestä ja `top()` pitää vain parhaan version –
+  muuten yksi malli täyttää koko listan.
+- Agenttitestit valitaan kärkimallien (top 20 älykkyydellä) kattavuuden mukaan ja kaikilta
+  vaaditaan samat testit. Älä keskiarvoista eri testijoukkoja eri malleille (ei vertailukelpoista),
+  äläkä valitse testejä koko mallijoukon mukaan (uusimmat mallit putoavat pois).
+- AA:n Math Index jäi päivittymättä joulukuussa 2025. `stale()` ai-opas.html:ssä näyttää
+  varoituksen, jos listan uusin malli on yli 180 päivää vanha.
+- `data/`-kansio syntyy vasta ensimmäisestä ajosta; skripti luo sen itse (`mkdir`).
