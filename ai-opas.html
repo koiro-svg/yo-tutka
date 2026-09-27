@@ -90,6 +90,7 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 .metric{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 .tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
 .empty{color:var(--ink-3);font-size:14px}
+.card select{margin-top:6px;width:100%;font:inherit;font-size:14px;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:7px 8px}
 .notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px;font-size:13px}
 </style>
 </head>
@@ -116,6 +117,7 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 (function(){
   const GROUPS = [
     {id:'teksti', name:'Teksti, koodi & agentit'},
+    {id:'hinta', name:'Hinta & nopeus'},
     {id:'kuva', name:'Kuvat'},
     {id:'video', name:'Video'},
     {id:'aani', name:'Ääni'},
@@ -129,12 +131,28 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
      tip:'Kärjen erot ovat pieniä – valitse se, jonka tyyli miellyttää ja jolla on tarvitsemasi työkalut (haku, tiedostot).'},
     {id:'matikka', group:'teksti', title:'Matematiikka & päättely', use:'Laskut, todistukset, data-analyysi, monivaiheinen ongelmanratkaisu.',
      tip:'Käytä “reasoning/thinking”-tilaa – se on hitaampi mutta selvästi tarkempi.'},
-    {id:'hinta-laatu', group:'teksti', title:'Paras hinta-laatu', use:'Isot volyymit: luokittelu, tiivistäminen, massa-automaatio.',
+    {id:'asiakaspalvelu', group:'teksti', title:'Asiakaspalvelubotit', use:'Chat- ja puhelinbotit, jotka hoitavat asiakkaan asian järjestelmien kautta (varaukset, laskut, tuki).',
+     tip:'Testit simuloivat oikeaa asiakasta ja yrityksen sääntöjä – hyvä mittari kaikille botteille, jotka tekevät muutoksia asiakkaan puolesta.'},
+    {id:'ohjeet', group:'teksti', title:'Ohjeiden tarkka noudattaminen', use:'Tarkat muotovaatimukset: JSON, pituusrajat, tietty rakenne – tärkeää automaatioissa.',
+     tip:'Jos automaatio hajoaa, koska malli ei noudata muotoa, valitse tältä listalta.'},
+    {id:'pitkat-dokumentit', group:'teksti', title:'Pitkät dokumentit', use:'Satojen sivujen sopimukset, raportit ja aineistot: päättely koko tekstin yli.',
+     tip:'Mittaa ymmärrystä, ei pelkkää hakua – antaa hyvän kuvan siitä, kuka oikeasti lukee koko dokumentin.'},
+    {id:'tiede', group:'teksti', title:'Tiede & asiantuntijatieto', use:'Biologia, fysiikka, kemia tohtoritasolla – vaikea faktatieto ja päättely.',
+     tip:'Hyvä valinta opiskeluun ja faktojen tarkistamiseen, mutta tarkista silti lähteet.'},
+    {id:'vaikeimmat', group:'teksti', title:'Vaikeimmat kysymykset', use:'Humanity’s Last Exam: tuhansia asiantuntijoiden laatimia kysymyksiä, joihin netistä ei löydy vastausta.',
+     tip:'Kertoo, kuka pärjää aidosti uusissa ongelmissa – pisteet ovat vielä kaikilla matalia.'},
+    {id:'hinta-laatu', group:'hinta', title:'Paras hinta-laatu', use:'Isot volyymit: luokittelu, tiivistäminen, massa-automaatio.',
      tip:'Halvimmat mallit, jotka ovat silti lähellä kärkeä. Hinta = sekahinta ($ / miljoona tokenia, 3:1 syöte:tuotos).'},
-    {id:'nopeus', group:'teksti', title:'Nopein', use:'Chatbotit, asiakaspalvelu, reaaliaikaiset sovellukset.',
+    {id:'budjetti', group:'hinta', title:'Halvin kelvollinen', use:'Yksinkertaiset massatehtävät: luokittelu, poiminta, käännökset, tiivistelmät.',
+     tip:'Vähintään 60 % kärjen älykkyydestä. Testaa ensin pienellä erällä – halvin ei aina riitä.'},
+    {id:'viive', group:'hinta', title:'Pienin viive', use:'Puhebotit ja käyttöliittymät, joissa vastauksen pitää alkaa heti.',
+     tip:'Aika ensimmäiseen vastaussanaan (sisältää mahdollisen “ajatteluajan”). Vähintään 60 % kärjen älykkyydestä.'},
+    {id:'nopeus', group:'hinta', title:'Nopein', use:'Chatbotit, asiakaspalvelu, reaaliaikaiset sovellukset.',
      tip:'Nopeus mitattuna API:sta; mukana vain mallit, jotka ovat vähintään 70 % kärjen älykkyydestä.'},
     {id:'kuva', group:'kuva', title:'Kuvagenerointi', use:'Kuvat tekstistä: mainokset, somekuvat, thumbnailit, tuotekuvat.',
      tip:'Tekstiä sisältäviin kuviin (logot, julisteet) testaa kärkikolmikkoa – tekstin laatu vaihtelee eniten.'},
+    {id:'kuva-tyyli', data:'kuva', sub:true, group:'kuva', title:'Kuva tyylin ja aiheen mukaan', use:'Paras kuvamalli juuri sinun kuvatyyppiisi – valitse listasta.',
+     tip:'Sokkovertailut on jaettu tyyleihin ja aiheisiin. Pienissä kategorioissa vertailuja on vähemmän, joten erot ovat epävarmempia.'},
     {id:'kuvanmuokkaus', group:'kuva', title:'Kuvanmuokkaus', use:'Olemassa olevan kuvan muokkaus ohjeilla: tausta, tyyli, objektit.',
      tip:'Hyvä tuotekuviin ja UGC-materiaalin varioimiseen.'},
     {id:'video', group:'video', title:'Videogenerointi', use:'Video tekstistä: mainokset, somevideot, b-roll.',
@@ -150,7 +168,8 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 
   function fmt(v, cat){
     if (v == null) return '';
-    if (cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
+    if (cat.unit === 's') return v.toFixed(2).replace('.', ',') + ' s';
+    if (cat.unit === '$' || cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
     return Math.round(v).toLocaleString('fi-FI');
   }
   function isNew(d){
@@ -164,13 +183,33 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
   }
   function sub(it, cat){
     const bits = [esc(it.creator)];
-    if (cat.lowerIsBetter && it.intelligence != null) bits.push('älykkyys ' + Math.round(it.intelligence));
+    if (cat.lowerIsBetter && it.intelligence != null && cat.unit !== 's') bits.push('älykkyys ' + Math.round(it.intelligence));
     else if (!cat.lowerIsBetter && it.price) bits.push('$' + it.price.toFixed(2) + ' / 1M');
     return bits.filter(Boolean).join(' · ');
   }
 
+  const SUBNAMES = {
+    'Anime':'Anime', 'Cartoon & Illustration':'Piirretty & kuvitus', 'General & Photorealistic':'Fotorealistinen',
+    'Graphic Design & Digital Rendering':'Graafinen suunnittelu & 3D', 'Traditional Art':'Perinteinen taide',
+    'Vintage & Retro':'Vintage & retro', 'Commercial':'Mainos- & tuotekuvat', 'Fantasy & Mythical':'Fantasia',
+    'Futuristic & Sci-Fi':'Scifi', 'Nature & Landscapes':'Luonto & maisemat', 'People: Groups & Activities':'Ihmiset: ryhmät & toiminta',
+    'People: Portraits':'Ihmiset: muotokuvat', 'Physical Spaces':'Tilat & arkkitehtuuri', 'Text & Typography':'Teksti & typografia (logot, julisteet)',
+    'UI/UX Design':'Käyttöliittymät (UI/UX)', 'Photorealistic':'Fotorealistinen',
+  };
+  const subPick = {};
   function card(meta){
-    const cat = data.categories[meta.id] || {items:[]};
+    let cat = data.categories[meta.data || meta.id] || {items:[]};
+    let picker = '';
+    if (meta.sub) {
+      const subs = cat.subcategories || {};
+      const keys = Object.keys(subs).sort((a, b) => (SUBNAMES[a] || a).localeCompare(SUBNAMES[b] || b, 'fi'));
+      if (!keys.length) cat = {items:[]};
+      else {
+        const pick = keys.includes(subPick[meta.id]) ? subPick[meta.id] : (keys.includes('Commercial') ? 'Commercial' : keys[0]);
+        picker = `<select data-sub="${meta.id}" aria-label="Kuvatyyppi">${keys.map(k => `<option value="${esc(k)}"${k === pick ? ' selected' : ''}>${esc(SUBNAMES[k] || k)}</option>`).join('')}</select>`;
+        cat = {metric: cat.metric + ' · ' + (SUBNAMES[pick] || pick), items: subs[pick]};
+      }
+    }
     const its = cat.items || [];
     if (!its.length) return `<article class="card"><header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header><p class="empty">Ei dataa vielä.</p></article>`;
     const w = its[0];
@@ -185,7 +224,7 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
       <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(it.released) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>
       <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
     return `<article class="card">
-      <header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header>
+      <header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p>${picker}</header>
       <div class="winner" title="${esc(w.variant || '')}">
         <span class="label">Paras nyt</span>
         <span class="name">${esc(w.name)}${isNew(w.released) ? '<span class="new">UUSI</span>' : ''}</span>
@@ -222,6 +261,15 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
     render();
     const cur = $(`#filters button[data-f="${filter}"]`);
     if (cur) cur.focus();
+  });
+
+  $('#content').addEventListener('change', e => {
+    const sel = e.target.closest('select[data-sub]');
+    if (!sel) return;
+    subPick[sel.dataset.sub] = sel.value;
+    render();
+    const again = $(`select[data-sub="${sel.dataset.sub}"]`);
+    if (again) again.focus();
   });
 
   fetch('/data/ai-models.json', {cache:'no-cache'})
