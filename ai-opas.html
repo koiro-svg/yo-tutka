@@ -90,7 +90,7 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 .metric{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 .tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
 .empty{color:var(--ink-3);font-size:14px}
-.notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px}
+.notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px;font-size:13px}
 </style>
 </head>
 <body>
@@ -158,6 +158,10 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
     const t = Date.parse(d);
     return !isNaN(t) && Date.now() - t < 45 * 864e5;
   }
+  function stale(its){
+    const newest = Math.max(...its.map(i => Date.parse(i.released)).filter(t => !isNaN(t)));
+    return isFinite(newest) && Date.parse(data.updated) - newest > 180 * 864e5;
+  }
   function sub(it, cat){
     const bits = [esc(it.creator)];
     if (cat.lowerIsBetter && it.intelligence != null) bits.push('älykkyys ' + Math.round(it.intelligence));
@@ -188,7 +192,7 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
         <span class="sub">${sub(w, cat)} · ${fmt(w.score, cat)}</span>
       </div>
       <ol class="rank">${rest}</ol>
-      <p class="metric">Mittari: ${esc(cat.metric)}</p>
+      <p class="metric">Mittari: ${esc(cat.metric)}</p>${stale(its) ? '<p class="notice">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>' : ''}
       <p class="tip">${esc(meta.tip)}</p>
     </article>`;
   }
