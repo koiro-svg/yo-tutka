@@ -72,7 +72,6 @@ def top(items, n=TOP_N):
 BENCH = {
     "yleis": ("Intelligence Index", ["artificial_analysis_intelligence_index"]),
     "koodaus": ("Coding Index", ["artificial_analysis_coding_index"]),
-    "matikka": ("Math Index", ["artificial_analysis_math_index"]),
     "automaatio": ("Agenttitestit", ["terminalbench_v2_1", "terminalbench_hard"]),
     "asiakaspalvelu": ("Asiakaspalveluagentit", ["tau2", "tau_banking"]),
     "ohjeet": ("IFBench", ["ifbench"]),
@@ -84,16 +83,18 @@ BENCH = {
 
 def shared_keys(rows, candidates, frontier=20):
     """Of the candidate keys, those that >= 80 % of the top models (by intelligence) have.
-    Measured on the top models so new releases aren't excluded by a retired test."""
+    Measured on the top models so new releases aren't excluded by a retired test.
+    Returns (keys, coverage) where coverage = share of top models scored on all keys."""
     def ev(m):
         return m.get("evaluations") or {}
     ranked = sorted((m for m in rows if num(ev(m).get("artificial_analysis_intelligence_index")) is not None),
                     key=lambda m: -ev(m)["artificial_analysis_intelligence_index"])[:frontier]
     counts = {k: sum(num(ev(m).get(k)) is not None for m in ranked) for k in candidates}
     if not ranked or not any(counts.values()):
-        return []
-    keys = [k for k in candidates if counts[k] >= 0.8 * len(ranked)]
-    return keys or [max(counts, key=counts.get)]
+        return [], 0
+    keys = [k for k in candidates if counts[k] >= 0.8 * len(ranked)] or [max(counts, key=counts.get)]
+    covered = sum(all(num(ev(m).get(k)) is not None for k in keys) for m in ranked)
+    return keys, round(covered / len(ranked), 2)
 
 
 def pct(v):
@@ -111,7 +112,7 @@ def llm_categories(rows):
                          num(m.get("median_output_tokens_per_second"))))
 
     for cid, (label, candidates) in BENCH.items():
-        keys = shared_keys(rows, candidates)
+        keys, coverage = shared_keys(rows, candidates)
         its = []
         for m, ev, intel, price, speed in enriched:
             vals = [num(ev.get(k)) for k in keys]
@@ -120,7 +121,7 @@ def llm_categories(rows):
         its.sort(key=lambda x: -x["score"])
         if len(candidates) > 1:
             label += ": " + " + ".join(PRETTY.get(k, k) for k in keys)
-        cats[cid] = {"metric": label, "items": top(its)}
+        cats[cid] = {"metric": label, "items": top(its), "coverage": coverage}
 
     best = max((i for _, _, i, _, _ in enriched if i is not None), default=0)
 
@@ -152,20 +153,11 @@ def llm_categories(rows):
 
 
 def media_category(rows):
+    # Style/subject breakdowns (include_categories=true) are left out on purpose: the
+    # current top models have no category data, so sub-lists would crown old models.
     its = [item(m, num(m.get("elo"))) for m in rows if num(m.get("elo")) is not None]
     its.sort(key=lambda x: -x["score"])
-    cat = {"metric": "Arena ELO", "items": top(its)}
-    # Per style/subject breakdowns (include_categories=true), e.g. "Text & Typography".
-    sub = {}
-    for m in rows:
-        for c in m.get("categories") or []:
-            elo = num(c.get("elo"))
-            label = next((v for k, v in c.items() if k.endswith("_category") and v), None)
-            if elo is not None and label:
-                sub.setdefault(label, []).append(item(m, elo))
-    if sub:
-        cat["subcategories"] = {k: top(sorted(v, key=lambda x: -x["score"])) for k, v in sorted(sub.items())}
-    return cat
+    return {"metric": "Arena ELO", "items": top(its)}
 
 
 def inspect(key):
@@ -192,13 +184,9 @@ def inspect(key):
                 cats[label] = cats.get(label, 0) + 1
         for label, c in sorted(cats.items()):
             print(f"    {label}: {c}")
-        for m in sorted(rows, key=lambda m: -(num(m.get("elo")) or 0))[:6]:
-            cs = m.get("categories") or []
-            apps = sorted(num(c.get("appearances")) or 0 for c in cs)
-            print(f"    TOP {m.get('name')} rel={m.get('release_date')} app={m.get('appearances')} cats={len(cs)} "
-                  f"cat_app_min={apps[:1]} median={apps[len(apps)//2:len(apps)//2+1]} sample={cs[:1]}")
-    all_apps = sorted(num(c.get("appearances")) or 0 for m in fetch("media/text-to-image?include_categories=true", key) for c in m.get("categories") or [])
-    print("kuva cat appearances quantiles:", [all_apps[int(q * (len(all_apps) - 1))] for q in (0, .1, .25, .5, .75, .9, 1)])
+
+
+KNOWN = set(BENCH) | set(MEDIA) | {"hinta-laatu", "budjetti", "nopeus", "viive"}
 
 
 def main():
@@ -208,7 +196,7 @@ def main():
     if "--inspect" in sys.argv:
         return inspect(key)
     prev = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
-    cats = dict(prev.get("categories", {}))
+    cats = {k: v for k, v in prev.get("categories", {}).items() if k in KNOWN}
     errors = []
 
     try:
@@ -217,7 +205,7 @@ def main():
         errors.append(f"llms: {e}")
     for cid, path in MEDIA.items():
         try:
-            cats[cid] = media_category(fetch(path + "?include_categories=true", key))
+            cats[cid] = media_category(fetch(path, key))
         except Exception as e:
             errors.append(f"{cid}: {e}")
 
