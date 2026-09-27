@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-27T17:12Z",
+ "updated": "2026-09-27T17:13Z",
  "source": "https://artificialanalysis.ai/",
  "errors": [],
  "categories": {
@@ -258,52 +258,72 @@
    ]
   },
   "automaatio": {
-   "metric": "Agenttitestit: τ²-Bench + Terminal-Bench Hard + Terminal-Bench 2.1",
+   "metric": "Agenttitestit: Terminal-Bench 2.1",
    "items": [
     {
-     "name": "Claude Fable 5",
+     "name": "Claude Fable 5.1",
      "creator": "Anthropic",
-     "score": 82.02,
-     "released": "2026-06-09",
-     "variant": "Adaptive Reasoning, Max Effort, Opus 4.8 Fallback",
+     "score": 91.39,
+     "released": "2026-09-01",
+     "variant": "Adaptive Reasoning, Max Effort, Default Fallback",
      "price": 20,
-     "speed": 0,
-     "intelligence": 49.6
+     "speed": 70.55,
+     "intelligence": 53.4
+    },
+    {
+     "name": "GPT-6 Astra",
+     "creator": "OpenAI",
+     "score": 89.89,
+     "released": "2026-09-03",
+     "variant": "high",
+     "price": 20,
+     "speed": 58.09,
+     "intelligence": 50.9
     },
     {
      "name": "GPT-5.6 Sol",
      "creator": "OpenAI",
-     "score": 79.67,
+     "score": 89.51,
      "released": "2026-07-09",
-     "variant": "max",
+     "variant": "xhigh",
      "price": 8,
      "speed": 0,
-     "intelligence": 47
+     "intelligence": 44
     },
     {
-     "name": "GPT-5.5",
-     "creator": "OpenAI",
-     "score": 79.58,
-     "released": "2026-04-23",
-     "variant": "xhigh",
-     "price": 11.25,
-     "speed": 0,
-     "intelligence": 38.4
-    },
-    {
-     "name": "Claude Opus 4.8",
+     "name": "Claude Opus 5",
      "creator": "Anthropic",
-     "score": 79.14,
-     "released": "2026-05-28",
+     "score": 89.14,
+     "released": "2026-07-24",
      "variant": "Adaptive Reasoning, Max Effort",
      "price": 10,
      "speed": 0,
-     "intelligence": 41.8
+     "intelligence": 50.8
+    },
+    {
+     "name": "Qwen3.8 Max",
+     "creator": "Alibaba",
+     "score": 88.76,
+     "released": "2026-09-02",
+     "variant": "0902",
+     "price": 3,
+     "speed": 37.49,
+     "intelligence": 45.4
+    },
+    {
+     "name": "Grok 4.6",
+     "creator": "SpaceXAI",
+     "score": 88.39,
+     "released": "2026-08-12",
+     "variant": "high",
+     "price": 3,
+     "speed": 81.02,
+     "intelligence": 44.3
     },
     {
      "name": "GPT-5.6 Terra",
      "creator": "OpenAI",
-     "score": 77.28,
+     "score": 88.01,
      "released": "2026-07-09",
      "variant": "max",
      "price": 4.5,
@@ -311,33 +331,14 @@
      "intelligence": 42.1
     },
     {
-     "name": "GLM-5.2",
-     "creator": "Z AI",
-     "score": 75.93,
-     "released": "2026-06-16",
-     "variant": "max",
-     "price": 2.15,
-     "speed": 0,
-     "intelligence": 33.7
-    },
-    {
-     "name": "Claude Opus 4.7",
-     "creator": "Anthropic",
-     "score": 74.42,
-     "released": "2026-04-16",
-     "variant": "Adaptive Reasoning, Max Effort",
-     "price": 10,
-     "speed": 0,
-     "intelligence": 40.7
-    },
-    {
-     "name": "Gemini 3.1 Pro Preview",
+     "name": "Gemini 3.8 Flash",
      "creator": "Google",
-     "score": 74.39,
-     "released": "2026-02-19",
-     "price": 4.5,
-     "speed": 134.76,
-     "intelligence": 29.7
+     "score": 87.64,
+     "released": "2026-09-02",
+     "variant": "high",
+     "price": 1.5,
+     "speed": 303.49,
+     "intelligence": 40.9
     }
    ]
   },
