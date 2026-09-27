@@ -25,15 +25,21 @@ työkalua: AI-malliopas (`ai-opas.html`) ja YO-tutka (`yo-tutka.html`). Repo on 
   (linkki artificialanalysis.ai) – älä poista sitä ai-opas.html:n footerista.
 - `update_models.py` säilyttää epäonnistuneen kategorian vanhan datan; älä muuta
   sitä kirjoittamaan tyhjää listaa virheen sattuessa.
-- Automaatio-kategoria käyttää agenttimittaria vain jos API sen antaa; muuten
-  fallback on Intelligence Index ja se kerrotaan mittarin nimessä. Pidä rehellinen.
+- Tekstikategoriat ovat `BENCH`-taulussa (update_models.py). Jos testiä ei löydy, lista jää
+  tyhjäksi ("Ei dataa vielä") – älä korvaa sitä toisella mittarilla hiljaa.
+- `coverage` = osuus top 20 -malleista, joilla on testin tulos. Alle 0,5 → sivulla varoitus.
 - API-avain vain GitHub-secretissä. Repo on julkinen.
 - Samasta mallista tulee API:sta monta versiota ("Claude Opus 5.5 (Adaptive Reasoning, Max
   Effort…)"). `item()` pilkkoo sulkeiden edestä ja `top()` pitää vain parhaan version –
   muuten yksi malli täyttää koko listan.
-- Agenttitestit valitaan kärkimallien (top 20 älykkyydellä) kattavuuden mukaan ja kaikilta
+- Monen testin kategorioissa (automaatio, asiakaspalvelu) testit valitaan kärkimallien (top 20 älykkyydellä) kattavuuden mukaan ja kaikilta
   vaaditaan samat testit. Älä keskiarvoista eri testijoukkoja eri malleille (ei vertailukelpoista),
   äläkä valitse testejä koko mallijoukon mukaan (uusimmat mallit putoavat pois).
-- AA:n Math Index jäi päivittymättä joulukuussa 2025. `stale()` ai-opas.html:ssä näyttää
-  varoituksen, jos listan uusin malli on yli 180 päivää vanha.
+- AA:n Math Index jäi päivittymättä joulukuussa 2025 → matematiikka poistettu (27.9.2026).
+  `stale()` ai-opas.html:ssä varoittaa, jos listan uusin malli on yli 180 päivää vanha.
+- Kuva-/videoarenan tyyli- ja aihekategoriat (`include_categories=true`) on jätetty pois
+  tarkoituksella: kärkimalleilla (GPT Image 2.5 ym.) ei ole kategoriadataa, joten alalistat
+  nostivat vanhoja malleja kärkeen. Tarkista `--inspect`-ajolla ennen kuin otat käyttöön.
+- Uusia kenttiä tutkitaan ajamalla workflow `inspect: true` (tulostaa vain kenttien nimet
+  ja kattavuuden lokiin, ei päivitä dataa).
 - `data/`-kansio syntyy vasta ensimmäisestä ajosta; skripti luo sen itse (`mkdir`).
