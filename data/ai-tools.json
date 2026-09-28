@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-09-28T12:00:00Z",
+ "updated": "2026-09-28T15:45:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -220,7 +220,7 @@
      "kind": "automatisoi",
      "bestFor": "Tekoälypainotteiset datavirrat, esim. verkkosivujen raapiminen ja rikastus.",
      "why": "Visuaalinen rakentaja, jossa tekoälysolmut ovat keskiössä. Keräsi 50 M$ B-kierroksen 3/2026 (Benchmark).",
-     "price": "Ilmainen 2 000 krediittiä · Solo 37 $/kk",
+     "price": "14 vrk ilmainen kokeilu (Pro) · Pro 37 $/kk",
      "fi": "kohtalainen",
      "pick": false
     }
@@ -316,7 +316,7 @@
      "pick": true
     },
     {
-     "name": "GPT Image 2 (ChatGPT)",
+     "name": "GPT Image 2.5 (ChatGPT)",
      "vendor": "OpenAI",
      "url": "https://chatgpt.com",
      "kind": "avustaa",
@@ -406,7 +406,7 @@
      "kind": "avustaa",
      "bestFor": "Moderni, täysin muokattava CRM teknologiaorientoituneelle startupille.",
      "why": "Alan nopeimmin kasvava CRM, jonka tietomallin voi rakentaa itse. Ask Attio -AI ja datan rikastus ovat mukana.",
-     "price": "Ilmainen (3 paikkaa) · Plus 29 $/paikka/kk",
+     "price": "Ilmainen (3 paikkaa) · Plus 35 $/paikka/kk · Pro 79 $/paikka/kk (AI-krediitit kk-kiintiöllä)",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -619,13 +619,13 @@
      "pick": false
     },
     {
-     "name": "Gemini Sheetsissä ja Lookerissa",
+     "name": "Gemini Sheetsissä ja Data Studiossa",
      "vendor": "Google",
      "url": "https://workspace.google.com/products/sheets/",
      "kind": "avustaa",
      "bestFor": "Google-ympäristössä toimivan yrityksen raportointi.",
-     "why": "Sisältyy Workspace-hintaan: kaavat, taulukot ja yhteenvedot Sheetsissä, ja Looker Studio -dashboardit ilmaiseksi.",
-     "price": "Sisältyy Workspaceen · Looker Studio ilmainen",
+     "why": "Sisältyy Workspace-hintaan: kaavat, taulukot ja yhteenvedot Sheetsissä, ja Data Studio -dashboardit ilmaiseksi (entinen Looker Studio).",
+     "price": "Sisältyy Workspaceen · Data Studio ilmainen",
      "fi": "hyvä",
      "pick": false
     },
@@ -665,7 +665,7 @@
      "kind": "automatisoi",
      "bestFor": "Suomalainen pienyritys, joka haluaa tilitoimistojen yleisimmän järjestelmän ja siihen valmiit AI-toiminnot.",
      "why": "Junior tekee ostolaskuille tiliöintiehdotukset (tili, alv, vähennys-%) koneoppimisella, ja se käsitteli viime vuonna 4,6 miljoonaa laskua. Uusi Ask AI vastaa luonnollisella kielellä kysymyksiin myynnistä ja ostoista myös mobiilissa.",
-     "price": "Kevyt 25,90 €/kk · Perus 49,74 €/kk (alv 0) · uusille yrityksille 0 € loppuvuoden 2026",
+     "price": "Kevyt 25,90 €/kk · Perus 82,90 €/kk (alv 0) · uusille yrityksille 0 € loppuvuoden 2026",
      "fi": "hyvä",
      "pick": true
     },
@@ -771,7 +771,7 @@
      "kind": "automatisoi",
      "bestFor": "Allekirjoitusten lisäksi allekirjoitettujen sopimusten ehtojen ja määräaikojen seuranta.",
      "why": "Navigator poimii tekoälyllä ehdot, riskit ja velvoitteet allekirjoitetuista sopimuksista, ja Maestro automatisoi sopimusprosessin. Pelkkiin allekirjoituksiin tavallinen eSignature (tai kotimainen Visma Sign) riittää.",
-     "price": "alk. ~40–45 $/käyttäjä/kk, min. 3 käyttäjää",
+     "price": "alk. 45 $/käyttäjä/kk (Starter, ei minimiä) · Standard/Professional 50–80 $/käyttäjä/kk, min. 3 käyttäjää",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -998,6 +998,22 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-09-28",
+   "text": "Procountorin Perus-paketti nousi 49,74 eurosta 82,90 euroon kuukaudessa (alv 0)."
+  },
+  {
+   "date": "2026-09-28",
+   "text": "Gumloop poisti pysyvän ilmaisversion – tilalla 14 vrk kokeilu Pro-tasosta (37 $/kk)."
+  },
+  {
+   "date": "2026-09-28",
+   "text": "Attio nosti Plus-hintaa ja lisäsi uuden Pro-tason (79 $/paikka/kk)."
+  },
+  {
+   "date": "2026-09-28",
+   "text": "Google nimesi Looker Studion takaisin Data Studioksi (16.4.2026)."
+  },
   {
    "date": "2026-09-28",
    "text": "NotebookLM on nyt Gemini Notebook (16.7.2026) – vanhat muistikirjat ja osoite toimivat edelleen."
