@@ -50,7 +50,7 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
     <div>
       <div class="eyebrow">koirosvg.com</div>
       <h1>Näe mikä on tulossa.</h1>
-      <p class="lede">Kaksi tutkaa: toinen seuraa tekoälymallien kärkeä, toinen ylioppilaskokeiden aiheita.</p>
+      <p class="lede">Kolme tutkaa: tekoälymallien kärki, yrityksen parhaat AI-työkalut ja ylioppilaskokeiden aiheet.</p>
     </div>
     <canvas id="radar" width="720" height="720" aria-hidden="true"></canvas>
   </header>
@@ -59,6 +59,11 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
       <div class="hd"><h2>AI-malliopas</h2><span class="sig">● päivitys 2 pv välein</span></div>
       <p>Mikä tekoälymalli on juuri nyt paras automaatioon, koodaukseen, kirjoittamiseen, kuviin, videoon tai puheeseen.</p>
       <span class="go">Avaa opas →</span>
+    </a>
+    <a class="tool" href="/ai-tyokalut">
+      <div class="hd"><h2>AI-työkalupakki</h2><span class="sig">● 14 osa-aluetta · 79 työkalua</span></div>
+      <p>Parhaat tekoälytyökalut ja -alustat yrityksen pyörittämiseen: mikä automatisoi, mikä avustaa ja mihin kukin on paras.</p>
+      <span class="go">Avaa työkalupakki →</span>
     </a>
     <a class="tool" href="/yo-tutka">
       <div class="hd"><h2>YO-tutka</h2><span class="sig">● 6 ainetta · 2021S–2026S</span></div>
@@ -71,7 +76,7 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
 <script>
 // Radar: one blip per tool (labelled) plus two unlabelled for atmosphere.
 const cv=document.getElementById('radar'),cx=cv.getContext('2d'),W=720,C=W/2,R=W/2-20;
-const blips=[{a:-0.9,r:.55,t:'AI-opas'},{a:2.2,r:.72,t:'YO-tutka'},{a:0.9,r:.35,t:''},{a:3.9,r:.5,t:''}];
+const blips=[{a:-0.9,r:.55,t:'AI-opas'},{a:2.2,r:.72,t:'YO-tutka'},{a:0.7,r:.66,t:'AI-työkalut'},{a:3.9,r:.5,t:''}];
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const TAU=Math.PI*2;
 function draw(t){
