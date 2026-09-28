@@ -39,6 +39,8 @@ good run if nothing changed in the world.
 5. For each notable change, prepend to `changes`:
    `{"date": "YYYY-MM-DD", "text": "one Finnish sentence"}` (newest first; drop the oldest
    beyond `MAX_CHANGES` in the validator). Minor price tweaks do not need an entry.
+   If you only found that the existing data was wrong (not that something changed),
+   say so: "Korjattu …", never "nousi" / "muuttui".
 6. Set `updated` to the current UTC time (ISO 8601, e.g. `2026-09-30T04:20:00Z`),
    even if nothing else changed: it means "verified on this date".
 7. Run `python3 scripts/validate_tools.py` (it compares against the live site by itself).
