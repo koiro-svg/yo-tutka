@@ -6,7 +6,7 @@ työkalua: AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`) 
 
 ## Build & run
 - Ei buildia. `python3 -m http.server` repon juuressa ja avaa `/ai-opas.html`
-  (opas hakee `data/ai-models.json`:n fetchillä, joten file:// ei toimi).
+  (opas ja työkalupakki hakevat `data/*.json`:n fetchillä, joten file:// ei toimi).
 - Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee
   `/ai-opas` ja `/yo-tutka` -polut.
 
@@ -18,9 +18,10 @@ työkalua: AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`) 
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
   `ai-opas.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
-- AI-työkalupakki: käsin koottu, staattinen data (`AREAS`, `STARTER`, `NOTES`) suoraan
-  `ai-tyokalut.html`:n skriptissä. Ei API:a eikä automaattipäivitystä. Tarkistuspäivä
-  näkyy mastheadissa (`CHECKED`).
+- AI-työkalupakki: `data/ai-tools.json` → `ai-tyokalut.html` renderöi (fetch). Dataa
+  päivittää ajastettu Claude-pilviagentti (routine) joka toinen päivä ohjeen
+  `scripts/UPDATE_TOOLS.md` mukaan, ja `scripts/validate_tools.py` tarkistaa sen ennen
+  committia. Ei API-avainta eikä GitHub Actionia.
 - YO-tutkan lähde on `~/sovellukset/yo-tutka/` (data + koosta.py); tänne tuodaan
   vain data README:n komennolla.
 
@@ -59,9 +60,18 @@ työkalua: AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`) 
   korttiriveiksi (≤ 620 px) ja lämpökartan ruudukoksi (≤ 520 px, `--n` = tutkintokertojen
   määrä). Pitkät URL-tekstit rivittyvät (`overflow-wrap:anywhere`). Älä palauta
   `min-width`iä tai `overflow-x:auto`-kääreitä. Testaa 320–414 px kaikilla aineilla.
-- AI-työkalupakin sisältö vanhenee nopeasti (hinnat, yrityskaupat, lopetukset: Sora, Relay.app).
-  Päivitä `CHECKED`-päivämäärä vain, jos oikeasti tarkistit tiedot verkosta. Älä kirjaa
-  hintoihin määräaikaisia kampanjahintoja. Kotivalikon kortin lukumäärät
-  ("14 osa-aluetta · 79 työkalua") ovat käsin kirjoitettuja, joten päivitä ne samalla.
-- Työkalupakin linkit renderöidään vain `https://`-alkuisina (`safeUrl`), ja kaikki teksti
-  menee `esc()`:n läpi. Älä ohita näitä uusia kenttiä lisätessäsi.
+- AI-työkalupakin päivitysagentti saa muuttaa vain `data/ai-tools.json`:ia. Osa-alueet
+  (`id` ja järjestys) muutetaan vain käsin, ja validaattori estää yli `MAX_SWAPS` työkalun
+  vaihdon kerralla. Vertailukohta on julkaistu versio (koirosvg.com/data/ai-tools.json,
+  varalla origin/main), joten raja toimii myös Vercelin buildissa. Käsin tehtävä
+  rakennemuutos: nosta `revision` samassa commitissa. Agentti ei saa koskea siihen.
+  Älä löysää näitä rajoja, koska repo julkaisee suoraan.
+- `vercel.json`:n `buildCommand` ajaa validaattorin jokaisessa deployssa. Epävalidi data
+  kaataa deployn ja edellinen versio jää näkyviin. Älä poista sitä.
+- `updated` = viimeisin onnistunut tarkistus. Sivu näyttää varoituksen, jos se on yli 5 pv
+  vanha (eli ajastus on pysähtynyt). Älä kirjaa hintoihin määräaikaisia kampanjahintoja.
+- Kotivalikon kortissa ei ole lukumääriä tarkoituksella, koska ne vanhenisivat automaattisissa
+  päivityksissä.
+- Työkalupakin linkit renderöidään vain `https://`-alkuisina (`safeUrl`, validaattori
+  vaatii saman), ja kaikki teksti menee `esc()`:n läpi. Älä ohita näitä uusissa kentissä.
+- `ai-tyokalut.html` hakee datan fetchillä, joten file:// ei toimi (sama kuin AI-oppaassa).
