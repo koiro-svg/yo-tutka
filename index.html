@@ -36,8 +36,12 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
 .tool .sig{font:600 11px var(--font-mono);color:var(--glow);white-space:nowrap}
 .tool p{margin:0;color:var(--ink-2)}
 .tool .go{font-weight:700;color:var(--glow)}
+.wrap{position:relative}
+/* Discreet on purpose, but kept at 3.7:1 (WCAG non-text contrast). Absolute so it adds no grid row. */
+.lock{position:absolute;right:0;bottom:-44px;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;color:#5A7194;transition:color .15s}
+.lock:hover{color:var(--glow)}
 @media (max-width:700px){.hero{grid-template-columns:1fr}canvas{max-width:260px}}
-@media (prefers-reduced-motion:reduce){.tool{transition:none}.tool:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.tool,.lock{transition:none}.tool:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -62,6 +66,7 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
       <span class="go">Avaa YO-tutka →</span>
     </a>
   </nav>
+  <a class="lock" href="https://oma.koirosvg.com" aria-label="Oma alue (kirjautuminen)" title="Oma alue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></a>
 </main>
 <script>
 // Radar: one blip per tool (labelled) plus two unlabelled for atmosphere.
