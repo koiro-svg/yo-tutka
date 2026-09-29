@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-09-28T15:45:00Z",
+ "updated": "2026-09-29T07:50:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -96,7 +96,7 @@
      "kind": "automatisoi",
      "bestFor": "Esitykset, taulukot ja jopa puhelut yhdellä kehotteella.",
      "why": "Super Agent -työtila, jossa useat mallit ja työkalut toimivat yhdessä. Krediittien kulutus on vaikeasti ennakoitavaa.",
-     "price": "Ilmainen · Plus ~25 $/kk · Pro ~250 $/kk (hinnat voimassa 31.12.2026 asti)",
+     "price": "Ilmainen · Plus ~25 $/kk · Pro ~250 $/kk (hinnat voimassa 30.6.2027 asti)",
      "fi": "kohtalainen",
      "pick": false
     }
@@ -197,7 +197,7 @@
      "url": "https://zapier.com",
      "kind": "automatisoi",
      "bestFor": "Helpoin aloittaa, eniten valmiita integraatioita (9 000+).",
-     "why": "Zapier Agents, Copilot ja MCP-yhteys sisältyvät kaikkiin paketteihin. MCP:n kautta ChatGPT tai Claude voi käyttää tuhansia sovelluksia suoraan.",
+     "why": "AI by Zapier (ent. Zapier Agents, yhdistetty heinäkuussa 2026), Copilot ja MCP-yhteys sisältyvät kaikkiin paketteihin. MCP:n kautta ChatGPT tai Claude voi käyttää tuhansia sovelluksia suoraan.",
      "price": "Ilmainen · Pro alk. ~20–30 $/kk · Team alk. 69 $/kk",
      "fi": "kohtalainen",
      "pick": false
@@ -719,7 +719,7 @@
      "url": "https://www.pleo.io/fi",
      "kind": "automatisoi",
      "bestFor": "Tiimi, jolla on yrityskortteja ja paljon kulukuitteja.",
-     "why": "Kesäkuussa 2026 julkaistiin AI-agentit (Policy, AP, Accounting). Ne hakevat kuitit, kirjoittavat selitteet ja tiliöivät kulut. Pleon MCP-palvelimen kautta asiointi onnistuu myös Clauden, ChatGPT:n ja Copilotin kautta.",
+     "why": "Kesäkuussa 2026 esiteltiin AI-agentit (Policy, AP, Accounting); Policy oli käytössä heti, muut seurasivat heinäkuusta 2026. Ne hakevat kuitit, kirjoittavat selitteet ja tiliöivät kuluja. Pleon MCP-palvelimen kautta asiointi onnistuu myös Clauden, ChatGPT:n ja Copilotin kautta.",
      "price": "Maksulliset paketit alk. ~50 €/kk (3 käyttäjää)",
      "fi": "hyvä",
      "pick": false
@@ -810,19 +810,19 @@
      "url": "https://www.workable.com",
      "kind": "automatisoi",
      "bestFor": "Alle 50 hengen yritys, joka rekrytoi säännöllisesti ja haluaa läpinäkyvän hinnan.",
-     "why": "Workable Agent seuloo hakijat, etsii sopivia ehdokkaita Workablen tietokannasta ja keskustelee hakijoiden kanssa. Ilmoitukset jakautuvat automaattisesti satoihin kanaviin.",
-     "price": "Standard ~299 $/kk · agentin krediitit erikseen",
+     "why": "Neljä AI-rekrytointiagenttia (haku, seulonta, viestintä, työpaikkakuvaus) sai yleisen saatavuuden 14.9.2026. Ne etsivät ja seulovat ehdokkaita Workablen tietokannasta ja keskustelevat hakijoiden kanssa.",
+     "price": "Standard ~299 $/kk · agenttikrediitit erikseen (3 000 ilmaista/kk)",
      "fi": "kohtalainen",
      "pick": false
     },
     {
-     "name": "LinkedIn Hiring Pro",
+     "name": "LinkedIn Hiring Assistant",
      "vendor": "LinkedIn (Microsoft)",
-     "url": "https://business.linkedin.com/hire",
+     "url": "https://business.linkedin.com/hire/hiring-assistant",
      "kind": "automatisoi",
      "bestFor": "Pienyritys, joka hakee osaajia LinkedInistä ilman rekrytoijaa.",
-     "why": "Tammikuussa 2026 julkaistu agentti etsii ja lajittelee ehdokkaat ja tekee ensimmäisen seulonnan luonnollisella kielellä annettujen ohjeiden pohjalta. Toistaiseksi se on saatavilla vain englanninkielisillä markkinoilla.",
-     "price": "Maksullinen, hinta LinkedInin mukaan",
+     "why": "Tammikuussa 2026 julkaistu agentti etsii ja lajittelee ehdokkaat ja tekee ensimmäisen seulonnan luonnollisella kielellä annettujen ohjeiden pohjalta. Käytössä englanniksi, saksaksi ja ranskaksi, lisää kieliä tulossa 2026 aikana.",
+     "price": "Maksullinen lisäosa LinkedIn Recruiteriin, hinta LinkedInin mukaan",
      "fi": "heikko",
      "pick": false
     },
@@ -998,6 +998,26 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-09-29",
+   "text": "Korjattu Gensparkin hinnoittelun voimassaoloaika: 30.6.2027, ei 31.12.2026 kuten aiemmin luki."
+  },
+  {
+   "date": "2026-09-29",
+   "text": "Zapier yhdisti erillisen Agents-tuotteen osaksi AI by Zapieria heinäkuussa 2026."
+  },
+  {
+   "date": "2026-09-29",
+   "text": "Korjattu LinkedInin rekrytointiagentin nimi LinkedIn Hiring Assistantiksi; käytössä nyt myös saksaksi ja ranskaksi, ei enää vain englanniksi."
+  },
+  {
+   "date": "2026-09-29",
+   "text": "Workablen neljä rekrytointiagenttia siirtyivät yleiseen saatavuuteen krediittipohjaisella hinnoittelulla 14.9.2026."
+  },
+  {
+   "date": "2026-09-29",
+   "text": "Korjattu Pleon AI-agenttien aikataulu: vain Policy-agentti oli käytössä kesäkuussa 2026, muut seurasivat heinäkuusta."
+  },
   {
    "date": "2026-09-28",
    "text": "Korjattu Procountorin Perus-paketin hinta: 82,90 €/kk (alv 0) virallisen hinnaston mukaan."
