@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b0f15">
+<meta name="theme-color" content="#111317">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Hyppymittari</title>
@@ -17,165 +17,238 @@
   }
 </script>
 <style>
+  /* Stadium at night: floodlit dark, tartan-red track, lane-line white, LED-amber results board. */
   :root {
     color-scheme: dark;
-    --bg: #0b0f15;
-    --panel: #131a24;
-    --panel-2: #1a2330;
-    --line: #263244;
-    --text: #e9eef6;
-    --muted: #8e9bb0;
-    --accent: #c6ff3a;          /* skeleton torso, primary actions */
-    --accent-ink: #10150a;
-    --foot: #3987e5;            /* chart series 1 (validated vs --panel) */
+    --night: #111317;
+    --infield: #1a1d23;
+    --infield-2: #22262e;
+    --rail: #2c313b;
+    --lane: #f1f2f4;
+    --chalk: #959ca8;
+    --tartan: #d9502f;
+    --tartan-ink: #fff;
+    --led: #ffb21e;
+    --foot: #3987e5;            /* chart series 1 (validated vs --infield) */
     --hip: #d95926;             /* chart series 2 */
-    --good: #3ccf7a;
-    --warn: #f0b429;
-    --bad: #ff6b6b;
-    --radius: 14px;
+    --ok: #e9ecef;              /* white flag: valid */
+    --radius: 16px;
+    --display: "Avenir Next Condensed", "AvenirNextCondensed-Bold", "Roboto Condensed", "Arial Narrow", "sans-serif-condensed", system-ui, sans-serif;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     --safe-b: env(safe-area-inset-bottom, 0px);
+    --tabbar: 0px;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  html, body { margin: 0; background: var(--night); color: var(--lane); }
   body {
-    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    min-height: 100dvh; padding-bottom: calc(24px + var(--safe-b));
+    font: 15px/1.45 var(--body);
+    min-height: 100dvh;
+    padding-bottom: calc(28px + var(--tabbar) + var(--safe-b));
     -webkit-text-size-adjust: 100%;
+    /* floodlight from above the stands */
+    background: radial-gradient(120% 60% at 50% -10%, #1d2129 0%, var(--night) 60%) fixed, var(--night);
   }
   button, select, input { font: inherit; color: inherit; }
   button { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--led); outline-offset: 2px; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .display { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .02em; }
 
-  header { position: sticky; top: 0; z-index: 10; background: rgba(11, 15, 21, .92); backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
-  .topbar { display: flex; align-items: center; gap: 10px; padding: 10px 0 8px; }
-  .brand { font-weight: 800; letter-spacing: -.02em; font-size: 18px; display: flex; align-items: center; gap: 8px; }
-  .brand svg { width: 22px; height: 22px; }
-  .brand b { color: var(--accent); }
-  .crumb { color: var(--muted); font-size: 13px; text-decoration: none; white-space: nowrap; }
-  .crumb:hover { color: var(--text); }
+  /* ---------- header ---------- */
+  header { position: sticky; top: 0; z-index: 10; background: rgba(17, 19, 23, .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rail); padding-top: env(safe-area-inset-top, 0px); }
+  .topbar { display: flex; align-items: center; gap: 12px; padding: 10px 0; }
+  .brand { display: flex; align-items: center; gap: 9px; font-family: var(--display); font-weight: 800; font-stretch: condensed;
+    text-transform: uppercase; letter-spacing: .04em; font-size: 21px; line-height: 1; }
+  .brand svg { width: 28px; height: 28px; flex: none; }
+  .brand b { color: var(--tartan); font-weight: inherit; }
   .spacer { flex: 1; }
-  .icon-btn { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel);
-    display: grid; place-items: center; }
+  .crumb { color: var(--chalk); font: 12px var(--mono); text-decoration: none; white-space: nowrap; }
+  .crumb:hover { color: var(--lane); }
+  .icon-btn { width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--rail); background: var(--infield); display: grid; place-items: center; }
   .icon-btn svg { width: 20px; height: 20px; }
-  .tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; background: var(--panel); border: 1px solid var(--line);
-    border-radius: 12px; padding: 4px; }
-  .tabs button { border: 0; background: transparent; border-radius: 9px; padding: 8px 4px; font-weight: 600; color: var(--muted); }
-  .tabs button[aria-selected="true"] { background: var(--panel-2); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
-  .types { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 0; }
-  .chip { flex: none; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 7px 13px;
-    font-weight: 600; font-size: 14px; color: var(--muted); }
-  .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-  .type-hint { color: var(--muted); font-size: 13px; margin: -2px 0 10px; min-height: 1em; }
+
+  /* ---------- jump type chips (pictograms) ---------- */
+  .types { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 0 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--rail); background: var(--infield); border-radius: 999px;
+    padding: 6px 13px 6px 8px; font-weight: 650; font-size: 14px; color: var(--chalk); transition: background .15s, color .15s, border-color .15s; }
+  .chip svg { width: 22px; height: 22px; flex: none; }
+  .chip[aria-pressed="true"] { background: var(--lane); color: #14161a; border-color: var(--lane); }
+  .type-hint { color: var(--chalk); font-size: 13px; margin: -2px 0 10px; min-height: 1em; }
+
+  /* ---------- tabs: bottom bar on phones, top row on wide screens ---------- */
+  .tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+  .tabs button { border: 0; background: transparent; color: var(--chalk); display: grid; justify-items: center; gap: 3px;
+    padding: 8px 4px; font-size: 12px; font-weight: 650; border-radius: 12px; }
+  .tabs button svg { width: 22px; height: 22px; }
+  .tabs button[aria-selected="true"] { color: var(--lane); }
+  .tabs button[aria-selected="true"] svg { color: var(--tartan); }
+  @media (max-width: 719px) {
+    :root { --tabbar: 64px; }
+    header { position: static; }   /* the tab bar is at the bottom; give the viewfinder the height */
+    .types { display: grid; grid-template-columns: 1fr 1fr; }
+    .chip { justify-content: flex-start; }
+    .tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 6px 10px calc(6px + var(--safe-b));
+      background: rgba(17, 19, 23, .94); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-top: 1px solid var(--rail); }
+  }
+  @media (min-width: 720px) {
+    .tabs { margin: 14px auto 0; max-width: 760px; padding: 0 16px; }
+    .tabs button { grid-auto-flow: column; justify-content: center; align-items: center; gap: 8px; font-size: 14px; padding: 10px;
+      background: var(--infield); border: 1px solid var(--rail); }
+    .tabs button[aria-selected="true"] { border-color: var(--lane); }
+    .tabs button svg { width: 18px; height: 18px; }
+  }
 
   main section { padding-top: 14px; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
-  .card h2 { font-size: 15px; margin: 0 0 10px; }
-  .muted { color: var(--muted); }
+  .card { background: var(--infield); border: 1px solid var(--rail); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; }
+  .card h2 { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .05em;
+    font-size: 15px; color: var(--chalk); margin: 0 0 10px; }
+  .muted { color: var(--chalk); }
   .small { font-size: 13px; }
   .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .btn { border: 1px solid var(--line); background: var(--panel-2); border-radius: 11px; padding: 10px 14px; font-weight: 600; }
-  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn { border: 1px solid var(--rail); background: var(--infield-2); border-radius: 12px; padding: 10px 15px; font-weight: 700; color: var(--lane);
+    transition: transform .1s, background .15s; }
+  .btn:active { transform: translateY(1px); }
+  .btn.primary { background: var(--tartan); color: var(--tartan-ink); border-color: var(--tartan); }
   .btn.ghost { background: transparent; }
-  .btn.danger { color: var(--bad); }
+  .btn.danger { color: #ff8a70; }
   .btn:disabled, label.btn.disabled { opacity: .45; cursor: default; pointer-events: none; }
-  .btn.sm { padding: 6px 10px; font-size: 13px; border-radius: 9px; }
+  .btn.sm { padding: 6px 11px; font-size: 13px; border-radius: 10px; }
 
-  /* camera / video stage */
-  .stage { position: relative; width: 100%; aspect-ratio: 3 / 4; max-height: 68dvh; margin: 0 auto 12px; background: #000;
-    border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  /* ---------- camera / video stage: a viewfinder ---------- */
+  .stage { position: relative; width: 100%; aspect-ratio: 3 / 4; max-height: 66dvh; margin: 0 auto 12px; background: #050607;
+    border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rail); }
+  .stage::after { content: ""; position: absolute; inset: 10px; z-index: 1; pointer-events: none; opacity: .55;
+    --c: rgba(241, 242, 244, .7); --l: 22px; --w: 2px;
+    background:
+      linear-gradient(var(--c), var(--c)) top left / var(--l) var(--w) no-repeat, linear-gradient(var(--c), var(--c)) top left / var(--w) var(--l) no-repeat,
+      linear-gradient(var(--c), var(--c)) top right / var(--l) var(--w) no-repeat, linear-gradient(var(--c), var(--c)) top right / var(--w) var(--l) no-repeat,
+      linear-gradient(var(--c), var(--c)) bottom left / var(--l) var(--w) no-repeat, linear-gradient(var(--c), var(--c)) bottom left / var(--w) var(--l) no-repeat,
+      linear-gradient(var(--c), var(--c)) bottom right / var(--l) var(--w) no-repeat, linear-gradient(var(--c), var(--c)) bottom right / var(--w) var(--l) no-repeat; }
   .stage video, .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
   .stage.mirror video, .stage.mirror canvas { transform: scaleX(-1); }
-  .pill { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 2; white-space: nowrap;
-    background: rgba(10, 14, 20, .78); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px; }
-  .pill.ready { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-  .pill.air { background: #fff; color: #000; }
-  .pill.warn { color: var(--warn); }
-  .fps-tag { position: absolute; top: 12px; right: 12px; z-index: 2; font-size: 12px; color: var(--muted);
-    background: rgba(10, 14, 20, .7); padding: 3px 7px; border-radius: 6px; font-variant-numeric: tabular-nums; }
-  .big { position: absolute; left: 0; right: 0; bottom: 16px; z-index: 2; text-align: center; pointer-events: none;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, .85); transition: opacity .4s; }
-  .big .n { font-size: clamp(56px, 18vw, 110px); font-weight: 900; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
-  .big .u { font-size: 28px; font-weight: 800; margin-left: 4px; }
-  .big .s { font-weight: 700; color: #dfe6ef; }
-  .stage-empty { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; text-align: center; padding: 20px;
-    background: radial-gradient(120% 80% at 50% 30%, #17202c, #06080c); }
-  .stage-empty p { color: var(--muted); max-width: 30ch; margin: 12px auto 0; font-size: 14px; }
-  .stage-empty .btn { font-size: 17px; padding: 14px 22px; }
+  .pill { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); z-index: 2; white-space: nowrap; display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(10, 11, 13, .8); border: 1px solid var(--rail); border-radius: 999px; padding: 7px 15px; font-weight: 750; font-size: 14px; }
+  .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--chalk); flex: none; }
+  .pill.ready { background: var(--tartan); border-color: var(--tartan); color: #fff; }
+  .pill.ready::before { background: #fff; animation: pulse 1.2s ease-in-out infinite; }
+  .pill.air { background: var(--lane); color: #111; border-color: var(--lane); }
+  .pill.air::before { background: var(--led); }
+  .pill.warn::before { background: var(--led); }
+  @keyframes pulse { 50% { opacity: .25; } }
+  .fps-tag { position: absolute; top: 18px; right: 18px; z-index: 2; font: 11px var(--mono); color: var(--chalk);
+    background: rgba(10, 11, 13, .75); padding: 3px 7px; border-radius: 6px; }
 
-  /* results */
-  .res-main { display: flex; align-items: baseline; gap: 6px; }
-  .res-main .n { font-size: 44px; font-weight: 900; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
-  .res-main .u { font-size: 18px; font-weight: 700; color: var(--muted); }
-  .res-sub { color: var(--muted); font-variant-numeric: tabular-nums; }
-  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 12px 0; }
-  .metric { background: var(--panel-2); border-radius: 10px; padding: 8px 10px; }
-  .metric .k { font-size: 12px; color: var(--muted); }
-  .metric .v { font-weight: 700; font-variant-numeric: tabular-nums; }
-  .flags { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
-  .flags li { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: #f6e2b0;
-    background: rgba(240, 180, 41, .1); border: 1px solid rgba(240, 180, 41, .35); border-radius: 10px; padding: 8px 10px; }
-  .flags li::before { content: "!"; flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--warn); color: #000;
-    font-weight: 900; font-size: 12px; display: grid; place-items: center; margin-top: 1px; }
-  .flags li.ok { color: #c9f2d9; background: rgba(60, 207, 122, .08); border-color: rgba(60, 207, 122, .35); }
-  .flags li.ok::before { content: "✓"; background: var(--good); }
+  /* results board overlay on the stage */
+  .big { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 2; pointer-events: none; transition: opacity .4s;
+    max-width: calc(100% - 24px); text-align: center; }
+  .big .board { --led-h: clamp(52px, 14vw, 84px); }
+  .big .s { margin-top: 8px; text-align: center; font: 600 13px var(--mono); color: var(--lane); text-shadow: 0 1px 8px #000; }
 
-  /* charts */
-  .chart { position: relative; margin-top: 6px; }
+  /* the LED results board (signature) */
+  .board { display: inline-flex; align-items: flex-end; max-width: 100%; gap: 10px; background: #070707; border: 1px solid #2a2418; border-radius: 12px;
+    padding: 12px 14px; box-shadow: 0 10px 40px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 178, 30, .05); }
+  .board svg { display: block; height: var(--led-h, 48px); width: auto; max-width: 100%; }
+  .board .unit { font-family: var(--display); font-weight: 800; font-stretch: condensed; color: var(--led); font-size: 20px; line-height: 1; padding-bottom: 2px;
+    text-shadow: 0 0 10px rgba(255, 178, 30, .55); }
+  .board .dim { fill: rgba(255, 178, 30, .1); }
+  .board .lit { fill: var(--led); filter: drop-shadow(0 0 3px rgba(255, 178, 30, .7)); }
+  .board .lit circle { animation: led-on .32s both; }
+  @keyframes led-on { from { opacity: 0; } }
+  .board.sm { padding: 9px 11px; border-radius: 10px; }
+  .board.sm .unit { font-size: 16px; }
+
+  .stage-empty { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; text-align: center; padding: 22px;
+    background: radial-gradient(90% 60% at 50% 35%, #1f232b, #08090b); }
+  .stage-empty svg.scene { width: min(70%, 230px); height: auto; margin-bottom: 10px; }
+  .stage-empty h3 { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .03em;
+    font-size: 26px; margin: 0 0 6px; }
+  .stage-empty p { color: var(--chalk); max-width: 32ch; margin: 0 auto 16px; font-size: 14px; }
+  .stage-empty .btn { font-size: 17px; padding: 14px 24px; }
+
+  /* ---------- results ---------- */
+  .res-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .res-head > div:first-child { flex: 1; min-width: 0; }
+  .res-head > .row { flex: none; justify-content: flex-end; }
+  .res-head .board { --led-h: 44px; }
+  .res-sub { color: var(--chalk); font: 12.5px/1.5 var(--mono); margin-top: 8px; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 14px 0 12px; }
+  .metric { background: var(--infield-2); border-radius: 12px; padding: 9px 12px; }
+  .metric .k { font-size: 12px; color: var(--chalk); }
+  .metric .v { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: 22px; font-variant-numeric: tabular-nums; }
+  .flags { list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 6px; }
+  .flags li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--lane);
+    background: rgba(217, 80, 47, .09); border: 1px solid rgba(217, 80, 47, .35); border-radius: 12px; padding: 9px 11px; }
+  /* an official's flag: red = something is off, white = valid */
+  .flags li::before { content: ""; flex: none; width: 16px; height: 18px; margin-top: 1px; background: var(--tartan);
+    -webkit-mask: var(--flag) center / contain no-repeat; mask: var(--flag) center / contain no-repeat; }
+  .flags li.ok { background: rgba(233, 236, 239, .05); border-color: rgba(233, 236, 239, .25); }
+  .flags li.ok::before { background: var(--ok); }
+  :root { --flag: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 18'%3E%3Cpath d='M2 1h2v16H2zM5 2h9l-2.5 3.5L14 9H5z'/%3E%3C/svg%3E"); }
+
+  /* ---------- charts ---------- */
+  .chart { position: relative; margin-top: 8px; }
   .chart svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
-  .chart .legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .chart .legend { display: flex; gap: 14px; font-size: 12px; color: var(--chalk); margin-bottom: 4px; }
   .chart .legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
-  .chart .tip { position: absolute; pointer-events: none; background: #0b0f15; border: 1px solid var(--line); border-radius: 8px;
-    padding: 5px 8px; font-size: 12px; white-space: nowrap; transform: translate(-50%, -100%); font-variant-numeric: tabular-nums; }
+  .chart .tip { position: absolute; pointer-events: none; background: #0b0c0e; border: 1px solid var(--rail); border-radius: 8px;
+    padding: 5px 8px; font: 12px var(--mono); white-space: nowrap; transform: translate(-50%, -100%); }
   .chart .tip[hidden] { display: none; }
 
-  /* video tab */
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
-  label.field { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
-  select, input[type="number"] { width: 100%; background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; color: var(--text); }
-  .progress { height: 8px; background: var(--panel-2); border-radius: 99px; overflow: hidden; margin-top: 12px; }
-  .progress > div { height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+  /* ---------- video tab ---------- */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+  label.field { display: grid; gap: 5px; font-size: 13px; color: var(--chalk); }
+  select, input[type="number"] { width: 100%; background: var(--infield-2); border: 1px solid var(--rail); border-radius: 10px; padding: 10px; color: var(--lane); }
+  .progress { height: 6px; background: var(--infield-2); border-radius: 99px; overflow: hidden; margin-top: 14px; }
+  .progress > div { height: 100%; width: 0; background: var(--tartan); transition: width .2s; }
   .stepper { display: grid; grid-template-columns: auto auto 1fr auto auto; gap: 6px; align-items: center; }
-  .stepper .time { text-align: center; font-variant-numeric: tabular-nums; font-size: 13px; color: var(--muted); }
-  input[type="range"] { width: 100%; accent-color: var(--accent); margin: 10px 0 4px; }
-  .file-name { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+  .stepper .time { text-align: center; font: 12.5px var(--mono); color: var(--chalk); }
+  input[type="range"] { width: 100%; accent-color: var(--tartan); margin: 10px 0 6px; }
+  .file-name { font-size: 13px; color: var(--chalk); overflow-wrap: anywhere; }
 
-  /* history */
+  /* ---------- history ---------- */
   .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 12px; }
-  .sum { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; text-align: left; }
-  .sum[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
-  .sum .t { font-size: 13px; color: var(--muted); font-weight: 600; }
-  .sum .best { font-size: 28px; font-weight: 900; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
-  .sum .best small { font-size: 14px; color: var(--muted); font-weight: 700; }
-  .sum .meta { font-size: 12px; color: var(--muted); }
+  .sum { background: var(--infield); border: 1px solid var(--rail); border-radius: var(--radius); padding: 12px 13px; text-align: left; position: relative; }
+  .sum[aria-pressed="true"] { border-color: var(--tartan); box-shadow: inset 0 0 0 1px var(--tartan); }
+  .sum .t { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--chalk); font-weight: 650; }
+  .sum .t svg { width: 20px; height: 20px; }
+  .sum .best { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: 34px; line-height: 1.1; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .sum .best small { font-size: 15px; color: var(--chalk); }
+  .sum .meta { font: 11.5px var(--mono); color: var(--chalk); }
   .hist { list-style: none; margin: 0; padding: 0; }
-  .hist li { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
+  .hist li { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 11px 0; border-top: 1px solid var(--rail); }
   .hist li:first-child { border-top: 0; }
-  .hist .h { font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums; }
-  .hist .d { font-size: 12px; color: var(--muted); }
-  .hist .x { border: 0; background: transparent; color: var(--muted); font-size: 18px; padding: 4px 8px; }
-  .badge { font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 6px; background: var(--panel-2); color: var(--muted); }
-  .badge.w { color: #000; background: var(--warn); }
-  .badge.pr { color: var(--accent-ink); background: var(--accent); }
+  .hist .h { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: 22px; font-variant-numeric: tabular-nums; }
+  .hist .d { font: 11.5px/1.5 var(--mono); color: var(--chalk); }
+  .hist .x { border: 0; background: transparent; color: var(--chalk); font-size: 18px; padding: 4px 8px; }
+  .badge { font: 700 10.5px var(--mono); text-transform: uppercase; letter-spacing: .04em; padding: 3px 6px; border-radius: 6px;
+    background: var(--infield-2); color: var(--chalk); vertical-align: 3px; }
+  .badge.w { color: #fff; background: var(--tartan); }
+  .badge.pr { color: #111; background: var(--led); }
 
-  /* help */
-  .help h3 { font-size: 15px; margin: 18px 0 6px; }
+  /* ---------- help ---------- */
+  .help h3 { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .04em;
+    font-size: 17px; margin: 20px 0 6px; }
   .help ol, .help ul { padding-left: 20px; margin: 0; }
-  .help li { margin: 5px 0; }
+  .help li { margin: 6px 0; }
 
-  dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 18px; width: min(420px, calc(100vw - 32px)); padding: 18px; }
-  dialog::backdrop { background: rgba(0, 0, 0, .6); }
-  dialog h2 { margin: 0 0 14px; font-size: 18px; }
+  dialog { background: var(--infield); color: var(--lane); border: 1px solid var(--rail); border-radius: 20px; width: min(420px, calc(100vw - 32px)); padding: 20px; }
+  dialog::backdrop { background: rgba(0, 0, 0, .65); }
+  dialog h2 { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .04em; margin: 0 0 14px; font-size: 22px; }
   dialog .field { margin-bottom: 12px; }
   .toggle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; }
-  .toggle input { width: 22px; height: 22px; accent-color: var(--accent); }
+  .toggle input { width: 22px; height: 22px; accent-color: var(--tartan); }
 
-  .toast { position: fixed; left: 50%; bottom: calc(18px + var(--safe-b)); transform: translateX(-50%); z-index: 50;
-    background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; max-width: calc(100vw - 32px);
+  .toast { position: fixed; left: 50%; bottom: calc(18px + var(--tabbar) + var(--safe-b)); transform: translateX(-50%); z-index: 50;
+    background: var(--infield-2); border: 1px solid var(--rail); border-radius: 12px; padding: 10px 14px; max-width: calc(100vw - 32px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, .5); font-size: 14px; }
   .toast[hidden] { display: none; }
-  .err { color: var(--bad); }
+  .err { color: #ff8a70; }
   [hidden] { display: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -183,8 +256,9 @@
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="4" r="2" fill="currentColor" stroke="none"/><path d="M12 7v6M8 9l4 2 4-2M12 13l-3 4M12 13l3 4"/><path d="M4 22h16" stroke="#c6ff3a"/><path d="M19 20V9M17 11l2-2 2 2" stroke="#c6ff3a"/>
+        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="10" cy="5.5" r="2.6" fill="currentColor" stroke="none"/><path d="M10 9.5v6.5M6 11.5l4 2 4-2M10 16l-3 4.5M10 16l3 4.5"/>
+          <path d="M3 25.5h22" stroke="var(--tartan)"/><path d="M21.5 24V6M19.5 8l2-2.5 2 2.5M21.5 12h2M21.5 16h2M21.5 20h2" stroke="var(--tartan)" stroke-width="1.8"/>
         </svg>
         <span>Hyppy<b>mittari</b></span>
       </div>
@@ -194,18 +268,19 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
       </button>
     </div>
-    <nav class="tabs" role="tablist">
-      <button role="tab" data-tab="live" aria-selected="true">Kamera</button>
-      <button role="tab" data-tab="video" aria-selected="false">Video</button>
-      <button role="tab" data-tab="history" aria-selected="false">Historia</button>
-      <button role="tab" data-tab="help" aria-selected="false">Ohje</button>
-    </nav>
     <div id="typeBar">
       <div class="types" id="types" role="group" aria-label="Hyppytyyppi"></div>
       <div class="type-hint" id="typeHint"></div>
     </div>
   </div>
 </header>
+
+<nav class="tabs" role="tablist" aria-label="Näkymä">
+  <button role="tab" data-tab="live" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>Kamera</button>
+  <button role="tab" data-tab="video" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>Video</button>
+  <button role="tab" data-tab="history" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"/><path d="M5 15l4-4 3 3 6-7"/></svg>Historia</button>
+  <button role="tab" data-tab="help" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Ohje</button>
+</nav>
 
 <main class="wrap">
   <!-- LIVE -->
@@ -215,11 +290,20 @@
       <canvas id="camOverlay"></canvas>
       <div class="pill" id="liveStatus" hidden></div>
       <div class="fps-tag" id="liveFps" hidden></div>
-      <div class="big" id="liveBig" hidden><div><span class="n"></span><span class="u">cm</span></div><div class="s"></div></div>
+      <div class="big" id="liveBig" hidden><div id="liveBoard"></div><div class="s"></div></div>
       <div class="stage-empty" id="liveEmpty">
         <div>
+          <svg class="scene" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 124h184" stroke="var(--tartan)" stroke-width="3"/>
+            <path d="M168 122V22" stroke="var(--chalk)" stroke-width="2"/>
+            <g stroke="var(--chalk)" stroke-width="2"><path d="M168 102h8M168 82h8M168 62h8M168 42h8"/></g>
+            <g fill="var(--chalk)" font-family="ui-monospace, Menlo, monospace" font-size="9" stroke="none"><text x="180" y="105">10</text><text x="180" y="85">20</text><text x="180" y="65">30</text><text x="180" y="45">40</text></g>
+            <g stroke="var(--lane)" stroke-width="5"><circle cx="92" cy="22" r="8" fill="var(--lane)" stroke="none"/><path d="M92 34v26M80 42l12 6M104 42l-12 6M92 60l-9 20M92 60l9 20"/></g>
+            <path d="M118 120V86" stroke="var(--led)" stroke-width="2.5" stroke-dasharray="4 5"/><path d="M113 92l5-7 5 7" stroke="var(--led)" stroke-width="2.5"/>
+          </svg>
+          <h3>Puhelin 2–3 metrin päähän</h3>
+          <p id="liveEmptyText">Lattialle tai jalustalle niin, että koko vartalo jalkateriä myöten näkyy myös hypyn huipulla.</p>
           <button class="btn primary" id="startCam">Käynnistä kamera</button>
-          <p id="liveEmptyText">Aseta puhelin lattialle tai jalustalle 2–3 metrin päähän niin, että koko vartalo näkyy myös hypyn huipulla.</p>
         </div>
       </div>
     </div>
@@ -246,7 +330,7 @@
       <div class="grid2">
         <label class="field">Kuvataajuus
           <select id="vidFps">
-            <option value="auto">Tunnista automaattisesti</option>
+            <option value="auto">Automaattinen</option>
             <option value="30">30 fps</option><option value="60">60 fps</option>
             <option value="120">120 fps</option><option value="240">240 fps</option>
           </select>
@@ -314,7 +398,7 @@
       <ol>
         <li><b>Kamera paikoilleen.</b> Puhelin lattialle, tuolille tai jalustalle 2–3 m päähän. Koko vartalo – myös jalkaterät – pitää näkyä koko ajan, myös hypyn huipulla. Kameran korkeus mieluiten lantion tai polven tasolla.</li>
         <li><b>Valitse hyppytyyppi</b> yläpalkista ja paina <i>Käynnistä kamera</i>.</li>
-        <li><b>Seiso hetki paikallaan</b>, kunnes teksti muuttuu vihreäksi <i>Valmis – hyppää!</i> (vauhdillisessa hypyssä seisomista ei tarvita).</li>
+        <li><b>Seiso hetki paikallaan</b>, kunnes kuvan yläreunaan syttyy punainen <i>Valmis – hyppää!</i> (vauhdillisessa hypyssä seisomista ei tarvita).</li>
         <li><b>Hyppää.</b> Tulos näkyy ruudulla ja luetaan ääneen. Jokainen hyppy tallentuu historiaan.</li>
       </ol>
       <h3>Tärkein tekniikkavinkki</h3>
@@ -417,7 +501,10 @@ const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('fi-FI', { minim
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 // Theme tokens resolved once: SVG presentation attributes and canvas can't take var(--x) everywhere.
-const C = Object.fromEntries(['accent', 'foot', 'hip', 'line', 'muted', 'text', 'panel'].map(k => [k, css('--' + k)]));
+const C = {
+  accent: css('--tartan'), led: css('--led'), foot: css('--foot'), hip: css('--hip'),
+  line: css('--rail'), muted: css('--chalk'), text: css('--lane'), panel: css('--infield'),
+};
 const fmtWhen = at => new Date(at).toLocaleString('fi-FI', { dateStyle: 'short', timeStyle: 'short' });
 
 let toastTimer;
@@ -483,6 +570,52 @@ function firstPose(res) {
   return out;
 }
 
+// ---------- results board & pictograms ----------
+// 5×7 dot-matrix glyphs, like the results boards beside an athletics field.
+const GLYPHS = {
+  0: ['01110', '10001', '10011', '10101', '11001', '10001', '01110'],
+  1: ['00100', '01100', '00100', '00100', '00100', '00100', '01110'],
+  2: ['01110', '10001', '00001', '00010', '00100', '01000', '11111'],
+  3: ['11111', '00010', '00100', '00010', '00001', '10001', '01110'],
+  4: ['00010', '00110', '01010', '10010', '11111', '00010', '00010'],
+  5: ['11111', '10000', '11110', '00001', '00001', '10001', '01110'],
+  6: ['00110', '01000', '10000', '11110', '10001', '10001', '01110'],
+  7: ['11111', '00001', '00010', '00100', '01000', '01000', '01000'],
+  8: ['01110', '10001', '10001', '01110', '10001', '10001', '01110'],
+  9: ['01110', '10001', '10001', '01111', '00001', '00010', '01100'],
+  ',': ['00', '00', '00', '00', '11', '01', '10'],
+  '–': ['000', '000', '000', '111', '000', '000', '000'],
+};
+/** A results board showing `value` cm. Lit dots switch on column by column (CSS delay). */
+function ledBoard(value, { small = false } = {}) {
+  const text = fmt(value).replace('−', '–');
+  const cols = [];
+  for (const ch of text) {
+    const g = GLYPHS[ch];
+    if (!g) continue;
+    if (cols.length) cols.push(null);   // one dark column between glyphs
+    for (let c = 0; c < g[0].length; c++) cols.push(g.map(row => row[c] === '1'));
+  }
+  const p = 10, r = 3.9;
+  let dim = '', lit = '';
+  cols.forEach((col, x) => {
+    for (let y = 0; y < 7; y++) {
+      const on = col && col[y];
+      const dot = `<circle cx="${x * p + p / 2}" cy="${y * p + p / 2}" r="${r}"${on ? ` style="animation-delay:${x * 16}ms"` : ''}/>`;
+      if (on) lit += dot; else dim += dot;
+    }
+  });
+  return `<div class="board${small ? ' sm' : ''}"><svg viewBox="0 0 ${cols.length * p} ${7 * p}" role="img" aria-label="${esc(text)} cm">`
+    + `<g class="dim">${dim}</g><g class="lit">${lit}</g></svg><span class="unit">cm</span></div>`;
+}
+const PICTO_SVG = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const PICTO = {
+  cmj: PICTO_SVG('<circle cx="12" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M12 7.5v6.5M12 8.5l-3.5 2 2 2.5M12 8.5l3.5 2-2 2.5M12 14l-2 7M12 14l2 7"/>'),
+  cmja: PICTO_SVG('<circle cx="12" cy="6" r="2.3" fill="currentColor" stroke="none"/><path d="M12 9.5v5M12 10l-4.5-6M12 10l4.5-6M12 14.5l-2 6.5M12 14.5l2 6.5"/>'),
+  sj: PICTO_SVG('<circle cx="10.5" cy="6" r="2.3" fill="currentColor" stroke="none"/><path d="M10.5 9.5l-.5 5.5M10.5 10.5l6 1M10 15l5.5 1.5-1.5 4.5M10 15l3.5 3-3 3"/>'),
+  run: PICTO_SVG('<circle cx="14.5" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M13.5 7.5l-2.5 6M13 9l4 1.5 1.5-2.5M13 9l-4 1-1.5 3M11 13.5l4 2.5-1 5M11 13.5l-3 3.5-3.5-.5"/>'),
+};
+
 // ---------- drawing ----------
 const LIMBS = [[11, 13], [13, 15], [12, 14], [14, 16], [23, 25], [25, 27], [24, 26], [26, 28],
   [27, 29], [29, 31], [31, 27], [28, 30], [30, 32], [32, 28]];
@@ -529,7 +662,7 @@ function drawPose(ctx, lm, W, H, groundY = NaN, footY = NaN) {
   ctx.globalAlpha = 1;
   if (Number.isFinite(groundY) && Number.isFinite(footY)) {
     const fx = (X(P.L_TOE) + X(P.R_TOE)) / 2;
-    ctx.strokeStyle = C.accent; ctx.lineWidth = u * 2.2;
+    ctx.strokeStyle = C.led; ctx.lineWidth = u * 2.2;
     ctx.beginPath(); ctx.moveTo(fx, groundY); ctx.lineTo(fx, footY); ctx.stroke();
   }
 }
@@ -580,12 +713,12 @@ function jumpChart(result, { onPick } = {}) {
   const wrap = chartShell(`
     <div class="legend"><span><i style="background:var(--foot)"></i>Jalkaterän korkeus</span><span><i style="background:var(--hip)"></i>Lantion nousu</span><span>cm</span></div>
     <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Jalkaterän ja lantion korkeus hypyn aikana">
-      <rect x="${x(0)}" y="${m.t}" width="${x(T) - x(0)}" height="${H - m.t - m.b}" fill="${C.accent}" opacity=".07"/>
+      <rect x="${x(0)}" y="${m.t}" width="${x(T) - x(0)}" height="${H - m.t - m.b}" fill="${C.text}" opacity=".05"/>
       ${yGrid(y, yMin, yMax, yMax - yMin > 80 ? 20 : 10, m, W)}${xt}
-      <line x1="${x(0)}" x2="${x(0)}" y1="${m.t}" y2="${H - m.b}" stroke="${C.accent}" stroke-width="1.5"/>
-      <line x1="${x(T)}" x2="${x(T)}" y1="${m.t}" y2="${H - m.b}" stroke="${C.accent}" stroke-width="1.5"/>
-      <text x="${x(0) + 4}" y="${m.t + 11}" fill="${C.accent}" font-size="11">irtoaminen</text>
-      <text x="${x(T) + 4}" y="${m.t + 11}" fill="${C.accent}" font-size="11">alastulo</text>
+      <line x1="${x(0)}" x2="${x(0)}" y1="${m.t}" y2="${H - m.b}" stroke="${C.text}" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+      <line x1="${x(T)}" x2="${x(T)}" y1="${m.t}" y2="${H - m.b}" stroke="${C.text}" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+      <text x="${x(0) + 4}" y="${m.t + 11}" fill="${C.text}" font-size="11">irtoaminen</text>
+      <text x="${x(T) + 4}" y="${m.t + 11}" fill="${C.text}" font-size="11">alastulo</text>
       <path d="${path(c.hip)}" fill="none" stroke="${C.hip}" stroke-width="2" stroke-linejoin="round"/>
       <path d="${path(c.foot)}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round"/>
       ${Number.isFinite(hipLast) ? `<text x="${W - m.r}" y="${y(hipLast) - 6}" text-anchor="end" fill="${C.text}" font-size="11">lantio</text>` : ''}
@@ -629,14 +762,14 @@ function trendChart(jumps) {
   const n = jumps.length;
   const x = i => m.l + (n === 1 ? 0.5 : i / (n - 1)) * (W - m.l - m.r);
   const y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
-  const best = vals.indexOf(Math.max(...vals));
+  const best = jumps.indexOf(bestOf(jumps));   // the record: best jump without quality flags (-1 = none)
   const d = vals.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
   const date = j => new Date(j.at).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric' });
   const wrap = chartShell(`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tulokset ajan mittaan">
       ${yGrid(y, lo, hi, hi - lo > 40 ? 10 : 5, m, W)}
       <path d="${d}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round"/>
-      ${vals.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === best ? 5 : 3}" fill="${i === best ? C.accent : C.foot}" stroke="${C.panel}" stroke-width="2"/>`).join('')}
-      <text x="${x(best)}" y="${y(vals[best]) - 10}" text-anchor="middle" fill="${C.text}" font-size="12" font-weight="700">${fmt(vals[best])}</text>
+      ${vals.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === best ? 5 : 3}" fill="${i === best ? C.led : C.foot}" stroke="${C.panel}" stroke-width="2"/>`).join('')}
+      ${best >= 0 ? `<text x="${x(best)}" y="${y(vals[best]) - 10}" text-anchor="middle" fill="${C.text}" font-size="12" font-weight="700">${fmt(vals[best])}</text>` : ''}
       <text x="${m.l}" y="${H - 6}" fill="${C.muted}" font-size="11">${date(jumps[0])}</text>
       <text x="${W - m.r}" y="${H - 6}" text-anchor="end" fill="${C.muted}" font-size="11">${date(jumps[n - 1])}</text>
       <line class="hl" y1="${m.t}" y2="${H - m.b}" stroke="${C.text}" opacity=".4" visibility="hidden"/>
@@ -667,9 +800,9 @@ function resultCard(r, { extra = '' } = {}) {
        <div class="metric"><div class="k">Painovoimatarkistus</div><div class="v">${Number.isFinite(r.impliedG) ? fmt(r.impliedG) + ' m/s²' : '–'}</div></div>`
     : `<div class="metric"><div class="k">Lantion nousu</div><div class="v small muted">Aseta pituus asetuksista</div></div>`;
   card.innerHTML = `
-    <div class="row" style="justify-content:space-between;align-items:flex-start">
+    <div class="res-head">
       <div>
-        <div class="res-main"><span class="n">${fmt(r.heightCm)}</span><span class="u">cm</span></div>
+        ${ledBoard(r.heightCm, { small: true })}
         <div class="res-sub">±${fmt(r.errCm)} cm · lentoaika ${Math.round(r.flightMs)} ms · ${Math.round(r.fps)} fps</div>
       </div>
       <div class="row">${extra}</div>
@@ -726,7 +859,7 @@ function showTab(tab) {
 document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
 
 function renderTypes() {
-  $('types').innerHTML = TYPES.map(t => `<button class="chip" data-type="${t.id}" aria-pressed="${t.id === db.type}">${t.name}</button>`).join('');
+  $('types').innerHTML = TYPES.map(t => `<button class="chip" data-type="${t.id}" aria-pressed="${t.id === db.type}">${PICTO[t.id] || ''}${t.name}</button>`).join('');
   $('typeHint').textContent = typeOf(db.type).hint;
 }
 $('types').addEventListener('click', ev => {
@@ -907,7 +1040,7 @@ function showLiveJump(r) {
   const pr = saveable && addJump(rec);
   if (saveable) live.session.unshift(rec);
   const big = $('liveBig');
-  big.querySelector('.n').textContent = fmt(r.heightCm);
+  $('liveBoard').innerHTML = ledBoard(r.heightCm);
   big.querySelector('.s').textContent = (pr ? 'Uusi ennätys! · ' : '') + `lentoaika ${Math.round(r.flightMs)} ms` + (r.flags.length ? ' · tarkista huomautus' : '');
   big.hidden = false; big.style.opacity = 1;
   clearTimeout(live.bigTimer);
@@ -1247,7 +1380,7 @@ function renderHistory() {
   });
   $('summary').innerHTML = byType.map(({ t, n, best, avg }) => `
     <button class="sum" data-htype="${t.id}" aria-pressed="${t.id === type}">
-      <div class="t">${t.name}</div>
+      <div class="t">${PICTO[t.id] || ''}${t.name}</div>
       <div class="best">${Number.isFinite(best) ? fmt(best) : '–'}<small> cm</small></div>
       <div class="meta">${n ? `ka. 5 viim. ${fmt(avg)} cm · ${n} ${n === 1 ? 'hyppy' : 'hyppyä'}` : 'ei hyppyjä'}</div>
     </button>`).join('');
