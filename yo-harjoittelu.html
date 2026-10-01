@@ -228,6 +228,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 </div>
 <input type="file" id="imgPick" accept="image/*" hidden>
 <input type="file" id="filePick" accept=".html,text/html" hidden>
+<input type="file" id="backupPick" accept=".json,application/json" hidden>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@digabi/mathquill@0.10.12/build/mathquill.min.js" integrity="sha384-BzrSE7Jl9d3yBARQ8iMAdRmtdJEyZbgvZVL4q/EcwEQIrGJsBiIjz/3xd7hmg8S2" crossorigin="anonymous" defer></script>
@@ -282,6 +283,11 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       get: k => run('readonly', st => st.get(k)).catch(() => mem.get(k)),
       set: (k, v) => run('readwrite', st => st.put(v, k)).catch(() => { mem.set(k, v); idb.volatile = true; }),
       del: k => run('readwrite', st => st.delete(k)).catch(() => mem.delete(k)),
+      entries: () => open().then(db => new Promise(res => {
+        const tx = db.transaction('answers', 'readonly'), out = [];
+        tx.objectStore('answers').openCursor().onsuccess = e => { const c = e.target.result; if (c) { out.push([c.key, c.value]); c.continue(); } };
+        tx.oncomplete = () => res(out); tx.onerror = tx.onabort = () => res(out);
+      })).catch(() => Array.from(mem)),
       volatile: false
     };
   })();
@@ -859,7 +865,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       const sc = idx.get([a, x.id, t.n].join('|'));
       return `<a class="trow" href="${taskHref(a, x.id, t.n)}"><span class="n">${esc(t.n)}</span><span class="t">${esc(t.title)}</span><span class="st">${sc ? scoreChip(sc) : `<span class="muted">${t.points != null ? esc(t.points) + ' p' : ''}</span>`}</span>${t.summary ? `<span class="s">${esc(t.summary)}</span>` : ''}</a>`;
     };
-    setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (<kbd>Ctrl-E</kbd> avaa kaavan, <kbd>Ctrl-V</kbd> liittää kuvan). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen.') + `
+    setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (<kbd>Ctrl-E</kbd> avaa kaavan, <kbd>Ctrl-V</kbd> liittää kuvan). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen (varmuuskopio <a href="#/edistyminen">Edistyminen</a>-sivulla).') + `
       <nav class="filters" aria-label="Oppiaine">${DATA.map(x => `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}">${esc(x.name.replace(/, pitkä oppimäärä/, ''))}</button>`).join('')}</nav>
       <div class="grid2">
         <section class="card" aria-labelledby="rev-h">
@@ -1202,10 +1208,62 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       ${cards.length ? `<div class="grid2">${cards.join('')}</div>` : '<p class="muted">Ei vielä arvioita. Kun teet tehtävän, näytät malliratkaisun ja arvioit pisteesi, edistyminen näkyy tässä.</p>'}
       <section class="card" aria-labelledby="simres-h"><h2 id="simres-h">Koesimulaatiot</h2>
         ${sims ? `<table class="ptable"><thead><tr><th>Palautettu</th><th>Koe</th><th>Arvioidut pisteet</th></tr></thead><tbody>${sims}</tbody></table>` : '<p class="muted">Ei vielä palautettuja koesimulaatioita.</p>'}</section>
+      <section class="card" aria-labelledby="bak-h"><h2 id="bak-h">Varmuuskopio</h2>
+        <p class="muted">Arviot, arviohistoria, kertauslista, koesimulaatiot ja vastaukset kuvineen tallentuvat vain tähän selaimeen. Ne katoavat, jos selaimen tiedot tyhjennetään. Lataa varmuuskopio talteen, tai siirrä sillä edistyminen toiselle laitteelle. Palautus yhdistää tiedot: kummastakin pidetään uudempi.</p>
+        <div class="row"><button type="button" class="btn primary" id="bakSave">Lataa varmuuskopio</button><button type="button" class="btn" id="bakLoad">Palauta varmuuskopio</button>
+        ${S.ui.backupAt ? `<span class="muted small">Viimeksi ladattu ${fmtDay(S.ui.backupAt)}</span>` : ''}</div></section>
       ${footer()}`);
     for (const c of charts) bindChart(document.getElementById(c.id), c.pts);
+    $('#bakSave', app).onclick = () => exportBackup().catch(() => alertBox('Varmuuskopion luonti epäonnistui.'));
+    $('#bakLoad', app).onclick = () => $('#backupPick').click();
     window.scrollTo(0, 0);
   }
+
+  /* ---------- backup of the whole practice state (scores, history, review, sims, answers) ---------- */
+  async function exportBackup() {
+    const data = { type: 'yo-practice-backup', v: 1, saved: new Date().toISOString(),
+      state: { scores: S.scores, review: S.review, sims: S.sims, history: S.history }, answers: await idb.entries() };
+    download(new Blob([JSON.stringify(data)], { type: 'application/json' }), `yo-harjoittelu-varmuuskopio-${new Date().toISOString().slice(0, 10)}.json`);
+    S.ui.backupAt = Date.now(); persist();
+  }
+  // The file comes from outside: every value is re-validated and every answer goes through clean().
+  const UNIT_KEY = /^[a-z-]+\|\d{4}[KS]\|[^|<>"]+\|[^|<>"]+$/, SIM_KEY = /^[a-z-]+\|\d{4}[KS](\|[a-z]+)?$/;
+  const num = x => (Number.isFinite(+x) ? +x : null);
+  async function importBackup(file) {
+    let data = null;
+    try { data = JSON.parse(await file.text()); } catch (e) {}
+    if (!data || data.type !== 'yo-practice-backup' || !data.state) { alertBox('Tiedosto ei ole YO-harjoittelun varmuuskopio.'); return; }
+    const st = data.state; let scores = 0, answers = 0;
+    for (const [k, v] of Object.entries(st.scores || {})) {
+      if (!UNIT_KEY.test(k) || !v || num(v.p) == null || num(v.max) == null || num(v.at) == null) continue;
+      if (!S.scores[k] || S.scores[k].at < +v.at) { S.scores[k] = { p: +v.p, max: +v.max, at: +v.at }; scores++; }
+    }
+    const seen = new Set(S.history.map(e => e.k + '@' + e.at));
+    for (const e of Array.isArray(st.history) ? st.history : []) {
+      if (!e || !UNIT_KEY.test(e.k) || num(e.p) == null || num(e.max) == null || num(e.at) == null || seen.has(e.k + '@' + e.at)) continue;
+      S.history.push({ k: e.k, p: +e.p, max: +e.max, at: +e.at }); seen.add(e.k + '@' + e.at);
+    }
+    S.history.sort((x, y) => x.at - y.at);
+    if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
+    for (const [k, r] of Object.entries(st.review || {}))
+      if (UNIT_KEY.test(k) && r && num(r.due) != null && !S.review[k]) S.review[k] = { box: Math.max(0, Math.min(INTERVALS.length - 1, Math.round(+r.box) || 0)), due: +r.due };
+    for (const [k, m] of Object.entries(st.sims || {})) {
+      if (!SIM_KEY.test(k) || !m || num(m.start) == null || S.sims[k]) continue;
+      const res = m.result && { total: num(m.result.total) || 0, totalMax: num(m.result.totalMax) || 0, assessed: num(m.result.assessed) || 0 };
+      S.sims[k] = { start: +m.start, paused: num(m.paused) || 0, pauseAt: num(m.pauseAt), submitted: num(m.submitted),
+        chosen: (Array.isArray(m.chosen) ? m.chosen : []).filter(n => typeof n === 'string').slice(0, 50), ...(res ? { result: res } : {}) };
+    }
+    for (const [k, v] of Array.isArray(data.answers) ? data.answers : []) {
+      if (typeof k !== 'string' || !UNIT_KEY.test(k.replace(/^koe\|/, '')) || !v || typeof v.html !== 'string') continue;
+      const cur = await idb.get(k);
+      if (cur && cur.at >= (num(v.at) || 0)) continue;
+      const tpl = document.createElement('template'); tpl.innerHTML = v.html;
+      await idb.set(k, { html: clean(tpl.content).innerHTML, at: num(v.at) || Date.now() }); answers++;
+    }
+    persist(); progressView();
+    alertBox(`Varmuuskopio palautettu: ${scores} arviota ja ${answers} vastausta päivitettiin. Tämän selaimen uudemmat tiedot säilyivät.`);
+  }
+  $('#backupPick').addEventListener('change', e => { const f = e.target.files && e.target.files[0]; e.target.value = ''; if (f) importBackup(f); });
 
   /* ---------- router ---------- */
   const decode = x => { try { return decodeURIComponent(x); } catch (e) { return x; } };
