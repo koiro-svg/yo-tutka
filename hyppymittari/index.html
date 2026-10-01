@@ -1,0 +1,1321 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0f15">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Hyppymittari</title>
+<script>
+  // Served as /hyppymittari (koirosvg.com: cleanUrls, no trailing slash) every relative URL would
+  // resolve against the site root. Re-base on the folder before anything relative loads.
+  if (!/\/$|\.html$/.test(location.pathname)) {
+    const b = document.createElement('base');
+    b.href = location.pathname + '/';
+    document.head.appendChild(b);
+  }
+</script>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0f15;
+    --panel: #131a24;
+    --panel-2: #1a2330;
+    --line: #263244;
+    --text: #e9eef6;
+    --muted: #8e9bb0;
+    --accent: #c6ff3a;          /* skeleton torso, primary actions */
+    --accent-ink: #10150a;
+    --foot: #3987e5;            /* chart series 1 (validated vs --panel) */
+    --hip: #d95926;             /* chart series 2 */
+    --good: #3ccf7a;
+    --warn: #f0b429;
+    --bad: #ff6b6b;
+    --radius: 14px;
+    --safe-b: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100dvh; padding-bottom: calc(24px + var(--safe-b));
+    -webkit-text-size-adjust: 100%;
+  }
+  button, select, input { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+  header { position: sticky; top: 0; z-index: 10; background: rgba(11, 15, 21, .92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
+  .topbar { display: flex; align-items: center; gap: 10px; padding: 10px 0 8px; }
+  .brand { font-weight: 800; letter-spacing: -.02em; font-size: 18px; display: flex; align-items: center; gap: 8px; }
+  .brand svg { width: 22px; height: 22px; }
+  .brand b { color: var(--accent); }
+  .crumb { color: var(--muted); font-size: 13px; text-decoration: none; white-space: nowrap; }
+  .crumb:hover { color: var(--text); }
+  .spacer { flex: 1; }
+  .icon-btn { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel);
+    display: grid; place-items: center; }
+  .icon-btn svg { width: 20px; height: 20px; }
+  .tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 12px; padding: 4px; }
+  .tabs button { border: 0; background: transparent; border-radius: 9px; padding: 8px 4px; font-weight: 600; color: var(--muted); }
+  .tabs button[aria-selected="true"] { background: var(--panel-2); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+  .types { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 0; }
+  .chip { flex: none; border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 7px 13px;
+    font-weight: 600; font-size: 14px; color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .type-hint { color: var(--muted); font-size: 13px; margin: -2px 0 10px; min-height: 1em; }
+
+  main section { padding-top: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; margin-bottom: 12px; }
+  .card h2 { font-size: 15px; margin: 0 0 10px; }
+  .muted { color: var(--muted); }
+  .small { font-size: 13px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .btn { border: 1px solid var(--line); background: var(--panel-2); border-radius: 11px; padding: 10px 14px; font-weight: 600; }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.ghost { background: transparent; }
+  .btn.danger { color: var(--bad); }
+  .btn:disabled, label.btn.disabled { opacity: .45; cursor: default; pointer-events: none; }
+  .btn.sm { padding: 6px 10px; font-size: 13px; border-radius: 9px; }
+
+  /* camera / video stage */
+  .stage { position: relative; width: 100%; aspect-ratio: 3 / 4; max-height: 68dvh; margin: 0 auto 12px; background: #000;
+    border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  .stage video, .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  .stage.mirror video, .stage.mirror canvas { transform: scaleX(-1); }
+  .pill { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 2; white-space: nowrap;
+    background: rgba(10, 14, 20, .78); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px; }
+  .pill.ready { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .pill.air { background: #fff; color: #000; }
+  .pill.warn { color: var(--warn); }
+  .fps-tag { position: absolute; top: 12px; right: 12px; z-index: 2; font-size: 12px; color: var(--muted);
+    background: rgba(10, 14, 20, .7); padding: 3px 7px; border-radius: 6px; font-variant-numeric: tabular-nums; }
+  .big { position: absolute; left: 0; right: 0; bottom: 16px; z-index: 2; text-align: center; pointer-events: none;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, .85); transition: opacity .4s; }
+  .big .n { font-size: clamp(56px, 18vw, 110px); font-weight: 900; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+  .big .u { font-size: 28px; font-weight: 800; margin-left: 4px; }
+  .big .s { font-weight: 700; color: #dfe6ef; }
+  .stage-empty { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; text-align: center; padding: 20px;
+    background: radial-gradient(120% 80% at 50% 30%, #17202c, #06080c); }
+  .stage-empty p { color: var(--muted); max-width: 30ch; margin: 12px auto 0; font-size: 14px; }
+  .stage-empty .btn { font-size: 17px; padding: 14px 22px; }
+
+  /* results */
+  .res-main { display: flex; align-items: baseline; gap: 6px; }
+  .res-main .n { font-size: 44px; font-weight: 900; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .res-main .u { font-size: 18px; font-weight: 700; color: var(--muted); }
+  .res-sub { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 12px 0; }
+  .metric { background: var(--panel-2); border-radius: 10px; padding: 8px 10px; }
+  .metric .k { font-size: 12px; color: var(--muted); }
+  .metric .v { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .flags { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
+  .flags li { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: #f6e2b0;
+    background: rgba(240, 180, 41, .1); border: 1px solid rgba(240, 180, 41, .35); border-radius: 10px; padding: 8px 10px; }
+  .flags li::before { content: "!"; flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--warn); color: #000;
+    font-weight: 900; font-size: 12px; display: grid; place-items: center; margin-top: 1px; }
+  .flags li.ok { color: #c9f2d9; background: rgba(60, 207, 122, .08); border-color: rgba(60, 207, 122, .35); }
+  .flags li.ok::before { content: "✓"; background: var(--good); }
+
+  /* charts */
+  .chart { position: relative; margin-top: 6px; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
+  .chart .legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .chart .legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
+  .chart .tip { position: absolute; pointer-events: none; background: #0b0f15; border: 1px solid var(--line); border-radius: 8px;
+    padding: 5px 8px; font-size: 12px; white-space: nowrap; transform: translate(-50%, -100%); font-variant-numeric: tabular-nums; }
+  .chart .tip[hidden] { display: none; }
+
+  /* video tab */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+  label.field { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+  select, input[type="number"] { width: 100%; background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; color: var(--text); }
+  .progress { height: 8px; background: var(--panel-2); border-radius: 99px; overflow: hidden; margin-top: 12px; }
+  .progress > div { height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+  .stepper { display: grid; grid-template-columns: auto auto 1fr auto auto; gap: 6px; align-items: center; }
+  .stepper .time { text-align: center; font-variant-numeric: tabular-nums; font-size: 13px; color: var(--muted); }
+  input[type="range"] { width: 100%; accent-color: var(--accent); margin: 10px 0 4px; }
+  .file-name { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+
+  /* history */
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 12px; }
+  .sum { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; text-align: left; }
+  .sum[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .sum .t { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .sum .best { font-size: 28px; font-weight: 900; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .sum .best small { font-size: 14px; color: var(--muted); font-weight: 700; }
+  .sum .meta { font-size: 12px; color: var(--muted); }
+  .hist { list-style: none; margin: 0; padding: 0; }
+  .hist li { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
+  .hist li:first-child { border-top: 0; }
+  .hist .h { font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .hist .d { font-size: 12px; color: var(--muted); }
+  .hist .x { border: 0; background: transparent; color: var(--muted); font-size: 18px; padding: 4px 8px; }
+  .badge { font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 6px; background: var(--panel-2); color: var(--muted); }
+  .badge.w { color: #000; background: var(--warn); }
+  .badge.pr { color: var(--accent-ink); background: var(--accent); }
+
+  /* help */
+  .help h3 { font-size: 15px; margin: 18px 0 6px; }
+  .help ol, .help ul { padding-left: 20px; margin: 0; }
+  .help li { margin: 5px 0; }
+
+  dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 18px; width: min(420px, calc(100vw - 32px)); padding: 18px; }
+  dialog::backdrop { background: rgba(0, 0, 0, .6); }
+  dialog h2 { margin: 0 0 14px; font-size: 18px; }
+  dialog .field { margin-bottom: 12px; }
+  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; }
+  .toggle input { width: 22px; height: 22px; accent-color: var(--accent); }
+
+  .toast { position: fixed; left: 50%; bottom: calc(18px + var(--safe-b)); transform: translateX(-50%); z-index: 50;
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; max-width: calc(100vw - 32px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .5); font-size: 14px; }
+  .toast[hidden] { display: none; }
+  .err { color: var(--bad); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="4" r="2" fill="currentColor" stroke="none"/><path d="M12 7v6M8 9l4 2 4-2M12 13l-3 4M12 13l3 4"/><path d="M4 22h16" stroke="#c6ff3a"/><path d="M19 20V9M17 11l2-2 2 2" stroke="#c6ff3a"/>
+        </svg>
+        <span>Hyppy<b>mittari</b></span>
+      </div>
+      <div class="spacer"></div>
+      <a class="crumb" href="https://koirosvg.com/">← koirosvg.com</a>
+      <button class="icon-btn" id="settingsBtn" aria-label="Asetukset">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+      </button>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="live" aria-selected="true">Kamera</button>
+      <button role="tab" data-tab="video" aria-selected="false">Video</button>
+      <button role="tab" data-tab="history" aria-selected="false">Historia</button>
+      <button role="tab" data-tab="help" aria-selected="false">Ohje</button>
+    </nav>
+    <div id="typeBar">
+      <div class="types" id="types" role="group" aria-label="Hyppytyyppi"></div>
+      <div class="type-hint" id="typeHint"></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- LIVE -->
+  <section id="tab-live">
+    <div class="stage" id="liveStage">
+      <video id="cam" playsinline muted autoplay></video>
+      <canvas id="camOverlay"></canvas>
+      <div class="pill" id="liveStatus" hidden></div>
+      <div class="fps-tag" id="liveFps" hidden></div>
+      <div class="big" id="liveBig" hidden><div><span class="n"></span><span class="u">cm</span></div><div class="s"></div></div>
+      <div class="stage-empty" id="liveEmpty">
+        <div>
+          <button class="btn primary" id="startCam">Käynnistä kamera</button>
+          <p id="liveEmptyText">Aseta puhelin lattialle tai jalustalle 2–3 metrin päähän niin, että koko vartalo näkyy myös hypyn huipulla.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom:12px">
+      <button class="btn" id="stopCam" hidden>Pysäytä</button>
+      <button class="btn" id="flipCam" hidden>Vaihda kamera</button>
+      <span class="muted small" id="liveInfo"></span>
+    </div>
+    <div id="liveResult"></div>
+    <div class="card" id="sessionCard" hidden>
+      <h2>Tämä sessio</h2>
+      <ul class="hist" id="sessionList"></ul>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="tab-video" hidden>
+    <div class="card">
+      <div class="row">
+        <label class="btn primary" for="vidFile">Valitse video</label>
+        <input type="file" id="vidFile" accept="video/*" hidden>
+        <span class="file-name" id="vidName">Kuvaa hyppy puhelimella (mieluiten slow-mo) ja valitse se tästä.</span>
+      </div>
+      <div class="grid2">
+        <label class="field">Kuvataajuus
+          <select id="vidFps">
+            <option value="auto">Tunnista automaattisesti</option>
+            <option value="30">30 fps</option><option value="60">60 fps</option>
+            <option value="120">120 fps</option><option value="240">240 fps</option>
+          </select>
+        </label>
+        <label class="field">Onko video hidastettu?
+          <select id="vidSlow">
+            <option value="1">Ei – oikea nopeus</option>
+            <option value="2">Hidastettu 2×</option>
+            <option value="4">Hidastettu 4× (120 fps slow-mo)</option>
+            <option value="8">Hidastettu 8× (240 fps slow-mo)</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <button class="btn primary" id="vidAnalyze" disabled>Analysoi</button>
+        <button class="btn" id="vidCancel" hidden>Keskeytä</button>
+        <span class="muted small" id="vidStatus"></span>
+      </div>
+      <div class="progress" id="vidProgress" hidden><div></div></div>
+    </div>
+
+    <div id="vidPlayer" hidden>
+      <div class="stage" id="vidStage">
+        <video id="vid" playsinline muted preload="auto"></video>
+        <canvas id="vidOverlay"></canvas>
+      </div>
+      <div class="card">
+        <input type="range" id="vidScrub" min="0" max="1000" value="0" step="1" aria-label="Kelaa videota">
+        <div class="stepper">
+          <button class="btn sm" data-step="-10">−10</button>
+          <button class="btn sm" data-step="-1" aria-label="Edellinen ruutu">◀</button>
+          <div class="time" id="vidTime">–</div>
+          <button class="btn sm" data-step="1" aria-label="Seuraava ruutu">▶</button>
+          <button class="btn sm" data-step="10">+10</button>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <button class="btn sm" id="markTo">Merkitse irtoaminen</button>
+          <button class="btn sm" id="markLand">Merkitse alastulo</button>
+          <span class="muted small">Käsin: ensimmäinen ruutu ilmassa ja ensimmäinen ruutu maassa.</span>
+        </div>
+        <div id="manualOut"></div>
+      </div>
+    </div>
+    <div id="vidResults"></div>
+  </section>
+
+  <!-- HISTORY -->
+  <section id="tab-history" hidden>
+    <div class="summary" id="summary"></div>
+    <div class="card" id="trendCard"></div>
+    <div class="card">
+      <h2 id="histTitle">Hypyt</h2>
+      <ul class="hist" id="histList"></ul>
+    </div>
+    <div class="row">
+      <button class="btn" id="exportCsv">Vie CSV</button>
+      <button class="btn danger ghost" id="clearAll">Tyhjennä historia</button>
+    </div>
+  </section>
+
+  <!-- HELP -->
+  <section id="tab-help" class="help" hidden>
+    <div class="card">
+      <h2>Näin mittaat</h2>
+      <ol>
+        <li><b>Kamera paikoilleen.</b> Puhelin lattialle, tuolille tai jalustalle 2–3 m päähän. Koko vartalo – myös jalkaterät – pitää näkyä koko ajan, myös hypyn huipulla. Kameran korkeus mieluiten lantion tai polven tasolla.</li>
+        <li><b>Valitse hyppytyyppi</b> yläpalkista ja paina <i>Käynnistä kamera</i>.</li>
+        <li><b>Seiso hetki paikallaan</b>, kunnes teksti muuttuu vihreäksi <i>Valmis – hyppää!</i> (vauhdillisessa hypyssä seisomista ei tarvita).</li>
+        <li><b>Hyppää.</b> Tulos näkyy ruudulla ja luetaan ääneen. Jokainen hyppy tallentuu historiaan.</li>
+      </ol>
+      <h3>Tärkein tekniikkavinkki</h3>
+      <p>Pidä jalat suorina ilmassa ja <b>laskeudu päkiöille suorin polvin</b>. Mittaus perustuu lentoaikaan – jos koukistat polvet ennen maahantuloa, lentoaika venyy ja tulos näyttää todellista suuremmalta. Sovellus varoittaa, jos huomaa tämän.</p>
+      <h3>Miten mittaus toimii</h3>
+      <ul>
+        <li><b>Lentoaika</b> (päätulos): sovellus tunnistaa hetken, jolloin jalkaterät irtoavat maasta ja palaavat takaisin, ja laskee korkeuden kaavalla h = g·t²/8. Sama menetelmä kuin tutkimuksissa validoidussa My Jump -sovelluksessa – kalibrointia ei tarvita.</li>
+        <li><b>Lantion nousu</b> (tarkistus): lantion korkein kohta verrattuna seisoma-asentoon. Vaatii pituutesi asetuksista. Luku on yleensä lentoaikatulosta suurempi, koska se sisältää myös varpaille nousun ennen irtoamista – lähempänä seinään kurottamalla mitattua "vertikaalia".</li>
+        <li><b>Painovoimatarkistus</b>: lantion lentoradasta laskettu g. Jos se on lähellä 9,8 m/s², sekä ajoitus että mittakaava ovat kunnossa.</li>
+      </ul>
+      <h3>Tarkkuus</h3>
+      <ul>
+        <li>30 fps: noin ±2–3 cm · 60 fps: noin ±1–2 cm · slow-mo 240 fps: noin ±0,5–1 cm.</li>
+        <li>Jokaisen tuloksen perässä näkyy arvioitu virhemarginaali ja todellinen kuvataajuus.</li>
+        <li>Tarkin tapa: kuvaa hyppy puhelimen <b>slow-mo</b>-tilassa ja analysoi se <i>Video</i>-välilehdellä. Siellä voit myös tarkistaa irtoamis- ja alastuloruudun itse ja merkitä ne käsin.</li>
+      </ul>
+      <h3>Hyppytyypit</h3>
+      <ul>
+        <li><b>Kädet lanteilla</b> (CMJ): nopea kyykistys ja hyppy, kädet koko ajan lanteilla. Standardi jalkojen räjähtävyyden mittari.</li>
+        <li><b>Käsien kanssa</b>: kuten edellä, mutta käsien heilautuksella. Tyypillisesti 10–15 % korkeampi.</li>
+        <li><b>Kyykkyhyppy</b> (SJ): pysähdy kyykkyyn noin 2 sekunniksi ja hyppää ilman vastaliikettä.</li>
+        <li><b>Vauhdilla</b>: vauhdinotto ja hyppy. Kuvaa sivulta niin, että juokset kameran editse – ei kohti kameraa.</li>
+      </ul>
+      <h3>Yksityisyys</h3>
+      <p>Kaikki laskenta tapahtuu omalla laitteellasi. Kuvaa tai videota ei lähetetä minnekään, ja historia tallentuu vain tämän selaimen muistiin.</p>
+    </div>
+  </section>
+</main>
+
+<dialog id="settings">
+  <h2>Asetukset</h2>
+  <label class="field">Pituutesi (cm) – tarvitaan lantion nousuun ja painovoimatarkistukseen
+    <input type="number" id="setStature" min="100" max="230" step="1" inputmode="numeric" placeholder="esim. 180">
+  </label>
+  <label class="field">Kameratilan malli
+    <select id="setModel">
+      <option value="lite">Nopea (suositus puhelimelle)</option>
+      <option value="full">Tarkka (vaatii tehokkaamman laitteen)</option>
+    </select>
+  </label>
+  <div class="toggle"><span>Lue tulos ääneen</span><input type="checkbox" id="setSpeech"></div>
+  <div class="toggle"><span>Äänimerkki kun valmis</span><input type="checkbox" id="setBeep"></div>
+  <p class="muted small">Videoanalyysi käyttää aina tarkkaa mallia.</p>
+  <div class="row" style="justify-content:flex-end;margin-top:8px">
+    <button class="btn primary" id="settingsClose">Valmis</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" hidden></div>
+
+<script>
+  // Module scripts and wasm don't load from file:// — say so instead of showing a dead page.
+  if (location.protocol === 'file:') {
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('liveEmptyText').innerHTML =
+        '<span class="err">Avaa sovellus palvelimen kautta:</span> aja kansiossa <code>python3 -m http.server 8000</code> ja avaa <code>http://localhost:8000</code>.';
+      document.getElementById('startCam').disabled = true;
+    });
+  }
+</script>
+
+<script type="module">
+import { FilesetResolver, PoseLandmarker } from './vendor/mediapipe/vision_bundle.mjs';
+import {
+  JumpDetector, findJumps, frameFeatures, quantile, FLAG_TEXT, P, DEFAULT_STATURE_CM, MIN_FLIGHT_S, MAX_FLIGHT_S,
+  heightFromFlight, flightErrCm, slowdownFactor, isSaveable,
+} from './jump-analysis.js';
+
+// ---------- state & storage ----------
+// Per-type behaviour lives here, so nothing else branches on type ids:
+// standing jumps arm only after standing still; 'cmj' also checks the hands stay on the hips.
+const TYPES = [
+  { id: 'cmj', name: 'Kädet lanteilla', hint: 'Vastaliikehyppy, kädet koko ajan lanteilla.', checkArms: true },
+  { id: 'cmja', name: 'Käsien kanssa', hint: 'Vastaliikehyppy käsien heilautuksella.' },
+  { id: 'sj', name: 'Kyykkyhyppy', hint: 'Pysähdy kyykkyyn ~2 s ja hyppää ilman vastaliikettä.' },
+  { id: 'run', name: 'Vauhdilla', hint: 'Vauhdinotto kameran editse sivuttain, ei kohti kameraa.', runUp: true, readyText: 'Valmis – ota vauhtia ja hyppää' },
+];
+const typeOf = id => TYPES.find(t => t.id === id) || { id, name: id };
+const typeName = id => typeOf(id).name;
+const STORE_KEY = 'hyppymittari.v1';
+const DEFAULTS = { statureCm: null, liveModel: 'lite', camera: 'user', speech: true, beep: true };
+
+function loadStore() {
+  try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
+}
+const stored = loadStore();
+const db = {
+  settings: { ...DEFAULTS, ...(stored.settings || {}) },
+  jumps: Array.isArray(stored.jumps) ? stored.jumps : [],
+  type: TYPES.some(t => t.id === stored.type) ? stored.type : 'cmj',
+};
+function save() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); }
+  catch { toast('Tallennus epäonnistui – selaimen muisti ei ole käytettävissä.'); }
+}
+const stature = () => db.settings.statureCm || DEFAULT_STATURE_CM;
+
+const $ = id => document.getElementById(id);
+const fmt = (x, d = 1) => Number.isFinite(x) ? x.toLocaleString('fi-FI', { minimumFractionDigits: d, maximumFractionDigits: d }) : '–';
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+// Theme tokens resolved once: SVG presentation attributes and canvas can't take var(--x) everywhere.
+const C = Object.fromEntries(['accent', 'foot', 'hip', 'line', 'muted', 'text', 'panel'].map(k => [k, css('--' + k)]));
+const fmtWhen = at => new Date(at).toLocaleString('fi-FI', { dateStyle: 'short', timeStyle: 'short' });
+
+let toastTimer;
+function toast(msg, ms = 3500) {
+  const el = $('toast');
+  el.textContent = msg; el.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => (el.hidden = true), ms);
+}
+
+// ---------- audio feedback ----------
+let audioCtx = null;
+function unlockAudio() {
+  try {
+    audioCtx ??= new (window.AudioContext || window.webkitAudioContext)();
+    audioCtx.resume();
+  } catch { /* no audio */ }
+  // iOS only speaks after a speak() inside a user gesture.
+  if ('speechSynthesis' in window) speechSynthesis.speak(new SpeechSynthesisUtterance(''));
+}
+function beep(freq = 880, ms = 120) {
+  if (!db.settings.beep || !audioCtx) return;
+  const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+  o.frequency.value = freq; o.connect(g); g.connect(audioCtx.destination);
+  const t = audioCtx.currentTime;
+  g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.25, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, t + ms / 1000);
+  o.start(t); o.stop(t + ms / 1000 + 0.02);
+}
+function speak(text) {
+  if (!db.settings.speech || !('speechSynthesis' in window)) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'fi-FI';
+  speechSynthesis.cancel(); speechSynthesis.speak(u);
+}
+
+// ---------- MediaPipe ----------
+let filesetP = null;
+const landmarkers = {};   // kind → { model, p: Promise<PoseLandmarker> }
+/** kind 'live' → VIDEO mode (tracking, fast); 'video' → IMAGE mode (no temporal smoothing, so
+ *  no lag in the edge timing, and frames may be visited out of order). */
+function getLandmarker(kind, model) {
+  const cur = landmarkers[kind];
+  if (cur && cur.model === model) return cur.p;
+  cur?.p.then(l => l.close()).catch(() => {});
+  filesetP ??= FilesetResolver.forVisionTasks(new URL('vendor/mediapipe/wasm', document.baseURI).href);
+  const opts = delegate => ({
+    baseOptions: { modelAssetPath: new URL(`models/pose_landmarker_${model}.task`, document.baseURI).href, delegate },
+    runningMode: kind === 'live' ? 'VIDEO' : 'IMAGE',
+    numPoses: 1, minPoseDetectionConfidence: 0.5, minPosePresenceConfidence: 0.5, minTrackingConfidence: 0.5,
+  });
+  const p = filesetP.then(async fs => {
+    try { return await PoseLandmarker.createFromOptions(fs, opts('GPU')); }
+    catch (e) { console.warn('GPU-delegaatti ei toiminut, käytetään CPU:ta', e); return PoseLandmarker.createFromOptions(fs, opts('CPU')); }
+  });
+  p.catch(() => { if (landmarkers[kind]?.p === p) delete landmarkers[kind]; });
+  landmarkers[kind] = { model, p };
+  return p;
+}
+function firstPose(res) {
+  const lm = res && res.landmarks && res.landmarks[0];
+  // Copy out before close(): the result may own native memory.
+  const out = lm ? lm.map(p => ({ x: p.x, y: p.y, visibility: p.visibility ?? 1 })) : null;
+  res?.close?.();
+  return out;
+}
+
+// ---------- drawing ----------
+const LIMBS = [[11, 13], [13, 15], [12, 14], [14, 16], [23, 25], [25, 27], [24, 26], [26, 28],
+  [27, 29], [29, 31], [31, 27], [28, 30], [30, 32], [32, 28]];
+/** Skeleton overlay. footY (the measured lowest foot point) draws the height bar while airborne. */
+function drawPose(ctx, lm, W, H, groundY = NaN, footY = NaN) {
+  ctx.clearRect(0, 0, W, H);
+  const u = Math.max(2, Math.min(W, H) / 200);
+  if (Number.isFinite(groundY)) {
+    ctx.save();
+    ctx.setLineDash([u * 4, u * 3]); ctx.lineWidth = u; ctx.strokeStyle = 'rgba(255,255,255,.55)';
+    ctx.beginPath(); ctx.moveTo(0, groundY); ctx.lineTo(W, groundY); ctx.stroke();
+    ctx.restore();
+  }
+  if (!lm) return;
+  const X = i => lm[i].x * W, Y = i => lm[i].y * H, V = i => Math.min(1, Math.max(0.15, lm[i].visibility));
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+
+  // torso
+  ctx.beginPath();
+  ctx.moveTo(X(11), Y(11)); ctx.lineTo(X(12), Y(12)); ctx.lineTo(X(24), Y(24)); ctx.lineTo(X(23), Y(23)); ctx.closePath();
+  ctx.fillStyle = C.accent + '44'; ctx.fill();
+  ctx.lineWidth = u * 1.6; ctx.strokeStyle = C.accent; ctx.stroke();
+  // neck + head
+  const sx = (X(11) + X(12)) / 2, sy = (Y(11) + Y(12)) / 2;
+  const headR = Math.max(u * 3, Math.hypot(X(11) - X(12), Y(11) - Y(12)) * 0.28);
+  ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(X(0), Y(0) + headR); ctx.stroke();
+  ctx.beginPath(); ctx.arc(X(0), Y(0), headR, 0, Math.PI * 2); ctx.stroke();
+  // limbs
+  for (const [a, b] of LIMBS) {
+    ctx.strokeStyle = `rgba(255,255,255,${0.9 * Math.min(V(a), V(b))})`;
+    ctx.lineWidth = u * 1.3;
+    ctx.beginPath(); ctx.moveTo(X(a), Y(a)); ctx.lineTo(X(b), Y(b)); ctx.stroke();
+  }
+  for (const i of [11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28]) {
+    ctx.fillStyle = `rgba(255,255,255,${V(i)})`;
+    ctx.beginPath(); ctx.arc(X(i), Y(i), u * 1.4, 0, Math.PI * 2); ctx.fill();
+  }
+  // feet: the points the measurement actually follows
+  ctx.fillStyle = C.foot;
+  for (const i of [P.L_HEEL, P.R_HEEL, P.L_TOE, P.R_TOE]) {
+    ctx.globalAlpha = V(i);
+    ctx.beginPath(); ctx.arc(X(i), Y(i), u * 2, 0, Math.PI * 2); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  if (Number.isFinite(groundY) && Number.isFinite(footY)) {
+    const fx = (X(P.L_TOE) + X(P.R_TOE)) / 2;
+    ctx.strokeStyle = C.accent; ctx.lineWidth = u * 2.2;
+    ctx.beginPath(); ctx.moveTo(fx, groundY); ctx.lineTo(fx, footY); ctx.stroke();
+  }
+}
+
+// ---------- charts ----------
+let chartSeq = 0;
+// Chart viewBox width ≈ its rendered width, so 11px labels stay 11px on a phone as on a laptop.
+const chartWidth = () => Math.max(300, Math.min(700, document.querySelector('main').clientWidth - 62));
+/** Horizontal grid lines + y labels every `step` between lo and hi (solid at 0). */
+function yGrid(y, lo, hi, step, m, W) {
+  let out = '';
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+    out += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}" stroke="${C.line}"${v === 0 ? '' : ' stroke-dasharray="2 4"'}/>`
+      + `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" fill="${C.muted}" font-size="11">${v}</text>`;
+  }
+  return out;
+}
+/** Pointer position in viewBox x units, plus the svg's client rect for placing the tooltip. */
+function pointerX(ev, svg, W) {
+  const r = svg.getBoundingClientRect();
+  return { px: (ev.clientX - r.left) / r.width * W, r };
+}
+function chartShell(svg) {
+  const wrap = document.createElement('div');
+  wrap.className = 'chart';
+  wrap.innerHTML = svg + '<div class="tip" hidden></div>';
+  return wrap;
+}
+
+/** Foot height + hip rise around one jump. Two series → legend + direct labels, hover crosshair. */
+function jumpChart(result, { onPick } = {}) {
+  const c = result.chart;
+  if (!c || c.t.length < 3) return document.createElement('div');
+  const W = chartWidth(), H = 220, m = { l: 40, r: 12, t: 12, b: 26 };
+  const t0 = c.t[0], t1 = c.t[c.t.length - 1];
+  const all = c.foot.concat(c.hip.filter(Number.isFinite));
+  const yMin = Math.min(-5, Math.floor(Math.min(...all) / 10) * 10), yMax = Math.max(10, Math.ceil(Math.max(...all) / 10) * 10);
+  const x = t => m.l + (t - t0) / (t1 - t0) * (W - m.l - m.r);
+  const y = v => m.t + (yMax - v) / (yMax - yMin) * (H - m.t - m.b);
+  const path = arr => arr.map((v, i) => Number.isFinite(v) ? `${i && Number.isFinite(arr[i - 1]) ? 'L' : 'M'}${x(c.t[i]).toFixed(1)},${y(v).toFixed(1)}` : '').join('');
+  const T = result.t1 - result.t0;
+  let xt = '';
+  for (let s = Math.ceil(t0 * 2) / 2; s <= t1; s += 0.5) {
+    xt += `<text x="${x(s)}" y="${H - 8}" text-anchor="middle" fill="${C.muted}" font-size="11">${fmt(s, 1)} s</text>`;
+  }
+  const hipLast = c.hip[c.t.length - 1];
+  const id = `ch${++chartSeq}`;
+  const wrap = chartShell(`
+    <div class="legend"><span><i style="background:var(--foot)"></i>Jalkaterän korkeus</span><span><i style="background:var(--hip)"></i>Lantion nousu</span><span>cm</span></div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Jalkaterän ja lantion korkeus hypyn aikana">
+      <rect x="${x(0)}" y="${m.t}" width="${x(T) - x(0)}" height="${H - m.t - m.b}" fill="${C.accent}" opacity=".07"/>
+      ${yGrid(y, yMin, yMax, yMax - yMin > 80 ? 20 : 10, m, W)}${xt}
+      <line x1="${x(0)}" x2="${x(0)}" y1="${m.t}" y2="${H - m.b}" stroke="${C.accent}" stroke-width="1.5"/>
+      <line x1="${x(T)}" x2="${x(T)}" y1="${m.t}" y2="${H - m.b}" stroke="${C.accent}" stroke-width="1.5"/>
+      <text x="${x(0) + 4}" y="${m.t + 11}" fill="${C.accent}" font-size="11">irtoaminen</text>
+      <text x="${x(T) + 4}" y="${m.t + 11}" fill="${C.accent}" font-size="11">alastulo</text>
+      <path d="${path(c.hip)}" fill="none" stroke="${C.hip}" stroke-width="2" stroke-linejoin="round"/>
+      <path d="${path(c.foot)}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round"/>
+      ${Number.isFinite(hipLast) ? `<text x="${W - m.r}" y="${y(hipLast) - 6}" text-anchor="end" fill="${C.text}" font-size="11">lantio</text>` : ''}
+      <g id="${id}h" visibility="hidden">
+        <line y1="${m.t}" y2="${H - m.b}" stroke="${C.text}" stroke-width="1" opacity=".5"/>
+        <circle r="4.5" fill="${C.foot}" stroke="${C.panel}" stroke-width="2"/>
+        <circle r="4.5" fill="${C.hip}" stroke="${C.panel}" stroke-width="2"/>
+      </g>
+      <rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent" style="cursor:${onPick ? 'pointer' : 'crosshair'}"/>
+    </svg>`);
+  const svg = wrap.querySelector('svg'), hov = wrap.querySelector(`#${id}h`), tip = wrap.querySelector('.tip');
+  const nearest = ev => {
+    const { px, r } = pointerX(ev, svg, W);
+    const tt = t0 + (px - m.l) / (W - m.l - m.r) * (t1 - t0);
+    let bi = 0;
+    for (let i = 1; i < c.t.length; i++) if (Math.abs(c.t[i] - tt) < Math.abs(c.t[bi] - tt)) bi = i;
+    return { i: bi, r };
+  };
+  svg.addEventListener('pointermove', ev => {
+    const { i, r } = nearest(ev);
+    const X = x(c.t[i]);
+    hov.setAttribute('visibility', 'visible');
+    hov.querySelector('line').setAttribute('x1', X); hov.querySelector('line').setAttribute('x2', X);
+    const [cf, ch] = hov.querySelectorAll('circle');
+    cf.setAttribute('cx', X); cf.setAttribute('cy', y(c.foot[i]));
+    ch.setAttribute('cx', X); ch.setAttribute('cy', Number.isFinite(c.hip[i]) ? y(c.hip[i]) : -99);
+    tip.hidden = false;
+    tip.style.left = `${X / W * r.width}px`; tip.style.top = `${Math.min(y(c.foot[i]), y(c.hip[i]) || 1e9) / H * r.height - 8}px`;
+    tip.innerHTML = `${fmt(c.t[i], 3)} s · jalka ${fmt(c.foot[i])} cm${Number.isFinite(c.hip[i]) ? ` · lantio ${fmt(c.hip[i])} cm` : ''}`;
+  });
+  svg.addEventListener('pointerleave', () => { hov.setAttribute('visibility', 'hidden'); tip.hidden = true; });
+  if (onPick) svg.addEventListener('click', ev => onPick(c.idx[nearest(ev).i]));
+  return wrap;
+}
+
+/** One series over time (history trend) → no legend, title names it. */
+function trendChart(jumps) {
+  const W = chartWidth(), H = 200, m = { l: 40, r: 16, t: 16, b: 24 };
+  const vals = jumps.map(j => j.cm);
+  const lo = Math.floor(Math.min(...vals) / 5) * 5 - 5, hi = Math.ceil(Math.max(...vals) / 5) * 5 + 5;
+  const n = jumps.length;
+  const x = i => m.l + (n === 1 ? 0.5 : i / (n - 1)) * (W - m.l - m.r);
+  const y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
+  const best = vals.indexOf(Math.max(...vals));
+  const d = vals.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
+  const date = j => new Date(j.at).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric' });
+  const wrap = chartShell(`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tulokset ajan mittaan">
+      ${yGrid(y, lo, hi, hi - lo > 40 ? 10 : 5, m, W)}
+      <path d="${d}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round"/>
+      ${vals.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === best ? 5 : 3}" fill="${i === best ? C.accent : C.foot}" stroke="${C.panel}" stroke-width="2"/>`).join('')}
+      <text x="${x(best)}" y="${y(vals[best]) - 10}" text-anchor="middle" fill="${C.text}" font-size="12" font-weight="700">${fmt(vals[best])}</text>
+      <text x="${m.l}" y="${H - 6}" fill="${C.muted}" font-size="11">${date(jumps[0])}</text>
+      <text x="${W - m.r}" y="${H - 6}" text-anchor="end" fill="${C.muted}" font-size="11">${date(jumps[n - 1])}</text>
+      <line class="hl" y1="${m.t}" y2="${H - m.b}" stroke="${C.text}" opacity=".4" visibility="hidden"/>
+      <rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent"/>
+    </svg>`);
+  const svg = wrap.querySelector('svg'), tip = wrap.querySelector('.tip'), hl = wrap.querySelector('.hl');
+  svg.addEventListener('pointermove', ev => {
+    const { px, r } = pointerX(ev, svg, W);
+    const i = Math.max(0, Math.min(n - 1, Math.round((px - m.l) / (W - m.l - m.r) * (n - 1))));
+    hl.setAttribute('x1', x(i)); hl.setAttribute('x2', x(i)); hl.setAttribute('visibility', 'visible');
+    tip.hidden = false;
+    tip.style.left = `${x(i) / W * r.width}px`; tip.style.top = `${y(vals[i]) / H * r.height - 8}px`;
+    tip.textContent = `${fmtWhen(jumps[i].at)} · ${fmt(vals[i])} cm`;
+  });
+  svg.addEventListener('pointerleave', () => { tip.hidden = true; hl.setAttribute('visibility', 'hidden'); });
+  return wrap;
+}
+
+// ---------- result card ----------
+function resultCard(r, { extra = '' } = {}) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const flags = r.flags.map(f => `<li>${esc(FLAG_TEXT[f] || f)}</li>`);
+  const gOk = Number.isFinite(r.impliedG) && !r.flags.includes('gravity') && !r.flags.includes('slowed');
+  if (gOk && db.settings.statureCm) flags.push(`<li class="ok">Painovoimatarkistus ${fmt(r.impliedG)} m/s² – ajoitus ja mittakaava kunnossa.</li>`);
+  const hipTxt = db.settings.statureCm
+    ? `<div class="metric"><div class="k">Lantion nousu seisonnasta</div><div class="v">${Number.isFinite(r.hipRiseCm) ? fmt(r.hipRiseCm) + ' cm' : '–'}</div></div>
+       <div class="metric"><div class="k">Painovoimatarkistus</div><div class="v">${Number.isFinite(r.impliedG) ? fmt(r.impliedG) + ' m/s²' : '–'}</div></div>`
+    : `<div class="metric"><div class="k">Lantion nousu</div><div class="v small muted">Aseta pituus asetuksista</div></div>`;
+  card.innerHTML = `
+    <div class="row" style="justify-content:space-between;align-items:flex-start">
+      <div>
+        <div class="res-main"><span class="n">${fmt(r.heightCm)}</span><span class="u">cm</span></div>
+        <div class="res-sub">±${fmt(r.errCm)} cm · lentoaika ${Math.round(r.flightMs)} ms · ${Math.round(r.fps)} fps</div>
+      </div>
+      <div class="row">${extra}</div>
+    </div>
+    <div class="metrics">
+      ${hipTxt}
+    </div>
+    ${flags.length ? `<ul class="flags">${flags.join('')}</ul>` : ''}`;
+  return card;
+}
+
+function toRecord(r, src, type = db.type) {
+  return {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    at: new Date().toISOString(), type,
+    cm: Math.round(r.heightCm * 10) / 10, ms: Math.round(r.flightMs), err: Math.round(r.errCm * 10) / 10,
+    hipCm: Number.isFinite(r.hipRiseCm) && db.settings.statureCm ? Math.round(r.hipRiseCm * 10) / 10 : null,
+    fps: Math.round(r.fps), src, flags: r.flags.slice(),
+  };
+}
+const jumpsOf = type => db.jumps.filter(j => j.type === type).sort((a, b) => a.at.localeCompare(b.at));
+const cleanOf = js => js.filter(j => !j.flags.length);
+/** A record is a jump without quality flags: flagged jumps never count as a personal best. */
+const bestOf = js => cleanOf(js).reduce((a, j) => (!a || j.cm > a.cm ? j : a), null);
+/** Save; returns true when this beats an existing record of the same type. */
+function addJump(rec) {
+  const prev = bestOf(jumpsOf(rec.type));
+  db.jumps.push(rec); save();
+  return !rec.flags.length && !!prev && rec.cm > prev.cm;
+}
+function deleteJump(id) {
+  db.jumps = db.jumps.filter(j => j.id !== id); save();
+  live.session = live.session.filter(j => j.id !== id);
+}
+/** One delegated delete handler per list: `[data-del]` buttons delete, then `after` re-renders. */
+function onDelete(el, after) {
+  el.addEventListener('click', ev => {
+    const id = ev.target.closest('[data-del]')?.dataset.del;
+    if (id) { deleteJump(id); after(id); }
+  });
+}
+
+// ---------- tabs & type chips ----------
+let currentTab = 'live';
+function showTab(tab) {
+  if (tab === currentTab) return;
+  if (currentTab === 'live') stopLive();
+  currentTab = tab;
+  document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === tab)));
+  for (const t of ['live', 'video', 'history', 'help']) $('tab-' + t).hidden = t !== tab;
+  $('typeBar').hidden = tab === 'help';
+  if (tab === 'history') renderHistory();
+}
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
+
+function renderTypes() {
+  $('types').innerHTML = TYPES.map(t => `<button class="chip" data-type="${t.id}" aria-pressed="${t.id === db.type}">${t.name}</button>`).join('');
+  $('typeHint').textContent = typeOf(db.type).hint;
+}
+$('types').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-type]');
+  if (!b || b.dataset.type === db.type) return;
+  db.type = b.dataset.type; save(); renderTypes();
+  if (live.running) live.det = newDetector();
+  if (currentTab === 'history') renderHistory();
+});
+
+// ---------- LIVE ----------
+const cam = $('cam'), camOverlay = $('camOverlay'), camCtx = camOverlay.getContext('2d');
+// startSeq: bumped by stopLive, so a start still awaiting the model/camera knows it was cancelled.
+const live = { running: false, startSeq: 0, stream: null, lmk: null, det: null, timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity, wakeLock: null, bigTimer: null, session: [] };
+const EMPTY_TEXT = $('liveEmptyText').textContent;
+
+function newDetector() {
+  const t = typeOf(db.type);
+  return new JumpDetector({ statureCm: stature(), requireReady: !t.runUp, checkArms: !!t.checkArms });
+}
+
+function cameraError(e) {
+  if (!navigator.mediaDevices) return 'Kamera vaatii suojatun yhteyden (https tai localhost).';
+  if (e && e.name === 'NotAllowedError') return 'Kameran käyttö estettiin. Salli kamera selaimen asetuksista ja yritä uudelleen.';
+  if (e && e.name === 'NotFoundError') return 'Kameraa ei löytynyt.';
+  if (e && e.name === 'NotReadableError') return 'Kamera on toisen sovelluksen käytössä.';
+  return 'Kameran käynnistys epäonnistui: ' + (e && e.message || e);
+}
+
+async function startLive() {
+  const seq = ++live.startSeq;
+  const cancelled = () => seq !== live.startSeq;
+  unlockAudio();
+  $('startCam').disabled = true;
+  $('liveEmptyText').textContent = 'Ladataan tunnistusmallia… (ensimmäisellä kerralla ~15 Mt)';
+  try {
+    live.lmk = await getLandmarker('live', db.settings.liveModel);
+  } catch (e) {
+    console.error(e);
+    if (cancelled()) return;
+    $('liveEmptyText').innerHTML = `<span class="err">Mallin lataus epäonnistui.</span> ${esc(e.message || e)}`;
+    $('startCam').disabled = false;
+    return;
+  }
+  if (cancelled()) return;
+  let stream;
+  try {
+    if (!navigator.mediaDevices?.getUserMedia) throw null;
+    stream = await navigator.mediaDevices.getUserMedia({
+      audio: false,
+      video: { facingMode: db.settings.camera, width: { ideal: 1280 }, height: { ideal: 720 }, frameRate: { ideal: 60 } },
+    });
+  } catch (e) {
+    if (cancelled()) return;
+    $('liveEmptyText').innerHTML = `<span class="err">${esc(cameraError(e))}</span>`;
+    $('startCam').disabled = false;
+    return;
+  }
+  if (cancelled()) { stream.getTracks().forEach(t => t.stop()); return; }
+  live.stream = stream;
+  cam.srcObject = stream;
+  try { await cam.play(); } catch { /* autoplay attr covers it */ }
+  if (!cam.videoWidth) {
+    await new Promise(r => { cam.addEventListener('loadedmetadata', r, { once: true }); setTimeout(r, 4000); });
+  }
+  if (cancelled() || !cam.videoWidth) {
+    if (!cancelled()) { stopLive(); $('liveEmptyText').innerHTML = '<span class="err">Kamerakuva ei käynnistynyt.</span> Yritä uudelleen.'; }
+    return;
+  }
+  sizeStage($('liveStage'), camOverlay, cam.videoWidth, cam.videoHeight);
+  $('liveStage').classList.toggle('mirror', db.settings.camera === 'user');
+  $('liveEmpty').hidden = true;
+  $('startCam').disabled = false;
+  $('stopCam').hidden = $('flipCam').hidden = false;
+  $('liveStatus').hidden = $('liveFps').hidden = false;
+  const s = live.stream.getVideoTracks()[0]?.getSettings?.() || {};
+  $('liveInfo').textContent = `${cam.videoWidth}×${cam.videoHeight}${s.frameRate ? ` · kamera ${Math.round(s.frameRate)} fps` : ''}`;
+  Object.assign(live, { running: true, det: newDetector(), timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity });
+  requestWakeLock();
+  scheduleLiveFrame();
+}
+
+function stopLive() {
+  live.startSeq++;          // cancels a start that is still awaiting the model or the camera
+  live.running = false;
+  $('startCam').disabled = false;
+  live.stream?.getTracks().forEach(t => t.stop());
+  live.stream = null;
+  cam.srcObject = null;
+  live.wakeLock?.release?.().catch(() => {});
+  live.wakeLock = null;
+  $('liveEmpty').hidden = false;
+  $('stopCam').hidden = $('flipCam').hidden = true;
+  $('liveStatus').hidden = $('liveFps').hidden = $('liveBig').hidden = true;
+  $('liveEmptyText').textContent = EMPTY_TEXT;
+  camCtx.clearRect(0, 0, camOverlay.width, camOverlay.height);
+}
+
+async function requestWakeLock() {
+  try { live.wakeLock = await navigator.wakeLock?.request('screen'); } catch { /* not supported / denied */ }
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && live.running) requestWakeLock();
+});
+
+function sizeStage(stage, canvas, w, h) {
+  canvas.width = w; canvas.height = h;
+  stage.style.aspectRatio = `${w} / ${h}`;
+}
+
+function scheduleLiveFrame() {
+  if (!live.running) return;
+  if (cam.requestVideoFrameCallback) cam.requestVideoFrameCallback(onLiveFrame);
+  else requestAnimationFrame(now => onLiveFrame(now, null));
+}
+
+/** Frame timestamp in seconds: the camera's capture/media time when the browser provides it
+ *  (exact frame spacing), else the callback clock (vsync-quantized, slightly noisier). The source
+ *  is chosen once per session so the time base never mixes. */
+function liveTime(now, meta) {
+  live.timeSrc ??= meta?.captureTime ? 'capture' : meta?.mediaTime > 0 ? 'media' : 'clock';
+  if (live.timeSrc === 'capture') return meta?.captureTime ? meta.captureTime / 1000 : NaN;
+  if (live.timeSrc === 'media') return meta?.mediaTime > 0 ? meta.mediaTime : NaN;
+  return (meta?.expectedDisplayTime ?? now) / 1000;
+}
+
+function onLiveFrame(now, meta) {
+  if (!live.running) return;
+  scheduleLiveFrame();
+  if (!meta) { if (cam.currentTime === live.lastVT) return; live.lastVT = cam.currentTime; }
+  const t = liveTime(now, meta);
+  if (!(t > live.lastT)) return;
+  live.lastT = t;
+  const W = cam.videoWidth, H = cam.videoHeight;
+  if (!W) return;
+  if (camOverlay.width !== W || camOverlay.height !== H) sizeStage($('liveStage'), camOverlay, W, H);
+  let lm;
+  try { lm = firstPose(live.lmk.detectForVideo(cam, performance.now())); }
+  catch (e) { console.error(e); return; }
+  const f = lm ? frameFeatures(lm, W, H) : null;
+  const ev = live.det.push(t, f);
+  const st = live.det.status();
+  drawPose(camCtx, lm, W, H, st === 'noPerson' ? NaN : live.det.ground, st === 'air' && f ? f.foot : NaN);
+  trackFps(t);
+  setLiveStatus(st, lm, f);
+  if (ev) onLiveEvent(ev);
+}
+
+function trackFps(t) {
+  const fr = live.frames;
+  fr.push(t);
+  while (fr.length && fr[0] < t - 1) fr.shift();
+  if (t - live.fpsShownAt >= 0.5) { live.fpsShownAt = t; $('liveFps').textContent = `${fr.length} fps`; }
+}
+
+function setLiveStatus(st, lm, f) {
+  const el = $('liveStatus');
+  let text, cls = '';
+  if (st === 'air') { text = 'Ilmassa…'; cls = 'air'; }
+  else if (!lm) { text = 'Asetu kuvaan – koko vartalo näkyviin'; cls = 'warn'; }
+  else if (!f) { text = 'Jalkaterät eivät näy – siirry kauemmas'; cls = 'warn'; }
+  else if (st === 'settle') text = 'Seiso hetki paikallaan…';
+  else { text = typeOf(db.type).readyText || 'Valmis – hyppää!'; cls = 'ready'; }
+  if (el.textContent !== text) { el.textContent = text; el.className = 'pill ' + cls; }
+}
+
+function onLiveEvent(ev) {
+  if (ev.type === 'ready') beep(880);
+  else if (ev.type === 'reject') {
+    if (ev.reason === 'timeout') toast('Alastuloa ei tunnistettu – pysy kokonaan kuvassa.');
+    else if (ev.reason === 'feet') toast('Jalkaterät eivät näkyneet hypyn aikana.');
+  } else if (ev.type === 'jump') showLiveJump(ev.result);
+}
+
+function showLiveJump(r) {
+  const saveable = isSaveable(r);
+  const rec = toRecord(r, 'live');
+  const pr = saveable && addJump(rec);
+  if (saveable) live.session.unshift(rec);
+  const big = $('liveBig');
+  big.querySelector('.n').textContent = fmt(r.heightCm);
+  big.querySelector('.s').textContent = (pr ? 'Uusi ennätys! · ' : '') + `lentoaika ${Math.round(r.flightMs)} ms` + (r.flags.length ? ' · tarkista huomautus' : '');
+  big.hidden = false; big.style.opacity = 1;
+  clearTimeout(live.bigTimer);
+  live.bigTimer = setTimeout(() => { big.style.opacity = 0; setTimeout(() => (big.hidden = true), 400); }, 5000);
+  speak(`${Math.round(r.heightCm)} senttiä${pr ? ', uusi ennätys' : ''}`);
+
+  const card = resultCard(r, { extra: saveable ? `<button class="btn sm ghost" data-del="${rec.id}">Hylkää</button>` : '' });
+  card.appendChild(jumpChart(r));
+  $('liveResult').replaceChildren(card);
+  renderSession();
+}
+onDelete($('liveResult'), () => {
+  $('liveResult').replaceChildren();
+  renderSession();
+  toast('Hyppy poistettu historiasta.');
+});
+
+function jumpRow(j, { showType = false, best = false } = {}) {
+  const warn = j.flags.length ? `<span class="badge w" title="${esc(j.flags.map(f => FLAG_TEXT[f] || f).join(' '))}">huom.</span>` : '';
+  return `<li>
+    <div><div><span class="h">${fmt(j.cm)} cm</span> ${best ? '<span class="badge pr">ennätys</span>' : ''} ${warn}</div>
+      <div class="d">${fmtWhen(j.at)}${showType ? ' · ' + esc(typeName(j.type)) : ''} · ${fmt(+j.ms, 0)} ms · ±${fmt(j.err)} · ${fmt(+j.fps, 0)} fps · ${j.src === 'video' ? 'video' : 'kamera'}${j.hipCm != null ? ` · lantio ${fmt(j.hipCm)} cm` : ''}</div></div>
+    <button class="x" data-del="${esc(j.id)}" aria-label="Poista">✕</button>
+  </li>`;
+}
+function renderSession() {
+  $('sessionCard').hidden = !live.session.length;
+  $('sessionList').innerHTML = live.session.map(j => jumpRow(j, { showType: true })).join('');
+}
+onDelete($('sessionList'), renderSession);
+
+$('startCam').addEventListener('click', startLive);
+$('stopCam').addEventListener('click', stopLive);
+$('flipCam').addEventListener('click', async () => {
+  db.settings.camera = db.settings.camera === 'user' ? 'environment' : 'user'; save();
+  stopLive(); await startLive();
+});
+
+// ---------- VIDEO ----------
+const vid = $('vid'), vidOverlay = $('vidOverlay'), vidCtx = vidOverlay.getContext('2d');
+const work = document.createElement('canvas'), workCtx = work.getContext('2d');
+// fpsEst: auto-detected frame rate of the loaded file (undefined = not tried yet, null = failed).
+// anaFps / anaType: frame rate the cached `frames` are indexed with, jump type the results used.
+const vs = { url: null, fpsEst: undefined, anaFps: 30, anaType: null, busy: false, token: null, frames: null, curMt: 0, manual: { t0: null, t1: null }, jumps: [] };
+const slowNow = () => +$('vidSlow').value;
+/** The frame rate frame stepping/labels use: the selection, else the detected one. */
+const currentFps = () => +$('vidFps').value || vs.fpsEst || 30;
+/** Frame index of a media time. +0.25 maps both a frame's PTS (i/fps) and the seek target
+ *  (i+0.5)/fps to i; rounding would put the latter on a .5 boundary. */
+const frameIdx = (mt, fps) => Math.floor(mt * fps + 0.25);
+
+/** Analysis owns the single <video> element: user seeks during it would answer the analysis'
+ *  pending seek with the wrong frame, and a new file would swap the source under it. */
+function setVideoBusy(busy) {
+  vs.busy = busy;
+  for (const el of document.querySelectorAll('#vidFile, #vidFps, #vidSlow, #vidScrub, #markTo, #markLand, .stepper button')) el.disabled = busy;
+  document.querySelector('label[for="vidFile"]').classList.toggle('disabled', busy);
+}
+
+$('vidFile').addEventListener('change', async () => {
+  const file = $('vidFile').files[0];
+  if (!file || vs.busy) return;
+  if (vs.url) URL.revokeObjectURL(vs.url);
+  vs.url = URL.createObjectURL(file);
+  Object.assign(vs, { fpsEst: undefined, frames: null, manual: { t0: null, t1: null }, jumps: [] });
+  $('vidResults').replaceChildren(); $('manualOut').replaceChildren();
+  $('vidName').textContent = file.name;
+  $('vidPlayer').hidden = false;   // a display:none <video> may not start loading
+  vid.src = vs.url;
+  try {
+    await new Promise((res, rej) => { vid.onloadeddata = res; vid.onerror = () => rej(vid.error); });
+  } catch {
+    $('vidStatus').innerHTML = '<span class="err">Videota ei voitu avata tässä selaimessa.</span>';
+    return;
+  }
+  sizeStage($('vidStage'), vidOverlay, vid.videoWidth, vid.videoHeight);
+  $('vidAnalyze').disabled = false;
+  $('vidStatus').textContent = `${fmt(vid.duration, 1)} s · ${vid.videoWidth}×${vid.videoHeight}`;
+  await showFrame(0);
+});
+
+/** Seek and resolve with the presented frame's exact media time (rVFC), or null if the browser
+ *  doesn't report it. Never hangs: gives up after 3 s (e.g. a seek aborted by another). */
+function seekTo(time) {
+  return new Promise(resolve => {
+    let done = false, timer = null;
+    const finish = mt => { if (!done) { done = true; clearTimeout(timer); clearTimeout(guard); resolve(mt); } };
+    const guard = setTimeout(() => finish(null), 3000);
+    if (vid.requestVideoFrameCallback) vid.requestVideoFrameCallback((now, meta) => finish(meta.mediaTime));
+    vid.addEventListener('seeked', () => { timer = setTimeout(() => finish(null), vid.requestVideoFrameCallback ? 300 : 40); }, { once: true });
+    vid.currentTime = Math.max(0, Math.min(time, vid.duration - 1e-3));
+  });
+}
+
+/** Frame rate from real presented-frame timestamps. Played slowly from the start (the playhead
+ *  may sit at the end) so even 240 fps footage presents every frame; the smallest spacing
+ *  (20th percentile) is the frame interval. */
+function estimateFps() {
+  return new Promise(resolve => {
+    if (!vid.requestVideoFrameCallback) return resolve(null);
+    vid.currentTime = 0;
+    const times = [];
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true; vid.pause(); vid.playbackRate = 1;
+      const d = times.slice(1).map((t, i) => t - times[i]).filter(x => x > 1e-4);
+      resolve(d.length >= 4 ? 1 / quantile(d, 0.2) : null);
+    };
+    const cb = (now, meta) => {
+      if (done) return;
+      times.push(meta.mediaTime);
+      if (times.length >= 24) finish(); else vid.requestVideoFrameCallback(cb);
+    };
+    vid.requestVideoFrameCallback(cb);
+    vid.muted = true; vid.playbackRate = 0.25;
+    vid.play().catch(finish);
+    setTimeout(finish, 3500);
+  });
+}
+
+async function videoFps() {
+  const sel = $('vidFps').value;
+  if (sel !== 'auto') return { fps: +sel, src: 'valittu' };
+  if (vs.fpsEst === undefined) vs.fpsEst = await estimateFps();
+  return vs.fpsEst ? { fps: vs.fpsEst, src: 'tunnistettu' } : { fps: 30, src: 'oletus (tunnistus ei onnistunut)' };
+}
+
+function grabFrame() {
+  const w = vid.videoWidth, h = vid.videoHeight, k = Math.min(1, 1280 / Math.max(w, h));
+  const cw = Math.round(w * k), ch = Math.round(h * k);
+  if (work.width !== cw || work.height !== ch) { work.width = cw; work.height = ch; }   // resizing reallocates
+  // drawImage applies the video's rotation metadata, which a raw texture upload may not.
+  workCtx.drawImage(vid, 0, 0, cw, ch);
+  return work;
+}
+
+/** Show a frame with its skeleton: from the analysis cache when that frame was analysed,
+ *  otherwise detected on the spot (if the video model is loaded). seek:false redraws in place. */
+async function showFrame(mediaTime, { detect = true, seek = true } = {}) {
+  if (seek) vs.curMt = (await seekTo(mediaTime)) ?? vid.currentTime;
+  const cached = vs.frames?.get(frameIdx(vs.curMt, vs.anaFps));
+  let lm = cached ? cached.lm : null;
+  if (!cached && detect && landmarkers.video) {
+    try { lm = firstPose((await landmarkers.video.p).detect(grabFrame())); } catch (e) { console.error(e); }
+  }
+  drawPose(vidCtx, lm, vid.videoWidth, vid.videoHeight);
+  updateVidTime();
+}
+
+function updateVidTime() {
+  $('vidTime').textContent = `${fmt(vs.curMt / slowNow(), 3)} s · ruutu ${frameIdx(vs.curMt, currentFps())}`;
+  $('vidScrub').value = String(Math.round(vs.curMt / (vid.duration || 1) * 1000));
+}
+
+let scrubBusy = false, scrubPending = null;
+$('vidScrub').addEventListener('input', async () => {
+  scrubPending = +$('vidScrub').value / 1000 * vid.duration;
+  if (scrubBusy) return;
+  scrubBusy = true;
+  while (scrubPending != null) { const t = scrubPending; scrubPending = null; await showFrame(t, { detect: false }); }
+  scrubBusy = false;
+  showFrame(vs.curMt, { seek: false });   // settle: add the skeleton without seeking again
+});
+document.querySelector('.stepper').addEventListener('click', async ev => {
+  const n = +(ev.target.closest('[data-step]')?.dataset.step || 0);
+  if (!n) return;
+  const { fps } = await videoFps();
+  await showFrame((frameIdx(vs.curMt, fps) + n + 0.5) / fps);
+});
+
+function renderManual() {
+  const { t0, t1 } = vs.manual, out = $('manualOut');
+  if (t0 == null && t1 == null) return out.replaceChildren();
+  const T = t0 != null && t1 != null ? t1 - t0 : NaN;
+  const h = T > 0 ? heightFromFlight(T) : NaN;
+  out.innerHTML = `<div class="metrics">
+      <div class="metric"><div class="k">Irtoaminen</div><div class="v">${t0 != null ? fmt(t0, 3) + ' s' : '–'}</div></div>
+      <div class="metric"><div class="k">Alastulo</div><div class="v">${t1 != null ? fmt(t1, 3) + ' s' : '–'}</div></div>
+      <div class="metric"><div class="k">Käsin mitattu</div><div class="v">${Number.isFinite(h) ? fmt(h) + ' cm · ' + Math.round(T * 1000) + ' ms' : '–'}</div></div>
+    </div>
+    ${T >= MIN_FLIGHT_S && T <= MAX_FLIGHT_S ? '<button class="btn sm" id="saveManual">Tallenna historiaan</button>' : ''}
+    ${T > MAX_FLIGHT_S ? `<p class="err small">${esc(FLAG_TEXT.slowed)}</p>` : ''}
+    ${T < MIN_FLIGHT_S ? '<p class="err small">Lentoaika on liian lyhyt hypyksi – tarkista merkityt ruudut.</p>' : ''}`;
+}
+$('markTo').addEventListener('click', () => { vs.manual.t0 = vs.curMt / slowNow(); renderManual(); });
+$('markLand').addEventListener('click', () => { vs.manual.t1 = vs.curMt / slowNow(); renderManual(); });
+$('manualOut').addEventListener('click', async ev => {
+  if (ev.target.id !== 'saveManual' || ev.target.disabled) return;
+  ev.target.disabled = true;   // before any await: no double save on a double tap
+  const T = vs.manual.t1 - vs.manual.t0;
+  const realFps = (await videoFps()).fps * slowNow();
+  addJump(toRecord({ heightCm: heightFromFlight(T), flightMs: T * 1000, errCm: flightErrCm(T, realFps), fps: realFps, flags: [] }, 'video'));
+  ev.target.textContent = 'Tallennettu';
+});
+
+$('vidAnalyze').addEventListener('click', analyzeVideo);
+$('vidCancel').addEventListener('click', () => { if (vs.token) vs.token.cancelled = true; });
+
+async function analyzeVideo() {
+  if (!Number.isFinite(vid.duration)) {
+    $('vidStatus').textContent = 'Videon kestoa ei saatu selville (esim. selaimella nauhoitettu WebM) – tallenna video puhelimen kameralla.';
+    return;
+  }
+  const token = { cancelled: false };
+  vs.token = token;
+  setVideoBusy(true);
+  $('vidAnalyze').disabled = true; $('vidCancel').hidden = false;
+  const bar = $('vidProgress');
+  bar.hidden = false; bar.firstElementChild.style.width = '0%';
+  $('vidResults').replaceChildren();
+  const status = t => ($('vidStatus').textContent = t);
+  try {
+    status('Ladataan tunnistusmallia ja tunnistetaan kuvataajuutta…');
+    if (vs.fpsEst === null) vs.fpsEst = undefined;   // a failed estimate gets one more try
+    const [lmk, { fps, src }] = await Promise.all([getLandmarker('video', 'full'), videoFps()]);
+    const slow = slowNow(), realFps = fps * slow;
+    const nFrames = Math.max(1, Math.floor(vid.duration * fps));
+    const stride = Math.max(1, Math.round(realFps / 30));
+    const W = vid.videoWidth, H = vid.videoHeight;
+    // Landmarks belong to media frames, not to the slow-down factor: re-analysing the same file
+    // (e.g. after the slow-down suggestion) only re-times the cached frames.
+    const frames = vs.frames && vs.anaFps === fps ? vs.frames : new Map();
+    for (const fr of frames.values()) fr.t = fr.mt / slow;
+    Object.assign(vs, { frames, anaFps: fps, anaType: db.type });
+
+    // Seek to the next frame while MediaPipe works on the current one (it reads the pixels
+    // already copied into `work`), so video decode and inference overlap.
+    const grabAll = async (indices, pctFrom, pctTo, label) => {
+      const list = indices.filter(i => i >= 0 && i < nFrames && !frames.has(i));
+      let pending = list.length ? seekTo((list[0] + 0.5) / fps) : null;
+      for (let n = 0; n < list.length; n++) {
+        if (token.cancelled) throw new Error('cancelled');
+        const idx = list[n];
+        const tMedia = (await pending) ?? idx / fps;
+        grabFrame();
+        pending = n + 1 < list.length ? seekTo((list[n + 1] + 0.5) / fps) : null;
+        const lm = firstPose(lmk.detect(work));
+        frames.set(idx, { t: tMedia / slow, mt: tMedia, f: lm ? frameFeatures(lm, W, H) : null, lm });
+        if (n % 3 === 2 || n === list.length - 1) {
+          bar.firstElementChild.style.width = `${(pctFrom + (n + 1) / list.length * (pctTo - pctFrom)).toFixed(1)}%`;
+          status(`${label} ${n + 1}/${list.length}`);
+        }
+      }
+    };
+    const t = typeOf(db.type);
+    // Video may be slowed down but read as real time: allow long flights and slow rises.
+    const opts = { statureCm: stature(), checkArms: !!t.checkArms, timeout: 12, riseWindow: 0.6 };
+    const run = () => findJumps([...frames.values()].sort((a, b) => a.t - b.t), opts);
+
+    // Pass 1: ~30 samples per real second over the whole clip.
+    const coarse = [];
+    for (let i = 0; i < nFrames; i += stride) coarse.push(i);
+    await grabAll(coarse, 0, stride > 1 ? 60 : 100, `Analysoidaan (${Math.round(fps)} fps, ${src})…`);
+    let jumps = run();
+
+    // Pass 2: every frame around each jump found, for full-frame-rate edge timing.
+    if (stride > 1 && jumps.length) {
+      const fine = [];
+      for (const j of jumps) {
+        for (let i = Math.floor((j.t0 - 0.3) * realFps); i <= Math.ceil((j.t1 + 0.3) * realFps); i++) fine.push(i);
+      }
+      await grabAll(fine, 60, 100, 'Tarkennetaan irtoamista ja alastuloa…');
+      jumps = run();
+    }
+    bar.firstElementChild.style.width = '100%';
+    vs.jumps = jumps;
+    const seen = [...frames.values()].filter(f => f.f).length;
+    status(jumps.length
+      ? `Löytyi ${jumps.length} ${jumps.length === 1 ? 'hyppy' : 'hyppyä'} · ${Math.round(realFps)} fps${slow > 1 ? ` (hidastus ${slow}×)` : ''}`
+      : seen < frames.size * 0.5
+        ? 'Hyppyä ei löytynyt – jalkaterät eivät näkyneet suurimmassa osassa ruutuja.'
+        : 'Hyppyä ei löytynyt. Tarkista että koko vartalo näkyy, tai merkitse irtoaminen ja alastulo käsin.');
+    renderVideoResults(jumps, slow);
+    if (jumps.length) await showFrame(jumps[0].t0 * slow);
+  } catch (e) {
+    if (e.message === 'cancelled') status('Keskeytetty.');
+    else { console.error(e); status('Analyysi epäonnistui: ' + (e.message || e)); }
+  } finally {
+    setVideoBusy(false);
+    $('vidAnalyze').disabled = false; $('vidCancel').hidden = true;
+    setTimeout(() => (bar.hidden = true), 800);
+  }
+}
+
+function renderVideoResults(jumps, slow) {
+  const box = $('vidResults');
+  box.replaceChildren();
+  const k = slowdownFactor(jumps, slow);
+  if (k) {
+    const c = document.createElement('div');
+    c.className = 'card';
+    c.innerHTML = `<ul class="flags"><li>Painovoimatarkistuksen mukaan video on todennäköisesti ${k === 1 ? 'oikeassa nopeudessa' : `hidastettu noin ${k}×`} (nyt valittu ${slow}×). Väärä aikaskaala vääristää tulokset.</li></ul>
+      <button class="btn primary" data-reslow="${k}">Analysoi uudelleen: ${k === 1 ? 'ei hidastusta' : `hidastus ${k}×`}</button>`;
+    box.appendChild(c);
+  }
+  jumps.forEach((r, n) => {
+    const card = resultCard(r, {
+      extra: `<span class="badge">${esc(typeName(vs.anaType))}</span>
+              <button class="btn sm" data-seek="${r.t0 * slow}">Irtoamisruutu</button>
+              <button class="btn sm" data-seek="${r.t1 * slow}">Alastuloruutu</button>
+              ${isSaveable(r) ? `<button class="btn sm primary" data-save="${n}">Tallenna</button>` : ''}`,
+    });
+    card.appendChild(jumpChart(r, { onPick: idx => showFrame(r.samples[idx].t * slow) }));
+    const note = document.createElement('p');
+    note.className = 'muted small';
+    note.textContent = 'Napauta kuvaajaa nähdäksesi ruudun. Tarkista, että irtoamis- ja alastuloruutu osuvat oikeaan kohtaan.';
+    card.appendChild(note);
+    box.appendChild(card);
+  });
+}
+$('vidResults').addEventListener('click', ev => {
+  const reslow = ev.target.closest('[data-reslow]')?.dataset.reslow;
+  if (reslow) { $('vidSlow').value = reslow; analyzeVideo(); return; }
+  const seek = ev.target.closest('[data-seek]')?.dataset.seek;
+  if (seek != null) { showFrame(+seek); $('vidStage').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+  const n = ev.target.closest('[data-save]')?.dataset.save;
+  if (n != null) {
+    const pr = addJump(toRecord(vs.jumps[+n], 'video', vs.anaType));
+    const b = ev.target.closest('[data-save]');
+    b.disabled = true; b.textContent = pr ? 'Tallennettu – ennätys!' : 'Tallennettu';
+  }
+});
+$('vidFps').addEventListener('change', updateVidTime);
+$('vidSlow').addEventListener('change', updateVidTime);
+
+// ---------- HISTORY ----------
+let histType = null;
+function renderHistory() {
+  const type = histType || db.type;
+  const lists = Object.fromEntries(TYPES.map(t => [t.id, jumpsOf(t.id)]));
+  const byType = TYPES.map(t => {
+    const js = lists[t.id], clean = cleanOf(js);
+    const last5 = (clean.length ? clean : js).slice(-5);
+    const avg = last5.length ? last5.reduce((s, j) => s + j.cm, 0) / last5.length : NaN;
+    return { t, n: js.length, best: bestOf(js)?.cm ?? NaN, avg };
+  });
+  $('summary').innerHTML = byType.map(({ t, n, best, avg }) => `
+    <button class="sum" data-htype="${t.id}" aria-pressed="${t.id === type}">
+      <div class="t">${t.name}</div>
+      <div class="best">${Number.isFinite(best) ? fmt(best) : '–'}<small> cm</small></div>
+      <div class="meta">${n ? `ka. 5 viim. ${fmt(avg)} cm · ${n} ${n === 1 ? 'hyppy' : 'hyppyä'}` : 'ei hyppyjä'}</div>
+    </button>`).join('');
+  const js = lists[type] || jumpsOf(type);
+  const trend = $('trendCard');
+  trend.innerHTML = `<h2>${esc(typeName(type))} – kehitys</h2>`;
+  if (js.length >= 2) trend.appendChild(trendChart(js.slice(-40)));
+  else trend.insertAdjacentHTML('beforeend', '<p class="muted small">Kehityskäyrä näkyy, kun tästä hyppytyypistä on vähintään kaksi tulosta.</p>');
+  $('histTitle').textContent = `${typeName(type)} – kaikki hypyt (${js.length})`;
+  const bestId = bestOf(js)?.id;
+  $('histList').innerHTML = js.length ? js.slice().reverse().map(j => jumpRow(j, { best: j.id === bestId })).join('') : '<li class="muted">Ei vielä hyppyjä.</li>';
+}
+$('summary').addEventListener('click', ev => {
+  const t = ev.target.closest('[data-htype]')?.dataset.htype;
+  if (!t) return;
+  histType = t; renderHistory();
+});
+onDelete($('histList'), () => { renderHistory(); toast('Hyppy poistettu.'); });
+$('exportCsv').addEventListener('click', () => {
+  const n = x => (x == null || !Number.isFinite(x) ? '' : String(x).replace('.', ','));
+  const rows = [['aika', 'tyyppi', 'korkeus_cm', 'lentoaika_ms', 'virhe_cm', 'lantio_cm', 'fps', 'lahde', 'huomiot']]
+    .concat(db.jumps.map(j => [j.at, typeName(j.type), n(j.cm), j.ms, n(j.err), n(j.hipCm), j.fps, j.src, j.flags.join(' ')]));
+  const csv = '﻿' + rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(';')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+  a.download = `hypyt-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+});
+$('clearAll').addEventListener('click', () => {
+  if (!db.jumps.length) return;
+  if (!confirm(`Poistetaanko kaikki ${db.jumps.length} hyppyä? Tätä ei voi perua.`)) return;
+  db.jumps = []; save(); renderHistory();
+});
+
+// ---------- settings ----------
+$('settingsBtn').addEventListener('click', () => {
+  $('setStature').value = db.settings.statureCm || '';
+  $('setModel').value = db.settings.liveModel;
+  $('setSpeech').checked = db.settings.speech;
+  $('setBeep').checked = db.settings.beep;
+  $('settings').showModal();
+});
+$('settingsClose').addEventListener('click', () => $('settings').close());
+$('settings').addEventListener('close', () => {
+  const s = parseInt($('setStature').value, 10);
+  const modelChanged = $('setModel').value !== db.settings.liveModel;
+  Object.assign(db.settings, {
+    statureCm: s >= 100 && s <= 230 ? s : null,
+    liveModel: $('setModel').value,
+    speech: $('setSpeech').checked,
+    beep: $('setBeep').checked,
+  });
+  save();
+  if (live.running) {
+    if (modelChanged) { stopLive(); startLive(); } else live.det = newDetector();
+  }
+});
+
+// ---------- boot ----------
+renderTypes();
+if (!db.settings.statureCm && !db.jumps.length) {
+  setTimeout(() => toast('Vinkki: aseta pituutesi asetuksista (⚙), niin saat myös lantion nousun ja painovoimatarkistuksen.', 6000), 800);
+}
+// Warm the pose model in the background so the first camera start is quick.
+getLandmarker('live', db.settings.liveModel).catch(e => console.warn('Mallin esilataus epäonnistui', e));
+// ?debug exposes internals to the console (used to drive tests with recorded/synthetic samples).
+if (new URLSearchParams(location.search).has('debug')) window.__hyppy = { db, live, vs, findJumps, showLiveJump, renderHistory };
+</script>
+</body>
+</html>

@@ -70,13 +70,18 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
       <p>Ylioppilaskokeiden tehtävät aihealueittain ja arvio siitä, kuinka todennäköisesti aihe tulee seuraavassa kokeessa. Mukana harjoittelu Abitti-tyylisellä kaavaeditorilla, vihjeillä ja malliratkaisuilla.</p>
       <span class="go">Avaa YO-tutka →</span>
     </a>
+    <a class="tool" href="/hyppymittari">
+      <div class="hd"><h2>Hyppymittari</h2><span class="sig">● kamera · video · slow-mo</span></div>
+      <p>Vertikaalihypyn korkeus puhelimen kameralla: luuranko kuvan päällä, korkeus lentoajasta, laatuvaroitukset ja oma historia. Kaikki lasketaan laitteella.</p>
+      <span class="go">Avaa hyppymittari →</span>
+    </a>
   </nav>
   <a class="lock" href="https://oma.koirosvg.com" aria-label="Oma alue (kirjautuminen)" title="Oma alue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></a>
 </main>
 <script>
 // Radar: one blip per tool (labelled) plus two unlabelled for atmosphere.
 const cv=document.getElementById('radar'),cx=cv.getContext('2d'),W=720,C=W/2,R=W/2-20;
-const blips=[{a:-0.9,r:.55,t:'AI-opas'},{a:2.2,r:.72,t:'YO-tutka'},{a:0.7,r:.66,t:'AI-työkalut'},{a:3.9,r:.5,t:''}];
+const blips=[{a:-0.9,r:.55,t:'AI-opas'},{a:2.2,r:.72,t:'YO-tutka'},{a:0.7,r:.66,t:'AI-työkalut'},{a:4.2,r:.62,t:'Hyppymittari'},{a:3.4,r:.45,t:''}];
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const TAU=Math.PI*2;
 function draw(t){

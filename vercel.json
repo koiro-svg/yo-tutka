@@ -2,5 +2,25 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "buildCommand": "python3 scripts/validate_tools.py && python3 scripts/validate_practice.py",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "headers": [
+    {
+      "source": "/hyppymittari",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "connect-src 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/hyppymittari/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "connect-src 'self'"
+        }
+      ]
+    }
+  ]
 }

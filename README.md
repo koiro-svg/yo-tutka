@@ -8,6 +8,7 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
 | `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka |
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
+| `/hyppymittari` | `hyppymittari/index.html` | Hyppymittari: vertikaalihypyn korkeus kameralla (MediaPipe, laitteella) |
 
 ## AI-malliopas – automaattinen päivitys
 - `.github/workflows/update-models.yml` ajaa joka toinen päivä (04:17 UTC) skriptin
@@ -67,6 +68,19 @@ ja tuo se tänne käsin — yllä oleva komento siirtää vain datan.
   ```
   Kaavojen LaTeX-tarkistus MathJaxilla (`scripts/check_tex.mjs`) vaatii Noden: ohje tiedoston alussa.
 - Uusi tutkintokerta: lisää ensin YO-tutkaan (yllä), sitten harjoitussisältö ohjeen mukaan.
+
+## Hyppymittari – päivitys sovellukset-kansiosta
+
+Lähde on `~/sovellukset/hyppymittari/` (testit, CLAUDE.md, README siellä). Tänne kopioidaan
+vain ajettavat tiedostot:
+
+```sh
+rsync -a --delete --exclude '/test-jump.js' --exclude '/test.sh' --exclude '/CLAUDE.md' \
+  --exclude '/README.md' --exclude '.DS_Store' ~/sovellukset/hyppymittari/ hyppymittari/
+```
+
+Ankkuroi poissulkemiset (`/README.md`), muuten MediaPipen lisenssitiedosto
+`vendor/mediapipe/README.md` jää pois.
 
 ## Haarat
 Muissa haaroissa tehdyt pushit saavat oman preview-osoitteen, eivät mene tuotantoon.
