@@ -1,0 +1,460 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2024S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2024S_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-09-26_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "answer": 5,
+    "note": "Vastaa viiteen tehtävään. Käytössä taulukkokirja ja perusohjelmat, laskinohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Kuusi arkista laskua. Vastauskenttiin kirjoitetaan pelkät kokonaisluvut ilman välivaiheita.",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 2,
+     "prompt": "Juna lähtee kello 9.48 ja saapuu kello 15.25. Kuinka kauan matka kestää (tunnit ja minuutit)?",
+     "hints": [
+      "Laske ensin aika tasatuntiin (10.00) ja siitä eteenpäin, tai muuta kellonajat minuuteiksi keskiyöstä ja vähennä."
+     ],
+     "solution": "1. Kello 9.48 → 10.00 on $12$ min, 10.00 → 15.00 on $5$ h ja 15.00 → 15.25 on $25$ min.\n2. Yhteensä $5$ h $37$ min.\n\n**Vastaus: 5 tuntia ja 37 minuuttia**\n\n**Sudenkuoppa:** kellonaikojen vähentäminen desimaalilukuina ($15{,}25-9{,}48=5{,}77$) ei toimi, koska tunnissa on 60 minuuttia.",
+     "answer": "5 h 37 min",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.2",
+     "points": 2,
+     "prompt": "Bruttopalkka on 4 200 € kuukaudessa, ja siitä pidätetään 33 %. Paljonko palkasta jää käteen (euron tarkkuudella)?",
+     "hints": [
+      "Käteen jää $100\\,\\%-33\\,\\%=67\\,\\%$ bruttopalkasta. Kerro palkka vastaavalla kertoimella."
+     ],
+     "solution": "1. Käteen jää $67\\,\\%$.\n2. $0{,}67\\cdot 4200\\ \\text{€}=2814\\ \\text{€}$.\n\n**Vastaus: 2 814 €**",
+     "answer": "2 814 €",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.3",
+     "points": 2,
+     "prompt": "Vedestä maksetaan joka kuukausi 12 € ennakkoa. Puolen vuoden kulutus oli $17{,}012\\ \\text{m}^3$ ja hinta $4{,}63$ €/m³. Kuinka suuri on puolen vuoden tasauslasku (kokonaisina euroina), kun jo maksetut ennakot vähennetään siitä?",
+     "hints": [
+      "Tasauslasku on todellisen kulutuksen hinta miinus kuuden kuukauden aikana jo maksetut ennakot."
+     ],
+     "solution": "1. Todellinen hinta: $17{,}012\\cdot 4{,}63\\ \\text{€}\\approx 78{,}77\\ \\text{€}$.\n2. Ennakkoja on maksettu $6\\cdot 12\\ \\text{€}=72\\ \\text{€}$.\n3. Tasauslasku: $78{,}77\\ \\text{€}-72\\ \\text{€}=6{,}77\\ \\text{€}\\approx 7\\ \\text{€}$.\n\n**Vastaus: 7 €**\n\n**Sudenkuoppa:** ennakko käsitellään kertamaksuna (12 € eikä $6\\cdot 12$ €) tai erotus lasketaan väärin päin.",
+     "answer": "7 €",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.4",
+     "points": 2,
+     "prompt": "Kolme opettajaa arvostelee kokeet yhteensä 12 tunnissa, kun kaikki työskentelevät itsenäisesti samaan tahtiin. Kuinka monta tuntia sama työ vie neljältä opettajalta?",
+     "hints": [
+      "Kyse on kääntäen verrannollisuudesta: laske ensin, kuinka monta opettajatuntia työ vaatii."
+     ],
+     "solution": "1. Työ vaatii $3\\cdot 12=36$ opettajatuntia.\n2. Neljällä opettajalla aikaa kuluu $\\frac{36}{4}=9$ tuntia.\n\n**Vastaus: 9 tuntia**\n\n**Sudenkuoppa:** suoraan verrannollisena laskeminen antaisi $16$ tuntia, vaikka useampi opettaja tekee työn nopeammin.",
+     "answer": "9 h",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.5",
+     "points": 2,
+     "prompt": "Mikä on yhtälön $|x-1|=3$ negatiivinen ratkaisu?",
+     "hints": [
+      "$|x-1|=3$ tarkoittaa, että $x-1=3$ tai $x-1=-3$. Valitse ratkaisuista negatiivinen."
+     ],
+     "solution": "1. $x-1=3$ antaa $x=4$ ja $x-1=-3$ antaa $x=-2$.\n2. Negatiivinen ratkaisu on $x=-2$.\n\n**Vastaus: $x=-2$**",
+     "answer": "$x=-2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.6",
+     "points": 2,
+     "prompt": "Laske vektorien $\\bar a=3\\bar i+4\\bar j$ ja $\\bar b=2\\bar i+8\\bar j$ pistetulo.",
+     "hints": [
+      "Koordinaattimuodossa pistetulo on vastinkoordinaattien tulojen summa: $\\bar a\\cdot\\bar b=a_xb_x+a_yb_y$."
+     ],
+     "solution": "1. $\\bar a\\cdot\\bar b=3\\cdot 2+4\\cdot 8=6+32=38$.\n\n**Vastaus: 38**",
+     "answer": "$38$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Neljä monivalintaa (pudotusvalikko), perusteluja ei tarvita.\n\n- **2.1** Laske $p'(1)$, kun $p(x)=-2x^5+x^4-2$. Vaihtoehdot ovat kokonaisluvut $-12,-11,\\dots,12$.\n- **2.2** Mikä on $f'(x)$, kun $f(x)=xe^x$?\n- **2.3** Laske $g'(-1)$, kun $g(x)=\\ln(2x+3)$.\n- **2.4** Mikä on $h'(x)$, kun $h(x)=\\sin x+\\cos(3x)$?\n\nVaihtoehdot näkyvät alkuperäisessä tehtävässä.",
+     "hints": [
+      "Tarvitset potenssin derivoimissäännön, tulon derivoimissäännön $D(uv)=u'v+uv'$ ja ketjusäännön (sisäfunktion derivaatta kerrotaan mukaan).",
+      "Kohta kohdalta:\n\n- 2.1: $p'(x)=-10x^4+4x^3$, sijoita $x=1$.\n- 2.2: $u=x$ ja $v=e^x$; ota lopuksi $e^x$ yhteiseksi tekijäksi.\n- 2.3: $D\\ln(2x+3)=\\frac{2}{2x+3}$.\n- 2.4: $D\\cos(3x)=-3\\sin(3x)$."
+     ],
+     "solution": "Kirjaimet: A = pudotusvalikon ylin varsinainen vaihtoehto (tyhjää riviä ei lasketa) alkuperäisen koenäkymän järjestyksessä, B = toinen jne.\n\n**2.1** $p'(x)=-10x^4+4x^3$, joten $p'(1)=-10+4=-6$. Vaihtoehto **G** (seitsemäs, luku $-6$).\n\n**2.2** Tulon derivoimissäännöllä $f'(x)=1\\cdot e^x+x\\cdot e^x=(x+1)e^x$. Vaihtoehto **E** ($(x+1)e^x$).\n\n**2.3** Ketjusäännöllä $g'(x)=\\frac{1}{2x+3}\\cdot 2=\\frac{2}{2x+3}$, joten $g'(-1)=\\frac{2}{1}=2$. Vaihtoehto **B** (luku $2$).\n\n**2.4** $D\\sin x=\\cos x$ ja ketjusäännöllä $D\\cos(3x)=-\\sin(3x)\\cdot 3$. Siis $h'(x)=\\cos x-3\\sin(3x)$. Vaihtoehto **C** ($\\cos x-3\\sin(3x)$).\n\n**Vastaus: 2.1 G ($-6$) · 2.2 E ($(x+1)e^x$) · 2.3 B ($2$) · 2.4 C ($\\cos x-3\\sin(3x)$)**\n\n**Sudenkuoppa:** kohdassa 2.4 sisäfunktion derivaatta 3 unohtuu, tai kohdassa 2.2 tulo derivoidaan tekijä kerrallaan ($1\\cdot e^x=e^x$).",
+     "answer": "2.1 G ($-6$) · 2.2 E ($(x+1)e^x$) · 2.3 B ($2$) · 2.4 C ($\\cos x-3\\sin(3x)$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Ratkaise tarkasti yhtälö $4\\cdot 8^x=\\sqrt2$.",
+     "hints": [
+      "Kirjoita kaikki luvut kakkosen potensseina: $4=2^2$, $8=2^3$ ja $\\sqrt2=2^{1/2}$. Kun kantaluvut ovat samat, eksponentit ovat samat."
+     ],
+     "solution": "1. $4\\cdot 8^x=2^2\\cdot(2^3)^x=2^{3x+2}$ ja $\\sqrt2=2^{1/2}$.\n2. Yhtälö on $2^{3x+2}=2^{1/2}$. Eksponenttifunktio on aidosti kasvava, joten $3x+2=\\frac12$.\n3. $3x=-\\frac32$, eli $x=-\\frac12$.\n4. Tarkistus: $4\\cdot 8^{-1/2}=\\frac{4}{\\sqrt8}=\\frac{4}{2\\sqrt2}=\\sqrt2$.\n\n**Vastaus: $x=-\\frac12$**\n\n**Sudenkuoppa:** $4\\cdot 8^x$ ei ole $32^x$. Potenssi lasketaan ennen kertolaskua.",
+     "answer": "$x=-\\frac12$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Ratkaise tarkasti yhtälö $\\sin\\left(6y-\\frac{\\pi}{2}\\right)=\\frac12$ välillä $0\\le y\\le\\frac{\\pi}{2}$.",
+     "hints": [
+      "Ratkaise ensin $\\sin u=\\frac12$ yleisesti: ratkaisuja on kaksi perhettä, $u=\\frac{\\pi}{6}+n\\cdot 2\\pi$ ja $u=\\frac{5\\pi}{6}+n\\cdot 2\\pi$. Sijoita sitten $u=6y-\\frac{\\pi}{2}$.",
+      "Saat $y=\\frac{\\pi}{9}+n\\cdot\\frac{\\pi}{3}$ tai $y=\\frac{2\\pi}{9}+n\\cdot\\frac{\\pi}{3}$. Etsi kokonaisluvut $n$, joilla $y$ osuu välille $[0,\\frac{\\pi}{2}]$."
+     ],
+     "solution": "1. $\\sin u=\\frac12$, kun $u=\\frac{\\pi}{6}+n\\cdot 2\\pi$ tai $u=\\frac{5\\pi}{6}+n\\cdot 2\\pi$, $n\\in\\mathbb{Z}$.\n2. Ensimmäinen perhe: $6y-\\frac{\\pi}{2}=\\frac{\\pi}{6}+n\\cdot 2\\pi$, joten $6y=\\frac{2\\pi}{3}+n\\cdot 2\\pi$ ja $y=\\frac{\\pi}{9}+n\\cdot\\frac{\\pi}{3}$.\n3. Toinen perhe: $6y-\\frac{\\pi}{2}=\\frac{5\\pi}{6}+n\\cdot 2\\pi$, joten $6y=\\frac{4\\pi}{3}+n\\cdot 2\\pi$ ja $y=\\frac{2\\pi}{9}+n\\cdot\\frac{\\pi}{3}$.\n4. Välillä $[0,\\frac{\\pi}{2}]=[0,\\frac{9\\pi}{18}]$: ensimmäisestä $n=0$ antaa $\\frac{\\pi}{9}$ ja $n=1$ antaa $\\frac{\\pi}{9}+\\frac{3\\pi}{9}=\\frac{4\\pi}{9}<\\frac{\\pi}{2}$. Arvo $n=2$ antaa jo liian suuren luvun.\n5. Toisesta $n=0$ antaa $\\frac{2\\pi}{9}$, mutta $n=1$ antaa $\\frac{5\\pi}{9}>\\frac{\\pi}{2}$. Negatiiviset $n$ antavat negatiivisia arvoja.\n\n**Vastaus: $y=\\frac{\\pi}{9}$, $y=\\frac{2\\pi}{9}$ tai $y=\\frac{4\\pi}{9}$**\n\n**Sudenkuoppa:** jakson $2\\pi$ unohtaminen jakaa kuudella tai toisen ratkaisuperheen ($\\frac{5\\pi}{6}$) unohtaminen. Kumpikin hävittää ratkaisuja.",
+     "answer": "$y\\in\\left\\{\\frac{\\pi}{9},\\ \\frac{2\\pi}{9},\\ \\frac{4\\pi}{9}\\right\\}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Funktio $f:[0,\\infty)\\to[0,\\infty)$ antaa luvun $x$ kokonaisosan, esimerkiksi $f(1)=1$, $f(2{,}2)=2$ ja $f(\\pi)=3$. Laske $\\int_0^{10}f(x)\\,dx$.",
+     "hints": [
+      "Piirrä kuvaaja: funktio on porrasfunktio, joka on vakio jokaisella välillä $[k,k+1)$. Integraali on kuvaajan ja $x$-akselin väliin jäävä pinta-ala.",
+      "Välillä $[k,k+1)$ funktion arvo on $k$, joten tämän välin osuus integraalista on suorakulmion ala $1\\cdot k$. Yksittäisten pisteiden arvot eivät vaikuta integraaliin. Laske yhteen välit $k=0,1,\\dots,9$."
+     ],
+     "solution": "1. Kun $k\\le x<k+1$ ($k$ kokonaisluku), $f(x)=k$. Kuvaaja on siis portaikko.\n2. $f(x)\\ge 0$, joten integraali on kuvaajan alle jäävä pinta-ala. Porrasfunktion hyppykohdat ovat yksittäisiä pisteitä, eivätkä ne vaikuta alaan.\n3. Välin $[k,k+1]$ osuus on suorakulmio, jonka leveys on $1$ ja korkeus $k$: $\\int_k^{k+1}f(x)\\,dx=k$.\n4. $\\int_0^{10}f(x)\\,dx=\\sum_{k=0}^{9}k=0+1+2+\\dots+9=\\frac{9\\cdot 10}{2}=45$.\n\n**Vastaus: $45$**\n\n**Sudenkuoppa:** $\\int_0^{10}x\\,dx=50$ ei ole sama asia, ja portaiden siirtäminen yhdellä (korkeus $k+1$ välillä $[k,k+1)$) antaa väärin $55$.",
+     "answer": "$45$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Todista, että $\\frac{k-1}{k\\,2^k+1}<\\frac{1}{2^k}$ jokaisella positiivisella kokonaisluvulla $k$.",
+     "hints": [
+      "Molemmat nimittäjät ovat positiivisia, joten voit kertoa ristiin ilman, että epäyhtälön suunta muuttuu. Sievennä ja katso, mitä jää jäljelle."
+     ],
+     "solution": "**Tapa 1 (ristiinkertominen)**\n\n1. Nimittäjät $k\\,2^k+1$ ja $2^k$ ovat positiivisia, joten epäyhtälö on yhtäpitävä epäyhtälön $(k-1)2^k<k\\,2^k+1$ kanssa.\n2. Auki kerrottuna $k\\,2^k-2^k<k\\,2^k+1$, eli $-2^k<1$.\n3. Vasen puoli on negatiivinen ja oikea positiivinen, joten epäyhtälö on tosi. Koska kaikki vaiheet olivat yhtäpitäviä, alkuperäinenkin on tosi. $\\square$\n\n**Tapa 2 (arviointi)**\n\n4. Osoittajan kasvattaminen ja nimittäjän pienentäminen kasvattavat positiivista murtolukua: $\\frac{k-1}{k\\,2^k+1}<\\frac{k}{k\\,2^k+1}<\\frac{k}{k\\,2^k}=\\frac{1}{2^k}$. $\\square$",
+     "check": "hvp"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Todista, että $\\sum_{k=2}^{n}\\frac{k-1}{k\\,2^k+1}<\\frac12$ jokaisella kokonaisluvulla $n\\ge 2$. Saat käyttää kohdan a epäyhtälöä.",
+     "hints": [
+      "Arvioi summan jokaista termiä kohdan a epäyhtälöllä. Silloin summa on pienempi kuin geometrinen summa $\\frac{1}{2^2}+\\frac{1}{2^3}+\\dots+\\frac{1}{2^n}$.",
+      "Geometrisen summan ensimmäinen termi on $\\frac14$, suhdeluku $q=\\frac12$ ja termejä on $n-1$. Summan kaava $a_1\\frac{1-q^m}{1-q}$ antaa tulokseksi $\\frac12-\\frac{1}{2^n}$."
+     ],
+     "solution": "1. Kohdan a nojalla jokainen termi toteuttaa $\\frac{k-1}{k\\,2^k+1}<\\frac{1}{2^k}$, joten $\\sum_{k=2}^{n}\\frac{k-1}{k\\,2^k+1}<\\sum_{k=2}^{n}\\frac{1}{2^k}$.\n2. Oikea puoli on geometrinen summa: ensimmäinen termi $a_1=\\frac{1}{4}$, suhdeluku $q=\\frac12$ ja termejä $n-1$ kappaletta.\n3. $\\sum_{k=2}^{n}\\frac{1}{2^k}=\\frac14\\cdot\\frac{1-\\left(\\frac12\\right)^{n-1}}{1-\\frac12}=\\frac12\\left(1-\\frac{1}{2^{n-1}}\\right)=\\frac12-\\frac{1}{2^n}$.\n4. Koska $\\frac{1}{2^n}>0$, on $\\frac12-\\frac{1}{2^n}<\\frac12$.\n5. Siis $\\sum_{k=2}^{n}\\frac{k-1}{k\\,2^k+1}<\\frac12-\\frac{1}{2^n}<\\frac12$ kaikilla $n\\ge 2$. $\\square$\n\n(Tarkistus: summan arvot ovat esimerkiksi $n=2$: $\\frac19\\approx 0{,}11$ ja $n=40$: noin $0{,}289$.)\n\n**Sudenkuoppa:** geometrisen summan aloittaminen termistä $\\frac12$ (antaa ylärajaksi 1) tai muutaman $n$:n arvon kokeileminen ilman yleistä todistusta.",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Vesiaaltoja kuvaa funktio $f(x,y)=\\frac{\\sin\\sqrt{x^2+y^2}}{\\sqrt{x^2+y^2}}$, kun $(x,y)\\neq(0,0)$, ja $f(0,0)=1$.",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Keksi kaksi muuta tason pistettä, joissa $f$ saa saman arvon kuin pisteessä $(3,4)$, ja osoita laskemalla, että arvot ovat samat.",
+     "hints": [
+      "Funktion arvo riippuu vain luvusta $\\sqrt{x^2+y^2}$, eli pisteen etäisyydestä origosta. Kuinka kaukana origosta piste $(3,4)$ on?",
+      "$\\sqrt{3^2+4^2}=5$, joten $f(3,4)=\\frac{\\sin 5}{5}$. Kaikki pisteet ympyrällä $x^2+y^2=25$ kelpaavat, esimerkiksi $(4,3)$, $(5,0)$ tai $(-3,-4)$."
+     ],
+     "solution": "1. $f(3,4)=\\frac{\\sin\\sqrt{9+16}}{\\sqrt{9+16}}=\\frac{\\sin 5}{5}$.\n2. Funktion arvo riippuu vain etäisyydestä $\\sqrt{x^2+y^2}$, joten sama arvo saadaan kaikissa pisteissä, joiden etäisyys origosta on 5.\n3. Piste $(5,0)$: $f(5,0)=\\frac{\\sin\\sqrt{25+0}}{\\sqrt{25}}=\\frac{\\sin 5}{5}$.\n4. Piste $(-3,-4)$: $f(-3,-4)=\\frac{\\sin\\sqrt{9+16}}{\\sqrt{9+16}}=\\frac{\\sin 5}{5}$.\n\n**Vastaus: esimerkiksi $(5,0)$ ja $(-3,-4)$, joissa kummassakin $f=\\frac{\\sin 5}{5}$ kuten pisteessä $(3,4)$.**\n\n**Sudenkuoppa:** pelkkien likiarvojen vertailu ei osoita arvoja samoiksi; näytä tarkat lausekkeet.",
+     "answer": "Esim. $(5,0)$ ja $(-3,-4)$: $f=\\frac{\\sin 5}{5}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Osoita, että jokaisella $xy$-tason suoralla on ainakin yksi piste, jossa $f$ saa arvon nolla.",
+     "hints": [
+      "Milloin $\\frac{\\sin r}{r}=0$, kun $r>0$? Mieti, millaisen joukon nollakohdat muodostavat tasossa.",
+      "Nollakohdat ovat origokeskisillä ympyröillä, joiden säde on $k\\pi$ ($k=1,2,\\dots$). Suoran lähin piste on origosta jollakin etäisyydellä $d$, ja suora ulottuu kuinka kauas tahansa."
+     ],
+     "solution": "1. Merkitään $r=\\sqrt{x^2+y^2}$. Origossa $f=1\\neq 0$. Kun $r>0$, $f=0$ täsmälleen silloin, kun $\\sin r=0$, eli $r=k\\pi$ jollakin positiivisella kokonaisluvulla $k$.\n2. Nollakohdat muodostavat siis origokeskiset ympyrät, joiden säteet ovat $\\pi,2\\pi,3\\pi,\\dots$.\n3. Olkoon $s$ mikä tahansa tason suora ja $d\\ge 0$ sen etäisyys origosta, eli suoran lähimmän pisteen $Q$ etäisyys origosta.\n4. Kun suoraa pitkin liikutaan pisteestä $Q$ poispäin, etäisyys origosta kasvaa jatkuvasti arvosta $d$ rajatta.\n5. Valitaan kokonaisluku $k\\ge 1$, jolle $k\\pi\\ge d$. Suoralla on silloin piste, jonka etäisyys origosta on täsmälleen $k\\pi$ (suora leikkaa tai sivuaa tätä ympyrää), ja siinä pisteessä $f=0$. $\\square$\n\n**Sudenkuoppa:** mukaan otetaan myös $k=0$, vaikka origossa funktion arvo on 1 eikä 0.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Juoksulenkin reittiä (ks. alkuperäisen tehtävän kuva) mallinnetaan kolmiolla, jonka sivujen pituudet suhtautuvat kuten $6:7:9$ ja jonka piiri on 5,85 km.",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Laske kolmion suurin kulma asteina (4 merkitsevää numeroa).",
+     "hints": [
+      "Suurin kulma on pisimmän sivun vastainen. Kulmat eivät riipu mittakaavasta, joten voit käyttää sivuina suoraan lukuja 6, 7 ja 9.",
+      "Kosinilause: $9^2=6^2+7^2-2\\cdot 6\\cdot 7\\cos\\gamma$, josta $\\cos\\gamma=\\frac{1}{21}$."
+     ],
+     "solution": "1. Suurin kulma $\\gamma$ on pisimmän sivun vastainen. Yhdenmuotoisissa kolmioissa kulmat ovat samat, joten voidaan laskea sivuilla 6, 7 ja 9.\n2. Kosinilauseella $9^2=6^2+7^2-2\\cdot 6\\cdot 7\\cos\\gamma$, eli $81=85-84\\cos\\gamma$.\n3. $\\cos\\gamma=\\frac{4}{84}=\\frac{1}{21}$, joten $\\gamma\\approx 87{,}27^\\circ$.\n\n**Vastaus: $\\gamma\\approx 87{,}27^\\circ$**\n\n**Sudenkuoppa:** väärän kulman laskeminen (sivujen 6 ja 9 tai 7 ja 9 välinen) tai suorakulmaisen kolmion olettaminen.",
+     "answer": "$87{,}27^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Laske kolmion pinta-ala hehtaareina.",
+     "hints": [
+      "Sivujen todelliset pituudet saadaan jakamalla piiri 22 osaan ($6+7+9=22$). Ala saadaan kaavalla $\\frac12 ab\\sin\\gamma$ tai Heronin kaavalla. Muista $1\\ \\text{km}^2=100$ ha.",
+      "Yksi osa on $\\frac{5{,}85}{22}$ km, joten sivut ovat noin $1{,}5955$ km, $1{,}8614$ km ja $2{,}3932$ km. Kahden lyhimmän sivun välinen kulma on kohdan a kulma $\\gamma$, ja $\\sin\\gamma=\\sqrt{1-\\frac{1}{21^2}}$."
+     ],
+     "solution": "1. $6+7+9=22$, joten yksi suhdeosa on $\\frac{5{,}85}{22}\\ \\text{km}\\approx 0{,}26591$ km.\n2. Sivut ovat $a\\approx 1{,}5955$ km, $b\\approx 1{,}8614$ km ja $c\\approx 2{,}3932$ km.\n3. Sivujen $a$ ja $b$ välinen kulma on pisimmän sivun vastainen kulma $\\gamma\\approx 87{,}27^\\circ$.\n4. $A=\\frac12ab\\sin\\gamma\\approx\\frac12\\cdot 1{,}5955\\cdot 1{,}8614\\cdot\\sin 87{,}27^\\circ\\approx 1{,}4832\\ \\text{km}^2$.\n5. Tarkistus Heronin kaavalla: $s=\\frac{5{,}85}{2}=2{,}925$ km ja $A=\\sqrt{s(s-a)(s-b)(s-c)}\\approx 1{,}4832\\ \\text{km}^2$.\n6. $1\\ \\text{km}^2=100$ ha, joten $A\\approx 148$ ha.\n\n**Vastaus: noin 148 hehtaaria**\n\n**Sudenkuoppa:** ala lasketaan suhdeluvuilla 6, 7 ja 9 ilman mittakaavan neliötä, tai neliökilometrit muunnetaan hehtaareiksi kertoimella 1 000.",
+     "answer": "noin 148 ha",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Pyöreän tikkataulun (säde 20 cm, ks. alkuperäisen tehtävän kuva) keskellä on 10 pisteen ympyrä (säde 2 cm), ja sitä ympäröivät 2 cm leveät renkaat, joista sisin antaa 9 pistettä, seuraava 8 pistettä ja niin edelleen, uloin 1 pisteen.",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Osoita laskemalla, että parillisia pisteitä (10, 8, 6, 4, 2) antavien alueiden yhteinen pinta-ala on $180\\pi\\ \\text{cm}^2$.",
+     "hints": [
+      "Renkaan ala on ulomman ja sisemmän ympyrän alojen erotus. Selvitä kunkin parillisen alueen reunaympyröiden säteet: $p$ pisteen alueen ulkosäde on $2(11-p)$ cm."
+     ],
+     "solution": "1. 10 pisteen alue: $\\pi\\cdot 2^2=4\\pi$.\n2. 8 pisteen rengas on säteiden $4$ ja $6$ välissä: $\\pi(6^2-4^2)=20\\pi$.\n3. 6 pistettä: $\\pi(10^2-8^2)=36\\pi$.\n4. 4 pistettä: $\\pi(14^2-12^2)=52\\pi$.\n5. 2 pistettä: $\\pi(18^2-16^2)=68\\pi$.\n6. Yhteensä $(4+20+36+52+68)\\pi=180\\pi\\ \\text{cm}^2$. $\\square$",
+     "answer": "$180\\pi\\ \\text{cm}^2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Tikka osuu aina tauluun, ja jokainen taulun kohta on yhtä todennäköinen. Kolmen heiton pisteet lasketaan yhteen. Millä todennäköisyydellä summa on parillinen? Saat käyttää kohdan a tulosta.",
+     "hints": [
+      "Yhden heiton todennäköisyys osua parilliseen alueeseen on parillisen alueen ala jaettuna koko taulun alalla. Kolmen luvun summa on parillinen, kun parittomia on parillinen määrä.",
+      "$P(\\text{parillinen})=\\frac{180\\pi}{400\\pi}=\\frac{9}{20}$ ja $P(\\text{pariton})=\\frac{11}{20}$. Summa on parillinen, jos kaikki kolme ovat parillisia tai tasan kaksi on paritonta. Jälkimmäisessä tapauksessa käytä binomitodennäköisyyttä."
+     ],
+     "solution": "1. Koko taulun ala on $\\pi\\cdot 20^2=400\\pi\\ \\text{cm}^2$. Kohdan a nojalla parillisen tuloksen todennäköisyys yhdellä heitolla on $p=\\frac{180\\pi}{400\\pi}=\\frac{9}{20}$, ja parittoman $1-p=\\frac{11}{20}$.\n2. Heitot ovat riippumattomia. Summa on parillinen, jos parittomia tuloksia on 0 tai 2.\n3. Ei yhtään paritonta: $\\left(\\frac{9}{20}\\right)^3=\\frac{729}{8000}$.\n4. Tasan kaksi paritonta: $\\binom32\\left(\\frac{11}{20}\\right)^2\\cdot\\frac{9}{20}=\\frac{3\\cdot 121\\cdot 9}{8000}=\\frac{3267}{8000}$.\n5. Yhteensä $\\frac{729+3267}{8000}=\\frac{3996}{8000}=\\frac{999}{2000}=0{,}4995$.\n\n**Vastaus: $\\frac{999}{2000}\\approx 0{,}50$**\n\n**Sudenkuoppa:** vain tapauksen ”kaikki parillisia” laskeminen, tai binomikertoimen unohtaminen tapauksessa, jossa kaksi tulosta on parittomia.",
+     "answer": "$\\frac{999}{2000}=0{,}4995$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Funktio $f:\\mathbb{R}\\to\\mathbb{R}$ on jaksollinen, jos jollakin $L>0$ pätee $f(x+L)=f(x)$ kaikilla $x$. Pienin tällainen $L$ on perusjakso. Jokaisessa kohdassa piirretään kuvaaja omaan koordinaatistoonsa ja merkitään siihen yksi perusjakson mittainen väli $x$-akselilta.",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Piirrä funktion $f(x)=\\sin(2\\pi x)$ kuvaaja ja määritä sen perusjakso.",
+     "hints": [
+      "Funktion $\\sin(kx)$ perusjakso on $\\frac{2\\pi}{k}$. Piirrä ohjelmistolla vähintään kahden jakson mittainen osa."
+     ],
+     "solution": "1. $\\sin u$ toistaa itseään $2\\pi$:n välein. Kun $u=2\\pi x$, kasvu $2\\pi$ vastaa $x$:n kasvua $1$, joten $f(x+1)=\\sin(2\\pi x+2\\pi)=f(x)$.\n2. Pienempi jakso ei käy, koska sinifunktion perusjakso on $2\\pi$: yhden jakson aikana $\\sin u$ saa arvon $1$ vain kerran, ja $f$ saa sen välillä $[0,1)$ vain kohdassa $x=\\frac14$.\n3. Kuvaaja on siniaalto, jonka amplitudi on 1. Nollakohdat ovat puolen yksikön välein, huiput kohdissa $\\frac14+n$ ja pohjat kohdissa $\\frac34+n$. Merkitään kuvaan esimerkiksi väli $[0,1]$.\n\n**Vastaus: perusjakso on 1.**",
+     "answer": "$1$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 4,
+     "prompt": "Piirrä funktion $g(x)=|\\sin(\\pi x)+\\sin(2\\pi x)|$ kuvaaja ja määritä sen perusjakso.",
+     "hints": [
+      "Termien jaksot ovat 2 ja 1, joten $g(x+2)=g(x)$. Tarkista kuvaajasta tai laskemalla, voisiko pienempi luku, esimerkiksi 1, olla jakso: vertaa arvoja $g\\left(\\frac14\\right)$ ja $g\\left(\\frac54\\right)$."
+     ],
+     "solution": "1. $\\sin(\\pi x)$:n perusjakso on 2 ja $\\sin(2\\pi x)$:n 1. Molemmat toistuvat, kun $x$ kasvaa kahdella, joten $g(x+2)=g(x)$.\n2. Luku 1 ei ole jakso: $g\\left(\\frac14\\right)=\\frac{\\sqrt2}{2}+1\\approx 1{,}71$, mutta $g\\left(\\frac54\\right)=\\left|-\\frac{\\sqrt2}{2}+1\\right|\\approx 0{,}29$.\n3. Muitakaan lukuja välillä $(0,2)$ ei kelpaa: $g(x)=|\\sin(\\pi x)|\\cdot|1+2\\cos(\\pi x)|$, joten välin $[0,2)$ nollakohdat ovat $0,\\ \\frac23,\\ 1,\\ \\frac43$. Jakso siirtää nollakohdan nollakohdaksi, joten ainoat ehdokkaat ovat $\\frac23$, $1$ ja $\\frac43$. Siirto $\\frac23$ veisi nollakohdan $1$ kohtaan $\\frac53$, joka ei ole nollakohta, ja siirto $\\frac43$ veisi sen kohtaan $\\frac73$, joka vastaa kohtaa $\\frac13$. Kumpikaan ei ole nollakohta.\n4. Kuvaaja on ei-negatiivinen: välillä $[0,1]$ on korkea kaari (huippu noin 1,76) ja nollakohta $x=\\frac23$, välillä $[1,2]$ matalampi kaari. Kuvio toistuu kahden yksikön välein. Merkitään kuvaan esimerkiksi väli $[0,2]$.\n\n**Vastaus: perusjakso on 2.**\n\n**Sudenkuoppa:** itseisarvon unohtaminen piirrettäessä tai perusjaksoksi valitaan 1 sen perusteella, että $\\sin(2\\pi x)$:n jakso on 1.",
+     "answer": "$2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "c",
+     "points": 4,
+     "prompt": "Keksi jaksollinen funktio $h:\\mathbb{R}\\to\\mathbb{R}$, jonka perusjakso on 4, ja piirrä sen kuvaaja.",
+     "hints": [
+      "Venytä sinifunktiota vaakasuunnassa: $\\sin(kx)$:n perusjakso on $\\frac{2\\pi}{k}$. Valitse $k$ niin, että jaksoksi tulee 4."
+     ],
+     "solution": "1. Valitaan $h(x)=\\sin\\left(\\frac{\\pi x}{2}\\right)$. Se on määritelty kaikilla reaaliluvuilla.\n2. Perusjakso on $\\frac{2\\pi}{\\pi/2}=4$: $h(x+4)=\\sin\\left(\\frac{\\pi x}{2}+2\\pi\\right)=h(x)$, ja välillä $[0,4)$ arvo 1 saavutetaan vain kohdassa $x=1$, joten pienempää jaksoa ei ole.\n3. Kuvaajassa on siniaalto, jonka nollakohdat ovat $0,2,4,\\dots$ ja huiput kohdissa $1,5,9,\\dots$. Merkitään väli $[0,4]$.\n\n(Kelpaa myös esimerkiksi $g\\left(\\frac{x}{2}\\right)$, jossa $g$ on kohdan b funktio.)\n\n**Vastaus: esimerkiksi $h(x)=\\sin\\left(\\frac{\\pi x}{2}\\right)$.**\n\n**Sudenkuoppa:** $\\tan\\left(\\frac{\\pi x}{4}\\right)$ on 4-jaksoinen, mutta sitä ei ole määritelty koko $\\mathbb{R}$:ssä.",
+     "answer": "Esim. $h(x)=\\sin\\frac{\\pi x}{2}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Aineistossa 10.A (ks. alkuperäinen tehtävä) on Python-ohjelma, jonka piti tulostaa luvun $n$ alkutekijät. Ohjelma tallentaa alkuperäisen arvon muuttujaan $m$. Niin kauan kuin $n>1$, se käy for-silmukassa läpi luvut $a=2,3,\\dots,m$, ja aina kun $a$ jakaa luvun $n$, se tulostaa $a$:n ja jakaa $n$:n $a$:lla (operaattorilla /). Ohjelma tulostaa joskus oikein, joskus mukana on muitakin lukuja. Ohjelmaa voi ajaa koeympäristössä.",
+   "units": [
+    {
+     "id": "a",
+     "points": 3,
+     "prompt": "Keksi luvun $n$ alkuarvo, jolla ohjelma tulostaa vain $n$:n alkutekijöitä. Näytä alkuarvo ja tuloste.",
+     "hints": [
+      "Kokeile ohjelmaa luvuilla, joiden alkutekijät ovat kaikki eri lukuja, esimerkiksi $n=30$ tai jollakin alkuluvulla."
+     ],
+     "solution": "1. Valitaan $n=30=2\\cdot 3\\cdot 5$.\n2. Silmukan kierroksella $a=2$ jakaa luvun, tulostetaan 2 ja $n=15$. Sitten $a=3$ jakaa, tulostetaan 3 ja $n=5$. Luku $4$ ei jaa, $a=5$ jakaa, tulostetaan 5 ja $n=1$. Loput $a$:n arvot eivät jaa lukua 1.\n3. Tuloste on 2, 3, 5, eli täsmälleen luvun 30 alkutekijät.\n\n**Vastaus: esimerkiksi $n=30$, tuloste 2, 3, 5.**",
+     "answer": "Esim. $n=30$: tuloste 2, 3, 5",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 3,
+     "prompt": "Keksi luvun $n$ alkuarvo, jolla ohjelma tulostaa myös muita lukuja kuin $n$:n alkutekijöitä. Näytä alkuarvo ja tuloste.",
+     "hints": [
+      "Kokeile lukua, jossa sama alkutekijä toistuu, esimerkiksi kakkosen potenssia."
+     ],
+     "solution": "1. Valitaan $n=8=2^3$.\n2. $a=2$ jakaa, tulostetaan 2 ja $n=4$. Silmukka jatkaa arvoon $a=3$, joka ei jaa. Arvo $a=4$ jakaa luvun 4, joten tulostetaan 4 ja $n=1$.\n3. Tuloste on 2, 4. Luku 4 ei ole alkuluku.\n\n**Vastaus: esimerkiksi $n=8$, tuloste 2, 4 (tai $n=16$, tuloste 2, 4, 2).**",
+     "answer": "Esim. $n=8$: tuloste 2, 4",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "c",
+     "points": 6,
+     "prompt": "Mikä ohjelmassa on vialla? Selitä, miksi se joskus tulostaa vääriä lukuja.",
+     "hints": [
+      "Seuraa ohjelman kulkua kohdan b esimerkissä rivi riviltä. Mitä tapahtuu muuttujalle $a$ heti sen jälkeen, kun $n$ on jaettu $a$:lla?",
+      "Jakamisen jälkeen for-silmukka siirtyy seuraavaan $a$:n arvoon tarkistamatta, jakaako sama $a$ luvun $n$ vielä uudestaan. Jäljellä olevaan $n$:ään voi jäädä saman alkutekijän kopioita, ja silloin niiden tulo (yhdistetty luku) voi jakaa $n$:n myöhemmin silmukassa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Virheen syyn: kun $a$ jakaa luvun $n$, ohjelma jakaa kerran ja siirtyy heti seuraavaan lukuun $a+1$. Sama tekijä $a$ voi yhä jakaa pienentyneen luvun $n$.\n- Seurauksen: jos jäljelle jää esimerkiksi $a\\cdot a$ tai $a\\cdot(a+1)$, yhdistetty luku (esim. 4) voi jakaa luvun $n$ ennen kuin sen alkutekijät on poistettu. Ohjelma ei missään tarkista, onko tulostettava $a$ alkuluku.\n- Toimivan korjauksen: esimerkiksi ehdon *if n%a==0* tilalle silmukka *while n%a==0*, jolloin jokainen tekijä jaetaan pois niin monta kertaa kuin mahdollista ennen siirtymistä seuraavaan $a$:han.\n\n**Esimerkkivastaus:** Kun $n=8$, ensimmäinen kierros löytää tekijän 2 ja jakaa: $n=4$. For-silmukka ei kuitenkaan kokeile lukua 2 uudelleen, vaan jatkaa luvuilla 3 ja 4. Koska 4 jakaa luvun 4, se tulostuu, vaikka se ei ole alkuluku. Vika on siis se, että jokaista $a$:ta kokeillaan yhdellä for-kierroksella vain kerran: jos alkutekijä esiintyy $n$:ssä useasti, sen kaikki kopiot eivät ehdi poistua ennen kuin suurempia jakajia kokeillaan. Jos pienemmät alkutekijät poistetaan aina kokonaan ennen seuraavaa $a$:ta (esim. *while*-silmukalla *if*-ehdon sijaan), yhdistetty luku ei voi enää jakaa $n$:ää, koska sen alkutekijät on jo jaettu pois. Lisäksi jakolasku / tekee luvusta liukuluvun, ja isoilla luvuilla tarkkuus voi kärsiä; kokonaislukujako // olisi parempi.\n\n**Sudenkuoppa:** ongelmaksi väitetään, että sama alkuluku tulostuu useasti. Se on oikein, koska alkutekijähajotelmassa tekijät toistuvat.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Alue $P_0$ on $x$-akselin ja paraabelin $y=1-x^2$ välissä, kun $-1\\le x\\le 1$. Alue $P_a$ ($a>0$) saadaan siirtämällä $P_0$:aa matkan $a$ oikealle, ja $L_a$ on alueiden $P_0$ ja $P_a$ yhteinen osa (ks. alkuperäisen tehtävän kuva tapauksesta $a=0{,}75$).",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Laske alueen $L_{0{,}75}$ pinta-ala.",
+     "hints": [
+      "Siirretyn paraabelin yhtälö on $y=1-(x-0{,}75)^2$. Leikkausalue on symmetrinen paraabelien leikkauspisteen kautta kulkevan pystysuoran suhteen, joten riittää laskea puolet ja kertoa kahdella."
+     ],
+     "solution": "1. Siirretty paraabeli: $y=1-(x-0{,}75)^2$.\n2. Leikkauspiste: $1-x^2=1-(x-0{,}75)^2 \\iff x^2=(x-0{,}75)^2 \\iff x=0{,}375$.\n3. Välillä $[0{,}375;\\,1]$ alueen $L_{0{,}75}$ yläreunana on alkuperäinen paraabeli, ja symmetrian vuoksi toinen puolikas on yhtä suuri.\n4. $A=2\\int_{0{,}375}^{1}(1-x^2)\\,dx=2\\left[x-\\frac{x^3}{3}\\right]_{0{,}375}^{1}=\\frac{475}{768}\\approx 0{,}618$.\n\n**Vastaus: $\\frac{475}{768}\\approx 0{,}62$**",
+     "answer": "$\\frac{475}{768}\\approx 0{,}62$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Alueen $L_a$ ala on puolet alueen $P_0$ alasta, kun $a$ toteuttaa erään kolmannen asteen yhtälön. Muodosta yhtälö ja ratkaise siitä $a$ kolmen merkitsevän numeron tarkkuudella.",
+     "hints": [
+      "Laske ensin $P_0$:n ala. Leikkauspiste on yleisesti $x=\\frac a2$, ja kohdan a tapaan $L_a$:n ala on $2\\int_{a/2}^{1}(1-x^2)\\,dx$, kun $0<a<2$.",
+      "$P_0$:n ala on $\\frac43$, ja $L_a$:n alaksi saat $\\frac43-a+\\frac{a^3}{12}$. Aseta tämä yhtä suureksi kuin $\\frac23$ ja kerro nimittäjät pois. Ratkaise yhtälö ohjelmistolla ja valitse juuri väliltä $0<a<2$."
+     ],
+     "solution": "1. $P_0$:n ala: $\\int_{-1}^{1}(1-x^2)\\,dx=\\left[x-\\frac{x^3}{3}\\right]_{-1}^{1}=\\frac43$.\n2. Paraabelit $y=1-x^2$ ja $y=1-(x-a)^2$ leikkaavat, kun $x^2=(x-a)^2$, eli $x=\\frac a2$. Yhteinen osa on epätyhjä, kun $0<a<2$.\n3. Symmetrian vuoksi $L_a$:n ala on $2\\int_{a/2}^{1}(1-x^2)\\,dx=2\\left(\\frac23-\\frac a2+\\frac{a^3}{24}\\right)=\\frac43-a+\\frac{a^3}{12}$. (Tarkistus: $a=0{,}75$ antaa kohdan a tuloksen.)\n4. Ehto: $\\frac43-a+\\frac{a^3}{12}=\\frac12\\cdot\\frac43=\\frac23$. Kerrotaan luvulla 12: $a^3-12a+8=0$.\n5. Ohjelmistolla ratkaisut ovat noin $-3{,}76$, $0{,}695$ ja $3{,}06$. Vain $0{,}695$ on välillä $(0,2)$.\n\n**Vastaus: $a^3-12a+8=0$, josta $a\\approx 0{,}695$.**\n\n**Sudenkuoppa:** yhtälön kaikkien juurten ilmoittaminen. Negatiivinen juuri ja juuri $3{,}06$ eivät kelpaa, koska kaava on voimassa vain, kun $0<a<2$.",
+     "answer": "$a^3-12a+8=0$, $a\\approx 0{,}695$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "intro": "Aineiston 12.A (ks. alkuperäinen tehtävä) mukaan Bézier-käyrä määräytyy ohjauspisteistään, ja ensimmäinen ja viimeinen ohjauspiste ovat käyrän päätepisteet. Lineaarinen käyrä on $B(t)=(1-t)P_0+tP_1$ ja toisen asteen käyrä $B(t)=(1-t)\\bigl[(1-t)P_0+tP_1\\bigr]+t\\bigl[(1-t)P_1+tP_2\\bigr]$, kun $0\\le t\\le 1$. Pisteitä käsitellään paikkavektoreina.",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Lineaarinen Bézier-käyrä on $B(t)=(4t,\\ t+2)$, $0\\le t\\le 1$. Määritä sen ohjauspisteet.",
+     "hints": [
+      "Lineaarisen käyrän ohjauspisteet ovat sen päätepisteet $B(0)=P_0$ ja $B(1)=P_1$."
+     ],
+     "solution": "1. Määritelmästä $B(0)=P_0$ ja $B(1)=P_1$.\n2. $P_0=B(0)=(0,\\ 2)$ ja $P_1=B(1)=(4,\\ 3)$.\n3. Tarkistus: $(1-t)(0,2)+t(4,3)=(4t,\\ 2-2t+3t)=(4t,\\ t+2)$.\n\n**Vastaus: $P_0=(0,2)$ ja $P_1=(4,3)$**",
+     "answer": "$P_0=(0,2)$, $P_1=(4,3)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Kun toisen asteen Bézier-käyrän ohjauspisteinä ovat $P_0=(-2,0)$, $P_1=(0,8)$ ja $P_2=(2,0)$, mikä on käyrän yhtälö muodossa $y=f(x)$?",
+     "hints": [
+      "Sijoita pisteet määritelmään ja laske $x$- ja $y$-koordinaatit erikseen $t$:n funktioina. Ratkaise sitten $t$ lausekkeesta $x(t)$ ja sijoita se lausekkeeseen $y(t)$.",
+      "Sieventämällä saat $x=4t-2$ ja $y=16t-16t^2$. Silloin $t=\\frac{x+2}{4}$. Muista ilmoittaa myös $x$:n vaihteluväli, kun $0\\le t\\le 1$."
+     ],
+     "solution": "1. $B(t)=(1-t)^2P_0+2t(1-t)P_1+t^2P_2$ (määritelmä auki kerrottuna).\n2. $x$-koordinaatti: $x=-2(1-t)^2+0+2t^2=-2+4t-2t^2+2t^2=4t-2$.\n3. $y$-koordinaatti: $y=0+2t(1-t)\\cdot 8+0=16t-16t^2$.\n4. Kohdasta 2: $t=\\frac{x+2}{4}$, ja kun $0\\le t\\le 1$, $-2\\le x\\le 2$.\n5. Sijoitus: $y=16t(1-t)=16\\cdot\\frac{x+2}{4}\\cdot\\frac{2-x}{4}=(x+2)(2-x)=4-x^2$.\n6. Tarkistus: $f(-2)=0$ ja $f(2)=0$, eli päätepisteet ovat $P_0$ ja $P_2$, kuten pitää.\n\n**Vastaus: $y=4-x^2$, kun $-2\\le x\\le 2$.**\n\n**Sudenkuoppa:** oletetaan, että käyrä kulkee ohjauspisteen $P_1=(0,8)$ kautta. Huippu on kuitenkin $(0,4)$, koska keskimmäinen ohjauspiste vain ”vetää” käyrää puoleensa.",
+     "answer": "$y=4-x^2$, $-2\\le x\\le 2$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "intro": "Funktio on $f(x)=3x-5$, kun $x\\le 1$, ja $f(x)=x^2+x-2$, kun $x>1$. Jalmari laskee erotusosamäärän toispuoleiset raja-arvot kohdassa $x=1$. Vasemmalta hän saa $3$. Oikealta hän sijoittaa lausekkeeseen $f(1)$:n paikalle arvon $1^2+1-2=0$ ja saa $\\lim_{x\\to 1+}\\frac{x^2+x-2}{x-1}=3$. Tästä hän päättelee, että $f'(1)=3$ (koko päättely: ks. alkuperäinen tehtävä).",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Todista, että $f$ on epäjatkuva kohdassa $x=1$. Miksi havainto sotii Jalmarin tulosta vastaan, ja missä hänen virheensä on?",
+     "hints": [
+      "Laske $f(1)$ ja oikeanpuoleinen raja-arvo $\\lim_{x\\to 1+}f(x)$. Muista, että derivoituva funktio on aina jatkuva.",
+      "$f(1)=3\\cdot 1-5=-2$, mutta oikealta raja-arvo on $0$. Tarkista, mitä arvoa Jalmari käytti $f(1)$:n paikalla oikeanpuoleisessa erotusosamäärässä."
+     ],
+     "solution": "**Epäjatkuvuus**\n\n1. $f(1)=3\\cdot 1-5=-2$, ja vasemmalta $\\lim_{x\\to 1-}(3x-5)=-2$.\n2. Oikealta $\\lim_{x\\to 1+}(x^2+x-2)=1+1-2=0\\neq -2$.\n3. Toispuoleiset raja-arvot eroavat, joten $\\lim_{x\\to 1}f(x)$ ei ole olemassa, eikä $f$ ole jatkuva kohdassa $x=1$.\n\n**Ristiriita**\n\n4. Jos funktio on derivoituva jossakin kohdassa, se on siinä myös jatkuva. Koska $f$ ei ole jatkuva kohdassa $x=1$, se ei voi olla siinä derivoituva, joten tulos $f'(1)=3$ on väärä.\n\n**Virhe**\n\n5. Oikeanpuoleisessa erotusosamäärässä Jalmari käytti $f(1)$:n arvona lukua $1^2+1-2=0$, eli laski $f(1)$:n väärällä lausekkeella. Oikea arvo on $f(1)=-2$.\n6. Oikealla arvolla $\\frac{f(x)-f(1)}{x-1}=\\frac{x^2+x-2+2}{x-1}=\\frac{x(x+1)}{x-1}\\to\\infty$, kun $x\\to 1+$. Oikeanpuoleista raja-arvoa ei siis ole.\n\n**Vastaus: $f(1)=-2$, mutta $\\lim_{x\\to1+}f(x)=0$, joten $f$ on epäjatkuva kohdassa 1. Derivoituvuus edellyttäisi jatkuvuutta. Jalmari käytti oikeanpuoleisessa erotusosamäärässä väärää arvoa $f(1)=0$.**",
+     "answer": "Epäjatkuva: $f(1)=-2\\neq 0=\\lim_{x\\to1+}f(x)$; Jalmari käytti väärää arvoa $f(1)=0$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Osoita, että $f$ on monotoninen koko reaalilukujen joukossa.",
+     "hints": [
+      "Osoita, että $f$ on kasvava kummallakin palalla erikseen. Tarkista lopuksi, ettei hyppy kohdassa $x=1$ riko kasvavuutta: vertaa vasemman palan suurinta arvoa oikean palan arvoihin.",
+      "Vasen pala on nouseva suora, jonka arvot ovat enintään $-2$. Oikealla derivaatta $2x+1$ on positiivinen, ja arvot ovat suurempia kuin raja-arvo 0. Käsittele kolme tapausta: molemmat pisteet vasemmalla, molemmat oikealla tai yksi kummallakin puolella."
+     ],
+     "solution": "1. Kun $x\\le 1$, $f(x)=3x-5$ on nouseva suora (kulmakerroin 3), joten $f$ on aidosti kasvava välillä $(-\\infty,1]$. Siellä $f(x)\\le f(1)=-2$.\n2. Kun $x>1$, $f(x)=x^2+x-2$ ja $f'(x)=2x+1>0$, joten $f$ on aidosti kasvava välillä $(1,\\infty)$.\n3. Kun $x>1$, $f(x)=(x-1)(x+2)>0$, koska molemmat tekijät ovat positiivisia.\n4. Olkoon $x_1<x_2$. Jos molemmat ovat samalla palalla, $f(x_1)<f(x_2)$ kohtien 1 ja 2 nojalla. Jos $x_1\\le 1<x_2$, niin $f(x_1)\\le -2<0<f(x_2)$.\n5. Siis $f(x_1)<f(x_2)$ aina, kun $x_1<x_2$, eli $f$ on aidosti kasvava ja siten monotoninen koko $\\mathbb{R}$:ssä. $\\square$\n\n**Sudenkuoppa:** kasvavuus perustellaan vain derivaatan avulla paloittain. Kohta $x=1$ on tarkasteltava erikseen, koska funktio hyppää siinä.",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

@@ -7,6 +7,7 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
 | `/` | `index.html` | Kotivalikko |
 | `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka |
+| `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, koesimulaatio |
 
 ## AI-malliopas – automaattinen päivitys
 - `.github/workflows/update-models.yml` ajaa joka toinen päivä (04:17 UTC) skriptin
@@ -55,6 +56,17 @@ Tämä on **julkaisurepo**. Lähdedata ja koontiskripti ovat `~/sovellukset/yo-t
 
 Jos muutat ulkoasua tai logiikkaa, tee muutos ensin sovellukset-kansion `index.html`:ään (täällä `yo-tutka.html`)
 ja tuo se tänne käsin — yllä oleva komento siirtää vain datan.
+
+## YO-harjoittelu – vihjeet ja malliratkaisut
+- Sisältö: `data/practice/<aine>/<kerta>.json`, yksi tiedosto per aine ja tutkintokerta.
+  Kirjoitusohje ja tekijänoikeussäännöt: `scripts/PRACTICE_CONTENT.md`.
+- Tarkistus ennen committia:
+  ```sh
+  python3 scripts/validate_practice.py                 # rakenne, vihjemäärät, pisteet (ajetaan myös Vercelin buildissa)
+  python3 scripts/check_overlap.py <tiedosto.json> <koeteksti.txt> <hvp.txt>   # ei kopioitua tekstiä
+  ```
+  Kaavojen LaTeX-tarkistus MathJaxilla (`scripts/check_tex.mjs`) vaatii Noden: ohje tiedoston alussa.
+- Uusi tutkintokerta: lisää ensin YO-tutkaan (yllä), sitten harjoitussisältö ohjeen mukaan.
 
 ## Haarat
 Muissa haaroissa tehdyt pushit saavat oman preview-osoitteen, eivät mene tuotantoon.

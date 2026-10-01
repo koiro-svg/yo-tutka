@@ -1,0 +1,463 @@
+{
+ "subject": "fysiikka",
+ "session": "2022K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2022K_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-03-30_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen 20 pisteen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Valitse kussakin kohdassa yksi vaihtoehto (vaihtoehdot koenäkymässä, A = ylin).\n\n- 1.1 Vauhdittoman pituushypyn ponnistus: kokonaisvoiman suunta?\n- 1.2 Samalla ympyräradalla autot $20$ ja $40\\,\\mathrm{km/h}$: kiihtyvyyksien suhde?\n- 1.3 Puhkeava ilmapallo: sisäilman tilavuus ja lämpötila?\n- 1.4 Yksi lamppu vs. kaksi rinnan samanlaisilla akuilla: kirkkaudet?\n- 1.5 Elektroni tulee kohtisuoraan homogeeniseen sähkökenttään: rata?\n- 1.6 Kimmoisa törmäys, A pysähtyy ja B lähtee: säilyvätkö liikemäärä ja liike-energia?\n- 1.7 $400\\,\\mathrm{m}$ pilvenpiirtäjän perusvärähtely: aallonpituus?\n- 1.8 Yksi katupora $100\\,\\mathrm{dB}$, kaksi poraa samassa paikassa?\n- 1.9 Mikä kasvattaa pyörivän silmukan huippujännitettä eniten: ala 3×, aika 5×, pyörimisnopeus 4× vai vuontiheys 2×?\n- 1.10 Miten laserilla irrotettujen elektronien liike-energiaa kasvatetaan?",
+     "hints": [
+      "Käy jokainen kohta läpi yhdellä perusperiaatteella: Newtonin II laki, keskeiskiihtyvyys $v^2/r$, adiabaattinen laajeneminen, rinnankytkentä, sähköinen voima $F=qE$, säilymislait, seisova aalto, desibeliasteikko, induktiolaki ja valosähköinen ilmiö.",
+      "Kohta kohdalta: 1.1 hyppääjä kiihtyy vinosti; 1.2 $a\\propto v^2$; 1.3 nopea laajeneminen tekee työtä ilman lämmönsiirtoa; 1.4 rinnankytketyillä on akun koko jännite; 1.5 voima on kenttäviivojen suuntainen; 1.6 kimmoisa törmäys; 1.7 kiinteä pohja ja vapaa huippu, $L=\\lambda/4$; 1.8 intensiteetin kaksinkertaistus; 1.9 $e_\\max = NBA\\omega$; 1.10 $E_k = hf - W_0$."
+     ],
+     "solution": "1. **1.1 B** (vinosti eteen- ja ylöspäin). Hyppääjä lähtee paikaltaan liikkeelle eteen ja ylös, joten hänen kiihtyvyytensä ja siten kokonaisvoima osoittavat vinosti eteen ja ylöspäin.\n2. **1.2 A** (B:llä nelinkertainen kiihtyvyys). Keskeiskiihtyvyys $a = v^2/r$; nopeus kaksinkertaistuu, joten kiihtyvyys nelinkertaistuu.\n3. **1.3 B** (tilavuus kasvaa, lämpötila laskee). Puhkeaminen on niin nopea, että lämpöä ei ehdi siirtyä. Laajeneva ilma tekee työtä sisäenergiansa kustannuksella (adiabaattinen laajeneminen), joten se jäähtyy.\n4. **1.4 A** (kaikki yhtä kirkkaita). Ideaalisen akun jännite on kaikkien lamppujen yli sama, joten jokaisen lampun virta ja teho ovat samat.\n5. **1.5 C** (rata kaartuu, kunnes liike on lähes kenttäviivojen suuntaista). Voima $\\bar F = q\\bar E$ on vakio ja kenttäviivojen suuntainen (elektronilla vastakkainen), joten rata on paraabeli ja nopeuden kenttäsuuntainen komponentti kasvaa koko ajan.\n6. **1.6 C** (molemmat säilyvät). Liikemäärä säilyy kaikissa törmäyksissä, ja kimmoisassa törmäyksessä säilyy myös liike-energia.\n7. **1.7 A** ($1600\\,\\mathrm{m}$). Rakennuksen alapää on kiinni maassa (solmu) ja huippu liikkuu vapaasti (kupu). Perusvärähtelyssä $L = \\lambda/4$, joten $\\lambda = 4\\cdot 400\\,\\mathrm{m}$.\n8. **1.8 B** ($103\\,\\mathrm{dB}$). Intensiteetti kaksinkertaistuu: $\\Delta L = 10\\lg 2\\,\\mathrm{dB} \\approx 3\\,\\mathrm{dB}$.\n9. **1.9 C** (pyöritysnopeus nelinkertaiseksi). $e_\\max = NBA\\omega$: kulmanopeus 4-kertaiseksi antaa 4-kertaisen huippujännitteen, ala 3-kertaisen ja vuontiheys 2-kertaisen; pyöritysaika ei vaikuta huippuarvoon.\n10. **1.10 B** (valon taajuutta kasvattamalla). Valosähköisessä ilmiössä $E_k = hf - W_0$. Intensiteetti ja pulssin kesto vaikuttavat vain irtoavien elektronien määrään, ja aallonpituuden kasvattaminen pienentää energiaa.\n\n**Vastaus: 1.1 B · 1.2 A · 1.3 B · 1.4 A · 1.5 C · 1.6 C · 1.7 A · 1.8 B · 1.9 C · 1.10 B**\n\n**Sudenkuoppa:** kohdassa 1.8 desibelejä ei lasketa yhteen ($200\\,\\mathrm{dB}$ on väärin), koska asteikko on logaritminen.",
+     "answer": "1.1 B · 1.2 A · 1.3 B · 1.4 A · 1.5 C · 1.6 C · 1.7 A · 1.8 B · 1.9 C · 1.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 12,
+     "prompt": "Tuulivoimalan roottorin kokoa kuvaa pyyhkäisypinta-ala, eli lapojen kärkien piirtämän ympyrän ala (kuva 2.A). Taulukossa 2.B on valmistajien ilmoittamat tehot ja roottorien halkaisijat. Määritä graafisen esityksen avulla, kuinka paljon voimalan teho tyypillisesti kasvaa, kun pyyhkäisypinta-ala kasvaa $25\\,\\mathrm{m^2}$.",
+     "hints": [
+      "Laske jokaiselle voimalalle pyyhkäisypinta-ala halkaisijasta: $A = \\pi\\left(\\frac{d}{2}\\right)^2$. Piirrä teho pinta-alan funktiona ja katso, riippuuko teho pinta-alasta lineaarisesti.",
+      "Sovita pisteisiin suora. Sen kulmakerroin $k = \\frac{\\Delta P}{\\Delta A}$ on noin $0{,}36\\,\\mathrm{kW/m^2}$, ja tehon kasvu on $\\Delta P = k\\,\\Delta A$."
+     ],
+     "solution": "1. Lasketaan kullekin voimalalle pyyhkäisypinta-ala $A = \\pi\\left(\\dfrac{d}{2}\\right)^2$. Esimerkiksi $d = 100\\,\\mathrm{m}$ antaa $A \\approx 7850\\,\\mathrm{m^2}$.\n2. Piirretään teho $P\\ (\\mathrm{kW})$ pinta-alan $A\\ (\\mathrm{m^2})$ funktiona erillisinä pisteinä. Pisteet asettuvat melko hyvin suoralle, joten teho on likimain verrannollinen pyyhkäisypinta-alaan.\n3. Sovitetaan pisteisiin suora. Sen kulmakerroin on $k = \\dfrac{\\Delta P}{\\Delta A} \\approx 0{,}363\\,\\mathrm{kW/m^2}$.\n4. Tehon kasvu: $\\Delta P = k\\,\\Delta A = 0{,}363\\,\\mathrm{kW/m^2}\\cdot 25\\,\\mathrm{m^2} \\approx 9{,}1\\,\\mathrm{kW}$.\n\n**Vastaus: teho kasvaa tyypillisesti noin $9{,}1\\,\\mathrm{kW}$.**\n\nFysikaalinen tausta: tuulen teho on $P = \\frac12\\rho A v^3$, joten samalla tuulen nopeudella teho on verrannollinen pyyhkäisypinta-alaan.\n\n**Sudenkuoppa:** tehon piirtäminen halkaisijan funktiona. Silloin kuvaaja on paraabelin muotoinen, eikä kulmakerrointa voi suoraan käyttää.",
+     "answer": "$\\Delta P \\approx 9{,}1\\,\\mathrm{kW}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 3,
+     "prompt": "Mainitse kolme fysikaalisten tieteiden alaa, joiden osaamista tuulivoimalan suunnittelu tai rakentaminen vaatii.",
+     "hints": [
+      "Mieti voimalan eri osia ja ilmiöitä: lapoja pyörittävä ilmavirta, torniin kohdistuvat kuormat, generaattori ja sähkönsiirto, ääni sekä sää."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme eri osa-aluetta, esimerkiksi:\n- aerodynamiikka tai virtausmekaniikka (lapojen muoto, tuulen energian talteenotto)\n- mekaniikka ja lujuusoppi (tornin ja lapojen kuormat, värähtelyt)\n- sähkömagnetismi tai sähkötekniikka (generaattori, sähkönsiirto)\n- akustiikka (melu), meteorologia (tuuliolot), materiaalitiede tai geofysiikka (perustukset)\n\n**Esimerkkivastaus:** aerodynamiikka, lujuusoppi ja sähkötekniikka.\n\n**Sudenkuoppa:** ydinfysiikan tai pelkän ”magnetismin” mainitseminen ilman yhteyttä voimalan toimintaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 8,
+     "prompt": "Sylinteriin, jossa on kevytliikkeinen mäntä, otetaan ulkoa $1{,}1\\,\\mathrm{l}$ ilmaa ($5{,}0\\,^\\circ\\mathrm{C}$, $101\\,\\mathrm{kPa}$). Mäntä painetaan nopeasti sisään, jolloin tilavuus on $0{,}38\\,\\mathrm{l}$ ja paine $447\\,\\mathrm{kPa}$. Mäntä lukitaan, ja sylinteri viedään heti laboratorioon, jossa kaasu asettuu lämpötilaan $24\\,^\\circ\\mathrm{C}$. Määritä kaasun paine lopussa.",
+     "hints": [
+      "Ilmaa voi käsitellä ideaalikaasuna, ja sen ainemäärä ei muutu. Riittää verrata alkutilaa ja lopputilaa: kumpikin toteuttaa yhtälön $pV = nRT$.",
+      "Koska $nR$ on vakio, $\\frac{p_1V_1}{T_1} = \\frac{p_2V_2}{T_2}$. Lopputilassa tilavuus on $0{,}38\\,\\mathrm{l}$ ja lämpötila $297{,}15\\,\\mathrm{K}$. Välitilan paine ($447\\,\\mathrm{kPa}$) ei ole tarpeen."
+     ],
+     "solution": "1. Ilma käyttäytyy näissä oloissa ideaalikaasun tavoin: $pV = nRT$. Sylinteri on suljettu, joten ainemäärä $n$ säilyy.\n2. Alkutila: $p_1 = 101\\,\\mathrm{kPa}$, $V_1 = 1{,}1\\,\\mathrm{l}$, $T_1 = 278{,}15\\,\\mathrm{K}$. Lopputila: $V_2 = 0{,}38\\,\\mathrm{l}$, $T_2 = 297{,}15\\,\\mathrm{K}$.\n3. Koska $nR = \\dfrac{p_1V_1}{T_1} = \\dfrac{p_2V_2}{T_2}$, saadaan $p_2 = p_1\\dfrac{V_1T_2}{V_2T_1}$.\n4. Sijoitetaan: $p_2 = 101\\,\\mathrm{kPa}\\cdot\\dfrac{1{,}1\\,\\mathrm{l}\\cdot 297{,}15\\,\\mathrm{K}}{0{,}38\\,\\mathrm{l}\\cdot 278{,}15\\,\\mathrm{K}} \\approx 312\\,\\mathrm{kPa}$.\n\n**Vastaus: paine on lopussa noin $310\\,\\mathrm{kPa}$.**\n\n**Sudenkuoppa:** oletetaan, että kaasun lämpötila pysyi puristuksessa $5\\,^\\circ\\mathrm{C}$:ssa, ja käytetään paineen $447\\,\\mathrm{kPa}$ lähtökohtana väärää lämpötilaa. Nopeassa puristuksessa kaasu lämpenee (noin $150\\,^\\circ\\mathrm{C}$:een).",
+     "answer": "$p_2 \\approx 310\\,\\mathrm{kPa}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 7,
+     "prompt": "Selitä lämmön ja työn käsitteiden avulla, miten kaasun sisäenergia muuttuu (a) puristuksen aikana ja (b) kun kaasun lämpötila asettuu laboratorion lämpötilaan.",
+     "hints": [
+      "Lähde termodynamiikan ensimmäisestä pääsäännöstä: sisäenergia muuttuu lämmön ja työn kautta. Ideaalikaasun sisäenergia riippuu vain lämpötilasta.",
+      "Puristus on niin nopea, että lämpöä ei ehdi siirtyä, mutta mäntä tekee kaasuun työtä. Laske tilanyhtälöstä kaasun lämpötila heti puristuksen jälkeen ja vertaa sitä laboratorion lämpötilaan $24\\,^\\circ\\mathrm{C}$."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- termodynamiikan I pääsääntö: $\\Delta U = Q + W$, missä $Q$ on kaasuun tuotu lämpö ja $W$ kaasuun tehty työ\n- (a) puristuksessa ulkoinen voima tekee kaasuun työtä ($W > 0$), eikä lämpöä juuri ehdi siirtyä; sisäenergia ja lämpötila kasvavat\n- (b) puristuksen jälkeen kaasu on laboratoriota kuumempaa (noin $150\\,^\\circ\\mathrm{C}$), mäntä on lukittu ($W = 0$), ja kaasusta siirtyy lämpöä ympäristöön ($Q < 0$); sisäenergia pienenee\n- lopputilan sisäenergia on hiukan suurempi kuin alussa, koska $24\\,^\\circ\\mathrm{C} > 5\\,^\\circ\\mathrm{C}$\n\n**Esimerkkivastaus:** Termodynamiikan I pääsääntö $\\Delta U = Q + W$ kertoo, että sisäenergia voi muuttua kahdella tavalla: kaasuun tehdään työtä tai kaasu ja ympäristö vaihtavat lämpöä. Nopeassa puristuksessa mäntää työntävä voima tekee kaasuun työtä, ja koska puristus kestää vain hetken, lämpöä ei ehdi siirtyä. Kaasun sisäenergia kasvaa, ja tilanyhtälöstä $T = T_1\\frac{pV}{p_1V_1}$ saadaan lämpötilaksi noin $425\\,\\mathrm{K}$ eli noin $150\\,^\\circ\\mathrm{C}$. Laboratoriossa mäntä on lukittu, joten työtä ei tehdä. Kaasu on ympäristöään kuumempaa, joten siitä siirtyy lämpöä sylinterin seinien kautta ympäristöön, kunnes lämpötila on $24\\,^\\circ\\mathrm{C}$. Sisäenergia pienenee, mutta jää hieman alkutilaa suuremmaksi.\n\n**Sudenkuoppa:** väitetään kaasun lämpenevän laboratoriossa, tai käytetään sanaa ”lämpö” lämpötilan tai sisäenergian synonyyminä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Aineiston 4.A simulaatiossa jännitelähteeseen on kytketty sarjaan tavallinen vastus $R_1$ ja valovastus $R_\\mathrm{LDR}$, ja valovastuksen rinnalla on ledi. Ledi syttyy, kun valaistus heikkenee. Mikä on suurin valaistusvoimakkuus, jolla ledi vielä palaa?",
+     "hints": [
+      "Pienennä simulaatiossa valaistusvoimakkuutta vähitellen ja etsi raja, jolla ledin tila vaihtuu. Tarkenna arvoa, kunnes raja löytyy muutaman luksin tarkkuudella."
+     ],
+     "solution": "1. Simulaatiossa valaistusvoimakkuutta säädetään ja seurataan ledin tilaa.\n2. Kun valaistus heikkenee, valovastuksen resistanssi kasvaa, ja sen yli oleva jännite nousee. Ledi syttyy, kun tämä jännite saavuttaa ledin kynnysjännitteen.\n3. Kokeilemalla raja löytyy noin kohdasta $24\\,\\mathrm{lx}$: ledi palaa, kun valaistusvoimakkuus on $24{,}3\\,\\mathrm{lx}$ tai pienempi.\n\n**Vastaus: noin $24\\,\\mathrm{lx}$ ($24{,}3\\,\\mathrm{lx}$).**\n\n**Sudenkuoppa:** yksikön unohtaminen.",
+     "answer": "$\\approx 24\\,\\mathrm{lx}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 3,
+     "prompt": "Mikä on ledin kynnysjännite simulaation perusteella?",
+     "hints": [
+      "Kun ledi palaa, sen yli on kynnysjännite. Mittari näyttää jännitteen vastuksen $R_1$ yli. Käytä Kirchhoffin II lakia: jännitteet sarjaan kytketyissä osissa summautuvat lähdejännitteeksi."
+     ],
+     "solution": "1. Kun ledi palaa, simulaation mittari näyttää vastuksen $R_1$ yli jännitteen $U_1 \\approx 2{,}9\\,\\mathrm{V}$.\n2. Kirchhoffin II lain mukaan lähdejännite jakautuu $R_1$:n ja ledin (valovastuksen rinnankytkennän) kesken: $E = U_1 + U_\\mathrm{led}$.\n3. $U_\\mathrm{led} = E - U_1 = 5{,}0\\,\\mathrm{V} - 2{,}9\\,\\mathrm{V} = 2{,}1\\,\\mathrm{V}$.\n\n**Vastaus: kynnysjännite on noin $2{,}1\\,\\mathrm{V}$.**\n\n**Sudenkuoppa:** vastaukseksi annetaan mittarin lukema $2{,}9\\,\\mathrm{V}$, joka on vastuksen $R_1$ jännite.",
+     "answer": "$2{,}1\\,\\mathrm{V}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Määritä vastuksen $R_1$ ja valovastuksen $R_\\mathrm{LDR}$ resistanssit, kun valaistusvoimakkuus on $540\\,\\mathrm{lx}$.",
+     "hints": [
+      "Lue simulaatiosta jännite $U_1$ ja virta $I$. $R_1 = U_1/I$. Ledi ei tällöin pala, joten sama virta kulkee valovastuksen läpi, ja sen jännite on $E - U_1$."
+     ],
+     "solution": "1. Valaistusvoimakkuudella $540\\,\\mathrm{lx}$ simulaatio näyttää $U_1 \\approx 4{,}591\\,\\mathrm{V}$ ja $I \\approx 0{,}675\\,\\mathrm{mA}$.\n2. $R_1 = \\dfrac{U_1}{I} = \\dfrac{4{,}591\\,\\mathrm{V}}{0{,}675\\cdot 10^{-3}\\,\\mathrm{A}} \\approx 6{,}8\\,\\mathrm{k\\Omega}$.\n3. Ledi ei pala, joten sarjaan kytketyissä vastuksissa kulkee sama virta. Valovastuksen jännite on $U_\\mathrm{LDR} = E - U_1 = 5{,}0\\,\\mathrm{V} - 4{,}591\\,\\mathrm{V} = 0{,}409\\,\\mathrm{V}$.\n4. $R_\\mathrm{LDR} = \\dfrac{0{,}409\\,\\mathrm{V}}{0{,}675\\cdot 10^{-3}\\,\\mathrm{A}} \\approx 610\\,\\Omega$.\n\n**Vastaus: $R_1 \\approx 6{,}8\\,\\mathrm{k\\Omega}$ ja $R_\\mathrm{LDR} \\approx 610\\,\\Omega$.**",
+     "answer": "$R_1 \\approx 6{,}8\\,\\mathrm{k\\Omega}$, $R_\\mathrm{LDR} \\approx 610\\,\\Omega$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.4",
+     "points": 5,
+     "prompt": "Rajoitu valaistukseen, jolla ledi on sammuksissa. Miten valovastuksen resistanssi muuttuu, kun valaistus voimistuu? Perustele simulaation avulla.",
+     "hints": [
+      "Toista kohdan 4.3 lasku jollakin toisella valaistusvoimakkuudella ja vertaa tuloksia.",
+      "Esimerkiksi $900\\,\\mathrm{lx}$:llä $U_1 \\approx 4{,}703\\,\\mathrm{V}$ ja $I \\approx 0{,}692\\,\\mathrm{mA}$. Kun $U_1$ kasvaa, mitä se kertoo valovastuksen jännitteestä ja resistanssista?"
+     ],
+     "solution": "1. Kohdan 4.3 mukaan $540\\,\\mathrm{lx}$:llä $R_\\mathrm{LDR} \\approx 610\\,\\Omega$.\n2. Valaistusvoimakkuudella $900\\,\\mathrm{lx}$ simulaatio antaa $U_1 \\approx 4{,}703\\,\\mathrm{V}$ ja $I \\approx 0{,}692\\,\\mathrm{mA}$, joten $R_\\mathrm{LDR} = \\dfrac{5{,}0\\,\\mathrm{V} - 4{,}703\\,\\mathrm{V}}{0{,}692\\cdot 10^{-3}\\,\\mathrm{A}} \\approx 430\\,\\Omega$.\n3. Yleisemmin: kun ledi ei pala, simulaatio näyttää valaistuksen kasvaessa aina suurempaa jännitettä $U_1$. Silloin $U_\\mathrm{LDR} = E - U_1$ pienenee, ja koska $R_1$ on vakio, virta kasvaa. Jännitteenjaosta $\\dfrac{R_\\mathrm{LDR}}{R_1} = \\dfrac{E - U_1}{U_1}$, joten $R_\\mathrm{LDR}$ pienenee.\n\n**Vastaus: valovastuksen resistanssi pienenee, kun valaistusvoimakkuus kasvaa (esim. $610\\,\\Omega$ → $430\\,\\Omega$, kun $540\\,\\mathrm{lx}$ → $900\\,\\mathrm{lx}$).**\n\n**Sudenkuoppa:** laskussa päädytään $R_1$:n muuttumiseen. Tavallisen vastuksen resistanssi on vakio; muutos on valovastuksessa.",
+     "answer": "Pienenee (esim. $610\\,\\Omega$ → $430\\,\\Omega$).",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 8,
+     "prompt": "Hississä jousivaakaan ripustettu puhelin: hissin seistessä vaaka näyttää $1{,}93\\,\\mathrm{N}$ ja hissin lähdettyä liikkeelle $2{,}23\\,\\mathrm{N}$. Mihin suuntaan hissi kiihtyy, ja kuinka suuri on kiihtyvyys?",
+     "hints": [
+      "Piirrä puhelimen voimakuvio: paino $m\\bar g$ alas ja jousivoima ylös. Hissin seistessä voimat ovat tasapainossa, mistä saat puhelimen massan.",
+      "Liikkeellä Newtonin II laki: $T_2 - mg = ma$, missä $mg = 1{,}93\\,\\mathrm{N}$. Positiivinen $a$ tarkoittaa ylöspäin suuntautuvaa kiihtyvyyttä."
+     ],
+     "solution": "1. Puhelimeen vaikuttavat paino $\\bar G$ (alas) ja jousivaa'an voima $\\bar T$ (ylös). Valitaan ylöspäin positiiviseksi.\n2. Hissin seistessä kiihtyvyys on nolla: $T_1 - mg = 0$, joten $m = \\dfrac{T_1}{g} = \\dfrac{1{,}93\\,\\mathrm{N}}{9{,}81\\,\\mathrm{m/s^2}} \\approx 0{,}197\\,\\mathrm{kg}$.\n3. Kiihtyvässä liikkeessä $T_2 - mg = ma$, ja koska $mg = T_1$: $a = \\dfrac{T_2 - T_1}{m} = \\dfrac{2{,}23\\,\\mathrm{N} - 1{,}93\\,\\mathrm{N}}{0{,}1967\\,\\mathrm{kg}} \\approx 1{,}5\\,\\mathrm{m/s^2}$.\n4. $a > 0$, joten kiihtyvyys osoittaa ylöspäin. Koska hissi oli levossa, se lähtee liikkumaan ylöspäin.\n\n**Vastaus: hissi kiihtyy ylöspäin, $a \\approx 1{,}5\\,\\mathrm{m/s^2}$.**\n\n**Sudenkuoppa:** kiihtyvyyden suunnan tai liikesuunnan jättäminen kertomatta. Huomaa myös, että pelkkä vaa'an lukeman kasvu ei yleensä kerro liikesuuntaa, vaan kiihtyvyyden suunnan; tässä hissi lähtee levosta, joten ne ovat samat.",
+     "answer": "ylöspäin, $a \\approx 1{,}5\\,\\mathrm{m/s^2}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 7,
+     "prompt": "Kun hissi lähtee liikkeelle, jousivaa'an jousi venyy $4{,}5\\,\\mathrm{cm}$ lisää. Määritä jousen jousivakio (vaa'an lukemat ovat samat kuin edellä: $1{,}93\\,\\mathrm{N}$ levossa, $2{,}23\\,\\mathrm{N}$ liikkeen alussa).",
+     "hints": [
+      "Jousivoima noudattaa Hooken lakia $F = kx$. Kirjoita jousivoima kummassakin tilanteessa: venymä on levossa $x_1$ ja liikkeellä $x_1 + \\Delta x$.",
+      "Vähentämällä yhtälöt toisistaan tuntematon $x_1$ häviää: $T_2 - T_1 = k\\,\\Delta x$."
+     ],
+     "solution": "1. Hooken laki: jousivoima $T = kx$, missä $x$ on venymä.\n2. Levossa $T_1 = kx_1$ ja kiihtyvässä liikkeessä $T_2 = k(x_1 + \\Delta x)$.\n3. Vähennetään: $T_2 - T_1 = k\\,\\Delta x$, joten $k = \\dfrac{T_2 - T_1}{\\Delta x}$. (Sama saadaan Newtonin II laista: $k\\,\\Delta x = ma$.)\n4. Sijoitetaan: $k = \\dfrac{2{,}23\\,\\mathrm{N} - 1{,}93\\,\\mathrm{N}}{0{,}045\\,\\mathrm{m}} \\approx 6{,}7\\,\\mathrm{N/m}$.\n\n**Vastaus: $k \\approx 6{,}7\\,\\mathrm{N/m}$.**\n\n**Sudenkuoppa:** lukemien erotuksen sijoittaminen Hooken lakiin perustelematta tai negatiivinen jousivakio (väärä etumerkki).",
+     "answer": "$k \\approx 6{,}7\\,\\mathrm{N/m}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 2,
+     "prompt": "Aineistossa 6.A kerrotaan Itämeren aallokosta. Mikä on ollut korkeimpien yksittäisten aaltojen amplitudi? Anna pelkkä lukuarvo metreinä yhdellä merkitsevällä numerolla.",
+     "hints": [
+      "Aineistossa ilmoitetaan aallon pohjan ja harjan korkeusero. Miten se liittyy amplitudiin?"
+     ],
+     "solution": "1. Aineiston mukaan korkeimpien aaltojen pohjan ja harjan välinen korkeusero on ollut noin $14\\,\\mathrm{m}$.\n2. Amplitudi on poikkeama tasapainoasemasta eli puolet tästä korkeuserosta: $A = \\dfrac{14\\,\\mathrm{m}}{2} = 7\\,\\mathrm{m}$.\n\n**Vastaus: 7 (m)**\n\n**Sudenkuoppa:** vastataan $14$, eli sekoitetaan aallonkorkeus ja amplitudi.",
+     "answer": "7",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.2",
+     "points": 2,
+     "prompt": "Mikä on Itämeren tyypillisen aallokon korkeimpien aaltojen taajuus? Anna pelkkä lukuarvo hertseinä yhdellä merkitsevällä numerolla.",
+     "hints": [
+      "Aineistossa kerrotaan tyypillinen jaksonaika. Taajuus on jaksonajan käänteisluku."
+     ],
+     "solution": "1. Aineiston mukaan tyypillisen aallokon korkeimpien aaltojen jaksonaika on noin $T = 5\\,\\mathrm{s}$.\n2. $f = \\dfrac{1}{T} = \\dfrac{1}{5\\,\\mathrm{s}} = 0{,}2\\,\\mathrm{Hz}$.\n\n**Vastaus: 0,2 (Hz)**",
+     "answer": "0,2",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 2,
+     "prompt": "Laske syvän veden etenemisnopeus tyypillisen aallokon korkeimmille aalloille. Anna pelkkä lukuarvo (m/s) yhdellä merkitsevällä numerolla.",
+     "hints": [
+      "Aineistosta löytyvät syvän veden aallonpituus ja jaksonaika tyypillisille aalloille. Käytä aaltoliikkeen perusyhtälöä $v = \\lambda/T$."
+     ],
+     "solution": "1. Syvässä vedessä tyypillistä jaksonaikaa $5\\,\\mathrm{s}$ vastaa aineiston mukaan noin $40\\,\\mathrm{m}$ aallonpituus.\n2. $v = \\dfrac{\\lambda}{T} = \\dfrac{40\\,\\mathrm{m}}{5\\,\\mathrm{s}} = 8\\,\\mathrm{m/s}$.\n\n**Vastaus: 8 (m/s)**",
+     "answer": "8",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.4–6.7",
+     "points": 9,
+     "prompt": "Monivalinnat aineiston 6.A pohjalta (vaihtoehdot koenäkymässä; A = ylin):\n\n- 6.4 Mitä aaltojen tiedoista voi päätellä: Itämeren syvyys on tyypillisesti **alle** kuinka monta metriä? (vaihtoehdot $10$, $20$, $40$, $80$, $130$, $260$, $520\\,\\mathrm{m}$)\n- 6.5 Samoin: syvyys on tyypillisesti **yli** kuinka monta metriä? (samat vaihtoehdot)\n- 6.6 Mitä aineiston termi pyyhkäisymatka tarkoittaa?\n- 6.7 Aallot tulevat vinosti loivasti madaltuvaa rantaa kohti. Mikä aallon ominaisuus (aallonpituus, amplitudi, nopeus, suunta, taajuus) ei muutu?",
+     "hints": [
+      "Aineiston mukaan aalto alkaa tuntea pohjan, kun syvyys on alle puolet aallonpituudesta. Mitkä aallot tuntevat pohjan Itämerellä ja mitkä eivät?",
+      "Kohta kohdalta: 6.4 pisimmät ($260\\,\\mathrm{m}$) aallot tuntevat pohjan; 6.5 tyypilliset ($40\\,\\mathrm{m}$) aallot käyttäytyvät kuin syvässä vedessä; 6.6 tuulen vaikutusmatka; 6.7 mikä suure määräytyy aaltolähteestä?"
+     ],
+     "solution": "1. **6.4 E** ($130\\,\\mathrm{m}$). Pisimmät aallot ($\\lambda \\approx 260\\,\\mathrm{m}$) tuntevat aineiston mukaan pohjan, joten syvyys on alle $\\lambda/2 = 130\\,\\mathrm{m}$.\n2. **6.5 B** ($20\\,\\mathrm{m}$). Tyypillisten aaltojen ($\\lambda \\approx 40\\,\\mathrm{m}$) kerrotaan etenevän syvän veden aaltoina, joten syvyys on yli $\\lambda/2 = 20\\,\\mathrm{m}$.\n3. **6.6 B** (matka, jolla tuuli on päässyt vapaasti kasvattamaan aallokkoa havaintopaikalle saakka). Aineistossa pyyhkäisymatka rajoittaa aallokon kasvua merialtaan koon takia.\n4. **6.7 E** (taajuus). Aallon taajuus määräytyy aallon synnystä eikä muutu väliaineen muuttuessa. Madaltuvassa vedessä nopeus ja aallonpituus pienenevät, suunta kääntyy (taittuminen) ja amplitudi kasvaa.\n\n**Vastaus: 6.4 E ($130\\,\\mathrm{m}$) · 6.5 B ($20\\,\\mathrm{m}$) · 6.6 B · 6.7 E (taajuus)**",
+     "answer": "6.4 E · 6.5 B · 6.6 B · 6.7 E",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 11,
+     "prompt": "Aineiston 7.A sumukammiokuvassa näkyy varatun hiukkasen rata ja sen kulkusuunta (pieni sininen nuoli). Kammiossa on homogeeninen magneettikenttä $B = 3{,}8\\,\\mathrm{mT}$ kuvan tason sisään. Hiukkasen energia kammioon tullessa on $2{,}5\\,\\mathrm{keV}$ ja radan säde $r = 45\\,\\mathrm{mm}$. Varauksen itseisarvo on alkeisvaraus. Kammion jakaa ohut muovikalvo, jonka läpi hiukkanen pääsee. Määritä hiukkasen varauksen etumerkki ja massa.",
+     "hints": [
+      "Magneettinen voima $\\bar F = q\\bar v \\times \\bar B$ on ympyräradalla keskeisvoima, joten sen on osoitettava radan kaarevuuskeskipistettä kohti. Katso kuvasta, mihin suuntaan rata kaartuu, ja päättele varauksen merkki oikean käden säännöllä.",
+      "Yhdistä $qvB = \\frac{mv^2}{r}$ ja $E_k = \\frac12 mv^2$. Poista nopeus: $q^2B^2r^2 = 2mE_k$."
+     ],
+     "solution": "**Varauksen etumerkki**\n\n1. Kuvassa hiukkanen kulkee ylöspäin, ja rata kaartuu vasemmalle, joten kaarevuuskeskipiste on vasemmalla.\n2. Tasaisessa ympyräliikkeessä kokonaisvoima osoittaa keskipistettä kohti, joten magneettisen voiman on osoitettava vasemmalle.\n3. Kun nopeus osoittaa ylös ja kenttä kuvan sisään, oikean käden säännöllä positiiviseen varaukseen kohdistuu voima vasemmalle (negatiiviseen oikealle). **Varaus on siis positiivinen.**\n\n**Massa**\n\n4. Nopeus on kohtisuorassa kenttää vastaan, joten $F = qvB$. Newtonin II laki: $qvB = m\\dfrac{v^2}{r}$, eli $mv = qBr$.\n5. Liike-energiasta $v = \\sqrt{2E_k/m}$, joten $qBr = \\sqrt{2mE_k}$ ja $m = \\dfrac{q^2B^2r^2}{2E_k}$.\n6. $E_k = 2{,}5\\,\\mathrm{keV} = 2500\\cdot 1{,}602\\cdot 10^{-19}\\,\\mathrm{J} = 4{,}005\\cdot 10^{-16}\\,\\mathrm{J}$.\n7. $m = \\dfrac{(1{,}602\\cdot 10^{-19}\\,\\mathrm{C})^2(3{,}8\\cdot 10^{-3}\\,\\mathrm{T})^2(0{,}045\\,\\mathrm{m})^2}{2\\cdot 4{,}005\\cdot 10^{-16}\\,\\mathrm{J}} \\approx 9{,}4\\cdot 10^{-31}\\,\\mathrm{kg}$.\n8. Massa on elektronin massan suuruinen, ja varaus on positiivinen, joten hiukkanen on positroni.\n\n**Vastaus: varaus on positiivinen, ja massa on noin $9{,}4\\cdot 10^{-31}\\,\\mathrm{kg}$ (positroni).**\n\n**Sudenkuoppa:** energian yksikkömuunnos keV → J unohtuu, tai voima piirretään radan tangentin suuntaan.",
+     "answer": "positiivinen; $m \\approx 9{,}4\\cdot 10^{-31}\\,\\mathrm{kg}$ (positroni)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 4,
+     "prompt": "Perustele, miksi hiukkasen kulkusuunta on ollut kuvaan merkitty eikä päinvastainen.",
+     "hints": [
+      "Vertaa radan kaarevuussädettä kalvon eri puolilla. Kaavasta $r = \\frac{mv}{qB}$ näet, mitä säde kertoo nopeudesta. Voiko kalvon läpäisy lisätä hiukkasen energiaa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- radan kaarevuussäde on kalvon yläpuolella pienempi kuin alapuolella\n- säde on verrannollinen nopeuteen ($r = mv/(qB)$), joten pienempi säde tarkoittaa pienempää nopeutta ja energiaa\n- kalvon läpäisy voi vain pienentää hiukkasen liike-energiaa (se menettää energiaa vuorovaikuttaessaan kalvon aineen kanssa), ei kasvattaa sitä\n- siis hiukkanen on kulkenut alhaalta (suurempi säde) kalvon läpi ylös (pienempi säde)\n\n**Esimerkkivastaus:** Kuvan alaosassa rata kaartuu loivemmin kuin yläosassa. Koska $r = \\frac{mv}{qB}$ ja kenttä on koko kammiossa sama, alaosassa hiukkasen vauhti on suurempi. Kalvon läpi kulkiessaan hiukkanen luovuttaa energiaa kalvon atomeille, eikä se voi saada kalvolta lisäenergiaa. Siksi hiukkanen on tullut alaosasta, jossa sillä oli enemmän energiaa, ja jatkanut kalvon läpi yläosaan.\n\n**Sudenkuoppa:** selitetään vain, mihin suuntaan hiukkanen kaartuu, eikä käytetä kaarevuussäteen muutosta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 5,
+     "prompt": "Aineistossa 8.A kuvataan boori-neutronikaappaushoito: boori-10 kaappaa neutronin ja muodostaa virittyneen välitilan ytimen, joka hajoaa tuottaen alfahiukkasen, tytärytimen ja gammafotonin. Kirjoita reaktioyhtälö välivaiheineen neutronikaappauksesta lopputuotteisiin.",
+     "hints": [
+      "Kirjoita ensin kaappaus $^{10}_{5}\\mathrm{B} + {}^{1}_{0}\\mathrm{n}$ ja päättele välitilan ydin säilymislaeista. Sitten alfahajoaminen: massaluku −4, järjestysluku −2.",
+      "Välitilan ydin on $^{11}_{5}\\mathrm{B}^{*}$ (massaluku 11, kuten luonnon yleisimmällä booriisotoopilla). Alfahiukkasen lähdettyä jäljelle jää järjestysluvun 3 alkuaine."
+     ],
+     "solution": "1. Neutronikaappaus: massaluku kasvaa yhdellä, järjestysluku ei muutu: $^{10}_{5}\\mathrm{B} + {}^{1}_{0}\\mathrm{n} \\to {}^{11}_{5}\\mathrm{B}^{*}$.\n2. Virittynyt $^{11}\\mathrm{B}^*$ hajoaa alfahajoamisella: $11 - 4 = 7$ ja $5 - 2 = 3$ (litium): $^{11}_{5}\\mathrm{B}^{*} \\to {}^{7}_{3}\\mathrm{Li} + {}^{4}_{2}\\mathrm{He} + \\gamma$.\n3. Tarkemmin gammafotoni syntyy, kun virittyneenä syntynyt litiumydin purkautuu perustilaan: $^{7}_{3}\\mathrm{Li}^{*} \\to {}^{7}_{3}\\mathrm{Li} + \\gamma$ ($478\\,\\mathrm{keV}$).\n\n**Vastaus: $^{10}_{5}\\mathrm{B} + {}^{1}_{0}\\mathrm{n} \\to {}^{11}_{5}\\mathrm{B}^{*} \\to {}^{7}_{3}\\mathrm{Li} + {}^{4}_{2}\\mathrm{He} + \\gamma$**",
+     "answer": "$^{10}_{5}\\mathrm{B} + {}^{1}_{0}\\mathrm{n} \\to {}^{11}_{5}\\mathrm{B}^{*} \\to {}^{7}_{3}\\mathrm{Li} + {}^{4}_{2}\\mathrm{He} + \\gamma$",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 6,
+     "prompt": "Reaktiossa syntyy lopulta alfahiukkanen, tytärydin ja gammafotoni. Vertaa niiden merkitystä syöpäsolujen paikallisessa tuhoamisessa.",
+     "hints": [
+      "Mieti kunkin hiukkasen kantamaa kudoksessa: raskaat, varatut hiukkaset luovuttavat energiansa lyhyellä matkalla, gammafotonit vuorovaikuttavat heikosti.",
+      "Reaktiossa vapautuu $2{,}789\\,\\mathrm{MeV}$, josta gamma vie $478\\,\\mathrm{keV}$. Loput jakautuu alfahiukkasen ja litiumytimen liike-energiaksi (liikemäärän säilymisestä noin $1{,}5\\,\\mathrm{MeV}$ ja $0{,}8\\,\\mathrm{MeV}$). Missä tämä energia absorboituu, ja mihin gamma päätyy?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- alfahiukkanen on raskas ja kaksinkertaisesti varattu, joten se ionisoi voimakkaasti ja sen kantama kudoksessa on hyvin lyhyt (solun mittakaava); se tuhoaa tehokkaasti juuri sen solun, jossa reaktio tapahtui\n- litiumydin (tytärydin) on vielä raskaampi ja sen kantama on vielä lyhyempi; sekin luovuttaa energiansa paikallisesti ja on tärkeä solujen tuhoamisessa\n- gammafotoni vuorovaikuttaa kudoksen kanssa heikosti, joten se kulkee pitkälle ja voi vaurioittaa myös kasvainta ympäröivää tervettä kudosta; paikallisessa tuhoamisessa sen merkitys on vähäinen\n\n**Esimerkkivastaus:** Reaktion vapauttamasta energiasta noin $2{,}3\\,\\mathrm{MeV}$ on alfahiukkasen ja litiumytimen liike-energiaa. Liikemäärän säilymisen vuoksi kevyempi alfahiukkanen saa siitä noin $1{,}5\\,\\mathrm{MeV}$ ja litiumydin noin $0{,}8\\,\\mathrm{MeV}$. Molemmat ovat raskaita varattuja hiukkasia, jotka ionisoivat ainetta tiheästi ja pysähtyvät noin solun kokoisella matkalla. Siksi ne tuhoavat nimenomaan boorilla merkityn syöpäsolun. Gammafotoni ei ole varattu, ja se läpäisee kudosta helposti. Se ei juuri vaikuta paikallisesti, mutta voi antaa säteilyannoksen terveille kudoksille kauempana.\n\n**Sudenkuoppa:** väitetään gammasäteilyä tärkeimmäksi tai tytärydintä merkityksettömäksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 4,
+     "prompt": "Aiemmin hoidon neutronit saatiin ydinreaktorista. Kerro, miten ydinreaktorissa syntyy neutroneja, ja miten aineiston kuvaama uusi tekniikka eroaa tästä.",
+     "hints": [
+      "Reaktorissa: mikä ydinreaktio tuottaa neutroneja ja pitää itsensä käynnissä? Uudessa laitteessa: mitä hiukkaskiihdytin kiihdyttää, mihin kohtioon ja mitä syntyy?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- reaktorissa raskaat ytimet (esim. $^{235}\\mathrm{U}$) fissioituvat neutronin osuessa, ja jokaisessa fissiossa vapautuu keskimäärin 2–3 uutta neutronia, jotka ylläpitävät ketjureaktiota; osa neutroneista johdetaan hoitoon\n- uudessa laitteessa hiukkaskiihdytin kiihdyttää protoneja litiumkohtioon, ja protonin ja litiumytimen ydinreaktiossa vapautuu neutroni (esim. $^{7}_{3}\\mathrm{Li} + {}^{1}_{1}\\mathrm{p} \\to {}^{7}_{4}\\mathrm{Be} + {}^{1}_{0}\\mathrm{n}$)\n- ero: kiihdytin ei käytä fissiokelpoista polttoainetta eikä ketjureaktiota, energia tulee kiihdyttimestä, ja neutronien tuotto loppuu heti, kun suihku katkaistaan; laite mahtuu sairaalaan\n\n**Esimerkkivastaus:** Ydinreaktorissa uraani-235-ydin halkeaa kaapattuaan neutronin, ja halkeamisessa vapautuu muutama uusi neutroni. Osa niistä aiheuttaa uusia fissioita, jolloin ketjureaktio jatkuu, ja osa voidaan ohjata reaktorista ulos hoitokäyttöön. Uudessa laitteessa kiihdyttimen protonit törmäävät litiumkohtioon, ja ydinreaktiossa syntyy neutroni. Reaktio sitoo energiaa, joka tulee protonien liike-energiasta. Laitteessa ei ole ydinpolttoainetta eikä ketjureaktiota, joten se voidaan sijoittaa sairaalaan, ja neutronien tuotto pysähtyy, kun kiihdytin sammutetaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 6,
+     "prompt": "Aineiston 9.A tunnusluvut: maissin keskisato $7980\\,\\mathrm{kg/ha}$, biojätettä $7500\\,\\mathrm{kg/ha}$, etanolia $0{,}417\\,\\mathrm{l}$ maissikiloa kohden, etanolin tiheys $790\\,\\mathrm{kg/m^3}$ ja lämpöarvo $26{,}9\\,\\mathrm{MJ/kg}$, biojätteen lämpöarvo $19{,}0\\,\\mathrm{MJ/kg}$. Pellolle tulee Auringosta vuodessa keskimäärin $1{,}46\\,\\mathrm{MWh/m^2}$. Laske bioetanoliin perustuvan energiantuotannon suurin hyötysuhde (hyödynnetty energia / Auringosta tullut energia), kun etanolin energiasta voidaan hyödyntää enintään $44\\,\\%$.",
+     "hints": [
+      "Muunna kaikki neliömetriä kohden: $1\\,\\mathrm{ha} = 10\\,000\\,\\mathrm{m^2}$. Laske ensin etanolin massa neliömetriltä, sitten sen hyödynnettävä energia.",
+      "Etanolia saadaan $m_e = s_m\\varepsilon_e\\rho_e \\approx 0{,}263\\,\\mathrm{kg/m^2}$, ja hyödynnettävä energia on $E_e = m_eH_e\\cdot 0{,}44 \\approx 3{,}1\\,\\mathrm{MJ/m^2}$. Auringon energia on $1{,}46\\,\\mathrm{MWh/m^2} = 5256\\,\\mathrm{MJ/m^2}$."
+     ],
+     "solution": "1. Sato neliömetriä kohden: $s_m = 7980\\,\\mathrm{kg/ha} = 0{,}7980\\,\\mathrm{kg/m^2}$. Etanolin tiheys $\\rho_e = 0{,}790\\,\\mathrm{kg/l}$.\n2. Etanolin massa neliömetriltä: $m_e = s_m\\varepsilon_e\\rho_e = 0{,}7980\\,\\mathrm{kg/m^2}\\cdot 0{,}417\\,\\mathrm{l/kg}\\cdot 0{,}790\\,\\mathrm{kg/l} \\approx 0{,}2629\\,\\mathrm{kg/m^2}$.\n3. Hyödynnettävä energia: $E_e = m_eH_e\\eta_e = 0{,}2629\\,\\mathrm{kg/m^2}\\cdot 26{,}9\\,\\mathrm{MJ/kg}\\cdot 0{,}44 \\approx 3{,}112\\,\\mathrm{MJ/m^2}$.\n4. Auringon energia: $E_a = 1{,}46\\,\\mathrm{MWh/m^2} = 1{,}46\\cdot 3600\\,\\mathrm{MJ/m^2} = 5256\\,\\mathrm{MJ/m^2}$.\n5. Hyötysuhde: $\\eta = \\dfrac{E_e}{E_a} = \\dfrac{s_m\\varepsilon_e\\rho_eH_e\\eta_e}{E_a} = \\dfrac{3{,}112}{5256} \\approx 5{,}9\\cdot 10^{-4}$.\n\n**Vastaus: $\\eta \\approx 5{,}9\\cdot 10^{-4}$ eli noin $0{,}059\\,\\%$.**\n\n**Sudenkuoppa:** hehtaarin muunnos neliömetreiksi tai MWh:n muunnos jouleiksi unohtuu ($1\\,\\mathrm{Wh} = 3600\\,\\mathrm{J}$).",
+     "answer": "$\\eta \\approx 5{,}9\\cdot 10^{-4}$ ($0{,}059\\,\\%$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 5,
+     "prompt": "Viljelyyn ja etanolin valmistukseen kuluu lisäksi ulkoista prosessienergiaa $7460\\,\\mathrm{kJ}$ jokaista etanolilitraa kohden. Prosessin tuotto on nettoenergian (tuotettu energia miinus prosessienergia) suhde prosessienergiaan. Laske bioetanolin tuotto prosentteina (tuotetuksi energiaksi lasketaan etanolin hyödynnettävä energia, $44\\,\\%$).",
+     "hints": [
+      "Vertaa samaa etanolimäärää: laske yhden litran etanolin hyödynnettävä energia ja vertaa sitä litraa kohden kuluvaan prosessienergiaan.",
+      "Litrasta saadaan $0{,}790\\,\\mathrm{kg}\\cdot 26{,}9\\,\\mathrm{MJ/kg}\\cdot 0{,}44 \\approx 9350\\,\\mathrm{kJ}$. Tuotto on $y = \\frac{E - E_p}{E_p}$."
+     ],
+     "solution": "1. Tuotto: $y = \\dfrac{E_e - E_p}{E_p} = \\dfrac{E_e}{E_p} - 1$.\n2. Lasketaan litraa kohden. Yhden etanolilitran hyödynnettävä energia on $E_e = \\rho_eH_e\\eta_e = 0{,}790\\,\\mathrm{kg/l}\\cdot 26\\,900\\,\\mathrm{kJ/kg}\\cdot 0{,}44 \\approx 9350\\,\\mathrm{kJ/l}$.\n3. Prosessienergia on $E_p = 7460\\,\\mathrm{kJ/l}$.\n4. $y = \\dfrac{9350\\,\\mathrm{kJ/l}}{7460\\,\\mathrm{kJ/l}} - 1 \\approx 0{,}253 = 25\\,\\%$.\n\n(Sama saadaan neliömetriä kohden: $E_p = 7460\\,\\mathrm{kJ/l}\\cdot s_m\\varepsilon_e \\approx 2482\\,\\mathrm{kJ/m^2}$ ja $E_e \\approx 3112\\,\\mathrm{kJ/m^2}$.)\n\n**Vastaus: tuotto on noin $25\\,\\%$.**\n\n**Sudenkuoppa:** eri suureiden (litra, neliömetri, kilogramma) sekoittaminen: tuotetun energian ja prosessienergian on oltava samaa määrää kohden.",
+     "answer": "$y \\approx 25\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.3",
+     "points": 4,
+     "prompt": "Etanolin lisäksi viljelyn biojäte voidaan polttaa kaukolämpövoimalassa, jonka hyötysuhde on $85\\,\\%$. Vaihtoehtoisesti pellolle voisi asentaa aurinkokennoja, jotka hyödyntävät $18\\,\\%$ säteilyenergiasta. Kuinka moninkertainen olisi kennojen tuottama energia verrattuna viljelystä saatavaan bioenergiaan (etanoli + biojäte)?",
+     "hints": [
+      "Laske bioenergia neliömetriä kohden kahdesta osasta: etanolin hyödynnettävä energia (kuten kohdassa 9.1, noin $3{,}1\\,\\mathrm{MJ/m^2}$) ja biojätteen energia $s_jH_j\\cdot 0{,}85$. Vertaa summaa arvoon $0{,}18\\cdot 5256\\,\\mathrm{MJ/m^2}$."
+     ],
+     "solution": "1. Biojätettä neliömetriltä $s_j = 7500\\,\\mathrm{kg/ha} = 0{,}7500\\,\\mathrm{kg/m^2}$, ja siitä saadaan lämpöä $E_j = s_jH_j\\eta_j = 0{,}7500\\,\\mathrm{kg/m^2}\\cdot 19{,}0\\,\\mathrm{MJ/kg}\\cdot 0{,}85 \\approx 12{,}11\\,\\mathrm{MJ/m^2}$.\n2. Etanolin hyödynnettävä energia on kohdan 9.1 mukaan $E_e \\approx 3{,}11\\,\\mathrm{MJ/m^2}$, joten bioenergiaa on yhteensä $E_b = E_e + E_j \\approx 15{,}22\\,\\mathrm{MJ/m^2}$.\n3. Kennojen energia: $E_k = 0{,}18\\cdot 5256\\,\\mathrm{MJ/m^2} \\approx 946\\,\\mathrm{MJ/m^2}$.\n4. Suhde: $n = \\dfrac{E_k}{E_b} = \\dfrac{946}{15{,}22} \\approx 62$.\n\n**Vastaus: aurinkokennoilla saataisiin noin 62-kertainen energia.**\n\n**Sudenkuoppa:** biojätteen tai etanolin osuus unohtuu, tai jokin hyötysuhteista jää pois.",
+     "answer": "noin 62-kertainen",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.4",
+     "points": 5,
+     "prompt": "Etanoliauton moottori hyödyntää $44\\,\\%$ polttoaineen energiasta, ja tankkiin mahtuu $65\\,\\mathrm{l}$. Sähköauton moottori hyödyntää $89\\,\\%$ akun energiasta, ja akun energiatiheys on noin $150\\,\\mathrm{Wh/kg}$. Kuinka raskas akun on oltava, jotta sähköauton täydestä akusta saadaan käyttöön yhtä paljon energiaa kuin etanoliauton täydestä tankista?",
+     "hints": [
+      "Kirjoita kummankin auton hyödynnettävä energia: etanoli $V\\rho_eH_e\\eta_e$ ja akku $m_a w_a\\eta_s$. Aseta ne yhtä suuriksi.",
+      "Muunna energiatiheys: $150\\,\\mathrm{Wh/kg} = 540\\,\\mathrm{kJ/kg}$. Etanolin hyödynnettävä energia tankillisesta on noin $608\\,\\mathrm{MJ}$."
+     ],
+     "solution": "1. Etanoliauton hyödynnettävä energia: $E_1 = V\\rho_eH_e\\eta_e = 65\\,\\mathrm{l}\\cdot 0{,}790\\,\\mathrm{kg/l}\\cdot 26{,}9\\,\\mathrm{MJ/kg}\\cdot 0{,}44 \\approx 608\\,\\mathrm{MJ}$.\n2. Sähköauton hyödynnettävä energia: $E_2 = m_aw_a\\eta_s$, missä $w_a = 150\\,\\mathrm{Wh/kg} = 150\\cdot 3600\\,\\mathrm{J/kg} = 540\\,\\mathrm{kJ/kg}$.\n3. Ehto $E_1 = E_2$ antaa $m_a = \\dfrac{V\\rho_eH_e\\eta_e}{w_a\\eta_s} = \\dfrac{608\\cdot 10^3\\,\\mathrm{kJ}}{540\\,\\mathrm{kJ/kg}\\cdot 0{,}89} \\approx 1260\\,\\mathrm{kg}$.\n\n**Vastaus: akun massan pitäisi olla noin $1300\\,\\mathrm{kg}$.**",
+     "answer": "$m_a \\approx 1300\\,\\mathrm{kg}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Umpinainen muovilieriö, jonka pohja on ellipsi, vierii liukumatta kaltevaa tasoa alas (video 10.A). Lieriön ja tason välillä on kitka, muita liikevastuksia ei ole. Kuvassa 10.B lieriö on juuri lähtenyt liikkeelle ja liikkuu vielä hyvin hitaasti. Piirrä lieriöön vaikuttavat voimat tässä tilanteessa.",
+     "hints": [
+      "Lieriöön vaikuttaa kolme voimaa. Mieti, mikä voima on kohtisuorassa tasoa vastaan, mikä on tason suuntainen ja mikä osoittaa aina suoraan alas."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- voimakuvio, jossa on täsmälleen kolme nimettyä voimaa: paino $\\bar G$ massakeskipisteestä suoraan alas, tason tukivoima $\\bar N$ kosketuskohdasta kohtisuoraan tasosta poispäin ja kitka $\\bar F_\\mu$ kosketuskohdassa tason suuntaisesti\n- taso piirretään kaltevana, eivätkä $\\bar G$ ja $\\bar N$ ole vastakkaissuuntaiset\n- kitka on vierimisen alussa tason suuntainen ja osoittaa ylämäkeen päin (se antaa lieriölle pyörimistä); myöhemmin ellipsin muodon vuoksi sen suunta voi vaihdella\n\n**Esimerkkivastaus:** Piirretään kalteva taso ja sen päälle lieriön poikkileikkaus. Massakeskipisteestä piirretään paino $\\bar G$ suoraan alas. Kosketuskohtaan piirretään tukivoima $\\bar N$ kohtisuoraan tasosta ulospäin ja kitka $\\bar F_\\mu$ tason suuntaisesti ylämäkeen. Koska liike on alussa hidasta, $N$ on lähes painon tason normaalin suuntaisen komponentin suuruinen ja kitka selvästi painon tason suuntaista komponenttia pienempi.\n\n**Sudenkuoppa:** tukivoima piirretään pystysuoraan tai voimat jaetaan komponentteihin niin, että komponentteja ei erota voimista.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 2,
+     "prompt": "Kumpaa kitkaa lieriöön vaikuttaa, lepokitkaa vai liukukitkaa?",
+     "hints": [
+      "Liikkuuko lieriön kosketuskohta tason suhteen, kun lieriö vierii liukumatta?"
+     ],
+     "solution": "1. Lieriö vierii liukumatta, joten sen tasoa koskettava kohta on hetkellisesti levossa tason suhteen.\n2. Pintojen välillä ei ole liukumista, joten kitka on lepokitkaa.\n\n**Vastaus: lepokitkaa.**",
+     "answer": "lepokitka",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 5,
+     "prompt": "Aineistossa 10.C on simuloitu lieriöön kohdistuva tukivoima ajan funktiona. Miksi tukivoimassa on paikallisia maksimeja ja minimejä?",
+     "hints": [
+      "Mieti, miten ellipsin muotoisen lieriön massakeskipisteen etäisyys tasosta muuttuu vierimisen aikana.",
+      "Massakeskipiste liikkuu jaksollisesti tasosta poispäin ja sitä kohti, joten sillä on kiihtyvyyttä kohtisuoraan tasoa vastaan. Kirjoita Newtonin II laki tähän suuntaan: $N - G\\cos\\alpha = ma_\\mathrm{n}$. Mikä termeistä on vakio?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- ellipsin muodon vuoksi massakeskipisteen etäisyys tasosta vaihtelee jaksollisesti (kaksi kertaa kierroksella)\n- massakeskipisteellä on siis kiihtyvyyttä kohtisuoraan tasoa vastaan, ja Newtonin II lain mukaan normaalin suuntainen kokonaisvoima on nollasta poikkeava\n- painon normaalikomponentti on vakio, joten vaihtelun on tultava tukivoimasta: $N - G\\cos\\alpha = ma_\\mathrm{n}$\n- tukivoima on suurimmillaan, kun massakeskipisteen kiihtyvyys tasosta poispäin on suurin, ja pienimmillään, kun kiihtyvyys tasoa kohti on suurin; vaihtelu voimistuu vauhdin kasvaessa\n\n**Esimerkkivastaus:** Kun elliptinen lieriö vierii, se nojaa vuorotellen litteämmällä ja kaarevammalla kyljellään, joten massakeskipiste nousee ja laskee tason suhteen. Tämä pystyliike (tason normaalin suunnassa) vaatii kiihtyvyyttä, ja Newtonin II lain mukaan normaalin suuntaisten voimien summa on $ma_\\mathrm{n}$. Painon komponentti on vakio, joten tukivoiman on vaihdeltava. Kun massakeskipistettä kiihdytetään voimakkaimmin ylöspäin, tukivoima on maksimissaan; kun massakeskipiste ”putoaa” kiihtyen kohti tasoa, tukivoima on minimissään. Vauhdin kasvaessa nousut ja laskut tapahtuvat nopeammin, joten kiihtyvyydet ja tukivoiman heilahtelut kasvavat.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "Videolla lieriö irtoaa jossain vaiheessa hetkeksi alustasta. Milloin tämä tapahtuu aineiston 10.C perusteella?",
+     "hints": [
+      "Mikä on tukivoiman arvo, kun kappale ei enää ole kosketuksessa alustaan? Etsi kuvaajasta ensimmäinen minimi, joka ulottuu tähän arvoon."
+     ],
+     "solution": "1. Tukivoima voi olla vain työntävä, joten se ei voi olla negatiivinen. Kun sen minimi painuu nollaan, alusta ei enää pysty pitämään lieriötä pinnassa, ja lieriö irtoaa.\n2. Kuvaajassa tukivoiman minimit pienenevät ajan myötä, ja minimi saavuttaa nollan noin hetkellä $1{,}9\\,\\mathrm{s}$ (seuraava minimi noin $2{,}0\\,\\mathrm{s}$ kohdalla menee jo nollan alle).\n\n**Vastaus: noin hetkellä $1{,}9\\,\\mathrm{s}$ (tulkinnasta riippuen $1{,}9$–$2{,}0\\,\\mathrm{s}$).**\n\n**Sudenkuoppa:** vastaus yhdellä merkitsevällä numerolla ($2\\,\\mathrm{s}$) on liian epätarkka.",
+     "answer": "noin $1{,}9\\,\\mathrm{s}$ ($1{,}9$–$2{,}0\\,\\mathrm{s}$)",
+     "check": "hvp"
+    },
+    {
+     "id": "10.5",
+     "points": 5,
+     "prompt": "Taulukossa 10.D on massakeskipisteen nopeus tason suunnassa eri hetkinä. Mitä raja-arvoa massakeskipisteen kiihtyvyys (tason suunnassa) lähestyy, kun liike jatkuu? Käytä graafista esitystä.",
+     "hints": [
+      "Piirrä nopeus ajan funktiona. Nopeus kasvaa aaltoillen, mutta keskimäärin tasaisesti. Keskimääräinen kiihtyvyys on kuvaajan keskimääräinen kulmakerroin.",
+      "Sovita suora nopeusdatan loppuosaan (esim. $t \\ge 0{,}7\\,\\mathrm{s}$) tai piirrä suorat paikallisten maksimien ja minimien kautta ja ota kulmakertoimien keskiarvo."
+     ],
+     "solution": "1. Piirretään $v\\ (\\mathrm{m/s})$ ajan $t\\ (\\mathrm{s})$ funktiona. Nopeus kasvaa, mutta siinä on jaksollista aaltoilua, koska lieriön muoto muuttaa voimia kierroksen aikana.\n2. Liikkeen edetessä aaltoilu tasoittuu keskimääräisen kasvun ympärille. Sovitetaan suora datan loppuosaan ($t \\ge 0{,}7\\,\\mathrm{s}$): kulmakerroin on noin $0{,}39\\,\\mathrm{m/s^2}$.\n3. Tarkistus verhokäyrillä: maksimien kautta kulkevan suoran kulmakerroin on noin $0{,}34\\,\\mathrm{m/s^2}$ ja minimien kautta (ensimmäinen minimi pois lukien) noin $0{,}42\\,\\mathrm{m/s^2}$. Käyrät lähestyvät toisiaan, ja niiden keskiarvo on noin $0{,}38\\,\\mathrm{m/s^2}$.\n\n**Vastaus: kiihtyvyys lähestyy arvoa noin $0{,}39\\,\\mathrm{m/s^2}$.**\n\n**Sudenkuoppa:** kiihtyvyys lasketaan kahdesta vierekkäisestä pisteestä, jolloin tulos riippuu voimakkaasti siitä, missä aaltoilun kohdassa pisteet ovat.",
+     "answer": "$a \\approx 0{,}39\\,\\mathrm{m/s^2}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 6,
+     "prompt": "Kuvassa 11.A on ilmakehän yläosasta mitattu Maan pinnan lämpösäteilyn spektri aaltoluvun (aallonpituuden käänteisluvun) funktiona. Spektrissä on selvät kuopat kohdissa A ja B. Mikä aallonpituusväli vastaa kuoppaa A? Mistä kuopat johtuvat?",
+     "hints": [
+      "Lue kuvaajasta kuopan A alku- ja loppukohdan aaltoluvut yksikössä $\\mathrm{cm^{-1}}$ ja ota niistä käänteisluvut.",
+      "Kuoppa A on noin välillä $570$–$770\\,\\mathrm{cm^{-1}}$. Mieti sitten, mitä pinnan säteilylle tapahtuu matkalla ilmakehän läpi: mitkä kaasut absorboivat infrapunaa?"
+     ],
+     "solution": "1. Kuoppa A alkaa noin aaltoluvusta $570\\,\\mathrm{cm^{-1}}$ ja päättyy noin kohtaan $770\\,\\mathrm{cm^{-1}}$.\n2. Aallonpituus on aaltoluvun käänteisluku: $\\lambda = \\dfrac{1}{770\\,\\mathrm{cm^{-1}}} \\approx 1{,}3\\cdot 10^{-3}\\,\\mathrm{cm} = 13\\,\\mathrm{\\mu m}$ ja $\\lambda = \\dfrac{1}{570\\,\\mathrm{cm^{-1}}} \\approx 18\\,\\mathrm{\\mu m}$.\n3. Kuopat syntyvät, koska ilmakehän kaasut absorboivat Maan pinnan lähettämää lämpösäteilyä tietyillä aallonpituuksilla. Kuoppa A on hiilidioksidin voimakas absorptiovyö (noin $15\\,\\mathrm{\\mu m}$), ja kuoppa B (noin $9{,}6\\,\\mathrm{\\mu m}$) johtuu otsonista.\n\n**Vastaus: kuoppa A vastaa aallonpituuksia noin $13$–$18\\,\\mathrm{\\mu m}$. Kuopat johtuvat siitä, että ilmakehän kaasut (esim. $\\mathrm{CO_2}$, otsoni) absorboivat pinnan lämpösäteilyä.**\n\n**Sudenkuoppa:** selitetään kuopat Auringon säteilyn absorptiolla. Kuvaaja esittää Maan omaa lämpösäteilyä.",
+     "answer": "$\\approx 13$–$18\\,\\mathrm{\\mu m}$; ilmakehän kaasujen absorptio",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.2",
+     "points": 8,
+     "prompt": "Mittausdataan on sovitettu mustan kappaleen spektri (kuva 11.A). Määritä sovitteen perusteella Maan pintalämpötila Wienin siirtymälain taajuusmuodolla $f_\\max = \\frac{\\alpha}{h}kT$, missä $h$ on Planckin vakio, $k$ Boltzmannin vakio ja $\\alpha \\approx 2{,}8214$.",
+     "hints": [
+      "Lue sovitteen huippua vastaava aaltoluku $(1/\\lambda)_\\max$. Muunna se taajuudeksi: $f = c/\\lambda = c\\cdot(1/\\lambda)$.",
+      "Huippu on noin kohdassa $580\\,\\mathrm{cm^{-1}} = 5{,}8\\cdot 10^4\\,\\mathrm{m^{-1}}$. Ratkaise lämpötila: $T = \\frac{hc}{\\alpha k}\\left(\\frac{1}{\\lambda}\\right)_\\max$."
+     ],
+     "solution": "1. Mustan kappaleen sovitteen huippu on kuvaajassa noin aaltoluvun $(1/\\lambda)_\\max \\approx 580\\,\\mathrm{cm^{-1}} = 5{,}8\\cdot 10^4\\,\\mathrm{m^{-1}}$ kohdalla.\n2. Aaltoliikkeen perusyhtälöstä $f_\\max = c\\left(\\dfrac{1}{\\lambda}\\right)_\\max$.\n3. Wienin laista $c\\left(\\dfrac{1}{\\lambda}\\right)_\\max = \\dfrac{\\alpha}{h}kT$, joten $T = \\dfrac{hc}{\\alpha k}\\left(\\dfrac{1}{\\lambda}\\right)_\\max$.\n4. Sijoitetaan: $T = \\dfrac{6{,}626\\cdot 10^{-34}\\,\\mathrm{J\\,s}\\cdot 2{,}998\\cdot 10^8\\,\\mathrm{m/s}}{2{,}8214\\cdot 1{,}381\\cdot 10^{-23}\\,\\mathrm{J/K}}\\cdot 5{,}8\\cdot 10^4\\,\\mathrm{m^{-1}} \\approx 296\\,\\mathrm{K}$.\n\n**Vastaus: pintalämpötila on noin $300\\,\\mathrm{K}$ (noin $23\\,^\\circ\\mathrm{C}$).**\n\nTulos on herkkä huipun lukemiselle: $570$–$590\\,\\mathrm{cm^{-1}}$ antaa $291$–$301\\,\\mathrm{K}$.\n\n**Sudenkuoppa:** aaltoluku sijoitetaan yksikössä $\\mathrm{cm^{-1}}$ muuntamatta sitä yksikköön $\\mathrm{m^{-1}}$, tai käytetään aallonpituusmuotoista Wienin lakia $\\lambda_\\max T = b$ sijoittamalla siihen aaltoluvun huipun käänteisluku (maksimit eivät ole samassa kohdassa).",
+     "answer": "$T \\approx 300\\,\\mathrm{K}$ ($\\approx 23\\,^\\circ\\mathrm{C}$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 6,
+     "prompt": "Kuvassa 11.B on yläilmakehästä mitattu lämpösäteilyn intensiteetin alueellinen jakauma maapallolla (vuosien 2003–2011 keskiarvo). Selitä lyhyesti, mitkä tekijät aiheuttavat alueellisia eroja.",
+     "hints": [
+      "Mieti ensin, mikä määrää pinnan lähettämän lämpösäteilyn määrän, ja miten Auringon säteily jakautuu eri leveysasteille.",
+      "Toinen tekijä on se, mitä säteilylle tapahtuu matkalla avaruuteen. Vertaa sateisia päiväntasaajan alueita ja aavikoita: missä on paljon pilviä ja vesihöyryä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- pinnan lämpötila: lämpösäteilyn intensiteetti kasvaa voimakkaasti lämpötilan mukana ($I \\propto T^4$); tropiikki saa eniten auringonsäteilyä ja on lämmin, napa-alueet ovat kylmiä ja säteilevät vähemmän\n- pilvisyys ja vesihöyry: pilvet ja vesihöyry absorboivat pinnan lämpösäteilyä, ja pilvien yläpinta säteilee kylmempänä, joten pilvisten alueiden (esim. päiväntasaajan sadealueet) yläpuolella mitattu säteily on pienempää\n- kirkkaat, kuivat ja kuumat alueet (esim. Sahara, Lähi-itä) säteilevät avaruuteen eniten\n\n**Esimerkkivastaus:** Ensimmäinen tekijä on pinnan lämpötila. Auringon säteily kohdistuu keskimäärin voimakkaimmin päiväntasaajan seudulle ja heikkenee kohti napoja, joten matalilla leveysasteilla pinta on lämmin ja lähettää paljon lämpösäteilyä, napa-alueilla vähän. Toinen tekijä on pilvisyys. Esimerkiksi päiväntasaajan sadevyöhykkeellä on paljon korkeita pilviä ja vesihöyryä, jotka absorboivat pinnan säteilyä, joten avaruuteen asti pääsee vähemmän säteilyä kuin kuivilla aavikoilla, joissa taivas on usein pilvetön.\n\n**Sudenkuoppa:** tarkastellaan Maahan tulevaa auringonsäteilyä eikä Maan itse lähettämää lämpösäteilyä.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

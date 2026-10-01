@@ -1,0 +1,377 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2025K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2025K_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-03-19_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "answer": 5,
+    "note": "Vastaa viiteen tehtävään. Käytössä taulukkokirjat ja perusohjelmat, laskinohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Kuusi lyhyttä laskua. Vastauskenttään kirjoitetaan pelkkä kokonaisluku ilman perusteluja.",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 2,
+     "prompt": "Ratkaise $5x-17=43$.",
+     "hints": [
+      "Siirrä vakio oikealle puolelle ja jaa $x$:n kertoimella."
+     ],
+     "solution": "1. $5x=43+17=60$.\n2. $x=\\frac{60}{5}=12$.\n\n**Vastaus: $x=12$**",
+     "answer": "$x=12$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.2",
+     "points": 2,
+     "prompt": "Ratkaise $2x^3-128=0$.",
+     "hints": [
+      "Ratkaise ensin $x^3$ ja ota sitten kuutiojuuri. Parittoman asteen potenssiyhtälöllä on yksi reaalinen ratkaisu."
+     ],
+     "solution": "1. $2x^3=128$, joten $x^3=64$.\n2. $x=\\sqrt[3]{64}=4$.\n\n**Vastaus: $x=4$**",
+     "answer": "$x=4$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.3",
+     "points": 2,
+     "prompt": "Ratkaise $\\sin\\frac{x}{2}=\\frac12$, kun $0^\\circ<x<90^\\circ$. Vastaus asteina.",
+     "hints": [
+      "Millä terävällä kulmalla sini on $\\frac12$? Huomaa, että sinin sisällä on $\\frac x2$, joka on välillä $0^\\circ$–$45^\\circ$."
+     ],
+     "solution": "1. Kun $0^\\circ<x<90^\\circ$, on $0^\\circ<\\frac x2<45^\\circ$.\n2. Tällä välillä $\\sin\\frac x2=\\frac12$ vain, kun $\\frac x2=30^\\circ$.\n3. $x=60^\\circ$.\n\n**Vastaus: $x=60^\\circ$**\n\n**Sudenkuoppa:** vastaus $30^\\circ$ unohtaa, että ratkaistiin $\\frac x2$ eikä $x$.",
+     "answer": "$60^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.4",
+     "points": 2,
+     "prompt": "Laske $f'(2)$, kun $f(x)=x^4+100$.",
+     "hints": [
+      "$D(x^4)=4x^3$ ja vakion derivaatta on nolla."
+     ],
+     "solution": "1. $f'(x)=4x^3$.\n2. $f'(2)=4\\cdot 8=32$.\n\n**Vastaus: $32$**",
+     "answer": "$32$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.5",
+     "points": 2,
+     "prompt": "Laske $\\int_1^4 3x^2\\,dx$.",
+     "hints": [
+      "Funktion $3x^2$ integraalifunktio on $x^3$. Sijoita rajat ja vähennä."
+     ],
+     "solution": "1. $\\int_1^4 3x^2\\,dx=\\Big[x^3\\Big]_1^4=64-1=63$.\n\n**Vastaus: $63$**",
+     "answer": "$63$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.6",
+     "points": 2,
+     "prompt": "Aritmeettinen jono alkaa $1, 8, 15, \\dots$. Laske sen 30. jäsen $a_{30}$.",
+     "hints": [
+      "Aritmeettisen jonon yleinen jäsen on $a_n=a_1+(n-1)d$. Selvitä differenssi $d$ kahden peräkkäisen jäsenen erotuksena."
+     ],
+     "solution": "1. $a_1=1$ ja $d=8-1=7$.\n2. $a_{30}=1+29\\cdot 7=1+203=204$.\n\n**Vastaus: $204$**\n\n**Sudenkuoppa:** $1+30\\cdot 7=211$. Ensimmäisestä jäsenestä 30. jäseneen on vain 29 askelta.",
+     "answer": "$204$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Sievennä $\\frac{(y^2-4)(y+1)}{y-2}$, kun $y\\neq 2$.",
+     "hints": [
+      "Jaa $y^2-4$ tekijöihin: se on kahden neliön erotus.",
+      "$y^2-4=(y-2)(y+2)$. Kun $y\\neq 2$, tekijän $y-2$ voi supistaa. Kerro lopuksi jäljelle jäävä tulo auki."
+     ],
+     "solution": "1. Kahden neliön erotuksena $y^2-4=(y-2)(y+2)$.\n2. $\\frac{(y-2)(y+2)(y+1)}{y-2}=(y+2)(y+1)$, kun $y\\neq 2$.\n3. Auki kerrottuna $(y+2)(y+1)=y^2+y+2y+2=y^2+3y+2$.\n\n**Vastaus: $y^2+3y+2$ (eli $(y+1)(y+2)$)**\n\n**Sudenkuoppa:** lausekkeen muuttaminen yhtälöksi ($y^2+3y+2=0$) ja sen ratkaiseminen. Sievennyksessä ei ratkaista mitään.",
+     "answer": "$y^2+3y+2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Sievennä $\\sqrt{(z-1)^2+2(z-1)+1}$.",
+     "hints": [
+      "Merkitse $u=z-1$. Juurrettava on muotoa $u^2+2u+1$. Tunnistatko binomin neliön?",
+      "Juurrettava on $(u+1)^2=z^2$. Mitä on $\\sqrt{z^2}$, kun $z$ voi olla myös negatiivinen?"
+     ],
+     "solution": "1. Merkitään $u=z-1$. Juurrettava on $u^2+2u+1=(u+1)^2$.\n2. $u+1=z$, joten juurrettava on $z^2$. (Saman saa kertomalla auki: $z^2-2z+1+2z-2+1=z^2$.)\n3. $\\sqrt{z^2}=|z|$, koska neliöjuuri on aina ei-negatiivinen ja $z$ voi olla negatiivinen.\n\n**Vastaus: $|z|$**\n\n**Sudenkuoppa:** vastaus $z$ on väärin negatiivisilla $z$:n arvoilla, esimerkiksi $z=-3$ antaa $\\sqrt{9}=3\\neq -3$.",
+     "answer": "$|z|$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kolmiossa $ABC$ on $|AB|=3$, $|AC|=4$ ja $|BC|=5$, ja kulma $A$ on suora. Kärjestä $A$ piirretään hypotenuusalle korkeusjana, jonka kantapiste on $D$. Pisteestä $D$ piirretään kateetille $AC$ kohtisuora jana, jonka kantapiste on $E$ (ks. alkuperäisen tehtävän kuva). Laske suorakulmaisen kolmion $ADE$ kateettien pituudet tarkkoina arvoina.",
+     "hints": [
+      "Laske ensin korkeusjanan pituus $|AD|$, esimerkiksi kirjoittamalla kolmion $ABC$ ala kahdella tavalla. Etsi sitten yhdenmuotoisia kolmioita: kaikissa kuvion suorakulmaisissa kolmioissa esiintyvät samat terävät kulmat.",
+      "$\\frac12\\cdot 5\\cdot|AD|=\\frac12\\cdot 3\\cdot 4$ antaa $|AD|=\\frac{12}{5}$. Kolmio $ADE$ (suora kulma kärjessä $E$) on yhdenmuotoinen kolmion $ABC$ kanssa, ja sen hypotenuusa on $AD$. Verranto $\\frac{|AE|}{|AD|}=\\frac{|AB|}{|BC|}$ antaa toisen kateetin."
+     ],
+     "solution": "1. Kolmion $ABC$ ala on $\\frac12\\cdot|AB|\\cdot|AC|=6$. Toisaalta ala on $\\frac12\\cdot|BC|\\cdot|AD|=\\frac52|AD|$. Siis $|AD|=\\frac{12}{5}$.\n2. Merkitään $\\gamma=\\angle ACB$. Kolmiossa $ABC$ on $\\sin\\gamma=\\frac{3}{5}$ ja $\\cos\\gamma=\\frac45$.\n3. Kolmiossa $ADC$ kulma $D$ on suora, joten $\\angle DAC=90^\\circ-\\gamma$. Kolmiossa $ADE$ kulma $E$ on suora, joten $\\angle ADE=90^\\circ-\\angle DAE=\\gamma$.\n4. Kolmio $ADE$ on siis yhdenmuotoinen kolmion $ABC$ kanssa (kk): kulma $\\gamma$ ja suora kulma. Sen hypotenuusa on $AD$.\n5. Kateetti $AE$ on kulman $\\gamma$ (kärjessä $D$) vastainen: $|AE|=|AD|\\sin\\gamma=\\frac{12}{5}\\cdot\\frac35=\\frac{36}{25}$.\n6. Kateetti $DE$ on kulman $\\gamma$ viereinen: $|DE|=|AD|\\cos\\gamma=\\frac{12}{5}\\cdot\\frac45=\\frac{48}{25}$.\n7. Tarkistus Pythagoraan lauseella: $\\left(\\frac{36}{25}\\right)^2+\\left(\\frac{48}{25}\\right)^2=\\frac{3600}{625}=\\left(\\frac{12}{5}\\right)^2$.\n\n(Koordinaateilla: $A=(0,0)$, $B=(0,3)$, $C=(4,0)$. Silloin $D=\\left(\\frac{36}{25},\\frac{48}{25}\\right)$ ja $E=\\left(\\frac{36}{25},0\\right)$.)\n\n**Vastaus: $|AE|=\\frac{36}{25}=1{,}44$ ja $|DE|=\\frac{48}{25}=1{,}92$.**\n\n**Sudenkuoppa:** vastaukseksi annetaan myös hypotenuusa $|AD|$ tai pelkät likiarvot, vaikka kysytään kateetteja tarkkoina arvoina.",
+     "answer": "$|AE|=\\frac{36}{25}$ ja $|DE|=\\frac{48}{25}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Ohjauskorko on nyt 4,25 %. Aluksi arvioidaan, että korko nousee 0,25 prosenttiyksikköä todennäköisyydellä 50 % ja pysyy ennallaan todennäköisyydellä 50 %. Uuden inflaatiotiedon jälkeen noston todennäköisyydeksi arvioidaan 65 % ja ennallaan pysymisen 35 %. Montako prosenttiyksikköä koron odotusarvo nousee?",
+     "hints": [
+      "Koron mahdolliset arvot ovat 4,25 % ja 4,50 %. Odotusarvo on arvojen ja niiden todennäköisyyksien tulojen summa. Laske se ennen ja jälkeen uuden tiedon.",
+      "Ennen: $0{,}5\\cdot 4{,}25+0{,}5\\cdot 4{,}50$. Jälkeen: $0{,}35\\cdot 4{,}25+0{,}65\\cdot 4{,}50$. Vastaus on näiden erotus prosenttiyksikköinä."
+     ],
+     "solution": "1. Jos korkoa nostetaan, uusi korko on $4{,}25\\,\\%+0{,}25$ %-yks. $=4{,}50\\,\\%$.\n2. Odotusarvo aluksi: $0{,}5\\cdot 4{,}25+0{,}5\\cdot 4{,}50=4{,}375$ (%).\n3. Odotusarvo uuden tiedon jälkeen: $0{,}35\\cdot 4{,}25+0{,}65\\cdot 4{,}50=1{,}4875+2{,}925=4{,}4125$ (%).\n4. Muutos: $4{,}4125-4{,}375=0{,}0375$ prosenttiyksikköä.\n\n(Lyhyemmin: odotettu korotus kasvaa $0{,}25\\cdot 0{,}5=0{,}125$:stä $0{,}25\\cdot 0{,}65=0{,}1625$:een, eli $0{,}15\\cdot 0{,}25=0{,}0375$.)\n\n**Vastaus: noin $0{,}038$ prosenttiyksikköä ($0{,}0375$).**\n\n**Sudenkuoppa:** koron nosto lasketaan prosentteina ($4{,}25\\cdot 1{,}0025$) eikä prosenttiyksikköinä, tai vastaus annetaan prosentteina, vaikka kysytään prosenttiyksikköjä.",
+     "answer": "$0{,}0375\\approx 0{,}038$ prosenttiyksikköä",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Etsi funktion $f(x)=x^{2025}e^{-x}$ suurin arvo, kun $x\\ge 0$.",
+     "hints": [
+      "Derivoi tulon derivoimissäännöllä ja ota yhteiset tekijät erilleen, niin derivaatan merkki on helppo tutkia. Tutki myös, mitä funktiolle tapahtuu välin päätepisteessä $x=0$.",
+      "$f'(x)=x^{2024}e^{-x}(2025-x)$. Tekijät $x^{2024}$ ja $e^{-x}$ ovat ei-negatiivisia, joten derivaatan merkin ratkaisee $2025-x$. Tee kulkukaavio."
+     ],
+     "solution": "1. Tulon derivoimissäännöllä $f'(x)=2025x^{2024}e^{-x}-x^{2025}e^{-x}=x^{2024}e^{-x}(2025-x)$.\n2. Derivaatan nollakohdat: $x=0$ tai $x=2025$ ($e^{-x}>0$ aina).\n3. Välillä $(0,\\,2025)$ on $f'(x)>0$, koska siellä $x^{2024}>0$, $e^{-x}>0$ ja $2025-x>0$. Esimerkiksi $f'(1)=2024e^{-1}>0$.\n4. Kun $x>2025$, $f'(x)<0$. Esimerkiksi $f'(2026)=-2026^{2024}e^{-2026}<0$.\n5. $f$ on siis kasvava välillä $[0,2025]$ ja vähenevä välillä $[2025,\\infty)$, joten suurin arvo saavutetaan kohdassa $x=2025$.\n6. $f(2025)=2025^{2025}e^{-2025}=\\left(\\frac{2025}{e}\\right)^{2025}$.\n\n**Vastaus: suurin arvo on $2025^{2025}e^{-2025}=\\left(\\frac{2025}{e}\\right)^{2025}$ (kohdassa $x=2025$).**\n\n**Sudenkuoppa:** $e^{-x}$:n derivaatan etumerkki unohtuu, tai pelkkä derivaatan nollakohta ilmoitetaan ilman kulkukaaviota tai muuta perustelua sille, että kyseessä on suurin arvo.",
+     "answer": "$2025^{2025}e^{-2025}=\\left(\\frac{2025}{e}\\right)^{2025}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Laske lukujen 5322 ja 342 suurin yhteinen tekijä Eukleideen algoritmilla.",
+     "hints": [
+      "Jaa suurempi luku pienemmällä ja kirjoita $5322=q\\cdot 342+r$. Toista sitten sama jakajalle ja jakojäännökselle, kunnes jakojäännös on nolla.",
+      "Ensimmäinen vaihe on $5322=15\\cdot 342+192$, seuraava $342=1\\cdot 192+150$. Syt on viimeinen nollasta eroava jakojäännös."
+     ],
+     "solution": "1. $5322=15\\cdot 342+192$\n2. $342=1\\cdot 192+150$\n3. $192=1\\cdot 150+42$\n4. $150=3\\cdot 42+24$\n5. $42=1\\cdot 24+18$\n6. $24=1\\cdot 18+6$\n7. $18=3\\cdot 6+0$\n8. Jokaisessa vaiheessa $\\text{syt}(a,b)=\\text{syt}(b,r)$, joten syt on viimeinen nollasta eroava jakojäännös, eli $6$.\n\n(Tarkistus: $5322=6\\cdot 887$ ja $342=6\\cdot 57=6\\cdot 3\\cdot 19$, eikä 887 ole jaollinen luvuilla 3 tai 19.)\n\n**Vastaus: $\\text{syt}(5322,342)=6$**\n\n**Sudenkuoppa:** pelkkä laskimen gcd-komento tai sen toteaminen, että 6 on yhteinen tekijä, ei riitä. Tehtävä vaatii algoritmin vaiheet näkyviin.",
+     "answer": "$6$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuvassa 7.A (ks. alkuperäinen tehtävä) on kahdeksan merkki- tai kulkukaaviota A–H. Valitse kullekin funktiolle sitä kuvaava kaavio (2 p./kohta, perusteluja ei tarvita):\n\n- **7.1** $f(x)=x^2+2x-8$\n- **7.2** $f(x)=3x+6$\n- **7.3** $f(x)=2x^2+4x-6$\n- **7.4** $f(x)=4-x-x^3$\n- **7.5** $f(x)=3x^2+9x+6$\n- **7.6** $f(x)=2x-5$",
+     "hints": [
+      "Merkkikaaviossa näkyvät nollakohdat ja merkit, kulkukaaviossa derivaatan nollakohta ja funktion kasvu tai väheneminen. Laske jokaisen funktion nollakohdat ja tarvittaessa derivaatan nollakohta, ja vertaa kaavioihin.",
+      "Kohta kohdalta:\n\n- 7.1 ja 7.3: jaa tekijöihin, nollakohdat ovat kokonaislukuja.\n- 7.2 ja 7.6: suoran nollakohta ja kulmakertoimen merkki.\n- 7.4: nollakohta ei ole ”siisti”, joten tutki derivaattaa $-1-3x^2$.\n- 7.5: nollakohdat $-2$ ja $-1$, mutta tarkista merkit; derivaatan nollakohta on $-1{,}5$."
+     ],
+     "solution": "**7.1** $x^2+2x-8=(x+4)(x-2)$. Nollakohdat $-4$ ja $2$, ylöspäin aukeava paraabeli, joten merkit $+,-,+$. Vaihtoehto **B**.\n\n**7.2** $3x+6=0$, kun $x=-2$. Nouseva suora: negatiivinen ennen nollakohtaa, positiivinen sen jälkeen. Vaihtoehto **D**.\n\n**7.3** $2x^2+4x-6=2(x+3)(x-1)$. Nollakohdat $-3$ ja $1$, merkit $+,-,+$. Vaihtoehto **A**.\n\n**7.4** $f'(x)=-1-3x^2<0$ kaikilla $x$, joten funktio on aidosti vähenevä. Vaihtoehto **F** (derivaatta negatiivinen, funktio vähenee). Nollakohta on noin $1{,}38$, joten merkkikaavioista mikään ei sovi.\n\n**7.5** $3x^2+9x+6=3(x+1)(x+2)$ on positiivinen välien ulkopuolella ja negatiivinen nollakohtien $-2$ ja $-1$ välissä. Kaavion C merkit ovat päinvastaiset, joten se ei kelpaa. $f'(x)=6x+9=0$, kun $x=-1{,}5$: funktio vähenee ennen tätä kohtaa ja kasvaa sen jälkeen. Vaihtoehto **H**.\n\n**7.6** $2x-5=0$, kun $x=2{,}5$, merkit $-,+$. Vaihtoehto **E**.\n\n**Vastaus: 7.1 B · 7.2 D · 7.3 A · 7.4 F · 7.5 H · 7.6 E**\n\n**Sudenkuoppa:** kohdassa 7.5 valitaan kaavio C pelkkien nollakohtien perusteella, vaikka merkit ovat väärin päin.",
+     "answer": "7.1 B · 7.2 D · 7.3 A · 7.4 F · 7.5 H · 7.6 E",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Pisteet ovat $A=(-6,-1)$, $B=(-1,11)$ ja $C=(8,-1)$. Janoilta $AB$, $BC$ ja $AC$ valitaan pisteet $X$, $Y$ ja $Z$ niin, että $|AX|=|AZ|=a$, $|BX|=|BY|=b$ ja $|CZ|=|CY|=c$. Muodosta luvuille $a$, $b$ ja $c$ yhtälöryhmä ja ratkaise se.",
+     "hints": [
+      "Piste $X$ jakaa janan $AB$ kahteen osaan, joiden pituudet ovat $a$ ja $b$. Laske siis ensin kolmion sivujen pituudet etäisyyden kaavalla.",
+      "Sivut ovat $|AB|=13$, $|BC|=15$ ja $|AC|=14$. Yhtälöt ovat $a+b=13$, $b+c=15$ ja $a+c=14$. Laske kaikki kolme yhteen."
+     ],
+     "solution": "1. $|AB|=\\sqrt{(-1+6)^2+(11+1)^2}=\\sqrt{25+144}=13$.\n2. $|BC|=\\sqrt{(8+1)^2+(-1-11)^2}=\\sqrt{81+144}=15$.\n3. $|AC|=\\sqrt{14^2+0^2}=14$.\n4. Piste $X$ on janalla $AB$, joten $|AB|=|AX|+|XB|=a+b$. Samoin $|BC|=b+c$ ja $|AC|=a+c$.\n5. Yhtälöryhmä: $a+b=13$, $b+c=15$, $a+c=14$.\n6. Laskemalla yhteen $2(a+b+c)=42$, joten $a+b+c=21$.\n7. $c=21-13=8$, $a=21-15=6$ ja $b=21-14=7$.\n8. Tarkistus: $6+7=13$, $7+8=15$, $6+8=14$. Kaikki ovat positiivisia ja lyhyempiä kuin vastaavat sivut, joten pisteet ovat janoilla.\n\n**Vastaus: $a=6$, $b=7$ ja $c=8$**\n\n(Pisteet $X$, $Y$ ja $Z$ ovat itse asiassa kolmion sisään piirretyn ympyrän sivuamispisteet.)",
+     "answer": "$a=6$, $b=7$, $c=8$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Lautapelissä on 30 kiekkoa: 12 tyhjää, 5 hevosenkenkää, 3 rosvoa, 4 topaasia, 3 smaragdia, 2 rubiinia ja 1 Afrikan tähti. Kiekot ovat alussa nurinpäin eivätkä erotu toisistaan. Käännetty kiekko poistetaan pelistä. Nappuloita siirretään noppaa heittämällä.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 4,
+     "prompt": "Ovatko tapahtumat toisistaan riippuvia vai riippumattomia? (Monivalinta, 1 p./kohta.)\n\n- **9.1.1** Ensimmäinen kääntämäsi kiekko on tyhjä, toinen rubiini.\n- **9.1.2** Käännät topaasin, ja seuraava nopanheittosi on 4.\n- **9.1.3** Sinun nopanheittosi on 6 ja vastustajan 4.\n- **9.1.4** Sinä käännät rosvon ja vastustaja smaragdin.",
+     "hints": [
+      "Kiekkoja ei palauteta, joten jokainen käännetty kiekko muuttaa jäljellä olevien kiekkojen jakaumaa. Nopanheitot eivät riipu kiekoista eivätkä toisistaan."
+     ],
+     "solution": "Kirjaimet: A = ylin vaihtoehto (riippuvia), B = toinen (riippumattomia).\n\n**9.1.1** Käännetty kiekko poistetaan, joten ensimmäisen kiekon laatu muuttaa toisen kiekon todennäköisyyksiä. Esimerkiksi $P(\\text{1. tyhjä ja 2. rubiini})=\\frac{12}{30}\\cdot\\frac{2}{29}$, mutta $P(\\text{1. tyhjä})\\cdot P(\\text{2. rubiini})=\\frac{12}{30}\\cdot\\frac{2}{30}$. **A: riippuvia.**\n\n**9.1.2** Noppa ei tiedä, mikä kiekko käännettiin. **B: riippumattomia.**\n\n**9.1.3** Kaksi eri nopanheittoa. **B: riippumattomia.**\n\n**9.1.4** Kumpikin kiekko otetaan samasta, pienenevästä joukosta ilman palautusta. Rosvon kääntäminen muuttaa smaragdin todennäköisyyttä. **A: riippuvia.**\n\n**Vastaus: 9.1.1 A (riippuvia) · 9.1.2 B (riippumattomia) · 9.1.3 B (riippumattomia) · 9.1.4 A (riippuvia)**",
+     "answer": "9.1.1 A (riippuvia) · 9.1.2 B (riippumattomia) · 9.1.3 B (riippumattomia) · 9.1.4 A (riippuvia)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2.1",
+     "points": 4,
+     "prompt": "Millä todennäköisyydellä kahden nopanheiton silmälukujen summa on vähintään 10? Perustele.",
+     "hints": [
+      "Kahdella nopalla on $6\\cdot 6=36$ yhtä todennäköistä järjestettyä tulosparia. Luettele ne parit, joiden summa on 10, 11 tai 12."
+     ],
+     "solution": "1. Kahden heiton tulokset muodostavat $36$ yhtä todennäköistä järjestettyä paria.\n2. Summa vähintään 10: $(4,6)$, $(5,5)$, $(6,4)$, $(5,6)$, $(6,5)$ ja $(6,6)$, eli 6 paria.\n3. $P=\\frac{6}{36}=\\frac16\\approx 0{,}17$.\n\n**Vastaus: $\\frac16$**\n\n**Sudenkuoppa:** parit lasketaan järjestämättöminä (esim. $(4,6)$ ja $(6,4)$ samana), jolloin tapaukset eivät ole yhtä todennäköisiä.",
+     "answer": "$\\frac16$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2.2",
+     "points": 4,
+     "prompt": "Pelissä on jo käännetty 7 tyhjää, 1 topaasi, 1 rubiini ja 1 rosvo. Millä todennäköisyydellä seuraava käännettävä kiekko on Afrikan tähti tai hevosenkenkä? Perustele.",
+     "hints": [
+      "Laske, montako kiekkoa on jäljellä ja montako niistä on suotuisia. Käännetyissä ei ollut yhtään tähteä eikä hevosenkenkää."
+     ],
+     "solution": "1. Käännettyjä kiekkoja on $7+1+1+1=10$, joten jäljellä on $30-10=20$ kiekkoa.\n2. Hevosenkenkiä on jäljellä kaikki 5 ja Afrikan tähti 1, eli suotuisia on 6.\n3. Kaikki jäljellä olevat kiekot ovat yhtä todennäköisiä, joten $P=\\frac{6}{20}=\\frac{3}{10}$.\n\n**Vastaus: $\\frac{3}{10}$**",
+     "answer": "$\\frac{3}{10}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Satunnaismuuttuja $X$ on eksponenttijakautunut: sen tiheysfunktio on $f_\\lambda(x)=\\lambda e^{-\\lambda x}$, kun $x\\ge 0$, ja $0$ muualla ($\\lambda>0$ on vakio). Laske $P(X\\ge 7)$ vakion $\\lambda$ avulla.",
+     "hints": [
+      "Todennäköisyys saadaan tiheysfunktion integraalina: $P(X\\ge 7)=\\int_7^\\infty f_\\lambda(x)\\,dx$. Vaihtoehtoisesti $P(X\\ge 7)=1-\\int_0^7 f_\\lambda(x)\\,dx$.",
+      "Funktion $\\lambda e^{-\\lambda x}$ integraalifunktio on $-e^{-\\lambda x}$ (tarkista derivoimalla ketjusäännöllä). Epäoleellinen integraali lasketaan raja-arvona: $\\lim_{b\\to\\infty}e^{-\\lambda b}=0$, koska $\\lambda>0$."
+     ],
+     "solution": "1. $P(X\\ge 7)=\\int_7^\\infty\\lambda e^{-\\lambda x}\\,dx=\\lim_{b\\to\\infty}\\int_7^b\\lambda e^{-\\lambda x}\\,dx$.\n2. Integraalifunktio: $D\\left(-e^{-\\lambda x}\\right)=-e^{-\\lambda x}\\cdot(-\\lambda)=\\lambda e^{-\\lambda x}$.\n3. $\\int_7^b\\lambda e^{-\\lambda x}\\,dx=\\Big[-e^{-\\lambda x}\\Big]_7^b=e^{-7\\lambda}-e^{-\\lambda b}$.\n4. Koska $\\lambda>0$, $e^{-\\lambda b}\\to 0$, kun $b\\to\\infty$. Siis $P(X\\ge 7)=e^{-7\\lambda}$.\n\n(Toinen tapa: $P(X<7)=\\int_0^7\\lambda e^{-\\lambda x}\\,dx=1-e^{-7\\lambda}$, joten $P(X\\ge 7)=1-(1-e^{-7\\lambda})=e^{-7\\lambda}$.)\n\n**Vastaus: $P(X\\ge 7)=e^{-7\\lambda}$**\n\n**Sudenkuoppa:** integraalifunktion etumerkkivirhe ($e^{-\\lambda x}$ ilman miinusta) tai rajojen vaihtaminen, jolloin tulokseksi tulee negatiivinen ”todennäköisyys”.",
+     "answer": "$e^{-7\\lambda}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Olivia derivoi funktion $f(x)=\\frac{x^3-2x+1}{10}$ osamäärän derivoimissäännöllä: $f'(x)=\\frac{10\\,D(x^3-2x+1)-(D\\,10)(x^3-2x+1)}{10^2}=\\frac{10\\,D(x^3-2x+1)}{10^2}=\\frac{3x^2-2}{10}$. Onko lasku oikein? Korjaa mahdolliset virheet ja johda sama tulos yksinkertaisemmin.",
+     "hints": [
+      "Vertaa laskua osamäärän derivoimissääntöön $D\\frac{u}{v}=\\frac{u'v-uv'}{v^2}$: mikä on $u$, mikä $v$ ja mitä on vakion derivaatta? Yksinkertaisempi tapa: $\\frac{x^3-2x+1}{10}=\\frac{1}{10}(x^3-2x+1)$."
+     ],
+     "solution": "1. Osamäärän derivoimissääntö on $D\\frac{u}{v}=\\frac{u'v-uv'}{v^2}$. Olivialla $u=x^3-2x+1$ ja $v=10$.\n2. $u'=3x^2-2$ ja $v'=D\\,10=0$, joten jälkimmäinen termi häviää, ja $f'(x)=\\frac{10(3x^2-2)}{100}=\\frac{3x^2-2}{10}$.\n3. Jokainen vaihe on oikein, joten Olivian päättely on oikein (vaikkakin turhan raskas).\n4. Yksinkertaisemmin: $f(x)=\\frac{1}{10}(x^3-2x+1)$, ja vakiokertoimen saa siirtää derivaatan eteen: $f'(x)=\\frac{1}{10}(3x^2-2)=\\frac{3x^2-2}{10}$.\n\n**Vastaus: Olivian lasku on oikein. Helpommin $f'(x)=\\frac{1}{10}D(x^3-2x+1)=\\frac{3x^2-2}{10}$.**\n\n**Sudenkuoppa:** laskusta väitetään virheellisesti löytyvän virhe (esim. tekijöiden järjestys), tai oikeellisuus perustellaan vain tarkistamalla lopputulos laskimella.",
+     "answer": "Oikein; $f'(x)=\\frac{3x^2-2}{10}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Leo arvioi, montako nollaa luvun $2000!-10^{300}$ lopussa on. Hän laskee luvun $2000!$ nollat niin, että kymmenellä jaolliset tekijät ($\\frac{2000}{10}=200$ kpl) ja viidellä jaolliset tekijät ($\\frac{2000}{5}=400$ kpl, koska parillisia tekijöitä riittää) antavat kukin yhden nollan, yhteensä 600. Luvussa $10^{300}$ on 300 nollaa, joten erotuksessa on hänen mukaansa $600-300=300$ nollaa. Laskin antaa 5736-numeroisen luvun, jonka lopussa on 300 nollaa. Onko Leon päättely oikein? Korjaa mahdolliset virheet.",
+     "hints": [
+      "Tarkista päättelyn molemmat osat erikseen. Onko nollien määrien vähentäminen järkevä tapa laskea erotuksen nollat? Laskeeko Leo luvun $2000!$ viidellä jaolliset tekijät oikein, eli jääkö jotakin laskematta tai lasketaanko jotakin kahdesti?",
+      "Kirjoita $2000!=10^{N}\\cdot M$ ja erotus muotoon $10^{300}\\bigl(10^{N-300}M-1\\bigr)$, kun $N>300$. Mikä on sulkulausekkeen viimeinen numero? Riittää osoittaa, että $N>300$, esimerkiksi laskemalla $\\left\\lfloor\\frac{2000}{5}\\right\\rfloor+\\left\\lfloor\\frac{2000}{25}\\right\\rfloor+\\dots$."
+     ],
+     "solution": "**Virheet**\n\n1. Erotuksen nollia ei saa laskemalla nollien määrien erotusta. Esimerkiksi $1000-100=900$ päättyy kahteen nollaan, ei $3-2=1$ nollaan.\n2. Jokainen kymmenellä jaollinen tekijä on samalla viidellä jaollinen, joten ne tulevat lasketuiksi kahdesti.\n3. Osa nollista puuttuu: esimerkiksi 25, 125 ja 625 sisältävät tekijän 5 useamman kerran ja antavat siten useampia nollia.\n4. Leon lopputulos on siis oikea vain sattumalta. Laskimen tulos ei todista päättelyä oikeaksi.\n\n**Korjattu päättely**\n\n5. Luvun $2000!$ loppunollien määrä on sama kuin tekijän 5 potenssi sen alkutekijähajotelmassa (tekijöitä 2 on enemmän): $\\frac{2000}{5}+\\frac{2000}{25}+\\frac{2000}{125}+\\left\\lfloor\\frac{2000}{625}\\right\\rfloor=400+80+16+3=499$.\n6. Siis $2000!=10^{499}M$, missä $M$ ei ole jaollinen luvulla 10. Riittäisi jo tieto, että nollia on enemmän kuin 300.\n7. $2000!-10^{300}=10^{300}\\bigl(10^{199}M-1\\bigr)$. Luku $10^{199}M$ päättyy nollaan, joten $10^{199}M-1$ päättyy numeroon 9 eikä ole jaollinen luvulla 10.\n8. Erotuksen lopussa on siis täsmälleen 300 nollaa.\n\n**Vastaus: päättely on väärin (nollien määriä ei voi vähentää, ja luvun $2000!$ nollien laskennassa on virheitä: oikea määrä on 499), vaikka loppuvastaus 300 on oikein. Oikea perustelu: $2000!-10^{300}=10^{300}(10^{199}M-1)$, ja sulkulauseke päättyy numeroon 9.**\n\n**Sudenkuoppa:** päättelyn hyväksyminen sillä perusteella, että laskin antaa saman luvun. Oikea vastaus ei tee perustelusta pätevää.",
+     "answer": "Päättely väärin (2000!:ssa on 499 nollaa, eikä nollia voi vähentää), mutta erotuksessa on todella 300 nollaa",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Todista, että jokaisella kokonaisluvulla $n\\ge 0$ pätee $\\int_0^1\\sin(\\pi x)\\,\\bigl(x(1+x)(1-x)\\bigr)^n\\,dx\\le\\frac{2}{\\pi}\\left(\\frac{2}{3\\sqrt3}\\right)^n$. Käytä apuna tietoa: jos $f(x)\\le g(x)$ välillä $[0,1]$, niin $\\int_0^1f(x)\\,dx\\le\\int_0^1g(x)\\,dx$.",
+     "hints": [
+      "Tutki funktiota $g(x)=x(1+x)(1-x)=x-x^3$ välillä $[0,1]$: mikä on sen suurin arvo? Huomaa oikealla puolella tekijä $\\frac{2}{\\pi}$: mikä on $\\int_0^1\\sin(\\pi x)\\,dx$?",
+      "$g'(x)=1-3x^2=0$, kun $x=\\frac{1}{\\sqrt3}$, ja $g\\left(\\frac{1}{\\sqrt3}\\right)=\\frac{2}{3\\sqrt3}$. Koska $0\\le g(x)\\le\\frac{2}{3\\sqrt3}$ ja $\\sin(\\pi x)\\ge 0$ välillä $[0,1]$, saat integrandille ylärajan $\\sin(\\pi x)\\left(\\frac{2}{3\\sqrt3}\\right)^n$."
+     ],
+     "solution": "1. Merkitään $g(x)=x(1+x)(1-x)=x-x^3$. Välillä $[0,1]$ kaikki tekijät ovat ei-negatiivisia, joten $g(x)\\ge 0$.\n2. $g'(x)=1-3x^2$, jonka ainoa nollakohta välillä $[0,1]$ on $x=\\frac{1}{\\sqrt3}$. Derivaatta on positiivinen ennen sitä ja negatiivinen sen jälkeen, joten kyseessä on suurin arvo.\n3. $g\\left(\\frac{1}{\\sqrt3}\\right)=\\frac{1}{\\sqrt3}-\\frac{1}{3\\sqrt3}=\\frac{2}{3\\sqrt3}$. Siis $0\\le g(x)\\le\\frac{2}{3\\sqrt3}$ välillä $[0,1]$.\n4. Koska $g(x)\\ge 0$ ja potenssiin korotus säilyttää ei-negatiivisten lukujen järjestyksen, $g(x)^n\\le\\left(\\frac{2}{3\\sqrt3}\\right)^n$. (Kun $n=0$, molemmat puolet ovat 1.)\n5. Välillä $[0,1]$ on $\\sin(\\pi x)\\ge 0$, joten epäyhtälön saa kertoa sillä: $\\sin(\\pi x)\\,g(x)^n\\le\\sin(\\pi x)\\left(\\frac{2}{3\\sqrt3}\\right)^n$.\n6. Annetun tiedon mukaan integraaleille pätee sama järjestys: $\\int_0^1\\sin(\\pi x)\\,g(x)^n\\,dx\\le\\left(\\frac{2}{3\\sqrt3}\\right)^n\\int_0^1\\sin(\\pi x)\\,dx$.\n7. $\\int_0^1\\sin(\\pi x)\\,dx=\\left[-\\frac{1}{\\pi}\\cos(\\pi x)\\right]_0^1=\\frac{1}{\\pi}+\\frac{1}{\\pi}=\\frac{2}{\\pi}$.\n8. Siis $\\int_0^1\\sin(\\pi x)\\bigl(x(1+x)(1-x)\\bigr)^n\\,dx\\le\\frac{2}{\\pi}\\left(\\frac{2}{3\\sqrt3}\\right)^n$. $\\square$\n\n(Numeerinen tarkistus: kun $n=1$, vasen puoli on noin $0{,}194$ ja oikea noin $0{,}245$.)\n\n**Sudenkuoppa:** arvio $\\sin(\\pi x)\\le 1$ hävittää tekijän $\\frac{2}{\\pi}$, eikä väitettä saada. Lisäksi on perusteltava, että $\\sin(\\pi x)\\ge 0$, koska muuten epäyhtälön kertominen sillä ei ole sallittua.",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "intro": "Vektorien $\\bar a=a_x\\bar i+a_y\\bar j+a_z\\bar k$ ja $\\bar b=b_x\\bar i+b_y\\bar j+b_z\\bar k$ ristitulo on $\\bar a\\times\\bar b=(a_yb_z-a_zb_y)\\bar i+(a_zb_x-a_xb_z)\\bar j+(a_xb_y-a_yb_x)\\bar k$. Todistukset tehdään tämän lausekkeen avulla.",
+   "units": [
+    {
+     "id": "a",
+     "points": 3,
+     "prompt": "Todista, että $\\bar a\\times\\bar b$ on kohtisuorassa vektoria $\\bar a$ vastaan.",
+     "hints": [
+      "Kaksi vektoria ovat kohtisuorassa, kun niiden pistetulo on nolla. Laske $\\bar a\\cdot(\\bar a\\times\\bar b)$ koordinaateittain ja kerro auki."
+     ],
+     "solution": "1. Vektorit ovat kohtisuorassa, jos niiden pistetulo on nolla (nollavektori on kohtisuorassa kaikkia vektoreita vastaan).\n2. $\\bar a\\cdot(\\bar a\\times\\bar b)=a_x(a_yb_z-a_zb_y)+a_y(a_zb_x-a_xb_z)+a_z(a_xb_y-a_yb_x)$.\n3. Auki kerrottuna $a_xa_yb_z-a_xa_zb_y+a_ya_zb_x-a_xa_yb_z+a_xa_zb_y-a_ya_zb_x$.\n4. Termit kumoutuvat pareittain, ja summa on $0$. Siis $\\bar a\\times\\bar b\\perp\\bar a$. $\\square$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 9,
+     "prompt": "Todista, että $|\\bar a\\times\\bar b|$ on yhtä suuri kuin vektorien $\\bar a$ ja $\\bar b$ virittämän suunnikkaan pinta-ala.",
+     "hints": [
+      "Suunnikkaan ala on kanta kertaa korkeus eli $|\\bar a|\\,|\\bar b|\\sin\\theta$, missä $\\theta$ on vektorien välinen kulma. Kulman kosini saadaan pistetulosta. Vertaa neliöitä: laske $|\\bar a\\times\\bar b|^2$ ja $|\\bar a|^2|\\bar b|^2-(\\bar a\\cdot\\bar b)^2$.",
+      "Kerro molemmat lausekkeet auki: kummastakin jää jäljelle $a_x^2b_y^2+a_y^2b_x^2+a_x^2b_z^2+a_z^2b_x^2+a_y^2b_z^2+a_z^2b_y^2-2(a_xa_yb_xb_y+a_xa_zb_xb_z+a_ya_zb_yb_z)$. Sitten $|\\bar a|^2|\\bar b|^2-(\\bar a\\cdot\\bar b)^2=|\\bar a|^2|\\bar b|^2(1-\\cos^2\\theta)$."
+     ],
+     "solution": "1. Olkoon $\\theta\\in[0^\\circ,180^\\circ]$ vektorien $\\bar a$ ja $\\bar b$ välinen kulma (jos jompikumpi on nollavektori, sekä ala että ristitulo ovat nollia). Suunnikkaan kanta on $|\\bar a|$ ja korkeus $|\\bar b|\\sin\\theta$, joten ala on $A=|\\bar a|\\,|\\bar b|\\sin\\theta$.\n2. Lasketaan ristitulon pituuden neliö: $|\\bar a\\times\\bar b|^2=(a_yb_z-a_zb_y)^2+(a_zb_x-a_xb_z)^2+(a_xb_y-a_yb_x)^2$.\n3. Auki kerrottuna $|\\bar a\\times\\bar b|^2=a_y^2b_z^2+a_z^2b_y^2+a_z^2b_x^2+a_x^2b_z^2+a_x^2b_y^2+a_y^2b_x^2-2(a_ya_zb_yb_z+a_xa_zb_xb_z+a_xa_yb_xb_y)$.\n4. Toisaalta $|\\bar a|^2|\\bar b|^2=(a_x^2+a_y^2+a_z^2)(b_x^2+b_y^2+b_z^2)$ sisältää termit $a_x^2b_x^2+a_y^2b_y^2+a_z^2b_z^2$ ja kaikki kuusi ”sekatermiä” $a_i^2b_j^2$ ($i\\neq j$).\n5. $(\\bar a\\cdot\\bar b)^2=(a_xb_x+a_yb_y+a_zb_z)^2=a_x^2b_x^2+a_y^2b_y^2+a_z^2b_z^2+2(a_xa_yb_xb_y+a_xa_zb_xb_z+a_ya_zb_yb_z)$.\n6. Vähentämällä: $|\\bar a|^2|\\bar b|^2-(\\bar a\\cdot\\bar b)^2$ on täsmälleen kohdan 3 lauseke. Siis $|\\bar a\\times\\bar b|^2=|\\bar a|^2|\\bar b|^2-(\\bar a\\cdot\\bar b)^2$.\n7. Pistetulon määritelmästä $\\bar a\\cdot\\bar b=|\\bar a|\\,|\\bar b|\\cos\\theta$, joten $|\\bar a\\times\\bar b|^2=|\\bar a|^2|\\bar b|^2(1-\\cos^2\\theta)=|\\bar a|^2|\\bar b|^2\\sin^2\\theta$.\n8. Koska $\\sin\\theta\\ge 0$, kun $0^\\circ\\le\\theta\\le 180^\\circ$, neliöjuuri antaa $|\\bar a\\times\\bar b|=|\\bar a|\\,|\\bar b|\\sin\\theta=A$. $\\square$\n\n**Sudenkuoppa:** väitetään suoraan $|\\bar a\\times\\bar b|=|\\bar a|\\,|\\bar b|\\sin\\theta$, vaikka juuri se pitää johtaa annetusta koordinaattilausekkeesta. Neliöjuurta otettaessa on huomattava, että $\\sin\\theta\\ge 0$.",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

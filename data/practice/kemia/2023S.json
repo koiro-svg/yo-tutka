@@ -1,0 +1,439 @@
+{
+ "subject": "kemia",
+ "session": "2023S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2023/syksy/kemia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-09-21_KE_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään (15 p kukin)."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään (20 p kukin)."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Monivalinnat 1.1–1.10 (2 p kukin):\n\n- 1.1 sakkaroosi, vesijohtovesi, ilma vai pronssi: mikä on puhdas aine\n- 1.2 mikä vaikuttaa eniten puhtaan aineen haihtuvuuteen (neljä vaihtoehtoa sidoksista)\n- 1.3 mikä neljästä uuttoa koskevasta väitteestä on väärä\n- 1.4 mihin UV–Vis-spektroskopia perustuu\n- 1.5 pienin säde isoelektronisista hiukkasista $\\ce{Cl-}$, $\\ce{Ar}$, $\\ce{S^2-}$ ja $\\ce{K+}$\n- 1.6 millä neljästä rakennekaavasta on enantiomeerit (ks. alkuperäisen tehtävän kuvat)\n- 1.7 mikä neljästä muoveja koskevasta väitteestä on väärä\n- 1.8 propaani, propeeni, propan-1-oli vai propan-2-oni: millä korkein kiehumispiste\n- 1.9 paras vesiliukoisuus: $\\ce{O2}$, $\\ce{NH3}$, $\\ce{CO}$ vai $\\ce{N2}$\n- 1.10 mikä $\\ce{C3H6O}$-yhdiste antaa $^1$H-NMR-spektrin, jossa on vain yksi piikki (noin 2,2 ppm)",
+     "hints": [
+      "Käy kohdat läpi yksi kerrallaan. Moni kohta ratkeaa molekyylien välisten vuorovaikutusten avulla: vetysidokset nostavat kiehumispistettä ja parantavat vesiliukoisuutta. Väitekohdissa (1.3, 1.7) etsi väite, joka kuvaa toista menetelmää tai toista aineryhmää.",
+      "Kohta kohdalta:\n- 1.1: puhdas aine on yksi alkuaine tai yhdiste, ei seos.\n- 1.3: kumpi käyttää liikkuvaa ja paikallaan pysyvää faasia, uutto vai kromatografia?\n- 1.5: sama elektronimäärä, joten ratkaisee protonien määrä.\n- 1.6: etsi hiili, johon on liittynyt neljä erilaista ryhmää.\n- 1.7: kerta- ja kestomuovien ero lämmitettäessä.\n- 1.10: yksi piikki tarkoittaa, että kaikki vedyt ovat samanarvoisia."
+     ],
+     "solution": "1. **1.1 A** – sakkaroosi on yksi yhdiste ($\\ce{C12H22O11}$). Vesijohtovesi ja ilma ovat seoksia ja pronssi on metalliseos.\n2. **1.2 B** – molekyylien välisten sidosten voimakkuus. Haihtuessa molekyylit irtoavat toisistaan, mutta molekyylin sisäiset sidokset eivät katkea.\n3. **1.3 C** – väite liikkuvasta faasista on väärä. Liikkuva faasi kuuluu kromatografiaan. Uutossa kaksi toisiinsa sekoittumatonta nestettä muodostaa kaksi faasia, ja aineet jakautuvat niihin liukoisuutensa mukaan, usein erotussuppilossa.\n4. **1.4 A** – elektronien virittyminen energiatilalta toiselle. Värähtelyt kuuluvat IR-spektroskopiaan ja ydinten energiatilat NMR:ään.\n5. **1.5 D** – $\\ce{K+}$. Kaikilla on 18 elektronia, mutta kaliumilla on eniten protoneja (19), joten se vetää elektroneja voimakkaimmin puoleensa.\n6. **1.6 A** – 2-hydroksibutaanidihappo (omenahappo, $\\ce{HOOC-CH2-CH(OH)-COOH}$). Sen OH-hiileen liittyvät H, OH, COOH ja $\\ce{CH2COOH}$. Laktonirenkaassa, glyserolissa ja kloorifenyyliketonissa ei ole asymmetristä hiiltä.\n7. **1.7 B** – väite kertamuovien tarkasta sulamispisteestä on väärä. Kertamuovi on jäykkä, ristisilloittunut verkko, joka ei sula vaan hajoaa kuumennettaessa. Muut väitteet pitävät paikkansa.\n8. **1.8 C** – propan-1-oli. Sen molekyylit muodostavat keskenään vetysidoksia. Propanonin välillä on dipoli-dipolisidoksia ja hiilivetyjen välillä vain dispersiovoimia.\n9. **1.9 B** – $\\ce{NH3}$. Ammoniakki on poolinen, muodostaa vetysidoksia veden kanssa ja protolysoituu osittain. Muut kaasut ovat poolittomia tai heikosti poolisia.\n10. **1.10 C** – propanoni $\\ce{CH3COCH3}$. Kuusi vetyä on kahdessa samanarvoisessa metyyliryhmässä karbonyylin vieressä, joten spektrissä on yksi singletti noin 2,2 ppm:n kohdalla. Metyylioksiraanilla, prop-2-en-1-olilla ja propanaalilla on useita eri vetyjä (propanaalin aldehydivety noin 9–10 ppm).",
+     "answer": "1.1 A · 1.2 B · 1.3 C · 1.4 A · 1.5 D · 1.6 A · 1.7 B · 1.8 C · 1.9 B · 1.10 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Alumiinin ja metallioksidin välinen termiittireaktio, esimerkiksi $\\ce{Fe2O3(s) + 2Al(s) -> 2Fe(l) + Al2O3(s)}$, tuottaa sulaa rautaa, jolla voidaan hitsata rautatiekiskoja yhteen.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 9,
+     "prompt": "Kokeessa reagoi 3,85 g alumiinia ja 10,2 g rauta(III)oksidia. Montako grammaa rautaa syntyi?",
+     "hints": [
+      "Laske molempien lähtöaineiden ainemäärät ja selvitä reaktioyhtälön kertoimilla, kumpi lähtöaine on rajoittava tekijä.",
+      "$n(\\ce{Al})=0{,}1427$ mol ja $n(\\ce{Fe2O3})=0{,}06387$ mol. Alumiinin kanssa reagoisi $0{,}07135$ mol oksidia, mutta sitä on vähemmän, joten $\\ce{Fe2O3}$ rajoittaa. Jokaisesta oksidimoolista syntyy 2 mol rautaa."
+     ],
+     "solution": "1. $n(\\ce{Al})=\\frac{3{,}85\\,\\mathrm{g}}{26{,}98\\,\\mathrm{g/mol}}=0{,}14270\\,\\mathrm{mol}$\n2. $M(\\ce{Fe2O3})=2\\cdot55{,}85+3\\cdot16{,}00=159{,}70\\,\\mathrm{g/mol}$ ja $n(\\ce{Fe2O3})=\\frac{10{,}2\\,\\mathrm{g}}{159{,}70\\,\\mathrm{g/mol}}=0{,}063870\\,\\mathrm{mol}$\n3. Rajoittava tekijä: kaikki alumiini vaatisi $\\tfrac12\\cdot0{,}14270=0{,}071350$ mol $\\ce{Fe2O3}$:a. Oksidia on vain 0,063870 mol, joten **$\\ce{Fe2O3}$ on rajoittava tekijä** ja alumiinia jää yli.\n4. $n(\\ce{Fe})=2\\,n(\\ce{Fe2O3})=0{,}12774\\,\\mathrm{mol}$\n5. $m(\\ce{Fe})=0{,}12774\\,\\mathrm{mol}\\cdot55{,}85\\,\\mathrm{g/mol}=7{,}13\\,\\mathrm{g}$\n\n**Vastaus: rautaa syntyi 7,13 g**\n\n**Sudenkuoppa:** jos alumiinia pidetään rajoittavana, tulos on $0{,}1427\\,\\mathrm{mol}\\cdot55{,}85\\,\\mathrm{g/mol}=7{,}97$ g, mikä on väärin.",
+     "answer": "$m(\\ce{Fe})=7{,}13\\,\\mathrm{g}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 3,
+     "prompt": "Onko termiittireaktio hapettumis-pelkistymisreaktio? Perustele.",
+     "hints": [
+      "Määritä raudan ja alumiinin hapetusluvut lähtöaineissa ja tuotteissa."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- reaktio **on** hapettumis-pelkistymisreaktio\n- rauta: hapetusluku +III ($\\ce{Fe2O3}$) → 0 ($\\ce{Fe}$), eli rauta pelkistyy\n- alumiini: 0 ($\\ce{Al}$) → +III ($\\ce{Al2O3}$), eli alumiini hapettuu\n\nEsimerkkivastaus: Reaktio on hapettumis-pelkistymisreaktio, koska hapetusluvut muuttuvat. Rautaionit ($\\ce{Fe^3+}$) ottavat vastaan elektroneja ja muuttuvat metalliseksi raudaksi, ja metallinen alumiini luovuttaa elektroneja ja muuttuu $\\ce{Al^3+}$-ioneiksi. Hapen hapetusluku −II ei muutu.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 3,
+     "prompt": "Luokittele reaktio endotermiseksi tai eksotermiseksi ja perustele.",
+     "hints": [
+      "Katso reaktioyhtälön olomuotomerkintöjä: missä olomuodossa rauta syntyy? Mitä se kertoo vapautuvasta lämmöstä?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- reaktio on **eksoterminen**\n- siinä vapautuu lämpöä\n- perustelu: syntyvä rauta on sulaa (l), eli reaktio tuottaa niin paljon lämpöä, että raudan sulamispiste (noin 1 540 °C) ylittyy. Muodostumisentalpioista laskettuna reaktioentalpia on luokkaa −850 kJ/mol.\n\nEsimerkkivastaus: Termiittireaktio on eksoterminen. Reaktiossa vapautuu niin paljon lämpöenergiaa, että syntyvä rauta on nestemäistä, ja juuri tätä sulaa rautaa käytetään kiskojen liittämiseen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Tunnista kuvattujen havaintojen perusteella tuntemattomat aineet.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 7,
+     "prompt": "Valkoinen jauhe X kehittää kaasua suolahapossa. Atomiabsorptiospektroskopian mukaan siinä on kalsiumioneja muttei muita metalleja, ja sen moolimassa on noin 100 g/mol. Kuumennettaessa X:stä vapautuu hiilidioksidia ($\\ce{X -> Y + CO2(g)}$), ja jäljelle jää hieman tummempi jauhe Y. Y liukenee veteen huonosti, mutta liuos on selvästi emäksinen. Nimeä X ja Y ja kirjoita reaktioyhtälö Y:n reaktiolle veden kanssa.",
+     "hints": [
+      "Mikä kalsiumyhdiste vapauttaa hiilidioksidia sekä hapon kanssa että kuumennettaessa? Tarkista moolimassa.",
+      "X on $\\ce{CaCO3}$ ($M=100{,}09$ g/mol). Kun siitä lähtee $\\ce{CO2}$, jää metallioksidi. Metallioksidit ovat emäksisiä: ne reagoivat veden kanssa hydroksideiksi."
+     ],
+     "solution": "1. X reagoi hapon kanssa kaasua (hiilidioksidia) kehittäen ja sisältää kalsiumia, ja $M(\\ce{CaCO3})=40{,}08+12{,}01+3\\cdot16{,}00=100{,}09\\,\\mathrm{g/mol}$. **X on kalsiumkarbonaatti $\\ce{CaCO3}$.** ($\\ce{CaCO3(s) + 2HCl(aq) -> CaCl2(aq) + H2O(l) + CO2(g)}$)\n2. Kuumennus: $\\ce{CaCO3(s) -> CaO(s) + CO2(g)}$. **Y on kalsiumoksidi $\\ce{CaO}$** (poltettu kalkki).\n3. Kalsiumoksidi on emäksinen oksidi ja reagoi veden kanssa kalsiumhydroksidiksi, joka liukenee niukasti ja tekee liuoksesta emäksisen:\n\n$$\\ce{CaO(s) + H2O(l) -> Ca(OH)2(s)}$$\n\n(liuennut osa: $\\ce{Ca(OH)2(s) -> Ca^2+(aq) + 2OH-(aq)}$)\n\n**Vastaus: X = kalsiumkarbonaatti, Y = kalsiumoksidi; $\\ce{CaO(s) + H2O(l) -> Ca(OH)2(s)}$**\n\n**Sudenkuoppa:** \"kalkki\" tai kalsiumvetykarbonaatti eivät kelpaa nimiksi, eikä reaktioyhtälöön saa jättää ylimääräisiä aineita.",
+     "answer": "X = $\\ce{CaCO3}$ (kalsiumkarbonaatti), Y = $\\ce{CaO}$ (kalsiumoksidi); $\\ce{CaO(s) + H2O(l) -> Ca(OH)2(s)}$",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 8,
+     "prompt": "Väritön neste P sisältää vain hiiltä, vetyä ja happea, ja sen massaspektri on aineistossa 3.A. Kun P:n vesiliuosta kuumennetaan, syntyy tasapainoreaktiossa kaksi uutta yhdistettä: alkoholi Q ja yhdiste R, joka tekee liuoksesta lievästi happaman. Nimeä P, Q ja R (tai piirrä rakenteet) ja kerro, mihin yhdisteluokkiin P ja R kuuluvat.",
+     "hints": [
+      "Mikä yhdisteluokka hydrolysoituu vedessä tasapainoreaktiona alkoholiksi ja hapoksi? Molekyyli-ionin piikki (suurin $m/z$) kertoo moolimassan.",
+      "Molekyyli-ionin piikki on kohdassa $m/z=60$. Pienin esteri on $\\ce{C2H4O2}$ ($M=60$). Voimakkain piikki $m/z=31$ sopii $\\ce{CH3O+}$-fragmenttiin ja $m/z=29$ $\\ce{HCO+}$-fragmenttiin."
+     ],
+     "solution": "1. Hydrolyysi tasapainoreaktiona, jossa syntyy alkoholi ja happo, on esterin reaktio. **P on esteri.**\n2. Massaspektrin molekyyli-ionin piikki $m/z=60$ antaa moolimassan 60 g/mol. Esteri $\\ce{C2H4O2}$ on **metyylimetanaatti** (metyyliformiaatti) $\\ce{HCOOCH3}$. Fragmentit $m/z=31$ ($\\ce{CH3O+}$), 29 ($\\ce{HCO+}$) ja 15 ($\\ce{CH3+}$) tukevat tätä.\n3. Hydrolyysi: $\\ce{HCOOCH3 + H2O <=> HCOOH + CH3OH}$\n4. **Q on metanoli** $\\ce{CH3OH}$ ja **R on metaanihappo** (muurahaishappo) $\\ce{HCOOH}$. **R on karboksyylihappo**, joka protolysoituu osittain ja tekee liuoksesta lievästi happaman.\n\n**Vastaus: P = metyylimetanaatti (esteri), Q = metanoli, R = metaanihappo (karboksyylihappo)**\n\n**Sudenkuoppa:** etikkahappokin on $\\ce{C2H4O2}$ ($M=60$), mutta se ei hydrolysoidu alkoholiksi ja hapoksi.",
+     "answer": "P = metyylimetanaatti $\\ce{HCOOCH3}$ (esteri), Q = metanoli, R = metaanihappo $\\ce{HCOOH}$ (karboksyylihappo)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Haloperidoli on skitsofrenian ja kaksisuuntaisen mielialahäiriön hoidossa käytetty lääkeaine, joka valmistetaan kolmessa vaiheessa (synteesikaavio 4.B). Välituotteet eristetään jokaisen vaiheen jälkeen.\n\n- Vaihe 1: lähtöaine P reagoi kahden HBr-molekyylin kanssa. Pääasiallinen tuote on R1, 4-bromi-4-(4-kloorifenyyli)piperidiniumbromidi ($\\ce{C11H14Br2ClN}$), ja hyvin vähäinen tuote sen isomeeri R2, jossa bromi on renkaan hiilessä 3 (aryyliryhmää kantavan hiilen vieressä).\n- Vaihe 2: R1 reagoi NaOH-liuoksen kanssa, jolloin syntyy S eli 4-(4-kloorifenyyli)piperidin-4-oli ($\\ce{C11H14ClNO}$) ja NaBr.\n- Vaihe 3: S reagoi 4-kloori-1-(4-fluorifenyyli)butan-1-onin kanssa ($\\ce{K2CO3}$), ja syntyy haloperidoli.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 6,
+     "prompt": "Tehtaalla oli 6,44 kg välituotetta R1, ja vaiheesta 2 eristettiin 3,06 kg välituotetta S. Laske vaiheen 2 saantoprosentti.",
+     "hints": [
+      "Laske R1:n ja S:n moolimassat molekyylikaavoista ja niistä ainemäärät. Vaiheessa 2 yhdestä R1-moolista syntyy yksi mooli S:ää.",
+      "$M(\\text{R1})=355{,}48$ g/mol ja $M(\\text{S})=211{,}68$ g/mol. Saanto on toteutunut ainemäärä jaettuna teoreettisella."
+     ],
+     "solution": "1. $M(\\ce{C11H14Br2ClN})=11\\cdot12{,}01+14\\cdot1{,}008+2\\cdot79{,}90+35{,}45+14{,}01\\,\\mathrm{g/mol}=355{,}482\\,\\mathrm{g/mol}$\n2. $M(\\ce{C11H14ClNO})=11\\cdot12{,}01+14\\cdot1{,}008+35{,}45+14{,}01+16{,}00\\,\\mathrm{g/mol}=211{,}682\\,\\mathrm{g/mol}$\n3. $n(\\text{R1})=\\frac{6\\,440\\,\\mathrm{g}}{355{,}482\\,\\mathrm{g/mol}}=18{,}116\\,\\mathrm{mol}$ ja $n(\\text{S})=\\frac{3\\,060\\,\\mathrm{g}}{211{,}682\\,\\mathrm{g/mol}}=14{,}456\\,\\mathrm{mol}$\n4. Teoreettisesti $n(\\text{S})=n(\\text{R1})$, joten saanto $=\\frac{14{,}456}{18{,}116}\\cdot100\\,\\%=79{,}8\\,\\%$.\n\n**Vastaus: saanto on 79,8 %**\n\n**Sudenkuoppa:** massojen suora suhde ($3{,}06/6{,}44=47{,}5\\,\\%$) on väärä, koska moolimassat ovat erilaiset.",
+     "answer": "Saanto $79{,}8\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 2,
+     "prompt": "Tasapainota vaiheen 2 reaktioyhtälö (R1 ja S saa kirjoittaa kirjainsymboleina).",
+     "hints": [
+      "NaOH tekee vaiheessa 2 kaksi asiaa: korvaa bromin OH-ryhmällä ja poistaa typeltä ylimääräisen protonin. Mitä jälkimmäisestä syntyy?"
+     ],
+     "solution": "1. Yksi hydroksidi-ioni korvaa kovalenttisesti sitoutuneen bromin OH-ryhmällä (substituutio), jolloin syntyy NaBr.\n2. Toinen hydroksidi-ioni ottaa protonin piperidiniumtypeltä, jolloin syntyy vettä. Bromidi-ioni jää NaBr:ksi.\n\n$$\\ce{R1 + 2NaOH(aq) -> S + 2NaBr(aq) + H2O(l)}$$\n\n**Vastaus: $\\ce{R1 + 2NaOH -> S + 2NaBr + H2O}$**",
+     "answer": "$\\ce{R1 + 2NaOH(aq) -> S + 2NaBr(aq) + H2O(l)}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Esitä lähtöaineen P rakenne.",
+     "hints": [
+      "Vaihe 1 on kaksi reaktiota: yksi HBr protonoi aminoryhmän, ja toinen HBr liittyy additiona kaksoissidokseen. Poista R1:stä molemmat HBr-molekyylit."
+     ],
+     "solution": "1. R1:ssä on typpeen liittynyt ylimääräinen protoni ja bromidi-ioni. Ensimmäinen HBr on siis protonoinut aminoryhmän. P:ssä typpi on neutraali sekundäärinen aminoryhmä $\\mathrm{{-}NH{-}}$.\n2. Toinen HBr on liittynyt additiona C=C-sidokseen: bromi aryyliryhmää kantavaan hiileen C4 ja vety viereiseen hiileen C3 (R2:ssa päinvastoin). Kaksoissidos on siis ollut **hiilten C3 ja C4 välillä**.\n3. P on **4-(4-kloorifenyyli)-1,2,3,6-tetrahydropyridiini** ($\\ce{C11H12ClN}$): kuusirengas, jossa on NH, kolme $\\ce{CH2}$-ryhmää, CH ja aryyliryhmää kantava hiili, jonka ja viereisen CH-hiilen välillä on kaksoissidos. Aryyliryhmä on para-klooribentseenirengas.\n\n$$\\ce{P + 2HBr -> R1}\\quad(\\ce{C11H12ClN + 2HBr -> C11H14Br2ClN})$$\n\n**Sudenkuoppa:** P:hen ei jää bromia, eikä sen typpi ole protonoitunut.",
+     "answer": "4-(4-kloorifenyyli)-1,2,3,6-tetrahydropyridiini: C=C renkaan hiilten 3 ja 4 välissä, neutraali NH",
+     "check": "hvp"
+    },
+    {
+     "id": "4.4",
+     "points": 3,
+     "prompt": "R1 ja R2 ovat isomeerejä. Mikä isomerian laji on kyseessä? Perustele, miksi vaiheessa 1 syntyy lähes pelkästään R1:tä.",
+     "hints": [
+      "Vertaa, mihin hiileen bromi on liittynyt. Mikä sääntö kertoo, miten HX liittyy epäsymmetriseen kaksoissidokseen?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- R1 ja R2 ovat **paikkaisomeerejä** (bromi eri hiilessä)\n- addition suunnan määrää **Markovnikovin sääntö**: vety liittyy kaksoissidoksen siihen hiileen, jolla on jo valmiiksi useampi vetyatomi (C3), ja bromi toiseen hiileen (C4)\n- (syy: välivaiheena syntyvä karbokationi on pysyvämpi tertiäärisessä, aryyliryhmää kantavassa hiilessä)\n\nEsimerkkivastaus: R1 ja R2 eroavat vain bromin paikan osalta, joten ne ovat paikkaisomeerejä. HBr:n additio noudattaa Markovnikovin sääntöä. Protoni liittyy kaksoissidoksen vetyä kantavaan hiileen C3, jolloin positiivinen varaus jää tertiääriseen hiileen C4, jossa aryyliryhmä stabiloi sitä. Bromidi-ioni liittyy tähän hiileen, ja tuote on R1.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 5,
+     "prompt": "Sulaa magnesiumkloridia elektrolysoidaan. Kumpi alkuaine hapettuu, kumpi pelkistyy? Kirjoita hapettumisen ja pelkistymisen reaktioyhtälöt.",
+     "hints": [
+      "Sulatteessa on vain $\\ce{Mg^2+}$- ja $\\ce{Cl-}$-ioneja, ei vettä. Kumpi ioni voi luovuttaa elektroneja ja kumpi ottaa niitä vastaan?",
+      "Anodilla kloridi-ionit luovuttavat elektroneja ja muuttuvat kloorikaasuksi. Katodilla magnesiumionit ottavat vastaan kaksi elektronia kukin."
+     ],
+     "solution": "1. Sulatteessa on vain magnesium- ja kloridi-ioneja. **Kloori hapettuu** ja **magnesium pelkistyy**.\n2. Anodi (hapettuminen): $\\ce{2Cl-(l) -> Cl2(g) + 2e-}$\n3. Katodi (pelkistyminen): $\\ce{Mg^2+(l) + 2e- -> Mg(l)}$\n4. Kokonaisreaktio: $\\ce{MgCl2(l) -> Mg(l) + Cl2(g)}$\n\n**Sudenkuoppa:** sulatteessa ei ole (aq)-olomuotoja.",
+     "answer": "Kloori hapettuu: $\\ce{2Cl- -> Cl2 + 2e-}$; magnesium pelkistyy: $\\ce{Mg^2+ + 2e- -> Mg}$",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 6,
+     "prompt": "Elektrolysoidaan 1,0 mol/l litiumjodidin vesiliuosta 25 °C:ssa. Mitkä hapettumis- ja pelkistymisreaktiot tapahtuvat? Kirjoita reaktioyhtälöt ja perustele normaalipotentiaalien avulla.",
+     "hints": [
+      "Vesiliuoksessa kilpailevat ionit ja vesi. Listaa kaksi mahdollista hapettumista (jodidi, vesi) ja kaksi mahdollista pelkistymistä (litiumioni, vesi).",
+      "Pelkistyspotentiaalit: $\\ce{I2/I-}$ +0,54 V, $\\ce{O2/H2O}$ +1,23 V, $\\ce{Li+/Li}$ −3,04 V ja $\\ce{H2O/H2}$ −0,83 V. Katodilla pelkistyy se, jonka potentiaali on suurempi, ja anodilla hapettuu se, jonka potentiaali on pienempi."
+     ],
+     "solution": "1. Mahdolliset hapettumiset anodilla:\n   - $\\ce{2I-(aq) -> I2(aq) + 2e-}$ ($E^\\circ(\\ce{I2/I-})=+0{,}54$ V)\n   - $\\ce{2H2O(l) -> O2(g) + 4H+(aq) + 4e-}$ ($E^\\circ(\\ce{O2/H2O})=+1{,}23$ V)\n\n   Jodidi hapettuu helpommin, koska sen pelkistyspotentiaali on pienempi (hapettumisen potentiaali −0,54 V on suurempi kuin −1,23 V). **Anodilla syntyy jodia.**\n2. Mahdolliset pelkistymiset katodilla:\n   - $\\ce{Li+(aq) + e- -> Li(s)}$ ($E^\\circ=-3{,}04$ V)\n   - $\\ce{2H2O(l) + 2e- -> H2(g) + 2OH-(aq)}$ ($E^\\circ=-0{,}83$ V)\n\n   Veden pelkistymisen potentiaali on paljon suurempi, joten **katodilla syntyy vetyä** eikä litiumia.\n3. Kokonaisreaktio: $\\ce{2I-(aq) + 2H2O(l) -> I2(aq) + H2(g) + 2OH-(aq)}$",
+     "answer": "Anodi: $\\ce{2I- -> I2 + 2e-}$; katodi: $\\ce{2H2O + 2e- -> H2 + 2OH-}$",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 4,
+     "prompt": "Sinkki puhdistetaan elektrolysoimalla sinkkisulfaatin vesiliuosta. Miksi magnesiumia ei voi valmistaa magnesiumkloridin vesiliuoksesta, vaan se on elektrolysoitava sulatteesta?",
+     "hints": [
+      "Vertaa magnesiumionin ja veden pelkistyspotentiaaleja. Kumpi pelkistyy katodilla vesiliuoksessa?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- vesiliuoksessa katodilla pelkistyisi vesi (syntyisi vetyä) eikä magnesiumia, ja anodilla hapettuisi kloridi tai vesi\n- perustelu: veden pelkistymisen normaalipotentiaali (−0,83 V) on paljon suurempi kuin $\\ce{Mg^2+/Mg}$-parin (−2,37 V), ja suuremman potentiaalin pelkistyminen tapahtuu\n- (sinkin potentiaali −0,76 V on lähellä veden potentiaalia, ja vedyn ylijännite sinkin pinnalla mahdollistaa sinkin saostumisen vesiliuoksesta)\n\nEsimerkkivastaus: Magnesium on hyvin epäjalo metalli. Sen ionien pelkistyspotentiaali on paljon pienempi kuin veden, joten vesiliuoksen elektrolyysissä katodilla pelkistyy vesi vedyksi ja hydroksidi-ioneiksi, eikä metallista magnesiumia synny. Sulatteessa vettä ei ole, joten magnesiumionit pelkistyvät metalliksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Kalorimetriset videokokeet 6.A ja 6.B: hyvin eristettyyn astiaan, jossa on 100 ml vettä, magneettisekoittaja ja lämpötila-anturi, lisätään pieni määrä kiinteää kalsiumkloridia (6.A) tai ammoniumkloridia (6.B), ja lämpötilaa seurataan.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Mitä havaitset videoissa, ja mitä liukenemisprosesseista voi päätellä? Perustele johtopäätökset.",
+     "hints": [
+      "Kirjaa lämpötila ennen suolan lisäystä ja liukenemisen jälkeen kummassakin kokeessa. Mitä astian hyvä eristys tarkoittaa lämmön siirtymisen kannalta?",
+      "Kalsiumkloridilla lämpötila nousee ja ammoniumkloridilla laskee. Eristetyssä astiassa lämmön on tultava itse liukenemisprosessista tai mentävä siihen."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- havainnot: lämpötila on tasainen ennen lisäystä ja liukenemisen jälkeen (alku- ja loppulämpötilat kirjattuina)\n- $\\ce{CaCl2}$:n lisäyksen jälkeen lämpötila nousee\n- $\\ce{NH4Cl}$:n lisäyksen jälkeen lämpötila laskee\n- johtopäätös: astia on eristetty, joten lämpöä ei siirry ympäristöön tai ympäristöstä, ja lämpötilan muutos johtuu liukenemisesta\n- $\\ce{CaCl2}$:n liukeneminen on **eksoterminen** (vapauttaa lämpöä)\n- $\\ce{NH4Cl}$:n liukeneminen on **endoterminen** (sitoo lämpöä)\n\nEsimerkkivastaus: Molemmissa kokeissa lämpötila pysyy vakiona ennen suolan lisäystä. Kalsiumkloridin liuetessa lämpötila nousee muutamassa kymmenessä sekunnissa ja tasaantuu korkeampaan arvoon. Ammoniumkloridin liuetessa lämpötila laskee ja tasaantuu alkuarvoa matalammaksi. Koska astia on hyvin eristetty, lämpöä ei juuri vaihdu ympäristön kanssa, ja muutokset johtuvat liukenemisesta. Kalsiumkloridin liukeneminen vapauttaa energiaa liuokseen eli on eksotermistä, ja ammoniumkloridin liukeneminen sitoo energiaa liuoksesta eli on endotermistä.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 9,
+     "prompt": "Kalsiumkloridin liukeneminen (video 6.A): mitä sidoksia katkeaa ja mitä syntyy, ja mitä sidostyyppiä ne ovat? Missä vaiheessa energiaa vapautuu ja missä sitoutuu? Mikä ratkaisee, onko liukeneminen endoterminen vai eksoterminen?",
+     "hints": [
+      "Mieti, mitä tapahtuu suolalle ja mitä vedelle: ionihila hajoaa, ja ionit ympäröityvät vesimolekyyleillä. Mitkä vesimolekyylien väliset sidokset joutuvat katkeamaan?",
+      "Katkeavat: $\\ce{Ca^2+}$–$\\ce{Cl-}$-ionisidokset ja osa vesimolekyylien välisistä vetysidoksista (sitoo energiaa). Muodostuvat: ioni-dipolisidokset ionien ja veden välille (vapauttaa energiaa). Vertaa näiden energioiden suuruutta."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- katkeavat sidokset: kalsium- ja kloridi-ionien väliset **ionisidokset** (ionihila hajoaa) sekä vesimolekyylien väliset **vetysidokset**\n- sidosten katkeaminen **sitoo energiaa** (endoterminen vaihe)\n- muodostuvat sidokset: **ioni-dipolisidokset** $\\ce{Ca^2+}$-ionien ja vesimolekyylien sekä $\\ce{Cl-}$-ionien ja vesimolekyylien välille (hydratoituminen)\n- sidosten muodostuminen **vapauttaa energiaa** (eksoterminen vaihe)\n- ratkaisu: jos muodostuvien sidosten yhteenlaskettu energia on suurempi kuin katkeavien, liukeneminen on eksoterminen, ja päinvastaisessa tapauksessa endoterminen. $\\ce{CaCl2}$:lla vapautuva energia on suurempi, joten liuos lämpenee.\n\nEsimerkkivastaus: Kun kalsiumkloridi liukenee, sen ionihilan ionisidokset katkeavat, ja myös vesimolekyylien välisiä vetysidoksia katkeaa, kun ionit tunkeutuvat veden rakenteeseen. Näiden sidosten katkaiseminen vaatii energiaa. Samalla vesimolekyylit asettuvat ionien ympärille: poolisen veden osittain negatiivinen happipää kohti $\\ce{Ca^2+}$-ionia ja vetypäät kohti $\\ce{Cl-}$-ionia, jolloin syntyy ioni-dipolisidoksia. Niiden muodostuessa energiaa vapautuu. Kokonaisuus riippuu siitä, kumpi energiamäärä on suurempi. Pienellä ja kaksinkertaisesti varautuneella kalsiumionilla hydratoitumisessa vapautuu niin paljon energiaa, että se ylittää sidosten katkaisemiseen kuluvan energian, ja liukeneminen on eksotermistä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 9,
+     "prompt": "Hypokloorihapokeliuoksen ($\\ce{HClO}$, $K_a=3{,}0\\cdot10^{-8}$ mol/l) tarkka konsentraatio määritettiin titraamalla. NaOH-liuos tehtiin liuottamalla 4,535 g vedetöntä natriumhydroksidia veteen 1 000,0 ml:ksi. Täyspipetillä otettuun 10 ml:n HClO-näytteeseen lisättiin indikaattoria, ja NaOH-liuosta kului 18,1 ml. Kirjoita titrausreaktion yhtälö ja laske HClO-liuoksen konsentraatio.",
+     "hints": [
+      "Kirjoita neutraloitumisreaktio yksiarvoiselle hapolle. Laske NaOH-liuoksen konsentraatio punnituksesta ja siitä kulunut ainemäärä.",
+      "$c(\\ce{NaOH})=0{,}11338$ mol/l, joten kulutuksessa $n(\\ce{NaOH})=2{,}052\\cdot10^{-3}$ mol. Reaktiosuhde on 1:1."
+     ],
+     "solution": "1. Titrausreaktio: $\\ce{HClO(aq) + NaOH(aq) -> NaClO(aq) + H2O(l)}$ (syntyy natriumhypokloriittia)\n2. $M(\\ce{NaOH})=(22{,}99+16{,}00+1{,}008)\\,\\mathrm{g/mol}=39{,}998\\,\\mathrm{g/mol}$ ja $n=\\frac{4{,}535\\,\\mathrm{g}}{39{,}998\\,\\mathrm{g/mol}}=0{,}11338\\,\\mathrm{mol}$\n3. $c(\\ce{NaOH})=\\frac{0{,}11338\\,\\mathrm{mol}}{1{,}0000\\,\\mathrm{l}}=0{,}11338\\,\\mathrm{mol/l}$\n4. Kulutus: $n(\\ce{NaOH})=0{,}11338\\,\\mathrm{mol/l}\\cdot0{,}0181\\,\\mathrm{l}=2{,}0522\\cdot10^{-3}\\,\\mathrm{mol}$\n5. Reaktioyhtälön mukaan $n(\\ce{HClO})=n(\\ce{NaOH})=2{,}0522\\cdot10^{-3}\\,\\mathrm{mol}$.\n6. $c(\\ce{HClO})=\\frac{2{,}0522\\cdot10^{-3}\\,\\mathrm{mol}}{0{,}0100\\,\\mathrm{l}}=0{,}205\\,\\mathrm{mol/l}$\n\n**Vastaus: $c(\\ce{HClO})=0{,}205\\,\\mathrm{mol/l}$**\n\nHappovakiota ei tarvita laskussa. Se kertoo, että HClO on heikko happo, joten ekvivalenttipiste on emäksinen, ja indikaattoriksi sopii esimerkiksi fenoliftaleiini.",
+     "answer": "$\\ce{HClO(aq) + NaOH(aq) -> NaClO(aq) + H2O(l)}$; $c(\\ce{HClO})=0{,}205\\,\\mathrm{mol/l}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 6,
+     "prompt": "Säilytyksen aikana HClO hajoaa hitaasti kahdeksi tuotteeksi: happikaasuksi ja aineeksi, joka reagoi veden kanssa. Kirjoita hajoamisreaktion yhtälö. Muuttuuko liuoksen pH säilytettäessä? Perustele.",
+     "hints": [
+      "Kun hapesta lähtee happikaasuna, mitä jää jäljelle vedystä ja kloorista? Onko tämä aine vahva vai heikko happo verrattuna HClO:hon?",
+      "$\\ce{2HClO -> 2HCl + O2}$. HCl on vahva happo, joka protolysoituu täydellisesti, ja HClO on heikko ($K_a=3{,}0\\cdot10^{-8}$ mol/l). Miten oksoniumionikonsentraatio muuttuu?"
+     ],
+     "solution": "1. Hajoaminen: $\\ce{2HClO(aq) -> 2HCl(aq) + O2(g)}$\n2. Syntyvä vetykloridi on vahva happo ja protolysoituu vedessä täydellisesti: $\\ce{HCl(aq) + H2O(l) -> H3O+(aq) + Cl-(aq)}$\n3. Hypokloorihapoke on heikko happo, josta vain pieni osa protolysoituu. Kun heikko happo muuttuu vahvaksi hapoksi, oksoniumionikonsentraatio kasvaa.\n4. **pH muuttuu: se pienenee** (liuos happamoituu) säilytyksen aikana.\n\n**Vastaus: $\\ce{2HClO(aq) -> 2HCl(aq) + O2(g)}$; pH pienenee, koska syntyy vahvaa happoa**",
+     "answer": "$\\ce{2HClO(aq) -> 2HCl(aq) + O2(g)}$; pH pienenee",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Suomen vesistöissä fluoridia on yleensä vähän, mutta rapakivialueiden pohjavedessä sitä voi olla useita milligrammoja litrassa. Talousveden raja-arvo on 1,5 mg/l. Fluoridipitoisuus mitataan fluoridiselektiivisellä elektrodilla, jonka potentiaali (mV) pienenee, kun fluoridipitoisuus kasvaa.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 5,
+     "prompt": "Kaivoveden analyysia varten natriumfluoridista tehtiin 1 000 ml:n mittapullossa perusliuos, jossa fluoridi-ioneja on 100,0 mg/l. Montako grammaa NaF:a punnittiin?",
+     "hints": [
+      "Laske ensin, montako milligrammaa fluoridia litrassa on, ja muuta se ainemääräksi. Yhdestä NaF-moolista saadaan yksi mooli fluoridi-ioneja.",
+      "$n(\\ce{F-})=\\frac{0{,}1000\\,\\mathrm{g}}{19{,}00\\,\\mathrm{g/mol}}=5{,}263\\cdot10^{-3}$ mol, ja $M(\\ce{NaF})=41{,}99$ g/mol."
+     ],
+     "solution": "1. Litrassa perusliuosta on 100,0 mg = 0,1000 g fluoridia: $n(\\ce{F-})=\\frac{0{,}1000\\,\\mathrm{g}}{19{,}00\\,\\mathrm{g/mol}}=5{,}2632\\cdot10^{-3}\\,\\mathrm{mol}$\n2. $\\ce{NaF(s) -> Na+(aq) + F-(aq)}$, joten $n(\\ce{NaF})=n(\\ce{F-})$.\n3. $M(\\ce{NaF})=22{,}99+19{,}00=41{,}99\\,\\mathrm{g/mol}$ ja $m(\\ce{NaF})=5{,}2632\\cdot10^{-3}\\,\\mathrm{mol}\\cdot41{,}99\\,\\mathrm{g/mol}=0{,}2210\\,\\mathrm{g}$\n\n**Vastaus: 0,2210 g NaF:a**\n\n**Sudenkuoppa:** 100,0 mg on fluoridin massa, ei natriumfluoridin.",
+     "answer": "$m(\\ce{NaF})=0{,}2210\\,\\mathrm{g}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.2",
+     "points": 4,
+     "prompt": "Perusliuoksesta (100,0 mg/l) tehtiin laimentamalla 50 ml:n mittapulloon työliuos, jonka fluoridipitoisuus on 10,0 mg/l. Paljonko perusliuosta pipetoitiin?",
+     "hints": [
+      "Laimennuksessa fluoridin massa säilyy: $c_1V_1=c_2V_2$ (pitoisuudet yksikössä mg/l)."
+     ],
+     "solution": "1. Työliuokseen tarvitaan fluoridia $m=c\\,V=10{,}0\\,\\mathrm{mg/l}\\cdot0{,}0500\\,\\mathrm{l}=0{,}500\\,\\mathrm{mg}$.\n2. Tämä määrä on perusliuoksen tilavuudessa $V=\\frac{0{,}500\\,\\mathrm{mg}}{100{,}0\\,\\mathrm{mg/l}}=0{,}00500\\,\\mathrm{l}=5{,}00\\,\\mathrm{ml}$.\n\nSama suoraan: $V_1=\\frac{c_2V_2}{c_1}=\\frac{10{,}0\\cdot50\\,\\mathrm{ml}}{100{,}0}=5{,}00\\,\\mathrm{ml}$.\n\n**Vastaus: 5,00 ml perusliuosta**",
+     "answer": "$V=5{,}00\\,\\mathrm{ml}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.3",
+     "points": 6,
+     "prompt": "Standardiliuokset tehtiin työliuoksesta. Mittausta varten 25,0 ml kaivovettä sekoitettiin 25,0 ml:aan puskuriliuosta. Aineistossa 8.A ovat standardien pitoisuudet ja niiden kymmenkantaiset logaritmit, mitatut potentiaalit sekä näytteen potentiaali. Piirrä standardisuora ($E$/mV pystyakselilla, $\\lg(c/(\\mathrm{mg/l}))$ vaaka-akselilla), määritä sen yhtälö ja laske kaivoveden fluoridipitoisuus.",
+     "hints": [
+      "Sovita pisteisiin suora (lineaarinen regressio) ja ratkaise yhtälöstä näytteen potentiaalia vastaava $\\lg c$. Muista, että näyte laimeni puskurin lisäyksessä.",
+      "Suora on noin $E=-57{,}2\\,\\mathrm{mV}\\cdot x+98{,}8\\,\\mathrm{mV}$. Näytteellä $E=90{,}6$ mV antaa $x\\approx0{,}143$ eli mitatussa liuoksessa $c\\approx1{,}39$ mg/l. Puskuri laimensi näytteen puoleen."
+     ],
+     "solution": "1. Kuvaajassa pystyakselilla $E$ (mV) ja vaaka-akselilla $\\lg(c/(\\mathrm{mg/l}))$, viisi standardipistettä ja niihin sovitettu suora.\n2. Regressiosuora: $E=-57{,}22\\,\\mathrm{mV}\\cdot\\lg(c/(\\mathrm{mg/l}))+98{,}78\\,\\mathrm{mV}$ ($R^2=0{,}999$)\n3. Näytteen $E=90{,}6$ mV: $\\lg(c/(\\mathrm{mg/l}))=\\frac{90{,}6-98{,}78}{-57{,}22}=0{,}1429$, joten $c=10^{0{,}1429}\\,\\mathrm{mg/l}=1{,}39\\,\\mathrm{mg/l}$.\n4. Tämä on puskuroidun liuoksen pitoisuus. Näyte laimennettiin 25,0 ml → 50,0 ml, joten kaivovedessä $c=2\\cdot1{,}39\\,\\mathrm{mg/l}=2{,}78\\,\\mathrm{mg/l}$.\n\n**Vastaus: kaivoveden fluoridipitoisuus on 2,78 mg/l** (ylittää raja-arvon 1,5 mg/l)\n\n**Sudenkuoppa:** laimennuksen unohtaminen antaa 1,39 mg/l. Pisteisiin sovitetaan suora eikä käyrää.",
+     "answer": "$E=-57{,}2\\,\\mathrm{mV}\\cdot\\lg(c/(\\mathrm{mg/l}))+98{,}8\\,\\mathrm{mV}$; kaivovesi $2{,}78\\,\\mathrm{mg/l}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Synteesikaavio 9.A kuvaa sekundäärisen amiinin Z ($\\ce{R-NH-CH3}$) valmistuksen kaksi viimeistä vaihetta. Vaiheessa 1 yhdisteen X typestä irrotetaan happamissa oloissa (HCl) tert-butoksikarbonyyliryhmä $\\ce{-COOC(CH3)3}$. Tuotteina ovat amiinin hydrokloridisuola Y ($\\ce{[RNH2CH3]+ Cl-}$), hiilidioksidi ja 2-metyylipropeeni. Vaiheessa 2 Y reagoi natriumhydroksidin kanssa, ja syntyy amiini Z, NaCl ja vesi. R on sama kaikissa yhdisteissä.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 12,
+     "prompt": "Synteesissä käytettiin 2,000 g yhdistettä X, ja amiinia Z saatiin 1,357 g (saanto 89 %). Z:n alkuaineanalyysi: C 67,26 %, H 8,47 %, N 4,36 %, O 19,91 % (massa-%). Määritä Z:n molekyylikaava.",
+     "hints": [
+      "Määritä ensin suhdekaava (100 g → ainemäärät → jaa pienimmällä). Moolimassa selviää saannosta: X:n ja Z:n ainemäärät ovat reaktioyhtälöiden mukaan samat, ja X eroaa Z:sta poistettavan ryhmän verran.",
+      "Suhdekaava on $\\ce{C18H27NO4}$ ($321{,}4$ g/mol). $M(\\ce{X})=M(\\ce{Z})+M(\\ce{CO2})+M(\\ce{C4H8})=M(\\ce{Z})+100{,}11\\,\\mathrm{g/mol}$. Teoreettinen Z:n massa on $1{,}357\\,\\mathrm{g}/0{,}89$."
+     ],
+     "solution": "1. Suhdekaava 100 g:sta:\n   - $n(\\ce{C})=\\frac{67{,}26}{12{,}01}=5{,}600$ mol, $n(\\ce{H})=\\frac{8{,}47}{1{,}008}=8{,}403$ mol\n   - $n(\\ce{N})=\\frac{4{,}36}{14{,}01}=0{,}3112$ mol, $n(\\ce{O})=\\frac{19{,}91}{16{,}00}=1{,}244$ mol\n   - jaetaan typellä: $18{,}00:27{,}00:1:4{,}00$, joten **suhdekaava on $\\ce{C18H27NO4}$** ($M=321{,}41$ g/mol).\n2. Saannon huomioiminen: jos saanto olisi 100 %, Z:aa syntyisi $\\frac{1{,}357\\,\\mathrm{g}}{0{,}89}=1{,}5247\\,\\mathrm{g}$.\n3. Stoikiometria: $n(\\ce{X})=n(\\ce{Y})=n(\\ce{Z})$. X:ssä typen vedyn tilalla on ryhmä, joka lähtee $\\ce{CO2}$:na ja $\\ce{C4H8}$:na, joten $M(\\ce{X})=M(\\ce{Z})+44{,}01+56{,}11=M(\\ce{Z})+100{,}11\\,\\mathrm{g/mol}$.\n4. $\\frac{2{,}000\\,\\mathrm{g}}{M(\\ce{Z})+100{,}11\\,\\mathrm{g/mol}}=\\frac{1{,}5247\\,\\mathrm{g}}{M(\\ce{Z})}\\Rightarrow M(\\ce{Z})=\\frac{1{,}5247\\cdot100{,}11}{2{,}000-1{,}5247}\\,\\mathrm{g/mol}=321\\,\\mathrm{g/mol}$\n5. $M(\\ce{Z})/M(\\ce{C18H27NO4})=321/321{,}4\\approx1$, joten molekyylikaava on sama kuin suhdekaava.\n\n**Vastaus: Z on $\\ce{C18H27NO4}$**\n\n**Sudenkuoppa:** suhdekaava ei yksin todista molekyylikaavaa. Kerroin 1 pitää perustella moolimassalla, joka lasketaan saannosta.",
+     "answer": "$\\ce{C18H27NO4}$ ($M\\approx321\\,\\mathrm{g/mol}$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 8,
+     "prompt": "Z liukenee veteen huonosti, mutta sen suola Y liukenee paremmin. Kun 0,028 mmol Y:tä liuotettiin veteen 0,100 litraksi, liuoksen pH oli 6,36 (25 °C). Laske amiinin Z emäsvakio.",
+     "hints": [
+      "Y on amiinin vastinhappo $\\ce{BH+}$, joka protolysoituu: $\\ce{BH+ + H2O <=> B + H3O+}$. Laske sen happovakio pH:sta ja muunna se emäsvakioksi.",
+      "$c(\\ce{BH+})=2{,}8\\cdot10^{-4}$ mol/l ja $[\\ce{H3O+}]=[\\ce{B}]=10^{-6{,}36}$ mol/l. Kun $K_a$ on laskettu, $K_b=K_w/K_a$."
+     ],
+     "solution": "1. $c(\\ce{Y})=\\frac{0{,}028\\cdot10^{-3}\\,\\mathrm{mol}}{0{,}100\\,\\mathrm{l}}=2{,}8\\cdot10^{-4}\\,\\mathrm{mol/l}$\n2. $[\\ce{H3O+}]=10^{-6{,}36}\\,\\mathrm{mol/l}=4{,}365\\cdot10^{-7}\\,\\mathrm{mol/l}$\n3. Tasapaino $\\ce{BH+ + H2O <=> B + H3O+}$ ($\\ce{BH+}$ = Y, B = Z): tasapainossa $[\\ce{B}]=[\\ce{H3O+}]=4{,}365\\cdot10^{-7}$ ja $[\\ce{BH+}]=2{,}8\\cdot10^{-4}-4{,}365\\cdot10^{-7}\\,\\mathrm{mol/l}$.\n4. $K_a=\\frac{[\\ce{B}][\\ce{H3O+}]}{[\\ce{BH+}]}=\\frac{(4{,}365\\cdot10^{-7})^2}{2{,}8\\cdot10^{-4}-4{,}365\\cdot10^{-7}}\\,\\mathrm{mol/l}=6{,}82\\cdot10^{-10}\\,\\mathrm{mol/l}$\n5. $K_b=\\frac{K_w}{K_a}=\\frac{1{,}0\\cdot10^{-14}\\,\\mathrm{mol^2/l^2}}{6{,}82\\cdot10^{-10}\\,\\mathrm{mol/l}}=1{,}5\\cdot10^{-5}\\,\\mathrm{mol/l}$\n\n**Vastaus: $K_b\\approx1{,}5\\cdot10^{-5}\\,\\mathrm{mol/l}$**\n\n**Sudenkuoppa:** pH:sta saadaan suoraan vain suolan (vastinhapon) $K_a$. Emäsvakio saadaan vasta muunnoksella $K_aK_b=K_w$.",
+     "answer": "$K_b\\approx1{,}5\\cdot10^{-5}\\,\\mathrm{mol/l}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Aineiston 10.A mukaan peroksidit (O–O-sidos) hapettavat värillisiä likamolekyylejä. Pelkkä vetyperoksidi valkaisee tehokkaasti vasta kuumassa pesussa. Pesuaineessa vetyperoksidi on sidottu natriumkarbonaattiin, ja koneessa se reagoi tetra-asetyylietyleenidiamiinin (TAED) kanssa. Tuotteena syntyy tehokkaampaa peretikkahappoa (natriumsuolana) ja diasetyylietyleenidiamiinia (DAED). Mangaani(II)- tai rauta(II)-suolat katalysoivat valkaisua, jolloin riittää vielä matalampi lämpötila. Rakennekaavat ovat aineistossa 10.B.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 5,
+     "prompt": "Kaliumjodidi katalysoi vetyperoksidin hajoamista vedeksi ja hapeksi kahdessa vaiheessa. Ensin vetyperoksidi hapettaa jodidi-ionit hypojodiitti-ioneiksi $\\ce{IO-}$. Sitten $\\ce{IO-}$ reagoi toisen vetyperoksidimolekyylin kanssa, ja syntyy jodidi-ioneja, vettä ja happea. Kirjoita vaiheiden reaktioyhtälöt ja anna jodin hapetusluvut eri vaiheissa.",
+     "hints": [
+      "Kirjoita kummankin vaiheen aineet ja tasapainota atomit ja varaukset. Hapen hapetusluku $\\ce{IO-}$-ionissa on −II.",
+      "Vaihe 1: $\\ce{H2O2 + I- -> H2O + IO-}$. Vaiheessa 2 jodidi palautuu, ja happikaasua vapautuu. $\\ce{IO-}$:ssa jodin hapetusluku saadaan varauksesta: $x+(-2)=-1$."
+     ],
+     "solution": "1. Vaihe 1: $\\ce{H2O2(aq) + I-(aq) -> H2O(l) + IO-(aq)}$\n2. Vaihe 2: $\\ce{IO-(aq) + H2O2(aq) -> H2O(l) + O2(g) + I-(aq)}$\n3. Kokonaisreaktio (jodidi kumoutuu, koska se on katalyytti): $\\ce{2H2O2(aq) -> 2H2O(l) + O2(g)}$\n4. Jodin hapetusluvut: $\\ce{I-}$:ssä **−I**, $\\ce{IO-}$:ssa **+I** ($x-2=-1$) ja lopussa taas −I. Jodi hapettuu vaiheessa 1 ja pelkistyy vaiheessa 2.\n\n**Vastaus: $\\ce{H2O2 + I- -> H2O + IO-}$ ja $\\ce{IO- + H2O2 -> H2O + O2 + I-}$; jodi −I → +I → −I**",
+     "answer": "$\\ce{H2O2 + I- -> H2O + IO-}$, $\\ce{IO- + H2O2 -> H2O + O2 + I-}$; I: −I → +I → −I",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 5,
+     "prompt": "Miksi pesuaineeseen lisätyn katalyytin ansiosta valkaiseva pesu onnistuu matalammassa lämpötilassa? Mitä ominaisuuksia kuluttajille myytävään pyykinpesuaineeseen sopivalta katalyytiltä vaaditaan?",
+     "hints": [
+      "Mieti, miksi lämpötilan nostaminen nopeuttaa reaktiota ja voiko saman vaikutuksen saada muulla tavalla. Ajattele ominaisuuksia kuluttajan, valmistajan ja ympäristön kannalta.",
+      "Katalyytti tarjoaa reitin, jonka aktivoitumisenergia on pienempi. Ominaisuuksiksi kelpaavat esimerkiksi hinta, säilyvyys, tehokkuus pieninä määrinä, vesiliukoisuus sekä turvallisuus ihmisille, tekstiileille ja ympäristölle."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- katalyytti tarjoaa reaktiolle toisen reitin, jonka **aktivoitumisenergia on pienempi**, joten riittävän moni törmäys johtaa reaktioon jo matalassa lämpötilassa\n- vähintään kolme perusteltua ominaisuutta, esimerkiksi:\n  - edullinen ja raaka-aineiltaan hyvin saatavilla\n  - säilyy hyvin pesuaineessa eikä hajoa varastoinnissa\n  - tehokas pienenä määränä ja toimii pesulämpötiloissa\n  - liukenee veteen\n  - turvallinen käyttäjälle eikä vahingoita tekstiilejä tai pesukonetta\n  - ympäristölle haitaton, ja sen tuotanto on ympäristöystävällistä\n\nEsimerkkivastaus: Valkaisureaktion nopeus riippuu siitä, kuinka suuri osa molekyyleistä ylittää aktivoitumisenergian. Ilman katalyyttiä tämä vaatii korkean lämpötilan. Mangaani- tai rautayhdiste muodostaa peroksidien kanssa reaktiivisia välituotteita, jolloin reaktio etenee reittiä, jonka aktivoitumisenergia on pienempi, ja pesu tehoaa jo 30 °C:ssa. Kuluttajatuotteen katalyytin pitää olla halpa, säilyä pesuaineessa pitkään, toimia pieninä pitoisuuksina ja olla turvallinen käyttäjälle, vaatteille ja vesistöille.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 6,
+     "prompt": "Vedessä TAED, vetyperoksidi ja natriumkarbonaatti reagoivat keskenään, ja syntyy DAED:a, peretikkahapon natriumsuolaa ja natriumvetykarbonaattia. Kirjoita reaktioyhtälö (lyhenteet TAED ja DAED sallittu) ja piirrä peretikkahapon natriumsuolan rakennekaava.",
+     "hints": [
+      "TAED:ssä on neljä asetyyliryhmää ja DAED:ssä kaksi. Montako peretikkahappoyksikköä yksi TAED siis tuottaa? Karbonaatti-ioni toimii emäksenä ja ottaa vastaan protonin.",
+      "Yksi TAED reagoi kahden $\\ce{H2O2}$:n kanssa ja antaa kaksi perasetaatti-ionia $\\ce{CH3COOO-}$. Kaksi karbonaatti-ionia neutraloi syntyvät protonit vetykarbonaatiksi."
+     ],
+     "solution": "1. TAED ($\\ce{C10H16N2O4}$) luovuttaa kaksi asetyyliryhmäänsä kahdelle vetyperoksidimolekyylille, ja kummastakin typestä tulee NH-ryhmä (DAED, $\\ce{C6H12N2O2}$).\n2. Syntyvä peretikkahappo luovuttaa protonin karbonaatille: $\\ce{CO3^2- + H+ -> HCO3-}$.\n3. Reaktioyhtälö:\n\n$$\\ce{TAED(aq) + 2H2O2(aq) + 2Na2CO3(aq) -> DAED(aq) + 2CH3COOONa(aq) + 2NaHCO3(aq)}$$\n\nTarkistus: C 12, H 20, N 2, O 14 ja Na 4 molemmin puolin.\n4. Peretikkahapon natriumsuola: $\\ce{CH3-C(=O)-O-O^{-}}$ $\\ce{Na+}$. Siinä on metyyliryhmä, karbonyylihiili ja peroksiryhmä, jonka uloimmassa happiatomissa on negatiivinen varaus, sekä erillinen natriumioni.",
+     "answer": "$\\ce{TAED + 2H2O2 + 2Na2CO3 -> DAED + 2CH3COOONa + 2NaHCO3}$; suola $\\ce{CH3C(=O)OO-}$ $\\ce{Na+}$",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "MEK-peroksidi syntyy butan-2-onista ja vetyperoksidista happamassa liuoksessa, ja sitä käytetään polymerointikatalyyttinä esimerkiksi lasikuituveneiden valmistuksessa. Sen molekyylikaava on $\\ce{C8H16O4}$, ja siinä on kuusiatominen rengas. O–O-sidokset eivät katkea reaktiossa. Esitä MEK-peroksidin rakennekaava.",
+     "hints": [
+      "$\\ce{C8H16O4}$ vastaa kahta butanonia ja kahta vetyperoksidia, joista lähtee kaksi vesimolekyyliä. Karbonyylihiilestä tulee kahden happiatomin välinen hiili. Miten kaksi C-atomia ja kaksi O–O-siltaa muodostavat kuusirenkaan?"
+     ],
+     "solution": "1. $\\ce{2C4H8O + 2H2O2 -> C8H16O4 + 2H2O}$, eli kaksi ketonia ja kaksi peroksidia liittyvät yhteen, ja vettä lohkeaa.\n2. Kummankin butanonin karbonyylihiili sitoutuu kahteen happiatomiin, jotka tulevat eri vetyperoksidimolekyyleistä. O–O-sidokset säilyvät.\n3. Rengas on C–O–O–C–O–O (1,2,4,5-tetraoksaani). Kummassakin rengashiilessä on lisäksi metyyli- ja etyyliryhmä.\n\n**Vastaus: 3,6-dietyyli-3,6-dimetyyli-1,2,4,5-tetraoksaani: kuusirengas, jossa kaksi O–O-siltaa vuorottelee kahden hiilen kanssa, ja kummassakin hiilessä on $\\ce{CH3}$ ja $\\ce{C2H5}$**",
+     "answer": "3,6-dietyyli-3,6-dimetyyli-1,2,4,5-tetraoksaani (rengas C–O–O–C–O–O, hiilissä $\\ce{CH3}$ ja $\\ce{C2H5}$)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Aineiston 11.A kuvaajassa on vuosilta 1970–2018 Itämeren pintaveden fosforikonsentraatio (mmol/m³), maa-alueilta tuleva fosforikuormitus ($10^6$ kg/vuosi) ja hapettoman pohjan pinta-ala ($10^3$ km²).",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 6,
+     "prompt": "Vuonna 1958 pintaveden fosforipitoisuus oli 8,36 µg/l. Kuinka moninkertaiseksi pitoisuus oli kasvanut vuoteen 2018 mennessä (vuoden 2018 arvo kuvaajasta)? Perustele laskulla.",
+     "hints": [
+      "Muunna vuoden 1958 massapitoisuus samaan yksikköön kuin kuvaajassa (mmol/m³): 1 m³ = 1 000 l, ja $M(\\ce{P})=30{,}97$ g/mol.",
+      "Vuonna 1958 pitoisuus oli $8{,}36\\,\\mathrm{mg/m^3}$ eli noin $0{,}270\\,\\mathrm{mmol/m^3}$. Lue kuvaajan loppupäästä vuoden 2018 arvo ja jaa."
+     ],
+     "solution": "1. $8{,}36\\,\\mathrm{\\mu g/l}=8{,}36\\cdot10^{-6}\\,\\mathrm{g/l}=8{,}36\\cdot10^{-3}\\,\\mathrm{g/m^3}$\n2. $n(\\ce{P})=\\frac{8{,}36\\cdot10^{-3}\\,\\mathrm{g}}{30{,}97\\,\\mathrm{g/mol}}=2{,}70\\cdot10^{-4}\\,\\mathrm{mol}$ kuutiometrissä eli $0{,}270\\,\\mathrm{mmol/m^3}$\n3. Kuvaajasta vuoden 2018 pitoisuus on noin $1{,}05$–$1{,}1\\,\\mathrm{mmol/m^3}$.\n4. $\\frac{1{,}05\\,\\mathrm{mmol/m^3}}{0{,}270\\,\\mathrm{mmol/m^3}}\\approx3{,}9$ (arvolla 1,10 saadaan 4,1)\n\n**Vastaus: pitoisuus kasvoi noin nelinkertaiseksi (3,9–4,1-kertaiseksi)**",
+     "answer": "noin 4-kertaiseksi ($1958$: $0{,}270\\,\\mathrm{mmol/m^3}$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.2",
+     "points": 7,
+     "prompt": "Kuvaa, miten maalta tuleva fosforikuormitus ja hapettomien pohjien ala ovat kehittyneet vuosikymmenittäin, ja arvioi niiden yhteyttä pintaveden fosforikonsentraatioon.",
+     "hints": [
+      "Tarkastele käyriä jaksoissa (esim. 1970–1995 ja 1995–2018). Missä vaiheessa kuormitus kääntyy laskuun? Muuttuuko hapettoman pohjan käyttäytyminen jossain vaiheessa pysyvästi?",
+      "Vertaa: seuraako pintaveden fosfori koko jakson ajan kuormitusta vai hapettoman pohjan pinta-alaa? Hapettomalta pohjalta fosfaattia vapautuu sedimentistä takaisin veteen (sisäinen kuormitus)."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- **hapeton pohja:** 1970-luvun puoliväliin asti lähes nolla, sen jälkeen vuoteen 2002 asti voimakasta vaihtelua (0 – noin $35\\cdot10^3$ km²), mutta pinta-ala palasi toistuvasti lähelle nollaa. Noin 2003–2006 pinta-ala kasvoi selvästi ja on pysynyt korkealla tasolla (noin $30$–$57\\cdot10^3$ km²) palaamatta nollaan.\n- **kuormitus maalta:** kasvoi tasaisesti 1970-luvulta 1990-luvulle (noin $17\\to50\\cdot10^6$ kg/vuosi) ja on laskenut siitä lähtien (noin $25\\cdot10^6$ kg/vuosi 2010-luvulla). Lyhyen aikavälin vaihtelu on samansuuruista koko jakson.\n- **yhteys:** 1970–1990-luvun alussa pintaveden fosfori kasvoi yhdessä kuormituksen kanssa, mutta 1990-luvun lopulta alkaen se on kasvanut, vaikka kuormitus on vähentynyt. Pintaveden fosfori ei siis selity pelkällä ulkoisella kuormituksella.\n- pintaveden fosfori ja hapettoman pohjan pinta-ala vaihtelevat samassa tahdissa: huiput ja pohjat osuvat samoille vuosille (esim. 1990-luvun alun huippu ja noin vuoden 2001 minimi), ja molemmat ovat kasvaneet 2000-luvulla.\n\nEsimerkkivastaus: Maalta tuleva fosforikuormitus kasvoi 1970-luvulta 1990-luvulle ja on sen jälkeen puolittunut. Hapettoman pohjan pinta-ala vaihteli 1970- ja 1980-luvuilla ja 1990-luvulla voimakkaasti, mutta aina välillä happitilanne palautui. 2000-luvun puolivälistä alkaen laaja hapeton alue on ollut pysyvä. Pintaveden fosforikonsentraatio seurasi aluksi kuormitusta, mutta 1990-luvun lopusta alkaen se on noussut kuormituksen laskusta huolimatta ja myötäilee hapettoman pohjan pinta-alaa. Tämä viittaa sisäiseen kuormitukseen: hapettomissa oloissa pohjasedimenttiin sitoutunutta fosforia vapautuu takaisin veteen, ja rehevöityminen ylläpitää itse itseään.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 7,
+     "prompt": "Osa fosforista sitoutuu Itämeren pohjaan vivianiittina $\\ce{Fe3(PO4)2*8H2O}$. Samaa ilmiötä tutkitaan fosfaatin saostamiseen jätevedenpuhdistamoilla $\\ce{Fe^3+}$-ionien avulla. Miksi $\\ce{Fe^3+}$-ionien on ensin pelkistyttävä, jotta vivianiittia muodostuu? Mitä seuraa, jos fosforia ei kerätä talteen, sekä lähivuosina että pitkällä aikavälillä?",
+     "hints": [
+      "Laske raudan hapetusluku vivianiitissa (fosfaatti-ionin varaus on −3). Mieti sitten fosforia sekä vesistöjen ravinteena että rajallisena luonnonvarana.",
+      "Vivianiitissa $3x+2\\cdot(-3)=0$, joten $x=+2$. Seurauksia: rehevöityminen, happikato, sinilevät ja fosforin varastoituminen pohjaan. Pitkällä aikavälillä fosfori on uusiutumaton ja ehtyvä lannoiteraaka-aine."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- vivianiitissa rauta on hapetusasteella +II ($3\\cdot(+2)+2\\cdot(-3)=0$), joten $\\ce{Fe^3+}$ on ensin pelkistettävä $\\ce{Fe^2+}$:ksi: $\\ce{Fe^3+ + e- -> Fe^2+}$\n- vähintään kaksi perusteltua seurausta, esimerkiksi:\n  - fosforia päätyy vesistöihin, ja rehevöityminen, levä- ja sinileväkukinnat lisääntyvät\n  - happikato ja hapettomat pohja-alueet laajenevat, ja pohjasta vapautuu lisää fosforia (sisäinen kuormitus)\n  - veden laatu, virkistyskäyttö ja luonnon monimuotoisuus heikkenevät\n  - fosfori on uusiutumaton luonnonvara: louhittavat fosfaattivarannot ehtyvät, lannoitteiden ja ruoan hinta nousee, ja ruokaturva voi heiketä. Varannot ovat harvojen maiden hallussa, mikä lisää geopoliittisia jännitteitä.\n  - pitkällä aikavälillä ekosysteemin muutokset voivat olla pysyviä, koska sedimenttiin kertynyt fosfori ylläpitää rehevöitymistä vuosikymmeniä\n\nEsimerkkivastaus: Vivianiitissa raudan hapetusluku on +II, joten jätevesiin lisättyjen $\\ce{Fe^3+}$-ionien on ensin pelkistyttävä $\\ce{Fe^2+}$-ioneiksi, ennen kuin ne voivat saostua fosfaatin kanssa vivianiitiksi. Jos fosforia ei kerätä talteen, se päätyy vesistöihin ja lisää rehevöitymistä, sinileväkukintoja ja happikatoa. Hapettomilta pohjilta vapautuu lisää fosforia, joten kierre voimistuu. Pitkällä aikavälillä ongelma on myös se, että fosfori on uusiutumaton ja välttämätön lannoitteiden raaka-aine. Kun sitä valuu mereen eikä kierrätetä, louhittavat varannot ehtyvät, ruoan tuotanto kallistuu ja riippuvuus harvoista tuottajamaista kasvaa.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

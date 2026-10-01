@@ -1,0 +1,426 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2025S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2025S_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-09-25_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "answer": 5,
+    "note": "Vastaa viiteen tehtävään. Käytössä taulukkokirjat ja perusohjelmat, laskinohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuusi monivalintaa (pudotusvalikko, 2 p./kohta), perusteluja ei tarvita:\n\n- **1.1** Paljonko on 12 % luvusta 34?\n- **1.2** Ratkaise $12+x^3=4$.\n- **1.3** Suorakulmaisen kolmion kateetti on 12 ja sen vastainen kulma $34^\\circ$. Kuinka pitkä on hypotenuusa kokonaisluvuksi pyöristettynä?\n- **1.4** Piste $(3,4)$ on ympyrällä, jonka keskipiste on $(1,2)$. Laske ympyrän säde.\n- **1.5** Sievennä $\\log_a 1+\\log_a 2^3+\\log_a 4$ ($a>0$).\n- **1.6** Laske $g'(4)$, kun $g(x)=1+2x-x^3$.\n\nVaihtoehdot näkyvät alkuperäisessä tehtävässä.",
+     "hints": [
+      "Jokainen kohta on yhden kaavan sovellus: prosenttikerroin, kuutiojuuri, sinin määritelmä suorakulmaisessa kolmiossa, kahden pisteen etäisyys, logaritmien summasääntö ja potenssin derivointi.",
+      "Kohta kohdalta:\n\n- 1.2: $x^3=-8$; kuutiojuuri negatiivisesta luvusta on olemassa.\n- 1.3: $\\sin 34^\\circ=\\frac{12}{c}$. Tarkista, että laskin on asteissa.\n- 1.5: $\\log_a u+\\log_a v=\\log_a(uv)$ ja $\\log_a 1=0$.\n- 1.6: $g'(x)=2-3x^2$."
+     ],
+     "solution": "Kirjaimet: A = pudotusvalikon ylin varsinainen vaihtoehto (tyhjää riviä ei lasketa) alkuperäisen koenäkymän järjestyksessä, B = toinen jne.\n\n**1.1** $0{,}12\\cdot 34=4{,}08$. Vaihtoehto **D** ($4{,}08$).\n\n**1.2** $x^3=4-12=-8$, joten $x=\\sqrt[3]{-8}=-2$. Vaihtoehto **E** ($x=-2$).\n\n**1.3** Kateetti on kulman vastainen, joten $\\sin 34^\\circ=\\frac{12}{c}$ ja $c=\\frac{12}{\\sin 34^\\circ}\\approx 21{,}46\\approx 21$. Vaihtoehto **P** (luku 21; vaihtoehdot ovat luvut 6–25 järjestyksessä).\n\n**1.4** $r=\\sqrt{(3-1)^2+(4-2)^2}=\\sqrt{8}$. Vaihtoehto **H** ($\\sqrt8$).\n\n**1.5** $\\log_a 1=0$, joten summa on $\\log_a(8\\cdot 4)=\\log_a 32=\\log_a 2^5=5\\log_a 2$. Vaihtoehto **C** ($5\\log_a 2$).\n\n**1.6** $g'(x)=2-3x^2$, joten $g'(4)=2-48=-46$. Vaihtoehto **B** ($-46$).\n\n**Vastaus: 1.1 D ($4{,}08$) · 1.2 E ($-2$) · 1.3 P ($21$) · 1.4 H ($\\sqrt8$) · 1.5 C ($5\\log_a 2$) · 1.6 B ($-46$)**\n\n**Sudenkuoppa:** kohdassa 1.3 laskin radiaanitilassa antaa hypotenuusaksi noin 23.",
+     "answer": "1.1 D ($4{,}08$) · 1.2 E ($-2$) · 1.3 P ($21$) · 1.4 H ($\\sqrt8$) · 1.5 C ($5\\log_a 2$) · 1.6 B ($-46$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Määritä pisteiden $(5,0)$ ja $(0,-3)$ kautta kulkevan suoran yhtälö.",
+     "hints": [
+      "Laske kulmakerroin $k=\\frac{\\Delta y}{\\Delta x}$. Piste $(0,-3)$ on $y$-akselilla, joten se kertoo suoraan vakiotermin."
+     ],
+     "solution": "1. Kulmakerroin: $k=\\frac{0-(-3)}{5-0}=\\frac35$.\n2. Suora leikkaa $y$-akselin pisteessä $(0,-3)$, joten vakiotermi on $-3$.\n3. $y=\\frac35x-3$. Tarkistus: $x=5$ antaa $y=3-3=0$.\n\n**Vastaus: $y=\\frac35x-3$ (eli $3x-5y-15=0$)**",
+     "answer": "$y=\\frac35x-3$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 4,
+     "prompt": "Derivoi $f(x)=3x^2+e^{4x}$.",
+     "hints": [
+      "Derivoi termeittäin. Eksponenttitermissä tarvitset ketjusääntöä: $D\\,e^{kx}=ke^{kx}$."
+     ],
+     "solution": "1. $D(3x^2)=6x$.\n2. Ketjusäännöllä $D\\,e^{4x}=e^{4x}\\cdot 4=4e^{4x}$.\n3. $f'(x)=6x+4e^{4x}$.\n\n**Vastaus: $f'(x)=6x+4e^{4x}$**\n\n**Sudenkuoppa:** $D\\,e^{4x}=4xe^{4x}$ on väärin. Eksponentin derivaatta on vakio 4.",
+     "answer": "$f'(x)=6x+4e^{4x}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "c",
+     "points": 4,
+     "prompt": "Määritä $\\int\\cos(5x)\\,dx$.",
+     "hints": [
+      "Mikä funktio derivoituu kosiniksi? Ketjusääntö tuo kertoimen 5, joten integroidessa se pitää jakaa pois. Muista integroimisvakio."
+     ],
+     "solution": "1. $D\\sin(5x)=5\\cos(5x)$, joten $D\\left(\\frac15\\sin(5x)\\right)=\\cos(5x)$.\n2. $\\int\\cos(5x)\\,dx=\\frac15\\sin(5x)+C$.\n\n**Vastaus: $\\frac15\\sin(5x)+C$**\n\n**Sudenkuoppa:** kertominen viidellä jakamisen sijaan tai integroimisvakion $C$ unohtaminen.",
+     "answer": "$\\frac15\\sin(5x)+C$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Ratkaise epäyhtälö $(x-1)(x+3)>-3$.",
+     "hints": [
+      "Kerro vasen puoli auki ja siirrä kaikki termit samalle puolelle, jotta toisella puolella on nolla.",
+      "Epäyhtälö sievenee muotoon $x^2+2x>0$, eli $x(x+2)>0$. Etsi nollakohdat ja mieti, millä väleillä ylöspäin aukeava paraabeli on positiivinen."
+     ],
+     "solution": "1. $(x-1)(x+3)=x^2+2x-3$, joten epäyhtälö on $x^2+2x-3>-3$, eli $x^2+2x>0$.\n2. Nollakohdat: $x(x+2)=0$, kun $x=0$ tai $x=-2$.\n3. $x^2+2x$ on ylöspäin aukeava paraabeli, joten se on positiivinen nollakohtien ulkopuolella.\n\n**Vastaus: $x<-2$ tai $x>0$**\n\n**Sudenkuoppa:** tekijöiden käsittely erikseen ($x-1>-3$ ja $x+3>-3$) on virheellinen. Tulon nollasääntöä voi käyttää vain, kun toisella puolella on nolla.",
+     "answer": "$x<-2$ tai $x>0$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Ratkaise yhtälö $(x+e)(x^2-\\pi^2)=0$.",
+     "hints": [
+      "Tulo on nolla, kun jokin tekijöistä on nolla. Toinen tekijä on kahden neliön erotus.",
+      "$x^2-\\pi^2=(x-\\pi)(x+\\pi)$. Huomaa, että $e$ ja $\\pi$ ovat vakioita (Neperin luku ja pii)."
+     ],
+     "solution": "1. Tulon nollasäännön mukaan $x+e=0$ tai $x^2-\\pi^2=0$.\n2. $x+e=0$ antaa $x=-e$.\n3. $x^2=\\pi^2$ antaa $x=\\pi$ tai $x=-\\pi$.\n\n**Vastaus: $x=-e$, $x=-\\pi$ tai $x=\\pi$**\n\n**Sudenkuoppa:** ratkaisun $x=-\\pi$ unohtaminen tai sulkujen kertominen auki, jolloin saadaan hankala kolmannen asteen yhtälö.",
+     "answer": "$x\\in\\{-e,\\ -\\pi,\\ \\pi\\}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Ratkaise yhtälö $1-(\\cos x)^2=(\\sin 2x)^2$ välillä $-\\pi\\le x\\le\\pi$.",
+     "hints": [
+      "Kirjoita vasen puoli sinin avulla ($\\sin^2x+\\cos^2x=1$) ja oikea puoli kaksinkertaisen kulman kaavalla $\\sin 2x=2\\sin x\\cos x$.",
+      "Yhtälö saa muodon $\\sin^2x=4\\sin^2x\\cos^2x$, eli $\\sin^2x\\,(1-4\\cos^2x)=0$. Älä jaa lausekkeella $\\sin^2x$, vaan käytä tulon nollasääntöä: $\\sin x=0$ tai $\\cos x=\\pm\\frac12$."
+     ],
+     "solution": "1. $1-\\cos^2x=\\sin^2x$ ja $(\\sin 2x)^2=(2\\sin x\\cos x)^2=4\\sin^2x\\cos^2x$.\n2. Yhtälö on $\\sin^2x=4\\sin^2x\\cos^2x$, eli $\\sin^2x\\,(1-4\\cos^2x)=0$.\n3. Tulon nollasäännöllä $\\sin x=0$ tai $\\cos^2x=\\frac14$.\n4. $\\sin x=0$ välillä $[-\\pi,\\pi]$: $x=-\\pi$, $x=0$ tai $x=\\pi$.\n5. $\\cos x=\\frac12$: $x=\\pm\\frac{\\pi}{3}$. $\\cos x=-\\frac12$: $x=\\pm\\frac{2\\pi}{3}$.\n\n**Vastaus: $x\\in\\left\\{-\\pi,\\ -\\frac{2\\pi}{3},\\ -\\frac{\\pi}{3},\\ 0,\\ \\frac{\\pi}{3},\\ \\frac{2\\pi}{3},\\ \\pi\\right\\}$**\n\n**Sudenkuoppa:** yhtälön jakaminen lausekkeella $\\sin^2x$ hävittää ratkaisut $0$ ja $\\pm\\pi$. Myös negatiiviset kulmat ja $\\cos x=-\\frac12$ unohtuvat helposti.",
+     "answer": "$x\\in\\{-\\pi,-\\frac{2\\pi}{3},-\\frac{\\pi}{3},0,\\frac{\\pi}{3},\\frac{2\\pi}{3},\\pi\\}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Lukujen $x_1,\\dots,x_n$ keskiarvo on $a$, ja $b>a$. Todista, että lukujen $x_1,\\dots,x_n,b$ keskiarvo on suurempi kuin $a$.",
+     "hints": [
+      "Keskiarvon määritelmästä $x_1+\\dots+x_n=na$. Kirjoita uusi keskiarvo tämän avulla.",
+      "Uusi keskiarvo on $\\frac{na+b}{n+1}$. Vertaa sitä lukuun $a=\\frac{na+a}{n+1}$ ja käytä oletusta $b>a$."
+     ],
+     "solution": "1. Keskiarvon määritelmän mukaan $\\frac{x_1+\\dots+x_n}{n}=a$, joten $x_1+\\dots+x_n=na$.\n2. Uusi keskiarvo on $\\frac{x_1+\\dots+x_n+b}{n+1}=\\frac{na+b}{n+1}$.\n3. Koska $b>a$, on $na+b>na+a=(n+1)a$.\n4. Jaetaan positiivisella luvulla $n+1$: $\\frac{na+b}{n+1}>a$. $\\square$\n\n**Sudenkuoppa:** muutaman numeroesimerkin laskeminen ei ole todistus. Ketju, joka alkaa väitteestä ja päätyy oletukseen $b>a$, todistaa vain väärän suunnan, ellei jokaista vaihetta perustella yhtäpitäväksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Keksi lukujoukko, jonka moodi on 1, keskiarvo 10 ja mediaani 100, tai osoita, ettei sellaista ole.",
+     "hints": [
+      "Lukujen ei tarvitse olla positiivisia. Mediaani 100 vaatii, että puolet luvuista on vähintään 100, jolloin keskiarvon painaminen kymmeneen vaatii yhden hyvin negatiivisen luvun.",
+      "Kokeile parillista määrää lukuja, jolloin mediaani on kahden keskimmäisen keskiarvo, esimerkiksi $1$ ja $199$. Luku 1 on esiinnyttävä useammin kuin mikään muu. Valitse lopuksi pienin luku niin, että summa on $10$ kertaa lukujen määrä."
+     ],
+     "solution": "**Esimerkki:** $-542,\\ 1,\\ 1,\\ 199,\\ 200,\\ 201$.\n\n1. **Moodi:** luku 1 esiintyy kahdesti ja muut kerran, joten moodi on 1.\n2. **Mediaani:** lukuja on kuusi ja ne ovat suuruusjärjestyksessä, joten mediaani on kahden keskimmäisen keskiarvo $\\frac{1+199}{2}=100$.\n3. **Keskiarvo:** summa on $-542+1+1+199+200+201=60$, joten keskiarvo on $\\frac{60}{6}=10$.\n\n**Miten esimerkki löytyi:** valittiin keskimmäisiksi 1 ja 199 (keskiarvo 100) ja toiseksi pienimmäksi 1 (moodi). Suurimmiksi valittiin eri luvut 200 ja 201, jotta mikään muu luku ei esiinny kahdesti. Lopuksi pienin luku $m$ ratkaistiin ehdosta $m+602=60$.\n\n**Vastaus: esimerkiksi $-542, 1, 1, 199, 200, 201$ (moodi 1, mediaani 100, keskiarvo 10).**\n\n**Sudenkuoppa:** päätellään, ettei esimerkkiä ole, koska luvut oletetaan huomaamatta positiivisiksi.",
+     "answer": "Esim. $-542,\\ 1,\\ 1,\\ 199,\\ 200,\\ 201$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Funktio on $f(x,y)=xy$. Mitkä kaikki arvot $f$ saa, kun piste $(x,y)$ kulkee ympyrää $x^2+y^2=4$ pitkin?",
+     "hints": [
+      "Ympyrän pisteet voi esittää parametrimuodossa $x=2\\cos t$, $y=2\\sin t$. Toinen tapa: ratkaise $y=\\pm\\sqrt{4-x^2}$ ja tutki yhden muuttujan funktiota derivaatan avulla.",
+      "Parametrimuodossa $f=4\\sin t\\cos t=2\\sin 2t$. Mitä arvoja $\\sin 2t$ saa, kun $t$ käy läpi välin $[0,2\\pi]$?"
+     ],
+     "solution": "1. Ympyrän $x^2+y^2=4$ keskipiste on origo ja säde 2, joten sen pisteet ovat täsmälleen $(2\\cos t,\\ 2\\sin t)$, $t\\in[0,2\\pi]$.\n2. Sijoitus: $f(2\\cos t,\\ 2\\sin t)=4\\sin t\\cos t=2\\sin 2t$.\n3. Kun $t$ käy läpi välin $[0,2\\pi]$, $2t$ käy läpi välin $[0,4\\pi]$, ja $\\sin 2t$ saa kaikki arvot väliltä $[-1,1]$.\n4. Siis $f$ saa ympyrällä kaikki arvot väliltä $[-2,2]$. Suurin arvo $2$ saadaan esimerkiksi pisteessä $(\\sqrt2,\\sqrt2)$ ja pienin $-2$ pisteessä $(-\\sqrt2,\\sqrt2)$.\n\n(Tarkistus toisella tavalla: $(x-y)^2\\ge 0$ antaa $2xy\\le x^2+y^2=4$, eli $xy\\le 2$, ja $(x+y)^2\\ge 0$ antaa $xy\\ge -2$.)\n\n**Vastaus: $f$ saa kaikki arvot väliltä $[-2,2]$.**\n\n**Sudenkuoppa:** ilmoitetaan vain suurin ja pienin arvo. Kysytään kaikkia arvoja, joten on perusteltava, että myös välissä olevat arvot saavutetaan (jatkuvuus tai parametrimuoto).",
+     "answer": "$[-2,\\ 2]$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Kuusi laskua, joihin vastataan pelkällä kokonaisluvuksi pyöristetyllä likiarvolla. Kohdissa 7.1 ja 7.2 kolmion kärjet ovat $(12,3)$, $(-2,9)$ ja $(4,20)$. Kohdissa 7.5 ja 7.6 $\\bar u=\\bar i+2\\bar j$ ja $\\bar v=2\\bar i-2\\bar j$.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 2,
+     "prompt": "Laske kolmion pinta-ala $A_1$.",
+     "hints": [
+      "Muodosta kahden sivun vektorit samasta kärjestä, esimerkiksi $\\overline{PQ}=(-14,6)$ ja $\\overline{PR}=(-8,17)$. Ala on $\\frac12|x_1y_2-x_2y_1|$."
+     ],
+     "solution": "1. Kärjestä $P=(12,3)$: $\\overline{PQ}=(-14,\\ 6)$ ja $\\overline{PR}=(-8,\\ 17)$.\n2. $A_1=\\frac12\\left|(-14)\\cdot 17-6\\cdot(-8)\\right|=\\frac12|-238+48|=\\frac12\\cdot 190=95$.\n\n**Vastaus: $A_1=95$**",
+     "answer": "$95$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 2,
+     "prompt": "Laske kolmion piiri $p$.",
+     "hints": [
+      "Laske kaikkien kolmen sivun pituudet etäisyyden kaavalla ja laske ne yhteen. Pyöristä vasta lopuksi."
+     ],
+     "solution": "1. $\\sqrt{14^2+6^2}=\\sqrt{232}\\approx 15{,}23$.\n2. $\\sqrt{6^2+11^2}=\\sqrt{157}\\approx 12{,}53$.\n3. $\\sqrt{8^2+17^2}=\\sqrt{353}\\approx 18{,}79$.\n4. $p\\approx 15{,}23+12{,}53+18{,}79\\approx 46{,}55\\approx 47$.\n\n**Vastaus: $p\\approx 47$**\n\n**Sudenkuoppa:** välitulosten pyöristäminen kokonaisluvuiksi ennen yhteenlaskua voi antaa luvun 46.",
+     "answer": "$47$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.3",
+     "points": 2,
+     "prompt": "Suoran ympyrälieriön korkeus on 13 ja pohjan säde 4. Laske vaipan pinta-ala $A_2$.",
+     "hints": [
+      "Vaippa on levitettynä suorakulmio, jonka leveys on pohjaympyrän kehä $2\\pi r$ ja korkeus $h$."
+     ],
+     "solution": "1. $A_2=2\\pi rh=2\\pi\\cdot 4\\cdot 13=104\\pi\\approx 326{,}7\\approx 327$.\n\n**Vastaus: $A_2\\approx 327$**\n\n**Sudenkuoppa:** pohjien alojen lisääminen mukaan: kysytään vain vaippaa.",
+     "answer": "$327$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.4",
+     "points": 2,
+     "prompt": "Laske pisteen $(-20,6)$ etäisyys $d$ suorasta $2x+y+5=0$.",
+     "hints": [
+      "Pisteen $(x_0,y_0)$ etäisyys suorasta $ax+by+c=0$ on $\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$."
+     ],
+     "solution": "1. $d=\\frac{|2\\cdot(-20)+6+5|}{\\sqrt{2^2+1^2}}=\\frac{|-29|}{\\sqrt5}=\\frac{29}{\\sqrt5}\\approx 12{,}97\\approx 13$.\n\n**Vastaus: $d\\approx 13$**",
+     "answer": "$13$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.5",
+     "points": 2,
+     "prompt": "Laske vektorien $\\bar u$ ja $\\bar v$ välinen kulma $\\alpha$ asteina.",
+     "hints": [
+      "$\\cos\\alpha=\\frac{\\bar u\\cdot\\bar v}{|\\bar u|\\,|\\bar v|}$. Negatiivinen pistetulo tarkoittaa tylppää kulmaa."
+     ],
+     "solution": "1. $\\bar u\\cdot\\bar v=1\\cdot 2+2\\cdot(-2)=-2$, $|\\bar u|=\\sqrt5$ ja $|\\bar v|=\\sqrt8$.\n2. $\\cos\\alpha=\\frac{-2}{\\sqrt{40}}\\approx -0{,}316$, joten $\\alpha\\approx 108{,}4^\\circ\\approx 108^\\circ$.\n\n**Vastaus: $\\alpha\\approx 108^\\circ$**\n\n**Sudenkuoppa:** itseisarvon ottaminen pistetulosta antaa suplementtikulman $72^\\circ$.",
+     "answer": "$108^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.6",
+     "points": 2,
+     "prompt": "Laske vektorin $4\\bar u-7\\bar v$ pituus $L$.",
+     "hints": [
+      "Laske ensin vektori koordinaateittain: $4\\bar u=4\\bar i+8\\bar j$ ja $7\\bar v=14\\bar i-14\\bar j$. Pituus on $\\sqrt{x^2+y^2}$."
+     ],
+     "solution": "1. $4\\bar u-7\\bar v=(4-14)\\bar i+(8+14)\\bar j=-10\\bar i+22\\bar j$.\n2. $L=\\sqrt{(-10)^2+22^2}=\\sqrt{584}\\approx 24{,}2\\approx 24$.\n\n**Vastaus: $L\\approx 24$**",
+     "answer": "$24$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Auri haluaa säästää kolmessa vuodessa 7 500 € pianoa varten. Joka kuukausi hän tallettaa tilille saman summan heti kuun alussa (ennen kuin pankkipäivä alkaa). Tilin nettokorko on 2,5 % vuodessa, ja korko hyvitetään tilille vuoden lopussa. Kuukaudet oletetaan yhtä pitkiksi, ja rahat kerryttävät korkoa koko ajan, jonka ne ovat tilillä. Kuinka suuri kuukausitalletuksen on oltava?",
+     "hints": [
+      "Merkitse kuukausitalletusta kirjaimella $x$. Vuoden sisällä korko lasketaan yksinkertaisena korkona talletuksen tilillä oloajalle: tammikuun talletus on tilillä 12 kuukautta, helmikuun 11 ja niin edelleen. Vuoden vaihtuessa korko lisätään pääomaan, jolloin se alkaa kerryttää korkoa.",
+      "Yhden vuoden talletukset ja niiden korko ovat vuoden lopussa $12x+\\frac{0{,}025}{12}(12+11+\\dots+1)x=12{,}1625x$. Ensimmäisen vuoden summa kasvaa vielä kaksi vuotta korkoa korolle (kerroin $1{,}025^2$) ja toisen vuoden summa yhden vuoden."
+     ],
+     "solution": "1. Olkoon kuukausitalletus $x$ euroa. Kuukauden korkokanta on $\\frac{2{,}5\\,\\%}{12}$, ja korko lisätään tilille vuoden lopussa.\n2. Vuoden $m$:nnen kuukauden alussa tehty talletus on tilillä vuoden loppuun $13-m$ kuukautta, joten sille kertyy korkoa $\\frac{0{,}025}{12}(13-m)x$.\n3. Yhden vuoden aikana talletetut rahat ja niiden korko ovat vuoden lopussa $12x+\\frac{0{,}025}{12}(1+2+\\dots+12)x=12x+\\frac{0{,}025\\cdot 78}{12}x=12{,}1625x$.\n4. Jokainen vuosi on samanlainen. Ensimmäisen vuoden summa kasvaa vielä kaksi kokonaista vuotta (kerroin $1{,}025^2$), toisen vuoden summa yhden vuoden (kerroin $1{,}025$) ja kolmannen vuoden summa ei enää kasva.\n5. Kolmen vuoden kuluttua tilillä on $12{,}1625x\\,(1{,}025^2+1{,}025+1)=12{,}1625\\cdot 3{,}075625\\,x\\approx 37{,}407x$.\n6. Ehto: $37{,}407x=7500$, joten $x\\approx 200{,}50$ €.\n\n(Tarkistus kuukausi kerrallaan taulukkolaskennalla antaa saman loppusaldon 7 500 €.)\n\n**Vastaus: noin 200,50 € kuukaudessa.**\n\n**Sudenkuoppa:** koko vuoden talletukset käsitellään yhtenä vuoden alun talletuksena, tai koron korkoa lasketaan kuukausittain, vaikka korko maksetaan vain kerran vuodessa.",
+     "answer": "noin 200,50 €",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Gizan suuren pyramidin korkeus on 146,6 m, ja sen neliöpohjan sivu on 230,3 m. Sirius pitää pyramidia säännöllisen oktaedrin puolikkaana ja laskee tilavuuden oktaedrin kaavalla $V=\\frac{a^3\\sqrt2}{3}$ puolitettuna, jolloin tulokseksi tulee noin $2{,}88\\cdot 10^6\\ \\text{m}^3$. Tulos ei täsmää lähteen kanssa. Mikä meni vikaan? Laske oikea tilavuus.",
+     "hints": [
+      "Säännöllisen oktaedrin kaikki särmät ovat yhtä pitkiä. Kuinka korkea olisi pyramidi, jos se olisi oktaedrin puolikas, jonka särmä on 230,3 m? Vertaa annettuun korkeuteen.",
+      "Oktaedrin puolikkaan korkeus on puolet neliön lävistäjästä, eli $\\frac{a}{\\sqrt2}\\approx 162{,}8$ m. Oikea tilavuus saadaan pyramidin kaavalla $V=\\frac13A_ph$."
+     ],
+     "solution": "1. Säännöllisen oktaedrin puolikas on neliöpohjainen pyramidi, jonka kaikki särmät ovat yhtä pitkiä. Sen korkeus olisi puolet pohjan lävistäjästä: $\\frac{230{,}3}{\\sqrt2}\\approx 162{,}8$ m.\n2. Gizan pyramidin korkeus on vain 146,6 m, joten se ei ole oktaedrin puolikas. Sen sivusärmä on Pythagoraan lauseella $\\sqrt{\\left(\\frac{230{,}3}{\\sqrt2}\\right)^2+146{,}6^2}\\approx 219{,}1$ m, eli lyhyempi kuin pohjan sivu.\n3. Siriuksen virhe on siis väärä oletus pyramidin muodosta: oktaedrin kaava ei sovi, ja se antaa liian suuren tuloksen.\n4. Oikea tilavuus: $V=\\frac13A_ph=\\frac13\\cdot 230{,}3^2\\cdot 146{,}6\\approx 2\\,592\\,000\\ \\text{m}^3$.\n\n**Vastaus: pyramidi ei ole säännöllisen oktaedrin puolikas (se on sitä matalampi). Oikea tilavuus on $V=\\frac13\\cdot 230{,}3^2\\cdot 146{,}6\\approx 2{,}59\\cdot 10^6\\ \\text{m}^3$.**\n\n**Sudenkuoppa:** tilavuuden ilmoittaminen kymmenen merkitsevän numeron tarkkuudella, vaikka lähtötiedoissa on vain neljä.",
+     "answer": "$V\\approx 2{,}59\\cdot 10^6\\ \\text{m}^3$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Vega etsii funktion $g(x)=x^3-2x+1$ suurimman arvon välillä $[-1,1]$. Hän laskee derivaatan nollakohdat $x=\\pm\\sqrt{\\frac23}$, vertaa arvoja $g\\left(\\sqrt{\\frac23}\\right)\\approx -0{,}09$ ja $g\\left(-\\sqrt{\\frac23}\\right)=1+\\frac{4\\sqrt6}{9}\\approx 2{,}09$ ja toteaa suurimmaksi arvoksi $1+\\frac{4\\sqrt6}{9}$. Onko päättely oikein? Perustele tai korjaa.",
+     "hints": [
+      "Suljetulla välillä jatkuva funktio saa suurimman arvonsa joko derivaatan nollakohdassa tai välin päätepisteessä. Mitkä kohdat Vega jätti tutkimatta?",
+      "Laske $g(-1)$ ja $g(1)$ ja vertaa niitä derivaatan nollakohtien arvoihin."
+     ],
+     "solution": "1. Vegan päättelyssä on puute: suurin arvo voi olla myös välin päätepisteessä, eikä hän tutkinut päätepisteitä $x=\\pm 1$.\n2. Muuten laskut ovat oikein: $g'(x)=3x^2-2=0$, kun $x=\\pm\\sqrt{\\frac23}$, ja molemmat ovat välillä $[-1,1]$.\n3. Päätepisteissä $g(-1)=-1+2+1=2$ ja $g(1)=1-2+1=0$.\n4. Ehdokkaat ovat siis $2$, $1+\\frac{4\\sqrt6}{9}\\approx 2{,}089$, $1-\\frac{4\\sqrt6}{9}\\approx -0{,}089$ ja $0$. Suurin on $1+\\frac{4\\sqrt6}{9}$, koska $\\frac{4\\sqrt6}{9}\\approx 1{,}089>1$.\n5. Vegan vastaus on siis oikea, mutta vasta päätepisteiden vertailu tekee perustelusta pätevän.\n\n**Vastaus: päättely on puutteellinen, koska päätepisteet puuttuvat. Kun ne lisätään ($g(-1)=2$, $g(1)=0$), suurimmaksi arvoksi saadaan $1+\\frac{4\\sqrt6}{9}\\approx 2{,}09$, eli sama kuin Vegalla.**\n\n**Sudenkuoppa:** päättelyn hyväksyminen sillä perusteella, että vastaus sattuu olemaan oikea.",
+     "answer": "Päättely puutteellinen (päätepisteet puuttuvat), suurin arvo silti $1+\\frac{4\\sqrt6}{9}\\approx 2{,}09$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Laske lukujen 121 110 987 654 321 ja 123 456 789 101 112 suurin yhteinen tekijä Eukleideen algoritmilla. Ohjelmistoa saa käyttää, mutta algoritmin välivaiheiden on näyttävä.",
+     "hints": [
+      "Algoritmi: kirjoita suurempi luku muotoon $a=q\\cdot b+r$, missä $0\\le r\\lt b$. Jatka pareilla $(b,r)$, kunnes jakojäännös on nolla. Syt on viimeinen nollasta eroava jakojäännös. Käytä ohjelmistoa (esim. Python tai taulukkolaskenta) jakojäännösten laskemiseen ja dokumentoi komennot.",
+      "Ensimmäinen vaihe: $123\\,456\\,789\\,101\\,112=1\\cdot 121\\,110\\,987\\,654\\,321+2\\,345\\,801\\,446\\,791$. Seuraavassa vaiheessa osamäärä on 51. Algoritmi päättyy noin 30 vaiheen jälkeen."
+     ],
+     "solution": "Merkitään $a_0=123\\,456\\,789\\,101\\,112$ ja $a_1=121\\,110\\,987\\,654\\,321$ ja lasketaan $a_{k+1}=a_{k-1}-q_k a_k$ (jakojäännös), kunnes jäännös on nolla. Taulukkolaskennassa sarakkeeseen voi kirjoittaa kaavan, joka laskee kahden edellisen solun jakojäännöksen (esim. MOD-funktio), tai Pythonissa silmukan, jossa pari $(a,b)$ korvataan parilla $(b,\\ a\\ \\%\\ b)$ ja jokainen vaihe tulostetaan.\n\nEnsimmäiset vaiheet:\n\n1. $123\\,456\\,789\\,101\\,112=1\\cdot 121\\,110\\,987\\,654\\,321+2\\,345\\,801\\,446\\,791$\n2. $121\\,110\\,987\\,654\\,321=51\\cdot 2\\,345\\,801\\,446\\,791+1\\,475\\,113\\,867\\,980$\n3. $2\\,345\\,801\\,446\\,791=1\\cdot 1\\,475\\,113\\,867\\,980+870\\,687\\,578\\,811$\n\n(Välissä 24 vaihetta lisää, joissa luvut pienenevät.)\n\nViimeiset vaiheet:\n\n28. $183=1\\cdot 96+87$\n29. $96=1\\cdot 87+9$\n30. $87=9\\cdot 9+6$\n31. $9=1\\cdot 6+3$\n32. $6=2\\cdot 3+0$\n\nViimeinen nollasta eroava jakojäännös on 3, joten syt on 3. Tarkistus: kummankin luvun numeroiden summa on jaollinen kolmella mutta ei yhdeksällä.\n\n**Vastaus: suurin yhteinen tekijä on 3.**\n\n**Sudenkuoppa:** osamäärä 1 oletetaan jokaisessa vaiheessa (eli vähennetään vain kerran), tai ratkaisussa näkyy pelkkä lopputulos ilman välivaiheita tai komentoja.",
+     "answer": "$3$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Ellipsi on niiden tason pisteiden $Z$ joukko, joille $|PZ|+|QZ|=k$, missä $P$ ja $Q$ ovat polttopisteet ja vakio $k>|PQ|$. Tarkastellaan koordinaattiakselien suhteen symmetristä ellipsiä, joka leikkaa akselit pisteissä $(\\pm a,0)$ ja $(0,\\pm 1)$, missä $a>1$. Sen polttopisteet ovat $x$-akselilla. Määritä polttopisteet $a$:n avulla ja osoita pelkän määritelmän avulla, että ellipsin yhtälö on $\\frac{x^2}{a^2}+y^2=1$.",
+     "hints": [
+      "Merkitse polttopisteitä $(p,0)$ ja $(q,0)$. Sovella määritelmää pisteisiin $(a,0)$ ja $(-a,0)$: niistä saat sekä polttopisteiden sijainnin että vakion $k$. Piste $(0,1)$ antaa sitten polttopisteiden etäisyyden origosta.",
+      "Pisteistä $(\\pm a,0)$ saadaan $k=2a$ ja polttopisteet $(\\pm c,0)$. Pisteestä $(0,1)$: $2\\sqrt{c^2+1}=2a$, joten $c=\\sqrt{a^2-1}$. Merkitse $d_1=|ZP|$ ja $d_2=|ZQ|$: koska $d_1^2-d_2^2=4cx$ ja $d_1+d_2=2a$, saat $d_1-d_2=\\frac{2cx}{a}$ ja siten $d_1=a+\\frac{cx}{a}$. Korota neliöön."
+     ],
+     "solution": "**Polttopisteet**\n\n1. Olkoot polttopisteet $P=(p,0)$ ja $Q=(q,0)$, $p\\le q$. Tarkastellaan $x$-akselin pisteitä: etäisyyksien summa $S(x)=|x-p|+|x-q|$ on välillä $[p,q]$ vakio $q-p=|PQ|\\lt k$, ja välin ulkopuolella se kasvaa kulmakertoimella 2.\n2. Yhtälöllä $S(x)=k$ on siis täsmälleen kaksi ratkaisua, $x=p-\\frac{k-(q-p)}{2}$ ja $x=q+\\frac{k-(q-p)}{2}$. Ne ovat ellipsin ja $x$-akselin leikkauspisteet, eli $-a$ ja $a$.\n3. Laskemalla yhtälöt yhteen saadaan $p+q=0$, eli polttopisteet ovat symmetrisesti $(\\pm c,0)$, $c\\ge 0$. Vähentämällä saadaan $k=2a$.\n4. Piste $(0,1)$ on ellipsillä, ja sen etäisyys kummastakin polttopisteestä on $\\sqrt{c^2+1}$: $2\\sqrt{c^2+1}=2a$, joten $c^2=a^2-1$ ja $c=\\sqrt{a^2-1}$.\n5. Polttopisteet ovat $\\left(-\\sqrt{a^2-1},\\ 0\\right)$ ja $\\left(\\sqrt{a^2-1},\\ 0\\right)$.\n\n**Yhtälö**\n\n6. Piste $Z=(x,y)$ on ellipsillä, jos ja vain jos $d_1+d_2=2a$, missä $d_1=\\sqrt{(x+c)^2+y^2}$ ja $d_2=\\sqrt{(x-c)^2+y^2}$.\n7. Aina pätee $d_1^2-d_2^2=(x+c)^2-(x-c)^2=4cx$. Jos $d_1+d_2=2a$, niin $d_1-d_2=\\frac{4cx}{2a}=\\frac{2cx}{a}$, ja laskemalla yhteen $d_1=a+\\frac{cx}{a}$.\n8. Neliöön korottamalla $(x+c)^2+y^2=a^2+2cx+\\frac{c^2x^2}{a^2}$, eli $x^2+c^2+y^2=a^2+\\frac{c^2x^2}{a^2}$.\n9. Järjestetään: $x^2\\cdot\\frac{a^2-c^2}{a^2}+y^2=a^2-c^2$. Koska $a^2-c^2=1$, saadaan $\\frac{x^2}{a^2}+y^2=1$.\n10. Kääntäen, jos $\\frac{x^2}{a^2}+y^2=1$, niin $|x|\\le a$ ja sijoittamalla $y^2=1-\\frac{x^2}{a^2}$ saadaan $d_1^2=\\left(a+\\frac{cx}{a}\\right)^2$ ja $d_2^2=\\left(a-\\frac{cx}{a}\\right)^2$. Koska $\\left|\\frac{cx}{a}\\right|\\le c\\lt a$, lausekkeet $a\\pm\\frac{cx}{a}$ ovat positiivisia, joten $d_1+d_2=2a$. Käyrän jokainen piste on siis ellipsillä.\n11. Ellipsin yhtälö on siten $\\frac{x^2}{a^2}+y^2=1$. $\\square$\n\n**Vastaus: polttopisteet $\\left(\\pm\\sqrt{a^2-1},\\ 0\\right)$, ja ellipsin yhtälö on $\\frac{x^2}{a^2}+y^2=1$.**\n\n**Sudenkuoppa:** polttopisteiden symmetrisyys oletetaan perustelematta tai käytetään valmista ellipsin kaavaa $c^2=a^2-b^2$, vaikka tehtävässä saa käyttää vain määritelmää.",
+     "answer": "Polttopisteet $\\left(\\pm\\sqrt{a^2-1},\\ 0\\right)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "intro": "Välillä $[a,b]$ jatkuvat funktiot $f$ ja $g$ ovat ortogonaaliset, jos $\\int_a^b f(x)g(x)\\,dx=0$. Nollafunktiota ei hyväksytä: jokaisen funktion on saatava myös nollasta poikkeavia arvoja.",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Keksi funktio $g:[1,2]\\to\\mathbb{R}$, joka on ortogonaalinen funktion $f(x)=3x+2$ kanssa, ja osoita laskemalla, että se on.",
+     "hints": [
+      "Koska $f(x)>0$ koko välillä, tulon $f(x)g(x)$ integraali voi olla nolla vain, jos $g$ vaihtaa merkkiä. Kokeile ensimmäisen asteen funktiota, jossa on parametri, esimerkiksi $g(x)=x-c$.",
+      "$\\int_1^2(3x+2)(x-c)\\,dx=10-\\frac{13}{2}c$. Valitse $c$ niin, että integraali on nolla."
+     ],
+     "solution": "1. Valitaan $g(x)=x-c$ ja määritetään vakio $c$.\n2. $\\int_1^2(3x+2)(x-c)\\,dx=\\int_1^2\\bigl(3x^2+(2-3c)x-2c\\bigr)\\,dx=\\left[x^3+\\frac{2-3c}{2}x^2-2cx\\right]_1^2$.\n3. Rajat sijoittamalla: $7+\\frac{3(2-3c)}{2}-2c=10-\\frac{13}{2}c$.\n4. Integraali on nolla, kun $c=\\frac{20}{13}$. Kerrotaan vielä luvulla 13 (vakiolla kertominen ei muuta ortogonaalisuutta): $g(x)=13x-20$.\n5. Tarkistus: $\\int_1^2(3x+2)(13x-20)\\,dx=\\int_1^2(39x^2-34x-40)\\,dx=\\left[13x^3-17x^2-40x\\right]_1^2=(104-68-80)-(13-17-40)=-44+44=0$.\n\n**Vastaus: esimerkiksi $g(x)=13x-20$.**\n\n**Sudenkuoppa:** positiivinen $g$ (esim. vakiofunktio 1) ei voi toimia, koska $f$ on positiivinen koko välillä ja integraali olisi silloin positiivinen.",
+     "answer": "Esim. $g(x)=13x-20$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Jos $f$ ja $g$ ovat ortogonaaliset ja myös $g$ ja $h$ ovat ortogonaaliset, ovatko $f$ ja $h$ välttämättä ortogonaaliset? Perustele.",
+     "hints": [
+      "Kokeile yksinkertaisinta mahdollista valintaa: mitä tapahtuu, jos $h$ on sama funktio kuin $f$? Onko funktio koskaan ortogonaalinen itsensä kanssa?",
+      "Käytä kohdan a funktioita: $f=h=3x+2$ ja $g=13x-20$ välillä $[1,2]$. Laske $\\int_1^2 f(x)h(x)\\,dx=\\int_1^2(3x+2)^2\\,dx$."
+     ],
+     "solution": "1. Väite ei päde, ja sen kumoaa vastaesimerkki.\n2. Valitaan välillä $[1,2]$ funktiot $f(x)=h(x)=3x+2$ ja $g(x)=13x-20$.\n3. Kohdan a nojalla $\\int_1^2 f(x)g(x)\\,dx=0$, ja koska $h=f$, myös $\\int_1^2 g(x)h(x)\\,dx=0$.\n4. Kuitenkin $\\int_1^2 f(x)h(x)\\,dx=\\int_1^2(3x+2)^2\\,dx=\\left[\\frac{(3x+2)^3}{9}\\right]_1^2=\\frac{512-125}{9}=43\\neq 0$.\n5. Siis $f$ ja $h$ eivät ole ortogonaaliset, vaikka molemmat ovat ortogonaalisia funktion $g$ kanssa.\n\n**Vastaus: eivät välttämättä. Esimerkiksi $f=h=3x+2$ ja $g=13x-20$ välillä $[1,2]$: $f\\perp g$ ja $g\\perp h$, mutta $\\int_1^2 fh\\,dx=43\\neq 0$.**\n\n**Sudenkuoppa:** vastaesimerkissä $g$ on nollafunktio, vaikka tehtävä sulkee sen pois.",
+     "answer": "Ei välttämättä: esim. $f=h=3x+2$, $g=13x-20$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "intro": "Funktiolle $f:\\mathbb{R}\\to\\mathbb{R}$ pätee $f'(x)>0$ aina, kun $x\\neq 0$. Kohdassa $x=0$ funktiosta ei tiedetä mitään. Kunkin väitteen kohdalla joko perustellaan se tai kumotaan vastaesimerkillä. (Pistejako tässä on HVP:n mukainen; kokeessa sitä ei näytetty.)",
+   "units": [
+    {
+     "id": "a",
+     "points": 2,
+     "prompt": "Väite: $f$ on jatkuva.",
+     "hints": [
+      "Kohdassa $x=0$ funktio voi hypätä, koska siellä derivaatasta ei oleteta mitään. Rakenna paloittain määritelty funktio, jonka kummallakin palalla derivaatta on positiivinen."
+     ],
+     "solution": "1. Väite ei päde.\n2. Vastaesimerkki: $f(x)=x$, kun $x<0$, ja $f(x)=x+1$, kun $x\\ge 0$.\n3. Kun $x\\neq 0$, $f'(x)=1>0$, joten oletus on voimassa.\n4. $f(0)=1$, mutta $\\lim_{x\\to 0-}f(x)=0$, joten $f$ ei ole jatkuva kohdassa 0.\n\n**Vastaus: ei päde (vastaesimerkki yllä).**",
+     "answer": "Ei päde",
+     "check": "hvp"
+    },
+    {
+     "id": "b",
+     "points": 2,
+     "prompt": "Väite: $f$ on kasvava.",
+     "hints": [
+      "Kokeile hyppyä alaspäin kohdassa $x=0$: funktio kasvaa kummallakin puolella, mutta oikean puolen arvot voivat olla pienempiä kuin vasemman."
+     ],
+     "solution": "1. Väite ei päde.\n2. Vastaesimerkki: $f(x)=x$, kun $x<0$, ja $f(x)=x-5$, kun $x\\ge 0$. Kun $x\\neq 0$, $f'(x)=1>0$.\n3. $-1<1$, mutta $f(-1)=-1>-4=f(1)$, joten $f$ ei ole kasvava.\n\n**Vastaus: ei päde (vastaesimerkki yllä).**",
+     "answer": "Ei päde",
+     "check": "hvp"
+    },
+    {
+     "id": "c",
+     "points": 6,
+     "prompt": "Väite: jos $f$ on jatkuva, niin $f$ on kasvava.",
+     "hints": [
+      "Väite pätee. Osoita ensin, että $f$ on aidosti kasvava väleillä $(-\\infty,0]$ ja $[0,\\infty)$. Differentiaalilaskennan väliarvolause toimii, koska se vaatii derivoituvuutta vain välin sisäpisteissä.",
+      "Jos $x_1\\lt x_2\\le 0$, väliarvolauseen mukaan $f(x_2)-f(x_1)=f'(\\xi)(x_2-x_1)$ jollakin $\\xi\\in(x_1,x_2)$, ja $\\xi\\neq 0$. Käsittele lopuksi tapaus $x_1<0\\lt x_2$ vertaamalla kumpaakin lukuun $f(0)$."
+     ],
+     "solution": "1. Väite pätee. Oletetaan, että $f$ on jatkuva, ja olkoon $x_1\\lt x_2$.\n2. **Tapaus $x_1\\lt x_2\\le 0$:** $f$ on jatkuva välillä $[x_1,x_2]$ ja derivoituva sen sisäpisteissä, koska ne ovat negatiivisia. Väliarvolauseen mukaan on $\\xi\\in(x_1,x_2)$, jolle $f(x_2)-f(x_1)=f'(\\xi)(x_2-x_1)$. Koska $\\xi\\neq 0$, $f'(\\xi)>0$, joten $f(x_2)>f(x_1)$.\n3. **Tapaus $0\\le x_1\\lt x_2$:** samoin, koska välin sisäpisteet ovat positiivisia.\n4. **Tapaus $x_1<0\\lt x_2$:** kohtien 2 ja 3 nojalla $f(x_1)\\lt f(0)$ ja $f(0)\\lt f(x_2)$, joten $f(x_1)\\lt f(x_2)$.\n5. Kaikissa tapauksissa $f(x_1)\\lt f(x_2)$, joten $f$ on aidosti kasvava. $\\square$\n\n(Jatkuvuutta tarvitaan kohdissa 2 ja 3: ilman sitä väliarvolausetta ei voisi käyttää väleillä, joiden päätepiste on 0, ja kohdan b vastaesimerkki osoittaa, että väite voi silloin pettää.)\n\n**Sudenkuoppa:** todetaan vain, että $f$ on kasvava väleillä $(-\\infty,0)$ ja $(0,\\infty)$. Kohdan 0 yli meneminen on koko tehtävän ydin, ja siinä jatkuvuus on välttämätön.",
+     "answer": "Pätee",
+     "check": "hvp"
+    },
+    {
+     "id": "d",
+     "points": 2,
+     "prompt": "Väite: jos $f$ on kasvava, niin $f$ on jatkuva.",
+     "hints": [
+      "Kohdan a vastaesimerkki hyppää ylöspäin. Onko se kasvava?"
+     ],
+     "solution": "1. Väite ei päde.\n2. Vastaesimerkki: sama funktio kuin kohdassa a, $f(x)=x$, kun $x<0$, ja $f(x)=x+1$, kun $x\\ge 0$. Derivaatta on 1, kun $x\\neq 0$.\n3. $f$ on kasvava: kummallakin palalla se kasvaa, ja jos $x_1<0\\le x_2$, niin $f(x_1)=x_1<0<1\\le x_2+1=f(x_2)$.\n4. Kohdan a mukaan $f$ ei kuitenkaan ole jatkuva kohdassa 0.\n\n**Vastaus: ei päde (vastaesimerkki yllä).**",
+     "answer": "Ei päde",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

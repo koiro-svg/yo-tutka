@@ -1,0 +1,410 @@
+{
+ "subject": "biologia",
+ "session": "2025K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2025/kevat/biologia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-03-21_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: 20 pisteen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä. Monivalinnoissa väärästä vastauksesta 0 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään seitsemästä."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään kolmesta. Tehtävän 11.1 viivadiagrammi tehdään taulukkolaskentaohjelmalla. Koko kokeessa vastataan seitsemään tehtävään, yhteensä 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kaksi monivalintasarjaa.\n\n**1.1 (1.1.1–1.1.7, 2 p/kohta):** muovautumismuuntelun kuvaus ja esimerkki, epigeneettisen säätelyn määritelmä ja oikea väite siitä sekä oikea väite mitokondrioista, viherhiukkasista ja kasvisolun soluseinästä.\n\n**1.2 (1.2.1–1.2.6, 1 p/kohta):** kuusi väitettä geenitekniikasta; valitse kuhunkin, sopiiko se CRISPR-tekniikkaan, yhdistelmä-DNA-tekniikkaan vai molempiin. Väitteet koskevat poistogeenisiä eliöitä, ihmisen insuliinin tuottamista bakteereissa, halutun ominaisuuden ilmentämistä, opas-RNA:ta, täsmällistä kohdemuokkausta ja plasmideja.",
+     "hints": [
+      "Kertaa käsitteet: muovautumismuuntelu (sama genotyyppi, eri ympäristö → eri fenotyyppi), epigenetiikka (geenin ilmentyminen muuttuu, emäsjärjestys ei), endosymbioositeoria sekä CRISPR-Cas9 (opas-RNA + Cas-entsyymi) ja yhdistelmä-DNA-tekniikka (restriktioentsyymit, ligaasi, plasmidi).",
+      "Kohta kohdalta:\n- 1.1.1–1.1.2: valitse vaihtoehto, jossa perimä on sama ja ero johtuu ympäristöstä (ei lajikkeista, alleeleista tai evoluutiosta).\n- 1.1.4: epigeneettiset merkit (esim. DNA:n metylaatio) voivat säilyä solunjakautumisissa.\n- 1.1.5–1.1.7: mitä mitokondrio saa glykolyysistä, mitä viherhiukkanen sitoo, mistä soluseinä koostuu?\n- 1.2: vain CRISPR käyttää opas-RNA:ta, ja insuliinibakteerit ovat klassinen yhdistelmä-DNA-sovellus."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen (1.2: A = CRISPR, B = yhdistelmä-DNA, C = molemmat).\n\n**1.1**\n\n1. **1.1.1 B:** muovautumismuuntelun vuoksi genotyypiltään samanlaiset yksilöt voivat näyttää erilaisilta.\n2. **1.1.2 D:** perimältään samanlaiset kasvit kasvavat eri kokoisiksi eri kasvupaikoilla. Muut vaihtoehdot (lajikkeet, silmäväri, silmätäplät, voikukan väri) johtuvat perimästä.\n3. **1.1.3 B:** geenin ilmentymisen muutos, joka ei johdu DNA:n emäsjärjestyksen muutoksesta.\n4. **1.1.4 A:** epigeneettinen säätely voi periytyä, eli geenien ilmentymiseen tulleet muutokset voivat näkyä myös jälkeläisissä.\n5. **1.1.5 E:** mitokondrio käyttää glykolyysissä syntyvää pyruvaattia. (Mitokondriot periytyvät äidiltä, myös viherhiukkasissa on DNA:ta, hiilidioksidi syntyy sitruunahappokierrossa eikä viimeisessä vaiheessa, ja kasveillakin on mitokondriot.)\n6. **1.1.6 B:** viherhiukkaset tarvitsevat hiilidioksidia fotosynteesiin. (Niiden DNA muistuttaa bakteerien DNA:ta, niillä on kaksoiskalvo, ne käyttävät näkyvää valoa ja lehtivihreä on tylakoidikalvoissa.)\n7. **1.1.7 E:** soluseinä rakentuu pääosin selluloosasta.\n\n**1.2**\n\n8. **1.2.1 A tai C:** poistogeenisiä eliöitä tehdään CRISPR-tekniikalla, mutta myös yhdistelmä-DNA-menetelmin voidaan hiljentää geenejä, joten molemmat vastaukset hyväksytään.\n9. **1.2.2 B:** insuliinigeeni liitetään plasmidiin ja siirretään bakteeriin, eli yhdistelmä-DNA-tekniikka.\n10. **1.2.3 C:** molemmilla eliö saadaan ilmentämään haluttua ominaisuutta.\n11. **1.2.4 A:** opas-RNA kuuluu vain CRISPR-järjestelmään.\n12. **1.2.5 A tai C:** täsmällinen muokkaus on CRISPR-tekniikan tunnusmerkki; myös vastaus \"molemmat\" hyväksytään.\n13. **1.2.6 B:** plasmidit ovat yhdistelmä-DNA-tekniikan vektoreita.",
+     "answer": "1.1.1 B · 1.1.2 D · 1.1.3 B · 1.1.4 A · 1.1.5 E · 1.1.6 B · 1.1.7 E · 1.2.1 A/C · 1.2.2 B · 1.2.3 C · 1.2.4 A · 1.2.5 A/C · 1.2.6 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Kasvien rakenteen osat ovat kehittyneet evoluution kuluessa. Kuva 2.A on kasvin varren poikkileikkaus, ja kohdassa 2.2 on kuvia kuudesta suomalaisesta kasvilajista.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 2,
+     "prompt": "Kuva 2.A on kasvin varren poikkileikkaus, johon on merkitty osat 1–5. Valitse, mikä osista on puuosa ja mikä nilaosa (1 p/kohta).",
+     "hints": [
+      "Kaksisirkkaisen varren johtojänteissä nila on kehän ulkoreunan puolella ja puu varren keskustan puolella, ja niiden välissä on ohut jälsikerros. Uloin kerros on pintakudos ja keskellä on ydin."
+     ],
+     "solution": "1. **Puuosa: osa 4 (D).** Johtojänteen sisempi, keskustaa kohti oleva osa.\n2. **Nilaosa: osa 2 (B).** Johtojänteen ulompi osa.\n\nMuut osat: 1 on pintakudos, 3 jälsi (puun ja nilan välissä oleva kasvusolukko) ja 5 ydin.\n\n**Sudenkuoppa:** jälsi (3) ei ole puu eikä nila, vaan jakautumiskykyinen solukko, joka tuottaa niitä.",
+     "answer": "2.1.1 D (osa 4) · 2.1.2 B (osa 2)",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 6,
+     "prompt": "Putkilokasveilla on puu- ja nilaosasta koostuvat johtojänteet. Päättele kuvista, kuuluvatko seuraavat suomalaiset lajit putkilokasveihin: metsäkuusi, karhunsammal, oravanmarja, kotkansiipi, kerrossammal ja metsäkorte (1 p/kohta).",
+     "hints": [
+      "Kasvien pääryhmät: sammalet (ei johtojänteitä) sekä putkilokasvit, joihin kuuluvat sanikkaiset (saniaiset, kortteet, liekot) ja siemenkasvit (paljas- ja koppisiemeniset).",
+      "Karhunsammal on korkea ja näyttää pieneltä havupuulta, mutta se on silti sammal. Kotkansiipi on saniainen ja metsäkorte korte, ja molemmat kuuluvat itiöistä huolimatta putkilokasveihin."
+     ],
+     "solution": "1. **2.2.1 Metsäkuusi: kuuluu** (paljassiemeninen siemenkasvi).\n2. **2.2.2 Karhunsammal: ei kuulu** (sammal; sen johtosolukot ovat alkeellisia eikä sillä ole varsinaisia johtojänteitä).\n3. **2.2.3 Oravanmarja: kuuluu** (koppisiemeninen, yksisirkkainen).\n4. **2.2.4 Kotkansiipi: kuuluu** (saniainen).\n5. **2.2.5 Kerrossammal: ei kuulu** (sammal).\n6. **2.2.6 Metsäkorte: kuuluu** (korte).\n\n**Sudenkuoppa:** itiöillä lisääntyminen ei tarkoita, ettei kasvi olisi putkilokasvi. Saniaiset ja kortteet ovat itiökasveja, mutta niillä on johtojänteet.",
+     "answer": "2.2.1 kuuluu · 2.2.2 ei · 2.2.3 kuuluu · 2.2.4 kuuluu · 2.2.5 ei · 2.2.6 kuuluu",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 7,
+     "prompt": "Pohdi johtojänteiden merkitystä kasvien evoluutiolle: miksi niiden synty oli ratkaiseva askel?",
+     "hints": [
+      "Mieti, mitä ongelmia kasvi kohtaa siirtyessään vedestä maalle, ja miten sisäinen kuljetusjärjestelmä ja tuki ratkaisevat ne.",
+      "Johtojänteet muodostavat johtosolukon: puuosa kuljettaa vettä ja ravinteita juurista ylös ja tukee kasvia, nilaosa kuljettaa yhteyttämistuotteita muualle ja varastoon. Tämä mahdollisti maalla elämisen, kasvinosien erilaistumisen juuriksi, varreksi ja lehdiksi, korkeuskasvun (kilpailu valosta) sekä jälsen ansiosta paksuuskasvun."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Johtojänteet muodostavat johtosolukon, joka on kasvin sisäinen aineiden kuljetusjärjestelmä.\n- Johtosolukko oli edellytys maalle sopeutumiselle.\n- Se on avainsopeuma, jonka ansiosta kasvinosat pystyivät erilaistumaan juuriksi, varreksi ja lehdiksi.\n- Johtojänteet tukevat kasvia, juuret kiinnittävät sen maahan, ja korkeuskasvu mahdollistaa tehokkaamman kilpailun valosta.\n- Jälsi mahdollistaa paksuuskasvun.\n- Puuosassa vesi ja sen mukana ravinteet nousevat kasvin muihin osiin.\n- Nilaosassa yhteyttämistuotteet kulkevat muihin osiin, esimerkiksi varastoitaviksi juuriin, ja niitä voidaan muokata muiksi aineiksi.\n\n**Esimerkkivastaus**\n\nVedessä elävä levä saa vettä ja ravinteita koko pinnaltaan, ja vesi kannattelee sitä. Maalla kasvin on otettava vesi maasta ja kuljetettava se lehtiin, joissa valoa on. Johtojänteet ratkaisivat tämän: puuosan kuolleet, paksuseinäiset solut muodostavat putkia, joissa vesi ja siihen liuenneet ravinteet nousevat juurista ylös, ja nilaosa kuljettaa lehtien tuottamat sokerit sinne, missä niitä tarvitaan tai varastoidaan, esimerkiksi juuriin ja mukuloihin.\n\nKuljetusjärjestelmän ansiosta kasvin osat pystyivät erikoistumaan: juuret ottavat vettä ja kiinnittävät kasvin, varsi kuljettaa ja tukee ja lehdet yhteyttävät. Puuosan lujat soluseinät tukevat vartta, joten kasvit pystyivät kasvamaan korkeiksi ja kilpailemaan valosta. Jälsi tuottaa uutta puuta ja nilaa, jolloin puut voivat kasvaa myös paksuutta. Ilman johtojänteitä kasvit olisivat jääneet sammalten tapaan mataliksi ja kosteista paikoista riippuvaisiksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 3,
+     "prompt": "Selitä, mitä ekosysteemipalvelu tarkoittaa.",
+     "hints": [
+      "Määritelmässä on kolme osaa: kuka tuottaa (luonto), millaisia hyötyjä (aineellisia ja aineettomia) ja kenelle ja mihin ne vaikuttavat (ihmisen hyvinvointi, ekosysteemin toimivuus)."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa kolme)\n\n- Ekosysteemipalveluihin luetaan kaikki luonnosta saatavat resurssit, hyödykkeet ja palvelut.\n- Osa palveluista on aineellisia, osa aineettomia.\n- Taustalla ovat luonnon prosessit, jotka pitävät eliöyhteisön kestävänä ja tuottavana ja tukevat samalla ihmisten hyvinvointia.\n\n**Esimerkkivastaus**\n\nEkosysteemipalveluilla tarkoitetaan kaikkia hyötyjä, joita ihminen saa luonnosta ja sen toiminnasta. Ne voivat olla aineellisia, kuten puuta, ruokaa ja puhdasta vettä, tai aineettomia, kuten virkistystä ja kauneuselämyksiä. Palvelut perustuvat ekosysteemien prosesseihin, jotka pitävät yllä eliöyhteisön toimivuutta ja tuottavuutta ja sitä kautta ihmisten hyvinvointia.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 12,
+     "prompt": "Mitä ekosysteemipalveluja Suomen metsistä saadaan? Pohdi ja hyödynnä kaikkia kuvan 3.2.A käsitteitä: ylläpito-, säätely-, tuotanto- ja kulttuuripalvelut.",
+     "hints": [
+      "Määrittele ensin jokainen neljästä luokasta (enintään 4 p) ja anna sitten jokaisesta metsiin liittyviä esimerkkejä (enintään 8 p). Ylläpito- ja säätelypalvelut saa käsitellä myös yhdessä.",
+      "Ylläpito: fotosynteesi ja perustuotanto, hajottajat ja aineiden kierto, veden kierto, monimuotoisuus. Säätely: hiilinielu ja ilmasto, veden pidättäminen (tulvat, eroosio), veden puhdistuminen maaperässä, melu- ja pölysuoja, pölytys. Tuotanto: puu teollisuuteen ja energiaksi, marjat, sienet, riista, mahla, terva. Kulttuuri: liikunta, retkeily ja virkistys, terveysvaikutukset, esteettiset elämykset ja taiteen innoitus."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Luokkien määritelmät*\n- **Ylläpitopalvelut** pitävät ekosysteemit toiminnassa, ja kaikki muut palvelut rakentuvat niiden varaan.\n- **Säätelypalvelut** vaikuttavat esimerkiksi ilmastoon, vesitalouteen ja eliöiden välisiin vuorovaikutuksiin.\n- **Tuotantopalvelut** ovat konkreettisia tuotteita, joita ekosysteemistä saadaan.\n- **Kulttuuripalvelut** ovat ihmiselle koituvia aineettomia hyötyjä.\n\n*Esimerkit metsistä*\n- Ylläpito: tuottajien fotosynteesi, hajottajat ja aineiden kierto, veden kierto, luonnon monimuotoisuus.\n- Säätely: metsät sitovat ja varastoivat hiiltä (hiilinielu) ja hidastavat ilmastonmuutosta; juuret ja maaperä sitovat vettä, joten maa ei huuhtoudu helposti ja tulvat tasoittuvat; maakerrosten läpi kulkeva vesi puhdistuu; metsä suojaa melulta ja epäpuhtauksilta; hyönteispölytys tuottaa marjasadon.\n- Tuotanto: puu metsäteollisuuden raaka-aineeksi ja biomateriaaleiksi, puu ja hakkuutähteet energiaksi, marjat (mustikka, puolukka) ja ruokasienet, riistan liha (hirvi, metsäkanalinnut), muut hyödykkeet (tuohi, mahla, terva, yrtit, joulukuuset).\n- Kulttuuri: liikunta, retkeily ja virkistys, terveysvaikutukset (esim. stressin lievittyminen), esteettiset elämykset ja taiteen innoituksen lähde.\n\n**Esimerkkivastaus**\n\nYlläpitopalvelut ovat perusta, jonka varassa kaikki muut palvelut toimivat. Metsässä puut ja muut kasvit yhteyttävät ja tuottavat biomassaa, hajottajat palauttavat karikkeen ravinteet maahan, ja metsä ylläpitää veden kiertoa ja lajien monimuotoisuutta.\n\nSäätelypalvelut vaikuttavat ympäristön tilaan. Kasvava metsä sitoo ilmakehän hiilidioksidia puustoon ja maaperään ja hillitsee siten ilmastonmuutosta. Kasvillisuus ja maaperä pidättävät sadevettä, mikä tasaa tulvia ja estää maan huuhtoutumista, ja maakerrosten läpi suodattuva vesi puhdistuu pohjavedeksi. Hyönteiset pölyttävät metsämarjoja, ja tienvarren puusto vaimentaa melua ja pölyä.\n\nTuotantopalvelut ovat aineellisia hyödykkeitä. Suomen metsistä saadaan puuta sahoille, paperi- ja selluteollisuudelle ja biomateriaaleihin, ja hakkuutähteitä poltetaan energiaksi. Metsistä kerätään mustikkaa, puolukkaa ja sieniä, ja hirvestä ja metsäkanalinnuista saadaan lihaa.\n\nKulttuuripalvelut ovat aineettomia. Metsässä ulkoillaan, marjastetaan, retkeillään ja harrastetaan liikuntaa, ja metsässä oleskelu laskee tutkitusti stressiä ja verenpainetta. Metsät tarjoavat kauneuselämyksiä ja ovat innoittaneet taiteilijoita ja kansanperinnettä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 5,
+     "prompt": "Päättele viidestä solunjakautumisen tapahtumasta, liittyykö kukin vain mitoosiin, vain meioosiin vai kumpaankin (1 p/kohta): kromosomien siirtäminen sukkularihmoilla, identtiset tytärsolut, tumakotelon hajoaminen ennen kromosomien erottamista, vastinkromosomien pariutuminen vierekkäin ja haploidien solujen syntyminen.",
+     "hints": [
+      "Mitkä vaiheet ovat yhteisiä kaikille tumallisten solujen jakautumisille, ja mitkä liittyvät kromosomiluvun puolittumiseen ja tekijäinvaihduntaan?",
+      "Sukkularihmat ja tumakotelon hajoaminen kuuluvat kumpaankin. Identtiset tytärsolut syntyvät vain mitoosissa. Vastinkromosomien konjugaatio (ja tekijäinvaihdunta) tapahtuu meioosin ensimmäisessä jakautumisessa, ja haploidit solut ovat meioosin tulos."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen (A = vain mitoosi, B = vain meioosi, C = molemmat).\n\n1. **4.1.1 C:** sukkularihmat siirtävät kromosomeja sekä mitoosissa että meioosissa.\n2. **4.1.2 A:** identtisiä tytärsoluja syntyy vain mitoosissa.\n3. **4.1.3 C:** tumakotelo hajoaa ennen kromosomien erottamista molemmissa.\n4. **4.1.4 B:** vastinkromosomit asettuvat pareiksi (konjugaatio) vain meioosin ensimmäisessä jakautumisessa.\n5. **4.1.5 B:** haploideja soluja syntyy vain meioosissa.",
+     "answer": "4.1.1 C · 4.1.2 A · 4.1.3 C · 4.1.4 B · 4.1.5 B",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 5,
+     "prompt": "Pohdi meioosin merkitystä monisoluisten eliöiden kannalta.",
+     "hints": [
+      "Mieti kahta asiaa: mitä kromosomiluvulle tapahtuu ja miksi se on tarpeen suvullisessa lisääntymisessä, ja mistä meioosissa syntyy uusia alleeliyhdistelmiä.",
+      "Meioosi puolittaa kromosomiluvun, joten hedelmöityksessä diploidia ei kerry yli. Tekijäinvaihdunta vastinkromosomien välillä ja vastinkromosomien sattumanvarainen jakautuminen sukusoluihin tuottavat rekombinaatiota, joka lisää jälkeläisten muuntelua ja sopeutumiskykyä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Meioosi on vähennysjakautuminen, jossa kromosomiluku puolittuu.\n- Se mahdollistaa suvullisen lisääntymisen, jossa jälkeläiset eroavat geneettisesti toisistaan.\n- Vastinkromosomit vaihtavat osia (tekijäinvaihdunta).\n- Kukin sukusolu saa vastinkromosomiparista sattumanvaraisesti jommankumman.\n- Nämä yhdessä tuottavat uusia alleeliyhdistelmiä eli rekombinaatiota.\n- Syntyvä fenotyyppinen muuntelu auttaa eliöitä sopeutumaan muuttuviin ympäristöihin.\n\n**Esimerkkivastaus**\n\nMeioosissa diploidista solusta syntyy haploideja sukusoluja, joissa on vain yksi kromosomi kustakin vastinparista. Kun munasolu ja siittiö yhdistyvät hedelmöityksessä, diploidi kromosomiluku palautuu. Ilman meioosia kromosomimäärä kaksinkertaistuisi joka sukupolvessa.\n\nMeioosi myös sekoittaa perimää. Ensimmäisen jakautumisen alussa vastinkromosomit asettuvat vierekkäin ja vaihtavat keskenään palasia tekijäinvaihdunnassa. Sen jälkeen vastinkromosomit jakautuvat tytärsoluihin sattumanvaraisesti. Siksi jokainen sukusolu on perimältään erilainen, ja hedelmöityksessä syntyy jälkeläisiä, joilla on uusia ominaisuusyhdistelmiä. Tämä muuntelu antaa luonnonvalinnalle materiaalia, ja populaatio voi sopeutua muuttuviin oloihin, kuten uusiin tauteihin.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 5,
+     "prompt": "Solunjakautumista ohjaa joukko säätelyproteiineja. Pohdi, miksi mitoottista jakautumista täytyy säädellä ja mitä tapahtuu, jos säätely pettää.",
+     "hints": [
+      "Mieti solusyklin tarkastuspisteitä: mitä solu tarkistaa ennen kuin se siirtyy seuraavaan vaiheeseen?",
+      "Säätelyproteiinit valvovat tarkastuspisteissä (G1, G2, M), onko DNA kahdentunut oikein, ettei soluja synny liikaa ja että jokainen tytärsolu saa oikean kromosomimäärän. Jos säätelygeeneihin tulee mutaatioita, jakautuminen karkaa hallinnasta: syntyy kasvaimia, esimerkiksi syöpää."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Solusyklissä on tarkastuspisteitä (esim. G1-, G2- ja M-vaiheessa), joissa säätelyproteiinit ratkaisevat, saako sykli jatkua.\n- Tarkastuspisteissä selvitetään esimerkiksi, onko DNA:n kahdentuminen onnistunut ilman virheitä.\n- Säätelyn ansiosta soluja ei synny tarpeettomasti, ja jokaiseen tytärsoluun päätyy oikea kromosomimäärä.\n- Jos jakautuminen riistäytyy hallinnasta, syntyy kasvain eli poikkeavaa kudosta.\n- Syövässä solusyklin säätely on pettänyt, koska säätelygeeneihin on tullut mutaatioita.\n\n**Esimerkkivastaus**\n\nMonisoluisessa eliössä solujen pitää jakautua vain silloin, kun uusia soluja tarvitaan, esimerkiksi kasvussa tai haavan parantuessa. Solusyklissä on tarkastuspisteitä, joissa säätelyproteiinit tarkistavat, onko solu kasvanut riittävästi, onko DNA kahdentunut kokonaan ja virheettömästi ja ovatko kromosomit kiinnittyneet sukkularihmoihin oikein. Jos virhe havaitaan, sykli pysähtyy korjauksen ajaksi, tai solu ohjataan ohjelmoituun solukuolemaan.\n\nJos säätelyproteiinien geeneissä on mutaatioita, esimerkiksi jakautumista kiihdyttävä geeni on jatkuvasti päällä tai jarruttava geeni ei toimi, solu jakautuu hallitsemattomasti. Virheellinen DNA siirtyy tytärsoluihin, ja niihin voi tulla väärä määrä kromosomeja. Syntyy kasvain, ja jos solut alkavat tunkeutua muihin kudoksiin ja levitä, kyse on syövästä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 9,
+     "prompt": "Ihmisen perimä koostuu geeneistä ja niiden välisistä alueista. Selitä, millaisista osista aitotumallisen solun geeni rakentuu ja mitä kukin osa tekee.",
+     "hints": [
+      "Jaa geeni kahteen pääosaan: säätelyalue ja koodaava alue. Mitä kumpikin sisältää, ja mitä tuotteita geenit voivat koodata?",
+      "Säätelyalue: promoottori (RNA-polymeraasin kiinnittyminen ja luennan aloitus) ja tehostajajaksot (avustavat luennan käynnistämistä). Koodaava alue: eksonit (sisältävät tuotteen ohjeen) ja intronit (poistetaan silmukoinnissa). Geeni voi koodata proteiinia tai toimivaa RNA:ta (esim. tRNA, rRNA)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Geeni on DNA:n jakso.\n- Geenissä on koodaava alue ja säätelyalue.\n- Osa geeneistä sisältää ohjeen proteiinille, osa pelkälle RNA-molekyylille (esim. siirtäjä- ja ribosomi-RNA).\n- Koodaavassa alueessa vuorottelevat eksonit, jotka sisältävät tuotteen ohjeen, ja intronit, joissa ohjetta ei ole ja jotka leikataan pois silmukoinnissa.\n- Säätelyalueen promoottori on kohta, johon RNA-polymeraasi sitoutuu ja josta transkriptio lähtee liikkeelle.\n- Säätelyalueella on lisäksi tehostajajaksoja, joiden ansiosta transkriptio käynnistyy tehokkaammin.\n\n**Esimerkkivastaus**\n\nGeeni on DNA:n jakso, jonka mukaan solu valmistaa jonkin toimivan tuotteen. Useimmat geenit koodaavat proteiineja, mutta osa koodaa RNA-molekyylejä, kuten siirtäjä-RNA:ta ja ribosomi-RNA:ta, joita ei käännetä proteiiniksi.\n\nGeenissä on säätelyalue ja koodaava alue. Säätelyalueen promoottori on koodaavan alueen edessä; siihen kiinnittyvät transkriptiotekijät ja RNA-polymeraasi, ja siitä transkriptio alkaa. Tehostajajaksot voivat sijaita kauempanakin, ja niihin sitoutuvat säätelyproteiinit lisäävät luennan tehoa, joten ne vaikuttavat siihen, missä soluissa ja kuinka paljon geeniä luetaan.\n\nTumallisten eliöiden koodaava alue on pilkkoutunut eksoneihin ja introneihin. Transkriptiossa koko alue kopioidaan esiaste-RNA:ksi, josta intronit poistetaan silmukoinnissa. Eksonit liitetään yhteen lähetti-RNA:ksi, jonka mukaan ribosomi rakentaa proteiinin.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 6,
+     "prompt": "Kuvaile, millaisia alueita geenien välissä on ja mikä niiden merkitys on.",
+     "hints": [
+      "Ajattele kromosomin rakennetta (keskikohta ja päät) sekä toistuvia ja liikkuvia jaksoja. Kerro jokaisesta sen tehtävä tai käyttö.",
+      "Esimerkiksi toistojaksot (käytetään yksilöntunnistuksessa), sentromeeri (sukkularihmojen kiinnittyminen jakautumisessa), telomeerit (suojaavat kromosomin päitä kahdentumisessa), transposonit eli hyppivät geenit (voivat siirtyä ja aiheuttaa mutaatioita), sammuneet geenit eli pseudogeenit sekä virusten jäänteet ja DNA, jonka tehtävää ei tunneta."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (esimerkiksi seuraavista)\n\n- Toistojaksot, joissa sama lyhyt emäsjakso on monta kertaa peräkkäin. Niiden avulla yksilöt voidaan tunnistaa (DNA-tunnisteet).\n- Sentromeeri kromosomin keskellä, jolla on tehtävä solunjakautumisessa.\n- Telomeerit, jotka suojaavat kromosomin päitä ja liittyvät kromosomien kahdentumiseen.\n- Transposonit eli hyppivät geenit liikkuvat perimässä uusiin kohtiin. Jos ne osuvat esimerkiksi eksoniin tai säätelyalueelle, geenin toiminta ja yksilön kelpoisuus voivat muuttua. Transposonien aktivoitumista voidaan hyödyntää syövän merkkinä.\n- Pseudogeenit eli sammuneet geenit, jotka ovat menettäneet toimintansa evoluution aikana.\n- Muinaisten virusten jäänteet ja DNA, jonka tehtävää ei vielä tiedetä.\n\n**Esimerkkivastaus**\n\nVain pieni osa ihmisen perimästä on geenejä. Geenien välissä on paljon toistojaksoja, joissa lyhyt emäsjakso toistuu peräkkäin. Toistojen määrä vaihtelee yksilöittäin, joten niitä käytetään rikostutkinnan ja isyystestien DNA-tunnisteina. Kromosomin keskellä on sentromeeri, johon sukkularihmat kiinnittyvät solunjakautumisessa, ja kromosomien päissä telomeerit, jotka suojaavat kromosomia lyhenemiseltä kahdentumisessa.\n\nPerimässä on myös transposoneja eli hyppiviä geenejä, jotka voivat kopioitua tai siirtyä uuteen paikkaan. Jos transposoni osuu geenin sisään tai säätelyalueelle, se voi muuttaa geenin toimintaa, joten transposonit ovat yksi muuntelun lähde. Lisäksi geenien välissä on evoluution kuluessa toimintansa menettäneitä geenejä, muinaisten virusinfektioiden jäänteitä ja paljon DNA:ta, jonka tehtävää ei vielä tunneta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Värisokeutta on useaa tyyppiä. Yleisin on puna-vihersokeus (puna-viherheikkous); sinisokeus on paljon harvinaisempi ja täydellinen värisokeus kaikkein harvinaisin. Selitä, mitä puna-vihersokeus on ja mikä sen aiheuttaa.",
+     "hints": [
+      "Aloita värinäön perusteista: missä verkkokalvon soluissa värit aistitaan ja kuinka monta tyyppiä niitä on?",
+      "Tappisoluja on kolmea tyyppiä, jotka ovat herkimpiä punaiselle, vihreälle tai siniselle valolle. Puna-vihersokeudessa punaista tai vihreää aistivat tapit toimivat heikosti tai puuttuvat, joten värejä on vaikea erottaa. Syy on yleensä X-kromosomissa oleva resessiivinen alleeli."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Puna-vihersokea ei erota hyvin punaista ja vihreää toisistaan.\n- Häiriö voi koskea joko punaisen tai vihreän valon aistimista.\n- Värinäkö perustuu verkkokalvon tappisoluihin, joiden eri tyypit aistivat eri aallonpituuksia.\n- Tappityyppejä on kolme: punaiselle, vihreälle ja siniselle valolle herkimmät.\n- Taustalla on yleensä X-kromosomissa oleva resessiivinen alleeli.\n- Sen vuoksi punaiselle tai vihreälle herkkä tappityyppi toimii puutteellisesti tai puuttuu kokonaan.\n\n**Esimerkkivastaus**\n\nVärinäkö perustuu verkkokalvon tappisoluihin. Niitä on kolmea tyyppiä, joiden näköpigmentit reagoivat herkimmin siniseen, vihreään tai punaiseen valoon. Aivot tulkitsevat värit vertaamalla eri tappityyppien signaaleja toisiinsa.\n\nPuna-vihersokeudessa ihmisen on vaikea erottaa punaista ja vihreää toisistaan, koska joko punaiselle tai vihreälle herkkä tappityyppi toimii heikosti tai puuttuu. Punaisen ja vihreän pigmentin geenit sijaitsevat X-kromosomissa, ja puna-vihersokeuden aiheuttaa niissä oleva resessiivinen alleeli. Muuttunut pigmentti reagoi väärille aallonpituuksille tai sitä ei synny lainkaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 2,
+     "prompt": "Pohdi, miksi puna-vihersokeus on miehillä yleisempää kuin naisilla.",
+     "hints": [
+      "Montako X-kromosomia miehellä ja naisella on, ja mitä se merkitsee resessiivisen alleelin ilmenemiselle?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Puna-vihersokeus periytyy X-kromosomissa resessiivisesti. Miehellä on vain yksi X-kromosomi, joka on peräisin äidiltä.\n- Miehellä ei ole vastinalleelia, joten yksikin resessiivinen alleeli ilmenee fenotyypissä. Naisella toisen X-kromosomin normaali alleeli peittää sen, joten nainen on värisokea vain, jos molemmat X-kromosomit kantavat alleelia.\n\n**Esimerkkivastaus**\n\nVärisokeuden alleeli on X-kromosomissa ja resessiivinen. Miehellä on vain yksi X-kromosomi, eikä Y-kromosomissa ole vastinalleelia, joten jos äidiltä saatu X-kromosomi kantaa alleelia, mies on värisokea. Naisella on kaksi X-kromosomia, ja toisen X:n normaali alleeli riittää värinäköön. Nainen on värisokea vain, jos hän saa alleelin sekä isältä että äidiltä, mikä on paljon harvinaisempaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 3,
+     "prompt": "Selitä, millä keinoin puna-vihersokeus voidaan todeta.",
+     "hints": [
+      "Mieti arkielämän havaintoja, värikuviin tai eriväriseen valoon perustuvia testejä (esim. Ishiharan taulut) ja geenitestiä. Kerro myös lyhyesti, miten testi paljastaa värisokeuden."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa kolme)\n\n- Puna-vihersokeus huomataan usein jo arkielämässä.\n- Sen toteamiseen on kuviin ja eriväriseen valoon perustuvia testejä.\n- Kuvatesteissä (Ishiharan testi) käytetään punaisen ja vihreän sävyjä, ja puna-vihersokea ei erota niistä muodostuvia numeroita tai kuvioita oikein.\n- Geenitesteillä voidaan tunnistaa värisokeuden alleeli; vastauksessa voi kuvata testin toteutuksen (DNA-näyte, PCR, sekvensointi tai DNA-siru).\n\n**Esimerkkivastaus**\n\nPuna-vihersokeus huomataan usein arjessa, kun ihminen esimerkiksi sekoittaa punaisen ja vihreän kynän tai ruskean ja vihreän vaatteen. Varmistus tehdään värinäkötestillä. Ishiharan testissä katsotaan tauluja, joissa eri sävyisistä täplistä muodostuu numero. Normaalisti näkevä erottaa numeron, mutta puna-vihersokea ei näe sitä tai näkee eri numeron. Tarkemmin värien erotuskykyä voi mitata laitteilla, joissa sekoitetaan eriväristä valoa. Geenitestissä DNA-näytteestä tutkitaan, onko X-kromosomin värinäköpigmenttien geeneissä värisokeuden aiheuttava muutos.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.4",
+     "points": 4,
+     "prompt": "Arvioi, miksi puna-vihersokeus voi olla esteenä joillekin ammattialoille.",
+     "hints": [
+      "Mieti tilanteita, joissa tieto välitetään värikoodilla (liikennevalot, jarruvalot, merkkivalot, johtojen värit), ja mitä seuraa, jos väri havaitaan liian myöhään tai väärin. Anna konkreettinen ammattiesimerkki."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Värisokeus haittaa tilanteissa, joissa tietoa välitetään väreillä.\n- Havainnollinen esimerkki, kuten liikennevalot tai edellä ajavan auton jarruvalot.\n- Seurauksena reaktioaika voi pidentyä, valo voi jäädä huomaamatta tai väri voidaan tunnistaa väärin.\n- Ammattiesimerkki, esimerkiksi lentäjä, veturinkuljettaja, sähköasentaja, merenkulkija tai poliisi.\n\n**Esimerkkivastaus**\n\nMonissa ammateissa turvallisuus perustuu värikoodeihin. Liikenteessä punainen ja vihreä valo, junaliikenteen opastimet, lentokenttien ja laivojen kulkuvalot sekä sähköjohtojen värit on tunnistettava nopeasti ja varmasti. Puna-vihersokea voi tunnistaa värin väärin, huomata valon vasta myöhään tai tarvita enemmän aikaa reagoimiseen, mikä voi johtaa onnettomuuksiin. Siksi esimerkiksi lentäjän, veturinkuljettajan, merikapteenin ja sähköasentajan koulutukseen voi olla vaatimuksena normaali värinäkö.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Sikiödiagnostiikassa sikiön terveyttä tutkitaan eri menetelmin, kuten lapsivesitutkimuksella ja ultraäänellä (kuva 7.A).",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Ihmisen yksilönkehityksessä puhutaan ensin alkiosta ja myöhemmin sikiöstä. Selitä molemmat käsitteet.",
+     "hints": [
+      "Kerro kummastakin vaiheesta, milloin se alkaa ja päättyy ja mitä kehityksessä silloin tapahtuu (elinten muodostuminen vs. kasvu ja kypsyminen)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Alkiovaiheen alkamiskohdasta on useita määritelmiä: hedelmöitys, solunjakautumisvaihe tai gastrulaatio.\n- Alkiovaihe kestää noin kahdeksan viikkoa hedelmöityksestä, mikä vastaa suunnilleen kymmenettä raskausviikkoa.\n- Alkiovaiheessa kaikkien elinjärjestelmien alut määräytyvät ja alkavat kehittyä.\n- Sikiövaihe jatkuu alkiovaiheen lopusta syntymään. Sen aikana elimet ja ruumiinosat kypsyvät ja kasvavat, ja sikiö alkaa näyttää ihmiseltä.\n\n**Esimerkkivastaus**\n\nAlkiolla tarkoitetaan kehitysvaihetta hedelmöityksestä (tai määritelmästä riippuen solunjakautumisten tai gastrulaation alusta) noin kahdeksan viikon ikään eli noin kymmenenteen raskausviikkoon. Tänä aikana soluista muodostuvat alkiokerrokset ja niistä kaikkien elinjärjestelmien alut, esimerkiksi hermostoputki ja sydän. Tämän jälkeen yksilöä kutsutaan syntymään asti sikiöksi. Sikiövaiheessa elimet kypsyvät ja kasvavat, ruumiinosat kehittyvät ja sikiö saa ihmisen näköisen muodon.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 4,
+     "prompt": "Nimeä kuvan 7.A rakenteet 1–4 (kuvassa on raskaana oleva kohtu, ultraäänianturi ja lapsivesinäytteen ottava ruisku).",
+     "hints": [
+      "Rakenne 1 on kohdun seinämään kiinnittyvä veren runsas levy, 2 yhdistää sen sikiöön, 3 on sikiötä ympäröivä paksu lihaksinen seinämä ja 4 on kohdun alaosan kapea aukko emättimeen päin."
+     ],
+     "solution": "1. **Istukka.**\n2. **Napanuora.**\n3. **Kohdun seinämä** (kohtu, kohtulihas).\n4. **Kohdunsuu** (kohdunkaula).",
+     "answer": "1 istukka · 2 napanuora · 3 kohdun seinämä · 4 kohdunsuu",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 7,
+     "prompt": "Pohdi, mitä sikiöstä voidaan selvittää lapsivesitutkimuksella ja mitä ultraäänitutkimuksella.",
+     "hints": [
+      "Käsittele molemmat menetelmät, sillä kummastakin saa noin puolet pisteistä. Mieti, mitä lapsivesinäytteessä on (sikiön soluja) ja mitä ultraäänikuvasta näkyy (rakenteet ja liike).",
+      "Lapsivesi: sikiön irronneista soluista geenimutaatiot (esim. kystinen fibroosi), kromosomipoikkeavuudet (esim. Downin oireyhtymä) karyotyypistä, biologinen sukupuoli ja Rh-tekijä. Ultraääni: sikiöiden lukumäärä, raskauden kesto kehitysvaiheen perusteella, sikiön, napanuoran ja istukan sijainti, sydämen syke, rakennepoikkeamat (esim. huulihalkio), 3D-kuvaus, sukupuoli ja painoarvio loppuraskaudessa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Lapsivesitutkimus*\n- Neulalla otetusta näytteestä tutkitaan sikiön irronneita soluja.\n- Solujen DNA:sta voidaan etsiä geenimutaatioiden aiheuttamia perinnöllisiä sairauksia, kuten kystistä fibroosia.\n- Karyotyypistä voidaan havaita kromosomi- ja kromosomistomutaatiot, kuten Downin oireyhtymä.\n- Karyotyypistä selviää myös sikiön biologinen sukupuoli, ja näytteestä voidaan määrittää Rh-tekijä.\n\n*Ultraäänitutkimus*\n- Sikiöiden lukumäärä.\n- Raskauden kesto sikiön kehitysvaiheen perusteella.\n- Sikiön sijainti ja asento sekä napanuoran ja istukan sijainti.\n- Sydämen syke.\n- Rakenteelliset poikkeamat ja epämuodostumat, kuten huulihalkio; tarkempaan tutkimukseen 3D-ultraääni.\n- Biologinen sukupuoli ulkoisten sukupuolielinten kehityttyä ja loppuraskauden painoarvio.\n\n**Esimerkkivastaus**\n\nLapsivesitutkimuksessa kohtuun viedään ultraääniohjauksessa ohut neula ja otetaan lapsivettä, jossa on sikiöstä irronneita soluja. Solut kasvatetaan, ja niistä tutkitaan kromosomit eli karyotyyppi. Siitä nähdään esimerkiksi Downin oireyhtymä (ylimääräinen kromosomi 21) ja sikiön biologinen sukupuoli. Solujen DNA:sta voidaan etsiä tunnettuja geenivirheitä, kuten kystisen fibroosin mutaatioita, ja määrittää sikiön Rh-veriryhmä.\n\nUltraäänitutkimus on kivuton ja vaaraton. Sen avulla nähdään, montako sikiötä kohdussa on, ja sikiön koosta voidaan arvioida raskauden kesto. Kuvasta näkyvät sikiön, istukan ja napanuoran sijainti ja sikiön asento, ja sydämen sykettä voidaan seurata. Rakenneultraäänessä etsitään elinten ja raajojen poikkeamia, kuten sydänvikoja tai huulihalkiota. Myöhemmin raskaudessa ultraäänellä voidaan arvioida sikiön painoa ja nähdä sukupuoli.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 11,
+     "prompt": "Antibioottiresistenssiä pidetään ihmisten terveydelle yhtä vakavana uhkana kuin ilmastonmuutosta. Arvioi, mitkä tekijät ovat johtaneet resistenssin syntymiseen.",
+     "hints": [
+      "Käsittele sekä biologinen mekanismi (mutaatio, geenien siirtyminen, luonnonvalinta) että ihmisen toiminta (antibioottien käyttö lääketieteessä ja maataloudessa). Määrittele ensin antibiootti ja resistenssi.",
+      "Mekanismi: resistenssialleeleja syntyy mutaatioissa, ne ovat usein plasmideissa ja siirtyvät konjugaatiossa, transformaatiossa tai transduktiossa bakteerista toiseen, myös lajien välillä; haploidissa perimässä mutaatio näkyy heti; antibiootti aiheuttaa suuntaavaa valintaa. Ihminen: turhat kuurit (esim. virustauteihin), laajakirjoiset antibiootit, sairaalabakteerit ja moniresistenssi, maatalouden kasvua edistävä ja ennaltaehkäisevä käyttö, jäämät ravinnossa, heikko lääkevalvonta ja jätehuolto."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Käsitteet ja mekanismi*\n- Antibiootit ovat peräisin mikrobeista, etenkin homeista, jotka tuottavat bakteereja tappavia aineita.\n- Resistenssi tarkoittaa, että bakteeri selviää ja lisääntyy antibiootista huolimatta.\n- Antibiootti toimii suuntaavana valintana: herkät bakteerit kuolevat, ja kestävät jatkavat lisääntymistä.\n- Resistenssin aiheuttavat alleelit syntyvät mutaatioina ja sijaitsevat usein plasmideissa.\n- Resistenssigeeni voi levitä rekombinaatiolla (konjugaatio, transformaatio, transduktio) bakteerista toiseen, jopa toiseen lajiin.\n- Koska bakteerin perimä on haploidi, mutaatio näkyy ilmiasussa heti.\n\n*Ihmisen toiminta*\n- Antibiootteja on määrätty tarpeettomasti, esimerkiksi virusinfektioihin, joihin ne eivät vaikuta.\n- Laajakirjoinen antibiootti tuhoaa taudinaiheuttajan lisäksi sen kilpailijoita.\n- Seurauksena on syntynyt moniresistenttejä sairaalabakteereja, joihin ei ole löytynyt tehoavaa antibioottia.\n- Kotieläimille on annettu antibiootteja kasvun kiihdyttämiseksi ja tautien ehkäisemiseksi, ja jäämät voivat kulkeutua ruokaan.\n- Löyhä lääkevalvonta ja puutteellinen jätehuolto osassa maailmaa levittävät resistenttejä bakteereja.\n\n**Esimerkkivastaus**\n\nAntibiootit ovat alun perin homeiden ja muiden mikrobien tuottamia aineita, jotka tappavat bakteereja tai estävät niiden kasvun. Resistentti bakteeri kestää antibiootin ja lisääntyy sen läsnä ollessa. Resistenssi syntyy sattumanvaraisista mutaatioista, esimerkiksi niin, että bakteeri alkaa tuottaa antibioottia hajottavaa entsyymiä. Koska bakteerit ovat haploideja ja lisääntyvät nopeasti, uusi ominaisuus näkyy heti ja yleistyy nopeasti. Resistenssigeenit sijaitsevat usein plasmideissa, jotka siirtyvät konjugaatiossa bakteerista toiseen, jopa eri lajeihin.\n\nKun antibioottia käytetään, herkät bakteerit kuolevat ja resistentit jäävät jäljelle ja saavat tilaa lisääntyä. Tätä valintaa ihminen on voimistanut käyttämällä antibiootteja turhaan, esimerkiksi flunssaan, jonka aiheuttavat virukset, sekä suosimalla laajakirjoisia valmisteita, jotka tuhoavat myös harmittomat kilpailijabakteerit. Sairaaloissa, joissa antibiootteja käytetään paljon, on kehittynyt moniresistenttejä bakteereja. Monissa maissa eläimille on syötetty antibiootteja kasvun edistämiseksi ja tautien ehkäisemiseksi, ja jäämiä ja resistenttejä bakteereja päätyy ympäristöön ja ruokaan. Heikko lääkevalvonta, itsehoitona myytävät antibiootit ja puutteellinen jätevesihuolto levittävät resistenssiä maailmanlaajuisesti.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 4,
+     "prompt": "Pohdi, millä keinoin ihmiskunta voi hillitä antibioottiresistenssin yleistymistä.",
+     "hints": [
+      "Mieti keinoja kolmelta tasolta: antibioottien käyttö (milloin ja mitä), tartuntojen ehkäisy (hygienia, eristys) ja uudet ratkaisut (uudet lääkkeet, bakteriofagit, tiedotus)."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa neljä)\n\n- Lääkekuuri otetaan loppuun asti tai lääkärin ohjeen mukaan.\n- Antibiootteja ei käytetä turhaan, varsinkaan maataloudessa.\n- Käytetään kapeakirjoista antibioottia, joka tehoaa juuri kyseiseen bakteeriin; oikea valmiste löydetään puhdasviljelmällä.\n- Hyvä hygienia ja sairaalabakteeria kantavien potilaiden eristäminen.\n- Uusien antibioottien kehittäminen, valmisteiden vuorottelu ja bakteriofagit antibioottien tilalla.\n- Matkailijoiden valistaminen ja ylijääneiden antibioottien vieminen asianmukaisesti hävitettäviksi.\n\n**Esimerkkivastaus**\n\nTärkeintä on käyttää antibiootteja vain bakteeri-infektioihin ja silloinkin kapeakirjoista valmistetta, joka on valittu bakteeriviljelyn perusteella. Kuuri on syötävä ohjeen mukaan, ja ylimääräiset lääkkeet palautetaan apteekkiin. Eläintuotannossa antibioottien käyttö kasvun edistämiseen on kiellettävä. Sairaaloissa hyvä käsihygienia ja resistenttejä bakteereja kantavien potilaiden eristäminen estävät leviämistä. Lisäksi tarvitaan uusia antibiootteja ja vaihtoehtoisia hoitoja, kuten bakteriofageja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Aineistossa 9.A kerrotaan kenttäkokeesta Nebraskassa: pohjoisamerikkalaisen peurahiiren turkki on vaalealla hiekkadyynialueella vaaleampi kuin tummemmalla maalla dyynien ulkopuolella. Suuriin aitauksiin kummallekin alueelle vapautettiin yhtä monta vaaleaa ja tummaa hiirtä, ja alueen väriin sopivien hiirten osuus kasvoi nopeasti. Tutkijat löysivät myös turkin väriin liittyvän geenin mutaation, joka vaihtaa proteiinista yhden aminohapon.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 6,
+     "prompt": "Määrittele genotyyppi ja fenotyyppi ja selitä, mitä ne tarkoittavat aineiston 9.A peurahiiripopulaatioiden tapauksessa.",
+     "hints": [
+      "Kummastakin käsitteestä saa noin kolme pistettä: yleinen määritelmä ja sen soveltaminen peurahiiriin. Mikä hiirten ominaisuus on fenotyyppi, ja mikä geenitason muutos on sen taustalla?",
+      "Genotyyppi on alleelikoostumus: tutkijat löysivät turkin väriin vaikuttavasta geenistä mutaation, joka vaihtaa proteiinista yhden aminohapon, joten vaaleilla ja tummilla hiirillä on eri genotyyppi. Fenotyyppi on ilmiasu: tässä turkin väri (makrotaso) ja muuttunut proteiini (mikrotaso); ympäristö voi vaikuttaa siihen. Muista, että hiiret eroavat myös monien muiden geenien suhteen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Genotyyppi*\n- Genotyyppi tarkoittaa yksilön perimää eli sen alleeleja.\n- Tutkimuksessa löydettiin peurahiireltä yksi geeni, jonka muutokset säätelevät turkin väriä.\n- Vaaleat ja tummat hiiret eroavat siis tämän geenin alleeleiltaan.\n\n*Fenotyyppi*\n- Fenotyyppi on yksilön ilmiasu.\n- Tutkimuksessa ilmiasu on näkyvä turkin väri, mutta yleisesti fenotyyppiin kuuluvat myös rakenne, käyttäytyminen ja fysiologia.\n- Ilmiasu muotoutuu perimän ja ympäristön yhteisvaikutuksesta.\n- Molekyylitasolla fenotyypin muodostaa geenin koodaama proteiini.\n\n*Lisäksi*\n- Koe keskittyi turkin väriin, vaikka hiiret poikkeavat toisistaan monien muidenkin geenien ja ominaisuuksien suhteen.\n\n**Esimerkkivastaus**\n\nGenotyyppi tarkoittaa yksilön perimää eli sitä, mitä alleeleja sillä on. Peurahiirillä tutkijat keskittyivät yhteen turkin väriin vaikuttavaan geeniin ja löysivät siitä mutaation, joka vaihtaa geenin tuottamaan proteiiniin yhden aminohapon. Vaaleilla dyynihiirillä on tämän geenin eri alleeli kuin tummilla hiirillä, eli niiden genotyypit eroavat.\n\nFenotyyppi on yksilön havaittava ilmiasu, joka syntyy perimän ja ympäristön yhteisvaikutuksesta. Peurahiirillä tutkittu fenotyyppi on turkin väri: vaalea tai tumma. Molekyylitasolla fenotyyppi on geenin koodaama proteiini, joka vaikuttaa karvojen pigmenttiin. Hiirillä on luonnollisesti monia muitakin geenejä ja ominaisuuksia, joiden suhteen ne eroavat, mutta kokeessa tarkasteltiin vain turkin väriä.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 14,
+     "prompt": "Aineistossa 9.A tutkimusta pidetään esimerkkinä evoluutiosta. Arvioi, millaisen mikroevoluution kautta peurahiiripopulaatioiden turkin väri on muuttunut.",
+     "hints": [
+      "Etene evoluution vaiheiden mukaan: muuntelun synty, valintapaine ja valinnan tyyppi, kelpoisuus ja lisääntyminen, alleelifrekvenssien muutos. Liitä jokainen vaihe kenttäkokeeseen (vaaleat ja tummat hiiret aitauksissa dyyneillä ja niiden ulkopuolella).",
+      "Muuntelua tuottavat sukusolulinjan mutaatiot ja rekombinaatio. Turkin väri on suojaväri: petolinnut löytävät helpommin taustastaan erottuvat hiiret, joten dyyneillä valinta suosii vaaleita ja muualla tummia (suuntaava valinta kummassakin, kokonaisuutena hajottava valinta). Hiiret lisääntyvät nopeasti ja paljon, joten muutos voi olla nopea. Kelpoisimmat siirtävät alleelinsa jälkeläisille, alleelifrekvenssi ja fenotyyppien suhteet muuttuvat: mikroevoluutio, ei vielä lajiutumista."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Evoluutio edellyttää populaatiossa muuntelua, joka näkyy ilmiasussa.\n- Muuntelun lähteitä ovat mutaatiot ja rekombinaatio. Turkin väriä muuttavat mutaatiot periytyvät, koska ne ovat syntyneet sukusoluja tuottavissa soluissa.\n- Turkin väri suojaa saalistajilta; avoimiin aitauksiin pääsivät esimerkiksi petolinnut.\n- Saalistus toimii valintapaineena.\n- Dyyneillä ja niiden ulkopuolella valinta suuntautuu vastakkaisiin suuntiin, joten yhdessä tarkasteltuna valinta on hajottavaa.\n- Lyhyt sukupolviväli ja suuret poikueet tekevät hiirten evoluutiosta nopeaa.\n- Kelpoisuus on suurin hiirillä, joiden turkki sulautuu maaperän väriin.\n- Nämä hiiret saavat lisääntymiskykyisiä poikasia, jotka perivät niiden värialleelit.\n- Alleelien yleisyys populaatiossa muuttuu, ja vaaleiden ja tummien hiirten osuudet vaihtuvat sukupolvesta toiseen (mikroevoluutio).\n- Uutta lajia ei ole (vielä) syntynyt.\n\n**Esimerkkivastaus**\n\nEvoluutio edellyttää perinnöllistä muuntelua. Peurahiirten turkin väriin vaikuttavassa geenissä on syntynyt mutaatio, joka vaihtaa yhden aminohapon pigmenttiin vaikuttavassa proteiinissa. Koska mutaatio on syntynyt sukusoluja tuottavassa solulinjassa, se periytyy. Suvullisessa lisääntymisessä rekombinaatio yhdistää alleeleja uusiksi yhdistelmiksi, joten populaatiossa on eri sävyisiä hiiriä.\n\nTurkin väri toimii suojavärinä. Aitaukset olivat avoimia, joten petolinnut, kuten pöllöt ja haukat, pystyivät saalistamaan hiiriä. Vaalealla dyynihiekalla tummat hiiret erottuvat selvästi ja joutuvat useammin saaliiksi, kun taas tummalla maalla vaaleat hiiret ovat näkyvämpiä. Saalistus aiheuttaa siis valintapaineen, joka on dyyneillä suuntaavaa valintaa vaaleaa väriä kohti ja dyynien ulkopuolella tummaa väriä kohti. Kun molempia alueita tarkastellaan yhdessä, valinta on hajottavaa, sillä se suosii kahta ääripäätä.\n\nKelpoisimpia ovat ne hiiret, joiden turkki sulautuu maaperään: ne selviävät pidempään ja ehtivät lisääntyä useammin. Niiden värialleelit siirtyvät jälkeläisiin, ja seuraavassa sukupolvessa suojaväriset hiiret ovat yleisempiä. Koska hiirillä on lyhyt sukupolviväli ja suuret poikueet, muutos on nopea, kuten kokeessa havaittiin: vaaleiden osuus kasvoi dyyniaitauksissa ja tummien muualla. Kyse on mikroevoluutiosta eli alleelifrekvenssien muutoksesta populaatiossa. Vaaleat ja tummat hiiret ovat kuitenkin edelleen samaa lajia, eikä lajiutumista ole tapahtunut.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Jokainen avaruusaseman astronautti tarvitsee päivässä noin 1 kg happea, 1 kg kuivaruokaa ja 3 kg vettä, joiden kuljettaminen Maasta on kallista. ESA:n MELiSSA-ohjelma kehittää omavaraista ekosysteemiä (kuva 10.A), jossa on viisi osastoa: 1 kuumassa eläviä anaerobisia bakteereja, 2 fotoheterotrofisia bakteereja (hiili orgaanisista yhdisteistä, energia valosta), 3 nitrifikaatiobakteereja, 4 vihreitä kasveja ja fotosynteettisiä bakteereja ja 5 astronautit. Virtsasta puhdistetaan vettä kierrätykseen.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 7,
+     "prompt": "Pohdi kuvan 10.A perusteella osastojen 1, 2 ja 3 tehtävää avaruusekosysteemissä.",
+     "hints": [
+      "Seuraa kuvan nuolia: mitä kukin osasto saa ja mitä se luovuttaa eteenpäin? Mieti, mikä on kunkin osaston bakteerien rooli ekosysteemissä (hajottaja, fotoheterotrofi, nitrifikaatio).",
+      "Osasto 1: anaerobiset hajottajat pilkkovat astronauttien jätteet ja kasvijätteen, tuottavat hiilidioksidia osastolle 4 sekä rasvahappoja ja ammoniumia osastolle 2. Osasto 2: valon energiaa käyttävät bakteerit muuttavat rasvahapot biomassaksi (myös ravinnoksi) ja siirtävät ravinteet eteenpäin. Osasto 3: nitrifikaatiobakteerit hapettavat ammoniumin nitriitin kautta nitraatiksi, jota osaston 4 kasvit tarvitsevat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Osastojen 1–3 bakteerit tuottavat yhdessä ravinteita, joista osaston 4 tuottajat rakentavat orgaanisia yhdisteitä.\n- **Osasto 1:** hajottajabakteerit hajottavat jätteet yhdisteiksi, joita osasto 2 hyödyntää, ja vapauttavat hiilidioksidia, jota osaston 4 fotosynteesi tarvitsee.\n- **Osasto 2:** valoenergiaa hyödyntävät bakteerit rakentavat rasvahapoista muita orgaanisia yhdisteitä. Ammoniumionit ja muut ravinteet siirtyvät tätä kautta osastolle 3. Bakteerien biomassaa voidaan käyttää astronauttien ruokana, ja bakteerit vapauttavat hiilidioksidia kasvien käyttöön.\n- **Osasto 3:** huolehtii typen kierrosta: nitrifikaatiobakteerit hapettavat ammoniumionit ensin nitriitiksi ja sitten nitraatti-ioneiksi.\n- Osaston 4 tuottajat saavat typen nitraatin muodossa ja tarvitsevat sitä kasvaakseen ja rakentaakseen biomolekyylejä.\n\n**Esimerkkivastaus**\n\nOsastot 1–3 hoitavat avaruusekosysteemissä saman tehtävän kuin hajottajat ja maaperän mikrobit maapallolla: ne palauttavat jätteiden aineet kiertoon, jotta kasvit saavat ravinteita.\n\nOsastossa 1 kuumassa ja hapettomassa elävät bakteerit hajottavat astronauttien ulosteet ja syötäväksi kelpaamattomat kasvinosat. Hajotuksessa vapautuu hiilidioksidia, jota osaston 4 kasvit käyttävät yhteyttämiseen, sekä rasvahappoja, ammoniumia ja muita ravinteita, jotka siirtyvät osastolle 2.\n\nOsaston 2 fotoheterotrofiset bakteerit saavat energiansa valosta ja hiilensä osastolta 1 tulevista rasvahapoista. Ne muuttavat rasvahapot omaksi biomassakseen, jota voidaan käyttää ravinnoksi, ja välittävät ammoniumin ja muut ravinteet osastolle 3.\n\nOsaston 3 nitrifikaatiobakteerit hapettavat ammoniumionit ensin nitriitiksi ja sitten nitraatiksi. Nitraatti on kasveille parhaiten sopiva typen muoto, ja kasvit tarvitsevat typpeä proteiinien ja nukleiinihappojen valmistukseen. Ilman osastoja 1–3 typpi ja muut ravinteet jäisivät jätteisiin eivätkä kiertäisi takaisin kasveille.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 7,
+     "prompt": "Pohdi, mitä hyötyä osastosta 4 on osaston 5 astronauteille.",
+     "hints": [
+      "Osastossa 4 ovat tuottajat. Mitä kolmea asiaa astronautti tarvitsee päivittäin (aineiston luvut: happi, ruoka ja vesi), ja mitä astronautit antavat tuottajille takaisin?",
+      "Tuottajat ovat omavaraisia: fotosynteesissä syntyy glukoosia, josta kasvit valmistavat muita biomolekyylejä (proteiineja, rasvoja), ja ne ovat astronauttien ravintoa. Fotosynteesi kuluttaa astronauttien uloshengittämän hiilidioksidin ja tuottaa happea soluhengitykseen. Kasvit haihduttavat ja puhdistavat vettä juotavaksi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Osaston 4 eliöt ovat omavaraisia tuottajia.\n- Fotosynteesissä ne tuottavat glukoosia ja rakentavat siitä muut biomolekyylinsä, esimerkiksi proteiinit ja rasvat.\n- Tuottajat ovat astronauttien ravintoa.\n- Astronauttien uloshengittämä hiilidioksidi kuluu tuottajien fotosynteesiin, joten sen pitoisuus asemalla pysyy pienenä.\n- Fotosynteesi vapauttaa happea, jota astronautit ja muut aerobiset eliöt tarvitsevat soluhengitykseen.\n- Kasvien haihduttama vesi on puhdasta ja kelpaa astronauttien juomavedeksi.\n\n**Esimerkkivastaus**\n\nOsaston 4 vihreät kasvit ja fotosynteettiset bakteerit ovat järjestelmän tuottajia. Ne sitovat valoenergiaa fotosynteesissä ja valmistavat hiilidioksidista ja vedestä glukoosia, josta ne rakentavat muut biomolekyylinsä, kuten tärkkelyksen, proteiinit ja rasvat. Astronautit syövät kasveja, joten osasto 4 korvaa Maasta kuljetettavan noin kilon päivittäisen kuivaruoan.\n\nAstronautit hengittävät ulos hiilidioksidia, joka kertyisi suljettuun tilaan myrkylliseksi. Osaston 4 tuottajat käyttävät sen yhteyttämiseen ja vapauttavat samalla happea, jota astronautit tarvitsevat soluhengitykseensä. Lisäksi kasvit haihduttavat vettä, joka voidaan tiivistää puhtaaksi juomavedeksi. Osasto 4 on siis astronauteille ruoan, hapen ja veden lähde ja hiilidioksidin poistaja.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 6,
+     "prompt": "Pohdi ekologisesta näkökulmasta, miksi omavaraiseen avaruusekosysteemiin, kuten MELiSSA-järjestelmään, ei kannata tuoda eläimiä.",
+     "hints": [
+      "Ajattele energiaa trofiatasoittain: jos astronautti söisi eläintä, jolla trofiatasolla hän olisi ja paljonko energiaa häviäisi matkalla?",
+      "Eläimen ekologinen tehokkuus on pieni: suurin osa (noin 90 %) sen syömästä energiasta kuluu elintoimintoihin. Eläimet tarvitsisivat rehua (vie tilaa ruoalta), kuluttaisivat happea ja vettä, ja kasveista saadaan jo kaikki ravintoaineet, joita astronautit tarvitsevat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Ihminen siirtyisi kolmannelle trofiatasolle, jolloin energiaa menisi hukkaan enemmän.\n- Eläimet sitovat biomassaansa pienemmän osan energiasta kuin tuottajat: ne käyttävät noin 90 % energiasta omiin elintoimintoihinsa, tuottajat vain noin puolet.\n- Kasvit tuottavat siis biomassaa tehokkaammin.\n- Eläinten rehun kasvattaminen veisi tilaa ihmisten ruoalta.\n- Eläinten soluhengitys kuluttaisi happea astronauttien kustannuksella.\n- Eläimet joisivat myös vettä.\n- Osaston 4 tuottajista saadaan jo kaikki astronauttien tarvitsemat ravintoaineet, joten eläimiä ei tarvita.\n\n**Esimerkkivastaus**\n\nKun astronautti syö kasveja, hän on toisella trofiatasolla. Jos kasveilla ruokittaisiin ensin eläimiä ja astronautti söisi eläimet, hän olisi kolmannella tasolla. Eläin käyttää noin 90 % syömänsä ravinnon energiasta omaan aineenvaihduntaansa, ja vain noin kymmenesosa päätyy sen kasvuun. Samalla kasvimäärällä voitaisiin siis ruokkia kymmenkertainen määrä ihmisiä, jos kasvit syötäisiin suoraan.\n\nAvaruusaseman tila, valo ja vesi ovat rajallisia. Eläinten rehua varten tarvittaisiin lisää kasvatustilaa, ja eläimet hengittäisivät happea ja joisivat vettä, joita astronauteille jäisi vähemmän. Eläimet tuottaisivat myös lisää jätettä ja hiilidioksidia hajotettavaksi. Koska kasveista ja bakteeribiomassasta saadaan kaikki tarvittavat ravintoaineet, eläimet vain heikentäisivät järjestelmän hyötysuhdetta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Luustolihaksia ohjaavat liikehermot. Tekstissä 11.A kuvataan koe, jossa lihas kiinnitetään voimanmittausanturiin ja sen liikehermoa ärsytetään elektrodeilla. Kuva 11.B on esimerkki yhdestä mittauksesta, ja taulukossa 11.C on tulokset seitsemällä ärsykevälillä (20–400 ms) ja kolmella jännitteellä.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Tekstin 11.A kokeessa luustolihasta ärsytettiin sähköllä kahdesti peräkkäin ja mitattiin jälkimmäisen ärsykkeen aiheuttama supistusvoima. Ärsykkeiden väliä vaihdeltiin, ja jännitteinä käytettiin 0,8 V, 1,4 V ja 2,0 V. Tee taulukon 11.C tuloksista viivadiagrammi, jonka vaaka-akselilla on ärsykkeiden välinen aika ja pystyakselilla supistusvoima kullakin kolmella jännitteellä, ja liitä se vastaukseen kuvakaappauksena.",
+     "hints": [
+      "Diagrammissa on kolme viivaa, yksi kullekin jännitteelle. Vaaka-akselin on oltava jatkuva aika-asteikko, vaikka taulukon arvot eivät ole tasavälein.",
+      "Käytä taulukkolaskentaohjelmassa XY-kaaviota viivoin (ei kategorista viivakaaviota), jotta 20, 40, 60, 80, 100, 200 ja 400 ms sijoittuvat oikeille kohdilleen. Vaaka-akseli: ärsykkeiden välinen aika (ms), kasvaa vasemmalta oikealle. Pystyakseli: supistusvoima (N). Lisää selite jännitteistä ja otsikko."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Viivadiagrammi, jossa on kolme viivaa (tai erilliset viivadiagrammit kustakin jännitteestä).\n- Vaaka-akselilla ärsykkeiden välinen aika oikein päin jatkuvalla asteikolla, akseli nimetty ja yksikkö ms.\n- Pystyakselilla voima, akseli nimetty ja yksikkö newton (N).\n- Selite, josta jännitteet 0,8 V, 1,4 V ja 2,0 V erottuvat.\n- Otsikko tai kuvateksti, josta käy ilmi ärsytysjännitteen ja ärsykkeiden välisen ajan vaikutus supistusvoimaan.\n\n**Toteutus**\n\n1. Kopioi taulukko ohjelmaan. Järjestä halutessasi rivit kasvavaan aikajärjestykseen (taulukossa ne ovat laskevassa).\n2. Valitse kaaviotyypiksi XY (hajonta) viivoin, jolloin aika-akseli on jatkuva (0–400 ms).\n3. Pystyakselin asteikoksi riittää 0–3 N, koska voimat ovat noin 0,5–3,0 N.\n4. Nimeä akselit, lisää selite ja otsikko, esim. \"Ärsykkeiden välisen ajan vaikutus lihaksen supistusvoimaan kolmella ärsytysjännitteellä\".\n\n**Sudenkuoppa:** tavallinen viivakaavio sijoittaa arvot tasavälein luokkina, jolloin 20 ms:n ja 400 ms:n välinen ero näyttää yhtä suurelta kuin 20 ja 40 ms:n ero. Silloin kyse ei ole viivadiagrammista jatkuvalla asteikolla.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 10,
+     "prompt": "Selitä diagrammisi perusteella, miten ärsytysjännitteen suuruus vaikutti lihaksen supistusvoimaan. Perustele tulokset lihaksen rakenteella ja toiminnalla.",
+     "hints": [
+      "Vertaa viivoja keskenään samalla ärsykevälillä: kuinka paljon voima kasvaa, kun jännite nousee 0,8 V:sta 1,4 V:iin ja siitä 2,0 V:iin? Selitä ero motoristen yksiköiden avulla.",
+      "Suurempi jännite aktivoi useampia liikehermosoluja, jolloin useampi motorinen yksikkö supistuu. Voiman kasvu tasaantuu suurilla jännitteillä, kun lähes kaikki lihassolut ovat jo mukana (yksittäinen solu toimii kaikki tai ei mitään -periaatteella). Kerro lisäksi supistumisen mekanismi: sarkomeeri, aktiini ja myosiini, liukuminen lomittain, ATP."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kun ärsytysjännitettä nostetaan, lihas supistuu voimakkaammin.\n- Korkeampi jännite aktivoi useampia liikehermosoluja, ja supistukseen osallistuu enemmän motorisia yksiköitä.\n- Suurilla jännitteillä voima kasvaa enää vähän, sillä lähes kaikki lihassolut ovat jo mukana supistuksessa eikä lisävoimaa ole saatavilla.\n- Supistus syntyy lihassäikeiden sarkomeereissa, joissa aktiini- ja myosiinisäikeet ovat järjestyneet säännöllisesti.\n- Säikeiden liukuessa toistensa lomaan lihassolu lyhenee.\n- Myosiini toimii moottoriproteiinina ja saa energiansa ATP:stä.\n- Yksittäisen lihassolun supistus noudattaa kaikki tai ei mitään -periaatetta, joten lihaksen voimaa säätelee supistuvien solujen määrä.\n\n**Laskettu tarkistus:** 400 ms:n välillä voima kasvaa noin 78 % (noin 0,38 N), kun jännite nousee 0,8 V:sta 1,4 V:iin, mutta vain noin 6 % (noin 0,05 N), kun se nousee 1,4 V:sta 2,0 V:iin. Sama kyllästyminen näkyy kaikilla ärsykeväleillä.\n\n**Esimerkkivastaus**\n\nDiagrammissa 1,4 V:n ja 2,0 V:n viivat ovat selvästi 0,8 V:n viivan yläpuolella kaikilla ärsykeväleillä, mutta keskenään ne ovat lähellä toisiaan. Jännitteen nosto 0,8 V:sta 1,4 V:iin lähes kaksinkertaisti voiman, mutta nosto 2,0 V:iin lisäsi sitä enää vähän.\n\nLuustolihas koostuu motorisista yksiköistä: kukin liikehermosolu hermottaa joukkoa lihassoluja, jotka supistuvat yhdessä. Heikko sähköärsyke saa toimintajännitteen syntymään vain osassa hermon aksoneista, joten vain osa motorisista yksiköistä supistuu. Kun jännite kasvaa, yhä useampi aksoni aktivoituu, ja supistukseen osallistuu enemmän lihassoluja. Yksittäinen lihassolu toimii kaikki tai ei mitään -periaatteella, joten lihaksen voimaa säädellään sillä, kuinka monta solua supistuu. Kun lähes kaikki yksiköt ovat mukana, jännitteen lisäys ei enää juuri lisää voimaa.\n\nLihassolun sisällä voima syntyy sarkomeereissa. Hermoimpulssi vapauttaa kalsiumia solulimakalvostosta, jolloin myosiinin päät pääsevät tarttumaan aktiinisäikeisiin. Myosiini käyttää ATP:n energiaa ja vetää aktiinisäikeitä sarkomeerin keskustaa kohti, jolloin säikeet liukuvat lomittain, sarkomeerit lyhenevät ja koko lihas supistuu.",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 5,
+     "prompt": "Pohdi diagrammisi ja kuvan 11.B (yksittäinen mittaus: kaksi 0,8 V:n ärsykettä 200 ms välein) avulla, miten ärsykeväli vaikutti supistusvoimaan.",
+     "hints": [
+      "Katso kuvasta 11.B, kuinka kauan ärsykkeestä kestää supistuksen alkuun ja kuinka pian lihas on rentoutunut. Vertaa tätä diagrammin kohtaan, jossa voima alkaa kasvaa.",
+      "Pitkillä väleillä (200–400 ms) lihas ehtii rentoutua, ja jälkimmäinen supistus on yhtä voimakas kuin ensimmäinen. Alle noin 100 ms:n väleillä toinen ärsyke tulee ennen kuin edellinen supistus on ohi, joten supistukset summautuvat ja voima kasvaa (kohti tetaanista supistusta). Lyhyimmällä välillä voima on noin kolminkertainen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Nopeasti toistuva ärsytys kasvattaa supistusvoimaa.\n- Selvin vaikutus näkyy alle 100 ms:n väleillä, jolloin seuraava ärsyke osuu vielä käynnissä olevaan supistukseen.\n- Silloin lihas lähestyy tetaanista supistusta, ja voima voi olla yli kaksi kertaa niin suuri kuin yksittäisessä supistuksessa.\n- Kuvassa 11.B supistus alkaa noin 20 ms ärsykkeen jälkeen, joten lyhyillä väleillä seuraava ärsyke tulee ennen kuin edellinen supistus on huipussaan.\n- Toistuva ärsytys voi aktivoida useampia lihassoluja. Lisäksi uusi supistus lähtee liikkeelle jo osittain lyhentyneistä sarkomeereista, koska solut eivät ehdi palautua lepotilaan.\n- Yli 200 ms:n väleillä lihas rentoutuu kokonaan ennen seuraavaa ärsykettä, joten voima ei kasva.\n\n**Laskettu tarkistus:** taulukon arvoista lyhimmällä välillä (20 ms) voima on noin 3,2–3,4-kertainen verrattuna 400 ms:n väliin kaikilla jännitteillä, ja 200 ms:n ja 400 ms:n välillä ei ole juuri eroa.\n\n**Esimerkkivastaus**\n\nKuvassa 11.B supistus alkaa noin 20 ms ärsykkeen jälkeen, on huipussaan noin 60 ms kohdalla ja lihas on rentoutunut noin 130 ms:ssa. Koska ärsykkeiden väli on 200 ms, jälkimmäinen supistus alkaa rennosta lihaksesta ja on yhtä voimakas kuin ensimmäinen.\n\nDiagrammissa voima on 200 ja 400 ms:n väleillä sama, mutta alkaa kasvaa, kun väli lyhenee noin 100 millisekuntiin, ja kasvaa jyrkästi alle 60 ms:n väleillä. Silloin toinen ärsyke tulee ennen kuin lihas on ehtinyt rentoutua, ja supistukset summautuvat: sarkomeerit ovat jo osittain lyhentyneet, kalsiumia on vielä solulimassa ja uusi supistus lähtee korkeammalta tasolta. Lyhimmällä 20 ms:n välillä voima on noin kolminkertainen yksittäiseen supistukseen verrattuna. Jos ärsykkeitä tulisi jatkuvasti tiheään, lihas jäisi pysyvään tetaaniseen supistukseen, jolla elimistö tuottaa voimakkaita, pitkäkestoisia supistuksia.",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,407 @@
+{
+ "subject": "biologia",
+ "session": "2026S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2026/syksy/biologia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2026-09-22_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: 20 pisteen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä. Monivalinnoissa väärästä tai puuttuvasta vastauksesta 0 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään seitsemästä."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään kolmesta. Koko kokeessa vastataan seitsemään tehtävään, yhteensä 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Monivalintasarja soluista. Kohdissa 1.1–1.5 tunnistetaan viisi mikroskooppikuvaa soluista A–E ja valitaan jokaiselle eliön osa, johon solu parhaiten kuuluu (kaksi pudotusvalikkoa, 1 p/valinta). Kohdissa 1.6 ja 1.7 etsitään kuvien soluja koskevista väittämistä se yksi, joka on väärin (ensin solujen tehtävät, sitten rakenteet). Kohdissa 1.8.1–1.8.3 etsitään virheellinen väite kasvisolun piirrokseen merkityistä rakenteista a–e (aineisto 1.8.A). Monivalinnoista 2 p/kohta. Kuvat ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Tunnista solut tuntomerkeistä: poikkijuovat ja useita tumia, pitkät haarakkeet, paksuseinäiset putkimaiset solurivit, tumattomat kiekkomaiset solut ja tiivis yhtenäinen solukerros. Kasvisolun piirroksessa a on tuma, b mitokondrio, c keskusvakuoli, d solulimakalvosto ja e viherhiukkanen.",
+      "Kohta kohdalta:\n- 1.1–1.5: yhdistä solu elimeen, jossa sitä on eniten (tahdonalainen lihas, keskushermosto, varren johtojänne, verisuoni, hengitysteiden pinta).\n- 1.6: mitä punasolut todella kuljettavat, ja mikä veressä kuljettaa glukoosia?\n- 1.7: tarkista jokaisen väitteen sana *ainoita*. Montako kuvista on eläinsoluja?\n- 1.8.1–1.8.3: missä proteiinit syntetoidaan, missä glykolyysi tapahtuu ja mistä kromatiini koostuu?"
+     ],
+     "solution": "**1.1–1.5 Solut ja eliön osat** (vaihtoehdot kirjaimin ylhäältä alkaen)\n\n1. Solu A: **poikkijuovainen lihassolu** (G) ja **hauislihas** (G). Pitkä syy, jossa on poikkijuovat ja monta tumaa.\n2. Solu B: **hermosolu** (B) ja **aivot** (A). Solukeskuksesta lähtee haarakkeita.\n3. Solu C: **johtosolukon solu** (E) ja **kasvin varsi** (E). Paksut soluseinät, soluja rivissä kuin putkia.\n4. Solu D: **verisolu** (H) ja **valtimo** (D). Pieniä tumattomia kiekkoja eli punasoluja.\n5. Solu E: **pintakudoksen solu eli epiteelisolu** (I) ja **keuhkoputken sisäpinta** (F). Tiiviisti vierekkäin oleva solukerros.\n\n**1.6 Virheellinen väite solujen tehtävistä: D.** Väite, että kuvan 1.4 solut kuljettavat glukoosia soluille, on väärä. Punasolut kuljettavat happea (ja osin hiilidioksidia), glukoosi kulkee liuenneena veriplasmassa.\n\n**1.7 Virheellinen väite rakenteista: D.** Väite, että vain kuvan 1.4 soluista puuttuvat viherhiukkaset, on väärä. Viherhiukkaset puuttuvat myös lihas-, hermo- ja epiteelisoluista, jotka ovat eläinsoluja, eikä niitä ole varren johtosolukon soluissakaan.\n\n**1.8 Soluelimet**\n\n1. 1.8.1: **A.** Väite, että tuma (a) valmistaa solun proteiinit, on väärä. Tumassa on proteiinien ohje (DNA), ja siellä tehdään lähetti-RNA, mutta proteiinit syntetoidaan ribosomeissa solulimassa ja solulimakalvostolla.\n2. 1.8.2: **B.** Väite, että mitokondriossa (b) tapahtuu glykolyysi, on väärä. Glykolyysi tapahtuu solulimassa, mitokondriossa tapahtuvat sitruunahappokierto ja elektroninsiirtoketju.\n3. 1.8.3: **B.** Väite, että kaikissa rakenteissa tumaa lukuun ottamatta on proteiineja, on väärä. Tumassa on runsaasti proteiineja: kromatiinin histonit, tumahuokosten proteiinit ja DNA:n kahdentamisen ja transkription entsyymit.\n\n**Sudenkuoppa:** kohdissa 1.6–1.8 etsitään *virheellistä* väitettä. Kohdan 1.8.3 kaksoiskalvo tarkoittaa fosfolipidikaksoiskerrosta, joka on jokaisen solukalvon perusrakenne, joten vakuolia koskeva väite on tosi.",
+     "answer": "1.1 G, G · 1.2 B, A · 1.3 E, E · 1.4 H, D · 1.5 I, F · 1.6 D · 1.7 D · 1.8.1 A · 1.8.2 B · 1.8.3 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Bakteerit ovat eliöryhmistä monimuotoisin, ja niiden osuus maapallon biomassasta on noin 13 %. Pohdi, miksi bakteereja on niin paljon ja kaikkialla: miten niiden evoluutiohistoria ja ominaisuudet selittävät tämän?",
+     "hints": [
+      "Jäsennä vastaus teemoittain: pitkä evoluutiohistoria, lisääntyminen ja leviäminen, perinnöllinen muuntelu, energian ja ravinnon hankinta sekä suhteet muihin eliöihin. Anna jokaisesta teemasta konkreettinen esimerkki.",
+      "Muuntelun osalta kytke yhteen kolme asiaa: haploidinen perimä (mutaatio näkyy heti ilmiasussa), nopea jakautuminen (paljon mutaatioita lyhyessä ajassa) ja horisontaalinen geeninsiirto, esimerkiksi konjugaatio. Muuntelu ja luonnonvalinta yhdessä selittävät nopean sopeutumisen. Mainitse lisäksi lepoitiöt, ääriolojen lajit, fotosynteesi ja kemosynteesi sekä mutualismi ja loisinta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Pitkä historia:** bakteereja on ollut maapallolla noin 3,5 miljardia vuotta, paljon kauemmin kuin useimpia muita eliöitä. Ne ovat ehtineet sopeutua lähes kaikkiin ympäristöihin, myös sellaisiin, joissa muut eliöt eivät tule toimeen (kuumat lähteet, hapettomat sedimentit, suolaiset tai hyvin happamat vedet, antibiooteille altistuvat sairaalat).\n- **Lisääntyminen ja leviäminen:** suvuton kahtia jakautuminen on nopeaa, joten hyvissä oloissa populaatio kasvaa eksponentiaalisesti. Huonoissa oloissa osa bakteereista muodostaa kestäviä lepoitiöitä, jotka myös leviävät helposti.\n- **Muuntelu:** perimä on haploidinen, joten mutaatio vaikuttaa heti. Nopea sukupolvenvaihto kerryttää mutaatioita, ja bakteerit saavat geenejä toisiltaan horisontaalisesti (konjugaatio, transformaatio, transduktio). Runsas perinnöllinen vaihtelu ja luonnonvalinta mahdollistavat nopean sopeutumisen.\n- **Monipuolinen aineenvaihdunta:** osa on omavaraisia (syanobakteerien fotosynteesi, kemosynteesi). Toisenvaraiset bakteerit käyttävät energianlähteenä lähes mitä tahansa orgaanista ainetta ja ovat kehittyneet hajottamaan uusiakin aineita, kuten öljyä ja muovia.\n- **Suhteet muihin eliöihin:** bakteerit elävät taudinaiheuttajina ja loisina, mutta myös mutualismissa (suoliston bakteerit ruoansulatuksen apuna, typensitojat palkokasvien juurinystyröissä) sekä hajottajina.\n\n**Esimerkkivastaus**\n\nBakteerit ovat eläneet maapallolla miljardeja vuosia kauemmin kuin useimmat monisoluiset eliöt. Tänä aikana ne ovat levittäytyneet kaikkialle, myös kuumiin lähteisiin, suolajärviin ja hapettomiin pohjakerroksiin, joissa muut eliöt eivät selviä.\n\nBakteerit lisääntyvät jakautumalla kahtia, parhaimmillaan kymmenien minuuttien välein, joten hyvissä oloissa niiden määrä kasvaa eksponentiaalisesti. Kun olot heikkenevät, monet lajit muodostavat lepoitiöitä, jotka kestävät kuivuutta ja kuumuutta ja kulkeutuvat helposti uusille alueille.\n\nKoska bakteerin perimä on haploidinen, mutaatio vaikuttaa heti ilmiasuun eikä vastinalleeli peitä sitä. Nopea jakautuminen tuottaa lyhyessä ajassa paljon mutaatioita, ja lisäksi bakteerit vaihtavat geenejä horisontaalisesti esimerkiksi konjugaatiossa plasmidien välityksellä. Syntyy runsaasti muuntelua, josta luonnonvalinta suosii oloihin parhaiten sopivia muotoja. Esimerkkinä on antibioottiresistenssin yleistyminen sairaaloissa.\n\nAineenvaihdunnaltaan bakteerit ovat monipuolisia: syanobakteerit yhteyttävät, kemosynteettiset bakteerit saavat energiaa epäorgaanisista yhdisteistä ja toisenvaraiset bakteerit hajottavat lähes mitä tahansa orgaanista ainetta, jopa öljyä ja muovia. Bakteerit ovat myös solmineet monenlaisia suhteita muiden eliöiden kanssa: osa aiheuttaa tauteja, osa elää mutualismissa, kuten ihmisen suolistobakteerit ja palkokasvien typensitojat.\n\n**Sudenkuoppa:** bakteeri ei \"päätä\" sopeutua. Muuntelu syntyy sattumanvaraisesti, ja luonnonvalinta karsii huonommin selviytyvät.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Trooppiset sademetsät kuuluvat maapallon lajirikkaimpiin ympäristöihin. Pohdi, mistä johtuu, että niissä on kehittynyt paljon enemmän lajeja kuin suomalaisissa havumetsissä. Voit käyttää aineistoja 3.A (kartta sademetsien sijainnista) ja 3.B (kuva latvuston kasvillisuudesta).",
+     "hints": [
+      "Vertaa metsätyyppejä ensin abioottisten tekijöiden kautta: valon määrä, lämpötila, kosteus ja sateisuus sekä se, miten ne vaihtelevat vuoden aikana. Täysiin pisteisiin tarvitaan nimenomaan vertailua, ei pelkkää sademetsän kuvausta.",
+      "Lisää ekologiset ja evolutiiviset syyt: suuri perustuotanto, kerroksellinen latvusto ja runsaat päällyskasvit (aineisto 3.B) tarjoavat paljon erilaisia ekolokeroita, joihin lajit ovat voineet erikoistua. Mainitse koevoluutio ja lajiutuminen sekä ikäero: sademetsät ovat olleet vakaita miljoonia vuosia, Suomen metsät ovat syntyneet vasta jääkauden jälkeen."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (täysiin pisteisiin tarvitaan metsätyyppien vertailu)\n\n- **Valo ja perustuotanto:** päiväntasaajan seudulla (aineisto 3.A) valoa saadaan tasaisesti läpi vuoden, joten yhteyttäminen on tehokasta ja perustuotanto suurta. Suomessa valoa on runsaasti vain keväällä ja kesällä, ja kasvu keskittyy lyhyeen kasvukauteen.\n- **Lämpötila:** sademetsässä on lämmintä koko vuoden. Suomessa lajien on kestettävä pakkanen ja jäätyminen ja talvehdittava, ja puiden oksien on kannettava lumikuorma. Nämä vaatimukset rajaavat lajistoa.\n- **Kosteus:** sademetsässä sataa säännöllisesti ja ilma on jatkuvasti kosteaa, mikä suosii esimerkiksi sammakkoeläimiä, sieniä ja päällyskasveja eli epifyyttejä. Suomessa sade vaihtelee enemmän, joten lajien on siedettävä kuivia jaksoja.\n- **Rakenteellinen monimuotoisuus:** sademetsän latvusto on kerroksellinen, ja valo, kosteus ja tuulisuus vaihtelevat kerroksesta toiseen. Puiden oksilla ja rungoilla kasvaa runsaasti päällyskasveja (aineisto 3.B). Suomessa talven lumi ja jää rajoittavat rungoilla kasvavan lajiston lähinnä jäkäliin, ja kerroksia on vähemmän.\n- **Ekolokerot ja lajiutuminen:** monipuolinen ympäristö ja eliöyhteisö ovat mahdollistaneet erikoistumisen kapeisiin ekolokeroihin (esim. vain yhtä ravintokasvia käyttävät hyönteiset). Koevoluutio (pölyttäjät, loiset, mutualismi) on tuottanut paljon uusia lajeja. Suomessa erikoistujia on vähemmän, lajien lokerot ovat laajoja ja lajien välinen kilpailu kovempaa.\n- **Historia:** sademetsät ovat säilyneet suhteellisen vakaina miljoonia vuosia. Suomen havumetsät ovat vain muutaman tuhannen vuoden ikäisiä, koska jääkaudella alue oli jään peitossa, eivätkä kaikki lajit ole vielä ehtineet levitä tänne.\n\n**Esimerkkivastaus**\n\nTrooppiset sademetsät sijaitsevat päiväntasaajan molemmin puolin. Siellä valoa ja lämpöä riittää ympäri vuoden, joten kasvit yhteyttävät jatkuvasti ja perustuotanto on suurta. Suomalaisessa havumetsässä valoisa ja lämmin kasvukausi on lyhyt, ja pitkän talven aikana eliöiden on kestettävä pakkasta ja puiden lumikuormaa. Tällaisiin oloihin sopeutuneita lajeja on vähemmän.\n\nSademetsässä sataa säännöllisesti ja ilmankosteus on suuri, mikä sopii kosteutta tarvitseville eliöille, kuten sammakoille, sienille ja puiden oksilla kasvaville päällyskasveille. Latvusto muodostaa monta kerrosta, joissa valo ja kosteus vaihtelevat, joten yhdessä puussa on monia erilaisia elinympäristöjä. Havumetsässä kerroksia on vähemmän, ja rungoilla kasvaa talven vuoksi lähinnä jäkäliä.\n\nKoska ympäristöjä ja ravintokohteita on paljon, sademetsän lajeille on syntynyt tilaa erikoistua kapeisiin ekolokeroihin, ja koevoluutio esimerkiksi kasvien ja pölyttäjien välillä on tuottanut paljon uusia lajeja. Havumetsän lajit ovat yleisempiä, ja niiden lokerot menevät enemmän päällekkäin, mikä lisää kilpailua. Lisäksi sademetsät ovat olleet vakaita miljoonia vuosia, kun taas Suomen metsät ovat kehittyneet vasta jääkauden jälkeen, eivätkä kaikki lajit ole vielä levinneet tänne.\n\n**Sudenkuoppa:** pelkkä sademetsän olojen luettelointi ei riitä. Jokaisen tekijän kohdalla kannattaa sanoa, miten havumetsä eroaa ja miksi ero vaikuttaa lajimäärään.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Tunnetuimmat veriryhmäjärjestelmät ovat ABO ja Rh. Punasolujen pinnalla voi olla antigeeneja ja plasmassa vasta-aineita veriryhmän mukaan, ja verensiirroissa luovuttajan ja vastaanottajan veren on sovittava yhteen.",
+   "units": [
+    {
+     "id": "4.1–4.4",
+     "points": 8,
+     "prompt": "Valitse veriryhmille A (4.1), B (4.2), AB (4.3) ja O (4.4) kaksi tietoa: mitä ABO-antigeeneja punasolujen pinnalla on ja mitä antigeeneja vastaan plasmassa on vasta-aineita (1 p/valinta).",
+     "hints": [
+      "Veriryhmän nimi kertoo punasolujen pinnan antigeenit. Plasmassa on vasta-aineita niitä ABO-antigeeneja vastaan, joita omissa punasoluissa ei ole.",
+      "Tee itsellesi pieni taulukko, jossa rivit ovat veriryhmät ja sarakkeet antigeenit ja vasta-aineet. Antigeenit ja vasta-aineet ovat toistensa peilikuvia: kun ryhmällä on kaikki antigeenit, ABO-vasta-aineita ei ole, ja kun antigeeneja ei ole, vasta-aineita on molempia kohtaan."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen (antigeenit: A = vain A, B = vain B, C = molemmat, D = ei kumpaakaan; vasta-aineet samassa järjestyksessä).\n\n1. **Veriryhmä A:** vain A-antigeeneja (A); vasta-aineita vain B-antigeenia kohtaan (B).\n2. **Veriryhmä B:** vain B-antigeeneja (B); vasta-aineita vain A-antigeenia kohtaan (A).\n3. **Veriryhmä AB:** sekä A- että B-antigeeneja (C); ei ABO-vasta-aineita (D).\n4. **Veriryhmä O:** ei A- eikä B-antigeeneja (D); vasta-aineita molempia kohtaan (C).\n\nPerustelu: elimistö ei tee vasta-aineita omia antigeenejaan vastaan, mutta plasmaan muodostuu jo varhain vasta-aineita niitä ABO-antigeeneja vastaan, joita omissa punasoluissa ei ole.\n\n**Sudenkuoppa:** O-ryhmäisellä ei ole antigeeneja mutta on molemmat vasta-aineet, AB-ryhmäisellä päinvastoin. Näitä on helppo vaihtaa keskenään.",
+     "answer": "4.1 A, B · 4.2 B, A · 4.3 C, D · 4.4 D, C",
+     "check": "hvp"
+    },
+    {
+     "id": "4.5",
+     "points": 3,
+     "prompt": "B-veriryhmän potilas saa verensiirrossa A-ryhmän verta. Selitä, mitä hänen elimistössään seuraa.",
+     "hints": [
+      "Mitä vasta-aineita B-ryhmäisen plasmassa on, ja mihin ne tarttuvat? Seuraa tapahtumaketjua punasoluista verisuoniin ja koko elimistöön."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- B-ryhmäisen plasmassa on vasta-aineita A-antigeenia vastaan, ja ne sitoutuvat siirrettyjen punasolujen pinnan A-antigeeneihin.\n- Vieraat punasolut takertuvat toisiinsa kasaumiksi (agglutinaatio) ja hajoavat.\n- Kasaumat voivat tukkia verisuonia (veritulppa), ja reaktio voi olla hengenvaarallinen.\n\n**Esimerkkivastaus**\n\nB-veriryhmän ihmisen plasmassa on vasta-aineita A-antigeenia vastaan. Kun hänelle siirretään A-ryhmän verta, vasta-aineet tarttuvat vieraiden punasolujen A-antigeeneihin. Punasolut liimautuvat toisiinsa kasaumiksi ja hajoavat. Kasaumat voivat tukkia pieniä verisuonia, ja pahimmillaan verensiirtoreaktio johtaa kuolemaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.6",
+     "points": 4,
+     "prompt": "Rh-positiivisen ihmisen punasolujen pinnalla on Rh-antigeeni, Rh-negatiivisen ei. Rh-negatiivinen äiti synnyttää ensimmäisen lapsensa, joka on Rh-positiivinen. Selitä, mitä äidin elimistössä tällöin tapahtuu ja mitä äidille ja sikiölle seuraa, jos myös seuraava sikiö on Rh-positiivinen.",
+     "hints": [
+      "Missä vaiheessa äidin ja lapsen veret pääsevät sekoittumaan? Ensimmäinen kohtaaminen herkistää äidin, eli vasta-aineet ja muistisolut syntyvät. Vasta seuraavassa raskaudessa vasta-aineet ehtivät vaikuttaa sikiöön istukan kautta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Synnytyksessä, kun istukka irtoaa, lapsen Rh-positiivisia punasoluja pääsee äidin verenkiertoon.\n- Äidin immuunipuolustus muodostaa vasta-aineita Rh-antigeenia vastaan (ja muistisoluja). Ensimmäinen lapsi ei yleensä vahingoitu, koska vasta-aineet syntyvät vasta synnytyksen yhteydessä.\n- Seuraavassa raskaudessa äidin vasta-aineet kulkeutuvat istukan läpi sikiöön ja sitoutuvat sikiön punasolujen Rh-antigeeneihin.\n- Sikiön punasolut hajoavat tai kasautuvat, jolloin sikiölle kehittyy anemia ja hapenpuute, ja sen terveys tai henki voi vaarantua.\n\n**Esimerkkivastaus**\n\nRaskauden aikana äidin ja sikiön veri eivät juuri sekoitu, mutta synnytyksessä istukan irrotessa lapsen Rh-positiivisia punasoluja pääsee äidin verenkiertoon. Äidin elimistö tunnistaa Rh-antigeenin vieraaksi ja muodostaa sitä vastaan vasta-aineita ja muistisoluja. Esikoinen on tällöin jo syntynyt, joten se ei vahingoitu.\n\nJos seuraavakin sikiö on Rh-positiivinen, äidin vasta-aineet pääsevät istukan läpi sikiön verenkiertoon. Ne tarttuvat sikiön punasolujen Rh-antigeeneihin, ja punasolut hajoavat. Sikiö muuttuu aneemiseksi ja kärsii hapenpuutteesta, mikä voi vaurioittaa sitä vakavasti. Nykyään tätä ehkäistään antamalla äidille synnytyksen jälkeen anti-D-suojaus.\n\n**Sudenkuoppa:** vaara kohdistuu *seuraavaan* Rh-positiiviseen sikiöön, ei ensimmäiseen lapseen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Linnut polveutuvat pienikokoisista dinosauruksista, joista ne erkanivat yli 100 miljoonaa vuotta sitten, ja höyhenet ovat muuntuneet matelijoiden suomuista. Aineisto 5.A on kuvakollaasi erilaisista linnuista.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 10,
+     "prompt": "Pohdi, mitä hyötyä linnuille on höyhenpeitteestä ja mitä lentotaidosta. Voit käyttää apuna aineiston 5.A kuvia.",
+     "hints": [
+      "Käsittele kaksi kokonaisuutta erikseen ja suunnilleen yhtä laajasti: höyhenpeitteen hyödyt ja lentämisen hyödyt. Kummastakin saa noin puolet pisteistä, joten pelkkä lentäminen ei riitä.",
+      "Höyhenet: lämmöneristys, vedenpitävyys, suoja auringolta ja haihtumiselta, pesän vuoraus, suojaväri ja lajinsisäinen viestintä (soidin). Lentäminen: nopea ja pitkä liikkuminen, ravinnon, puolisoiden ja pesäpaikkojen etsiminen laajalta alueelta, vaikeapääsyiset pesäpaikat, saalistus ilmassa ja pako pedoilta, muutto sekä leviäminen maantieteellisten esteiden yli. Aineiston kuvissa näkyy esimerkiksi muuttoaura, soidin ja pesällä haudova vesilintu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Höyhenpeite*\n- Eristää lämpöä ja auttaa lämmönsäätelyssä, joten linnut voivat elää kylmissä oloissa (esim. pörhistää höyhenet pakkasella).\n- Vesilintujen rasvattu höyhenpeite on vedenpitävä, eikä iho kastu.\n- Kuumassa höyhenet varjostavat ihoa auringonsäteilyltä ja vähentävät veden haihtumista ihon kautta.\n- Höyheniä ja untuvia käytetään pesän vuoraukseen munien ja poikasten suojaksi (esim. haahka).\n- Ympäristön värinen höyhenpuku toimii suojavärinä, värikäs puku taas viestinä lajitovereille, esimerkiksi soitimella (riikinkukko).\n\n*Lentotaito*\n- Nopea ja energiatehokas liikkuminen pitkiä matkoja, joten ravintoa, puolisoita ja pesäpaikkoja voi etsiä laajalta alueelta.\n- Pesiminen vaikeapääsyisiin paikkoihin, kuten jyrkänteille ja latvoihin, pedoilta turvaan.\n- Saalistus ilmasta käsin (esim. lentävät hyönteiset) ja pako saalistajilta.\n- Muutto pois epäsuotuisina vuodenaikoina (muuttoaura) ja pako esimerkiksi metsäpalon tieltä.\n- Leviäminen uusille alueille vuoristojen, aavikoiden ja merten yli.\n\n**Esimerkkivastaus**\n\nHöyhenpeite on linnulle ennen kaikkea tehokas lämmöneriste. Kun lintu pörhistää höyhenensä, niiden väliin jää ilmaa, ja lintu pysyy lämpimänä kovallakin pakkasella. Vesilintujen höyhenpeite hylkii vettä, joten iho ei kastu uidessa. Kuumissa oloissa höyhenet taas varjostavat ihoa ja vähentävät kosteuden haihtumista. Monet linnut vuoraavat pesänsä untuvilla, kuten haahka, jolloin munat ja poikaset pysyvät lämpiminä. Höyhenpuvun väri voi suojata lintua pedoilta, tai se voi olla näyttävä, kuten riikinkukon pyrstö, jolla koiras houkuttelee naarasta.\n\nLentäminen on nopea tapa liikkua pitkiä matkoja. Lintu voi hakea ravintoa ja pesäpaikkoja laajalta alueelta ja pesiä jyrkänteille tai puiden latvoihin, joihin pedot eivät helposti pääse. Lentäen voi myös saalistaa, esimerkiksi napata hyönteisiä ilmasta, ja paeta saalistajia. Lentokyvyn ansiosta monet lajit muuttavat talveksi lämpimämpiin paikkoihin ja voivat levittäytyä uusille alueille vuoristojen ja merten yli.\n\n**Sudenkuoppa:** jos vastaus keskittyy pelkkään lentämiseen (siiven höyhenet), höyhenpeitteen muut tehtävät, kuten eristys ja viestintä, jäävät pois ja pisteitä menetetään.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 5,
+     "prompt": "Kaikki nykylinnut polveutuvat lentävistä esi-isistä, mutta osa on evoluution kuluessa menettänyt lentokykynsä. Mainitse esimerkkejä linnuista tai linturyhmistä, jotka eivät lennä, ja pohdi, miksi lentokyky ei niille enää ollut tarpeen.",
+     "hints": [
+      "Nimeä muutama esimerkki (esim. pingviinit, strutsi, emu, kiivi, dodo). Mieti sitten, mitä lentäminen maksaa linnulle ja milloin siitä ei ole hyötyä.",
+      "Lentäminen kuluttaa paljon energiaa, joten luonnonvalinta voi suosia lentokyvyttömyyttä, kun maassa on turvallista, kuten eristyneillä saarilla, joilla ei ole maapetoja. Selitä erikseen suuret juoksijat (strutsi: koko, nopeus, potkut) ja pingviinit (siivet toimivat uimaevinä)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Esimerkkejä: pingviinit, strutsi, emu, nandu, kasuaari, kiivi, sukupuuttoon kuollut dodo.\n- Lentäminen vaatii paljon energiaa ja rajoittaa kokoa, joten luonnonvalinta voi suosia lentokyvyttömyyttä, jos maassa pärjää turvallisesti.\n- Lentokyvyttömiä lintuja elää usein eristyneillä valtamerten saarilla tai Antarktiksella, missä ei ole maalla saalistavia petoja.\n- Osa, kuten strutsi, elää petojen seassa, mutta niistä on tullut isoja ja nopeita juoksijoita, jotka pakenevat tai puolustautuvat voimakkailla potkuilla.\n- Pingviinien siivet ovat muuttuneet uimiseen ja sukeltamiseen sopiviksi.\n\n**Esimerkkivastaus**\n\nLentokyvyttömiä lintuja ovat esimerkiksi pingviinit, strutsi, emu, kiivi ja sukupuuttoon kuollut dodo. Lentäminen on energiaa kuluttavaa, ja lentävän linnun on oltava kevyt. Jos ravintoa saa maasta eikä maalla ole petoja, lentokyvystä ei ole hyötyä, ja luonnonvalinta suosii yksilöitä, jotka käyttävät energiansa muuhun, kuten lisääntymiseen. Siksi lentokyvyttömyys on yleistä eristyneillä saarilla, kuten dodolla Mauritiuksella ja kiivillä Uudessa-Seelannissa.\n\nStrutsi elää savanneilla petojen keskellä, mutta se on kasvanut niin suureksi ja nopeaksi, että se voi paeta tai potkaista hyökkääjää. Pingviinit taas ovat erikoistuneet ravinnonhankintaan meressä: niiden siivet toimivat lentämisen sijaan evinä uidessa ja sukeltaessa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Pepsiini on ruoansulatuskanavan entsyymi, joka pilkkoo proteiineja katkaisemalla peptidisidoksia. Aineisto 6.A (kuva) ja 6.B (video ilman ääntä) näyttävät entsyymin rakenteen ja sen katalysoiman reaktion.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 7,
+     "prompt": "Pepsiini pystyy pilkkomaan vain proteiinia, joka mahtuu sen keskellä olevaan pieneen aktiiviseen kohtaan, vaikka monet proteiinit ovat kookkaita kolmiulotteisia rakenteita. Pohdi, miten ympäristö, jossa pepsiini elimistössä toimii, tekee pilkkomisen mahdolliseksi ja mitä pilkkomisessa syntyy.",
+     "hints": [
+      "Missä ruoansulatuskanavan osassa pepsiini toimii ja millainen pH siellä on? Mitä happamuus tekee proteiinin kolmiulotteiselle rakenteelle?",
+      "Mahanesteen suolahappo denaturoi ruoan proteiinit: laskostunut rakenne aukeaa ketjuksi, joka mahtuu aktiiviseen kohtaan. Happamuus on myös pepsiinin oma toimintaedellytys. Pepsiini katkaisee ketjun sisältä aminohappojen välisiä peptidisidoksia, joten tuotteet ovat pääosin lyhyitä peptidejä ja osin yksittäisiä aminohappoja."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Pepsiini toimii mahalaukussa, jonka sisältö on hyvin hapanta (pH noin 1–3).\n- Happamuus johtuu mahalaukun seinämän rauhasten erittämästä suolahaposta.\n- Pepsiini ei toimi ilman hapanta ympäristöä: hapan ympäristö aktivoi entsyymin (esimuodosta irtoaa osa), ja pepsiini toimii parhaiten matalassa pH:ssa.\n- Happo denaturoi ruoan proteiinit, jolloin niiden kolmiulotteinen rakenne aukeaa ja aminohappoketju mahtuu pepsiinin aktiiviseen kohtaan.\n- Pepsiini katkaisee aminohappojen välisiä peptidisidoksia hydrolyysillä.\n- Tuloksena syntyy lyhyitä peptidejä ja yksittäisiä aminohappoja, joiden pilkkominen jatkuu ohutsuolessa.\n\n**Esimerkkivastaus**\n\nPepsiini toimii mahalaukussa, jonka seinämä erittää suolahappoa. Mahan sisällön pH on noin 2, ja juuri tällainen ympäristö sopii pepsiinille, joka menettää toimintakykynsä neutraalissa. Happamuus muuttaa myös ruoan proteiineja: se rikkoo kolmiulotteista rakennetta ylläpitäviä heikkoja sidoksia, ja proteiini denaturoituu. Laskostunut proteiini aukeaa pitkäksi aminohappoketjuksi, jonka osia mahtuu pepsiinin kapeaan aktiiviseen kohtaan.\n\nAktiivisessa kohdassa pepsiini katkaisee aminohappojen välisiä peptidisidoksia vettä apuna käyttäen. Koska pepsiini katkaisee ketjua sen sisältä, tuloksena on lähinnä lyhyitä peptidejä ja jonkin verran vapaita aminohappoja. Ohutsuolessa muut entsyymit pilkkovat peptidit lopulta aminohapoiksi, jotka imeytyvät verenkiertoon.\n\n**Sudenkuoppa:** happo ei itse pilko peptidisidoksia. Se avaa proteiinin rakenteen, ja pilkkominen on entsyymin työtä.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 8,
+     "prompt": "Elimistö rakentaa ravinnon aminohapoista omia proteiineja, kuten pepsiiniä. Kuvaile, miten solussa syntyvä proteiini saa kuvan 6.A kaltaisen kolmiulotteisen rakenteen. Selitä myös, miten solun valmistama pepsiinin esimuoto muuttuu mahalaukussa aktiiviseksi.",
+     "hints": [
+      "Käy läpi proteiinin rakennetasot (primaari-, sekundaari-, tertiaari- ja kvartaarirakenne) ja kerro, millaiset sidokset ja vuorovaikutukset pitävät rakenteen koossa. Täysiin pisteisiin tarvitaan myös esimuodon aktivoituminen.",
+      "Erittyvä proteiini valmistetaan karkean solulimakalvoston ribosomeilla, laskostuu ja muokkautuu solulimakalvoston ja Golgin laitteen sisällä ja poistuu solusta eksosytoosilla. Pepsiini erittyy inaktiivisena esimuotona (pepsinogeeni). Mitä mahan happamuus tekee pepsinogeenille?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Kolmiulotteinen rakenne*\n- Aminohapot liittyvät ribosomissa peptidisidoksin ketjuksi; aminohappojärjestys on proteiinin primaarirakenne.\n- Ketju laskostuu paikallisesti kierteiksi (α-kierre) ja laskoksiksi (β-laskos) eli sekundaarirakenteeksi, jota vetysidokset ylläpitävät.\n- Koko ketju laskostuu edelleen kolmiulotteiseksi tertiaarirakenteeksi. Rakennetta ylläpitävät vetysidokset, ionisidokset, rikkisillat sekä sivuketjujen ja veden väliset vetävät ja hylkivät voimat (vesipakoiset sivuketjut kääntyvät sisään).\n- Jos useampi polypeptidiketju toimii yhdessä, puhutaan kvartaarirakenteesta.\n\n*Esimuodon aktivoituminen*\n- Pepsiinin esimuoto laskostuu solulimakalvostossa ja muokataan Golgin laitteessa, josta se pakataan rakkuloihin ja erittyy solusta eksosytoosilla.\n- Se erittyy inaktiivisena pepsinogeenina, joka ei pysty pilkkomaan proteiineja (näin rauhassolut eivät pilko itseään).\n- Mahalaukun happamuudessa pepsinogeenistä irtoaa pätkä, jolloin aktiivinen kohta vapautuu ja entsyymi aktivoituu. Syntynyt pepsiini aktivoi myös muita pepsinogeenimolekyylejä.\n\n**Esimerkkivastaus**\n\nProteiinisynteesissä ribosomi liittää aminohappoja peptidisidoksilla ketjuksi lähetti-RNA:n ohjeen mukaan. Aminohappojen järjestys on proteiinin primaarirakenne. Jo synteesin aikana ketju alkaa kiertyä kierteiksi ja taittua laskoksiksi, kun peptidirungon osat muodostavat keskenään vetysidoksia; tämä on sekundaarirakenne. Tämän jälkeen koko ketju laskostuu tertiaarirakenteeksi: vesipakoiset sivuketjut hakeutuvat molekyylin sisään ja vesihakuiset pinnalle, ja rakennetta vahvistavat vetysidokset, ionisidokset ja rikkisillat. Monesta ketjusta koostuvilla proteiineilla on lisäksi kvartaarirakenne.\n\nPepsiinin esimuoto syntyy mahalaukun rauhassolujen karkealla solulimakalvostolla. Se laskostuu solulimakalvoston sisällä, kulkee Golgin laitteeseen ja erittyy rakkuloissa eksosytoosilla mahalaukkuun. Solu erittää sen inaktiivisena pepsinogeenina, jossa aktiivista kohtaa peittää ylimääräinen osa, joten solu ei vaurioidu. Mahalaukun happamuudessa tämä osa irtoaa, ja entsyymi muuttuu aktiiviseksi pepsiiniksi, joka voi aktivoida lisää pepsinogeenia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Isoruusukirvan (*Macrosiphum rosae*) keväiset yksilöt ovat siivettömiä naaraita, jotka elävät ruusun nuorissa versoissa ja synnyttävät partenogeneettisesti eläviä poikasia. Loppukesällä syntyy siivekkäitä koiraita ja naaraita, jotka lisääntyvät suvullisesti ja voivat siirtyä muille ruusuille tai toisille isäntäkasveille, kuten ruusuruoholle. Syksyllä hedelmöittyneet naaraat laskevat munansa ruusuihin. Aineisto 7.A: kuvia elinkierrosta, 7.B: kuvaaja nymfien ja aikuisten runsaudesta kesällä.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 5,
+     "prompt": "Pohdi, mitä hyötyä kirvoille on elinkierrosta, jossa suvuton ja suvullinen lisääntyminen vuorottelevat.",
+     "hints": [
+      "Käsittele molemmat lisääntymistavat: mitä etua kummastakin on ja mihin vuodenaikaan kumpikin sopii. Täysiin pisteisiin tarvitaan molemmat.",
+      "Partenogeneesi: jokainen naaras lisääntyy yksin, eikä koiraita tarvita, ja elävänä syntyvät poikaset alkavat pian itse lisääntyä, joten populaatio kasvaa nopeasti, kun ravintoa on. Suvullinen lisääntyminen: rekombinaatio tuottaa muuntelua. Siivet auttavat levittäytymään, munat talvehtimaan, ja eri isäntäkasvit vähentävät kilpailua."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Partenogeneesissä jälkeläinen kehittyy hedelmöittymättömästä munasolusta.\n- Partenogeneesi on nopeaa ja tehokasta, koska jokainen naaras lisääntyy ilman koirasta ja välittää jälkeläisilleen kaikki alleelinsa.\n- Elävänä syntyvät poikaset ovat heti pitkälle kehittyneitä ja pääsevät pian lisääntymään, joten kanta kasvaa nopeasti keväällä ja alkukesällä, kun nuoria versoja on runsaasti.\n- Suvullinen lisääntyminen tuottaa rekombinaation kautta perinnöllistä muuntelua, joka parantaa sopeutumista muuttuviin oloihin (esim. uudet loiset, taudit, sää).\n- Vuorottelemalla kirvat saavat molempien tapojen hyödyt.\n- Eri vaiheet ovat erikoistuneet: siivekkäät yksilöt levittäytyvät uusille kasveille ja eri isäntälajeille (vähemmän kilpailua), ja munat kestävät talven.\n\n**Esimerkkivastaus**\n\nKeväällä kirvat lisääntyvät partenogeneettisesti: naaraat tuottavat hedelmöittymättömistä munasoluista eläviä poikasia ilman koiraita. Koska jokainen yksilö lisääntyy ja poikaset ovat nopeasti itse lisääntymiskykyisiä, populaatio kasvaa hyvin nopeasti juuri silloin, kun ruusuissa on runsaasti meheviä nuoria versoja. Emo siirtää jälkeläisilleen koko perimänsä.\n\nLoppukesällä syntyvät koiraat ja naaraat lisääntyvät suvullisesti. Rekombinaatio tuottaa geneettisesti erilaisia jälkeläisiä, joista osa selviää paremmin, jos olot muuttuvat. Siivet mahdollistavat siirtymisen uusiin ruusuihin tai muille isäntäkasveille, mikä vähentää kilpailua tiheissä kolonioissa, ja kestävät munat selviävät talven yli. Vuorottelun ansiosta kirva saa sekä nopean kasvun että muuntelun ja leviämisen hyödyt.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Populaation kokoa ja tiheyttä säätelevät syntyvyys, kuolleisuus ja muuttoliike. Pohdi kuvan 7.B avulla, miten bioottiset ja abioottiset tekijät vaikuttavat näihin kolmeen kirvapopulaatiossa vuoden kuluessa.",
+     "hints": [
+      "Lue kuvaajasta ensin, milloin nymfejä ja aikuisia on eniten ja milloin määrät romahtavat. Täysiin pisteisiin tarvitaan kuvaajan tulkintaa. Jaa sitten vuosi jaksoihin: kevät ja alkukesä, heinäkuu, loppukesä ja syksy sekä talvi.",
+      "Kuvaajassa nymfejä on huipussaan noin sata lehtirykelmää kohden heinäkuun puolivälissä, aikuisia noin 20, ja sen jälkeen määrät laskevat jyrkästi ja ovat elokuun lopussa lähellä nollaa. Keväällä ravinto ja lämpö nostavat syntyvyyttä. Kun tiheys kasvaa, kilpailu kiristyy ja pedot, kuten leppäkertut, runsastuvat, joten kuolleisuus nousee ja siivekkäät muuttavat pois. Syksyllä kylmyys ja kasvien kuihtuminen tappavat, ja talven yli selviävät vain munat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kuvaajan tulkinta: yksilöitä, etenkin nymfejä, on eniten alkukesällä, noin heinäkuun puolivälissä, minkä jälkeen määrä laskee nopeasti ja on elokuun lopulla lähes nolla.\n- Syntyvyys kasvaa keväällä ja alkukesällä, kun lämpötila nousee ja ruusujen nuoria versoja on runsaasti ravinnoksi.\n- Muuttoliike: siivekkäät yksilöt lähtevät kesällä tiheiltä oksilta ja siirtyvät uusiin isäntäkasveihin; syksyllä munivat naaraat siirtyvät ja levittävät lajia.\n- Kuolleisuus kasvaa kesällä, kun tiheys kasvaa, kilpailu ravinnosta kovenee ja saalistajia, esimerkiksi leppäkerttuja, on enemmän.\n- Syksyllä kylmyys ja kasvien kasvun loppuminen lisäävät kuolleisuutta. Pakkanen tappaa nymfit ja aikuiset, joten talven yli selviävät vain munat.\n\n**Esimerkkivastaus**\n\nKuvan 7.B mukaan kirvoja on kesäkuun alussa vähän, mutta nymfien määrä kasvaa nopeasti ja on huipussaan heinäkuun puolivälissä, noin sata yksilöä lehtirykelmää kohden. Aikuisia on samaan aikaan noin viidesosa tästä. Tämän jälkeen molemmat romahtavat, ja elokuun lopussa kirvoja ei käytännössä ole.\n\nKevään lämpö ja ruusujen nopeasti kasvavat, ravinteikkaat versot nostavat syntyvyyttä, ja partenogeneesi mahdollistaa nopean kasvun. Kun tiheys kasvaa, kilpailu ravinnosta kiristyy ja kirvoja syövät pedot, kuten leppäkertut ja niiden toukat, runsastuvat. Kuolleisuus kasvaa, ja siivekkäät yksilöt muuttavat tiheistä kolonioista uusiin kasveihin, mikä pienentää paikallista populaatiota. Syksyllä kylmyys ja kasvien kuihtuminen lisäävät kuolleisuutta, ja siivekkäät naaraat siirtyvät munimaan ruusuihin. Pakkasen yli selviävät vain munat.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 5,
+     "prompt": "Kirvat syövät isäntäkasviensa nesteitä. Pohdi, millaisin keinoin kasvit puolustautuvat erilaisia ja eri kokoisia kasvinsyöjiä vastaan.",
+     "hints": [
+      "Jaa keinot fyysisiin ja kemiallisiin sekä jatkuvasti päällä oleviin ja vasta tarvittaessa (vaurion jälkeen) käynnistyviin.",
+      "Fyysiset keinot, kuten piikit, karvat, poltinkarvat, kova kuori ja pihka, toimivat parhaiten suuria kasvinsyöjiä vastaan. Kemialliset, kuten myrkyt ja pahanmakuiset aineet, tehoavat pieniinkin syöjiin. Mainitse myös vaurioituneiden osien pudottaminen, uusien kasvattaminen ja ilmaan vapautuvat varoitusaineet."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Puolustus voi olla pysyvää tai käynnistyä vasta, kun kasvi vaurioituu.\n- Fyysiset keinot tehoavat yleensä parhaiten isoihin kasvinsyöjiin: piikit ja okaat, karvat ja poltinkarvat, kova kuori, pihka, nuppuja suojaavat kovat suojuslehdet.\n- Kemialliset keinot: myrkylliset tai pahanmakuiset yhdisteet (esim. alkaloidit, parkkiaineet). Ne tehoavat kaikenkokoisiin kasvinsyöjiin.\n- Kasvi voi pudottaa vaurioituneet osat ja kasvattaa tilalle uusia.\n- Vaurioitunut kasvi voi vapauttaa ilmaan haihtuvia yhdisteitä, jotka varoittavat naapurikasveja tai muita oksia käynnistämään puolustuksen.\n\n**Esimerkkivastaus**\n\nKasvien puolustus voi olla jatkuvaa tai vasta hyökkäyksestä käynnistyvää. Fyysisiä keinoja ovat esimerkiksi ruusun piikit, nokkosen poltinkarvat, paksu kuori ja havupuiden pihka. Ne suojaavat parhaiten isoilta syöjiltä, kuten hirviltä, mutta tiheät karvat voivat haitata myös hyönteisten liikkumista.\n\nKemiallisesti kasvit tuottavat myrkyllisiä tai pahanmakuisia aineita, jotka tehoavat pieniinkin syöjiin, kuten kirvoihin ja toukkiin. Kun kasvi vaurioituu, se voi lisätä näiden aineiden tuotantoa ja vapauttaa ilmaan haihtuvia yhdisteitä, jotka saavat viereiset kasvit tai saman kasvin muut osat valmistautumaan. Lisäksi kasvi voi pudottaa vaurioituneet lehdet ja kasvattaa uusia menetettyjen tilalle.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Saimaannorppaa (*Pusa saimensis*) esiintyy vain Saimaassa. Uusimpien tutkimusten perusteella se luokitellaan omaksi lajikseen eikä alalajiksi, ja sen kehityslinja on erkaantunut itämerennorpan ja laatokannorpan kanssa yhteisestä kantamuodosta aiemmin kuin on luultu.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 5,
+     "prompt": "Selitä, mitä lajiutuminen tarkoittaa, ja kuvaile, mihin evolutiivisiin mekanismeihin se perustuu.",
+     "hints": [
+      "Aloita määritelmästä: milloin kaksi populaatiota katsotaan eri lajeiksi? Täysiin pisteisiin tarvitaan sekä määritelmä että mekanismit.",
+      "Mekanismit: isolaatio katkaisee geenivirran (maantieteellinen, ekologinen, käyttäytymiseen tai fysiologiaan perustuva). Eristyneissä populaatioissa luonnonvalinta suosii eri alleeleja, ja sattuma eli geneettinen ajautuminen muuttaa etenkin pieniä populaatioita. Lopulta syntyy lisääntymiseste."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lajiutuminen on makroevoluutiota: yhdestä lajista kehittyy kaksi tai useampia lajeja.\n- Uusi laji on syntynyt, kun populaatiot eivät enää lisäänny keskenään tai jälkeläiset eivät ole lisääntymiskykyisiä.\n- Mekanismina on isolaatio, joka katkaisee geenivirran populaatioiden väliltä ja johtaa lopulta lisääntymisesteeseen.\n- Isolaation tyyppejä: maantieteellinen (esim. vesistö tai jäätikkö erottaa), ekologinen, käyttäytymiseen perustuva ja fysiologinen.\n- Luonnonvalinta: eri ympäristöjen erilainen valintapaine (suuntaava valinta) yleistää eri alleeleja eri populaatioissa.\n- Sattuma: geneettinen ajautuminen, perustajavaikutus ja pullonkaula muuttavat alleelien yleisyyksiä etenkin pienissä populaatioissa, kuten saimaannorpalla.\n\n**Esimerkkivastaus**\n\nLajiutumisessa yhden lajin populaatiot kehittyvät niin erilaisiksi, että ne eivät enää lisäänny keskenään tai niiden jälkeläiset ovat lisääntymiskyvyttömiä. Kyse on makroevoluutiosta.\n\nLajiutumisen edellytys on isolaatio, joka katkaisee geenivirran populaatioiden väliltä. Saimaannorpan esi-isät jäivät jääkauden jälkeen maankohoamisen vuoksi Saimaaseen, eli kyse on maantieteellisestä isolaatiosta. Eristetyissä populaatioissa on erilainen valintapaine, joten luonnonvalinta suosii eri ominaisuuksia ja eri alleelit yleistyvät. Lisäksi sattuma muuttaa alleelien yleisyyksiä geneettisen ajautumisen kautta, ja vaikutus on suuri pienissä populaatioissa. Kun eroja kertyy riittävästi, syntyy lisääntymiseste, ja populaatiot ovat eri lajeja, vaikka ne myöhemmin kohtaisivatkin.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 5,
+     "prompt": "Pohdi, millaiset ominaisuudet auttavat hylkeitä, kuten saimaannorppaa, sopeutumaan vesielämään ja Suomen ankariin oloihin.",
+     "hints": [
+      "Ryhmittele ominaisuudet: liikkuminen ja ravinnonhankinta vedessä, lämmönsäätely kylmässä sekä sukeltaminen ja aistit veden alla.",
+      "Esimerkiksi virtaviivainen ruumis ja eväraajat, kalan pyydystämiseen sopivat hampaat, paksu rasvakerros, kuuttien karvapeite ja lumipesä, pitkä hengityksen pidätys, suuret silmät ja herkät viiksikarvat. Kerro jokaisesta, miksi siitä on hyötyä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Virtaviivainen ruumis vähentää veden vastusta, ja eväjalat tekevät uimisesta nopeaa.\n- Nopeus ja kaloihin erikoistuneet hampaat auttavat pyydystämään kaloja, joista saa runsaasti energiaa.\n- Paksu rasvakerros eristää lämpöä, mikä on tärkeää kylmässä vedessä ja talvella.\n- Kuutit syntyvät lumipesään jäälle, ja niillä on paksumpi karvapeite lämmönsäätelyn tueksi.\n- Hylkeet pystyvät pidättämään hengitystään ja sukeltamaan pitkään.\n- Suuret silmät näkevät hämärässä vedessä, ja herkät viiksikarvat auttavat suunnistamaan ja löytämään saaliin.\n\n**Esimerkkivastaus**\n\nHylkeen ruumis on sukkulamainen ja virtaviivainen, joten vesi vastustaa sen liikettä vähän. Raajat ovat muuttuneet eväjaloiksi, joilla norppa ui nopeasti ja saa kiinni kaloja. Hampaat sopivat liukkaiden kalojen pitämiseen, ja rasvainen kalaravinto antaa paljon energiaa.\n\nIhon alla oleva paksu rasvakerros eristää lämpöä ja varastoi energiaa, mikä on tärkeää Saimaan kylmässä vedessä ja pitkinä talvina. Kuutit syntyvät lumeen kaivettuun pesään jäällä, ja niiden paksu karvapeite suojaa kylmältä. Norppa voi olla veden alla pitkään hengittämättä, ja sen suuret silmät näkevät hämärässä. Pitkät, herkät viiksikarvat aistivat veden liikkeitä, joten norppa löytää saaliinsa ja suunnistaa myös tummassa vedessä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 5,
+     "prompt": "Saimaannorppa on rauhoitettu ja äärimmäisen uhanalainen, ja yksilöitä on vain noin 500. Esittele toimia, joilla ihminen voi auttaa elinvoimaisen kannan säilymistä.",
+     "hints": [
+      "Mieti ensin norpan suurimmat uhat: kalanpyydykset, häiriöt pesintä- ja karvanvaihtoaikana, ravinnon riittävyys, ympäristömyrkyt ja ilmastonmuutos. Esitä jokaiseen uhkaan toimi.",
+      "Esimerkiksi verkkokalastuksen rajoittaminen norppa-alueilla ja norppaturvalliset pyydykset (etenkin nuoret norpat hukkuvat verkkoihin), rantarakentamisen, veneilyn ja moottorikelkkailun rajoittaminen, järviluonnon suojelu kalakantojen turvaamiseksi, haitallisten aineiden ja mikromuovin päästöjen vähentäminen sekä apukinokset ja tekopesät vähälumisina talvina."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kalanpyydykset ovat suurin uhka, koska etenkin nuoret norpat takertuvat verkkoihin ja hukkuvat: verkkokalastuksen kieltäminen norppa-alueilla, norppaturvallisten pyydysten käytön tukeminen ja uusien kehittäminen.\n- Rantarakentamisen rajoittaminen sekä veneilyn ja moottorikelkkailun rajoittaminen norppa-alueilla, erityisesti pesintä- ja karvanvaihtoaikana.\n- Järviluonnon ja monimuotoisuuden suojelu, jotta kalaravintoa riittää.\n- Ympäristömyrkkyjen ja mikromuovien päästöjen vähentäminen, koska ne kertyvät ravintoketjun huipulla olevaan norppaan.\n- Ilmastonmuutos heikentää jää- ja lumipeitettä, joten pesintää voidaan tukea kolaamalla apukinoksia tai tekemällä tekopesiä.\n\n**Esimerkkivastaus**\n\nSaimaannorpan tärkein kuolinsyy ihmisen toiminnasta johtuen on hukkuminen kalanpyydyksiin, erityisesti nuorilla norpilla. Siksi verkkokalastusta rajoitetaan norpan elinalueilla keväästä alkukesään, ja kalastajia kannustetaan käyttämään norppaturvallisia katiskoja ja rysiä, joita kehitetään edelleen.\n\nNorpat tarvitsevat rauhaa pesinnän ja karvanvaihdon aikaan. Rantarakentamista, moottorikelkkailua ja veneilyä voidaan rajoittaa tärkeillä pesimäalueilla. Järven kalakantoja on hoidettava niin, että ravintoa riittää, ja vesistöjen kuormitusta ympäristömyrkyillä ja mikromuovilla on vähennettävä, koska ravintoketjun huipulla oleva norppa kerää niitä elimistöönsä. Ilmastonmuutoksen vuoksi lumipeite on usein ohut, joten talvella kolataan apukinoksia ja rakennetaan tekopesiä, joihin norpat voivat synnyttää.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Kyttyrälohi (*Oncorhynchus gorbuscha*) on Tyynenmeren pohjoisosista kotoisin oleva vaelluskala. Eurooppaan se on levinnyt Vienanmeren ja Murmanskin istutuksista, ja nykyään sitä tavataan myös Suomen joissa, joissa se kutee samoilla alueilla kuin lohi ja taimen. Aineisto 9.A kertoo lajin elinkierrosta ja merkityksestä ihmisille (esim. kaksivuotinen elinkierto ja kuolema kudun jälkeen).",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 4,
+     "prompt": "Pohdi, miten kyttyrälohi voi vaikuttaa Suomen alkuperäisten lohikalojen, kuten lohen ja taimenen, elinoloihin ja kantoihin.",
+     "hints": [
+      "Ajattele lajien välisiä suhteita: kilpailua kutupaikoista, poikasten ravinnosta ja tilasta, mahdollista saalistusta sekä tauteja ja loisia. Mitä kudun jälkeen kuolevien kalojen raadot tekevät joelle?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kyttyrälohi voi häiritä lohen ja taimenen kutua samoilla kutupaikoilla (aggressiivinen reviirikäyttäytyminen).\n- Kyttyrälohen poikaset kilpailevat ravinnosta ja elintilasta lohen ja taimenen poikasten kanssa.\n- Se voi mahdollisesti saalistaa muiden lohikalojen poikasia.\n- Se voi tuoda mukanaan tauteja ja loisia.\n- Raatojen kertyminen voi muuttaa jokiympäristöä lohelle ja taimenelle epäsuotuisaksi.\n- Kaiken tämän vuoksi lohen ja taimenen kannat voivat pienentyä.\n\n**Esimerkkivastaus**\n\nKyttyrälohi kutee samoilla paikoilla kuin lohi ja taimen ja puolustaa kutuaikana reviiriään aggressiivisesti, joten se voi häiritä alkuperäisten lajien kutua. Sen poikaset kilpailevat lohen ja taimenen poikasten kanssa ravinnosta ja suojapaikoista, ja isommat kalat voivat syödä pienempien poikasia. Tulokas voi myös levittää tauteja ja loisia, joille alkuperäiset kannat eivät ole vastustuskykyisiä. Kudun jälkeen kuolevien kalojen raadot voivat heikentää veden laatua. Kaikki nämä voivat pienentää lohi- ja taimenkantoja.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 8,
+     "prompt": "Pohdi, miten kyttyrälohi voi muuttaa Suomen jokiekosysteemejä.",
+     "hints": [
+      "Aloita aineiston tiedosta, että kyttyrälohet kuolevat kudun jälkeen jokeen ja rannoille. Mitä suuri raatomäärä merkitsee ravinteiden kannalta, ja keitä se hyödyttää tai haittaa?",
+      "Raadoista vapautuu ravinteita → rehevöityminen, levät ja vesikasvit runsastuvat, ja karuihin, kirkkaisiin vesiin sopeutuneet lajit (esim. raakku eli jokihelmisimpukka, koskikara) kärsivät. Toisaalta raadot, mäti ja poikaset ovat uutta ravintoa haaskansyöjille, hajottajille ja petokaloille. Pohdi, miten tämä muuttaa ravintoverkkoa laajemmin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kudun jälkeen kuolleet ja mätänevät kalat lisäävät jokien ravinnemäärää huomattavasti, mikä muuttaa ekosysteemin tasapainoa.\n- Rehevöityminen lisää levien ja vesikasvien kasvua.\n- Karuihin ja kirkkaisiin vesiin sopeutuneet lajit kärsivät (esim. raakku eli jokihelmisimpukka, koskikara).\n- Toisaalta haaskansyöjät ja hajottajat saavat raadoista ravintoa, joten osa lajeista voi hyötyä.\n- Myös kyttyrälohen mäti ja poikaset tarjoavat muille eläimille runsaasti uutta ravintoa.\n- Tulokaslaji muokkaa jokien ravintoverkkoja, mikä heijastuu monen muun lajin elinoloihin.\n\n**Esimerkkivastaus**\n\nKyttyrälohet kuolevat kutemisen jälkeen, ja jokiin ja rannoille voi kertyä suuria määriä raatoja. Kun ne hajoavat, veteen vapautuu typpeä ja fosforia, joita pohjoisen karuissa joissa on luonnostaan vähän. Ravinteiden lisääntyminen rehevöittää jokea: levät ja vesikasvit kasvavat, vesi samenee ja happea kuluu hajotukseen. Tämä haittaa lajeja, jotka ovat sopeutuneet kirkkaaseen, karuun ja happirikkaaseen veteen, kuten raakkua, jonka toukkavaihe on lisäksi riippuvainen lohesta ja taimenesta, sekä koskikaraa, joka etsii ravintonsa kirkkaasta koskivedestä.\n\nToisaalta raadot ovat ravintoa haaskansyöjille, kuten linnuille, ketuille ja karhuille, sekä hajottajille, kuten bakteereille, sienille ja selkärangattomille. Myös kyttyrälohen mäti ja poikaset ovat runsas uusi ravinnonlähde muille kaloille ja linnuille. Ravintoverkko siis muuttuu, kun uusi laji tuo jokeen merestä peräisin olevia ravinteita ja energiaa, ja muutokset voivat heijastua laajasti koko jokiekosysteemiin ja sen rannoille.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 8,
+     "prompt": "Arvioi, mitä hyötyä ja mitä haittaa kyttyrälohesta on tai voisi olla suomalaisille.",
+     "hints": [
+      "Käsittele sekä hyödyt että haitat, sillä kummastakin saa enintään noin puolet pisteistä. Hyödynnä aineiston tietoja kalan syömäkelpoisuudesta ja elinkierrosta.",
+      "Hyödyt: ravinto ihmisille sekä koti- ja tuotantoeläimille (merestä tai jokeen noustessa pyydetty kala, mäti), virkistyskalastus ja kalastusmatkailu, ammattikalastus. Kaksivuotisen elinkierron vuoksi kaloja tulee runsaasti joka toinen vuosi. Haitat: lohen ja taimenen väheneminen (vähemmän saalista ja matkailuarvoa), mätänevien raatojen haju ja veden laadun heikkeneminen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Hyödyt*\n- Runsaita esiintymiä voidaan hyödyntää ihmisten ravintona sekä koti- ja tuotantoeläinten ravintona.\n- Merestä tai jokeen noustessa pyydetty kala on hyvää, ja mäti kelpaa syötäväksi kutuasussakin.\n- Virkistyskalastus ja siihen liittyvä matkailu sekä ammattikalastus; kalaa tulee runsaasti joka toinen vuosi.\n\n*Haitat*\n- Lohen ja taimenen selviytyminen voi vaikeutua, jolloin niitä on vähemmän ruoaksi ja virkistyskalastukseen.\n- Kuolleet kalat haisevat ja vähentävät alueen virkistysarvoa ja matkailua.\n- Mätänevät raadot heikentävät veden laatua.\n\n**Esimerkkivastaus**\n\nKyttyrälohesta voi olla ihmisille hyötyä ravintona. Kun kala pyydetään merestä tai heti jokeen nousun jälkeen, se on maukasta, ja mätiä voi hyödyntää myöhemminkin. Syömäkelvottomaksi muuttuneita kaloja voi käyttää eläinten rehuna. Koska laji palaa kutemaan kahden vuoden välein, joka toinen vuosi jokiin nousee runsaasti kaloja, ja niitä voisi hyödyntää virkistys- ja ammattikalastuksessa sekä kalastusmatkailussa.\n\nHaitat voivat kuitenkin olla suurempia. Tenon ja Näätämöjoen lohi on alueen asukkaille ja matkailulle tärkeä, ja jos kyttyrälohi heikentää lohi- ja taimenkantoja kilpailun ja tautien kautta, arvokas saalis vähenee. Kudun jälkeen rannoille kertyvät raadot haisevat, heikentävät veden laatua ja tekevät jokivarsista vähemmän houkuttelevia retkeilijöille ja matkailijoille. Kokonaisuutena kyttyrälohen haitat alkuperäiselle lohitaloudelle ovat todennäköisesti hyötyjä suuremmat.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Vanhoillisten ortodoksijuutalaisten (haredien) suljetuissa yhteisöissä eräät perinnölliset taudit ovat yleisiä, ja kouluikäiset lapset osallistuvat tautialleelien seulontaan. Tay–Sachsin tauti rappeuttaa hermostoa nopeasti ja johtaa yleensä kuolemaan lapsuudessa. Aineisto 10.A on sukupuu, johon on merkitty sairastuneet sekä henkilöt 1 ja 2.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 5,
+     "prompt": "Tautialleelit seulotaan DNA-sirulla. Selitä, miten DNA-siru paljastaa, mitä tautialleeleja henkilöllä on.",
+     "hints": [
+      "Mitä sirun pinnalla on? Muista emäspariperiaate: yksijuosteinen DNA tarttuu vastinjuosteeseensa.",
+      "Sirulla on jokaista tutkittavaa alleelia varten yksijuosteisia DNA-koettimia. Näytteen DNA eristetään, tehdään yksijuosteiseksi kuumentamalla ja leimataan väriaineella. Mihin koettimeen leimattu DNA kiinnittyy, ja miten tulos näkyy?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- DNA-sirulla on geenikoetin jokaista tutkittavaa tautialleelia varten.\n- Koetin on lyhyt yksijuosteinen DNA-jakso, jonka emäsjärjestys vastaa osaa tautialleelista.\n- Henkilöltä eristetään DNA, joka muutetaan kuumentamalla yksijuosteiseksi ja leimataan esimerkiksi fluoresoivalla väriaineella.\n- Näyte levitetään sirulle, ja DNA kiinnittyy (hybridisoituu) niihin koettimiin, joihin sillä on vastinemäkset.\n- Kiinnittyminen näkyy väri- tai valosignaalina.\n- Signaalit kertovat, mitkä tautialleelit henkilöllä on.\n\n**Esimerkkivastaus**\n\nDNA-siru on pieni levy, jonka pinnalle on kiinnitetty tuhansia lyhyitä yksijuosteisia DNA-koettimia. Kunkin koettimen emäsjärjestys vastaa tietyn tautialleelin kohtaa, joten jokaista tutkittavaa alleelia varten sirulla on oma kohtansa.\n\nTutkittavalta henkilöltä eristetään DNA esimerkiksi syljestä tai verestä. DNA pilkotaan, muutetaan kuumentamalla yksijuosteiseksi ja leimataan fluoresoivalla väriaineella. Kun näyte levitetään sirulle, näytteen DNA-jaksot pariutuvat emäspariperiaatteen mukaan niiden koettimien kanssa, joiden emäsjärjestys on niille vastinjuoste. Sirut pestään, jolloin kiinnittymätön DNA huuhtoutuu pois. Lopuksi siru luetaan laitteella: ne kohdat, jotka hohtavat, kertovat, mitä tautialleeleja henkilön perimässä on.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 5,
+     "prompt": "Päättele aineiston 10.A sukupuusta, miten Tay–Sachsin tauti periytyy. Perustele sanallisesti tai risteytyskaavioin.",
+     "hints": [
+      "Käy periytymistavat läpi yksi kerrallaan: autosomaalinen dominoiva ja resessiivinen, X-kromosomaalinen dominoiva ja resessiivinen sekä Y-kromosomaalinen. Etsi sukupuusta ristiriita kaikkia paitsi yhtä vastaan.",
+      "Katso sukupuusta: onko sairailla lapsilla terveet vanhemmat? Onko sairaita tyttäriä, joiden isä on terve? Onko sairaita poikia, joiden äiti on terve? Onko sairaita naisia?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Tauti periytyy autosomaalisesti (tavallisessa kromosomissa) resessiivisesti.**\n- Ei autosomaalinen dominoiva: terveillä vanhemmilla on sairaita lapsia, eikä tauti näy joka sukupolvessa.\n- Ei X-kromosomaalinen resessiivinen: sairaan tyttären isä on terve, vaikka X-resessiivisessä periytymisessä hänen pitäisi olla sairas.\n- Ei X-kromosomaalinen dominoiva: sairaiden poikien äiti on terve, vaikka pojan X-kromosomi tulee äidiltä.\n- Ei Y-kromosomaalinen: sukupuussa on sairaita naisia.\n\n**Esimerkkivastaus**\n\nSukupuussa kaikki sairaat lapset ovat terveiden vanhempien lapsia, eikä tauti näy joka sukupolvessa. Jos tauti olisi dominoiva, ainakin toisen vanhemman pitäisi olla sairas, joten tautialleeli on resessiivinen. Sairaita on sekä miehiä että naisia, joten tauti ei ole Y-kromosomaalinen.\n\nX-kromosomaalinen resessiivinen periytyminen ei käy, koska sukupuussa on sairas tytär, jonka isä on terve. Tytär saa toisen X-kromosominsa isältä, joten isän pitäisi olla sairas. X-kromosomaalinen dominoiva ei käy, koska sairaiden poikien äiti on terve, vaikka pojan ainoa X-kromosomi tulee äidiltä. Jäljelle jää autosomaalinen resessiivinen periytyminen: sairaat ovat homotsygootteja (aa), ja heidän terveet vanhempansa ovat kantajia (Aa).",
+     "answer": "autosomaalinen resessiivinen periytyminen",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 5,
+     "prompt": "Sukupuun henkilöt 1 ja 2 suunnittelevat kolmatta lasta. Laske risteytyskaavion avulla todennäköisyys sille, että tämä lapsi saa Tay–Sachsin taudin.",
+     "hints": [
+      "Merkitse alleelit (esim. A = terve, a = tautialleeli). Päättele vanhempien genotyypit heidän omasta ilmiasustaan ja heidän lastensa ilmiasuista.",
+      "Henkilöillä 1 ja 2 on sairas tytär (aa), joten kumpikin on antanut tälle yhden a-alleelin. Koska he itse ovat terveitä, molempien genotyyppi on Aa. Tee 2 × 2 -ruudukko sukusoluista."
+     ],
+     "solution": "1. **Merkinnät:** A = terve alleeli (dominoiva), a = tautialleeli (resessiivinen).\n2. **Vanhempien genotyypit:** henkilöt 1 ja 2 ovat terveitä, mutta heillä on sairas tytär ($aa$). Kumpikin on siis antanut tyttärelle a-alleelin, joten molemmat ovat kantajia: $Aa \\times Aa$.\n3. **Sukusolut:** kumpikin vanhempi tuottaa sukusoluja A ja a yhtä todennäköisesti ($\\tfrac12$).\n4. **Risteytyskaavio:**\n$$\\begin{array}{c|cc} & A & a \\\\ \\hline A & AA & Aa \\\\ a & Aa & aa \\end{array}$$\n5. Jälkeläisten genotyypit: $AA : Aa : aa = 1 : 2 : 1$. Sairas on vain $aa$.\n6. $P(aa)=\\tfrac12\\cdot\\tfrac12=\\tfrac14$.\n\n**Vastaus: lapsi sairastuu todennäköisyydellä $\\tfrac14$ eli $25\\,\\%$.**\n\n**Sudenkuoppa:** aiemmat lapset eivät vaikuta todennäköisyyteen, koska jokainen hedelmöitys on riippumaton tapahtuma. Todennäköisyys, että *terve* lapsi on kantaja, on eri kysymys ($\\tfrac23$).",
+     "answer": "$\\tfrac14$ eli $25\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.4",
+     "points": 5,
+     "prompt": "Tay–Sachsin tauti on aineenvaihduntasairaus, jossa eräs lysosomissa toimiva entsyymi puuttuu. Kerro, millaisia soluelimiä lysosomit ovat, ja pohdi, miksi solu kärsii, jos jokin lysosomientsyymi puuttuu tai ei toimi.",
+     "hints": [
+      "Kuvaa ensin lysosomin rakenne (missä, millainen kalvo, mitä sisällä) ja tehtävät. Täysiin pisteisiin tarvitaan sekä kuvaus että toimintahäiriön seuraukset.",
+      "Lysosomit ovat solulimassa olevia kalvorakkuloita, joissa on paljon hajotusentsyymejä. Ne pilkkovat tarpeettomia molekyylejä, kuluneita soluelimiä ja solun nielemiä bakteereja, ja pilkkoutumistuotteet palaavat käyttöön. Mitä tapahtuu, jos yksi hajotusvaihe puuttuu?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lysosomit ovat solulimassa sijaitsevia rakkuloita, joita ympäröi fosfolipidikalvo.\n- Niissä on paljon erilaisia hajotusentsyymejä, jotka toimivat happamassa sisätilassa.\n- Entsyymit pilkkovat aineita, joita solu ei enää tarvitse, sekä vaurioituneita soluelimiä. Pilkkomistuotteet palaavat solulimaan uusiokäyttöön.\n- Lysosomit osallistuvat myös puolustukseen hajottamalla esimerkiksi syöjäsolujen nielemiä bakteereja.\n- Jos jokin entsyymi puuttuu, sen hajotettava aine kertyy soluun ja häiritsee solun aineenvaihduntaa (Tay–Sachsissa rasva-aine kertyy hermosoluihin, jotka tuhoutuvat).\n\n**Esimerkkivastaus**\n\nLysosomit ovat solulimassa olevia pieniä rakkuloita, joita ympäröi fosfolipidikalvo. Niiden sisällä on happamassa ympäristössä toimivia hajotusentsyymejä, jotka pilkkovat proteiineja, hiilihydraatteja, lipidejä ja nukleiinihappoja. Lysosomit ovat solun kierrätyskeskuksia: ne hajottavat tarpeettomia molekyylejä ja vanhentuneita soluelimiä, ja syntyneet pienet molekyylit palaavat solulimaan rakennusaineiksi. Valkosoluissa lysosomit hajottavat solun nielemiä bakteereja.\n\nJos yksi lysosomientsyymi puuttuu, sen hajottama aine ei pilkkoudu, vaan se kertyy lysosomeihin ja solulimaan. Kasautuva aine täyttää solun ja häiritsee sen aineenvaihduntaa, ja lopulta solu vaurioituu tai kuolee. Tay–Sachsin taudissa hermosoluihin kertyy rasva-ainetta, mikä selittää hermoston nopean rappeutumisen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Hirviösudet (*Aenocyon dirus*) elivät Amerikassa noin 250 000–10 000 vuotta sitten. Tekstin 11.B mukaan yhdysvaltalainen yhtiö ilmoitti vuonna 2024 tuottaneensa kolme hirviösuden pentua: fossiileista eristetty DNA sekvensoitiin ja sitä verrattiin suden perimään, suden verisuonten kantasoluihin muokattiin geenisaksilla 15 hirviösuden ominaisuutta, ja alkiot tehtiin tumansiirrolla ja kasvatettiin koiraemojen kohduissa. Kuva 11.A esittää vaiheet ja video 11.C pentujen kasvua.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Kuva 11.A esittää hirviösuden \"kloonauksen\" vaiheet. Valitse pudotusvalikoista, mikä solu on kuvan kohdissa A ja B ja mitä kohdissa C, D ja E tehdään. Käytä apuna tekstiä 11.B (1 p/kohta).",
+     "hints": [
+      "Tumansiirrossa tarvitaan tumaton munasolu ja luovuttajasolun tuma. Etsi tekstistä, kenen munasoluja käytettiin (kuka toimi sijaissynnyttäjänä) ja kenen soluja muokattiin geenisaksilla.",
+      "Kohta kohdalta: A on iso munasolu, josta pipetti poistaa oman tuman (C). B on pienempi, geenimuokattu luovuttajasolu, josta tuma otetaan talteen (D). Kohdassa E tuma viedään tyhjään munasoluun, josta kehittyy alkio. Munasolut ovat samaa lajia kuin sijaissynnyttäjät."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen.\n\n1. **11.1.1 Kohta A: C, koiran munasolu.** Alkiot kasvatettiin koirien kohduissa, ja tumansiirrossa käytettiin koiran munasoluja.\n2. **11.1.2 Kohta B: A, suden geenimuokattu solu.** Suden verisuonten kantasoluihin muokattiin geenisaksilla hirviösuden ominaisuuksia.\n3. **11.1.3 Kohta C: B, tuma poistetaan solusta.** Munasolusta poistetaan sen oma tuma, jotta perimä tulee vain luovuttajasolusta.\n4. **11.1.4 Kohta D: A, tuma otetaan talteen.** Geenimuokatusta solusta otetaan tuma siirtoa varten.\n5. **11.1.5 Kohta E: B, tuma siirretään koiran munasolun sisälle.** Tumaton koiran munasolu saa suden muokatun tuman ja alkaa jakautua alkioksi.\n\n**Sudenkuoppa:** suden munasolua ei käytetty lainkaan. Munasolu tulee lajilta, joka myös kantaa alkion.",
+     "answer": "11.1.1 C · 11.1.2 A · 11.1.3 B · 11.1.4 A · 11.1.5 B",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 5,
+     "prompt": "Pohdi aineistojen 11.B ja 11.C avulla, oliko kyse todellisesta kloonauksesta ja ovatko syntyneet eläimet samanlaisia kuin muinoin eläneet hirviösudet.",
+     "hints": [
+      "Määrittele kloonaus: millainen perimä kloonilla on suhteessa kloonattavaan yksilöön? Täysiin pisteisiin tarvitaan pohdinta sekä kloonauksen aitoudesta että eläinten samankaltaisuudesta.",
+      "Suden noin 19 000 geenistä muokattiin vain pieni osa 15 ominaisuuden osalta, joten valtaosa perimästä on suden. Pohdi, mitä muuta kuin koko, lihaksisto ja purukyky erottaa lajeja (käyttäytyminen, aineenvaihdunta, ruoansulatus), ja millaisessa ympäristössä ja millaisten saaliiden ja kilpailijoiden keskellä pennut elävät."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (täysiin pisteisiin tarvitaan molemmat näkökulmat)\n\n- Kyse ei ollut todellisesta kloonauksesta, koska kloonin kaikki geenit ovat samat kuin kloonattavalla eläimellä.\n- Pentujen perimästä vain pieni osa muokattiin hirviösuden sekvenssin mukaiseksi; valtaosa geeneistä on suden.\n- Muokatut geenit vaikuttavat vain muutamaan ominaisuuteen, mutta lajit ovat eronneet toisistaan myös monissa muissa geeneissä, esimerkiksi käyttäytymiseen, aineenvaihduntaan ja ruoansulatukseen liittyvissä.\n- Pennut eivät elä samassa ympäristössä ja ilmastossa eivätkä kohtaa samoja saaliita, kilpailijoita ja petoja kuin muinaiset hirviösudet.\n- Lopputulos on siis geenimuokattu susi (GMO-susi), ei aito hirviösusi.\n\n**Esimerkkivastaus**\n\nKloonauksessa syntyy yksilö, jonka perimä on sama kuin kloonattavan yksilön. Tässä tapauksessa tuma ei tullut hirviösudesta, vaan harmaan suden solusta, johon oli muokattu hirviösuden geenimuotoja 15 ominaisuuden osalta. Suden noin 19 000 geenistä valtaosa jäi ennalleen, joten todellista kloonausta ei tehty. Kyseessä on tumansiirrolla tuotettu geenimuokattu susi.\n\nPennut voivat muistuttaa hirviösutta ulkonäöltään, koska muokatut geenit vaikuttavat esimerkiksi kokoon, lihaksikkuuteen ja purukykyyn. Hirviösusi ja susi olivat kuitenkin vain kaukaista sukua, ja niiden perimät eroavat myös monissa geeneissä, jotka säätelevät käyttäytymistä, aineenvaihduntaa ja ruoansulatusta. Lisäksi pennut kasvavat aitauksessa ihmisen hoidossa, eivät jääkauden Amerikassa biisoneita saalistaen ja muiden suurpetojen kanssa kilpaillen. Ne eivät siksi ole samanlaisia kuin muinaiset hirviösudet.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 5,
+     "prompt": "Pohdi, millaisia haasteita tutkijat kohtaavat, jos he yrittävät kloonata sukupuuttoon kuolleen eläinlajin laboratoriossa.",
+     "hints": [
+      "Ajattele kolmea asiaa: miten koko perimä saadaan (DNA:n säilyminen), miten itse kloonaus onnistuu ja mitä se maksaa.",
+      "DNA hajoaa ajan myötä, joten mitä kauemmin sitten laji on kuollut sukupuuttoon, sitä epätodennäköisempää on löytää ehjää DNA:ta (mammutti vs. dinosaurus). Suuri osa kloonialkioista ei kehity, sijaisemot voivat saada komplikaatioita ja kloonatuilla yksilöillä on usein kehityshäiriöitä ja sairauksia. Tekniikka vaatii kalliita laitteita ja osaavaa henkilökuntaa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kloonaustekniikka on kallista: tarvitaan osaavaa henkilökuntaa sekä laboratoriolaitteita ja -tarvikkeita.\n- Yrityksiä tarvitaan paljon, koska suurin osa alkioista ei ala kehittyä tai kuolee.\n- Sijaissynnyttäjät voivat kuolla komplikaatioihin.\n- Kloonatuilla yksilöillä on usein kehityshäiriöitä ja sairauksia.\n- Perimä voidaan selvittää vain, jos DNA on säilynyt hyvässä kunnossa, ja mitä kauemmin laji on ollut sukupuuttoon kuollut, sitä pienempi on todennäköisyys tähän. Esimerkiksi mammutin DNA:ta on löydetty ikiroudasta, dinosauruksen ei.\n\n**Esimerkkivastaus**\n\nSuurin haaste on perimän saaminen. DNA hajoaa kuoleman jälkeen, joten tutkijoilla on käytössään vain pätkittäistä DNA:ta fossiileista ja jäänteistä. Mammutin kaltaisesta muutama tuhat vuotta sitten kuolleesta lajista DNA:ta voi löytyä ikiroudasta, mutta dinosaurusten DNA:ta tuskin koskaan saadaan. Puutteelliset kohdat on täydennettävä lähisukuisen lajin perimällä.\n\nItse kloonaus onnistuu harvoin. Tumansiirron jälkeen useimmat alkiot eivät kehity, osa raskauksista päättyy keskenmenoon, ja sijaissynnyttäjät voivat saada komplikaatioita. Syntyneillä klooneilla on usein kehityshäiriöitä tai sairauksia. Lisäksi sijaissynnyttäjäksi tarvitaan lähisukuinen nykyinen laji, jota ei aina ole. Tekniikka on myös kallista, koska se vaatii huippulaboratorion, kalliita tarvikkeita ja erikoisosaamista.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 5,
+     "prompt": "Arvioi, millaisia ekologisia seurauksia sukupuuttoon kuolleiden eläinten palauttamisesta luontoon voisi olla ja millaisia eettisiä ongelmia tekstin 11.B hankkeeseen ja luontoon palauttamiseen liittyy.",
+     "hints": [
+      "Jaa vastaus kahteen osaan: ekologia (onko eläimelle enää paikkaa nykyisessä ekosysteemissä?) ja etiikka (eläinten hyvinvointi, rahankäyttö, omistajuus, viestintä).",
+      "Ekologia: alkuperäistä ekolokeroa ei enää ole, joten palautettu laji voi sopeutua huonosti tai käyttäytyä kuin vieraslaji, eli kilpailla, saalistaa tai risteytyä muiden lajien kanssa. Etiikka: eläimet päätyvät tarhaan tai lemmikkikauppaan, rahat ja osaaminen voisi käyttää nykylajien suojeluun, ja \"henkiin herättäminen\" voi hämärtää sukupuuton lopullisuutta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Ekologiset seuraukset*\n- Palautetulla lajilla ei ole enää sitä ekolokeroa, joka sillä ennen oli, mikä voi estää sen sopeutumisen nykyluontoon.\n- Palautettu laji voi toimia vieraslajin tavoin: kilpailla muiden lajien kanssa, saalistaa niitä tai risteytyä jonkin lajin kanssa.\n\n*Eettiset ongelmat*\n- Eläimet jouduttaisiin todennäköisesti pitämään eläintarhassa tai -puistossa, koska luonnossa ei ole niille elinympäristöä; ne voisivat myös päätyä lemmikkikauppaan tai pentutehtailuun.\n- Hanke on kallis: samoilla rahoilla ja osaamisella voitaisiin suojella nykyistä monimuotoisuutta.\n- Julkisuus voi antaa käsityksen, että sukupuutto ei ole lopullinen, ja heikentää suojelun kiireellisyyttä.\n- Lisäksi voi pohtia eläinten ja tietotaidon omistajuutta, kun ne ovat yksityisen yrityksen hallussa, sekä sijaisemojen ja pentujen hyvinvointia.\n\n**Esimerkkivastaus**\n\nHirviösusi kuoli sukupuuttoon noin 10 000 vuotta sitten, ja sen saaliit, kuten jääkauden suuret nisäkkäät, ovat kadonneet. Nykyluonnossa sille ei ole valmista ekolokeroa. Jos palautettu eläin vapautettaisiin, se voisi käyttäytyä kuin vieraslaji: kilpailla susien ja muiden petojen kanssa, saalistaa uhanalaisia lajeja tai risteytyä susien ja koirien kanssa, mikä sotkisi niiden perimää.\n\nEettisesti ongelmallista on, että eläimet joutuvat todennäköisesti elämään koko ikänsä aitauksessa, eikä niillä ole oman lajin laumaa. Hankkeen menetelmät aiheuttavat myös kärsimystä sijaissynnyttäjinä toimiville koirille ja epäonnistuneille alkioille. Rahat ja osaaminen voisi käyttää nykyisten uhanalaisten lajien suojeluun. Uutisointi \"henkiin herätetyistä\" lajeista voi saada ihmiset uskomaan, että sukupuutto on korjattavissa, mikä vähentää halua suojella lajeja ajoissa. Lisäksi on kysyttävä, kuka omistaa eläimet ja niitä koskevan tiedon, kun hankkeen takana on kaupallinen yritys.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

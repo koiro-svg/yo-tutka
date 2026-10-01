@@ -1,0 +1,389 @@
+{
+ "subject": "fysiikka",
+ "session": "2026S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2026S_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2026-09-22_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintakohtaa (1.1–1.10), joissa valitaan paras vaihtoehto. Aiheet: pikajuoksijan liike-energian suuruusluokka maaliviivalla, suoraan ylös heitetyn pallon kiihtyvyys lakipisteessä, törmäyksessä aina säilyvä suure, kiertoheilurin pallon kiihtyvyyden suunta (pisteet K, L ja M alkuperäisen tehtävän kuvassa), mistä äänen nopeus tyynessä ilmassa riippuu, miksi kitaran kielen lyhentäminen puoleen nostaa perustaajuuden kaksinkertaiseksi, mitä sulakkeen merkinnät 16 A ja 500 V tarkoittavat, miksi vesilasissa oleva pilli näyttää taittuvan, mihin ilmiöön tarvitaan fotonimallia ja missä säteilyn syntytavassa voi syntyä näkyvää valoa. Vaihtoehdot ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Hae jokaiseen kohtaan yksi fysiikan periaate: suuruusluokka-arvio kaavalla $E_k=\\frac12mv^2$, Newtonin II laki, liikemäärän säilyminen, tasaisen ympyräliikkeen kiihtyvyys, aallon nopeus ja aallonpituus, sulakkeen nimellisarvot, valon taittuminen, fotonin energia $E=hf$ ja eri säteilylajien syntytavat.",
+      "Kohta kohdalta:\n- 1.1: arvioi massa (noin 75 kg) ja loppunopeus (noin 10 m/s).\n- 1.2: mikä voima vaikuttaa palloon lakipisteessä, vaikka nopeus on nolla?\n- 1.3: onko törmääviin kappaleisiin vaakasuunnassa ulkoisia voimia?\n- 1.4: pallo kiertää vaakasuoraa ympyrää tasaisella vauhdilla. Missä on radan keskipiste?\n- 1.5: äänen nopeus kaasussa liittyy molekyylien lämpöliikkeeseen.\n- 1.6: kielen perusvärähtelyssä $\\lambda=2L$. Muuttuuko kielen jännitys tai massa pituusyksikköä kohti?\n- 1.7: toinen merkintä on nimellisvirta, toinen nimellisjännite.\n- 1.8: valo siirtyy aineesta toiseen.\n- 1.9: missä ilmiössä valon energia siirtyy kvantteina?\n- 1.10: mistä syntyvät radioaallot, mistä gammasäteily?"
+     ],
+     "solution": "1. **1.1 D (noin 3 kJ).** Juoksijan massa on noin 70–80 kg ja nopeus maalissa noin 10 m/s, joten $E_k=\\frac12mv^2\\approx\\frac12\\cdot 75\\ \\text{kg}\\cdot(10\\ \\text{m/s})^2\\approx 4\\ \\text{kJ}$. Vaihtoehdoista suuruusluokaltaan ainoa sopiva on 3 kJ.\n2. **1.2 A ($-9{,}8\\ \\text{m/s}^2$).** Lakipisteessä nopeus on hetken nolla, mutta palloon vaikuttaa edelleen paino. Newtonin II lain mukaan kiihtyvyys on $g$ alaspäin, eli negatiivinen, kun ylöspäin on positiivinen suunta.\n3. **1.3 A (liikemäärien summa).** Kitkattomalla vaakasuoralla radalla ulkoisten voimien summa liikkeen suunnassa on nolla, joten kokonaisliikemäärä säilyy aina. Liike-energia säilyy vain kimmoisassa törmäyksessä, eikä nopeuksien summa ole säilyvä suure.\n4. **1.4 D (kohti pistettä L).** Pallo on tasaisessa ympyräliikkeessä, joten sen kiihtyvyys on normaalikiihtyvyys kohti ympyräradan keskipistettä L. Langan jännitysvoiman pystykomponentti kumoaa painon, ja vaakakomponentti aiheuttaa keskeiskiihtyvyyden.\n5. **1.5 A (ilman lämpötilasta).** Äänen nopeus kaasussa kasvaa lämpötilan mukana ($v\\propto\\sqrt{T}$). Ilmassa kaikki taajuudet etenevät samalla nopeudella, eikä tavallinen äänen voimakkuus tai tyynessä ilmassa suunta vaikuta nopeuteen.\n6. **1.6 A (aallonpituus muuttuu).** Perusvärähtelyssä kielen pituudelle mahtuu puoli aallonpituutta, $\\lambda=2L$. Aallon nopeus $v=\\sqrt{F/\\mu}$ pysyy samana, koska jännitys ja kieli eivät muutu. Siksi $f=\\frac{v}{2L}$ kaksinkertaistuu, kun $L$ puolittuu.\n7. **1.7 B (katkaisee, kun virta ylittää 16 A).** 16 A on nimellisvirta, jonka ylittyessä sulake palaa (pienellä ylityksellä hitaasti, suurella nopeasti). 500 V on suurin jännite, jossa sulake pystyy katkaisemaan virran turvallisesti. Sulakkeen resistanssi on hyvin pieni, ei kymmeniä ohmeja.\n8. **1.8 C (taittuu).** Pillin veden alla olevasta osasta tuleva valo muuttaa suuntaansa siirtyessään vedestä ilmaan, joten upotettu osa näyttää olevan eri kohdassa kuin todellisuudessa.\n9. **1.9 A (valosähköinen ilmiö).** Irronneiden elektronien suurin liike-energia riippuu valon taajuudesta eikä voimakkuudesta, ja ilmiöllä on rajataajuus. Tämä selittyy vain, jos valon energia tulee kvantteina $E=hf$. Taipuminen, taittuminen ja heijastuminen selittyvät aaltomallilla.\n10. **1.10 B (rakenneosien lämpövärähtely).** Kuuma kappale lähettää lämpösäteilyä, jonka spektri siirtyy lämpötilan noustessa lyhyempiin aallonpituuksiin. Esimerkiksi hehkulanka ja Aurinko säteilevät näkyvää valoa. Antennin vaihtovirta tuottaa radioaaltoja, ja annihilaatiossa sekä ytimen viritystilan purkautumisessa syntyy gammasäteilyä.\n\n**Vastaus: 1.1 D · 1.2 A · 1.3 A · 1.4 D · 1.5 A · 1.6 A · 1.7 B · 1.8 C · 1.9 A · 1.10 B**\n\n**Sudenkuoppa:** kohdassa 1.2 nollanopeus houkuttelee valitsemaan nollakiihtyvyyden. Kiihtyvyys riippuu voimista, ei nopeudesta.",
+     "answer": "1.1 D · 1.2 A · 1.3 A · 1.4 D · 1.5 A · 1.6 A · 1.7 B · 1.8 C · 1.9 A · 1.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Tennispallon sisällä on ylipaine (uudessa pallossa vajaa 100 kPa), joka pienenee vähitellen myös käyttämättömänä. Neljä palloa sisältänyt paineistettu purkki avattiin, ja palloja pudotettiin 2,54 m:n korkeudelta toistuvasti noin 10 viikon ajan. Kunkin pallon ponnahduskorkeus mitattiin (alkuperäisen tehtävän taulukko 2.A ja kuvaaja 2.B).",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 7,
+     "prompt": "Laske kunkin mittauspäivän neljän pallon ponnahduskorkeuksien keskiarvo ja esitä keskiarvot kuvaajana purkin avaamisesta kuluneen ajan funktiona. Kuvaajaan pelkät mittauspisteet.",
+     "hints": [
+      "Syötä taulukko 2.A laskentaohjelmaan (esim. GeoGebra tai taulukkolaskenta), laske jokaiselle riville $\\bar h=\\frac{h_1+h_2+h_3+h_4}{4}$ ja piirrä pistekaavio: aika vaaka-akselille, keskiarvo pystyakselille. Muista akselien suureet ja yksiköt.",
+      "Ensimmäisen mittauspäivän keskiarvo on noin 1,426 m ja viimeisen (71 d) noin 1,373 m. Kuukauden ajan keskiarvot pysyvät noin välillä 1,43–1,46 m ja alkavat sitten laskea. Valitse pystyakselin asteikoksi esimerkiksi 1,35–1,48 m, jotta muutos näkyy."
+     ],
+     "solution": "1. Lasketaan jokaiselle mittauspäivälle keskiarvo $\\bar h=\\frac{h_1+h_2+h_3+h_4}{4}$. Esimerkiksi hetkellä $t=0$: $\\bar h=\\frac{1{,}425+1{,}432+1{,}404+1{,}442}{4}\\ \\text{m}\\approx 1{,}426\\ \\text{m}$.\n2. Keskiarvot ovat ensimmäisen noin viiden viikon ajan välillä noin 1,43–1,46 m (suurin noin 1,461 m hetkellä 20 d). Sen jälkeen ne pienenevät tasaisesti, ja viimeisellä mittauskerralla (71 d) keskiarvo on noin 1,373 m.\n3. Piirretään pistekaavio: vaaka-akselilla aika $t$ (d), pystyakselilla keskiarvo $\\bar h$ (m). Jokainen mittauspäivä on yksi piste, eikä pisteitä yhdistetä viivalla eikä niihin sovitettu käyrää, koska tehtävä pyytää pelkät mittauspisteet.\n4. Kuvaajassa on otsikko tai selite, akselien nimet ja yksiköt sekä asteikko, jossa muutokset erottuvat (esim. $\\bar h$ välillä 1,35–1,48 m).\n\n**Vastaus: pistekaavio keskiarvoista; keskiarvo pysyy aluksi noin 1,43–1,46 metrissä ja laskee loppua kohti noin 1,37 metriin.**\n\n**Sudenkuoppa:** yksittäisten pallojen pisteiden piirtäminen keskiarvojen sijaan tai pisteiden yhdistäminen murtoviivaksi. Laskutapa on myös näytettävä, sillä keskiarvojen laskemisesta saa omat pisteensä.",
+     "answer": "keskiarvot noin $1{,}426$ m ($t=0$) … $1{,}373$ m ($t=71$ d), esitettynä pistekaaviona",
+     "check": "laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 4,
+     "prompt": "Tenniksen kansainvälisen liiton vaatimus pelikelpoiselle pallolle on 1,35–1,47 m:n ponnahdus 2,54 m:n pudotuksesta. Kuinka kauan purkin avaamisesta pallot pysyivät pelikelpoisina, jos ennuste tehdään neljän viimeisen mittausviikon aikana tapahtuneen muutoksen perusteella? Perustele kuvaajan avulla.",
+     "hints": [
+      "Neljä viimeistä viikkoa kattavat mittaukset hetkistä 44–71 d. Sovita näiden keskiarvopisteiden kautta suora ja jatka sitä, kunnes se leikkaa alarajan $1{,}35$ m. Katso myös, ylittyykö yläraja missään vaiheessa."
+     ],
+     "solution": "1. Yläraja 1,47 m ei ylity missään vaiheessa: suurin keskiarvo on noin 1,461 m. Pelikelpoisuuden ratkaisee siis alaraja 1,35 m.\n2. Neljän viimeisen viikon aikana on kuusi mittausta ($t=44$, 51, 56, 62, 67 ja 71 d). Niiden keskiarvot pienenevät noin 1,437 metristä noin 1,373 metriin lähes lineaarisesti.\n3. Sovitetaan pisteisiin suora (pienimmän neliösumman menetelmä): $\\bar h\\approx -0{,}00238\\ \\tfrac{\\text{m}}{\\text{d}}\\cdot t+1{,}543\\ \\text{m}$.\n4. Suora leikkaa alarajan, kun $-0{,}00238\\ \\tfrac{\\text{m}}{\\text{d}}\\cdot t+1{,}543\\ \\text{m}=1{,}35\\ \\text{m}$, eli $t\\approx 81\\ \\text{d}$.\n5. Kuvaajaan piirretään keskiarvopisteet, sovitettu suora jatkettuna yli mittausalueen sekä vaakasuora viiva korkeudella 1,35 m. Leikkauspisteestä luetaan aika.\n\n**Vastaus: noin 80 vuorokautta (noin 11–12 viikkoa) purkin avaamisesta.**\n\nSuoran sovitus antaa noin 81 d. YTL:n alustavissa hyvän vastauksen piirteissä kuvaajasta luettu arvo on noin 83 d. Graafisessa arviossa kumpikin on järkevä, ja olennaista on, että ennuste tehdään viimeisten viikkojen laskevasta trendistä.\n\n**Sudenkuoppa:** suoran sovittaminen kaikkiin pisteisiin. Alun tasainen jakso loiventaa suoraa ja siirtää ennustetta liian myöhäiseksi.",
+     "answer": "noin 81 d (noin 11–12 viikkoa)",
+     "check": "laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 4,
+     "prompt": "Mitkä kaksi merkittävää tekijää pudotuskorkeuden lisäksi on pidettävä samoina, jotta eri päivien mittaukset ovat vertailukelpoisia?",
+     "hints": [
+      "Mieti, mikä vaikuttaa pallon kimmoisuuteen ja sisäiseen ylipaineeseen tai itse pomppuun: mihin pallo osuu ja millaisissa olosuhteissa pallo ja sen sisällä oleva kaasu ovat."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi seuraavista perusteluineen:\n- **Alusta**, jolle pallo pudotetaan (sama materiaali ja jäykkyys), koska alusta vaikuttaa siihen, kuinka paljon energiaa pomppu kuluttaa.\n- **Lämpötila**, koska kaasun paine pallon sisällä ($pV=nRT$) ja kumin kimmoisuus riippuvat lämpötilasta.\n- **Ilmanpaine**, koska pallon ylipaine on sisäpaineen ja ulkoisen paineen erotus.\n- **Ilmankosteus**, koska se vaikuttaa pallon pinnan ja kumin ominaisuuksiin.\n\nEi riitä: vaatimus samasta tai tarkasta mittalaitteesta tai -menetelmästä eikä ulkoisen häiriön poistaminen (esim. tuuleton paikka tai vaakasuora alusta).\n\n**Esimerkkivastaus:** Pallot on pudotettava aina samalle alustalle, esimerkiksi samaan betonilattiaan, koska pehmeämpi tai joustavampi pinta kuluttaa enemmän energiaa ja pienentää ponnahduskorkeutta. Lisäksi lämpötilan on oltava sama, sillä pallon sisällä olevan kaasun paine kasvaa lämpötilan mukana ja kumi on lämpimänä kimmoisampaa. Kylmänä pallo pomppaisi matalammalle, vaikka se ei olisi vanhentunut.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Kohdat ovat pudotusvalikoita, ja jokainen oikea valinta on 1 p. Kohdissa 3.2 ja 3.3 ideaalikaasua käyttävä lämpövoimakone kiertää suljetun prosessin ABCA, joka on esitetty $(V,p)$-koordinaatistossa alkuperäisen tehtävän kuvassa 3.A: AB on pystysuora jana ylöspäin, BC laskeva käyrä kohti suurempaa tilavuutta ja CA vaakasuora jana takaisin A:han.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 5,
+     "prompt": "Onko suure tilanmuuttuja (tilansuure)? Vastaa kyllä tai ei: 3.1.1 lämpömäärä, 3.1.2 lämpötila, 3.1.3 paine, 3.1.4 sisäenergia, 3.1.5 työ.",
+     "hints": [
+      "Tilanmuuttujan arvo määräytyy pelkästään systeemin senhetkisestä tilasta, eikä se riipu siitä, miten tilaan päädyttiin.",
+      "Kysy jokaisesta suureesta: voiko kaasulla *olla* tämän suureen arvo tietyllä hetkellä, vai kuvaako suure vain prosessin aikana siirtyvää energiaa? Lämpö ja työ ovat energian siirtymisen tapoja."
+     ],
+     "solution": "1. Tilanmuuttuja kuvaa systeemin tilaa: sen arvo riippuu vain tilasta, ja suljetussa kiertoprosessissa se palaa alkuarvoonsa. Prosessisuure taas riippuu siitä, mitä reittiä tilasta toiseen siirrytään.\n2. **3.1.1 Lämpömäärä: ei.** Lämpö on energiaa, joka siirtyy prosessin aikana lämpötilaeron vuoksi. Kaasulla ei ole ”lämpömäärää”, ja siirtyvä lämpö riippuu reitistä.\n3. **3.1.2 Lämpötila: kyllä.**\n4. **3.1.3 Paine: kyllä**, sekin on tilanmuuttuja.\n5. **3.1.4 Sisäenergia: kyllä.** Ideaalikaasun sisäenergia riippuu vain lämpötilasta, joten se on tilan funktio.\n6. **3.1.5 Työ: ei.** Työ riippuu prosessin reitistä: $pV$-kuvaajassa se on käyrän alle jäävä pinta-ala, joka on eri eri reiteillä.\n\n**Vastaus: 3.1.1 ei · 3.1.2 kyllä · 3.1.3 kyllä · 3.1.4 kyllä · 3.1.5 ei**",
+     "answer": "3.1.1 ei · 3.1.2 kyllä · 3.1.3 kyllä · 3.1.4 kyllä · 3.1.5 ei",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 6,
+     "prompt": "Täydennä vaiheelle AB: miten tilavuus, paine ja lämpötila muuttuvat (kasvaa / pienenee / pysyy vakiona), onko kaasun tekemä työ ja kaasuun siirtynyt lämpömäärä positiivinen, negatiivinen vai nolla, ja miten sisäenergia muuttuu (kohdat 3.2.1–3.2.6).",
+     "hints": [
+      "Lue kuvaajasta, millainen vaihe AB on: pystysuora jana $(V,p)$-koordinaatistossa tarkoittaa, että yksi tilanmuuttuja pysyy vakiona. Käytä sitten tilanyhtälöä $pV=nRT$ ja termodynamiikan I pääsääntöä.",
+      "Vaihe AB on isokoorinen, joten kaasun tekemä työ on nolla. Kun tilavuus on vakio ja paine kasvaa, $T=\\frac{pV}{nR}$ kasvaa. I pääsäännön $\\Delta U=Q-W$ mukaan kaikki kaasuun tuotu lämpö kasvattaa sisäenergiaa."
+     ],
+     "solution": "1. Kuvassa vaihe AB on pystysuora jana, jolla paine kasvaa. Tilavuus pysyy vakiona (isokoorinen prosessi).\n2. **3.2.1 Tilavuus pysyy vakiona.**\n3. **3.2.2 Paine kasvaa.**\n4. **3.2.3 Lämpötila nousee**, sillä ideaalikaasulle $T=\\frac{pV}{nR}$, ja $p$ kasvaa $V$:n pysyessä vakiona.\n5. **3.2.4 Kaasun tekemä työ on nolla**, koska $W=\\int p\\,dV=0$, kun tilavuus ei muutu.\n6. **3.2.6 Sisäenergia kasvaa**, koska ideaalikaasun sisäenergia kasvaa lämpötilan mukana.\n7. **3.2.5 Kaasuun siirtynyt lämpömäärä on positiivinen**: I pääsäännöstä $Q=\\Delta U+W=\\Delta U>0$.\n\n**Vastaus: 3.2.1 pysyy vakiona · 3.2.2 kasvaa · 3.2.3 nousee · 3.2.4 nolla · 3.2.5 positiivinen · 3.2.6 kasvaa**\n\n**Sudenkuoppa:** I pääsäännön etumerkit. Tässä $W$ on kaasun tekemä työ, joten $\\Delta U=Q-W$.",
+     "answer": "3.2.1 pysyy vakiona · 3.2.2 kasvaa · 3.2.3 nousee · 3.2.4 nolla · 3.2.5 positiivinen · 3.2.6 kasvaa",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 4,
+     "prompt": "Vaihe BC on isoterminen. Täydennä sille: miten lämpötila muuttuu, onko kaasun tekemä työ ja kaasuun siirtynyt lämpömäärä positiivinen, negatiivinen vai nolla, ja miten sisäenergia muuttuu (kohdat 3.3.1–3.3.4).",
+     "hints": [
+      "Isotermisessä vaiheessa ideaalikaasun sisäenergia ei muutu, koska se riippuu vain lämpötilasta. Katso kuvaajasta, kasvaako tilavuus vaiheessa BC, ja käytä I pääsääntöä $\\Delta U=Q-W$."
+     ],
+     "solution": "1. **3.3.1 Lämpötila pysyy vakiona** (isoterminen prosessi).\n2. **3.3.4 Sisäenergia pysyy vakiona**, koska ideaalikaasun sisäenergia riippuu vain lämpötilasta.\n3. **3.3.2 Kaasun tekemä työ on positiivinen**, sillä kuvaajan mukaan tilavuus kasvaa vaiheessa BC eli kaasu laajenee ja tekee työtä ympäristöön.\n4. **3.3.3 Kaasuun siirtynyt lämpömäärä on positiivinen**: I pääsäännöstä $Q=\\Delta U+W=W>0$. Kaasu saa lämpöä yhtä paljon kuin se tekee työtä.\n\n**Vastaus: 3.3.1 pysyy vakiona · 3.3.2 positiivinen · 3.3.3 positiivinen · 3.3.4 pysyy vakiona**",
+     "answer": "3.3.1 pysyy vakiona · 3.3.2 positiivinen · 3.3.3 positiivinen · 3.3.4 pysyy vakiona",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Lankku (massa 3,40 kg) roikkuu kahden narun varassa. Kumpikin naru nousee lankun päästä pystysuoraan kattoon kiinnitetyn väkipyörän yli ja laskeutuu vinosti lankun päällä olevan punnuksen yläpintaan. Narujen ja vaakatason välinen kulma punnuksen kohdalla on $\\theta=55^\\circ$ (ks. alkuperäisen tehtävän kuva 4.A).",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 4,
+     "prompt": "Piirrä lankun voimakuvio. Merkitse voimien vaikutuspisteet huolellisesti ja piirrä nuolet oikeissa pituussuhteissa.",
+     "hints": [
+      "Lankkuun koskettavat kaksi pystysuoraa narua ja punnus, ja lisäksi siihen vaikuttaa paino. Tasapainossa ylöspäin ja alaspäin osoittavien voimien summat ovat yhtä suuret."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Lankun paino $\\vec G_1$ lankun keskipisteessä alaspäin.\n- Narujen jännitysvoimat $\\vec T_1$ ja $\\vec T_2$ lankun päissä pystysuoraan ylöspäin (narut nousevat lankun päistä suoraan väkipyörille). Symmetrian vuoksi ne ovat yhtä suuret.\n- Punnuksen lankkuun kohdistama voima $\\vec N_1$ alaspäin punnuksen ja lankun kosketuskohdassa lankun keskellä (punnuksen tukivoiman vastavoima).\n- Pituussuhteet: tasapainossa $T_1+T_2=G_1+N_1$, joten jännitysvoimien nuolet ovat kumpikin yli puolet painon nuolesta.\n\n**Esimerkkivastaus:** Piirretään lankku vaakasuorana suorakulmiona. Keskipisteestä lähtee alaspäin paino $\\vec G_1$ ja samasta kohdasta, lankun yläpinnalta punnuksen alta, alaspäin punnuksen kohdistama voima $\\vec N_1$. Lankun kummastakin päästä lähtee ylöspäin yhtä pitkä jännitysvoima $\\vec T_1$ ja $\\vec T_2$ niin, että niiden yhteispituus on sama kuin nuolten $\\vec G_1$ ja $\\vec N_1$ yhteispituus.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 4,
+     "prompt": "Piirrä punnuksen voimakuvio.",
+     "hints": [
+      "Punnukseen koskettavat kaksi narua ja lankku. Narujen voimat ovat narujen suuntaisia, ja narut ovat $55^\\circ$ kulmassa vaakatasoon nähden."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Punnuksen paino $\\vec G_2$ painopisteessä alaspäin.\n- Narujen jännitysvoimat $\\vec T_3$ ja $\\vec T_4$ narujen kiinnityskohdassa punnuksen yläpinnalla, kumpikin narun suuntaisesti vinosti ylöspäin $55^\\circ$ kulmassa vaakatasoon, toinen vasemmalle ja toinen oikealle. Ne ovat yhtä suuret, joten niiden vaakakomponentit kumoavat toisensa.\n- Lankun tukivoima $\\vec N_2$ punnuksen pohjassa ylöspäin.\n- Pituussuhteet: $G_2=N_2+2T\\sin 55^\\circ$.\n\n**Esimerkkivastaus:** Punnus piirretään laatikkona. Sen keskeltä alaspäin osoittaa paino $\\vec G_2$, pohjasta ylöspäin lankun tukivoima $\\vec N_2$ ja yläpinnan keskeltä kaksi yhtä pitkää jännitysvoimaa $\\vec T_3$ ja $\\vec T_4$ narujen suuntiin. Jännitysvoimien pystykomponenttien ja tukivoiman summa on yhtä suuri kuin paino.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 7,
+     "prompt": "Systeemi on tasapainossa niin, että punnus koskettaa lankkua. Mikä on punnuksen pienin mahdollinen massa?",
+     "hints": [
+      "Kirjoita tasapainoehto pystysuunnassa erikseen lankulle ja punnukselle. Sama naru kulkee väkipyörän yli, joten jännitysvoima on sama narun kummassakin päässä. Punnuksen ja lankun välinen tukivoima on voima–vastavoima-pari.",
+      "Lankulle $2T=Mg+N$ ja punnukselle $mg=N+2T\\sin\\theta$. Punnus koskettaa lankkua vain, jos tukivoima on $N\\ge 0$. Pienin massa saadaan rajatapauksesta $N=0$."
+     ],
+     "solution": "1. Merkitään lankun massaa $M=3{,}40\\ \\text{kg}$, punnuksen massaa $m$, narujen jännitysvoimaa $T$ ja punnuksen ja lankun välistä tukivoimaa $N$. Kevyt naru kulkee kitkattoman väkipyörän yli, joten jännitys on sama narun kummassakin päässä, ja symmetrian vuoksi molemmat narut ovat yhtä kireällä. Voiman ja vastavoiman lain mukaan punnuksen lankkuun kohdistama voima on yhtä suuri kuin lankun punnukseen kohdistama tukivoima $N$.\n2. Lankun tasapaino pystysuunnassa (Newtonin I laki): $2T-Mg-N=0$, eli $2T=Mg+N$.\n3. Punnuksen tasapaino pystysuunnassa: $2T\\sin\\theta+N-mg=0$. Vaakakomponentit $T\\cos\\theta$ kumoavat toisensa.\n4. Sijoitetaan $2T$: $mg=N+(Mg+N)\\sin\\theta$, josta $N(1+\\sin\\theta)=mg-Mg\\sin\\theta$.\n5. Punnus koskettaa lankkua vain, jos $N\\ge 0$. Siis $m\\ge M\\sin\\theta$.\n6. Pienin massa: $m=M\\sin\\theta=3{,}40\\ \\text{kg}\\cdot\\sin 55^\\circ\\approx 2{,}79\\ \\text{kg}$.\n\n**Vastaus: $m\\approx 2{,}8\\ \\text{kg}$**\n\n**Sudenkuoppa:** narun jännitysvoimaa ei tunneta etukäteen, vaan se määräytyy lankun tasapainosta. Jos jännitys oletetaan esimerkiksi punnuksen painon suuruiseksi tai sinin paikalle tulee kosini, tulos on väärä.",
+     "answer": "$m_{\\min}=M\\sin 55^\\circ\\approx 2{,}8\\ \\text{kg}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 3,
+     "prompt": "Mitä mekaanisten aaltojen interferenssi tarkoittaa? Selitä lyhyesti.",
+     "hints": [
+      "Mitä tapahtuu, kun kaksi aaltoa kohtaa samassa paikassa? Muista superpositioperiaate sekä vahvistava ja heikentävä interferenssi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Interferenssi on kahden tai useamman aallon yhteisvaikutus, kun ne kohtaavat samassa kohdassa väliainetta.\n- Superpositioperiaate: väliaineen poikkeama on aaltojen poikkeamien summa.\n- Samassa vaiheessa kohtaavat aallot vahvistavat toisiaan, vastakkaisessa vaiheessa heikentävät tai kumoavat.\n\n**Esimerkkivastaus:** Kun kaksi mekaanista aaltoa kohtaa, väliaineen poikkeama kussakin kohdassa on aaltojen omien poikkeamien summa. Jos aallonharja kohtaa harjan, poikkeama kasvaa (vahvistava interferenssi). Jos harja kohtaa pohjan, aallot heikentävät tai jopa kumoavat toisensa (heikentävä interferenssi). Kohtaamisen jälkeen aallot jatkavat matkaansa muuttumattomina.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 3,
+     "prompt": "Mitä mekaanisten aaltojen diffraktio tarkoittaa? Selitä lyhyesti.",
+     "hints": [
+      "Mieti, mitä aallolle tapahtuu esteen reunalla tai kapeassa aukossa. Miksi ääni kuuluu nurkan taakse?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Diffraktio (taipuminen) on aallon etenemissuunnan muuttuminen esteen reunalla tai aukossa niin, että aalto leviää myös esteen ”varjoon”.\n- Ilmiö on selvä, kun aukon tai esteen koko on aallonpituuden suuruusluokkaa tai pienempi.\n\n**Esimerkkivastaus:** Kun aalto kohtaa esteen tai kulkee aukon läpi, se ei jatka pelkästään suoraan vaan kaartuu esteen reunan taakse. Kapea aukko toimii ikään kuin uutena aaltolähteenä, josta aalto leviää puoliympyränä eteenpäin. Siksi esimerkiksi vesiaallot ulottuvat aallonmurtajan taakse ja ääni kuuluu nurkan takaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 3,
+     "prompt": "Alkuperäisen tehtävän ilmakuvassa 5.A rannan edustalla on rivi aallonmurtajia, joiden väleissä on kapeat aukot. Aukkojen takana ranta on kulunut suunnilleen puoliympyrän muotoiseksi (katkoviivat). Selitä, miksi.",
+     "hints": [
+      "Käytä edellisen kohdan diffraktiota: miten meren suunnalta tuleva suora aaltorintama käyttäytyy, kun se kulkee aallonpituuteen verrattuna kapean aukon läpi?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Aallonmurtajien väliset aukot ovat kapeita aallonpituuteen verrattuna, joten aallot diffraktoituvat niissä.\n- Aukko toimii uuden, puoliympyrän muotoisen aallon lähteenä: aallot etenevät aukosta kaikkiin suuntiin rantaa kohti.\n- Puoliympyrän muotoiset aaltorintamat osuvat rantaan joka kohdassa yhtä kaukana aukosta ja kuluttavat sen samanmuotoiseksi.\n\n**Esimerkkivastaus:** Aallonmurtajien välinen rako on niin kapea, että siihen saapuva suora aaltorintama taipuu ja rako toimii ikään kuin pistemäisenä aaltolähteenä. Raosta lähtee rantaa kohti puoliympyrän muotoisia aaltoja, jotka saavuttavat raosta yhtä kaukana olevat rannan kohdat samanaikaisesti ja yhtä voimakkaina. Siksi aallot kuluttavat rannan raon ympärille puoliympyräksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.4",
+     "points": 6,
+     "prompt": "Alkuperäisen tehtävän ilmakuvassa 5.B on aallonmurtaja ja satamalaituri, joiden välisellä alueella (katkoviiva) meren pinnassa näkyy ristikkäinen aaltokuvio. Selitä, miten kuvio syntyy.",
+     "hints": [
+      "Kuvio syntyy kolmen aalto-ilmiön peräkkäisestä yhteisvaikutuksesta. Seuraa aaltoja mereltä: mitä tapahtuu aallonmurtajan päässä, mitä laiturin seinässä ja mitä kun kaksi aaltoa kohtaa?",
+      "Mereltä tulevat aallot taipuvat aallonmurtajan pään ympäri alueelle, jonne ne eivät muuten pääsisi. Nämä aallot heijastuvat laiturin seinästä takaisin, ja tulevat ja heijastuneet aallot kohtaavat samalla alueella."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n1. Mereltä tulevat aaltorintamat **diffraktoituvat** aallonmurtajan päässä ja leviävät kaarevina rintamina aallonmurtajan suojaan kohti laituria.\n2. Nämä aallot **heijastuvat** laiturin pystysuorasta seinästä takaisin alueelle.\n3. Laiturille menevät ja siitä heijastuneet aallot **interferoivat**: poikkeamat summautuvat, jolloin syntyy ristikkäinen kuvio vahvistumis- ja heikentymiskohtineen.\n\n**Esimerkkivastaus:** Aallonmurtaja suojaa aluetta, mutta sen päähän saapuvat aallot taipuvat pään ympäri ja leviävät kaarevina rintamina kohti laituria. Laiturin seinä heijastaa aallot takaisin. Alueella on siis yhtä aikaa laituria kohti kulkevia ja siitä poispäin kulkevia aaltoja, jotka kohtaavat eri kulmissa. Niiden interferenssi tuottaa ruudukkomaisen kuvion: siellä missä aallot kohtaavat samassa vaiheessa, aallokko voimistuu, ja vastakkaisessa vaiheessa se heikkenee.\n\n**Sudenkuoppa:** pelkkä ”interferenssi” ei riitä, vaan on selitettävä, mistä kaksi toisiaan leikkaavaa aaltoa tulevat (diffraktio ja heijastus).",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "NASAn NSTAR-ionimoottori kiihdyttää ksenon-ioneja $\\mathrm{Xe^+}$ levosta, ja kiihdytysjännite on 1300 V (ksenonin atomimassa 131,293 u).\n\n- 6.1: Millä nopeudella ionit lähtevät moottorista?\n- 6.2: Moottorin työntövoima on 92 mN. Laske moottorista yhden sekunnin aikana poistuvien ionien yhteismassa sekä ionisuihkun sähköteho.",
+     "hints": [
+      "Sähkökentän ioniin tekemä työ $W=qU$ muuttuu ionin liike-energiaksi (energiaperiaate). Muunna atomimassayksikkö kilogrammoiksi ($1\\ \\text{u}=1{,}6605\\cdot10^{-27}\\ \\text{kg}$). Työntövoima on Newtonin II lain mukaan ionien liikemäärän muutosnopeus.",
+      "Yhden sekunnin aikana poistuvan ionimassan $\\Delta m$ liikemäärä muuttuu nollasta arvoon $\\Delta m\\,v$, joten $F=\\frac{\\Delta m\\,v}{\\Delta t}$. Sähköteho on $P=UI$, jossa ionivirta on alkeisvaraus kertaa sekunnissa poistuvien ionien määrä. Saman tuloksen antaa $P=\\frac{\\Delta m}{\\Delta t}\\cdot\\frac12v^2$."
+     ],
+     "solution": "**6.1 Ionien nopeus**\n\n1. Sähkökenttä tekee ioniin työn $W=qU$, joka muuttuu liike-energiaksi: $qU=\\frac12m_{\\text{Xe}}v^2$. Ionin varaus on $q=e=1{,}602\\cdot10^{-19}\\ \\text{C}$.\n2. Ionin massa: $m_{\\text{Xe}}=131{,}293\\ \\text{u}=131{,}293\\cdot1{,}6605\\cdot10^{-27}\\ \\text{kg}\\approx 2{,}1802\\cdot10^{-25}\\ \\text{kg}$ (elektronin massa on merkityksettömän pieni).\n3. $v=\\sqrt{\\dfrac{2eU}{m_{\\text{Xe}}}}=\\sqrt{\\dfrac{2\\cdot1{,}602\\cdot10^{-19}\\ \\text{C}\\cdot1300\\ \\text{V}}{2{,}1802\\cdot10^{-25}\\ \\text{kg}}}\\approx 4{,}37\\cdot10^{4}\\ \\text{m/s}$.\n\n**6.2 Massa sekunnissa ja teho**\n\n4. Impulssiperiaate: työntövoima on yhtä suuri kuin ionien liikemäärän muutosnopeus. Ionit lähtevät levosta ja saavat nopeuden $v$, joten ajassa $\\Delta t$ poistuvalle massalle $F=\\frac{\\Delta m\\,v}{\\Delta t}$.\n5. $\\Delta m=\\dfrac{F\\,\\Delta t}{v}=\\dfrac{0{,}092\\ \\text{N}\\cdot1\\ \\text{s}}{4{,}371\\cdot10^{4}\\ \\text{m/s}}\\approx 2{,}1\\cdot10^{-6}\\ \\text{kg}=2{,}1\\ \\text{mg}$.\n6. Ioneja poistuu sekunnissa $n=\\dfrac{\\Delta m}{m_{\\text{Xe}}}\\approx\\dfrac{2{,}105\\cdot10^{-6}\\ \\text{kg}}{2{,}1802\\cdot10^{-25}\\ \\text{kg}}\\approx 9{,}65\\cdot10^{18}$, joten ionivirta on $I=\\dfrac{ne}{\\Delta t}\\approx 1{,}55\\ \\text{A}$.\n7. Sähköteho $P=UI\\approx1300\\ \\text{V}\\cdot1{,}55\\ \\text{A}\\approx 2{,}0\\cdot10^{3}\\ \\text{W}$.\n8. Tarkistus energiasta: $P=\\frac{\\Delta m}{\\Delta t}\\cdot\\frac12v^2=\\frac12Fv=\\frac12\\cdot0{,}092\\ \\text{N}\\cdot4{,}371\\cdot10^4\\ \\text{m/s}\\approx 2{,}0\\ \\text{kW}$.\n\n**Vastaus: 6.1 $v\\approx 4{,}4\\cdot10^4\\ \\text{m/s}$; 6.2 noin 2,1 mg ioneja sekunnissa ja teho noin 2,0 kW**\n\nYksi sekunti on tässä vain vertailuaika, joten se ei rajoita merkitsevien numeroiden määrää.\n\n**Sudenkuoppa:** työntövoiman laskeminen kaavalla $F=ma$ yksittäiselle ionille tai atomimassan käyttäminen ilman muunnosta kilogrammoiksi.",
+     "answer": "6.1 $v\\approx 4{,}4\\cdot10^4\\ \\text{m/s}$; 6.2 $2{,}1\\ \\text{mg}$ sekunnissa, $P\\approx 2{,}0\\ \\text{kW}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Sähköä siirretään tasavirtana: jännite on 400 kV ja siirtoteho 400 MW. Säteilyturvakeskuksen suosituksen mukaan voimajohtojen magneettivuon tiheys saa olla enintään 0,4 µT tiloissa, joissa lapset oleskelevat.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 9,
+     "prompt": "Kuinka kaukana yksittäisestä johtimesta päiväkodin on vähintään oltava, jotta johtimen magneettivuon tiheys päiväkodissa on enintään 0,4 µT? Oleta johdin suoraksi.",
+     "hints": [
+      "Ratkaise ensin johtimen virta siirtotehosta ($P=UI$). Käytä sitten pitkän suoran johtimen magneettikentän kaavaa $B=\\frac{\\mu_0 I}{2\\pi r}$ ja ratkaise etäisyys $r$.",
+      "Virta on $I=\\frac{400\\cdot10^6\\ \\text{W}}{400\\cdot10^3\\ \\text{V}}=1000\\ \\text{A}$. Sijoita se ja raja-arvo $B=0{,}4\\cdot10^{-6}\\ \\text{T}$ kaavaan $r=\\frac{\\mu_0 I}{2\\pi B}$."
+     ],
+     "solution": "1. Siirtoteho on $P=UI$, joten johtimen virta on $I=\\dfrac{P}{U}=\\dfrac{400\\cdot10^{6}\\ \\text{W}}{400\\cdot10^{3}\\ \\text{V}}=1000\\ \\text{A}$.\n2. Pitkän suoran johtimen magneettivuon tiheys etäisyydellä $r$ on $B=\\dfrac{\\mu_0 I}{2\\pi r}$.\n3. Magneettivuon tiheys pienenee etäisyyden kasvaessa, joten raja-arvo $B=0{,}4\\ \\mu\\text{T}$ saavutetaan etäisyydellä\n$$r=\\frac{\\mu_0 I}{2\\pi B}=\\frac{4\\pi\\cdot10^{-7}\\ \\tfrac{\\text{Vs}}{\\text{Am}}\\cdot1000\\ \\text{A}}{2\\pi\\cdot0{,}4\\cdot10^{-6}\\ \\text{T}}=500\\ \\text{m}.$$\n4. Tätä lähempänä kenttä on suurempi kuin suositus sallii.\n\n**Vastaus: vähintään noin 500 m (0,5 km)**\n\n**Sudenkuoppa:** mikroteslan muuntaminen väärin ($0{,}4\\ \\mu\\text{T}=4\\cdot10^{-7}\\ \\text{T}$) tai jännitteen käyttäminen kentän laskemisessa virran asemesta.",
+     "answer": "$r\\approx 500\\ \\text{m}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 6,
+     "prompt": "Voimajohto tehdään johdinparina: kahdessa johtimessa kulkee yhtä suuri mutta vastakkaissuuntainen virta, ja johtimien väli on 2 m. Kuinka kaukana johdinparista päiväkodin on vähintään oltava, kun tarkastellaan pisteitä samassa tasossa johtimien kanssa? Siirtoteho ja -jännite ovat samat kuin kohdassa 7.1.",
+     "hints": [
+      "Vastakkaiset virrat synnyttävät johtimien ulkopuolella vastakkaissuuntaiset kentät. Kirjoita kokonaiskenttä etäisyyden $r$ (lähempään johtimeen) funktiona.",
+      "Kokonaiskenttä on $B=\\frac{\\mu_0 I}{2\\pi}\\left(\\frac1r-\\frac1{r+d}\\right)=\\frac{\\mu_0 I d}{2\\pi r(r+d)}$. Aseta se raja-arvon suuruiseksi: saat toisen asteen yhtälön $r(r+d)=\\frac{\\mu_0 I d}{2\\pi B_0}$."
+     ],
+     "solution": "1. Virta on edelleen $I=\\frac{P}{U}=1000\\ \\text{A}$. Johtimien väli on $d=2\\ \\text{m}$.\n2. Johtimien tasossa, parin ulkopuolella etäisyydellä $r$ lähemmästä johtimesta, johtimien kentät ovat oikean käden säännön mukaan vastakkaissuuntaiset, koska virrat ovat vastakkaiset. Kokonaiskenttä on niiden erotus:\n$$B=\\frac{\\mu_0 I}{2\\pi r}-\\frac{\\mu_0 I}{2\\pi (r+d)}=\\frac{\\mu_0 I}{2\\pi}\\cdot\\frac{d}{r(r+d)}.$$\n3. Asetetaan $B=B_0=0{,}4\\ \\mu\\text{T}$: $r(r+d)=\\dfrac{\\mu_0 I d}{2\\pi B_0}=500\\ \\text{m}\\cdot2\\ \\text{m}=1000\\ \\text{m}^2$.\n4. Yhtälö $r^2+2r-1000=0$ (yksiköt metreinä) antaa positiiviseksi ratkaisuksi $r=-1+\\sqrt{1001}\\approx 30{,}6\\ \\text{m}$. Negatiivinen juuri vastaa symmetristä pistettä parin toisella puolella.\n5. Kauempana kokonaiskenttä on raja-arvoa pienempi.\n\n**Vastaus: noin 30 m (30,6 m), eli johdinparin kentät kumoavat toisiaan niin, että etäisyys lyhenee noin 500 metristä noin 30 metriin**\n\n**Sudenkuoppa:** kenttien laskeminen yhteen. Vastakkaissuuntaisten virtojen kentät heikentävät toisiaan johtimien ulkopuolella.",
+     "answer": "$r\\approx 30\\ \\text{m}$ (30,6 m)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Kallion kultapitoisuutta tutkitaan neutroniaktivoinnilla. Pieni kivinäyte säteilytetään ensin neutroneilla, jolloin osa sen kultaytimistä muuttuu reaktiossa $\\mathrm{Au}+\\mathrm{n}\\to\\mathrm{X}$ radioaktiiviseksi isotoopiksi X. Sen jälkeen näyte viedään 15,0 cm:n päähän ilmaisimesta, joka laskee X:n hajoamisessa syntyviä gammafotoneja viitenä peräkkäisenä jaksona, joiden kesto on $\\tau=4{,}00\\ \\text{h}$. Ilmaisin havaitsee vain osuuden $p=0{,}089\\,\\%$ kaikista syntyneistä gammafotoneista.",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "- 8.1: Mikä isotooppi X on alkuperäisen tehtävän kullan isotooppitaulukon 8.A perusteella?\n- 8.2: Johda lauseke sille, montako fotonia ilmaisin havaitsee hetkellä $t$ alkavan 4,00 tunnin jakson aikana. Määritä mittaustuloksista (taulukko 8.B) isotoopin puoliintumisaika.\n- 8.3: Montako X-ydintä säteilytys synnytti näytteeseen?\n- 8.4: Miksi ilmaisin rekisteröi vain murto-osan näytteen lähettämistä gammafotoneista? Anna yksi syy.",
+     "hints": [
+      "Taulukosta 8.A näkyy, mikä kullan isotooppi esiintyy luonnossa. Neutronin kaappaus kasvattaa massalukua yhdellä. Käytä hajoamislakia $N(t)=N_0e^{-\\lambda t}$: jakson aikana hajoavien ytimien määrä on $N(t)-N(t+\\tau)$, ja ilmaisin havaitsee siitä osuuden $p$.",
+      "Havaittujen fotonien määrä on muotoa $\\Delta N=pN_0(1-e^{-\\lambda\\tau})\\,e^{-\\lambda t}=C e^{-\\lambda t}$. Sovita mittauksiin eksponenttifunktio: saat $\\lambda\\approx 0{,}0103\\ \\text{1/h}$ ja $C\\approx 6600$. Kertoimesta $C$ ratkaiset $N_0$."
+     ],
+     "solution": "**8.1 Isotooppi X**\n\n1. Taulukon mukaan luonnon kulta on kokonaan isotooppia $^{197}\\mathrm{Au}$ (suhteellinen runsaus 100 %), ja muut isotoopit ovat radioaktiivisia.\n2. Neutronin kaappauksessa massaluku kasvaa yhdellä ja järjestysluku säilyy: $^{197}_{79}\\mathrm{Au}+{}^{1}_{0}\\mathrm{n}\\to{}^{198}_{79}\\mathrm{Au}$. Siis X on $^{198}\\mathrm{Au}$, joka on taulukon mukaan $\\beta^-$-aktiivinen.\n\n**8.2 Lauseke ja puoliintumisaika**\n\n3. Radioaktiivisten ytimien määrä noudattaa hajoamislakia $N(t)=N_0e^{-\\lambda t}$, jossa $N_0$ on ytimien määrä säteilytyksen päättyessä ($t=0$) ja $\\lambda$ hajoamisvakio.\n4. Aikavälillä $[t,\\,t+\\tau]$ hajoaa $N(t)-N(t+\\tau)=N_0e^{-\\lambda t}\\left(1-e^{-\\lambda\\tau}\\right)$ ydintä. Oletetaan, että kustakin hajoamisesta syntyy yksi gammafotoni, jolloin ilmaisin havaitsee\n$$\\Delta N(t)=pN_0\\left(1-e^{-\\lambda\\tau}\\right)e^{-\\lambda t}.$$\n5. Havaittujen fotonien määrä pienenee siis eksponentiaalisesti jakson aloitushetken funktiona. Sovitetaan malli $\\Delta N=Ce^{-\\lambda t}$ mittauspisteisiin (laskentaohjelman eksponenttiregressio): $C\\approx 6598$ ja $\\lambda\\approx 0{,}01027\\ \\text{1/h}$.\n6. Puoliintumisaika: $T_{1/2}=\\dfrac{\\ln 2}{\\lambda}=\\dfrac{\\ln 2}{0{,}01027\\ \\text{1/h}}\\approx 67{,}5\\ \\text{h}\\approx 2{,}8\\ \\text{d}$.\n\n**8.3 Ytimien määrä**\n\n7. Kertoimesta $C=pN_0(1-e^{-\\lambda\\tau})$ saadaan\n$$N_0=\\frac{C}{p\\left(1-e^{-\\lambda\\tau}\\right)}=\\frac{6598}{0{,}00089\\cdot\\left(1-e^{-0{,}01027\\ \\text{1/h}\\cdot4{,}00\\ \\text{h}}\\right)}\\approx 1{,}8\\cdot10^{8}.$$\n\n**8.4 Miksi vain pieni osa havaitaan**\n\n8. Esimerkiksi: gammafotonit lähtevät näytteestä satunnaisiin suuntiin tasaisesti joka puolelle, ja 15 cm:n päässä oleva ilmaisin on vain pienen osan suunnista edessä. Toinen hyväksyttävä syy: gammasäteily vuorovaikuttaa aineen kanssa heikosti, joten osa ilmaisimeen osuvista fotoneista läpäisee sen rekisteröitymättä.\n\n**Vastaus: 8.1 $^{198}\\mathrm{Au}$; 8.2 $\\Delta N=pN_0(1-e^{-\\lambda\\tau})e^{-\\lambda t}$ ja $T_{1/2}\\approx 67{,}5\\ \\text{h}\\approx 2{,}8\\ \\text{d}$; 8.3 noin $1{,}8\\cdot10^8$ ydintä; 8.4 esim. fotonit etenevät kaikkiin suuntiin eikä ilmaisin kata niistä kuin pienen osan**\n\n**Sudenkuoppa:** osuuden $p=0{,}089\\,\\%=0{,}00089$ unohtaminen tai käyttäminen prosenttilukuna. Silloin ytimien määrä menee sata- tai tuhatkertaisesti väärin.",
+     "answer": "8.1 $^{198}\\mathrm{Au}$; 8.2 $\\Delta N=pN_0(1-e^{-\\lambda\\tau})e^{-\\lambda t}$, $T_{1/2}\\approx 67{,}5\\ \\text{h}\\approx 2{,}8\\ \\text{d}$; 8.3 $N_0\\approx 1{,}8\\cdot10^8$; 8.4 esim. fotonit etenevät kaikkiin suuntiin",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Ulkoilman lämpötila on 25 °C, suhteellinen kosteus $\\varphi=75\\,\\%$ ja paine normaali. Alkuperäisen tehtävän aineiston 9.A mukaan vesihöyryä voi käsitellä ideaalikaasuna, suhteellinen kosteus on $\\varphi=\\frac{p_v}{p_k}\\cdot100\\,\\%$ ($p_v$ vesihöyryn osapaine, $p_k$ kylläisen vesihöyryn paine samassa lämpötilassa), veden moolimassa on $M_v=18{,}0\\ \\text{g/mol}$ ja ominaishöyrystymislämpö 11 °C:ssa on $h=2480\\ \\text{kJ/kg}$. Taulukossa 9.B on $p_k$ lämpötiloissa 5–40 °C.",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "- 9.1: Esitä taulukon 9.B arvot kuvaajana ($p_k$ lämpötilan funktiona) ja määritä siitä ulkoilman kastepiste.\n- 9.2: Kuinka suuri on vesihöyryn massa kuutiometrissä ulkoilmaa?\n- 9.3: Auton ilmastointilaite jäähdyttää ulkoilman 11 °C:n lämpötilaan. Montako grammaa vettä tiivistyy kuutiometristä ulkoilmaa?\n- 9.4: Laitteen läpi kulkee 0,90 m³ ulkoilmaa minuutissa. Millä teholla vesihöyryn tiivistyminen luovuttaa energiaa laitteeseen?",
+     "hints": [
+      "Kastepisteessä vesihöyryn paine on sama kuin kylläisen höyryn paine: laske $p_v=\\frac{\\varphi}{100\\,\\%}\\,p_k(25\\,^\\circ\\text{C})$ ja etsi kuvaajasta lämpötila, jossa $p_k$ on yhtä suuri. Vesihöyryn massa saadaan ideaalikaasun tilanyhtälöstä $pV=\\frac mM RT$.",
+      "Ulkoilmassa $p_v\\approx 2{,}38\\ \\text{kPa}$. Jäähdytyksessä paine pysyy normaalina ja kuivan ilman ainemäärä säilyy, mutta 11 °C:ssa höyry on kylläistä, eli sen osapaine on $p_k(11\\,^\\circ\\text{C})=1{,}32\\ \\text{kPa}$. Jäljelle jäävän höyryn ainemäärä on $n_v=n_{\\text{kuiva}}\\frac{p_k(11\\,^\\circ\\text{C})}{p_0-p_k(11\\,^\\circ\\text{C})}$. Tiivistyvän veden massavirta kertaa höyrystymislämpö antaa tehon."
+     ],
+     "solution": "**9.1 Kastepiste**\n\n1. Taulukon 9.B mukaan $p_k(25\\,^\\circ\\text{C})=3{,}17\\ \\text{kPa}$. Suhteellisen kosteuden määritelmästä ulkoilman vesihöyryn paine on $p_v=\\frac{\\varphi}{100\\,\\%}\\,p_k=0{,}75\\cdot3{,}17\\ \\text{kPa}\\approx 2{,}38\\ \\text{kPa}$.\n2. Kastepisteessä ilma on kylläistä, eli $p_k(T_k)=p_v$. Piirretään taulukon pisteet (lämpötila vaaka-akselilla, $p_k$ pystyakselilla) ja niiden kautta kulkeva käyrä. Vaakasuora viiva korkeudella 2,38 kPa leikkaa käyrän kohdassa $T_k\\approx 20{,}3\\,^\\circ\\text{C}$ (arvojen 20 °C ja 21 °C välissä).\n\n**9.2 Vesihöyryn massa**\n\n3. Vesihöyry on ideaalikaasua: $p_vV=\\frac{m}{M_v}RT$, joten $m=\\dfrac{p_vVM_v}{RT}=\\dfrac{2378\\ \\text{Pa}\\cdot1\\ \\text{m}^3\\cdot0{,}0180\\ \\tfrac{\\text{kg}}{\\text{mol}}}{8{,}314\\ \\tfrac{\\text{J}}{\\text{mol K}}\\cdot298{,}15\\ \\text{K}}\\approx 0{,}0173\\ \\text{kg}=17{,}3\\ \\text{g}$.\n\n**9.3 Tiivistyvä vesi**\n\n4. Jäähdytys 11 °C:seen vie ilman kastepisteen alapuolelle, joten jäähdytetty ilma on kylläistä: vesihöyryn osapaine on $p_k(11\\,^\\circ\\text{C})=1{,}32\\ \\text{kPa}$ ja loput höyrystä tiivistyy.\n5. Kokonaispaine pysyy normaalina $p_0=101{,}325\\ \\text{kPa}$. Kuivan ilman molekyylit eivät tiivisty, joten niiden ainemäärä säilyy. Kuutiometrissä ulkoilmaa kuivaa ilmaa on\n$n_{\\text{kuiva}}=\\dfrac{(p_0-p_v)V}{RT}=\\dfrac{(101\\,325-2378)\\ \\text{Pa}\\cdot1\\ \\text{m}^3}{8{,}314\\ \\tfrac{\\text{J}}{\\text{mol K}}\\cdot298{,}15\\ \\text{K}}\\approx 39{,}9\\ \\text{mol}$.\n6. Samassa kaasuseoksessa ainemäärät suhtautuvat kuin osapaineet. Jäähdytyksen jälkeen vesihöyryä on\n$n_v=n_{\\text{kuiva}}\\dfrac{p_k(11\\,^\\circ\\text{C})}{p_0-p_k(11\\,^\\circ\\text{C})}=39{,}9\\ \\text{mol}\\cdot\\dfrac{1{,}32\\ \\text{kPa}}{100{,}0\\ \\text{kPa}}\\approx 0{,}527\\ \\text{mol}$, eli $m'=n_vM_v\\approx 9{,}48\\ \\text{g}$.\n7. Tiivistyy $\\Delta m=17{,}26\\ \\text{g}-9{,}48\\ \\text{g}\\approx 7{,}8\\ \\text{g}$.\n\n**9.4 Teho**\n\n8. Vettä tiivistyy $7{,}78\\ \\tfrac{\\text{g}}{\\text{m}^3}\\cdot0{,}90\\ \\tfrac{\\text{m}^3}{\\text{min}}\\approx 7{,}0\\ \\tfrac{\\text{g}}{\\text{min}}=1{,}17\\cdot10^{-4}\\ \\tfrac{\\text{kg}}{\\text{s}}$.\n9. Tiivistyessä vapautuu höyrystymislämpö: $P=h\\dfrac{\\Delta m}{\\Delta t}=2480\\cdot10^3\\ \\tfrac{\\text{J}}{\\text{kg}}\\cdot1{,}17\\cdot10^{-4}\\ \\tfrac{\\text{kg}}{\\text{s}}\\approx 290\\ \\text{W}$.\n\n**Vastaus: 9.1 kastepiste noin 20 °C (20,3 °C); 9.2 noin 17,3 g; 9.3 noin 7,8 g; 9.4 noin 290 W**\n\n**Sudenkuoppa:** kohdassa 9.3 on helppo laskea 11-asteisen kylläisen ilman vesimäärä kuutiometrissä (noin 10,1 g) ja vähentää se 17,3 grammasta. Tulos (7,2 g) on liian pieni, koska jäähtyvä ilma kutistuu: alkuperäinen kuutiometri vie jäähdytettynä vain noin 0,95 m³.",
+     "answer": "9.1 $T_k\\approx 20\\,^\\circ\\text{C}$ (20,3 °C); 9.2 $17{,}3\\ \\text{g}$; 9.3 $7{,}8\\ \\text{g}$; 9.4 $P\\approx 290\\ \\text{W}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Kevyesti liikkuva vaunu (massa 520 g) on pitkillä kaltevilla kiskoilla, joiden kaltevuuskulma on 10° ja väli 320 mm. Kiskot johtavat hyvin, ja niiden alapäät on yhdistetty vastuksella. Homogeeninen magneettikenttä (0,35 T) on kohtisuorassa kiskojen tasoa vastaan. Vaunun etupyörät ja etuakseli johtavat sähköä, muut osat eivät (ks. alkuperäisen tehtävän kuva).",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 8,
+     "prompt": "Vaunu lähtee liikkeelle levosta. Miten sen nopeus ja kiihtyvyys kehittyvät ajan kuluessa? Perustele sanallisesti ja selitä, miksi liike tasaantuu vakionopeudeksi.",
+     "hints": [
+      "Etuakseli, kiskot ja vastus muodostavat suljetun virtapiirin. Mieti, milloin akseliin indusoituu jännite ja mitä piirissä kulkeva virta aiheuttaa magneettikentässä olevalle akselille (Lenzin laki).",
+      "Induktiojännite $e=vBL$ ja siten virta ja magneettinen voima $F=ILB$ ovat verrannollisia nopeuteen. Painon rinteen suuntainen komponentti $mg\\sin\\alpha$ on vakio. Mitä kokonaisvoimalle tapahtuu nopeuden kasvaessa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Alussa nopeus on nolla, joten induktiojännitettä, virtaa eikä magneettista voimaa ole. Kiihtyvyys on suurimmillaan, $a=g\\sin\\alpha$, ja sen aiheuttaa painon kiskojen suuntainen komponentti.\n- Kun vaunu liikkuu, etuakseli leikkaa magneettikenttää ja siihen indusoituu jännite $e=vBL$. Suljetussa piirissä kulkee virta, ja magneettikenttä kohdistaa virralliseen akseliin voiman $F=ILB$, joka Lenzin lain mukaan vastustaa liikettä.\n- Nopeuden kasvaessa jännite, virta ja jarruttava voima kasvavat, joten kokonaisvoima ja kiihtyvyys pienenevät. Nopeus kasvaa yhä hitaammin.\n- Kun jarruttava voima on kasvanut yhtä suureksi kuin $mg\\sin\\alpha$, kokonaisvoima on nolla. Kiihtyvyys on nolla ja vaunu jatkaa vakionopeudella (Newtonin I laki).\n\n**Esimerkkivastaus:** Levossa olevaan vaunuun vaikuttaa kiskojen suunnassa vain painon komponentti $mg\\sin\\alpha$, joten vaunu lähtee kiihtymään alaspäin. Liikkeelle päästyään sähköä johtava etuakseli liikkuu magneettikentässä, joten siihen indusoituu jännite, joka on verrannollinen nopeuteen. Akseli, kiskot ja vastus muodostavat suljetun piirin, joten piirissä kulkee virta. Magneettikenttä vaikuttaa virralliseen akseliin voimalla, joka Lenzin lain mukaan on liikkeen suunnalle vastakkainen. Mitä suurempi nopeus, sitä suurempi virta ja jarruttava voima, joten vaunun kiihtyvyys pienenee jatkuvasti ja nopeuden kasvu hidastuu. Lopulta jarruttava voima kumoaa painon rinteen suuntaisen komponentin, kiihtyvyys on nolla ja vaunu liikkuu tasaisella nopeudella.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 8,
+     "prompt": "Millainen resistanssi vastuksella on oltava, jotta vaunun vakionopeudeksi tulee 2,5 m/s?",
+     "hints": [
+      "Vakionopeudella kiskojen suuntaiset voimat ovat tasapainossa: $mg\\sin\\alpha=ILB$. Induktiojännite on $e=vBL$, ja Ohmin laki yhdistää jännitteen, virran ja resistanssin.",
+      "Tasapainosta virta on $I=\\frac{mg\\sin\\alpha}{LB}\\approx 7{,}9\\ \\text{A}$, ja induktiojännite on $e=vBL=0{,}28\\ \\text{V}$. Resistanssi on näiden suhde."
+     ],
+     "solution": "1. Lähtötiedot: $B=0{,}35\\ \\text{T}$, $\\alpha=10^\\circ$, $L=0{,}320\\ \\text{m}$, $m=0{,}520\\ \\text{kg}$, $v=2{,}5\\ \\text{m/s}$ ja $g=9{,}81\\ \\text{m/s}^2$.\n2. Nopeus on kiskojen suuntainen ja siten kohtisuorassa kenttää vastaan, joten etuakseliin indusoituu jännite $e=vBL=2{,}5\\ \\tfrac{\\text{m}}{\\text{s}}\\cdot0{,}35\\ \\text{T}\\cdot0{,}320\\ \\text{m}=0{,}28\\ \\text{V}$.\n3. Virralliseen akseliin vaikuttaa kiskojen suuntainen, liikettä vastustava magneettinen voima $F=ILB$.\n4. Vakionopeudella kiihtyvyys on nolla, joten Newtonin II lain mukaan kiskojen suunnassa $mg\\sin\\alpha-ILB=0$, josta\n$I=\\dfrac{mg\\sin\\alpha}{LB}=\\dfrac{0{,}520\\ \\text{kg}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}\\cdot\\sin10^\\circ}{0{,}320\\ \\text{m}\\cdot0{,}35\\ \\text{T}}\\approx 7{,}91\\ \\text{A}$.\n5. Kiskojen ja akselin resistanssi on pieni, joten Ohmin lain mukaan $R=\\dfrac{e}{I}=\\dfrac{L^2B^2v}{mg\\sin\\alpha}=\\dfrac{0{,}28\\ \\text{V}}{7{,}91\\ \\text{A}}\\approx 0{,}0354\\ \\Omega$.\n\n**Vastaus: $R\\approx 35\\ \\text{m}\\Omega$**\n\n**Sudenkuoppa:** koko painon $mg$ käyttäminen tasapainoehdossa. Liikettä vastaan tasapainottuu vain painon kiskojen suuntainen komponentti $mg\\sin\\alpha$.",
+     "answer": "$R=\\dfrac{L^2B^2v}{mg\\sin\\alpha}\\approx 35\\ \\text{m}\\Omega$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Vaunu kulkee kohdan 10.2 tilanteessa vakionopeudella 2,5 m/s. Kuinka pitkässä ajassa vastukseen muuttuu 1,0 J energiaa?",
+     "hints": [
+      "Vakionopeudella liike-energia ei muutu, joten potentiaalienergian väheneminen muuttuu kokonaan vastuksen lämmöksi. Teho on $P=mg\\sin\\alpha\\cdot v$ (tai $P=I^2R$), ja aika saadaan kaavasta $E=Pt$."
+     ],
+     "solution": "1. Vakionopeudella liike-energia ei muutu. Energiaperiaatteen mukaan potentiaalienergian väheneminen muuttuu kokonaan vastuksessa lämmöksi (kiskojen ja akselin resistanssi on pieni).\n2. Painon kiskojen suuntaisen komponentin teho on $P=mg\\sin\\alpha\\cdot v=0{,}520\\ \\text{kg}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}\\cdot\\sin10^\\circ\\cdot2{,}5\\ \\tfrac{\\text{m}}{\\text{s}}\\approx 2{,}21\\ \\text{W}$.\n3. Tarkistus kohdan 10.2 arvoilla: $P=I^2R=(7{,}91\\ \\text{A})^2\\cdot0{,}0354\\ \\Omega\\approx 2{,}21\\ \\text{W}$.\n4. Aika: $t=\\dfrac{E}{P}=\\dfrac{1{,}0\\ \\text{J}}{2{,}21\\ \\text{W}}\\approx 0{,}45\\ \\text{s}$.\n\n**Vastaus: $t\\approx 0{,}45\\ \\text{s}$**",
+     "answer": "$t\\approx 0{,}45\\ \\text{s}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Leija on sidottu ohuella langalla terassilla olevaan tuoliin (ks. alkuperäisen tehtävän kuva 11.A). Tuuli pitää leijan paikallaan ja kiristää lankaa. Tuuli ei kohdistu tuoliin, ja lanka on koko ajan $27^\\circ$ kulmassa pystysuoraan nähden. Tuolin massa on 4,6 kg.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Piirrä paikallaan pysyvän tuolin voimakuvio alkuperäisen tehtävän pohjakuvan 11.B päälle. Merkitse vaikutuspisteet huolellisesti ja piirrä nuolet oikeissa pituussuhteissa.",
+     "hints": [
+      "Tuoliin vaikuttavat paino, langan jännitysvoima, terassin tukivoima ja lepokitka. Mieti, mihin suuntaan langan vaakakomponentti vetää ja mihin suuntaan kitka silloin osoittaa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Paino $\\vec G$ tuolin painopisteessä pystysuoraan alaspäin.\n- Langan jännitysvoima $\\vec T$ langan kiinnityskohdassa langan suuntaisesti, $27^\\circ$ kulmassa pystysuoraan nähden ylös ja leijan puolelle.\n- Terassin tukivoima $\\vec N$ ylöspäin tuolin ja terassin kosketuskohdissa (jalkojen alla, tai yhtenä voimana kosketuspintojen välissä).\n- Lepokitka $\\vec F_\\mu$ terassin pinnan suuntaisesti kosketuskohdissa, vastakkaiseen suuntaan kuin langan vaakakomponentti.\n- Pituussuhteet: $N=G-T\\cos27^\\circ$ (tukivoima on painoa pienempi) ja $F_\\mu=T\\sin27^\\circ$.\n\n**Esimerkkivastaus:** Piirretään tuolin painopisteeseen alaspäin paino $\\vec G$ ja langan kiinnityskohtaan vinosti ylös leijan suuntaan jännitysvoima $\\vec T$. Tuolin jalkojen kohdalle terassin pintaan piirretään ylöspäin tukivoima $\\vec N$, joka on hieman lyhyempi kuin $\\vec G$, sekä vaakasuoraan leijasta poispäin osoittava kitkavoima $\\vec F_\\mu$, joka on yhtä pitkä kuin jännitysvoiman vaakakomponentti.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 7,
+     "prompt": "Kuinka suuri langan jännitysvoiman on vähintään oltava, jotta tuoli lähtee liukumaan terassia pitkin? Lepokitkakerroin tuolin ja terassin välillä on 0,37.",
+     "hints": [
+      "Kirjoita tasapainoehdot vaaka- ja pystysuunnassa. Liukumisen rajalla lepokitka on suurimmillaan, $F_\\mu=\\mu N$. Huomaa, että langan pystykomponentti keventää tuolia ja pienentää tukivoimaa.",
+      "Pystysuunnasta $N=mg-T\\cos\\theta$ ja vaakasuunnasta rajalla $T\\sin\\theta=\\mu N$. Sijoittamalla saat $T(\\sin\\theta+\\mu\\cos\\theta)=\\mu mg$."
+     ],
+     "solution": "1. Tuoli on levossa, joten Newtonin I lain mukaan $\\vec T+\\vec G+\\vec N+\\vec F_\\mu=\\vec 0$. Merkitään $\\theta=27^\\circ$ (lanka pystysuoraan nähden), $m=4{,}6\\ \\text{kg}$ ja $\\mu=0{,}37$.\n2. Vaakasuunta: $T\\sin\\theta-F_\\mu=0$.\n3. Pystysuunta: $N+T\\cos\\theta-mg=0$, eli $N=mg-T\\cos\\theta$.\n4. Lepokitka on enintään $\\mu N$. Tuoli lähtee liukumaan, kun $T\\sin\\theta$ ylittää tämän: rajalla $T\\sin\\theta=\\mu(mg-T\\cos\\theta)$.\n5. Ratkaistaan: $T=\\dfrac{\\mu mg}{\\sin\\theta+\\mu\\cos\\theta}=\\dfrac{0{,}37\\cdot4{,}6\\ \\text{kg}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}}{\\sin27^\\circ+0{,}37\\cos27^\\circ}\\approx 21{,}3\\ \\text{N}$.\n\n**Vastaus: $T\\approx 21\\ \\text{N}$**\n\n**Sudenkuoppa:** tukivoiman olettaminen painon suuruiseksi ($N=mg$). Silloin tulokseksi tulee noin 37 N, koska langan nostava komponentti jää huomiotta.",
+     "answer": "$T=\\dfrac{\\mu mg}{\\sin\\theta+\\mu\\cos\\theta}\\approx 21\\ \\text{N}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 9,
+     "prompt": "Tuuli voimistuu, ja fyysikko istuu tuolille, jotta se ei liiku. Kuinka suureen tuulennopeuteen asti lanka kestää? Oletukset: langan jännitys syntyy siitä, että leija kääntää siihen osuvan ilmavirran suuntaa. Tuulta vastaan kohtisuora leijan pinta-ala on 0,19 m², ilmavirta jatkaa leijan pintaa pitkin samalla vauhdilla, ja sen suunta muuttuu $23^\\circ$. Ilman tiheys on 1,3 kg/m³. Langan murtolujuus (suurin kestetty jännitys pinta-alayksikköä kohti) on 470 N/mm², ja langan halkaisija on 0,35 mm.",
+     "hints": [
+      "Laske ensin suurin voima, jonka lanka kestää: murtolujuus kertaa langan poikkipinta-ala. Leijan voima saadaan impulssiperiaatteesta: ajassa $\\Delta t$ leijaan osuu ilmamassa $\\Delta m=\\rho A v_0\\Delta t$, ja jokaisen ilma-alkion nopeuden suunta muuttuu $23^\\circ$.",
+      "Lanka kestää voiman $T_{\\max}=\\sigma\\pi\\left(\\frac d2\\right)^2\\approx 45\\ \\text{N}$. Kun nopeuden suuruus säilyy ja suunta kääntyy kulman $\\alpha$, nopeuden muutoksen suuruus on $|\\Delta\\vec v|=2v_0\\sin\\frac{\\alpha}{2}$. Siis $F=\\rho A v_0^2\\cdot 2\\sin\\frac{\\alpha}{2}$."
+     ],
+     "solution": "1. Langan kestämä suurin voima: $T_{\\max}=\\sigma A_{\\text{lanka}}=\\sigma\\pi\\left(\\frac d2\\right)^2=470\\ \\tfrac{\\text{N}}{\\text{mm}^2}\\cdot\\pi\\cdot(0{,}175\\ \\text{mm})^2\\approx 45{,}2\\ \\text{N}$.\n2. Tarkastellaan ilmaa, joka osuu leijaan ajassa $\\Delta t$. Se kulkee matkan $v_0\\Delta t$, joten sen massa on $\\Delta m=\\rho A v_0\\Delta t$ ($A=0{,}19\\ \\text{m}^2$).\n3. Ilmavirran vauhti säilyy, mutta suunta kääntyy kulman $\\alpha=23^\\circ$. Nopeusvektorien $\\vec v_0$ ja $\\vec v_0'$ erotus on tasakylkisen kolmion kanta: $|\\Delta\\vec v|=2v_0\\sin\\frac{\\alpha}{2}$.\n4. Impulssiperiaatteen mukaan leija kohdistaa ilmaan voiman $F=\\dfrac{\\Delta m\\,|\\Delta\\vec v|}{\\Delta t}=\\rho A v_0^2\\cdot2\\sin\\frac{\\alpha}{2}$, ja vastavoimana ilma kohdistaa leijaan yhtä suuren voiman. Tämä voima välittyy lankaan.\n5. Lanka katkeaa, kun $F=T_{\\max}$:\n$$v_0=\\sqrt{\\frac{T_{\\max}}{2\\rho A\\sin\\frac{\\alpha}{2}}}=\\sqrt{\\frac{45{,}2\\ \\text{N}}{2\\cdot1{,}3\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot0{,}19\\ \\text{m}^2\\cdot\\sin11{,}5^\\circ}}\\approx 21{,}4\\ \\tfrac{\\text{m}}{\\text{s}}.$$\n\n**Vastaus: lanka kestää noin 21 m/s:n tuulen**\n\nYTL:n alustavissa hyvän vastauksen piirteissä on sama kaava, mutta lopputulos on noin 22 m/s. Ero syntyy, jos kertoimen $2\\sin\\frac{\\alpha}{2}$ sijasta käytetään likiarvoa $\\sin\\alpha$ ($0{,}391$ eikä $0{,}399$). Kaavan mukainen tarkka arvo on 21,4 m/s.\n\n**Sudenkuoppa:** langan halkaisijan käyttäminen säteenä tai murtolujuuden yksikön $\\text{N/mm}^2$ muuntaminen väärin. Kun pinta-ala lasketaan neliömillimetreinä, muunnosta ei tarvita.",
+     "answer": "$v_0=\\sqrt{\\dfrac{\\sigma\\pi(d/2)^2}{2\\rho A\\sin(\\alpha/2)}}\\approx 21\\ \\text{m/s}$ (HVP: noin 22 m/s)",
+     "check": "laskettu"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,393 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2026K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2026K_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2026-03-18_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "answer": 5,
+    "note": "Vastaa viiteen tehtävään. Käytössä taulukkokirjat ja perusohjelmat, laskinohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Jokaisessa kohdassa yksi luku puuttuu (merkitty $\\square$). Täydennä se niin, että väite on tosi. Vastaukseksi kirjoitetaan pelkkä kokonaisluku.",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 2,
+     "prompt": "$\\frac34-\\frac25=\\frac{\\square}{60}$",
+     "hints": [
+      "Lavenna molemmat murtoluvut nimittäjään 60 ja vähennä osoittajat."
+     ],
+     "solution": "1. $\\frac34=\\frac{45}{60}$ ja $\\frac25=\\frac{24}{60}$.\n2. $\\frac{45}{60}-\\frac{24}{60}=\\frac{21}{60}$.\n\n**Vastaus: $21$**\n\n**Sudenkuoppa:** supistettu muoto $\\frac{7}{20}$ on oikein, mutta kysytty osoittaja on nimittäjän 60 mukainen.",
+     "answer": "$21$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.2",
+     "points": 2,
+     "prompt": "Lukujen $-5$, $4$, $13$ ja $\\square$ keskiarvo on $5$.",
+     "hints": [
+      "Neljän luvun keskiarvo 5 tarkoittaa, että lukujen summa on $4\\cdot 5=20$."
+     ],
+     "solution": "1. Summan on oltava $4\\cdot 5=20$.\n2. Tunnettujen summa on $-5+4+13=12$, joten puuttuva luku on $20-12=8$.\n\n**Vastaus: $8$**",
+     "answer": "$8$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.3",
+     "points": 2,
+     "prompt": "$(2x+3)^2=4x^2+\\square\\,x+9$",
+     "hints": [
+      "Binomin neliö: $(a+b)^2=a^2+2ab+b^2$. Keskimmäinen termi on kaksinkertainen tulo."
+     ],
+     "solution": "1. $(2x+3)^2=(2x)^2+2\\cdot 2x\\cdot 3+3^2=4x^2+12x+9$.\n\n**Vastaus: $12$**\n\n**Sudenkuoppa:** kaksinkertaisen tulon unohtaminen antaa 6.",
+     "answer": "$12$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.4",
+     "points": 2,
+     "prompt": "Yhtälön $7x+\\square=19-2x$ ratkaisu on $x=2$.",
+     "hints": [
+      "Sijoita $x=2$ yhtälöön ja ratkaise puuttuva luku."
+     ],
+     "solution": "1. Kun $x=2$: $14+\\square=19-4=15$.\n2. $\\square=15-14=1$.\n\n**Vastaus: $1$**",
+     "answer": "$1$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.5",
+     "points": 2,
+     "prompt": "Luvut $x=3$ ja $y$ toteuttavat yhtälöparin $2x+y=\\square$, $x-2y=9$.",
+     "hints": [
+      "Ratkaise ensin $y$ jälkimmäisestä yhtälöstä, kun $x=3$. Sijoita sitten molemmat ensimmäiseen."
+     ],
+     "solution": "1. $3-2y=9$, joten $y=-3$.\n2. $2x+y=6-3=3$.\n\n**Vastaus: $3$**",
+     "answer": "$3$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.6",
+     "points": 2,
+     "prompt": "Suorakulmaisen kolmion kateetit ovat 20 ja 21, joten hypotenuusa on $\\square$.",
+     "hints": [
+      "Pythagoraan lause: $c^2=a^2+b^2$."
+     ],
+     "solution": "1. $c^2=20^2+21^2=400+441=841$.\n2. $c=\\sqrt{841}=29$.\n\n**Vastaus: $29$**",
+     "answer": "$29$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Derivoi funktiot $f(x)=-6x^2+12x+5$ (kohta 2.1), $g(x)=-\\frac12x^2+4x-6$ (kohta 2.2) ja $h(x)=3x^3-4x+3$ (kohta 2.3). Valitse kullekin derivaatalle paras kuvaus kahdesta pudotusvalikosta (2 p./valinta):\n\n- Lista 1 (kohdat 2.x.1): derivaatan nollakohdat, leikkauspiste $y$- tai $x$-akselin kanssa tai arvo kohdassa $x=1$.\n- Lista 2 (kohdat 2.x.2): derivaatan kuvaajan muoto (suora ja sen kulmakerroin, paraabelin aukeamissuunta tai polynomin aste).\n\nMolemmissa listoissa viimeinen vaihtoehto on ”ei mikään yllä olevista”. Tarkat vaihtoehdot näkyvät alkuperäisessä tehtävässä.",
+     "hints": [
+      "Derivoi ensin: $D(x^n)=nx^{n-1}$. Laske sitten jokaiselle derivaatalle nollakohdat, arvo kohdassa $x=0$ ($y$-akselin leikkaus) ja arvo kohdassa $x=1$. Toisen asteen polynomin derivaatta on suora, kolmannen asteen polynomin paraabeli.",
+      "Derivaatat ovat $f'(x)=-12x+12$, $g'(x)=-x+4$ ja $h'(x)=9x^2-4$. Tarkista listan 2 kulmakertoimet huolella: löytyykö $f'$:n kulmakerroin listasta ollenkaan?"
+     ],
+     "solution": "Kirjaimet: A = listan ylin varsinainen vaihtoehto (tyhjää riviä ei lasketa) alkuperäisen koenäkymän järjestyksessä, B = toinen jne.\n\n**2.1** $f'(x)=-12x+12$.\n\n- 2.1.1: $f'(0)=12$, joten kuvaaja leikkaa $y$-akselin pisteessä $(0,12)$. Vaihtoehto **B**. ($f'$:n nollakohta on 1 ja $f'(1)=0$, joten muut vaihtoehdot eivät sovi.)\n- 2.1.2: $f'$ on suora, jonka kulmakerroin on $-12$. Listassa on vain kulmakertoimet $-6$ ja $-1$, joten oikea on **F** (ei mikään yllä olevista).\n\n**2.2** $g'(x)=-x+4$.\n\n- 2.2.1: $g'(x)=0$, kun $x=4$, eli kuvaaja leikkaa $x$-akselin pisteessä $(4,0)$. Vaihtoehto **D**. ($g'(0)=4$ ja $g'(1)=3$.)\n- 2.2.2: suora, jonka kulmakerroin on $-1$. Vaihtoehto **B**.\n\n**2.3** $h'(x)=9x^2-4$.\n\n- 2.3.1: $9x^2=4$, kun $x=\\pm\\frac23$. Vaihtoehto **C**.\n- 2.3.2: toisen asteen polynomi, jonka $x^2$-kerroin 9 on positiivinen, joten kuvaaja on ylöspäin aukeava paraabeli. Vaihtoehto **C**.\n\n**Vastaus: 2.1.1 B · 2.1.2 F · 2.2.1 D · 2.2.2 B · 2.3.1 C · 2.3.2 C**\n\n**Sudenkuoppa:** kohdassa 2.1.2 valitaan kulmakerroin $-6$ funktion $f$ johtavan kertoimen perusteella, vaikka derivaatan kulmakerroin on $2\\cdot(-6)=-12$.",
+     "answer": "2.1.1 B · 2.1.2 F (ei mikään) · 2.2.1 D · 2.2.2 B · 2.3.1 C · 2.3.2 C",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Keksi positiiviset reaaliluvut $a$, $b$ ja $c$, joilla yhtälö $\\ln(a+b+c)=\\ln a+\\ln b+\\ln c$ ei päde, ja perustele.",
+     "hints": [
+      "Kokeile helppoja lukuja, joiden logaritmit tunnet, esimerkiksi $a=b=c=1$. Oikealla puolella $\\ln 1=0$."
+     ],
+     "solution": "1. Valitaan $a=b=c=1$.\n2. Vasen puoli: $\\ln(1+1+1)=\\ln 3$. Oikea puoli: $\\ln 1+\\ln 1+\\ln 1=0$.\n3. $\\ln 3>0$, koska $3>1$. Puolet eivät ole yhtä suuret, joten yhtälö ei päde.\n\n**Vastaus: esimerkiksi $a=b=c=1$, jolloin vasen puoli on $\\ln 3\\neq 0$.**",
+     "answer": "Esim. $a=b=c=1$: $\\ln 3\\neq 0$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 8,
+     "prompt": "Keksi positiiviset reaaliluvut $a$, $b$ ja $c$, joilla yhtälö $\\ln(a+b+c)=\\ln a+\\ln b+\\ln c$ pätee täsmälleen. Likiarvot eivät kelpaa perusteluksi.",
+     "hints": [
+      "Yhdistä oikean puolen logaritmit: $\\ln a+\\ln b+\\ln c=\\ln(abc)$. Logaritmifunktio on aidosti kasvava, joten yhtälö pätee täsmälleen silloin, kun $a+b+c=abc$.",
+      "Etsi luvut, joiden summa ja tulo ovat samat. Esimerkiksi symmetrinen valinta $a=b=c$ antaa ehdon $3a=a^3$. (Myös jotkin pienet kokonaisluvut toimivat.)"
+     ],
+     "solution": "1. Logaritmin laskusäännöllä $\\ln a+\\ln b+\\ln c=\\ln(abc)$, kun $a,b,c>0$.\n2. Yhtälö on siis $\\ln(a+b+c)=\\ln(abc)$. Koska $\\ln$ on aidosti kasvava, se pätee täsmälleen silloin, kun $a+b+c=abc$.\n3. Valitaan $a=b=c=t>0$: ehto on $3t=t^3$, eli $t^2=3$ ja $t=\\sqrt3$.\n4. Tarkistus tarkoilla arvoilla: $a+b+c=3\\sqrt3$ ja $abc=(\\sqrt3)^3=3\\sqrt3$. Siis $\\ln(a+b+c)=\\ln(3\\sqrt3)=\\ln(abc)=\\ln a+\\ln b+\\ln c$.\n\n**Vastaus: esimerkiksi $a=b=c=\\sqrt3$, koska silloin $a+b+c=abc=3\\sqrt3$.**\n\n**Sudenkuoppa:** yhtälön toteaminen laskimen likiarvoilla. Tehtävä vaatii täsmällisen perustelun, esimerkiksi logaritmin laskusäännön avulla.",
+     "answer": "Esim. $a=b=c=\\sqrt3$ (summa = tulo = $3\\sqrt3$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Aineistossa 4.A (ks. alkuperäinen tehtävä) esitellään Descartesin merkkisääntö: kun $n$:nnen asteen polynomiyhtälöllä on $n$ reaalista ratkaisua, sen positiivisten ratkaisujen määrä on sama kuin nollasta poikkeavien kertoimien merkinvaihtojen määrä, kun termit on kirjoitettu asteluvun mukaan laskevassa järjestyksessä. Ratkaise yhtälö $x^4-5x^2+4=0$ ja osoita, että sääntö antaa sen positiivisten ratkaisujen määrän oikein.",
+     "hints": [
+      "Yhtälössä on vain parillisia potensseja. Sijoita $t=x^2$, jolloin saat toisen asteen yhtälön.",
+      "$t^2-5t+4=0$ antaa $t=1$ tai $t=4$. Palaa muuttujaan $x$. Laske sitten merkinvaihdot kertoimista $1,\\ -5,\\ 4$ (nollakertoimia ei oteta mukaan)."
+     ],
+     "solution": "**Yhtälön ratkaisu**\n\n1. Merkitään $t=x^2$. Yhtälö on $t^2-5t+4=0$.\n2. Ratkaisukaavalla tai tekijöihin jakamalla $(t-1)(t-4)=0$, joten $t=1$ tai $t=4$.\n3. $x^2=1$ antaa $x=\\pm 1$ ja $x^2=4$ antaa $x=\\pm 2$.\n4. Ratkaisut ovat $x=-2,\\ -1,\\ 1,\\ 2$. Neljännen asteen yhtälöllä on enintään neljä ratkaisua, joten muita ei ole, ja ratkaisuja on juuri $n=4$ kappaletta.\n\n**Merkkisääntö**\n\n5. Nollasta poikkeavat kertoimet laskevassa järjestyksessä ovat $1$, $-5$ ja $4$, eli merkit ovat $+,\\ -,\\ +$.\n6. Merkki vaihtuu kahdesti: $x^4$- ja $x^2$-termin välillä sekä $x^2$-termin ja vakiotermin välillä. Säännön mukaan positiivisia ratkaisuja on siis kaksi.\n7. Positiiviset ratkaisut ovat $x=1$ ja $x=2$, eli niitä on todella kaksi. Sääntö antaa oikean määrän.\n\n**Vastaus: $x\\in\\{-2,-1,1,2\\}$. Kertoimien merkeissä on kaksi vaihtoa, ja positiivisia ratkaisuja on kaksi ($1$ ja $2$), joten sääntö pitää paikkansa.**\n\n**Sudenkuoppa:** neliöjuuren ottaminen ”puolittain” yhtälöstä, jolloin $x^4$ muuttuu virheellisesti muotoon $x^2$. Muuttujanvaihto $t=x^2$ on kirjoitettava näkyviin.",
+     "answer": "$x=\\pm1$, $x=\\pm2$; kaksi merkinvaihtoa ja kaksi positiivista ratkaisua",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Paraabelin jokainen piste on yhtä kaukana johtosuorasta ja polttopisteestä. Paraabelin johtosuora on $y=-x$ ja polttopiste $(2,2)$ (ks. alkuperäisen tehtävän kuva). Näytä, että paraabeli saadaan esitettyä yhtälönä $x+y=a(x-y)^2+b$, ja selvitä vakiot $a$ ja $b$.",
+     "hints": [
+      "Kirjoita pisteen $(x,y)$ etäisyys polttopisteestä etäisyyden kaavalla ja etäisyys suorasta $x+y=0$ pisteen ja suoran etäisyyden kaavalla. Merkitse ne yhtä suuriksi ja korota neliöön.",
+      "Neliöön korotettuna $(x-2)^2+(y-2)^2=\\frac{(x+y)^2}{2}$. Kerro kahdella ja kerro auki: termit $x^2+y^2-2xy$ muodostavat lausekkeen $(x-y)^2$, ja lineaariset termit ovat $-8(x+y)$."
+     ],
+     "solution": "1. Pisteen $(x,y)$ etäisyys polttopisteestä on $\\sqrt{(x-2)^2+(y-2)^2}$.\n2. Johtosuora on $x+y=0$, joten pisteen etäisyys siitä on $\\frac{|x+y|}{\\sqrt{1^2+1^2}}=\\frac{|x+y|}{\\sqrt2}$.\n3. Paraabelin ehto: $\\sqrt{(x-2)^2+(y-2)^2}=\\frac{|x+y|}{\\sqrt2}$. Molemmat puolet ovat ei-negatiivisia, joten neliöön korotus on yhtäpitävä muunnos: $(x-2)^2+(y-2)^2=\\frac{(x+y)^2}{2}$.\n4. Kerrotaan kahdella ja auki: $2x^2-8x+8+2y^2-8y+8=x^2+2xy+y^2$.\n5. Siirretään termit: $x^2-2xy+y^2+16=8x+8y$, eli $(x-y)^2+16=8(x+y)$.\n6. Jaetaan kahdeksalla: $x+y=\\frac18(x-y)^2+2$.\n\n(Tarkistus: paraabelin huippu on polttopisteen ja johtosuoran puolivälissä, pisteessä $(1,1)$. Siinä $x+y=2$ ja $x-y=0$, mikä sopii yhtälöön.)\n\n**Vastaus: $x+y=\\frac18(x-y)^2+2$, eli $a=\\frac18$ ja $b=2$.**\n\n**Sudenkuoppa:** suoran etäisyyskaavasta unohtuu nimittäjä $\\sqrt2$ tai itseisarvo. Silloin yhtälöstä ei tule annettua muotoa.",
+     "answer": "$a=\\frac18$, $b=2$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Eiffel-tornia mallintaa kappale, jota rajaavat pinnat $x=\\pm a\\,e^{c(h-z)}$ ja $y=\\pm a\\,e^{c(h-z)}$ sekä tasot $z=0$ ja $z=h$ (ks. alkuperäisen tehtävän kuva). Mallissa $a=4{,}255$, $c=0{,}00892$ ja $h=312$ (metreinä). Laske kappaleen tilavuus integroimalla.",
+     "hints": [
+      "Tarkastele poikkileikkausta korkeudella $z$: mikä kuvio siitä tulee, ja mikä on sen sivun pituus? Tilavuus on poikkileikkauksen alan integraali korkeuden yli.",
+      "Poikkileikkaus on neliö, jonka sivu on $2a\\,e^{c(h-z)}$, joten sen ala on $A(z)=4a^2e^{2c(h-z)}$. Laske $\\int_0^{h}A(z)\\,dz$. Integraalifunktiossa tarvitset sisäfunktion derivaatan $-2c$."
+     ],
+     "solution": "1. Korkeudella $z$ kappaleen poikkileikkaus on neliö $-s\\le x\\le s$, $-s\\le y\\le s$, missä $s(z)=a\\,e^{c(h-z)}$. Neliön sivu on $2s$.\n2. Poikkileikkauksen ala on $A(z)=(2a\\,e^{c(h-z)})^2=4a^2e^{2c(h-z)}$.\n3. Tilavuus: $V=\\int_0^h A(z)\\,dz=4a^2\\int_0^h e^{2c(h-z)}\\,dz$.\n4. Koska $D\\,e^{2c(h-z)}=-2c\\,e^{2c(h-z)}$, integraalifunktio on $-\\frac{1}{2c}e^{2c(h-z)}$.\n5. $V=4a^2\\left[-\\frac{1}{2c}e^{2c(h-z)}\\right]_0^h=\\frac{4a^2}{2c}\\left(e^{2ch}-1\\right)=\\frac{2a^2}{c}\\left(e^{2ch}-1\\right)$.\n6. Sijoitus: $2ch=2\\cdot 0{,}00892\\cdot 312\\approx 5{,}566$, $e^{5{,}566}\\approx 261{,}4$ ja $\\frac{2a^2}{c}=\\frac{2\\cdot 4{,}255^2}{0{,}00892}\\approx 4\\,059{,}4$.\n7. $V\\approx 4\\,059{,}4\\cdot 260{,}4\\approx 1\\,057\\,000\\ \\text{m}^3$.\n\n**Vastaus: $V=\\frac{2a^2}{c}\\left(e^{2ch}-1\\right)\\approx 1{,}06\\cdot 10^6\\ \\text{m}^3$.**\n\n**Sudenkuoppa:** poikkileikkauksen sivuksi otetaan $a\\,e^{c(h-z)}$ eikä sen kaksinkertaista, jolloin tilavuus jää neljäsosaan. Torni ei myöskään ole pyörähdyskappale, joten $\\pi r^2$-kaava ei sovi.",
+     "answer": "$V=\\frac{2a^2}{c}(e^{2ch}-1)\\approx 1{,}06\\cdot 10^6\\ \\text{m}^3$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Skotlannin lippu on 50 cm leveä ja 30 cm korkea. Sinisellä pohjalla on kummankin lävistäjän ympärillä valkoinen raita, joka ulottuu lävistäjästä 5,8 cm vaakasuunnassa kumpaankin suuntaan ja 3,5 cm pystysuunnassa kumpaankin suuntaan (ks. alkuperäisen tehtävän kuva). Montako prosenttia lipun alasta on valkoista?",
+     "hints": [
+      "Valkoista aluetta on hankala laskea suoraan, koska raidat menevät päällekkäin. Laske sen sijaan neljän sinisen kolmion alat ja vähennä ne koko lipun alasta.",
+      "Vasemman (ja oikean) sinisen kolmion kanta lipun reunalla on $30-2\\cdot 3{,}5=23$ cm ja korkeus $25-5{,}8=19{,}2$ cm. Ylä- ja alakolmion kanta on $50-2\\cdot 5{,}8=38{,}4$ cm ja korkeus $15-3{,}5=11{,}5$ cm."
+     ],
+     "solution": "1. Lipun ala on $50\\cdot 30=1500\\ \\text{cm}^2$. Lävistäjät leikkaavat keskipisteessä $(25,15)$, kun lippu asetetaan koordinaatistoon $0\\le x\\le 50$, $0\\le y\\le 30$.\n2. Sininen osa koostuu neljästä kolmiosta. Vasemmanpuoleisen kolmion kanta on lipun vasemmalla reunalla: raidat vievät reunasta 3,5 cm ylhäältä ja alhaalta, joten kanta on $30-7=23$ cm.\n3. Kolmion kärki on siinä, missä raitojen reunat kohtaavat keskiviivalla $y=15$. Raita ulottuu keskipisteestä 5,8 cm vasemmalle, joten kärki on kohdassa $x=25-5{,}8=19{,}2$. Korkeus on $19{,}2$ cm ja ala $\\frac12\\cdot 23\\cdot 19{,}2=220{,}8\\ \\text{cm}^2$.\n4. Yläkolmion kanta on yläreunalla: $50-2\\cdot 5{,}8=38{,}4$ cm. Kärki on keskiviivalla $x=25$ korkeudella $15+3{,}5=18{,}5$, joten korkeus on $30-18{,}5=11{,}5$ cm ja ala $\\frac12\\cdot 38{,}4\\cdot 11{,}5=220{,}8\\ \\text{cm}^2$.\n5. Symmetrian vuoksi oikea kolmio vastaa vasenta ja alakolmio yläkolmiota. Sinistä on $4\\cdot 220{,}8=883{,}2\\ \\text{cm}^2$.\n6. Valkoista on $1500-883{,}2=616{,}8\\ \\text{cm}^2$, eli $\\frac{616{,}8}{1500}\\approx 0{,}411=41\\,\\%$.\n\n**Vastaus: noin 41 %**\n\n**Sudenkuoppa:** raitojen alat lasketaan yhteen erikseen, jolloin keskellä oleva päällekkäinen neljäkäs tulee lasketuksi kahdesti. Myös vaaka- ja pystymittojen sekoittaminen kolmioiden korkeuksissa on tyypillinen virhe.",
+     "answer": "noin 41 %",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Assyrialaisen lainaehdon mukaan velkaan lisättiin joka kuukausi yksi sekeli hopeaa jokaista velan minaa kohti. Mina jakautuu 60 sekeliin (mina on noin 570 g hopeaa). Ehdon voi tulkita kahdella tavalla. Tarkastellaan 30 minan lainaa vuoden ajan, kun korko lisätään velkaan kuukausittain.",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Tulkinta 1: korko lasketaan vain täysistä minoista. Paljonko korkoa kertyy vuodessa?",
+     "hints": [
+      "Laske kuukausi kerrallaan: velan täysien minojen määrä ratkaisee kuukauden koron sekeleinä. Pidä kirjaa velasta muodossa ”minaa ja sekeliä”.",
+      "Kaksi ensimmäistä kuukautta korko on 30 sekeliä, jolloin velka on tasan 31 minaa. Sen jälkeen korko kasvaa yhdellä sekelillä joka toinen kuukausi."
+     ],
+     "solution": "1. Alussa velka on 30 minaa. Kuukauden korko sekeleinä on täysien minojen määrä.\n2. Kuukaudet 1–2: korko $30+30$ sekeliä, velka $31$ minaa $0$ sekeliä.\n3. Kuukaudet 3–4: korko $31+31$, velka $31$ minaa $31$ sekeliä ja sitten $32$ minaa $2$ sekeliä.\n4. Kuukaudet 5–6: korko $32+32$, velka $32$ minaa $34$ sekeliä ja sitten $33$ minaa $6$ sekeliä.\n5. Samoin kuukaudet 7–8 ($33+33$), 9–10 ($34+34$) ja 11–12 ($35+35$). Täysien minojen määrä kasvaa aina kahden kuukauden välein, koska kuukauden korko on hieman yli puoli minaa.\n6. Korkoa kertyy yhteensä $2(30+31+32+33+34+35)=390$ sekeliä, eli $6$ minaa ja $30$ sekeliä ($6{,}5$ minaa).\n\n**Vastaus: 390 sekeliä eli 6,5 minaa**\n\n**Sudenkuoppa:** koron pitäminen koko vuoden 30 sekelinä (360 sekeliä). Ehdon mukaan korko lisätään velkaan, joten velan minamäärä kasvaa.",
+     "answer": "390 sekeliä (6 minaa 30 sekeliä)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Tulkinta 2: korko lasketaan myös minan osista. Paljonko korkoa kertyy vuodessa?",
+     "hints": [
+      "Kun korko lasketaan velan koko määrästä, kuukausikorko on $\\frac{1}{60}$ velasta. Kyse on korkoa korolle -laskusta.",
+      "Velka kasvaa kuukaudessa kertoimella $1+\\frac{1}{60}=\\frac{61}{60}$. Vuoden kuluttua velka on $30\\cdot\\left(\\frac{61}{60}\\right)^{12}$ minaa."
+     ],
+     "solution": "1. Yksi sekeli minaa kohti on $\\frac{1}{60}$ velasta, joten kuukausikorko on $\\frac{1}{60}\\approx 1{,}667\\,\\%$ ja kasvukerroin $\\frac{61}{60}$.\n2. Korko lisätään velkaan, joten 12 kuukauden jälkeen velka on $30\\cdot 60\\cdot\\left(\\frac{61}{60}\\right)^{12}\\approx 1800\\cdot 1{,}21939\\approx 2\\,194{,}9$ sekeliä.\n3. Korkoa on kertynyt $2\\,194{,}9-1\\,800\\approx 394{,}9\\approx 395$ sekeliä, eli noin $6$ minaa ja $35$ sekeliä.\n\n**Vastaus: noin 395 sekeliä eli noin 6 minaa 35 sekeliä (noin 6,58 minaa)**\n\n**Sudenkuoppa:** kasvukertoimena $1+\\frac{1}{61}$ tai vuosikoron laskeminen yksinkertaisena korkona ($12\\cdot 30=360$ sekeliä) ilman korkoa korolle.",
+     "answer": "noin 395 sekeliä (6 minaa 35 sekeliä)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Laadi kahden muuttujan aineisto, jossa on ainakin 10 erillistä pistettä ja jonka korrelaatiokerroin on annettu luku. Vastaukseen kuuluvat aineisto, sen graafinen esitys (pistekaavio) ja ohjelmiston tuloste, joka osoittaa korrelaatiokertoimen.",
+   "units": [
+    {
+     "id": "a",
+     "points": 4,
+     "prompt": "Laadi aineisto, jossa $r=1$.",
+     "hints": [
+      "Korrelaatiokerroin on $1$ täsmälleen silloin, kun pisteet ovat nousevalla suoralla. Valitse $x$-arvot ja laske $y$-arvot jonkin nousevan suoran yhtälöstä."
+     ],
+     "solution": "1. Valitaan $x=1,2,\\dots,10$ ja $y=2x+1$, eli pisteet $(1,3)$, $(2,5)$, …, $(10,21)$.\n2. Pistekaaviossa pisteet ovat nousevalla suoralla.\n3. Ohjelmisto (esim. taulukkolaskennan korrelaatiofunktio tai GeoGebran tilastotyökalu) antaa $r=1$. Tämä on odotettavaa, koska kaikki pisteet ovat täsmälleen suoralla, jonka kulmakerroin on positiivinen.\n\n**Vastaus: esimerkiksi $x=1,\\dots,10$ ja $y=2x+1$, jolloin $r=1$.**",
+     "answer": "Esim. $y=2x+1$, $x=1,\\dots,10$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 4,
+     "prompt": "Laadi aineisto, jossa $r=-1$.",
+     "hints": [
+      "Nyt pisteiden täytyy olla laskevalla suoralla eli suoralla, jonka kulmakerroin on negatiivinen."
+     ],
+     "solution": "1. Valitaan $x=1,2,\\dots,10$ ja $y=40-3x$, eli pisteet $(1,37)$, $(2,34)$, …, $(10,10)$.\n2. Pistekaaviossa pisteet ovat laskevalla suoralla.\n3. Ohjelmisto antaa $r=-1$.\n\n**Vastaus: esimerkiksi $x=1,\\dots,10$ ja $y=40-3x$, jolloin $r=-1$.**",
+     "answer": "Esim. $y=40-3x$, $x=1,\\dots,10$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "c",
+     "points": 4,
+     "prompt": "Laadi aineisto, jossa $r=0$.",
+     "hints": [
+      "Korrelaatiokerroin mittaa vain lineaarista riippuvuutta. Symmetrinen aineisto, jossa $y$ riippuu $x$:stä mutta ei lineaarisesti (esim. $y=x^2$ nollan molemmin puolin), antaa tarkalleen $r=0$. Vältä vakiota $y$:tä, sillä silloin $r$:ää ei voi laskea."
+     ],
+     "solution": "1. Valitaan $x=-5,-4,\\dots,5$ (11 arvoa) ja $y=x^2$, eli pisteet $(-5,25)$, $(-4,16)$, …, $(0,0)$, …, $(5,25)$. Kaikki pisteet ovat erillisiä.\n2. Pistekaaviossa pisteet muodostavat ylöspäin aukeavan paraabelin.\n3. $r=0$, koska $\\bar x=0$ ja $\\sum x_i y_i=\\sum x_i^3=0$ symmetrian vuoksi. Silloin kovarianssi on nolla, ja ohjelmisto antaa $r=0$.\n4. Esimerkki näyttää, että $r=0$ ei tarkoita, ettei riippuvuutta olisi: se tarkoittaa vain, ettei riippuvuus ole lineaarista.\n\n**Vastaus: esimerkiksi $x=-5,\\dots,5$ ja $y=x^2$, jolloin $r=0$.**\n\n**Sudenkuoppa:** vakioarvoinen $y$ (esim. kaikki $y=3$). Silloin $y$:n keskihajonta on nolla, eikä korrelaatiokerrointa voi laskea.",
+     "answer": "Esim. $y=x^2$, $x=-5,\\dots,5$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Collatzin jonossa seuraava jäsen saadaan edellisestä näin: jos $a_n$ on parillinen, $a_{n+1}=\\frac{a_n}{2}$; jos $a_n$ on pariton ja suurempi kuin 1, $a_{n+1}=3a_n+1$; jos $a_n=1$, jono päättyy. Esimerkiksi alkuarvosta 20 saadaan 20, 10, 5, 16, 8, 4, 2, 1. Collatzin konjektuurin mukaan jono päättyy mistä tahansa alkuarvosta, mutta sitä ei ole todistettu.",
+   "units": [
+    {
+     "id": "a",
+     "points": 3,
+     "prompt": "Kirjoita Collatzin jono alkuarvosta $a_1=23$.",
+     "hints": [
+      "23 on pariton, joten seuraava jäsen on $3\\cdot 23+1=70$. Jatka sääntöjen mukaan, kunnes pääset lukuun 1."
+     ],
+     "solution": "1. $23\\to 3\\cdot 23+1=70\\to 35\\to 106\\to 53\\to 160\\to 80\\to 40\\to 20$.\n2. Luvusta 20 jono jatkuu kuten esimerkissä: $10\\to 5\\to 16\\to 8\\to 4\\to 2\\to 1$.\n3. Jono on siis 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1 (16 jäsentä).\n\n**Vastaus: 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1**",
+     "answer": "23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 9,
+     "prompt": "Selvitä ohjelmiston avulla, mikä alkuarvo väliltä 2–100 tuottaa pisimmän Collatzin jonon. Esitä koodi (esim. Python tai taulukkolaskenta), sen selitys ja taulukko ainakin viiden pisimmän jonon alkuarvoista ja pituuksista.",
+     "hints": [
+      "Tarvitset kaksi sisäkkäistä silmukkaa. Ulompi käy läpi alkuarvot 2–100. Sisempi soveltaa sääntöä niin kauan kuin luku on suurempi kuin 1 ja laskee jäsenten määrän. Parillisuuden testaat jakojäännöksellä: luku on parillinen, jos sen jakojäännös kahdella jaettuna on 0.",
+      "Päätä, lasketaanko pituuteen alkuarvo ja lopun ykkönen (jäsenten määrä). Silloin alkuarvon 23 jonon pituus on 16. Tallenna pituudet listaan tai taulukkoon ja poimi suurimmat. Pisin jono on yli sadan jäsenen mittainen, ja sen alkuarvo on lähellä sataa."
+     ],
+     "solution": "**Ohjelman toiminta (Python-tyyppinen kuvaus)**\n\n1. Tehdään tyhjä lista tuloksille.\n2. Jokaiselle alkuarvolle $n=2,3,\\dots,100$ (silmukka, jonka yläraja 101 ei sisälly):\n- asetetaan $a=n$ ja pituus $=1$ (alkuarvo lasketaan mukaan)\n- niin kauan kuin $a>1$: jos $a$ on parillinen (jakojäännös 2:lla on 0), $a$ korvataan luvulla $a$ jaettuna kahdella (kokonaislukujako), muuten luvulla $3a+1$; pituutta kasvatetaan yhdellä\n- lisätään listaan pari (pituus, $n$).\n3. Lista järjestetään pituuden mukaan laskevaan järjestykseen, ja tulostetaan kärki.\n\nKoodin toimivuuden voi tarkistaa: alkuarvolla 20 pituus on 8 ja alkuarvolla 23 pituus on 16, kuten käsin laskettuna.\n\n**Tulokset (pituus = jäsenten määrä)**\n\n- 97: 119\n- 73: 116\n- 54 ja 55: 113\n- 27: 112\n- 82 ja 83: 111\n\n**Vastaus: alkuarvo 97 tuottaa pisimmän jonon (119 jäsentä, eli 118 askelta).**\n\n**Sudenkuoppa:** silmukan yläraja 100, jolloin arvo 100 jää pois, tai pituuden laskeminen yhdellä pielessä ilman, että laskutapa kerrotaan. Kerro aina, lasketaanko jäseniä vai askelia.",
+     "answer": "97 (119 jäsentä); seuraavat 73 (116), 54 ja 55 (113), 27 (112), 82 ja 83 (111)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Tarkastellaan epäoleellisia integraaleja $I_n=\\int_0^\\infty x^ne^{-x}\\,dx$, $n=0,1,2,\\dots$",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Johda palautuskaava $I_n=n\\,I_{n-1}$, kun $n\\ge 1$. Vihje: integroi välillä $0\\le x\\le R$ kaava $D(x^ne^{-x})=nx^{n-1}e^{-x}-x^ne^{-x}$ ja anna sitten $R\\to\\infty$.",
+     "hints": [
+      "Vasemmalla integroidaan derivaattaa, joten integraali on yksinkertaisesti $\\Big[x^ne^{-x}\\Big]_0^R$. Oikealla puolella integraali jakautuu kahdeksi integraaliksi.",
+      "$\\Big[x^ne^{-x}\\Big]_0^R=R^ne^{-R}\\to 0$, kun $R\\to\\infty$ (eksponenttifunktio voittaa potenssin). Raja-arvona oikea puoli lähestyy lauseketta $nI_{n-1}-I_n$."
+     ],
+     "solution": "1. Integroidaan vihjeen kaava välillä $[0,R]$: $\\int_0^R D(x^ne^{-x})\\,dx=\\int_0^R\\left(nx^{n-1}e^{-x}-x^ne^{-x}\\right)dx$.\n2. Vasen puoli: $\\Big[x^ne^{-x}\\Big]_0^R=R^ne^{-R}-0$ (kun $n\\ge 1$, $0^n=0$).\n3. Oikea puoli: $n\\int_0^R x^{n-1}e^{-x}\\,dx-\\int_0^R x^ne^{-x}\\,dx$.\n4. Kun $R\\to\\infty$, $R^ne^{-R}=\\frac{R^n}{e^R}\\to 0$. Epäoleellisen integraalin määritelmän mukaan oikean puolen integraalit lähestyvät arvoja $I_{n-1}$ ja $I_n$ (integraalit suppenevat).\n5. Raja-arvona $0=nI_{n-1}-I_n$, eli $I_n=nI_{n-1}$. $\\square$\n\n**Sudenkuoppa:** ylärajan käsittely suoraan sijoittamalla $\\infty$ (esim. ”$e^{-\\infty}=0$”). Epäoleellinen integraali on raja-arvo, ja se on kirjoitettava näkyviin.",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Osoita epäoleellisen integraalin määritelmän avulla, että $I_0=\\int_0^\\infty e^{-x}\\,dx=1$, ja laske sitten $I_5$ palautuskaavalla.",
+     "hints": [
+      "Laske ensin $\\int_0^R e^{-x}\\,dx$ ja ota sitten raja-arvo, kun $R\\to\\infty$.",
+      "$\\int_0^R e^{-x}\\,dx=1-e^{-R}\\to 1$. Palautuskaavaa toistamalla $I_5=5\\cdot 4\\cdot 3\\cdot 2\\cdot 1\\cdot I_0$."
+     ],
+     "solution": "1. Määritelmän mukaan $I_0=\\lim_{R\\to\\infty}\\int_0^R e^{-x}\\,dx$.\n2. $\\int_0^R e^{-x}\\,dx=\\Big[-e^{-x}\\Big]_0^R=-e^{-R}+1$.\n3. Kun $R\\to\\infty$, $e^{-R}\\to 0$, joten $I_0=1$.\n4. Palautuskaavalla $I_1=1\\cdot I_0=1$, $I_2=2I_1=2$, $I_3=3I_2=6$, $I_4=4I_3=24$ ja $I_5=5I_4=120$.\n5. Yleisesti $I_n=n!$.\n\n**Vastaus: $I_0=1$ ja $I_5=5!=120$**",
+     "answer": "$I_0=1$, $I_5=120$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Seitsensakaraisen tähden (ks. alkuperäisen tehtävän kuva) seitsemän kärkeä ovat tasavälein ympyrällä. Sakarat muodostuvat seitsemästä paraabelinkaaresta, ja jokaista sakaraa rajaa kaksi paraabelia. Kukin paraabeli leikkaa ympyrän kahdessa kärjessä, joiden välissä on yksi kärki, ja leikkauspisteissä paraabelin tangentti on kohtisuorassa ympyrän tangenttia vastaan. Keskelle jää ympyrä, jota kaikki paraabelit sivuavat. Laske sisemmän ja ulomman ympyrän säteiden suhde.",
+     "hints": [
+      "Valitse ulommaksi ympyräksi yksikköympyrä ja tarkastele yhtä paraabelia, jonka symmetria-akseli on $y$-akseli: $y=ax^2+b$. Paraabelin leikkauspisteiden välinen keskuskulma on kahden kärkivälin verran eli $\\frac{4\\pi}{7}$.",
+      "Jos väliin jäävä kärki on pisteessä $(0,1)$, leikkauspiste on $P=\\left(\\cos\\frac{3\\pi}{14},\\ \\sin\\frac{3\\pi}{14}\\right)$. Kohtisuoruusehto tarkoittaa, että paraabelin tangentti pisteessä $P$ on säteen $OP$ suuntainen: $2a\\cos\\frac{3\\pi}{14}=\\tan\\frac{3\\pi}{14}$. Ratkaise $a$ ja sitten $b$. Sisempi ympyrä sivuaa paraabelia sen huipussa."
+     ],
+     "solution": "1. Asetetaan tähden keskipiste origoon ja ulomman ympyrän säteeksi 1. Silloin kysytty suhde on sisemmän ympyrän säde.\n2. Kärkien välinen keskuskulma on $\\frac{2\\pi}{7}$. Tarkastellaan paraabelia, joka kulkee kärkien läpi molemmin puolin kärkeä $(0,1)$. Symmetrian vuoksi sen akseli on $y$-akseli: $y=ax^2+b$.\n3. Leikkauspisteet ovat kulmissa $\\frac{\\pi}{2}\\pm\\frac{2\\pi}{7}$. Oikeanpuoleinen on $P=\\left(\\cos\\frac{3\\pi}{14},\\ \\sin\\frac{3\\pi}{14}\\right)$, koska $\\frac{\\pi}{2}-\\frac{2\\pi}{7}=\\frac{3\\pi}{14}$.\n4. Ympyrän tangentti pisteessä $P$ on kohtisuorassa sädettä $OP$ vastaan. Koska paraabelin tangentti on kohtisuorassa ympyrän tangenttia vastaan, se on säteen $OP$ suuntainen, eli sen kulmakerroin on $\\tan\\frac{3\\pi}{14}$.\n5. Paraabelin kulmakerroin on $y'=2ax$, joten $2a\\cos\\frac{3\\pi}{14}=\\frac{\\sin\\frac{3\\pi}{14}}{\\cos\\frac{3\\pi}{14}}$, ja siitä $a=\\frac{\\sin\\frac{3\\pi}{14}}{2\\cos^2\\frac{3\\pi}{14}}$.\n6. Piste $P$ on paraabelilla: $\\sin\\frac{3\\pi}{14}=a\\cos^2\\frac{3\\pi}{14}+b=\\frac12\\sin\\frac{3\\pi}{14}+b$, joten $b=\\frac12\\sin\\frac{3\\pi}{14}$.\n7. Paraabelin pisteen etäisyyden neliö origosta on $x^2+(ax^2+b)^2=a^2x^4+(1+2ab)x^2+b^2$. Kun $a,b>0$, se on pienin kohdassa $x=0$. Origokeskinen ympyrä sivuaa paraabelia siis huipussa $(0,b)$, ja sen säde on $b$.\n8. Kaikki seitsemän paraabelia saadaan tästä kiertämällä kulman $\\frac{2\\pi}{7}$ monikertoja, joten sama ympyrä sivuaa kaikkia.\n9. Suhde on $\\frac{r}{R}=\\frac12\\sin\\frac{3\\pi}{14}=\\frac12\\cos\\frac{2\\pi}{7}\\approx 0{,}312$.\n\n**Vastaus: $\\frac{r}{R}=\\frac12\\sin\\frac{3\\pi}{14}\\approx 0{,}312$ (käänteisesti $\\frac{R}{r}\\approx 3{,}21$).**\n\n**Sudenkuoppa:** paraabelin leikkauspisteiksi valitaan vierekkäiset kärjet (keskuskulma $\\frac{2\\pi}{7}$), vaikka niiden välissä pitää olla yksi kärki.",
+     "answer": "$\\frac{r}{R}=\\frac12\\sin\\frac{3\\pi}{14}\\approx 0{,}312$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Funktio $f:[0,1]\\to\\mathbb{R}$ on $f(x)=\\int_0^x\\sin(2\\pi z^2)\\,dz$. Missä kohdissa $f$ saa suurimman ja pienimmän arvonsa? Ohjelmistoa saa käyttää tutkimiseen, mutta vastaus on perusteltava täsmällisesti: integraalien likiarvot tai fMax-/fMin-komennot eivät riitä.",
+     "hints": [
+      "Analyysin peruslauseen mukaan $f'(x)=\\sin(2\\pi x^2)$. Etsi derivaatan nollakohdat välillä $[0,1]$ ja tee kulkukaavio. Pienimmän arvon ehdokkaita on kaksi: vertaa niitä.",
+      "Derivaatta on positiivinen välillä $\\left(0,\\frac{1}{\\sqrt2}\\right)$ ja negatiivinen välillä $\\left(\\frac{1}{\\sqrt2},1\\right)$, joten suurin arvo on kohdassa $\\frac{1}{\\sqrt2}$. Pienimmälle arvolle pitää osoittaa, että $f(1)>0=f(0)$. Sijoita $u=z^2$ ja pariuta välin $\\left[0,\\frac12\\right]$ positiivinen osa välin $\\left[\\frac12,1\\right]$ negatiivisen osan kanssa siirrolla $u\\mapsto u+\\frac12$."
+     ],
+     "solution": "**Kulku**\n\n1. Integrandi on jatkuva, joten analyysin peruslauseen mukaan $f'(x)=\\sin(2\\pi x^2)$.\n2. Välillä $[0,1]$ on $0\\le 2\\pi x^2\\le 2\\pi$, ja $\\sin(2\\pi x^2)=0$, kun $2\\pi x^2\\in\\{0,\\pi,2\\pi\\}$, eli $x=0$, $x=\\frac{1}{\\sqrt2}$ ja $x=1$.\n3. Kun $0\\lt x<\\frac{1}{\\sqrt2}$, on $0<2\\pi x^2<\\pi$ ja $f'(x)>0$. Kun $\\frac{1}{\\sqrt2}\\lt x<1$, on $\\pi<2\\pi x^2<2\\pi$ ja $f'(x)<0$.\n4. $f$ on siis kasvava välillä $\\left[0,\\frac{1}{\\sqrt2}\\right]$ ja vähenevä välillä $\\left[\\frac{1}{\\sqrt2},1\\right]$. Suurin arvo on kohdassa $x=\\frac{1}{\\sqrt2}$, ja pienin on jommassakummassa päätepisteessä.\n\n**Päätepisteiden vertailu**\n\n5. $f(0)=0$. Osoitetaan, että $f(1)>0$.\n6. Sijoitus $u=z^2$, $z=\\sqrt u$, $dz=\\frac{du}{2\\sqrt u}$ (rajat pysyvät samoina): $f(1)=\\frac12\\int_0^1\\frac{\\sin(2\\pi u)}{\\sqrt u}\\,du$.\n7. Jaetaan väli kahtia ja sijoitetaan jälkimmäiseen $u=v+\\frac12$. Koska $\\sin(2\\pi v+\\pi)=-\\sin(2\\pi v)$, saadaan $f(1)=\\frac12\\int_0^{1/2}\\sin(2\\pi v)\\left(\\frac{1}{\\sqrt v}-\\frac{1}{\\sqrt{v+\\frac12}}\\right)dv$.\n8. Välillä $\\left(0,\\frac12\\right)$ on $\\sin(2\\pi v)>0$ ja $\\frac{1}{\\sqrt v}>\\frac{1}{\\sqrt{v+1/2}}$, joten integrandi on positiivinen ja $f(1)>0=f(0)$.\n9. Pienin arvo on siis $f(0)=0$ kohdassa $x=0$.\n\n(Numeerinen tarkistus: $f\\left(\\frac{1}{\\sqrt2}\\right)\\approx 0{,}357$ ja $f(1)\\approx 0{,}172$.)\n\n**Vastaus: suurin arvo kohdassa $x=\\frac{1}{\\sqrt2}$ ja pienin kohdassa $x=0$.**\n\n**Sudenkuoppa:** pienin arvo päätellään laskimen antamista likiarvoista $f(0)$ ja $f(1)$. Tehtävä vaatii täsmällisen perustelun sille, että $f(1)>0$.",
+     "answer": "Suurin arvo kohdassa $x=\\frac{1}{\\sqrt2}$, pienin kohdassa $x=0$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

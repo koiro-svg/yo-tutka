@@ -1,0 +1,397 @@
+{
+ "subject": "englanti",
+ "session": "2025S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2025/syksy/englanti_pitka/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-09-19_EA_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: Kuullun ymmärtäminen",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "answer": 7,
+    "note": "Vastaa kaikkiin. Varaa kuullun tehtäviin yhteensä noin tunti. Videon saa katsoa vapaasti, mutta äänitteiden kuuntelukerrat on rajattu tehtäväkohtaisesti."
+   },
+   {
+    "title": "Osa 2: Luetun ymmärtäminen",
+    "tasks": [
+     "8",
+     "9",
+     "10",
+     "11",
+     "12"
+    ],
+    "answer": 5,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 3: Sanasto ja rakenteet",
+    "tasks": [
+     "13",
+     "14",
+     "15",
+     "16"
+    ],
+    "answer": 4,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 4: Kirjallinen tuottaminen",
+    "tasks": [
+     "17.1",
+     "17.2",
+     "17.3",
+     "17.4"
+    ],
+    "answer": 1,
+    "note": "Valitse yksi aihe. Pituus 700–1 300 merkkiä ilman välilyöntejä ja rivinvaihtoja; ylityksestä seuraa pistevähennys. Jätä muut kentät tyhjiksi."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Kuuntele radiohaastattelu (Fresh Air), jossa Terry Gross haastattelee lastenkirurgi Ala Stanfordia tämän työstä koronapandemian aikana Philadelphiassa. Äänite on kolmessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen jokaisen osan kerran. Kuusi kohtaa (3 p/kohta), joista viisi on monivalintoja ja yksi avoin:\n\n1. Mistä Gross tuntee Stanfordin työn?\n2. Mikä sai Stanfordin suuntautumaan terveysaktivismiin?\n3. Mistä Stanford päätteli, että heikommassa asemassa olevilla oli vaikeuksia?\n4. (suomeksi, enintään 100 merkkiä) Miten Stanford jakoi testejä ensimmäisellä kerralla?\n5. Miten hän selvitti, missä apua tarvittiin eniten?\n6. Miksi testauspaikoiksi valittiin kirkkoja ja moskeijoita?",
+     "hints": [
+      "Kysymykset ovat pareittain äänitteen osissa (1.1–1.2, 1.3–1.4, 1.5–1.6). Kuuntele erityisesti syitä ja keinoja: moni väärä vaihtoehto on asia, joka kuulostaa uskottavalta, mutta jota Stanford ei itse sano (tai jonka hän nimenomaan kiistää).",
+      "- 1.1: Gross kertoo alussa jotain itsestään. Mitä?\n- 1.2: mitä Stanfordin käsille ja olkapäälle oli tapahtunut, ja joutuiko hän lopettamaan työt?\n- 1.3: keitä olivat ne ihmiset, jotka soittivat hänelle maaliskuussa ja joilta evättiin testi?\n- 1.4: minne hän ajoi testien kanssa, ja kuinka monta paikkaa ehti päivässä?\n- 1.5: hän mainitsee verkko-osoitteen ja sanoo, ettei tietoa juuri näkynyt mediassa.\n- 1.6: hän kysyy itseltään, mihin ihmiset luottavat."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **1.1 A** (Gross asuu samassa kaupungissa). Gross kertoo asuvansa Philadelphiassa ja tuntevansa siksi Stanfordin siellä tekemää työtä. Samasta työnantajasta (B) ei puhuta, ja C on ansa: myöhemmin Stanford sanoo, ettei aiheesta juuri kerrottu mediassa.\n- **1.2 C** (terveysongelmien kautta). Kirurgin työ oli aiheuttanut käsiin rannekanavaoireita, ja auto-onnettomuuden jälkeen hänen olkapäänsä leikattiin. Hän mietti, kuinka kauan voisi jatkaa kirurgina. Hän ei kuitenkaan ollut työkyvytön (A), eikä onnettomuutta kuvata hengenvaaralliseksi (B).\n- **1.3 B** (hyvin toimeentulevat pyysivät häneltä apua). Maaliskuussa hänelle soittivat ystävien ystävät, joilla oli vakuutus ja koulutus ja jotka silti käännytettiin pois testeistä. Hän päätteli, että vähävaraisilla oli vielä vaikeampaa. Vakuutusyhtiöiden korvauksista (A) tai lääkäripulasta (C) ei puhuta.\n- **1.4** *Hän ajoi viemään testejä soittaneiden koteihin yksi kerrallaan.* Ensimmäisellä kerralla ihmiset soittivat hänelle, ja hän kävi kodeissa ovelta ovelle. Välimatkojen takia yhteen päivään mahtui vain 12 kotia.\n- **1.5 A** (kaupungin verkkosivujen avulla). Tiedot sairastuvuudesta ja väestöstä löytyivät kaupungin sivustolta (phila.gov). Stanford järjesti postinumeroalueet sairaimmasta vähiten sairaaseen. Media-arkistot (B) ovat ansa, koska hän sanoo nimenomaan, ettei tieto tullut mediasta.\n- **1.6 B** (paikkoja, joissa palveluiden ulkopuolelle jääneet tuntevat olonsa turvalliseksi). Stanford mietti, mihin tautiin eniten kuolevat mustat philadelphialaiset luottavat, ja hänen kokemuksensa mukaan vastaus oli moskeijat, kirkot ja yhteisötalot. Aiemmasta terveydenhoidosta (A) tai tartunnoista siellä (C) ei puhuta.",
+     "answer": "1.1 A · 1.2 C · 1.3 B · 1.4 vei testejä ihmisten koteihin (ovelta ovelle) · 1.5 A · 1.6 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Katso australialainen uutisvideo nuorisorikollisuudesta Queenslandissa. Videon saa katsoa niin monta kertaa kuin haluaa. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä Ken Cunliffe tekee Toowoomban rikosten uhrien hyväksi?\n2. Mitä Cunliffelle tapahtui puolitoista vuotta sitten?\n3. Miten nuorten autorikosten määrä on kehittynyt Toowoombassa?\n4. Mikä sai väkijoukon menemään rockhamptonilaisen talon pihalle?\n5. Mitä osavaltion pääministeri teki aiemmin samana vuonna?",
+     "hints": [
+      "Uutisessa on paljon lukuja ja nimiä. Erota toisistaan koko osavaltiota koskevat tiedot ja yhtä kaupunkia (Toowoomba) koskevat tiedot, sillä yksi kysymyksistä perustuu juuri tähän eroon.",
+      "- 2.1: millä sanalla toimittaja kuvaa Cunliffea uhrien puolestapuhujana?\n- 2.2: Cunliffe kertoo myös nuoresta, joka kuoli myöhemmin. Oliko tämä hänen läheisensä?\n- 2.3: koko Queenslandin luvut laskevat, mutta mitä tapahtui Toowoomban autorikoksille vuoden 2019 jälkeen?\n- 2.4: pitivätkö syytökset talon asukkaita kohtaan paikkansa? Kuka ne esitti?\n- 2.5: mitä nuorisorikoslakiin lisättiin: uusia tekoja vai pidempiä tuomioita?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **2.1 A** (hän tukee uhreja julkisesti). Cunliffesta on tullut äänekäs Toowoomban rikosten uhrien puolestapuhuja. Oikeudellisesta neuvonnasta (B) tai rahallisesta tuesta (C) ei puhuta.\n- **2.2 A** (hänen kotiinsa murtauduttiin). Puolitoista vuotta sitten hänen kotiinsa tunkeuduttiin ja lapsijoukko varasti hänen autonsa. B on ansa: yksi autovarkaista, 13-vuotias, kuoli myöhemmin kolarissa, mutta hän ei ollut Cunliffen läheinen.\n- **2.3 C** (määrä on kasvanut). Koko osavaltiossa nuorisorikollisuus vähenee, joten B on ansa. Toowoombassa kuitenkin autojen luvaton käyttö on nelinkertaistunut vuodesta 2019, ja autoja varastavien määrä on kaksinkertaistunut.\n- **2.4 C** (pahantahtoinen syytös). Väkijoukko tunkeutui talon pihalle, kun entinen One Nation -puolueen ehdokas oli syyttänyt talon aboriginaalinuoria rikoksista perusteettomasti. Poliittisesta erimielisyydestä (B) ei ollut kyse, vaikka syyttäjä oli poliitikko.\n- **2.5 A** (hän lisäsi lakiin rikosnimikkeitä). Pääministeri muutti nuorisorikoslakia niin, että takuuehtojen rikkominen on taas rikos ja autovarkausvideoiden julkaisemisesta sosiaalisessa mediassa tuli uusi, rangaistusta koventava teko. Tuomioiden pidentämisestä (B) tai menettelyn yksinkertaistamisesta (C) ei puhuta.",
+     "answer": "2.1 A · 2.2 A · 2.3 C · 2.4 C · 2.5 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele haastattelu, jossa jalkapalloselostaja Peter Drury muistelee nigerialaista Jay-Jay Okochaa, yhtä lahjakkaimmista pelaajista, joita hän on nähnyt. Äänitteen saa kuunnella kaksi kertaa. Vastaa suomeksi, kumpaankin enintään 100 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 3.1: mihin kuuluisa selostajan heitto Okochasta perustuu?\n- 3.2: mihin Bolton ylsi Okochan aikana?",
+     "hints": [
+      "Äänite on lyhyt, joten keskity ensimmäisellä kuuntelulla kokonaisuuteen ja toisella kahteen avainkohtaan. Arvostelu on 3/0, joten vastauksen pitää osua täsmälleen kysyttyyn asiaan. Yleinen kehu pelaajasta ei riitä.",
+      "- 3.1: heitossa sanotaan, että hän oli niin hyvä, että hänet nimettiin kahdesti. Mitä hänen nimessään on kahdesti?\n- 3.2: Bolton ei ole luonnostaan voittajaseura, mutta Sam Allardycen johdolla joukkue selviytyi jonnekin. Minne? Huomaa, että kysytään joukkueen saavutusta, ei Okochan."
+     ],
+     "solution": "- **3.1** *Hänen nimeensä: etunimessä on sama osa kahdesti (Jay-Jay).* Tunnettu selostuslause leikittelee sanonnalla, että joku on niin hyvä, että hänet nimettiin kahdesti. Vitsi toimii, koska Okochan etunimi on kaksiosainen. Pelkkä \"hän oli hyvä pelaaja\" ei kerro, mistä vitsissä on kyse.\n- **3.2** *Joukkue selviytyi eurooppalaisiin cup-kilpailuihin.* Druryn mukaan Bolton ei ole luontaisesti menestyvä seura, mutta sillä oli upea joukkue, joka pääsi pelaamaan Eurooppaan Sam Allardycen johdolla.\n\n**Sudenkuoppa:** 3.2:ssa \"hän pääsi pelaamaan Eurooppaan\" tai \"menestyi Euroopassa\" hylätään. Saavutus on joukkueen, ja se oli karsiutuminen eurooppalaiseen kilpailuun, ei menestys siellä.",
+     "answer": "3.1 hänen (kaksinkertainen) nimensä · 3.2 pääsi pelaamaan eurooppalaisiin kilpailuihin",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Kuuntele katkelma Caryl Churchillin näytelmästä *Top Girls*: Shona on työhaastattelussa. Äänitteen saa kuunnella kaksi kertaa. Kolme monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä Shona sanoo iästään?\n2. Mitä hän kertoo nykyisestä työstään?\n3. Mikä sana kuvaa parhaiten hänen tapaansa puhua haastattelijalle?",
+     "hints": [
+      "Katkelma on komediaa: Shona vastaa kysymyksiin oudosti ja kaunistelee asioita. Kuuntele tarkasti, mitä hän oikeasti sanoo, ja mitä haastattelija lukee paperista.",
+      "- 4.1: haastattelija lukee iän paperista. Kiistääkö Shona sen, vai selittääkö hän, miksi näyttää nuorelta?\n- 4.2: auto on hänen käytössään, mutta kenen se on? Minne hän ajaa, ja myykö vai korjaako hän laitteita?\n- 4.3: arvioi kokonaisuutta: vastaa kysymykseen \"kaikki lukee tuolla\", kehuskelee autolla ja ajamisella."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **4.1 B** (hyvät geenit saavat hänet näyttämään nuoremmalta). Hän kertoo olevansa 29, ja kun haastattelija toteaa paperin sanovan samaa, Shona selittää, että nuorekkuus kulkee suvussa. A on päinvastainen, eikä hän väitä paperin tietoa vääräksi (C).\n- **4.2 C** (hän tapaa asiakkaitaan eri paikoissa). Hän ajaa moottoritietä pohjoiseen asiakkaiden luo, esimerkiksi Staffordshireen ja Yorkshireen, ja myy sähkölaitteita, kuten astian- ja pyykinpesukoneita. Auto on työnantajan (A), ja hän myy eikä korjaa laitteita (B).\n- **4.3 C** (epäammattimainen). Hän vastaa ympäripyöreästi ja viittaa paperiin kertomatta itse, toistaa kysymyksen sanoja ja kehuskelee Porschella ja ylinopeuksilla. Tämä ei sovi työhaastatteluun. Hän ei vaikuta epävarmalta (B), eikä hänen puheensa ole johdonmukaisen vakaata (A).",
+     "answer": "4.1 B · 4.2 C · 4.3 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele ystävysten Markin ja Ellien keskustelu elokuvailtaan lähtemisestä. Äänite on neljässä osassa. Kussakin Mark sanoo repliikin (se on kokeessa myös kirjoitettuna), ja Ellien kolme vastausvaihtoehtoa A, B ja C ovat vain äänitteinä. Valitse kohteliain vastaus. Repliikin ja jokaisen vaihtoehdon saa kuunnella kaksi kertaa (4 kohtaa, 3 p/kohta). Tilanteet: kutsu perjantaina elokuviin, Markin elokuvaehdotus, syntymäpäiväsankarin toive ja kutsu illanviettoon elokuvan jälkeen.",
+     "hints": [
+      "Kaikki vaihtoehdot ovat sisällöltään mahdollisia, joten ratkaisevaa on sävy. Kohtelias vastaus kiittää, pehmentää kieltäytymistä (anteeksipyyntö, *I'm afraid*) ja ottaa toisen huomioon. Epäkohtelias vastaus on tyly, suora tai innoton.",
+      "- 5.1: kuka kiittää kutsusta ja näyttää kiinnostusta, kuka vastaa epämääräisesti?\n- 5.2: Ellie ei pidä scifistä. Kuka pehmentää sanomaansa pahoittelulla?\n- 5.3: kuka kiittää Markia järjestelyistä ennen kuin kieltäytyy?\n- 5.4: kuka tarttuu ehdotukseen innostuneesti, kuka vain myöntyy vastahakoisesti?"
+     ],
+     "solution": "Vaihtoehdot ovat kokeessa vain äänitteinä, joten kirjain on äänitteen A, B tai C.\n\n- **5.1 A**. Ellie kiittää kutsusta ja kysyy, mitä Mark aikoi katsoa. B ja C vastaavat nihkeästi: ehkä hän pääsee, ehkä perjantai käy.\n- **5.2 B**. Ellie pahoittelee, että pilaa tunnelman, ennen kuin kertoo pitävänsä scifiä typeränä. A ja C ilmaisevat saman inhon suoraan ja tylysti.\n- **5.3 B**. Ellie kehuu Markia huomaavaiseksi, koska tämä järjestää illan, ja kieltäytyy sitten pahoitellen. A (menkää ilman minua) ja C (tylsistyisin, joten en tule) ovat töykeitä.\n- **5.4 C**. Ellie innostuu ehdotuksesta ja pyytää kertomaan paikan. A ja B myöntyvät, mutta laimeasti ja vastahakoisesti.\n\n**Sudenkuoppa:** kohteliaisuus ei tarkoita myöntymistä. Kohdissa 5.2 ja 5.3 kohtelias vastaus on silti kieltävä, mutta pehmennetty.",
+     "answer": "5.1 A · 5.2 B · 5.3 B · 5.4 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele lyhyt uutinen Intian ympäristöongelmista. Äänitteen saa kuunnella kaksi kertaa. Vastaa suomeksi, kumpaankin enintään 50 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 6.1: millaiset Intian hiilidioksidipäästöt ovat asukasmäärään suhteutettuna?\n- 6.2: mitä vesien saastuminen voi Maailmanpankin raportin mukaan hidastaa Intian kaltaisissa maissa?",
+     "hints": [
+      "Uutinen on täynnä lukuja (saastuneimmat kaupungit, jätevesi, prosentit). Älä kirjoita niitä kaikkia, vaan etsi juuri kysytty tieto. 50 merkkiä riittää yhteen lyhyeen lauseeseen.",
+      "- 6.1: Intia on kokonaispäästöissä kolmanneksi suurin, mutta uutinen lisää *despite*-sanalla vastakkaisen tiedon. Mikä se on?\n- 6.2: raportin mukaan vesien saastuminen voi viedä jopa puolet jostakin taloudellisesta. Mistä?"
+     ],
+     "solution": "- **6.1** *Ne ovat pienet asukasta kohden.* Intia on maailman kolmanneksi suurin hiilidioksidin päästäjä, vaikka päästöt henkeä kohden ovat alhaiset. Kysymys koskee vain henkeä kohden laskettuja päästöjä, joten \"kolmanneksi suurin\" ei vastaa kysymykseen.\n- **6.2** *Bruttokansantuotteen (talouden) kasvua.* Maailmanpankin raportin mukaan keskitulotason maissa vesien saastuminen voi syödä jopa puolet BKT:n kasvusta. Vastauksessa pitää näkyä kasvu: pelkkä \"BKT:ta\" tai \"bruttokansantuloa\" ei riitä.",
+     "answer": "6.1 pienet asukasta kohden · 6.2 BKT:n kasvua",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Kuuntele haastattelu, jossa Anna kertoo, miten hänen elämänsä eteni, kun hän jätti koulun 16-vuotiaana suorittamatta yhtään GCSE-koetta. Äänite on kahdessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miksi Anna lopetti koulun varhain?\n2. Miksi hän halusi palata opiskelemaan?\n3. Miksi hän valitsi yliopisto-opintoihin valmistavan kurssin?\n4. Miksi hän jatkoi tohtoriksi asti?\n5. Mikä olisi haastattelulle paras vaihtoehtoinen otsikko?",
+     "hints": [
+      "Annan tarina etenee aikajärjestyksessä: koulu → työ → paikallinen oppilaitos → äitiys → valmentava kurssi → kandidaatti → tohtori → opettaja. Kysymykset koskevat hänen *syitään* kussakin vaiheessa, joten kuuntele, miten hän itse perustelee valintansa. Kohdat 7.1–7.2 ovat ensimmäisessä osassa ja 7.3–7.5 toisessa.",
+      "- 7.1: millaiseksi hän kuvaa koulun ilmapiiriä ja auktoriteettia?\n- 7.2: miltä työ alkoi tuntua noin vuoden kuluttua, ja mitä hän kaipasi?\n- 7.3: hän kertoo, ettei ollut vielä edes ajatellut yliopistoa. Miksi hän sitten valitsi kurssin? Tapahtuiko jotain samaan aikaan, ja oliko se syy?\n- 7.4: mitä hän ajatteli, kun kandidaatin opinnot olivat loppumassa? Tuliko opettajan paikka suunnitelmana vai sattumalta?\n- 7.5: miten tarina päättyy suhteessa siihen, mistä se alkoi?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **7.1 C** (vapauden puute turhautti häntä). Anna kertoo, ettei viihtynyt teini-iässä koulun auktoriteetin ja kurinalaisuuden takia, ja jälkeen jääminen teki kiinni kuromisesta yhä vaikeampaa. Hän ei ajatellut, ettei tutkintoa tarvitse (A), vaan oli pettynyt itseensä, eikä hän sano kaikkia aineita tylsiksi (B).\n- **7.2 A** (hän kaipasi älyllistä haastetta). Noin vuoden työnteon jälkeen työ tuntui tylsältä, ja hän kaipasi jotain henkisesti virikkeellisempää. C on ansa: hän meni luonnonsuojelukurssille, mutta syy palata opiskelemaan oli virikkeen tarve, ei ympäristönsuojelu. Palkasta (B) ei puhuta.\n- **7.3 A** (aiheet kiinnostivat häntä). Hän ei ollut vielä ajatellut yliopistoa, vaan valitsi kurssin, koska se vaikutti kiinnostavalta ja hän piti opiskelemistaan aineista. B on ansa: hän aloitti opinnot, kun tytär meni päiväkotiin, mutta ei tylsistymisen takia.\n- **7.4 B** (hän halusi jatkaa sitä, mistä nautti). Kandidaatin opintojen loppuessa hän ei halunnut niiden päättyvän, koska rakasti opiskelua. Lehtorin paikka avautui vasta väitöskirjan valmistuttua ja sattumalta (A).\n- **7.5 C** (koskaan ei ole liian myöhäistä toteuttaa unelmiaan). Nuori, joka lähti koulusta ilman todistuksia, johtaa nyt samaa tutkinto-ohjelmaa, jonka hän itse aloitti vuonna 2002. A ja B eivät kuvaa tarinaa.",
+     "answer": "7.1 C · 7.2 A · 7.3 A · 7.4 B · 7.5 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 21,
+     "prompt": "Lue katkelma romaanista *The List of Suspicious Things* (Jennie Godfrey). Kertojana on Miv-niminen teini, ja tapahtumat sijoittuvat 1970-luvun Yorkshireen, vanhaan kouluun ja historian tunnille. Seitsemän kohtaa (3 p/kohta), joista kuusi on monivalintoja ja yksi avoin:\n\n1. Mikä kuvaa parhaiten koulun ulkonäköä?\n2. Miksi kertoja ei pidä koulun vessoista?\n3. Millaisina kertoja näkee itsensä ja luokkatoverinsa?\n4. Mikä on tunnin levottomuuden perimmäinen syy?\n5. Miten opettaja Mr Ware suhtautuu levottomuuteen?\n6. (suomeksi, enintään 100 merkkiä) Miksi juuri tämä läksy ilahdutti kertojaa salaa?\n7. Mikä olisi tekstille sopiva vaihtoehtoinen otsikko?",
+     "hints": [
+      "Kaunokirjallisessa tekstissä vastaukset on usein päätelty kuvauksesta, ei sanottu suoraan. Etsi kustakin kysymyksestä kohta ja katso, mitä yksityiskohdat (adjektiivit, äänet, tunteet) kertovat. Kysymykset etenevät tekstin järjestyksessä.",
+      "- 8.1: pöydät, lattia, piha. Kertoja kuvittelee, että koulu oli joskus hienompi, mutta millainen se on nyt?\n- 8.2: missä vessat ovat, ja mitä kehoille tapahtuu siellä?\n- 8.3: kertoja vertaa luokkaansa lapsiin, joita koulussa oli ennen. Kumpia hän pitää hienompina?\n- 8.4: kaksi poikaa riehuu, mutta miksi koko luokka on levoton? Mikä päivä on?\n- 8.5: äänensävy, käskyt ja lisäläksy.\n- 8.6: mitä kertoja tiesi aiheesta jo etukäteen, ja miksi? Huom. *mill* on tässä tekstiilitehdas, ei mylly.\n- 8.7: kolmesta sanonnasta vain yksi on neutraali \"ennen vanhaan\" ilman kaipausta."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **8.1 B** (nuhruinen). Pöydät ovat lohkeilleita ja kaiverrettuja, piha on hoitamaton kenttä ja luokat kylmiä. A on ansa: kertoja kuvittelee koulun joskus olleen hienompien lasten koulu, mutta nyt se ei ole hieno. Pahamaineisuudesta (C) ei puhuta.\n- **8.2 B** (ne ovat usein kylmiä). Vessarakennus on ulkona, ja siellä äänet kaikuvat ja kehot tärisevät. Epäkunnosta (A) tai etäisyydestä (C) ei puhuta.\n- **8.3 A** (melko tavallisina). Kertoja arvelee, että koulussa oli joskus paljon hienostuneempia lapsia kuin he. C on ansa: vanha kirja (*Jane Eyre*) liittyy koulurakennukseen, ei oppilaisiin.\n- **8.4 C** (luokan on vaikea palata lomalta). On ensimmäinen päivä lyhyen loman jälkeen, kaikki kolmekymmentä oppilasta ovat levottomia ja haluavat kotiin, eikä aihe innosta. Kahden pojan kahakka (A) on vain oire.\n- **8.5 B** (tiukka). Opettaja puhuu varoittavalla äänellä, käskee kädet päälaelle, katsoo ankarasti ja antaa koko luokalle lisäläksyn.\n- **8.6** *Hän tiesi tekstiilitehtaista jo valmiiksi, koska suvun naiset olivat olleet niissä töissä.* Kertoja rakasti läksyjä, mutta ennen kaikkea hänellä oli aiheesta ennakkotietoa. HVP ei hyväksy vastausta, jonka mukaan kertojalla olisi omakohtaista kokemusta tehdastyöstä.\n- **8.7 B** *Back in the day* (ennen vanhaan). Teksti kuvaa arkea 1970-luvun koulussa. A (*Those were the days*) on ansa, koska se ilmaisee kaipausta parempiin aikoihin, ja kuvaus kylmästä, rähjäisestä koulusta ei ole kaihoisa. C (*Seize the day*) on kehotus tarttua hetkeen.",
+     "answer": "8.1 B · 8.2 B · 8.3 A · 8.4 C · 8.5 B · 8.6 hänellä oli aiheesta ennakkotietoa (suvun naiset tehtaissa) · 8.7 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue TechCrunchin artikkeli Enveda-yrityksestä, joka yhdistää perinteisten kasvilääkkeiden tuntemuksen ja tekoälyn uusien lääkkeiden etsimisessä. Sama teksti on myös tehtävässä 13. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Minkä esimerkki aspiriini on?\n2. Miksi luonnon lääkeaineita hyödynnetään vähän?\n3. Miten tekoäly auttaa lääkekehityksessä?\n4. Miksi uudet sijoittajat ovat Envedalle tärkeitä?\n5. Mikä on perustaja Viswa Collurun johtopäätös?",
+     "hints": [
+      "Kysymykset etenevät tekstin järjestyksessä. Väärät vaihtoehdot ovat usein osittain oikeita (esimerkiksi aspiriini liittyy puuhun) mutta vääristävät yksityiskohdan. Tarkista siksi vaihtoehdon jokainen sana tekstistä.",
+      "- 9.1: löytyykö aspiriinin vaikuttava aine puusta sellaisenaan, vai onko se muokattu versio?\n- 9.2: toinen kappale vertaa luonnon molekyylien tutkimista laboratoriossa tehtäviin yhdisteisiin.\n- 9.3: mistä Enveda kokosi tietonsa, ja tutkiiko sen malli yksittäisiä molekyylejä?\n- 9.4: mitä sijoituskierros mahdollistaa kumppanien ja aikajänteen osalta?\n- 9.5: viimeinen kappale: kuinka monesta kasvista riittäisi lääkkeitä?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **9.1 C** (lääke, jonka vaikuttava aine on samankaltainen kuin luonnossa esiintyvä). Pajunkuoren vaikuttava aine eristettiin ja patentoitiin muokattuna aspiriiniksi. A on ansa: pillerin ainesosaa ei kerätä puusta, vaan se on muokattu versio. B ei tarkoita mitään järkevää.\n- **9.2 C** (ne ovat liian työläitä). Luonnon molekyylien tunnistaminen, eristäminen ja testaaminen on monimutkaisempaa ja hitaampaa kuin uusien yhdisteiden valmistaminen laboratoriossa. Vaarallisuudesta (A) tai arvaamattomuudesta (B) ei puhuta.\n- **9.3 A** (se kokoaa tietoa kaikkialta maailmasta). Enveda keräsi kaiken digitaalisen tiedon siitä, miten eri kulttuurit ovat käyttäneet kasveja kivun ja sairauksien hoitoon. C on päinvastainen, koska malli tulkitsee koko näytteen eikä yksittäisiä molekyylejä.\n- **9.4 B** (ne mahdollistavat pitkän aikavälin suunnittelun). Rahoituskierros tuo mukaan strategisia kumppaneita, jotta hankkeita voidaan suunnitella pidemmällä aikavälillä. Seuraava rahoituskierros mainitaan, mutta sitä ei esitetä uusien sijoittajien ansiona (A).\n- **9.5 B** (löytämättömiä mahdollisuuksia on paljon). Colluru sanoo, että luonto on niin monimuotoinen, että jo sadasta kasvista saisi enemmän mahdollisia lääkkeitä kuin niille keksitään käyttöä. A liittyy toiseen yritykseen (Pangea Bio), ja C on päinvastainen, koska hän arvostelee keskittymistä muutamaan kasviin.",
+     "answer": "9.1 C · 9.2 C · 9.3 A · 9.4 B · 9.5 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Lue lyhyt uutinen Iowan pääkaupungista Des Moinesista, jossa kananomistajat marssivat kanoineen kaupungintalolle. Vastaa suomeksi, jokaiseen enintään 100 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 10.1: mitä marssilla vastustettiin?\n- 10.2: miksi kaupunki halusi muuttaa sääntöjä?\n- 10.3: millä perusteella marssijat vastustivat muutosta?",
+     "hints": [
+      "Uutinen on lyhyt, mutta täynnä kanasanastoa ja sanaleikkejä (*pecking order*, *cock-a-doodle-dos*). Etsi ensin, mikä ehdotus oli, mistä se johtui ja mitä järjestäjä siitä sanoi. Arvostelu on 3/0, joten vastauksen pitää kattaa asia kokonaan mutta täsmällisesti.",
+      "- 10.1: ehdotuksessa oli kaksi osaa: lintujen määrä ja kukot. Kirjoita yleisesti rajoituksista, ei vain toisesta osasta.\n- 10.2: mitä naapurustoissa oli tapahtunut, ja mitä asukkaat olivat tehneet? Mainitse, mistä tehtiin.\n- 10.3: mitä järjestäjä Ed Fallon sanoi kaupungin reaktiosta, ja kuinka monta valitusta oli tullut?"
+     ],
+     "solution": "- **10.1** *Kanojen ja kukkojen pitämistä koskevia uusia rajoituksia.* Kaupunginvaltuuston alustavasti hyväksymä ehdotus olisi vähentänyt sallittujen lintujen määrän 30:stä 12:een ja kieltänyt kukot. HVP:n mukaan pelkkä kukkokielto tai pelkkä lukumäärän rajoitus on liian suppea.\n- **10.2** *Kanoista ja kukoista oli tehty valituksia.* Kukot häiritsivät rauhaa joillakin asuinalueilla. Vastauksessa pitää sanoa, mistä valitettiin: pelkkä \"niistä valitettiin\" on liian epämääräinen.\n- **10.3** *Valituksia oli tullut vain kolme, joten kaupunki ylireagoi.* Järjestäjän mukaan valituksia kirjattiin vuoden 2020 alun ja kesäkuun 2024 välillä vain kolme. HVP hyväksyy myös vastauksen, jonka mukaan marssijat halusivat pitää kanansa, mutta pelkkä \"sääntö oli epäreilu\" ei riitä.",
+     "answer": "10.1 kanojen ja kukkojen pitämisen rajoitukset · 10.2 kanoista ja kukoista oli valitettu · 10.3 valituksia vain kolme",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Lue artikkeli Stonehengen Alttarikivestä, jonka tutkijat ovat todenneet peräisin olevan Skotlannista. Kokeessa on englanninkielinen tiivistelmä, jossa on kuusi aukkoa. Täydennä kuhunkin **yksi englanninkielinen sana** (3 p/aukko). Aukot koskevat sitä, mitä tutkijat ovat selvittäneet, kuinka todennäköisesti kivi tuotiin ihmisvoimin, kaksi kuljetusreittiä, kumpaa tutkijat pitävät oikeana, mikä kivessä tekee matkasta huomattavan ja mistä saavutus kertoo.",
+     "hints": [
+      "Lue tiivistelmä ensin kokonaan ja päättele jokaisen aukon sanaluokka: artikkelin *the* jälkeen tarvitaan substantiivi, *More ___,* aloittaa lauseen adverbina, ja *either by ___ or by sea* vaatii sanaparin. Etsi sitten tekstistä vastaava kohta ja muotoile sana tiivistelmään sopivaksi.",
+      "- 11.1: tutkijat selvittivät, mistä kivi on peräisin. Mikä substantiivi tarkoittaa alkuperää?\n- 11.2: jääkausiteoria ei ole todennäköinen, joten ihmisen tekemä kuljetus on *enemmän* mitä?\n- 11.3 ja 11.4: tekstissä on kaksi teoriaa, maitse ja meritse. Kumpaa tutkijat arvelevat, eli ensimmäistä vai jälkimmäistä?\n- 11.5: tekstissä verrataan kiven painoa täysikasvuiseen afrikannorsuun.\n- 11.6: lainauksessa puhutaan kuljettamisesta Britannian sisällä. Tarvitset substantiivin."
+     ],
+     "solution": "- **11.1 origins** (myös *origin*): tutkijat ovat selvittäneet, että Alttarikivi on peräisin kaukaa Skotlannista.\n- **11.2 likely** (myös *probably*): jäätiköt liikkuivat Skotlannissa pohjoiseen, eivät etelään, joten jääkauden kuljetus ei ole uskottava. *More likely* = todennäköisemmin.\n- **11.3 land**: ensimmäinen teoria on, että kivi raahattiin yli 800 kilometriä maitse kukkuloiden ja metsien halki ennen pyörän keksimistä.\n- **11.4 latter** (myös *second*): tutkijat arvelevat, että kivi kuljetettiin meritse, eli jälkimmäinen vaihtoehto.\n- **11.5 weight** (myös *size*): kivi painaa noin kuusi tonnia, suunnilleen yhtä paljon kuin aikuinen afrikannorsu.\n- **11.6 transportation** (myös *transport*, *delivery*): reitti osoittaa, että kivikauden yhteisöt olivat järjestäytyneitä ja pystyivät kuljettamaan tavaraa Britannian sisällä.\n\nHVP:n mukaan myös muut oikeat ilmaisut hyväksytään. Tehtävä arvostellaan keskitetysti.",
+     "answer": "origins/origin · likely/probably · land · latter/second · weight/size · transportation/transport",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 21,
+     "prompt": "Kokeessa on artikkeli siitä, miksi niin monissa kulttuureissa on lohikäärmeitä: eri maanosien lohikäärmeet, niiden erot ja yhtäläisyydet sekä kaksi selitystä (fossiilien väärintulkinta ja vaarallisten petojen muistijälki). Tekstissä on yhdeksän aukkoa, ja kuhunkin valitaan alasvetovalikosta kolmesta vaihtoehdosta sopivin sanaryhmä. Aukot ovat 2 tai 3 p (yhteensä 21 p). Teksti on itse tehtävässä.",
+     "hints": [
+      "Lue ensin koko teksti aukoista välittämättä. Ratkaise sitten jokainen aukko sen **jälkeen** tulevan tekstin avulla: jatko joko todistaa, täsmentää tai esimerkittää aukon väitteen. Hylkää vaihtoehdot, jotka ovat ristiriidassa tekstin pääajatuksen kanssa (lohikäärmeitä on kaikkialla, vaikka kulttuurit eivät olleet yhteydessä toisiinsa).",
+      "- 12.1: seuraava virke luettelee neljän maanosan legendoja.\n- 12.3: *Firstly*-virkettä seuraa kuvaus eurooppalaisista, itäaasialaisista ja keskiamerikkalaisista lohikäärmeistä ja maininta monimuotoisuudesta. Mitä väitettä kuvaukset tukevat?\n- 12.4: aukon jälkeen kerrotaan, että jumaluuden uskottiin olleen mukana ihmiskunnan luomisessa.\n- 12.6: seuraava virke puhuu Tyrannosauruksen jäänteistä.\n- 12.7–12.8: Jonesin teoria koskee pelkoa, joka on periytynyt esi-isiltä. Mitä se sai aikaan?\n- 12.9: viimeinen virke kertoo, että lohikäärmeet kiehtovat yhä."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C).\n\n- **12.1 B** (lohikäärmeitä on vaikea olla löytämättä kansanperinteestä). Seuraava virke luettelee Euroopan, Aasian, Afrikan ja Amerikan legendoja. A ja C ovat ristiriidassa tämän kanssa.\n- **12.2 A** (vaikka sitä ei ole koskaan ollut todellisuudessa). Kysymys on, miksi moni sivilisaatio keksi saman myytin toisistaan riippumatta, kun olentoa ei ole olemassa.\n- **12.3 B** (on hieman yksinkertaistavaa olettaa kaikkien lohikäärmeiden olevan samanlaisia). Jatko esittelee erilaisia lohikäärmeitä ja toteaa, että jo eurooppalaisissakin on runsaasti vaihtelua.\n- **12.4 C** (oli keskeisessä asemassa heidän uskonnossaan). Jumaluuden uskottiin olleen mukana ihmisen luomisessa. A on väärin, koska eurooppalaiset lohikäärmeet olivat pahoja.\n- **12.5 C** (että kulttuurit olivat maantieteellisesti erillään). Jatko kertoo, että kulttuurien välillä oli hyvin vähän vaihtoa myyttien syntyaikana.\n- **12.6 C** (sukupuuttoon kuolleiden eläinten fossiilien väärintulkinnan jälkeen). Seuraavassa virkkeessä kuvitellaan, että joku löytää T. rexin jäänteet ja luulee niitä lohikäärmeen luiksi.\n- **12.7 B** (vaarallisten petojen muistijälki mieleen). Jonesin mukaan lohikäärmeessä on piirteitä, joita esi-isämme oppivat pelkäämään villieläimissä.\n- **12.8 C** (sai mielikuvituksemme luomaan). Vaisto johti olentoon, jossa yhdistyvät krokotiilin, käärmeen, petolinnun ja kissapedon pelottavimmat piirteet.\n- **12.9 C** (lohikäärmeet selvästi kiehtovat meitä). Jatko kertoo niiden säilyneen tuhansia vuosia ja esiintyvän suosituissa tarinoissa. A ja B eivät johda tähän.",
+     "answer": "12.1 B · 12.2 A · 12.3 B · 12.4 C · 12.5 C · 12.6 C · 12.7 B · 12.8 C · 12.9 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 5,
+     "prompt": "Tehtävän 9 tekstissä (Enveda ja tekoäly) on viisi alleviivattua ilmausta: *isolate*, *harnessing*, *expedite*, *decipher* ja *bear fruit*. Valitse kullekin kolmesta vaihtoehdosta se, joka tarkoittaa tässä yhteydessä lähes samaa (1 p/kohta).",
+     "hints": [
+      "Korvaa alleviivattu ilmaus vuorotellen jokaisella vaihtoehdolla ja lue virke uudelleen. Oikea vaihtoehto säilyttää merkityksen ja sopii lauseeseen. Jos sana on vieras, päättele sen merkitys yhteydestä ennen kuin katsot vaihtoehtoja.",
+      "- 13.1: mitä tutkijat tekivät pajunkuoren vaikuttavalle aineelle ennen kuin muokkasivat sen lääkkeeksi?\n- 13.2: menestys luonnon antimien kanssa: mitä niille on tehty?\n- 13.3: tekoäly tekee lääkkeiden löytämisestä nopeampaa vai monipuolisempaa?\n- 13.4: kaikki vaihtoehdot alkavat *de*-, joten merkitys ratkaisee. Mitä \"kemialliselle kielelle\" tehdään?\n- 13.5: lääkkeet etenevät kliinisiin kokeisiin. Vertaa kolmea *pay*-fraasiverbiä."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **13.1 A** *separate*: *isolate* = eristää, erottaa aine muista.\n- **13.2 B** *utilising*: *harness* = valjastaa käyttöön, hyödyntää.\n- **13.3 B** *accelerate*: *expedite* = jouduttaa, nopeuttaa.\n- **13.4 B** *decode*: *decipher* = tulkita, purkaa (salakirjoitus). *Delude* = hämätä, *deflate* = tyhjentää ilmasta.\n- **13.5 B** *pay off*: *bear fruit* = kantaa hedelmää, tuottaa tulosta. *Pay off* = kannattaa, tuottaa tulosta. *Pay in* = maksaa tilille, *pay up* = maksaa velkansa.",
+     "answer": "13.1 A · 13.2 B · 13.3 B · 13.4 B · 13.5 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "14",
+   "units": [
+    {
+     "id": "",
+     "points": 19,
+     "prompt": "Kokeen aukkotekstinä on sähkömagnetismin oppikirjan esipuheen alku: kirjan tausta, edeltävät tiedot ja lukujen sisältö. Tekstissä on 15 aukkoa, ja kuhunkin valitaan alasvetovalikosta kolmesta vaihtoehdosta sopivin (1–2 p/aukko, yhteensä 19 p). Aukot mittaavat prepositioita, artikkeleita, aikamuotoja, relatiivipronomineja, apuverbejä, partisiippeja ja sananmuodostusta (adjektiivi vai adverbi).",
+     "hints": [
+      "Ratkaise jokainen aukko katsomalla, mihin sanaan se liittyy. Adverbi määrittää verbiä tai adjektiivia (*___ assigned*), adjektiivi substantiivia. Aikamuodossa etsi aikailmaus (*for the past eight years*). Prepositioissa etsi vakiintunut pari (*an outgrowth ___*, *___ the end of*, *considerations ___*).",
+      "- 14.2: aikailmaus *for the past eight years* kertoo, että opettaminen on alkanut aiemmin ja jatkuu yhä.\n- 14.3 ja 14.4: sanaa *more material* voi voimistaa adverbi, ja *assigned* on partisiippi, jota määrittää adverbi.\n- 14.6 ja 14.7: *___ of Electricity* ja *at ___ junior level*: kumpi vaatii artikkelin?\n- 14.11: prepositio *upon* + relatiivipronomini.\n- 14.12: lyhennetty sivulause *as [they are] ___ in Maxwell's equations*.\n- 14.13: esipuheen varovainen tulkinta: mikä apuverbi ilmaisee mahdollisuutta?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C).\n\n- **14.1 B** *from* (1 p): *an outgrowth from* = kasvanut jostakin.\n- **14.2 C** *has been giving* (2 p): perfektin kestomuoto, koska opettaminen on jatkunut kahdeksan vuotta ja jatkuu yhä.\n- **14.3 B** *substantially* (1 p) = huomattavasti (enemmän aineistoa).\n- **14.4 C** *commonly* (1 p): adverbi määrittää partisiippia *assigned*.\n- **14.5 C** *as such* (2 p) = siten, sellaisenaan: siksi kirja sopii jatko-opiskelijoiden kurssin pohjaksi.\n- **14.6 A** *a knowledge* (1 p): *a knowledge of something* = tietämys jostakin.\n- **14.7 C** *a more* (1 p): *at a more junior level* = alemmalla tasolla.\n- **14.8 C** *especially* (1 p) = erityisesti (liitteet I ja IV).\n- **14.9 B** *by* (2 p): *by the end of* = mennessä.\n- **14.10 B** *the subject* (1 p): *the subject matter* = (kirjan) aihepiiri, määräinen.\n- **14.11 B** *which* (1 p): prepositio + *which*; *that* ja *what* eivät käy tässä.\n- **14.12 B** *embodied* (1 p): passiivin partisiippi lyhennetyssä sivulauseessa (lait sellaisina kuin ne on ilmaistu yhtälöissä).\n- **14.13 C** *may* (1 p): *may be regarded* = voidaan pitää.\n- **14.14 A** *when* (2 p) = kun (kentät ja lähteet eivät riipu ajasta).\n- **14.15 A** *on* (1 p): *considerations on* = näkökohtia jostakin.",
+     "answer": "from · has been giving · substantially · commonly · as such · a knowledge · a more · especially · by · the subject · which · embodied · may · when · on",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "15",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Oppikirjan esipuheen jatkossa on kuusi aukkoa. Joka aukossa on alasvetovalikossa samat viisi vaihtoehtoa: neljä apuverbimuotoa (*has* ja *have* sekä passiivin *has been* ja *have been*) tai tyhjä, jolloin aukkoon ei tule mitään. 1 p/aukko. Aiheet: kirjoittajan panostus johdatuksiin, anteeksipyyntö yksityiskohtaisuudesta, lukijat, jotka opiskelevat itsenäisesti, sekä kiitos esikuvaksi olleesta teoksesta.",
+     "hints": [
+      "Jokaisessa aukossa ratkaise kaksi asiaa: (1) tarvitaanko aukkoon ylipäätään mitään, eli onko lause valmis ilman sitä, ja (2) jos tarvitaan, onko subjekti yksikkö vai monikko ja onko lause aktiivi vai passiivi (*has/have* + partisiippi vai *has/have been* + partisiippi). Myös modaaliverbin (*could well ___*) jälkeen tuleva *have* on muodoltaan aina sama.",
+      "- 15.1: *considerable effort ___ made*: yksikkö, ja ponnistelu on tehty (passiivi).\n- 15.2: *the 'details' ___ somewhat overdone*: monikko, passiivi.\n- 15.3: *could well ___ left out*: modaaliverbi + perfektin passiivi.\n- 15.4 ja 15.5: *readers ___ studying* ja *carefully ___ written* ovat valmiita ilman apuverbiä.\n- 15.6: *the author ... ___ drawn so much inspiration*: yksikkö, aktiivi."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C). Vaihtoehdot ovat joka aukossa samat: A = *has* (yksikkö), B = *have* (monikko), C = *has been* (yksikön passiivi), D = *have been* (monikon passiivi), E = tyhjä.\n\n- **15.1 C** *has been*: *effort* on yksikkö, ja ponnistelu *on tehty* (passiivin perfekti).\n- **15.2 D** *have been*: *details* on monikko, ja yksityiskohtia on liioiteltu (passiivi).\n- **15.3 D** *have been*: *could well have been left out* = olisi hyvin voitu jättää pois. Modaaliverbin jälkeen *have* on perusmuodossa.\n- **15.4 E** (tyhjä): *readers studying on their own* on lyhennetty relatiivilause (*readers who are studying*), joten apuverbiä ei tarvita.\n- **15.5 E** (tyhjä): *the carefully written work* = huolellisesti kirjoitettu teos. Adverbi + partisiippi määrittää substantiivia.\n- **15.6 A** *has*: subjekti *the author* on yksikkö, ja lause on aktiivissa (*has drawn inspiration*).",
+     "answer": "15.1 has been · 15.2 have been · 15.3 have been · 15.4 tyhjä · 15.5 tyhjä · 15.6 has",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "16",
+   "units": [
+    {
+     "id": "",
+     "points": 5,
+     "prompt": "Kokeen tekstissä selitetään ajanjaksojen *year*, *century* ja *era* erot, ja lopussa on luettelo pidemmistä ajanjaksoista. Täydennä viisi aukkoa englanniksi vihjeen mukaan oikeaan muotoon (1 p/aukko). Vihjeet: 16.1 verbi *be*, 16.2 järjestysluku (*numeral*), 16.3 prepositio, 16.4 verbi *characterize* + prepositio ja 16.5 ilman vihjettä (sana päätellään luettelosta).",
+     "hints": [
+      "Katso jokaisen aukon ympäristöä: mikä sanaluokka ja muoto sopii kohtaan? Vihje kertoo perusmuodon, mutta sinun pitää taivuttaa se lauseeseen sopivaksi. Jos vihje on *preposition*, etsi sana, jonka pariksi prepositio kuuluu.",
+      "- 16.1: pilkun jälkeen alkaa lauseenvastike, joka selittää vuoden: mikä *be*-verbin muoto?\n- 16.2: vuosisadan nimi vaatii järjestysluvun.\n- 16.3: mikä prepositio kuuluu vuosiluvun eteen?\n- 16.4: *often ___* substantiivin jäljessä vaatii passiivin partisiipin ja preposition.\n- 16.5: luettelo etenee 2, 5, 10 ja 100 vuoden jaksoista. Mikä sana tarkoittaa tuhatta vuotta?"
+     ],
+     "solution": "- **16.1 being**: lauseenvastike (*..., being the time it takes...*) = joka on. *-ing*-muoto korvaa relatiivilauseen.\n- **16.2 21st** (myös *twenty-first*): vuonna 2001 alkoi 2000-luku, eli 21. vuosisata.\n- **16.3 in**: *in the year 2001* = vuonna 2001.\n- **16.4 characterized by** (myös *characterised by*): passiivin partisiippi + *by* = jollekin ominaista on.\n- **16.5 millennium**: tuhat vuotta = vuosituhat.\n\nHVP:n mukaan myös muut oikeat ilmaisut hyväksytään. Tehtävä arvostellaan keskitetysti.",
+     "answer": "being · 21st/twenty-first · in · characterized by · millennium",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "17.1",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: motivaatiokirje. Suomalainen pelinkehitysyritys hakee harjoittelijaa ja pyytää hakijoilta englanninkielisen kirjeen, jossa he perustelevat, miksi juuri heidät kannattaisi palkata. HVP: −2 p, jos aloitus tai lopetus puuttuu tai on liian rento.",
+     "hints": [
+      "Kirjeen muoto on pakollinen: muodollinen aloitus (*Dear Hiring Team,*) ja lopetus (*Yours sincerely,* ja nimi). Liian rento aloitus (*Hi guys!*) tuo vähennyksen. Sisällön ydin on perustelu: miksi juuri sinä olisit paras harjoittelija?",
+      "Rakenne: mihin haet ja miksi → mitä osaat, konkreettisin esimerkein (omat pelit, kurssit, pelijamit) → vahvuudet työyhteisössä (tiimityö, aikataulut) → mitä olet valmis tekemään harjoittelijana → kiitos ja halu päästä haastatteluun. Hyödyllistä sanastoa: *trainee, eager to learn, hands-on experience, deadline, feedback, contribute*."
+     ],
+     "solution": "**Malliteksti** (1 067 merkkiä ilman välilyöntejä)\n\nDear Hiring Team,\n\nI am writing to apply for the trainee position at your studio. Games have been a central part of my life for as long as I can remember, and I would love the chance to learn how they are made by professionals.\n\nI am currently in my final year of upper secondary school, where I have taken every programming and art course available. Over the past two years, I have built three small games in Unity with two friends. One of them, a puzzle platformer, was downloaded over 2,000 times on itch.io, and the feedback from players taught me how much testing and patience a good game requires.\n\nI believe my greatest strengths are curiosity and teamwork. In our projects I usually handle the coding, but I have also learned to listen to the artist and the sound designer and to find compromises when our ideas clash. I am used to working towards deadlines, for example during game jams, where we have only 48 hours to create something playable.\n\nAs a trainee, I would be happy to take on any task, whether it is bug testing, level design or writing documentation. I am eager to learn from experienced developers and to bring fresh ideas from a player's point of view.\n\nThank you for considering my application. I would be delighted to tell you more in an interview.\n\nYours sincerely,\nEero Mäkinen\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** muodollinen aloitus ja lopetus (ei −2 p:n vähennystä). Kiitos ja maininta haastattelusta ovat hakemuksen vakiofraaseja.\n- **Perustelut näkyvät:** omat pelit, latausmäärä, pelijamit ja tiimityö todistavat osaamisen sen sijaan, että hakija vain väittäisi olevansa taitava.\n- **Kohdistus:** kirje puhuu nimenomaan pelinkehityksestä ja harjoittelijan roolista (testaus, tasosuunnittelu).\n- **Rakenne:** jokaisella kappaleella on selvä tehtävä: tavoite, kokemus, vahvuudet, tarjous, lopetus.\n- **Kieli:** muodollinen mutta innostunut (*I would be delighted*), perfekti kokemuksista (*I have built*) ja konditionaali toiveista.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.2",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: pohdiskeleva kirjoitus. Lähtökohtana on YK:n ihmisoikeusjulistuksen artikla, jonka mukaan perhe on yhteiskunnan luonnollinen perusyksikkö ja ansaitsee yhteiskunnan ja valtion suojelun. Onko perhe yhä merkityksellinen yksikkö, kun moni rakentaa itselleen niin sanotun valitun perheen, jota eivät sido veri tai lainsäädäntö? Kirjoita teksti, jossa pohdit näkemyksiäsi.",
+     "hints": [
+      "Tehtävä pyytää pohtimaan, joten esitä kanta ja perustele se, mutta punnitse myös toista näkökulmaa. Määrittele, mitä *perhe* sinulle tarkoittaa, koska koko kysymys riippuu määritelmästä.",
+      "Rakenne: otsikko → johdanto (julistuksen ajan perhekäsitys vs. nykyiset perhemuodot) → miksi perinteinen perhe on yhä tärkeä → miksi määritelmää pitäisi laajentaa (valitut perheet, sateenkaariperheet) → johtopäätös: päivitetäänkö artikla vai tulkitaanko se uudelleen? Hyödyllistä sanastoa: *found family, commitment, blood ties, legal protection, interpret, fundamental*."
+     ],
+     "solution": "**Malliteksti** (1 113 merkkiä ilman välilyöntejä)\n\n**Is the Family Still the Heart of Society?**\n\nWhen the Universal Declaration of Human Rights was written in 1948, the word \"family\" meant something quite clear: a married couple and their children. Today the picture is far more varied. Many people live alone, some raise children with a new partner, and others build \"found families\" of close friends who support each other like siblings.\n\nDoes this make the traditional family irrelevant? I do not think so. For most children, parents are still the people who feed them, protect them and teach them how to live. The state also relies on families: parents take care of the young, and adult children often help their elderly parents.\n\nHowever, I believe the definition of family should be broader. What makes a family is not blood or a marriage certificate but commitment and care. A same-sex couple raising a child, or a group of friends who look after one another through illness, fulfils the same role as a traditional family. These relationships deserve the same protection, for example when it comes to hospital visits or inheritance.\n\nIn conclusion, the family remains the basic unit of society, but its form has changed. Instead of rewriting the article, we should interpret it in a modern way, so that every caring community, whatever it looks like, is protected by society and the state.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** otsikoitu, pohdiskeleva kirjoitus, jossa on johdanto, käsittely ja johtopäätös.\n- **Vastaa kysymykseen:** perheen merkitystä puolustetaan, mutta myös valitut perheet otetaan huomioon, ja johtopäätös vastaa otsikon kysymykseen päivittämisestä.\n- **Oma määritelmä** (sitoutuminen ja huolenpito, ei veri tai paperit) tekee pohdinnasta johdonmukaisen.\n- **Konkretia:** sairaalavierailut ja perintö näyttävät, miksi suojelulla on käytännön merkitystä.\n- **Sidosteisuus ja kieli:** *However, In conclusion, Instead of*, relatiivilauseet ja vaihteleva lauserakenne.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.3",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: tervetuliaispuhe. Kouluusi tulee vierailulle ryhmä ulkomaisia opettajia tutustumaan suomalaiseen kouluun. Sinua on pyydetty pitämään tervetuliaispuhe, jossa kerrot myös omia näkemyksiäsi. Kirjoita, mitä sanoisit. HVP: −2 p, jos yleisön puhuttelu puuttuu. Vähennystä ei tule, vaikka käsittelisit vain omaa kouluasi tai vain suomalaista koulujärjestelmää yleensä.",
+     "hints": [
+      "Puhe alkaa yleisön puhuttelulla (*Dear teachers,* tai *Ladies and gentlemen,*), ja se on pakollinen. Tehtävässä on kaksi osaa: toivota vieraat tervetulleiksi ja kerro omia näkemyksiäsi koulusta. Pelkkä faktaluettelo suomalaisesta koulusta ei riitä.",
+      "Rakenne: puhuttelu ja tervetulotoivotus → esittäytyminen (kuka puhuu ja kenen puolesta) → 2–3 omaa näkemystä, esim. luottamus, rento ilmapiiri, maksuttomuus, ja jokin asia, jota voisi parantaa → kutsu keskustelemaan ja toivotus hyvästä vierailusta. Puheeseen sopivat *you*-muoto, *As you can see*, *I hope you will...* ja selkeät siirtymät (*First of all, Secondly*)."
+     ],
+     "solution": "**Malliteksti** (1 040 merkkiä ilman välilyöntejä)\n\nDear teachers, welcome to our school!\n\nMy name is Sofia, and I am a second-year student here. On behalf of all the students, I am delighted to welcome you to Finland and to our school. I hope you will feel at home during your visit.\n\nYou may have heard that Finnish schools are among the best in the world. I cannot promise that everything here is perfect, but I would like to tell you what I personally value most.\n\nFirst of all, we are trusted. Our teachers treat us as responsible young adults, which is why we can plan our own timetables and choose many of our courses. Nobody checks whether we are doing our homework, but most of us do it anyway, because we know it is our own future.\n\nSecondly, the atmosphere is relaxed. We call our teachers by their first names, and it is easy to ask for help. As you can see, many students walk around in their socks, which may seem strange to you, but it makes the school feel almost like a second home.\n\nOn the other hand, I think we still have things to improve. Many students feel stressed about the matriculation exams, and I wish there were more time for creativity and less focus on grades.\n\nI hope you will talk to us during your stay and share how things are done in your countries. We have a lot to learn from you, too. Enjoy your visit!\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** puhe alkaa puhuttelulla (ei −2 p:n vähennystä) ja päättyy toivotukseen. Puhuja esittäytyy ja puhuu opiskelijoiden puolesta.\n- **Omia näkemyksiä:** luottamus, rento ilmapiiri ja kehitettävä asia (yo-kokeiden stressi). Tasapainoinen kuva on uskottavampi kuin pelkkä kehu.\n- **Yleisön huomioiminen:** *You may have heard, As you can see* ja kutsu kertomaan omien maiden käytännöistä.\n- **Konkretia:** etunimet, sukkasillaan kulkeminen ja omat lukujärjestykset havainnollistavat väitteitä.\n- **Sidosteisuus:** *First of all, Secondly, On the other hand*.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.4",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: kirjoitus. Mikä on ihmiskunnan suurin ongelma juuri nyt, ja miten ratkaisisit sen? Kuvaa ongelma ja ehdota yksi tai useampi ratkaisu. HVP: −5 p, jos ratkaisuehdotukset puuttuvat. Useamman ongelman käsittelystä ei vähennetä.",
+     "hints": [
+      "Tehtävässä on kaksi pakollista osaa: ongelman kuvaus ja ratkaisuehdotukset. Moni kirjoittaa pitkästi ongelmasta ja unohtaa ratkaisut, mikä maksaa 5 p. Valitse ongelma, josta pystyt sanomaan jotain konkreettista, ja varaa ratkaisuille vähintään puolet tekstistä.",
+      "Rakenne: otsikko → ongelma ja miksi se on vakava (esimerkki tai luku) → 2–3 ratkaisua eri tasoilla (esim. koulu, kaupunki tai valtio, yksilö) → johtopäätös. Ongelma voi olla ilmastonmuutos, eriarvoisuus, yksinäisyys tai disinformaatio. Tärkeintä on perustella, miksi ratkaisu toimisi. Hyödyllistä sanastoa: *tackle, address, measure, raise awareness, invest in, in the long run*."
+     ],
+     "solution": "**Malliteksti** (1 095 merkkiä ilman välilyöntejä)\n\n**Loneliness – A Silent Crisis**\n\nWhen people think about the biggest problems facing humanity, they usually mention climate change or war. In my view, however, one of the most serious problems is much quieter: loneliness. Studies suggest that about one in four adults feels lonely regularly, and loneliness has been shown to be as harmful to health as smoking. It affects not only elderly people but increasingly also teenagers who spend more time with screens than with friends.\n\nSo what could be done? First, schools should teach social skills just as seriously as maths. Group projects, clubs and mentoring programmes where older students support younger ones would help young people build real friendships.\n\nSecond, cities should be designed for meeting people. Libraries, youth centres and parks with benches and cafés give people a reason to leave their homes. Finland already has good libraries, but many small towns lack places where different generations could meet.\n\nFinally, each of us can do something. A short phone call to a grandparent or an invitation to a classmate who always sits alone may mean more than we realise.\n\nLoneliness cannot be solved by one law or one invention. If we treat it as a public health issue and all take small steps, we can build communities where nobody has to feel invisible.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Molemmat osat:** ongelma kuvataan ja perustellaan vakavaksi, ja ratkaisuja on kolme (ei −5 p:n vähennystä).\n- **Omaperäinen näkökulma:** yksinäisyys on odottamattomampi valinta kuin ilmastonmuutos, ja johdanto perustelee valinnan vertaamalla niihin.\n- **Ratkaisut eri tasoilla:** koulu, kaupunkisuunnittelu ja yksilö. Jokainen ratkaisu perustellaan.\n- **Sidosteisuus:** *So what could be done? First, Second, Finally*.\n- **Kieli:** passiivi (*has been shown*), modaaliverbit (*should, could*) ja konditionaali johtopäätöksessä.",
+     "check": "malli"
+    }
+   ]
+  }
+ ]
+}

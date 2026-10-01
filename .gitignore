@@ -2,3 +2,5 @@
 .DS_Store
 node_modules
 __pycache__/
+# YTL source texts used by scripts/check_overlap.py are copyrighted: never commit them
+*.txt

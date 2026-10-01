@@ -1,0 +1,431 @@
+{
+ "subject": "fysiikka",
+ "session": "2026K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2026K_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2026-03-25_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kaksikymmentä väittämää (1.1–1.20), joista kustakin päätetään, onko se oikein vai väärin. Aiheet: kasvavan voiman aiheuttama kiihtyvyys, liike-energia kimmottomassa törmäyksessä, eristetyn systeemin liikemäärä, nosteen suunta, lämmön johtuminen tyhjiössä, ideaalisen lämpövoimakoneen hukkalämpö, suljetun termodynaamisen systeemin energia, ideaalikaasumallin pätevyys pienellä paineella, taajuus aineiden rajapinnassa, keskipakoisvoima ympyräliikkeessä, painovoima avaruusasemalla, potentiaalimuutosten summa suljetussa silmukassa, rinnankytkettyjen vastusten kokonaisresistanssi, pn-rajapinta diodissa ja aurinkokennossa, valon nopeus eri aineissa, elektronin kiihtyminen sähkökentässä, generaattorin toimintaperiaate, kasvihuonekaasujen absorptio, massan muutos beetahajoamisessa ja fuusioon osallistuvat ytimet.",
+     "hints": [
+      "Etsi jokaiseen väittämään yksi periaate: Newtonin II laki, säilymislait, Arkhimedeen laki, lämmönsiirtymistavat, termodynamiikan pääsäännöt, aallon taajuuden säilyminen, Kirchhoffin lait, resistanssien kytkennät, induktio ja massan ja energian yhteys ydinreaktioissa.",
+      "Kohta kohdalta:\n- 1.1: $F=ma$, joten mitä kasvava voima tekee kiihtyvyydelle?\n- 1.2 ja 1.3: mikä säilyy kaikissa törmäyksissä, mikä vain kimmoisissa?\n- 1.5: johtuminen tarvitsee väliaineen.\n- 1.6: Carnot'n hyötysuhde on aina alle 1.\n- 1.7: erota suljettu (ei ainetta) ja eristetty (ei ainetta eikä energiaa) systeemi.\n- 1.9: mikä määrää aallon taajuuden?\n- 1.10 ja 1.11: tarkastele tilannetta inertiaalikoordinaatistossa.\n- 1.12 ja 1.13: Kirchhoffin jännitelaki ja $\\frac1R=\\frac1{R_1}+\\frac1{R_2}$.\n- 1.16: elektronin varaus on negatiivinen.\n- 1.18: millä aallonpituuksilla Maa säteilee?\n- 1.19 ja 1.20: vapautuva energia ja sidososuuskäyrä."
+     ],
+     "solution": "1. **1.1 väärin.** Newtonin II lain mukaan kiihtyvyys on verrannollinen voimaan, joten tasaisesti kasvava voima saa aikaan tasaisesti kasvavan kiihtyvyyden.\n2. **1.2 väärin.** Kimmottomassa törmäyksessä osa liike-energiasta muuttuu lämmöksi ja muodonmuutoksiksi. Liikemäärä säilyy, liike-energia ei.\n3. **1.3 oikein.** Jos ulkoisia voimia ei ole, systeemin kokonaisliikemäärä säilyy.\n4. **1.4 oikein.** Noste osoittaa ylöspäin, paino alaspäin.\n5. **1.5 oikein.** Johtuminen tapahtuu hiukkasten välisten törmäysten kautta, joten tyhjiössä lämpöä ei johdu. Tyhjiön läpi lämpö siirtyy säteilemällä.\n6. **1.6 oikein.** Termodynamiikan II pääsäännön mukaan lämpövoimakone ei voi muuttaa kaikkea lämpöä työksi. Ideaalisenkin (Carnot'n) koneen hyötysuhde on $1-\\frac{T_k}{T_h}<1$.\n7. **1.7 väärin.** Suljettu systeemi ei vaihda ainetta ympäristönsä kanssa, mutta se voi vaihtaa energiaa lämpönä ja työnä. Energia säilyy vain eristetyssä systeemissä.\n8. **1.8 oikein.** Pienessä paineessa molekyylit ovat kaukana toisistaan, joten niiden omalla tilavuudella ja keskinäisillä voimilla ei ole merkitystä.\n9. **1.9 väärin.** Taajuus määräytyy aaltolähteestä ja säilyy rajapinnassa. Nopeus ja aallonpituus muuttuvat.\n10. **1.10 väärin.** Ympyräliikkeessä voimien summa osoittaa kohti radan keskipistettä (keskeisvoima). Keskipakoisvoima on näennäisvoima, jota ei inertiaalikoordinaatistossa ole.\n11. **1.11 väärin.** Painovoima vaikuttaa astronauttiin melkein yhtä suurena kuin maan pinnalla. Painottomuus johtuu siitä, että asema ja astronautti ovat yhdessä vapaassa putoamisliikkeessä Maan ympäri.\n12. **1.12 väärin.** Kirchhoffin jännitelain mukaan potentiaalimuutosten summa suljetussa silmukassa on aina nolla komponenteista riippumatta.\n13. **1.13 väärin.** Resistanssit lasketaan yhteen sarjakytkennässä. Rinnankytkennässä $\\frac1R=\\frac1{R_1}+\\frac1{R_2}$, joten kokonaisresistanssi on pienempi kuin kumpikaan resistanssi.\n14. **1.14 oikein.** Diodin tasasuuntaus ja aurinkokennon varausten erottuminen perustuvat molemmat pn-liitokseen.\n15. **1.15 väärin.** Valon nopeus aineessa on $v=\\frac cn$, ja taitekerroin riippuu aineesta.\n16. **1.16 oikein.** Elektroniin vaikuttava voima $\\vec F=q\\vec E$ on kentälle vastakkainen, koska varaus on negatiivinen.\n17. **1.17 oikein.** Generaattorissa johdinsilmukan läpi kulkeva magneettivuo muuttuu, ja siihen indusoituu jännite.\n18. **1.18 väärin.** Kasvihuonekaasut päästävät näkyvän valon lähes esteettä läpi ja absorboivat maanpinnan lähettämää infrapunasäteilyä.\n19. **1.19 oikein.** Hajoamisessa vapautuu energiaa, joten syntyvien hiukkasten yhteenlaskettu massa on pienempi kuin alkuperäisen ytimen massa ($E=\\Delta mc^2$).\n20. **1.20 väärin.** Energiaa vapauttava fuusio tapahtuu kevyillä ytimillä (esim. vety ja helium). Raskaat ytimet vapauttavat energiaa fissiossa.\n\n**Vastaus: oikein ovat 1.3, 1.4, 1.5, 1.6, 1.8, 1.14, 1.16, 1.17 ja 1.19; muut ovat väärin.**\n\n**Sudenkuoppa:** kohta 1.7. Energia säilyy eristetyssä systeemissä, mutta suljettu systeemi voi vaihtaa energiaa ympäristönsä kanssa.",
+     "answer": "oikein: 1.3, 1.4, 1.5, 1.6, 1.8, 1.14, 1.16, 1.17, 1.19 · väärin: 1.1, 1.2, 1.7, 1.9, 1.10, 1.11, 1.12, 1.13, 1.15, 1.18, 1.20",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Alkuperäisen tehtävän kuva 2.A näyttää mittaustuloksina, miten tanskalaisen tuulivoimalan sähköteho $P$ riippuu tuulen nopeudesta $v$. Roottorin halkaisija on 80 m ja konehuone 59 m:n korkeudella. Tuulen nopeus mitattiin konehuoneen katolla, ja jokainen piste on 10,0 minuutin keskiarvo. Kohdissa 2.1 ja 2.2 vastaukseen liitetään kuvakaappaus kuvasta, johon on merkitty luettu kohta.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 3,
+     "prompt": "Mikä on pienin tuulen nopeus, jolla voimala tuottaa sähköä? Merkitse lukemasi kohta kuvaajaan.",
+     "hints": [
+      "Etsi kuvaajasta kohta, jossa mittauspisteet nousevat nollatehon yläpuolelle. Tarkista, millä tuulen nopeudella teho on vielä tarkalleen nolla."
+     ],
+     "solution": "1. Pienillä tuulen nopeuksilla kaikki mittauspisteet ovat tehon nollatasolla: roottori ei vielä tuota sähköä.\n2. Ensimmäiset nollaa suuremmat tehot näkyvät noin nopeudella 2,1 m/s. Tästä alkaen osa pisteistä on nollatason yläpuolella.\n3. Kuvaan merkitään pystysuora viiva tai nuoli tähän kohtaan.\n\n**Vastaus: noin 2,1 m/s (2 m/s)**\n\nMyös noin 3,5 m/s on perusteltu vastaus, jos sillä tarkoitetaan nopeutta, josta alkaen voimala tuottaa sähköä kaikissa mittauksissa.\n\n**Sudenkuoppa:** 2,0 m/s on vielä liian pieni, koska sillä nopeudella teho on kuvaajan mukaan nolla.",
+     "answer": "noin 2,1 m/s",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 4,
+     "prompt": "Millä tuulen nopeuksilla voimala tuottaa suurimman tehonsa? Merkitse nopeusväli kuvaajaan.",
+     "hints": [
+      "Suurin teho näkyy kuvaajassa vaakasuorana tasanteena. Lue, millä nopeudella pisteet saavuttavat tasanteen ja mihin asti tasanne jatkuu."
+     ],
+     "solution": "1. Kuvaajan yläosassa pisteet asettuvat vaakasuoralle tasanteelle noin 1,1 MW:n kohdalle: voimalan teho on rajoitettu nimellistehoon.\n2. Tasanteelle päästään noin nopeudella 9–10 m/s. Tätä pienemmillä nopeuksilla teho vielä kasvaa.\n3. Tasanne jatkuu mittausalueen loppuun eli noin 15 m/s:iin asti. Todellisuudessa voimala pysäytetään hyvin kovalla tuulella, joten jollakin yli 15 m/s:n nopeudella on myös yläraja.\n4. Kuvaan merkitään tasanteen alku- ja loppukohta.\n\n**Vastaus: noin 9–15 m/s**\n\n**Sudenkuoppa:** noin 8,6 m/s on liian pieni alaraja, koska sillä nopeudella teho ei vielä ole suurimmillaan.",
+     "answer": "noin 9–15 m/s",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Tuuli puhaltaa 40,0 minuuttia tasaisesti nopeudella 8,0 m/s. Arvioi voimalan tänä aikana tuottama energia. Ilmoita tulos tyypillisenä vaihteluvälinä.",
+     "hints": [
+      "Lue kuvaajasta, millä tehovälillä suurin osa mittauspisteistä on nopeudella 8,0 m/s. Energia saadaan kaavasta $E=Pt$.",
+      "Nopeudella 8,0 m/s tyypillinen teho on noin 700–900 kW. Muunna aika tunneiksi ($40\\ \\text{min}=\\frac23\\ \\text{h}$) tai sekunneiksi ($2400\\ \\text{s}$)."
+     ],
+     "solution": "1. Nopeudella 8,0 m/s mittauspisteiden tehot ovat pääosin välillä noin 700–900 kW. Yksittäiset harvinaiset poikkeamat jätetään tyypillisen vaihteluvälin ulkopuolelle.\n2. Energia vakioteholla on $E=Pt$, jossa $t=40{,}0\\ \\text{min}=\\frac23\\ \\text{h}=2400\\ \\text{s}$.\n3. Alaraja: $E=700\\ \\text{kW}\\cdot\\frac23\\ \\text{h}\\approx 470\\ \\text{kWh}$ ($\\approx 1{,}7\\ \\text{GJ}$).\n4. Yläraja: $E=900\\ \\text{kW}\\cdot\\frac23\\ \\text{h}=600\\ \\text{kWh}$ ($\\approx 2{,}2\\ \\text{GJ}$).\n\n**Vastaus: noin 470–600 kWh (1,7–2,2 GJ)**\n\n**Sudenkuoppa:** väärän pystyviivan lukeminen (esim. 9 m/s) tai harvinaisten ääriarvojen ottaminen mukaan tyypilliseen vaihteluväliin.",
+     "answer": "noin 470–600 kWh (1,7–2,2 GJ)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.4",
+     "points": 3,
+     "prompt": "Mittauksissa ei ole tehty virheitä, mutta pisteissä on silti hajontaa eivätkä ne asetu yhdelle käyrälle. Anna kolme syytä.",
+     "hints": [
+      "Jokainen piste on 10 minuutin keskiarvo, ja tuuli mitataan vain yhdestä kohdasta konehuoneen katolta. Mieti, mikä muu kuin keskinopeus vaikuttaa roottorin saamaan tehoon: tuulen jakautuminen, suunta, ilman ominaisuudet ja lapojen kunto."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme seuraavista:\n- **Tuulen suunnan nopeat vaihtelut.** Voimala kääntyy tuulen mukaan hitaasti eikä ehdi seurata hetkellisiä suunnanmuutoksia, joten osa tuulesta osuu roottoriin vinosti.\n- **Tuulen nopeus ei ole sama koko roottorin alueella.** Anemometri mittaa yhdestä pisteestä, mutta 80 metrin roottorin eri osissa tuuli voi olla erilainen, ja ero vaihtelee satunnaisesti.\n- **Hetkellisen nopeuden vaihtelu keskiarvon ympärillä.** Tuulen kuljettama teho kasvaa nopeuden kuutiossa ($P\\propto v^3$), joten puuskainen ja tasainen tuuli tuottavat eri keskitehon, vaikka keskinopeus olisi sama.\n- **Ilman tiheyden vaihtelu.** Lämpötila, ilmanpaine ja kosteus muuttavat tiheyttä ja sitä kautta tuulen kuljettamaa energiaa.\n- **Lapojen pinnan muutokset**, esimerkiksi jää tai vesikerros, jotka heikentävät ilmavirtausta lavan ympärillä.\n\nEi kelpaa pelkkä maininta tuulen nopeuden vaihtelusta tai voimalan kulumisesta tai viasta.\n\n**Esimerkkivastaus:** Ensinnäkin tuulen suunta vaihtelee jatkuvasti, eikä voimala ehdi kääntyä nopeiden muutosten mukana, joten tuuli osuu roottoriin välillä vinosti. Toiseksi ilman tiheys vaihtelee lämpötilan ja ilmanpaineen mukana, ja tiheämpi ilma kuljettaa samalla nopeudella enemmän energiaa. Kolmanneksi talvella lapoihin voi kertyä jäätä, joka muuttaa lavan muotoa ja pienentää tehoa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Metallikapselissa on 8,0 g hiilidioksidia nesteenä ja kylläisenä höyrynä (ks. alkuperäisen tehtävän kuvat 3.A ja 3.B sekä video 3.C). Kohta 3.2 on pudotusvalikko.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 3,
+     "prompt": "Mikä on kapselin paine 22,0 °C:ssa? Perustele hiilidioksidin faasikaavion (kuva 3.B) avulla.",
+     "hints": [
+      "Kun kapselissa on samanaikaisesti nestettä ja höyryä, ne ovat tasapainossa. Paine on silloin kylläisen höyryn paine, ja se luetaan faasikaaviossa nesteen ja kaasun rajakäyrältä (höyrystymiskäyrältä)."
+     ],
+     "solution": "1. Kapselissa on nestettä ja kylläistä höyryä dynaamisessa tasapainossa: yhtä paljon molekyylejä höyrystyy kuin tiivistyy.\n2. Tällöin paine on kylläisen höyryn paine, joka riippuu vain lämpötilasta. Faasikaaviossa se on nestealueen ja kaasualueen rajakäyrällä.\n3. Luetaan höyrystymiskäyrältä lämpötilaa 22 °C vastaava paine. Huomaa, että paineakseli on logaritminen.\n\n**Vastaus: noin 60 bar eli 6,0 MPa**\n\n**Sudenkuoppa:** logaritmisen asteikon lukeminen kuin lineaarisen.",
+     "answer": "noin 60 bar (6,0 MPa)",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 2,
+     "prompt": "Hiilidioksidia vapautetaan kapselista hitaasti. Samalla lämpötila säilyy arvossa 22,0 °C, ja kapselissa on koko ajan sekä nestettä että höyryä. Miten kapselin paine muuttuu: pienenee, kasvaa vai pysyy vakiona?",
+     "hints": [
+      "Mistä kylläisen höyryn paine riippuu? Riippuuko se nesteen tai höyryn määrästä?"
+     ],
+     "solution": "1. Niin kauan kuin kapselissa on sekä nestettä että höyryä, höyry on kylläistä.\n2. Kylläisen höyryn paine riippuu vain lämpötilasta. Kun kaasua poistuu, nestettä höyrystyy ja tasapaino palautuu samaan paineeseen.\n\n**Vastaus: paine pysyy vakiona.**",
+     "answer": "pysyy vakiona",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 3,
+     "prompt": "Alkuperäisen tehtävän videolla 3.C täysi kapseli puhkaistaan. Nestemäinen hiilidioksidi kaasuuntuu kokonaan noin puolessa minuutissa. Mikä saa nesteen höyrystymään?",
+     "hints": [
+      "Mitä kapselin paineelle tapahtuu puhkaisussa? Vertaa uutta painetta kylläisen höyryn paineeseen tai katso faasikaaviosta, mikä olomuoto on pysyvä huoneenlämmössä ja normaalipaineessa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Puhkaisussa kapselin paine laskee, koska kaasu pääsee ulos.\n- Paine on nyt pienempi kuin kylläisen höyryn paine tässä lämpötilassa, joten tasapaino rikkoutuu: nestettä höyrystyy enemmän kuin höyryä tiivistyy.\n- Faasikaavion avulla: pienessä paineessa hiilidioksidin kiehumispiste on selvästi huoneenlämpöä alempana, joten neste kiehuu, kunnes se on kokonaan kaasuuntunut.\n\n**Esimerkkivastaus:** Ehjässä kapselissa neste ja höyry ovat tasapainossa noin 60 barin paineessa. Kun kapseli puhkaistaan, kaasu purkautuu ulos ja paine putoaa kohti ilmanpainetta. Kylläisen höyryn paine on kuitenkin edelleen paljon suurempi, joten neste alkaa kiehua voimakkaasti: pienessä paineessa hiilidioksidin kiehumispiste on reilusti huoneenlämmön alapuolella. Höyrystyminen jatkuu, kunnes kaikki neste on muuttunut kaasuksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.4",
+     "points": 3,
+     "prompt": "Videolla 3.C näkyy myös kapselin pintalämpötila ajan funktiona puhkaisun jälkeen. Miksi lämpötila muuttuu?",
+     "hints": [
+      "Höyrystyminen sitoo energiaa (höyrystymislämpö). Mistä tämä energia tulee, jos höyrystyminen on hyvin nopeaa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Höyrystyminen vaatii energiaa (höyrystymislämpöä), eli se on energiaa sitova tapahtuma.\n- Höyrystyminen on niin nopeaa, että ympäristöstä ei ehdi siirtyä lämpöä riittävästi. Energia otetaan hiilidioksidin ja kapselin sisäenergiasta.\n- Siksi hiilidioksidin ja sen kanssa kosketuksissa olevan kapselin lämpötila laskee.\n\n**Esimerkkivastaus:** Kun neste höyrystyy, jokaisen irtoavan molekyylin on saatava energiaa, jotta se pääsee irti nesteestä. Puhkaistussa kapselissa höyrystyminen tapahtuu sekunneissa, eikä ympäröivästä ilmasta ehdi johtua kapseliin lämpöä samaa tahtia. Tarvittava energia otetaan silloin nesteen omasta sisäenergiasta, joten nesteen ja sitä ympäröivän metallikapselin lämpötila laskee selvästi pakkasen puolelle.\n\n**Sudenkuoppa:** muutosta ei voi perustella faasikaaviolla, koska kaavio kuvaa vain tasapainotiloja.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.5",
+     "points": 4,
+     "prompt": "Kapselissa on 8,0 g hiilidioksidia. Kapselin koko sisältö purkautuu ilmaan ja lämpenee 22,0 °C:seen 1 atm:n paineessa. Mikä on kaasun tilavuus? Kapseliin jäävää vähäistä kaasua ei huomioida.",
+     "hints": [
+      "Käytä ideaalikaasun tilanyhtälöä $pV=nRT$. Ainemäärä saadaan massasta ja hiilidioksidin moolimassasta $M(\\ce{CO2})=44{,}0\\ \\text{g/mol}$."
+     ],
+     "solution": "1. Kaasu on normaalipaineessa ja huoneenlämmössä, joten sitä voi käsitellä ideaalikaasuna: $pV=nRT$.\n2. Ainemäärä: $n=\\dfrac{m}{M}=\\dfrac{8{,}0\\ \\text{g}}{44{,}0\\ \\text{g/mol}}\\approx 0{,}182\\ \\text{mol}$.\n3. $T=(22{,}0+273{,}15)\\ \\text{K}=295{,}15\\ \\text{K}$ ja $p=101\\,325\\ \\text{Pa}$.\n4. $V=\\dfrac{nRT}{p}=\\dfrac{0{,}182\\ \\text{mol}\\cdot 8{,}314\\ \\tfrac{\\text{J}}{\\text{mol K}}\\cdot 295{,}15\\ \\text{K}}{101\\,325\\ \\text{Pa}}\\approx 4{,}4\\cdot10^{-3}\\ \\text{m}^3$.\n\n**Vastaus: $V\\approx 4{,}4\\ \\text{l}$**\n\n**Sudenkuoppa:** massan sijoittaminen tilanyhtälöön ainemäärän paikalle tai lämpötilan jättäminen celsiusasteiksi.",
+     "answer": "$V\\approx 4{,}4\\ \\text{l}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lentokoneeseen vaikuttaa ylöspäin nostovoima $F_{\\text{nosto}}=c_{\\text{nosto}}A\\cdot\\frac12\\rho v^2$, jossa $c_{\\text{nosto}}=1{,}8$, siipien pinta-ala $A=125\\ \\text{m}^2$, $\\rho$ on ilman tiheys ja $v$ koneen nopeus. Koneen massa on 68 000 kg, ja se kiihtyy kiitotiellä levosta tasaisella kiihtyvyydellä $1{,}5\\ \\text{m/s}^2$, kunnes irtoaa maasta.\n\n- 4.1: Johda kiihdytysmatkalle suureyhtälö, jossa on ilman tiheyden ja putoamiskiihtyvyyden lisäksi vain edellä annettuja suureita. Voimakuviota ei tarvita.\n- 4.2: Laske kiihdytysmatka Helsinki-Vantaalla, kun ilman tiheys on $1{,}25\\ \\text{kg/m}^3$.\n- 4.3: Laske kiihdytysmatka Tiibetissä 4334 m:n korkeudella sijaitsevalla lentoasemalla, jossa ilmanpaine on 0,60 bar ja lämpötila $-10\\,^\\circ\\text{C}$.",
+     "hints": [
+      "Pystysuunnassa koneella ei ole kiihtyvyyttä: tukivoima, nostovoima ja paino ovat tasapainossa. Kone irtoaa, kun tukivoima putoaa nollaan. Yhdistä tämä tasaisesti kiihtyvän liikkeen kaavoihin $v=at$ ja $s=\\frac12at^2$.",
+      "Irtoamishetkellä $c_{\\text{nosto}}A\\cdot\\frac12\\rho v^2=mg$, ja tasaisesti kiihtyvässä liikkeessä levosta $v^2=2as$. Kohdassa 4.3 ilman tiheys lasketaan tilanyhtälöstä $\\rho=\\frac{pM}{RT}$, jossa ilman moolimassa on noin $29\\ \\text{g/mol}$."
+     ],
+     "solution": "**4.1 Suureyhtälö**\n\n1. Pystysuunnassa kone ei kiihdy, joten Newtonin II lain mukaan $N+F_{\\text{nosto}}-mg=0$, jossa $N$ on kiitotien tukivoima.\n2. Nopeuden kasvaessa nostovoima kasvaa ja tukivoima pienenee. Kone irtoaa, kun $N=0$, eli $F_{\\text{nosto}}=mg$:\n$$c_{\\text{nosto}}A\\cdot\\tfrac12\\rho v^2=mg\\quad\\Rightarrow\\quad v^2=\\frac{2mg}{c_{\\text{nosto}}A\\rho}.$$\n3. Tasaisesti kiihtyvässä liikkeessä levosta $v=at$ ja $s=\\frac12at^2$. Eliminoimalla aika saadaan $s=\\dfrac{v^2}{2a}$.\n4. Sijoitetaan nopeuden neliö:\n$$s=\\frac{mg}{c_{\\text{nosto}}A\\rho a}.$$\n\n**4.2 Helsinki-Vantaa**\n\n5. $s=\\dfrac{68\\,000\\ \\text{kg}\\cdot 9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}}{1{,}8\\cdot125\\ \\text{m}^2\\cdot1{,}25\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot1{,}5\\ \\tfrac{\\text{m}}{\\text{s}^2}}\\approx 1581\\ \\text{m}\\approx 1{,}6\\ \\text{km}$.\n\n**4.3 Korkealla sijaitseva kenttä**\n\n6. Ilman tiheys ideaalikaasun tilanyhtälöstä: $pV=\\frac{m}{M}RT$, joten $\\rho=\\dfrac{pM}{RT}=\\dfrac{0{,}60\\cdot10^5\\ \\text{Pa}\\cdot0{,}029\\ \\tfrac{\\text{kg}}{\\text{mol}}}{8{,}314\\ \\tfrac{\\text{J}}{\\text{mol K}}\\cdot263\\ \\text{K}}\\approx 0{,}80\\ \\tfrac{\\text{kg}}{\\text{m}^3}$.\n7. Sijoitetaan kohdan 4.1 kaavaan: $s=\\dfrac{68\\,000\\ \\text{kg}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}}{1{,}8\\cdot125\\ \\text{m}^2\\cdot0{,}795\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot1{,}5\\ \\tfrac{\\text{m}}{\\text{s}^2}}\\approx 2485\\ \\text{m}\\approx 2{,}5\\ \\text{km}$.\n\n**Vastaus: 4.1 $s=\\dfrac{mg}{c_{\\text{nosto}}A\\rho a}$; 4.2 noin 1600 m; 4.3 noin 2500 m**\n\n**Sudenkuoppa:** tasaisen liikkeen kaavan $s=vt$ käyttäminen, jolloin matka tulee kaksinkertaiseksi. Toinen tavallinen virhe on väittää, että irtoamiseen tarvitaan painoa suurempi nostovoima: rajalla riittää, että ne ovat yhtä suuret.",
+     "answer": "4.1 $s=\\dfrac{mg}{c_{\\text{nosto}}A\\rho a}$; 4.2 $s\\approx 1600\\ \\text{m}$; 4.3 $s\\approx 2500\\ \\text{m}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Seinään kiinnitetyn jousen (jousivakio $k$) päässä oleva kappale (massa $m$) värähtelee kitkattomalla vaakatasolla amplitudilla $A$ (kuva 5.A). Valitse seitsemässä monivalintakohdassa oikea vaihtoehto:\n\n- 5.1 missä kohdassa nopeus on suurin\n- 5.2 suurin nopeus annetuilla suureilla\n- 5.3 missä kohdassa kiihtyvyys on suurin\n- 5.4 suurin kiihtyvyys annetuilla suureilla\n- 5.5 yhden jakson aikana kuljettu matka\n- 5.6 $n$ samanlaisen rinnan kytketyn jousen yhteinen jousivakio (kuva 5.B)\n- 5.7 $n$ samanlaisen peräkkäin kytketyn jousen yhteinen jousivakio (kuva 5.C).\n\nVaihtoehdot ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Harmonisessa värähtelyssä jousivoima on $F=-kx$ ja mekaaninen energia säilyy: $\\frac12mv^2+\\frac12kx^2$ on vakio. Jousien kytkennöissä mieti, jakautuuko voima vai venymä jousien kesken.",
+      "Kohta kohdalta:\n- 5.1 ja 5.2: missä jousen potentiaalienergia on nolla? Merkitse $\\frac12mv_{\\max}^2=\\frac12kA^2$.\n- 5.3 ja 5.4: missä jousivoima on suurin? $a=\\frac Fm$.\n- 5.5: jakson aikana kappale käy molemmissa ääriasemissa ja palaa.\n- 5.6: rinnan kytketyillä jousilla venymä on sama, voimat summautuvat.\n- 5.7: peräkkäin kytketyissä jousissa voima on sama, venymät summautuvat."
+     ],
+     "solution": "1. **5.1 C (tasapainoasemassa).** Tasapainoasemassa jousen potentiaalienergia on nolla, joten koko mekaaninen energia on liike-energiaa.\n2. **5.2 B ($A\\sqrt{k/m}$).** Energian säilymisestä $\\frac12mv_{\\max}^2=\\frac12kA^2$, joten $v_{\\max}=A\\sqrt{\\frac km}$.\n3. **5.3 B (ääriasemassa).** Jousivoiman suuruus $k|x|$ on suurin, kun poikkeama on suurin.\n4. **5.4 A ($\\frac{kA}{m}$).** Newtonin II lain mukaan $a_{\\max}=\\frac{kA}{m}$.\n5. **5.5 C ($4A$).** Jakson aikana kappale kulkee tasapainoasemasta ääriasemaan, takaisin, toiseen ääriasemaan ja takaisin: $4A$.\n6. **5.6 A ($nk$).** Rinnan kytketyt jouset venyvät yhtä paljon $x$, ja voimat summautuvat: $F=nkx$, joten jousivakio on $nk$.\n7. **5.7 A ($\\frac kn$).** Peräkkäin kytketyissä jousissa vaikuttaa sama voima $F$, ja jokainen venyy $\\frac Fk$. Kokonaisvenymä on $\\frac{nF}{k}$, joten jousivakio on $\\frac kn$.\n\n**Vastaus: 5.1 C · 5.2 B · 5.3 B · 5.4 A · 5.5 C · 5.6 A · 5.7 A**\n\n**Sudenkuoppa:** jousien kytkennät menevät helposti ristiin vastusten kanssa. Jousilla rinnankytkentä kasvattaa jousivakiota ja sarjakytkentä pienentää sitä.",
+     "answer": "5.1 C · 5.2 B · 5.3 B · 5.4 A · 5.5 C · 5.6 A · 5.7 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Opiskelijat tutkivat kuvan 6.A virtapiiriä, jossa säädettävä jännitelähde, LED ja vastus ovat sarjassa, ja mittasivat kuvaajan 6.B mukaisen virran jännitteen funktiona (ks. alkuperäinen tehtävä). Kohta 6.1 on monivalinta.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 2,
+     "prompt": "Kytkentäkaaviossa 6.A mittarit on numeroitu 1 ja 2. Kumpi mittaa jännitettä ja kumpi virtaa?",
+     "hints": [
+      "Jännitemittari kytketään rinnan mitattavan osan kanssa, virtamittari sarjaan niin, että sama virta kulkee sen läpi."
+     ],
+     "solution": "1. Mittari 1 on kytketty LEDin ja vastuksen sarjaankytkennän rinnalle, joten se mittaa niiden yhteistä jännitettä.\n2. Mittari 2 on samassa haarassa kuin jännitelähde, LED ja vastus, joten kaikki piirin virta kulkee sen läpi: se on virtamittari.\n\n**Vastaus: B, eli mittari 1 mittaa jännitettä ja mittari 2 virtaa.**",
+     "answer": "B: mittari 1 jännite, mittari 2 virta",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 3,
+     "prompt": "Miksi piirissä tarvitaan vastus?",
+     "hints": [
+      "Mitä LEDin virralle tapahtuu, kun jännite nousee kynnysjännitteen yli? Rajoittaako LED itse virtaa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Kynnysjännitteen ylittyessä LED johtaa erittäin hyvin, eikä se itse rajoita virran kasvua.\n- Vastus rajoittaa piirin virtaa.\n- Ilman vastusta virta kasvaisi liian suureksi ja LED rikkoutuisi.\n\n**Esimerkkivastaus:** LEDin virta kasvaa kynnysjännitteen jälkeen hyvin jyrkästi, koska LEDin oma resistanssi on silloin pieni. Jo vähäinen jännitteen nosto saisi virran kasvamaan niin suureksi, että LED kuumenee ja rikkoutuu. Sarjaan kytketty vastus rajoittaa virtaa Ohmin lain mukaisesti ja pitää sen LEDin kestämissä rajoissa.\n\n**Sudenkuoppa:** ”vastus rajoittaa jännitettä” tai ”muuten tulee oikosulku” eivät ole oikeita perusteluja.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 5,
+     "prompt": "Mitä LEDin kynnysjännite tarkoittaa? Määritä kynnysjännite kuvaajasta 6.B ja merkitse kuvaajaan, miten luit sen.",
+     "hints": [
+      "Mittari 1 mittaa LEDin ja vastuksen yhteistä jännitettä, joten Kirchhoffin jännitelain mukaan $U=U_0+RI$, jossa $U_0$ on LEDin jännitehäviö sen johtaessa.",
+      "Sovita suora kuvaajan lineaariseen, jyrkästi nousevaan osaan ja katso, missä se leikkaa jänniteakselin ($I=0$). Toinen hyväksytty tapa on lukea kohta, jossa virta alkaa kasvaa havaittavasti."
+     ],
+     "solution": "1. Kynnysjännite on LEDin yli oleva jännite (potentiaalihäviö) silloin, kun LED johtaa sähköä ja valaisee. Se muuttuu virran mukana vain vähän, joten sitä pidetään usein vakiona $U_0$.\n2. Mitattu jännite on LEDin ja vastuksen jännitteiden summa: $U=U_0+RI$, eli $I=\\dfrac{U-U_0}{R}$. Kynnysjännitteen yläpuolella virta kasvaa siis lineaarisesti jännitteen funktiona.\n3. Sovitetaan suora kuvaajan lineaariseen osaan (noin 2,2–2,7 V) ja jatketaan sitä jänniteakselille. Suora leikkaa akselin $I=0$ kohdassa $U\\approx 1{,}9\\ \\text{V}$, eli $U_0\\approx 1{,}9\\ \\text{V}$.\n4. Vaihtoehtoinen määritelmä: kynnysjännite on pienin myötäsuuntainen jännite, jolla LEDin läpi alkaa kulkea havaittava virta. Tällä tavalla luettuna kuvaajasta saadaan noin 1,5 V, koska vastuksen jännite on pienellä virralla lähes nolla.\n\n**Vastaus: $U_0\\approx 1{,}9\\ \\text{V}$ (suoran ja jänniteakselin leikkauspiste), tai noin 1,5 V, jos kynnysjännite määritellään kohdaksi, jossa virta alkaa kulkea**\n\n**Sudenkuoppa:** määritelmän ja lukutavan on vastattava toisiaan. Jos määrittelet kynnysjännitteen suoran leikkauspisteeksi, et voi ilmoittaa arvoa 1,5 V.",
+     "answer": "$U_0\\approx 1{,}9\\ \\text{V}$ (tai noin 1,5 V virran alkamiskohdasta)",
+     "check": "hvp"
+    },
+    {
+     "id": "6.4",
+     "points": 5,
+     "prompt": "Määritä kuvaajan 6.B avulla piirin vastuksen resistanssi.",
+     "hints": [
+      "Kynnysjännitteen yläpuolella jännitteen kasvu kohdistuu vain vastukseen: $I=\\frac{U-U_0}{R}$. Resistanssi saadaan kuvaajan lineaarisen osan kulmakertoimesta.",
+      "Lue lineaariselta osalta kaksi kaukana toisistaan olevaa pistettä, esimerkiksi suoran leikkauspiste $(1{,}9\\ \\text{V};\\ 0)$ ja piste jännitteellä 2,5 V, ja laske $R=\\frac{\\Delta U}{\\Delta I}$."
+     ],
+     "solution": "1. Kirchhoffin jännitelain mukaan $U=U_0+RI$, joten $I=\\dfrac{U}{R}-\\dfrac{U_0}{R}$. Kuvaajan lineaarisen osan kulmakerroin on $\\frac1R$.\n2. Luetaan lineaariselta osalta kaksi pistettä: suoran ja jänniteakselin leikkauspiste $U\\approx 1{,}9\\ \\text{V}$, $I=0$ sekä piste $U=2{,}5\\ \\text{V}$, $I\\approx 12{,}7\\ \\text{mA}$.\n3. $R=\\dfrac{\\Delta U}{\\Delta I}=\\dfrac{2{,}5\\ \\text{V}-1{,}9\\ \\text{V}}{12{,}7\\cdot10^{-3}\\ \\text{A}}\\approx 47\\ \\Omega$.\n\n**Vastaus: $R\\approx 47\\ \\Omega$ (kuvaajan lukutarkkuuden vuoksi hyväksyttävä vaihteluväli on noin 40–60 Ω)**\n\n**Sudenkuoppa:** resistanssin laskeminen Ohmin lailla yhdestä pisteestä, esimerkiksi $\\frac{2{,}7\\ \\text{V}}{17\\ \\text{mA}}\\approx 160\\ \\Omega$. Mitattu jännite sisältää myös LEDin kynnysjännitteen.",
+     "answer": "$R\\approx 47\\ \\Omega$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Syyskuussa 1859 Carringtonin aurinkomyrsky häiritsi lennätinlinjoja. Kew'n observatoriossa Englannissa mitattiin tuolloin Maan magneettikentän pystykomponentin $B_z$ muutoksia (alkuperäisen tehtävän taulukko 7.A), ja tapahtumaa kuvataan aineiston 7.B tekstissä.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Piirrä taulukon 7.A mittauksista kuvaaja pystysuuntaisesta magneettivuon tiheydestä ajan funktiona.",
+     "hints": [
+      "Syötä taulukko laskentaohjelmaan ja piirrä pistekaavio: aika (min) vaaka-akselille ja magneettivuon tiheys (nT) pystyakselille. Kaikki pisteet mukaan, ei sovitetta."
+     ],
+     "solution": "1. Piirretään kaikki mittauspisteet: vaaka-akselilla aika $t$ (min), pystyakselilla pystysuuntainen magneettivuon tiheys $B_z$ (nT).\n2. Kuvaajassa on akselien suureet, yksiköt ja lukuarvot. Pisteitä ei korvata pylväillä tai pelkällä murtoviivalla, eikä niihin sovitettu käyrää.\n3. Kuvaajasta näkyy, että $B_z$ on aluksi lähes vakio (noin 400 nT), laskee sitten epätasaisesti noin 370 nT:iin ja romahtaa lopussa noin 1140 minuutin jälkeen hyvin jyrkästi noin 150 nT:iin.\n\n**Vastaus: pistekaavio $B_z(t)$; jyrkin muutos noin hetkellä 1140–1160 min.**\n\n**Sudenkuoppa:** pylväsdiagrammi, puuttuvat pisteet tai sovitteen piirtäminen. Tässä kuvaajan tehtävä on näyttää mittaukset sellaisinaan.",
+     "check": "laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Selitä aineiston 7.B tekstin ja omien tietojesi avulla, miksi auringon roihupurkaus häiritsi lennätinjärjestelmää. Selitä myös taulukon 7.A avulla, miksi häiriö oli suurin noin hetkellä 1150 min.",
+     "hints": [
+      "Yhdistä kaksi asiaa: Auringosta tulevat varatut hiukkaset muuttavat Maan magneettikenttää, ja muuttuva magneettivuo johdinsilmukan läpi indusoi jännitteen (Faradayn laki).",
+      "Pitkät lennätinjohdot rajaavat maan pinnan suuntaisia silmukoita, joiden läpi kulkee pystysuuntainen kenttä. Induktiojännite on verrannollinen vuon muutosnopeuteen, joten etsi kohdan 7.1 kuvaajasta jyrkin muutos."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Roihupurkauksen plasmapilven liikkuvat varatut hiukkaset muuttivat Maan magneettikenttää.\n- Lennätinjohdot muodostivat laajoja johdinsilmukoita. Silmukan läpi kulkevan magneettivuon muutos indusoi niihin jännitteen ($e=-\\frac{\\Delta\\Phi}{\\Delta t}$) ja siten virran, joka häiritsi signaaleja.\n- Maan pinnan suuntaisen silmukan läpäisee nimenomaan pystysuuntainen kenttä.\n- Induktiojännite riippuu kentän **muutosnopeudesta**, ja kuvaajan mukaan $B_z$ muuttuu jyrkimmin noin hetkellä 1150 min.\n\n**Esimerkkivastaus:** Aurinkomyrskyn plasmapilvi koostui nopeista varatuista hiukkasista, jotka Maahan saapuessaan saivat Maan magneettikentän vaihtelemaan voimakkaasti. Pitkät lennätinjohdot muodostivat maan pinnan suuntaisia silmukoita, joiden pinta-ala oli satoja tai tuhansia neliökilometrejä. Kun pystysuuntainen magneettikenttä muuttui, silmukan läpi kulkeva magneettivuo muuttui, ja Faradayn induktiolain mukaan johtoihin indusoitui jännite ja virta, joka sekoitti sähkeitä. Indusoitunut jännite on sitä suurempi, mitä nopeammin vuo muuttuu. Kuvaajan mukaan kenttä romahtaa jyrkimmin noin 1150 minuutin kohdalla, joten häiriö oli silloin suurin.\n\n**Sudenkuoppa:** pelkkä toteamus, että kenttä muuttui hetkellä 1150 min, ei riitä. Olennaista on muutoksen nopeus.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 6,
+     "prompt": "Lontoon ja Oxfordin välistä lennätinverkkoa mallinnetaan virtasilmukalla, jonka pinta-ala on 2800 km² ja johtimen pituus 190 km (kartta 7.C). Johtimen resistanssi pituusyksikköä kohti on 8,6 µΩ/m. Määritä häiriön johtimiin aiheuttaman virran suurin arvo taulukon 7.A avulla.",
+     "hints": [
+      "Faradayn lain mukaan $e=-A\\frac{\\Delta B_z}{\\Delta t}$. Etsi kuvaajasta jyrkin lasku ja määritä sen kulmakerroin suoran sovituksella. Virta saadaan Ohmin laista, kun johtimen resistanssi on $R=r L$.",
+      "Jyrkin muutos on noin välillä 1143–1155 min. Sovitetun suoran kulmakerroin on noin $-9{,}1\\ \\text{nT/min}$. Muunna se yksikköön T/s ennen kuin kerrot pinta-alalla neliömetreinä."
+     ],
+     "solution": "1. Kuvaajan mukaan $B_z$ muuttuu nopeimmin noin välillä 1143–1155 min. Sovitetaan tälle välille suora: kulmakerroin on $\\dfrac{\\Delta B_z}{\\Delta t}\\approx -9{,}09\\ \\tfrac{\\text{nT}}{\\text{min}}=-\\dfrac{9{,}09\\cdot10^{-9}\\ \\text{T}}{60\\ \\text{s}}\\approx -1{,}52\\cdot10^{-10}\\ \\tfrac{\\text{T}}{\\text{s}}$.\n2. Silmukan läpi kulkeva vuo on $\\Phi=B_zA$, joten Faradayn lain mukaan induktiojännitteen suuruus on $|e|=A\\left|\\dfrac{\\Delta B_z}{\\Delta t}\\right|=2800\\cdot10^{6}\\ \\text{m}^2\\cdot1{,}52\\cdot10^{-10}\\ \\tfrac{\\text{T}}{\\text{s}}\\approx 0{,}42\\ \\text{V}$.\n3. Johtimen resistanssi: $R=rL=8{,}6\\cdot10^{-6}\\ \\tfrac{\\Omega}{\\text{m}}\\cdot190\\cdot10^{3}\\ \\text{m}\\approx 1{,}63\\ \\Omega$.\n4. Suurin virta: $I=\\dfrac{|e|}{R}=\\dfrac{0{,}424\\ \\text{V}}{1{,}63\\ \\Omega}\\approx 0{,}26\\ \\text{A}$.\n\n**Vastaus: $I\\approx 0{,}26\\ \\text{A}$**\n\nTulos riippuu siitä, mille välille suora sovitetaan: noin 0,2–0,28 A on perusteltu. Esimerkiksi jyrkin kahden peräkkäisen pisteen muutos ($-9{,}7\\ \\text{nT/min}$) antaa 0,28 A.\n\n**Sudenkuoppa:** minuuttien ja neliökilometrien muuntaminen SI-yksiköiksi. Neliökilometri on $10^6\\ \\text{m}^2$.",
+     "answer": "$I\\approx 0{,}26\\ \\text{A}$ (noin 0,2–0,28 A)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "- 8.1: Johda puoliintumisajan ja hajoamisvakion välinen yhteys aktiivisuuden lausekkeesta $A(t)=A_0e^{-\\lambda t}$.\n- 8.2: Kahden radioaktiivisen lähteen $L_A$ ja $L_B$ aktiivisuus on alussa 4,5 MBq. Kun 7,0 vuorokautta on kulunut, $L_A$:n aktiivisuus on 4,4 MBq ja $L_B$:n 3,0 kBq. Määritä lähteiden puoliintumisajat.\n- 8.3: Mikä on lähteiden radioaktiivisten ydinten lukumäärien suhde alussa?",
+     "hints": [
+      "Puoliintumisajan kohdalla aktiivisuus on pudonnut puoleen: $A(T_{1/2})=\\frac12A_0$. Ota yhtälöstä luonnollinen logaritmi. Kohdassa 8.3 tarvitset aktiivisuuden ja ydinten määrän yhteyden $A=\\lambda N$.",
+      "Aktiivisuuksien suhteesta: $\\frac{A}{A_0}=e^{-\\lambda t}$, joten $T_{1/2}=\\frac{t\\ln 2}{\\ln(A_0/A)}$. Koska alkuaktiivisuudet ovat samat, $\\lambda_AN_A=\\lambda_BN_B$, eli $\\frac{N_A}{N_B}=\\frac{T_{1/2,A}}{T_{1/2,B}}$."
+     ],
+     "solution": "**8.1 Yhteys**\n\n1. Puoliintumisajan määritelmän mukaan $A(T_{1/2})=\\frac12A_0$, joten $A_0e^{-\\lambda T_{1/2}}=\\frac12A_0$.\n2. Jaetaan $A_0$:lla: $e^{-\\lambda T_{1/2}}=\\frac12$.\n3. Otetaan luonnollinen logaritmi: $-\\lambda T_{1/2}=\\ln\\frac12=-\\ln2$.\n4. Siis $T_{1/2}=\\dfrac{\\ln2}{\\lambda}$.\n\n**8.2 Puoliintumisajat**\n\n5. Ajan $t=7{,}0\\ \\text{d}$ kuluttua $\\dfrac{A}{A_0}=e^{-\\lambda t}$, joten $\\lambda=\\dfrac{\\ln(A_0/A)}{t}$ ja $T_{1/2}=\\dfrac{t\\ln2}{\\ln(A_0/A)}$.\n6. $L_A$: $T_{1/2,A}=\\dfrac{7{,}0\\ \\text{d}\\cdot\\ln2}{\\ln\\frac{4{,}5\\ \\text{MBq}}{4{,}4\\ \\text{MBq}}}\\approx 216\\ \\text{d}\\approx 220\\ \\text{d}$.\n7. $L_B$: $T_{1/2,B}=\\dfrac{7{,}0\\ \\text{d}\\cdot\\ln2}{\\ln\\frac{4{,}5\\cdot10^6\\ \\text{Bq}}{3{,}0\\cdot10^3\\ \\text{Bq}}}\\approx 0{,}663\\ \\text{d}\\approx 16\\ \\text{h}$.\n\n**8.3 Ydinten määrien suhde**\n\n8. Aktiivisuus on $A=\\lambda N=\\dfrac{\\ln2}{T_{1/2}}N$, joten $N=\\dfrac{AT_{1/2}}{\\ln2}$.\n9. Alkuaktiivisuudet ovat yhtä suuret, joten $\\dfrac{N_A}{N_B}=\\dfrac{T_{1/2,A}}{T_{1/2,B}}=\\dfrac{215{,}9\\ \\text{d}}{0{,}6635\\ \\text{d}}\\approx 330$.\n\n**Vastaus: 8.1 $T_{1/2}=\\dfrac{\\ln2}{\\lambda}$; 8.2 $T_{1/2,A}\\approx 220\\ \\text{d}$ ja $T_{1/2,B}\\approx 16\\ \\text{h}$; 8.3 $N_A/N_B\\approx 330$**\n\n**Sudenkuoppa:** lähteen $L_A$ aktiivisuus muuttuu vain vähän, joten pyöristetyillä väliarvoilla tulos voi heitellä paljon. Laske suoraan suureyhtälöstä ja pyöristä vasta lopuksi. Kohdassa 8.3 suhde ei ole 1, vaikka aktiivisuudet ovat alussa samat.",
+     "answer": "8.1 $T_{1/2}=\\ln2/\\lambda$; 8.2 $T_{1/2,A}\\approx 220\\ \\text{d}$, $T_{1/2,B}\\approx 16\\ \\text{h}$; 8.3 $N_A/N_B\\approx 330$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Purkautuva basalttilaava on noin 1200-asteista ja voi virrata pitkiä matkoja ennen jähmettymistään (ks. alkuperäisen tehtävän video 9.A). Taulukossa 9.B basaltin tiheys (1200 °C) on $2900\\ \\text{kg/m}^3$, sulan basaltin ominaislämpökapasiteetti $1{,}120\\ \\text{kJ/(kg K)}$, ominaissulamislämpö $506\\ \\text{kJ/kg}$ ja sulamispiste $984\\,^\\circ\\text{C}$.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 7,
+     "prompt": "Laavavirrassa pohjimmainen laava jähmettyy ohueksi, heikosti lämpöä johtavaksi kerrokseksi, jonka päällä sula laava virtaa. Juuri purkautunutta 1200-asteista basalttilaavaa on alussa 1,0 m³, ja se virtaa nopeudella 0,25 m/s. Laavasta poistuu lämpöä vain johtumalla, keskimäärin teholla 15 kW. Kuinka pitkän matkan laava virtaa ennen kuin se on kokonaan jähmettynyt? Basaltin ominaisuudet ovat taulukossa 9.B.",
+     "hints": [
+      "Laavan on luovutettava kaksi lämpömäärää: ensin se jäähtyy sulamispisteeseen ($Q_1=cm\\Delta T$) ja sitten jähmettyy ($Q_2=sm$). Aika saadaan tehon kaavasta $P=\\frac Qt$.",
+      "Massa on $m=\\rho V=2900\\ \\text{kg}$ ja lämpötilan muutos $1200\\,^\\circ\\text{C}-984\\,^\\circ\\text{C}=216\\ \\text{K}$. Kokonaislämmöksi tulee noin $2{,}17\\cdot10^9\\ \\text{J}$, joten jähmettyminen kestää noin 40 tuntia."
+     ],
+     "solution": "1. Laavan massa: $m=\\rho V=2900\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot1{,}0\\ \\text{m}^3=2900\\ \\text{kg}$.\n2. Jäähtyminen sulamispisteeseen: $Q_1=c\\,m\\,\\Delta T=1{,}120\\ \\tfrac{\\text{kJ}}{\\text{kg K}}\\cdot2900\\ \\text{kg}\\cdot(1200-984)\\ \\text{K}\\approx 7{,}02\\cdot10^5\\ \\text{kJ}$.\n3. Jähmettyminen: $Q_2=s\\,m=506\\ \\tfrac{\\text{kJ}}{\\text{kg}}\\cdot2900\\ \\text{kg}\\approx 1{,}47\\cdot10^6\\ \\text{kJ}$.\n4. Yhteensä $Q=Q_1+Q_2\\approx 2{,}17\\cdot10^6\\ \\text{kJ}=2{,}17\\cdot10^9\\ \\text{J}$.\n5. Lämpöä poistuu teholla $P=15\\ \\text{kW}$, joten aikaa kuluu $t=\\dfrac QP=\\dfrac{2{,}17\\cdot10^9\\ \\text{J}}{15\\cdot10^3\\ \\text{W}}\\approx 1{,}45\\cdot10^5\\ \\text{s}$ (noin 40 h).\n6. Matka: $x=vt=0{,}25\\ \\tfrac{\\text{m}}{\\text{s}}\\cdot1{,}45\\cdot10^5\\ \\text{s}\\approx 3{,}6\\cdot10^4\\ \\text{m}$.\n\n**Vastaus: noin 36 km**\n\n**Sudenkuoppa:** jommankumman lämpömäärän unohtaminen: pelkkä jäähtyminen antaa noin 12 km ja pelkkä jähmettyminen noin 24 km.",
+     "answer": "$x=\\dfrac{v\\,m\\,(c\\Delta T+s)}{P}\\approx 36\\ \\text{km}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 6,
+     "prompt": "Lämpövirran tiheys on pinta-alayksikön läpi aikayksikössä siirtyvä lämpö. Kuvaajaan 9.C on merkitty kahden siirtymistavan, A:n ja B:n, lämpövirran tiheys laavalle eri lämpötiloissa (pisteet kelvineinä) eri ympäristöissä ja taivaankappaleilla. Kumpikaan tavoista ei ole johtuminen. Tunnista tavat A ja B. Selitä, miten kumpaankin vaikuttavat ympäristö ja laavan oma lämpötila.",
+     "hints": [
+      "Johtumisen lisäksi lämpö siirtyy kahdella tavalla. Kumpi niistä toimii myös tyhjiössä ja riippuu voimakkaasti kappaleen omasta lämpötilasta? Kumpi tarvitsee liikkuvaa väliainetta?",
+      "Katso, miten A (pystyakseli) ja B (vaaka-akseli) muuttuvat ympäristöstä toiseen samassa lämpötilassa. A on lähes sama kaikissa ympäristöissä, mutta B vaihtelee lähes nollasta (Mars) tuhansiin kW/m² (meren pohja)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- **A on lämpösäteily.** Sen lämpövirran tiheys on samassa lämpötilassa lähes sama kaikissa ympäristöissä ja kasvaa jyrkästi laavan lämpötilan mukana (säteilyteho $\\propto T^4$). Kylmä ympäristö vaikuttaa vähän, koska kuuman laavan oma säteily on hallitseva.\n- **B on kuljettuminen (konvektio).** Sen lämpövirran tiheys riippuu voimakkaasti ympäristön väliaineesta: tiheässä väliaineessa, kuten vedessä meren pohjassa tai Venuksen paksussa kaasukehässä, lämpö siirtyy tehokkaasti, mutta lähes tyhjiössä (Marsin ohut kaasukehä) kuljettumista ei juuri ole.\n- Myös kuljettumisen lämpövirta kasvaa, kun laavan lämpötila nousee.\n\n**Esimerkkivastaus:** Lämmönsiirtymistapa A on lämpösäteily. Kuvaajan mukaan saman lämpötilan pisteet ovat A:n suhteen lähes samalla korkeudella riippumatta siitä, onko laava Marsissa, Venuksessa, maanpinnalla vai meren pohjassa, ja lämpövirta kasvaa monikymmenkertaiseksi lämpötilan noustessa 600 kelvinistä 1500 kelviniin. Tämä sopii säteilyyn, jonka teho on verrannollinen lämpötilan neljänteen potenssiin eikä tarvitse väliainetta. Tapa B on kuljettuminen: sen lämpövirran tiheys vaihtelee ympäristön mukaan monta kertaluokkaa, koska lämpö siirtyy laavasta pois liikkuvan ilman tai veden mukana. Vedessä kuljettuminen on tehokkainta, Marsin ohuessa kaasukehässä lähes olematonta. Sekin kasvaa, kun laava on kuumempaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 4,
+     "prompt": "Maan pinnalla on 1500 K:n lämpöistä laavaa, ja johtumisen lämpövirran tiheys on $q_j=12\\ \\text{kW/m}^2$. Määritä kuvaajan 9.C avulla lämpövirran kokonaistiheys, kun kaikki lämmönsiirtymistavat otetaan huomioon. Montako prosenttia lämmöstä siirtyy johtumalla?",
+     "hints": [
+      "Lue kuvaajasta maanpinnan käyrän 1500 K:n pisteestä molemmat lämpövirran tiheydet (A pystyakselilta, B vaaka-akselilta). Muista, että akselit ovat logaritmisia. Laske kaikki kolme yhteen ja vertaa johtumisen osuutta summaan."
+     ],
+     "solution": "1. Maanpinnan käyrän 1500 K:n pisteessä A:n (säteily) lämpövirran tiheys on noin $q_s\\approx 260\\ \\text{kW/m}^2$ ja B:n (kuljettuminen) noin $q_k\\approx 11\\ \\text{kW/m}^2$. Logaritmisella asteikolla $10^2$:n ja $10^3$:n väli jakautuu epätasaisesti, joten lukeminen tehdään huolella.\n2. Kokonaistiheys: $q=q_j+q_s+q_k\\approx(12+260+11)\\ \\text{kW/m}^2\\approx 283\\ \\text{kW/m}^2\\approx 280\\ \\text{kW/m}^2$.\n3. Sama pinta-ala ja sama aika, joten johtumalla siirtyvän lämmön osuus on $\\dfrac{q_j}{q}=\\dfrac{12}{283}\\approx 0{,}042=4{,}2\\,\\%$.\n\n**Vastaus: noin 280 kW/m²; johtumalla siirtyy noin 4 % (4,2 %)**\n\n**Sudenkuoppa:** logaritmisen asteikon lukeminen väärin, jolloin säteilylle saadaan esimerkiksi 200 kW/m² tai kuljettumiselle 10 kW/m².",
+     "answer": "$q\\approx 280\\ \\text{kW/m}^2$, johtumalla noin $4\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.4",
+     "points": 3,
+     "prompt": "Todellinen laava jäähtyy mallien ennustetta hitaammin, erityisesti hitaasti virtaava laava. Miksi? Käytä apuna alkuperäisen tehtävän videota 9.A.",
+     "hints": [
+      "Mitä hitaasti virtaavan laavan pinnalle videolla muodostuu? Miten se vaikuttaa siihen, kuinka kuuma pinta säteilee ja luovuttaa lämpöä ilmaan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Hitaasti virtaavan laavan **yläpinnalle** muodostuu jähmettynyt, tumma kuori, joka johtaa lämpöä huonosti ja eristää alla olevaa sulaa laavaa.\n- Kuoren pinta on paljon sulaa laavaa kylmempi, joten siitä lähtevä säteily ja kuljettuminen ovat paljon heikompia ($\\propto T^4$ säteilyssä).\n- Nopeasti virtaava laava sekoittuu, jolloin kuuma sula aines tulee jatkuvasti pintaan. Hitaassa virtauksessa näin ei käy.\n\n**Esimerkkivastaus:** Videolla näkyy, että hitaan laavavirran päälle muodostuu tummia, jähmettyneitä basalttilaattoja. Basaltti johtaa lämpöä huonosti, joten kuori eristää sen alla olevaa sulaa laavaa. Kuoren pinta on paljon kylmempi kuin sula laava, ja koska säteilyteho riippuu voimakkaasti lämpötilasta, pinnasta säteilee ja ilmaan kulkeutuu vain pieni osa siitä lämmöstä, jonka paljas sula pinta luovuttaisi. Nopeasti virtaavassa laavassa kuori rikkoutuu ja kuumaa ainesta nousee jatkuvasti pintaan, joten se jäähtyy nopeammin.\n\n**Sudenkuoppa:** laavan pohjalle syntyvä kerros ei selitä ilmiötä, koska tehtävän tilanteessa lämpö poistuu pääasiassa pinnasta säteilemällä ja kuljettumalla.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Radioaktiivinen näyte lähettää gammafotoneja, joiden energiat ovat 122, 245 ja 344 keV. Ilmaisin erottelee 100–400 keV:n fotonien energiat, ja se havaitsee myös ympäristön taustasäteilyä. Näytteen ja ilmaisimen väliin voi asettaa 0–5 mm lyijyä. Alkuperäisen tehtävän simulaatio 10.B (taulukkolaskentatiedosto) tuottaa spektrin valitulla mittausajalla ja laskee fotonimäärät koko spektristä ja isotoopin piikkien energiaväleiltä.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 3,
+     "prompt": "Tarkastele simulaatiolla näytteen viivaspektrejä, kun mittausaika on 5 s ja 100 s. Miksi mittausaika vaikuttaa spektrin muotoon?",
+     "hints": [
+      "Gammafotonit saapuvat ilmaisimeen satunnaisesti, ja jokaisen energia on satunnainen. Mieti, montako fotonia yhteen energiakanavaan ehtii kertyä lyhyessä ja pitkässä mittauksessa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Radioaktiivinen hajoaminen ja taustasäteily ovat satunnaisia: fotoneja osuu ilmaisimeen harvakseltaan ja satunnaisille energioille.\n- Lyhyessä mittauksessa fotoneja havaitaan vähän, joten spektri on rikkonainen ja monessa kanavassa ei ole yhtään fotonia.\n- Pitkässä mittauksessa fotoneja kertyy paljon, jolloin satunnaisvaihtelun suhteellinen osuus pienenee ja spektrin muoto (tausta ja isotoopin piikit 122, 245 ja 344 keV) erottuu selvästi.\n\n**Esimerkkivastaus:** Viiden sekunnin mittauksessa ilmaisin havaitsee vain muutamia kymmeniä fotoneja, jotka jakautuvat sattumanvaraisesti eri energioille. Spektri on siksi piikikäs ja aukkoinen, eikä siitä voi erottaa, mitkä huiput kuuluvat näytteelle. Sadan sekunnin mittauksessa fotoneja kertyy jokaiseen energiaväliin, satunnaisvaihtelu tasoittuu suhteessa lukumääriin ja spektristä erottuvat selvästi taustan tasainen osa ja näytteen gammapiikit.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 5,
+     "prompt": "Simulaation 10.B avulla: kuinka monta näytteen lähettämää gammafotonia ilmaisin rekisteröi keskimäärin sekunnissa?",
+     "hints": [
+      "Ilmaisin havaitsee myös taustasäteilyä ilman näytettä. Mittaa pitkä aika (esim. 1000 s) sekä näytteen kanssa että ilman sitä ja vähennä tausta.",
+      "1000 sekunnin mittauksessa tausta antaa koko spektrin alueelle noin 20 000 fotonia ja näytteen kanssa noin 26 000. Näytteen osuus on erotus."
+     ],
+     "solution": "1. Kohdan 10.1 perusteella mittausajan on oltava pitkä, jotta satunnaisvaihtelu jää pieneksi. Valitaan esimerkiksi $t=1000\\ \\text{s}$.\n2. Mitataan ensin pelkkä tausta (näyte pois): koko spektrin alueella (100–400 keV) havaitaan noin $N_{\\text{tausta}}\\approx 19\\,800$ fotonia.\n3. Mitataan näyte ilmaisimen edessä ilman lyijyä: havaitaan noin $N\\approx 25\\,900$ fotonia.\n4. Näytteestä peräisin olevia fotoneja on $N-N_{\\text{tausta}}\\approx 6100$, eli sekunnissa $\\dfrac{6100}{1000\\ \\text{s}}\\approx 6{,}1\\ \\tfrac{1}{\\text{s}}$.\n\nSimulaatio arpoo lukumäärät, joten omat lukemasi poikkeavat hieman näistä. Simulaation mallin odotusarvot ovat taustalle noin 19,8 fotonia sekunnissa ja näytteelle noin 6,1 fotonia sekunnissa.\n\n**Vastaus: noin 6 fotonia sekunnissa (6,1 1/s)**\n\n**Sudenkuoppa:** taustan jättäminen vähentämättä (tulos noin 26 1/s) tai liian lyhyt mittausaika.",
+     "answer": "noin $6{,}1$ fotonia sekunnissa",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 5,
+     "prompt": "Simulaation avulla: mikä osuus näytteen gammafotoneista jää 1 mm paksuun lyijylevyyn?",
+     "hints": [
+      "Mittaa pitkällä mittausajalla näytteen kanssa ilman lyijyä ja 1 mm:n lyijylevyn kanssa. Vähennä molemmista tausta, sillä levy ei vaikuta taustaan.",
+      "1000 sekunnin mittauksessa levyn kanssa havaitaan noin 21 300 fotonia, joista tausta on noin 19 800. Levyn läpi pääsee siis noin 1500 näytteen fotonia alkuperäisestä noin 6100:sta."
+     ],
+     "solution": "1. Kohdan 10.2 mittauksesta (1000 s) näytteen fotoneja on ilman lyijyä noin $N_1\\approx 6100$.\n2. Asetetaan 1 mm:n lyijylevy näytteen ja ilmaisimen väliin. Samassa ajassa havaitaan noin $21\\,300$ fotonia, joista tausta on edelleen noin $19\\,800$. Levyn läpi päässeitä näytteen fotoneja on siis noin $N_2\\approx 1500$.\n3. Absorboitunut osuus: $\\dfrac{N_1-N_2}{N_1}\\approx\\dfrac{6100-1500}{6100}\\approx 0{,}76$.\n\nSimulaation mallin odotusarvoista laskettuna levyn läpi pääsee 24 % näytteen fotoneista, eli 76 % absorboituu.\n\n**Vastaus: noin 76 % (noin 3/4)**\n\n**Sudenkuoppa:** jos taustaa ei vähennetä, tulokseksi saadaan virheellisesti vain noin 18 %.",
+     "answer": "noin $76\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.4",
+     "points": 7,
+     "prompt": "Määritä lyijyn heikennyskerroin $\\mu$ heikennyslaissa $I=I_0e^{-\\mu x}$ gammasäteilylle, jonka energia on 344 keV. Käytä simulaatiota.",
+     "hints": [
+      "Käytä vain 344 keV:n piikin energiaväliä (340–350 keV), jonka lukumäärän simulaatio laskee erikseen. Intensiteetti on verrannollinen havaittujen fotonien määrään, kun mittausaika on sama. Vähennä tausta tältäkin väliltä.",
+      "Mittaa sama aika ilman lyijyä ja esimerkiksi 2,0 mm:n lyijyn kanssa sekä pelkkä tausta. Heikennyslaista $\\mu=-\\frac1x\\ln\\frac{N}{N_0}$, jossa $N_0$ ja $N$ ovat taustalla korjatut lukumäärät."
+     ],
+     "solution": "1. Intensiteetti on verrannollinen sekunnissa havaittujen fotonien määrään, joten samalla mittausajalla heikennyslaki pätee lukumäärille: $N=N_0e^{-\\mu x}$, josta $\\mu=-\\dfrac1x\\ln\\dfrac{N}{N_0}$.\n2. Käytetään 340–350 keV:n väliä, jolle simulaatio antaa oman lukumääränsä. Mitataan esimerkiksi 1000 s: tausta noin 350, näyte ilman lyijyä noin 1860 ja 2,0 mm:n lyijyn kanssa noin 1120 fotonia.\n3. Taustalla korjatut määrät: $N_0\\approx 1860-350=1510$ ja $N\\approx 1120-350=770$.\n4. $\\mu=-\\dfrac{1}{2{,}0\\ \\text{mm}}\\ln\\dfrac{770}{1510}\\approx 0{,}34\\ \\tfrac{1}{\\text{mm}}=3{,}4\\cdot10^{2}\\ \\tfrac1{\\text{m}}$.\n5. Tarkemman tuloksen saa mittaamalla useilla paksuuksilla ja sovittamalla eksponenttifunktion pisteisiin $(x,N)$.\n\nSimulaation mallin odotusarvoista laskettuna $\\mu\\approx 0{,}336\\ \\text{1/mm}$.\n\n**Vastaus: $\\mu\\approx 0{,}34\\ \\text{mm}^{-1}$ (noin $340\\ \\text{m}^{-1}$)**\n\n**Sudenkuoppa:** koko spektrin lukumäärien käyttäminen piikin sijasta tai taustan unohtaminen (tulos noin $260\\ \\text{m}^{-1}$).",
+     "answer": "$\\mu\\approx 0{,}34\\ \\text{mm}^{-1}\\approx 340\\ \\text{m}^{-1}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Opiskelijat tutkivat veden paineen alenemaa $\\Delta p$ vaakasuorassa muoviputkessa. Mahdolliset tekijät ovat putken halkaisija $D$ ja pituus $L$, veden lämpötila $T$ sekä virtausnopeus $v$, ja kustakin on oma mittaussarjansa (aineistot 11.A–11.D).\n\n- 11.1: Missä aineistossa on yksi karkeasti virheellinen mittauspiste? Piirrä sen kuvaaja ja merkitse piste.\n- 11.2: Selvitä paineen aleneman riippuvuus jokaisesta tekijästä ja yhdistä riippuvuudet yhdeksi lausekkeeksi.\n- 11.3: Suureyhtälöön tarvitaan vielä ainakin yksi lisätekijä. Mistä tämän voi päätellä?",
+     "hints": [
+      "Piirrä jokainen aineisto omaksi kuvaajakseen ja kokeile sovitteita: suora origon kautta, potenssifunktio $y=ax^b$ tai vakio. Poikkeava piste erottuu kuvaajasta selvästi muista.",
+      "Potenssisovitteet antavat eksponentit noin $-1$ (halkaisija), $1$ (pituus) ja $2$ (nopeus), ja lämpötilasarjassa paine-ero pysyy vakiona. Kohdassa 11.3 vertaa lausekkeen $\\frac{v^2L}{D}$ yksikköä paineen yksikköön."
+     ],
+     "solution": "**11.1 Karkea virhe**\n\n1. Piirretään kaikki neljä aineistoa. Pituussarjassa 11.B pisteet ovat lähes täsmälleen origon kautta kulkevalla suoralla (noin $1{,}20\\ \\text{Pa/cm}$) yhtä lukuun ottamatta: pituudella 245 cm paine-ero on 400,1 Pa, vaikka suoran mukaan sen pitäisi olla noin 300 Pa.\n2. Muissa sarjoissa ei ole yhtä selvää yksittäistä poikkeamaa. Vastaukseen piirretään aineiston 11.B pistekaavio, johon poikkeava piste merkitään.\n\n**11.2 Riippuvuudet**\n\n3. Halkaisija (11.A): potenssisovite antaa eksponentin noin $-1{,}00$, joten $\\Delta p\\propto\\dfrac1D$. Esimerkiksi halkaisijan kaksinkertaistuminen puolittaa paine-eron.\n4. Pituus (11.B, virheellinen piste pois): $\\Delta p\\propto L$ (suora origon kautta, potenssisovitteen eksponentti noin 1,00).\n5. Lämpötila (11.C): paine-ero on kaikissa mittauksissa noin 704–707 Pa ilman trendiä. Vaihtelu on mittausepätarkkuuden luokkaa, joten $\\Delta p$ ei riipu lämpötilasta tällä välillä.\n6. Nopeus (11.D): potenssisovitteen eksponentti on noin 2,01, joten $\\Delta p\\propto v^2$. Tarkistus: suhde $\\frac{\\Delta p}{v^2}$ on kaikissa pisteissä noin $950\\text{–}970\\ \\text{Pa s}^2/\\text{m}^2$.\n7. Yhdistetty riippuvuus: $\\Delta p\\propto\\dfrac{v^2L}{D}$.\n\n**11.3 Lisätekijä**\n\n8. Tarkastellaan yksiköitä. Vasemmalla $[\\Delta p]=\\text{Pa}=\\dfrac{\\text{N}}{\\text{m}^2}=\\dfrac{\\text{kg}}{\\text{m}\\,\\text{s}^2}$.\n9. Oikealla $\\left[\\dfrac{v^2L}{D}\\right]=\\dfrac{(\\text{m/s})^2\\cdot\\text{m}}{\\text{m}}=\\dfrac{\\text{m}^2}{\\text{s}^2}$.\n10. Yksiköt eivät täsmää, joten suureyhtälössä täytyy olla lisäksi tekijä (tai tekijöiden tulo), jonka yksikkö on $\\frac{\\text{kg}}{\\text{m}^3}$, esimerkiksi veden tiheys ja dimensioton kitkakerroin: $\\Delta p=f\\cdot\\frac{L}{D}\\cdot\\frac{\\rho v^2}{2}$.\n\n**Vastaus: 11.1 pituusaineisto 11.B, piste $L=245\\ \\text{cm}$; 11.2 $\\Delta p\\propto\\dfrac1D$, $\\Delta p\\propto L$, $\\Delta p\\propto v^2$, ei riipu lämpötilasta, yhteensä $\\Delta p\\propto\\dfrac{v^2L}{D}$; 11.3 yksiköt eivät täsmää, puuttuu tekijä, jonka yksikkö on $\\text{kg/m}^3$ (esim. tiheys)**\n\n**Sudenkuoppa:** riippuvuuksien yhdistäminen summaksi ($\\Delta p\\propto v^2+L+\\frac1D$). Kun jokainen tekijä vaikuttaa kertoimena, riippuvuudet yhdistetään tuloksi. Verrannollisuutta ei myöskään saa merkitä yhtäsuuruusmerkillä.",
+     "answer": "11.1 aineisto 11.B, piste $L=245$ cm; 11.2 $\\Delta p\\propto\\dfrac{v^2L}{D}$ (ei riipu lämpötilasta); 11.3 yksiköt eivät täsmää, puuttuu tekijä yksiköltään $\\text{kg/m}^3$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

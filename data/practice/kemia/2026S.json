@@ -1,0 +1,527 @@
+{
+ "subject": "kemia",
+ "session": "2026S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2026S_KE/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2026-09-16_KE_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen monivalintatehtävä (20 p)."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "15 pisteen tehtävät, vastaa neljään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "20 pisteen tehtävät, vastaa kahteen."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Kymmenen monivalintaa, 2 p kukin. Vaihtoehdot on lueteltu koenäkymän järjestyksessä, ja kirjain A tarkoittaa ylintä vaihtoehtoa.",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "- 1.1 huoneenlämmössä nestemäinen alkuaine: F, I, Br, Cl\n- 1.2 isotooppien järjestys- ja massaluku: sama–sama, eri–sama, eri–eri, sama–eri\n- 1.3 tasapainovakion lauseke reaktiolle $\\ce{2SO2(g) + O2(g) <=> 2SO3(g)}$\n- 1.4 mikä siirtää tasapainoa kohti $\\ce{SO3}$:a: katalyytti, $\\ce{SO2}$:n poisto, puristaminen pienempään tilavuuteen, $\\ce{SO3}$:n lisäys\n- 1.5 indikaattori ammoniakin titraukseen vahvalla hapolla: fenoliftaleiini, tärkkelys, metyylioranssi, kaliumdikromaatti\n- 1.6 pienin $K_\\text{b}$: $\\ce{CH3COO-}$, $\\ce{Cl-}$, $\\ce{OH-}$, $\\ce{NH3}$\n- 1.7 helpoimmin hapettuva metalli: Pt, Ni, Al, Na\n- 1.8 mitä siirtyy ja mihin suuntaan reaktiossa $\\ce{2Mg(s) + O2(g) -> 2MgO(s)}$\n- 1.9 aine liukenee veteen (ei bensiiniin), johtaa sähköä vain liuoksena ja sulaa korkealla: NaCl, parafiini, jodi, sakkaroosi\n- 1.10 −114 °C:ssa jähmettyvä puhdas neste: metanoli, vesi, asetoni, etanoli",
+     "hints": [
+      "Käy kohdat läpi yksi kerrallaan ja karsi ensin selvästi väärät vaihtoehdot. Tasapainovakiossa reaktioyhtälön kertoimet tulevat eksponenteiksi, ja Le Chatelierin periaatteen mukaan tasapaino siirtyy suuntaan, joka vastustaa tehtyä muutosta.",
+      "Kohta kohdalta:\n- 1.1: halogeenien olomuoto muuttuu ryhmässä alaspäin kaasusta kiinteäksi.\n- 1.4: laske kaasumolekyylien määrä yhtälön kummallakin puolella.\n- 1.5: ekvivalenttikohdassa liuoksessa on heikkoa happoa $\\ce{NH4+}$, joten pH on alle 7.\n- 1.6: vahvan hapon vastinemäs on erittäin heikko emäs.\n- 1.7: katso metallien jännitesarjaa.\n- 1.9: sähkönjohtavuus vain liuenneena viittaa ioniyhdisteeseen.\n- 1.10: vertaa taulukkokirjan sulamispisteitä."
+     ],
+     "solution": "1. **1.1 C (bromi).** Fluori ja kloori ovat kaasuja, jodi on kiinteä. Bromi on ainoa huoneenlämmössä nestemäinen epämetalli.\n2. **1.2 D (sama järjestysluku, eri massaluku).** Isotoopeilla on sama protonimäärä, mutta neutroneja on eri määrä.\n3. **1.3 B, $K=\\frac{[\\ce{SO3}]^2}{[\\ce{SO2}]^2[\\ce{O2}]}$.** Tuotteet ovat osoittajassa ja lähtöaineet nimittäjässä, ja kertoimet ovat eksponentteja (eivät hakasulkeiden sisällä).\n4. **1.4 C (paineen kasvattaminen tilavuutta pienentämällä).** Vasemmalla on 3 mol kaasua, oikealla 2 mol, joten puristaminen siirtää tasapainoa oikealle. Katalyytti ei siirrä tasapainoa, $\\ce{SO2}$:n poisto ja $\\ce{SO3}$:n lisäys siirtävät sitä vasemmalle.\n5. **1.5 C (metyylioranssi).** Heikon emäksen ja vahvan hapon titrauksessa ekvivalenttikohta on happamalla puolella (noin pH 5), ja metyylioranssin värinmuutosalue (noin pH 3,1–4,4) osuu jyrkän hyppäyksen alueelle. Fenoliftaleiini vaihtaa väriä emäksisellä alueella, tärkkelys on jodin indikaattori ja kaliumdikromaatti hapetin.\n6. **1.6 B ($\\ce{Cl-}$).** Kloridi on vahvan hapon $\\ce{HCl}$ vastinemäs, joten sen emäsvakio on häviävän pieni.\n7. **1.7 D (natrium).** Natrium on jännitesarjassa epäjaloin, eli sen normaalipotentiaali on negatiivisin.\n8. **1.8 B (magnesium luovuttaa elektroneja hapelle).** Magnesium hapettuu ionaksi $\\ce{Mg^2+}$ ja happi pelkistyy oksidi-ioniksi $\\ce{O^2-}$.\n9. **1.9 A (natriumkloridi).** Ioniyhdiste liukenee poolisiin liuottimiin, johtaa sähköä vain sulana tai liuenneena ja sulaa korkeassa lämpötilassa (NaCl noin 800 °C). Sakkaroosin vesiliuos ei johda sähköä.\n10. **1.10 D (etanoli).** Etanolin sulamispiste on noin −114 °C. Metanoli sulaa noin −98 °C:ssa, asetoni noin −95 °C:ssa ja vesi 0 °C:ssa.\n\n**Vastaus: 1.1 C · 1.2 D · 1.3 B · 1.4 C · 1.5 C · 1.6 B · 1.7 D · 1.8 B · 1.9 A · 1.10 D**\n\n**Sudenkuoppa:** kohdassa 1.5 fenoliftaleiini tuntuu tutulta, mutta se sopii vain titrauksiin, joiden ekvivalenttikohta on emäksinen.",
+     "answer": "1.1 C · 1.2 D · 1.3 B · 1.4 C · 1.5 C · 1.6 B · 1.7 D · 1.8 B · 1.9 A · 1.10 D",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Vety palaa suljetussa astiassa yhtälön $\\ce{2H2(g) + O2(g) -> 2H2O(g)}$ mukaan.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 8,
+     "prompt": "Astiassa on 45,0 ml vetyä ja 19,0 ml happea. Molemmat tilavuudet on mitattu 85,0 °C:ssa ja 101,3 kPa:n paineessa. Montako grammaa vesihöyryä syntyy?",
+     "hints": [
+      "Muuta kaasujen tilavuudet ainemääriksi ideaalikaasun tilanyhtälöllä $pV=nRT$ (lämpötila kelvineinä). Selvitä sitten, kumpi lähtöaine on rajoittava tekijä.",
+      "$n(\\ce{H2})\\approx 1{,}531\\cdot10^{-3}\\,\\text{mol}$ ja $n(\\ce{O2})\\approx 6{,}463\\cdot10^{-4}\\,\\text{mol}$. Hapen kanssa reagoisi $2\\cdot n(\\ce{O2})$ vetyä, joten happi loppuu ensin ja vettä syntyy $2\\cdot n(\\ce{O2})$."
+     ],
+     "solution": "1. $T=(85{,}0+273{,}15)\\,\\text{K}=358{,}15\\,\\text{K}$ ja $R=8{,}3145\\,\\frac{\\text{kPa}\\cdot\\text{l}}{\\text{mol}\\cdot\\text{K}}$.\n2. $n(\\ce{H2})=\\frac{pV}{RT}=\\frac{101{,}3\\,\\text{kPa}\\cdot0{,}0450\\,\\text{l}}{8{,}3145\\,\\frac{\\text{kPa}\\cdot\\text{l}}{\\text{mol}\\cdot\\text{K}}\\cdot358{,}15\\,\\text{K}}=1{,}5308\\cdot10^{-3}\\,\\text{mol}$.\n3. $n(\\ce{O2})=\\frac{101{,}3\\,\\text{kPa}\\cdot0{,}0190\\,\\text{l}}{8{,}3145\\,\\frac{\\text{kPa}\\cdot\\text{l}}{\\text{mol}\\cdot\\text{K}}\\cdot358{,}15\\,\\text{K}}=6{,}4634\\cdot10^{-4}\\,\\text{mol}$.\n4. Rajoittava tekijä: hapen kanssa reagoisi $2\\cdot6{,}4634\\cdot10^{-4}\\,\\text{mol}=1{,}2927\\cdot10^{-3}\\,\\text{mol}$ vetyä. Vetyä on enemmän, joten happi on rajoittava tekijä ja vetyä jää yli.\n5. $n(\\ce{H2O})=2\\cdot n(\\ce{O2})=1{,}2927\\cdot10^{-3}\\,\\text{mol}$.\n6. $m(\\ce{H2O})=nM=1{,}2927\\cdot10^{-3}\\,\\text{mol}\\cdot18{,}016\\,\\text{g/mol}=0{,}02329\\,\\text{g}\\approx0{,}0233\\,\\text{g}$.\n\n**Vastaus: $0{,}0233\\,\\text{g}$ vesihöyryä**\n\n**Sudenkuoppa:** jos veden määrä lasketaan vedyn perusteella, tulokseksi tulee 0,0276 g. Väärä rajoittava tekijä on periaatevirhe, jonka jälkeen pisteitä ei enää kerry. Pikatarkistus: samassa lämpötilassa ja paineessa 45,0 ml vetyä tarvitsisi 22,5 ml happea, mutta happea on vain 19,0 ml.",
+     "answer": "$0{,}0233\\,\\text{g}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Kaikki aineet ovat reaktion jälkeen yhä kaasuja, ja lämpötila ja paine ovat samat kuin kohdassa 2.1 (85,0 °C, 101,3 kPa). Mikä on kaasuseoksen kokonaistilavuus reaktion jälkeen?",
+     "hints": [
+      "Samassa lämpötilassa ja paineessa kaasun tilavuus on suoraan verrannollinen sen ainemäärään (Avogadron laki). Mieti, mitä astiaan jää: ylimääräinen lähtöaine ja tuote.",
+      "Happea kuluu kokonaan 19,0 ml, vetyä kuluu $2\\cdot19{,}0\\,\\text{ml}=38{,}0\\,\\text{ml}$ ja vesihöyryä syntyy saman verran kuin vetyä kuluu."
+     ],
+     "solution": "1. Koska $T$ ja $p$ eivät muutu, tilavuudet käyttäytyvät kuten ainemäärät, ja reaktioyhtälön kertoimia voi käyttää suoraan tilavuuksille.\n2. Happi (19,0 ml) on rajoittava tekijä ja kuluu loppuun. Vetyä kuluu $2\\cdot19{,}0\\,\\text{ml}=38{,}0\\,\\text{ml}$, joten sitä jää $45{,}0\\,\\text{ml}-38{,}0\\,\\text{ml}=7{,}0\\,\\text{ml}$.\n3. Vesihöyryä syntyy $2\\cdot19{,}0\\,\\text{ml}=38{,}0\\,\\text{ml}$.\n4. $V_\\text{loppu}=7{,}0\\,\\text{ml}+38{,}0\\,\\text{ml}=45{,}0\\,\\text{ml}$.\n5. Tarkistus ainemäärillä: $n_\\text{kok}=(1{,}5308-1{,}2927)\\cdot10^{-3}\\,\\text{mol}+1{,}2927\\cdot10^{-3}\\,\\text{mol}=1{,}5308\\cdot10^{-3}\\,\\text{mol}$, ja $V=\\frac{nRT}{p}=45{,}0\\,\\text{ml}$. Loppuseoksen ainemäärä on sama kuin vedyn alkuperäinen ainemäärä, koska jokaisesta kuluneesta vetymolekyylistä syntyy yksi vesimolekyyli.\n\n**Vastaus: $45{,}0\\,\\text{ml}$**\n\n**Sudenkuoppa:** alkutilavuuksien summa 64,0 ml tai pelkkä vesihöyryn tilavuus 38,0 ml. Ylijäänyt vety kuuluu kaasuseokseen.",
+     "answer": "$45{,}0\\,\\text{ml}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 2,
+     "prompt": "Kun astia jäähtyy huoneenlämpöön, sen sisällä näkyy pisaroita. Selitä ilmiö.",
+     "hints": [
+      "Mikä reaktioseoksen aineista on huoneenlämmössä neste? Ajattele veden kiehumispistettä ja höyrynpainetta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Reaktiossa syntynyt vesihöyry tiivistyy (kondensoituu) nestemäiseksi vedeksi, kun lämpötila laskee.\n- Huoneenlämmössä veden höyrynpaine on pieni, joten suurin osa vedestä ei voi pysyä kaasuna.\n\n**Esimerkkivastaus:** Astiassa on reaktion jälkeen vetyä ja vesihöyryä. Kun astia jäähtyy, vesihöyry tiivistyy nestemäiseksi vedeksi, koska vesi on huoneenlämmössä neste. Pisarat ovat tätä vettä.",
+     "answer": "Vesihöyry tiivistyy jäähtyessään nestemäiseksi vedeksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Tehtaalla vuoti lattialle 150 litraa väkevää suolahappoa eli vetykloridihapon vesiliuosta, ja pelastuslaitos teki siitä vaarattoman.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 8,
+     "prompt": "Pelastuslaitos lisäsi happoon ainetta, joka poisti vaaran. Mikä aineista ammoniakki, natrium, natriumkarbonaatti ja natriumkloridi soveltuu tähän turvallisesti? Perustele myös, miksi kolme muuta eivät sovellu.",
+     "hints": [
+      "Happo neutraloidaan emäksellä. Mieti jokaisesta aineesta: onko se emäs, onko sitä turvallista levittää suuria määriä ja mitä se tekee joutuessaan veteen?",
+      "Natriumkarbonaatti on kiinteä, melko heikko emäs: $\\ce{Na2CO3(s) + 2HCl(aq) -> 2NaCl(aq) + H2O(l) + CO2(g)}$. Ammoniakki on haihtuva, natrium reagoi kiivaasti veden kanssa ja natriumkloridi on neutraali suola."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Natriumkarbonaatti** sopii: se on kiinteä emäs, joka neutraloi hapon, ja sitä on turvallista käsitellä.\n- **Ammoniakki** ei sovellu: se on emäksinen mutta helposti haihtuva ja hengitettynä myrkyllinen, joten suuren määrän levittäminen sisätiloihin on vaarallista.\n- **Natriumkloridi** ei sovellu: se on neutraali suola, eikä se vähennä happamuutta.\n- **Natrium** ei sovellu: se reagoi veden (ja hapon) kanssa rajusti, reaktio vapauttaa paljon lämpöä ja syntyvä vetykaasu on helposti syttyvää, joten seurauksena voi olla tulipalo tai räjähdys: $\\ce{2Na(s) + 2H2O(l) -> 2NaOH(aq) + H2(g)}$.\n\n**Esimerkkivastaus:** Turvallinen valinta on natriumkarbonaatti. Se on kiinteä emäs, joka reagoi hapon kanssa: $\\ce{Na2CO3(s) + 2HCl(aq) -> 2NaCl(aq) + H2O(l) + CO2(g)}$, jolloin liuos neutraloituu. Ammoniakki olisi myös emäs, mutta se höyrystyy helposti ja on hengitettynä haitallista. Natriumkloridi on neutraali suola, eikä se poista happamuutta. Natrium reagoi vesiliuoksen kanssa kiivaasti, reaktio kuumentaa seosta ja syntyvä vety voi syttyä tai räjähtää.",
+     "answer": "Natriumkarbonaatti",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 7,
+     "prompt": "Vuotaneen liuoksen konsentraatio oli 10,2 mol/l ja tilavuus 150,0 l. Se neutraloitiin kokonaan kiinteällä kalsiumhydroksidilla $\\ce{Ca(OH)2}$. Montako kilogrammaa kalsiumhydroksidia kului?",
+     "hints": [
+      "Kirjoita neutraloinnin reaktioyhtälö ja laske vetykloridin ainemäärä kaavalla $n=cV$.",
+      "$\\ce{Ca(OH)2(s) + 2HCl(aq) -> CaCl2(aq) + 2H2O(l)}$, joten kalsiumhydroksidia tarvitaan puolet vetykloridin ainemäärästä."
+     ],
+     "solution": "1. Reaktioyhtälö: $\\ce{Ca(OH)2(s) + 2HCl(aq) -> CaCl2(aq) + 2H2O(l)}$.\n2. $n(\\ce{HCl})=cV=10{,}2\\,\\text{mol/l}\\cdot150{,}0\\,\\text{l}=1530\\,\\text{mol}$.\n3. Kalsiumhydroksidi on kaksiarvoinen emäs, joten $n(\\ce{Ca(OH)2})=\\frac12 n(\\ce{HCl})=765{,}0\\,\\text{mol}$.\n4. $M(\\ce{Ca(OH)2})=40{,}08+2\\cdot(16{,}00+1{,}008)\\,\\text{g/mol}=74{,}096\\,\\text{g/mol}$.\n5. $m=nM=765{,}0\\,\\text{mol}\\cdot74{,}096\\,\\text{g/mol}=56\\,683\\,\\text{g}\\approx56{,}7\\,\\text{kg}$.\n\n**Vastaus: $56{,}7\\,\\text{kg}$**\n\n**Sudenkuoppa:** ainemääräsuhde 1 : 1 antaa kaksinkertaisen tuloksen (113 kg). Stoikiometriavirhe on periaatevirhe.",
+     "answer": "$56{,}7\\,\\text{kg}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Valbenatsiini ja tetrabenatsiini ovat liikehäiriöiden lääkkeitä. Valbenatsiini on esteri, joka hydrolysoituu elimistössä yhdisteeksi X ja aminohappo valiiniksi $\\ce{(CH3)2CH-CH(NH2)-COOH}$. Tetrabenatsiinissa on ketoniryhmä, ja kun se pelkistyy, syntyy myös yhdiste X.\n\nYhdisteen X rakenne (ks. alkuperäisen tehtävän kuva): kolmen kuusirenkaan runko. Bentseenirenkaassa on kaksi vierekkäistä metoksiryhmää $\\ce{-OCH3}$. Bentseeniin on liittynyt typpeä sisältävä rengas, ja typpi on renkaiden liitoskohdassa yhteinen kolmannen, tyydyttyneen renkaan kanssa. Kolmas rengas on kiertojärjestyksessä N–$\\ce{CH2}$–CH(isobutyyli)–CH(OH)–$\\ce{CH2}$–CH, jossa viimeinen CH on sama liitoshiili, joka on sitoutunut sekä typpeen että bentseenirenkaaseen. Isobutyyliryhmä on $\\ce{-CH2-CH(CH3)2}$.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Nimeä yhdisteen X funktionaaliset ryhmät, joissa on happea tai typpeä.",
+     "hints": [
+      "Käy läpi jokainen happi- ja typpiatomi: mihin atomeihin se on sitoutunut? Montako hiiltä on kiinni typessä, ja montako hiiltä on kiinni OH-ryhmän kantavassa hiilessä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Eetteriryhmä** (kaksi metoksiryhmää $\\ce{-O-CH3}$ bentseenirenkaassa): happi on kahden hiilen välissä.\n- **Hydroksyyliryhmä** eli sekundäärinen alkoholi: OH-hiileen on sitoutunut kaksi muuta hiiltä.\n- **Tertiäärinen amiini** eli aminoryhmä: typpi on sitoutunut kolmeen hiileen, eikä siinä ole vetyä.\n\n**Esimerkkivastaus:** Yhdisteessä X on eetteriryhmiä (metoksiryhmät), sekundäärinen hydroksyyliryhmä ja tertiäärinen aminoryhmä.",
+     "answer": "Eetteri, (sekundäärinen) hydroksyyliryhmä ja (tertiäärinen) amiini",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 4,
+     "prompt": "Piirrä valbenatsiinin rakennekaava.",
+     "hints": [
+      "Esteri syntyy alkoholin ja karboksyylihapon kondensaatiossa. Hydrolyysi purkaa esterisidoksen, joten tee se ajatuksissa takaperin: yhdisteen X OH-ryhmä ja valiinin COOH-ryhmä yhdistyvät, ja vesi lohkeaa."
+     ],
+     "solution": "1. Tehtävän mukaan valbenatsiini on esteri, ja sen hydrolyysissä syntyvät X (alkoholi) ja valiini (karboksyylihappo).\n2. Esterisidos muodostuu siis X:n hydroksyyliryhmän hapen ja valiinin karboksyylihiilen välille.\n3. Valbenatsiinin rakenne: X:n koko runko säilyy ennallaan (metoksiryhmät, amiinityppi, isobutyyliryhmä), mutta OH-ryhmän paikalla on esteriryhmä $\\ce{R-O-C(=O)-CH(NH2)-CH(CH3)2}$, jossa R on X:n runko. Valiinin aminoryhmä $\\ce{-NH2}$ ja isopropyyliryhmä jäävät vapaiksi.\n\n**Vastaus: X:n OH-ryhmä on esteröity valiinilla: $\\ce{R-O-C(=O)-CH(NH2)-CH(CH3)2}$.**\n\n**Sudenkuoppa:** valiinin aminoryhmän liittäminen muodostaisi amidin, ja jos X:n puolelle piirretään karbonyyli, esteri on väärin päin. Tehtävässä kerrotaan, että valbenatsiinissa on esteriryhmä.",
+     "answer": "$\\ce{R-O-C(=O)-CH(NH2)-CH(CH3)2}$, R = X:n runko",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Piirrä tetrabenatsiinin rakennekaava.",
+     "hints": [
+      "Ketonin pelkistyksessä syntyy sekundäärinen alkoholi. Tee päinvastoin: mikä ryhmä tetrabenatsiinissa on sillä paikalla, jossa X:ssä on $\\ce{CH-OH}$?"
+     ],
+     "solution": "1. Tetrabenatsiinin ketoniryhmä pelkistyy X:n sekundääriseksi alkoholiksi: $\\ce{>C=O -> >CH-OH}$.\n2. Tetrabenatsiini on siis muuten sama kuin X, mutta hydroksyyliryhmää kantava $\\ce{CH}$ on karbonyylihiili $\\ce{C=O}$.\n3. Kolmas rengas on kiertojärjestyksessä N–$\\ce{CH2}$–CH(isobutyyli)–C(=O)–$\\ce{CH2}$–CH(liitoshiili). Metoksiryhmät, typpi ja isobutyyliryhmä pysyvät ennallaan.\n\n**Vastaus: X, jossa $\\ce{CH-OH}$ on korvattu ketoniryhmällä $\\ce{C=O}$.**\n\n**Sudenkuoppa:** karbonyyliryhmän sijoittaminen väärään hiileen tai ketonin sijasta aldehydin piirtäminen. Rengashiili, jossa on kaksi hiilinaapuria, voi olla vain ketoni.",
+     "answer": "X, jossa $\\ce{CH-OH}$ on korvattu ryhmällä $\\ce{C=O}$",
+     "check": "hvp"
+    },
+    {
+     "id": "4.4",
+     "points": 4,
+     "prompt": "X:stä lohkeaa eliminaatiossa vesimolekyyli. Tuotteessa asymmetrisiä hiiliä on kaksi vähemmän kuin X:ssä. Piirrä tuotteen rakennekaava.",
+     "hints": [
+      "Etsi ensin X:n asymmetriset hiilet (niitä on kolme). Vesi lohkeaa OH-hiilestä ja viereisen hiilen vedystä, jolloin syntyy $\\ce{C=C}$-sidos. Kumman naapurin suuntaan kaksoissidoksen pitää syntyä, jotta kaksi asymmetriakeskusta häviää?"
+     ],
+     "solution": "1. X:n asymmetriset hiilet: typen ja bentseenin välinen liitoshiili, OH-ryhmää kantava hiili ja isobutyyliryhmää kantava hiili.\n2. OH-hiilellä on kaksi naapuria, joista voi lohjeta vety: $\\ce{CH2}$ (liitoshiilen puolella) ja isobutyyliryhmää kantava CH.\n3. Jos kaksoissidos syntyy $\\ce{CH2}$:n suuntaan, vain OH-hiilen asymmetria häviää. Jos se syntyy isobutyylihiilen suuntaan, molemmat kaksoissidoksen hiilet muuttuvat $sp^2$-hiiliksi ja kaksi asymmetriakeskusta häviää.\n4. Tuote: runko kuten X:ssä, mutta ilman OH-ryhmää, ja kolmas rengas on N–$\\ce{CH2}$–C(isobutyyli)=CH–$\\ce{CH2}$–CH(liitoshiili). Jäljelle jää yksi asymmetriakeskus (liitoshiili).\n\n**Vastaus: kaksoissidos entisen OH-hiilen ja isobutyyliryhmää kantavan hiilen välissä: $\\ce{-CH2-CH=C(CH2CH(CH3)2)-CH2-N}$.**\n\n**Sudenkuoppa:** kaksoissidos $\\ce{CH2}$:n suuntaan poistaa vain yhden asymmetriakeskuksen, joten se ei täytä tehtävän ehtoa.",
+     "answer": "Kaksoissidos entisen OH-hiilen ja isobutyylihiilen välissä: $\\ce{-CH2-CH=C(CH2CH(CH3)2)-CH2-N}$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Jätevedessä fosfori on fosfaatti-ionina $\\ce{PO4^3-}$. Puhdistamoon tulee jätevettä 4 950 m³ vuorokaudessa. Siihen lisätään rauta(II)sulfaattia $\\ce{FeSO4*7H2O}$, jolloin fosfaatti saostuu rauta(II)fosfaattina. Vuorokaudessa saostuneessa fosfaatissa on keskimäärin 30,0 kg fosforia.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 3,
+     "prompt": "Kirjoita saostusreaktion yhtälö olomuotoineen. Raudan hapetusluku ei muutu reaktiossa.",
+     "hints": [
+      "Rauta(II)-ioni on $\\ce{Fe^2+}$ ja fosfaatti-ioni $\\ce{PO4^3-}$. Muodosta niistä sähköisesti neutraali suola. Sulfaatti-ioni on katsojaioni, joten ionireaktio riittää."
+     ],
+     "solution": "1. Neutraalissa suolassa varausten summa on nolla: $3\\cdot(+2)+2\\cdot(-3)=0$, joten kaava on $\\ce{Fe3(PO4)2}$.\n2. Rauta(II)fosfaatti saostuu eli on kiinteä, ja ionit ovat liuenneina.\n\n$$\\ce{3Fe^2+(aq) + 2PO4^3-(aq) -> Fe3(PO4)2(s)}$$\n\n**Vastaus: $\\ce{3Fe^2+(aq) + 2PO4^3-(aq) -> Fe3(PO4)2(s)}$**\n\nMyös yhtälö, jossa lähtöaineena on $\\ce{FeSO4}$ ja tuotteena lisäksi $\\ce{SO4^2-(aq)}$, on oikein.",
+     "answer": "$\\ce{3Fe^2+(aq) + 2PO4^3-(aq) -> Fe3(PO4)2(s)}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 5,
+     "prompt": "Laske jäteveden keskimääräinen fosfaatti-ionipitoisuus yksikössä g/m³, kun oletetaan, että koko fosforimäärä päätyy sakkaan.",
+     "hints": [
+      "Jokaisessa fosfaatti-ionissa on yksi fosforiatomi, joten $n(\\ce{PO4^3-})=n(\\ce{P})$. Laske fosfaatin massa ja jaa se vuorokauden jätevesitilavuudella.",
+      "$n(\\ce{P})=\\frac{30{,}0\\cdot10^3\\,\\text{g}}{30{,}97\\,\\text{g/mol}}\\approx968{,}7\\,\\text{mol}$ ja $M(\\ce{PO4^3-})=94{,}97\\,\\text{g/mol}$."
+     ],
+     "solution": "1. $n(\\ce{P})=\\frac{m}{M}=\\frac{30{,}0\\cdot10^3\\,\\text{g}}{30{,}97\\,\\text{g/mol}}=968{,}68\\,\\text{mol}=n(\\ce{PO4^3-})$.\n2. $M(\\ce{PO4^3-})=30{,}97+4\\cdot16{,}00\\,\\text{g/mol}=94{,}97\\,\\text{g/mol}$.\n3. $m(\\ce{PO4^3-})=968{,}68\\,\\text{mol}\\cdot94{,}97\\,\\text{g/mol}=91\\,995\\,\\text{g}\\approx92{,}0\\,\\text{kg}$.\n4. Pitoisuus: $\\frac{91\\,995\\,\\text{g}}{4950\\,\\text{m}^3}=18{,}58\\,\\text{g/m}^3\\approx18{,}6\\,\\text{g/m}^3$.\n\n**Vastaus: $18{,}6\\,\\text{g/m}^3$**\n\n**Sudenkuoppa:** fosforin massan jakaminen tilavuudella antaa fosforipitoisuuden (6,06 g/m³), ei fosfaatti-ionien pitoisuutta.",
+     "answer": "$18{,}6\\,\\text{g/m}^3$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.3",
+     "points": 7,
+     "prompt": "Rauta(II)sulfaatti syötetään liuoksena, jossa on 30 massaprosenttia $\\ce{FeSO4*7H2O}$:a ja jonka tiheys on 1 160 kg/m³. Montako litraa tätä liuosta tarvitaan vuorokaudessa, kun kaikki fosfaatti saostuu kohdan 5.1 reaktioyhtälön mukaan?",
+     "hints": [
+      "Reaktioyhtälön mukaan rautaa tarvitaan 3 mol jokaista 2 mol fosfaattia kohti. Laske heptahydraatin massa, siitä liuoksen massa massaprosentin avulla ja lopuksi tilavuus tiheydellä.",
+      "$n(\\ce{FeSO4*7H2O})=\\frac32\\cdot968{,}7\\,\\text{mol}\\approx1453\\,\\text{mol}$ ja $M(\\ce{FeSO4*7H2O})\\approx278{,}0\\,\\text{g/mol}$, joten kidevedellistä suolaa tarvitaan noin 404 kg."
+     ],
+     "solution": "1. Kohdan 5.2 mukaan $n(\\ce{PO4^3-})=968{,}68\\,\\text{mol}$.\n2. Reaktioyhtälön kertoimista $n(\\ce{Fe^2+})=\\frac32 n(\\ce{PO4^3-})=1453{,}0\\,\\text{mol}=n(\\ce{FeSO4*7H2O})$.\n3. $M(\\ce{FeSO4*7H2O})=55{,}85+32{,}06+4\\cdot16{,}00+7\\cdot18{,}016\\,\\text{g/mol}=278{,}02\\,\\text{g/mol}$.\n4. $m(\\ce{FeSO4*7H2O})=1453{,}0\\,\\text{mol}\\cdot278{,}02\\,\\text{g/mol}=403\\,970\\,\\text{g}\\approx404\\,\\text{kg}$.\n5. Liuosta tarvitaan $\\frac{404{,}0\\,\\text{kg}}{0{,}30}=1346{,}6\\,\\text{kg}$.\n6. Tiheys $1160\\,\\text{kg/m}^3=1{,}160\\,\\text{kg/l}$, joten $V=\\frac{m}{\\rho}=\\frac{1346{,}6\\,\\text{kg}}{1{,}160\\,\\text{kg/l}}=1160{,}8\\,\\text{l}\\approx1{,}16\\cdot10^3\\,\\text{l}$.\n\n**Vastaus: noin $1{,}16\\cdot10^3\\,\\text{l}$ (noin 1 160 l) liuosta vuorokaudessa**\n\n**Sudenkuoppa:** vedettömän $\\ce{FeSO4}$:n moolimassan (151,9 g/mol) käyttö, vaikka massaprosentti koskee kidevedellistä suolaa, tai 30 %:n unohtaminen, jolloin tulos on vain noin 350 l.",
+     "answer": "noin $1{,}16\\cdot10^3\\,\\text{l}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Juoma tehdään ravistamalla suljetussa astiassa 50 ml rommia (vettä ja etanolia), 50 ml ananasmehua (lähes pelkkää vettä) ja 40 ml kookoskermaa (vettä ja rasvoja). Esimerkkirasva on glyseryylitrilauraatti eli glyserolin ja lauriinihapon $\\ce{C11H23COOH}$ triesteri, jossa on kolme pitkää hiilivetyketjua. Seos kaadetaan lasiin jäiden kanssa. Kuva 6.A näyttää juoman heti ja kuva 6.B vuorokauden kuluttua (ks. alkuperäiset kuvat).",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Perustele kemiallisesti, mitkä juoman ainesosista (vesi, etanoli, rasva) liukenevat toisiinsa.",
+     "hints": [
+      "Luokittele vesi, etanoli ja rasva poolisuuden mukaan ja mieti, mitä heikkoja sidoksia molekyylit voivat muodostaa keskenään. Muista periaate: samanlainen liuottaa samanlaista.",
+      "Etanolissa on hydroksyyliryhmä, joten se muodostaa vetysidoksia veden kanssa. Rasvamolekyylin kolme pitkää hiilivetyketjua tekevät siitä kokonaisuutena poolittoman, vaikka esteriryhmät ovat poolisia."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Vesi on poolinen molekyyli, joka muodostaa vetysidoksia.\n- Etanoli on poolinen: sen OH-ryhmä muodostaa vetysidoksia, ja sen lyhyt hiilivetyosa on pieni pooliton osa.\n- Etanoli- ja vesimolekyylit sitoutuvat toisiinsa vetysidoksin, ja nesteet sekoittuvat kaikissa suhteissa.\n- Rasva on kokonaisuutena pooliton, koska sen pitkät hiilivetyketjut hallitsevat rakennetta (esteriryhmät ovat vain pieniä poolisia osia).\n- Pooliton rasva ei muodosta vetysidoksia veden kanssa eikä liukene veteen. Etanoliinkin se liukenee huonosti.\n\n**Esimerkkivastaus:** Vesi ja etanoli ovat poolisia molekyylejä, joissa on OH-ryhmä. Ne muodostavat keskenään vetysidoksia, joten etanoli liukenee veteen täysin. Rasvamolekyyleissä on kolme pitkää, poolitonta hiilivetyketjua, joten rasva on pooliton. Rasvan ja veden välille ei synny vetysidoksia, ja rasvan ja veden väliset dispersiovoimat ovat heikkoja verrattuna vesimolekyylien välisiin vetysidoksiin. Siksi rasva ei liukene veden ja etanolin seokseen.",
+     "answer": "Vesi ja etanoli liukenevat toisiinsa (poolisia, vetysidokset); pooliton rasva ei liukene niihin.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 5,
+     "prompt": "Sekoitettu juoma (kuva 6.A) on emulsio. Selitä, mitä se tarkoittaa tämän juoman kohdalla.",
+     "hints": [
+      "Emulsio on seostyyppi. Onko se homogeeninen vai heterogeeninen seos, ja missä olomuodossa sen osat ovat?",
+      "Juomassa on kaksi toisiinsa liukenematonta nestefaasia: veden ja etanolin liuos sekä rasva. Kumpi niistä on jakautunut toiseen pieninä pisaroina ravistelun jälkeen?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Emulsio on heterogeeninen seos, jossa on kaksi toisiinsa liukenematonta faasia.\n- Molemmat faasit ovat nesteitä.\n- Juomassa faasit ovat veden ja etanolin liuos (jatkuva faasi) ja rasva.\n- Rasva on jakautunut vesifaasiin niin pieninä pisaroina, ettei niitä erota paljaalla silmällä, joten juoma näyttää tasaiselta.\n\n**Esimerkkivastaus:** Emulsio on kahden toisiinsa liukenemattoman nesteen heterogeeninen seos. Ravistelu hajottaa kookoskerman rasvan pieniksi pisaroiksi, jotka jakautuvat veden ja etanolin muodostamaan liuokseen. Pisarat ovat niin pieniä, ettei niitä näe, joten juoma näyttää yhtenäiseltä ja samealta, vaikka siinä on kaksi faasia.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 4,
+     "prompt": "Vertaa kuvia 6.A ja 6.B. Mitä juoman ainesosille on tapahtunut vuorokauden aikana?",
+     "hints": [
+      "Emulsio ei ole pysyvä. Mitä rasvapisaroille tapahtuu ajan myötä, ja kumman faasin tiheys on pienempi? Katso myös lasissa olleita jääpaloja."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lasiin on muodostunut kaksi selvästi erottuvaa kerrosta eli faasia: emulsio on purkautunut.\n- Rasvapisarat ovat yhdistyneet omaksi faasikseen, ja toisessa faasissa on vesi ja etanoli.\n- Rasvakerros on vesifaasin päällä, koska rasvan tiheys on pienempi.\n- Jääpalat ovat sulaneet.\n\n**Esimerkkivastaus:** Vuorokauden aikana emulsio on erottunut kahdeksi kerrokseksi. Rasvapisarat ovat yhdistyneet ja nousseet pienemmän tiheytensä vuoksi pinnalle omaksi kerrokseksi. Alla on veden ja etanolin liuos (johon on liuennut myös mehun muita aineita). Jäät ovat sulaneet ja laimentaneet vesifaasia.",
+     "answer": "Emulsio on purkautunut kahdeksi faasiksi: rasva päällä, vesi–etanoli alla; jäät ovat sulaneet.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "UV-säteily jaetaan aallonpituuden mukaan kolmeen alueeseen: UVC 100–280 nm (ei juuri pääse maanpinnalle), UVB 280–320 nm (polttaa ihon pintaa) ja UVA 320–400 nm (tunkeutuu syvemmälle ja vanhentaa ihoa). Kaikki alueet vaurioittavat DNA:ta ja lisäävät ihosyövän riskiä.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 3,
+     "prompt": "UV-säteilyn absorboinnin lisäksi: nimeä kolme muuta ominaisuutta, jotka aurinkovoiteen suoja-aineella pitäisi olla.",
+     "hints": [
+      "Mieti ainetta käyttäjän terveyden (iho), käyttötilanteen (hikoilu, uiminen), ympäristön ja valmistuksen kannalta."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme perusteltua ominaisuutta, esimerkiksi:\n\n- myrkytön, ei ärsytä ihoa eikä aiheuta allergiaa\n- ei liukene veteen (on rasvaliukoinen), jotta suoja säilyy hikoillessa ja uidessa\n- biohajoava eli ei kerry ympäristöön eikä vahingoita vesieliöitä\n- edullinen ja ympäristön kannalta kestävä valmistaa\n- ei tuki ihohuokosia\n- kestää auringonvaloa hajoamatta, jotta suoja ei heikkene käytössä\n\n**Esimerkkivastaus:** Suoja-aineen pitää olla ihmiselle myrkytön ja ihoa ärsyttämätön, se ei saa liueta veteen, jotta suoja säilyy uidessa, ja sen pitää hajota luonnossa, jotta se ei kerry vesistöihin.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Aineistossa 7.A on kolmen suoja-aineen (A, B ja C) UV-absorptiospektri (ks. alkuperäinen aineisto). Kuvaile spektrien perusteella, miten aineiden suojauskyky eroaa. Minkä aineen tai aineet valitsisit, jotta voide suojaisi riittävästi? Perustele.",
+     "hints": [
+      "Merkitse spektreihin UVB-alue 280–320 nm ja UVA-alue 320–400 nm. Katso, millä alueella kunkin aineen absorbanssi on suuri: aine suojaa niiltä aallonpituuksilta, joita se absorboi.",
+      "Yksi aineista absorboi lähinnä UVB-aluetta (huippu noin 310 nm), yksi lähinnä UVA-aluetta (huippu noin 355 nm) ja yksi laajasti koko alueella noin 280–390 nm. Voiteen täytyy suojata molemmilta."
+     ],
+     "solution": "1. **Aine A** absorboi voimakkaimmin noin 290–330 nm:n alueella, joten se suojaa pääasiassa **UVB**-säteilyltä. UVA-alueen yläpäätä se ei absorboi.\n2. **Aine C** absorboi voimakkaimmin noin 330–390 nm:n alueella, joten se suojaa pääasiassa **UVA**-säteilyltä. UVB-alueella sen absorbanssi on pieni.\n3. **Aine B** absorboi voimakkaasti koko alueella noin 280–390 nm, joten se suojaa **kummaltakin alueelta** (UVA ja UVB).\n4. Valinta: koska sekä UVA että UVB ovat haitallisia, voiteen pitää absorboida molempia alueita. Valitaan joko aine B yksinään tai aineet A ja C yhdessä, jolloin A kattaa UVB-alueen ja C UVA-alueen.\n\n**Vastaus: A suojaa UVB:ltä, C UVA:lta ja B molemmilta. Valitaan B tai yhdistelmä A + C.**\n\n**Sudenkuoppa:** pelkän korkeimman absorbanssihuipun perusteella valitseminen. Ratkaisevaa on, kattaako absorptio koko UVA- ja UVB-alueen.",
+     "answer": "A: UVB, C: UVA, B: molemmat. Valitaan B tai A + C.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 4,
+     "prompt": "Selitä, mitä molekyylissä tapahtuu, kun se absorboi UV-säteilyä.",
+     "hints": [
+      "Säteily koostuu fotoneista, joilla on aallonpituudesta riippuva energia $E=\\frac{hc}{\\lambda}$. Mihin molekyylin osaan tämä energia siirtyy?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Molekyyli absorboi UV-fotonin, jonka energia vastaa kahden elektronisen energiatason erotusta.\n- Absorptiossa elektroni virittyy eli siirtyy alemmalta energiatasolta ylemmälle (esimerkiksi π-orbitaalilta π*-orbitaalille konjugoiduissa systeemeissä).\n- Viritystila purkautuu, kun elektroni palaa perustilaan. Suoja-aineessa energia vapautuu pääosin lämpönä.\n\n**Esimerkkivastaus:** Kun UV-fotoni osuu molekyyliin, molekyyli voi absorboida sen, jos fotonin energia on yhtä suuri kuin kahden elektronitilan energiaero. Tällöin elektroni siirtyy alemmalta energiatasolta korkeammalle, eli molekyyli virittyy. Kun elektroni palaa perustilaan, energia vapautuu tavallisesti lämpönä, joten säteily ei pääse ihoon asti.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.4",
+     "points": 3,
+     "prompt": "Oksibentsonin rakenne on kuvassa 7.B: bentsofenoni eli kaksi bentseenirengasta, joita yhdistää karbonyyliryhmä $\\ce{C=O}$. Toisessa renkaassa on OH-ryhmä karbonyylihiilen viereisessä (orto-)asemassa ja metoksiryhmä. Piirrä molekyylin sisäinen vetysidos rakenteeseen.",
+     "hints": [
+      "Vetysidos syntyy, kun hyvin elektronegatiiviseen atomiin sitoutunut vety on lähellä toisen elektronegatiivisen atomin vapaata elektroniparia. Mitkä sellaiset atomit ovat lähekkäin?"
+     ],
+     "solution": "1. Vetysidoksen luovuttaja on OH-ryhmän vetyatomi (vety on sitoutunut elektronegatiiviseen happeen).\n2. Vastaanottaja on karbonyyliryhmän happi, jolla on vapaita elektronipareja.\n3. Koska OH on karbonyylin viereisessä asemassa, piirretään katkoviiva OH:n vedystä karbonyylihappeen. Samalla syntyy kuuden atomin rengasmainen rakenne O–H···O=C–C=C.\n\n**Vastaus: katkoviiva OH-ryhmän vedystä karbonyyliryhmän $\\ce{C=O}$ happeen.**\n\n**Sudenkuoppa:** vetysidoksen piirtäminen metoksiryhmän happeen (liian kaukana) tai kahden vetyatomin välille.",
+     "answer": "OH-ryhmän vety ··· karbonyylihappi",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 11,
+     "prompt": "Teräksen pinnoitteena käytetty metalliseos sisältää vain sinkkiä ja alumiinia. 1,50 g:n näyte liuotettiin ylimäärään suolahappoa, ja vetyä syntyi 614 ml (20,0 °C, 101,325 kPa, moolitilavuus 24,055 dm³/mol) reaktioiden $\\ce{2Al(s) + 6HCl(aq) -> 2AlCl3(aq) + 3H2(g)}$ ja $\\ce{Zn(s) + 2HCl(aq) -> ZnCl2(aq) + H2(g)}$ mukaan. Laske sinkin ja alumiinin massat grammoina sekä massaprosentit.",
+     "hints": [
+      "Laske vedyn ainemäärä moolitilavuuden avulla. Merkitse tuntemattomia ainemääriä $n(\\ce{Al})$ ja $n(\\ce{Zn})$ ja muodosta kaksi yhtälöä: toinen vedyn kokonaisainemäärälle, toinen näytteen massalle.",
+      "$n(\\ce{H2})=0{,}025525\\,\\text{mol}$. Yhtälöpari: $1{,}5\\,n(\\ce{Al})+n(\\ce{Zn})=0{,}025525\\,\\text{mol}$ ja $26{,}98\\,\\tfrac{\\text{g}}{\\text{mol}}\\,n(\\ce{Al})+65{,}38\\,\\tfrac{\\text{g}}{\\text{mol}}\\,n(\\ce{Zn})=1{,}50\\,\\text{g}$."
+     ],
+     "solution": "1. $n(\\ce{H2})=\\frac{V}{V_\\text{m}}=\\frac{0{,}614\\,\\text{l}}{24{,}055\\,\\text{l/mol}}=0{,}025525\\,\\text{mol}$.\n2. Stoikiometria: 1 mol alumiinia tuottaa 1,5 mol vetyä ja 1 mol sinkkiä 1 mol vetyä.\n3. Yhtälöt: $1{,}5\\,n(\\ce{Al})+n(\\ce{Zn})=0{,}025525\\,\\text{mol}$ ja $26{,}98\\,\\text{g/mol}\\cdot n(\\ce{Al})+65{,}38\\,\\text{g/mol}\\cdot n(\\ce{Zn})=1{,}50\\,\\text{g}$.\n4. Yhtälöparin ratkaisu (esim. CAS): $n(\\ce{Al})=0{,}0023747\\,\\text{mol}$ ja $n(\\ce{Zn})=0{,}021963\\,\\text{mol}$.\n5. $m(\\ce{Al})=0{,}0023747\\,\\text{mol}\\cdot26{,}98\\,\\text{g/mol}=0{,}06407\\,\\text{g}\\approx0{,}0641\\,\\text{g}$.\n6. $m(\\ce{Zn})=0{,}021963\\,\\text{mol}\\cdot65{,}38\\,\\text{g/mol}=1{,}4359\\,\\text{g}\\approx1{,}44\\,\\text{g}$ (tarkistus: $0{,}0641+1{,}4359=1{,}50$).\n7. Massaprosentit: $\\frac{0{,}06407\\,\\text{g}}{1{,}50\\,\\text{g}}\\cdot100\\,\\%=4{,}27\\,\\%$ alumiinia ja $\\frac{1{,}4359\\,\\text{g}}{1{,}50\\,\\text{g}}\\cdot100\\,\\%=95{,}7\\,\\%$ sinkkiä.\n\n**Vastaus: $m(\\ce{Al})\\approx0{,}0641\\,\\text{g}$ (4,27 %) ja $m(\\ce{Zn})\\approx1{,}44\\,\\text{g}$ (95,7 %)**\n\n**Sudenkuoppa:** alumiinin suhde 1 : 1 vetyyn (oikein 2 : 3). Toinen yleinen virhe on vetytilavuuden jättäminen millilitroiksi, kun moolitilavuus on litroina moolia kohti.",
+     "answer": "Al $0{,}0641\\,\\text{g}$ ($4{,}27\\,\\%$), Zn $1{,}44\\,\\text{g}$ ($95{,}7\\,\\%$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.2",
+     "points": 2,
+     "prompt": "Kaasua kehittyy liian hitaasti. Nimeä kaksi keinoa nopeuttaa analyysia, kun saat käyttää vain kohdassa 8.1 mainittuja aineita.",
+     "hints": [
+      "Mitkä tekijät vaikuttavat reaktionopeuteen törmäysteorian mukaan? Ajattele konsentraatiota, lämpötilaa ja kiinteän aineen pinta-alaa."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi toimivaa keinoa, esimerkiksi:\n\n- väkevämmän suolahapon käyttö (enemmän $\\ce{H+}$-ioneja, enemmän törmäyksiä)\n- reaktioseoksen lämmittäminen (suurempi osa törmäyksistä ylittää aktivoitumisenergian)\n- seoksen sekoittaminen\n- näytteen hienontaminen, jolloin reagoiva pinta-ala kasvaa\n\nKatalyyttiä ei voi käyttää, koska uusia aineita ei saa lisätä.",
+     "answer": "Esim. väkevämpi suolahappo ja lämmittäminen (tai sekoitus, näytteen hienontaminen).",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 2,
+     "prompt": "Seoksessa olisi epäpuhtautena vähän metallista kuparia. Mitä kuparille tapahtuisi analyysissa? Perustele.",
+     "hints": [
+      "Vertaa kuparin ja vedyn paikkaa jännitesarjassa. Pystyvätkö suolahapon vetyionit hapettamaan kuparia?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kupari on jalompi kuin vety ($E^\\circ(\\ce{Cu^2+}/\\ce{Cu})=+0{,}34\\,\\text{V}$), joten suolahappo ei hapeta sitä eikä kupari liukene.\n- Kupari jää metallina astian pohjalle eikä tuota vetyä.\n\n**Esimerkkivastaus:** Kupari ei reagoisi suolahapon kanssa, koska se on jalometalli: sen normaalipotentiaali on suurempi kuin vedyn. Kupari jäisi kiinteänä astian pohjalle. Koska kupari ei tuota vetyä mutta kasvattaa näytteen massaa, kohdan 8.1 laskutapa antaisi virheellisen koostumuksen.",
+     "answer": "Kupari ei liukene (jalompi kuin vety), vaan jää metallina astian pohjalle.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Nikotiinissa on kaksi rengasta, joita yhdistää hiili–hiilisidos. Rengas I on pyridiinirengas (aromaattinen kuusirengas, jossa on yksi typpi; $K_\\text{b}=1{,}10\\cdot10^{-11}$ mol/l). Rengas II on tyydyttynyt viisirengas (pyrrolidiini), jonka typessä on metyyliryhmä ($K_\\text{b}=6{,}92\\cdot10^{-7}$ mol/l). Renkaat liittyvät pyridiinin 3-asemasta pyrrolidiinin typen viereiseen hiileen. Molekyylikaava on $\\ce{C10H14N2}$.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 4,
+     "prompt": "Vertaile renkaiden I ja II rakennetta ja kemiallisia ominaisuuksia. Älä vertaa atomien lukumääriä.",
+     "hints": [
+      "Vertaa esimerkiksi hiiliatomien hybridisaatiota, renkaan muotoa, sidosten luonnetta, aromaattisuutta ja emäksisyyttä ($K_\\text{b}$-arvot). Jokaisessa kohdassa pitää kertoa molemmista renkaista."
+     ],
+     "solution": "**Hyvä vastaus sisältää** neljä vertailua, joissa molemmat renkaat on käsitelty, esimerkiksi:\n\n- **Hybridisaatio:** renkaan I hiilet ovat $sp^2$-hybridisoituneita, renkaan II hiilet $sp^3$-hybridisoituneita.\n- **Muoto:** I on tasomainen, II hieman poimuttunut.\n- **Sidokset:** renkaan I kaikilla sidoksilla on osittainen kaksoissidosluonne (delokalisoituneet π-elektronit), renkaan II sidokset ovat yksinkertaisia.\n- **Aromaattisuus:** I on aromaattinen pyridiini, II tyydyttynyt ei-aromaattinen rengas.\n- **Emäksisyys:** renkaan I typpi on paljon heikompi emäs ($K_\\text{b}=1{,}10\\cdot10^{-11}$) kuin renkaan II typpi ($K_\\text{b}=6{,}92\\cdot10^{-7}$).\n\n**Esimerkkivastaus:** Ensimmäinen rengas on tasomainen aromaattinen pyridiini, jonka hiilet ovat $sp^2$-hybridisoituneita ja jonka sidokset ovat samanpituisia delokalisoituneiden elektronien vuoksi. Toinen rengas on tyydyttynyt, hieman poimuttunut viisirengas, jossa on vain yksinkertaisia sidoksia ja $sp^3$-hiiliä. Renkaan II typpi on noin 60 000 kertaa vahvempi emäs kuin renkaan I typpi.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 5,
+     "prompt": "Määrittele enantiomeeri, selitä miksi nikotiinilla on enantiomeerejä ja kerro, mitä raseemisella seoksella tarkoitetaan.",
+     "hints": [
+      "Enantiomeerit liittyvät peilikuviin. Etsi nikotiinista hiili, jonka kaikki neljä sidoskumppania ovat keskenään erilaisia.",
+      "Asymmetriakeskus on renkaan II hiili, joka on liittynyt renkaaseen I. Sen neljä sustituenttia ovat vety, renkaan II typpi, pyridiinirengas ja renkaan II $\\ce{CH2}$-ryhmä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Enantiomeerit eli peilikuvaisomeerit ovat stereoisomeerejä, jotka ovat toistensa peilikuvia mutta joita ei voi asettaa päällekkäin.\n- Nikotiinissa on asymmetriakeskus (kiraalinen hiili): renkaan II hiili, joka on sitoutunut vetyyn, typpeen, pyridiinirenkaaseen ja renkaan toiseen hiileen. Siksi nikotiinilla on kaksi enantiomeeriä.\n- Rasemaatti on seos, jossa on yhtä paljon kumpaakin enantiomeeriä.\n\n**Esimerkkivastaus:** Enantiomeerit ovat saman yhdisteen kaksi muotoa, jotka ovat toistensa peilikuvia kuten oikea ja vasen käsi. Nikotiinissa renkaiden liitoskohdan viisirenkaan hiileen on sitoutunut neljä erilaista ryhmää (H, N, pyridiinirengas ja $\\ce{CH2}$), joten hiili on asymmetrinen ja molekyylistä on kaksi peilikuvamuotoa. Rasemaatissa enantiomeerejä on yhtä suuret määrät, eikä seos siksi käännä polarisoidun valon tasoa.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 5,
+     "prompt": "Aineistossa 9.B on sähkösavukenesteen nikotiinin kromatogrammi, jossa enantiomeerien piikkien pinta-alat ovat 92,3 ja 9,9. Pinta-ala on verrannollinen konsentraatioon. Enantiomeeriylimäärä on $\\text{ee}=\\frac{[\\text{E}_1]-[\\text{E}_2]}{[\\text{E}_1]+[\\text{E}_2]}\\cdot100\\,\\%$, jossa E₁ on runsaampi enantiomeeri. Laske nesteen ee. Mikä olisi rasemaatin ee?",
+     "hints": [
+      "Koska pinta-ala on verrannollinen konsentraatioon, pinta-alat voi sijoittaa kaavaan suoraan konsentraatioiden paikalle.",
+      "Osoittaja on $92{,}3-9{,}9=82{,}4$ ja nimittäjä $92{,}3+9{,}9=102{,}2$. Rasemaatissa enantiomeerien konsentraatiot ovat yhtä suuret."
+     ],
+     "solution": "1. Runsaampi enantiomeeri on piikki, jonka pinta-ala on 92,3, ja vähäisempi se, jonka pinta-ala on 9,9.\n2. $\\text{ee}=\\frac{92{,}3-9{,}9}{92{,}3+9{,}9}\\cdot100\\,\\%=\\frac{82{,}4}{102{,}2}\\cdot100\\,\\%=80{,}6\\,\\%\\approx81\\,\\%$.\n3. Rasemaatissa $[\\text{E}_1]=[\\text{E}_2]$, joten osoittaja on nolla ja $\\text{ee}=0\\,\\%$.\n\n**Vastaus: nesteen $\\text{ee}\\approx81\\,\\%$ (80,6 %), rasemaatin $\\text{ee}=0\\,\\%$**\n\n**Sudenkuoppa:** pelkän osuuden $\\frac{92{,}3}{102{,}2}=90\\,\\%$ laskeminen. Se on runsaamman enantiomeerin osuus, ei enantiomeeriylimäärä.",
+     "answer": "$\\text{ee}\\approx81\\,\\%$; rasemaatti $0\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.4",
+     "points": 6,
+     "prompt": "Nesteen nikotiinipitoisuus määritettiin titraamalla suolahapolla. Titrauskäyrässä (ks. alkuperäinen kuva) on vain yksi selvä ekvivalenttikohta, noin pH:ssa 5. Kirjoita titrausreaktion yhtälö rakennekaavoin.",
+     "hints": [
+      "Suolahappo luovuttaa protonin emäkselle. Nikotiinissa on kaksi emäksistä typpeä. Kumpi niistä on vahvempi emäs? Katso $K_\\text{b}$-arvoja.",
+      "Koska ekvivalenttikohtia on vain yksi, vain vahvemmin emäksinen typpi protonoituu, eli renkaan II metyloitu typpi ($K_\\text{b}=6{,}92\\cdot10^{-7}$). Tuotteina ovat nikotiinin ammoniumioni ja kloridi-ioni."
+     ],
+     "solution": "1. Lähtöaineet: nikotiini (piirrä molemmat renkaat kuten tehtävän kuvassa) ja $\\ce{HCl}$.\n2. Vahvempi emäs on renkaan II tertiäärinen amiinityppi, joten $\\ce{HCl}$ luovuttaa protonin sille. Pyridiinityppi ei protonoidu tässä titrauksessa, mikä näkyy siitä, että käyrässä on vain yksi hyppäys.\n3. Tuote 1: sama rakenne, mutta renkaan II typpeen on liittynyt vetyatomi. Typellä on neljä sidosta (metyyli, kaksi rengashiiltä ja H) ja positiivinen varaus.\n4. Tuote 2: kloridi-ioni $\\ce{Cl-}$.\n\nMolekyylikaavoin: $\\ce{C10H14N2 + HCl -> C10H15N2+ + Cl-}$.\n\n**Vastaus: nikotiini + $\\ce{HCl}$ → nikotiini, jonka pyrrolidiinityppi on protonoitunut ($\\ce{>N+(H)-CH3}$), + $\\ce{Cl-}$**\n\nOksoniumionikin kelpaa protonin luovuttajaksi: silloin toinen tuote on vesi.\n\n**Sudenkuoppa:** pyridiinitypen protonointi tai molempien typpien protonointi. Pyridiinityppi on noin 60 000 kertaa heikompi emäs.",
+     "answer": "$\\ce{C10H14N2 + HCl -> C10H15N2+ + Cl-}$, pyrrolidiinityppi protonoituu",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Varhaisen maapallon ilmakehä oli pääosin typpeä, hiilidioksidia ja metaania. Syanobakteerien fotosynteesi alkoi tuottaa happea, mutta aluksi meret ja monet mineraalit sitoivat sen (niin sanotut happipuskurit). Suuri hapetustapahtuma käynnistyi noin 2,5 miljardia vuotta sitten. Sen päätyttyä ilmakehän happipitoisuus kasvoi nopeasti, ja fotosynteesi poisti hiilidioksidia.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 3,
+     "prompt": "Oliko ilmasto ennen hapetustapahtumaa nykyistä lämpimämpi vai kylmempi? Perustele ilmakehän koostumuksella.",
+     "hints": [
+      "Mitkä varhaisen ilmakehän kaasuista ovat kasvihuonekaasuja, ja miten niiden määrä muuttui, kun happea alkoi kertyä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hiilidioksidi on kasvihuonekaasu, jonka pitoisuus laski fotosynteesin vuoksi.\n- Metaani on voimakas kasvihuonekaasu, ja sen määrä pieneni, kun se hapettui.\n- Kasvihuoneilmiö heikkeni ja ilmasto viileni, eli aiemmin ilmasto oli lämpimämpi kuin nyt.\n\n**Esimerkkivastaus:** Ilmasto oli lämpimämpi. Ilmakehässä oli paljon hiilidioksidia ja metaania, jotka ovat kasvihuonekaasuja. Hapen lisääntyessä metaani hapettui ja fotosynteesi sitoi hiilidioksidia, jolloin kasvihuoneilmiö heikkeni.",
+     "answer": "Lämpimämpi (enemmän kasvihuonekaasuja $\\ce{CO2}$ ja $\\ce{CH4}$).",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 4,
+     "prompt": "Ennen hapetustapahtumaa ilmakehä oli luonteeltaan lievästi pelkistävä ja sen jälkeen lievästi hapettava. Perustele tämä pääkomponenttien hapettavien ja pelkistävien ominaisuuksien avulla.",
+     "hints": [
+      "Käy läpi $\\ce{N2}$, $\\ce{CO2}$, $\\ce{CH4}$ ja $\\ce{O2}$: mikä niistä hapettuu helposti (toimii pelkistimenä), mikä pelkistyy helposti (toimii hapettimena) ja mikä on lähes reagoimaton? Hiilen hapetusluvut auttavat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Typpi on kolmoissidoksensa vuoksi hyvin reagoimaton, joten se ei ole kummassakaan ilmakehässä merkittävä hapetin eikä pelkistin.\n- Hiilidioksidissa hiilen hapetusluku on +IV eli suurin mahdollinen, joten se ei voi hapettua. Se pelkistyy vain vaikeasti, joten se ei ole merkittävä hapetin.\n- Ennen tapahtumaa: metaanin hiilen hapetusluku on −IV, joten metaani voi hapettua eli toimia pelkistimenä. Siksi ilmakehä oli heikosti pelkistävä.\n- Tapahtuman jälkeen: happi on hapetin, joten ilmakehästä tuli heikosti hapettava.\n\n**Esimerkkivastaus:** Typpi ja hiilidioksidi eivät juuri osallistu hapetus-pelkistysreaktioihin: typen kolmoissidos on hyvin vahva, ja hiilidioksidin hiili on jo hapettunut täysin (+IV). Ilmakehän luonteen ratkaisi siis muu komponentti. Ennen hapetustapahtumaa se oli metaani, jonka hiili (−IV) hapettuu helposti, joten metaani toimi pelkistimenä. Tapahtuman jälkeen ilmakehään kertyi happea, joka on hapetin.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 3,
+     "prompt": "Sideriitti $\\ce{FeCO3}$ reagoi hapen kanssa, jolloin syntyy hematiittia $\\ce{Fe2O3}$ ja hiilidioksidia. Miksi sideriitti pystyi toimimaan happipuskurina?",
+     "hints": [
+      "Kirjoita reaktioyhtälö. Mihin happi päätyy, ja mitä ilmakehän happipitoisuudelle tapahtuu niin kauan kuin sideriittiä riittää?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Reaktio kuluttaa happea: $\\ce{4FeCO3(s) + O2(g) -> 2Fe2O3(s) + 4CO2(g)}$.\n- Reaktiossa syntyy kiinteää hematiittia, ja happi jää siihen sitoutuneena maankuoreen.\n- Fotosynteesin tuottama happi kuluu sideriitin hapettamiseen, ja ilmakehän happipitoisuus voi alkaa kasvaa vasta, kun sideriitti on loppunut.\n\n**Esimerkkivastaus:** Sideriitti reagoi hapen kanssa yhtälön $\\ce{4FeCO3(s) + O2(g) -> 2Fe2O3(s) + 4CO2(g)}$ mukaan. Happi päätyy kiinteään hematiittiin ja poistuu siten ilmakehästä. Niin kauan kuin reagoimatonta sideriittiä riittää, happea ei kerry ilmakehään.",
+     "answer": "$\\ce{4FeCO3(s) + O2(g) -> 2Fe2O3(s) + 4CO2(g)}$: happi sitoutuu hematiittiin.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 5,
+     "prompt": "Perustele hapetuslukujen avulla, miksi sideriitti $\\ce{FeCO3}$ toimii happipuskurina mutta hematiitti $\\ce{Fe2O3}$ ei. Voiko fajaliitti $\\ce{Fe2SiO4}$ toimia happipuskurina? Perustele.",
+     "hints": [
+      "Laske raudan hapetusluku jokaisessa mineraalissa. Karbonaatti-ioni on $\\ce{CO3^2-}$, silikaatti-ioni $\\ce{SiO4^4-}$ ja hapen hapetusluku on −II.",
+      "Sideriitissä raudan hapetusluku on +II ja hematiitissa +III. Happi on hapetin, joten se reagoi vain sellaisen aineen kanssa, joka voi vielä hapettua."
+     ],
+     "solution": "1. $\\ce{FeCO3}$: $x+(-2)=0$, joten Fe on **+II**.\n2. $\\ce{Fe2O3}$: $2x+3\\cdot(-2)=0$, joten Fe on **+III**.\n3. Happi on hapetin: reagoidessaan se pelkistyy ja hapettaa toisen aineen. Sideriitin rauta voi hapettua tilasta +II tilaan +III, joten sideriitti kuluttaa happea. Hematiitin rauta on jo tilassa +III, eikä happi voi hapettaa sitä pidemmälle, joten hematiitti ei kuluta happea.\n4. $\\ce{Fe2SiO4}$: $2x+4+4\\cdot(-2)=0$, joten Fe on **+II**. Fajaliitin rauta voi hapettua tilaan +III, joten fajaliitti voi toimia happipuskurina.\n\n**Vastaus: Sideriitin ja fajaliitin rauta on +II ja voi hapettua (+III), joten ne kuluttavat happea. Hematiitin rauta on jo +III, joten hematiitti ei toimi puskurina.**\n\n**Sudenkuoppa:** väite, että happi voisi reagoida hematiitin kanssa pelkistämällä rautaa. Hapettimena happi voi vain hapettaa.",
+     "answer": "Fe +II sideriitissä ja fajaliitissa (voivat hapettua → puskureita), Fe +III hematiitissa (ei puskuri).",
+     "check": "hvp"
+    },
+    {
+     "id": "10.5",
+     "points": 5,
+     "prompt": "Pyriitti $\\ce{FeS2}$ (rikin hapetusluku −I) reagoi hapen kanssa, jolloin syntyy rauta(III)oksidia ja $\\ce{SO3}$:a. Jälkimmäinen muodostaa veden kanssa rikkihappoa, joka reagoi maankuoren kalsiitin $\\ce{CaCO3}$ kanssa. Kirjoita koko prosessin kokonaisreaktioyhtälö olomuotoineen.",
+     "hints": [
+      "Kirjoita ja tasapainota ensin kolme osareaktiota. Laske ne yhteen sellaisin kertoimin, että välituotteet $\\ce{SO3}$ ja $\\ce{H2SO4}$ supistuvat pois.",
+      "Ensimmäinen osareaktio on $\\ce{4FeS2(s) + 15O2(g) -> 2Fe2O3(s) + 8SO3(g)}$. Kerro kaksi muuta osareaktiota kahdeksalla, jotta rikkiyhdisteet kumoutuvat."
+     ],
+     "solution": "1. Pyriitin hapettuminen: $\\ce{4FeS2(s) + 15O2(g) -> 2Fe2O3(s) + 8SO3(g)}$. Elektronitase: rauta +II → +III ja rikki −I → +VI, eli $4\\cdot1+8\\cdot7=60$ elektronia, ja $15\\,\\ce{O2}$ ottaa vastaan $15\\cdot4=60$ elektronia.\n2. Rikkihapon muodostuminen: $\\ce{SO3(g) + H2O(l) -> H2SO4(aq)}$, kerrotaan kahdeksalla.\n3. Reaktio kalsiitin kanssa: $\\ce{CaCO3(s) + H2SO4(aq) -> CaSO4(s) + CO2(g) + H2O(l)}$, kerrotaan kahdeksalla.\n4. Lasketaan yhteen: $\\ce{SO3}$, $\\ce{H2SO4}$ ja $\\ce{H2O}$ (8 kulutetaan ja 8 syntyy) supistuvat pois.\n\n$$\\ce{4FeS2(s) + 15O2(g) + 8CaCO3(s) -> 2Fe2O3(s) + 8CaSO4(s) + 8CO2(g)}$$\n\n**Vastaus: $\\ce{4FeS2(s) + 15O2(g) + 8CaCO3(s) -> 2Fe2O3(s) + 8CaSO4(s) + 8CO2(g)}$**\n\n**Sudenkuoppa:** veden jättäminen kokonaisreaktioon, vaikka se kumoutuu, tai rikin hapetusluvun arvaaminen −II:ksi, jolloin happikerroin menee väärin.",
+     "answer": "$\\ce{4FeS2(s) + 15O2(g) + 8CaCO3(s) -> 2Fe2O3(s) + 8CaSO4(s) + 8CO2(g)}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Typpitrijodidi $\\ce{NI3}$ on epävakaa kosketusräjähde. Ammoniakin ja jodin reaktiossa syntyy ketjumaista kompleksia $\\ce{NH3*NI3}$, joka räjähtää pienestäkin kosketuksesta. Videolla 11.A räjähdyksestä nousee violettia savua. Taulukossa 11.B on ammoniakin ja kompleksin muodostumisentalpiat sekä jodin sublimoitumisentalpia.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 2,
+     "prompt": "Nimeä kaksi kemiallista ominaisuutta, jotka kosketusräjähteen hajoamisreaktiolla täytyy olla.",
+     "hints": [
+      "Ajattele reaktion energiaa (entalpianmuutos ja aktivoitumisenergia), nopeutta ja tuotteiden olomuotoa."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi seuraavista:\n\n- reaktio on eksoterminen eli vapauttaa lämpöä\n- aktivoitumisenergia on pieni, joten pieni kosketus riittää käynnistämään sen\n- reaktiossa syntyy kaasuja, jolloin tilavuus kasvaa äkillisesti\n- reaktio on hyvin nopea",
+     "answer": "Esim. eksoterminen ja pieni aktivoitumisenergia (myös kaasumaiset tuotteet, nopeus).",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 2,
+     "prompt": "Piirrä $\\ce{NI3}$:n rakennekaava.",
+     "hints": [
+      "Typellä on viisi valenssielektronia ja jodilla seitsemän. Kuinka monta sidosta ja vapaata elektroniparia typelle tulee, ja millaisen muodon VSEPR-teoria antaa?"
+     ],
+     "solution": "1. Typpi muodostaa kolme yksinkertaista sidosta, yhden kuhunkin jodiatomiin, ja sille jää yksi vapaa elektronipari.\n2. Jokaisella jodiatomilla on kolme vapaata elektroniparia (oktetti täyttyy).\n3. Neljä elektroniparia typen ympärillä, joista yksi on vapaa, antaa kolmisivuisen pyramidin kuten ammoniakilla.\n\n**Vastaus: N keskellä kolmen I-atomin kanssa yksinkertaisin sidoksin, vapaa elektronipari typellä, pyramidin muotoinen molekyyli.**",
+     "answer": "N:n ympärillä kolme N–I-sidosta ja yksi vapaa elektronipari (pyramidi).",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "$\\ce{NH3*NI3}$ hajoaa niin, että tuotteina on kaasumaista ammoniakkia ja kaksi muuta kaasua. Kirjoita hajoamisen reaktioyhtälö. Mistä violetti väri johtuu?",
+     "hints": [
+      "Kun ammoniakki lohkeaa, mitä alkuaineita jää jäljelle? Muodosta niistä alkuainemolekyylit ja tasapainota pienimmin kokonaislukukertoimin. Muista, että tuotteet ovat kaasuja."
+     ],
+     "solution": "1. Ammoniakin lisäksi jäljelle jäävät typpi ja jodi, jotka muodostavat alkuainemolekyylit $\\ce{N2}$ ja $\\ce{I2}$.\n2. Tasapainotus: yksi $\\ce{NI3}$ antaa puoli $\\ce{N2}$:ta ja puolitoista $\\ce{I2}$:ta, joten kerrotaan kahdella.\n\n$$\\ce{2NH3*NI3(s) -> 2NH3(g) + N2(g) + 3I2(g)}$$\n\n3. Violetti väri johtuu kaasumaisesta jodista (jodihöyry on violettia).\n\n**Vastaus: $\\ce{2NH3*NI3(s) -> 2NH3(g) + N2(g) + 3I2(g)}$; violetti väri tulee jodihöyrystä.**",
+     "answer": "$\\ce{2NH3*NI3(s) -> 2NH3(g) + N2(g) + 3I2(g)}$; väri jodihöyrystä",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.4",
+     "points": 8,
+     "prompt": "Laske kohdan 11.3 hajoamisreaktion entalpianmuutos taulukon 11.B arvoilla. Paljonko lämpöä vapautuu, kun 1,00 g $\\ce{NH3*NI3}$:a räjähtää?",
+     "hints": [
+      "Käytä kaavaa $\\Delta H_\\text{r}=\\sum\\Delta H_\\text{f}(\\text{tuotteet})-\\sum\\Delta H_\\text{f}(\\text{lähtöaineet})$. Alkuaineen muodostumisentalpia perustilassa on nolla, mutta jodin perustila on kiinteä ja reaktiossa syntyy jodihöyryä.",
+      "Kaasumaisen jodin muodostumisentalpia on sama kuin sublimoitumisentalpia, joten $\\Delta H_\\text{r}=2\\Delta H_\\text{f}(\\ce{NH3})+3\\Delta H_\\text{sub}(\\ce{I2})-2\\Delta H_\\text{f}(\\ce{NH3*NI3})$. Huomaa, että yhtälössä hajoaa 2 mol kompleksia, ja $M(\\ce{NH3*NI3})=411{,}7\\,\\text{g/mol}$."
+     ],
+     "solution": "1. Kohdan 11.3 yhtälö: $\\ce{2NH3*NI3(s) -> 2NH3(g) + N2(g) + 3I2(g)}$.\n2. $\\Delta H_\\text{f}(\\ce{N2(g)})=0$ ja $\\Delta H_\\text{f}(\\ce{I2(g)})=\\Delta H_\\text{sub}(\\ce{I2})=62{,}4\\,\\text{kJ/mol}$, koska jodin perustila on kiinteä.\n3. $\\Delta H_\\text{r}=2\\cdot(-45{,}9)+0+3\\cdot62{,}4-2\\cdot146\\,\\text{kJ/mol}=-196{,}6\\,\\text{kJ/mol}$ (reaktioyhtälön mukaista 2 mol:n hajoamista kohti eli $-98{,}3$ kJ yhtä moolia kompleksia kohti).\n4. $M(\\ce{NH3*NI3})=2\\cdot14{,}01+3\\cdot1{,}008+3\\cdot126{,}90\\,\\text{g/mol}=411{,}74\\,\\text{g/mol}$ ja $n=\\frac{1{,}00\\,\\text{g}}{411{,}74\\,\\text{g/mol}}=2{,}4287\\cdot10^{-3}\\,\\text{mol}$.\n5. $Q=2{,}4287\\cdot10^{-3}\\,\\text{mol}\\cdot\\frac{196{,}6\\,\\text{kJ}}{2\\,\\text{mol}}=0{,}2387\\,\\text{kJ}\\approx0{,}239\\,\\text{kJ}$.\n\n**Vastaus: $\\Delta H_\\text{r}=-196{,}6\\,\\text{kJ/mol}$ (yhtälölle, jossa hajoaa 2 mol kompleksia); 1,00 g:sta vapautuu $0{,}239\\,\\text{kJ}$ lämpöä**\n\n**Sudenkuoppa:** jodin sublimoitumisentalpian unohtaminen (jolloin $\\Delta H_\\text{r}=-383{,}8$ kJ/mol) tai kertoimen 2 unohtaminen lämpöä laskettaessa, jolloin tulos kaksinkertaistuu.",
+     "answer": "$\\Delta H_\\text{r}=-196{,}6\\,\\text{kJ/mol}$; $0{,}239\\,\\text{kJ}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.5",
+     "points": 4,
+     "prompt": "$\\ce{NCl3}$ ja $\\ce{NBr3}$ ovat räjähtäviä, mutta $\\ce{NF3}$ ei ole. Perustele kemiallisesti, miksi $\\ce{NF3}$ on pysyvämpi kuin muut typpitrihalidit.",
+     "hints": [
+      "Vertaa halogeenien elektronegatiivisuutta ja atomikokoa. Miten ne vaikuttavat N–X-sidoksen lujuuteen ja siihen, mahtuuko kolme halogeeniatomia pienen typpiatomin ympärille?"
+     ],
+     "solution": "**Hyvä vastaus sisältää** ainakin toisen perustelun:\n\n- **Elektronegatiivisuus:** fluori on halogeeneista elektronegatiivisin. Se vetää sidoselektroneja voimakkaasti puoleensa, ja N–F-sidos on luja, joten molekyyli on pysyvä.\n- **Koko:** fluori on halogeeneista pienin. Suuret halogeeniatomit (Cl, Br, I) ovat ahtaasti pienen typen ympärillä ja hylkivät toisiaan (steerinen jännitys), mikä heikentää sidoksia ja tekee yhdisteestä epävakaan. Fluoriatomit mahtuvat typen ympärille ilman vastaavaa jännitystä.\n\n**Esimerkkivastaus:** Fluori on pieni ja hyvin elektronegatiivinen atomi, joten N–F-sidos on lyhyt ja luja. Isommat halogeenit muodostavat typen kanssa pitkiä ja heikkoja sidoksia, ja kolme suurta atomia pienen typen ympärillä hylkivät toisiaan. Siksi esimerkiksi $\\ce{NI3}$ hajoaa helposti typeksi ja halogeeniksi, jolloin syntyy hyvin luja $\\ce{N#N}$-kolmoissidos, ja energiaa vapautuu.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

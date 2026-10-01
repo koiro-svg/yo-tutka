@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YO-harjoittelu</title>
+<meta name="description" content="Tee ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla. Vihjeet, malliratkaisut, itsearvio, kertauslista ja koesimulaatio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digabi/mathquill@0.10.12/build/mathquill.css" integrity="sha384-Bjv922/rg2S1nHWkK1ojuHz92gznxN3aI6bV3IRuaoGWEr5WfgDOPMm3acaTXqN3" crossorigin="anonymous">
+<style>
+/* koirosvg radar theme: deliberately dark-only, same palette as index.html.
+   Exception: answer fields are light "paper" like in Abitti, because formula images are black SVGs. */
+:root{
+  color-scheme:dark;
+  --bg:#081427; --bg-glow:#0E2140; --surface:#0F213D; --surface-2:#16294A; --line:#1F3B66; --line-2:#182F52;
+  --ink:#E6EEF8; --ink-2:#B4C3D8; --ink-3:#8FA3BF;
+  --accent:#5CE1C6; --accent-ink:#06221C; --accent-soft:#123D45;
+  --spring:#6FC48F; --autumn:#E58E4E;
+  --ok:#6FC48F; --ok-soft:#173A2E; --warn:#E8B45C; --warn-soft:#3A3222; --bad:#F08A7E; --bad-soft:#3E2227;
+  --paper:#FBFCFE; --paper-ink:#141B26; --paper-line:#C9D3E1;
+  --focus:#5CE1C6;
+  --font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;padding-inline:clamp(16px,3vw,40px);padding-block:20px 80px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(28px,4.5vw,44px);font-weight:800;letter-spacing:-.02em}
+h2{font-size:21px;font-weight:700;overflow-wrap:anywhere}
+h3{font-size:16px;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+[hidden]{display:none!important}
+
+.layout{max-width:1240px;margin:0 auto;display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+body.aids-open .layout{max-width:1680px}
+@media (min-width:1100px){ body.aids-open .layout{grid-template-columns:minmax(0,1fr) minmax(380px,40%)} }
+.wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-content:start;min-width:0;overflow-wrap:anywhere}   /* long chemical names / task titles must not widen the page */
+.masthead,.taskhead{grid-template-columns:minmax(0,1fr)}
+.wrap>*{min-width:0}
+.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.masthead{display:grid;gap:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.masthead .eyebrow{color:var(--accent)}
+.lede{color:var(--ink-2);max-width:70ch;font-size:16px}
+.crumb{display:inline-flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--font-mono);font-size:13px}
+.crumb a{padding-block:8px;text-decoration:none;color:var(--ink-3)}
+.crumb a:hover{color:var(--accent)}
+.muted{color:var(--ink-3)}
+.sp{margin-left:auto}
+.small{font-size:13px}
+.mono{font-family:var(--font-mono)}
+.warnbox{background:var(--warn-soft);border-radius:10px;padding:12px 14px;font-size:14px}
+
+.btn{border:1px solid var(--line);background:var(--surface-2);border-radius:8px;padding:7px 12px;cursor:pointer;font-weight:700;font-size:14px;line-height:1.2;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.ghost{background:transparent}
+.btn[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:700;font-size:14px}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.card{background:linear-gradient(180deg,rgba(92,225,198,.05),transparent 200px),var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.grid2{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.chip{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
+.chip.K{background:#173A2E;color:var(--spring)} .chip.S{background:#3A2A22;color:var(--autumn)}
+.chip.ok{background:var(--ok-soft);color:var(--ok)} .chip.warn{background:var(--warn-soft);color:var(--warn)} .chip.bad{background:var(--bad-soft);color:var(--bad)}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 9px;color:var(--ink-2)}
+
+/* home */
+.list{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.list li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.list a{font-weight:700;text-decoration:none}
+.list a:hover{text-decoration:underline}
+.meter{display:grid;grid-template-columns:minmax(0,1fr) 90px 44px;gap:10px;align-items:center;font-size:14px}
+.meter .track{height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.meter .fill{height:100%;background:var(--accent)}
+.meter .fill.bad{background:var(--bad)} .meter .fill.warn{background:var(--warn)}
+.meter .v{font-family:var(--font-mono);font-size:12px;text-align:right;color:var(--ink-2)}
+details.sess{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-weight:700}
+.tasks{display:grid;gap:2px;padding:0 10px 12px}
+.trow{display:grid;grid-template-columns:3.2em minmax(0,1fr) auto;gap:4px 12px;align-items:baseline;padding:8px 6px;border-radius:8px;text-decoration:none;color:inherit}
+.trow:hover{background:var(--surface-2)}
+.trow .n{font-family:var(--font-mono);font-weight:600;color:var(--accent)}
+.trow .t{font-weight:700;overflow-wrap:anywhere}
+.trow .s{grid-column:2/-1;color:var(--ink-3);font-size:13px}
+.trow .st{font-family:var(--font-mono);font-size:12px;white-space:nowrap}
+
+/* task view */
+.taskhead{display:grid;gap:8px}
+.taskhead .sum{color:var(--ink-2);max-width:75ch}
+.unit{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:16px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px;scroll-margin-top:calc(var(--toolbar-h,0px) + 16px);min-width:0}
+.unit .uhead{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.unit .uhead b{font-family:var(--font-display);font-size:15px}
+.md{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;max-width:78ch;min-width:0;overflow-wrap:anywhere}
+.md>*{min-width:0}   /* grid items default to min-width:auto, which lets a wide formula widen the page */
+.md ul,.md ol{margin:0;padding-left:22px;display:grid;gap:3px}
+.md mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%}
+/* MathJax 3 cannot line-break: a too-wide inline formula shrinks to fit instead of widening the page */
+.md mjx-container:not([display="true"]) svg{max-width:100%;height:auto}
+.md mjx-assistive-mml{max-width:100%}   /* invisible screen-reader copy: must not widen the page either */
+.intro{border-left:3px solid var(--accent);padding:4px 0 4px 14px;color:var(--ink-2)}
+.help{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0}
+.reveal{min-width:0;border-radius:10px;padding:12px 14px;background:var(--surface-2);border:1px solid var(--line-2)}
+.reveal.hint{border-left:3px solid var(--warn)}
+.reveal.sol{border-left:3px solid var(--accent)}
+.reveal .rh{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.assess{display:grid;gap:8px;border-top:1px dashed var(--line);padding-top:10px}
+.pts{display:flex;flex-wrap:wrap;gap:4px}
+.pts button{min-width:36px;border:1px solid var(--line);background:var(--surface-2);border-radius:6px;padding:5px 8px;cursor:pointer;font-family:var(--font-mono);font-size:13px}
+.pts button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pts input{width:5.5em;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
+.pager{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* answer editor ("paper") */
+.answer{background:var(--paper);color:var(--paper-ink);border:1px solid var(--paper-line);border-radius:8px;min-height:120px;padding:12px 14px;font-family:Arial,"Helvetica Neue",sans-serif;font-size:16px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;cursor:text}
+.answer:focus{outline:2px solid var(--accent);outline-offset:1px}
+.answer:empty::before{content:attr(data-ph);color:#7A8699}
+.answer img{max-width:100%;vertical-align:middle}
+.answer img.eq{cursor:pointer;max-width:none}
+.answer img.eq:hover{outline:1px dashed #5B8DEF}
+.answer img.shot{display:block;margin:6px 0;border:1px solid var(--paper-line)}
+.afoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
+.eq-edit{display:inline-flex;flex-direction:column;gap:4px;vertical-align:middle;min-width:14em;max-width:100%;padding:6px;margin:2px;background:#EEF4FF;border:1px solid #5B8DEF;border-radius:6px;white-space:normal}
+.eq-edit .mq-editable-field{min-height:1.6em;padding:3px 5px;background:#fff;border-color:#9CB4E0 !important;font-size:18px}
+.eq-edit .mq-editable-field.mq-focused{box-shadow:0 0 0 2px #5B8DEF;border-color:#5B8DEF !important}
+.eq-edit textarea{font-family:var(--font-mono);font-size:13px;resize:none;border:1px solid #9CB4E0;border-radius:4px;padding:3px 5px;background:#fff;color:#141B26;min-height:1.9em;overflow:hidden}
+
+/* editor toolbar: fixed on top while an answer is focused, like in Abitti */
+.rte{position:fixed;left:0;right:0;top:0;z-index:50;background:#0B1A31;border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);padding:6px clamp(8px,2vw,24px);display:grid;gap:6px}
+.rte .bar{display:flex;gap:4px;align-items:center;overflow-x:auto;scrollbar-width:thin}
+.rte button{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:6px;min-width:32px;height:32px;padding:0 8px;cursor:pointer;font-size:15px;color:var(--ink)}
+.rte button:hover{border-color:var(--accent)}
+.rte button.wide{font-weight:700;font-size:13px}
+.rte button.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.rte .sep{flex:none;width:1px;height:24px;background:var(--line);margin:0 4px}
+.rte .mathbar{display:none}
+.rte.math .mathbar{display:flex}
+.rte .keys{font-size:12px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:4px 14px;padding:4px 2px}
+.rte .keys kbd{font-family:var(--font-mono);font-size:11px;background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+
+/* exam simulation */
+.simbar{position:sticky;top:calc(var(--toolbar-h,0px));z-index:20;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:10px 14px}
+body.tools-on .simbar{top:calc(var(--toolbar-h,0px) + 4px)}
+.clock{font-family:var(--font-mono);font-size:22px;font-weight:600;color:var(--accent)}
+.clock.low{color:var(--warn)}
+.section{display:grid;gap:10px}
+.section>header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+details.simtask{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+details.simtask[data-chosen="1"]{border-color:var(--accent)}
+details.simtask>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.simbody{display:grid;gap:12px;padding:0 14px 14px}
+.total{font-family:var(--font-display);font-size:28px}
+
+/* aids panel */
+.aids{position:sticky;top:calc(var(--toolbar-h,0px) + 12px);height:calc(100vh - var(--toolbar-h,0px) - 24px);display:grid;grid-template-rows:auto minmax(0,1fr);gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px}
+.aids .tabs{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.aids .tabs button{border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:4px 11px;cursor:pointer;font-size:13px;font-weight:700}
+.aids .tabs button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.aids .tabs .x{margin-left:auto}
+.aids .pane{min-height:0;border-radius:8px;overflow:hidden;background:#fff}
+.aids .pane.links{background:var(--surface-2);overflow:auto;padding:14px;display:grid;gap:10px;align-content:start}
+.aids iframe{width:100%;height:100%;border:0;display:block}
+.aids .aidlazy{height:100%;display:grid;place-items:center;background:var(--surface-2)}
+@media (max-width:1099px){
+  .aids{position:fixed;left:8px;right:8px;bottom:8px;top:auto;height:68vh;z-index:40;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
+}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+body.aids-open .fab{display:none}
+footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
+@media print{ .rte,.fab,.aids,.help,.assess,.simbar .btn{display:none!important} body{background:#fff;color:#000} }
+</style>
+</head>
+<body>
+<div class="layout">
+  <main class="wrap" id="app"><p class="muted">Ladataan…</p></main>
+  <aside class="aids" id="aids" hidden aria-label="Apuvälineet">
+    <div class="tabs" role="toolbar" aria-label="Apuväline">
+      <button type="button" data-aid="mafy" aria-pressed="true">Mafy-taulukot</button>
+      <button type="button" data-aid="geogebra">GeoGebra</button>
+      <button type="button" data-aid="cas">CAS</button>
+      <button type="button" data-aid="desmos">Desmos</button>
+      <button type="button" data-aid="links">Muut</button>
+      <button type="button" class="btn ghost x" id="aidsClose" aria-label="Sulje apuvälineet">✕</button>
+    </div>
+    <div class="pane" id="aidPane"></div>
+  </aside>
+</div>
+<button type="button" class="btn primary fab" id="aidsOpen">🧮 Apuvälineet</button>
+
+<div class="rte" id="rte" hidden role="toolbar" aria-label="Vastauksen työkalut">
+  <div class="bar" id="rteChars"></div>
+  <div class="bar mathbar" id="rteMath"></div>
+  <div class="keys" id="rteKeys" hidden>
+    <span><kbd>Ctrl</kbd>+<kbd>E</kbd> kirjoita kaava</span><span><kbd>Esc</kbd> sulje kaava</span><span><kbd>Enter</kbd> kaava seuraavalle riville</span>
+    <span><kbd>/</kbd> jakoviiva</span><span><kbd>*</kbd> kertomerkki</span><span><kbd>^</kbd> eksponentti</span><span><kbd>_</kbd> alaindeksi</span>
+    <span><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> kumoa / tee uudelleen</span><span><kbd>Ctrl</kbd>+<kbd>V</kbd> liitä kuva leikepöydältä</span>
+    <span>Klikkaa kaavaa muokataksesi sitä</span>
+  </div>
+</div>
+<input type="file" id="imgPick" accept="image/*" hidden>
+<input type="file" id="filePick" accept=".html,text/html" hidden>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@digabi/mathquill@0.10.12/build/mathquill.min.js" integrity="sha384-BzrSE7Jl9d3yBARQ8iMAdRmtdJEyZbgvZVL4q/EcwEQIrGJsBiIjz/3xd7hmg8S2" crossorigin="anonymous" defer></script>
+<script>
+(function(){
+  'use strict';
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const sessKey = id => { const m = /^(\d{4})([KS])$/.exec(id); return m ? (+m[1]) * 2 + (m[2] === 'K' ? 0 : 1) : 0; };
+  const shortLabel = id => { const m = /^(\d{4})([KS])$/.exec(id); return m ? m[2] + m[1].slice(2) : id; };
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const addDays = n => { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() + n); return d.getTime(); };   // local midnight, DST-safe
+  const today = () => addDays(0);
+  const fmtDate = t => { const d = new Date(t); return d.getDate() + '.' + (d.getMonth() + 1) + '.'; };
+  const TUTKA = '/yo-tutka';
+  const MATHJAX_URL = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js';
+
+  // Keys shared with yo-tutka.html: unit score key "aine|kerta|n|yksikkö" ('_' = whole task).
+  const ukey = (a, k, n, u) => [a, k, n, u || '_'].join('|');
+  const parseKey = key => { const [a, k, n, u] = key.split('|'); return { a, k, n, u: u === '_' ? '' : u }; };
+  const taskHref = (a, k, n, u) => '#/' + ['t', a, k, n, u].filter(Boolean).map(encodeURIComponent).join('/');
+  const simKey = (a, k, g) => [a, k, g].filter(Boolean).join('|');
+
+  /* ---------- persistent state (small data in localStorage, answers in IndexedDB) ---------- */
+  // localStorage 'yo-practice' is also read by yo-tutka.html (scores → weak topics). Keep the key format.
+  const LS = 'yo-practice';
+  const S = { v: 1, scores: {}, review: {}, sims: {}, ui: {} };
+  try { Object.assign(S, JSON.parse(localStorage.getItem(LS) || '{}')); } catch (e) {}
+  const persist = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
+  // another tab saved: take its state, so our next persist() does not overwrite it
+  window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); } catch (err) {} } });
+
+  const idb = (() => {
+    const mem = new Map();
+    let dbp = null;
+    const open = () => dbp || (dbp = new Promise((res, rej) => {
+      try {
+        const r = indexedDB.open('yo-practice', 1);
+        r.onupgradeneeded = () => r.result.createObjectStore('answers');
+        r.onsuccess = () => res(r.result);
+        r.onerror = () => rej(r.error);
+      } catch (e) { rej(e); }
+    }));
+    const run = (mode, fn) => open().then(db => new Promise((res, rej) => {
+      const tx = db.transaction('answers', mode); const req = fn(tx.objectStore('answers'));
+      tx.oncomplete = () => res(req && req.result); tx.onerror = tx.onabort = () => rej(tx.error);
+    }));
+    return {
+      get: k => run('readonly', st => st.get(k)).catch(() => mem.get(k)),
+      set: (k, v) => run('readwrite', st => st.put(v, k)).catch(() => { mem.set(k, v); idb.volatile = true; }),
+      del: k => run('readwrite', st => st.delete(k)).catch(() => mem.delete(k)),
+      volatile: false
+    };
+  })();
+
+  /* ---------- data ---------- */
+  let DATA = [];
+  function loadMeta() {
+    // '/yo-tutka' on Vercel (cleanUrls, same cache entry as the tutka page); 'yo-tutka.html' for a local http.server.
+    const get = url => fetch(url).then(r => r.ok ? r.text() : Promise.reject(new Error('HTTP ' + r.status)));
+    return get(TUTKA).catch(() => get('yo-tutka.html')).then(h => {
+      const m = /<script id="yo-data" type="application\/json">([\s\S]*?)<\/script>/.exec(h);
+      if (!m) throw new Error('YO-tutkan dataa ei löytynyt');
+      DATA = JSON.parse(m[1]);
+    });
+  }
+  const subj = id => DATA.find(s => s.id === id);
+  const sessionOf = (a, k) => ((subj(a) || {}).sessions || []).find(x => x.id === k);
+  const taskOf = (a, k, n) => ((sessionOf(a, k) || {}).tasks || []).find(t => t.n === n);
+  const topicName = (s, id) => { const t = (s.topics || []).find(t => t.id === id); return t ? t.name : id; };
+  const sessionsDesc = s => s.sessions.filter(x => x.tasks && x.tasks.length).sort((a, b) => sessKey(b.id) - sessKey(a.id));
+  // Resolves to the content JSON, null when it does not exist (cached), or false on a load error (retried next time).
+  const contentCache = new Map();
+  function getContent(a, k) {
+    const key = a + '/' + k;
+    if (!contentCache.has(key)) contentCache.set(key, fetch(`data/practice/${encodeURIComponent(a)}/${encodeURIComponent(k)}.json`)
+      .then(r => r.ok ? r.json() : r.status === 404 ? null : Promise.reject(new Error('HTTP ' + r.status)))
+      .catch(() => { contentCache.delete(key); return false; }));
+    return contentCache.get(key);
+  }
+  function unitsFor(content, task) {
+    const c = content && (content.tasks || []).find(t => t.n === task.n);
+    if (c && c.units && c.units.length) return { intro: c.intro, units: c.units };
+    return { intro: null, units: [{ id: '', points: task.points || 0, prompt: null, hints: [], solution: null }] };
+  }
+  // Exam structure, resolved once per view: real sections from the content file, or a fallback grouped by
+  // part (A/B1/B2) or separate exam (äidinkieli). Section examUrl/gradingUrl/minutes override the file-level ones.
+  function examFor(content, session) {
+    const exam = (content && content.exam) || {};
+    const fileLinks = { examUrl: (content && content.examUrl) || (session.sources || []).find(u => /^https:\/\//.test(u)), gradingUrl: content && content.gradingUrl };
+    let sections = exam.sections;
+    if (!sections) {
+      const groups = new Map();
+      for (const t of session.tasks) { const g = t.part || t.exam || ''; if (!groups.has(g)) groups.set(g, []); groups.get(g).push(t); }
+      sections = Array.from(groups, ([g, ts]) => ({ title: !g ? 'Tehtävät' : ts[0].part ? g + '-osa' : cap(g), group: ts[0].exam, tasks: ts.map(t => t.n), answer: ts.length, note: 'Valintamäärää ei ole kirjattu, joten kaikki tehtävät ovat mukana.' }));
+    }
+    sections = sections.map(x => ({ ...x, examUrl: x.examUrl || fileLinks.examUrl, gradingUrl: x.gradingUrl || fileLinks.gradingUrl, minutes: x.minutes || exam.minutes || 360 }));
+    const byN = new Map();
+    for (const x of sections) for (const n of x.tasks) byN.set(n, x);
+    return { sections, byN, fileLinks };
+  }
+  function ctxFor(a, k, task, ex) {
+    const links = ex.byN.get(task.n) || ex.fileLinks;
+    return { a, k, n: task.n, subject: subj(a), session: sessionOf(a, k), task, examUrl: links.examUrl, gradingUrl: links.gradingUrl };
+  }
+
+  /* ---------- light Markdown + LaTeX (content is ours, but still escaped) ---------- */
+  function md(src) {
+    if (src == null) return '';
+    const math = [];
+    let s = String(src).replace(/\$\$[\s\S]+?\$\$|(?<!\\)\$[^$\n]+?(?<!\\)\$/g, m => { math.push(m); return '\u0000' + (math.length - 1) + '\u0000'; });
+    s = esc(s);
+    const inline = t => t.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/(^|[^*])\*([^*\n]+?)\*/g, '$1<i>$2</i>');
+    const out = [];
+    for (const block of s.split(/\n{2,}/)) {
+      let list = null, para = [];
+      const flushPara = () => { if (para.length) out.push('<p>' + para.map(inline).join('<br>') + '</p>'); para = []; };
+      const flushList = () => { if (list) out.push(`<${list.tag}${list.start > 1 ? ` start="${list.start}"` : ''}>` + list.items.map(i => '<li>' + inline(i) + '</li>').join('') + `</${list.tag}>`); list = null; };
+      for (const line of block.split('\n')) {
+        const ul = /^\s*[-•] (.*)$/.exec(line), ol = /^\s*\d+[.)] (.*)$/.exec(line);
+        const hit = ul ? ['ul', ul[1]] : ol ? ['ol', ol[1]] : null;
+        if (hit) { flushPara(); if (!list || list.tag !== hit[0]) { flushList(); list = { tag: hit[0], items: [], start: ol ? parseInt(line, 10) : 1 }; } list.items.push(hit[1]); }
+        else if (list && /^\s{2,}\S/.test(line)) list.items[list.items.length - 1] += ' ' + line.trim();
+        else { flushList(); if (line.trim()) para.push(line); }
+      }
+      flushPara(); flushList();
+    }
+    return out.join('').replace(/\u0000(\d+)\u0000/g, (_, i) => esc(math[+i]));
+  }
+  // MathJax (~2 MB) is loaded on first use, so views without formulas never pay for it.
+  // mhchem (\ce) is fetched by MathJax's autoload extension when a formula needs it.
+  let mjPromise = null;
+  function mjReady() {
+    return mjPromise || (mjPromise = new Promise((resolve, reject) => {
+      window.MathJax = {
+        tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], processEscapes: true },
+        svg: { fontCache: 'none' },
+        options: { ignoreHtmlClass: 'tex2jax_ignore|answer|eq-edit' },
+        startup: { typeset: false, ready() { MathJax.startup.defaultReady(); MathJax.startup.promise.then(resolve, reject); } }
+      };
+      const el = document.createElement('script'); el.src = MATHJAX_URL; el.async = true;
+      el.onerror = () => reject(new Error('MathJax ei latautunut'));
+      document.head.append(el);
+    }));
+  }
+  // MathJax calls must not overlap (extensions such as mhchem load mid-typeset), so they run one at a time.
+  let mjChain = Promise.resolve();
+  function mjRun(fn) { const p = mjChain.then(mjReady).then(fn); mjChain = p.catch(() => {}); return p; }
+  function typeset(els) { els = [].concat(els || []).filter(Boolean); if (els.length) mjRun(() => MathJax.typesetPromise(els)).catch(() => {}); }
+
+  /* ---------- scores, weak topics and review list ---------- */
+  const INTERVALS = [1, 3, 7, 14, 30];
+  const freshReview = () => ({ box: 0, due: addDays(1) });
+  function setScore(key, p, max) {
+    S.scores[key] = { p, max, at: Date.now() };
+    const ratio = max ? p / max : 0, r = S.review[key];
+    if (ratio < 0.7) S.review[key] = freshReview();
+    else if (r && r.due <= today()) {   // advance only a due review; re-scoring the same day must not skip intervals
+      const box = r.box + 1;
+      if (box >= INTERVALS.length) delete S.review[key];
+      else S.review[key] = { box, due: addDays(INTERVALS[box]) };
+    }
+    persist();
+  }
+  function toggleReview(key) {
+    if (S.review[key]) delete S.review[key]; else S.review[key] = freshReview();
+    persist();
+  }
+  const scoreCls = r => r >= 0.8 ? 'ok' : r >= 0.5 ? 'warn' : 'bad';
+  const scoreChip = (v, attrs = '') => { if (!v) return ''; const p = Number(v.p), max = Number(v.max); return `<span class="chip ${scoreCls(max ? p / max : 0)}" ${attrs}>${p}/${max} p</span>`; };
+  // One pass over all unit scores: "aine|kerta|n" -> summed {p, max}.
+  function scoreIndex() {
+    const idx = new Map();
+    for (const [key, v] of Object.entries(S.scores)) {
+      if (!v || !v.max) continue;
+      const t = key.slice(0, key.lastIndexOf('|')); const x = idx.get(t) || { p: 0, max: 0 };
+      x.p += Number(v.p); x.max += Number(v.max); idx.set(t, x);
+    }
+    return idx;
+  }
+  function mastery(s, idx) {
+    const acc = new Map();
+    for (const x of s.sessions) for (const t of x.tasks || []) {
+      const sc = idx.get([s.id, x.id, t.n].join('|')); if (!sc) continue;
+      for (const id of t.topics || []) {
+        const m = acc.get(id) || { id, name: topicName(s, id), p: 0, max: 0, tasks: 0 };
+        m.p += sc.p; m.max += sc.max; m.tasks++; acc.set(id, m);
+      }
+    }
+    return acc;
+  }
+  function simStatus(prefix) {   // exact sim key, or "aine|kerta" for every exam of the session
+    const st = Object.entries(S.sims).filter(([key]) => key === prefix || key.startsWith(prefix + '|')).map(([, v]) => v);
+    return !st.length ? '' : st.every(v => v.submitted) ? ' (tehty)' : ' (kesken)';
+  }
+
+  /* ---------- answer editor (Abitti / Mafynetti style) ---------- */
+  let MQ = null;   // MathQuill loads with `defer`, after this script
+  const mq = () => MQ || (MQ = window.MathQuill ? MathQuill.getInterface(2) : null);
+  const rte = $('#rte');
+  // [label, latex, mode]: mode 1 = MathQuill command, 2 = typed character (digabi/MathQuill lacks the LaTeX command)
+  const CHARS = [
+    ['°', '^{\\circ}'], ['·', '\\cdot'], ['×', '\\times'], ['÷', '\\div'], ['±', '\\pm'], ['≠', '\\ne'], ['≈', '\\approx'], ['≤', '\\le'], ['≥', '\\ge'],
+    ['∞', '\\infty'], ['√', '\\sqrt', 1], ['π', '\\pi'], ['∠', '\\angle'], ['⊥', '\\perp'], ['∥', '\\parallel'], ['→', '\\rightarrow'], ['⇌', '⇌', 2], ['⇒', '\\Rightarrow'], ['⇔', '\\Leftrightarrow'],
+    ['α', '\\alpha'], ['β', '\\beta'], ['γ', '\\gamma'], ['δ', '\\delta'], ['Δ', '\\Delta'], ['ε', '\\varepsilon'], ['θ', '\\theta'], ['λ', '\\lambda'], ['μ', '\\mu'], ['ρ', '\\rho'], ['σ', '\\sigma'], ['τ', '\\tau'], ['φ', '\\varphi'], ['ω', '\\omega'], ['Ω', '\\Omega'],
+    ['∑', '\\sum', 1], ['∫', '\\int'], ['∈', '\\in'], ['∉', '\\notin'], ['⊂', '\\subset'], ['∪', '\\cup'], ['∩', '\\cap'], ['∅', '\\emptyset'], ['ℝ', '\\mathbb{R}'], ['ℕ', '\\mathbb{N}'], ['ℤ', '\\mathbb{Z}'], ['ℚ', '\\mathbb{Q}'],
+    ['∀', '\\forall'], ['∃', '\\exists'], ['¬', '\\neg'], ['∧', '\\wedge'], ['∨', '\\vee'], ['²', '^2'], ['³', '^3'], ['½', '\\frac{1}{2}'], ['‰', '‰'], ['Å', '\\text{Å}'], ['ℏ', '\\hbar']
+  ];
+  const TEMPLATES = [
+    ['a⁄b', 'Murtoluku', m => m.cmd('\\frac')], ['√', 'Neliöjuuri', m => m.cmd('\\sqrt')], ['ⁿ√', 'n:s juuri', m => m.cmd('\\nthroot')],
+    ['xⁿ', 'Eksponentti', m => m.cmd('^')], ['xₙ', 'Alaindeksi', m => m.cmd('_')], ['|x|', 'Itseisarvo', m => m.cmd('|')], ['( )', 'Sulut', m => m.cmd('(')], ['[ ]', 'Hakasulut', m => m.cmd('[')],
+    ['∫ₐᵇ', 'Määrätty integraali', m => m.write('\\int_{ }^{ }')], ['Σ', 'Summa', m => m.cmd('\\sum')], ['lim', 'Raja-arvo', m => m.write('\\lim_{x\\to }')],
+    ['log', 'Logaritmi', m => m.write('\\log_{ }')], ['ln', 'Luonnollinen logaritmi', m => m.write('\\ln')], ['sin', 'sin', m => m.write('\\sin')], ['cos', 'cos', m => m.write('\\cos')], ['tan', 'tan', m => m.write('\\tan')],
+    ['v⃗', 'Vektori', m => m.cmd('\\vec')], ['AB→', 'Vektori kahden pisteen välillä', m => m.cmd('\\overrightarrow')], ['x̄', 'Yläviiva', m => m.cmd('\\overline')],
+    ['{ ', 'Yhtälöpari', m => m.write('\\begin{cases} \\\\ \\end{cases}')], ['(ⁿₖ)', 'Binomikerroin', m => m.cmd('\\binom')]
+  ];
+  let math = null;        // currently open formula: {root, box, mf, ta, hist, redo}
+  let lastSel = null;     // last caret inside an answer: {root, range}
+
+  function buildToolbar() {
+    const btn = (label, title, cls = '') => `<button type="button" class="${cls}" title="${esc(title)}" aria-label="${esc(title)}">${esc(label)}</button>`;
+    $('#rteChars').innerHTML = btn('Σ Lisää kaava', 'Lisää kaava (Ctrl-E)', 'wide main') + btn('🖼 Kuva', 'Lisää kuva tiedostosta', 'wide') + '<span class="sep"></span>' +
+      CHARS.map(([c]) => btn(c, 'Lisää ' + c)).join('') + '<span class="sep"></span>' + btn('?', 'Näppäinoikotiet', 'wide');
+    $('#rteMath').innerHTML = TEMPLATES.map(([l, t]) => btn(l, t)).join('');
+    const btns = $$('#rteChars button');
+    btns[0].onclick = () => math ? closeMath() : (activeRoot() && openMath(activeRoot()));
+    btns[1].onclick = () => { if (math) closeMath(); $('#imgPick').click(); };
+    btns[btns.length - 1].onclick = () => { $('#rteKeys').hidden = !$('#rteKeys').hidden; syncToolbarHeight(); };
+    CHARS.forEach(([c, latex, mode], i) => {
+      btns[i + 2].onclick = () => {
+        if (math) { mode === 1 ? math.mf.cmd(latex) : mode === 2 ? math.mf.typedText(latex) : math.mf.write(latex); math.mf.focus(); }
+        else if (activeRoot()) document.execCommand('insertText', false, c);
+      };
+    });
+    $$('#rteMath button').forEach((b, i) => b.onclick = () => { if (!math) return; TEMPLATES[i][2](math.mf); math.mf.focus(); });
+    // keep focus (and the caret) in the answer while clicking toolbar buttons
+    rte.addEventListener('mousedown', e => { if (e.target.closest('button')) e.preventDefault(); });
+  }
+  const activeRoot = () => { const a = document.activeElement; const r = a && a.closest ? a.closest('.answer') : null; return r || (lastSel && document.contains(lastSel.root) ? lastSel.root : null); };
+  function syncToolbarHeight() { document.documentElement.style.setProperty('--toolbar-h', rte.hidden ? '0px' : (rte.offsetHeight + 12) + 'px'); }
+  function updateToolbar() {
+    const a = document.activeElement;
+    const inside = !!(a && a.closest && (a.closest('.answer') || a.closest('#rte'))) || !!math;
+    if (rte.hidden === inside) { rte.hidden = !inside; document.body.classList.toggle('tools-on', inside); }
+    rte.classList.toggle('math', !!math);
+    syncToolbarHeight();
+  }
+  const outsideMath = t => math && !math.box.contains(t) && !rte.contains(t);
+  document.addEventListener('focusin', e => { if (outsideMath(e.target)) closeMath({ keepFocus: true }); setTimeout(updateToolbar, 0); });
+  // clicks on non-focusable page areas never fire focusin; clicks in the same answer are handled by focusin
+  document.addEventListener('pointerdown', e => { if (outsideMath(e.target) && !math.root.contains(e.target)) closeMath({ keepFocus: true }); }, true);
+  document.addEventListener('focusout', () => setTimeout(updateToolbar, 0));
+  document.addEventListener('selectionchange', () => {
+    const sel = getSelection(); if (!sel.rangeCount) return;
+    const r = sel.getRangeAt(0); const node = r.commonAncestorContainer; const el = node.nodeType === 1 ? node : node.parentElement;
+    const root = el && el.closest('.answer');
+    if (root && !(el.closest('.eq-edit'))) lastSel = { root, range: r.cloneRange() };
+  });
+
+  function caretRange(root) {
+    const sel = getSelection();
+    if (sel.rangeCount) { const r = sel.getRangeAt(0); if (root.contains(r.commonAncestorContainer) && !closestEl(r.commonAncestorContainer, '.eq-edit')) return r; }
+    if (lastSel && lastSel.root === root && root.contains(lastSel.range.commonAncestorContainer)) return lastSel.range;
+    const r = document.createRange(); r.selectNodeContents(root); r.collapse(false); return r;
+  }
+  const closestEl = (n, s) => { const el = n && (n.nodeType === 1 ? n : n.parentElement); return el ? el.closest(s) : null; };
+  function placeCaret(root, node, after = true) {
+    const r = document.createRange(); after ? r.setStartAfter(node) : r.setStartBefore(node); r.collapse(true);
+    root.focus({ preventScroll: true }); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  }
+  function insertNode(root, node) {
+    const r = caretRange(root); r.deleteContents(); r.insertNode(node); placeCaret(root, node);
+  }
+
+  function openMath(root, img) {
+    if (!mq()) { alertBox('Kaavaeditori ei latautunut (ei verkkoyhteyttä kirjastoihin).'); return; }
+    if (math) closeMath();
+    const box = document.createElement('span'); box.className = 'eq-edit'; box.contentEditable = 'false';
+    box.innerHTML = '<span class="mqf"></span><textarea rows="1" spellcheck="false" aria-label="Kaava LaTeX-muodossa" placeholder="LaTeX"></textarea>';
+    if (img) img.replaceWith(box); else insertNode(root, box);
+    const ta = $('textarea', box); let syncing = false;
+    const m = { root, box, ta, hist: [], redo: [] };
+    const grow = () => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; };
+    m.mf = mq().MathField($('.mqf', box), {
+      spaceBehavesLikeTab: false, leftRightIntoCmdGoes: 'up', restrictMismatchedBrackets: true, sumStartsWithNEquals: true,
+      supSubsRequireOperand: true, charsThatBreakOutOfSupSub: '+-=<>', autoSubscriptNumerals: false,
+      autoCommands: 'pi theta sqrt sum prod alpha beta gamma delta epsilon varepsilon lambda mu rho sigma tau phi varphi omega Delta Omega infty nthroot',
+      autoOperatorNames: 'sin cos tan cot arcsin arccos arctan sinh cosh tanh ln log lg exp lim min max det deg',
+      handlers: {
+        edit: mf => { if (syncing) return; ta.value = mf.latex(); grow(); pushHist(m); },
+        enter: () => closeMath({ newLine: true }),
+        moveOutOf: dir => closeMath({ after: dir > 0 }),
+        deleteOutOf: dir => { if (!m.mf.latex()) closeMath({ after: dir > 0 }); }
+      }
+    });
+    m.setLatex = latex => { syncing = true; m.mf.latex(latex); syncing = false; ta.value = latex; grow(); };
+    ta.addEventListener('input', () => { syncing = true; m.mf.latex(ta.value); syncing = false; grow(); pushHist(m); });
+    box.addEventListener('keydown', e => {
+      const mod = e.ctrlKey || e.metaKey, k = e.key.toLowerCase();
+      if (e.key === 'Escape' || (mod && k === 'e')) { e.preventDefault(); e.stopPropagation(); closeMath(); }
+      else if (e.target === ta && e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); closeMath({ newLine: true }); }
+      else if (e.target !== ta && mod && (k === 'z' || k === 'y')) { e.preventDefault(); undoMath(m, k === 'y' || e.shiftKey); }
+    }, true);
+    math = m;
+    if (img && img.dataset.latex) m.setLatex(img.dataset.latex);
+    m.hist.push(m.mf.latex());
+    m.mf.focus();
+    updateToolbar();
+  }
+  function pushHist(m) { const l = m.mf.latex(); if (m.hist[m.hist.length - 1] !== l) { m.hist.push(l); if (m.hist.length > 200) m.hist.shift(); m.redo = []; } }
+  function undoMath(m, redo) {
+    if (redo) { if (!m.redo.length) return; const l = m.redo.pop(); m.hist.push(l); m.setLatex(l); }
+    else { if (m.hist.length < 2) return; m.redo.push(m.hist.pop()); m.setLatex(m.hist[m.hist.length - 1]); }
+  }
+  function closeMath({ newLine = false, after = true, keepFocus = false } = {}) {
+    if (!math) return;
+    const m = math; math = null;
+    const latex = m.mf.latex().trim();
+    let node;
+    if (latex) {
+      node = document.createElement('img'); node.className = 'eq'; node.alt = latex; node.dataset.latex = latex;
+      m.box.replaceWith(node); renderEq(node).then(() => saveAnswer(m.root));
+    } else { node = document.createTextNode(''); m.box.replaceWith(node); }
+    if (newLine) { const br = document.createElement('br'); node.after(br); placeCaret(m.root, br); openMath(m.root); }
+    else if (!keepFocus) placeCaret(m.root, node, after);
+    saveAnswer(m.root);
+    updateToolbar();
+  }
+  async function texSvg(latex) {
+    const node = await mjRun(() => MathJax.tex2svgPromise(latex, { display: false }));
+    const svg = node.querySelector('svg');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    const va = svg.style.verticalAlign || '';
+    svg.removeAttribute('style'); svg.setAttribute('color', '#000');
+    return { src: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(svg)), va };
+  }
+  async function renderEq(img) {
+    const latex = img.dataset.latex;
+    try { const { src, va } = await texSvg(latex); if (img.dataset.latex === latex) { img.src = src; img.style.verticalAlign = va; } }
+    catch (e) { img.alt = latex; }
+  }
+
+  // Only plain text, line breaks, formula images and pasted/attached images are kept (an open .eq-edit box is skipped).
+  const SAFE_IMG = /^data:image\/(png|jpeg|gif|webp|svg\+xml)[;,]/i;
+  function clean(src, dst = document.createElement('div')) {
+    for (const n of src.childNodes) {
+      if (n.nodeType === 3) { dst.append(n.textContent); continue; }
+      if (n.nodeType !== 1) continue;
+      const tag = n.tagName.toUpperCase();
+      if (tag === 'BR') dst.append(document.createElement('br'));
+      else if (tag === 'IMG') {
+        const src = n.getAttribute('src') || '', isEq = n.classList.contains('eq');
+        const latex = n.getAttribute('data-latex') || '';
+        if (!(isEq && latex) && !SAFE_IMG.test(src)) continue;
+        const img = document.createElement('img');
+        if (isEq) {
+          img.className = 'eq'; img.alt = latex; img.dataset.latex = latex;
+          if (/^data:image\/svg\+xml[;,]/i.test(src)) img.src = src;
+          const va = n.style.verticalAlign; if (/^-?[\d.]+ex$/.test(va)) img.style.verticalAlign = va;
+        } else { img.className = 'shot'; img.alt = 'liitetty kuva'; img.src = src; }
+        dst.append(img);
+      }
+      else if (/^(SCRIPT|STYLE|TEMPLATE|IFRAME|OBJECT|EMBED|SVG|MATH|HEAD|TITLE)$/.test(tag) || n.classList.contains('eq-edit')) continue;
+      else if (/^(DIV|P|LI|TR|H[1-6]|BLOCKQUOTE|PRE|UL|OL|TABLE)$/.test(tag)) dst.append(clean(n));
+      else clean(n, dst);
+    }
+    return dst;
+  }
+  const answerHtml = root => clean(root).innerHTML;
+  function setAnswer(root, html) {
+    const tpl = document.createElement('template'); tpl.innerHTML = html;
+    root.replaceChildren(...clean(tpl.content).childNodes);
+    $$('img.eq', root).forEach(img => { if (!img.getAttribute('src')) renderEq(img); });
+    countChars(root);
+  }
+  const saveTimers = new WeakMap();
+  function saveAnswer(root) {
+    clearTimeout(saveTimers.get(root));
+    saveTimers.set(root, setTimeout(() => {
+      const html = answerHtml(root);
+      html.trim() ? idb.set(root.dataset.key, { html, at: Date.now() }) : idb.del(root.dataset.key);
+      countChars(root);
+    }, 400));
+  }
+  function countChars(root) {
+    const out = root.parentElement.querySelector('.count'); if (!out) return;
+    const n = root.textContent.replace(/\s/g, '').length;   // whitespace is ignored, so textContent needs no layout
+    const imgs = $$('img.shot', root).length, eqs = $$('img.eq', root).length;
+    out.textContent = `${n} merkkiä ilman välilyöntejä` + (eqs ? ` · ${eqs} kaavaa` : '') + (imgs ? ` · ${imgs} kuvaa` : '');
+  }
+  function fileToDataUrl(file) {
+    return new Promise((res, rej) => {
+      const fr = new FileReader(); fr.onerror = () => rej(fr.error);
+      fr.onload = () => {
+        const url = fr.result;
+        // keep small web-safe images as they are; convert everything else (HEIC, AVIF, BMP, big photos) to JPEG
+        if (/^image\/(gif|svg\+xml)$/.test(file.type) || (/^image\/(png|jpeg|webp)$/.test(file.type) && file.size < 400e3)) return res(url);
+        const im = new Image(); im.onerror = () => rej(new Error('Kuvamuotoa ei tueta'));
+        im.onload = () => {
+          const k = Math.min(1, 1600 / Math.max(im.width, im.height));
+          const c = document.createElement('canvas'); c.width = Math.round(im.width * k); c.height = Math.round(im.height * k);
+          const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(im, 0, 0, c.width, c.height);
+          res(c.toDataURL('image/jpeg', 0.85));
+        };
+        im.src = url;
+      };
+      fr.readAsDataURL(file);
+    });
+  }
+  async function insertImages(root, files) {
+    for (const f of files) {
+      if (!/^image\//.test(f.type)) continue;
+      const img = document.createElement('img'); img.className = 'shot'; img.alt = 'liitetty kuva';
+      try { img.src = await fileToDataUrl(f); } catch (e) { alertBox(`Kuvaa ${f.name} ei voitu lisätä: selain ei osaa avata tätä kuvamuotoa. Tallenna se PNG- tai JPEG-muodossa.`); continue; }
+      insertNode(root, img);
+    }
+    saveAnswer(root);
+  }
+  $('#imgPick').addEventListener('change', e => { const root = activeRoot(); if (root) insertImages(root, Array.from(e.target.files || [])); e.target.value = ''; });
+
+  function mountEditor(root) {
+    root.contentEditable = 'true'; root.spellcheck = false; root.dataset.ph = 'Kirjoita vastaus tähän. Ctrl-E avaa kaavan.';
+    root.setAttribute('role', 'textbox'); root.setAttribute('aria-multiline', 'true');
+    root.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'e' && !closestEl(e.target, '.eq-edit')) { e.preventDefault(); openMath(root); }
+    });
+    root.addEventListener('input', e => { if (!closestEl(e.target, '.eq-edit')) saveAnswer(root); });
+    root.addEventListener('click', e => { if (e.target.matches('img.eq')) openMath(root, e.target); });
+    root.addEventListener('paste', e => {
+      if (closestEl(e.target, '.eq-edit')) return;
+      const files = Array.from(e.clipboardData.files || []).filter(f => /^image\//.test(f.type));
+      e.preventDefault();
+      if (files.length) insertImages(root, files);
+      else document.execCommand('insertText', false, e.clipboardData.getData('text/plain'));
+    });
+    root.addEventListener('drop', e => {
+      const files = Array.from((e.dataTransfer && e.dataTransfer.files) || []).filter(f => /^image\//.test(f.type));
+      if (!files.length) return;
+      e.preventDefault();
+      if (document.caretRangeFromPoint) { const r = document.caretRangeFromPoint(e.clientX, e.clientY); if (r && root.contains(r.startContainer)) lastSel = { root, range: r }; }
+      insertImages(root, files);
+    });
+    return idb.get(root.dataset.key).then(v => { if (v && v.html) setAnswer(root, v.html); else countChars(root); });
+  }
+
+  // Answer "paper" look, shared by the PNG export and the saved HTML file.
+  const PAPER = 'font:16px/1.6 Arial,sans-serif;color:#141B26;white-space:pre-wrap;overflow-wrap:anywhere';
+  const paperImgCss = sel => `${sel} img{max-width:100%;vertical-align:middle}${sel} img.shot{display:block;margin:6px 0}`;
+
+  // "Tallenna kuvana": draw the answer through an SVG foreignObject onto a canvas.
+  async function answerPng(root, name) {
+    const el = clean(root), w = Math.max(320, root.clientWidth);
+    const style = `width:${w}px;box-sizing:border-box;padding:16px;background:#fff;${PAPER}`;
+    const holder = document.createElement('div'); holder.className = 'png-measure'; holder.style.cssText = `position:absolute;left:-9999px;top:0;${style}`;
+    holder.innerHTML = `<style>${paperImgCss('.png-measure')}</style>${el.innerHTML}`; document.body.append(holder);
+    const h = holder.scrollHeight + 8; holder.remove();
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml" style="${style}"><style>${paperImgCss('div')}</style>${new XMLSerializer().serializeToString(el)}</div></foreignObject></svg>`;
+    const im = new Image();
+    await new Promise((res, rej) => { im.onload = res; im.onerror = rej; im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg); });
+    const c = document.createElement('canvas'); const k = 2; c.width = w * k; c.height = h * k;
+    const g = c.getContext('2d'); g.scale(k, k); g.fillStyle = '#fff'; g.fillRect(0, 0, w, h); g.drawImage(im, 0, 0);
+    try { c.toBlob(b => download(b, name + '.png'), 'image/png'); }
+    catch (e) { alertBox('Selain ei salli kuvan tallennusta. Käytä tulostusta (Ctrl-P → Tallenna PDF:ksi).'); }
+  }
+  function download(blob, name) {
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.append(a); a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+  function alertBox(msg) {
+    const el = document.createElement('div'); el.className = 'warnbox'; el.setAttribute('role', 'alert'); el.textContent = msg;
+    app.prepend(el); setTimeout(() => el.remove(), 7000);
+  }
+
+  // Save / open all answers of one task as a standalone HTML file (the JSON inside is used for re-import).
+  function exportTask(ctx) {
+    const units = $$('.answer', app).map(r => ({ id: r.dataset.unit, html: answerHtml(r) }));
+    const data = { type: 'yo-harjoittelu', v: 1, subject: ctx.a, session: ctx.k, n: ctx.n, saved: new Date().toISOString(), units };
+    const title = `${ctx.subject.name}, ${ctx.session.label}, tehtävä ${ctx.n}`;
+    const doc = `<!doctype html><html lang="fi"><meta charset="utf-8"><title>${esc(title)}</title><style>body{max-width:780px;margin:24px auto;padding:0 16px;${PAPER}}${paperImgCss('body')}.u{border-top:1px solid #ccd;padding:10px 0}</style><h1>${esc(title)}</h1><p>${esc(ctx.task.title)} · tallennettu ${esc(new Date().toLocaleString('fi-FI'))}</p>${units.map(u => `<div class="u"><h2>${esc(u.id || 'Vastaus')}</h2>${u.html}</div>`).join('')}<script type="application/json" id="yo-vastaus">${JSON.stringify(data).replace(/</g, '\\u003c')}<\/script></html>`;
+    download(new Blob([doc], { type: 'text/html' }), `yo-${ctx.a}-${ctx.k}-${ctx.n}.html`);
+  }
+  let importTarget = null;
+  $('#filePick').addEventListener('change', async e => {
+    const f = e.target.files && e.target.files[0]; e.target.value = '';
+    if (!f || !importTarget) return;
+    try {
+      const text = await f.text();
+      const m = /<script type="application\/json" id="yo-vastaus">([\s\S]*?)<\/script>/.exec(text);
+      const data = JSON.parse(m[1]);
+      const { a, k, n } = importTarget;
+      if (data.subject !== a || data.session !== k || data.n !== n) { alertBox(`Tiedosto on eri tehtävästä (${data.subject} ${data.session} tehtävä ${data.n}).`); return; }
+      for (const u of data.units || []) {
+        const root = $$('.answer', app).find(r => r.dataset.unit === u.id); if (!root) continue;
+        setAnswer(root, u.html || ''); saveAnswer(root);
+      }
+    } catch (err) { alertBox('Tiedostoa ei voitu avata. Valitse tällä sivulla tallennettu .html-tiedosto.'); }
+  });
+
+  /* ---------- aids panel ---------- */
+  const AIDS = {
+    mafy: 'https://mafytaulukot.fi/',
+    geogebra: 'https://www.geogebra.org/calculator',
+    cas: 'https://www.geogebra.org/cas',
+    desmos: 'https://www.desmos.com/calculator?lang=fi'
+  };
+  const aidFrames = {};
+  const CALCS = { geogebra: 'GeoGebra', cas: 'GeoGebra CAS', desmos: 'Desmos' };
+  // restore = panel reopened on page load: calculators grab keyboard focus when they load,
+  // so they wait for a click instead of stealing focus from the answer being typed
+  function showAid(id, restore = false) {
+    S.ui.aid = id; persist();
+    $$('#aids .tabs [data-aid]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.aid === id)));
+    const pane = $('#aidPane');
+    Object.values(aidFrames).forEach(f => f.hidden = true);
+    pane.classList.toggle('links', id === 'links');
+    let links = $('.aidlinks', pane);
+    if (id === 'links' && !links) {
+      pane.insertAdjacentHTML('beforeend', `<div class="aidlinks md">
+        <p><b>Kokeessa käytössä olevat apuvälineet</b> avautuvat tälle paneelille yllä olevista välilehdistä. Jos jokin ei aukea upotettuna, avaa se omaan välilehteen:</p>
+        <ul><li><a href="${AIDS.mafy}" target="_blank" rel="noopener">Mafy-taulukot</a>: matematiikan, fysiikan ja kemian kaavat ja taulukot (myös Abitissa)</li>
+        <li><a href="${AIDS.geogebra}" target="_blank" rel="noopener">GeoGebra-laskin</a> ja <a href="${AIDS.cas}" target="_blank" rel="noopener">GeoGebra CAS</a></li>
+        <li><a href="${AIDS.desmos}" target="_blank" rel="noopener">Desmos-kuvaajat</a> ja <a href="https://www.desmos.com/scientific?lang=fi" target="_blank" rel="noopener">funktiolaskin</a></li>
+        <li><a href="https://ptable.com/?lang=fi" target="_blank" rel="noopener">Jaksollinen järjestelmä</a></li>
+        <li><a href="https://math-demo.abitti.fi/" target="_blank" rel="noopener">Abitin oma kaavaeditori (demo)</a></li></ul>
+        <p class="muted small">Oikeassa kokeessa on lisäksi mm. TI-Nspire CAS, ClassPad, wxMaxima ja LibreOffice Calc. Harjoittele niitä Abitin harjoituskokeissa.</p></div>`);
+      links = $('.aidlinks', pane);
+    }
+    if (links) links.hidden = id !== 'links';
+    const lazy = $('.aidlazy', pane); if (lazy) lazy.remove();
+    if (id === 'links') return;
+    if (!aidFrames[id] && restore && CALCS[id]) {
+      pane.insertAdjacentHTML('beforeend', `<div class="aidlazy"><button type="button" class="btn primary">Avaa ${esc(CALCS[id])}</button></div>`);
+      $('.aidlazy button', pane).onclick = () => showAid(id);
+      return;
+    }
+    if (!aidFrames[id]) {
+      const f = document.createElement('iframe'); f.src = AIDS[id]; f.title = id;
+      f.setAttribute('allow', 'clipboard-write; fullscreen');
+      aidFrames[id] = f; pane.append(f);
+    }
+    aidFrames[id].hidden = false;
+  }
+  function setAids(open, restore = false) {
+    $('#aids').hidden = !open; document.body.classList.toggle('aids-open', open);
+    S.ui.aidsOpen = open; persist();
+    if (open) showAid(S.ui.aid || 'mafy', restore);
+  }
+  $('#aidsOpen').onclick = () => setAids(true);
+  $('#aidsClose').onclick = () => setAids(false);
+  $$('#aids .tabs [data-aid]').forEach(b => b.onclick = () => showAid(b.dataset.aid));
+
+  /* ---------- views ---------- */
+  const app = $('#app');
+  let view = new AbortController();
+  // Replace the whole view. Aborting the previous view's controller removes its listeners and timers.
+  function setView(html) {
+    view.abort(); view = new AbortController();
+    if (window.MathJax && MathJax.typesetClear) MathJax.typesetClear([app]);
+    app.innerHTML = html;
+    updateToolbar();   // a focused answer was removed without a focusout event
+    return view.signal;
+  }
+  // Two-click confirmation instead of a modal dialog.
+  function armConfirm(btn, confirmText, action) {
+    const label = btn.textContent;
+    btn.onclick = () => {
+      if (btn.dataset.confirm) return action();
+      btn.dataset.confirm = 1; btn.textContent = confirmText;
+      setTimeout(() => { delete btn.dataset.confirm; btn.textContent = label; }, 4000);
+    };
+  }
+  const masthead = (crumbs, title, lede) => `
+    <header class="masthead">
+      <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="${TUTKA}">YO-tutka</a>${crumbs || ''}</nav>
+      <div class="eyebrow">YO-tutka · Harjoittelu</div>
+      <h1>${title}</h1>
+      ${lede ? `<p class="lede">${lede}</p>` : ''}
+      ${idb.volatile ? '<p class="warnbox">Selaimesi ei salli tallennusta tällä sivulla (esim. yksityinen ikkuna). Vastaukset katoavat, kun suljet sivun. Käytä Tallenna-painiketta.</p>' : ''}
+    </header>`;
+  const homeCrumb = a => `<a href="#/${esc(a)}">Harjoittelu</a>`;
+  const footer = () => `<footer>
+      <p>Tehtävänannot ovat Ylioppilastutkintolautakunnan tekijänoikeuden alaisia, joten tässä on vain lyhyt kuvaus ja linkki alkuperäiseen tehtävään. Vihjeet ja malliratkaisut ovat tämän sivuston omia. Ne on kirjoitettu tekoälyn avulla ja loppuvastaukset on tarkistettu YTL:n hyvän vastauksen piirteitä vasten tai laskemalla, kun se on ollut mahdollista (merkintä jokaisessa kohdassa). Virheitä voi silti olla.</p>
+      <p>Kaavaeditori: <a href="https://github.com/digabi/mathquill" target="_blank" rel="noopener">digabi/MathQuill</a> (sama kuin Abitissa) ja <a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>.</p>
+    </footer>`;
+
+  function home(prefer) {
+    const a = subj(prefer) ? prefer : (subj(S.ui.subject) ? S.ui.subject : DATA[0].id);
+    S.ui.subject = a; persist();
+    const s = subj(a), idx = scoreIndex(), sessions = sessionsDesc(s);
+    const due = Object.entries(S.review).filter(([, r]) => r.due <= today()).map(([k]) => k);
+    const upcoming = Object.keys(S.review).length - due.length;
+    const m = Array.from(mastery(s, idx).values()).sort((x, y) => x.p / x.max - y.p / y.max);
+    const reviewItem = key => {
+      const x = parseKey(key), t = taskOf(x.a, x.k, x.n); if (!t) return '';
+      return `<li><a href="${taskHref(x.a, x.k, x.n, x.u)}">${esc(subj(x.a).name.split(',')[0])} ${esc(shortLabel(x.k))} · ${esc(x.n)}${x.u ? ' ' + esc(x.u) : ''}</a><span class="muted small">${esc(t.title)}</span></li>`;
+    };
+    const meterRow = t => {
+      const pct = Math.round(t.p / t.max * 100);
+      return `<div class="meter"><span>${esc(t.name)} <span class="muted small">· ${t.tasks} teht.</span></span><div class="track"><div class="fill ${scoreCls(t.p / t.max)}" style="width:${pct}%"></div></div><span class="v">${pct} %</span></div>`;
+    };
+    const taskRow = (x, t) => {
+      const sc = idx.get([a, x.id, t.n].join('|'));
+      return `<a class="trow" href="${taskHref(a, x.id, t.n)}"><span class="n">${esc(t.n)}</span><span class="t">${esc(t.title)}</span><span class="st">${sc ? scoreChip(sc) : `<span class="muted">${t.points != null ? esc(t.points) + ' p' : ''}</span>`}</span>${t.summary ? `<span class="s">${esc(t.summary)}</span>` : ''}</a>`;
+    };
+    setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (<kbd>Ctrl-E</kbd> avaa kaavan, <kbd>Ctrl-V</kbd> liittää kuvan). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen.') + `
+      <nav class="filters" aria-label="Oppiaine">${DATA.map(x => `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}">${esc(x.name.replace(/, pitkä oppimäärä/, ''))}</button>`).join('')}</nav>
+      <div class="grid2">
+        <section class="card" aria-labelledby="rev-h">
+          <h2 id="rev-h">Kertaus tänään</h2>
+          ${due.length ? `<ul class="list">${due.slice(0, 12).map(reviewItem).join('')}</ul>${due.length > 12 ? `<p class="muted small">+ ${due.length - 12} muuta</p>` : ''}`
+          : `<p class="muted">Ei kerrattavaa tänään.${upcoming ? ` Tulossa ${upcoming} kohtaa myöhemmin.` : ''} Kohta menee kertauslistalle, kun arvioit siitä alle 70 % pisteistä tai painat ”Kertaa myöhemmin”. Kertausväli pitenee 1 → 3 → 7 → 14 → 30 päivään aina, kun onnistut.</p>`}
+        </section>
+        <section class="card" aria-labelledby="mas-h">
+          <h2 id="mas-h">Oma osaaminen: ${esc(s.name.split(',')[0])}</h2>
+          ${m.length ? `<div class="list">${m.slice(0, 10).map(meterRow).join('')}</div>
+            <p class="small"><a href="${TUTKA}">Katso YO-tutkasta</a>, mitkä heikot aiheet tulevat kokeeseen todennäköisimmin.</p>`
+          : '<p class="muted">Ei vielä arvioituja tehtäviä tässä aineessa. Kun näytät malliratkaisun ja arvioit pisteesi, aihekohtainen osaaminen näkyy tässä ja YO-tutkassa.</p>'}
+        </section>
+      </div>
+      <section class="card" aria-labelledby="sim-h">
+        <h2 id="sim-h">Koesimulaatio</h2>
+        <p class="muted">Tee kokonainen koe oikealla rakenteella ja kellolla. Valitse tehtävät kuten oikeassa kokeessa. Vihjeet ja ratkaisut aukeavat vasta, kun palautat kokeen.</p>
+        <div class="row"><label>Tutkintokerta <select id="simSel">${sessions.map(x => `<option value="${esc(x.id)}">${esc(x.label)}${simStatus(simKey(a, x.id))}</option>`).join('')}</select></label>
+        <button type="button" class="btn primary" id="simGo">Avaa koe</button></div>
+      </section>
+      <section style="display:grid;gap:10px" aria-labelledby="ses-h">
+        <h2 id="ses-h">Tehtävät kerroittain</h2>
+        ${sessions.map((x, i) => `<details class="sess" ${i === 0 ? 'open' : ''}><summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}<span class="sp muted small mono">${x.tasks.length} tehtävää</span></summary>
+          <div class="tasks">${x.tasks.map(t => taskRow(x, t)).join('')}</div></details>`).join('')}
+      </section>
+      ${footer()}`);
+    $$('[data-subj]', app).forEach(b => b.onclick = () => { location.hash = '#/' + b.dataset.subj; });
+    $('#simGo', app).onclick = () => { location.hash = `#/koe/${encodeURIComponent(a)}/${encodeURIComponent($('#simSel', app).value)}`; };
+  }
+
+  const CHECK_TXT = { 'hvp': 'tarkistettu YTL:n hyvän vastauksen piirteitä vasten', 'laskettu': 'loppuvastaus laskettu koneellisesti', 'hvp+laskettu': 'tarkistettu hyvän vastauksen piirteitä vasten ja laskettu koneellisesti', 'malli': 'esimerkkivastaus: yhtä oikeaa vastausta ei ole, malli noudattaa YTL:n arviointikriteerejä', 'ei': 'ei tarkistettu' };
+  const CHECK_CHIP = { 'ei': ['warn', 'ei tarkistettu'], 'malli': ['', 'esimerkkivastaus'] };
+  const revLabel = on => on ? '✓ Kertauslistalla' : 'Kertaa myöhemmin';
+  function syncRev(btn, key) { if (!btn) return; const on = !!S.review[key]; btn.setAttribute('aria-pressed', String(on)); btn.textContent = revLabel(on); }
+  function unitBlock(ctx, u, { prefix = '', showHelp = true } = {}) {
+    const key = ukey(ctx.a, ctx.k, ctx.n, u.id);
+    const hints = u.hints || [];
+    const [chkCls, chkTxt] = CHECK_CHIP[u.check] || ['ok', '✓ tarkistettu'];
+    const checkChip = u.check ? `<span class="chip ${chkCls}" title="${esc(CHECK_TXT[u.check] || '')}">${chkTxt}</span>` : '';
+    const hintBtn = (_, i) => `<button type="button" class="btn" data-hint="${i}" ${i > 0 ? 'disabled' : ''} aria-expanded="false">Vihje ${i + 1}${hints.length > 1 ? (i === 0 ? ' · kevyt' : ' · vahva') : ''}</button>`;
+    const help = !u.solution
+      ? `<p class="muted small">Tälle tehtävälle ei ole vielä vihjeitä eikä malliratkaisua. Katso <a href="${esc(ctx.gradingUrl || ctx.examUrl || '#')}" target="_blank" rel="noopener">YTL:n hyvän vastauksen piirteet</a> ja arvioi itsesi.</p>`
+      : `<div class="row">${hints.map(hintBtn).join('')}
+          <button type="button" class="btn" data-act="sol" aria-expanded="false">Näytä malliratkaisu</button>
+          <button type="button" class="btn ghost" data-act="rev" aria-pressed="${!!S.review[key]}">${revLabel(!!S.review[key])}</button></div>
+          ${hints.map((h, i) => `<div class="reveal hint md" data-hintbox="${i}" hidden><div class="rh">Vihje ${i + 1}</div>${md(h)}</div>`).join('')}
+          <div class="reveal sol md" data-solbox hidden><div class="rh">Malliratkaisu</div>${md(u.solution)}${u.answer ? `<p><b>Vastaus:</b> ${md(u.answer).replace(/^<p>|<\/p>$/g, '')}</p>` : ''}${u.check ? `<p class="muted small">${esc(CHECK_TXT[u.check] || '')}</p>` : ''}</div>`;
+    return `<section class="unit" id="u-${esc(u.id || '_')}" data-key="${esc(key)}">
+      <div class="uhead">${u.id ? `<b>${esc(u.id)}</b>` : ''}<span class="chip">${esc(u.points)} p</span>${checkChip}${scoreChip(S.scores[key], 'data-score title="oma arvio"')}</div>
+      ${u.prompt ? `<div class="md">${md(u.prompt)}</div>` : ''}
+      <div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
+      <div class="afoot"><span class="count"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
+      ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u.points)}</div></div>` : ''}
+    </section>`;
+  }
+  function assessHtml(key, max) {
+    const v = S.scores[key];
+    const buttons = max <= 20
+      ? `<div class="pts" role="group" aria-label="Pisteet">${Array.from({ length: max + 1 }, (_, i) => `<button type="button" data-pts="${i}" aria-pressed="${v ? v.p === i : false}">${i}</button>`).join('')}</div>`
+      : `<div class="pts"><input type="number" min="0" max="${max}" step="1" value="${v ? v.p : ''}" aria-label="Pisteet 0–${max}"><button type="button" data-pts="input">Tallenna</button></div>`;
+    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${buttons}<span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
+  }
+  // Toggle a hint/solution box; its formulas are typeset on first open only.
+  function reveal(box, btn) {
+    const open = box.hidden;
+    box.hidden = !open; btn.setAttribute('aria-expanded', String(open));
+    if (open && !box.dataset.ts) { box.dataset.ts = 1; typeset(box); }
+    return open;
+  }
+  function bindUnit(sec, max) {
+    const key = sec.dataset.key;
+    const hintBtns = $$('[data-hint]', sec);
+    hintBtns.forEach((b, i) => b.onclick = () => { if (reveal($(`[data-hintbox="${i}"]`, sec), b) && hintBtns[i + 1]) hintBtns[i + 1].disabled = false; });
+    const sol = $('[data-act="sol"]', sec);
+    if (sol) sol.onclick = () => {
+      const open = reveal($('[data-solbox]', sec), sol);
+      sol.textContent = open ? 'Piilota malliratkaisu' : 'Näytä malliratkaisu';
+      if (open) $('.assess', sec).hidden = false;
+    };
+    const rev = $('[data-act="rev"]', sec);
+    if (rev) rev.onclick = () => { toggleReview(key); syncRev(rev, key); };
+    const assess = $('.assess', sec);
+    if (assess) assess.addEventListener('click', e => {
+      const b = e.target.closest('[data-pts]'); if (!b) return;
+      const raw = b.dataset.pts === 'input' ? $('input', assess).value.trim() : b.dataset.pts;
+      const p = Math.round(+raw);
+      if (raw === '' || !(p >= 0 && p <= max)) return;
+      setScore(key, p, max);
+      sec.dispatchEvent(new CustomEvent('yo:score', { bubbles: true }));
+      assess.innerHTML = assessHtml(key, max);
+      $('[data-assessnote]', assess).textContent = `Tallennettu ${p}/${max} p.` + (S.review[key] ? ` Kohta on kertauslistalla (${fmtDate(S.review[key].due)}).` : '');
+      syncRev(rev, key);
+      const chip = scoreChip(S.scores[key], 'data-score title="oma arvio"'), old = $('[data-score]', sec);
+      if (old) old.outerHTML = chip; else $('.uhead', sec).insertAdjacentHTML('beforeend', chip);
+    });
+    $('[data-act="png"]', sec).onclick = () => answerPng($('.answer', sec), 'vastaus-' + key.replace(/\|/g, '-')).catch(() => alertBox('Kuvan tallennus epäonnistui. Käytä tulostusta (Ctrl-P).'));
+  }
+  // Typeset the visible text, wire up the unit controls and load saved answers.
+  function mountUnits(container, units) {
+    typeset($$('.md:not(.reveal)', container));
+    $$('.unit', container).forEach((sec, j) => { bindUnit(sec, units[j].points); mountEditor($('.answer', sec)); });
+  }
+
+  async function taskView(a, k, n, unitId) {
+    const s = subj(a), session = sessionOf(a, k), task = taskOf(a, k, n);
+    if (!task) { setView(masthead(homeCrumb(''), 'Tehtävää ei löytynyt') + '<p><a href="#/">Takaisin</a></p>'); return; }
+    const title = esc(`${task.n}. ${task.title}`);
+    const signal = setView(masthead(homeCrumb(a), title) + '<p class="muted">Ladataan tehtävää…</p>');
+    const content = await getContent(a, k);
+    if (signal.aborted) return;
+    const { intro, units } = unitsFor(content, task);
+    const ctx = ctxFor(a, k, task, examFor(content, session));
+    const list = session.tasks, i = list.indexOf(task), prev = list[i - 1], next = list[i + 1];
+    const part = task.part ? task.part + '-osa' : task.exam || '';
+    setView(masthead(homeCrumb(a) + `<a href="#/${esc(a)}">${esc(s.name.split(',')[0])}</a>`, title) + `
+      <section class="taskhead">
+        <div class="row"><span class="chip ${k.slice(-1)}">${esc(shortLabel(k))}</span><span class="eyebrow">${esc(s.name)} · ${esc(session.label)}${part ? ' · ' + esc(part) : ''} · ${esc(task.points)} p${task.optional ? ' · valinnainen' : ''}</span></div>
+        ${task.summary ? `<p class="sum">${esc(task.summary)}</p>` : ''}
+        <div class="row">${(task.topics || []).map(id => `<span class="tag">${esc(topicName(s, id))}</span>`).join('')}</div>
+        <div class="row">
+          ${ctx.examUrl ? `<a class="btn primary" href="${esc(ctx.examUrl)}" target="_blank" rel="noopener">Avaa alkuperäinen tehtävä ↗</a>` : ''}
+          ${ctx.gradingUrl ? `<a class="btn" href="${esc(ctx.gradingUrl)}" target="_blank" rel="noopener">YTL: hyvän vastauksen piirteet ↗</a>` : ''}
+          <button type="button" class="btn ghost" id="saveTask">Tallenna</button>
+          <button type="button" class="btn ghost" id="openTask">Avaa tallennettu</button>
+        </div>
+        <p class="muted small">Alkuperäinen tehtävä aukeaa uuteen välilehteen. Tehtävänantoa ei kopioida tänne tekijänoikeuksien vuoksi. Alla on lyhyt kuvaus jokaisesta kohdasta.</p>
+      </section>
+      ${intro ? `<div class="md intro">${md(intro)}</div>` : ''}
+      ${content === false ? '<p class="warnbox">Vihjeiden ja malliratkaisujen lataus epäonnistui. Päivitä sivu yrittääksesi uudelleen.</p>'
+        : !content ? '<p class="warnbox">Tälle tutkintokerralle ei ole vielä vihjeitä eikä malliratkaisuja. Voit silti vastata ja arvioida itsesi.</p>' : ''}
+      ${units.map(u => unitBlock(ctx, u)).join('')}
+      <nav class="pager" aria-label="Tehtävät">
+        ${prev ? `<a class="btn" href="${taskHref(a, k, prev.n)}">← ${esc(prev.n)}. ${esc(prev.title)}</a>` : '<span></span>'}
+        ${next ? `<a class="btn" href="${taskHref(a, k, next.n)}">${esc(next.n)}. ${esc(next.title)} →</a>` : ''}
+      </nav>
+      ${footer()}`);
+    mountUnits(app, units);
+    $('#saveTask', app).onclick = () => exportTask(ctx);
+    $('#openTask', app).onclick = () => { importTarget = { a, k, n }; $('#filePick').click(); };
+    const target = unitId && document.getElementById('u-' + unitId);
+    if (target) target.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0);
+  }
+
+  /* ---------- exam simulation ---------- */
+  async function simView(a, k, g) {
+    const s = subj(a), session = sessionOf(a, k);
+    if (!session) { location.hash = '#/'; return; }
+    let signal = setView(masthead(homeCrumb(a), 'Koesimulaatio') + '<p class="muted">Ladataan…</p>');
+    const content = await getContent(a, k);
+    if (signal.aborted) return;
+    const ex = examFor(content, session);
+    const head = `${s.name.split(',')[0]} · ${session.label}`;
+    // Some subjects (äidinkieli) have two separate exams in one session: sections carry a `group`.
+    const groups = Array.from(new Set(ex.sections.map(x => x.group).filter(Boolean)));
+    if (groups.length > 1 && !groups.includes(g)) {
+      setView(masthead(homeCrumb(a), 'Koesimulaatio', esc(head)) + `
+        <section class="card"><h2>Valitse koe</h2><p class="muted">Tällä kerralla on kaksi erillistä koetta eri päivinä. Kumpikin tehdään omana simulaationaan.</p>
+        <div class="row">${groups.map(x => `<a class="btn primary" href="#/koe/${encodeURIComponent(a)}/${encodeURIComponent(k)}/${encodeURIComponent(x)}">${esc(cap(x))}${simStatus(simKey(a, k, x))}</a>`).join('')}</div></section>${footer()}`);
+      return;
+    }
+    const sections = g ? ex.sections.filter(x => x.group === g) : ex.sections;
+    const minutes = sections.length ? sections[0].minutes : 360;
+    const sk = simKey(a, k, g), sim = S.sims[sk];
+    const title = esc(head + (g ? ' · ' + g : ''));
+    if (!sim) {
+      setView(masthead(homeCrumb(a), 'Koesimulaatio', title) + `
+        <section class="card">
+          <h2>Kokeen rakenne</h2>
+          <p>Aikaa on <b>${Math.floor(minutes / 60)} h${minutes % 60 ? ' ' + minutes % 60 + ' min' : ''}</b>. Kello käy, vaikka suljet sivun. Tauon voi pitää, vaikka oikeassa kokeessa ei voi.</p>
+          <ul class="list">${sections.map(x => `<li><b>${esc(x.title)}</b><span class="muted">vastaa ${x.answer}/${x.tasks.length} tehtävään${x.note ? ' · ' + esc(x.note) : ''}</span></li>`).join('')}</ul>
+          <p class="muted small">Vihjeet ja malliratkaisut ovat piilossa, kunnes palautat kokeen. Sen jälkeen arvioit jokaisen valitsemasi tehtävän ja näet arvioidut kokonaispisteet. Kokeen vastaukset ovat erillään tavallisista harjoitusvastauksista.</p>
+          <div class="row"><button type="button" class="btn primary" id="simStart">Aloita koe</button><a class="btn ghost" href="#/${esc(a)}">Peruuta</a></div>
+        </section>${footer()}`);
+      $('#simStart').onclick = () => { S.sims[sk] = { start: Date.now(), paused: 0, pauseAt: null, chosen: [], submitted: null }; persist(); simView(a, k, g); };
+      return;
+    }
+    const remaining = () => minutes * 6e4 - ((sim.submitted || sim.pauseAt || Date.now()) - sim.start - sim.paused);
+    const fmt = ms => { ms = Math.max(0, ms); const h = Math.floor(ms / 36e5), m = Math.floor(ms / 6e4) % 60, x = Math.floor(ms / 1e3) % 60; return `${h}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')}`; };
+    const done = !!sim.submitted;
+    const chosen = new Set(sim.chosen);
+    const totals = () => {
+      let total = 0, totalMax = 0, assessed = 0;
+      for (const t of session.tasks) {
+        if (!chosen.has(t.n)) continue;
+        for (const u of unitsFor(content, t).units) { totalMax += u.points; const v = S.scores[ukey(a, k, t.n, u.id)]; if (v && v.at >= sim.start) { total += v.p; assessed++; } }
+      }
+      return { total, totalMax, assessed };
+    };
+    const tot = totals(), idx = scoreIndex();
+    const simTask = n => {
+      const t = taskOf(a, k, n), on = chosen.has(n);
+      if (!t || (done && !on)) return '';
+      const right = done ? scoreChip(idx.get([a, k, n].join('|'))) : `<label class="sp"><input type="checkbox" data-choose="${esc(n)}" ${on ? 'checked' : ''}> Vastaan tähän</label>`;
+      return `<details class="simtask" data-n="${esc(n)}" data-chosen="${on ? 1 : 0}"><summary><b>${esc(t.n)}. ${esc(t.title)}</b><span class="chip">${esc(t.points)} p</span>${right}</summary><div class="simbody" data-body></div></details>`;
+    };
+    signal = setView(masthead(homeCrumb(a), 'Koesimulaatio', title) + `
+      <div class="simbar" role="region" aria-label="Kokeen tila">
+        ${done ? `<span class="total" id="simTotal">${tot.total} / ${tot.totalMax} p</span><span class="muted"><span id="simAssessed">arvioitu ${tot.assessed} kohdasta</span> · koe palautettu ${fmtDate(sim.submitted)}, aikaa käytetty ${fmt(minutes * 6e4 - remaining())}</span>`
+          : `<span class="clock" id="clock" aria-live="off">${fmt(remaining())}</span><span class="muted" id="chosenInfo"></span><span class="sp"></span>
+            <button type="button" class="btn" id="simPause">${sim.pauseAt ? 'Jatka' : 'Tauko'}</button><button type="button" class="btn primary" id="simSubmit">Palauta koe</button>`}
+        <button type="button" class="btn ghost" id="simReset">${done ? 'Uusi yritys' : 'Keskeytä'}</button>
+      </div>
+      ${done ? '<p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet päivittyvät jokaisen arvion jälkeen.</p>'
+        : `<p class="warnbox" id="pauseNote" ${sim.pauseAt ? '' : 'hidden'}>Tauko. Kello on pysähtynyt.</p>`}
+      ${sections.map((x, si) => `<section class="section">
+        <header><h2>${esc(x.title)}</h2><span class="muted">vastaa ${x.answer}/${x.tasks.length}${x.note ? ' · ' + esc(x.note) : ''}</span><span class="chip" data-count="${si}"></span></header>
+        ${x.tasks.map(simTask).join('')}
+      </section>`).join('')}
+      ${footer()}`);
+    const updateCounts = () => {
+      sections.forEach((x, si) => { const c = x.tasks.filter(n => chosen.has(n)).length; const el = $(`[data-count="${si}"]`, app); el.textContent = `valittu ${c}/${x.answer}`; el.className = 'chip ' + (c === x.answer ? 'ok' : c > x.answer ? 'bad' : ''); });
+      const info = $('#chosenInfo'); if (info) info.textContent = `${chosen.size} tehtävää valittu`;
+    };
+    updateCounts();
+    $$('[data-choose]', app).forEach(cb => {
+      cb.addEventListener('click', e => e.stopPropagation());
+      cb.onchange = () => { cb.checked ? chosen.add(cb.dataset.choose) : chosen.delete(cb.dataset.choose); sim.chosen = Array.from(chosen); persist(); cb.closest('details').dataset.chosen = cb.checked ? 1 : 0; updateCounts(); };
+    });
+    $$('details.simtask', app).forEach(d => d.addEventListener('toggle', () => {
+      if (!d.open || d.dataset.loaded) return; d.dataset.loaded = 1;
+      const t = taskOf(a, k, d.dataset.n), { intro, units } = unitsFor(content, t), ctx = ctxFor(a, k, t, ex);
+      const body = $('[data-body]', d);
+      body.innerHTML = `${t.summary ? `<p class="muted">${esc(t.summary)}</p>` : ''}${ctx.examUrl ? `<p><a href="${esc(ctx.examUrl)}" target="_blank" rel="noopener">Avaa alkuperäinen tehtävä ↗</a></p>` : ''}${intro ? `<div class="md intro">${md(intro)}</div>` : ''}` + units.map(u => unitBlock(ctx, u, { prefix: 'koe|', showHelp: done })).join('');
+      mountUnits(body, units);
+    }));
+    armConfirm($('#simReset'), done ? 'Varmasti? Aloita alusta' : 'Varmasti? Keskeytä koe', async () => {
+      delete S.sims[sk]; persist();
+      // exam answers live under their own prefix; a new attempt starts from empty answers
+      await Promise.all(sections.flatMap(x => x.tasks).map(n => taskOf(a, k, n)).filter(Boolean)
+        .flatMap(t => unitsFor(content, t).units.map(u => idb.del('koe|' + ukey(a, k, t.n, u.id)))));
+      simView(a, k, g);
+    });
+    if (done) {
+      app.addEventListener('yo:score', () => { const x = totals(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; }, { signal });
+      return;
+    }
+    const unpause = t => { if (sim.pauseAt) { sim.paused += t - sim.pauseAt; sim.pauseAt = null; } };
+    const submit = (at = Date.now()) => { sim.submitted = at; unpause(at); persist(); simView(a, k, g); window.scrollTo(0, 0); };
+    armConfirm($('#simSubmit'), 'Varmasti? Palauta', () => submit());
+    const clock = $('#clock'), pauseBtn = $('#simPause');
+    const tick = () => { const r = remaining(); clock.textContent = fmt(r); clock.classList.toggle('low', r < 15 * 6e4); if (r <= 0 && !sim.pauseAt) submit(sim.start + sim.paused + minutes * 6e4); };
+    pauseBtn.onclick = () => {
+      if (sim.pauseAt) unpause(Date.now()); else sim.pauseAt = Date.now();
+      persist(); pauseBtn.textContent = sim.pauseAt ? 'Jatka' : 'Tauko'; $('#pauseNote').hidden = !sim.pauseAt; tick();
+    };
+    tick();
+    const timer = setInterval(tick, 1000);
+    signal.addEventListener('abort', () => clearInterval(timer));
+  }
+
+  /* ---------- router ---------- */
+  const decode = x => { try { return decodeURIComponent(x); } catch (e) { return x; } };
+  const hashParts = () => location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decode);
+  function route() {
+    if (math) closeMath();
+    const p = hashParts();
+    if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
+    if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
+    home(p[0]); window.scrollTo(0, 0);
+  }
+
+  buildToolbar();
+  const first = hashParts();
+  if ((first[0] === 't' || first[0] === 'koe') && first[2]) getContent(first[1], first[2]);   // fetch in parallel with the task list
+  loadMeta().then(() => {
+    window.addEventListener('hashchange', route);
+    route();
+    if (S.ui.aidsOpen) setAids(true, true);   // after the first view, so an embedded calculator does not delay it
+  }).catch(e => { setView(masthead('', 'Harjoittelu') + `<p class="warnbox">Tehtävien lataus epäonnistui: ${esc(e.message)}. Sivu toimii vain verkko-osoitteesta (ei file://).</p>`); });
+})();
+</script>
+</body>
+</html>

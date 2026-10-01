@@ -1,0 +1,416 @@
+{
+ "subject": "fysiikka",
+ "session": "2023S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2023S_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-09-13_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen 20 pisteen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa eri osa-alueilta, kukin 2 p (vaihtoehdot koenäkymässä, A = ylin).\n\n- 1.1 Mikä kuvaus fissiosta ja fuusiosta pitää paikkansa?\n- 1.2 Miksi saunan lauteen metallinaula polttaa ihoa enemmän kuin puu?\n- 1.3 Vakiovauhdilla vedettävän asuntovaunun kokonaisvoima?\n- 1.4 Paksun langan halkaisija kaksinkertainen, pituus sama, ohuen resistanssi $R$: paksun resistanssi?\n- 1.5 Puolet matkasta vauhdilla $v$, loput $2v$: keskivauhti?\n- 1.6 Kivi siirretään kelluvasta leluveneestä akvaarion pohjalle: vedenpinta?\n- 1.7 Liukuvaa laatikkoa hidastavan kitkan työn etumerkki?\n- 1.8 Seuraus, jos Maan akselin kallistus olisi $0^\\circ$?\n- 1.9 Mitä paristolle tapahtuu lampun syttyessä?\n- 1.10 Putkessa kitkan varassa olevan pulloharjan putkea lyödään yläpäästä, ja putki nytkähtää alas: harjan liike putken suhteen?",
+     "hints": [
+      "Kertaa perusasiat: ydinreaktiot, lämmönjohtuminen, Newtonin I laki, resistanssin riippuvuus langan mitoista, keskivauhdin määritelmä, Arkhimedeen laki, työn etumerkki, vuodenaikojen synty, virtapiirin varausten kierto ja hitaus.",
+      "Kohta kohdalta: 1.1 kevyet ytimet yhdistyvät, raskas halkeaa; 1.2 kumpi aine siirtää lämpöä iholle nopeammin; 1.3 tasainen vauhti; 1.4 $R = \\rho l/A$, $A \\propto d^2$; 1.5 laske osamatkojen ajat; 1.6 veneessä kivi syrjäyttää painonsa verran vettä, pohjalla vain tilavuutensa verran; 1.7 voima ja siirtymä vastakkaisiin suuntiin; 1.8 auringonsäteiden tulokulma vuoden mittaan; 1.9 varaus kiertää piirissä; 1.10 harja pyrkii pysymään paikallaan."
+     ],
+     "solution": "1. **1.1 D** (fuusiossa kevyet ytimet yhdistyvät, fissiossa raskas ydin halkeaa).\n2. **1.2 B** (naulan lämmönjohtavuus on suurempi). Naula ja laude ovat saunassa samassa lämpötilassa, mutta metalli johtaa lämpöä iholle paljon nopeammin kuin puu.\n3. **1.3 B** (nolla). Vauhti ja suunta pysyvät samoina, joten Newtonin I lain mukaan voimat kumoavat toisensa.\n4. **1.4 A** ($\\tfrac14 R$). $R = \\rho\\dfrac{l}{A}$ ja $A = \\dfrac{\\pi d^2}{4}$. Halkaisijan kaksinkertaistuminen nelinkertaistaa poikkipinta-alan, joten resistanssi on neljäsosa.\n5. **1.5 C** ($\\tfrac43 v$). Kun matka on $2s$, aikaa kuluu $\\dfrac{s}{v} + \\dfrac{s}{2v} = \\dfrac{3s}{2v}$, joten keskivauhti on $\\dfrac{2s}{3s/(2v)} = \\dfrac43 v$. Matkan pituutta ei tarvita.\n6. **1.6 C** (pinta laskee). Veneessä kivi syrjäyttää painoaan vastaavan määrän vettä, eli enemmän kuin oman tilavuutensa, koska kivi on vettä tiheämpää. Pohjalla se syrjäyttää vain oman tilavuutensa.\n7. **1.7 C** (negatiivinen). Kitkavoima on vastakkainen siirtymälle, joten $W = Fs\\cos 180^\\circ < 0$, ja laatikon liike-energia pienenee.\n8. **1.8 D** (vuodenaikoja ei olisi). Kallistuksen takia auringonvalon tulokulma ja päivän pituus vaihtelevat vuoden mittaan; ilman kallistusta ne pysyisivät kullakin leveysasteella samoina.\n9. **1.9 A** (pariston kokonaisvaraus ei muutu). Paristo ei tuota eikä kuluta varauksia, vaan siirtää niitä piirissä ympäri; energiaa kuluu, varausta ei.\n10. **1.10 C** (harja liikahtaa ylöspäin putken suhteen). Isku kohdistuu vain putkeen. Pieni kitka ei ehdi kiihdyttää harjaa putken mukana, joten hitautensa vuoksi harja jää lähes paikalleen ja putki liukuu sen ohi alas.\n\n**Vastaus: 1.1 D · 1.2 B · 1.3 B · 1.4 A · 1.5 C · 1.6 C · 1.7 C · 1.8 D · 1.9 A · 1.10 C**\n\n**Sudenkuoppa:** kohdassa 1.5 lasketaan nopeuksien keskiarvo $\\tfrac32 v$. Hitaammalla vauhdilla kuljetaan pidempään, joten keskivauhti painottuu kohti arvoa $v$.",
+     "answer": "1.1 D · 1.2 B · 1.3 B · 1.4 A · 1.5 C · 1.6 C · 1.7 C · 1.8 D · 1.9 A · 1.10 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 5,
+     "prompt": "Aineisto 2.A sisältää Pirttikosken vesivoimalaitoksen keskimääräisen virtaaman ($\\mathrm{m^3/s}$) jokaiselta päivältä helmikuun alusta heinäkuun loppuun 2022. Tee graafinen esitys yhden vuorokauden aikana virranneesta vesimäärästä (tilavuus) päivän järjestysnumeron (vuoden alusta) funktiona.",
+     "hints": [
+      "Virtaama kertoo, montako kuutiometriä vettä kulkee sekunnissa. Muunna se vuorokauden vesimääräksi ennen piirtämistä.",
+      "Kerro jokainen virtaama vuorokauden sekuntimäärällä $24\\cdot 3600\\,\\mathrm{s} = 86\\,400\\,\\mathrm{s}$. Vaaka-akselille päivän numero (ei päivämäärää), pystyakselille tilavuus yksikköineen. Peräkkäisiä päiviä yhdistävä murtoviiva sopii hyvin."
+     ],
+     "solution": "1. Vuorokaudessa virrannut tilavuus: $V = q\\cdot 86\\,400\\,\\mathrm{s}$, missä $q$ on päivän keskivirtaama. Esimerkiksi päivälle 32: $459{,}96\\,\\mathrm{m^3/s}\\cdot 86\\,400\\,\\mathrm{s} \\approx 3{,}97\\cdot 10^7\\,\\mathrm{m^3}$.\n2. Lasketaan taulukkolaskennalla uusi sarake kaikille päiville (numerot $32$–$212$). Arvot vaihtelevat välillä noin $5\\cdot 10^6$–$9\\cdot 10^7\\,\\mathrm{m^3}$.\n3. Piirretään pisteet: vaaka-akselilla päivän numero, pystyakselilla vuorokauden vesimäärä $V\\ (\\mathrm{m^3})$. Koska arvo koskee koko vuorokautta, pisteet yhdistetään murtoviivaksi (tai piirretään pylväinä), jotta jokaisen päivän vesimäärä on luettavissa. Yhtä sovitettua funktiota ei käytetä, koska vaihtelu on epäsäännöllistä.\n4. Kuvaajassa näkyy selvä kevättulvan huippu toukokuussa (noin päivät $130$–$150$).\n\n**Sudenkuoppa:** piirretään suoraan aineiston virtaama $\\mathrm{m^3/s}$ eikä vuorokauden vesimäärää, tai käytetään vaaka-akselilla päivämäärää eikä päivän numeroa.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Minä kuukautena vettä virtasi aineiston 2.A aikavälillä eniten, ja kuinka suuri kyseisen kuukauden kokonaisvesimäärä oli?",
+     "hints": [
+      "Kuukauden vesimäärä on vuorokausittaisten vesimäärien summa (tai virtaaman kuvaajan alle jäävä pinta-ala).",
+      "Laske taulukkolaskennalla kuukausikohtaiset summat kohdan 2.1 sarakkeesta ($V = q\\cdot 86\\,400\\,\\mathrm{s}$) ja vertaa kuukausia. Muunna lopuksi sopivaan yksikköön ($1\\,\\mathrm{km^3} = 10^9\\,\\mathrm{m^3}$)."
+     ],
+     "solution": "1. Kuukauden kokonaisvesimäärä saadaan laskemalla yhteen kuukauden päivien vesimäärät $V_i = q_i\\cdot 86\\,400\\,\\mathrm{s}$ (tai graafisesti integroimalla virtaama ajan suhteen).\n2. Taulukkolaskennan summat: helmikuu $0{,}77\\cdot 10^9\\,\\mathrm{m^3}$, maaliskuu $0{,}80\\cdot 10^9\\,\\mathrm{m^3}$, huhtikuu $0{,}87\\cdot 10^9\\,\\mathrm{m^3}$, toukokuu $1{,}61\\cdot 10^9\\,\\mathrm{m^3}$, kesäkuu $0{,}94\\cdot 10^9\\,\\mathrm{m^3}$ ja heinäkuu $0{,}75\\cdot 10^9\\,\\mathrm{m^3}$.\n3. Suurin on toukokuu (lumien sulamisen kevättulva): $V \\approx 1{,}6\\cdot 10^9\\,\\mathrm{m^3} = 1{,}6\\,\\mathrm{km^3}$.\n\n**Vastaus: toukokuussa, noin $1{,}6\\cdot 10^9\\,\\mathrm{m^3}$ eli $1{,}6\\,\\mathrm{km^3}$.**\n\n**Sudenkuoppa:** lasketaan yhteen virtaamat ($\\mathrm{m^3/s}$) kertomatta niitä sekuntimäärällä, jolloin tuloksen yksikkö ei ole tilavuus.",
+     "answer": "toukokuu, $V \\approx 1{,}6\\cdot 10^9\\,\\mathrm{m^3}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Voimalaitoksessa veden putouskorkeus on $26\\,\\mathrm{m}$. Paljonko energiaa laitos olisi enimmillään voinut tuottaa päivänä 13.3.2022, jos kaikki laitoksen läpi kulkeneen veden potentiaalienergia olisi saatu hyötykäyttöön?",
+     "hints": [
+      "Suurin mahdollinen energia on koko päivän aikana pudonneen vesimassan potentiaalienergian muutos $\\Delta E_p = mgh$.",
+      "Päivä 13.3. on vuoden 72. päivä. Laske sen vuorokauden vesimäärä $V = q\\cdot 86\\,400\\,\\mathrm{s}$ ja massa $m = \\rho V$, $\\rho = 1000\\,\\mathrm{kg/m^3}$."
+     ],
+     "solution": "1. Energiaa ei voi syntyä enempää kuin vesi menettää potentiaalienergiaa, joten $E_{\\max} = \\Delta E_p = mgh = \\rho Vgh$.\n2. Päivän 13.3. (päivä 72) keskivirtaama on $348{,}23\\,\\mathrm{m^3/s}$, joten vuorokauden vesimäärä on $V = 348{,}23\\,\\mathrm{m^3/s}\\cdot 86\\,400\\,\\mathrm{s} \\approx 3{,}009\\cdot 10^7\\,\\mathrm{m^3}$.\n3. $E_{\\max} = 1000\\,\\mathrm{kg/m^3}\\cdot 3{,}009\\cdot 10^7\\,\\mathrm{m^3}\\cdot 9{,}81\\,\\mathrm{m/s^2}\\cdot 26\\,\\mathrm{m} \\approx 7{,}7\\cdot 10^{12}\\,\\mathrm{J}$.\n\n**Vastaus: $E \\approx 7{,}7\\cdot 10^{12}\\,\\mathrm{J} = 7{,}7\\,\\mathrm{TJ}$ (noin $2{,}1\\,\\mathrm{GWh}$).**\n\n**Sudenkuoppa:** käytetään massana yhden sekunnin vesimäärää (tulos noin $89\\,\\mathrm{MJ}$), jolloin saadaan teho eikä vuorokauden energia.",
+     "answer": "$E \\approx 7{,}7\\,\\mathrm{TJ}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Pakastimesta otettu jääpala ($0{,}050\\,\\mathrm{kg}$, $-18{,}0\\,^\\circ\\mathrm{C}$) pudotetaan lämpöeristettyyn astiaan, jossa on $0{,}40\\,\\mathrm{kg}$ vettä lämpötilassa $+1{,}0\\,^\\circ\\mathrm{C}$. Kun lämpömittarin lukema on asettunut, astiassa on sekä jäätä että nestemäistä vettä. Mikä on loppulämpötila, ja miten ja kuinka paljon jääpalan massa muuttuu?",
+     "hints": [
+      "Mikä lämpötila astiassa on, kun jäätä ja vettä on siellä yhtä aikaa tasapainossa? Käytä sitten energian säilymistä: eristetyssä astiassa kaikkien lämpöjen summa on nolla.",
+      "Laske jään lämpenemiseen $0\\,^\\circ\\mathrm{C}$:een tarvittava lämpö ($Q = cm\\Delta T$, $\\Delta T = 18\\,\\mathrm{K}$) ja veden jäähtyessä $0\\,^\\circ\\mathrm{C}$:een luovuttama lämpö. Vertaa niitä: kumpaan suuntaan olomuoto muuttuu? Erotus kuluu tai vapautuu olomuodon muutoksessa $Q = s\\,\\Delta m$."
+     ],
+     "solution": "1. Lopussa jää ja vesi ovat tasapainossa, joten lämpötila on sulamispisteessä: $T = 0\\,^\\circ\\mathrm{C}$.\n2. Jään lämpeneminen $-18\\,^\\circ\\mathrm{C} \\to 0\\,^\\circ\\mathrm{C}$ vaatii lämmön $Q_j = c_j m_j\\Delta T_j = 2090\\,\\tfrac{\\mathrm{J}}{\\mathrm{kg\\,K}}\\cdot 0{,}050\\,\\mathrm{kg}\\cdot 18\\,\\mathrm{K} \\approx 1881\\,\\mathrm{J}$.\n3. Veden jäähtyminen $1{,}0\\,^\\circ\\mathrm{C} \\to 0\\,^\\circ\\mathrm{C}$ vapauttaa lämmön $Q_v = c_v m_v\\Delta T_v = 4190\\,\\tfrac{\\mathrm{J}}{\\mathrm{kg\\,K}}\\cdot 0{,}40\\,\\mathrm{kg}\\cdot 1{,}0\\,\\mathrm{K} \\approx 1676\\,\\mathrm{J}$.\n4. Veden jäähtyessä vapautuva lämpö ei riitä jään lämmittämiseen, joten puuttuva lämpö saadaan siitä, että osa vedestä jäätyy. Energian säilyminen: $Q_j = Q_v + s\\,\\Delta m$.\n5. $\\Delta m = \\dfrac{Q_j - Q_v}{s} = \\dfrac{1881\\,\\mathrm{J} - 1676\\,\\mathrm{J}}{333\\,000\\,\\mathrm{J/kg}} \\approx 6{,}2\\cdot 10^{-4}\\,\\mathrm{kg}$.\n6. Jäätyvä määrä on hyvin pieni verrattuna veden määrään, joten astiaan todella jää sekä vettä että jäätä.\n\n**Vastaus: loppulämpötila on $0\\,^\\circ\\mathrm{C}$ ja jääpalan massa kasvaa noin $0{,}62\\,\\mathrm{g}$.**\n\n**Sudenkuoppa:** unohdetaan olomuodon muutos ja ratkaistaan yhteinen loppulämpötila pelkällä kaavalla $Q = cm\\Delta T$. Silloin saadaan hieman alle $0\\,^\\circ\\mathrm{C}$, mikä on ristiriidassa sen kanssa, että astiassa on nestemäistä vettä.",
+     "answer": "$T = 0\\,^\\circ\\mathrm{C}$; jää kasvaa $\\Delta m \\approx 0{,}62\\,\\mathrm{g}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Kuvassa 4.A on kolme piiriä, joissa on identtiset ideaaliset jännitelähteet, vastukset ja johtimet: piirissä 1 yksi vastus (pisteet A–D), piirissä 2 kaksi vastusta sarjassa (pisteet E–H, G vastusten välissä) ja piirissä 3 kaksi vastusta rinnan (pisteet K–N, M toisen haaran alapäässä). Kunkin piirin alajohdin on maadoitettu. Monivalinnat (vaihtoehdot koenäkymässä, A = ylin; 4.1–4.6 à 2 p, 4.7 3 p):\n\n- 4.1 Potentiaalien vertailu piirin 1 pisteissä A–D\n- 4.2 Virtojen vertailu pisteissä A–D\n- 4.3 Virta piirin 2 pisteessä G verrattuna piirin 1 pisteeseen C\n- 4.4 Potentiaali pisteessä G verrattuna pisteeseen C\n- 4.5 Virta piirin 3 pisteessä M verrattuna pisteeseen C\n- 4.6 Virta pisteessä E verrattuna piirin 3 pisteeseen K\n- 4.7 Piirien kokonaistehojen $P_1$, $P_2$, $P_3$ järjestys",
+     "hints": [
+      "Merkitse lähdejännitettä $U$ ja yhden vastuksen resistanssia $R$. Laske jokaisen piirin kokonaisresistanssi ja lähteestä lähtevä virta. Muista, että ideaalisen johtimen päissä potentiaali on sama.",
+      "Piiri 1: $I = U/R$. Piiri 2: $R_\\mathrm{s} = 2R$, virta $U/(2R)$ ja G on puolivälissä jännitettä. Piiri 3: $R_\\mathrm{r} = R/2$, kokonaisvirta $2U/R$, kummankin haaran virta $U/R$. Teho $P = UI$."
+     ],
+     "solution": "Olkoon lähdejännite $U$ ja vastuksen resistanssi $R$. Maadoitetun pisteen potentiaali on $0$.\n\n1. **4.1 B** ($V_A = V_B > V_C = V_D$). A ja B ovat samassa johtimessa lähteen plusnavan puolella ($U$), C ja D maadoitetussa johtimessa ($0$). Potentiaali laskee vain vastuksessa.\n2. **4.2 C** (virta on sama kaikissa pisteissä). Piiri on haaraton, joten sama virta $I_1 = U/R$ kulkee kaikkialla.\n3. **4.3 C** ($I_G = \\tfrac12 I_C$). Piirin 2 resistanssi on $2R$, joten $I_2 = \\dfrac{U}{2R}$.\n4. **4.4 A** ($V_G > V_C$). $V_C = 0$, koska C on maadoitetussa johtimessa. Piirissä 2 jännite jakautuu tasan kahdelle vastukselle, joten G:n ja maan välissä on vielä toinen vastus: $V_G = U/2 > 0$.\n5. **4.5 D** ($I_M = I_C$). Rinnankytkennässä kummankin vastuksen yli on koko jännite $U$, joten haaran virta on $U/R$, sama kuin piirissä 1.\n6. **4.6 A** ($I_E = \\tfrac14 I_K$). $I_E = \\dfrac{U}{2R}$ ja $K$:ssa kulkee kummankin haaran virta: $I_K = \\dfrac{2U}{R}$. Suhde on $\\tfrac14$.\n7. **4.7 C** ($P_3 > P_1 > P_2$). $P = \\dfrac{U^2}{R_\\mathrm{kok}}$: $P_1 = \\dfrac{U^2}{R}$, $P_2 = \\dfrac{U^2}{2R}$ ja $P_3 = \\dfrac{2U^2}{R}$.\n\n**Vastaus: 4.1 B · 4.2 C · 4.3 C · 4.4 A · 4.5 D · 4.6 A · 4.7 C**\n\n**Sudenkuoppa:** ajatellaan, että virta ”kuluu” vastuksessa (kohta 4.2) tai että rinnankytkentä puolittaa jokaisen haaran virran (kohta 4.5). Haarat eivät vaikuta toisiinsa, koska ideaalisen lähteen jännite pysyy samana.",
+     "answer": "4.1 B · 4.2 C · 4.3 C · 4.4 A · 4.5 D · 4.6 A · 4.7 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 9,
+     "prompt": "Auto ($1600\\,\\mathrm{kg}$) ajaa vakionopeudella $58\\,\\mathrm{km}$ matkan Helsingistä (korkeus $17\\,\\mathrm{m}$ merenpinnasta) Hyvinkäälle ($105\\,\\mathrm{m}$) ja samaa tietä takaisin. Moottorin hyötysuhde on $24\\,\\%$ ja bensiinin lämpöarvo $31{,}2\\,\\mathrm{MJ/l}$. Vastusvoimat ovat keskimäärin samat molempiin suuntiin. Kuinka paljon suurempi bensiinin kulutus litroina on menosuuntaan kuin paluusuuntaan?",
+     "hints": [
+      "Mihin moottorin tekemä työ kuluu kummallakin matkalla? Vastusvoimien työ on sama, joten se kumoutuu erotuksessa. Mikä jää jäljelle?",
+      "Menomatkalla moottori tekee työn $W_\\mathrm{v} + mg\\Delta h$, paluumatkalla $W_\\mathrm{v} - mg\\Delta h$. Erotus on $2mg\\Delta h$. Bensiinin energiasta vain osa $\\eta$ muuttuu työksi: $\\Delta E = \\eta H\\,\\Delta V$."
+     ],
+     "solution": "1. Menomatkalla moottorin työ kuluu vastusvoimien voittamiseen ja auton potentiaalienergian kasvattamiseen: $W_\\mathrm{meno} = W_\\mathrm{v} + mg\\Delta h$, missä $\\Delta h = 105\\,\\mathrm{m} - 17\\,\\mathrm{m} = 88\\,\\mathrm{m}$.\n2. Paluumatkalla potentiaalienergia pienenee ja auttaa liikettä: $W_\\mathrm{paluu} = W_\\mathrm{v} - mg\\Delta h$. Liike-energia on sama alussa ja lopussa (vakionopeus).\n3. Työn erotus: $\\Delta W = 2mg\\Delta h = 2\\cdot 1600\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2}\\cdot 88\\,\\mathrm{m} \\approx 2{,}76\\cdot 10^6\\,\\mathrm{J}$.\n4. Poltetun bensiinin tilavuudesta $\\Delta V$ saadaan työtä $\\eta H\\Delta V$, joten $\\Delta V = \\dfrac{2mg\\Delta h}{\\eta H} = \\dfrac{2{,}76\\cdot 10^6\\,\\mathrm{J}}{0{,}24\\cdot 31{,}2\\cdot 10^6\\,\\mathrm{J/l}} \\approx 0{,}37\\,\\mathrm{l}$.\n\n**Vastaus: menomatkalla kuluu noin $0{,}37\\,\\mathrm{l}$ enemmän bensiiniä.**\n\n**Sudenkuoppa:** otetaan erotukseksi vain $mg\\Delta h$ (tulos $0{,}18\\,\\mathrm{l}$). Paluumatkalla potentiaalienergia myös vähentää kulutusta, joten ero on kaksinkertainen.",
+     "answer": "$\\Delta V \\approx 0{,}37\\,\\mathrm{l}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 6,
+     "prompt": "Miten kulutusero meno- ja paluumatkan välillä muuttuu, jos menomatka ajetaan kovemmalla vauhdilla kuin paluumatka?",
+     "hints": [
+      "Kohdan 5.1 energiankulutus koostui kahdesta osasta. Kumpi niistä riippuu ajonopeudesta?",
+      "Ilmanvastus kasvaa nopeasti vauhdin kasvaessa ($F \\propto v^2$), joten vastusvoimien työ menomatkalla kasvaa. Mieti, oliko menomatkan kulutus jo ennestään suurempi vai pienempi."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- suuremmalla nopeudella vastusvoimat (erityisesti ilmanvastus) ovat suuremmat, joten niiden tekemä työ samalla matkalla kasvaa\n- menomatkalla kulutus oli jo valmiiksi suurempi (nousu $88\\,\\mathrm{m}$)\n- johtopäätös: ero kasvaa, $\\Delta E = 2mg\\Delta h + (W_\\mathrm{v,meno} - W_\\mathrm{v,paluu}) > 2mg\\Delta h$\n\n**Esimerkkivastaus:** Ilmanvastus on suunnilleen verrannollinen nopeuden neliöön, joten kovemmalla vauhdilla sama $58\\,\\mathrm{km}$ matka vaatii enemmän työtä vastusvoimia vastaan. Menomatka vei jo valmiiksi enemmän bensiiniä, koska autoa nostettiin ylemmäs. Kun menomatkan vastustyö vielä kasvaa ja paluumatkan pysyy ennallaan, menomatkan kulutus kasvaa ja ero paluumatkaan suurenee yli $0{,}37$ litran.\n\n**Sudenkuoppa:** perustellaan kulutuksen kasvua suuremmalla liike-energialla. Liike-energia on vakionopeudella ajettaessa sama matkan alussa ja lopussa; lisäkulutus tulee vastusvoimien suuremmasta työstä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 3,
+     "prompt": "Perseverance-mönkijä tallensi vuonna 2022 ääntä Marsin pinnalla. Marsin kaasukehän tiheys on noin $0{,}02\\,\\mathrm{kg/m^3}$ (Maassa $1{,}2\\,\\mathrm{kg/m^3}$). Miksi ääniaaltojen havaitseminen Marsissa oli tieteellisesti merkittävä tulos?",
+     "hints": [
+      "Mitä ääni tarvitsee edetäkseen? Millainen Marsin kaasukehä on Maan ilmakehään verrattuna?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- ääni on mekaanista aaltoliikettä, joka tarvitsee väliaineen\n- Marsin kaasukehä on hyvin ohut (tiheys ja paine murto-osa Maan arvoista), joten epäiltiin, etteivät ääniaallot pääse siinä kunnolla etenemään\n\n**Esimerkkivastaus:** Ääni etenee väliaineen hiukkasten välityksellä. Marsin kaasukehän tiheys on vain noin kuudeskymmenesosa Maan ilmakehän tiheydestä, ja paine on vastaavasti pieni. Siksi pidettiin mahdollisena, ettei ääni juuri etene Marsissa. Mittaus osoitti, että ääni kulkee sielläkin.\n\n**Sudenkuoppa:** pohditaan elämää tai äänilähteitä Marsissa, vaikka kysymys koskee äänen etenemisen fysiikkaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 3,
+     "prompt": "Marsissa äänen nopeudeksi mitattiin noin $240\\,\\mathrm{m/s}$ alle $400\\,\\mathrm{Hz}$:n taajuuksilla ja noin $250\\,\\mathrm{m/s}$ niitä suuremmilla. Miten äänen nopeuden ja taajuuden välinen yhteys eroaa Maan pinnalla havaittavasta?",
+     "hints": [
+      "Riippuuko äänen nopeus Maan ilmakehässä kuultavien äänten taajuudesta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Maan pinnalla äänen nopeus on kuuloalueella käytännössä sama kaikilla taajuuksilla (noin $340\\,\\mathrm{m/s}$), kun taas Marsissa nopeus riippuu taajuudesta\n\n**Esimerkkivastaus:** Maassa äänen nopeus määräytyy ilman ominaisuuksista (lähinnä lämpötilasta), eikä se juuri muutu taajuuden mukana: matalat ja korkeat äänet etenevät yhtä nopeasti. Marsissa korkeat äänet (yli $400\\,\\mathrm{Hz}$) etenevät noin $10\\,\\mathrm{m/s}$ eli noin $4\\,\\%$ nopeammin kuin matalat.\n\n**Sudenkuoppa:** päätellään kaavasta $v = \\lambda f$, että nopeus kasvaa taajuuden mukana. Kaava kertoo aallonpituuden, kun nopeus ja taajuus tunnetaan; väliaine määrää nopeuden.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 5,
+     "prompt": "Marsissa sama äänilähde kuulosti noin $20\\,\\mathrm{dB}$ heikommalta kuin Maassa. Moninkertaiseksi äänen intensiteetti pitää Maassa kasvattaa, jotta intensiteettitaso nousee $20\\,\\mathrm{dB}$?",
+     "hints": [
+      "Intensiteettitaso on logaritminen suure: $L = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{I}{I_0}$.",
+      "Kirjoita taso kahdelle intensiteetille ja vähennä: $L_2 - L_1 = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{I_2}{I_1}$. Ratkaise suhde $I_2/I_1$."
+     ],
+     "solution": "1. Intensiteettitaso on $L = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{I}{I_0}$, missä $I_0 = 10^{-12}\\,\\mathrm{W/m^2}$.\n2. Tasojen erotus: $L_2 - L_1 = 10\\,\\mathrm{dB}\\cdot\\left(\\lg\\dfrac{I_2}{I_0} - \\lg\\dfrac{I_1}{I_0}\\right) = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{I_2}{I_1}$.\n3. $20\\,\\mathrm{dB} = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{I_2}{I_1} \\Rightarrow \\lg\\dfrac{I_2}{I_1} = 2 \\Rightarrow \\dfrac{I_2}{I_1} = 10^2 = 100$.\n\n**Vastaus: intensiteetti on kasvatettava $100$-kertaiseksi.**\n\n**Sudenkuoppa:** ajatellaan desibeliasteikkoa lineaariseksi (esimerkiksi ”kaksinkertaiseksi” tai ”20-kertaiseksi”). Jokainen $10\\,\\mathrm{dB}$ vastaa intensiteetin kymmenkertaistumista.",
+     "answer": "$I_2/I_1 = 100$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.4",
+     "points": 4,
+     "prompt": "Millaista puheen tai musiikin kuunteleminen olisi Marsissa verrattuna Maahan, jos ääniä voisi kuunnella suoraan ilman suojavarusteita? Perustele annettujen tietojen avulla.",
+     "hints": [
+      "Hyödynnä kahta tehtävän tietoa: äänet ovat heikompia, ja äänen nopeus riippuu taajuudesta. Mitä jälkimmäinen tarkoittaa monitaajuiselle äänelle, joka kulkee jonkin matkan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- äänet kuuluisivat selvästi hiljaisempina (intensiteetti noin sadasosa)\n- korkeat taajuudet saapuisivat kuulijalle hieman ennen matalia, joten puhe ja musiikki muuttuisivat sekaviksi tai epäselviksi, sitä enemmän mitä kauempana lähde on\n\n**Esimerkkivastaus:** Marsissa sama ääni olisi $20\\,\\mathrm{dB}$ hiljaisempi, joten kuuleminen vaatisi lähelle menemistä. Lisäksi yli $400\\,\\mathrm{Hz}$:n osaäänet kulkevat noin $4\\,\\%$ nopeammin kuin matalat. Esimerkiksi $100\\,\\mathrm{m}$ päästä korkeat äänet saapuisivat noin $0{,}017\\,\\mathrm{s}$ ennen matalia, jolloin puheen tavut ja soittimen sävelen osat eivät tulisi perille yhtä aikaa ja kokonaisuus kuulostaisi puuroutuneelta.\n\n**Sudenkuoppa:** todetaan pelkästään äänen olevan $20\\,\\mathrm{dB}$ hiljaisempi, vaikka tehtävä pyytää pohtimaan kuuntelukokemusta myös äänen nopeuden taajuusriippuvuuden kannalta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 6,
+     "prompt": "Deuteriumplasmassa on elektroneja ja deuteroneja (ytimessä protoni ja neutroni). Laitteessa on homogeeninen magneettikenttä ilman sähkökenttää, ja deuteronin ja elektronin alkunopeudet ovat kohtisuorassa kenttää vastaan. Kuvaile hiukkasten liike ja kaksi eroa deuteronin ja elektronin liikkeiden välillä.",
+     "hints": [
+      "Magneettinen voima $F = qvB$ on kohtisuorassa sekä nopeutta että kenttää vastaan. Millaisen liikkeen tällainen voima aiheuttaa?",
+      "Ratkaise ratasäde yhtälöstä $qvB = \\dfrac{mv^2}{r}$. Vertaa massoja ($m_\\mathrm{d} \\approx 3700\\,m_\\mathrm{e}$) ja varausten etumerkkejä."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- magneettinen voima on aina kohtisuorassa nopeutta vastaan, joten se ei muuta vauhtia; hiukkaset kulkevat tasaisella vauhdilla ympyrärataa kenttää vastaan kohtisuorassa tasossa\n- ratasäteet ovat erilaiset: $r = \\dfrac{mv}{|q|B}$, ja deuteronin massa on noin $3700$-kertainen elektroniin nähden, joten sen rata on paljon suurempi (samalla vauhdilla)\n- kiertosuunnat ovat vastakkaiset, koska varaukset ovat vastakkaismerkkiset\n\n**Esimerkkivastaus:** Magneettikentän voima $F = |q|vB$ toimii keskeisvoimana: $|q|vB = \\dfrac{mv^2}{r}$, joten $r = \\dfrac{mv}{|q|B}$. Molemmat hiukkaset kiertävät ympyrää kenttää vastaan kohtisuorassa tasossa ja niiden vauhti pysyy vakiona. Varausten suuruus on sama ($e$), mutta deuteronin massa on noin $3700$-kertainen, joten samalla vauhdilla sen ratasäde on vastaavasti suurempi. Positiivinen deuteroni ja negatiivinen elektroni kaartuvat vastakkaisiin suuntiin, joten ne kiertävät ympyrää vastakkaisiin kiertosuuntiin. (Myös kierrosaika $T = \\dfrac{2\\pi m}{|q|B}$ on deuteronilla paljon pidempi.)\n\n**Sudenkuoppa:** kuvataan vain, että hiukkanen alkaa kaartua, eikä todeta, että liike on tasaista ympyräliikettä.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Homogeenisen magneettikentän lisäksi laitteeseen kytketään homogeeninen sähkökenttä, joka on magneettikentän suuntainen. Deuteronin alkunopeus on kohtisuorassa magneettikenttää vastaan. Selitä, miksi deuteroni kulkee nyt ruuviviivan muotoista rataa (kuva 7.A).",
+     "hints": [
+      "Tarkastele liikettä kahdessa suunnassa erikseen: kenttää vastaan kohtisuorassa tasossa ja kenttien suunnassa. Mikä voima vaikuttaa kumpaankin?",
+      "Magneettinen voima ei vaikuta kentän suuntaiseen nopeuden osaan. Sähkökentän voima $e\\bar E$ on vakio, joten millaista liike kentän suunnassa on?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- magneettinen voima vaikuttaa vain kenttää vastaan kohtisuoraan nopeuden osaan, ja se pitää yllä ympyräliikettä tässä tasossa\n- sähkökenttä aiheuttaa kentän suuntaisen voiman $\\bar F = e\\bar E$, joka kiihdyttää deuteronia kenttien suuntaan\n- eteneminen kentän suunnassa on tasaisesti kiihtyvää, joten ruuviviivan kierteet harvenevat\n\n**Esimerkkivastaus:** Liike voidaan jakaa kahteen osaan. Kenttää vastaan kohtisuorassa tasossa magneettinen voima kaartaa deuteronia samalla tavalla kuin kohdassa 7.1, joten projektio tähän tasoon on ympyrä. Magneettikenttä ei vaikuta kentän suuntaiseen nopeuden osaan, mutta sähkökenttä vaikuttaa: voima $e\\bar E$ osoittaa kentän suuntaan ja antaa vakiokiihtyvyyden $a = eE/m$. Ympyräliike ja kentän suuntainen kiihtyvä eteneminen yhdessä tuottavat ruuviviivan, jonka nousu kasvaa kierros kierrokselta.\n\n**Sudenkuoppa:** väitetään sähkökentän muuttavan ympyrän sädettä. Kentän suuntainen voima ei vaikuta kohtisuoraan nopeuden osaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 4,
+     "prompt": "Fuusioreaktorin polttoaine on plasmaa. Miksi plasmaa ohjataan juuri sähkö- ja magneettikentillä, ja miksi plasman halutaan olevan tiheää?",
+     "hints": [
+      "Kuinka kuumaa fuusioplasma on, ja mitä tapahtuisi, jos se koskettaisi reaktorin seinämiä? Fuusion syntyminen vaatii ytimien törmäyksiä."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- plasma on äärimmäisen kuumaa (miljoonia tai satoja miljoonia kelvinejä); mikään seinämateriaali ei kestäisi kosketusta, ja plasma myös jäähtyisi ja likaantuisi; varattuja hiukkasia voi pitää koossa kentillä ilman kosketusta\n- tiheässä plasmassa ytimet törmäävät useammin, joten fuusioreaktioita tapahtuu enemmän ja reaktori tuottaa enemmän energiaa\n\n**Esimerkkivastaus:** Fuusio vaatii niin korkean lämpötilan, että plasma sulattaisi minkä tahansa astian seinämän ja jäähtyisi samalla. Koska plasma koostuu varatuista hiukkasista, sähkö- ja magneettikentät pystyvät ohjaamaan niitä ja pitämään plasman irti seinistä. Positiivisten ytimien on päästävä toistensa lähelle Coulombin hylkimisestä huolimatta. Mitä tiheämpää plasma on, sitä useammin ytimet törmäävät ja sitä enemmän fuusioita tapahtuu aikayksikössä.\n\n**Sudenkuoppa:** mainitaan vain, että kentät ”pitävät plasman paikallaan”, kertomatta, miksi kiinteä astia ei kävisi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 3,
+     "prompt": "Kilpirauhassyöpää hoidetaan radioaktiivisella jodilla I-131, joka on beeta miinus -aktiivinen. Kirjoita sen hajoamisyhtälö.",
+     "hints": [
+      "Beeta miinus -hajoamisessa neutroni muuttuu protoniksi: järjestysluku kasvaa yhdellä, massaluku säilyy. Mitkä hiukkaset syntyvät lisäksi?"
+     ],
+     "solution": "1. Jodin järjestysluku on $53$. Beeta miinus -hajoamisessa ytimen neutroni muuttuu protoniksi, ja ytimestä lähtevät elektroni ja elektronin antineutriino.\n2. Tytärytimen järjestysluku on $54$ eli alkuaine on ksenon, ja massaluku säilyy.\n\n$$^{131}_{\\ 53}\\mathrm{I} \\to {}^{131}_{\\ 54}\\mathrm{Xe} + {}^{\\ 0}_{-1}\\mathrm{e} + \\bar\\nu_e$$\n\n**Vastaus: $^{131}_{\\ 53}\\mathrm{I} \\to {}^{131}_{\\ 54}\\mathrm{Xe} + {}^{\\ 0}_{-1}\\mathrm{e} + \\bar\\nu_e$**\n\n**Sudenkuoppa:** antineutriino puuttuu tai tytärytimeksi merkitään telluuri (järjestysluvun pieneneminen kuuluu beeta plus -hajoamiseen).",
+     "answer": "$^{131}\\mathrm{I} \\to {}^{131}\\mathrm{Xe} + \\mathrm{e}^- + \\bar\\nu_e$",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 6,
+     "prompt": "Hajoamisessa syntyy myös gammasäteilyä ($360\\,\\mathrm{keV}$), jonka matkavaimennuskerroin kudoksessa on $0{,}11\\,\\mathrm{1/cm}$. Beetahiukkasten kantama kudoksessa on noin $1\\,\\mathrm{mm}$ (aineisto 8.A). Määritä gammasäteilyn puoliintumispaksuus ja vertaa, kuinka hyvin beeta- ja gammasäteily soveltuvat syöpäsolujen tuhoamiseen.",
+     "hints": [
+      "Säteilyn intensiteetti heikkenee kudoksessa lain $I = I_0 e^{-\\mu x}$ mukaan. Puoliintumispaksuudella $I = I_0/2$.",
+      "$x_{1/2} = \\dfrac{\\ln 2}{\\mu}$. Vertaa sitten, kuinka suurelle alueelle kummankin säteilylajin energia jakautuu: kilpirauhaskudos on pieni, mutta gammasäteily etenee senttimetrejä."
+     ],
+     "solution": "1. Heikennyslaki: $I = I_0 e^{-\\mu x}$. Puoliintumispaksuudella $\\dfrac{I_0}{2} = I_0 e^{-\\mu x_{1/2}}$, joten $x_{1/2} = \\dfrac{\\ln 2}{\\mu} = \\dfrac{\\ln 2}{0{,}11\\,\\mathrm{1/cm}} \\approx 6{,}3\\,\\mathrm{cm}$.\n2. Gammasäteilystä vain puolet absorboituu ensimmäisen noin $6\\,\\mathrm{cm}$ matkalla, ja loput etenee kauemmas, osin kehon ulkopuolelle. Energia jakautuu laajalle alueelle, eikä se kohdistu kilpirauhaskudokseen.\n3. Beetahiukkaset pysähtyvät noin $1\\,\\mathrm{mm}$ matkalla, joten niiden energia jää lähelle jodia sitonutta kudosta. Beetasäteily tuhoaa siis tehokkaasti kilpirauhasen jäännöskudoksen ja syöpäsolut ja säästää muita kudoksia.\n\n**Vastaus: $x_{1/2} \\approx 6\\,\\mathrm{cm}$. Beetasäteily soveltuu hoitoon paremmin, koska se luovuttaa energiansa paikallisesti; gammasäteily levittää annosta laajalle kehoon.**\n\n**Sudenkuoppa:** annetaan puoliintumispaksuudeksi $1/\\mu \\approx 9\\,\\mathrm{cm}$ tai verrataan vain säteilylajien energioita tai kantamia pohtimatta, mihin energia päätyy.",
+     "answer": "$x_{1/2} \\approx 6\\,\\mathrm{cm}$; beetasäteily sopii paremmin",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.3",
+     "points": 6,
+     "prompt": "Potilas juo I-131-liuosta, jonka aktiivisuus on $6{,}5\\,\\mathrm{GBq}$. Siitä $20\\,\\%$ sitoutuu kilpirauhaskudokseen, jossa jodi vähenee vain fysikaalisesti ($T_\\mathrm{fys} = 8{,}02\\,\\mathrm{d}$). Loput leviää kehoon ja poistuu myös biologisesti ($T_\\mathrm{bio} \\approx 24\\,\\mathrm{h}$), jolloin efektiivinen puoliintumisaika saadaan yhtälöstä $\\dfrac{1}{T_\\mathrm{ef}} = \\dfrac{1}{T_\\mathrm{fys}} + \\dfrac{1}{T_\\mathrm{bio}}$. Potilas voi kotiutua, kun aktiivisuus on laskenut $1100\\,\\mathrm{MBq}$:iin. Montako täyttä vuorokautta on odotettava?",
+     "hints": [
+      "Jaa alkuaktiivisuus kahteen osaan, jotka vähenevät eri puoliintumisajoilla: $A(t) = 0{,}2A_0 e^{-\\ln 2\\cdot t/T_\\mathrm{fys}} + 0{,}8A_0 e^{-\\ln 2\\cdot t/T_\\mathrm{ef}}$.",
+      "$T_\\mathrm{ef} = \\left(\\dfrac{1}{8{,}02\\,\\mathrm{d}} + \\dfrac{1}{1{,}0\\,\\mathrm{d}}\\right)^{-1} \\approx 0{,}889\\,\\mathrm{d}$. Ratkaise $A(t) = 1{,}1\\,\\mathrm{GBq}$ graafisesti tai laskimella ja pyöristä ylöspäin täysiin vuorokausiin."
+     ],
+     "solution": "1. Kilpirauhaseen sitoutuva osa: $A_1(0) = 0{,}20\\cdot 6{,}5\\,\\mathrm{GBq} = 1{,}3\\,\\mathrm{GBq}$, puoliintumisaika $T_\\mathrm{fys} = 8{,}02\\,\\mathrm{d}$.\n2. Muualle kehoon leviävä osa: $A_2(0) = 0{,}80\\cdot 6{,}5\\,\\mathrm{GBq} = 5{,}2\\,\\mathrm{GBq}$. Efektiivinen puoliintumisaika: $\\dfrac{1}{T_\\mathrm{ef}} = \\dfrac{1}{8{,}02\\,\\mathrm{d}} + \\dfrac{1}{1{,}0\\,\\mathrm{d}} \\approx 1{,}125\\,\\mathrm{1/d}$, joten $T_\\mathrm{ef} \\approx 0{,}889\\,\\mathrm{d}$.\n3. Hajoamislain mukaan potilaan kokonaisaktiivisuus on\n$$A(t) = 1{,}3\\,\\mathrm{GBq}\\cdot e^{-\\ln 2\\cdot t/8{,}02\\,\\mathrm{d}} + 5{,}2\\,\\mathrm{GBq}\\cdot e^{-\\ln 2\\cdot t/0{,}889\\,\\mathrm{d}}.$$\n4. Arvoja: $A(4\\,\\mathrm{d}) \\approx 1{,}15\\,\\mathrm{GBq}$ ja $A(5\\,\\mathrm{d}) \\approx 0{,}95\\,\\mathrm{GBq}$. Yhtälön $A(t) = 1{,}1\\,\\mathrm{GBq}$ ratkaisu on $t \\approx 4{,}2\\,\\mathrm{d}$.\n5. Neljän vuorokauden kohdalla raja ei vielä alitu, joten täysinä vuorokausina tarvitaan viisi.\n\n**Vastaus: 5 vuorokautta.**\n\n**Sudenkuoppa:** käytetään koko annokselle pelkkää fysikaalista puoliintumisaikaa (tulos noin 21 vuorokautta) tai koko annokselle efektiivistä puoliintumisaikaa, jolloin kilpirauhaseen jäävä jodi unohtuu (noin 2,2 vuorokautta).",
+     "answer": "$t \\approx 4{,}2\\,\\mathrm{d}$, eli 5 täyttä vuorokautta",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 12,
+     "prompt": "Juoksupyöränosturissa (video 9.A, kuva 9.B) ihminen kävelee pyörän sisällä, ja pyörän akselilla olevalle rummulle kelautuva köysi nostaa kuormaa. Juoksupyörän halkaisija on $4{,}0\\,\\mathrm{m}$, rummun $0{,}34\\,\\mathrm{m}$, kuorman massa $420\\,\\mathrm{kg}$ ja ihmisen $81\\,\\mathrm{kg}$; kitkaa ei ole. Piirrä kuvio ja selitä, minkä voimien momentit yhteisen akselin suhteen ovat nollasta poikkeavia. Kuinka suuri on vähintään kulma $\\alpha$ pystysuoran ja ihmisen jalkojen kohdalle piirretyn säteen välillä, jotta kuorma alkaa nousta?",
+     "hints": [
+      "Tarkastele ensin kuormaa: kuinka suuri köysivoima tarvitaan, kun kuorma on juuri irtoamassa? Tarkastele sitten pyörän ja rummun kokonaisuutta akselin suhteen: millä voimilla on nollasta poikkeava momenttivarsi?",
+      "Köysivoima $F = m_\\mathrm{k}g$ vaikuttaa rummun kehällä varrella $r = 0{,}17\\,\\mathrm{m}$. Ihmisen painon momenttivarsi on vaakasuora etäisyys akselista: $R\\sin\\alpha$, $R = 2{,}0\\,\\mathrm{m}$. Momenttiehto: $m_\\mathrm{h}gR\\sin\\alpha = Fr$."
+     ],
+     "solution": "1. **Kuvio:** juoksupyörä ja rumpu, akseli $O$ keskellä. Ihmisen jalkojen kohdalla pyörän kehällä alaspäin vaikuttava voima $G_\\mathrm{h}$ (ihmisen paino välittyy pyörään tukivoiman vastavoimana), rummun kehältä pystysuoraan alas lähtevä köysivoima $F$ ja akselin tukivoima. Kuorman kuviossa ylöspäin $F$ ja alaspäin $G_\\mathrm{k}$.\n2. Säteet: $R = 2{,}0\\,\\mathrm{m}$ ja $r = 0{,}17\\,\\mathrm{m}$. Painot: $G_\\mathrm{k} = m_\\mathrm{k}g = 420\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2} \\approx 4120\\,\\mathrm{N}$ ja $G_\\mathrm{h} = 81\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2} \\approx 795\\,\\mathrm{N}$.\n3. Kun kuorma on irtoamassa alustalta, alustan tukivoima on nolla ja kuorma on vielä tasapainossa: $F - G_\\mathrm{k} = 0$, joten $F = G_\\mathrm{k} \\approx 4120\\,\\mathrm{N}$.\n4. Momentit akselin suhteen: akselin tukivoiman ja pyörän painon vaikutussuora kulkee akselin kautta, joten niiden momentti on nolla. Köysivoiman momentti on $Fr$. Ihmisen painon momenttivarsi on jalkojen vaakasuora etäisyys akselista, $R\\sin\\alpha$, joten momentti on $G_\\mathrm{h}R\\sin\\alpha$ vastakkaiseen kiertosuuntaan.\n5. Momenttiehto rajatilanteessa: $G_\\mathrm{h}R\\sin\\alpha - Fr = 0$, josta\n$$\\sin\\alpha = \\frac{m_\\mathrm{k}r}{m_\\mathrm{h}R} = \\frac{420\\,\\mathrm{kg}\\cdot 0{,}17\\,\\mathrm{m}}{81\\,\\mathrm{kg}\\cdot 2{,}0\\,\\mathrm{m}} \\approx 0{,}441,$$\neli $\\alpha \\approx 26^\\circ$.\n6. Ihmisen on noustava pyörän sisäpintaa pitkin alimmasta kohdasta sivuun (sille puolelle, johon pyörän on pyörittävä köyden kelaamiseksi) niin, että kulma on yli $26^\\circ$. Silloin painon momentti voittaa köyden momentin, ja pyörä alkaa kiertyä.\n\n**Vastaus: kuorma lähtee nousemaan, kun $\\alpha > 26^\\circ$ (rajakulma $\\alpha \\approx 26{,}2^\\circ$).**\n\n**Sudenkuoppa:** käytetään momenttivartena koko sädettä $R$ tai halkaisijoita säteiden sijaan. Momenttivarsi on voiman vaikutussuoran kohtisuora etäisyys akselista, eli ihmiselle $R\\sin\\alpha$.",
+     "answer": "$\\alpha > 26^\\circ$ ($\\sin\\alpha \\approx 0{,}441$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 4,
+     "prompt": "Ihmisen kävellessä pyörä kiertää vakionopeudella, $2{,}0$ kierrosta minuutissa. Laske kuorman nousunopeus ja nosturin teho.",
+     "hints": [
+      "Köysi kelautuu rummulle, joten kuorman nopeus on rummun kehäpisteen vauhti $v = 2\\pi rn$. Tasaisessa nousussa köysivoima on edelleen $m_\\mathrm{k}g$, ja teho $P = Fv$."
+     ],
+     "solution": "1. Pyörimisnopeus $n = 2{,}0\\,\\mathrm{1/min} = 0{,}0333\\,\\mathrm{1/s}$. Rumpu pyörii yhtä nopeasti kuin juoksupyörä.\n2. Kuorma nousee köyden mukana, eli rummun kehäpisteen vauhdilla: $v = 2\\pi rn = 2\\pi\\cdot 0{,}17\\,\\mathrm{m}\\cdot 0{,}0333\\,\\mathrm{1/s} \\approx 0{,}0356\\,\\mathrm{m/s} \\approx 36\\,\\mathrm{mm/s}$.\n3. Nopeus on vakio, joten köysivoima on $F = m_\\mathrm{k}g \\approx 4120\\,\\mathrm{N}$, ja teho on $P = Fv = 4120\\,\\mathrm{N}\\cdot 0{,}0356\\,\\mathrm{m/s} \\approx 147\\,\\mathrm{W}$.\n\n**Vastaus: $v \\approx 36\\,\\mathrm{mm/s}$ ja $P \\approx 150\\,\\mathrm{W}$.**\n\n**Sudenkuoppa:** käytetään rummun halkaisijaa säteenä tai juoksupyörän sädettä, jolloin nopeus on väärä (tekijä 2 tai lähes 12).",
+     "answer": "$v \\approx 36\\,\\mathrm{mm/s}$, $P \\approx 150\\,\\mathrm{W}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.3",
+     "points": 4,
+     "prompt": "Roomalaiset nostivat juoksupyöränostureilla usean tonnin kuormia. Miten kuvan 9.B nosturia voisi kehittää, jotta sillä voisi nostaa raskaampia kappaleita? Esitä vähintään kaksi fysikaalisesti perusteltua keinoa.",
+     "hints": [
+      "Mieti momenttiehtoa $G_\\mathrm{h}R\\sin\\alpha = Fr$: mitä sen suureista voi muuttaa? Entä voiko köysivoimaa pienentää muulla tavalla kuin rummun kokoa muuttamalla?"
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi perusteltua keinoa, esimerkiksi:\n- juoksupyörän halkaisijan kasvattaminen tai rummun halkaisijan pienentäminen: momenttivarsien suhde $R/r$ kasvaa, joten sama paino tuottaa suuremman köysivoiman\n- vetävän painon lisääminen: leveämpi pyörä, jossa useampi ihminen kävelee rinnakkain, tai toinen juoksupyörä samalle akselille\n- väkipyörästö (useampi köysipyörä) kuorman nostoon: köysivoima jakautuu usealle köydenosalle, jolloin rummulle tarvittava voima pienenee\n\n**Esimerkkivastaus:** Momenttiehdosta nähdään, että nostettava kuorma on verrannollinen suhteeseen $R/r$ ja kävelijöiden kokonaispainoon. Siksi juoksupyörää voi suurentaa tai rumpua pienentää, jolloin sama kävelijä tuottaa suuremman köysivoiman (nosto hidastuu vastaavasti). Pyörää voi myös leventää niin, että siinä kävelee useampi ihminen rinnakkain. Lisäksi kuorma voidaan ripustaa väkipyörästöön, jossa se roikkuu esimerkiksi neljän köydenosan varassa, jolloin rummulle tarvitaan vain neljäsosa voimasta.\n\n**Sudenkuoppa:** ehdotetaan ”suurempaa pyörää” kertomatta, tarkoitetaanko halkaisijan kasvattamista (momenttivarsi) vai pyörän leventämistä (useampi kävelijä).",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 3,
+     "prompt": "Kuinka suuri paine sukeltajaan kohdistuu $65\\,\\mathrm{m}$ syvyydessä, kun ilmanpaine meren pinnalla on $101{,}3\\,\\mathrm{kPa}$?",
+     "hints": [
+      "Syvyydessä kokonaispaine on veden hydrostaattinen paine $\\rho gh$ lisättynä pinnalla vaikuttavalla ilmanpaineella."
+     ],
+     "solution": "1. Syvyydessä paine on veden aiheuttama hydrostaattinen paine lisättynä pinnan ilmanpaineella: $p = \\rho gh + p_0$.\n2. $p = 1{,}0\\cdot 10^3\\,\\mathrm{kg/m^3}\\cdot 9{,}81\\,\\mathrm{m/s^2}\\cdot 65\\,\\mathrm{m} + 101{,}3\\,\\mathrm{kPa} \\approx 637{,}7\\,\\mathrm{kPa} + 101{,}3\\,\\mathrm{kPa} \\approx 739\\,\\mathrm{kPa}$.\n\n**Vastaus: $p \\approx 740\\,\\mathrm{kPa}$ (noin 7,3-kertainen ilmanpaineeseen nähden).**\n\n**Sudenkuoppa:** unohdetaan pinnalla vaikuttava ilmanpaine, jolloin saadaan vain $640\\,\\mathrm{kPa}$.",
+     "answer": "$p \\approx 740\\,\\mathrm{kPa}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.2",
+     "points": 7,
+     "prompt": "Sukeltaja on hengittänyt $65\\,\\mathrm{m}$ syvyydessä pitkään paineilmaa, jossa on $78\\,\\%$ typpeä, ja nousee pintaan niin nopeasti, ettei ylimääräistä typpeä poistu kehosta. Henryn lain mukaan liuenneen typen konsentraatio on $c = H_s p_{\\mathrm{N_2}}$, missä $H_s = 6{,}0\\,\\mathrm{\\mu mol/(m^3\\,Pa)}$ (aineisto 10.A). Veren tilavuus on $5{,}0\\,\\mathrm{l}$ ja lämpötila $37\\,^\\circ\\mathrm{C}$, ilmanpaine pinnalla $101{,}3\\,\\mathrm{kPa}$. Määritä vereen muodostuvien typpikuplien yhteistilavuus millilitroina.",
+     "hints": [
+      "Laske vereen liuenneen typen ainemäärä $n = H_s p_{\\mathrm{N_2}}V$ syvyydessä ja pinnalla. Typen osapaine on $0{,}78$ kertaa kokonaispaine.",
+      "Ylimääräinen ainemäärä on $\\Delta n = H_s\\cdot 0{,}78\\cdot\\rho gh\\cdot V_0$ (ilmanpaineen osuus kumoutuu). Pinnalla se vapautuu kaasuna: $V = \\dfrac{\\Delta n RT}{p_0}$, $T = 310\\,\\mathrm{K}$."
+     ],
+     "solution": "1. Henryn laki: $c = H_s p_{\\mathrm{N_2}}$, ja veren tilavuudessa $V_0$ oleva ainemäärä on $n = cV_0 = H_s p_{\\mathrm{N_2}}V_0$. Typen osapaine on $p_{\\mathrm{N_2}} = 0{,}78\\,p$.\n2. Syvyydessä $p_1 = \\rho gh + p_0$ ja pinnalla $p_0$. Ylimääräinen typpi on ainemäärien erotus:\n$$\\Delta n = H_s\\cdot 0{,}78\\,(p_1 - p_0)V_0 = H_s\\cdot 0{,}78\\,\\rho gh V_0.$$\n3. $\\Delta n = 6{,}0\\cdot 10^{-6}\\,\\tfrac{\\mathrm{mol}}{\\mathrm{m^3\\,Pa}}\\cdot 0{,}78\\cdot 6{,}377\\cdot 10^5\\,\\mathrm{Pa}\\cdot 5{,}0\\cdot 10^{-3}\\,\\mathrm{m^3} \\approx 0{,}0149\\,\\mathrm{mol}$.\n4. Typpi käyttäytyy tässä ideaalikaasun tavoin. Pinnalla kuplien paine on noin $p_0$ ja lämpötila $T = 310{,}15\\,\\mathrm{K}$, joten tilanyhtälöstä $pV = nRT$:\n$$V = \\frac{\\Delta n RT}{p_0} = \\frac{0{,}0149\\,\\mathrm{mol}\\cdot 8{,}314\\,\\tfrac{\\mathrm{J}}{\\mathrm{mol\\,K}}\\cdot 310{,}15\\,\\mathrm{K}}{101\\,300\\,\\mathrm{Pa}} \\approx 3{,}8\\cdot 10^{-4}\\,\\mathrm{m^3}.$$\n\n**Vastaus: kuplien yhteistilavuus on noin $380\\,\\mathrm{ml}$.**\n\n**Sudenkuoppa:** lasketaan kuplien tilavuus koko syvyydessä liuenneesta typestä vähentämättä pinnalla liukoisena pysyvää osaa, tai käytetään kaasun tilavuuden laskussa syvyyden painetta.",
+     "answer": "$V \\approx 380\\,\\mathrm{ml}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Taulukossa 10.B on suurin sukellusaika ilman dekompressiopysähdyksiä syvyyksillä $12$–$40\\,\\mathrm{m}$. Määritä pisteistöön tehdyn sovituksen avulla, kuinka kauan $10\\,\\mathrm{m}$ syvyydessä voi olla ilman pysähdyksiä.",
+     "hints": [
+      "Piirrä aika syvyyden funktiona ja kokeile, mikä funktiotyyppi seuraa koko pistejoukkoa (esimerkiksi potenssifunktio $t = ad^b$). Laske arvo, kun $d = 10\\,\\mathrm{m}$ (ekstrapolointi)."
+     ],
+     "solution": "1. Piirretään aika $t\\ (\\mathrm{min})$ syvyyden $d\\ (\\mathrm{m})$ funktiona. Aika lyhenee jyrkästi syvyyden kasvaessa, joten suora ei sovi.\n2. Sovitetaan potenssifunktio $t = ad^b$. Pienimmän neliösumman sovitus antaa noin $a \\approx 1{,}985\\cdot 10^4$ ja $b \\approx -2{,}026$ (kun $t$ minuutteina ja $d$ metreinä).\n3. Ekstrapoloidaan: $t(10) \\approx 1{,}985\\cdot 10^4\\cdot 10^{-2{,}026} \\approx 187\\,\\mathrm{min}$.\n4. Tulos riippuu sovitteesta ja ohjelmasta: esimerkiksi logaritmisella linearisoinnilla tehty potenssisovite antaa noin $210\\,\\mathrm{min}$. Järkevä vastaus on noin $160$–$210\\,\\mathrm{min}$.\n\n**Vastaus: noin $190\\,\\mathrm{min}$ (noin 3 tuntia).**\n\n**Sudenkuoppa:** luetaan arvo pisteitä yhdistävästä viivasta tai sovitetaan suora, joka ei seuraa pistejoukon kaarevuutta. Ekstrapolointi taulukon ulkopuolelle vaatii koko joukkoon sopivan sovitteen.",
+     "answer": "$t \\approx 190\\,\\mathrm{min}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.4",
+     "points": 6,
+     "prompt": "Taulukossa 10.C on uusintasukelluksen suurin kesto pinnalla pidetyn tauon funktiona, kun ensimmäinen sukellus $24\\,\\mathrm{m}$ syvyyteen kesti enimmäisajan $35\\,\\mathrm{min}$. Aineiston tekstin mukaan ensimmäisen sukelluksen ja uusintasukelluksen enimmäisaikojen erotus vähenee eksponentiaalisesti, kun taukoa pidennetään. Määritä sovituksen avulla kehon ylimääräisen typen puoliintumisaika.",
+     "hints": [
+      "Mikä suure pienenee eksponentiaalisesti? Muodosta se taulukon arvoista ennen sovitusta: ei itse uusintasukelluksen kesto vaan sen ero alkuperäiseen enimmäisaikaan.",
+      "Laske $\\Delta t = 35\\,\\mathrm{min} - t_\\mathrm{u}$ jokaiselle tauolle ja sovita pisteisiin $\\Delta t = Ae^{-\\lambda\\tau}$. Puoliintumisaika on $T_{1/2} = \\dfrac{\\ln 2}{\\lambda}$."
+     ],
+     "solution": "1. Ylimääräinen typpi lyhentää uusintasukelluksen enimmäisaikaa. Lyhennys on $\\Delta t = 35\\,\\mathrm{min} - t_\\mathrm{u}$, ja se pienenee samassa tahdissa kuin kehossa jäljellä oleva ylimääräinen typpi.\n2. Taulukon tauoille ($67$–$480\\,\\mathrm{min}$) lyhennykset ovat $28$, $23$, $18$, $13$, $8$ ja $4\\,\\mathrm{min}$.\n3. Piirretään $\\Delta t$ tauon $\\tau$ funktiona ja sovitetaan eksponenttifunktio $\\Delta t = Ae^{-\\lambda\\tau}$. Sovitus antaa $A \\approx 40\\,\\mathrm{min}$ ja $\\lambda \\approx 0{,}0055\\,\\mathrm{1/min}$.\n4. Sovite on hajoamislain muotoa, joten $T_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{\\ln 2}{0{,}00546\\,\\mathrm{1/min}} \\approx 127\\,\\mathrm{min}$.\n5. Logaritmisella linearisoinnilla saadaan hieman suurempi arvo (noin $146\\,\\mathrm{min}$); sovitustavasta riippuen tulos on noin $100$–$150\\,\\mathrm{min}$.\n\n**Vastaus: puoliintumisaika on noin $130\\,\\mathrm{min}$ (noin 2 tuntia).**\n\n**Sudenkuoppa:** sovitetaan eksponenttifunktio suoraan uusintasukelluksen kestoon $t_\\mathrm{u}$, joka kasvaa tauon mukana eikä pienene.",
+     "answer": "$T_{1/2} \\approx 130\\,\\mathrm{min}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Kylmälaukku saa sähkönsä invertteristä, joka muuttaa auton $12\\,\\mathrm{V}$:n akun tasajännitteen $230\\,\\mathrm{V}$:n vaihtojännitteeksi. Pysäköinnin jälkeen laukku toimii keskimäärin $35\\,\\mathrm{W}$:n teholla. Invertterin hyötysuhde on $87\\,\\%$ ja akun kapasiteetti $60\\,\\mathrm{Ah}$. Kuinka kauan kestää, että akun varaus laskee täydestä $20\\,\\%$:iin?",
+     "hints": [
+      "Muunna akun kapasiteetti energiaksi: $E = QU$ ($\\mathrm{Ah}\\cdot\\mathrm{V} = \\mathrm{Wh}$). Käytettävissä on $80\\,\\%$ siitä, ja akusta otettava teho on $P = P_\\mathrm{laukku}/\\eta$."
+     ],
+     "solution": "1. Akun energia: $E = QU = 60\\,\\mathrm{Ah}\\cdot 12\\,\\mathrm{V} = 720\\,\\mathrm{Wh}$. Varauksen laskiessa $100\\,\\% \\to 20\\,\\%$ käytetään $0{,}80\\cdot 720\\,\\mathrm{Wh} = 576\\,\\mathrm{Wh}$.\n2. Invertterin häviöiden takia akusta otetaan teho $P = \\dfrac{35\\,\\mathrm{W}}{0{,}87} \\approx 40{,}2\\,\\mathrm{W}$.\n3. Aika: $t = \\dfrac{576\\,\\mathrm{Wh}}{40{,}2\\,\\mathrm{W}} \\approx 14{,}3\\,\\mathrm{h}$.\n\n**Vastaus: noin $14\\,\\mathrm{h}$ (noin 14 h 20 min).**\n\n**Sudenkuoppa:** jätetään hyötysuhde huomiotta tai kerrotaan sillä (jolloin aika pitenee), tai muunnetaan $0{,}3\\,\\mathrm{h}$ virheellisesti 30 minuutiksi.",
+     "answer": "$t \\approx 14\\,\\mathrm{h}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.2",
+     "points": 10,
+     "prompt": "Aineistossa 11.A on invertteriltä täydellä teholla toimivalle kylmälaukulle menevä sähkövirta ja jännite ajan funktiona (millisekunnin välein). Määritä laukun keskimääräinen tehonkulutus.",
+     "hints": [
+      "Hetkellinen teho on $P = UI$. Laske se jokaiselle mittaushetkelle ja katso, miltä teho näyttää ajan funktiona. Keskiarvo pitää ottaa kokonaisista jaksoista.",
+      "Invertterin jännite ei ole sinimuotoinen: se on vuorotellen noin $+332\\,\\mathrm{V}$, $0$ ja $-332\\,\\mathrm{V}$. Selvitä jakson pituus ja kuinka suuren osan jaksosta teho on nollasta poikkeava (noin $113\\,\\mathrm{W}$). Keskiteho on tämän osuuden ja huipputehon tulo, tai hetkellisten tehojen keskiarvo kokonaisten jaksojen yli."
+     ],
+     "solution": "1. Hetkellinen teho on $P(t) = U(t)I(t)$. Lasketaan se taulukkolaskennalla jokaiselle riville (virta ja jännite ovat samanmerkkiset, joten $P \\geq 0$).\n2. Aineistosta nähdään, että jännite on ”porrastettua” vaihtojännitettä: noin $6{,}7\\,\\mathrm{ms}$ arvossa $+332\\,\\mathrm{V}$, noin $3{,}3\\,\\mathrm{ms}$ nollassa, noin $6{,}7\\,\\mathrm{ms}$ arvossa $-332\\,\\mathrm{V}$ ja taas $3{,}3\\,\\mathrm{ms}$ nollassa. Jakso on noin $20\\,\\mathrm{ms}$ ($50\\,\\mathrm{Hz}$).\n3. Kun jännite on päällä, $|I| \\approx 0{,}34\\,\\mathrm{A}$ ja teho $P \\approx 332\\,\\mathrm{V}\\cdot 0{,}34\\,\\mathrm{A} \\approx 113\\,\\mathrm{W}$. Muulloin teho on nolla.\n4. Teho on päällä osuuden $\\dfrac{6{,}7\\,\\mathrm{ms}}{10{,}0\\,\\mathrm{ms}} \\approx 0{,}67$ ajasta, joten $\\bar P \\approx 0{,}67\\cdot 113\\,\\mathrm{W} \\approx 75\\,\\mathrm{W}$.\n5. Tarkistus: hetkellisten tehojen keskiarvo kolmen kokonaisen jakson yli (tai tehon kuvaajan pinta-ala jaettuna jaksojen kestolla) on $75{,}2\\,\\mathrm{W}$.\n\n**Vastaus: keskimääräinen tehonkulutus on noin $75\\,\\mathrm{W}$.**\n\n**Sudenkuoppa:** käytetään sinimuotoisen vaihtovirran kaavaa $\\bar P = \\tfrac12 U_0I_0$ (tulos $56\\,\\mathrm{W}$), otetaan keskiarvo koko aineistosta eikä kokonaisista jaksoista, tai jätetään nollatehon ajat huomiotta (tulos $113\\,\\mathrm{W}$).",
+     "answer": "$\\bar P \\approx 75\\,\\mathrm{W}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 6,
+     "prompt": "Halvat sähköiset kylmälaukut perustuvat Peltier-elementtiin. Aineiston 11.B mukaan elementin siirtämä lämpö on $Q_\\mathrm{P} = P_\\mathrm{P}It$ ($P_\\mathrm{P}$ tyypillisesti $5$–$10\\,\\mathrm{W/A}$), ja elementti tuottaa lisäksi hukkalämpöä $Q_\\mathrm{h} = RI^2t$ ($R$ noin $2$–$3\\,\\Omega$). Kuvassa 11.C on elementin rakenne ja mitat. Mitkä aineistoista ilmenevät seikat heikentävät kylmälaukun viilennystehoa?",
+     "hints": [
+      "Vertaa, miten siirtyvä lämpö ja hukkalämpö riippuvat virrasta.",
+      "$Q_\\mathrm{P} \\propto I$, mutta $Q_\\mathrm{h} \\propto I^2$. Katso kuvasta lisäksi, kuinka kaukana kylmä ja lämmin puoli ovat toisistaan ja mitä niiden välissä on: mihin suuntaan lämpö johtuu?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- elementin oma hukkalämpö $RI^2$ heikentää viilennystä, koska osa siitä päätyy kylmälle puolelle\n- hukkalämpö kasvaa virran neliönä, siirretty lämpö vain suoraan verrannollisesti virtaan, joten virtaa kasvattamalla hyöty ei kasva samassa suhteessa; suurilla virroilla hukkalämpö on suurempi kuin siirretty lämpö (esim. $P_\\mathrm{P} = 7{,}5\\,\\mathrm{W/A}$ ja $R = 2{,}5\\,\\Omega$: yhtä suuret jo virralla $3\\,\\mathrm{A}$)\n- elementti on ohut (noin $4\\,\\mathrm{mm}$), ja kylmän ja lämpimän puolen välissä on hyvin johtavia puolijohteita ja kuparia, joten lämpöä johtuu takaisin lämpimältä puolelta kylmälle\n\n**Esimerkkivastaus:** Peltier-ilmiön siirtämä lämpöteho $P_\\mathrm{P}I$ kasvaa lineaarisesti virran mukana, mutta elementin resistanssissa syntyvä hukkateho $RI^2$ kasvaa virran neliönä. Kun virtaa lisätään, hukkalämpöä syntyy yhä suhteellisesti enemmän, ja osa siitä lämmittää kylmää puolta. Lisäksi kylmä ja lämmin puoli ovat vain muutaman millimetrin päässä toisistaan, ja niiden välissä on hyvin lämpöä johtavaa materiaalia, joten lämpöä virtaa johtumalla takaisin kylmälle puolelle. Mitä suurempi lämpötilaero puolten välille syntyy, sitä voimakkaampaa tämä paluuvirtaus on.\n\n**Sudenkuoppa:** mainitaan vain hukkalämpö kertomatta, miksi sen vaikutus kasvaa virran kasvaessa, tai unohdetaan lämmön johtuminen elementin läpi.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

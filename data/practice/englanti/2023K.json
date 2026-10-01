@@ -1,0 +1,361 @@
+{
+ "subject": "englanti",
+ "session": "2023K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2023/kevat/2023-03-20_EA_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-03-20_EA_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: Kuullun ymmärtäminen",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "answer": 7,
+    "note": "Vastaa kaikkiin. Varaa kuullun tehtäviin yhteensä noin tunti. Videot saa katsoa vapaasti, mutta äänitteiden kuuntelukerrat on rajattu tehtäväkohtaisesti."
+   },
+   {
+    "title": "Osa 2: Luetun ymmärtäminen",
+    "tasks": [
+     "8",
+     "9",
+     "10",
+     "11",
+     "12"
+    ],
+    "answer": 5,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 3: Sanasto ja rakenteet",
+    "tasks": [
+     "13",
+     "14"
+    ],
+    "answer": 2,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 4: Kirjallinen tuottaminen",
+    "tasks": [
+     "15.1",
+     "15.2",
+     "15.3",
+     "15.4"
+    ],
+    "answer": 1,
+    "note": "Valitse yksi aihe. Pituus 700–1 300 merkkiä ilman välilyöntejä ja rivinvaihtoja; ylityksestä seuraa pistevähennys. Jätä muut kentät tyhjiksi."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Katso uutisvideo Purduen yliopiston opiskelijoiden projektista Ecuadorissa. Videon saa katsoa niin monta kertaa kuin haluaa. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä on projektin päätavoite?\n2. Miten opiskelijat ovat rahoittaneet projektin?\n3. Missä opiskelijat majoittuvat?\n4. Mitä Sadie Argus arvostaa?\n5. Mitä tapahtuu toukokuussa?",
+     "hints": [
+      "Uutinen etenee kysymysten järjestyksessä: ensin tavoite ja rakennettava keskus, sitten rahoitus, majoitus, opiskelijoiden kokemukset ja lopuksi aikataulu. Vaihtoehdoissa on houkuttelevia yksityiskohtia, jotka mainitaan mutta jotka eivät vastaa kysymykseen.",
+      "- 1.1: kenelle keskus on tarkoitettu: vain pienille lapsille vai koko yhteisölle?\n- 1.2: *crowdfunding*: keneltä rahat kerätään?\n- 1.3: *bunking with*: kenen luona opiskelijat nukkuvat?\n- 1.4: Sadie tuntee naapuruston koirat ja lapset. Mikä on hänelle tärkeintä?\n- 1.5: *groundbreaking* = ensimmäinen lapionpisto. Valmistuuko rakennus vai vasta alkaako rakentaminen?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **1.1 A** (rakennus, jossa kaikki ovat tervetulleita oppimaan). Keskus tarjoaa opetusta paitsi 3–5-vuotiaille myös koko yhteisölle, ja kaikki sen tilat ovat yhteisön käytössä. B on ansa: pienet lapset ovat vain yksi kohderyhmä, eikä kyse ole virkistyskeskuksesta. Vuokraamisesta (C) ei puhuta.\n- **1.2 A** (keräämällä rahaa suurelta joukolta ihmisiä). Opiskelijat ovat järjestäneet varainkeruuta ja joukkorahoitusta. Mainossopimuksista (B) tai vanhemmista (C) ei puhuta.\n- **1.3 A** (paikallisten kodeissa). Opiskelijat asuvat noin viikon mittaisten matkojensa ajan isäntäperheissä.\n- **1.4 A** (paikallisiin ihmisiin tutustuminen). Sadie kertoo lähentyneensä yhteisön jäsenten kanssa ja tuntevansa naapuruston lapset. B on ansa: koirat mainitaan, mutta hän ei hoida kulkukoiria. Paikallisista tavoista (C) hän ei puhu.\n- **1.5 C** (projekti käynnistyy virallisesti). Pitkän suunnittelun ja monen matkan jälkeen rakentaminen alkaa toukokuussa ensimmäisellä lapionpistolla. Rakennus ei valmistu (B), eikä perustuksista (A) puhuta.",
+     "answer": "1.1 A · 1.2 A · 1.3 A · 1.4 A · 1.5 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Kuulet kolme hissipuhetta eli lyhyttä esittelyä olemassa olevasta tai suunnitellusta yrityksestä. Kunkin saa kuunnella kaksi kertaa. Vastaa suomeksi, kuhunkin enintään 150 merkkiä (3 p/kohta):\n\n- 2.1 (Chris): missä asiassa hän auttaa asiakkaitaan?\n- 2.2 (Joseph): millaista työtä nuoret voisivat tehdä hänen yrityksessään?\n- 2.3 (Genevieve): mitä TravelBlender-sovellus tekee?",
+     "hints": [
+      "Hissipuhe on tiivis: puhuja kertoo ensin ongelman tai vertailukohdan ja sitten, mitä hänen yrityksensä tekee. Vastaus on usein puheen keskellä. HVP hylkää liian yleiset vastaukset, joten mainitse täsmällinen palvelu.",
+      "- 2.1: Warren Buffett maksaa vähemmän veroa kuin työntekijänsä. Mitä Chris lupaa asiakkailleen verotuksesta? Huomaa prosentin edellä *never more than*.\n- 2.2: vastavalmistuneet ovat työttömiä, ja pienyritysten verkkosivut ovat heikkoja. Miten Joseph yhdistäisi nämä? Mainitse, kenelle työtä tehtäisiin.\n- 2.3: aikuiset haluaisivat tutustua uusiin ihmisiin matkoilla. Mitä *matching software* tekee?"
+     ],
+     "solution": "**2.1** *Maksamaan mahdollisimman vähän veroa: efektiivinen veroaste ei ylitä 20 prosenttia.*\n\nChris on tilintarkastaja (CPA), jonka asiakkaat ovat varakkaita länsiteksasilaisia. HVP ei hyväksy vastausta, jonka mukaan asiakkaat maksavat tasan 20 % veroa, eikä liian yleisiä muotoiluja, kuten \"auttaa raha-asioissa\" tai \"auttaa verojen maksamisessa\".\n\n**2.2** *Suunnitella pienille yrityksille parempia verkkosivuja.*\n\nNuorisotyöttömyys on kasvanut, ja moni pienyritys kaatuu muun muassa heikkojen verkkosivujen vuoksi. Joseph haluaa yhdistää nämä, koska vastavalmistuneet ovat opiskelleet juuri tätä. Vastauksessa on mainittava, kenelle sivut tehdään. Brändäys, mainonta tai markkinointi ei kelpaa.\n\n**2.3** *Se etsii käyttäjälle sopivat matkakumppanit.*\n\nKäyttäjä kertoo itsestään, toiveistaan ja matkakohteestaan, ohjelma yhdistää hänet sopiviin matkaseuralaisiin, ja sen jälkeen asiantuntijat suunnittelevat matkan. Pelkkä matkan tai aktiviteettien suunnittelu ei tuo pisteitä.",
+     "answer": "2.1 minimoimaan verot (enintään 20 %) · 2.2 suunnitella verkkosivuja pienyrityksille · 2.3 etsii sopivat matkakumppanit",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Kuuntele podcast, jossa toimittaja Sarah Vitak ja professori Mikhail Shapiro kertovat, miten synteettistä biologiaa voi käyttää syövän hoidossa. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen jokaisen kolmesta osasta kerran. Kuusi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mihin tutkijat yrittävät saada solut?\n2. Mikä muokatuissa soluissa on osoittautunut ongelmaksi?\n3. Mitä kaasurakkulan rakenne muistuttaa?\n4. Mikä kaasurakkuloiden alkuperäinen tehtävä oli?\n5. Mihin Shapiron ryhmä käytti ultraääntä?\n6. Mitä syövän ominaisuutta käytettiin sitä itseään vastaan?",
+     "hints": [
+      "Podcastissa on paljon tieteellistä sanastoa, mutta kysymykset koskevat perusajatuksia. Kuuntele erityisesti vertauksia (armeija, GPS, ilmakuplat) ja kohtia, joissa ilmiö selitetään yksinkertaisesti.",
+      "- 3.1: *commanded and controlled*: soluja ohjelmoidaan tekemään jotain tiettyä.\n- 3.2: solut eivät tiedä, missä päin elimistöä ne ovat. Mitä ne eivät siis löydä?\n- 3.3: ilmaa, jota ympäröi kova proteiinikuori. Mikä vaihtoehto on kova ja ontto?\n- 3.4: miksi vedessä elävä, yhteyttävä mikrobi tarvitsee kellukkeen?\n- 3.5: *burst the bubbles*.\n- 3.6: missä kohdassa elimistöä bakteerit säilyvät, ja miksi immuunijärjestelmä ei tuhoa niitä siellä?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **3.1 A** (tekemään haluttuja tehtäviä). Synteettisessä biologiassa soluja ohjelmoidaan kuin armeijaa, jota voi komentaa ja hallita, esimerkiksi etsimään sairasta kudosta. Reagointia ympäristöön (B) tai jakautumista (C) ei tavoitella.\n- **3.2 A** (ne eivät tunnista kohdettaan). Solut eivät tiedä, ovatko ne kasvaimessa, maksassa vai haimassa, vaan niiden on pääteltävä sijaintinsa molekyylivihjeistä. Soluja lamaavista molekyyleistä (B) ei puhuta, eikä ongelma ole se, etteivät tutkijat löytäisi soluja (C).\n- **3.3 C** (pieni pingispallo). Kaasurakkula on pieni ilmakupla, jota ympäröi kova proteiinikuori, eli se on kova ja ontto kuin pingispallo. Ilmapallo (A) on ansa, koska sen kuori on pehmeä, eikä kananmuna (B) ole ilmaa täynnä.\n- **3.4 C** (auttaa mikrobeja nousemaan veden pintaan). Rakkulat kehittyivät kellukkeiksi vedessä eläville, yhteyttäville mikrobeille, jotta ne pääsevät pintaan auringonvaloon. A on ansa: valo liittyy asiaan, mutta rakkulat eivät itse ime sitä. Happisäiliöstä (B) ei puhuta.\n- **3.5 B** (rakkuloiden puhkaisemiseen). Ultraäänellä rakkulat puhkaistiin tarkoituksella. Koska ultraäänen voi kohdistaa tarkasti, se korvasi solujen puuttuvan \"GPS:n\". Kasvaimen paikantaminen (A) oli bakteerien tehtävä.\n- **3.6 B** (kyky välttää elimistön puolustusjärjestelmä). Muualla elimistössä immuunijärjestelmä tuhosi bakteerit, mutta kasvaimen ydin lamaa immuunipuolustusta, joten bakteerit säilyivät juuri siellä. Terveiden solujen muuttamisesta (A) tai syövän uusiutumisesta (C) ei puhuta.",
+     "answer": "3.1 A · 3.2 A · 3.3 C · 3.4 C · 3.5 B · 3.6 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele lyhyt tiedeuutinen tutkimuksesta, jossa selvitettiin kotihiirten älykkyyttä. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen jokaisen neljästä osasta kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miksi kotihiiret löytävät ruoan niin taitavasti?\n2. Mikä tiivistää parhaiten Anja Guentherin havainnon?\n3. Mitä tutkijat mittasivat selvittääkseen hiirten kognitiivisia taitoja?\n4. Mikä voisi Guentherin mukaan olla tutkimuksen tärkeä tulos?",
+     "hints": [
+      "Jokainen osa vastaa yhtä kysymystä. Tutkimuksessa verrattiin kolmea alalajia, jotka ovat eläneet ihmisten kanssa eri pituisia aikoja (noin 12 000, 8 000 ja 3 000–5 000 vuotta). Kyse on siis lajien kehityksestä, ei yksittäisten hiirten iästä.",
+      "- 4.1: miksi hiirten on täytynyt tulla paremmiksi ongelmanratkaisijoiksi? Mitä ihmiset ovat oppineet tekemään?\n- 4.2: mitä pitempään hiiret ovat eläneet ihmisten kanssa, sitä taitavampia ne ovat. Tarkoittaako tämä yksilön ikää vai alalajin historiaa?\n- 4.3: ruokapulmat: kannen työntäminen, paperitukon vetäminen putkesta ja Lego-talon ikkunan avaaminen.\n- 4.4: ihmisen jalanjälki maapallolla kasvaa. Mitä meidän pitäisi ymmärtää eläinten mielistä?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **4.1 C** (ne kehittyvät sopeutumalla ihmisten käyttäytymiseen). Hiirten on täytynyt kehittyä paremmiksi ongelmanratkaisijoiksi, koska ihmiset ovat oppineet piilottamaan ruokansa paremmin. A on ansa: kyse ei ole yksittäisen hiiren iästä. Kouluttamisesta (B) ei puhuta.\n- **4.2 B** (pitempään ihmisten parissa eläneet alalajit ovat taitavampia ruoanhankkijoita). Mitä kauemmin alalaji on elänyt ihmisten kanssa, sitä todennäköisemmin se ratkaisi ruokapulmat. A sekoittaa alalajin historian yksilön ikään, eikä työkaluista (C) puhuta.\n- **4.3 A** (kekseliäisyyttä). 150 hiirtä testattiin seitsemällä ruokapulmalla, joissa palkinnon sai vain keksimällä keinon, esimerkiksi avaamalla kannen tai Lego-talon ikkunan. Yhteistyötä (B) tai refleksejä (C) ei mitattu.\n- **4.4 A** (uutta tietoa siitä, miten ihmiskontakti vaikuttaa eläimiin). Guentherin mukaan on entistä tärkeämpää ymmärtää, miten ihmiset vaikuttavat eläinten mieliin ja miksi osa lajeista sopeutuu ja osa kuolee sukupuuttoon. B ja C laajentavat tulosta asioihin, joista ei puhuta.",
+     "answer": "4.1 C · 4.2 B · 4.3 A · 4.4 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Asiakas palauttaa lahjaksi saamiaan hansikkaita kaupan kassalla. Keskustelu on neljässä osassa. Myyjän repliikki on kokeessa myös kirjoitettuna, ja sen saa kuunnella kerran. Asiakkaan kolmea vastausvaihtoehtoa A, B ja C (vain äänitteinä) saa kuunnella vapaasti. Valitse jokaisessa osassa asiakkaan kohteliain vastaus (3 p/kohta).",
+     "hints": [
+      "Vaihtoehdot ovat asiasisällöltään lähes samat, joten ratkaisevaa on sävy. Kohtelias asiakas esittää asiansa kysymyksenä tai toiveena eikä ilmoituksena, pahoittelee ja kiittää.",
+      "- 5.1: ilmoittaako asiakas palauttavansa hansikkaat vai kysyykö, voiko ne palauttaa?\n- 5.2: kuittia ei ole. Kuka pahoittelee ja ehdottaa varovasti (*I think*), kuka väittää, ettei kuittia tarvita?\n- 5.3: hansikkaat ovat vanhaa mallistoa. Kuka toivoo, kuka vaatii ja kuka olettaa?\n- 5.4: kaikki hyväksyvät lahjakortin. Kuka kiittää, kuka tyytyy siihen vastahakoisesti?"
+     ],
+     "solution": "Vaihtoehdot ovat kokeessa vain äänitteinä, joten kirjain on äänitteen A, B tai C.\n\n- **5.1 C**. C kertoo saaneensa hansikkaat lahjaksi ja kysyy varovasti, voisiko ne palauttaa (*I'm wondering if*). A ja B ilmoittavat palauttavansa ne, mikä kuulostaa vaatimukselta.\n- **5.2 B**. B pahoittelee, ettei kuittia ole (*I'm afraid not*), ja ehdottaa pehmeästi, että merkkilappu kertoisi hansikkaiden olevan tästä kaupasta. A väittää, ettei kuittia tarvita, ja C:n *clearly* ja *though* kuulostavat väitteleviltä.\n- **5.3 A**. A hämmästyy ja toivoo, että palautus käy silti (*I hope*). B ilmoittaa haluavansa palauttaa ne joka tapauksessa, ja C olettaa myyjän hyväksyvän palautuksen.\n- **5.4 B**. B hyväksyy lahjakortin ja kiittää. A:n *I guess* kuulostaa vastahakoiselta, ja C on asiallinen mutta jättää kiittämättä.",
+     "answer": "5.1 C · 5.2 B · 5.3 A · 5.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Katso video, jossa kitaristi Cory Wong kertoo, miten hän on päässyt soittamaan eri keikoille. Videon saa katsoa vapaasti. Valitse kuudelle keikalle kahdeksasta vaihtoehdosta se, joka kertoo, miten Cory sai keikan. Kaksi vaihtoehtoa jää yli (3 p/kohta).\n\nKeikat: 6.1 häät, 6.2 seurakunnan ylistysbändi, 6.3 Robert Robinsonin joulukiertue, 6.4 Larry Longin American Roots Review, 6.5 Dr. Mambo's Combo Bunker'sissa ja 6.6 Vulfpeck.\n\nVaihtoehdot ovat järjestyksessä A–H: bändin jäsen suositteli tuntemaansa Corya; Cory ystävystyi yleisössä olleen muusikon kanssa; Cory tutustui keikkapaikan omistajaan; joku muu ei päässyt ja tarjosi keikan Corylle; Coryn ystävät ehdottivat häntä bändin johtajalle; paikan työntekijä piti Coryn soitosta; vieraileva artisti huomasi Coryn soiton; soittaja pyysi Corya tuuraajaksi toiseen bändiinsä.",
+     "hints": [
+      "Cory kertoo tarinansa ketjuna: jokainen keikka johti seuraavaan, ja jokaisessa vaiheessa joku uusi ihminen huomasi hänet. Kirjoita muistiin, kuka kussakin vaiheessa teki aloitteen ja mikä hänen roolinsa oli (professori, pastori, vieraileva laulaja, rumpali, yleisön jäsen).",
+      "- 6.1: häihin pyydettiin ensin Coryn professori Bobby Stanton. Miksi hän ei soittanut itse?\n- 6.2: kuka seurakunnassa piti Coryn tyylistä?\n- 6.3: Robert Robinson oli seurakunnassa vieraana.\n- 6.4: Larry Long kokosi bändiä, ja Robert oli yksi laulajista.\n- 6.5: Larryn keikan rumpali johti Bunker'sin jameja. Kenen tuuraajaksi Cory pääsi?\n- 6.6: Vulfpeckin jäsenet tulivat Bunker'siin kuuntelemaan. Mitä keikan tauolla tapahtui?"
+     ],
+     "solution": "Vaihtoehdot ovat samassa järjestyksessä kaikissa kohdissa. Kirjain = paikka ylhäältä lukien (A–H).\n\n- **6.1 D** (joku muu ei päässyt ja tarjosi keikan Corylle). Häihin pyydettiin alun perin Coryn professoria Bobby Stantonia, joka ei päässyt ja ehdotti Corya tilalleen.\n- **6.2 F** (paikan työntekijä piti Coryn soitosta). Seurakunnan pastori piti Coryn soittotyylistä häissä ja kutsui hänet ylistysbändiin.\n- **6.3 G** (vieraileva artisti huomasi Coryn soiton). Gospellaulaja Robert Robinson oli seurakunnassa vierailevana ylistysjohtajana, piti Coryn soitosta ja pyysi hänet joulukiertueelleen.\n- **6.4 A** (bändin jäsen suositteli tuntemaansa Corya). Robert oli yksi Larry Longin show'n laulajista, ja kun bändiin tarvittiin kitaristi, hän suositteli Corya.\n- **6.5 H** (soittaja pyysi Corya tuuraajaksi toiseen bändiinsä). Larryn keikan rumpali Michael Bland veti Dr. Mambo's Comboa ja pyysi Corya tuuraamaan bändin kitaristia, joka myöhemmin loukkaantui keilatessa.\n- **6.6 B** (Cory ystävystyi yleisössä olleen muusikon kanssa). Vulfpeckin jäsenet tulivat Bunker'siin kuuntelemaan. Tauolla Theo tuli juttelemaan, heillä oli yhteinen ystävä, ja he viettivät yön yhdessä. Myöhemmin Jack pyysi Corya levylle ja keikoille.\n\nYlimääräiset vaihtoehdot ovat C (keikkapaikan omistaja) ja E (ystävät ehdottivat bändin johtajalle).",
+     "answer": "6.1 D · 6.2 F · 6.3 G · 6.4 A · 6.5 H · 6.6 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele eteläafrikkalaisen SABC-kanavan uutinen. Äänitteen saa kuunnella kaksi kertaa. Vastaa suomeksi, kumpaankin enintään 150 merkkiä (3 p/kohta):\n\n- 7.1: mitä eteläafrikkalaiset opiskelijat ovat joutuneet tekemään Turkissa?\n- 7.2: mikä on johtanut tilanteeseen?",
+     "hints": [
+      "Uutinen on vain puolen minuutin mittainen, ja molemmat vastaukset kerrotaan siinä kahdesti: alussa lyhyesti ja lopussa tarkemmin. Kuuntele ensimmäisellä kerralla kokonaisuus ja toisella yksityiskohdat.",
+      "- 7.1: missä opiskelijat ovat nukkuneet? Pelkkä \"jääneet jumiin\" ei riitä.\n- 7.2: kenen säätiö jätti maksamatta, ja mitkä maksut? Jos mainitset säätiön, maksuja ei tarvitse täsmentää, mutta jos puhut vain maksuista, kerro mitkä."
+     ],
+     "solution": "**7.1** *Nukkumaan kaduilla ja puistoissa, koska heillä ei ole asuntoa.*\n\nYli 20 opiskelijaa on ollut syyskuusta asti Istanbulissa ilman yöpaikkaa. HVP ei hyväksy pelkkää \"jääneet jumiin\" tai \"joutuneet heitteille\", eikä opiskelijoiden määrä ole vastaus.\n\n**7.2** *Heidän opintojaan rahoittanut säätiö ei ole maksanut lukukausi- ja asumismaksuja.*\n\nANC:n pääsihteerin Ace Magashulen säätiö on jättänyt kahdelle turkkilaiselle yliopistolle yli 25 miljoonan randin velat. HVP: jos vastaus mainitsee säätiön (tai järjestön), maksuja ei tarvitse täsmentää, mutta jos se puhuu vain maksuista, on kerrottava, mitkä maksut. Yritys, pelkkä \"tuki\" tai epämääräinen \"maksuja ei ole maksettu\" ei kelpaa.",
+     "answer": "7.1 nukkuneet kaduilla ja puistoissa · 7.2 säätiö ei maksanut lukukausi- ja asumismaksuja",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Lue aineiston 8.A uutinen (Hebrides News) ruisrääkkäkannan kehityksestä Skotlannissa. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miksi ruisrääkkien määrää kuvataan ristiriitaiseksi?\n2. Mikä on lintujensuojeluyhdistys RSPB:n ratkaisu ongelmaan?\n3. Mikä tekee lintujen laskemisesta vaikeaa?\n4. Mikä kolmesta annetusta kappaleesta sopisi parhaiten tekstin loppuun?",
+     "hints": [
+      "Teksti on lyhyt ja faktapitoinen. 8.4:ssä mieti, mikä kappale jatkaa tekstin aihetta (kannan koko ja levinneisyys) ja sopii sen tyyliin. Uutinen ei yleensä pääty mainokseen.",
+      "- 8.1: *mixed picture*: missä kanta kasvoi ja missä pieneni?\n- 8.2: RSPB vaatii maksuja luontoystävällisestä maanviljelystä. Kenelle maksettaisiin ja mistä?\n- 8.3: *due to their shy character*: miksi lintuja lasketaan äänen perusteella?\n- 8.4: kappale A kertoo lajin levinneisyyden historiasta, B jäseneksi liittymisestä ja C poikasten kehityksestä ja elinympäristöstä."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **8.1 A** (joillain alueilla määrä on kasvanut). Koko Skotlannissa kanta pienenee, mutta Ulko-Hebrideillä se kasvoi 10 %, kun taas Sisä-Hebrideillä se romahti. Luonnonsuojelijat eivät ole erimielisiä (B), eikä tekstissä sanota, että vain koiraiden määrä olisi pienentynyt (C). Koiraat ovat vain ne, jotka lasketaan.\n- **8.2 A** (taloudelliset kannustimet viljelijöiden toimintatapoihin). RSPB vaatii, että luonto- ja ilmastoystävällisestä maanviljelystä maksettaisiin tukea osana hallituksen maatalouspolitiikkaa. Viljelijöitä ei pyydetä laskemaan lintuja (B), eikä peltoalaa vähennetä (C).\n- **8.3 C** (lintu välttelee ihmisiä). Arkuutensa vuoksi ruisrääkkiä lasketaan koiraiden kutsuäänten perusteella. Parittelukauden pituudesta (A) tai samannäköisistä lajeista (B) ei puhuta.\n- **8.4 A** (muutto Afrikasta ja levinneisyyden supistuminen). Kappale jatkaa tekstin aihetta ja selittää, miksi kerran koko maassa yleinen lintu elää nyt vain muutamalla saaristoalueella. B on jäsenmainos, joka ei sovi uutiseen, ja C käsittelee poikasia ja elinympäristöä, jotka eivät liity tekstin aiheeseen.",
+     "answer": "8.1 A · 8.2 A · 8.3 C · 8.4 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Lue aineiston 9.A Guardianin artikkeli (Rupert Jones) siitä, miten Brexit muutti Britanniasta EU:hun lähetettävien lahjojen tullausta. Vastaa suomeksi, kuhunkin enintään 150 merkkiä (3 p/kohta):\n\n- 9.1: milloin Britanniasta lähetetystä tavarasta ei tarvitse täyttää tulli-ilmoitusta?\n- 9.2: missä tapauksessa lähetys on vapaa arvonlisäverosta?\n- 9.3: mitä ostajan on tehtävä, jos verkkokaupan tilaus on merkitty lahjaksi?",
+     "hints": [
+      "Teksti on lyhyt, ja jokainen vastaus on yhdessä virkkeessä: tullilomakkeita koskeva poikkeus ensimmäisessä kappaleessa, arvonlisäveron raja toisessa ja lahjan määritelmä kolmannessa. Kolmannen kysymyksen vastaus pitää päätellä.",
+      "- 9.1: *except when*: mistä minne lähetettäessä?\n- 9.2: tekstissä on kaksi rajaa, 18 ja 38 puntaa. Kumpi koskee lahjoja, ja minne ne lähetetään?\n- 9.3: jos verkko-ostosta ei lasketa lahjaksi, mitä siitä silloin on maksettava?"
+     ],
+     "solution": "**9.1** *Kun se lähetetään Pohjois-Irlannista EU-maahan.*\n\nTullilomake on nyt pakollinen kaikille Britanniasta ulkomaille lähetettäville lahjoille ja tavaroille, paitsi Pohjois-Irlannista EU:hun lähetettäessä. Pelkkä \"Irlannista\" tai \"Britanniasta\" ei kelpaa.\n\n**9.2** *Kun kyseessä on alle 38 punnan arvoinen lahja EU:hun.*\n\nMuut tavarat eivät ole enää verovapaita edes alle 18 punnan arvoisina, mutta alle 38 punnan lahjat Eurooppaan ovat yhä vapaita arvonlisäverosta ja muista maksuista. Summa on mainittava: \"alle tietyn summan\" ei riitä.\n\n**9.3** *Siitä on maksettava arvonlisävero tai tulli (eli se on tullattava).*\n\nLahja on tekstin mukaan esine, jonka ihminen antaa toiselle ilman maksua. Verkkokaupasta ostettua tavaraa ei siksi lasketa lahjaksi, vaikka se olisi merkitty sellaiseksi. HVP hyväksyy veron, tullin tai tulli-ilmoituksen mainitsemisen. Pelkät käsittelymaksut eivät riitä, ja arvonlisävero kannattaa kirjoittaa suomeksi, sillä HVP hylkäsi vastauksen, jossa oli vain englanninkielinen lyhenne *VAT*.",
+     "answer": "9.1 Pohjois-Irlannista EU:hun · 9.2 alle 38 punnan lahja EU:hun · 9.3 maksettava arvonlisävero tai tulli",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 21,
+     "prompt": "Lue aineiston 10.A Scientific Americanin artikkeli (Anna Bruk) siitä, miten muut näkevät haavoittuvuutemme. Tekstissä on viisi numeroitua kappaletta. Seitsemän monivalintaa (3 p/kohta):\n\n- 10.1–10.3: mikä on kappaleiden 1, 2 ja 3 pääajatus (kolme vaihtoehtoa kussakin)?\n- 10.4–10.6: kappaleen 4 kolmeen aukkoon valitaan itsemyötätunnon osa-alue neljästä vaihtoehdosta: *common humanity*, *self-kindness*, *complexity* ja *mindfulness*.\n- 10.7: mikä on kappaleen 5 pääajatus?",
+     "hints": [
+      "Pääajatusta kysyttäessä lue koko kappale ja mieti, mitä kirjoittaja haluaa sillä sanoa koko tekstin kannalta. Yksittäinen yksityiskohta ei riitä. Aukoissa jokaisen osa-alueen määritelmä on aukon jälkeen, joten yhdistä sana ja määritelmä.",
+      "- 10.1: pandemian jälkeen moni on entistä tutumpi minkä tunteen kanssa? Muiden ihmisten paheksuminen on vain esimerkki.\n- 10.2: mitä kirjoittaja suosittelee tekemään vaikeuksien kanssa?\n- 10.3: *beautiful mess effect*: kumpi näkee haavoittuvuuden kielteisemmin, ihminen itse vai muut?\n- 10.4: huolehtiva ja ymmärtävä suhtautuminen omaan kärsimykseen.\n- 10.5: kipu ja epäonnistumiset kuuluvat kaikkien elämään.\n- 10.6: selkeä tietoisuus tästä hetkestä.\n- 10.7: *can be intentionally cultivated*: miten itsemyötätuntoa voi kehittää?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien. Aukkojen 10.4–10.6 vaihtoehdot ovat järjestyksessä *common humanity* (A), *self-kindness* (B), *complexity* (C) ja *mindfulness* (D).\n\n- **10.1 B** (miksi tunnemme itsemme yhä haavoittuvammiksi). Pandemian aiheuttama stressi on tehnyt haavoittuvuuden tunteen entistä tutummaksi, ja kappale kuvaa, miten vältämme vaikeita keskusteluja. Muiden paheksuminen (C) on vain yksi esimerkki, eikä erilaisista reaktioista pandemiaan (A) puhuta.\n- **10.2 C** (avoimuuden tärkeys). Kierteen voi katkaista kertomalla vaikeuksistaan muille, vaikka se tuntuu pelottavalta, koska kätketyt tunteet eivät pysy piilossa. Kaikkien tunteiden hyväksyminen (A) tai muutoksen vaikeus (B) ei ole kappaleen pääajatus.\n- **10.3 C** (ihmiset ovat ymmärtäväisempiä kuin luulemme). Kuudessa kokeessa ihmiset arvioivat oman haavoittuvuutensa kielteisemmin kuin muut sen arvioivat. B on ansa: tilanteita oli monia, mutta tulos oli niissä kaikissa sama.\n- **10.4 B** *self-kindness*: huolehtiva ja ymmärtävä suhtautuminen omaan kärsimykseen eli ystävällisyys itseä kohtaan.\n- **10.5 A** *common humanity*: kivun ja epäonnistumisten näkeminen väistämättömänä osana elämää eli yhteinen ihmisyys.\n- **10.6 D** *mindfulness*: tietoinen läsnäolo, jossa vaikeuksia ei sivuuteta eikä liioitella. *Complexity* (C) jää yli.\n- **10.7 A** (miten itsemyötätuntoa voi lisätä). Kappaleen mukaan itsemyötätunto ei ole pysyvä ominaisuus, vaan sitä voi harjoittaa esimerkiksi päiväkirjaa kirjoittamalla. Itsemyötätunnon seurauksia (B) ja merkitystä (C) käsitellään lähinnä edellisissä kappaleissa.",
+     "answer": "10.1 B · 10.2 C · 10.3 C · 10.4 B (self-kindness) · 10.5 A (common humanity) · 10.6 D (mindfulness) · 10.7 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue aineiston kolme Facebook-päivitystä: 11.A professori Kenyon Wilsonin kokeilu, 11.B Bodleianin kirjaston esittelemä vanha käsikirjoitus ja 11.C jalkapalloilija Marcus Rashfordin kirjakerho. Vastaa suomeksi, kuhunkin enintään 150 merkkiä (3 p/kohta):\n\n- 11.1: miksi Wilsonin piilottama seteli oli yhä kaapissa lukukauden lopussa?\n- 11.2: millaisia ideoita Wilson pyytää seuraajiltaan?\n- 11.3: mikä oli Franciscus Juniuksen haave?\n- 11.4: millaisia kirjailijoita Rashfordin kirjakerho haluaa tuoda esille?\n- 11.5: mitä Rashford haluaa saada aikaan?",
+     "hints": [
+      "Päivitykset ovat lyhyitä, ja jokainen vastaus on yhdessä virkkeessä. Osa vastauksista on pääteltävä: Wilson ei sano suoraan, miksi seteli jäi kaappiin, mutta sen voi päätellä siitä, mihin hän tiedon kätki.",
+      "- 11.1: missä kaapin numero ja koodi kerrottiin, ja mitä se paljastaa opiskelijoista?\n- 11.2: *shenanigans* = kujeet, jekut.\n- 11.3: Junius halusi tehdä hollannin kielestä sopivan johonkin. Mihin?\n- 11.4: *underserved communities*: millaisista oloista lapset tulevat?\n- 11.5: *pathway to success*: mitä lasten pitäisi nähdä?"
+     ],
+     "solution": "**11.1** *Koska kukaan opiskelijoista ei lukenut kurssikuvausta, jossa kaapin numero ja koodi kerrottiin.*\n\nWilson laittoi lukukauden alussa 50 dollaria kaappiin ja kirjoitti kaapin tiedot yli 70 opiskelijan kurssin opintosuunnitelmaan. Lukukauden lopussa seteli oli yhä noutamatta. HVP hyväksyy myös vastauksen, ettei kukaan hakenut seteliä. Pelkkä toteamus, että hän oli antanut koodin, ei vastaa kysymykseen.\n\n**11.2** *Uuteen kepposeen tai jekkuun.*\n\nWilson kysyy, mitä akateemista kujetta hän voisi kokeilla seuraavaksi. HVP ei hyväksy neutraaleja sanoja, kuten kokeilu, testi tai tutkimus, koska niistä puuttuu sanan leikillisyys.\n\n**11.3** *Että hollannista tulisi tieteellisen kirjoittamisen ja tutkimuksen kieli.*\n\nJunius lahjoitti kirjakokoelmansa, myös muinaisenglantilaista runoutta sisältävän käsikirjoituksen, Bodleianin kirjastolle vähän ennen kuolemaansa. Kirjakieli, opetuskieli tai virallinen kieli ei ole oikea vastaus.\n\n**11.4** *Kirjailijoita, jotka kuvaavat huono-osaisista oloista tulevia lapsia.*\n\nRashford halusi nostaa jalustalle kirjailijoita, jotka edustavat vähävaraisten yhteisöjen lapsia. HVP ei hyväksy vastausta \"köyhistä oloista tulevat kirjailijat\" eikä pelkkiä vähemmistöjä.\n\n**11.5** *Että lapset näkisivät, että menestys on heillekin mahdollista.*\n\nKun lapset voivat samaistua kirjailijoihin, he näkevät tien menestykseen. Pelkkä \"saada lapset lukemaan\" tai \"antaa toivoa\" ei riitä.",
+     "answer": "11.1 kukaan ei lukenut kurssikuvausta / hakenut seteliä · 11.2 uuteen kepposeen · 11.3 hollannista tieteen kieli · 11.4 köyhistä oloista tulevia lapsia kuvaavia · 11.5 lapset näkisivät menestyksen mahdolliseksi",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Lue aineiston 12.A BBC:n matkailuartikkeli (Debbie Olsen) Iniskim Umaapi -kivikehästä Kanadan Albertassa. Kuusi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä kivirivistä kerrotaan?\n2. Millainen näkymä paikalta avautuu? (Vaihtoehdot ovat kolme valokuvaa.)\n3. Miten alueen kivien alkuperä on perinteisesti selitetty?\n4. Miten professori Freeman tulkitsee kivien järjestyksen?\n5. Mitä 28 säteittäistä riviä vastaavat?\n6. Mitä luku neljä muun muassa edustaa mustajalkaintiaaneille?",
+     "hints": [
+      "Kysymykset etenevät tekstin järjestyksessä. Monissa vaihtoehdoissa on tekstin sanoja väärässä yhteydessä (esimerkiksi ympyrä, luku neljä), joten tarkista, mihin sana tekstissä liittyy.",
+      "- 12.1: *radiating*: mistä rivit lähtevät ja mihin suuntaan?\n- 12.2: kuvittele näkymä 100 kilometrin päähän, kun ympärillä on *grasslands*.\n- 12.3: *glacial moraine*: mikä on moreeni ja mikä sen muodosti?\n- 12.4: aurinko, kuu, aamutähti, tähtikuviot, päivänseisaukset ja tasaukset: mitä nämä ovat yhdessä?\n- 12.5: *lunar cycle*.\n- 12.6: *cardinal directions*."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **12.1 A** (ne lähtevät keskustasta ulospäin). Keskellä on kiviröykkiö, josta lähtee 28 säteittäistä kiviriviä, ja niitä ympäröi yksi suuri kivirengas. Rivit eivät kaarru ympyröiksi (B), eikä renkaita ole kymmeniä (C).\n- **12.2 C** (kolmas kuva: aaltoileva ruohotasanko, joka jatkuu taivaanrantaan asti). Paikka on alueen korkeimpia kukkuloita, sitä ympäröivät niityt, ja selkeällä säällä näkyvyys on noin 100 kilometriä joka suuntaan. Punertavat, karut rinteet (A) ja lumihuippuinen vuori (B) eivät vastaa kuvausta.\n- **12.3 A** (jääkausi siirsi kiviä ja maamassoja). Osa arkeologeista pitää kehän ulkopuolisia kiviä jäätikön moreenin satunnaisena tuloksena. Suoalueista (B) tai kallion murenemisesta (C) ei puhuta.\n- **12.4 C** (se kuvaa tähtitieteen keskeisiä asioita). Freemanin mukaan kivet edustavat aurinkoa, kuunsirppiä, aamutähteä ja tähtikuvioita ja merkitsevät päivänseisauksia ja päiväntasauksia. Planeettojen mittasuhteista (A) tai vuorokauden tunneista (B) ei puhuta.\n- **12.5 A** (kuun kierto maan ympäri). Säteittäiset rivit vastaavat kuun kierron pituutta. B on ansa: tähtikuviot liittyvät kehän kiviin yleisesti, eivät riveihin.\n- **12.6 C** (ilmansuunnat). Luku neljä edustaa mustajalkaisille muun muassa neljää pääilmansuuntaa, neljää pyhää lääkettä ja neljää ihmisen tarvetta. Vuodenajoista (A) tai sydämen lokeroista (B) ei puhuta.",
+     "answer": "12.1 A · 12.2 C · 12.3 A · 12.4 C · 12.5 A · 12.6 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 10,
+     "prompt": "Kokeen tekstissä on katkelma Oscar Wilden matkakirjasta *Impressions of America* (1906): Wilde kuvaa Salt Lake Cityä ja kaivoskaupunki Leadvilleä. Täydennä 10 aukkoa englanniksi aukon kohdalla olevan vihjeen perusteella niin, että muoto sopii lauseeseen (1 p/aukko). Vihjeet ovat englanninkielisiä perusmuotoja (*clothe*, *tell*, *bring*, *seize*), suomenkielisiä ilmauksia (*rinnakkain*, *Brigham Youngin vaimoista*, *Kalliovuoret*) tai sanaluokka (*prepositio*, *pronomini*).",
+     "hints": [
+      "Mieti jokaisen aukon kohdalla, tarvitaanko passiivi, *-ing*-muoto vai jokin muu rakenne. Verbivihjeissä kysy: tekeekö subjekti itse, vai kohdistuuko teko siihen? Kerronta on menneessä ajassa.",
+      "- 1: kaksi ihmisryhmää kuvataan vierekkäin.\n- 2: raamatun henkilöt on *puettu* johonkin (passiivi).\n- 3: *one of* + genetiivi + monikko.\n- 4: vuoriston nimessä on määräinen artikkeli.\n- 5: Wildelle *kerrottiin* (passiivi).\n- 6: luennoida jostakin aiheesta.\n- 7: prepositio *for* + *not* + *-ing*-muoto.\n- 8: *come ___* = sattua löytämään.\n- 9: *in ___* viittaa sankoon.\n- 10: pidätys oli tapahtunut jo ennen kuin Wilde tuli teatteriin."
+     ],
+     "solution": "- **1** (rinnakkain) **side by side** (myös *next to each other*).\n- **2** (clothe) **are clothed** (myös *were clothed*): passiivi, koska raamatun henkilöt on puettu romanttisiin asuihin.\n- **3** (Brigham Youngin vaimoista): *one of* + monikko, eli **Brigham Young's wives** (myös *the wives of Brigham Young*) = yksi Brigham Youngin vaimoista.\n- **4** (Kalliovuoret): vuoristojen nimissä on määräinen artikkeli, eli **the Rocky Mountains** (myös *the Rockies*).\n- **5** (tell) **was told** (myös *had been told*): passiivi, sillä Wildelle kerrottiin.\n- **6** (prepositio) **on** (myös *about*): *lecture on something* = luennoida jostakin.\n- **7** (bring) **bringing** (myös *having brought*): prepositio *for* + *-ing*-muoto.\n- **8** (prepositio) **across**: *come across* = sattua löytämään.\n- **9** (pronomini) **which**: *a bucket in which* = sanko, jossa. *That* ei voi seurata prepositiota.\n- **10** (seize) **had been seized**: pluskvamperfektin passiivi, koska miehet oli pidätetty jo ennen Wilden saapumista.\n\nHVP:n mukaan myös muut oikeat ilmaisut hyväksytään.",
+     "answer": "side by side · are clothed · Brigham Young's wives · the Rocky Mountains · was told · on · bringing · across · which · had been seized",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "14",
+   "units": [
+    {
+     "id": "",
+     "points": 25,
+     "prompt": "Kokeen tekstissä (Bowery Farming) kerrotaan pystyviljelystä eli kasvien kasvattamisesta sisätiloissa kerroksittain. Tekstissä on 14 aukkoa kolmessa ryhmässä, ja kunkin ryhmän aukkoihin valitaan sanat ryhmän yhteisestä listasta. Jokainen sana käytetään kerran, ja jokaisesta listasta jää yksi sana yli. Aukot ovat 1 tai 2 pisteen arvoisia (yhteensä 25 p).\n\n- 14.1–14.5 (substantiiveja): *conditions, conservation, demand, process, rows, yield*\n- 14.6–14.10 (verbejä): *allow, controlled, defined, harvest, match, succeed*\n- 14.11–14.14 (adjektiiveja): *conventional, correlated, energy-efficient, indigenous, seasonal*\n\nListat on tässä aakkostettu; kokeessa sanat ovat eri järjestyksessä.",
+     "hints": [
+      "Päättele ensin, millainen sana aukkoon sopii merkitykseltään ja muodoltaan, ja käytä pudotusmenetelmää: käytetty sana ei käy muualle. Täytä ensin varmimmat aukot ja jätä vaikeimmat viimeiseksi.",
+      "- Merkityksiä: *conservation* säästäminen, *process* menetelmä, *yield* sato, *conditions* olosuhteet, *rows* rivit, *demand* kysyntä; *defined* määritelty, *controlled* säädelty, *harvest* korjata sato, *match* vastata jotakin, *allow* sallia, *succeed* menestyä; *energy-efficient* energiatehokas, *seasonal* vuodenaikojen mukaan vaihteleva, *correlated* toisiinsa liittyvä, *indigenous* alkuperäinen, *conventional* tavanomainen.\n- Vaikeimmat: 14.6 (millainen viljely *on määritelty* jollakin), 14.9 (älytilat *sallivat* vaihtelun) ja 14.14 (LED-valojen hinnan lasku ja pystyviljelyn kasvu liittyvät toisiinsa)."
+     ],
+     "solution": "Kirjain = sanan paikka alkuperäisen kokeen pudotusvalikossa ylhäältä lukien (ryhmissä 1 ja 2 A–F, ryhmässä 3 A–E).\n\n- **14.1 B** *process* (1 p): pystyviljely on maatalouden menetelmä.\n- **14.2 E** *rows* (1 p): perinteisesti kasvit kasvavat vaakasuorissa riveissä.\n- **14.3 A** *conservation* (2 p): pystysuunta säästää tilaa.\n- **14.4 C** *yield* (2 p): sato pinta-alayksikköä kohden kasvaa.\n- **14.5 D** *conditions* (2 p): sisätiloissa voi hallita kasvuolosuhteita.\n- Ryhmästä 1 jää yli *demand* (F).\n- **14.6 A** *defined* (2 p): CEA on viljelytapa, jolle on ominaista (*defined by*) kasvattaminen säädeltävissä tiloissa.\n- **14.7 B** *controlled* (2 p): olosuhteita voidaan säädellä ja muokata.\n- **14.8 D** *match* (1 p): tilat muokataan vastaamaan kasvien tarpeita.\n- **14.9 E** *allow* (2 p): *allow for variations* = mahdollistaa vaihtelun.\n- **14.10 F** *succeed* (2 p): eri kasvit voivat menestyä samassa tilassa.\n- Ryhmästä 2 jää yli *harvest* (C).\n- **14.11 E** *conventional* (2 p): etu tavanomaiseen viljelyyn verrattuna.\n- **14.12 B** *seasonal* (2 p): lämpötilan ja valon vuodenaikaisvaihtelu.\n- **14.13 A** *energy-efficient* (2 p): energiatehokkaat LED-valot.\n- **14.14 C** *correlated* (2 p): LED-valojen halpenemiseen liittyvä kasvu.\n- Ryhmästä 3 jää yli *indigenous* (D).",
+     "answer": "14.1 B process (menetelmä) · 14.2 E rows (rivit) · 14.3 A conservation (säästö) · 14.4 C yield (sato) · 14.5 D conditions (olosuhteet) · 14.6 A defined (määritelty) · 14.7 B controlled (säädelty) · 14.8 D match (vastata) · 14.9 E allow (sallia) · 14.10 F succeed (menestyä) · 14.11 E conventional (tavanomainen) · 14.12 B seasonal (vuodenaikojen) · 14.13 A energy-efficient (energiatehokas) · 14.14 C correlated (liittyvä)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "15.1",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Englantia puhutaan äidinkielenä sekä toisena tai kolmantena kielenä. Essexin yliopisto kerää tietoa siitä, millaisena nuoret näkevät englannin maailmankielenä. Mitkä englannin variantit ovat sinulle tutuimpia ja miksi? Voit myös kertoa tilanteista, joissa olet käyttänyt englantia yhteisenä kielenä (lingua franca) sellaisten ihmisten kanssa, joiden äidinkieli ei ole englanti. HVP: pisteitä ei vähennetä, vaikka kirjoittaisit vain omasta englannin käytöstäsi kansainvälisissä tilanteissa.",
+     "hints": [
+      "Tehtävässä on kaksi osaa: mitkä englannin variantit ovat sinulle tutuimpia ja miksi, sekä (vapaaehtoisesti) esimerkkejä tilanteista, joissa englanti on ollut yhteinen kieli muiden kuin natiivipuhujien kanssa.",
+      "Kerro konkreettisesti, mistä olet oppinut minkäkin variantin (koulu, sarjat, pelit, matkat), ja anna sana- tai ääntämisesimerkkejä. Lingua franca -osaan sopii tarina yhdestä tilanteesta. Lopuksi voit pohtia, kenelle englanti kuuluu. Sanastoa: *variety, accent, native speaker, to pick up a language, to have in common*."
+     ],
+     "solution": "**Malliteksti** (943 merkkiä ilman välilyöntejä)\n\nEnglish Without Borders\n\nLike most young Finns, I started studying English at school at the age of nine, but I had already picked up a lot of it before that. The variety I know best is American English, simply because it is everywhere: in the series I watch, in YouTube videos and in the games I play. I still say \"apartment\" and \"vacation\" without thinking. At school, however, our textbooks used British English, so I am also familiar with words like \"flat\" and \"queue\" and with the British accent, which sounds a little more formal to me.\n\nFor me, though, English is not really the language of Americans or the British. It is the language I use with people from all over the world. Last summer I attended a youth camp in Germany, and English was the only language all fifteen of us had in common. A Spanish girl, a Polish boy and I spent hours talking about music, and nobody cared about grammar mistakes. Online, I play football games in a team with Brazilians and Koreans, and we communicate in quick, simple English.\n\nIn my opinion, this is the most important role of English today. It belongs to everyone who uses it, not only to native speakers.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** tutuimmat variantit ja syyt niihin (amerikanenglanti median kautta, brittienglanti koulusta) sekä kaksi esimerkkiä englannista yhteisenä kielenä (leiri, verkkopelit).\n- **Konkreettisuus:** sanaparit (*apartment/flat*, *vacation*, *queue*) osoittavat, että kirjoittaja tuntee varianttien erot.\n- **Rakenne:** otsikko, kaksi pääkappaletta ja pohdiskeleva lopetus, joka vastaa kysymykseen englannin asemasta.\n- **Kieli:** vastakohtaa ilmaisevat sidossanat (*however*, *though*) ja luonteva, vaihteleva sanasto.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "15.2",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Kansainvälinen nuortenlehti haluaa kuulla nuorten taiteellisista harrastuksista. Kirjoitatko tarinoita, teetkö musiikkia tai maalaatko? Oletko käynyt tanssitunneilla tai opetellut soittamaan? Onko jokin taidemuoto, jonka haluaisit aloittaa? Kuvaile valitsemaasi taidemuotoa ja sitä, mitä se sinulle antaa. HVP: fiktiivinen tarina ja useampi taidemuoto ovat sallittuja; −10 p, jos kirjoitat vain taiteen kuluttamisesta tai esimerkiksi urheilulajista kertomatta, mikä tekee siitä taidetta.",
+     "hints": [
+      "Kirjoita itsestäsi tekijänä: mitä taidetta teet tai haluaisit tehdä (kirjoittaminen, musiikki, kuvataide, tanssi, soittaminen) ja mitä se sinulle antaa. Tekstilaji on kirjoitus nuortenlehteen, joten otsikko ja persoonallinen ote sopivat.",
+      "Jaa teksti kahteen osaan: kuvaile taidemuotoa konkreettisesti (miten, missä, millä välineillä) ja kerro 2–3 asiaa, joita se antaa. HVP vähentää 10 p, jos kerrot vain taiteen kuluttamisesta (musiikin kuuntelu, elokuvat) tai urheilulajista kertomatta, mikä tekee siitä taidetta. Sanastoa: *to express oneself, creativity, sketchbook, to take up, to be absorbed in*."
+     ],
+     "solution": "**Malliteksti** (935 merkkiä ilman välilyöntejä)\n\nWhy I Draw Comics\n\nI have been drawing for as long as I can remember, but three years ago I discovered the art form I love most: comics. Today I spend almost every evening at my desk with a pencil, a black ink pen and a sketchbook full of characters.\n\nMy comics are short, usually four to eight pages, and they tell stories about ordinary teenagers who suddenly find something magical in their everyday lives. I start with a simple idea, plan the pages in small boxes and then draw each panel carefully. The hardest part is not the drawing itself but the storytelling: how to show a feeling with one look or make a joke work without words.\n\nDrawing gives me many things. First, it is the best way for me to relax. When I am working on a page, I forget school, exams and my phone for hours. Second, it has given me friends. I post my comics online, and I belong to a small community of young artists who comment on each other's work. Finally, comics have taught me patience. A single page can take a whole week, and I have learnt that good things take time.\n\nOne day I would like to publish my own graphic novel. Until then, I will keep filling sketchbooks.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** taidemuoto (sarjakuva) kuvataan konkreettisesti, ja kirjoittaja kertoo kolme asiaa, joita se antaa (rentoutuminen, yhteisö, kärsivällisyys). Hän esiintyy tekijänä eikä vain kuluttajana.\n- **Tekstilaji:** otsikko ja persoonallinen ote sopivat nuortenlehteen.\n- **Rakenne:** johdanto, kuvaus työtavasta, perustelut järjestyssanoin (*First, Second, Finally*) ja tulevaisuuteen katsova lopetus.\n- **Kieli:** alan sanasto (*panel, sketchbook, storytelling, graphic novel*) ja vaihtelevat aikamuodot (*have been drawing, discovered, would like*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "15.3",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Osallistut lukiolaisten argumentoivien esseiden kilpailuun. Kirjoita essee siitä, pitäisikö mobiililaitteet (puhelimet ja älypuhelimet) kieltää kouluissa. Valitse puolesi ja perustele se. HVP: −5 p, jos selkeä kanta puuttuu; −5 p, jos teksti ei käsittele koulua lainkaan.",
+     "hints": [
+      "Tekstilaji on argumentoiva essee kilpailuun. Valitse puoli (kielto kyllä vai ei) ja pysy siinä koko tekstin ajan. HVP vähentää 5 p, jos kanta ei ole selvä, ja 5 p, jos teksti ei käsittele koulua.",
+      "Rakenne: otsikko ja kanta johdannossa, 2–3 perustetta omissa kappaleissaan (esim. keskittyminen, välitunnit ja sosiaalisuus, kiusaaminen, tai vastapuolelta oppimisen välineet ja turvallisuus), vastaväitteen käsittely ja kannan toisto lopussa. Sanastoa: *to ban, distraction, to concentrate, notification, cyberbullying, digital skills*."
+     ],
+     "solution": "**Malliteksti** (966 merkkiä ilman välilyöntejä)\n\nPhones Belong in Bags, Not on Desks\n\nShould mobile phones be banned at school? In my opinion, the answer is yes, both during lessons and during breaks.\n\nFirst, phones destroy concentration. Studies suggest that even a silent phone lying on the desk makes it harder to focus, because part of the brain keeps waiting for the next notification. In my own class, I have seen how quickly a discussion dies when one person checks a message and everyone else follows.\n\nSecond, a ban would improve the social life of schools. During breaks, many students sit next to each other scrolling instead of talking. Schools that have banned phones report that pupils play, chat and even argue more, which is exactly what young people need.\n\nThird, phones make bullying easier. A photo or a video can be taken in a second and shared with hundreds of people before a teacher notices anything.\n\nCritics say that phones are useful learning tools. That is true, but students already have laptops for schoolwork, so personal phones are not needed. A ban would not send us back to the Stone Age. It would simply give students six hours a day to think, learn and be together. That is why I support it.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Selkeä kanta** otsikossa, johdannossa ja lopussa, ja teksti käsittelee koko ajan koulua.\n- **Perustelut:** kolme erillistä perustetta (keskittyminen, sosiaalisuus, kiusaaminen) esimerkkeineen sekä vastaväitteen käsittely (*Critics say… That is true, but…*).\n- **Rakenne:** yksi perustelu kappaletta kohden ja järjestyssanat (*First, Second, Third*).\n- **Kieli:** argumentoinnin ilmaukset ja vaihtelevat rakenteet (*even a silent phone…*, *which is exactly what…*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "15.4",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Ontarion tiedekeskus pyytää ihmisiltä eri puolilta maailmaa kirjoituksia siitä, miten tiede on tehnyt elämästä parempaa. Valitse yksi tieteenala ja selitä, millä tavoin se on parantanut elämää. Näytä yhteys tieteen ja paremman elämän välillä joko omassa elämässäsi tai ihmisten elämässä yleensä. HVP: kirje tai puhe on sallittu, ja kaikki tieteenalat käyvät; −5 p, jos tieteenalaa ei nimetä lainkaan.",
+     "hints": [
+      "Valitse yksi tieteenala (esim. lääketiede, kemia, tietojenkäsittelytiede tai psykologia) ja nimeä se selvästi. HVP vähentää 5 p, jos kirjoitat vain yksittäisistä keksinnöistä nimeämättä alaa. Kaikki tieteenalat käyvät, ja myös kirje tai puhe on sallittu.",
+      "Näytä yhteys tieteen ja paremman elämän välillä konkreettisilla esimerkeillä, mieluiten sekä omasta elämästäsi että yleiseltä tasolta. Toimiva rakenne: johdanto ja valittu ala, 2–3 esimerkkiä (vaikkapa ennen ja nyt), lyhyt pohdinta rajoista ja lopetus. Sanastoa: *breakthrough, to prevent, life expectancy, to cure, research*."
+     ],
+     "solution": "**Malliteksti** (983 merkkiä ilman välilyöntejä)\n\nHow Medicine Changed My Family's Story\n\nWhen people think about science, they often imagine rockets or robots. For me, the science that has made life better is medicine, and I can see its effects in my own family.\n\nMy great-grandmother had eight children, but only five of them lived to adulthood. Two died of diseases that vaccines now prevent, such as measles and diphtheria. Today, thanks to national vaccination programmes, Finnish parents hardly ever lose a child to these illnesses.\n\nMedicine has also made everyday problems less frightening. When I was twelve, I had a serious ear infection. A hundred years ago, it could have led to deafness or even death, but a week of antibiotics cured me completely. Similarly, my grandfather had heart surgery last year. Thanks to modern anaesthesia and surgical techniques, he was home within five days and is now walking his dog again.\n\nMedicine is not perfect. Bacteria are becoming resistant to antibiotics, and millions of people around the world still lack good healthcare. Still, the connection between medical science and a better life is clear: we live longer, healthier and less fearful lives than any generation before us.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tieteenala nimetään** heti alussa (lääketiede), ja HVP:n vähennys vältetään.\n- **Yhteys parempaan elämään** näytetään konkreettisesti: rokotteet, antibiootit ja nykyaikainen kirurgia, sekä oman suvun että suomalaisten yleisellä tasolla.\n- **Tasapaino:** lyhyt pohdinta ongelmista (antibioottiresistenssi, hoidon saatavuus) tekee tekstistä uskottavan.\n- **Kieli:** vertailu menneeseen (*A hundred years ago… Today*) ja syy-seuraussuhteet (*thanks to, could have led to*).",
+     "check": "malli"
+    }
+   ]
+  }
+ ]
+}

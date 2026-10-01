@@ -1,0 +1,485 @@
+{
+ "subject": "fysiikka",
+ "session": "2024S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2024S_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-09-24_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (1.1–1.10):\n\n- 1.1: vesilasin pinnankorkeus, kun kelluva jääpala sulaa\n- 1.2: sitooko vai vapauttaako sulava jäätikkö lämpöä, ja miten ilman lämpötila muuttuu\n- 1.3: solmut ja kuvut värähtelevän kitaran kielen päissä\n- 1.4: äänen nopeus ilmassa, kun kielen taajuus kaksinkertaistuu\n- 1.5: virran ja elektronien kulkusuunta paristoon kytketyssä vastuksessa\n- 1.6: 1,5 V:n paristossa on 1,5 kΩ:n vastus, ja samoihin napoihin kytketään lisäksi kaksi sarjaan kytkettyä 1,5 kΩ:n vastusta; ensimmäisen vastuksen jännite\n- 1.7 ja 1.8: kitkavoima ja kitkakerroin sekä liike-energia ja liikemäärä: vektoreita vai skalaareja\n- 1.9: alfahajoamisessa lähtevä hiukkanen\n- 1.10: mitä parinmuodostuksessa tapahtuu.\n\nVaihtoehdot ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Kertaa Arkhimedeen laki (kelluva kappale syrjäyttää oman painonsa verran vettä), olomuodon muutosten lämmöt, seisovan aallon reunaehdot, aallon perusyhtälö $v=f\\lambda$, sähkövirran sopimussuunta, ideaalisen jännitelähteen napajännite sekä vektori- ja skalaarisuureiden ero.",
+      "Kohta kohdalta:\n- 1.1: sulamisvesi täyttää juuri sen tilavuuden, jonka jää syrjäytti.\n- 1.2: sulaminen vaatii lämpöä. Mistä se otetaan?\n- 1.3: kielen päät on kiinnitetty.\n- 1.4: mikä määrää äänen nopeuden?\n- 1.5: sopimussuunta on plusnavasta miinusnapaan ulkoisessa piirissä, elektronit ovat negatiivisia.\n- 1.6: rinnankytkennässä jännite on sama kaikissa haaroissa.\n- 1.7 ja 1.8: onko suureella suunta?\n- 1.9: alfahiukkanen on ${}^{4}_{2}\\mathrm{He}$.\n- 1.10: fotonin energia muuttuu hiukkaspariksi atomiytimen lähellä."
+     ],
+     "solution": "1. **1.1 B (pinnan korkeus ei muutu).** Kelluva jää syrjäyttää oman massansa verran vettä. Sulaessaan se muuttuu vedeksi, jonka tilavuus on täsmälleen syrjäytetyn veden tilavuus.\n2. **1.2 A (sitoo lämpöä ja laskee ilman lämpötilaa).** Sulaminen vaatii sulamislämmön, joka otetaan ympäristöstä, joten ympäröivä ilma jäähtyy.\n3. **1.3 A (molemmissa päissä solmu).** Kiinnitetyt päät eivät voi liikkua, joten niissä on aina solmu.\n4. **1.4 C (äänen nopeus ei muutu).** Äänen nopeus riippuu väliaineesta (ilman lämpötilasta), ei taajuudesta. Taajuuden kaksinkertaistuessa aallonpituus puolittuu.\n5. **1.5 B.** Sähkövirran sopimussuunta on ulkoisessa piirissä positiivisesta navasta negatiiviseen, ja negatiiviset elektronit kulkevat vastakkaiseen suuntaan eli negatiiviselta navalta positiiviselle.\n6. **1.6 D (1,5 V).** Lisävastukset kytketään samojen napojen väliin eli ensimmäisen vastuksen rinnalle. Ideaalisen pariston jännite ei muutu, joten ensimmäisen vastuksen jännite on edelleen 1,5 V. (Tehtävänanto oli monitulkintainen, joten arvostelussa hyväksyttiin kaikki vaihtoehdot.)\n7. **1.7 C (kitkavoima vektori, kitkakerroin skalaari).** Voimalla on suunta. Kitkakerroin on kahden voiman suuruuksien suhde, pelkkä luku.\n8. **1.8 C (liike-energia skalaari, liikemäärä vektori).** $E_\\text{k}=\\frac12mv^2$ ei riipu suunnasta, mutta $\\vec p=m\\vec v$ on nopeuden suuntainen.\n9. **1.9 D (heliumydin).** Alfahiukkanen on ${}^{4}_{2}\\mathrm{He}$-ydin.\n10. **1.10 B.** Suurienerginen fotoni vuorovaikuttaa atomiytimen kanssa ja muuttuu elektroniksi ja positroniksi. Ydintä tarvitaan, jotta liikemäärä säilyy.\n\n**Vastaus: 1.1 B · 1.2 A · 1.3 A · 1.4 C · 1.5 B · 1.6 D · 1.7 C · 1.8 C · 1.9 D · 1.10 B**\n\n**Sudenkuoppa:** kohta 1.10. Parinmuodostus on annihilaation käänteisilmiö: siinä fotonista syntyy hiukkaspari, eikä kahdesta hiukkasesta synny fotoneja.",
+     "answer": "1.1 B · 1.2 A · 1.3 A · 1.4 C · 1.5 B · 1.6 D · 1.7 C · 1.8 C · 1.9 D · 1.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Vuonna 2021 Yhdysvaltojen olympiakarsinnoissa Sydney McLaughlin juoksi 400 metrin aitojen maailmanennätyksen 51,90 s. Hopealle sijoittunut Dalilah Muhammad oli alussa johdossa. Kummankin juoksijan vauhti ajan funktiona on mittausaineistoissa 2.A ja 2.B.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 7,
+     "prompt": "Piirrä McLaughlinin vauhti ajan funktiona. Juoksun keskiosassa vauhti muuttuu tasaisesti: määritä kiihtyvyyden suuruus aikavälillä 8,0–45 s.",
+     "hints": [
+      "Piirrä mittaustulokset erillisinä pisteinä (vaaka-akselilla $t$, pystyakselilla $v$). Tasaisesti muuttuvan vauhdin kiihtyvyys on $v(t)$-kuvaajaan sovitetun suoran kulmakerroin.",
+      "Ota sovitukseen vain pisteet, joiden aika on 8,0–45 s (8,13 s … 44,09 s, yhdeksän pistettä), ja sovita niihin suora."
+     ],
+     "solution": "1. Piirretään taulukon 2.A pisteet $(t,v)$ kuvaajaan erillisinä pisteinä ilman yhdysviivoja.\n2. Alussa vauhti kasvaa nopeasti noin 8,7 m/s:iin (lähtökiihdytys). Keskiosassa vauhti pienenee lähes lineaarisesti, ja aivan lopussa se kasvaa taas (loppukiri).\n3. Sovitetaan suora $v=at+b$ välin 8,0–45 s pisteisiin. Kulmakertoimeksi saadaan $a\\approx-0{,}038\\ \\text{m/s}^2$.\n4. Kiihtyvyyden suuruus on siis $0{,}038\\ \\text{m/s}^2$, ja miinusmerkki kertoo, että vauhti pienenee.\n\n**Vastaus: $|a|\\approx 0{,}038\\ \\text{m/s}^2$ (vauhti hidastuu)**\n\n**Sudenkuoppa:** kiihtyvyyden laskeminen vain kahden pisteen avulla tai pelkkä murtoviiva, josta yksittäiset mittauspisteet eivät erotu.",
+     "answer": "$|a|\\approx 0{,}038\\ \\text{m/s}^2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Juoksun keskiosassa McLaughlin kuroi Muhammadin etumatkaa kiinni. Määritä kuvaajan avulla kummankin juoksijan kulkema matka aikavälillä 0–26 s. Kumpi oli edellä hetkellä 26 s?",
+     "hints": [
+      "Kuljettu matka on $v(t)$-kuvaajan ja aika-akselin väliin jäävä pinta-ala. Piirrä molempien juoksijoiden pisteet samaan kuvaan ja laske pinta-ala numeerisesti, esimerkiksi puolisuunnikkailla.",
+      "Ensimmäinen puolisuunnikas McLaughlinille on $\\frac{0+7{,}365}{2}\\ \\text{m/s}\\cdot 3{,}06\\ \\text{s}\\approx 11{,}3\\ \\text{m}$. Katkaise viimeinen väli kohtaan 26 s ja interpoloi nopeus siihen (McLaughlinilla noin 7,65 m/s)."
+     ],
+     "solution": "1. Nopeus on paikan derivaatta, joten kuljettu matka on $s=\\int_0^{26\\ \\text{s}}v\\,\\mathrm dt$ eli pinta-ala $v(t)$-kuvaajan alla.\n2. Numeerinen integrointi puolisuunnikassäännöllä: $s\\approx\\sum\\frac{v_i+v_{i+1}}{2}\\,\\Delta t_i$. Viimeinen väli päättyy hetkeen 26 s, ja nopeus siinä saadaan lineaarisesti interpoloimalla.\n3. McLaughlin: $s\\approx 197\\ \\text{m}$. Muhammad: $s\\approx 198\\ \\text{m}$. Ohjelmistojen erilaiset integrointitavat antavat hieman eri lukuja (noin 197–202 m), mutta ero on aina noin 0,8 m Muhammadin hyväksi.\n4. Muhammad oli siis hetkellä 26 s noin 0,8 m edellä.\n\n**Vastaus: McLaughlin noin 197 m ja Muhammad noin 198 m; Muhammad johti.**\n\n**Sudenkuoppa:** matka lasketaan kertomalla taulukon nopeus ja aika suoraan keskenään, ikään kuin nopeus olisi ollut koko ajan vakio.",
+     "answer": "McLaughlin $\\approx 197\\ \\text{m}$, Muhammad $\\approx 198\\ \\text{m}$; Muhammad johti",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 3,
+     "prompt": "Kuinka pitkän matkan jälkeen McLaughlin ohitti Muhammadin?",
+     "hints": [
+      "Laske kummankin kulkema matka myöhemmillekin hetkille samalla tavalla kuin kohdassa 2.2 ja etsi hetki, jolloin matkat ovat yhtä suuret. Kysytään matkaa, ei aikaa."
+     ],
+     "solution": "1. Seurataan kummankin kulkemaa matkaa numeerisella integroinnilla 26 s:n jälkeenkin. Muhammadin etumatka pienenee koko ajan, koska McLaughlinin vauhti on keskiosassa suurempi.\n2. Matkat ovat yhtä suuret noin hetkellä 44 s, jolloin kumpikin on juossut noin 330 m.\n3. Tämän jälkeen McLaughlinin kulkema matka on suurempi, eli hän on johdossa.\n\n**Vastaus: noin 330 m:n kohdalla**",
+     "answer": "noin 330 m",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Kuumana kesäpäivänä ilmalämpöpumppu jäähdyttää taloa siirtämällä lämpöä sisältä ulos. Sisälämpötila pysyy 21 °C:ssa, kun ulkona on 25 °C. Pumpun jäähdytyksen suorituskyky (talosta poistettu lämpö jaettuna käytetyllä sähköenergialla) on 3,2, ja pumppu käyttää tunnissa 1,6 kWh sähköenergiaa. Energiavirrat on esitetty kuvassa 3.A.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 5,
+     "prompt": "Paljonko lämpöä (kWh) siirtyy tunnissa pois talosta?",
+     "hints": [
+      "Suorituskyky on $\\varepsilon=\\frac{Q_0}{W}$, jossa $Q_0$ on sisältä (kylmemmästä) otettu lämpö ja $W$ pumpun käyttämä sähköenergia (kuva 3.A).",
+      "Ratkaise $Q_0=\\varepsilon W$ ja sijoita yhden tunnin arvot."
+     ],
+     "solution": "1. Jäähdytyksen suorituskyvyn määritelmä: $\\varepsilon=\\frac{Q_0}{W}$.\n2. Ratkaistaan: $Q_0=\\varepsilon W=3{,}2\\cdot 1{,}6\\ \\text{kWh}=5{,}12\\ \\text{kWh}$.\n\n**Vastaus: $Q_0\\approx 5{,}1\\ \\text{kWh}$**",
+     "answer": "$Q_0\\approx 5{,}1\\ \\text{kWh}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 5,
+     "prompt": "Paljonko lämpöä (kWh) siirtyy tunnissa ulkoilmaan?",
+     "hints": [
+      "Katso kuvan 3.A energiavirtoja: pumppuun tulee sisältä lämpö $Q_0$ ja sähköenergia $W$, ja ulos lähtee lämpö $Q_1$.",
+      "Energia säilyy (I pääsääntö kiertoprosessille, jossa pumpun oma sisäenergia ei muutu): $Q_1=Q_0+W$."
+     ],
+     "solution": "1. Pumpun oma sisäenergia ei muutu, joten termodynamiikan I pääsäännön mukaan kaikki pumppuun tuleva energia siirtyy ulos: $Q_1=Q_0+W$.\n2. $Q_1=5{,}12\\ \\text{kWh}+1{,}6\\ \\text{kWh}=6{,}72\\ \\text{kWh}$.\n\n**Vastaus: $Q_1\\approx 6{,}7\\ \\text{kWh}$**\n\n**Sudenkuoppa:** erotus $Q_0-W\\approx 3{,}5\\ \\text{kWh}$ on väärin, koska sähköenergia päätyy ulos lämpönä eikä vähennä sitä.",
+     "answer": "$Q_1\\approx 6{,}7\\ \\text{kWh}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.3",
+     "points": 5,
+     "prompt": "Ulkolämpötila nousee 32 °C:seen. Kuinka suuri sähköteho pumpulla pitää olla, jotta sisälämpötila pysyy 21 °C:ssa? Oletetaan, että suorituskyky ei riipu lämpötiloista ja että lämpöä tulee ulkoa sisään vain johtumalla teholla, joka on verrannollinen lämpötilaeroon.",
+     "hints": [
+      "Sisälämpötila pysyy vakiona, kun pumppu poistaa lämpöä samalla teholla kuin sitä johtuu sisään. Johtumisteho on $P_\\text{j}=K\\Delta T$.",
+      "Lämpötilaero kasvaa 4 °C:sta 11 °C:seen. Koska $\\varepsilon$ on vakio, sähköteho $P=\\frac{P_\\text{j}}{\\varepsilon}$ kasvaa samassa suhteessa kuin lämpötilaero."
+     ],
+     "solution": "1. Tasapainossa pumpun talosta poistama lämpöteho on yhtä suuri kuin sisään johtuva teho $P_\\text{j}=K(T_\\text{ulko}-T_\\text{sisä})$.\n2. Alussa $P_\\text{j,1}=\\frac{5{,}12\\ \\text{kWh}}{1\\ \\text{h}}=5{,}12\\ \\text{kW}$ lämpötilaerolla 4 K, joten $K=1{,}28\\ \\text{kW/K}$.\n3. Uusi johtumisteho: $P_\\text{j,2}=K\\cdot 11\\ \\text{K}\\approx 14{,}1\\ \\text{kW}$.\n4. Sähköteho: $P_2=\\frac{P_\\text{j,2}}{\\varepsilon}=\\frac{14{,}08\\ \\text{kW}}{3{,}2}=4{,}4\\ \\text{kW}$. Sama tulos saadaan suoraan verrannollisuudesta: $P_2=1{,}6\\ \\text{kW}\\cdot\\frac{11\\ \\text{K}}{4\\ \\text{K}}=4{,}4\\ \\text{kW}$.\n\n**Vastaus: $P\\approx 4{,}4\\ \\text{kW}$**",
+     "answer": "$P\\approx 4{,}4\\ \\text{kW}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Kalliosta irronnut 2 200 kg:n lohkare lähtee levosta liukumaan alas rinnettä, jonka kaltevuuskulma on 28°. Lohkareen ja rinteen välinen liukukitkakerroin on 0,40.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 8,
+     "prompt": "Määritä lohkareen kiihtyvyys.",
+     "hints": [
+      "Piirrä voimakuvio: paino, pinnan tukivoima ja liukukitka (rinnettä ylöspäin). Valitse koordinaatisto rinteen suuntaisesti ja jaa paino komponentteihin.",
+      "Rinnettä vastaan kohtisuorassa suunnassa $N=mg\\cos\\alpha$, joten $F_\\mu=\\mu mg\\cos\\alpha$. Rinteen suunnassa $ma=mg\\sin\\alpha-\\mu mg\\cos\\alpha$."
+     ],
+     "solution": "1. Voimat: paino $\\vec G$ pystysuoraan alas, tukivoima $\\vec N$ kohtisuoraan rinnettä vastaan ja liukukitka $\\vec F_\\mu$ rinnettä ylöspäin eli liikettä vastaan.\n2. Newtonin II laki rinteen suunnassa (alaspäin positiivinen): $ma=G\\sin\\alpha-F_\\mu$.\n3. Kohtisuoraan rinnettä vastaan ei ole kiihtyvyyttä: $N-G\\cos\\alpha=0$, joten $N=mg\\cos\\alpha$ ja $F_\\mu=\\mu N=\\mu mg\\cos\\alpha$.\n4. Massa supistuu:\n$$a=g(\\sin\\alpha-\\mu\\cos\\alpha)=9{,}81\\ \\text{m/s}^2\\cdot\\left(\\sin28^\\circ-0{,}40\\cdot\\cos28^\\circ\\right)\\approx 1{,}14\\ \\text{m/s}^2.$$\n\n**Vastaus: $a\\approx 1{,}1\\ \\text{m/s}^2$ rinnettä alaspäin**\n\n**Sudenkuoppa:** sinin ja kosinin vaihtuminen komponenteissa. Tarkista: jos kulma olisi 0°, rinteen suuntainen painon komponentti olisi nolla.",
+     "answer": "$a\\approx 1{,}1\\ \\text{m/s}^2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 7,
+     "prompt": "Johda lohkareen liike-energialle lauseke ajan funktiona ja piirrä sen avulla liike-energian kuvaaja välillä 0–10 s.",
+     "hints": [
+      "Liike on tasaisesti kiihtyvää ja alkaa levosta, joten $v=at$. Sijoita tämä liike-energian lausekkeeseen $E_\\text{k}=\\frac12mv^2$.",
+      "$E_\\text{k}(t)=\\frac12ma^2t^2\\approx 1{,}43\\ \\text{kJ/s}^2\\cdot t^2$. Kuvaaja on paraabelin haara. Laske arvoja esimerkiksi hetkillä 2, 4, 6, 8 ja 10 s."
+     ],
+     "solution": "1. Kiihtyvyys on vakio ja alkunopeus nolla, joten $v(t)=at$.\n2. Liike-energia: $E_\\text{k}(t)=\\frac12m\\left(at\\right)^2=\\frac12ma^2t^2$.\n3. Lukuarvoina: $\\frac12\\cdot 2200\\ \\text{kg}\\cdot\\left(1{,}141\\ \\text{m/s}^2\\right)^2\\approx 1430\\ \\text{J/s}^2$, joten $E_\\text{k}(t)\\approx\\left(1{,}43\\ \\text{kJ/s}^2\\right)t^2$.\n4. Arvoja: 2 s → 5,7 kJ; 4 s → 22,9 kJ; 6 s → 51,5 kJ; 8 s → 91,6 kJ; 10 s → 143 kJ.\n5. Kuvaaja: yhtenäinen, origosta alkava ja jyrkkenevä paraabelin haara välillä 0–10 s. Vaaka-akselilla $t$ (s), pystyakselilla $E_\\text{k}$ (kJ).\n\n**Vastaus: $E_\\text{k}(t)=\\frac12ma^2t^2\\approx\\left(1{,}43\\ \\text{kJ/s}^2\\right)t^2$; hetkellä 10 s noin 143 kJ**\n\n**Sudenkuoppa:** kuvaajan piirtäminen $t^2$:n funktiona (suora) tai negatiivisille ajoille.",
+     "answer": "$E_\\text{k}(t)=\\frac12ma^2t^2\\approx\\left(1{,}43\\ \\text{kJ/s}^2\\right)t^2$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Marsilla on kaksi kuuta: suurempi Phobos kiertää lähempänä ja pienempi Deimos kauempana, molemmat lähes ympyräradoilla Marsin päiväntasaajan tasossa (animaatio 5.B). Taulukon 5.A tiedot: Marsin massa $6{,}4171\\cdot 10^{23}$ kg. Phobos: massa $1{,}08\\cdot 10^{16}$ kg, ratasäde $9{,}3772\\cdot 10^{6}$ m, kiertoaika 0,319 d. Deimos: massa $1{,}80\\cdot 10^{15}$ kg, ratasäde $2{,}34632\\cdot 10^{7}$ m, kiertoaika 1,263 d.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 6,
+     "prompt": "Laske Phobosin ja Deimosin välinen gravitaatiovoima, kun kuut ovat lähimpänä toisiaan, sekä Marsin ja Deimosin välinen voima. Laske myös voimien suuruuksien suhde.",
+     "hints": [
+      "Gravitaatiolaki on $F=G\\frac{m_1m_2}{r^2}$. Kuut ovat lähimpänä, kun ne ovat samalla puolella Marsia samalla säteellä: etäisyys on ratasäteiden erotus.",
+      "Kuiden lähin etäisyys on $r=r_\\text{D}-r_\\text{P}\\approx 1{,}41\\cdot 10^{7}\\ \\text{m}$. Marsin ja Deimosin etäisyys on Deimosin ratasäde."
+     ],
+     "solution": "1. Lähin etäisyys: $r=r_\\text{D}-r_\\text{P}=2{,}34632\\cdot 10^{7}\\ \\text{m}-9{,}3772\\cdot 10^{6}\\ \\text{m}\\approx 1{,}4086\\cdot 10^{7}\\ \\text{m}$.\n2. Kuiden välinen voima:\n$$F_\\text{PD}=G\\frac{m_\\text{P}m_\\text{D}}{r^2}=6{,}674\\cdot 10^{-11}\\ \\frac{\\text{N m}^2}{\\text{kg}^2}\\cdot\\frac{1{,}08\\cdot 10^{16}\\ \\text{kg}\\cdot 1{,}80\\cdot 10^{15}\\ \\text{kg}}{\\left(1{,}4086\\cdot 10^{7}\\ \\text{m}\\right)^2}\\approx 6{,}54\\cdot 10^{6}\\ \\text{N}.$$\n3. Marsin ja Deimosin välinen voima: $F_\\text{MD}=G\\frac{m_\\text{M}m_\\text{D}}{r_\\text{D}^2}\\approx 1{,}40\\cdot 10^{14}\\ \\text{N}$.\n4. Suhde: $\\frac{F_\\text{MD}}{F_\\text{PD}}\\approx 2{,}14\\cdot 10^{7}$.\n\n**Vastaus: $F_\\text{PD}\\approx 6{,}54\\cdot 10^{6}\\ \\text{N}$, $F_\\text{MD}\\approx 1{,}40\\cdot 10^{14}\\ \\text{N}$, suhde noin $2{,}14\\cdot 10^{7}$**\n\n**Sudenkuoppa:** kuiden massat on annettu kolmen merkitsevän numeron tarkkuudella, joten tuloksissa ei pidä olla enempää numeroita.",
+     "answer": "$F_\\text{PD}\\approx 6{,}54\\cdot 10^{6}\\ \\text{N}$, $F_\\text{MD}\\approx 1{,}40\\cdot 10^{14}\\ \\text{N}$, suhde $\\approx 2{,}14\\cdot 10^{7}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 9,
+     "prompt": "Piirrä Phobosin voimakuvio. Määritä Marsin massa ensin Phobosin radan tiedoista ja sitten Deimosin radan tiedoista. Kuinka tarkasti Marsin massan voi tulosten perusteella ilmoittaa?",
+     "hints": [
+      "Phobokseen vaikuttaa käytännössä vain Marsin gravitaatio (kohdan 5.1 mukaan kuiden välinen voima on mitätön). Se aiheuttaa ympyräliikkeen keskeiskiihtyvyyden $a_\\text{n}=\\frac{v^2}{r}$, jossa $v=\\frac{2\\pi r}{T}$.",
+      "Newtonin II laista $G\\frac{m_\\text{M}m}{r^2}=m\\frac{4\\pi^2r}{T^2}$ saadaan $m_\\text{M}=\\frac{4\\pi^2r^3}{GT^2}$. Muunna kiertoajat sekunneiksi ($1\\ \\text{d}=86\\,400\\ \\text{s}$)."
+     ],
+     "solution": "1. Voimakuvio: Phobokseen piirretään vain yksi voima, Marsin gravitaatiovoima $\\vec F$, joka osoittaa kohti Marsin keskipistettä. Nopeutta tai kiihtyvyyttä ei piirretä voimakuvioon.\n2. Newtonin II laki: gravitaatio aiheuttaa keskeiskiihtyvyyden, $G\\frac{m_\\text{M}m_\\text{P}}{r_\\text{P}^2}=m_\\text{P}\\frac{v^2}{r_\\text{P}}$.\n3. Tasaisessa ympyräliikkeessä $v=\\frac{2\\pi r_\\text{P}}{T_\\text{P}}$, joten\n$$m_\\text{M}=\\frac{4\\pi^2r_\\text{P}^3}{GT_\\text{P}^2}.$$\n4. Phobos: $T_\\text{P}=0{,}319\\cdot 86\\,400\\ \\text{s}\\approx 27\\,560\\ \\text{s}$, josta $m_\\text{M}\\approx 6{,}421\\cdot 10^{23}\\ \\text{kg}$.\n5. Deimos: $T_\\text{D}=1{,}263\\cdot 86\\,400\\ \\text{s}\\approx 109\\,120\\ \\text{s}$, josta $m_\\text{M}\\approx 6{,}417\\cdot 10^{23}\\ \\text{kg}$.\n6. Tulokset ovat samat kolmen merkitsevän numeron tarkkuudella, ja neljäs numero vaihtelee. Marsin massa voidaan siis ilmoittaa muodossa $6{,}42\\cdot 10^{23}\\ \\text{kg}$, mikä vastaa taulukon arvoa.\n\n**Vastaus: $m_\\text{M}\\approx 6{,}42\\cdot 10^{23}\\ \\text{kg}$ kolmen merkitsevän numeron tarkkuudella**\n\n**Sudenkuoppa:** tarkkuutta ei pidä perustella pelkällä vertailulla taulukon arvoon, vaan kahden itse saadun tuloksen yhtäpitävyydellä.",
+     "answer": "$m_\\text{M}\\approx 6{,}42\\cdot 10^{23}\\ \\text{kg}$ (3 merkitsevää numeroa)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Kahden vaakasuoran kondensaattorilevyn (ylempi A, alempi B) välissä leijuu paikallaan öljypisara, jossa on ylimääräisiä elektroneja. Levyjen etäisyys on $d=2{,}0$ cm ja niiden välinen jännite 505 V. Pisaran säde on $r=1{,}1\\ \\mu\\text{m}$ ja öljyn tiheys 753 kg/m³.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Piirrä voimakuvio pisarasta ja päättele perustellen, onko levy A vai levy B negatiivinen.",
+     "hints": [
+      "Pisara on levossa, joten siihen vaikuttavien voimien summa on nolla. Paino osoittaa alaspäin. Mikä voima voi kumota sen?",
+      "Sähköisen voiman on osoitettava ylöspäin. Negatiivinen pisara hylkii negatiivista levyä ja vetää positiivista puoleensa. Kumman levyn on silloin oltava negatiivinen?"
+     ],
+     "solution": "1. Pisara leijuu paikallaan, joten Newtonin I lain mukaan $\\vec F_\\text{s}+\\vec G=\\vec 0$.\n2. Voimakuvio: paino $\\vec G$ alaspäin ja sähköinen voima $\\vec F_\\text{s}$ ylöspäin, yhtä pitkinä nuolina pisarasta lähtien.\n3. Sähköinen voima $\\vec F=q\\vec E$ on negatiiviselle varaukselle kenttää vastaan. Koska voima osoittaa ylöspäin, kentän on osoitettava alaspäin eli ylemmästä levystä A alempaan levyyn B.\n4. Kenttä osoittaa positiivisesta levystä negatiiviseen, joten A on positiivinen ja B negatiivinen. (Sama asia toisin: alempi negatiivinen levy hylkii pisaraa ylöspäin ja ylempi positiivinen vetää sitä ylöspäin.)\n\n**Vastaus: levy B on negatiivinen.**\n\n**Sudenkuoppa:** ylöspäin osoittava voima jää nimeämättä sähköiseksi voimaksi, tai voimakuvioon piirretään nopeus tai kiihtyvyys.",
+     "answer": "levy B",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 10,
+     "prompt": "Kuinka monta ylimääräistä elektronia pisarassa on?",
+     "hints": [
+      "Tasapainossa sähköinen voima $|q|E$ on yhtä suuri kuin paino $mg$. Levyjen välinen kenttä on homogeeninen, $E=\\frac Ud$, ja pisaran massa saadaan tiheydestä ja pallon tilavuudesta.",
+      "$m=\\rho\\cdot\\frac43\\pi r^3\\approx 4{,}20\\cdot 10^{-15}\\ \\text{kg}$. Ratkaise $|q|=\\frac{mgd}{U}$ ja jaa alkeisvarauksella $e=1{,}602\\cdot 10^{-19}\\ \\text{C}$."
+     ],
+     "solution": "1. Pisaran massa: $m=\\rho\\cdot\\frac43\\pi r^3=753\\ \\text{kg/m}^3\\cdot\\frac43\\pi\\left(1{,}1\\cdot 10^{-6}\\ \\text{m}\\right)^3\\approx 4{,}198\\cdot 10^{-15}\\ \\text{kg}$.\n2. Kentän voimakkuus: $E=\\frac Ud=\\frac{505\\ \\text{V}}{0{,}020\\ \\text{m}}=25\\,250\\ \\text{V/m}$.\n3. Tasapaino: $|q|E=mg$, josta\n$$|q|=\\frac{mgd}{U}=\\frac{4\\pi r^3\\rho gd}{3U}\\approx 1{,}631\\cdot 10^{-18}\\ \\text{C}.$$\n4. Elektronien määrä: $N=\\frac{|q|}{e}=\\frac{1{,}631\\cdot 10^{-18}\\ \\text{C}}{1{,}602\\cdot 10^{-19}\\ \\text{C}}\\approx 10{,}2$.\n5. Varaus on aina alkeisvarauksen monikerta, joten tulos pyöristetään kokonaisluvuksi.\n\n**Vastaus: 10 elektronia**\n\n**Sudenkuoppa:** vastauksen jättäminen desimaaliluvuksi (10,2). Elektroneja voi olla vain kokonainen määrä.",
+     "answer": "10",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Oven sähkölukko avautuu, kun kulkutunniste tuodaan lukulaitteen lähelle. Lukulaite luo ympärilleen magneettikentän (kuva 7.A). Kokeessa tunnisteen paikalle asetettiin käämi, jonka päihin kytkettiin 330 Ω:n vastus. Vastuksen yli mitattiin oskilloskoopilla sinimuotoista, korkeataajuista vaihtojännitettä, jonka amplitudi oli 1,2 V. Käämin resistanssi oli pieni, ja käämi pysyi paikallaan.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Selitä, miten jännite vastuksen napojen välille syntyy.",
+     "hints": [
+      "Käämi on paikallaan, joten jännitteen täytyy johtua kentän muutoksesta. Millainen lukulaitteen magneettikentän on oltava, ja mitä induktiolaki sanoo muuttuvasta magneettivuosta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Lukulaite synnyttää ajan mukana muuttuvan (vaihtuvan) magneettikentän.\n- Käämin läpäisevä magneettivuo muuttuu, joten induktiolain $e=-N\\frac{\\Delta\\Phi}{\\Delta t}$ mukaan käämiin indusoituu jännite.\n- Tämä induktiojännite on käämin päihin kytketyn vastuksen napojen välillä.\n\nPelkkä maininta indusoituvasta virrasta ei riitä, koska kysytään jännitteen syntyä.\n\n**Esimerkkivastaus:** Lukulaitteen käämissä kulkee vaihtovirta, joten sen ympärille syntyy jatkuvasti suuntaansa ja suuruuttaan vaihtava magneettikenttä. Paikallaan olevan käämin läpi kulkeva magneettivuo muuttuu siksi koko ajan, ja induktiolain mukaan käämiin indusoituu vaihtojännite. Koska vastus on kytketty käämin päihin, sama jännite mitataan vastuksen napojen välillä.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 4,
+     "prompt": "Vastus vaihdetaan 1,0 kΩ:n vastukseen. Mikä on nyt vaihtojännitteen amplitudi vastuksen yli? Perustele.",
+     "hints": [
+      "Induktiolain mukaan indusoitunut jännite riippuu käämistä ja magneettivuon muutosnopeudesta. Riippuuko se kuormavastuksesta, kun käämin oma resistanssi on pieni?"
+     ],
+     "solution": "1. Induktiojännite $e=-N\\frac{\\Delta\\Phi}{\\Delta t}$ riippuu vain käämin kierrosmäärästä ja pinta-alasta sekä magneettikentän muutoksesta, ei käämiin kytketystä vastuksesta.\n2. Käämin oma resistanssi on pieni, joten siinä ei häviä merkittävästi jännitettä, ja koko induktiojännite on vastuksen yli.\n3. Virta pienenee ($I=\\frac eR$), mutta jännitteen amplitudi pysyy samana.\n\n**Vastaus: 1,2 V**\n\n**Sudenkuoppa:** jos oletetaan virta vakioksi, saadaan virheellisesti 3,6 V.",
+     "answer": "$1{,}2\\ \\text{V}$",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 4,
+     "prompt": "Käämi siirretään kauemmas lukulaitteesta. Miksi jännitteen amplitudi tällöin pienenee?",
+     "hints": [
+      "Mitä magneettivuon tiheydelle tapahtuu etäisyyden kasvaessa? Jos kenttä vaihtelee pienemmällä amplitudilla, mitä tapahtuu vuon muutosnopeudelle?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Lukulaitteen magneettivuon tiheys on pienempi kauempana laitteesta. Lukulaite tuottaa saman kentän, mutta käämin kohdalla kenttä on heikompi.\n- Käämin läpäisevä vuo $\\Phi=BA$ vaihtelee silloin samalla taajuudella mutta pienemmällä amplitudilla, joten vuon muutosnopeus on pienempi.\n- Induktiolain mukaan indusoitunut jännite on verrannollinen vuon muutosnopeuteen, joten jännitteen amplitudi pienenee.\n\n**Esimerkkivastaus:** Kauempana lukulaitteesta sen magneettikenttä on heikompi. Kun käämi siirretään kauemmas, sen läpi kulkeva magneettivuo vaihtelee edelleen samassa tahdissa, mutta vaihtelun suuruus on pienempi. Silloin vuo muuttuu hitaammin, ja induktiolain mukaan käämiin indusoituu pienempi jännite.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.4",
+     "points": 3,
+     "prompt": "Monivalinta: kuudessa kuvaajassa on vaihtoehtoinen magneettivuon tiheys $B$ ajan funktiona (yhtenäinen viiva) ja vertailun vuoksi mitattu vastuksen jännite $V$ (katkoviiva). Mikä kuvaaja vastaa parhaiten magneettivuon tiheyttä käämin kohdalla? Kuvaajat ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Induktiojännite on verrannollinen vuon muutosnopeuteen eli $B(t)$:n derivaattaan. Kun $V=0$, $B$:n kuvaajan tangentin on oltava vaakasuora. Sinifunktion derivaatta on kosini."
+     ],
+     "solution": "1. Käämin pinta-ala on vakio, joten $V=-NA\\frac{\\mathrm dB}{\\mathrm dt}$.\n2. Jännite on sinimuotoinen, joten myös $B$ on sinimuotoinen samalla taajuudella, mutta neljänneksen jaksoa siirtynyt: $B$ on ääriarvossaan, kun $V=0$, ja $B$ muuttuu nopeimmin (on nolla), kun jännite on suurimmillaan.\n3. Esimerkiksi jos $V=V_0\\sin\\omega t$, niin $B=B_0\\cos\\omega t$, sillä $-\\frac{\\mathrm dB}{\\mathrm dt}=B_0\\omega\\sin\\omega t$.\n4. Ainoa tällainen vaihtoehto on F (kuudes kuvaaja), jossa $B$ on kosinikäyrä: se on maksimissaan alussa, kun jännite on nolla. Vakiokenttä (B) ei indusoi jännitettä, kanttiaallot (A ja E) indusoisivat vain lyhyitä piikkejä, ja jännitteen kanssa samassa tai vastakkaisessa vaiheessa olevat sinikäyrät (C ja D) antaisivat suurimman jännitteen hetkellä, jolloin $B$ ei muutu.\n\n**Vastaus: F (kuudes kuvaaja, jossa $B$ on suurimmillaan, kun jännite on nolla)**",
+     "answer": "F (kosinimuotoinen $B$, neljänneksen jaksoa siirtynyt jännitteeseen nähden)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Aineisto 8.A kuvaa kevyiden ytimien syntyä alkuräjähdyksen jälkeen. Kun maailmankaikkeus oli noin sekunnin ikäinen ($T=1{,}0\\cdot 10^{10}\\ \\text{K}$), neutronien ja protonien lukumäärien suhde oli $\\frac{N_\\text{n}}{N_\\text{p}}=\\exp\\left(-\\frac{\\Delta mc^2}{kT}\\right)$, jossa $\\Delta m=m_\\text{n}-m_\\text{p}$ ja $k$ on Boltzmannin vakio. Nukleoneista neutroneja on osuus $R=\\frac{N_\\text{n}}{N_\\text{n}+N_\\text{p}}$. Aineiston kuvassa on kevyiden isotooppien massaosuuksien teoreettinen ennuste (vedyn massaosuuden yksikköinä) aineen tiheyden funktiona, ja pystysuora viiva osoittaa WMAP-satelliitin havaintojen kohdan.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 5,
+     "prompt": "Laske neutronien osuus nukleoneista $R$ lämpötilassa $T=1{,}0\\cdot 10^{10}\\ \\text{K}$.",
+     "hints": [
+      "Hae taulukosta neutronin ja protonin massat ja Boltzmannin vakio. Laske ensin $\\frac{N_\\text{n}}{N_\\text{p}}$ annetulla kaavalla.",
+      "$\\Delta mc^2\\approx 2{,}07\\cdot 10^{-13}\\ \\text{J}$ (1,29 MeV) ja $kT\\approx 1{,}38\\cdot 10^{-13}\\ \\text{J}$. Merkitse $x=\\frac{N_\\text{n}}{N_\\text{p}}$, jolloin $R=\\frac{x}{1+x}$."
+     ],
+     "solution": "1. Massojen erotus: $\\Delta m=m_\\text{n}-m_\\text{p}=1{,}67492747\\cdot 10^{-27}\\ \\text{kg}-1{,}67261898\\cdot 10^{-27}\\ \\text{kg}\\approx 2{,}308\\cdot 10^{-30}\\ \\text{kg}$.\n2. Eksponentti:\n$$\\frac{\\Delta mc^2}{kT}=\\frac{2{,}308\\cdot 10^{-30}\\ \\text{kg}\\cdot\\left(2{,}998\\cdot 10^{8}\\ \\text{m/s}\\right)^2}{1{,}381\\cdot 10^{-23}\\ \\text{J/K}\\cdot 1{,}0\\cdot 10^{10}\\ \\text{K}}\\approx 1{,}50.$$\n3. Lukumäärien suhde: $x=\\frac{N_\\text{n}}{N_\\text{p}}=e^{-1{,}50}\\approx 0{,}22$.\n4. Neutronien osuus: $R=\\frac{N_\\text{n}}{N_\\text{n}+N_\\text{p}}=\\frac{x}{x+1}\\approx\\frac{0{,}222}{1{,}222}\\approx 0{,}18$.\n\n**Vastaus: $R\\approx 0{,}18$ (noin 18 % nukleoneista on neutroneja)**\n\n**Sudenkuoppa:** vastaukseksi annetaan suhde $\\frac{N_\\text{n}}{N_\\text{p}}\\approx 0{,}22$ tai protonien osuus.",
+     "answer": "$R\\approx 0{,}18$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.2",
+     "points": 2,
+     "prompt": "Kirjoita reaktioyhtälö, jossa neutroni muuttuu protoniksi.",
+     "hints": [
+      "Varaus ja leptoniluku säilyvät. Vapaa neutroni muuttuu protoniksi beeta-miinus-hajoamisessa."
+     ],
+     "solution": "1. Beeta-miinus-hajoamisessa neutroni muuttuu protoniksi, ja syntyy elektroni ja elektronin antineutriino:\n$$\\mathrm{n}\\to\\mathrm{p}+\\mathrm{e}^-+\\bar{\\nu}_\\mathrm{e}$$\n2. Tarkistus: varaus $0=+1-1+0$, nukleoniluku $1=1$, leptoniluku $0=+1-1$.\n3. Varhaisessa maailmankaikkeudessa myös reaktio $\\mathrm{n}+\\nu_\\mathrm{e}\\to\\mathrm{p}+\\mathrm{e}^-$ muuttaa neutroneja protoneiksi.\n\n**Vastaus: $\\mathrm{n}\\to\\mathrm{p}+\\mathrm{e}^-+\\bar{\\nu}_\\mathrm{e}$**",
+     "answer": "$\\mathrm{n}\\to\\mathrm{p}+\\mathrm{e}^-+\\bar{\\nu}_\\mathrm{e}$",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 3,
+     "prompt": "Kirjoita reaktioketju, jossa protoneista ja neutroneista syntyy lopulta helium-4-ydin. Jokaisen reaktion vasemmalla puolella saa olla vain kaksi hiukkasta tai ydintä.",
+     "hints": [
+      "Aloita deuteronista: protoni ja neutroni yhtyvät. Miten kahdesta deuteronista, tai deuteronista ja yksittäisistä nukleoneista, saadaan ydin, jossa on kaksi protonia ja kaksi neutronia?"
+     ],
+     "solution": "1. Protoni ja neutroni muodostavat deuteronin: $\\mathrm{p}+\\mathrm{n}\\to{}^{2}_{1}\\mathrm{H}\\ (+\\gamma)$. Reaktio tapahtuu kahdesti, jolloin syntyy kaksi deuteronia.\n2. Kaksi deuteronia yhtyy heliumiksi: ${}^{2}_{1}\\mathrm{H}+{}^{2}_{1}\\mathrm{H}\\to{}^{4}_{2}\\mathrm{He}\\ (+\\gamma)$.\n3. Myös muut oikeat ketjut kelpaavat, esimerkiksi ${}^{2}_{1}\\mathrm{H}+\\mathrm{p}\\to{}^{3}_{2}\\mathrm{He}$ ja sitten ${}^{3}_{2}\\mathrm{He}+\\mathrm{n}\\to{}^{4}_{2}\\mathrm{He}$.\n\n**Vastaus: $\\mathrm{p}+\\mathrm{n}\\to{}^{2}_{1}\\mathrm{H}$ (kahdesti), sitten ${}^{2}_{1}\\mathrm{H}+{}^{2}_{1}\\mathrm{H}\\to{}^{4}_{2}\\mathrm{He}$**\n\n**Sudenkuoppa:** vedyn isotoopin massaluvun merkitseminen väärin tai sen unohtaminen, että ensimmäinen reaktio tarvitaan kahteen kertaan.",
+     "answer": "$\\mathrm{p}+\\mathrm{n}\\to{}^{2}_{1}\\mathrm{H}$ (2 kertaa), ${}^{2}_{1}\\mathrm{H}+{}^{2}_{1}\\mathrm{H}\\to{}^{4}_{2}\\mathrm{He}$",
+     "check": "hvp"
+    },
+    {
+     "id": "8.4",
+     "points": 5,
+     "prompt": "Mitä aineiston 8.A kuvasta voi päätellä teoreettisen mallin ja havaintojen suhteesta? Arvioi kuvasta suunnilleen, mikä on heliumin massaosuus suhteessa vedyn massaosuuteen havaintojen kohdalla.",
+     "hints": [
+      "Katso, missä havaintoja kuvaavat ympyrät ovat suhteessa teoreettisiin käyriin. Pystyakselin yksikkö on vedyn massaosuus, joten He-4-käyrän lukema on suoraan heliumin ja vedyn massaosuuksien suhde.",
+      "Pystyakseli on logaritminen. Lue He-4-käyrän ympyrän kohta arvojen $10^{-1}$ ja $10^{0}$ väliltä: se on lähellä apuviivoja 0,2 ja 0,3."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Havaintoja kuvaavat ympyrät osuvat kaikkien isotooppien (He-4, deuterium, He-3 ja Li-7) teoreettisille käyrille samalla tiheyden arvolla. Alkuräjähdyksen ydinsynteesiin perustuva malli ennustaa siis kevyiden isotooppien havaitut osuudet hyvin.\n- He-4-käyrä ja pystyviiva leikkaavat noin kohdassa 0,2–0,3. Koska pystyakselin yksikkö on vedyn massaosuus, heliumin ja vedyn massaosuuksien suhde on noin 0,25, eli vetyä on massaltaan noin 4–5-kertaisesti heliumiin verrattuna.\n\n**Esimerkkivastaus:** Kuvan mukaan WMAP-satelliitin havainnot osuvat kaikilla neljällä kevyellä isotoopilla teoreettisille käyrille yhdellä ja samalla aineen tiheydellä, joten alkuräjähdysmalli selittää kevyiden alkuaineiden runsaudet hyvin. Helium-4:n käyrältä luetaan havaintokohdassa arvo noin 0,25. Koska asteikon yksikkönä on vedyn massaosuus, heliumin massa on noin neljännes vedyn massasta.\n\n**Sudenkuoppa:** kuvaaja ei esitä runsauksien muutosta ajan funktiona, vaan ennusteen eri tiheyksillä.",
+     "answer": "malli vastaa havaintoja; $\\frac{m_\\text{He}}{m_\\text{H}}\\approx 0{,}2\\text{–}0{,}3$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Fyysikko hyppii trampoliinilla niin, että hän on osan ajasta ilmassa. Taulukossa 9.A on hänen pystysuora paikkansa $y$ ajan funktiona 0,01 s:n välein (0–3,0 s). Tekstin 9.B mallissa $y$ mitataan kuormittamattoman trampoliinin tasosta ylöspäin. Kosketuksen aikana trampoliini työntää hyppijää voimalla $F=-ky$, ja liike on harmonista värähdysliikettä: $y(t)=-\\frac{mg}{k}-A\\cos(2\\pi ft)$, jossa $f=\\frac1{2\\pi}\\sqrt{\\frac km}$.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 6,
+     "prompt": "Selitä, miten fyysikon nopeus lasketaan taulukon 9.A paikkatiedoista, ja piirrä nopeuden kuvaaja kaikilla taulukon hetkillä.",
+     "hints": [
+      "Nopeus on paikan muutosnopeus: $v\\approx\\frac{\\Delta y}{\\Delta t}$ peräkkäisten mittausten välillä. Myös ohjelman derivointitoiminto käy.",
+      "Mittausväli on $\\Delta t=0{,}01\\ \\text{s}$. Laske jokaiselle välille $\\frac{y_{i+1}-y_i}{\\Delta t}$ (tai keskeisdifferenssi $\\frac{y_{i+1}-y_{i-1}}{2\\Delta t}$) ja piirrä pisteet ajan funktiona. Ilmalennon aikana nopeus pienenee suoraviivaisesti noin +7 m/s:sta noin −7 m/s:iin."
+     ],
+     "solution": "1. Nopeus on paikan derivaatta ajan suhteen. Taulukosta se saadaan kunkin mittausvälin keskinopeutena $v_i\\approx\\frac{y_{i+1}-y_i}{t_{i+1}-t_i}$, jossa $\\Delta t=0{,}01\\ \\text{s}$, tai hieman tarkemmin keskeisdifferenssinä $v_i\\approx\\frac{y_{i+1}-y_{i-1}}{2\\Delta t}$. Taulukkolaskenta- tai mittausohjelman derivointi tekee saman.\n2. Kuvaajan (vaaka-akselilla $t$ (s), pystyakselilla $v$ (m/s)) kulku:\n   - 0–0,21 s: fyysikko on trampoliinilla, ja nopeus kasvaa nollasta noin +7,2 m/s:iin kaarevasti (sinimuotoisesti).\n   - 0,21–1,67 s: ilmalento, jolloin nopeus pienenee lineaarisesti noin +7,2 m/s:sta noin −7,1 m/s:iin. Nopeus on nolla lakipisteessä noin hetkellä 0,94 s.\n   - 1,67–2,1 s: taas trampoliinilla. Nopeus kulkee nollan kautta alimmassa kohdassa (noin 1,89 s) ja kasvaa taas noin +7 m/s:iin.\n   - 2,1–3,0 s: uusi lento, jossa nopeus pienenee taas lineaarisesti.\n\n**Vastaus: $v_i\\approx\\frac{\\Delta y}{\\Delta t}$ ($\\Delta t=0{,}01$ s); kuvaajassa vuorottelevat kaarevat kosketusjaksot ja lineaarisesti pienenevät lentojaksot.**\n\n**Sudenkuoppa:** paikan ja ajan suhde $\\frac yt$ tai tulo ei ole nopeus. Myöskään harmonisen funktion sovittaminen koko aineistoon ei toimi, koska liike ei ole koko ajan harmonista.",
+     "answer": "$v\\approx\\frac{\\Delta y}{\\Delta t}$, $\\Delta t=0{,}01$ s",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2–9.4",
+     "points": 3,
+     "prompt": "Kolme monivalintaa (vaihtoehdot alkuperäisessä tehtävässä):\n\n- 9.2: mikä liikemalli (vaihtoehtoina tasainen, tasaisesti kiihtyvä, harmoninen värähdys- tai pyörimisliike) sopii hetkeen 0,1 s\n- 9.3: sama kysymys hetkellä 0,5 s\n- 9.4: milloin liikkeen tyyppi seuraavan kerran vaihtuu hetken 0,5 s jälkeen (0,9 s, 1,7 s, 1,9 s vai 2,1 s).",
+     "hints": [
+      "Onko fyysikko kyseisellä hetkellä trampoliinin varassa ($y<0$) vai ilmassa ($y>0$)? Ilmassa ainoa voima on paino. Liikkeen tyyppi vaihtuu, kun hyppijä osuu trampoliiniin tai irtoaa siitä."
+     ],
+     "solution": "1. **9.2 C (harmoninen värähdysliike).** Hetkellä 0,1 s $y\\approx-0{,}77\\ \\text{m}$, joten fyysikko on trampoliinilla. Voimien summa $-ky-mg$ on verrannollinen poikkeamaan tasapainoasemasta, mikä on harmonisen värähdysliikkeen ehto.\n2. **9.3 B (tasaisesti kiihtyvä liike).** Hetkellä 0,5 s $y\\approx1{,}64\\ \\text{m}$, eli fyysikko on ilmassa. Ainoa voima on paino, joten kiihtyvyys on vakio $g$ alaspäin.\n3. **9.4 B (1,7 s).** Fyysikko palaa trampoliinin tasolle $y=0$ noin hetkellä 1,67 s, jolloin vapaa pudotus vaihtuu harmoniseksi liikkeeksi. Hetki 0,9 s on lennon lakipiste, jossa liikkeen tyyppi ei vaihdu. 1,9 s on alin kohta ja 2,1 s seuraava irtoaminen.\n\n**Vastaus: 9.2 C · 9.3 B · 9.4 B**",
+     "answer": "9.2 C (harmoninen) · 9.3 B (tasaisesti kiihtyvä) · 9.4 B (1,7 s)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.5",
+     "points": 4,
+     "prompt": "Määritä fyysikon suurin kiihtyvyys.",
+     "hints": [
+      "Kiihtyvyys on nopeuden derivaatta. Laske nopeusdatasta vielä kerran $\\frac{\\Delta v}{\\Delta t}$ tai piirrä nopeuskuvaajan jyrkimpään kohtaan tangentti. Jyrkin kohta on trampoliinin alimmassa kohdassa, jossa jousivoima on suurin."
+     ],
+     "solution": "1. Kiihtyvyys on nopeuden kuvaajan kulmakerroin. Se on suurin siellä, missä nopeuskuvaaja on jyrkimmillään, eli trampoliinin alimmassa kohdassa (hetket 0 s ja noin 1,89 s), jossa trampoliinin voima on suurin.\n2. Derivoimalla nopeusdata uudelleen tai käyttämällä tangenttia saadaan alimmassa kohdassa $a\\approx 58\\ \\text{m/s}^2$ ylöspäin: nopeus muuttuu siellä noin 0,58 m/s jokaisen 0,01 s:n aikana.\n3. Tämä on noin kuusinkertainen putoamiskiihtyvyyteen verrattuna. Ilmassa kiihtyvyys on vain $9{,}8\\ \\text{m/s}^2$ alaspäin.\n\n**Vastaus: $a_\\text{max}\\approx 58\\ \\text{m/s}^2$ (ylöspäin, alimmassa kohdassa)**\n\n**Sudenkuoppa:** tangentin piirtäminen paikan kuvaajaan antaa nopeuden, ei kiihtyvyyttä.",
+     "answer": "$a_\\text{max}\\approx 58\\ \\text{m/s}^2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.6",
+     "points": 7,
+     "prompt": "Johda tekstin 9.B mallista lauseke suurimmalle amplitudille $A$, jolla hyppijä pysyy koko ajan kosketuksissa trampoliiniin. Laske $A$, kun $m=68$ kg ja trampoliinin jousivakio on $k=4\\,600$ N/m.",
+     "hints": [
+      "Trampoliini voi vain työntää ylöspäin, joten kosketus säilyy vain, jos hyppijä ei nouse kuormittamattoman trampoliinin tason $y=0$ yläpuolelle. Missä on värähtelyn tasapainoasema?",
+      "Tasapainoasema on $y_0=-\\frac{mg}{k}$, ja värähtelyn ylin kohta on $y_0+A$. Vaadi, että $y_0+A\\le 0$."
+     ],
+     "solution": "1. Tasapainoasemassa voimat kumoavat toisensa: $-ky_0-mg=0$, joten $y_0=-\\frac{mg}{k}$.\n2. Liike $y(t)=-\\frac{mg}{k}-A\\cos(2\\pi ft)$ on ylimmillään, kun $\\cos(2\\pi ft)=-1$: $y_\\text{max}=-\\frac{mg}{k}+A$.\n3. Trampoliinin voima $F=-ky$ voi osoittaa vain ylöspäin, joten se vaikuttaa vain, kun $y\\le 0$. Jalat pysyvät kiinni, jos $y_\\text{max}\\le 0$, eli\n$$A\\le\\frac{mg}{k}.$$\nSamaan päästään kiihtyvyydellä: ylimmässä kohdassa kiihtyvyys on $\\frac kmA$ alaspäin, eikä se saa olla suurempi kuin $g$, koska trampoliini ei voi vetää hyppijää alaspäin.\n4. Lukuarvo:\n$$A_\\text{max}=\\frac{mg}{k}=\\frac{68\\ \\text{kg}\\cdot 9{,}81\\ \\text{m/s}^2}{4600\\ \\text{N/m}}\\approx 0{,}145\\ \\text{m}.$$\n\n**Vastaus: $A_\\text{max}=\\dfrac{mg}{k}\\approx 0{,}15\\ \\text{m}$**\n\n**Sudenkuoppa:** amplitudin ratkaiseminen paikan lausekkeesta sijoittamalla siihen arvattuja lukuarvoja perustelematta ehtoa $y\\le 0$.",
+     "answer": "$A_\\text{max}=\\dfrac{mg}{k}\\approx 0{,}15\\ \\text{m}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Puolen litran vesipullo (kuva 10.A) tuotiin jääkaapista olohuoneeseen, ja veden lämpötila mitattiin viiden minuutin välein 1,5 tunnin ajan (taulukko 10.B). Jääkaapissa on 5,3 °C ja olohuoneessa 21,9 °C, ja ulkoilman paine on normaali ilmanpaine.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 7,
+     "prompt": "Piirrä veden ja huoneen lämpötilaero ajan funktiona. Arvioi, kuinka pitkän ajan kuluttua veden lämpötila olisi mittaustarkkuuden (0,1 °C) rajoissa sama kuin huoneen lämpötila.",
+     "hints": [
+      "Laske jokaiselle mittaukselle $\\Delta T=21{,}9\\ \\text{°C}-T$ ja piirrä pisteet. Lämpötilaero pienenee Newtonin jäähtymislain mukaan eksponentiaalisesti, joten sovita pisteisiin funktio $\\Delta T=\\Delta T_0e^{-kt}$.",
+      "Sovite on noin $\\Delta T\\approx 16{,}0\\ \\text{°C}\\cdot e^{-0{,}0099\\,t/\\text{min}}$. Ratkaise, milloin $\\Delta T$ laskee alle 0,05 °C, jolloin mittari näyttää eroksi 0,0 °C."
+     ],
+     "solution": "1. Lämpötilaero $\\Delta T=21{,}9\\ \\text{°C}-T$ on alussa 16,6 °C ja 90 min kohdalla 6,9 °C.\n2. Piirretään pisteet erillisinä: vaaka-akselilla $t$ (min), pystyakselilla $\\Delta T$ (°C).\n3. Lämpöä siirtyy veteen teholla, joka on verrannollinen lämpötilaeroon, joten ero pienenee eksponentiaalisesti. Sovitus antaa $\\Delta T\\approx 16{,}0\\ \\text{°C}\\cdot e^{-0{,}0099\\,t/\\text{min}}$.\n4. Mittari näyttää 0,1 °C:n tarkkuudella, joten ero on mittaustarkkuuden rajoissa nolla, kun $\\Delta T<0{,}05\\ \\text{°C}$:\n$$t=\\frac{\\ln\\left(16{,}0/0{,}05\\right)}{0{,}0099\\ \\text{min}^{-1}}\\approx 580\\ \\text{min}.$$\n5. Ekstrapolointi on herkkä sovitukselle (esimerkiksi logaritmoidun datan suorasovite antaa noin 610 min), joten tulos on noin 580–610 min eli noin 10 tuntia.\n\n**Vastaus: noin 600 min (580–610 min, noin 10 h)**\n\n**Sudenkuoppa:** suoran tai polynomin sovittaminen. Lämpötilaero ei pienene lineaarisesti, vaan hidastuen kohti nollaa.",
+     "answer": "noin 580–610 min (noin 10 h)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.2",
+     "points": 5,
+     "prompt": "Pullo pantiin 1,5 tunnin kuluttua takaisin jääkaappiin. Jääkaappi toimii ideaalisella suorituskyvyllä $\\varepsilon_\\text{max}=\\frac QW=\\frac1{\\eta_\\text{max}}-1$, jossa $Q$ on siirretty lämpö, $W$ työ ja $\\eta_\\text{max}$ ideaalinen (Carnot'n) hyötysuhde. Kuinka paljon ylimääräistä sähköenergiaa kuluu, kun vesi jäähtyy takaisin jääkaapin lämpötilaan?",
+     "hints": [
+      "Vedestä poistettava lämpö on $Q=cm\\Delta T$, jossa $\\Delta T$ on veden lämpeneminen 1,5 tunnissa (15,0 °C − 5,3 °C). Carnot'n hyötysuhde on $\\eta_\\text{max}=1-\\frac{T_\\text{k}}{T_\\text{h}}$ kelvineinä.",
+      "Kylmä säiliö on jääkaappi (278,45 K) ja lämmin huone (295,05 K), joten $\\varepsilon_\\text{max}=\\frac{T_\\text{k}}{T_\\text{h}-T_\\text{k}}\\approx 16{,}8$. Sähköenergia on $W=\\frac{Q}{\\varepsilon_\\text{max}}$."
+     ],
+     "solution": "1. Veden lämpeneminen: $\\Delta T=15{,}0\\ \\text{°C}-5{,}3\\ \\text{°C}=9{,}7\\ \\text{K}$. Veden massa on noin 0,50 kg.\n2. Vedestä poistettava lämpö: $Q=cm\\Delta T=4{,}19\\ \\text{kJ/(kg K)}\\cdot 0{,}50\\ \\text{kg}\\cdot 9{,}7\\ \\text{K}\\approx 20\\ \\text{kJ}$.\n3. Ideaalinen suorituskyky: $\\eta_\\text{max}=1-\\frac{T_\\text{k}}{T_\\text{h}}$, joten\n$$\\varepsilon_\\text{max}=\\frac1{\\eta_\\text{max}}-1=\\frac{T_\\text{k}}{T_\\text{h}-T_\\text{k}}=\\frac{278{,}45\\ \\text{K}}{16{,}6\\ \\text{K}}\\approx 16{,}8.$$\n4. Sähköenergia: $W=\\frac{Q}{\\varepsilon_\\text{max}}=\\frac{20{,}3\\ \\text{kJ}}{16{,}8}\\approx 1{,}2\\ \\text{kJ}$.\n\n**Vastaus: noin 1,2 kJ**\n\n**Sudenkuoppa:** Celsius-asteiden käyttäminen suorituskyvyn kaavassa. Lämpötilojen suhteen on oltava kelvineinä.",
+     "answer": "$W\\approx 1{,}2\\ \\text{kJ}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 8,
+     "prompt": "Samanlainen tyhjä, suljettu (ilmaa sisältävä) pullo vietiin huoneenlämpöisenä jääkaappiin, ja se jäähtyi jääkaapin lämpötilaan. Jäähtyessään pullo alkoi rutistua, kun sisä- ja ulkopuolen paine-ero kasvoi 2,0 mbar:iin (kuva 10.C), ja paine-ero pysyi sen jälkeen vakiona. Määritä ilmaan tilavuuden muuttuessa tehty työ. Selitä, miten rutistuminen vaikutti ilman jäähtymiseen verrattuna pulloon, joka ei rutistu.",
+     "hints": [
+      "Pullossa oleva ilma on suljettu, joten ainemäärä säilyy: $\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$. Alussa $V_1=0{,}50$ l, $p_1=101\\,325$ Pa ja $T_1=295{,}05$ K; lopussa $p_2=p_1-200$ Pa ja $T_2=278{,}45$ K.",
+      "Pullo säilyttää muotonsa, kunnes paine-ero on 2,0 mbar, ja rutistuu sen jälkeen vakiopaineessa $p_2$. Työ vakiopaineessa on $W=p_2\\Delta V$, jossa $\\Delta V=V_1-V_2\\approx 27\\ \\text{cm}^3$. Jäähtymisen selitykseen käytä I pääsääntöä $\\Delta U=Q+W$."
+     ],
+     "solution": "1. Ideaalikaasun tilanyhtälö $pV=nRT$, jossa ainemäärä $n$ on vakio, antaa $\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$.\n2. Lopputilavuus:\n$$V_2=V_1\\frac{p_1T_2}{p_2T_1}=0{,}50\\ \\text{l}\\cdot\\frac{101\\,325\\ \\text{Pa}\\cdot 278{,}45\\ \\text{K}}{101\\,125\\ \\text{Pa}\\cdot 295{,}05\\ \\text{K}}\\approx 0{,}4728\\ \\text{l}.$$\n3. Tilavuuden muutos: $\\Delta V=V_1-V_2\\approx 0{,}0272\\ \\text{l}=2{,}72\\cdot 10^{-5}\\ \\text{m}^3$ (noin 5,4 %).\n4. Rutistuminen tapahtuu vakiopaineessa $p_2$, joten ulkoilma tekee pullon ilmaan työn $W=p_2\\Delta V=101\\,125\\ \\text{Pa}\\cdot 2{,}72\\cdot 10^{-5}\\ \\text{m}^3\\approx 2{,}75\\ \\text{J}$.\n5. I pääsääntö: $\\Delta U=Q+W$. Alku- ja loppulämpötila ovat samat kuin jäykässä pullossa, joten sisäenergian muutos on sama. Rutistuvassa pullossa ilmaan tehdään lisäksi positiivista työtä, joten ilmasta on siirryttävä lämpönä pois enemmän energiaa: $|Q|=|\\Delta U|+W$. Jäähtyminen kestää siksi kauemmin kuin pullossa, joka ei rutistu.\n\n**Vastaus: $W\\approx 2{,}75\\ \\text{J}$ (ilmaan tehty työ); rutistuminen hidastaa jäähtymistä, koska ilmasta on poistettava lämpönä myös siihen tehty työ.**\n\n**Sudenkuoppa:** paineen muutoksen unohtaminen tilavuuden muutosta laskettaessa, eli oletetaan $p_2=p_1$.",
+     "answer": "$W\\approx 2{,}75\\ \\text{J}$; jäähtyminen hidastuu",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Lukiolaiset tutkivat, noudattaako kuminauha jousivoiman lakia, ja kirjoittivat työstä selostuksen (aineisto 11.A). Opettaja jakoi selostuksen viiteen numeroituun osaan. Jokaisesta osasta etsitään fysikaalisesti merkittävin yksittäinen virhe ja kerrotaan, miten toimitaan tai raportoidaan oikein. Kussakin kohdassa saa mainita vain yhden virheen.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Työselostuksen osa 1 (tavoite, välineet, mittausjärjestely ja tulostaulukko): mikä on merkittävin fysikaalinen virhe, ja miten toimitaan tai raportoidaan oikein?",
+     "hints": [
+      "Katso, millä välineellä kuminauhan pituus mitattiin ja millä tarkkuudella tulokset on kirjattu taulukkoon. Riittääkö tarkkuus, kun venymät ovat vain muutamia senttimetrejä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- **Virhe:** pituus mitattiin metrin mittaisella tauluviivaimella, jonka lukematarkkuus on liian karkea. Taulukossa pituudet ovat kokonaisina senttimetreinä, vaikka venymät ovat vain 2–10 cm, joten suhteellinen epätarkkuus on suuri.\n- **Oikein:** pituus mitataan välineellä, josta voi lukea millimetrin tarkkuudella (esimerkiksi viivoitin tai rullamitta), ja tulokset kirjataan tällä tarkkuudella.\n\n**Esimerkkivastaus:** Osan 1 merkittävin virhe on liian karkea mittaväline. Tauluviivaimella pituudet saatiin vain senttimetrin tarkkuudella, mikä on pienillä venymillä jopa kymmeniä prosentteja. Oikein pituus mitataan millimetriasteikolla, esimerkiksi viivoittimella tai rullamitalla.\n\n**Sudenkuoppa:** kuminauhan lepopituuden arvo ei ole osan merkittävin virhe.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 4,
+     "prompt": "Työselostuksen osa 2 (mittausten kulku: vino statiivi, kaatuminen ja kuminauhan katkeaminen): mikä on merkittävin fysikaalinen virhe, ja miten toimitaan oikein?",
+     "hints": [
+      "Mikä tapahtumista muuttaa itse tutkittavaa kohdetta kesken mittaussarjan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- **Virhe:** kuminauha katkesi, ja tilalle vaihdettiin toinen, mutta mittaussarjaa jatkettiin siitä, mihin oli jääty. Sarjassa on silloin kahden eri kuminauhan tuloksia, eikä yksi jousivakio kuvaa kumpaakaan.\n- **Oikein:** kun kuminauha vaihdetaan, koko mittaussarja aloitetaan alusta uudella nauhalla, koska kuminauhat eivät ole keskenään täsmälleen samanlaisia. Koko sarja mitataan samalla nauhalla.\n\n**Esimerkkivastaus:** Osan 2 merkittävin virhe on se, että katkenneen kuminauhan tilalle otettiin uusi nauha ja mittaamista jatkettiin. Kahdella nauhalla voi olla eri jousivakio, joten tuloksia ei voi yhdistää. Nauhan vaihtamisen jälkeen kaikki mittaukset olisi pitänyt tehdä uudelleen alusta.\n\n**Sudenkuoppa:** statiivin kaatuminen tai puristimen irtoaminen ei ole merkittävin virhe.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Työselostuksen osa 3 (jousivoiman laki ja kuvaaja 1): mikä on merkittävin fysikaalinen virhe, ja miten toimitaan oikein?",
+     "hints": [
+      "Vertaa kuvaajan pisteitä taulukon 1 mittaustuloksiin. Onko kuvaajassa piste, jota ei ole mitattu?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- **Virhe:** kuvaajaan on lisätty origoon piste (pituus 0 m, voima 0 N), jota vastaavaa mittausta ei ole. Kuminauhan pituus ei ole nolla, vaikka sitä ei venytetä.\n- **Oikein:** kuvaajaan piirretään vain todelliset mittauspisteet. Olisi selkeämpää esittää voima venymän funktiona, mutta pituutta käyttämällä jousivakion saa myös suoran kulmakertoimesta, joten se ei ole varsinainen virhe.\n\n**Esimerkkivastaus:** Kuvaajan origossa on piste, jota ei ole mitattu. Se olisi tarkoittanut, että kuminauhan pituus olisi nolla ilman kuormaa, mikä on mahdotonta. Kuvaajaan saa piirtää vain mitatut pisteet.\n\n**Sudenkuoppa:** vaaka-akselin suureeksi valittu pituus venymän sijaan ei ole osan merkittävin virhe.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Työselostuksen osa 4 (jousivakion laskeminen ja tuloksen arviointi): mikä on merkittävin fysikaalinen virhe, ja miten toimitaan oikein?",
+     "hints": [
+      "Miten jousivakio lopulta laskettiin: koko mittausaineistosta vai yhdestä mittauksesta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- **Virhe:** jousivakio on laskettu yhdestä voima–venymä-parista ($k=\\frac Fx$ yhdellä parilla), vaikka mittauksia oli viisi.\n- **Oikein:** koko aineisto käytetään hyväksi: voiman ja venymän (tai pituuden) kuvaajaan sovitetaan suora, ja jousivakio on sen kulmakerroin.\n\n**Esimerkkivastaus:** Jousivakion arvo perustuu vain yhteen mittaukseen, jolloin sen yksittäinen mittausvirhe siirtyy suoraan tulokseen. Oikein jousivakio määritetään kaikkien mittauspisteiden kautta sovitetun suoran kulmakertoimena.\n\n**Sudenkuoppa:** kuminauhan väriin liittyvä pohdinta ei ole osan merkittävin virhe.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.5",
+     "points": 4,
+     "prompt": "Työselostuksen osa 5 (johtopäätökset ja pohdinta): mikä on merkittävin fysikaalinen virhe, ja miten raportoidaan oikein?",
+     "hints": [
+      "Voiko viiden punnuksen mittauksista päätellä, miten kuminauha käyttäytyy millä tahansa voimalla?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- **Virhe:** tulos yleistetään koskemaan kaikkia venyttäviä voimia, vaikka mittaukset kattavat vain voimat noin 0,2–1,2 N (venymät 2–10 cm). Kuminauha ei yleensä noudata lineaarista lakia suurilla venymillä, ja se voi katketa.\n- **Oikein:** johtopäätöksessä todetaan, että jousivoiman laki ja määritetty jousivakio pätevät vain tutkitulla voima- ja venymäalueella.\n\n**Esimerkkivastaus:** Osan 5 merkittävin virhe on tuloksen yleistäminen kaikille voimille. Mittaukset tehtiin vain viidellä pienellä kuormalla, joten niistä ei voi päätellä kuminauhan käyttäytymistä suurilla venymillä. Johtopäätöksessä pitää kertoa, millä voima- ja venymäalueella tulos on voimassa.\n\n**Sudenkuoppa:** viittauskäytäntö ei ole osan merkittävin virhe.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,474 @@
+{
+ "subject": "fysiikka",
+ "session": "2021S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2021S_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2021-09-15_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen 20 pisteen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 2,
+     "prompt": "Täydennä lause: aurinkokunnan pitää koossa mikä vuorovaikutus?",
+     "hints": [
+      "Neljästä perusvuorovaikutuksesta vain yksi vaikuttaa aina vetävästi ja ulottuu tähtitieteellisille etäisyyksille."
+     ],
+     "solution": "1. Planeettojen radat määräytyvät Auringon ja planeettojen massojen välisestä vetovoimasta.\n2. Sähköinen vuorovaikutus ei hallitse, koska taivaankappaleet ovat kokonaisuutena lähes sähköisesti neutraaleja, ja ydinvoimat ovat lyhytkantoisia.\n\n**Vastaus: gravitaatio**",
+     "answer": "gravitaatio(vuorovaikutus)",
+     "check": "hvp"
+    },
+    {
+     "id": "1.2",
+     "points": 2,
+     "prompt": "Täydennä lause: atomiydin pysyy koossa minkä vuorovaikutuksen ansiosta?",
+     "hints": [
+      "Protonit hylkivät toisiaan sähköisesti. Mikä perusvuorovaikutus on lyhyillä etäisyyksillä sitä voimakkaampi?"
+     ],
+     "solution": "1. Ytimen protonien välinen sähköinen hylkiminen on suuri, joten koossapitävän vuorovaikutuksen on oltava vielä voimakkaampi.\n2. Tällainen on vahva vuorovaikutus, joka vaikuttaa nukleonien välillä noin $10^{-15}\\,\\mathrm{m}$ etäisyyksillä.\n\n**Vastaus: vahva (vuorovaikutus)**",
+     "answer": "vahva",
+     "check": "hvp"
+    },
+    {
+     "id": "1.3",
+     "points": 2,
+     "prompt": "Täydennä lause: jos kappaleeseen vaikuttava kokonaisvoima ei ole nolla, millaisessa liikkeessä kappale on?",
+     "hints": [
+      "Newtonin II laki: $\\sum \\bar F = m\\bar a$. Mitä nollasta poikkeava kokonaisvoima merkitsee kiihtyvyydelle?"
+     ],
+     "solution": "1. Newtonin II lain mukaan $\\bar a = \\sum\\bar F / m$, joten nollasta poikkeava kokonaisvoima antaa kappaleelle kiihtyvyyden.\n2. Kiihtyvyys voi muuttaa vauhtia tai suuntaa (esim. tasainen ympyräliike), joten sopiva täydennys on yleinen.\n\n**Vastaus: kiihtyvässä (liikkeessä)**",
+     "answer": "kiihtyvässä",
+     "check": "hvp"
+    },
+    {
+     "id": "1.4",
+     "points": 2,
+     "prompt": "Täydennä lause: mikä suure säilyy kahden kappaleen kimmottomassa törmäyksessä?",
+     "hints": [
+      "Kimmottomassa törmäyksessä osa liike-energiasta muuttuu muiksi energiamuodoiksi. Mikä suure säilyy silti kaikissa törmäyksissä, kun ulkoisia voimia ei ole?"
+     ],
+     "solution": "1. Törmäyksessä kappaleet vaikuttavat toisiinsa yhtä suurin, vastakkaissuuntaisin voimin (Newtonin III laki), joten systeemin kokonaisliikemäärä säilyy.\n2. Liike-energia ei säily kimmottomassa törmäyksessä.\n\n**Vastaus: liikemäärä**\n\n**Sudenkuoppa:** vastaus ”energia” on väärä, jos sillä tarkoitetaan liike-energiaa.",
+     "answer": "liikemäärä",
+     "check": "hvp"
+    },
+    {
+     "id": "1.5",
+     "points": 2,
+     "prompt": "Täydennä lause: miten kolikon paksuus muuttuu, kun kolikkoa lämmitetään?",
+     "hints": [
+      "Ajattele kiinteän aineen lämpölaajenemista: $\\Delta l = \\alpha l_0 \\Delta T$."
+     ],
+     "solution": "1. Metallin pituuden lämpötilakerroin $\\alpha$ on positiivinen, joten kaikki mitat kasvavat lämpötilan noustessa.\n2. Paksuus on yksi kolikon mitoista.\n\n**Vastaus: kasvaa**",
+     "answer": "kasvaa",
+     "check": "hvp"
+    },
+    {
+     "id": "1.6",
+     "points": 2,
+     "prompt": "Täydennä lause: termodynaamiseen systeemiin tuodaan lämpö $Q$, ja systeemi tekee yhtä suuren työn ($|W|=|Q|$). Mitä tapahtuu systeemin lämpötilalle?",
+     "hints": [
+      "Käytä termodynamiikan ensimmäistä pääsääntöä $\\Delta U = Q - W$ (W = systeemin tekemä työ) ja muista, että ideaalikaasun sisäenergia riippuu vain lämpötilasta."
+     ],
+     "solution": "1. Ensimmäinen pääsääntö: $\\Delta U = Q - W$, kun $W$ on systeemin tekemä työ.\n2. Kun $W = Q$, saadaan $\\Delta U = 0$.\n3. Sisäenergia ei muutu, joten lämpötila ei muutu (kyseessä on isoterminen prosessi).\n\n**Vastaus: pysyy vakiona**",
+     "answer": "pysyy vakiona",
+     "check": "hvp"
+    },
+    {
+     "id": "1.7",
+     "points": 2,
+     "prompt": "Täydennä lause: miten viulun kielen tuottaman äänen aallonpituus (ilmassa) muuttuu, kun kieltä kiristetään?",
+     "hints": [
+      "Kiristäminen kasvattaa aallon etenemisnopeutta kielessä. Mieti ensin, mitä tapahtuu taajuudelle, ja sitten äänen aallonpituudelle ilmassa $\\lambda = v_{\\text{ääni}}/f$."
+     ],
+     "solution": "1. Kielen jännityksen kasvaessa aallon nopeus kielessä kasvaa, mutta kielen pituus ja siten seisovan aallon aallonpituus kielessä pysyvät samoina.\n2. Siksi taajuus $f = v_{\\text{kieli}}/\\lambda_{\\text{kieli}}$ kasvaa, ja ääni kuulostaa korkeammalta.\n3. Äänen nopeus ilmassa ei muutu, joten ilmassa etenevän äänen aallonpituus $\\lambda = v/f$ pienenee.\n\n**Vastaus: pienenee**",
+     "answer": "pienenee",
+     "check": "hvp"
+    },
+    {
+     "id": "1.8",
+     "points": 2,
+     "prompt": "Täydennä lause: mikä valon ominaisuus pysyy samana, kun valo siirtyy ilmasta lasiin?",
+     "hints": [
+      "Rajapinnassa valon nopeus ja aallonpituus muuttuvat. Mikä suure määräytyy valonlähteestä eikä väliaineesta?"
+     ],
+     "solution": "1. Lasissa valon nopeus on pienempi, $v = c/n$, ja aallonpituus lyhenee samassa suhteessa.\n2. Rajapinnan molemmin puolin värähtelyn on oltava tahdissa, joten taajuus säilyy.\n\n**Vastaus: taajuus**",
+     "answer": "taajuus",
+     "check": "hvp"
+    },
+    {
+     "id": "1.9",
+     "points": 2,
+     "prompt": "Täydennä lause: millaiset varaukset kahdella muovipallolla on, kun ne vetävät toisiaan puoleensa?",
+     "hints": [
+      "Coulombin laki: samanmerkkiset varaukset hylkivät, erimerkkiset vetävät."
+     ],
+     "solution": "1. Varattujen kappaleiden välinen voima on hylkivä samanmerkkisillä ja vetävä erimerkkisillä varauksilla.\n2. Täydennyksen kannalta oikea sana on siis erimerkkiset.\n\n(Huom. varattu pallo voi vetää puoleensa myös varauksetonta kappaletta polarisaation takia, mutta lause kysyy pallojen varauksista.)\n\n**Vastaus: erimerkkiset**",
+     "answer": "erimerkkiset",
+     "check": "hvp"
+    },
+    {
+     "id": "1.10",
+     "points": 2,
+     "prompt": "Täydennä lause: mikä induktiolain mukaan synnyttää sähkövirran suljettuun johdinsilmukkaan?",
+     "hints": [
+      "Faradayn induktiolaki: $e = -N\\dfrac{\\Delta\\Phi}{\\Delta t}$."
+     ],
+     "solution": "1. Induktiolain mukaan silmukkaan indusoituu jännite, kun silmukan läpäisevä magneettivuo muuttuu.\n2. Suljetussa silmukassa jännite synnyttää virran.\n3. Pelkkä magneettikenttä ei riitä, vaan tarvitaan vuon muutos.\n\n**Vastaus: magneettivuon muutos**",
+     "answer": "magneettivuon muutos",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Sulkapallo lyötiin hallissa suoraan ylöspäin. Siihen vaikuttavat paino ja ilmanvastus, joka on verrannollinen nopeuden neliöön. Mittausaineistossa 2.A on pallon nopeus ajan funktiona. Pallon massa on $4{,}8\\,\\mathrm{g}$ ja poikkipinta-ala $A = 0{,}0030\\,\\mathrm{m^2}$, ilman tiheys $\\rho = 1{,}22\\,\\mathrm{kg/m^3}$.\n\n- 2.1 Esitä mitattu nopeus ajan funktiona graafisesti (tasoitusta ei tarvita).\n- 2.2 Milloin pallo on korkeimmillaan? Millä aikavälillä nopeus on lähes vakio?\n- 2.3 Ilmanvastukselle pätee $F_D = \\frac12 C\\rho A v^2$. Määritä kerroin $C$ vakionopeuden aikavälin avulla.",
+     "hints": [
+      "Piirrä mittauspisteet erillisinä pisteinä ($t$ vaaka-akselille, $v$ pystyakselille). Lakipisteessä pallon nopeus on nolla. Vakionopeudella pallo ei kiihdy, joten siihen vaikuttavat voimat ovat tasapainossa.",
+      "Sovita suora nollakohdan ympärille (esim. välille $0{,}70$–$1{,}15\\,\\mathrm{s}$) ja ratkaise, milloin $v = 0$. Lopussa nopeus asettuu noin arvoon $-6{,}6\\,\\mathrm{m/s}$. Voimatasapainosta $mg = \\frac12 C\\rho A v^2$ saadaan $C = \\frac{2mg}{\\rho A v^2}$."
+     ],
+     "solution": "**2.1 Kuvaaja**\n\n1. Piirretään mittauspisteet $(t, v)$ erillisinä pisteinä (ei murtoviivaa). Akseleihin merkitään suure ja yksikkö: $t\\ (\\mathrm{s})$ ja $v\\ (\\mathrm{m/s})$.\n2. Kuvaajassa nopeus pienenee aluksi jyrkästi noin arvosta $31\\,\\mathrm{m/s}$, ylittää nollan noin hetkellä $0{,}9\\,\\mathrm{s}$, muuttuu negatiiviseksi (pallo putoaa) ja tasaantuu lopussa noin arvoon $-6{,}6\\,\\mathrm{m/s}$.\n\n**2.2 Lakipiste ja vakionopeus**\n\n3. Lakipisteessä pystysuora nopeus on nolla. Sovitetaan suora nollakohdan ympärillä oleviin pisteisiin ($0{,}70$–$1{,}15\\,\\mathrm{s}$): $v = -9{,}94\\,\\mathrm{m/s^2}\\cdot t + 9{,}31\\,\\mathrm{m/s}$.\n4. Kun $v = 0$: $t = \\frac{9{,}31\\,\\mathrm{m/s}}{9{,}94\\,\\mathrm{m/s^2}} \\approx 0{,}94\\,\\mathrm{s}$.\n5. Kuvaajan mukaan nopeus pysyy lähes vakiona noin aikavälillä $2{,}4$–$2{,}8\\,\\mathrm{s}$ (mittauksen loppu).\n\n**2.3 Kerroin $C$**\n\n6. Vakionopeudella kiihtyvyys on nolla, joten Newtonin II lain mukaan kokonaisvoima on nolla: $G = F_D$, eli $mg = \\frac12 C\\rho A v^2$.\n7. Ratkaistaan: $C = \\dfrac{2mg}{\\rho A v^2}$.\n8. Nopeuden itseisarvon keskiarvo välillä $2{,}40$–$2{,}81\\,\\mathrm{s}$ on $v = 6{,}578\\,\\mathrm{m/s}$.\n9. Sijoitetaan: $C = \\dfrac{2\\cdot 0{,}0048\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2}}{1{,}22\\,\\mathrm{kg/m^3}\\cdot 0{,}0030\\,\\mathrm{m^2}\\cdot(6{,}578\\,\\mathrm{m/s})^2} \\approx 0{,}59$.\n\n**Vastaus: lakipiste noin hetkellä $0{,}94\\,\\mathrm{s}$; nopeus lähes vakio noin välillä $2{,}4$–$2{,}8\\,\\mathrm{s}$; $C \\approx 0{,}59$.**\n\nHuomaa, että sovitetun suoran kulmakerroin lakipisteen lähellä on lähes $-g$. Se on järkevää, koska nopeuden ollessa pieni myös ilmanvastus on pieni ja palloon vaikuttaa käytännössä vain paino.\n\n**Sudenkuoppa:** mittauspisteiden yhdistäminen murtoviivaksi tai tulosten ilmoittaminen liian monella merkitsevällä numerolla. Lähtötiedot ovat kahden merkitsevän numeron tarkkuudella.",
+     "answer": "$t \\approx 0{,}94\\,\\mathrm{s}$; vakionopeus n. $2{,}4$–$2{,}8\\,\\mathrm{s}$; $C \\approx 0{,}59$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Pyykinpesukoneen samaa ohjelmaa voi käyttää viidellä pesulämpötilalla. Aineistossa 3.A on ohjelman kesto kullakin lämpötilalla (kylmä vesi on $7\\,^\\circ\\mathrm{C}$). Ohjelman vaiheet ovat samat lukuun ottamatta pesuveden lämmitystä. Ohjelmassa on lisäksi kylmällä vedellä tehtävä huuhtelu, jonka vesimäärä on sama kuin pesun. Koko ohjelman vedenkulutus on $37\\,\\mathrm{l}$. Määritä graafisen esityksen avulla koneen lämmitysvastuksen teho.",
+     "hints": [
+      "Koska vain lämmitysaika riippuu lämpötilasta, ohjelman keston kasvu kertoo, kauanko veden lämmittäminen kestää. Piirrä pesulämpötila ohjelman keston funktiona ja sovita suora: kulmakerroin on veden lämpenemisnopeus.",
+      "Sovitetun suoran kulmakerroin on noin $1{,}13\\,^\\circ\\mathrm{C/min}$. Pesuun lämmitetään vain puolet vedestä, eli $18{,}5\\,\\mathrm{kg}$. Teho on $P = \\frac{E}{t} = cm\\frac{\\Delta T}{t}$."
+     ],
+     "solution": "1. Muutetaan kestot minuuteiksi: $83$, $104$, $116$, $132$ ja $156\\,\\mathrm{min}$ lämpötiloilla $7$, $30$, $40$, $60$ ja $90\\,^\\circ\\mathrm{C}$.\n2. Piirretään pesulämpötila $T$ ohjelman keston $t$ funktiona erillisinä pisteinä ja sovitetaan pisteisiin suora. Pisteet ovat lähes suoralla, eli lämmitysaika on verrannollinen lämpötilan nousuun.\n3. Suoran kulmakerroin on lämpenemisnopeus: $\\dfrac{\\Delta T}{\\Delta t} \\approx 1{,}132\\,^\\circ\\mathrm{C/min} = 0{,}01887\\,^\\circ\\mathrm{C/s}$.\n4. Lämmitettävän veden massa on puolet kokonaiskulutuksesta, koska huuhteluvesi on kylmää: $m = \\frac{37\\,\\mathrm{kg}}{2} = 18{,}5\\,\\mathrm{kg}$ ($\\rho_{\\text{vesi}} \\approx 1{,}0\\,\\mathrm{kg/l}$).\n5. Veteen siirtyvä energia on $E = cm\\Delta T$, ja teho on $P = \\dfrac{E}{\\Delta t} = cm\\dfrac{\\Delta T}{\\Delta t}$.\n6. Sijoitetaan ($c = 4{,}19\\,\\mathrm{kJ/(kg\\cdot{}^\\circ C)}$): $P = 4190\\,\\mathrm{\\tfrac{J}{kg\\cdot{}^\\circ C}}\\cdot 18{,}5\\,\\mathrm{kg}\\cdot 0{,}01887\\,\\mathrm{^\\circ C/s} \\approx 1{,}46\\,\\mathrm{kW}$.\n\n**Vastaus: lämmitysvastuksen teho on noin $1{,}5\\,\\mathrm{kW}$.**\n\nVaihtoehtoisesti voi piirtää keston lämpötilan funktiona. Silloin kulmakerroin on $0{,}880\\,\\mathrm{min/^\\circ C}$, ja $P = cm/(0{,}880\\cdot 60\\,\\mathrm{s/^\\circ C})$ antaa saman tuloksen.\n\n**Sudenkuoppa:** koko $37$ litran käyttäminen antaa kaksinkertaisen tehon ($2{,}9\\,\\mathrm{kW}$). Myös kahden taulukkoarvon käyttäminen ilman graafista sovitusta jättää tehtävänannon ehdon täyttämättä.",
+     "answer": "$P \\approx 1{,}5\\,\\mathrm{kW}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Täytettyä ilmapalloa hangataan vaatetta vasten. Mitä pallolle tällöin tapahtuu?",
+     "hints": [
+      "Hankaussähkö: mikä varauksenkuljettaja voi siirtyä kahden eri materiaalin välillä, kun ne hankautuvat toisiinsa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- elektroneja siirtyy vaatteesta palloon tai pallosta vaatteeseen (materiaaleista riippuen)\n- pallo varautuu sähköisesti (hankaussähkö); protonit eivät siirry\n\n**Esimerkkivastaus:** Kun pallon pinta hankautuu kankaaseen, elektroneja siirtyy materiaalista toiseen, koska materiaalit sitovat elektronejaan eri voimakkuudella. Tavallisesti kumipallo saa ylimäärän elektroneja ja varautuu negatiivisesti. Pallo on hankaamisen jälkeen siis sähköisesti varattu.\n\n**Sudenkuoppa:** puhutaan epämääräisesti ”varausten” tai ”hiukkasten” siirtymisestä. Siirtyviä hiukkasia ovat nimenomaan elektronit.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 8,
+     "prompt": "Selitä, miksi hangattu ilmapallo tarttuu seinään ja pysyy paikallaan. Piirrä palloon vaikuttavat voimat (ks. alkuperäisen tehtävän kuva 4.A) ja nimeä ne.",
+     "hints": [
+      "Seinä ei ole varattu. Mieti, mitä varatun pallon sähkökenttä saa aikaan seinän pinnan molekyyleissä. Tarvitset neljä voimaa: kaksi vaakasuoraa ja kaksi pystysuoraa.",
+      "Polarisoitunut seinä vetää palloa puoleensa (sähköinen voima), ja seinä työntää palloa tukivoimalla. Mikä voima estää palloa putoamasta, ja miksi se on mahdollinen vain, kun pallo painautuu seinää vasten?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- varattu pallo polarisoi seinän pinnan molekyylit, jolloin palloon kohdistuu seinää kohti suuntautuva sähköinen voima $\\bar F_\\mathrm{s}$\n- voimakuvio, jossa on täsmälleen neljä voimaa: sähköinen voima $\\bar F_\\mathrm{s}$ (kohti seinää), tukivoima $\\bar N$ (seinästä poispäin), paino $\\bar G$ (alas) ja lepokitka $\\bar F_\\mu$ (ylös)\n- tasapaino: $F_\\mathrm{s} = N$ ja $F_\\mu = G$, joten nuolet ovat pareittain yhtä pitkiä\n- kitkan merkitys: lepokitka on mahdollinen, koska sähköinen voima painaa palloa seinää vasten ja synnyttää tukivoiman ($F_\\mu \\le \\mu_0 N$)\n\n**Esimerkkivastaus:** Negatiivisesti varatun pallon sähkökenttä siirtää seinän molekyylien elektronipilviä hieman poispäin pallosta, jolloin seinän pintaan pallon kohdalle jää positiivinen osa. Koska positiivinen osa on lähempänä palloa kuin negatiivinen, vetovoima on hylkimistä suurempi, ja palloon kohdistuu seinää kohti suuntautuva sähköinen voima $\\bar F_\\mathrm{s}$. Seinä työntää palloa yhtä suurella tukivoimalla $\\bar N$. Pystysuunnassa palloon vaikuttaa alaspäin paino $\\bar G$ ja ylöspäin seinän ja pallon välinen lepokitka $\\bar F_\\mu$. Pallo pysyy paikallaan, koska kokonaisvoima on nolla: $F_\\mathrm{s} = N$ ja $F_\\mu = G$. Ilman sähköistä voimaa ei olisi tukivoimaa eikä siten kitkaakaan.\n\n**Sudenkuoppa:** väitetään, että seinä on varautunut, tai piirretään palloon vaikuttavien voimien lisäksi niiden vastavoimia. Kitkan unohtaminen jättää pystysuoran tasapainon selittämättä.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Miksi seinään tarttunut ilmapallo alkaa jonkin ajan kuluttua liukua alas?",
+     "hints": [
+      "Mikä pallossa muuttuu ajan kuluessa, ja miten se vaikuttaa sähköiseen voimaan, tukivoimaan ja suurimpaan mahdolliseen lepokitkaan $\\mu_0 N$?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- pallon varaus pienenee vähitellen (varaus purkautuu esim. seinän ja kostean ilman kautta)\n- sähköinen voima ja siten tukivoima pienenevät, jolloin lepokitkan suurin arvo $\\mu_0 N$ pienenee\n- kun $\\mu_0 N < G$, kitka ei enää riitä kannattelemaan palloa, ja se alkaa liukua alas\n\n**Esimerkkivastaus:** Pallon ylimääräiset elektronit siirtyvät vähitellen pois, esimerkiksi seinän pinnan ja ilmankosteuden kautta. Kun varaus pienenee, seinän polarisaatio ja sähköinen voima heikkenevät, ja myös tukivoima $N$ pienenee. Lepokitka voi olla enintään $\\mu_0 N$. Kun tämä raja-arvo laskee pallon painoa pienemmäksi, pystysuuntainen tasapaino ei enää ole mahdollinen, ja pallo liukuu seinää pitkin alas.\n\n**Sudenkuoppa:** puhutaan varauksen ”tasoittumisesta” pallon ja seinän välillä ilman, että kytketään varauksen pienenemistä tukivoimaan ja kitkaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Keinun naruiksi on vain ohutta pyykkinarua, jonka valmistajan ilmoittama murtolujuus on $65\\,\\mathrm{kg}$ (narun kestämä voima vastaa $65\\,\\mathrm{kg}$ massan painoa). Keinussa on kaksi narua (ks. alkuperäisen tehtävän kuva 5.A). Missä liikeradan kohdassa naruihin kohdistuu suurin voima? Perustele. Mikä on keinujan suurin sallittu massa, kun hän heilahtaa suurimmillaan $90^\\circ$ kulmaan pystysuorasta?",
+     "hints": [
+      "Keinu on ympyräliikkeessä, joten radan normaalin suunnassa Newtonin II laki on $ma_\\mathrm{n} = T - G_\\mathrm{n}$. Mieti, missä kohdassa sekä painon normaalikomponentti että keskeiskiihtyvyys $v^2/r$ ovat suurimmillaan.",
+      "Alimmassa kohdassa $T = mg + \\frac{mv^2}{r}$. Mekaanisen energian säilymisestä $v^2 = 2gh$, ja $90^\\circ$ heilahduksessa pudotuskorkeus on $h = r$. Kaksi narua kestää yhteensä voiman $2\\cdot 65\\,\\mathrm{kg}\\cdot g$."
+     ],
+     "solution": "1. Keinuun (keinuja ja lauta) vaikuttavat paino $\\bar G = m\\bar g$ ja narujen yhteenlaskettu jännitysvoima $\\bar T$ (voimakuvioon nämä kaksi voimaa).\n2. Keinu liikkuu ympyrän kaarta, joten narun suunnassa (radan normaali) $ma_\\mathrm{n} = T - G_\\mathrm{n}$, missä $G_\\mathrm{n} = mg\\cos\\varphi$ on painon komponentti narun suunnassa ja $\\varphi$ narun kulma pystysuorasta. Siis $T = m\\dfrac{v^2}{r} + mg\\cos\\varphi$.\n3. Molemmat termit ovat suurimmillaan alimmassa kohdassa: $\\cos\\varphi = 1$, ja nopeus on energiaperiaatteen mukaan suurin, kun potentiaalienergia on pienin. **Narujen kuormitus on siis suurin, kun keinu on ala-asemassa (narut pystysuorassa).**\n4. Mekaanisen energian säilyminen ($90^\\circ$ kulmasta alas, pudotus $h = r$): $\\frac12 mv^2 = mgr$, joten $v^2 = 2gr$.\n5. Ala-asemassa $T_\\max = m\\dfrac{2gr}{r} + mg = 3mg$. Tulos ei riipu narun pituudesta.\n6. Kaksi narua kestää yhteensä $2m_\\mathrm{m}g$, missä $m_\\mathrm{m} = 65\\,\\mathrm{kg}$. Ehto $3mg < 2m_\\mathrm{m}g$ antaa $m < \\dfrac{2\\cdot 65\\,\\mathrm{kg}}{3} \\approx 43\\,\\mathrm{kg}$.\n\n**Vastaus: kuormitus on suurin ala-asemassa, ja keinujan (ja keinun) massa saa olla enintään noin $43\\,\\mathrm{kg}$.**\n\n**Sudenkuoppa:** keskeiskiihtyvyyden unohtaminen, jolloin vastaukseksi saadaan virheellisesti $65\\,\\mathrm{kg}$ tai $130\\,\\mathrm{kg}$. Liikkuvaan keinuun vaikuttava narun voima on ala-asemassa kolminkertainen painoon verrattuna.",
+     "answer": "Ala-asemassa; $m \\le 43\\,\\mathrm{kg}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Kuvassa 6.A on huilulla ja klarinetilla soitetun saman sävelen äänispektrit A ja B. Määritä perussävelen taajuus ja sitä vastaava aallonpituus ilmassa.",
+     "hints": [
+      "Perussävel on spektrin pienin taajuus, jolla on selvä piikki (tässä myös suurin piikki). Aallonpituus saadaan aaltoliikkeen perusyhtälöstä.",
+      "Molempien spektrien ensimmäinen piikki on noin $264\\,\\mathrm{Hz}$ kohdalla. Käytä äänen nopeutta $v \\approx 343\\,\\mathrm{m/s}$ ($20\\,^\\circ\\mathrm{C}$) ja kaavaa $\\lambda = v/f$."
+     ],
+     "solution": "1. Kummassakin spektrissä pienitaajuisin ja voimakkain piikki on noin $264\\,\\mathrm{Hz}$ kohdalla ($260$–$270\\,\\mathrm{Hz}$), joten perustaajuus on $f_1 \\approx 264\\,\\mathrm{Hz}$.\n2. Aaltoliikkeen perusyhtälö $v = f\\lambda$ antaa $\\lambda = \\dfrac{v}{f}$.\n3. Äänen nopeus ilmassa huoneenlämmössä on $v \\approx 343\\,\\mathrm{m/s}$, joten $\\lambda = \\dfrac{343\\,\\mathrm{m/s}}{264\\,\\mathrm{Hz}} \\approx 1{,}3\\,\\mathrm{m}$.\n\n**Vastaus: $f \\approx 264\\,\\mathrm{Hz}$ ja $\\lambda \\approx 1{,}3\\,\\mathrm{m}$.**\n\n**Sudenkuoppa:** tuloksen ilmoittaminen liian tarkasti (esim. $1{,}2992\\,\\mathrm{m}$). Taajuus luetaan kuvaajasta, joten kaksi tai kolme merkitsevää numeroa riittää.",
+     "answer": "$f \\approx 264\\,\\mathrm{Hz}$, $\\lambda \\approx 1{,}3\\,\\mathrm{m}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.2",
+     "points": 10,
+     "prompt": "Mallinnetaan huilu putkeksi, jonka kumpikin pää on auki, ja klarinetti putkeksi, jonka toinen pää on kiinni. Selvitä fysikaalisesti perustellen, onko kuvan 6.A spektri A huilun vai klarinetin.",
+     "hints": [
+      "Lue kummastakin spektristä yläsävelten taajuudet ja vertaa niitä perustaajuuteen. Mitkä perustaajuuden monikerrat voivat syntyä avoimessa ja mitkä suljetussa putkessa?",
+      "Avoimessa putkessa molemmissa päissä on paineen kupu (paineminimi), joten $L = n\\frac{\\lambda}{2}$ ja $f_n = nf_1$, $n = 1, 2, 3,\\ldots$ Toisesta päästä suljetussa putkessa suljetussa päässä on solmu, joten $L = n\\frac{\\lambda}{4}$ vain parittomilla $n$. Spektrissä A näkyy $264$, $792$ ja $1320\\,\\mathrm{Hz}$."
+     ],
+     "solution": "1. Spektristä A luetaan piikit noin $264$, $792$ ja $1320\\,\\mathrm{Hz}$, eli $f_1$, $3f_1$ ja $5f_1$.\n2. Spektristä B luetaan noin $264$, $528$, $792$, $1056$ ja $1320\\,\\mathrm{Hz}$, eli $f_1$, $2f_1$, $3f_1$, $4f_1$ ja $5f_1$.\n3. **Avoin putki (huilu):** kummassakin päässä on paineen kupu (paineminimi). Putkeen mahtuu kokonainen määrä puolikkaita aallonpituuksia: $L = n\\dfrac{\\lambda_n}{2}$, joten $\\lambda_n = \\dfrac{\\lambda_1}{n}$ ja $f_n = nf_1$, $n = 1, 2, 3, \\ldots$ Kaikki monikerrat ovat mahdollisia.\n4. **Toisesta päästä suljettu putki (klarinetti):** suljetussa päässä on paineen solmu (painemaksimi) ja avoimessa kupu. Putkeen mahtuu pariton määrä neljäsosa-aallonpituuksia: $L = n\\dfrac{\\lambda_n}{4}$, $n = 1, 3, 5, \\ldots$, joten $f_n = nf_1$ vain parittomilla $n$ ($f_1$, $3f_1$, $5f_1$, …).\n5. Spektrissä A on vain parittomia monikertoja, mikä vastaa suljettua putkea. Spektrissä B on myös parilliset monikerrat, mikä vastaa avointa putkea.\n\n**Vastaus: spektri A on klarinetin (vain parittomat monikerrat $f_1, 3f_1, 5f_1$), ja spektri B on huilun.**\n\n**Sudenkuoppa:** päätellään soitin piikkien korkeuksista tai perustaajuudesta. Perustaajuus on sama, koska sävel on sama; ratkaisevaa on, mitkä monikerrat esiintyvät.",
+     "answer": "Spektri A on klarinetin (vain parittomat monikerrat), B huilun.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Kuvan 7.A tasavirtamoottorissa neliömäinen johdinsilmukka pyörii kestomagneettien välisessä homogeenisessa magneettikentässä, jonka suunta on merkitty kuvaan. Piirrä ne voimat, jotka pyörittävät silmukkaa.",
+     "hints": [
+      "Virtajohtimeen kohdistuva voima $\\bar F = I\\bar l \\times \\bar B$ on kohtisuorassa sekä virtaa että kenttää vastaan (oikean käden sääntö). Mitkä silmukan sivut ovat kohtisuorassa kenttää vastaan ja kulkevat pyörimisakselin suuntaisesti?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- voimat piirretään niihin kahteen silmukan sivuun, jotka ovat pyörimisakselin suuntaisia ja kohtisuorassa magneettikenttää vastaan\n- voimat ovat yhtä suuret ja vastakkaissuuntaiset: kuvassa toinen osoittaa ylös ja toinen alas, kohtisuoraan sekä kenttää että virtaa vastaan\n- suunnat saadaan oikean käden säännöllä virran kiertosuunnan ja kentän suunnan perusteella\n\n**Esimerkkivastaus:** Silmukan akselin suuntaisissa sivuissa virta kulkee vastakkaisiin suuntiin, joten niihin kohdistuvat magneettiset voimat ($F = IlB$) ovat yhtä suuret mutta vastakkaissuuntaiset. Koska kenttä on vaakasuora ja virta näissä sivuissa kohtisuorassa sitä vastaan, voimat ovat pystysuoria: toinen ylös, toinen alas. Ne muodostavat voimaparin, joka kiertää silmukkaa. Kahteen muuhun sivuun kohdistuvat voimat ovat akselin suuntaisia eivätkä pyöritä silmukkaa.\n\n**Sudenkuoppa:** molemmat voimat piirretään samaan suuntaan tai 180° väärin päin, tai piirretään vain toinen voima.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 8,
+     "prompt": "Johda silmukkaan kohdistuvan momentin $M$ suuruus kiertokulman $\\theta$ funktiona (ks. kuva 7.A, jossa $\\theta$ on silmukan tason ja kentän suunnan välinen kulma). Magneettivuon tiheys on $8{,}1\\,\\mathrm{mT}$, silmukan sivu $4{,}0\\,\\mathrm{cm}$ ja virta $510\\,\\mathrm{mA}$. Mikä on momentin suurin arvo?",
+     "hints": [
+      "Aloita yhteen sivuun kohdistuvasta voimasta $F = IlB$ ja mieti, mikä on sen momenttivarsi pyörimisakselin suhteen, kun silmukka on kääntynyt kulman $\\theta$.",
+      "Momenttivarsi on $\\frac{l}{2}\\cos\\theta$, ja kumpikin voima kiertää samaan suuntaan, joten $M = 2F\\cdot\\frac{l}{2}\\cos\\theta$. Suurin arvo saadaan, kun $\\cos\\theta = 1$."
+     ],
+     "solution": "1. Pyörimisakselin suuntaiset sivut ovat kohtisuorassa kenttää vastaan, joten kumpaankin kohdistuu voima $F = IlB$ (voiman suunta pysyy pystysuorana silmukan asennosta riippumatta).\n2. Voiman momenttivarsi on voiman vaikutussuoran etäisyys akselista. Kun silmukan taso on kulmassa $\\theta$ kenttään nähden, sivu on vaakasuunnassa etäisyydellä $a = \\frac{l}{2}\\cos\\theta$ akselista.\n3. Molempien voimien momentit kiertävät samaan suuntaan: $M = Fa + Fa = 2\\cdot IlB\\cdot\\dfrac{l}{2}\\cos\\theta = Il^2B\\cos\\theta$.\n4. Suurin arvo, kun $\\theta = 0$ (silmukan taso kentän suuntainen): $M_\\max = Il^2B = 0{,}510\\,\\mathrm{A}\\cdot(0{,}040\\,\\mathrm{m})^2\\cdot 8{,}1\\cdot 10^{-3}\\,\\mathrm{T} \\approx 6{,}6\\cdot 10^{-6}\\,\\mathrm{N\\,m}$.\n\n**Vastaus: $M = Il^2B\\cos\\theta$, ja suurin momentti on noin $6{,}6\\,\\mathrm{\\mu N\\,m}$.**\n\n**Sudenkuoppa:** taulukkokirjan kaavassa $M = NIAB\\sin\\alpha$ kulma $\\alpha$ on silmukan normaalin ja kentän välinen kulma. Tässä $\\theta$ mitataan silmukan tasosta, joten $\\sin\\alpha = \\cos\\theta$. Kaavan käyttö ilman johtoa ei vastaa tehtävänantoa.",
+     "answer": "$M = Il^2B\\cos\\theta$; $M_\\max \\approx 6{,}6\\,\\mathrm{\\mu N\\,m}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.3",
+     "points": 3,
+     "prompt": "Moottorissa on kommutaattori (kuvassa C), joka kääntää silmukan virran suunnan. Miksi se on moottorin toiminnalle tärkeä?",
+     "hints": [
+      "Mieti, mihin suuntaan voimat ja momentti osoittavat, kun silmukka on kiertynyt puoli kierrosta ja virran suunta ei muutu."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- johtimeen kohdistuvan voiman suunta riippuu vain virran ja kentän suunnista, ei johtimen paikasta\n- ilman virran kääntämistä momentti vaihtaisi suuntaa silmukan ohitettua asennon, jossa sen taso on kohtisuorassa kenttää vastaan, ja silmukka pysähtyisi tai heiluisi edestakaisin\n- kommutaattori kääntää virran joka puolikierroksella, joten momentti pysyy samansuuntaisena ja pyöriminen jatkuu\n\n**Esimerkkivastaus:** Kun silmukka on kiertynyt asentoon, jossa sen taso on kohtisuorassa kenttää vastaan, voimien momenttivarsi on nolla. Jos virta jatkaisi samaan suuntaan, voimat alkaisivat tämän asennon jälkeen kiertää silmukkaa takaisin päin. Kommutaattori vaihtaa virran suunnan juuri tässä kohdassa, jolloin voimat vaihtavat suuntaa ja momentti kiertää silmukkaa edelleen samaan suuntaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 9,
+     "prompt": "Selitä, millä periaatteella fuusioreaktori toimii.",
+     "hints": [
+      "Mitä fuusiossa tapahtuu atomiytimille ja mistä energia vapautuu? Mikä estää ytimiä yhtymästä tavallisissa olosuhteissa?",
+      "Käytetyt polttoaineet ovat vedyn isotoopit deuterium ja tritium. Positiiviset ytimet hylkivät toisiaan, joten tarvitaan valtava lämpötila (plasma). Mieti, miten näin kuuma plasma pidetään irti reaktorin seinistä."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- fuusiossa kevyet atomiytimet yhtyvät raskaammaksi ytimeksi, ja reaktiossa vapautuu energiaa (lopputuotteiden massa on pienempi, sidosenergia nukleonia kohden kasvaa)\n- esimerkki: $\\ce{^2_1H + ^3_1H -> ^4_2He + ^1_0n}$, vapautuu noin $17{,}6\\,\\mathrm{MeV}$\n- ytimet hylkivät toisiaan sähköisesti (Coulombin voima), joten ne on kuumennettava hyvin korkeaan lämpötilaan (noin $10^8\\,\\mathrm{K}$), jolloin aine on plasmaa\n- plasma pidetään koossa ja irti seinistä magneettikentällä (tokamak) tai puristetaan lasersäteillä (inertiafuusio)\n- vapautuva energia (etenkin neutronien liike-energia) muutetaan lämmöksi reaktorin vaipassa, tuotetaan höyryä ja pyöritetään turbiinia ja generaattoria\n\n**Esimerkkivastaus:** Fuusioreaktorissa vedyn raskaat isotoopit deuterium ja tritium yhtyvät heliumytimeksi, ja samalla vapautuu neutroni. Reaktion lopputuotteiden massa on pienempi kuin lähtöaineiden, ja massavaje vapautuu energiana ($E = \\Delta mc^2$). Koska ytimet ovat positiivisia, ne hylkivät toisiaan, ja jotta ne pääsisivät vahvan vuorovaikutuksen kantaman sisälle, niillä on oltava suuri liike-energia. Siksi polttoaine kuumennetaan noin sataan miljoonaan kelviniin, jolloin se on täysin ionisoitunutta plasmaa. Mikään seinämateriaali ei kestä tällaista lämpötilaa, joten plasma pidetään koossa voimakkailla magneettikentillä, jotka ohjaavat varattuja hiukkasia kulkemaan renkaan muotoisessa kammiossa. Neutronit pääsevät kentästä läpi ja luovuttavat energiansa reaktoria ympäröivään vaippaan. Syntyvällä lämmöllä tuotetaan höyryä, joka pyörittää turbiinia ja generaattoria kuten tavallisessa lämpövoimalassa.\n\n**Sudenkuoppa:** väitetään, että fuusiossa yhtyvät atomit, tai että magneettikenttä kuumentaa plasman.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 6,
+     "prompt": "Oletetaan, että fuusiovoimalat korvaavat tulevaisuudessa laajasti fissiovoimalat. Pohdi perustellen, päteekö kukin seuraava fissiovoimaloista esitetty väite myös fuusiovoimaloihin: (1) sopivaa sijoituspaikkaa on vaikea löytää, (2) jätteen sijoittaminen on ongelmallista, (3) joidenkin valtioiden on poliittisesti vaikea hankkia reaktoria kansainvälisten suhteiden takia.",
+     "hints": [
+      "Arvioi jokaista väitettä fysiikan kannalta: voiko fuusioreaktori karata hallinnasta, millaista radioaktiivista ainetta syntyy ja voiko reaktoria käyttää ydinaseiden materiaalin tuottamiseen?",
+      "Fuusiossa ei ole ketjureaktiota eikä pitkäikäisiä fissiotuotteita, mutta tritium on radioaktiivista ja neutronit aktivoivat rakennemateriaaleja. Voimakasta neutronisäteilyä voisi periaatteessa käyttää fissiokelpoisen aineen tuottamiseen. Kummallekin kannalle on perusteluja; tärkeintä on perustella johtopäätös."
+     ],
+     "solution": "Jokaiseen väitteeseen riittää yksi fysikaalisesti perusteltu kanta (puolesta tai vastaan) ja siihen sopiva johtopäätös.\n\n**Hyvä vastaus sisältää** esimerkiksi:\n1. **Sijoituspaikka:** fuusioreaktorissa ei voi syntyä hallitsematonta ketjureaktiota, ja jos plasma häiriintyy, reaktio sammuu itsestään. Sydämen sulamisen kaltaista onnettomuutta ei ole, joten sijoittaminen voisi olla helpompaa. (Toisaalta radioaktiivinen tritium on kaasuna helposti leviävää, mikä puoltaa samankaltaisia varotoimia.)\n2. **Jäte:** fuusiossa ei synny pitkäikäisiä fissiotuotteita eikä käytettyä ydinpolttoainetta. Neutronisäteily aktivoi kuitenkin reaktorin rakenteet, joista tulee lyhytikäisempää radioaktiivista jätettä. Jäteongelma on siis pienempi mutta ei olematon.\n3. **Politiikka:** fuusioreaktori ei käytä uraania tai plutoniumia, joten siitä ei saa suoraan ydinaseiden materiaalia, mikä helpottaisi hankintaa. (Toisaalta voimakasta neutronivuota voisi käyttää fissiokelpoisen aineen hyötämiseen, joten valvontaa tarvittaisiin silti.)\n\n**Esimerkkivastaus:** Ensimmäinen väite koskee fuusiovoimaloita vähemmän, koska fuusio ei ole ketjureaktio: plasman häiriintyessä reaktio sammuu, eikä reaktorin sydän voi sulaa. Toinenkin väite koskee niitä lievemmin: fuusiossa ei synny fissiotuotteita, mutta neutronien aktivoimat rakenteet ovat radioaktiivista jätettä, jonka aktiivisuus kuitenkin laskee paljon nopeammin kuin käytetyn polttoaineen. Kolmas väite heikkenee, koska polttoaineena on vetyä eikä fissiokelpoista ainetta, joten reaktorista ei suoraan saa ydinasemateriaalia.\n\n**Sudenkuoppa:** mielipide ilman fysikaalista perustelua ei riitä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 10,
+     "prompt": "Tehtävänä on vertailla kuvan 9.A induktiokeittolevyn ja perinteisen valurautalevyn energiatehokkuutta veden keittämisessä. Kuvaile pääpiirteissään, miten vertailu tehdään: mitä ja miten mitataan tai määritetään? Mitä tekijöitä pitää ottaa huomioon, jotta tulokset olisivat luotettavia?",
+     "hints": [
+      "Energiatehokkuus on veteen siirtynyt energia jaettuna levyn ottamalla sähköenergialla. Mieti, millä mittareilla saat kummankin selville.",
+      "Mittaa veden lämpötila ajan funktiona ja levyn ottama sähköenergia (kWh-mittari) tai teho (tehomittari tai virta ja jännite). Veteen siirtynyt energia on $Q = cm\\Delta T$. Vakioitavia ovat ainakin veden määrä, alkulämpötilat ja kattila."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kummallakin levyllä lämmitetään vettä ja mitataan veden lämpötilaa ajan funktiona (tai aika tiettyyn loppulämpötilaan, esim. kiehumiseen)\n- levyn ottama sähköenergia mitataan energiamittarilla (kWh) tai teho mitataan tehomittarilla tai virta- ja jännitemittarilla ($P = UI$) ja energia lasketaan $E = Pt$\n- veden massa (määrä) ja alkulämpötila mitataan ja pidetään samoina\n- käytetään samaa tai samanlaista kattilaa, jonka alkulämpötila on sama, ja levyt ovat aluksi huoneenlämpöisiä\n- olosuhteet (huoneen lämpötila, kansi, ilmavirrat) pidetään samoina, ja mittaukset toistetaan\n\n**Esimerkkivastaus:**\n1. Mitataan vaa'alla kattilaan sama määrä vettä, esimerkiksi $1{,}00\\,\\mathrm{kg}$, ja mitataan veden alkulämpötila.\n2. Kytketään keittolevy verkkoon energiamittarin kautta ja nollataan mittari.\n3. Asetetaan kattila levylle, käynnistetään levy täydellä teholla ja kirjataan veden lämpötila lämpömittarilla (tai anturilla) esimerkiksi $15\\,\\mathrm{s}$ välein, kunnes vesi on esimerkiksi $90\\,^\\circ\\mathrm{C}$. Luetaan kulunut sähköenergia $E_\\mathrm{s}$.\n4. Veteen siirtynyt energia on $Q = cm\\Delta T$ ja hyötysuhde $\\eta = Q/E_\\mathrm{s}$.\n5. Toistetaan sama toisella levyllä samalla kattilalla, kun kattila on jäähtynyt alkulämpötilaan ja levy on kylmä. Toistetaan kumpikin mittaus muutaman kerran.\n6. Luotettavuuden vuoksi vakioidaan veden määrä ja alkulämpötila, kattila (sama, induktioon sopiva pohja), kansi ja huoneen olosuhteet. Valurautalevyn jälkilämpö huomioidaan esimerkiksi mittaamalla samaan loppulämpötilaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 6,
+     "prompt": "Hahmottele graafinen esitys mittausdatasta, jota odotat saavasi (voit käyttää aineiston 9.B piirrospohjaa).",
+     "hints": [
+      "Piirrä veden lämpötila ajan funktiona kummallekin levylle samaan koordinaatistoon ja nimeä akselit ja käyrät.",
+      "Mieti, kumpi levy alkaa lämmittää vettä viiveettä ja kumpi joutuu ensin lämmittämään itsensä. Käyrien pitää erota nousun alkuhetkessä tai jyrkkyydessä ja saavuttaa sama loppulämpötila eri aikaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kuvaaja, jossa on veden lämpötila ($^\\circ\\mathrm{C}$) ajan ($\\mathrm{s}$ tai $\\mathrm{min}$) funktiona, nimetyt akselit ja kaksi nimettyä käyrää (induktio, valurauta)\n- käyrät alkavat samasta alkulämpötilasta, mutta ne lähtevät nousuun eri aikaan tai eri jyrkkyydellä: induktiolevyllä nousu alkaa heti ja on jyrkempää, valurautalevyllä nousu alkaa viiveellä, koska levy lämpenee ensin\n- käyrät saavuttavat saman loppulämpötilan (esim. $100\\,^\\circ\\mathrm{C}$, jossa ne tasaantuvat) eri aikaan\n- käyrien nousu ei kiihdy ajan mittaan, vaan pikemminkin loivenee lopussa lämpöhäviöiden kasvaessa\n\n**Esimerkkivastaus:** Vaaka-akselilla on aika $t\\ (\\mathrm{min})$ ja pystyakselilla veden lämpötila $T\\ (^\\circ\\mathrm{C})$. Induktiolevyn käyrä lähtee huoneenlämmöstä nousemaan heti lähes suoraviivaisesti ja saavuttaa $100\\,^\\circ\\mathrm{C}$ esimerkiksi noin $5\\,\\mathrm{min}$ kohdalla, minkä jälkeen se pysyy vaakasuorana. Valurautalevyn käyrä pysyy ensimmäisen minuutin lähes vaakasuorana, nousee sitten loivemmin ja saavuttaa kiehumispisteen selvästi myöhemmin. Jos mitattiin myös sähköenergiaa, voi lisäksi piirtää kulutetun energian ajan funktiona, jolloin valurautalevyn suora nousee pidempään.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 4,
+     "prompt": "Tutkimuksessa toinen levyistä osoittautuu energiatehokkaammaksi. Mistä fysikaalisista syistä ero johtuu?",
+     "hints": [
+      "Mikä kappale lämpenee kummassakin tapauksessa ensin? Mieti lämmitettävien kappaleiden kokonaislämpökapasiteettia sekä sitä, miten kuuman pinnan lämpötila vaikuttaa lämmön siirtymiseen ympäristöön."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- induktiolevy on tehokkaampi: vaihtuva magneettikenttä indusoi pyörrevirrat suoraan kattilan pohjaan, joten itse keittotaso ei lämpene (lämpenee vain kattilasta johtuvasta lämmöstä)\n- valurautalevy on lämmitettävä ensin, ja sen lämpötilan on oltava selvästi yli $100\\,^\\circ\\mathrm{C}$, jotta lämpöä siirtyy kattilaan; kuumasta levystä siirtyy paljon lämpöä ympäristöön säteilemällä ja johtumalla\n- induktiolevyn keraaminen pinta johtaa lämpöä huonosti, joten kattilasta siirtyy siihen vähän energiaa\n\n**Esimerkkivastaus:** Induktiolevy on energiatehokkaampi. Sen käämin vaihtuva magneettikenttä synnyttää pyörrevirtoja kattilan pohjaan, jolloin lämpö syntyy suoraan kattilassa. Valurautalevyssä sähkövirta lämmittää ensin raskaan rautalevyn, jonka lämmittämiseen kuluu energiaa, ja levyn on oltava paljon vettä kuumempi, jotta lämpö johtuisi kattilaan. Kuuma levy myös säteilee ja luovuttaa lämpöä ympäröivään ilmaan. Induktiolevyn huonosti lämpöä johtava keraaminen pinta pysyy viileämpänä, joten hukkaan menee vähemmän energiaa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Radiometrisen tiheysmittarin säteilylähteenä on isotooppi Am-241 ($T_{1/2} = 432{,}2\\,\\mathrm{a}$), jonka alfahajoamisten yhteydessä syntyy $59{,}5\\,\\mathrm{keV}$ gammakvantteja. Kirjoita Am-241:n alfahajoamisen yhtälö. Mikä on gammakvantin alkuperä?",
+     "hints": [
+      "Alfahiukkanen on heliumydin $^4_2\\mathrm{He}$. Säilytä massaluku ja varausluku ja katso tytärydin jaksollisesta järjestelmästä. Ajattele, voiko tytärydin jäädä viritystilaan."
+     ],
+     "solution": "1. Alfahajoamisessa massaluku pienenee neljällä ja järjestysluku kahdella: $241 - 4 = 237$ ja $95 - 2 = 93$. Alkuaine 93 on neptunium.\n2. Hajoamisyhtälö: $^{241}_{95}\\mathrm{Am} \\to {}^{237}_{93}\\mathrm{Np}^{*} + {}^{4}_{2}\\alpha$\n3. Hajoamisessa syntyvä neptuniumydin jää usein viritystilaan ($^*$). Kun ydin purkautuu perustilaan, sen energia vapautuu gammakvanttina: $^{237}_{93}\\mathrm{Np}^{*} \\to {}^{237}_{93}\\mathrm{Np} + \\gamma$.\n\n**Vastaus: $^{241}_{95}\\mathrm{Am} \\to {}^{237}_{93}\\mathrm{Np}^{*} + {}^{4}_{2}\\alpha$; gammakvantti syntyy, kun tytärytimen viritystila purkautuu.**\n\n**Sudenkuoppa:** väitetään gammasäteilyn syntyvän atomin (elektroniverhon) viritystilan purkautuessa. Elektroniverhon siirtymät tuottavat enintään röntgensäteilyä, gamma on peräisin ytimestä.",
+     "answer": "$^{241}_{95}\\mathrm{Am} \\to {}^{237}_{93}\\mathrm{Np}^{*} + {}^{4}_{2}\\alpha$; gamma ytimen viritystilan purkautumisesta",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 4,
+     "prompt": "Laitteisto mittaa putkessa kulkevaa neste–kaasu-seosta. Kun säteilyn tiellä on pelkkää nestettä, intensiteetti on $I_1$, ja kun pelkkää kaasua, $I_2$. Materiaalin keskimääräinen paksuus on $x$. Osoita, että absorptiokertoimien erotukselle pätee $\\Delta\\mu = \\mu_1 - \\mu_2 = \\frac{1}{x}\\ln\\frac{I_2}{I_1}$.",
+     "hints": [
+      "Kirjoita heikennyslaki $I = I_0e^{-\\mu x}$ erikseen nesteelle ja kaasulle samalla lähteen intensiteetillä $I_0$. Ota kummastakin logaritmi ja vähennä yhtälöt toisistaan."
+     ],
+     "solution": "1. Heikennyslaki: $I = I_0e^{-\\mu x}$.\n2. Pelkkä neste: $I_1 = I_0e^{-\\mu_1 x}$, joten $\\ln I_1 = \\ln I_0 - \\mu_1 x$.\n3. Pelkkä kaasu: $I_2 = I_0e^{-\\mu_2 x}$, joten $\\ln I_2 = \\ln I_0 - \\mu_2 x$.\n4. Vähennetään: $\\ln I_2 - \\ln I_1 = \\mu_1 x - \\mu_2 x = x(\\mu_1 - \\mu_2)$.\n5. Siis $\\ln\\dfrac{I_2}{I_1} = x\\,\\Delta\\mu$, eli $\\Delta\\mu = \\dfrac{1}{x}\\ln\\dfrac{I_2}{I_1}$, mikä piti osoittaa.\n\n**Sudenkuoppa:** heikennyslain kirjoittaminen suoraan muotoon $I_2 = I_1e^{-\\Delta\\mu x}$ ilman perustelua. Se on väärin myös etumerkiltään, koska $I_2 > I_1$.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 8,
+     "prompt": "Seoksen efektiivinen absorptiokerroin on $\\mu = \\mu_1 - \\alpha(\\mu_1 - \\mu_2)$, missä $\\alpha$ on kaasun tilavuusosuus. Virtausnopeus on vakio ja mittaukset on tehty tasaisin väliajoin. Määritä kuvan 10.B ja mittausaineiston 10.C avulla kaasun keskimääräinen osuus koko mittauksen ajalta prosentteina kolmen merkitsevän numeron tarkkuudella.",
+     "hints": [
+      "Vertaa jokaista hetkellistä intensiteettiä $I$ pelkän nesteen intensiteettiin $I_1$ samalla tavalla kuin kohdassa 10.2. Sijoittamalla $\\mu$:n lausekkeen saat $\\alpha$:n jokaiselle mittauspisteelle.",
+      "Tulokseksi saadaan $\\alpha = \\dfrac{\\ln(I/I_1)}{\\ln(I_2/I_1)}$. Arvioi $I_1$ minimikohdan keskiarvona (noin $1870$–$2030\\,\\mathrm{ms}$, $\\approx 38\\,\\mathrm{cpms}$) ja $I_2$ maksimikohdan keskiarvona (noin $1440$–$1710\\,\\mathrm{ms}$, $\\approx 50\\,\\mathrm{cpms}$). Laske $\\alpha_i$ taulukkolaskimella jokaiselle riville ja ota keskiarvo."
+     ],
+     "solution": "1. Kohdan 10.2 tavoin hetkellisen intensiteetin $I$ ja pelkän nesteen intensiteetin $I_1$ suhteesta saadaan $\\mu_1 - \\mu = \\dfrac{1}{x}\\ln\\dfrac{I}{I_1}$.\n2. Sijoitetaan $\\mu = \\mu_1 - \\alpha(\\mu_1 - \\mu_2)$: $\\mu_1 - \\mu = \\alpha\\,\\Delta\\mu$.\n3. Kohdan 10.2 tuloksella $\\alpha\\cdot\\dfrac{1}{x}\\ln\\dfrac{I_2}{I_1} = \\dfrac{1}{x}\\ln\\dfrac{I}{I_1}$, joten $\\alpha = \\dfrac{\\ln(I/I_1)}{\\ln(I_2/I_1)}$.\n4. Koska virtausnopeus ja mittausväli ovat vakioita, koko mittauksen keskimääräinen kaasuosuus on pisteittäisten osuuksien keskiarvo: $\\alpha_\\mathrm{ka} = \\dfrac{1}{N}\\sum_i \\dfrac{\\ln(I_i/I_1)}{\\ln(I_2/I_1)}$.\n5. Minimi-intensiteetti (pelkkä neste) keskiarvona välillä $1870$–$2030\\,\\mathrm{ms}$: $I_1 \\approx 37{,}99\\,\\mathrm{cpms}$. Maksimi-intensiteetti (pelkkä kaasu) välillä $1440$–$1710\\,\\mathrm{ms}$: $I_2 \\approx 50{,}34\\,\\mathrm{cpms}$.\n6. Lasketaan $\\alpha_i$ kaikille $145$ mittauspisteelle ja keskiarvo: $\\alpha_\\mathrm{ka} \\approx 0{,}378$.\n\n**Vastaus: kaasun keskimääräinen osuus on noin $37{,}8\\,\\%$.**\n\nTulos on herkkä ääriarvojen $I_1$ ja $I_2$ arvioinnille. Esimerkiksi pyöristetyillä arvoilla $38$ ja $50\\,\\mathrm{cpms}$ saadaan $38{,}7\\,\\%$, joten noin prosenttiyksikön epävarmuus on luonteva.\n\n**Sudenkuoppa:** $\\alpha$:n laskeminen intensiteettien keskiarvosta eikä pisteittäin. Koska riippuvuus on logaritminen, tulos poikkeaa hieman.",
+     "answer": "$\\alpha_\\mathrm{ka} \\approx 37{,}8\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "Kuinka paljon maksimi- ja minimi-intensiteetin erotus muuttuu kymmenessä vuodessa? Käytä kohdan 10.3 intensiteettejä $I_1$ ja $I_2$.",
+     "hints": [
+      "Kaikki intensiteetit ovat verrannollisia lähteen aktiivisuuteen, joten myös erotus pienenee hajoamislain $\\Delta I = \\Delta I_0 e^{-\\lambda t}$ mukaan, kun $\\lambda = \\frac{\\ln 2}{T_{1/2}}$."
+     ],
+     "solution": "1. Lähteen aktiivisuus pienenee hajoamislain mukaan, ja kaikki mitatut intensiteetit pienenevät samassa suhteessa. Siksi $\\Delta I(t) = \\Delta I_0e^{-\\lambda t}$, missä $\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{\\ln 2}{432{,}2\\,\\mathrm{a}}$.\n2. Alussa $\\Delta I_0 = I_2 - I_1 = 50{,}34\\,\\mathrm{cpms} - 37{,}99\\,\\mathrm{cpms} = 12{,}35\\,\\mathrm{cpms}$.\n3. Kymmenen vuoden kuluttua $\\Delta I = 12{,}35\\,\\mathrm{cpms}\\cdot e^{-\\frac{\\ln 2}{432{,}2\\,\\mathrm{a}}\\cdot 10\\,\\mathrm{a}} \\approx 12{,}15\\,\\mathrm{cpms}$.\n4. Muutos: $12{,}35\\,\\mathrm{cpms} - 12{,}15\\,\\mathrm{cpms} \\approx 0{,}20\\,\\mathrm{cpms}$, eli noin $1{,}6\\,\\%$.\n\n**Vastaus: erotus pienenee noin $0{,}20\\,\\mathrm{cpms}$ (noin $1{,}6\\,\\%$).**\n\n**Sudenkuoppa:** hajoamisvakion yksikön sekoittaminen: jos $T_{1/2}$ on vuosina, myös $t$ on annettava vuosina.",
+     "answer": "pienenee noin $0{,}20\\,\\mathrm{cpms}$ ($1{,}6\\,\\%$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Aineistossa 11.A kuvataan GRACE-koe, jossa kaksi samalla radalla peräkkäin kulkevaa satelliittia mittasi Maan gravitaatiokentän paikallisia vaihteluita. Selitä, miten ja miksi paikallinen massan muutos Maassa muuttaa satelliitin liikettä. Miksi mittaukseen tarvitaan satelliittipari?",
+     "hints": [
+      "Mieti, miten ylimääräinen massa satelliitin edessä tai takana vaikuttaa sen nopeuteen (gravitaatiolaki ja Newtonin II laki). Mitä kahden satelliitin välisestä etäisyydestä voi päätellä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- suuri paikallinen massa (esim. vesivarasto) aiheuttaa satelliittiin tavallista suuremman gravitaatiovoiman $F = \\gamma\\frac{mM}{r^2}$\n- kun satelliitti lähestyy tällaista aluetta, voiman liikkeen suuntainen komponentti kasvattaa sen vauhtia, ja poistuttaessa vauhti vastaavasti pienenee\n- vauhdin muutokset havaitaan satelliittien välisen etäisyyden muutoksista, siksi tarvitaan kaksi satelliittia\n\n**Esimerkkivastaus:** Kun etummainen satelliitti lähestyy aluetta, jossa on tavallista enemmän massaa, alueen gravitaatiovoimalla on liikkeen suuntainen komponentti. Satelliitin vauhti kasvaa, ja se loittonee perässä tulevasta satelliitista. Alueen ohitettuaan voima jarruttaa sitä, ja etäisyys pienenee. Yksittäisen satelliitin näin pienien nopeusmuutosten mittaaminen olisi vaikeaa, mutta kahden satelliitin välinen etäisyys voidaan mitata mikroaalloilla erittäin tarkasti. Etäisyyden muutoksista päätellään satelliittien nopeuserot ja niistä massan jakauma.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 3,
+     "prompt": "Aineiston 11.B kartoissa ei erotu vuoria tai muita pinnanmuotoja. Miksi?",
+     "hints": [
+      "Mihin kuvien arvoja verrataan? Mieti, millä aikaskaalalla vuoristot muuttuvat."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kuvissa esitetään massan (gravitaatiokentän) muutos verrattuna kolmen vuoden keskiarvoon, ei kentän kokonaisvoimakkuutta\n- vuoret ja maanpinnan muodot eivät muutu kuukausien tai vuosien aikaskaalalla, joten niiden vaikutus sisältyy keskiarvoon ja kumoutuu erotuksessa\n\n**Esimerkkivastaus:** Kartat näyttävät, kuinka paljon kunkin kuukauden gravitaatiokenttä poikkeaa kolmen vuoden keskiarvosta. Vuoriston massa on sama joka kuukausi, joten se on mukana sekä kuukausiarvossa että keskiarvossa, ja erotuksessa sen vaikutus häviää. Näkyviin jäävät vain nopeasti muuttuvat massat, kuten sadekausien vesimäärät.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 8,
+     "prompt": "Aineiston mukaan noin $500\\,\\mathrm{km}$ korkeudella lentävät satelliitit havaitsevat painovoiman muutoksen, joka vastaa halkaisijaltaan $300\\,\\mathrm{km}$ ja paksuudeltaan $1\\,\\mathrm{cm}$ vesikiekon vetovoimaa. Kuinka pieni suhteellinen muutos putoamiskiihtyvyydessä satelliitin kohdalla on siis havaittavissa?",
+     "hints": [
+      "Laske ensin vesikiekon massa $M = \\rho V$, missä $V = \\frac{\\pi d^2}{4}h$. Arvioi sitten kiekon aiheuttama lisäkiihtyvyys satelliitin kohdalla gravitaatiolailla.",
+      "Kiekon massa on noin $7{,}1\\cdot 10^{11}\\,\\mathrm{kg}$. Pistemassan mallilla $\\Delta a = \\gamma\\frac{M}{r^2}$, kun $r = 500\\,\\mathrm{km}$. Jaa tulos putoamiskiihtyvyydellä $g \\approx 9{,}81\\,\\mathrm{m/s^2}$."
+     ],
+     "solution": "1. Vesikiekon tilavuus on $V = \\dfrac{\\pi d^2}{4}h$ ja massa $M = \\rho V = \\dfrac{\\pi(3{,}00\\cdot 10^5\\,\\mathrm{m})^2}{4}\\cdot 0{,}01\\,\\mathrm{m}\\cdot 1000\\,\\mathrm{kg/m^3} \\approx 7{,}1\\cdot 10^{11}\\,\\mathrm{kg}$.\n2. Arvioidaan kiekkoa pistemassana satelliitin etäisyydellä $r = 500\\,\\mathrm{km}$ (karkea arvio, koska kiekon halkaisija on samaa suuruusluokkaa kuin etäisyys). Gravitaatiolaki: $F = \\gamma\\dfrac{mM}{r^2}$.\n3. Newtonin II lain mukaan lisäkiihtyvyys on $\\Delta a = \\dfrac{F}{m} = \\gamma\\dfrac{M}{r^2} = 6{,}674\\cdot 10^{-11}\\,\\mathrm{\\tfrac{N\\,m^2}{kg^2}}\\cdot\\dfrac{7{,}07\\cdot 10^{11}\\,\\mathrm{kg}}{(5{,}00\\cdot 10^5\\,\\mathrm{m})^2} \\approx 1{,}9\\cdot 10^{-10}\\,\\mathrm{m/s^2}$.\n4. Suhteellinen muutos: $\\dfrac{\\Delta a}{g} = \\dfrac{1{,}9\\cdot 10^{-10}\\,\\mathrm{m/s^2}}{9{,}81\\,\\mathrm{m/s^2}} \\approx 2\\cdot 10^{-11}$.\n\n**Vastaus: noin $2\\cdot 10^{-11}$ (satojen miljardisosien suuruusluokkaa pienempi muutos).**\n\nJos vertailuarvona käytetään putoamiskiihtyvyyttä $500\\,\\mathrm{km}$ korkeudella ($\\approx 8{,}4\\,\\mathrm{m/s^2}$), tulos on edelleen noin $2\\cdot 10^{-11}$.\n\n**Sudenkuoppa:** etäisyytenä käytetään Maan keskipisteen etäisyyttä satelliitista. Vesikiekko on Maan pinnalla, joten oikea etäisyys on satelliitin korkeus.",
+     "answer": "$\\Delta a/g \\approx 2\\cdot 10^{-11}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.4",
+     "points": 5,
+     "prompt": "Millaista tietoa gravitaatiokentän mittaus antaa sellaisista asioista, joita muilla menetelmillä on hankala selvittää?",
+     "hints": [
+      "Gravitaatiokenttä riippuu vain massasta, ei siitä, näkyykö massa. Mieti, mitä Maan massajakaumassa muuttuu kuukausien aikana.",
+      "Ajattele vettä ja jäätä: pohjavesi, jokialtaat, jäätiköt ja meret. Mitkä näistä jäävät satelliittikuvissa tai paikallisissa mittauksissa piiloon?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- gravitaatiomittaus kertoo Maan massajakauman ja erityisesti sen lyhytaikaiset muutokset\n- esimerkkejä: pohjavesivarastojen, maaperän kosteuden, jäätiköiden ja valtamerten vesimäärien muutokset sekä maanjäristysten tai tulivuoritoiminnan aiheuttamat massan siirtymät\n- näitä muutoksia on vaikea mitata muuten, koska ne ovat näkymättömiä (maan alla) tai jakautuvat laajoille alueille\n\n**Esimerkkivastaus:** Gravitaatiokentän muutokset johtuvat massan siirtymisestä, joten mittauksista saadaan kuukausittain kuva siitä, miten massa Maan pinnalla ja sen alla jakautuu uudelleen. Tärkeimmät siirtymät ovat veden ja jään liikkeitä: pohjavesivarastojen täyttyminen ja tyhjeneminen, suurten jokialtaiden vesimäärät sekä mannerjäätiköiden sulaminen. Esimerkiksi maanalaista vettä ei näe satelliittikuvista, eikä koko valuma-alueen vesimäärää voi punnita paikallisilla mittauksilla, mutta gravitaatiomittaus kattaa koko alueen kerralla.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}
