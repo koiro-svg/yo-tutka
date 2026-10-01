@@ -1,0 +1,352 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2023K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2023K_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-03-22_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 4,
+    "note": "Kaikki neljä tehtävää ovat pakollisia. Käytössä taulukkokirja ja perusohjelmat; muut ohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuusi monivalintaa (2 p kukin), perusteluja ei tarvita. Vaihtoehdot näet alkuperäisestä tehtävästä.\n\n- 1.1 Montako millimetriä on kilometrissä? (vaihtoehdot kymmenen potensseja $10^{-6}$…$10^{12}$)\n- 1.2 Mikä on sellaisen lieriön nimi, jonka pohja on monikulmio?\n- 1.3 Mikä tuttu lause kosinilauseesta tulee, kun kolmio on suorakulmainen?\n- 1.4 Minkä kanssa suoran $y=ax+b$ kulmakerroin on aina yhtä suuri?\n- 1.5 Millainen matemaattinen olio kahden vektorin pistetulo on?\n- 1.6 Montako leikkauspistettä tason ympyrällä ja paraabelilla voi olla?",
+     "hints": [
+      "1.1: muunna vaiheittain (km → m → mm). 1.2–1.3: kertaa monitahokkaiden nimet ja kosinilauseen muoto, kun kulma on $90^\\circ$. 1.4: mieti, mitä derivaatta kertoo kuvaajan jyrkkyydestä. 1.6: sijoita paraabelin yhtälö ympyrän yhtälöön ja katso yhtälön astetta.",
+      "Kohta kohdalta:\n- 1.1: $1\\text{ km}=10^3\\text{ m}$ ja $1\\text{ m}=10^3\\text{ mm}$.\n- 1.3: $c^2=a^2+b^2-2ab\\cos\\gamma$ ja $\\cos 90^\\circ=0$.\n- 1.4: normaalin kulmakerroin on $-\\frac1a$, ja suuntakulma on kulma eikä kulmakerroin.\n- 1.5: pistetulo lasketaan kertomalla ja laskemalla yhteen reaalilukuja.\n- 1.6: sijoitus antaa neljännen asteen yhtälön muuttujalle $x$."
+     ],
+     "solution": "1. **1.1: G ($10^6$).** $1\\text{ km}=10^3\\text{ m}=10^3\\cdot 10^3\\text{ mm}=10^6\\text{ mm}$.\n2. **1.2: B (särmiö).** Monikulmiopohjainen lieriö on särmiö. Kartio ja pyramidi suippenevat kärkeen, ja tetraedri on kolmiopyramidi.\n3. **1.3: A (Pythagoraan lause).** Kun $\\gamma=90^\\circ$, termi $2ab\\cos\\gamma$ häviää, ja jää $c^2=a^2+b^2$.\n4. **1.4: C (funktion $f(x)=ax+b$ derivaatan arvo).** $f'(x)=a$ kaikilla $x$. Normaalin kulmakertoimen käänteisluku on $-a$, ja suuntakulma $\\alpha$ toteuttaa $\\tan\\alpha=a$.\n5. **1.5: B (reaaliluku).** Pistetulo on skalaari, eli reaaliluku, joka ei yleensä ole kokonaisluku.\n6. **1.6: D (korkeintaan neljä).** Esimerkiksi ympyrä $x^2+(y-c)^2=r^2$ ja paraabeli $y=x^2$ johtavat neljännen asteen yhtälöön, jolla on enintään neljä ratkaisua. Leikkauspisteitä voi olla 0–4, joten mikään ”tasan”-vaihtoehto ei päde aina.\n\n**Vastaus: 1.1 G · 1.2 B · 1.3 A · 1.4 C · 1.5 B · 1.6 D**\n\n**Sudenkuoppa:** kohdassa 1.5 vastataan ”kokonaisluku”, koska koulun esimerkeissä pistetulo on usein kokonaisluku.",
+     "answer": "1.1 G ($10^6$) · 1.2 B (särmiö) · 1.3 A (Pythagoraan lause) · 1.4 C (derivaatan arvo) · 1.5 B (reaaliluku) · 1.6 D (korkeintaan neljä)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Yhdistä kukin yhtälö oikeaan kuvaajaan alkuperäisen tehtävän kuvassa 2.A (kuvaajat 1–12) tai valitse ”ei kuvaajaa”. Vastinkuvaaja on yhdeksällä yhtälöllä. Jokainen kohta on 1 p.\n\n2.1 $y=x^2$ · 2.2 $y=x^4$ · 2.3 $y=x^3$ · 2.4 $y=x^2+1$ · 2.5 $y=(x+1)^2$ · 2.6 $y=2x^2$ · 2.7 $y=\\cos x$ · 2.8 $y=\\sin x$ · 2.9 $y=-2\\cos x+2$ · 2.10 $y=-\\cos(2x)$ · 2.11 $y=2\\sin(2x)$ · 2.12 $y=2\\sin x$",
+     "hints": [
+      "Tunnista kuvaajista tarkistuspisteitä: arvo kohdassa $x=0$, nollakohdat, arvo kohdassa $x=1$, suurin ja pienin arvo sekä jaksonpituus. Laske samat asiat kustakin yhtälöstä ja vertaa.",
+      "Vihjeitä kohta kohdalta:\n- Paraabelit $x^2$, $2x^2$, $x^2+1$ ja $(x+1)^2$ erottuvat arvoista $f(0)$ ja $f(1)$ sekä huipun paikasta.\n- $x^4$ on nollan lähellä hyvin litteä, ja $x^3$ kulkee pisteen $(1,1)$ kautta.\n- $\\cos x$ saa nollassa arvon 1 ja $\\sin x$ arvon 0; kummankin arvot ovat välillä $[-1,1]$.\n- $-2\\cos x+2$ saa arvot väliltä $[0,4]$, $-\\cos(2x)$ väliltä $[-1,1]$ (nollassa $-1$) ja $2\\sin(2x)$ väliltä $[-2,2]$ jaksolla $\\pi$."
+     ],
+     "solution": "Tarkistetaan kustakin yhtälöstä tunnusmerkit ja etsitään kuvaaja, jossa ne toteutuvat.\n\n1. **2.1 $y=x^2$: kuvaaja 9.** Huippu origossa ja arvo 1 kohdassa $x=1$.\n2. **2.2 $y=x^4$: kuvaaja 2.** Parillinen, origon lähellä hyvin litteä, arvo 1 kohdassa $x=1$.\n3. **2.3 $y=x^3$: ei kuvaajaa.** Kuvaajan pitäisi kulkea pisteen $(1,1)$ kautta. Kuvaajissa 6 ja 11 arvo kohdassa $x=1$ on selvästi yli 1.\n4. **2.4 $y=x^2+1$: kuvaaja 12.** Huippu pisteessä $(0,1)$.\n5. **2.5 $y=(x+1)^2$: kuvaaja 4.** Huippu pisteessä $(-1,0)$, ja $y$-akselin leikkaus on 1.\n6. **2.6 $y=2x^2$: kuvaaja 5.** Huippu origossa ja arvo 2 kohdassa $x=1$.\n7. **2.7 $y=\\cos x$: kuvaaja 7.** Arvo 1 nollassa, nollakohdat $\\pm\\frac{\\pi}{2}\\approx\\pm1{,}57$.\n8. **2.8 $y=\\sin x$: kuvaaja 1.** Kulkee origon kautta, suurin arvo 1 kohdassa $\\frac{\\pi}{2}$.\n9. **2.9 $y=-2\\cos x+2$: kuvaaja 10.** Arvo 0 nollassa ja suurin arvo 4 kohdissa $\\pm\\pi$.\n10. **2.10 $y=-\\cos(2x)$: ei kuvaajaa.** Arvojen pitäisi olla välillä $[-1,1]$ ja nollassa $-1$. Kuvaaja 8 on muuten samanmuotoinen, mutta sen arvot ovat välillä $[0,2]$ (se on $1-\\cos(2x)$).\n11. **2.11 $y=2\\sin(2x)$: kuvaaja 3.** Kulkee origon kautta, amplitudi 2 ja nollakohdat $\\frac{\\pi}{2}$:n välein.\n12. **2.12 $y=2\\sin x$: ei kuvaajaa.** Amplitudin 2 sinikäyrä, jonka jakso on $2\\pi$, puuttuu kuvasta.\n\n**Vastaus: 2.1 → 9 · 2.2 → 2 · 2.3 → ei · 2.4 → 12 · 2.5 → 4 · 2.6 → 5 · 2.7 → 7 · 2.8 → 1 · 2.9 → 10 · 2.10 → ei · 2.11 → 3 · 2.12 → ei**\n\n**Sudenkuoppa:** yhdistetään $y=-\\cos(2x)$ kuvaajaan 8 muodon perusteella. Tarkista aina arvo jossakin pisteessä, esimerkiksi $x=0$.",
+     "answer": "2.1 → 9 · 2.2 → 2 · 2.3 → ei · 2.4 → 12 · 2.5 → 4 · 2.6 → 5 · 2.7 → 7 · 2.8 → 1 · 2.9 → 10 · 2.10 → ei · 2.11 → 3 · 2.12 → ei",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kymmenen metrin ratakisko on taipunut lämpölaajenemisen takia, mutta sen päät ovat paikallaan (ks. alkuperäisen tehtävän kuva 3.A). Kohtisuora poikkeama alkuperäisestä asemasta on $f(x)=\\frac{x^3-15x^2+50x}{1000}$, missä $x$ on etäisyys alkupäästä (m) ja poikkeama on metreinä. Missä kohdissa poikkeama on suurin, ja kuinka suuri se on?",
+     "hints": [
+      "Tarkasteluväli on $0\\le x\\le 10$, ja päissä $f(0)=f(10)=0$. Poikkeaman suuruus on $|f(x)|$, joten etsi funktion suurin ja pienin arvo välillä derivaatan nollakohtien avulla.",
+      "$f'(x)=\\frac{3x^2-30x+50}{1000}$, ja nollakohdat ovat $x=5\\pm\\frac{5}{\\sqrt3}\\approx 2{,}11$ ja $7{,}89$. Laske funktion arvot näissä kohdissa ja vertaa itseisarvoja."
+     ],
+     "solution": "1. $f$ on polynomina jatkuva ja derivoituva välillä $[0,10]$, ja $f(0)=f(10)=0$. Kysytty on suurin $|f(x)|$.\n2. $f'(x)=\\frac{3x^2-30x+50}{1000}=0 \\iff 3x^2-30x+50=0 \\iff x=\\frac{30\\pm\\sqrt{900-600}}{6}=5\\pm\\frac{5}{\\sqrt3}$.\n3. Nollakohdat ovat $x_1\\approx 2{,}113$ ja $x_2\\approx 7{,}887$, ja molemmat ovat välillä $(0,10)$.\n4. $f(x)=\\frac{x(x-5)(x-10)}{1000}$, ja arvot ovat $f(x_1)=\\frac{\\sqrt3}{36}\\approx 0{,}0481$ ja $f(x_2)=-\\frac{\\sqrt3}{36}\\approx -0{,}0481$.\n5. Jatkuvan funktion suurin ja pienin arvo suljetulla välillä saavutetaan derivaatan nollakohdissa tai välin päätepisteissä. Päätepisteissä $f=0$, joten $f$:n suurin arvo on $0{,}0481$ kohdassa $x_1$ ja pienin $-0{,}0481$ kohdassa $x_2$.\n6. Poikkeaman suuruus $|f(x)|$ on siis suurin molemmissa kohdissa, ja se on noin $0{,}048$ m eli noin 4,8 cm. Kisko taipuu alkupäässä toiselle ja loppupäässä toiselle puolelle.\n\n**Vastaus: noin $2{,}11$ m:n ja $7{,}89$ m:n kohdalla alkupäästä. Suurin poikkeama on noin $0{,}048$ m ($\\frac{\\sqrt3}{36}$ m).**\n\n**Sudenkuoppa:** vain suurimman arvon etsiminen. Kohdassa $x\\approx 7{,}89$ poikkeama on negatiivinen mutta itseisarvoltaan yhtä suuri, joten sekin on vastaus.",
+     "answer": "Kohdissa $x\\approx 2{,}11$ m ja $x\\approx 7{,}89$ m; suurin poikkeama $\\approx 0{,}048$ m",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Tason suora on pisteestä $A=(-2,0)$ etäisyydellä 2 ja pisteestä $B=(3,0)$ etäisyydellä 3. Määritä kaikki tällaiset suorat.",
+     "hints": [
+      "Suora on etäisyydellä $r$ pisteestä $P$ täsmälleen silloin, kun se sivuaa $P$-keskistä $r$-säteistä ympyrää. Etsi siis ympyröiden $(x+2)^2+y^2=4$ ja $(x-3)^2+y^2=9$ yhteiset tangentit. Piirrä kuva ja tutki, miten ympyrät sijaitsevat toisiinsa nähden.",
+      "Keskipisteiden etäisyys on $5=2+3$, joten ympyrät sivuavat toisiaan origossa. Yksi yhteinen tangentti on $y$-akseli. Muut kaksi ovat $x$-akselin suhteen symmetriset ja leikkaavat $x$-akselin pisteessä $(q,0)$, jolle etäisyyksien suhde on $2:3$. Voit myös kirjoittaa suoran muodossa $y=kx+b$ ja käyttää pisteen etäisyyden kaavaa."
+     ],
+     "solution": "1. Suoran etäisyys pisteestä $A$ on 2 täsmälleen silloin, kun suora sivuaa ympyrää $(x+2)^2+y^2=4$. Samoin $B$:lle ja ympyrälle $(x-3)^2+y^2=9$. Etsitään ympyröiden yhteiset tangentit.\n2. **Pystysuorat suorat** $x=c$: ehdot $|c+2|=2$ ja $|c-3|=3$ antavat $c\\in\\{0,-4\\}$ ja $c\\in\\{0,6\\}$, joten $c=0$. Suora $x=0$ kelpaa.\n3. **Muut suorat** $y=kx+b$ eli $kx-y+b=0$: etäisyyden kaavalla $|b-2k|=2\\sqrt{k^2+1}$ ja $|b+3k|=3\\sqrt{k^2+1}$.\n4. Jakamalla saadaan $3|b-2k|=2|b+3k|$. Tapaukset:\n- $3(b-2k)=2(b+3k)$, jolloin $b=12k$.\n- $3(b-2k)=-2(b+3k)$, jolloin $b=0$. Silloin $|2k|=2\\sqrt{k^2+1}$ eli $k^2=k^2+1$, mikä on mahdotonta.\n5. Kun $b=12k$: $|10k|=2\\sqrt{k^2+1} \\iff 100k^2=4k^2+4 \\iff k^2=\\frac{1}{24}$, joten $k=\\pm\\frac{1}{2\\sqrt6}=\\pm\\frac{\\sqrt6}{12}$ ja $b=12k=\\pm\\sqrt6$.\n6. Tarkistus pisteelle $B$: $\\frac{|15k|}{\\sqrt{k^2+1}}=15\\cdot\\frac{1}{5}=3$, koska $\\frac{|k|}{\\sqrt{k^2+1}}=\\frac{1/\\sqrt{24}}{5/\\sqrt{24}}=\\frac15$.\n7. Geometrisesti: ympyrät sivuavat toisiaan origossa (keskipisteiden etäisyys $5=2+3$). Yhteisiä tangentteja on siksi kolme: sivuamispisteen kautta kulkeva $y$-akseli ja kaksi ulkoista tangenttia, jotka leikkaavat $x$-akselin pisteessä $(-12,0)$.\n\n**Vastaus: $x=0$, $y=\\frac{\\sqrt6}{12}x+\\sqrt6$ ja $y=-\\frac{\\sqrt6}{12}x-\\sqrt6$ (eli $y=\\pm\\frac{1}{2\\sqrt6}(x+12)$).**\n\n**Sudenkuoppa:** $y$-akseli unohtuu, koska muotoon $y=kx+b$ kirjoitettu suora ei voi olla pystysuora. Pystysuorat suorat on tutkittava erikseen.",
+     "answer": "$x=0$ ja $y=\\pm\\frac{\\sqrt6}{12}(x+12)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Albrecht Dürerin kaiverruksessa Melankolia I on $4\\times4$-taikaneliö, jonka jokaisen vaaka- ja pystyrivin summa on 34 (ks. alkuperäisen tehtävän kuva 5.A). Neliön rivit ovat ylhäältä alas $16,\\ 3,\\ 2,\\ 13$; $5,\\ 10,\\ 11,\\ 8$; $9,\\ \\frac{y-2}{2},\\ \\frac{x-1}{2},\\ 12$; $4,\\ x,\\ y,\\ 1$. Kun luvut $x$ ja $y$ kirjoitetaan peräkkäin, saadaan teoksen valmistumisvuosi. Ratkaise $x$ ja $y$ ja anna vuosiluku.",
+     "hints": [
+      "Valitse kaksi riviä tai saraketta, joissa esiintyvät $x$ ja $y$, ja kirjoita niiden summaehdot. Saat kahden yhtälön ryhmän.",
+      "Alin vaakarivi antaa $4+x+y+1=34$ eli $x+y=29$. Kolmas pystyrivi antaa $2+11+\\frac{x-1}{2}+y=34$ eli $x+2y=43$."
+     ],
+     "solution": "1. Alin vaakarivi: $4+x+y+1=34$, joten $x+y=29$.\n2. Kolmas pystyrivi: $2+11+\\frac{x-1}{2}+y=34$, joten $\\frac{x-1}{2}+y=21$ eli $x+2y=43$.\n3. Vähennetään: $(x+2y)-(x+y)=43-29$, joten $y=14$ ja $x=15$.\n4. Tarkistus muilla riveillä: kolmas vaakarivi $9+\\frac{14-2}{2}+\\frac{15-1}{2}+12=9+6+7+12=34$ ja toinen pystyrivi $3+10+6+15=34$.\n5. Luvut peräkkäin: 15 ja 14, eli vuosi 1514.\n\n**Vastaus: $x=15$, $y=14$; teos on vuodelta 1514.**",
+     "answer": "$x=15$, $y=14$; vuosi 1514",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Raketin kärkiosa (nokkakartio) on pyörähdyskappale: sen synnyttää alaspäin aukeava paraabeli, joka kiertää oman symmetria-akselinsa ympäri. Kappaleen korkeus on 4,5 m, ja pohjan halkaisija on 3,3 m. Laske tilavuus.",
+     "hints": [
+      "Aseta paraabelin poikkileikkaus koordinaatistoon niin, että huippu on pisteessä $(0;\\ 4{,}5)$ ja nollakohdat ovat $x=\\pm1{,}65$. Pyörähdys tapahtuu $y$-akselin ympäri, joten tilavuus lasketaan integroimalla $y$:n suhteen: $V=\\pi\\int x^2\\,dy$.",
+      "Paraabeli on $y=4{,}5-\\frac{4{,}5}{1{,}65^2}x^2$, joten $x^2=1{,}65^2\\left(1-\\frac{y}{4{,}5}\\right)$. Integroi välillä $0\\le y\\le 4{,}5$."
+     ],
+     "solution": "1. Asetetaan poikkileikkaus niin, että huippu on $(0;\\ 4{,}5)$ ja pohjan säde on $\\frac{3{,}3}{2}=1{,}65$. Paraabeli on $y=4{,}5+ax^2$.\n2. Ehto $y(1{,}65)=0$: $a=-\\frac{4{,}5}{1{,}65^2}=-\\frac{200}{121}$, joten $y=4{,}5-\\frac{200}{121}x^2$.\n3. Ratkaistaan $x^2$: $x^2=1{,}65^2\\left(1-\\frac{y}{4{,}5}\\right)$.\n4. Korkeudella $y$ poikkileikkaus on ympyrä, jonka säde on $|x|$, joten\n$$V=\\pi\\int_0^{4{,}5}1{,}65^2\\left(1-\\frac{y}{4{,}5}\\right)dy=\\pi\\cdot 1{,}65^2\\left[y-\\frac{y^2}{9}\\right]_0^{4{,}5}=\\pi\\cdot 1{,}65^2\\cdot 2{,}25.$$\n5. $V\\approx 19{,}24$ m³.\n\n(Tarkistus: pyörähdysparaboloidin tilavuus on puolet saman pohjan ja korkeuden lieriön tilavuudesta, $\\frac12\\pi r^2h=\\frac12\\pi\\cdot 1{,}65^2\\cdot 4{,}5$.)\n\n**Vastaus: noin $19$ m³**\n\n**Sudenkuoppa:** kartion kaavan $\\frac13\\pi r^2h\\approx 12{,}8$ m³ käyttäminen. Kappale ei ole kartio, vaikka sitä kutsutaan nokkakartioksi.",
+     "answer": "$\\approx 19$ m³ ($\\frac12\\pi\\cdot 1{,}65^2\\cdot 4{,}5\\approx 19{,}24$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Vektorit ovat $\\overline u=\\overline i+2\\overline j$ ja $\\overline v=\\sin(2t)\\,\\overline i+\\cos(4t)\\,\\overline j$, missä $t\\ge 0$.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Laske vektori $\\overline u+\\overline v$, kun $t=0$, $t=\\frac{\\pi}{4}$ ja $t=\\frac{3\\pi}{4}$.",
+     "hints": [
+      "$\\overline u+\\overline v=(1+\\sin 2t)\\,\\overline i+(2+\\cos 4t)\\,\\overline j$. Sijoita kukin $t$ radiaaneina ja laske sinin ja kosinin tarkat arvot."
+     ],
+     "solution": "1. $\\overline u+\\overline v=(1+\\sin 2t)\\,\\overline i+(2+\\cos 4t)\\,\\overline j$.\n2. $t=0$: $\\sin 0=0$ ja $\\cos 0=1$, joten $\\overline u+\\overline v=\\overline i+3\\overline j$.\n3. $t=\\frac{\\pi}{4}$: $\\sin\\frac{\\pi}{2}=1$ ja $\\cos\\pi=-1$, joten $\\overline u+\\overline v=2\\overline i+\\overline j$.\n4. $t=\\frac{3\\pi}{4}$: $\\sin\\frac{3\\pi}{2}=-1$ ja $\\cos 3\\pi=-1$, joten $\\overline u+\\overline v=0\\,\\overline i+\\overline j=\\overline j$.\n\n**Vastaus: $\\overline i+3\\overline j$; $2\\overline i+\\overline j$; $\\overline j$**",
+     "answer": "$\\overline i+3\\overline j$; $2\\overline i+\\overline j$; $\\overline j$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 8,
+     "prompt": "Mikä käyrä muodostuu vektorin $\\overline u+\\overline v$ kärkipisteistä, kun $t\\in[0,\\pi]$? Anna vastaus muodossa $y=f(x)$. Apuna voi käyttää kaavaa $\\cos 2x=1-2\\sin^2x$.",
+     "hints": [
+      "Kärkipiste on $(x,y)=(1+\\sin 2t,\\ 2+\\cos 4t)$. Yritä lausua $y$ lausekkeen $\\sin 2t$ avulla, jolloin sen voi korvata $x$:n lausekkeella.",
+      "Kaavalla $\\cos 4t=\\cos(2\\cdot 2t)=1-2\\sin^2 2t$, ja $\\sin 2t=x-1$. Selvitä myös, mitkä $x$:n arvot tulevat kyseeseen, kun $t\\in[0,\\pi]$."
+     ],
+     "solution": "1. Kärkipiste on $x=1+\\sin 2t$, $y=2+\\cos 4t$.\n2. Kaksinkertaisen kulman kaavalla $\\cos 4t=1-2\\sin^2 2t$, joten $y=3-2\\sin^2 2t$.\n3. Koska $\\sin 2t=x-1$, saadaan $y=3-2(x-1)^2=-2x^2+4x+1$.\n4. Kun $t\\in[0,\\pi]$, $2t$ käy läpi välin $[0,2\\pi]$, joten $\\sin 2t$ saa kaikki arvot väliltä $[-1,1]$ ja $x=1+\\sin 2t$ kaikki arvot väliltä $[0,2]$ (ääripäät esim. $t=\\frac{3\\pi}{4}$ ja $t=\\frac{\\pi}{4}$).\n5. Käyrä on siis alaspäin aukeavan paraabelin kaari, jonka huippu on $(1,3)$ ja päätepisteet $(0,1)$ ja $(2,1)$.\n\n**Vastaus: paraabelin kaari $y=-2x^2+4x+1$, kun $0\\le x\\le 2$.**\n\n**Sudenkuoppa:** määrittelyväli $0\\le x\\le 2$ unohtuu. Koko paraabeli ei synny, vaan vain sen kaari.",
+     "answer": "$y=-2x^2+4x+1$, $0\\le x\\le 2$ (paraabelin kaari)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 6,
+     "prompt": "Todista induktiolla, että $k^3\\ge k^2+4$ kaikilla kokonaisluvuilla $k\\ge 2$.",
+     "hints": [
+      "Kirjoita alkuaskel ($k=2$), induktio-oletus ja induktioväite. Induktioaskeleessa avaa $(k+1)^3$ ja käytä induktio-oletusta termiin $k^3$.",
+      "$(k+1)^3=k^3+3k^2+3k+1\\ge(k^2+4)+3k^2+3k+1$. Vertaa tätä lausekkeeseen $(k+1)^2+4=k^2+2k+5$: erotus on $3k^2+k$."
+     ],
+     "solution": "1. **Alkuaskel:** kun $k=2$, $2^3=8$ ja $2^2+4=8$, joten $8\\ge 8$ pätee.\n2. **Induktio-oletus:** oletetaan, että jollakin kokonaisluvulla $k\\ge 2$ pätee $k^3\\ge k^2+4$.\n3. **Induktioväite:** $(k+1)^3\\ge(k+1)^2+4$.\n4. **Todistus:** $(k+1)^3=k^3+3k^2+3k+1\\ge(k^2+4)+3k^2+3k+1$ induktio-oletuksen nojalla.\n5. $(k^2+4)+3k^2+3k+1-\\left((k+1)^2+4\\right)=4k^2+3k+5-(k^2+2k+5)=3k^2+k>0$, kun $k\\ge 2$.\n6. Siis $(k+1)^3\\ge(k+1)^2+4$, ja induktioperiaatteen nojalla väite pätee kaikilla $k\\ge 2$. $\\blacksquare$\n\n**Sudenkuoppa:** induktioväite todistetaan käyttämättä induktio-oletusta, jolloin kyse ei ole induktiotodistuksesta.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 2,
+     "prompt": "Osoita, että epäyhtälö $k^3\\ge k^2+4$ ei päde millään negatiivisella kokonaisluvulla $k$.",
+     "hints": [
+      "Vertaa epäyhtälön puolten etumerkkejä, kun $k<0$."
+     ],
+     "solution": "1. Kun $k<0$, on $k^3<0$ (pariton potenssi säilyttää merkin).\n2. Toisaalta $k^2+4\\ge 4>0$.\n3. Siis $k^3<0\\lt k^2+4$, eikä epäyhtälö päde. $\\blacksquare$\n\n**Sudenkuoppa:** yksi esimerkki (kuten $k=-1$) ei riitä, koska väite koskee kaikkia negatiivisia kokonaislukuja.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 4,
+     "prompt": "Osoita, että $x^3\\ge x^2+4$ kaikilla reaaliluvuilla $x\\ge 2$.",
+     "hints": [
+      "Induktio ei toimi reaaliluvuille. Kirjoita $x^3-x^2=x^2(x-1)$ ja arvioi tekijöitä, kun $x\\ge 2$. Toinen tapa on tutkia funktion $f(x)=x^3-x^2-4$ kulkua derivaatan avulla."
+     ],
+     "solution": "1. $x^3-x^2=x^2(x-1)$.\n2. Kun $x\\ge 2$, on $x^2\\ge 4$ ja $x-1\\ge 1$, ja molemmat tekijät ovat positiivisia.\n3. Siis $x^3-x^2=x^2(x-1)\\ge 4\\cdot 1=4$, eli $x^3\\ge x^2+4$. $\\blacksquare$\n\n(Vaihtoehto: $f(x)=x^3-x^2-4$, $f'(x)=x(3x-2)>0$, kun $x\\ge 2$, joten $f$ on kasvava, ja $f(2)=0$. Siis $f(x)\\ge 0$, kun $x\\ge 2$.)\n\n**Sudenkuoppa:** laskimen solve-komennon antama $x\\ge 2$ ei ole todistus.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Alkuperäisen tehtävän tekstissä 9.A on pseudokoodialgoritmi integraali($a$, $b$, $n$). Se laskee ensin $h=\\frac{b-a}{n}$ ja $r=0$. Sitten se toistaa arvoilla $k=1,2,\\dots,n$: $f=(a+k\\cdot h)^2+1$ ja $r=r+f\\cdot h$. Lopuksi se palauttaa $r$:n.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 2,
+     "prompt": "Mitä algoritmi palauttaa, kun $a=0$, $b=1$ ja $n=5$?",
+     "hints": [
+      "Laske ensin $h=\\frac{b-a}{n}$. Käy silmukka läpi kierros kerrallaan ($k=1,\\dots,5$): laske $f$ ja lisää $f\\cdot h$ muuttujaan $r$."
+     ],
+     "solution": "1. $h=\\frac{1-0}{5}=\\frac15$.\n2. Silmukan kierroksilla $f=(k/5)^2+1$: $\\frac{26}{25}$, $\\frac{29}{25}$, $\\frac{34}{25}$, $\\frac{41}{25}$ ja $2=\\frac{50}{25}$.\n3. $r=\\frac15\\cdot\\frac{26+29+34+41+50}{25}=\\frac15\\cdot\\frac{180}{25}=\\frac{36}{25}$.\n\n**Vastaus: $\\frac{36}{25}=1{,}44$**\n\n**Sudenkuoppa:** silmukka aloitetaan arvosta $k=0$ tai lopetetaan arvoon $k=4$ (tulos $1{,}04$).",
+     "answer": "$\\frac{36}{25}=1{,}44$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 4,
+     "prompt": "Toteuta algoritmi taulukkolaskennalla tai ohjelmoimalla, kun $a=-1$, $b=2$ ja $n=1000$. Mikä on tulos?",
+     "hints": [
+      "Taulukkolaskennassa tee sarakkeet $k$, $f$ ja $r$: $f=(a+k\\cdot h)^2+1$ ja uusi $r$ = edellinen $r$ + $f\\cdot h$. Pythonissa for-silmukka arvoilla $1,\\dots,n$ (range(1, n+1))."
+     ],
+     "solution": "1. $h=\\frac{2-(-1)}{1000}=0{,}003$.\n2. Pythonilla funktio integraali(a, b, n) laskee ensin $h$:n ja asettaa $r=0$. Silmukka for k in range(1, n + 1) laskee joka kierroksella $f=(a+kh)^2+1$ ja kasvattaa summaa: $r=r+f\\cdot h$. Lopuksi funktio palauttaa $r$:n.\n3. Kutsu integraali(-1, 2, 1000) palauttaa $r\\approx 6{,}0045$.\n\n(Taulukkolaskennassa vastaavasti 1000 riviä, joilla $f$-sarake lasketaan kaavalla $(-1+k\\cdot 0{,}003)^2+1$ ja $r$-sarake kertyvänä summana. Viimeisen rivin $r$ on tulos.)\n\n**Vastaus: noin $6{,}005$**\n\n**Sudenkuoppa:** viimeinen kierros ($k=n$) jää pois, jolloin tulos on noin $6{,}0045-2\\cdot 0{,}003=5{,}9985$.",
+     "answer": "$\\approx 6{,}005$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.3",
+     "points": 6,
+     "prompt": "Minkä integraalin likiarvon algoritmi laskee? Kerro, mikä tehtävä kullakin muuttujalla $a$, $b$, $n$, $h$, $r$, $k$ ja $f$ on.",
+     "hints": [
+      "Muuttuja $f$ lasketaan jossakin pisteessä $x$, ja $f\\cdot h$ on suorakulmion ala. Mikä on integroitava funktio, ja mitkä ovat pisteet $a+kh$?",
+      "Pisteet $a+kh$, $k=1,\\dots,n$, ovat osavälien oikeat päätepisteet, ja integroitava on $x^2+1$. Käy muuttujat läpi yksi kerrallaan: mikä niistä on syöte, mikä apusuure, mikä laskuri ja mikä kertyvä summa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Algoritmi approksimoi integraalia $\\int_a^b(x^2+1)\\,dx$ suorakulmiosäännöllä (korkeus osavälin oikeassa päätepisteessä). Tapauksessa $a=-1$, $b=2$ tarkka arvo on 6.\n- $a$ ja $b$: integroimisvälin ala- ja yläraja.\n- $n$: osavälien (suorakulmioiden) määrä.\n- $h$: yhden osavälin pituus, eli suorakulmion leveys.\n- $k$: silmukkalaskuri, joka kertoo, monettako osaväliä käsitellään. Piste $a+kh$ on $k$:nnen osavälin oikea päätepiste.\n- $f$: integroitavan funktion $x^2+1$ arvo pisteessä $a+kh$, eli suorakulmion korkeus.\n- $r$: tähän asti laskettujen suorakulmioiden alojen summa. Lopuksi se on integraalin likiarvo.\n\n**Esimerkkivastaus:** Algoritmi jakaa välin $[a,b]$ $n$:ään yhtä pitkään osaan, joiden leveys on $h$. Jokaisella kierroksella se laskee funktion $x^2+1$ arvon $f$ osavälin oikeassa päätepisteessä $a+kh$ ja lisää suorakulmion alan $f\\cdot h$ summaan $r$. Lopuksi $r$ on integraalin $\\int_a^b(x^2+1)\\,dx$ likiarvo.",
+     "answer": "$\\int_a^b(x^2+1)\\,dx$ (oikean päätepisteen suorakulmiosääntö)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "PET-kuvauksesta saadaan aika-aktiivisuuskäyrä $f(t)=g(t)+ue^{v-(t-w)^2}$, missä $u,v,w>0$ ja $g(t)=0$, kun $t<0$; $g(t)=a_1t+b_1$, kun $0\\le t\\lt w$; $g(t)=a_2t+b_2$, kun $t\\ge w$. Mittausarvot ovat alkuperäisen tehtävän taulukossa 10.A.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Piirrä funktion $f$ kuvaaja ja alkuperäisen tehtävän taulukon 10.A mittauspisteet samaan koordinaatistoon, kun $u=\\frac15$, $v=3$, $w=2$, $a_1=\\frac54$, $b_1=0$, $a_2=-\\frac14$ ja $b_2=3$.",
+     "hints": [
+      "Määrittele paloittain annettu funktio ohjelmistossa, esimerkiksi GeoGebrassa ehtolauseella Jos(...), ja lisää eksponenttitermi. Syötä mittauspisteet taulukosta pistelistana. Muista osa $t<0$, jossa $g(t)=0$."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Oikein syötetyn lausekkeen, esimerkiksi GeoGebrassa g(t) = Jos(t < 0, 0, t < 2, 5/4 t, -1/4 t + 3) ja f(t) = g(t) + 1/5 e^(3 - (t - 2)^2).\n- Kuvaajan, jossa on nouseva osa, huippu kohdassa $t=2$ (arvo noin $6{,}5$) ja sen jälkeen laskeva osa, joka lähestyy suoraa $y=-\\frac14t+3$.\n- Taulukon mittauspisteet samassa kuvassa erillisinä pisteinä (ei yhdistettynä käyräksi).\n\nMalli sopii mittauksiin hyvin: esimerkiksi $f(1)\\approx 2{,}73$, $f(2)\\approx 6{,}52$ ja $f(4)\\approx 2{,}07$ ovat lähellä samojen hetkien mittausarvoja.\n\n**Sudenkuoppa:** mittauspisteisiin sovitetaan oma käyrä (polynomi tai splini) annetun mallin sijaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 4,
+     "prompt": "Kuvaile, millainen vaikutus parametreilla $u$, $v$ ja $w$ on funktion $f$ kuvaajaan.",
+     "hints": [
+      "Tutki termiä $ue^{v-(t-w)^2}=ue^v\\cdot e^{-(t-w)^2}$ esimerkiksi liukusäätimillä. Missä termi on suurimmillaan, ja mikä on sen suurin arvo?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- $u$: kerroin, joka skaalaa huipun korkeutta. Kun $u$ kasvaa, huippu nousee.\n- $v$: koska $e^{v-(t-w)^2}=e^v\\cdot e^{-(t-w)^2}$, $v$ skaalaa huippua kertoimella $e^v$. Kun $v$ kasvaa, huippu nousee (eksponentiaalisesti).\n- $w$: huipun paikka aika-akselilla (termi on suurin, kun $t=w$). Lisäksi $w$ on hetki, jolloin $g$ vaihtuu lausekkeesta toiseen.\n\n**Esimerkkivastaus:** Termin $ue^{v-(t-w)^2}$ suurin arvo on $ue^v$ hetkellä $t=w$, joten $u$ ja $v$ määräävät huipun korkeuden: kummankin kasvattaminen nostaa huippua. Parametri $w$ siirtää huippua aika-akselilla ja määrää myös, milloin taustan lineaarinen osa $g$ vaihtuu nousevasta laskevaksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Mitä ehtoja parametrien $w$, $a_1$, $b_1$, $a_2$ ja $b_2$ on toteutettava, jotta $f$ on jatkuva?",
+     "hints": [
+      "Eksponenttitermi on jatkuva kaikkialla, joten riittää tarkastella funktiota $g$. Se on jatkuva muualla kuin mahdollisesti paloittelukohdissa $t=0$ ja $t=w$. Vertaa niissä lausekkeiden arvoja."
+     ],
+     "solution": "1. Termi $ue^{v-(t-w)^2}$ on jatkuva kaikilla $t$, ja jatkuvien funktioiden summa on jatkuva. Siksi $f$ on jatkuva täsmälleen silloin, kun $g$ on jatkuva.\n2. Kukin $g$:n pala on polynomi, joten $g$ on jatkuva muualla kuin mahdollisesti kohdissa $t=0$ ja $t=w$.\n3. Kohta $t=0$: vasemmalta raja-arvo on 0 ja $g(0)=a_1\\cdot 0+b_1=b_1$. Jatkuvuus vaatii $b_1=0$.\n4. Kohta $t=w$: vasemmalta raja-arvo on $a_1w+b_1$ ja $g(w)=a_2w+b_2$. Jatkuvuus vaatii $a_1w+b_1=a_2w+b_2$.\n5. Yhdessä: $b_1=0$ ja $b_2=w(a_1-a_2)$.\n\n(Kohdan 10.1 arvot toteuttavat ehdot: $b_1=0$ ja $2\\left(\\frac54+\\frac14\\right)=3=b_2$.)\n\n**Vastaus: $b_1=0$ ja $b_2=w(a_1-a_2)$.**\n\n**Sudenkuoppa:** tarkastellaan vain kohtaa $t=w$ ja unohdetaan alkukohta $t=0$, jossa nolla-osa vaihtuu ensimmäiseksi suoraksi.",
+     "answer": "$b_1=0$ ja $b_2=w(a_1-a_2)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 9,
+     "prompt": "Eeri heittää kahta noppaa kerran ja valitsee sen, jonka silmäluku on suurempi (tasapelissä kumman tahansa). Sitten hän heittää valitsemaansa noppaa uudelleen. Millä todennäköisyydellä toinen tulos on pienempi kuin ensimmäinen?",
+     "hints": [
+      "Ensimmäinen tulos on kahden nopan silmälukujen maksimi $M$. Laske ensin $P(M=k)$ kaikilla $k=1,\\dots,6$ (36 yhtä todennäköistä tulosparia). Käytä sitten kokonaistodennäköisyyttä.",
+      "$P(M=k)=\\frac{2k-1}{36}$, koska maksimi on $k$ niissä pareissa, joissa kumpikin on enintään $k$ ($k^2$ paria), mutta ei kumpikin enintään $k-1$. Uusi heitto on pienempi kuin $k$ todennäköisyydellä $\\frac{k-1}{6}$."
+     ],
+     "solution": "1. Kahden nopan heitossa on $6\\cdot 6=36$ yhtä todennäköistä tulosparia. Ensimmäinen tulos on niiden maksimi $M$.\n2. $M\\le k$ on $k^2$ parissa, joten $M=k$ on $k^2-(k-1)^2=2k-1$ parissa: $P(M=k)=\\frac{2k-1}{36}$. (Esim. $M=6$: 11 paria, $M=1$: 1 pari.)\n3. Kun $M=k$, uusi heitto on pienempi todennäköisyydellä $\\frac{k-1}{6}$.\n4. Kokonaistodennäköisyys:\n$$P=\\sum_{k=1}^{6}\\frac{2k-1}{36}\\cdot\\frac{k-1}{6}=\\frac{1\\cdot0+3\\cdot1+5\\cdot2+7\\cdot3+9\\cdot4+11\\cdot5}{216}=\\frac{125}{216}.$$\n5. $\\frac{125}{216}\\approx 0{,}579$.\n\n**Vastaus: $\\frac{125}{216}\\approx 0{,}58$**\n\n**Sudenkuoppa:** ensimmäinen tulos lasketaan kuin yksi noppa ($\\frac{15}{36}=\\frac{5}{12}$). Valinta suosii suuria tuloksia, ja siksi pieneneminen on todennäköisempää.",
+     "answer": "$\\frac{125}{216}\\approx 0{,}58$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.2",
+     "points": 3,
+     "prompt": "Laajalti levinneessä uutisessa väitettiin, että kymmenen maailman rikkaimman varallisuus tuplaantui pandemian kahtena ensimmäisenä vuotena. Vertailu tehtiin laskemalla jakson lopun kymmenen rikkaimman omaisuus ja vertaamalla sitä heidän omaisuuteensa kaksi vuotta aiemmin. Mikä ajatusvirhe tässä on, ja miten se liittyy Eerin nopanheittoon?",
+     "hints": [
+      "Molemmissa tapauksissa joukko valitaan sen perusteella, että sen arvo oli suuri yhdellä hetkellä. Mitä tapahtuu arvolle toisella hetkellä, jos suuri arvo johtui osin sattumasta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kymmenen rikkaimman joukko valittiin jakson lopun tilanteen perusteella. Samat ihmiset eivät välttämättä olleet kärjessä kaksi vuotta aiemmin.\n- Listalle päätyvät todennäköisimmin ne, joiden omaisuus kasvoi poikkeuksellisen paljon. Siksi vertailu yliarvioi ”kymmenen rikkaimman” omaisuuden kasvun.\n- Sama valintavinouma näkyy nopassa: noppa valittiin suuren tuloksen perusteella, ja uusi tulos on todennäköisesti pienempi (regressio kohti keskiarvoa).\n\n**Esimerkkivastaus:** Vertailuun valittiin ihmiset, jotka olivat rikkaimpia nimenomaan jakson lopussa. Heihin valikoituvat ne, joiden omaisuus sattui kasvamaan eniten, joten kasvu näyttää suuremmalta kuin kärkijoukossa yleensä. Eeri valitsi samoin nopan sen perusteella, että se sattui antamaan suuren tuloksen, joten seuraava heitto on todennäköisemmin pienempi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Keksi polynomi $P(x)$, jolla yhtälöllä $P(x)=1$ on täsmälleen kaksi eri ratkaisua ja yhtälöllä $P(x)=-1$ vähintään neljä eri ratkaisua. Perustele laskemalla, että ehdot täyttyvät; kuva tai solve-komento ei yksin riitä.",
+     "hints": [
+      "Polynomin on oltava vähintään neljättä astetta, jotta yhtälöllä $P(x)=-1$ voi olla neljä ratkaisua. Hahmottele M-kirjaimen muotoinen kuvaaja, jonka kaksi huippua koskettavat suoraa $y=1$ ja jonka keskikuoppa ja reunat ulottuvat suoran $y=-1$ alapuolelle.",
+      "Kokeile muotoa $P(x)=1-c(x^2-1)^2$, jossa $c>0$. Silloin $P(x)=1$ vain, kun $x=\\pm1$. Valitse $c$ niin suuri, että yhtälöstä $(x^2-1)^2=\\frac{2}{c}$ saadaan neljä ratkaisua (esim. $c=8$)."
+     ],
+     "solution": "**Esimerkki:** $P(x)=1-8(x^2-1)^2=-8x^4+16x^2-7$.\n\n**Yhtälö $P(x)=1$**\n\n1. $1-8(x^2-1)^2=1 \\iff (x^2-1)^2=0 \\iff x^2=1 \\iff x=\\pm1$.\n2. Ratkaisuja on täsmälleen kaksi eri ratkaisua: $x=-1$ ja $x=1$.\n\n**Yhtälö $P(x)=-1$**\n\n3. $1-8(x^2-1)^2=-1 \\iff (x^2-1)^2=\\frac14 \\iff x^2-1=\\pm\\frac12$.\n4. $x^2=\\frac32$ tai $x^2=\\frac12$, joten $x=\\pm\\sqrt{\\frac32}=\\pm\\frac{\\sqrt6}{2}$ tai $x=\\pm\\sqrt{\\frac12}=\\pm\\frac{\\sqrt2}{2}$.\n5. Nämä neljä lukua ovat eri suuria, joten ratkaisuja on neljä.\n\n**Vastaus: esimerkiksi $P(x)=1-8(x^2-1)^2$. Silloin $P(x)=1$ vain, kun $x=\\pm1$, ja $P(x)=-1$, kun $x=\\pm\\frac{\\sqrt2}{2}$ tai $x=\\pm\\frac{\\sqrt6}{2}$.**\n\n**Sudenkuoppa:** kahden eri polynomin antaminen (yksi kummallekin ehdolle). Saman polynomin on täytettävä molemmat ehdot.",
+     "answer": "Esim. $P(x)=1-8(x^2-1)^2$: $P=1$ kun $x=\\pm1$; $P=-1$ kun $x=\\pm\\frac{\\sqrt2}{2},\\pm\\frac{\\sqrt6}{2}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Olkoon $f(x,s)=\\frac{1-s}{(1+x^2-2sx)^2}$, kun $0\\lt s<1$ ja $0\\le x\\le 1$. Raja-arvo $s\\to1$ tarkoittaa vasemmanpuoleista raja-arvoa.\n\n1. Määritä $g(x)=\\lim_{s\\to1}f(x,s)$, kun $0\\le x<1$, ja laske $\\int_0^1g(x)\\,dx$. (3 p)\n2. Etsi $x_0<1$, jolla $f(x_0,s)=f(1,s)$, ja laske $\\int_{x_0}^1f(x_0,s)\\,dx$. (3 p)\n3. Osoita, että $f(x,s)\\ge f(x_0,s)$, kun $x\\in[x_0,1]$. (3 p)\n4. Osoita, että $\\int_0^1\\lim_{s\\to1}f(x,s)\\,dx\\neq\\lim_{s\\to1}\\int_0^1f(x,s)\\,dx$. (3 p)",
+     "hints": [
+      "Kun $x<1$ on kiinteä, nimittäjä lähestyy lukua $(1-x)^2>0$ ja osoittaja nollaa. Kohdassa 2 nimittäjät voi merkitä yhtä suuriksi (miksi?), ja syntyvä yhtälö jakautuu tekijöihin. Kohdassa 3 tutki lauseketta $h(x,s)=x^2-2sx+1$ paraabelina muuttujan $x$ suhteen.",
+      "Kohta 2: $x^2-2sx=1-2s \\iff (1-x)(x+1-2s)=0$, joten $x_0=2s-1$. Integroitava on vakio, joten integraali on $(1-x_0)f(x_0,s)$. Kohta 3: $h$:n huippu on kohdassa $x=s$, joka on välin $[x_0,1]$ keskipiste, ja $h(x_0,s)=h(1,s)$. Kohta 4: $f\\ge0$, joten $\\int_0^1f\\,dx\\ge\\int_{x_0}^1f\\,dx$."
+     ],
+     "solution": "**1.**\n\n1. Kiinteällä $0\\le x<1$: kun $s\\to1$, osoittaja $1-s\\to0$ ja nimittäjä $(1+x^2-2sx)^2\\to(1-x)^4>0$. Siis $g(x)=0$.\n2. $\\int_0^1g(x)\\,dx=0$. (Arvo $x=1$ ei vaikuta integraaliin.)\n\n**2.**\n\n3. Merkitään $h(x,s)=1+x^2-2sx=(x-s)^2+1-s^2>0$. Yhtälö $f(x,s)=f(1,s)$ on $\\frac{1-s}{h(x,s)^2}=\\frac{1-s}{h(1,s)^2}$. Koska nimittäjät ovat positiivisia, se on yhtäpitävä ehdon $h(x,s)=h(1,s)$ kanssa.\n4. $1+x^2-2sx=2-2s \\iff x^2-1-2s(x-1)=0 \\iff (x-1)(x+1-2s)=0$.\n5. Ratkaisu $x_0<1$ on $x_0=2s-1$ (välillä $[0,1)$, kun $s\\ge\\frac12$).\n6. Integroitava $f(x_0,s)=f(1,s)=\\frac{1-s}{(2-2s)^2}$ ei riipu $x$:stä, joten $\\int_{x_0}^1f(x_0,s)\\,dx=(1-x_0)\\cdot\\frac{1-s}{4(1-s)^2}=(2-2s)\\cdot\\frac{1}{4(1-s)}=\\frac12$.\n\n**3.**\n\n7. Kiinteällä $s$ funktio $x\\mapsto h(x,s)$ on ylöspäin aukeava paraabeli, jonka huippu on kohdassa $x=s$. Välin $[x_0,1]$ päätepisteissä $h(x_0,s)=h(1,s)=2-2s$, joten välillä $h(x,s)\\le h(x_0,s)$.\n8. Lisäksi $h(x,s)>0$, joten $0\\lt h(x,s)^2\\le h(x_0,s)^2$.\n9. Siis $f(x,s)=\\frac{1-s}{h(x,s)^2}\\ge\\frac{1-s}{h(x_0,s)^2}=f(x_0,s)$. $\\blacksquare$\n\n**4.**\n\n10. Kun $\\frac12\\lt s<1$, on $0\\lt x_0<1$. Koska $f\\ge0$, kohtien 3 ja 2 mukaan $\\int_0^1f(x,s)\\,dx\\ge\\int_{x_0}^1f(x,s)\\,dx\\ge\\int_{x_0}^1f(x_0,s)\\,dx=\\frac12$.\n11. Integraali on siis vähintään $\\frac12$ kaikilla $s$:n arvoilla lähellä ykköstä, joten sen raja-arvo (jos sellainen on, äärellinen tai ääretön) on vähintään $\\frac12$. Se ei voi olla 0.\n12. Kohdan 1 mukaan $\\int_0^1\\lim_{s\\to1}f(x,s)\\,dx=0$. Järjestyksen vaihtaminen muuttaa tuloksen. $\\blacksquare$\n\n(Numeerisesti integraali $\\int_0^1f(x,s)\\,dx$ on noin 3,05, kun $s=0{,}99$, ja noin 9,04, kun $s=0{,}999$. Se kasvaa rajatta, koska funktion huippu kohdassa $x=s$ kasvaa nopeammin kuin se kapenee.)\n\n**Vastaus: $g(x)=0$ ja $\\int_0^1g=0$; $x_0=2s-1$ ja $\\int_{x_0}^1f(x_0,s)\\,dx=\\frac12$; koska $\\int_0^1f(x,s)\\,dx\\ge\\frac12$, raja-arvo ei ole 0.**\n\n**Sudenkuoppa:** kohdassa 2 hyväksytään ratkaisu $x=1$, vaikka tehtävä vaatii $x_0<1$.",
+     "answer": "$g=0$, $\\int_0^1g=0$; $x_0=2s-1$, $\\int_{x_0}^1f(x_0,s)\\,dx=\\frac12$; $\\lim\\int\\ge\\frac12\\neq0$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

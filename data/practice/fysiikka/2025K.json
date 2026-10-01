@@ -1,0 +1,478 @@
+{
+ "subject": "fysiikka",
+ "session": "2025K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2025K_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-03-21_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (1.1–1.10), joissa tulkitaan kuvia ja kuvaajia:\n\n- 1.1–1.3: kolme nopeuden kuvaajaa $v(t)$; onko kappale levossa, tasaisessa, (tasaisesti) kiihtyvässä vai hidastuvassa liikkeessä\n- 1.4–1.5: vakioteholla lämmitetyn aineen lämpötila ajan funktiona; mikä ilmiö tapahtuu kuvaajaan merkityllä välillä\n- 1.6–1.7: kolmen komponentin $I(U)$-käyrät; mikä niistä on vastus ja mikä diodi\n- 1.8: kitaran kielen seisova aalto; kuvaan merkityn etäisyyden suuruus aallonpituuden avulla\n- 1.9–1.10: mihin suuntaan elektronin rata kaartuu homogeenisessa sähkökentässä ja homogeenisessa magneettikentässä.\n\nKuvat ja vaihtoehdot ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Nopeuden kuvaajan kulmakerroin on kiihtyvyys. Olomuodon muutoksen ajan lämpötila pysyy vakiona, vaikka lämmitys jatkuu. Vakioresistanssin $I(U)$-kuvaaja on origon kautta kulkeva suora. Elektronin varaus on negatiivinen, joten voiman suunta on päinvastainen kuin positiivisella varauksella.",
+      "Kohta kohdalta:\n- 1.1–1.3: onko kuvaaja vaakasuora, nouseva suora vai loiveneva nouseva käyrä?\n- 1.4–1.5: ensimmäinen vaakasuora osa on sulaminen ja toinen kiehuminen. Mitä tapahtuu niiden välissä?\n- 1.6–1.7: mikä käyrä on suora, ja mikä pysyy nollassa kynnysjännitteeseen asti?\n- 1.8: kahden vierekkäisen solmukohdan etäisyys on puolet aallonpituudesta.\n- 1.9: $\\vec F=q\\vec E$, jossa $q<0$.\n- 1.10: $\\vec F=q\\vec v\\times\\vec B$. Selvitä ensin positiivisen varauksen voima oikean käden säännöllä ja käännä se."
+     ],
+     "solution": "1. **1.1 B (tasainen liike).** Kuvaaja on vaakasuora nollaa suuremmalla arvolla: nopeus on vakio mutta ei nolla.\n2. **1.2 C (tasaisesti kiihtyvä liike).** Kuvaaja on nouseva suora, joten kulmakerroin eli kiihtyvyys on vakio ja positiivinen.\n3. **1.3 C (kiihtyvä liike).** Nopeus kasvaa koko ajan, mutta käyrä loivenee, eli kiihtyvyys pienenee. Liike on kiihtyvää mutta ei tasaisesti kiihtyvää.\n4. **1.4 D (kiehuminen).** Merkitty väli on kuvaajan toinen vaakasuora osa. Vakioteholla lämmitettäessä lämpötila pysyy vakiona olomuodon muutoksen ajan: ensimmäinen tasanne on sulaminen, toinen höyrystyminen eli kiehuminen.\n5. **1.5 B (nesteen lämpeneminen).** Merkitty nouseva osa on tasanteiden välissä, jolloin aine on kokonaan nestettä ja sen lämpötila nousee.\n6. **1.6 B.** Vastuksen virta on Ohmin lain $I=\\frac UR$ mukaan suoraan verrannollinen jännitteeseen, joten sen kuvaaja on origon kautta kulkeva suora.\n7. **1.7 C.** Diodin läpi ei juuri kulje virtaa ennen kynnysjännitettä, minkä jälkeen virta kasvaa hyvin jyrkästi.\n8. **1.8 A ($\\frac12\\lambda$).** Merkitty etäisyys on kahden vierekkäisen solmukohdan väli. Seisovassa aallossa solmut ovat puolen aallonpituuden päässä toisistaan.\n9. **1.9 B (ylöspäin).** Kenttä osoittaa kuvassa alaspäin. Elektroniin kohdistuva voima $\\vec F=q\\vec E$ on negatiivisen varauksen takia kenttää vastaan eli ylöspäin, joten rata kaartuu ylös.\n10. **1.10 C (kohti katsojaa).** Magneettinen voima on $\\vec F=q\\vec v\\times\\vec B$. Kun nopeus on oikealle ja kenttä alaspäin, positiiviseen varaukseen kohdistuva voima osoittaisi poispäin katsojasta. Elektronin varaus on negatiivinen, joten voima ja radan kaartuminen ovat kohti katsojaa.\n\n**Vastaus: 1.1 B · 1.2 C · 1.3 C · 1.4 D · 1.5 B · 1.6 B · 1.7 C · 1.8 A · 1.9 B · 1.10 C**\n\n**Sudenkuoppa:** kohdat 1.9 ja 1.10. Negatiivinen varaus kääntää voiman suunnan, ja magneettikentässä voima on kohtisuorassa sekä nopeutta että kenttää vastaan, joten kenttäviivojen suunta ei voi olla oikea vastaus.",
+     "answer": "1.1 B · 1.2 C · 1.3 C · 1.4 D · 1.5 B · 1.6 B · 1.7 C · 1.8 A · 1.9 B · 1.10 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 7,
+     "prompt": "Muunna taulukon 2.A latausasteet (%) akun lataustiloiksi (mAh) ja piirrä lataustila ajan funktiona pistekuvaajana ilman yhdysviivoja. Määritä sovitteen avulla latausvirta, kun latausaste on välillä 20–80 %.",
+     "hints": [
+      "Latausaste 100 % vastaa 3 090 mAh:a, joten kerro jokainen prosenttiluku luvulla 30,90 mAh. Lataustila on varaus, ja virta on varauksen muutosnopeus $I=\\frac{\\Delta Q}{\\Delta t}$ eli sovitesuoran kulmakerroin.",
+      "Valitse sovitukseen vain pisteet, joissa latausaste on 20–80 % (ajat 17–144 min, seitsemän pistettä). Jos muunnat ajan tunneiksi, kulmakertoimen yksikkö on suoraan mAh/h = mA."
+     ],
+     "solution": "1. Lataustila on $Q=\\frac{\\text{latausaste}}{100\\,\\%}\\cdot 3090\\ \\text{mAh}$. Esimerkiksi 21 % vastaa 649 mAh:a ja 79 % vastaa 2 441 mAh:a.\n2. Piirretään pisteet $(t,Q)$: vaaka-akselilla aika (h tai min), pystyakselilla lataustila (mAh). Pisteitä ei yhdistetä viivoilla.\n3. Latausasteen ollessa 20–80 % pisteet ovat lähes suoralla, eli akkua ladataan vakiovirralla. Lopussa lataus hidastuu, joten loppupisteitä ei oteta mukaan.\n4. Sovitetaan suora $Q=kt+b$ seitsemään pisteeseen (17, 52, 74, 80, 110, 116 ja 144 min). Kulmakertoimeksi saadaan $k\\approx 830\\ \\text{mAh/h}$.\n5. Koska virta on varauksen muutosnopeus, latausvirta on $I=k\\approx 830\\ \\text{mA}=0{,}83\\ \\text{A}$.\n\n**Vastaus: $I\\approx 0{,}83\\ \\text{A}$**\n\n**Sudenkuoppa:** suora sovitetaan koko aineistoon tai virta lasketaan vain kahdesta pisteestä. Jos aika jätetään minuutteihin, kulmakerroin on 13,8 mAh/min, jota ei saa tulkita suoraan ampeereiksi tai milliampeereiksi.",
+     "answer": "$I\\approx 0{,}83\\ \\text{A}$ (830 mA)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 4,
+     "prompt": "Laturin jännite on 5,0 V. Määritä kohdan 2.1 latauksen teho.",
+     "hints": [
+      "Sähköteho on $P=UI$. Käytä kohdan 2.1 latausvirtaa ampeereina."
+     ],
+     "solution": "1. Sähköteho on jännitteen ja virran tulo: $P=UI$.\n2. $P=5{,}0\\ \\text{V}\\cdot 0{,}83\\ \\text{A}\\approx 4{,}1\\ \\text{W}$.\n\n**Vastaus: $P\\approx 4{,}1\\ \\text{W}$**\n\n**Sudenkuoppa:** milliampeerien sijoittaminen ampeereina antaa tuhatkertaisen tehon.",
+     "answer": "$P\\approx 4{,}1\\ \\text{W}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 4,
+     "prompt": "Tabletin akun kapasiteetti on 11 200 mAh. Kuinka kauan sen lataaminen latausasteesta 20 % latausasteeseen 80 % kestää samalla laturilla ja samalla latausvirralla kuin kohdassa 2.1?",
+     "hints": [
+      "Laske ensin ladattava varaus, joka on 60 % kapasiteetista. Vakiovirralla latausaika on $t=\\frac QI$."
+     ],
+     "solution": "1. Ladattava varaus: $Q=(0{,}80-0{,}20)\\cdot 11\\,200\\ \\text{mAh}=6\\,720\\ \\text{mAh}=6{,}72\\ \\text{Ah}$.\n2. Latausaika: $t=\\frac QI=\\frac{6{,}72\\ \\text{Ah}}{0{,}83\\ \\text{A}}\\approx 8{,}1\\ \\text{h}$.\n\n**Vastaus: noin 8,1 h**",
+     "answer": "$t\\approx 8{,}1\\ \\text{h}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Laitteessa hehkulamppu toimii veden lämmitysvastuksena (video 3.A, kytkentäkuva 3.B). Lamppuun kytketään virtalähde, virtamittari ja jännitemittari, ja veden lämpötila mitataan tietokoneeseen liitetyllä anturilla (taulukko 3.C).",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 4,
+     "prompt": "Laitteella lämmitetään 0,20 l vettä. Piirrä taulukon 3.C datasta veden lämpötila ajan funktiona pistekuvaajana ja määritä suoran sovitteen avulla lämpötilan muutosnopeus välillä 50–200 s. Lämmitys alkaa vasta vähän mittauksen käynnistymisen jälkeen.",
+     "hints": [
+      "Rajaa sovitus aikaväliin 50–200 s, jolla lämpötila nousee tasaisesti. Suoran kulmakerroin on $\\frac{\\Delta T}{\\Delta t}$ yksikössä K/s (sama kuin °C/s)."
+     ],
+     "solution": "1. Piirretään pisteet $(t,T)$: vaaka-akselilla aika (s), pystyakselilla lämpötila (°C). Alussa lämpötila pysyy hetken noin 20,5 °C:ssa, minkä jälkeen se nousee lähes lineaarisesti.\n2. Sovitetaan suora välin 50–200 s pisteisiin (31 pistettä). Kulmakertoimeksi saadaan $\\frac{\\Delta T}{\\Delta t}\\approx 0{,}0257\\ \\text{K/s}$.\n\n**Vastaus: $\\frac{\\Delta T}{\\Delta t}\\approx 0{,}026\\ \\text{K/s}$**\n\n**Sudenkuoppa:** muutosnopeus lasketaan kahdesta pisteestä tai koko aineiston sovitteesta, jolloin alun viive vääristää tulosta.",
+     "answer": "$\\frac{\\Delta T}{\\Delta t}\\approx 0{,}026\\ \\text{K/s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 4,
+     "prompt": "Millä teholla lämpöä siirtyy veteen? Käytä kohdan 3.1 tulosta.",
+     "hints": [
+      "Veden saama lämpö on $Q=cm\\Delta T$, joten teho on $P=\\frac{Q}{\\Delta t}=cm\\frac{\\Delta T}{\\Delta t}$. Veden massa on 0,20 kg ja $c=4{,}19\\ \\text{kJ/(kg K)}$."
+     ],
+     "solution": "1. Veden massa: $m=\\rho V=1{,}00\\ \\text{kg/l}\\cdot 0{,}20\\ \\text{l}=0{,}20\\ \\text{kg}$.\n2. Veteen siirtyvä lämpöteho:\n$$P_\\text{v}=cm\\frac{\\Delta T}{\\Delta t}=4190\\ \\frac{\\text{J}}{\\text{kg K}}\\cdot 0{,}20\\ \\text{kg}\\cdot 0{,}0257\\ \\frac{\\text{K}}{\\text{s}}\\approx 21{,}5\\ \\text{W}.$$\n\n**Vastaus: $P_\\text{v}\\approx 22\\ \\text{W}$**\n\n**Sudenkuoppa:** tehon laskeminen mittauksen alku- ja loppulämpötilasta, jolloin alun viive pienentää tulosta.",
+     "answer": "$P_\\text{v}\\approx 22\\ \\text{W}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.3",
+     "points": 4,
+     "prompt": "Millä hyötysuhteella laite lämmittää vettä? Lampun jännitteen ja virran lukemat näkyvät videolla 3.A.",
+     "hints": [
+      "Syöttöteho on lampun sähköteho $P_\\text{s}=UI$ (videolla $U=12{,}00\\ \\text{V}$ ja $I=2{,}14\\ \\text{A}$). Hyötyteho on kohdan 3.2 veteen siirtyvä teho, ja $\\eta=\\frac{P_\\text{v}}{P_\\text{s}}$."
+     ],
+     "solution": "1. Lampun sähköteho: $P_\\text{s}=UI=12{,}00\\ \\text{V}\\cdot 2{,}14\\ \\text{A}\\approx 25{,}7\\ \\text{W}$.\n2. Hyötysuhde: $\\eta=\\frac{P_\\text{v}}{P_\\text{s}}=\\frac{21{,}5\\ \\text{W}}{25{,}7\\ \\text{W}}\\approx 0{,}84$.\n\n**Vastaus: $\\eta\\approx 84\\,\\%$**\n\n**Sudenkuoppa:** Carnot'n hyötysuhde ei liity tähän, koska laite ei ole lämpövoimakone vaan muuttaa sähköenergiaa lämmöksi.",
+     "answer": "$\\eta\\approx 84\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.4",
+     "points": 3,
+     "prompt": "Anna kolme syytä sille, että hyötysuhde jää alle 100 %:n. Mittausvirheitä ei tarvitse ottaa huomioon.",
+     "hints": [
+      "Seuraa sähköenergian kulkua: mihin muualle kuin veteen se voi päätyä? Mieti laitteen muita lämpeneviä osia, johtumista ympäristöön, lampun säteilyä ja johtimia."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme syytä, joissa kerrotaan, mihin energia siirtyy:\n- Lamppu, astia ja lampun kiinnikkeet lämpenevät myös, joten osa energiasta kasvattaa niiden sisäenergiaa.\n- Lämpöä johtuu laitteesta ympäristöön esimerkiksi kannen ja metallijohtimien kautta, vaikka astia on eristetty.\n- Hehkulanka säteilee: osa energiasta lähtee laitteesta näkyvänä valona ja infrapunasäteilynä.\n- Johtimissa ja liitoksissa syntyy resistiivistä lämpöä ($P=RI^2$), joka ei päädy veteen.\n\nPelkkä maininta energian häviämisestä tai huonosta eristyksestä ei riitä, jos ei kerrota, että energia siirtyy ympäristöön.\n\n**Esimerkkivastaus:** Ensinnäkin sähköenergia lämmittää veden lisäksi lamppua, astiaa ja lampun kiinnikkeitä, joten kaikki energia ei mene veteen. Toiseksi osa lämmöstä johtuu kannen ja johtimien kautta ulos laitteesta ympäröivään ilmaan. Kolmanneksi hehkulanka lähettää valoa ja lämpösäteilyä, joista osa pääsee laitteen ulkopuolelle.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Tarkastellaan heliumilla täytettyä ilmapalloa. Taulukon 4.A tiedot: heliumin tiheys 0,178 g/dm³, huoneilman tiheys 1,29 g/dm³, tyhjän pallon massa 3,8 g ja pallon tilavuus 5,3 dm³.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 5,
+     "prompt": "Pallo on levossa kattoa vasten. Piirrä pallon voimakuvio (pohjana voi käyttää kuvaa 4.B).",
+     "hints": [
+      "Käy läpi kaikki, mikä vaikuttaa palloon: Maa (etävoima), ympäröivä ilma ja katto (kosketusvoimat). Jokaisesta tulee yksi voima.",
+      "Voimia on kolme: paino alaspäin, noste ylöspäin ja katon tukivoima alaspäin. Pallo on levossa, joten voimat kumoavat toisensa: nosteen nuoli on yhtä pitkä kuin painon ja tukivoiman nuolet yhteensä."
+     ],
+     "solution": "1. Pallo on levossa, joten Newtonin I lain mukaan siihen vaikuttavien voimien summa on nolla.\n2. Voimat:\n   - paino $\\vec G$ alaspäin, vaikutuspiste pallon massakeskipisteessä\n   - noste $\\vec F_\\text{n}$ ylöspäin, ympäröivän ilman aiheuttama\n   - katon tukivoima $\\vec N$ alaspäin, vaikutuspiste pallon ja katon kosketuskohdassa.\n3. Nuolten pituudet piirretään niin, että $F_\\text{n}=G+N$, eli nosteen nuoli on pisin.\n4. Ilmanvastusta ei piirretä, koska pallo on levossa. Voimakuvioon ei myöskään piirretä nopeus- tai kiihtyvyysvektoreita.\n\n**Vastaus:** paino ja katon tukivoima alaspäin, noste ylöspäin, $F_\\text{n}=G+N$.\n\n**Sudenkuoppa:** katon tukivoima unohtuu tai piirretään ylöspäin. Katto voi vain työntää palloa, ja pallo on katon alapuolella, joten katto työntää sitä alaspäin.",
+     "answer": "$\\vec G$ ja $\\vec N$ alaspäin, $\\vec F_\\text{n}$ ylöspäin; $F_\\text{n}=G+N$",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 6,
+     "prompt": "Kuinka suurella voimalla katto painaa palloa, kun pallo on levossa katossa?",
+     "hints": [
+      "Pallo on tasapainossa, joten voimien summa on nolla: $F_\\text{n}-G-N=0$. Noste on syrjäytetyn ilman paino, $F_\\text{n}=\\rho_\\text{i}Vg$.",
+      "Pallon massaan kuuluu kuoren lisäksi sen sisällä oleva helium: $m=m_\\text{P}+\\rho_\\text{He}V$. Muunna yksiköt: $1{,}29\\ \\text{g/dm}^3=1{,}29\\ \\text{kg/m}^3$ ja $5{,}3\\ \\text{dm}^3=0{,}0053\\ \\text{m}^3$."
+     ],
+     "solution": "1. Pallo on levossa, joten Newtonin II lain mukaan $\\Sigma\\vec F=m\\vec a=\\vec 0$. Valitaan positiivinen suunta ylöspäin: $F_\\text{n}-G-N=0$, josta $N=F_\\text{n}-G$.\n2. Noste: $F_\\text{n}=\\rho_\\text{i}Vg=1{,}29\\ \\text{kg/m}^3\\cdot 0{,}0053\\ \\text{m}^3\\cdot 9{,}81\\ \\text{m/s}^2\\approx 0{,}0671\\ \\text{N}$.\n3. Pallon massa: $m=m_\\text{P}+\\rho_\\text{He}V=0{,}0038\\ \\text{kg}+0{,}178\\ \\text{kg/m}^3\\cdot 0{,}0053\\ \\text{m}^3\\approx 0{,}00474\\ \\text{kg}$, joten paino on $G=mg\\approx 0{,}0465\\ \\text{N}$.\n4. Tukivoima: $N=0{,}0671\\ \\text{N}-0{,}0465\\ \\text{N}\\approx 0{,}021\\ \\text{N}$, suunta alaspäin.\n\n**Vastaus: $N\\approx 21\\ \\text{mN}$**\n\n**Sudenkuoppa:** heliumin massan unohtaminen antaa tulokseksi noin 30 mN.",
+     "answer": "$N\\approx 21\\ \\text{mN}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Pallo vedetään lattialle ja vapautetaan, ja se kohoaa takaisin kattoon. Pallon nopeus vapauttamisen jälkeen on kuvaajassa 4.C. Kuinka suuri ilmanvastus palloon vaikuttaa juuri ennen kuin se osuu kattoon?",
+     "hints": [
+      "Mitä kuvaaja kertoo nopeudesta juuri ennen kattoon osumista? Jos nopeus on vakio, voimien summa on nolla, ja ilmanvastus on voimatasapainossa samassa roolissa kuin katon tukivoima kohdassa 4.2."
+     ],
+     "solution": "1. Kuvaajan mukaan nopeus kasvaa aluksi, mutta ennen kattoon osumista se on asettunut vakioarvoon. Pallon kiihtyvyys on silloin nolla.\n2. Voimien summa on nolla: $F_\\text{n}-G-F_\\text{i}=0$, joten $F_\\text{i}=F_\\text{n}-G$.\n3. Erotus on sama kuin kohdassa 4.2: $F_\\text{i}\\approx 21\\ \\text{mN}$, suunta alaspäin eli liikettä vastaan.\n\n**Vastaus: $F_\\text{i}\\approx 21\\ \\text{mN}$**",
+     "answer": "$F_\\text{i}\\approx 21\\ \\text{mN}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Telaketjunosturi kannattelee 320 kg:n tiilikuormaa (kuva 5.A). Auton (ilman puomia) massa on 3 200 kg ja puomin massa 220 kg. Auton painopiste P1 on telaketjujen A ja B puolivälissä, 1,4 m kummastakin. Puomi on 30° kulmassa vaakatasoon nähden, ja sen nivel on P1:n yläpuolella. Puomin painopiste P2 on puomin suunnassa 3,8 m nivelestä, ja kuorma on vielä 4,2 m kauempana.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 11,
+     "prompt": "Laske, kuinka suuret voimat telaketjut A ja B kohdistavat maahan. Voimakuvion voi piirtää kuvan 5.A päälle.",
+     "hints": [
+      "Käsittele autoa, puomia ja kuormaa yhtenä kappaleena, johon vaikuttaa kolme painoa ja kaksi maan tukivoimaa. Tasapainossa sekä voimien summa että momenttien summa ovat nolla.",
+      "Valitse momenttipisteeksi telaketju B, jolloin tukivoimalla $N_\\text{B}$ ei ole momenttia. Vaakasuorat varret B:stä: auton paino 1,4 m, puomin paino $3{,}8\\ \\text{m}\\cdot\\cos30^\\circ-1{,}4\\ \\text{m}\\approx 1{,}89\\ \\text{m}$ ja kuorman paino $1{,}89\\ \\text{m}+4{,}2\\ \\text{m}\\cdot\\cos30^\\circ\\approx 5{,}53\\ \\text{m}$. Tukivoiman $N_\\text{A}$ varsi on 2,8 m."
+     ],
+     "solution": "1. Voimakuvio: painot $\\vec G_1$ (auton painopisteessä P1), $\\vec G_2$ (puomin painopisteessä P2) ja $\\vec G_3$ (kuorman kohdalla) alaspäin sekä tukivoimat $\\vec N_\\text{A}$ ja $\\vec N_\\text{B}$ ylöspäin telaketjujen kohdalla.\n2. Painot: $G_1=3200\\ \\text{kg}\\cdot 9{,}81\\ \\text{m/s}^2\\approx 31{,}39\\ \\text{kN}$, $G_2=220\\ \\text{kg}\\cdot 9{,}81\\ \\text{m/s}^2\\approx 2{,}158\\ \\text{kN}$ ja $G_3=320\\ \\text{kg}\\cdot 9{,}81\\ \\text{m/s}^2\\approx 3{,}139\\ \\text{kN}$.\n3. Nosturi on levossa, joten voimien summa on Newtonin II lain perusteella nolla, $N_\\text{A}+N_\\text{B}-G_1-G_2-G_3=0$, ja momenttien summa minkä tahansa pisteen suhteen on nolla.\n4. Varret B:n suhteen: $d_1=1{,}4\\ \\text{m}$, $d_2=3{,}8\\ \\text{m}\\cdot\\cos30^\\circ-1{,}4\\ \\text{m}\\approx 1{,}891\\ \\text{m}$, $d_3=d_2+4{,}2\\ \\text{m}\\cdot\\cos30^\\circ\\approx 5{,}528\\ \\text{m}$ ja $d_\\text{A}=2{,}8\\ \\text{m}$. Auto ja A ovat B:n toisella puolella, puomi ja kuorma toisella.\n5. Momenttiehto B:n suhteen (vastapäivään positiivinen): $G_1d_1-N_\\text{A}d_\\text{A}-G_2d_2-G_3d_3=0$, josta\n$$N_\\text{A}=\\frac{G_1d_1-G_2d_2-G_3d_3}{d_\\text{A}}\\approx 8{,}04\\ \\text{kN}.$$\n6. Voimien tasapainosta: $N_\\text{B}=G_1+G_2+G_3-N_\\text{A}\\approx 28{,}6\\ \\text{kN}$.\n7. Newtonin III lain mukaan telaketjut painavat maata yhtä suurilla mutta alaspäin suuntautuvilla voimilla.\n\n**Vastaus: telaketju A painaa maata noin 8,0 kN:n ja telaketju B noin 29 kN:n voimalla.**\n\n**Sudenkuoppa:** puomin suuntaiset pituudet 3,8 m ja 4,2 m pitää projisoida vaakasuoraan ($\\cos30^\\circ$), koska momentin varsi on kohtisuora etäisyys pystysuoran voiman vaikutussuorasta.",
+     "answer": "$F_\\text{A}\\approx 8{,}0\\ \\text{kN}$, $F_\\text{B}\\approx 29\\ \\text{kN}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 4,
+     "prompt": "Miksi nosturi kaatuu, jos puomia jatketaan liikaa? Ehdota yksi nosturiin lisättävä rakenne, joka estää kaatumisen.",
+     "hints": [
+      "Tarkastele momentteja telaketjun B suhteen. Mitkä painot kiertävät nosturia kuorman puolelle ja mikä vastustaa? Mitä tapahtuu tukivoimalle $N_\\text{A}$, kun kaatava momentti kasvaa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Puomin pidentäminen kasvattaa puomin ja kuorman painojen varsia B:n suhteen, joten niiden kaatava momentti kasvaa. Auton painon vastakkainen momentti $G_1d_1$ ei muutu.\n- Kun kaatava momentti on suurempi kuin auton painon momentti, tasapaino vaatisi negatiivisen tukivoiman $N_\\text{A}$. Maa ei voi vetää telaketjua alaspäin, joten A nousee irti ja nosturi kiertyy B:n ympäri. Toisin sanoen koko nosturin massakeskipiste siirtyy tukialueen ulkopuolelle.\n- Parannus: auton runkoon kiinnitettävät tukijalat, jotka ulottuvat riittävän kauas kuorman puolelle, tai vastapaino auton toiselle puolelle.\n\n**Esimerkkivastaus:** Kun puomi pitenee, puomin ja kuorman painot vaikuttavat yhä kauempana telaketjusta B, ja niiden momentti B:n suhteen kasvaa. Auton oma paino pitää nosturia pystyssä momentilla, joka ei muutu. Kun kaatava momentti kasvaa tätä suuremmaksi, telaketjun A tukivoima putoaa nollaan ja nosturi kaatuu B:n yli. Kaatumisen voi estää rungosta kuorman puolelle ulottuvilla tukijaloilla, jotka siirtävät tukipisteen kauemmas.\n\n**Sudenkuoppa:** tukijalka, joka on kiinni puomissa tai kuormassa eikä auton rungossa, ei kelpaa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 4,
+     "prompt": "Miten virtamittari kytketään, kun halutaan mitata piirissä olevan vastuksen läpi kulkeva virta? Perustele Kirchhoffin I lain (virtalain) avulla.",
+     "hints": [
+      "Kirchhoffin I lain mukaan haarautumiskohtaan tuleva virta jakautuu siitä lähteviin haaroihin. Missä kytkennässä mittarin ja vastuksen läpi kulkee varmasti sama virta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Virtamittari on kytkettävä **sarjaan** vastuksen kanssa.\n- Kirchhoffin I laki: haarautumiskohtaan tulevien virtojen summa on yhtä suuri kuin siitä lähtevien virtojen summa.\n- Sarjakytkennässä mittarin ja vastuksen välissä ei ole haarautumiskohtaa, joten sama virta kulkee molempien läpi.\n- Rinnan kytkettynä virta jakautuisi mittarin ja vastuksen kesken, ja mittari näyttäisi vain oman haaransa virran, ei vastuksen virtaa.\n\n**Esimerkkivastaus:** Virtamittari kytketään vastuksen kanssa sarjaan. Kirchhoffin I lain mukaan virta voi jakautua vain liitoskohdissa, joissa tulevien ja lähtevien virtojen summat ovat yhtä suuret. Kun mittari on samassa johdinhaarassa vastuksen kanssa, niiden välissä ei ole liitoskohtaa, joten mittarin läpi kulkee täsmälleen sama virta kuin vastuksen läpi. Jos mittari olisi rinnan vastuksen kanssa, virta jakautuisi kahteen haaraan eikä mittari näyttäisi vastuksen virtaa.",
+     "answer": "sarjaan vastuksen kanssa",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 7,
+     "prompt": "Kuvan 6.A piirissä virtamittari (sisäinen resistanssi $R_\\text{m}$) on rinnan säätövastuksen $R_\\text{x}$ kanssa, ja niiden kanssa sarjassa on etuvastus, jolle $R_0\\gg R_\\text{x}$. Siksi kokonaisvirta $I_0$ ei riipu säätövastuksen asetuksesta. Johda mittarin läpi kulkevalle virralle $I$ lauseke suureiden $I_0$, $R_\\text{x}$ ja $R_\\text{m}$ avulla.",
+     "hints": [
+      "Kirjoita Kirchhoffin I laki haarautumiskohtaan, jossa $I_0$ jakautuu säätövastuksen ja mittarin haaroihin, ja Kirchhoffin II laki silmukalle, jossa ovat säätövastus ja mittari.",
+      "Rinnan kytketyissä haaroissa jännitteet ovat yhtä suuret: $R_\\text{x}I_\\text{x}=R_\\text{m}I$. Sijoita $I_\\text{x}=I_0-I$ ja ratkaise $I$."
+     ],
+     "solution": "1. Suuri etuvastus määrää kokonaisvirran $I_0$, joka jakautuu säätövastuksen virraksi $I_\\text{x}$ ja mittarin virraksi $I$. Kirchhoffin I laki: $I_0=I_\\text{x}+I$.\n2. Säätövastus ja mittari ovat rinnan, joten Kirchhoffin II lain mukaan jännitteet niiden yli ovat yhtä suuret: $R_\\text{x}I_\\text{x}=R_\\text{m}I$.\n3. Sijoitetaan $I_\\text{x}=I_0-I$: $R_\\text{x}(I_0-I)=R_\\text{m}I$, eli $R_\\text{x}I_0=(R_\\text{x}+R_\\text{m})I$.\n4. Ratkaistaan:\n$$I=\\frac{R_\\text{x}}{R_\\text{x}+R_\\text{m}}\\,I_0.$$\n5. Tarkistus: kun $R_\\text{x}\\to 0$, $I\\to 0$, ja kun $R_\\text{x}$ kasvaa hyvin suureksi, $I\\to I_0$. Tämä vastaa kuvaajan 6.B muotoa.\n\n**Vastaus: $I=\\dfrac{R_\\text{x}}{R_\\text{x}+R_\\text{m}}\\,I_0$**",
+     "answer": "$I=\\dfrac{R_\\text{x}}{R_\\text{x}+R_\\text{m}}\\,I_0$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 4,
+     "prompt": "Kuvaaja 6.B esittää mittarin lukeman $I$ säätövastuksen resistanssin $R_\\text{x}$ funktiona. Jännitelähteen jännitettä ja etuvastuksen resistanssia ei tunneta. Miten mittarin sisäinen resistanssi saadaan kuvaajasta? Merkitse lukukohta kuvaajaan.",
+     "hints": [
+      "Käytä kohdan 6.2 lauseketta. Millä $R_\\text{x}$:n arvolla mittarin virta on tasan puolet kokonaisvirrasta $I_0$, jota käyrä lähestyy suurilla resistansseilla?"
+     ],
+     "solution": "1. Kuvaajassa $I$ lähestyy suurilla $R_\\text{x}$:n arvoilla kokonaisvirtaa $I_0$ (katkoviiva). Pienellä $R_\\text{x}$:llä lähes koko virta kulkee säätövastuksen kautta, ja mittarin lukema on lähellä nollaa.\n2. Lausekkeesta $I=\\frac{R_\\text{x}}{R_\\text{x}+R_\\text{m}}I_0$ nähdään, että $I=\\frac12I_0$ täsmälleen silloin, kun $R_\\text{x}=R_\\text{m}$: virta jakautuu tasan kahteen yhtä suureen resistanssiin.\n3. Menetelmä: luetaan $I_0$ asymptootista, piirretään vaakaviiva korkeudelle $\\frac12I_0$ ja luetaan sen ja käyrän leikkauskohdasta vaaka-akselilta $R_\\text{x}$. Se on mittarin sisäinen resistanssi. Leikkauskohta merkitään kuvaajaan.\n4. Yleisemmin mistä tahansa käyrän pisteestä saadaan $R_\\text{m}=R_\\text{x}\\left(\\frac{I_0}{I}-1\\right)$.\n\n**Vastaus: $R_\\text{m}$ on se säätövastuksen resistanssi, jolla mittarin lukema on $\\frac12I_0$.**\n\n**Sudenkuoppa:** käyrän kulmakerroin tai pelkkä kokonaisvirta ei kerro mittarin resistanssia.",
+     "answer": "$R_\\text{m}=R_\\text{x}$ kohdassa, jossa $I=\\frac12I_0$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Seitsemän lyhyttä kohtaa valon kulusta ilman ja lasin rajapinnassa sekä valon hajoamisesta väreihin:\n\n- 7.1 ja 7.2 (monivalinta: suurempi / yhtä suuri / pienempi): valon nopeus ja valon taajuus lasissa verrattuna ilmaan\n- 7.3 (yksi sana): mikä suure on punaisella valolla tyhjiössä suurempi kuin sinisellä\n- 7.4 ja 7.5 (yksi sana): ilmiön nimi, kun osa valosta palaa rajapinnasta takaisin ilmaan, ja kun lasiin menevän valon kulkusuunta muuttuu\n- 7.6 (yksi sana): mikä lasin ominaisuus riippuu aallonpituudesta, jolloin prisma hajottaa valon väreiksi\n- 7.7 (yksi sana): mikä riippuu aallonpituudesta, jolloin hila hajottaa valon väreiksi.",
+     "hints": [
+      "Kertaa taitekerroin $n=\\frac cv$, aallon perusyhtälö $v=f\\lambda$ ja se, että taajuus määräytyy valonlähteestä. Prisma perustuu taittumiseen, hila taipumiseen ja interferenssiin (hilayhtälö $d\\sin\\theta=k\\lambda$).",
+      "Kohta kohdalta:\n- 7.1: lasin taitekerroin on suurempi kuin 1.\n- 7.2: muuttuuko taajuus, kun aalto siirtyy aineesta toiseen?\n- 7.3: punaisen valon taajuus on pienempi, joten mikä on suurempi?\n- 7.4 ja 7.5: kaksi rajapinnassa tapahtuvaa ilmiötä.\n- 7.6: mikä luku kertoo, kuinka voimakkaasti lasi taittaa valoa?\n- 7.7: hilayhtälössä aallonpituudesta riippuu kulma $\\theta$."
+     ],
+     "solution": "1. **7.1 C (pienempi).** Valon nopeus lasissa on $v=\\frac cn$, ja lasille $n\\approx 1{,}5$.\n2. **7.2 B (yhtä suuri).** Taajuus määräytyy valonlähteestä eikä muutu rajapinnassa. Nopeuden mukana muuttuu aallonpituus.\n3. **7.3 aallonpituus.** Punaisen valon aallonpituus on noin 700 nm ja sinisen noin 450 nm.\n4. **7.4 heijastuminen.** Rajapinnasta takaisin samaan aineeseen palaava valo heijastuu.\n5. **7.5 taittuminen.** Kulkusuunnan muutos rajapinnan läpi mentäessä on taittumista (Snellin laki $n_1\\sin\\alpha_1=n_2\\sin\\alpha_2$).\n6. **7.6 taitekerroin.** Taitekerroin riippuu aallonpituudesta (dispersio), joten eri värit taittuvat eri kulmiin.\n7. **7.7 taipumiskulma.** Hilayhtälön $d\\sin\\theta=k\\lambda$ mukaan maksimien suunta riippuu aallonpituudesta. Myös sana, joka viittaa taipumiseen eli diffraktioon, hyväksytään.\n\n**Vastaus: 7.1 C · 7.2 B · 7.3 aallonpituus · 7.4 heijastuminen · 7.5 taittuminen · 7.6 taitekerroin · 7.7 taipumiskulma**\n\n**Sudenkuoppa:** kohta 7.2. Taajuus ei muutu rajapinnassa, vaikka nopeus ja aallonpituus muuttuvat.",
+     "answer": "7.1 C (pienempi) · 7.2 B (yhtä suuri) · 7.3 aallonpituus · 7.4 heijastuminen · 7.5 taittuminen · 7.6 taitekerroin · 7.7 taipumiskulma",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Suomalaisten keskimääräisestä säteilyannoksesta yli 60 % on peräisin radonkaasun alfasäteilystä. Annoksen aiheuttaa isotooppi Rn-222, jonka puoliintumisaika on 3,8 vrk. Taulukossa 8.A on hiukkasten ja atomien massoja.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 3,
+     "prompt": "Kirjoita Rn-222:n alfahajoamisen reaktioyhtälö.",
+     "hints": [
+      "Alfahiukkanen on ${}^{4}_{2}\\mathrm{He}$. Massaluku pienenee neljällä ja järjestysluku kahdella. Radonin järjestysluku on 86."
+     ],
+     "solution": "1. Radonin järjestysluku on 86. Alfahajoamisessa ydin lähettää ${}^{4}_{2}\\mathrm{He}$-ytimen.\n2. Tytärytimen massaluku on $222-4=218$ ja järjestysluku $86-2=84$, eli se on polonium.\n\n$${}^{222}_{86}\\mathrm{Rn}\\to{}^{218}_{84}\\mathrm{Po}+{}^{4}_{2}\\mathrm{He}$$\n\n**Vastaus: ${}^{222}_{86}\\mathrm{Rn}\\to{}^{218}_{84}\\mathrm{Po}+{}^{4}_{2}\\mathrm{He}$**",
+     "answer": "${}^{222}_{86}\\mathrm{Rn}\\to{}^{218}_{84}\\mathrm{Po}+{}^{4}_{2}\\mathrm{He}$",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 4,
+     "prompt": "Miksi radon aiheuttaa merkittävän säteilyannoksen, vaikka sen alfasäteily ei läpäise edes paperiarkkia?",
+     "hints": [
+      "Radon on kaasu. Mieti, missä hajoaminen tapahtuu ja mitä alfahiukkasen lyhyt kantama merkitsee, kun säteilylähde on elimistön sisällä."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Radon on jalokaasu, joka kulkeutuu hengitysilman mukana keuhkoihin (myös sen lyhytikäiset hajoamistuotteet jäävät keuhkoihin).\n- Keuhkoissa hajoaminen tapahtuu aivan elävän kudoksen vieressä. Keuhkoja ei suojaa ihon kuollut pintakerros, joten alfahiukkaset luovuttavat koko energiansa keuhkokudokseen ja ionisoivat sitä voimakkaasti lyhyellä matkalla, mikä vaurioittaa soluja.\n\nEivät kelpaa selitykset, joissa syy on radonin puoliintumisaika tai joissa alfahiukkaset itse kulkeutuvat hengityksen mukana.\n\n**Esimerkkivastaus:** Radon on kaasu, joten sitä hengitetään sisäilman mukana keuhkoihin. Kun radon hajoaa keuhkoissa, alfahiukkaset syntyvät suoraan keuhkokudoksen pinnalla. Siellä ei ole ihon kaltaista suojaavaa kerrosta, joten alfahiukkaset luovuttavat energiansa eläviin soluihin. Alfasäteily ionisoi hyvin tehokkaasti, ja siksi pienikin määrä voi vaurioittaa solujen perimää.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 8,
+     "prompt": "Laske taulukon 8.A massojen avulla Rn-222:n alfahajoamisessa vapautuva energia. Missä muodossa vapautunut energia on heti hajoamisen jälkeen?",
+     "hints": [
+      "Vapautuva energia saadaan massakadosta: $Q=\\Delta m\\,c^2$, jossa $\\Delta m$ on lähtöaineen ja tuotteiden massojen erotus.",
+      "Käytä atomien massoja: Rn-222, Po-218 ja He-4-atomi (ei alfahiukkasen massaa), jolloin elektronien massat kumoutuvat. Muunnoskerroin on $1\\ \\text{u}=1{,}66054\\cdot 10^{-27}\\ \\text{kg}$ tai $1\\ \\text{u}\\cdot c^2\\approx 931{,}5\\ \\text{MeV}$."
+     ],
+     "solution": "1. Atomimassoissa elektroneja on molemmin puolin yhtä monta ($86=84+2$), joten tuotteena käytetään He-4-atomin massaa.\n2. Massakato:\n$$\\Delta m=m_\\text{Rn}-m_\\text{Po}-m_\\text{He}=222{,}017576\\ \\text{u}-218{,}008971\\ \\text{u}-4{,}002603\\ \\text{u}\\approx 0{,}006002\\ \\text{u}.$$\n3. Kilogrammoina: $\\Delta m\\approx 0{,}006002\\cdot 1{,}66054\\cdot 10^{-27}\\ \\text{kg}\\approx 9{,}966\\cdot 10^{-30}\\ \\text{kg}$.\n4. Vapautuva energia:\n$$Q=\\Delta m\\,c^2=9{,}966\\cdot 10^{-30}\\ \\text{kg}\\cdot\\left(2{,}998\\cdot 10^{8}\\ \\text{m/s}\\right)^2\\approx 8{,}957\\cdot 10^{-13}\\ \\text{J}\\approx 5{,}59\\ \\text{MeV}.$$\nTulos pyöristetään kolmeen merkitsevään numeroon, koska se on lähekkäisten lukujen erotus.\n5. Energia ilmenee hajoamistuotteiden, eli alfahiukkasen ja poloniumytimen, liike-energiana. Liikemäärän säilymisen vuoksi suurin osa siitä on kevyen alfahiukkasen liike-energiaa.\n\n**Vastaus: $Q\\approx 5{,}59\\ \\text{MeV}$ ($8{,}96\\cdot 10^{-13}\\ \\text{J}$), joka on hajoamistuotteiden liike-energiaa.**\n\n**Sudenkuoppa:** alfahiukkasen massan käyttäminen He-4-atomin massan sijaan unohtaa kaksi elektronia ja antaa väärän tuloksen 6,61 MeV. Energia ei myöskään ilmene säteilyenergiana.",
+     "answer": "$Q\\approx 5{,}59\\ \\text{MeV}$; hajoamistuotteiden liike-energiaa",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Läpinäkyvässä sylinterissä on ilmaa, jota voi puristaa tiiviillä männällä. Vivun avulla tilavuutta voi muuttaa hyvin nopeasti, ja lämpöä voi siirtyä ilman, sylinterin ja ympäristön välillä. Aluksi sylinterin ilma on ulkoilman paineessa ja lämpötilassa. Mäntä painetaan nopeasti alas, pidetään hetki alhaalla ja päästetään ponnahtamaan takaisin yläasentoon, johon se jää. Kuvassa 9.A on ilman tilavuus, paine ja lämpötila ajan funktiona. Ilmaa käsitellään ideaalikaasuna.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 6,
+     "prompt": "Vaihe 1: männän nopea painaminen ala-asentoon.\n\n- 9.1.1: Miten paine muuttuu? Selitä muutos muiden mitattujen suureiden ja sopivan kaasulain avulla.\n- 9.1.2: Miten ilman sisäenergia muuttuu? Perustele sopivalla termodynamiikan pääsäännöllä.",
+     "hints": [
+      "Katso kuvaajista, mitä tilavuudelle ja lämpötilalle tapahtuu samaan aikaan kuin paine muuttuu. Ideaalikaasulle $\\frac{pV}{T}$ on vakio. Sisäenergiaa varten kirjoita I pääsääntö $\\Delta U=Q+W$.",
+      "Puristus kestää vain noin puoli sekuntia, joten lämpöä ei ehdi siirtyä ($Q\\approx 0$). Mäntä tekee kaasuun positiivista työtä."
+     ],
+     "solution": "**9.1.1**\n1. Kuvaajien mukaan paine nousee noin 100 kPa:sta noin 250 kPa:iin samalla, kun tilavuus puolittuu (200 cm³ → 100 cm³) ja lämpötila nousee (noin 290 K → 365 K).\n2. Ideaalikaasun tilanyhtälöstä $\\frac{pV}{T}=\\text{vakio}$ saadaan $p=\\text{vakio}\\cdot\\frac TV$.\n3. Sekä tilavuuden pieneneminen että lämpötilan nousu kasvattavat painetta. Siksi paine yli kaksinkertaistuu, vaikka tilavuus vain puolittuu.\n\n**9.1.2**\n4. Termodynamiikan I pääsääntö: $\\Delta U=Q+W$, jossa $Q$ on kaasuun siirtynyt lämpö ja $W$ kaasuun tehty työ.\n5. Mäntä työntää kaasua liikkeensä suuntaan, joten $W>0$. Puristus on niin nopea, ettei lämpöä ehdi siirtyä: $Q\\approx 0$.\n6. Siis $\\Delta U=W>0$: sisäenergia kasvaa. Tämä näkyy lämpötilan nousuna, koska ideaalikaasun sisäenergia riippuu vain lämpötilasta ja kasvaa sen mukana.\n\n**Vastaus: paine kasvaa, koska $V$ pienenee ja $T$ kasvaa ($p\\propto\\frac TV$); sisäenergia kasvaa, koska $\\Delta U=W>0$ ja $Q\\approx 0$.**\n\n**Sudenkuoppa:** paineen nousun selittäminen pelkällä tilavuudella tai sisäenergian muutoksen selittäminen pelkällä työllä mainitsematta, että lämpöä ei siirry.",
+     "answer": "paine kasvaa ($V$ pienenee, $T$ kasvaa); $\\Delta U=W>0$, sisäenergia kasvaa",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 6,
+     "prompt": "Vaihe 2: mäntää pidetään paikallaan ala-asennossa.\n\n- 9.2.1: Miten lämpötila muuttuu ja miksi?\n- 9.2.2: Miten ilman sisäenergia muuttuu? Perustele sopivalla termodynamiikan pääsäännöllä.",
+     "hints": [
+      "Puristuksen jälkeen ilma on selvästi sylinterin seinämiä ja ympäristöä kuumempaa. Mitä tapahtuu, kun eri lämpöiset systeemit ovat kosketuksissa?",
+      "Tilavuus ei muutu, joten työtä ei tehdä ($W=0$). Lämpöä siirtyy ilmasta pois ($Q<0$). Sijoita nämä I pääsääntöön."
+     ],
+     "solution": "**9.2.1**\n1. Lämpötila laskee noin 365 K:stä kohti huoneenlämpöä (noin 300 K), ja lasku hidastuu ajan myötä.\n2. Syy: ilma on kuumempaa kuin sylinterin seinämä ja ympäristö, joten lämpöä siirtyy ilmasta niihin, kunnes saavutetaan terminen tasapaino (termodynamiikan 0. pääsääntö). Männän pito kestää riittävän kauan, jotta ilma ehtii jäähtyä lähes ympäristön lämpötilaan.\n\n**9.2.2**\n3. Mäntä on paikallaan, joten $\\Delta V=0$ ja kaasuun ei tehdä työtä: $W=0$.\n4. Ilma luovuttaa lämpöä ympäristöön: $Q<0$.\n5. I pääsäännön mukaan $\\Delta U=Q<0$, eli sisäenergia pienenee luovutetun lämmön verran. Samalla paine laskee, koska vakiotilavuudessa $p\\propto T$.\n\n**Vastaus: lämpötila laskee kohti ympäristön lämpötilaa lämmön siirtyessä ympäristöön; $\\Delta U=Q<0$, joten sisäenergia pienenee.**\n\n**Sudenkuoppa:** lämpö on siirtyvää energiaa eikä kaasun ominaisuus. Kaasun tilaa kuvaa sisäenergia, ja se pienenee, koska energiaa siirtyy lämpönä pois.",
+     "answer": "lämpötila laskee (lämpöä siirtyy ympäristöön); $W=0$, $\\Delta U=Q<0$",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 5,
+     "prompt": "Vaihe 3: männän annetaan ponnahtaa takaisin ylös.\n\n- 9.3.1: Miten ilman sisäenergia muuttuu? Perustele sopivalla termodynamiikan pääsäännöllä.\n- 9.3.2: Miten lämpötila muuttuu ja miksi?",
+     "hints": [
+      "Laajeneminen on yhtä nopea kuin puristus vaiheessa 1. Mikä on nyt kaasuun tehdyn työn etumerkki, kun kaasu työntää mäntää ylös?",
+      "$Q\\approx 0$ ja kaasuun tehty työ on negatiivinen ($W<0$), koska kaasu tekee työtä ympäristöönsä. Ideaalikaasun sisäenergia riippuu vain lämpötilasta."
+     ],
+     "solution": "**9.3.1**\n1. I pääsääntö: $\\Delta U=Q+W$.\n2. Kaasu laajenee ja työntää mäntää. Kaasuun kohdistuva voima on vastakkainen siirtymälle, joten kaasuun tehty työ on negatiivinen: $W<0$.\n3. Laajeneminen on nopea, joten lämpöä ei ehdi siirtyä: $Q\\approx 0$.\n4. $\\Delta U=W<0$: sisäenergia pienenee.\n\n**9.3.2**\n5. Lämpötila laskee (kuvaajassa noin 300 K:stä noin 253 K:iin), koska ideaalikaasun sisäenergia on suoraan verrannollinen absoluuttiseen lämpötilaan ja sisäenergia pienenee.\n\n**Vastaus: sisäenergia pienenee ($\\Delta U=W<0$, $Q\\approx 0$), joten lämpötila laskee.**",
+     "answer": "$\\Delta U=W<0$, sisäenergia pienenee; lämpötila laskee",
+     "check": "hvp"
+    },
+    {
+     "id": "9.4",
+     "points": 3,
+     "prompt": "Vaihe 4: mäntä pysyy paikallaan yläasennossa. Miten paine muuttuu? Selitä muutos muiden mitattujen suureiden ja sopivan kaasulain avulla.",
+     "hints": [
+      "Tilavuus on vakio ja sama kuin alussa. Mitä lämpötilalle tapahtuu vaiheen 4 aikana? Vakiotilavuudessa $\\frac pT$ on vakio."
+     ],
+     "solution": "1. Paine kasvaa: heti ponnahduksen jälkeen se on hieman ulkoilman painetta pienempi (noin 90 kPa) ja nousee vähitellen alkuarvoonsa (noin 100 kPa).\n2. Tilavuus pysyy vakiona (200 cm³), mutta lämpötila nousee, koska ympäristöstä siirtyy lämpöä kylmempään ilmaan.\n3. Vakiotilavuudessa tilanyhtälöstä seuraa $\\frac pT=\\text{vakio}$ (Gay-Lussacin laki), joten paine kasvaa lämpötilan mukana. Kun sekä $V$ että $T$ ovat palanneet alkuarvoihinsa, myös paine on palannut alkuarvoonsa.\n\n**Vastaus: paine kasvaa takaisin ulkoilman paineeseen, koska lämpötila nousee vakiotilavuudessa ($p\\propto T$).**",
+     "answer": "paine kasvaa alkuarvoonsa, koska $T$ nousee ja $V$ on vakio",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Ääniputki on rypytetty muoviputki, joka alkaa soida, kun sitä pyöritetään kahvasta (teksti 10.A). Putki on avoin molemmista päistä, sen pituus on 85,4 cm ja äänen nopeus on 343 m/s. Kuvassa 10.B on putken äänen taajuusspektri kahdella pyörimisnopeudella.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Liikkuuko putken sisällä oleva ilma kohti pyörittäjää, poispäin pyörittäjästä vai edestakaisin? Perustele.",
+     "hints": [
+      "Ympyräradalla pysyminen vaatii keskeisvoiman. Putken seinämä pakottaa putken kiertämään, mutta mikä voima pitäisi putken sisällä olevan ilman paikallaan putken pituussuunnassa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Ilma liikkuu pyörittäjästä poispäin: se virtaa kahvan päästä kohti vapaata päätä, poistuu vapaasta päästä, ja kahvan puolelta imeytyy tilalle uutta ilmaa.\n- Perustelu: putken pituussuunnassa ilmaan ei vaikuta normaalivoimaa, joka voisi toimia keskeisvoimana ja pitää ilman mukana ympyräliikkeessä. Seinämä voi työntää ilmaa vain kohtisuoraan putkea vastaan. Ilma ei siksi pysty seuraamaan putken kiertoliikettä vaan valuu hitautensa vuoksi ulospäin.\n\n**Esimerkkivastaus:** Ilma liikkuu pyörittäjästä poispäin. Jotta ilma kiertäisi ympyrää putken mukana, siihen pitäisi vaikuttaa kohti kahvaa osoittava keskeisvoima. Putken seinämä voi kuitenkin kohdistaa ilmaan voiman vain kohtisuoraan putken pintaa vastaan, eikä mikään voima vaikuta putken suuntaan. Ilma jatkaa siksi hitautensa takia ulospäin ja virtaa ulos vapaasta päästä, ja kahvan päästä tulee tilalle uutta ilmaa.\n\n**Sudenkuoppa:** edestakainen liike kuvaa ääniaallon värähtelyä, ei ilman virtausta putkessa.",
+     "answer": "pyörittäjästä poispäin",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 4,
+     "prompt": "Määritä spektrin (1) kolmen ominaistaajuuden (806 Hz, 1 608 Hz ja 2 400 Hz) kertaluvut sopivan fysikaalisen mallin avulla.",
+     "hints": [
+      "Molemmista päistä avoimessa putkessa $L=n\\frac{\\lambda}{2}$, joten $f_n=\\frac{nv}{2L}$. Ratkaise jokaiselle huipulle $n=\\frac{2Lf}{v}$ ja pyöristä kokonaisluvuksi."
+     ],
+     "solution": "1. Malli: putki on avoin molemmista päistä, joten päissä on paineen solmut (liikkeen kuvut). Putkeen mahtuu kokonaisluku puolikkaita aallonpituuksia: $L=n\\frac{\\lambda_n}{2}$, $n=1,2,3,\\dots$\n2. Aallon perusyhtälöstä $v=f\\lambda$ saadaan $f_n=\\frac{nv}{2L}$. Perustaajuus on $f_1=\\frac{343\\ \\text{m/s}}{2\\cdot 0{,}854\\ \\text{m}}\\approx 201\\ \\text{Hz}$.\n3. Kertaluku $n=\\frac{2Lf}{v}$:\n   - 806 Hz: $n\\approx 4{,}01$\n   - 1 608 Hz: $n\\approx 8{,}01$\n   - 2 400 Hz: $n\\approx 11{,}95$.\n\n**Vastaus: $n=4$, $8$ ja $12$ (eli 3., 7. ja 11. yläsävel)**",
+     "answer": "$n=4$, $8$ ja $12$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Nopeammin pyöritettäessä spektri on kuvan 10.B spektrin (2) mukainen (huiput 1 176 Hz, 2 354 Hz ja 3 527 Hz). Määritä ominaistaajuuksien kertaluvut ja laske, kuinka paljon putki on venynyt.",
+     "hints": [
+      "Laske ensin $n=\\frac{2Lf}{v}$ alkuperäisellä pituudella. Tulokset eivät ole kokonaislukuja, mutta taajuudet ovat suhteessa 1 : 2 : 3. Valitse sopivat kokonaisluvut ja ratkaise pituus yhtälöstä $L=\\frac{nv}{2f}$."
+     ],
+     "solution": "1. Alkuperäisellä pituudella 0,854 m saadaan $n\\approx 5{,}86$, $11{,}72$ ja $17{,}56$. Luvut jäävät selvästi kokonaislukujen alapuolelle, joten putken pituus on muuttunut: pyöritys venyttää sitä.\n2. Taajuudet ovat suhteessa $1:2:3$, joten kertaluvut ovat $n=6$, $12$ ja $18$.\n3. Pituus $L=\\frac{nv}{2f}$:\n   - $n=6$: $L=\\frac{6\\cdot 343\\ \\text{m/s}}{2\\cdot 1176\\ \\text{Hz}}\\approx 0{,}8750\\ \\text{m}$\n   - $n=12$: $L\\approx 0{,}8743\\ \\text{m}$\n   - $n=18$: $L\\approx 0{,}8752\\ \\text{m}$.\n4. Keskiarvo on noin 0,875 m, joten venymä on $\\Delta L=0{,}875\\ \\text{m}-0{,}854\\ \\text{m}\\approx 0{,}021\\ \\text{m}$.\n\n**Vastaus: $n=6$, $12$ ja $18$; putki on venynyt noin 2,1 cm.**",
+     "answer": "$n=6$, $12$ ja $18$; $\\Delta L\\approx 2{,}1\\ \\text{cm}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "Miksi spektrin (2) ominaistaajuudet ovat siirtyneet korkeammille taajuuksille?",
+     "hints": [
+      "Tekstin 10.A mukaan ryppyjen synnyttämien värähtelyjen taajuus riippuu ryppyjen välistä ja ilmavirran nopeudesta. Miten pyörimisnopeus vaikuttaa ilman virtausnopeuteen putkessa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Kun putkea pyöritetään nopeammin, sen seinämän keskeiskiihtyvyys kasvaa. Ilmaa ei pidä paikallaan mikään voima, joten ilma virtaa putkessa entistä nopeammin.\n- Nopeampi ilmavirta ohittaa ryppyjä useammin sekunnissa, joten ryppyjen synnyttämä värähtely on taajuudeltaan suurempi. Putki alkaa resonoida sillä ominaistaajuudella, joka on lähimpänä tätä taajuutta, eli korkeammalla kertaluvulla.\n- Putken venyminen ei selitä siirtymää: pidempi putki pienentäisi ominaistaajuuksia ($f_n\\propto\\frac1L$).\n\n**Esimerkkivastaus:** Nopeammin pyöritettäessä ilma virtaa putken läpi suuremmalla nopeudella, koska sitä ei pidä putkessa kiinni mikään voima. Nopeampi ilma kohtaa ryppyjen harjoja useammin aikayksikössä, joten ryppyjen aiheuttamien värähtelyjen taajuus kasvaa. Putkessa vahvistuu se ominaistaajuus, joka on lähimpänä tätä värähtelyä, ja siksi soivat nyt korkeamman kertaluvun yläsävelet.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.5",
+     "points": 4,
+     "prompt": "Johda lauseke, josta nähdään, monesko yläsävel putkessa soi, kun ilman virtausnopeus putkessa on $u$.",
+     "hints": [
+      "Merkitse ryppyjen väliä $d$. Ilma ohittaa ryppyjä taajuudella $f=\\frac ud$. Aseta tämä yhtä suureksi kuin avoimen putken ominaistaajuus $f_n=\\frac{nv}{2L}$. Kertaluku $n$ vastaa $(n-1)$:ttä yläsäveltä."
+     ],
+     "solution": "1. Olkoon ryppyjen väli $d$. Ilma kulkee yhden välin ajassa $\\frac du$, joten ryppyjen aiheuttama värähtely on taajuudeltaan $f=\\frac ud$.\n2. Putkessa soi ominaistaajuus, joka on yhtä suuri kuin tämä herätetaajuus: $\\frac{nv}{2L}=\\frac ud$, josta $n=\\frac{2Lu}{vd}$.\n3. Kertaluku $n=1$ on perussävel, joten yläsävelen järjestysnumero on\n$$m=n-1=\\frac{2Lu}{vd}-1.$$\n\n**Vastaus: $m=\\dfrac{2Lu}{vd}-1$ (ominaistaajuuden kertaluku $n=\\dfrac{2Lu}{vd}$)**",
+     "answer": "$m=\\dfrac{2Lu}{vd}-1$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "NASAn DART-luotain törmäytettiin Didymos-asteroidia kiertävään pieneen kuuhun (teksti 11.A). Ennen törmäystä kuun rata oli lähes ympyrä ja kiertoaika 11 h 55 min. Törmäyksen jälkeen kiertoaika oli 33 min lyhyempi ja rata edelleen lähes ympyrä. Asteroidin massa on $M_a=5{,}6\\cdot 10^{11}\\ \\text{kg}$, kuun massa $M_k=4{,}3\\cdot 10^{9}\\ \\text{kg}$, luotaimen massa $m_\\text{D}=580\\ \\text{kg}$ ja luotaimen nopeus kuun suhteen $v_\\text{D}=6{,}1\\ \\text{km/s}$. Törmäyksessä kuusta sinkoutui ainesta avaruuteen, mutta kuun massa ei juuri muuttunut.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 8,
+     "prompt": "Laske kuun ratanopeus ennen törmäystä kiertoajan avulla.",
+     "hints": [
+      "Kuun ympyräliikkeen keskeisvoima on asteroidin gravitaatiovoima: $\\frac{GM_aM_k}{r^2}=\\frac{M_kv^2}{r}$. Ratasäde on tuntematon, mutta se liittyy nopeuteen ja kiertoaikaan: $v=\\frac{2\\pi r}{T}$.",
+      "Ratkaise nopeusyhtälöstä $r=\\frac{vT_0}{2\\pi}$ ja sijoita liikeyhtälöön $v^2=\\frac{GM_a}{r}$. Saat $v^3=\\frac{2\\pi GM_a}{T_0}$. Kiertoaika sekunteina on $T_0=42\\,900\\ \\text{s}$."
+     ],
+     "solution": "1. Newtonin II laki kuulle ympyräradalla: gravitaatiovoima aiheuttaa keskeiskiihtyvyyden,\n$$\\frac{GM_aM_k}{r^2}=\\frac{M_kv^2}{r}\\quad\\Rightarrow\\quad v^2=\\frac{GM_a}{r}.$$\n2. Tasaisessa ympyräliikkeessä $v=\\frac{2\\pi r}{T_0}$, joten $r=\\frac{vT_0}{2\\pi}$.\n3. Sijoitetaan: $v^2=\\frac{2\\pi GM_a}{vT_0}$, josta\n$$v=\\sqrt[3]{\\frac{2\\pi GM_a}{T_0}}.$$\n4. $T_0=11\\ \\text{h}\\ 55\\ \\text{min}=42\\,900\\ \\text{s}$:\n$$v=\\sqrt[3]{\\frac{2\\pi\\cdot 6{,}674\\cdot 10^{-11}\\ \\text{N m}^2/\\text{kg}^2\\cdot 5{,}6\\cdot 10^{11}\\ \\text{kg}}{42\\,900\\ \\text{s}}}\\approx 0{,}176\\ \\text{m/s}.$$\nRadan säde on noin $r\\approx 1{,}2\\ \\text{km}$.\n\n**Vastaus: $v\\approx 0{,}18\\ \\text{m/s}$ (17,6 cm/s)**\n\n**Sudenkuoppa:** kiertoaika on muunnettava sekunneiksi. Kuun massa supistuu pois, joten sitä ei tarvita.",
+     "answer": "$v\\approx 0{,}18\\ \\text{m/s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.2",
+     "points": 3,
+     "prompt": "Määritä kiertoajan muutoksen perusteella, kuinka paljon kuun ratanopeus muuttui.",
+     "hints": [
+      "Uusi kiertoaika on $T=11\\ \\text{h}\\ 22\\ \\text{min}=40\\,920\\ \\text{s}$. Rata pysyy ympyränä, joten kaava $v=\\sqrt[3]{2\\pi GM_a/T}$ pätee edelleen, mutta säde muuttuu. Laske nopeuksien erotus."
+     ],
+     "solution": "1. Kiertoaika törmäyksen jälkeen: $T=11\\ \\text{h}\\ 55\\ \\text{min}-33\\ \\text{min}=11\\ \\text{h}\\ 22\\ \\text{min}=40\\,920\\ \\text{s}$.\n2. Uusi ratanopeus: $v_1=\\sqrt[3]{\\frac{2\\pi GM_a}{T}}\\approx 0{,}1790\\ \\text{m/s}$.\n3. Muutos: $\\Delta v=v_1-v_0\\approx 0{,}0028\\ \\text{m/s}=2{,}8\\ \\text{mm/s}$.\n\n**Vastaus: $\\Delta v\\approx 2{,}8\\ \\text{mm/s}$**\n\n**Sudenkuoppa:** jos ratasäde oletetaan muuttumattomaksi ja käytetään kaavaa $v=\\frac{2\\pi r}{T}$, tulos on yli kolminkertainen.",
+     "answer": "$\\Delta v\\approx 2{,}8\\ \\text{mm/s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 6,
+     "prompt": "Laske ennuste ratanopeuden muutokselle, jos törmäys olisi täysin kimmoton. Kuinka moninkertainen havaittu muutos on ennusteeseen verrattuna?",
+     "hints": [
+      "Täysin kimmottomassa törmäyksessä luotain jää kuuhun ja ne liikkuvat yhdessä. Liikemäärä säilyy. Tarkastele törmäystä kuun koordinaatistossa, jossa kuu on aluksi levossa ja luotaimen nopeus on $v_\\text{D}$.",
+      "$m_\\text{D}v_\\text{D}=(M_k+m_\\text{D})\\Delta v$, josta $\\Delta v=\\frac{m_\\text{D}}{M_k+m_\\text{D}}v_\\text{D}$. Vertaa tulosta kohdan 11.2 havaittuun muutokseen."
+     ],
+     "solution": "1. Tarkastellaan törmäystä koordinaatistossa, jossa kuu on aluksi levossa. Luotaimen nopeus kuun suhteen on $v_\\text{D}=6{,}1\\ \\text{km/s}$.\n2. Luotaimen ja kuun systeemiin ei törmäyksen aikana vaikuta merkittäviä ulkoisia voimia, joten liikemäärä säilyy: $m_\\text{D}v_\\text{D}=(M_k+m_\\text{D})\\Delta v$.\n3. Nopeuden muutos:\n$$\\Delta v=\\frac{m_\\text{D}}{M_k+m_\\text{D}}v_\\text{D}=\\frac{580\\ \\text{kg}}{4{,}3\\cdot 10^{9}\\ \\text{kg}+580\\ \\text{kg}}\\cdot 6100\\ \\text{m/s}\\approx 8{,}2\\cdot 10^{-4}\\ \\text{m/s}=0{,}82\\ \\text{mm/s}.$$\n4. Suhde: $\\frac{\\Delta v_\\text{havaittu}}{\\Delta v}=\\frac{2{,}8\\ \\text{mm/s}}{0{,}82\\ \\text{mm/s}}\\approx 3{,}4$.\n\n**Vastaus: ennuste on $\\Delta v\\approx 0{,}82\\ \\text{mm/s}$; havaittu muutos on noin 3,4-kertainen.**\n\n**Sudenkuoppa:** eri koordinaatistojen sekoittaminen, esimerkiksi kuun nopeus ulkopuolisen havaitsijan mittaamana mutta luotaimen nopeus kuun suhteen.",
+     "answer": "$\\Delta v\\approx 0{,}82\\ \\text{mm/s}$; noin 3,4-kertainen",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.4",
+     "points": 3,
+     "prompt": "Mistä ennusteen (kohta 11.3) ja havainnon (kohta 11.2) ero johtuu?",
+     "hints": [
+      "Tekstin mukaan törmäyksessä kuusta lensi ainesta avaruuteen suurella nopeudella. Miten sen liikemäärä pitää ottaa huomioon liikemäärän säilymislaissa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- Liikemäärän säilymislaissa on otettava huomioon myös kuusta avaruuteen sinkoutuneen aineksen liikemäärä.\n- Aines sinkoutui suurella nopeudella taaksepäin, kohti luotaimen tulosuuntaa. Sen liikemäärä on vastakkainen luotaimen liikemäärälle, joten kuu saa ylimääräisen \"rekyylin\", ja sen nopeus muuttuu enemmän kuin täysin kimmottomassa törmäyksessä.\n\nEnergian säilymislaki ei selitä eroa.\n\n**Esimerkkivastaus:** Ennusteessa oletettiin, että luotain vain uppoaa kuuhun. Todellisuudessa törmäys sinkosi kuun pinnalta ainesta avaruuteen suurella nopeudella, pääosin luotaimen tulosuuntaan. Liikemäärän säilymisen vuoksi kuu sai tällöin luotaimen liikemäärän lisäksi sinkoutuneen aineksen liikemäärän suuruisen lisäsysäyksen, joten sen nopeus muuttui noin kolminkertaisesti ennusteeseen verrattuna.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

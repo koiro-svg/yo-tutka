@@ -1,0 +1,397 @@
+{
+ "subject": "englanti",
+ "session": "2024K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2024/kevat/englanti_pitka/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-03-18_EA_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: Kuullun ymmärtäminen",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "answer": 7,
+    "note": "Vastaa kaikkiin. Varaa kuullun tehtäviin yhteensä noin tunti. Videot saa katsoa vapaasti, mutta äänitteiden kuuntelukerrat on rajattu tehtäväkohtaisesti."
+   },
+   {
+    "title": "Osa 2: Luetun ymmärtäminen",
+    "tasks": [
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 6,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 3: Sanasto ja rakenteet",
+    "tasks": [
+     "14",
+     "15",
+     "16"
+    ],
+    "answer": 3,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 4: Kirjallinen tuottaminen",
+    "tasks": [
+     "17.1",
+     "17.2",
+     "17.3",
+     "17.4"
+    ],
+    "answer": 1,
+    "note": "Valitse yksi aihe. Pituus 700–1 300 merkkiä ilman välilyöntejä ja rivinvaihtoja; ylityksestä seuraa pistevähennys. Jätä muut kentät tyhjiksi."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Katso Swim Australian video, jossa 19-vuotias Amy McKitrick kertoo työstään uimaopettajana. Videon saa katsoa niin monta kertaa kuin haluaa. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä sai Amyn ryhtymään uimaopettajaksi?\n2. Mistä Amy pitää työssään?\n3. Mitä Amy on saanut uimaopettajan työstä?\n4. Minkä käytännön edun Amy mainitsee suositellessaan työtä?",
+     "hints": [
+      "Video on lyhyt (noin puoli minuuttia), ja Amy vastaa jokaiseen kysymykseen yhdellä tai kahdella virkkeellä samassa järjestyksessä kuin kysymykset. Katso video ensin kokonaan ja sitten pätkä kerrallaan. Väärät vaihtoehdot käyttävät videon sanoja (ystävät, palkitseva, yliopisto) väärässä yhteydessä.",
+      "- 1.1: mitä Amy teki lapsena? Ystävät mainitaan vasta lopussa, ja he ryhtyivät opettajiksi Amyn jälkeen.\n- 1.2: Amy sanoo työn olevan palkitsevaa. Tarkoittaako hän palkintoja vai jotain, mitä hän näkee lapsissa?\n- 1.3: minne Amy on päässyt työn ansiosta?\n- 1.4: miten työ sopii hänen opintoihinsa? Ovatko opinnot ja työ sama asia?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **1.1 B** (uiminen oli jo tärkeä osa hänen elämäänsä). Amy oli lapsena kilpauimari ja rakasti uimista, joten työ tuntui hyvältä valinnalta. Ystävät (A) ryhtyivät uimaopettajiksi vasta Amyn suosituksesta.\n- **1.2 A** (lasten kehittymisen seuraaminen uimareina). Amy nauttii siitä, kun lapset kehittyvät ja paranevat ajan myötä, ja pitää sitä hyvin palkitsevana. C on ansa: *rewarding* tarkoittaa antoisaa, ei palkintoja.\n- **1.3 A** (hän on päässyt työskentelemään ulkomaille). Amy on matkustanut ulkomaille ja työskennellyt Meksikossa lastenkodissa. Opetustaidoista (B) tai itsevarmuudesta (C) hän ei puhu.\n- **1.4 B** (muut menot on helppo sovittaa työn ympärille). Työ on joustavaa, ja Amy on voinut sovittaa sen yliopiston lukujärjestykseensä. C on ansa: työ ei ole osa opintoja, vaan se joustaa niiden mukaan.",
+     "answer": "1.1 B · 1.2 A · 1.3 A · 1.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele BBC:n äänite, jossa lääkäri Sarah Jarvis puhuu Britannian yleislääkäreiden työstä. Äänitteen saa kuunnella kaksi kertaa. Vastaa suomeksi, kumpaankin enintään 100 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 2.1: mistä yleislääkäreitä on Britanniassa arvosteltu?\n- 2.2: mitä arvostelijat eivät Jarvisin mukaan näytä ymmärtävän?",
+     "hints": [
+      "Äänite on noin 40 sekuntia, ja siinä on kolme lukua: päivän pituus tunteina, työpäivien määrä viikossa ja viikkotunnit. Mieti, mikä luvuista on kritiikin kohde ja millä luvuilla Jarvis puolustaa lääkäreitä. Älä sekoita niitä samaan vastaukseen.",
+      "- 2.1: kritiikki koskee viikoittaisten työpäivien määrää, ei päivien pituutta. Jos lisäät vastaukseen pitkät päivät, vastaus menee sekaisin.\n- 2.2: laske kolme 12 tunnin päivää yhteen. Miten tulos suhteutuu tavalliseen kokoaikatyöhön?"
+     ],
+     "solution": "- **2.1** *He tekevät keskimäärin vain kolmen päivän työviikkoa.* Yleislääkäreitä on haukuttu ilkeästi siitä, että keskivertolääkäri on töissä vain kolmena päivänä viikossa. HVP:n mukaan vastaus ei kelpaa, jos siihen lisätään 11–12 tunnin päivät, koska ne eivät ole kritiikin kohde.\n- **2.2** *Heidän viikkotuntinsa vastaavat tavallista kokoaikatyötä.* Kolme 12 tunnin päivää tekee 36 tuntia, mikä on kenelle tahansa muulle täysi työviikko. Myös \"he tekevät 36 tuntia viikossa\" tai \"heidän työpäivänsä ovat hyvin pitkiä\" kelpaa. Pelkkä maininta, että moni lääkäri on pienten lasten äiti, ei riitä.",
+     "answer": "2.1 tekevät vain kolmipäiväistä työviikkoa · 2.2 viikkotunnit (36 h) vastaavat normaalia työviikkoa",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Kuuntele 99% Invisible -podcastin kertomus majavista: Roman Mars haastattelee Kurt Kohlstedtia, joka kertoo 1940-luvun Idahosta löytyneestä filmistä. Äänite on kolmessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen jokaisen osan kerran. Kuusi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miksi majavafilmi sai huomiota vasta pitkän ajan kuluttua?\n2. Miksi majavia siirrettiin muualle?\n3. Miten majavat vietiin perille?\n4. Mitä kuljetuksen aikana joskus tapahtui?\n5. Mikä uusi siirtotapa otettiin käyttöön?\n6. Mikä helpotti uuden tavan toteuttamista?",
+     "hints": [
+      "Kertomus etenee aikajärjestyksessä: filmin löytyminen ja siirtojen syy, hevoskuljetukset erämaahan ja lopuksi uusi keksintö. Jokaiseen osaan liittyy kaksi kysymystä. Kuuntele tarkasti, *kuka tai mikä* kuljettaa majavia ja *miksi*: vaihtoehdot eroavat pienissä yksityiskohdissa.",
+      "- 3.1: filmi oli ollut yli puoli vuosisataa väärässä paikassa ja väärällä nimellä. Kuka sen löysi, ja onko se syy vai vain tausta?\n- 3.2: siirrot tehtiin luonnonsuojelun vuoksi, ja osin majavia siirrettiin pois leviävän asutuksen tieltä. Tuhosivatko majavat jotain?\n- 3.3: majavalaatikot sidottiin eläinten selkään. Kulkivatko hevoset ja muulit itsekseen?\n- 3.4: kukaan eläimistä ei pitänyt matkasta. Mitä osalle majavista kävi?\n- 3.5–3.6: laatikot pudotettiin lentokoneesta. Mitä sotavuosien jälkeen oli saatavilla halvalla?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **3.1 C** (se oli pantu väärään paikkaan). Filmi oli ollut väärin arkistoituna ja väärin nimettynä yli 50 vuotta. A on ansa: työntekijä löysi filmin, mutta se ei selitä viivettä.\n- **3.2 B** (niitä piti suojella). Eläimiä siirrettiin suojelusyistä ja osin pois leviävän asutuksen tieltä, koska majavat ovat tärkeitä ekosysteemeille. Omaisuuden tuhoamisesta (C) ei puhuta.\n- **3.3 C** (ihmiset taluttivat hevosia ja muuleja, jotka kantoivat majavia). Majavalaatikot sidottiin eläinten selkään, ja ihmiset johdattivat niitä joskus päiväkausia erämaahan. Perävaunusta (A) ei puhuta, eivätkä eläimet kulkeneet yksin (B).\n- **3.4 C** (osa majavista kuoli matkalla). Kuljetus oli niin rankka, että kaikki majavat eivät selvinneet perille. Kantoeläinten eksymisestä (A) tai loukkaantumisesta (B) ei puhuta.\n- **3.5 C** (ne pudotettiin alueelle ilmasta). Majavat pudotettiin laskuvarjolla lentokoneesta laatikoissa, jotka aukesivat maahan osuessaan. Lentokenttä (B) on ansa.\n- **3.6 A** (sodanaikaisia tarvikkeita oli helposti saatavilla). Sodan jälkeen toisen maailmansodan laskuvarjoja sai halvalla, koska niitä ei enää tarvittu. Sotilastukikohdasta (B) tai sotilasajoneuvoista (C) ei puhuta.",
+     "answer": "3.1 C · 3.2 B · 3.3 C · 3.4 C · 3.5 C · 3.6 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele ystävysten Elainen ja Markin keskustelu kahvilassa. Äänite on neljässä osassa. Kussakin Elaine sanoo repliikin (se on kokeessa myös kirjoitettuna), ja Markin kolme vastausvaihtoehtoa A, B ja C ovat vain äänitteinä. Valitse kohteliain vastaus. Vaihtoehdot saa kuunnella kolme kertaa (4 kohtaa, 3 p/kohta). Tilanteet: kuulumisten kysyminen, uusi asunto keskustassa, kutsu tupaantuliaisiin ja ehdotus illallisesta matkan jälkeen.",
+     "hints": [
+      "Kaikki vaihtoehdot vastaavat asiasisällöltään Elainen repliikkiin, joten ratkaisevaa on sävy. Kohtelias vastaus on lämmin ja innostunut, ottaa toisen huomioon ja pahoittelee kieltäytyessään. Epäkohtelias vastaus vähättelee, moittii tai on tyly (*no can do*).",
+      "- 4.1: kuka vastaa innostuneesti, kiittää ja kysyy heti kuulumisia takaisin, ja kuka muistuttaa, että edellisestä tapaamisesta on kulunut kauan?\n- 4.2: kuka onnittelee, ja kuka arvostelee vanhaa asuntoa tai epäilee muutosta?\n- 4.3: kaikki kieltäytyvät. Kuka pahoittelee?\n- 4.4: kuka ilahtuu ehdotuksesta ja muistaa myös Elainen juhlat, ja kuka siirtää järjestelyt Elainen vastuulle?"
+     ],
+     "solution": "Vaihtoehdot ovat kokeessa vain äänitteinä, joten kirjain on äänitteen A, B tai C.\n\n- **4.1 B**. Mark kertoo innostuneesti, että hänellä on mennyt todella hyvin, kiittää kysymästä ja kääntää kysymyksen heti Elaineen (*and yourself?*). A:n *but* kuulostaa moitteelta pitkästä tauosta, ja C on asiallinen mutta laimea eikä kiitä.\n- **4.2 B**. Mark onnittelee ja kehuu sijaintia. A arvostelee Elainen vanhaa asuntoa syrjäiseksi, ja C toivottaa onnea epäilevään sävyyn.\n- **4.3 A**. Mark pahoittelee ja selittää, että hän on sinä viikonloppuna työmatkalla. B ja C kieltäytyvät tylysti ilman pahoittelua (*no can do*, *can't make it*).\n- **4.4 B**. Mark ilahtuu ehdotuksesta ja ehdottaa yhteydenottoa Elainen juhlien jälkeen. A on kohtelias mutta viileämpi, ja C jättää järjestelyt Elainen hoidettaviksi.\n\n**Sudenkuoppa:** kohteliaisuus ei ole vain sanoja, vaan myös vastavuoroisuutta. Kysy kuulumisia takaisin, onnittele ja pahoittele, kun kieltäydyt.",
+     "answer": "4.1 B · 4.2 B · 4.3 A · 4.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele BBC Radio Ulsterin satiirinen sketsi, jossa koomikot Michael Fry, Ciara Knight ja Sean Burke esittävät kuvitteellisen mainostoimiston ideointipalaveria. Äänite on kahdessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mistä ideointipalaverissa on kyse?\n2. Mitä harjoittelija tekee?\n3. Mitä Ciara Knight ehdottaa?\n4. Minkä haittapuolen Michael Fry mainitsee ideassa?",
+     "hints": [
+      "Sketsi on absurdia huumoria: asiakas on lyijyn (*lead*, latinaksi *plumbum*) lobbausjärjestö, ja toimisto on aiemmin tehnyt kampanjan hiilelle. Vitsit perustuvat siihen, että henkilöt puhuvat järjettömistä asioista täysin vakavasti. Kuuntele asiasisältö, älä naurua.",
+      "- 5.1: mitä asiakas haluaa lyijyn ympärille luoda? Onko se tuote, vaalikampanja vai tietoisuus?\n- 5.2: harjoittelija on kaivoksessa. Mitä hän tekee siellä puhelimellaan?\n- 5.3: Ciara puhuu röntgenessusta, joka on jo valmiiksi lyijyä. Mitä siihen lisättäisiin?\n- 5.4: Michael kehuu ideaa, mutta hänellä on kokemusta esiliinojen lähettämisestä. Mikä niissä on kallista?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **5.1 A** (kampanja, joka lisää ihmisten tietoisuutta). Lyijyn lobbausjärjestö haluaa toimiston luovan tietoisuutta ja samanlaista kohua lyijyn ympärille kuin aiemmassa hiilitapahtumassa. Keksinnön prototyypistä (B) tai vaaleista (C) ei puhuta.\n- **5.2 C** (hän julkaisee sisältöä sosiaalisessa mediassa). Harjoittelija tekee Instagram-tarinoita kaivoksesta, mutta ne eivät erotu, koska kaivoksessa on pilkkopimeää. A on ansa: yskiminen mainitaan, mutta toipumisesta ei puhuta.\n- **5.3 C** (valmiin lyijyvarusteen muokkaaminen omaksi). Ciara ehdottaa brändättyä röntgenesiliinaa, joka on jo valmiiksi tehty lyijystä. Kyse ei ole lyijyn uudesta käyttötarkoituksesta (A) eikä kokonaisesta tuoteperheestä (B).\n- **5.4 C** (postikulut eivät ole edulliset). Michael tietää kokemuksesta, että painavien lyijyesiliinojen postittaminen on hyvin kallista. Materiaalien saatavuudesta (A) ei puhuta.",
+     "answer": "5.1 A · 5.2 C · 5.3 C · 5.4 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele 99% Invisible -podcastin jakso, jossa Delaney Hall haastattelee Elliot Carteria. Carter oli harjoittelijana Washingtonin kongressitalossa (Capitol) ja kiinnostui rakennuksen alla kulkevista tunneleista. Äänite on kahdessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Vastaa suomeksi, jokaiseen enintään 100 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 6.1: miten rakennusta viilennettiin ennen?\n- 6.2: milloin kongressiedustajien piti päästä nopeasti kongressitaloon?\n- 6.3: mikä sai Carterin epäilemään, että jotain oli vialla?\n- 6.4: mihin hänen tunnelikarttojaan oli käytetty?",
+     "hints": [
+      "Kohdat 6.1–6.2 ovat ensimmäisessä osassa (tunnelien historia) ja 6.3–6.4 toisessa (Carterin verkkosivu vuonna 2021). HVP on tarkka: vastauksesta hylätään sekä puutteelliset (\"ilmastointi hoidettiin jäällä\") että liian tarkat mutta väärät yksityiskohdat (\"jääpalat\").",
+      "- 6.1: mitä tunneleiden valtavissa maanalaisissa ilmakanavissa oli? Kerro sekä aine että paikka.\n- 6.2: toimistorakennuksista kuljettiin kongressitaloon tekemään jotain. Mitä edustajat tekevät, kun kutsutaan koolle?\n- 6.3: Carterin sivusto oli pieni ja harrastuspohjainen. Millaisilta sivustoilta sinne yhtäkkiä tuli paljon kävijöitä?\n- 6.4: keskusteluketjuissa oli kuvakaappauksia kartoista nuolineen. Mitä tammikuun 6. päivälle 2021 suunniteltiin?"
+     ],
+     "solution": "- **6.1** *Maanalaisissa ilmakanavissa olevan jään avulla.* Osa tunneleista sisälsi valtavia ilmakanavia, jotka täytettiin jäällä, ja se oli varhainen ilmastoinnin muoto. Molemmat tiedot tarvitaan: pelkkä \"jäällä\" ilman maanalaisia kanavia ei riitä, ja \"jääpalat\" tai \"jääpussit\" hylätään.\n- **6.2** *Kun he menivät äänestämään.* Tunneleita pitkin edustajat pääsivät toimistorakennuksista kongressitaloon äänestämään noin vartissa, kun täysistunto kutsuttiin koolle. \"Kun piti tehdä päätöksiä\" on liian epämääräinen, ja \"vaalien aikana\" on väärin.\n- **6.3** *Sivustolle tuli paljon kävijöitä oudoilta sivustoilta.* Carter huomasi alkuvuodesta 2021 epätavallista liikennettä: kävijöitä ohjattiin hänen sivulleen esimerkiksi militia-nimisiltä sivustoilta. Pelkkä \"paljon kävijöitä\" ilman outoutta ei riitä.\n- **6.4** *Kongressitaloon tunkeutumisen suunnitteluun.* Tammikuun 6. päivän kapinaa suunnitelleet ihmiset käyttivät karttoja pohtiessaan, miten he piirittäisivät rakennuksen ja tunkeutuisivat sisään. Myös \"valtausyritykseen\" tai \"kapinaan\" kelpaa, mutta pelkkä \"piiritykseen\" tai \"mielenosoitukseen\" ei.",
+     "answer": "6.1 maanalaisten ilmakanavien jäällä · 6.2 äänestyksiin · 6.3 paljon kävijöitä oudoilta sivustoilta · 6.4 kongressitaloon tunkeutumisen suunnitteluun",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Katso Euroopan komission esittelyvideo komission tehtävistä. Video on tehty ennen brexitiä, joten kartassa näkyy myös Britannia. Videon saa katsoa niin monta kertaa kuin haluaa. Video seuraa kuvitteellista lomalaista, joka matkustaa junalla poikaystävänsä luo toiseen EU-maahan. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä on komissaarien tehtävän ydin?\n2. Mikä on komission päätehtävä?\n3. Miten komissio on helpottanut matkaa poikaystävän luo?\n4. Mitä komissio tekee EU:n ulkopuolisten maiden kanssa?",
+     "hints": [
+      "Video esittelee komission tehtävät tarinan avulla: ensin tekstiviesti rannalta (verkkovierailu), sitten uimaveden laatu, junamatka ja lopuksi kahvi. Jokaiseen tarinan vaiheeseen liittyy yksi komission tehtävä. Kirjoita katsoessasi muistiin, mikä tehtävä liittyy mihinkin vaiheeseen.",
+      "- 7.1: mitä komissaarit lupaavat virkavalaa vannoessaan omista hallituksistaan?\n- 7.2: komissiota kutsutaan unionin liikkeellepanevaksi voimaksi. Mitä se tekee ensimmäisenä, kun uusi laki syntyy?\n- 7.3: nopean junan rakentaminen liittyy komission kolmanteen tehtävään. Mihin EU:n rahoitusta ohjataan?\n- 7.4: kahvi tuli Afrikasta. Mitä komissio neuvottelee muiden maiden kanssa jäsenvaltioiden valtuutuksella?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **7.1 A** (he tekevät päätöksiä riippumattomasti omista hallituksistaan). Komissaarit vannovat, etteivät ota ohjeita oman maansa hallitukselta, ja heidän tehtävänsä on puolustaa koko unionin etua. C on ansa: heillä on omat vastuualueensa, mutta ne eivät koske omaa maata.\n- **7.2 B** (ehdottaa uusia EU-lakeja). Komission päärooli on tehdä aloitteita EU-lainsäädännöksi, esimerkiksi verkkovierailumaksujen alentamiseksi. A on komission toinen tehtävä, perussopimusten valvojan rooli, mutta ei päätehtävä.\n- **7.3 A** (se on tukenut infrastruktuurin kehittämistä). Komissio hallinnoi EU:n budjettia, josta rahoitetaan esimerkiksi rautateitä, moottoriteitä ja lentokenttiä. Ilman sitä nopeaa junayhteyttä ei ehkä olisi. Rajatarkastuksista (B) ei puhuta, ja edullisuus (C) liittyi puhelujen verkkovierailuun, ei matkustamiseen.\n- **7.4 A** (se tekee kauppasopimuksia niiden kanssa). Komissio neuvottelee jäsenvaltioiden valtuutuksella kauppasopimuksia EU:n ulkopuolisten maiden kanssa. C on ansa: kehitysohjelmia mainitaan, mutta ei pyynnöstä myönnettävää apua.",
+     "answer": "7.1 A · 7.2 B · 7.3 A · 7.4 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Lue kaksi matkailuun liittyvää aineistoa: sähköpostina tullut Aircoach-bussilippu Belfastista Dublinin lentokentälle ehtoineen (aineisto A) ja Belfastin kaupungintalon näyttelylippu (aineisto B, kuva). Vastaa suomeksi, jokaiseen enintään 100 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 8.1 (A): miten bussiin voi päästä ilman ennakkoon ostettua lippua?\n- 8.2 (A): milloin yhtiöllä on oikeus jättää matkalaukku kuljettamatta?\n- 8.3 (A): mitä Flex-lisäosa mahdollistaa?\n- 8.4 (B): mitä näyttelyvierailta pyydetään?",
+     "hints": [
+      "Lippujen ehdot on kirjoitettu lyhyesti, ja jokainen vastaus löytyy omasta väliotsikostaan (*How to Board*, *Luggage*, *Ticket changes*). Lue ehdot tarkasti: HVP hylkää vastaukset, joista puuttuu olennainen ehto, esimerkiksi *kenelle* laukku on liian painava.",
+      "- 8.1: mitä tapahtuu paikalle, jos lipun ostanut ei ole pysäkillä ajoissa? Kenelle paikka annetaan?\n- 8.2: laukkujen määrästä on sääntö, mutta kysymys koskee yksittäistä laukkua. Mitä kuljettajan pitää pystyä tekemään?\n- 8.3: ilman lisäosaa voi matkustaa vain varattuun aikaan. Mitä lisäosalla siis voi tehdä?\n- 8.4: lipussa pyydetään tekemään lipulle jotain ja kerrotaan, minkä todisteena se toimii."
+     ],
+     "solution": "- **8.1** *Jos joku ennakkolipun ostanut ei ole pysäkillä ajoissa.* Matkustajan pitää olla pysäkillä 10 minuuttia ennen lähtöä, ja myöhästyneen paikka annetaan juuri ennen lähtöä paikan päällä odottaville asiakkaille. HVP hylkää vastauksen \"jos joku myöhästyy bussista\", koska paikka vapautuu jo ennen lähtöä, ja Flex-lisäosa on väärä vastaus, koska sekin ostetaan ennakkoon.\n- **8.2** *Jos laukku on kuljettajalle liian raskas nostaa.* Ehtojen mukaan tavara, jota kuljettaja ei pysty nostamaan, jätetään kyydistä. Pelkkä laukun liiallinen paino ei riitä vastaukseksi, koska kuljettaja pitää mainita, eikä laukkujen määrä vastaa kysymykseen.\n- **8.3** *Matkustaa muuhun kuin varattuun aikaan (muuttaa varausta).* Ilman lisäosaa voi matkustaa vain varattuna aikana, joten lisäosa antaa joustoa lähtöaikaan. HVP ei hyväksy vastausta \"aikataulua voi muuttaa\", koska yhtiön aikataulu ei muutu.\n- **8.4** *Säilyttämään lipun todisteena rekisteröitymisestä.* Lipussa pyydetään pitämään se tallessa ilmoittautumisen todisteena. Pelkkä \"pitämään lippua\" tai \"säilyttämään todisteena\" ei riitä, eikä \"todisteena ostosta\".",
+     "answer": "8.1 jos joku lipun ostanut ei ole ajoissa paikalla · 8.2 jos laukku on kuljettajalle liian raskas nostaa · 8.3 matkustaa muuna aikana / muuttaa varausta · 8.4 säilyttämään lipun todisteena rekisteröitymisestä",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Lue Amit Kumarin ja Nicholas Epleyn tutkimuksen tiivistelmä (Journal of Experimental Psychology) satunnaisista ystävällisistä teoista ja siitä, miten tekijät arvioivat tekojensa vaikutuksen saajiin. Tekstissä selitetään sana *calibrate*. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miten tutkimuksen aineisto kerättiin?\n2. Mikä vahvisti saajien reaktioita?\n3. Mikä oli tutkimuksen päätulos?\n4. Mikä johtopäätös tekstissä tehdään?",
+     "hints": [
+      "Tiivistelmä on tieteellistä kieltä, ja lähes jokaisessa virkkeessä on vaikea sana (*miscalibrated, egocentric bias, prosociality*). Ydin on yksinkertainen: tekijät arvioivat tekojensa vaikutuksen väärin. Etsi jokaiseen kysymykseen yksi virke ja käännä se mielessäsi arkikielelle.",
+      "- 9.1: tutkijat järjestivät tilanteita puistossa ja laboratoriossa (kaakao, lahja). Kysyttiinkö aiemmista kokemuksista vai luotiinko tilanteet?\n- 9.2: mikä ystävällisessä teossa välittyy saajalle ja parantaa hänen reaktiotaan?\n- 9.3: mitä tekijät tekivät johdonmukaisesti saajien tunteille?\n- 9.4: miksi väärät odotukset ovat tutkijoiden mielestä tärkeä asia?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **9.1 C** (jäljittelemällä tosielämän tilanteita). Tutkijat järjestivät sekä kenttä- että laboratoriotilanteita, kuten kupin kuumaa kaakaota puistossa tai lahjan laboratoriossa, ja kysyivät molempien osapuolten tuntemuksia. Aiemmista kokemuksista (A) ei kysytty, eikä pelkkä tarkkailu (B) riitä, koska osapuolet raportoivat itse.\n- **9.2 C** (heille osoitettu ystävällisyys). Saajien myönteiset reaktiot vahvistuvat teon välittämästä lämmöstä, kun taas tekijät eivät juuri huomioi sitä. A on ansa: kyse on saajaan kohdistuvasta lämmöstä, ei saajan omista tunteista muita kohtaan.\n- **9.3 C** (antajat arvioivat saajien reaktiot väärin). Tekijät aliarvioivat johdonmukaisesti, kuinka hyvältä saajasta tuntui. B on ansa: tutkimus vertasi odotuksia saajan tunteisiin, ei tekijän ja saajan onnellisuutta.\n- **9.4 B** (ystävällisyyden vaikutusten ymmärtäminen on tärkeää). Väärät odotukset voivat estää ihmisiä tekemästä hyviä tekoja useammin, jolloin menetetään tilaisuuksia parantaa sekä omaa että muiden hyvinvointia. Tekstin mukaan ystävällisyys ei ole helppoa (A), vaan väärät odotukset jarruttavat sitä.",
+     "answer": "9.1 C · 9.2 C · 9.3 C · 9.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Tulkitse Ofcomin kaaviota (News Consumption in the UK 2022), joka näyttää, kuinka monta eri uutislähdettä (1, 2, 3 tai vähintään 4) kunkin alustan uutiskäyttäjät käyttävät. Alustat: kaikki internet, tv, painetut sanomalehdet, radio, sosiaalinen media, podcastit ja muut verkkosivut tai sovellukset. Kaksi kysymystä, joissa valitaan alustaseitsemästä vaihtoehdosta alasvetovalikosta (3 p/kohta):\n\n1. Millä alustalla on eniten käyttäjiä, jotka käyttävät vähintään kahta uutislähdettä?\n2. Millä alustalla käyttäjät käyttävät enimmäkseen vain yhtä tai kahta lähdettä?",
+     "hints": [
+      "Kaavion pylväät on jaettu neljään osaan lähteiden määrän mukaan. Kysymykset koskevat eri osien summia, joten laske ne itse: pelkkä yksi osa ei riitä. Ohita kaavion ensimmäinen pylväs (kaikki alustat yhteensä), koska se ei ole vaihtoehtona.",
+      "- 10.1: \"vähintään kaksi\" = 100 % miinus yhden lähteen osuus (tai kolmen ylimmän osan summa). Millä alustalla yhden lähteen osuus on pienin?\n- 10.2: laske yhteen yhden ja kahden lähteen osuudet. Mikä alusta erottuu, ja millä alustalla yhden lähteen osuus on suurin?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C). Vaihtoehdot ovat samassa järjestyksessä kuin kaaviossa: A kaikki internet, B tv, C painetut lehdet, D radio, E sosiaalinen media, F podcast, G muut sivustot/sovellukset.\n\n- **10.1 G** (muut verkkosivut ja sovellukset). Niillä vain yhtä lähdettä käyttää alle viidesosa, joten vähintään kahta lähdettä käyttää noin kolme neljäsosaa, enemmän kuin millään muulla alustalla. Myös otsikko ja keskiarvo (3,7 lähdettä) tukevat tätä. Kaikki internet (A) jää vähän jälkeen.\n- **10.2 D** (radio). Radiossa yhden lähteen osuus on lähes puolet, ja yhden tai kahden lähteen osuudet ovat yhteensä noin kolme neljäsosaa, mikä on alustoista suurin. Keskiarvo on alle kaksi lähdettä. Podcast (F) on lähellä, mutta sen summa jää pienemmäksi.\n\n**Sudenkuoppa:** älä vastaa pelkän sinisen (4+) osan perusteella kohdassa 10.1, vaan laske kaikki vähintään kahden lähteen osat yhteen.",
+     "answer": "10.1 G (muut sivustot/sovellukset) · 10.2 D (radio)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 30,
+     "prompt": "Lue Elizabeth Pennisin Science-lehden artikkeli sukupuuttoon kuolleiden lajien palauttamisesta (*de-extinction*). Tutkijat yrittivät koota Joulusaaren rotan perimän, mutta se jäi vajaaksi. Tekstissä on kymmenen aukkoa, ja kuhunkin valitaan alasvetovalikosta kolmesta vaihtoehdosta sopivin sanaryhmä (3 p/aukko). Artikkelissa esiintyvät tutkijat Karen Wendling, Tom Gilbert, Victoria Herridge, Andrew Pask ja George Church.",
+     "hints": [
+      "Artikkelissa vuorottelevat skeptiset ja optimistiset äänet. Mieti jokaisen aukon kohdalla, kuka puhuu ja mitä mieltä hän on: Gilbert ja Herridge ovat varovaisia, Pask ja Church optimistisia ja Wendling pohtii etiikkaa. Lue myös aukkoa seuraava virke, koska se usein selittää aukon sisällön.",
+      "- 11.1: Joulusaaren rotan perimä ei riitä sen palauttamiseen. Miten se vaikuttaa mammuttihaaveisiin?\n- 11.2: monia biologeja kiehtoo haaste. Mitä he kysyvät itseltään?\n- 11.3: seuraava virke kertoo, mitä mammutti teki pensaille ja ruohoille.\n- 11.4: seuraava virke luettelee palauttamisen vaiheet.\n- 11.5: Gilbert halusi aloittaa pienestä.\n- 11.6: puuttuvat geenit tekevät lajista ainutlaatuisen, sanoo seuraava virke.\n- 11.7: Pask ei hätkähdä ja on optimistinen pussihukasta.\n- 11.8: puuttuva 5 % on toistuvia jaksoja. Ovatko ne tärkeitä eläimen ulkonäölle?\n- 11.9: Churchin kommentti on lisäperuste optimismille.\n- 11.10: seuraava sitaatti vertaa kustannuksia elävien lajien suojeluun."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C).\n\n- **11.1 A** (on ehkä tehnyt lopun haaveista): rotan tapaus saattoi lopettaa haaveet tunnetumpien lajien palauttamisesta, koska edes sen tarkka perimä ei riitä. B ja C eivät sovi otsikon skeptiseen sävyyn.\n- **11.2 B** (\"pystynkö tähän?\"): palauttaminen houkuttelee geneetikkoja haasteena, ja seuraava virke puhuu lumoutumisesta.\n- **11.3 B** (voisi myös auttaa ennallistamaan ekosysteemejä): seuraava virke kertoo, miten mammutti piti pensaikot kurissa ja lannoitti ruohoa, eli se ylläpiti ekosysteemiä.\n- **11.4 B** (kuolleen lajin palauttamiseksi): virke luettelee kuolleen lajin palauttamisen vaiheet: perimän sekvensointi, lähisukulaisen DNA:n muokkaus ja sijaisemo.\n- **11.5 B** (miksei aloiteta yksinkertaisesta mallista): Gilbert halusi aloittaa pienestä, ja siksi valittiin hyvin tunnetun laboratorioeläimen lähisukulainen.\n- **11.6 A** (lähes 5 % Joulusaaren rotan perimästä puuttui yhä): seuraava virke puhuu puuttuvista geeneistä, jotka tekevät lajista ainutlaatuisen.\n- **11.7 A** (ehkä paras ehdokas palautettavaksi): Pask on optimistinen, joten hän pitää pussihukkaa hyvänä ehdokkaana.\n- **11.8 B** (ei luultavasti vaikuta eläimen ulkonäköön tai käytökseen): puuttuva osa on toistuvia jaksoja, joten Paskin optimismi perustuu siihen, ettei niillä ole merkitystä.\n- **11.9 B** *Moreover* (lisäksi): Churchin kommentti tuo lisäperusteen optimismille. *Conversely* ilmaisisi vastakohtaa.\n- **11.10 B** (voi viedä tarvittavia varoja luonnonsuojelulta): Wendlingin mukaan yhden lajin palauttamisen hinnalla voisi pelastaa kahdeksan elävää lajia.",
+     "answer": "11.1 A · 11.2 B · 11.3 B · 11.4 B · 11.5 B · 11.6 A · 11.7 A · 11.8 B · 11.9 B · 11.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue Felicity Clooken New Statesman -kolumni vierailusta itälontoolaiseen Dusty Knuckle -leipomoon varhain aamulla. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miksi kirjoittaja on liikkeellä niin aikaisin?\n2. Miksi omistaja Daisy Terry tarjoaa työntekijöilleen joogaa?\n3. Mitä Dusty Knucklesta kerrotaan?\n4. Mikä on Dusty Knucklen rooli yhteiskunnassa?\n5. Mitä tekstin viimeinen virke tarkoittaa?",
+     "hints": [
+      "Kolumni on kirjoitettu elävästi ja kielikuvin, joten etsi jokaiseen kysymykseen kohta, jossa asia sanotaan suoraan. Tekstin alussa ja lopussa esiintyvät ketut, ja viimeinen virke on sanaleikki tunnetusta englantilaisesta sananlaskusta.",
+      "- 12.1: kirjoittajan ystävä otti hänet mukaan suunnitelmaan. Mitä se tarkoittaa?\n- 12.2: Daisyn mukaan leivän laatu riippuu jostakin leipomossa. Mistä?\n- 12.3: voin, jauhojen ja energian hinnat nousevat. Onko leipomo tehnyt suuria voittoja vai kärsiikö se ympäröivästä tilanteesta?\n- 12.4: miksi leipomo perustettiin vuonna 2014? Keitä sen ovat tarkoitus työllistää?\n- 12.5: sananlasku *the early bird catches the worm* tarkoittaa, että aikainen lintu saa madon. Kuka kolumnin lopussa ei saa mitään?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **12.1 B** (kaveri haastoi hänet mukaan). Kesäkuussa ystävä värväsi kirjoittajan suunnitelmaan tutustua leipureihin, jotka heräävät keskellä yötä. Kettuja (A) kirjoittaja näkee vain sattumalta, eikä hän ole ostamassa aamiaissämpylöitä (C).\n- **12.2 C** (työntekijöiden olo vaikuttaa lopputuotteeseen). Daisyn mukaan leivän laatu riippuu kokonaan leipomon tunnelmasta, ja siksi siellä soi musiikki, syödään hyvin ja tarjotaan hierontaa ja kattojoogaa. Tehokkuudesta (B) ei puhuta.\n- **12.3 C** (ympäröivät tapahtumat vaikuttavat siihen). Voin, jauhojen ja energian hinnat ovat nousseet ja nousevat vielä, ja palkkojakin on korotettava, joten tulevaisuus on epävarma. Suurista voitoista (B) ei puhuta.\n- **12.4 A** (se palkkaa ihmisiä, jotka voisivat muuten päätyä vankilaan). Leipomo perustettiin tarjoamaan koulutusta ja töitä nuorille, joita uhkaa vankeustuomio, ja Daisy puhuu paljon valvojien kanssa. C on ansa: kirjoittaja ihmettelee, miksi leipää arvostetaan niin vähän, mutta leipomo ei ole muuttanut sitä.\n- **12.5 C** (kettu sai vain katsella, kun muut söivät). Kettu tuijottaa lasin läpi, kun kirjoittaja syö croissanttiaan. Kettu oli liikkeellä aikaisin, mutta ei saanut mitään, joten sananlasku kääntyy päälaelleen. Tulevaisuuden haasteisiin (A) virke ei viittaa.",
+     "answer": "12.1 B · 12.2 C · 12.3 C · 12.4 A · 12.5 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Lue Complex.com-sivuston lyhyt teksti vuoden 1879 Sydneyn mellakasta, joka syntyi Englannin ja New South Walesin välisessä kriketti-ottelussa. Vastaa suomeksi (3 p/kohta, arvostelu 3/0):\n\n- 13.1: keitä epäiltiin mellakan aiheuttajiksi? (enintään 50 merkkiä)\n- 13.2: mistä syystä he lietsoivat mellakan? (enintään 100 merkkiä)",
+     "hints": [
+      "Teksti on lyhyt, ja molemmat vastaukset ovat samassa kappaleessa, jossa kerrotaan mellakan syistä. Tunnista englannin vedonlyöntisanasto: *gamblers* (uhkapelaajat, vedonlyöjät), *bet on* (lyödä vetoa jonkin puolesta) ja *call the bets off* (perua vedot).",
+      "- 13.1: syyllisiä eivät olleet kannattajat tai katsojat vaan ihmiset, joilla oli rahaa pelissä. Keitä he olivat?\n- 13.2: kenen puolesta he olivat lyöneet vetoa, ja kumpi joukkue alkoi johtaa? Mitä he halusivat estää tai saada?"
+     ],
+     "solution": "- **13.1** *Paikallisten vedonlyöjien (uhkapelaajien).* Mellakan on arveltu johtuneen alueen vedonlyöjistä, jotka olivat lyöneet vetoa New South Walesin puolesta. HVP hylkää vastaukset \"kannattajat\" tai \"vetoa lyöneet fanit\", koska vedonlyöjät eivät välttämättä olleet faneja tai edes katsojia.\n- **13.2** *Jotteivät he häviäisi vetojaan, kun Englanti alkoi johtaa.* Vedonlyöjät olivat panneet rahansa Englantia vastaan, joten he käyttivät huonoa tuomarointia tekosyynä mellakan lietsomiseen ja vetojen perumiseen. Rahan menetys pitää mainita: pelkkä \"koska Englanti johti\" tai \"halusivat keskeyttää ottelun\" ei riitä, ja \"rahan takia\" on liian epämääräinen.",
+     "answer": "13.1 vedonlyöjät · 13.2 jotteivät häviäisi vetojaan (rahaa), kun Englanti oli voitolla",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "14",
+   "units": [
+    {
+     "id": "",
+     "points": 10,
+     "prompt": "Täydennä Sydney Morning Heraldin uutista, jossa Victorian osavaltion alkuperäiskansojen edustajakokouksen puheenjohtaja Marcus Stewart vaatii osavaltion vihreitä tukemaan Voice-kansanäänestyksen \"kyllä\"-kampanjaa. Tekstissä on kymmenen aukkoa (1 p/aukko). Aukkojen 14.1–14.5 vaihtoehdot ovat aakkosjärjestyksessä *accused, challenged, concerned, elected, excluded, protected* ja aukkojen 14.6–14.10 *acting, ardent, criminal, infamous, unsettled, vocal*. Kummastakin ryhmästä jää yksi sana käyttämättä.",
+     "hints": [
+      "Kummassakin ryhmässä on kuusi sanaa viiteen aukkoon, joten yksi sana jää yli. Etsi ensin varmimmat parit, kuten vakiintuneet rakenteet (*accuse someone of*, *as far as I'm concerned*), ja täytä sitten loput poissulkemalla. Tarkista, sopiiko sana myös merkitykseltään: onko se myönteinen vai kielteinen?",
+      "- 14.1: Stewart *haastaa* vihreät tukemaan kampanjaa.\n- 14.2: millainen alkuperäiskansojen ääni parlamentissa olisi, jos se kirjattaisiin perustuslakiin?\n- 14.3: *___ the Greens of stoking*: mikä verbi saa perään *of*?\n- 14.4: vakiintunut ilmaus \"minun puolestani, mitä minuun tulee\".\n- 14.5: edustajakokous valitaan neljän vuoden välein.\n- 14.6: liittovaltion vihreät ovat asiasta *epävarmoja*.\n- 14.7: vihreät ovat äänekkäitä muista asioista.\n- 14.8: nykyinen *virkaa tekevä* johtaja.\n- 14.9: hän oli *innokas* kampanjoija tasa-arvoisen avioliiton puolesta.\n- 14.10: *___ justice reform* = rikosoikeuden uudistus."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C). Alasvetovalikossa sanat ovat eri järjestyksessä kuin tehtävänannon aakkoslistassa, mutta samassa järjestyksessä kaikissa ryhmän aukoissa.\n\n- **14.1 A** *challenged*: haastoi vihreät tukemaan kampanjaa julkisesti.\n- **14.2 C** *protected*: perustuslaissa suojattu Voice-elin.\n- **14.3 F** *accused*: *accuse someone of doing something* = syyttää jostakin.\n- **14.4 E** *concerned*: *as far as I'm concerned* = minun mielestäni.\n- **14.5 B** *elected*: elin, jonka alkuperäisasukkaat valitsevat neljän vuoden välein.\n- **14.6 C** *unsettled*: liittovaltion vihreiden kanta on vielä epäselvä.\n- **14.7 E** *vocal*: äänekäs, näkyvästi kantaa ottava.\n- **14.8 F** *acting*: virkaa tekevä johtaja.\n- **14.9 A** *ardent*: innokas, palava kampanjoija.\n- **14.10 B** *criminal*: *criminal justice reform* = rikosoikeudellinen uudistus.\n\nKäyttämättä jäävät *excluded* ja *infamous*.",
+     "answer": "14.1 A · 14.2 C · 14.3 F · 14.4 E · 14.5 B · 14.6 C · 14.7 E · 14.8 F · 14.9 A · 14.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "15",
+   "units": [
+    {
+     "id": "",
+     "points": 11,
+     "prompt": "Täydennä Saira Peeskerin Globe and Mail -artikkelia introverteista työelämässä: vakuutusyhtiön analyytikko Angel Yang kertoo, miten hän on oppinut selviytymään palavereista. Tekstissä on kymmenen aukkoa, ja jokaisen kohdalla on vihje: suomenkielinen ilmaus käännetään tai englanninkielinen sana taivutetaan tekstiin sopivaan muotoon. Pisteet: 15.4 2 p, muut 1 p. Tehtävä arvostellaan keskitetysti. Vihjeet: *vaatisi* (työ), *osallistua* (palavereihin), *jähmettyisi* (kesken lauseen), *hänen kokemuksensa mukaan*, *löytää tapoja* (erottua), *see and hear* (introvertit), *etukäteen* (palaverin aiheet), *varmuutta*, *pose* (kysymykset) ja *kiinnostuneita* (sisällöstä).",
+     "hints": [
+      "Katso jokaisessa aukossa, mitä aukon ympärillä on: aikamuoto (menneen ajan kertomus), edeltävä verbi (*had to*, *puts the burden on*) ja se, tarvitaanko prepositio. Suomenkielinen vihje käännetään merkityksen mukaan, ei sana sanalta. Englanninkielinen vihje (*see and hear, pose*) pitää taivuttaa lauseeseen sopivaksi.",
+      "- 15.1: menneen ajan kertomus (*she quickly realized it ___*): konditionaali menneessä.\n- 15.2: *had to* + perusmuoto; muista prepositio ennen sanaa *meetings*.\n- 15.3: *What if she ___?*: kuviteltu tilanne, verbin mennyt muoto.\n- 15.4: vakiintunut ilmaus, jossa on prepositio ja omistuspronomini.\n- 15.5: *puts the burden on introverts ___*: infinitiivi.\n- 15.6: *to be ___*: passiivi, joten tarvitaan partisiipit.\n- 15.7: adverbi, \"ennen tapahtumaa\".\n- 15.9: *questions that might ___*: kysymykset eivät itse esitä, vaan ne esitetään.\n- 15.10: adjektiivi + prepositio (*what you say*)."
+     ],
+     "solution": "- **15.1** *would require*. Myös *would need* käy.\n- **15.2** *participate in*. Myös *take part in* tai *attend* käy, ja *attend* ei tarvitse prepositiota.\n- **15.3** *froze* (tai *were to freeze*): *what if* + mennyt aika ilmaisee kuviteltua tilannetta.\n- **15.4** *in her experience* (2 p). HVP hyväksyy myös *according to her experience* sekä esimerkiksi *based on her experience*.\n- **15.5** *to find ways*. Myös *to come up with ways* kelpaa.\n- **15.6** *seen and heard*: passiivin *be* + partisiippi.\n- **15.7** *in advance* tai *beforehand*.\n- **15.8** *confidence* tai *certainty*: *some confidence* on laskematon substantiivi.\n- **15.9** *be posed*: passiivi, koska joku muu esittää kysymykset.\n- **15.10** *interested in*. Myös *keen on* tai *curious about* käy.\n\n**Sudenkuoppa:** *freezed* ei ole englantia, vaan *freeze – froze – frozen*. Muista myös prepositio: *participate in*, *interested in*.",
+     "answer": "would require · participate in · froze · in her experience · to find ways · seen and heard · in advance · confidence · be posed · interested in",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "16",
+   "units": [
+    {
+     "id": "",
+     "points": 14,
+     "prompt": "Lue BBC Worklife -artikkelin alku ADHD-työntekijöiden hiljaisista kamppailuista: esimerkkinä on newyorkilainen konsultti Christian, joka menetti työnsä. Tekstissä on 13 aukkoa, ja kuhunkin valitaan alasvetovalikosta kolmesta vaihtoehdosta sopivin (16.13 2 p, muut 1 p). Aukot mittaavat verbimuotoja, aikamuotoja, prepositioita, ajanilmauksia, yhdyssanan kirjoitusasua ja määrän ilmaisemista.",
+     "hints": [
+      "Katso jokaisessa aukossa, mihin sanaan aukko liittyy. Aikamuodoissa ratkaisee ajanilmaus (*since he was 15*), prepositioissa vakiintunut pari (*fall behind on*, *point out*, *tick up*) ja yhdyssanoissa se, onko sana substantiivina vai adjektiivina. Kaikki kolme vaihtoehtoa voivat näyttää järkeviltä, joten lue koko virke.",
+      "- 16.1: *find themselves ___ behind*: partisiippi.\n- 16.2: ajanilmaus vuoden loppupuolesta: tarvitaanko artikkelia?\n- 16.3: *The ___* toimii substantiivina (31-vuotias): miten väliviivat kirjoitetaan?\n- 16.7: *since he was 15*: toiminta jatkuu yhä.\n- 16.8: *the same things that ultimately ___ him sacked*: mennyt aika.\n- 16.10: sivulause, joka kertoo ajankohdan.\n- 16.11: *millions of* + monikko.\n- 16.13: diagnoosien määrä *kasvaa*. Mikä partikkeli ilmaisee nousua?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C).\n\n- **16.1 A** *left*: *find oneself left behind* = huomata jääneensä jälkeen.\n- **16.2 C** *in late 2022*: vuoden loppupuolella, ilman artikkelia.\n- **16.3 C** *31-year-old*: kun ikä toimii substantiivina tai adjektiivina, osat yhdistetään väliviivoin ja *year* on yksikössä.\n- **16.4 B** *on*: *fall behind on something* = jäädä jälkeen jostakin.\n- **16.5 A** *being able*: *like being able to...* = kuten kyky tehdä jotain.\n- **16.6 A** *out*: *point out* = huomauttaa.\n- **16.7 C** *has been living*: perfektin kestomuoto, koska tila on jatkunut 15-vuotiaasta asti.\n- **16.8 A** *got*: *get someone sacked* menneessä ajassa (potkut saatiin jo).\n- **16.9 A** *mostly*: enimmäkseen hallittavissa.\n- **16.10 C** *when*: kun hän siirtyi työelämään (ajankohta).\n- **16.11 A** *millions of people*: *people* on jo monikko, eikä *millions* voi olla ilman *of*-sanaa.\n- **16.12 B** *even*: jotkut eivät edes tiedä syytä.\n- **16.13 C** *up* (2 p): *tick up* = nousta vähitellen, ja *so too does awareness* kertoo, että tietoisuuskin kasvaa.\n\n**Sudenkuoppa:** *a 31-year-old man*, mutta *he is 31 years old*. Väliviivat ja yksikkö kuuluvat vain määriteasemaan tai substantiiviksi muuttuneeseen muotoon.",
+     "answer": "16.1 A · 16.2 C · 16.3 C · 16.4 B · 16.5 A · 16.6 A · 16.7 C · 16.8 A · 16.9 A · 16.10 C · 16.11 A · 16.12 B · 16.13 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "17.1",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: vastaus jatkokyselyyn. Euroopan parlamentin nuorisokyselyn mukaan suurin osa (55 %) vastanneista nuorista ei ymmärrä EU:sta juuri mitään, ja 42 % sanoo ymmärtävänsä paljon tai kohtalaisesti. Miten EU:n pitäisi lähestyä nuoria, jotta se olisi ymmärrettävämpi?",
+     "hints": [
+      "Kysymys koskee keinoja: miten EU saisi nuoret ymmärtämään toimintaansa? Anna konkreettisia ehdotuksia ja perustele ne. Kyselyn vastauksena teksti voi olla henkilökohtainen, ja kyselyn luvun voi mainita alussa.",
+      "Rakenne: reaktio kyselyn tulokseen ja oma kokemus → 2–3 numeroitua ehdotusta (esim. sosiaalinen media, selkeä kieli, osallistuminen) ja jokaiselle esimerkki → yhteenveto. Hyödyllistä sanastoa: *engage, plain language, institution, decision-making, exchange programme, have a say*."
+     ],
+     "solution": "**Malliteksti** (998 merkkiä ilman välilyöntejä)\n\n**Follow-up survey: How can the EU reach young people?**\n\nI am not surprised that over half of young Europeans say they do not understand the EU. At school we learnt the names of the institutions, but nobody explained what they actually do for us. Here are my three suggestions.\n\nFirst, the EU should meet young people where they already are. Instead of long press releases, it could post short videos on TikTok and Instagram that explain one decision at a time. For example, a one-minute clip showing how the EU ended roaming charges would make its work concrete.\n\nSecond, the language must be simpler. Words like \"directive\" or \"qualified majority\" mean nothing to most teenagers. Every important decision should also be summarised in plain language, in every official language.\n\nThird, young people should be able to take part, not just listen. More exchange programmes like Erasmus+, youth councils and online polls on real proposals would show us that our opinions matter. When I spent a week in Brussels on a school trip, the EU suddenly felt real and close.\n\nIn short, the EU does not need to change what it does, only how it talks to us. If it listens and speaks our language, young people will listen back.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** teksti vastaa suoraan kysymykseen *miten*, ja jokaiselle ehdotukselle on perustelu ja esimerkki.\n- **Konkreettisuus:** esimerkit (verkkovierailumaksut, Erasmus+, koulumatka Brysseliin) tekevät ehdotuksista uskottavia.\n- **Tekstilaji:** kyselyvastauksessa on henkilökohtainen näkökulma, ja kyselyn tulos mainitaan alussa.\n- **Rakenne:** *First, Second, Third, In short* jäsentävät tekstin selkeästi.\n- **Kieli:** monipuolisia rakenteita, kuten *Instead of*, *would make*, *not just* sekä passiivi (*should be summarised*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.2",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: puheenvuoro verkkokeskusteluun lukemisesta. Keskustelijoiden mukaan kuuntelemme yhä enemmän äänikirjoja, vaikka meidän pitäisi lukea tekstejä paperilta tai näytöltä. He pohtivat myös, mikä on tärkeintä luettavaa: sanomalehdet, kaunokirjallisuus, tietokirjallisuus vai jokin muu. Kerro, mitä ihmisten pitäisi mielestäsi lukea ja miksi. HVP: −10 p, jos teksti käsittelee vain äänikirjojen kuuntelua eikä lainkaan lukemista.",
+     "hints": [
+      "Tehtävässä on kaksi osaa: suhtautuminen äänikirjoihin ja lukemiseen sekä kanta siihen, mitä kannattaa lukea. Pääpaino on lukemisessa: jos puhut vain äänikirjoista, menetät 10 p. Valitse selvä kanta ja perustele se.",
+      "Rakenne: viittaus keskusteluun ja oma kanta äänikirjoihin → mitä pitäisi lukea ensisijaisesti ja miksi (esim. kaunokirjallisuus ja empatia) → mitä muuta tarvitaan (uutiset, tietokirjat) → yhteenveto tai kehotus. Hyödyllistä sanastoa: *fiction, non-fiction, concentration, empathy, reliable source, misinformation*."
+     ],
+     "solution": "**Malliteksti** (987 merkkiä ilman välilyöntejä)\n\n**Re: What should we be reading?**\n\nI agree that reading still matters, but I do not think audiobooks are the enemy. Listening to a novel on the bus is better than scrolling through videos. However, reading a text with your own eyes trains concentration in a way that listening does not, so we should not give it up.\n\nAs for what to read, my answer is simple: read fiction first. Novels let us live inside other people's heads. When I read a book about a refugee family, I understood their fear far better than from any news report. Research also suggests that people who read fiction are better at empathy, and our divided world needs that skill badly.\n\nThat said, fiction alone is not enough. We also need reliable news, preferably from real newspapers rather than random social media posts. Otherwise we cannot take part in discussions about politics or recognise misinformation. Non-fiction, such as popular science, is a great bonus if you have time.\n\nSo my recipe would be a novel for the evening, a quality newspaper for the morning and an audiobook for the gym. The format matters less than the habit. Whatever you choose, keep reading, because every book teaches you something a screen cannot.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** teksti käsittelee sekä lukemista että äänikirjoja, ja kanta luettavaan on selvä (ei −10 p:n vähennystä).\n- **Perustelut:** kaunokirjallisuus ja empatia, uutiset ja kansalaisena toimiminen sekä esimerkki omasta lukukokemuksesta.\n- **Tekstilaji:** verkkokeskustelun piirteet, kuten viittaus aiempiin viesteihin ja henkilökohtainen sävy.\n- **Vivahteikkuus:** äänikirjoja ei tyrmätä, ja lopussa on käytännöllinen \"resepti\".\n- **Kieli:** vertailut (*far better than*, *rather than*) ja sidesanat (*However, That said, Otherwise, So*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.3",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: kilpailuessee, jolla haetaan parasta opiskelijan esseetä. Lähtökohtana on Ofelian repliikki Shakespearen *Hamletista*: tiedämme, mitä olemme, mutta emme sitä, mitä meistä voi tulla. Sen voi tulkita tulevaisuuden epävarmuudeksi tai kehotukseksi muuttua. Voimmeko muuttua, ja miten muutos voisi tapahtua?",
+     "hints": [
+      "Tehtävässä on kaksi kysymystä: voiko ihminen muuttua, ja *miten* muutos tapahtuu. Vastaa molempiin. Ofelian repliikki kannattaa mainita alussa tai lopussa omin sanoin, jotta essee liittyy aiheeseen.",
+      "Rakenne: kiinnostava aloitus Ofelian ajatuksesta ja oma tulkinta → kanta: voimmeko muuttua? → esimerkki omasta tai tunnetusta elämästä → miten muutos tapahtuu (pienet askeleet, uudet ihmiset ja tilanteet) → mikä pysyy ennallaan → lopetus, joka palaa alkuun. Hyödyllistä sanastoa: *personality, comfort zone, gradual, shape, identity, potential*."
+     ],
+     "solution": "**Malliteksti** (956 merkkiä ilman välilyöntejä)\n\n**The People We Might Become**\n\nWhen Ophelia admits that we understand what we are, but not what we may become, she sounds uncertain and even afraid. I prefer to read her words as a promise. We are not finished products, and that is good news.\n\nCan people really change? Many believe that our personality is fixed by the time we leave childhood. Yet my own experience says otherwise. At fourteen, I was so shy that I could not order a pizza by phone. Today I give presentations in two languages. Nothing magical happened; I simply had to join a drama club because my best friend refused to go alone.\n\nThis is how most change happens. It rarely comes from a sudden decision to become a new person. Instead, it grows from small steps, new people and situations that push us out of our comfort zone. Travelling, a new job, a difficult loss or a good teacher can all reshape us over time.\n\nOf course, some things stay the same. I am still a quiet person who needs time alone. But change does not mean erasing who we are; it means adding new possibilities.\n\nTherefore, I believe Ophelia was right not to know what she might become. None of us can know. The exciting part is finding out.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** essee vastaa sekä kysymykseen *voimmeko* että *miten*, ja Ofelian ajatus kulkee koko tekstin läpi.\n- **Oma esimerkki:** ujosta nuoresta esiintyjäksi tekee pohdinnasta konkreettista ja uskottavaa.\n- **Vivahteikkuus:** kirjoittaja myöntää, että osa persoonasta pysyy, mikä tekee kannasta harkitun.\n- **Rakenne:** alku ja loppu kehystävät tekstin, ja *Yet, Instead, Of course, Therefore* ohjaavat lukijaa.\n- **Kieli:** vaihtelevat rakenteet, kuten *so...that*, *rarely*, puolipiste ja *not...but* -vastakohta.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.4",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: puhe koulun väittelykerhossa. Aiheena on, onko huijaaminen koskaan hyväksyttävää. Aiemmin on puhuttu huijaamisesta työhakemuksissa ja huijareista. Käsittele huijaamista jossain tietyssä yhteydessä ja perustele, miksi se on tai ei ole hyväksyttävää. HVP: −5 p, jos puhe käsittelee huijaamista yleisesti ilman tarkempaa yhteyttä, −5 p, jos mielipidettä ei perustella, ja −2 p, jos yleisön tervehdys puuttuu.",
+     "hints": [
+      "Kolme pakollista asiaa: tarkka yhteys (esim. urheilu, kokeet, peli), perustelut ja yleisön tervehdys alussa (−5, −5 ja −2 p). Selvää kantaa ei vaadita, mutta se tekee väittelypuheesta vahvemman.",
+      "Rakenne: puhuttelu (*Honourable judges, dear opponents*) → aihe ja valittu yhteys → kanta ja 2–3 numeroitua perustelua → vastaväitteen kumoaminen (*Some of you might argue...*) → johtopäätös ja kiitos. Hyödyllistä sanastoa: *fair play, doping, performance-enhancing drugs, scandal, trust, integrity*."
+     ],
+     "solution": "**Malliteksti** (962 merkkiä ilman välilyöntejä)\n\n**Cheating in Sport Is Never OK**\n\nHonourable judges, dear opponents and fellow students,\n\nToday we are asked whether cheating can ever be acceptable. I would like to focus on one context: professional sport. My answer is clear. Cheating in sport is never acceptable, and I have three reasons for this.\n\nFirst, sport is based on fair competition. When an athlete uses doping, he does not only break the rules; he steals a medal, a salary and perhaps a whole career from a clean athlete who finished fourth. The victims of cheating are real people.\n\nSecond, cheating is dangerous. Performance-enhancing drugs can damage the heart and liver, and young athletes who see their heroes cheat may think they have to do the same to succeed.\n\nThird, cheating destroys the joy of watching sport. Why should we cheer for a record if we suspect it was achieved with a syringe? Every scandal makes fans trust the whole sport a little less.\n\nSome of you might argue that everybody cheats anyway, so banning it is pointless. But that is exactly why we need strict rules and tests. If we accept cheating, honest athletes have no future.\n\nSo let us protect fair play. Thank you for listening.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Pakolliset asiat:** tervehdys alussa, selvä yhteys (ammattiurheilu ja doping) ja kolme perustelua, joten vähennyksiä ei tule.\n- **Väittelyn keinot:** selvä kanta heti alussa, vastaväitteen kumoaminen ja kehotus lopussa.\n- **Perustelut:** jokaisessa on konkreettinen esimerkki (neljänneksi jäänyt urheilija, terveyshaitat, katsojien luottamus).\n- **Puheen piirteet:** retorinen kysymys, *we*- ja *you*-muodot ja kiitos lopussa.\n- **Kieli:** *not only...but*, *exactly why*, *If we accept* sekä vahva sanasto (*steals, destroys, strict*).",
+     "check": "malli"
+    }
+   ]
+  }
+ ]
+}

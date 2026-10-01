@@ -1,0 +1,479 @@
+{
+ "subject": "kemia",
+ "session": "2022S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2022/Syksy/2022-09-14_KE_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-09-14_KE_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään (15 p kukin)."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään (20 p kukin)."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintakohtaa (1.1–1.10, 2 p kukin):\n\n- 1.1 parhaiten veteen liukeneva: $\\ce{N2}$, $\\ce{O2}$, $\\ce{(C2H5)2NH}$ vai $\\ce{C2H5OC2H5}$ (20 °C)\n- 1.2 millä alkoholilla on enantiomeerit\n- 1.3 dibromibentseenin paikkaisomeerien määrä\n- 1.4 kiivaimmin veden kanssa reagoiva metalli: K, Fe, Al vai Ca\n- 1.5 paljonko $1{,}00\\cdot10^{-4}$ M glysiiniliuosta tarvitaan 100,0 ml:aan $1{,}20\\cdot10^{-7}$ M liuosta\n- 1.6 miten propan-2-olia voi valmistaa\n- 1.7 kaasun X moolimassa, kun pullo painaa tyhjänä 124,46 g, hapen kanssa 125,10 g ja X:n kanssa 125,34 g (sama ainemäärä, sama $p$ ja $T$)\n- 1.8 mikä väite pätee ideaalikaasulle\n- 1.9 mikä nuolista A–D on aktivoitumisenergia (ks. alkuperäinen kuva)\n- 1.10 reaktion $\\ce{2SO2(g) + O2(g) -> 2SO3(g)}$ $\\Delta H$, kun $\\Delta H_f$ on $\\ce{SO2}$:lle $-296{,}9$ ja $\\ce{SO3}$:lle $-395{,}2$ kJ/mol",
+     "hints": [
+      "Käy kohdat läpi yksi kerrallaan. Laskukohdissa (1.5, 1.7, 1.10) laske ensin itse: laimennus $c_1V_1=c_2V_2$, Avogadron laki (sama ainemäärä, joten massojen suhde on moolimassojen suhde) ja $\\Delta H=\\sum\\Delta H_f(\\text{tuotteet})-\\sum\\Delta H_f(\\text{lähtöaineet})$.",
+      "Kohta kohdalta:\n- 1.1: mikä yhdisteistä voi muodostaa vetysidoksia veden kanssa sekä luovuttajana että vastaanottajana?\n- 1.2: etsi hiili, jossa on neljä eri ryhmää.\n- 1.3: orto-, meta- ja para-asema.\n- 1.4: alkalimetallit ovat reaktiivisimpia.\n- 1.6: additio kaksoissidokseen Markovnikovin säännön mukaan.\n- 1.8: Boylen laki $pV=$ vakio.\n- 1.9: aktivoitumisenergia mitataan lähtöaineista siirtymätilaan."
+     ],
+     "solution": "1. **1.1 C** – $\\ce{(C2H5)2NH}$ (dietyyliamiini). Sen N–H-ryhmä ja typen vapaa elektronipari muodostavat vetysidoksia veden kanssa. Eetteri voi vain vastaanottaa vetysidoksia, ja happi ja typpi liukenevat veteen huonosti.\n2. **1.2 B** – butan-2-oli. Sen hiilessä 2 ovat H, OH, $\\ce{CH3}$ ja $\\ce{C2H5}$, eli neljä eri ryhmää.\n3. **1.3 C** – 3 (1,2-, 1,3- ja 1,4-dibromibentseeni).\n4. **1.4 A** – K. Kalium on alkalimetalli, ja sen ionisaatioenergia on näistä pienin: $\\ce{2K(s) + 2H2O(l) -> 2KOH(aq) + H2(g)}$ tapahtuu kiivaasti.\n5. **1.5 A** – 120 µl. $V_1=\\frac{c_2V_2}{c_1}=\\frac{1{,}20\\cdot10^{-7}\\cdot100{,}0\\,\\mathrm{ml}}{1{,}00\\cdot10^{-4}}=0{,}120\\,\\mathrm{ml}=120\\,\\mathrm{\\mu l}$.\n6. **1.6 A** – liittämällä vettä propeeniin. Markovnikovin säännön mukaan OH liittyy keskimmäiseen hiileen. (Propanaalin pelkistys antaa propan-1-olia, ja asetonin hapetus ei tuota alkoholia.)\n7. **1.7 C** – 44 g/mol. $m(\\ce{O2})=0{,}64\\,\\mathrm{g}$ ja $m(\\ce{X})=0{,}88\\,\\mathrm{g}$. Sama ainemäärä, joten $M(\\ce{X})=32{,}00\\cdot\\frac{0{,}88}{0{,}64}\\,\\mathrm{g/mol}=44\\,\\mathrm{g/mol}$ (esim. $\\ce{CO2}$).\n8. **1.8 B** – tilavuuden pienentäminen vakiolämpötilassa kasvattaa painetta (Boylen laki). Muut väitteet ovat kaasulakien vastaisia.\n9. **1.9 A** – nuoli A mittaa energiaeron lähtöaineista huippuun (siirtymätilaan). B on käänteisen reaktion aktivoitumisenergia, ja C ja D kuvaavat reaktion energiamuutosta.\n10. **1.10 A** – $-196{,}6$ kJ. $\\Delta H=2(-395{,}2)-[2(-296{,}9)+0]\\,\\mathrm{kJ}=-196{,}6\\,\\mathrm{kJ}$.",
+     "answer": "1.1 C · 1.2 B · 1.3 C · 1.4 A · 1.5 A · 1.6 A · 1.7 C · 1.8 B · 1.9 A · 1.10 A",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Kaliummangaanitrifluoridia $\\ce{KMnF3}$ (mahdollinen aurinkokennomateriaali) valmistetaan liuottamalla kaliumfluoridia ja mangaanidikloriditetrahydraattia $\\ce{MnCl2*4H2O}$ veteen ja kuumentamalla liuosten seosta lähes kiehuvaksi: $\\ce{3KF(aq) + MnCl2(aq) -> KMnF3(s) + 2KCl(aq)}$. Saostuma suodatetaan, pestään vedellä, etanolilla ja asetonilla, kuivataan 100 °C:ssa ja punnitaan eksikaattorissa jäähdyttämisen jälkeen. Tavoitteena oli 8,500 g $\\ce{KMnF3}$:a.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 8,
+     "prompt": "Paljonko kaliumfluoridia ja $\\ce{MnCl2*4H2O}$:ta (g) opiskelijat punnitsivat, kun he olettivat lähtöaineet täysin puhtaiksi ja saannon sataprosenttiseksi?",
+     "hints": [
+      "Laske tavoitellun tuotteen ainemäärä. Reaktioyhtälön kertoimista saat lähtöaineiden ainemäärät. Mangaanisuolan moolimassaan on otettava mukaan kidevesi.",
+      "$n(\\ce{KMnF3})=0{,}05628\\,\\mathrm{mol}$. Mangaanisuolaa tarvitaan sama ainemäärä ($M=197{,}90\\,\\mathrm{g/mol}$), ja kaliumfluoridia kolminkertainen määrä ($M=58{,}10\\,\\mathrm{g/mol}$)."
+     ],
+     "solution": "1. $M(\\ce{KMnF3})=39{,}10+54{,}94+3\\cdot19{,}00=151{,}04\\,\\mathrm{g/mol}$, joten $n(\\ce{KMnF3})=\\frac{8{,}500\\,\\mathrm{g}}{151{,}04\\,\\mathrm{g/mol}}=0{,}056276\\,\\mathrm{mol}$.\n2. $n(\\ce{MnCl2*4H2O})=n(\\ce{MnCl2})=n(\\ce{KMnF3})=0{,}056276\\,\\mathrm{mol}$.\n3. $M(\\ce{MnCl2*4H2O})=54{,}94+2\\cdot35{,}45+4\\cdot18{,}016=197{,}904\\,\\mathrm{g/mol}$, joten $m=0{,}056276\\,\\mathrm{mol}\\cdot197{,}904\\,\\mathrm{g/mol}=11{,}14\\,\\mathrm{g}$.\n4. $n(\\ce{KF})=3\\,n(\\ce{KMnF3})=0{,}16883\\,\\mathrm{mol}$ ja $m(\\ce{KF})=0{,}16883\\,\\mathrm{mol}\\cdot58{,}10\\,\\mathrm{g/mol}=9{,}809\\,\\mathrm{g}$.\n\n**Vastaus: $\\ce{KF}$ 9,809 g ja $\\ce{MnCl2*4H2O}$ 11,14 g**\n\n**Sudenkuoppa:** jos kidevesi unohtuu ($M(\\ce{MnCl2})=125{,}84\\,\\mathrm{g/mol}$), mangaanisuolaa punnitaan liian vähän (7,08 g), ja mangaanisuola jää rajoittavaksi tekijäksi.",
+     "answer": "$m(\\ce{KF})=9{,}809\\,\\mathrm{g}$, $m(\\ce{MnCl2*4H2O})=11{,}14\\,\\mathrm{g}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 2,
+     "prompt": "Tuotetta saatiin 8,235 g. Mitkä tekijät ovat voineet pienentää tuotteen massaa?",
+     "hints": [
+      "Käy läpi koko työ: lähtöaineiden laatu, itse reaktio ja tuotteen erotus (suodatus, pesu, siirrot)."
+     ],
+     "solution": "Hyvä vastaus sisältää esimerkiksi kaksi seuraavista:\n- lähtöaineet eivät olleet täysin puhtaita (esim. kosteutta tai muuta ainetta)\n- reaktio ei tapahtunut täydellisesti, eli kaikki ei saostunut\n- tuotetta hävisi erotuksessa: sitä jäi astioihin tai suodatinpaperille, meni suodatinpaperin läpi tai liukeni pesussa\n- punnitusvirhe lähtöaineissa tai tuotteessa\n\nEsimerkkivastaus: Massaa pienentää, jos lähtöaineet eivät olleet sataprosenttisen puhtaita tai jos saostuminen jäi vajaaksi. Lisäksi osa saostumasta jää helposti dekantterilasin seinämille ja suodatinpaperiin, ja pesussa pieni määrä tuotetta voi liueta pois.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Pulveriröntgendiffraktion mukaan 8,235 g:n tuotteessa oli 92,8 m-% $\\ce{KMnF3}$:a ja 7,2 m-% $\\ce{KCl}$:a. Laske $\\ce{KMnF3}$:n todellinen saantoprosentti ja selitä, miksi tuotteessa oli kaliumkloridia.",
+     "hints": [
+      "Laske tuotteessa olevan puhtaan $\\ce{KMnF3}$:n massa ja vertaa sitä teoreettiseen määrään (lähtöaineet punnittiin 8,500 g:aa varten).",
+      "Puhdasta tuotetta on $0{,}928\\cdot8{,}235\\,\\mathrm{g}=7{,}642\\,\\mathrm{g}$. Kaliumkloridi syntyy reaktiossa liukoisena sivutuotteena. Mitä sille pitäisi tapahtua saostuman käsittelyssä?"
+     ],
+     "solution": "1. Puhdasta $\\ce{KMnF3}$:a: $m=0{,}928\\cdot8{,}235\\,\\mathrm{g}=7{,}642\\,\\mathrm{g}$.\n2. Teoreettinen saanto on 8,500 g, joten saanto $=\\frac{7{,}642\\,\\mathrm{g}}{8{,}500\\,\\mathrm{g}}\\cdot100\\,\\%=89{,}9\\,\\%$.\n3. $\\ce{KCl}$ on reaktion vesiliukoinen sivutuote, joka jää liuokseen. Sitä päätyi tuotteeseen, koska saostuman pesu vedellä oli riittämätön, eikä kaikkea $\\ce{KCl}$-liuosta saatu huuhdeltua saostuman pinnalta. Kuivatessa suola jäi kiteinä tuotteen joukkoon.\n\n**Vastaus: todellinen saanto $89{,}9\\,\\%$; KCl on huonosti pois pestyä sivutuotetta**",
+     "answer": "Saanto $89{,}9\\,\\%$; KCl jäi tuotteeseen puutteellisen pesun takia",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Perustele kukin väite aineiden rakenteen ja sidosten avulla.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 5,
+     "prompt": "Väite: natriumkloridin vesiliuos johtaa sähköä paljon paremmin kuin kiinteä natriumkloridi.",
+     "hints": [
+      "Sähkönjohtavuus vaatii vapaasti liikkuvia varauksellisia hiukkasia. Mitkä ovat ne NaCl:n tapauksessa?",
+      "Kiinteässä NaCl:ssa ionit ovat ionihilassa kiinteillä paikoillaan. Liuotessaan ionit hydratoituvat ja pääsevät liikkumaan."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- vesiliuoksessa natrium- ja kloridi-ionit ovat hydratoituneina (akvaioneina), ja vesimolekyylit ympäröivät niitä\n- hydratoituneet ionit liikkuvat liuoksessa vapaasti ja toimivat varauksenkuljettajina, kun jännite kytketään\n- kiinteä NaCl on ionihila, jossa ionit ovat tietyillä paikoilla eivätkä pääse liikkumaan. Vapaasti liikkuvia varauksia ei ole, joten johtavuus on hyvin pieni\n- (varauksenkuljettajina ovat ionit, eivät elektronit)\n\nEsimerkkivastaus: Kiinteässä natriumkloridissa $\\ce{Na+}$- ja $\\ce{Cl-}$-ionit ovat kiinni säännöllisessä ionihilassa, ja vahvat ionisidokset pitävät ne paikoillaan. Varauksellisia hiukkasia on, mutta ne eivät pääse liikkumaan, joten virta ei kulje. Kun suola liukenee veteen, ionihila hajoaa ja ionit hydratoituvat: $\\ce{NaCl(s) -> Na+(aq) + Cl-(aq)}$. Hydratoituneet ionit liikkuvat liuoksessa vapaasti. Jännitteen vaikutuksesta kationit kulkeutuvat kohti katodia ja anionit kohti anodia, ja liuos johtaa sähköä.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 5,
+     "prompt": "Väite: polypropeeni ei sula tietyssä lämpötilassa, vaan pehmenee vähitellen laajalla lämpötila-alueella, kun taas asetyylisalisyylihapolla (aspiriinilla) on tarkka sulamispiste.",
+     "hints": [
+      "Sulaminen tarkoittaa molekyylien välisten sidosten katkeamista. Mieti, ovatko molekyylit järjestyneet samalla tavalla kummassakin aineessa.",
+      "Aspiriini on kiteinen molekyylihila, jossa jokaisella molekyylillä on samanlainen ympäristö. Polypropeenin pitkät, eripituiset ketjut ovat pääosin epäjärjestyksessä (amorfinen aine)."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- sulamisessa katkeavat molekyylien väliset heikot sidokset (poolittomassa polypropeenissa dispersiovoimat)\n- polypropeenin ketjut ovat eripituisia ja kietoutuneet toisiinsa, eivätkä ne muodosta säännöllistä hilaa. Ketjujen väliset vuorovaikutukset ovat eri kohdissa eri vahvoja, joten niiden katkaisemiseen tarvitaan eri määrä energiaa, ja pehmeneminen tapahtuu vähitellen leveällä lämpötilavälillä\n- kiinteänä asetyylisalisyylihappo muodostaa kiteitä: samanlaiset molekyylit ovat järjestyneet säännölliseksi molekyylihilaksi\n- kiteessä molekyylien väliset vuorovaikutukset ovat kaikkialla yhtä vahvoja, joten hila hajoaa tietyssä lämpötilassa, ja sulamispiste on tarkka\n\nEsimerkkivastaus: Kun aine sulaa, molekyylit irtoavat toisistaan, eli molekyylien väliset sidokset katkeavat. Aspiriinin molekyylit ovat keskenään identtisiä ja pakkautuneet säännölliseksi kidehilaksi, joten jokaisen molekyylin ympäristö on sama. Hila hajoaa kerralla, kun lämpöenergia riittää, ja sulamispiste on selvä. Polypropeenissa pitkät, eripituiset ketjut ovat vyyhtinä ja vain osin järjestyneinä. Ketjujen väliset dispersiovoimat vaihtelevat kohdasta toiseen, joten ketjut alkavat liikkua toistensa suhteen vähitellen eri lämpötiloissa, ja aine pehmenee asteittain.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 5,
+     "prompt": "Väite: 25 °C:ssa piidioksidi $\\ce{SiO2}$ on kiinteää, mutta hiilidioksidi $\\ce{CO2}$ on kaasua.",
+     "hints": [
+      "Vertaa rakenteita: onko aine erillisiä molekyylejä vai yhtenäinen kovalenttinen verkko? Mitä sidoksia olomuodon muutoksessa pitää katkaista?",
+      "$\\ce{SiO2}$:ssa jokainen piiatomi on kovalenttisesti sitoutunut neljään happiatomiin, ja kide on yksi jättimäinen kovalenttinen hila. $\\ce{CO2}$ on lineaarinen, pooliton molekyyli, joten molekyylien välillä on vain dispersiovoimia."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- $\\ce{SiO2}$:ssa jokainen piiatomi on kovalenttisesti sitoutunut neljään happiatomiin (ja jokainen happi kahteen piihin). Syntyy kovalenttinen verkkorakenne (atomihila), jossa kaikki atomit ovat vahvoin sidoksin kiinni toisissaan\n- $\\ce{CO2}$ koostuu erillisistä lineaarisista, poolittomista molekyyleistä, joita pitävät yhdessä vain heikot dispersiovoimat\n- kovalenttisten sidosten katkaiseminen vaatii paljon enemmän energiaa kuin dispersiovoimien voittaminen, joten $\\ce{SiO2}$ on huoneenlämmössä kiinteää ja $\\ce{CO2}$ kaasua\n\nEsimerkkivastaus: Piidioksidi ei ole molekyyliyhdiste. Jokainen piiatomi on sitoutunut tetraedrisesti neljään happiatomiin, ja tetraedrit liittyvät toisiinsa happisiltojen kautta yhtenäiseksi kolmiulotteiseksi kovalenttiseksi hilaksi. Sulattaminen vaatii vahvojen $\\ce{Si-O}$-sidosten katkaisemista, joten sulamispiste on yli 1600 °C. Hiilidioksidissa hiili muodostaa kaksoissidokset kahteen happeen, ja syntyy pieni lineaarinen molekyyli, jonka sidosdipolit kumoavat toisensa. Molekyylejä pitävät toisissaan kiinni vain heikot dispersiovoimat, joten jo pieni lämpöenergia riittää erottamaan molekyylit, ja $\\ce{CO2}$ on huoneenlämmössä kaasu.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Fentanyyli on synteettinen opioidi: $\\ce{C22H28N2O}$, 1-(2-fenyylietyyli)piperidiini, jonka hiilessä 4 on typpi, johon liittyvät fenyyliryhmä ja propanoyyliryhmä $\\ce{-CO-CH2CH3}$. Rakennekuvaan on merkitty ryhmä I (piperidiinirenkaan typpi) ja ryhmä II (typpi, joka on sitoutunut karbonyyliryhmään). Aineiston 4.A synteesi: a) ketoni K (1-(2-fenyylietyyli)piperidin-4-oni) + L → imiini M + vesi, b) M + $\\ce{H2}$/katalyytti → N, c) N + propanoyylikloridi → fentanyylin hydrokloridi.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 2,
+     "prompt": "Mihin yhdisteryhmään fentanyyli kuuluu ryhmän I perusteella ja mihin ryhmän II perusteella?",
+     "hints": [
+      "Katso, mihin typpiatomeihin on liittynyt. Onko typen vieressä karbonyyliryhmä $\\ce{C=O}$ vai pelkkiä hiilivetyryhmiä?"
+     ],
+     "solution": "1. Ryhmä I: typpi on sitoutunut kolmeen hiileen, eikä sen vieressä ole karbonyyliä. Fentanyyli on siis **amiini** (tertiäärinen amiini).\n2. Ryhmä II: typpi on sitoutunut karbonyylihiileen ($\\ce{N-C(=O)}$), joten kyseessä on **amidi**.",
+     "answer": "I: amiini; II: amidi",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 4,
+     "prompt": "Piirrä aineiston 4.A synteesin lähtöaine L ja välituote N.",
+     "hints": [
+      "Vaiheessa a) ketonin C=O muuttuu ryhmäksi C=N–fenyyli, ja vettä lohkeaa: millainen amiini reagoi ketonin kanssa? Vaiheessa b) vety liittyy kaksoissidokseen C=N."
+     ],
+     "solution": "1. Vaiheessa a) ketoni reagoi primäärisen amiinin kanssa, ja syntyy imiini ja vesi. M:n typessä on fenyyliryhmä, joten **L on aniliini** (fenyyliamiini) $\\ce{C6H5-NH2}$.\n2. Vaiheessa b) vety pelkistää C=N-kaksoissidoksen yksinkertaiseksi sidokseksi, jolloin syntyy sekundäärinen amiini. **N on N-fenyyli-1-(2-fenyylietyyli)piperidin-4-amiini**: piperidiinirenkaan hiilessä 4 on ryhmä $\\ce{-NH-C6H5}$, ja renkaan typessä on 2-fenyylietyyliryhmä $\\ce{-CH2CH2C6H5}$.\n3. Vaiheessa c) N:n NH-ryhmä asyloituu propanoyylikloridilla amidiksi (fentanyyli), ja vapautuva HCl protonoi piperidiinin typen.\n\n**Vastaus: L = aniliini $\\ce{C6H5NH2}$; N = piperidiini, jonka hiilessä 4 on $\\ce{-NH-C6H5}$ ja typessä $\\ce{-CH2CH2C6H5}$**",
+     "answer": "L = aniliini $\\ce{C6H5NH2}$; N = 4-(fenyyliamino)-1-(2-fenyylietyyli)piperidiini",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 9,
+     "prompt": "Fentanyyli toimii vedessä emäksenä (aineisto 4.B): piperidiinin typpi ottaa vedeltä protonin. $K_b=9{,}77\\cdot10^{-6}\\,\\mathrm{mol/l}$. Laske pH, kun 198,9 mg fentanyyliä liuotetaan veteen ja tilavuudeksi tulee 100,0 ml.",
+     "hints": [
+      "Laske fentanyylin moolimassa molekyylikaavasta $\\ce{C22H28N2O}$ ja siitä alkukonsentraatio. Kirjoita tasapainotaulukko reaktiolle $\\ce{B + H2O <=> BH+ + OH-}$.",
+      "$c_0=5{,}911\\cdot10^{-3}\\,\\mathrm{mol/l}$. Ratkaise $\\frac{x^2}{c_0-x}=K_b$, jossa $x=[\\ce{OH-}]$. Laske sitten pOH ja pH."
+     ],
+     "solution": "1. $M(\\ce{C22H28N2O})=22\\cdot12{,}01+28\\cdot1{,}008+2\\cdot14{,}01+16{,}00=336{,}46\\,\\mathrm{g/mol}$.\n2. $n=\\frac{0{,}1989\\,\\mathrm{g}}{336{,}46\\,\\mathrm{g/mol}}=5{,}9115\\cdot10^{-4}\\,\\mathrm{mol}$ ja $c_0=\\frac{n}{V}=5{,}9115\\cdot10^{-3}\\,\\mathrm{mol/l}$.\n3. Tasapainossa $[\\ce{BH+}]=[\\ce{OH-}]=x$ ja $[\\ce{B}]=c_0-x$.\n4. $K_b=\\frac{x^2}{c_0-x}=9{,}77\\cdot10^{-6}$. Toisen asteen yhtälön positiivinen juuri on $x=2{,}3549\\cdot10^{-4}\\,\\mathrm{mol/l}$ (negatiivinen juuri hylätään).\n5. $\\mathrm{pOH}=-\\lg(2{,}3549\\cdot10^{-4})=3{,}628$ ja $\\mathrm{pH}=14{,}000-3{,}628=10{,}372$.\n\n**Vastaus: pH on $10{,}372$ (noin 10,37)**\n\n**Sudenkuoppa:** approksimaatio $c_0-x\\approx c_0$ antaa $x=2{,}403\\cdot10^{-4}$ ja pH:ksi 10,381. Ero on pieni, mutta tarkka ratkaisu on parempi, koska protolyysiaste on noin 4 %.",
+     "answer": "$\\mathrm{pH}\\approx10{,}37$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Pentaerytritolia $\\ce{C(CH2OH)4}$ (PETN-räjähdysaineen lähtöaine) valmistetaan vesiliuoksessa etanaalista ja metanaalista emäksen avulla. Tasapainottamattomassa yhtälössä lähtöaineina ovat $\\ce{CH3CHO}$, $\\ce{HCHO}$ ja $\\ce{OH-}$, ja tuotteina pentaerytritoli ja formiaatti-ioni $\\ce{HCOO-}$.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 4,
+     "prompt": "Kirjoita tasapainotettu reaktioyhtälö olomuotoineen (molekyyli- tai rakennekaavoin).",
+     "hints": [
+      "Pentaerytritolissa on viisi hiiltä: kaksi etanaalista ja kolme metanaalista, ja lisäksi yksi metanaali hapettuu formiaatiksi. Tarkista hiilet, vedyt, hapet ja varaus."
+     ],
+     "solution": "1. Etanaalin metyylihiileen liittyy kolme metanaalia ($\\ce{-CH2OH}$-ryhmiksi), jolloin syntyy $\\ce{(HOCH2)3C-CHO}$.\n2. Neljäs metanaali pelkistää aldehydiryhmän $\\ce{-CH2OH}$:ksi ja hapettuu itse formiaatiksi (Cannizzaron reaktio).\n3. $\\ce{CH3CHO(aq) + 4HCHO(aq) + OH-(aq) -> C(CH2OH)4(aq) + HCOO-(aq)}$\n4. Tarkistus: C $2+4=6$ = $5+1$, H $4+8+1=13$ = $12+1$, O $1+4+1=6$ = $4+2$, varaus −1 = −1.",
+     "answer": "$\\ce{CH3CHO(aq) + 4HCHO(aq) + OH-(aq) -> C(CH2OH)4(aq) + HCOO-(aq)}$",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 5,
+     "prompt": "Aineistossa 5.A on kaksi $^1$H-NMR-spektriä, Q ja R. Spektrissä Q on kaksi piikkiä (noin 9,8 ppm ja noin 2,2 ppm) ja spektrissä R yksi piikki (noin 9,6 ppm). Kumpi spektri on etanaalin ja kumpi metanaalin? Perustele.",
+     "hints": [
+      "Montako erilaista vetyä (erilaista kemiallista ympäristöä) kummassakin molekyylissä on? Aldehydivety näkyy tyypillisesti noin 9–10 ppm:ssä.",
+      "Metanaalin $\\ce{HCHO}$ molemmat vedyt ovat samanlaisia aldehydivetyjä. Etanaalissa $\\ce{CH3CHO}$ on aldehydivety ja metyyliryhmän vedyt, jotka näkyvät noin 2 ppm:ssä."
+     ],
+     "solution": "1. Metanaalissa $\\ce{H2C=O}$ molemmat vedyt ovat samassa kemiallisessa ympäristössä, joten spektrissä on yksi piikki aldehydialueella.\n2. Etanaalissa $\\ce{CH3-CHO}$ on kahdenlaisia vetyjä: yksi aldehydivety (noin 9,8 ppm) ja metyyliryhmän kolme vetyä (noin 2,2 ppm). Spektrissä on siis kaksi piikkiä.\n3. Molemmissa näkyy aldehydivedyn piikki 9,5–10 ppm:ssä, mutta vain Q:ssa on metyylivetyjen piikki 2,0–2,5 ppm:ssä.\n\n**Vastaus: Q on etanaali ja R on metanaali**",
+     "answer": "Q = etanaali, R = metanaali",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 6,
+     "prompt": "Kiteytetystä tuotteesta mitattiin IR-spektri alueella 1500–3800 cm⁻¹ (aineisto 5.B). Siinä on leveä, voimakas piikki noin 3300 cm⁻¹:ssä ja teräviä piikkejä noin 2900 cm⁻¹:ssä, mutta alueella 1650–1800 cm⁻¹ ei ole piikkejä. Perustele spektrin avulla, onko tuotteessa pentaerytritolin lisäksi etanaalia tai metanaalia.",
+     "hints": [
+      "Mikä funktionaalinen ryhmä on lähtöaineissa mutta ei tuotteessa? Missä kohtaa IR-spektriä sen sidos näkyisi?",
+      "Aldehydien C=O-sidos antaa voimakkaan, terävän piikin noin 1700–1750 cm⁻¹:ssä. Pentaerytritolissa ei ole C=O-sidosta, vaan OH- ja CH-sidoksia."
+     ],
+     "solution": "1. Metanaalissa ja etanaalissa on aldehydiryhmä, jossa on C=O-kaksoissidos.\n2. C=O-sidoksen venytysvärähtely näkyisi IR-spektrissä voimakkaana, terävänä piikkinä noin 1700–1750 cm⁻¹:ssä.\n3. Spektrissä ei ole piikkiä tällä alueella. Leveä piikki noin 3300 cm⁻¹:ssä johtuu pentaerytritolin O–H-sidoksista ja piikit noin 2900 cm⁻¹:ssä C–H-sidoksista.\n4. Johtopäätös: IR-spektrin perusteella tuotteessa ei ole etanaalia eikä metanaalia (ainakaan havaittavia määriä).\n\n**Vastaus: ei ole, koska spektristä puuttuu aldehydin C=O-piikki (n. 1700–1750 cm⁻¹)**",
+     "answer": "Ei aldehydejä: C=O-piikki (1700–1750 cm⁻¹) puuttuu",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Vetyfluoridia valmistetaan reaktiolla $\\ce{H2(g) + F2(g) <=> 2HF(g)}$.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 9,
+     "prompt": "Tietyssä lämpötilassa $K=1{,}15\\cdot10^2$. 1,50 litran astiaan pantiin 3,00 mol kutakin kaasua ($\\ce{H2}$, $\\ce{F2}$ ja $\\ce{HF}$). Kumpaan suuntaan reaktio etenee (perustele), ja mitkä ovat tasapainokonsentraatiot?",
+     "hints": [
+      "Laske alkukonsentraatiot ja niistä reaktio-osamäärä $Q=\\frac{[\\ce{HF}]^2}{[\\ce{H2}][\\ce{F2}]}$. Vertaa sitä $K$:hon.",
+      "$Q=1<K$, joten reaktio etenee oikealle. Tasapainossa $[\\ce{H2}]=[\\ce{F2}]=2{,}00-x$ ja $[\\ce{HF}]=2{,}00+2x$. Koska lauseke on täydellinen neliö, voit ottaa neliöjuuren: $\\frac{2+2x}{2-x}=\\sqrt{115}$."
+     ],
+     "solution": "1. Alkukonsentraatiot: $\\frac{3{,}00\\,\\mathrm{mol}}{1{,}50\\,\\mathrm{l}}=2{,}00\\,\\mathrm{mol/l}$ kullekin.\n2. $K=\\frac{[\\ce{HF}]^2}{[\\ce{H2}][\\ce{F2}]}$. Alussa $Q=\\frac{2{,}00^2}{2{,}00\\cdot2{,}00}=1$.\n3. $Q=1\\ll K=115$, joten tuotetta on liian vähän: reaktio etenee vetyfluoridin muodostumisen suuntaan (oikealle).\n4. Tasapainossa $[\\ce{H2}]=[\\ce{F2}]=2{,}00-x$ ja $[\\ce{HF}]=2{,}00+2x$.\n5. $\\frac{(2{,}00+2x)^2}{(2{,}00-x)^2}=115 \\Rightarrow \\frac{2{,}00+2x}{2{,}00-x}=\\sqrt{115}=10{,}724$, josta $x=1{,}528\\,\\mathrm{mol/l}$. (Toinen juuri $x=2{,}688$ antaisi negatiivisen konsentraation.)\n6. $[\\ce{HF}]=2{,}00+2\\cdot1{,}528=5{,}06\\,\\mathrm{mol/l}$ ja $[\\ce{H2}]=[\\ce{F2}]=2{,}00-1{,}528=0{,}472\\,\\mathrm{mol/l}$.\n\nTarkistus: $\\frac{5{,}057^2}{0{,}4716^2}=115$.\n\n**Vastaus: reaktio etenee oikealle ($Q=1<K$); tasapainossa $[\\ce{HF}]=5{,}06\\,\\mathrm{mol/l}$ ja $[\\ce{H2}]=[\\ce{F2}]=0{,}472\\,\\mathrm{mol/l}$**",
+     "answer": "Oikealle ($Q=1<K$); $[\\ce{HF}]=5{,}06$, $[\\ce{H2}]=[\\ce{F2}]=0{,}472\\,\\mathrm{mol/l}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.2",
+     "points": 6,
+     "prompt": "Miten vetyfluoridia voisi tuottaa teollisesti mahdollisimman tehokkaasti tällä reaktiolla, kun $\\Delta H_f(\\ce{HF})=-273{,}3\\,\\mathrm{kJ/mol}$? Perustele.",
+     "hints": [
+      "Erottele kaksi asiaa: miten saadaan suuri saanto (tasapainon asema) ja miten reaktio saadaan nopeaksi. Mitä muodostumisentalpia kertoo reaktion lämpöefektistä?",
+      "Reaktio on eksoterminen, ja kaasumoolien määrä ei muutu (2 → 2). Mieti lämpötilan, tuotteen poiston tai lähtöaineiden syötön, katalyytin ja paineen vaikutusta, ja huomaa, että lämpötila vaikuttaa saantoon ja nopeuteen eri suuntiin."
+     ],
+     "solution": "Hyvä vastaus sisältää useita keinoja ja niiden perustelut, esimerkiksi:\n- **Lämpötilan laskeminen** siirtää tasapainoa tuotteiden puolelle, koska reaktio on eksoterminen ($\\Delta H=2\\cdot(-273{,}3)=-546{,}6\\,\\mathrm{kJ}$). Le Chatelier'n periaatteen mukaan jäähdytys suosii lämpöä vapauttavaa suuntaa.\n- **Tuotteen poistaminen** ja **lähtöaineiden jatkuva syöttäminen**: tasapaino ei ehdi asettua, vaan HF:ää muodostuu jatkuvasti lisää.\n- **Reaktion nopeuttaminen:** korkeampi lämpötila lisää hiukkasten liike-energiaa ja tehokkaita törmäyksiä, ja katalyytti alentaa aktivoitumisenergiaa. Suurempi konsentraatio tai paine lisää törmäyksiä.\n- **Yhteisvaikutus:** matala lämpötila parantaa saantoa mutta hidastaa reaktiota, joten valitaan kompromissilämpötila, ja nopeus haetaan katalyytillä.\n- Paine ei siirrä tasapainoa, koska kaasumoolien määrä on molemmin puolin 2, mutta se nopeuttaa reaktiota.\n\nEsimerkkivastaus: Vetyfluoridin muodostuminen on eksotermistä, joten tasapainon kannalta lämpötila kannattaa pitää mahdollisimman matalana. Muodostunut HF voidaan poistaa reaktorista esimerkiksi nesteyttämällä, ja uusia lähtöaineita syötetään tilalle. Silloin reaktio jatkuu tuotteen suuntaan. Matala lämpötila kuitenkin hidastaa reaktiota, koska tehokkaita törmäyksiä on vähemmän. Siksi käytetään kohtuullista lämpötilaa ja katalyyttiä, joka alentaa aktivoitumisenergiaa. Paineen nosto nopeuttaa reaktiota, mutta ei muuta tasapainoasemaa, koska kaasujen ainemäärä ei muutu reaktiossa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Aineiston 7.A galvaanisessa kennossa kuparielektrodi on kuparisulfaattiliuoksessa (sininen) ja sinkkielektrodi sinkkisulfaattiliuoksessa (väritön). Astiat on yhdistetty suolasillalla, ja elektrodit volttimittarin kautta.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Kirjoita kennon kennokaavio.",
+     "hints": [
+      "Kennokaaviossa anodi (hapettuminen) kirjoitetaan vasemmalle ja katodi oikealle. Kumpi metalleista on epäjalompi? Faasiraja merkitään $|$ ja suolasilta $||$."
+     ],
+     "solution": "1. Sinkki on epäjalompi kuin kupari ($E^\\circ(\\ce{Zn^2+/Zn})=-0{,}76\\,\\mathrm{V}$ ja $E^\\circ(\\ce{Cu^2+/Cu})=+0{,}34\\,\\mathrm{V}$), joten sinkki hapettuu (anodi, miinusnapa) ja kupari-ionit pelkistyvät (katodi, plusnapa).\n2. Kennokaavio:\n$$(-)\\ \\ce{Zn(s)}\\,|\\,\\ce{Zn^2+(aq)}\\,||\\,\\ce{Cu^2+(aq)}\\,|\\,\\ce{Cu(s)}\\ (+)$$",
+     "answer": "$(-)\\ \\ce{Zn(s)}|\\ce{Zn^2+(aq)}||\\ce{Cu^2+(aq)}|\\ce{Cu(s)}\\ (+)$",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Mitä muutoksia puolikennoissa voi havaita, kun elektrodireaktiot etenevät? Perustele havainnot reaktioyhtälöillä.",
+     "hints": [
+      "Kirjoita molempien elektrodien reaktiot: toinen metalli liukenee ioneiksi, toisen metallin ioneja saostuu metalliksi.",
+      "Sinkki hapettuu ja kupari-ionit pelkistyvät. Mitä tämä tarkoittaa kummankin elektrodin massalle ja kuparisulfaattiliuoksen siniselle värille?"
+     ],
+     "solution": "1. Sinkkielektrodi syöpyy ja sen massa pienenee, koska sinkki hapettuu: $\\ce{Zn(s) -> Zn^2+(aq) + 2e-}$.\n2. Kuparielektrodin pinnalle saostuu kuparia ja sen massa kasvaa, koska kupari-ionit pelkistyvät: $\\ce{Cu^2+(aq) + 2e- -> Cu(s)}$.\n3. Kuparisulfaattiliuoksen sininen väri vaalenee, koska sinisiä $\\ce{Cu^2+}$-ioneja kuluu. (Sinkkiliuos pysyy värittömänä.)\n4. Kokonaisreaktio: $\\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$.",
+     "answer": "Zn-elektrodi ohenee, Cu-elektrodi kasvaa ja $\\ce{CuSO4}$-liuoksen sininen väri vaalenee",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 4,
+     "prompt": "Mikä on suolasillan tehtävä, ja mitä suolasillassa tapahtuu, kun kennosta otetaan energiaa?",
+     "hints": [
+      "Mieti, mitä liuosten varauksille tapahtuu reaktion edetessä: sinkkipuolelle syntyy positiivisia ioneja, ja kuparipuolelta niitä kuluu. Mitkä suolasillan ionit liikkuvat mihinkin suuntaan?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- suolasilta sulkee virtapiirin liuosten välillä\n- se pitää puolikennojen liuokset sähköisesti neutraaleina (varaustasapaino), jolloin reaktio voi jatkua\n- kun kennosta otetaan virtaa, suolasillan kationit kulkevat kohti kuparipuolikennoa (katodi), jossa $\\ce{Cu^2+}$-ioneja kuluu, ja anionit kohti sinkkipuolikennoa (anodi), johon syntyy $\\ce{Zn^2+}$-ioneja\n\nEsimerkkivastaus: Suolasilta yhdistää liuokset ja sulkee virtapiirin: ulkoisessa johtimessa kulkevat elektronit ja liuoksissa ionit. Ilman sitä sinkkiliuokseen kertyisi positiivista varausta ja kupariliuokseen negatiivista, ja reaktio pysähtyisi heti. Kun kenno on käytössä, suolasillan anionit (esim. $\\ce{NO3-}$) siirtyvät sinkkipuolelle ja kationit (esim. $\\ce{K+}$) kuparipuolelle, ja liuosten varaustasapaino säilyy.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.4",
+     "points": 2,
+     "prompt": "Miten kokeessa tarvittavan suolasillan voisi valmistaa?",
+     "hints": [
+      "Suolasilta on ioneja johtava yhteys, joka ei päästä liuoksia sekoittumaan nopeasti. Mitä laboratoriossa on käytettävissä?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- teknisen toteutuksen: esimerkiksi U-putki, joka täytetään suolaliuoksella tai suolaa sisältävällä geelillä (agar) ja tulpataan pumpulilla, tai suolaliuoksella kostutettu suodatinpaperiliuska\n- ionien johtumisen: sillassa on liuennutta suolaa, joka ei reagoi kennon aineiden kanssa (esim. $\\ce{KNO3}$ tai $\\ce{K2SO4}$)\n\nEsimerkkivastaus: Suodatinpaperista leikataan liuska ja se kastellaan kaliumnitraattiliuoksessa. Liuskan päät upotetaan kumpaankin dekantterilasiin.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Ihminen alkoi käyttää fossiilisista polttoaineista ensimmäisenä kivihiiltä. Hiiltä on paljon, ja sen poltto tuottaa runsaasti lämpöä, joten hiilivoima on ollut edullista.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 5,
+     "prompt": "Miksi monet maat ovat viime vuosina pyrkineet vähentämään kivihiilen käyttöä energiantuotannossa? Perustele.",
+     "hints": [
+      "Mieti ensin ilmastoa: mitä hiilen palaessa syntyy, ja mikä sen vaikutus on? Mieti sitten muita päästöjä ja haittoja (epäpuhtaudet, vaillinainen palaminen, uusiutumattomuus).",
+      "Hiilidioksidi voimistaa kasvihuoneilmiötä. Lisäksi kivihiilessä on rikkiä ja typpeä, ja vaillinainen palaminen tuottaa häkää, nokea ja pienhiukkasia. Kuvaile kunkin haitan vaikutus, esim. happosateet."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- kivihiilen poltosta syntyy paljon hiilidioksidia (hiilen palaminen $\\ce{C + O2 -> CO2}$, ja energiaa kohden enemmän kuin muista polttoaineista)\n- ilmakehään kertyvä $\\ce{CO2}$ voimistaa kasvihuoneilmiötä ja ilmastonmuutosta\n- lisäksi muita haittoja ja niiden vaikutuksia, esimerkiksi seuraavat\n- rikkidioksidi: $\\ce{SO2}$ reagoi veden kanssa rikkihapokkeeksi ja hapettuu rikkihapoksi, mikä aiheuttaa happosateita sekä maaperän ja vesistöjen happamoitumista\n- typen oksidit aiheuttavat happosateita, ovat haitallisia hengitettyinä ja voimistavat kasvihuoneilmiötä\n- vaillinaisessa palamisessa syntyy myrkyllistä häkää ($\\ce{CO}$), nokea, pienhiukkasia ja syöpää aiheuttavia polyaromaattisia hiilivetyjä\n- lentotuhkan mukana leviää raskasmetalleja, ja $\\ce{CO2}$ happamoittaa myös meriä\n- kivihiili on uusiutumaton luonnonvara, ja kaivostoiminta haittaa luontoa\n\nEsimerkkivastaus: Kivihiili on lähes puhdasta hiiltä, joten sen poltosta syntyy tuotettua energiaa kohden enemmän hiilidioksidia kuin esimerkiksi maakaasusta. Hiilidioksidi on kasvihuonekaasu, joka voimistaa ilmastonmuutosta. Kivihiilessä on myös rikkiä, joka palaa rikkidioksidiksi. Ilmassa se muuttuu rikkihapoksi, joka happamoittaa maaperää ja vesistöjä happosateina. Palamisessa syntyy lisäksi typen oksideja ja pienhiukkasia, jotka heikentävät ilmanlaatua ja aiheuttavat hengityselinsairauksia. Kivihiili on myös uusiutumaton, ja sen louhinta muuttaa ympäristöä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 10,
+     "prompt": "Kun 24,0 g puhdasta hiiltä paloi rajallisessa hapessa, vapautui 481,2 kJ. Samanaikaisesti tapahtuivat reaktiot (1) $\\ce{C(s) + O2(g) -> CO2(g)}$, $\\Delta H=-393{,}5$ kJ (1 mol hiiltä) ja (2) $\\ce{2C(s) + O2(g) -> 2CO(g)}$, $\\Delta H=-221{,}0$ kJ (2 mol hiiltä). Laske muodostuneiden $\\ce{CO}$:n ja $\\ce{CO2}$:n ainemäärät.",
+     "hints": [
+      "Kaikki hiili päätyy joko $\\ce{CO2}$:ksi tai $\\ce{CO}$:ksi, joten ainemäärien summa on $n(\\ce{C})$. Toinen yhtälö saadaan energiasta. Huomaa, että reaktion (2) entalpia koskee kahta moolia.",
+      "Yhtä hiilimoolia kohden CO:ksi palaminen vapauttaa 110,5 kJ. Merkitse $n(\\ce{CO2})=a$, jolloin $n(\\ce{CO})=1{,}998-a$ ja $393{,}5a+110{,}5(1{,}998-a)=481{,}2$."
+     ],
+     "solution": "1. $n(\\ce{C})=\\frac{24{,}0\\,\\mathrm{g}}{12{,}01\\,\\mathrm{g/mol}}=1{,}9983\\,\\mathrm{mol}$.\n2. Hiilitase: $n(\\ce{CO2})+n(\\ce{CO})=1{,}9983\\,\\mathrm{mol}$.\n3. Energia yhtä hiilimoolia kohden: reaktio (1) 393,5 kJ ja reaktio (2) $\\frac{221{,}0}{2}=110{,}5\\,\\mathrm{kJ}$.\n4. Energiatase: $393{,}5\\,\\mathrm{kJ/mol}\\cdot n(\\ce{CO2})+110{,}5\\,\\mathrm{kJ/mol}\\cdot n(\\ce{CO})=481{,}2\\,\\mathrm{kJ}$.\n5. Sijoitetaan $n(\\ce{CO})=1{,}9983-n(\\ce{CO2})$: $283{,}0\\,n(\\ce{CO2})=481{,}2-110{,}5\\cdot1{,}9983=260{,}38$, josta $n(\\ce{CO2})=0{,}920\\,\\mathrm{mol}$.\n6. $n(\\ce{CO})=1{,}9983-0{,}9201=1{,}078\\,\\mathrm{mol}\\approx1{,}08\\,\\mathrm{mol}$.\n\nTarkistus: $0{,}9201\\cdot393{,}5+1{,}0782\\cdot110{,}5=362{,}1+119{,}1=481{,}2\\,\\mathrm{kJ}$.\n\n**Vastaus: $n(\\ce{CO2})=0{,}920\\,\\mathrm{mol}$ ja $n(\\ce{CO})=1{,}08\\,\\mathrm{mol}$**\n\n**Sudenkuoppa:** jos reaktion (2) entalpia $-221{,}0$ kJ lasketaan yhtä CO-moolia kohden, yhtälöllä ei ole järkevää ratkaisua.",
+     "answer": "$n(\\ce{CO2})=0{,}920\\,\\mathrm{mol}$, $n(\\ce{CO})=1{,}08\\,\\mathrm{mol}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Aineistossa 9.A opiskelija ajoi ohutlevykromatografialla (TLC) kolmen vihreän tussin (A, B, C) täplät vedellä. Levyn kuvassa tussin A vihreä täplä on jäänyt perusviivalle. B:stä on erottunut sininen täplä noin kolmanneksen korkeudelle ja keltainen täplä lähelle vesirintamaa. C:stä on erottunut sininen täplä samalle korkeudelle kuin B:n sininen ja keltainen täplä vähän sen alapuolelle. Aineistossa 9.B on silikageelin rakenne (Si–O-verkko, jonka pinnalla on OH-ryhmiä).",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 5,
+     "prompt": "Mitä kokeen perusteella voi päätellä tussien A, B ja C värillisistä yhdisteistä?",
+     "hints": [
+      "Ajoliuoksena on vesi, eli poolinen liuotin. Mitä kertoo, jos täplä ei liiku lainkaan, ja mitä, jos siitä erottuu useita täpliä?",
+      "Samalla korkeudella olevat täplät voivat olla samaa yhdistettä (sama $R_f$), ja eri korkeudella olevat ovat eri yhdisteitä. Vesi kuljettaa parhaiten vesiliukoisia, poolisia väriaineita."
+     ],
+     "solution": "Hyvä vastaus sisältää esimerkiksi:\n- A:n väriaine ei liikkunut, joten se on pooliton tai ei liukene veteen\n- B ja C ovat seoksia: kummastakin erottui sininen ja keltainen väriaine (vihreä = sininen + keltainen)\n- liikkuminen perustuu vesiliukoisuuteen: poolisimmat, parhaiten veteen liukenevat väriaineet kulkeutuvat pisimmälle (B:n keltainen)\n- B:ssä ja C:ssä on todennäköisesti sama sininen väriaine, sillä siniset täplät nousivat yhtä korkealle\n- B:n ja C:n keltaiset väriaineet ovat eri yhdisteitä, koska ne kulkivat eri matkan\n\nEsimerkkivastaus: Tussin A vihreä väri ei noussut lainkaan veden mukana, joten sen väriaine on pooliton eikä liukene veteen. Kokeesta ei selviä, onko se yksi yhdiste vai seos. Tussit B ja C ovat seoksia, sillä kummastakin erottui sininen ja keltainen täplä. Siniset täplät nousivat yhtä korkealle, joten niissä on luultavasti sama väriaine. Keltaiset täplät ovat eri korkeuksilla, joten ne ovat eri yhdisteitä. B:n keltainen liukenee veteen hyvin, ja C:n keltainen tarttuu paperiin voimakkaammin.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 4,
+     "prompt": "Opiskelija arvelee, että jokaisessa tussissa on kaksi värillistä yhdistettä. Millaisella lisäkokeella hypoteesin voi testata?",
+     "hints": [
+      "Hypoteesi on auki vain tussin A osalta, koska sen täplä ei liikkunut vedessä. Millainen ajoliuos saisi poolittomat väriaineet liikkumaan?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- tussin A väriaineet ovat poolittomia (eivät liikkuneet vedessä)\n- uusi TLC-ajo tehdään poolittomalla tai vähän poolisella ajoliuoksella\n- esimerkki liuottimesta: heksaani, heksaanin ja etyyliasetaatin seos, asetoni tai etanoli (vähemmän poolinen kuin vesi)\n\nEsimerkkivastaus: Tussin A väriaine ei liukene veteen, joten vesiajo ei kerro sen koostumuksesta. Opiskelija tekee uuden ajon samanlaisella levyllä, mutta ajoliuoksena on esimerkiksi heksaanin ja etyyliasetaatin seos. Jos A:n täplä jakautuu kahdeksi eriväriseksi täpläksi, hypoteesi pitää tussin A osalta paikkansa.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 5,
+     "prompt": "Retentiokerroin on $R_f=\\frac{\\text{täplän matka perusviivasta}}{\\text{ajoliuosrintaman matka perusviivasta}}$. Suunnittele ja perustele koe, jolla selvitetään, riippuuko $R_f$ ajon kestosta.",
+     "hints": [
+      "Hyvässä kokeessa muutetaan vain yhtä muuttujaa. Mitä kaikkea pidetään samana, mitä muutetaan ja mitä mitataan?",
+      "Tee useita samanlaisia levyjä samalla näytteellä ja samalla ajoliuoksella, mutta keskeytä ajot eri aikoina. Laske $R_f$ jokaiselle levylle ja vertaa."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- vakioidaan olosuhteet: vähintään kaksi samanlaista levyä, sama näyte samana määränä samalle korkeudelle, sama ajoliuos ja sama lämpötila\n- muutetaan vain ajoaikaa (tai rintaman kulkemaa matkaa)\n- kultakin levyltä mitataan täplän ja ajoliuosrintaman kulkema matka perusviivasta\n- lasketaan $R_f$-arvot ja verrataan niitä\n- johtopäätös: jos arvot ovat (virherajoissa) yhtä suuret, $R_f$ ei riipu ajon kestosta\n\nEsimerkkivastaus: Otetaan kolme samanlaista TLC-levyä, ja jokaiseen tehdään sama määrä samaa näytettä samalle korkeudelle. Levyt ajetaan samassa ajoliuoksessa ja lämpötilassa, mutta ne otetaan pois esimerkiksi 5, 10 ja 15 minuutin kuluttua. Rintama merkitään heti. Kultakin levyltä mitataan täplän ja rintaman etäisyys perusviivasta ja lasketaan $R_f$. Koska täplä ja rintama etenevät samassa suhteessa, $R_f$-arvojen odotetaan olevan yhtä suuria. Jos ne ovat, retentiokerroin ei riipu ajoajasta.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.4",
+     "points": 6,
+     "prompt": "Toisessa kokeessa ajettiin näytteet K, L ja M silikageelilevyllä heksaani–etyyliasetaattiseoksella. Näytteissä oli fenolia, hydrokinonia (1,4-dihydroksibentseeni) tai 2,5-dimetyylifenolia, ja $R_f$-arvot olivat K 0,03, L 0,27 ja M 0,35. Päättele perustellen, mikä aine oli missäkin näytteessä.",
+     "hints": [
+      "Silikageelin pinnalla on OH-ryhmiä, joten kiinteä faasi on poolinen, ja ajoliuos on melko pooliton. Poolinen yhdiste tarttuu levyyn ja kulkee lyhyen matkan. Järjestä yhdisteet poolisuuden mukaan.",
+      "Hydrokinonissa on kaksi OH-ryhmää, jotka muodostavat vetysidoksia silikageelin kanssa. Metyyliryhmät lisäävät molekyylin poolitonta osaa, joten 2,5-dimetyylifenoli on fenolia poolittomampi."
+     ],
+     "solution": "1. Silikageelin pinnan OH-ryhmät tekevät kiinteästä faasista poolisen. Se muodostaa vetysidoksia poolisten yhdisteiden kanssa, ja heksaani–etyyliasetaatti on vähän poolinen ajoliuos.\n2. Mitä poolisempi yhdiste on, sitä voimakkaammin se sitoutuu levyyn ja sitä pienempi on sen $R_f$.\n3. Hydrokinonissa on kaksi OH-ryhmää, joten se muodostaa eniten vetysidoksia ja on poolisin. Sillä on pienin $R_f$: **K = hydrokinoni**.\n4. Fenolissa on yksi OH-ryhmä. 2,5-dimetyylifenolissa on lisäksi kaksi poolitonta metyyliryhmää, jotka heikentävät OH-ryhmän vetysidosta levyyn ja tekevät molekyylistä poolittomamman: **L = fenoli** ja **M = 2,5-dimetyylifenoli**.\n\n(Hydrokinonin symmetrian vuoksi sen kokonaisdipolimomentti on pieni, mutta sen kaksi OH-ryhmää sitoutuvat silti voimakkaasti silikageeliin.)\n\n**Vastaus: K = hydrokinoni, L = fenoli, M = 2,5-dimetyylifenoli**",
+     "answer": "K = hydrokinoni, L = fenoli, M = 2,5-dimetyylifenoli",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Van 't Hoffin yhtälö (aineisto 10.A): $\\ln K=-\\frac{\\Delta H}{R}\\cdot\\frac1T+\\frac{\\Delta S}{R}$, kun $K$ on yksikötön ja $R=8{,}31451\\,\\mathrm{J/(K\\,mol)}$. Kun $\\ln K$ piirretään $\\frac1T$:n funktiona, saadaan suora, jonka kulmakerroin on $-\\frac{\\Delta H}{R}$.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 3,
+     "prompt": "Aineiston 10.B Van 't Hoffin kuvaajassa $\\ln K$ kasvaa, kun $\\frac1T$ kasvaa (suora nousee). Onko reaktio eksoterminen vai endoterminen? Perustele.",
+     "hints": [
+      "Kulmakerroin on $-\\frac{\\Delta H}{R}$. Jos kulmakerroin on positiivinen, mikä on $\\Delta H$:n etumerkki?"
+     ],
+     "solution": "1. Suora on nouseva, eli kulmakerroin on positiivinen.\n2. Kulmakerroin on $-\\frac{\\Delta H}{R}$, ja $R>0$, joten $\\Delta H<0$.\n3. Sama sanallisesti: $\\frac1T$ kasvaa, kun lämpötila laskee, joten $K$ kasvaa jäähdytettäessä, eli tasapaino siirtyy tuotteisiin päin lämpötilan laskiessa.\n\n**Vastaus: reaktio on eksoterminen**",
+     "answer": "Eksoterminen",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 4,
+     "prompt": "Ammoniakkisynteesille $\\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$ on 298 K:ssa $\\Delta S=-43{,}4\\,\\mathrm{J/(K\\,mol)}$ ja $\\Delta H=-45{,}9\\,\\mathrm{kJ/mol}$. Ratkaise Van 't Hoffin yhtälöstä $K$:n lauseke ja laske $K$ huoneenlämmössä.",
+     "hints": [
+      "Ratkaise $K$ ottamalla yhtälön molemmista puolista eksponenttifunktio. Muunna $\\Delta H$ jouleiksi, jotta yksiköt täsmäävät $R$:n kanssa."
+     ],
+     "solution": "1. $\\ln K=-\\frac{\\Delta H}{RT}+\\frac{\\Delta S}{R}$, joten $K=e^{-\\frac{\\Delta H}{RT}+\\frac{\\Delta S}{R}}$.\n2. $-\\frac{\\Delta H}{RT}=\\frac{45\\,900\\,\\mathrm{J/mol}}{8{,}31451\\,\\mathrm{J/(K\\,mol)}\\cdot298\\,\\mathrm{K}}=18{,}525$ ja $\\frac{\\Delta S}{R}=\\frac{-43{,}4}{8{,}31451}=-5{,}220$.\n3. $\\ln K=13{,}305$, joten $K=e^{13{,}305}=6{,}00\\cdot10^5$.\n\n**Vastaus: $K=e^{-\\Delta H/(RT)+\\Delta S/R}\\approx6{,}00\\cdot10^5$**\n\n**Sudenkuoppa:** jos $\\Delta H$ sijoitetaan kilojouleina, $\\ln K$ on noin $-5{,}2$ ja tulos on täysin väärä.",
+     "answer": "$K=e^{-\\Delta H/(RT)+\\Delta S/R}\\approx6{,}00\\cdot10^5$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 13,
+     "prompt": "Hiilidioksidi hajoaa korkeassa lämpötilassa: $\\ce{2CO2(g) <=> 2CO(g) + O2(g)}$. 2,00 dm³:n astiaan suljettiin tarkasti 0,0900 mol $\\ce{CO2}$:ta, ja tasapainokonsentraatio $[\\ce{CO2}]$ mitattiin eri lämpötiloissa (aineiston 10.C taulukko: 1395 K, 1443 K ja 1498 K; konsentraatio on hieman alle 0,0450 mol/dm³). Piirrä tuloksista Van 't Hoffin kuvaaja. Määritä sen avulla $\\Delta H$ kolmen merkitsevän numeron tarkkuudella. $\\Delta H$ ja $\\Delta S$ oletetaan lämpötilasta riippumattomiksi.",
+     "hints": [
+      "Laske alkukonsentraatio. Hajonneen $\\ce{CO2}$:n määrä $x$ on alkukonsentraation ja mitatun konsentraation erotus. Silloin $[\\ce{CO}]=x$ ja $[\\ce{O2}]=x/2$. Laske $K=\\frac{[\\ce{CO}]^2[\\ce{O2}]}{[\\ce{CO2}]^2}$ kussakin lämpötilassa.",
+      "$x$ on 1395 K:ssa $6{,}5\\cdot10^{-6}$, 1443 K:ssa $1{,}12\\cdot10^{-5}$ ja 1498 K:ssa $2{,}12\\cdot10^{-5}\\,\\mathrm{mol/dm^3}$. Laske $\\ln K$ ja $1/T$, sovita suora ja ratkaise $\\Delta H=-R\\cdot$kulmakerroin. Älä pyöristä välituloksia liikaa."
+     ],
+     "solution": "1. $c_0(\\ce{CO2})=\\frac{0{,}0900\\,\\mathrm{mol}}{2{,}00\\,\\mathrm{dm^3}}=0{,}0450\\,\\mathrm{mol/dm^3}$.\n2. Tasapainossa $[\\ce{CO2}]=c_0-x$, $[\\ce{CO}]=x$ ja $[\\ce{O2}]=\\frac x2$, joten $x=0{,}0450-[\\ce{CO2}]$.\n3. $K=\\frac{[\\ce{CO}]^2[\\ce{O2}]}{[\\ce{CO2}]^2}=\\frac{x^2\\cdot\\frac x2}{[\\ce{CO2}]^2}$.\n4. 1395 K: $x=6{,}5\\cdot10^{-6}$, $K=6{,}78\\cdot10^{-14}$, $\\ln K=-30{,}32$, $1/T=7{,}168\\cdot10^{-4}\\,\\mathrm{K^{-1}}$.\n5. 1443 K: $x=1{,}12\\cdot10^{-5}$, $K=3{,}47\\cdot10^{-13}$, $\\ln K=-28{,}69$, $1/T=6{,}930\\cdot10^{-4}\\,\\mathrm{K^{-1}}$.\n6. 1498 K: $x=2{,}12\\cdot10^{-5}$, $K=2{,}35\\cdot10^{-12}$, $\\ln K=-26{,}77$, $1/T=6{,}676\\cdot10^{-4}\\,\\mathrm{K^{-1}}$.\n7. Kuvaaja: vaaka-akselilla $\\frac1T$ (K⁻¹), pystyakselilla $\\ln K$. Pisteet ovat suoralla, jonka kulmakerroin on $-72\\,005\\,\\mathrm{K}$ (laskeva suora).\n8. $-\\frac{\\Delta H}{R}=-72\\,005\\,\\mathrm{K}$, joten $\\Delta H=72\\,005\\,\\mathrm{K}\\cdot8{,}31451\\,\\mathrm{J/(K\\,mol)}=598\\,700\\,\\mathrm{J/mol}\\approx599\\,\\mathrm{kJ/mol}$.\n\n**Vastaus: $\\Delta H\\approx599\\,\\mathrm{kJ/mol}$ (endoterminen)**\n\n**Sudenkuoppa:** $x$ on hyvin pieni erotus kahdesta lähes yhtä suuresta luvusta. Jos $[\\ce{CO2}]$ pyöristetään esimerkiksi arvoon 0,0450, koko tieto katoaa.",
+     "answer": "$\\Delta H\\approx599\\,\\mathrm{kJ/mol}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Laktoosi on maidon hiilihydraatti, jonka laktaasientsyymi pilkkoo hydrolysoimalla glykosidisidoksen. Laktoositonta maitoa valmistetaan käsittelemällä maito laktaasilla tai erottamalla laktoosi kromatografisesti. Aineistossa 11.A on laktoosin kaksi konformaatiota (I ja II) molekyylimalleina. Renkaat on nimetty O:ksi ja P:ksi.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 2,
+     "prompt": "Mihin hiilihydraattien ryhmään laktoosi kuuluu rakenteensa perusteella?",
+     "hints": [
+      "Montako monosakkaridiyksikköä laktoosissa on? Laske renkaat."
+     ],
+     "solution": "1. Laktoosissa on kaksi monosakkaridiyksikköä (renkaat O ja P), jotka ovat liittyneet toisiinsa glykosidisidoksella.\n\n**Vastaus: disakkaridit**",
+     "answer": "Disakkaridi",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 4,
+     "prompt": "Osoita konformaatiosta I glykosidisidos ja primääriset hydroksiryhmät.",
+     "hints": [
+      "Glykosidisidos on renkaiden välinen happisilta. Primäärinen hydroksiryhmä on hiilessä, johon on liittynyt vain yksi muu hiili, eli ryhmä $\\ce{-CH2OH}$ renkaan ulkopuolella."
+     ],
+     "solution": "1. **Glykosidisidos** on renkaita O ja P yhdistävä happiatomi ($\\ce{C-O-C}$-silta): se liittää galaktoosiyksikön (rengas O) hiilen 1 glukoosiyksikön (rengas P) hiileen 4, eli β(1→4)-sidos.\n2. **Primäärisiä hydroksiryhmiä** on kaksi: kummankin renkaan hiileen 5 liittyvän $\\ce{-CH2OH}$-ryhmän OH (hiili 6). Muut OH-ryhmät ovat renkaan hiilissä, joihin on sitoutunut kaksi muuta hiiltä, joten ne ovat sekundäärisiä. Renkaan P anomeerinen OH on hemiasetaaliryhmä.\n\n**Vastaus: renkaiden välinen happisilta; primääriset OH:t ovat kummankin renkaan $\\ce{CH2OH}$-ryhmissä**",
+     "answer": "Glykosidisidos = renkaiden välinen O-silta; primääriset OH:t = kaksi $\\ce{-CH2OH}$-ryhmää",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Mitkä hiilihydraatit (triviaalinimet) syntyvät, kun laktoosin glykosidisidos hydrolysoituu?",
+     "hints": [
+      "Laktoosi on ”maitosokeri”, joka koostuu kahdesta eri heksoosista. Toinen niistä on veren tavallisin sokeri."
+     ],
+     "solution": "1. Hydrolyysissä vesi pilkkoo glykosidisidoksen: $\\ce{C12H22O11 + H2O -> C6H12O6 + C6H12O6}$.\n2. Syntyvät monosakkaridit ovat **galaktoosi** ja **glukoosi**.",
+     "answer": "Galaktoosi ja glukoosi",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Epäpuhtaalla laktaasivalmisteella käsitelty laktoositon maito alkoi säilytyksessä maistua oudolta, ja siinä havaittiin runsaasti valiinia, tryptofaania, leusiinia ja muita samankaltaisia yhdisteitä. Mistä ne olivat peräisin, ja miten ne syntyivät?",
+     "hints": [
+      "Valiini, tryptofaani ja leusiini ovat aminohappoja. Mistä maidon osasta niitä voi vapautua, ja millainen epäpuhtaus laktaasivalmisteessa olisi voinut vapauttaa ne?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- yhdisteet ovat aminohappoja, ja ne ovat peräisin maidon proteiineista (esim. kaseiini)\n- proteiinit olivat hydrolysoituneet eli pilkkoutuneet: epäpuhtaassa entsyymivalmisteessa oli proteaaseja, jotka katkaisivat peptidisidoksia\n- hydrolyysissä vapautui yksittäisiä aminohappoja (ja lyhyitä peptidejä), jotka muuttivat makua\n\nEsimerkkivastaus: Valiini, tryptofaani ja leusiini ovat aminohappoja. Maidon proteiinit, pääasiassa kaseiini, koostuvat aminohapoista, jotka ovat liittyneet peptidisidoksilla. Laktaasivalmisteessa oli epäpuhtautena proteiineja pilkkovia entsyymejä, jotka hydrolysoivat peptidisidoksia säilytyksen aikana. Proteiineista vapautui aminohappoja ja peptidejä, ja ne antoivat maidolle oudon maun.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.5",
+     "points": 6,
+     "prompt": "Kumpi konformaatioista I ja II on energeettisesti edullisempi? Perustele ja esitä, mitkä tekijät vaikuttavat konformaation energiaan.",
+     "hints": [
+      "Vertaa renkaiden muotoa (tuoli vai vene) ja sitä, kuinka lähellä atomiryhmät ovat toisiaan saman renkaan sisällä ja renkaiden välillä.",
+      "Tuolimuodossa ryhmät ovat porrastetusti ja kaukana toisistaan. Venemuodossa ryhmät ovat pimennetyissä asemissa ja lähellä toisiaan, jolloin ne hylkivät toisiaan. Mieti myös, voiko jossakin konformaatiossa syntyä molekyylinsisäinen vetysidos."
+     ],
+     "solution": "Hyvä vastaus sisältää havaintoja ja niiden energiavertailun:\n- konformaatiossa I renkaat ovat tuolimuodossa ja konformaatiossa II venemuodossa. Tuolimuoto on energeettisesti edullisempi, koska siinä on vähemmän vääntö- ja steeristä jännitystä\n- konformaatiossa I saman renkaan atomit ja ryhmät ovat kaukana toisistaan, konformaatiossa II lähellä. Lähekkäiset ryhmät hylkivät toisiaan, mikä nostaa II:n energiaa\n- renkaiden väliset ryhmät ovat konformaatiossa I sopivalla etäisyydellä, konformaatiossa II osin liian lähellä toisiaan\n- konformaatiossa I renkaiden OH-ryhmien välille voi syntyä vetysidos molekyylin sisällä, mikä laskee energiaa\n- johtopäätös: **I on edullisempi**\n\nEsimerkkivastaus: Konformaatio I on energeettisesti edullisempi. Siinä kumpikin kuusirengas on tuolimuodossa, jossa sidoskulmat ovat lähellä tetraedrikulmaa, ja vierekkäisten hiilten substituentit ovat porrastetuissa asemissa. Konformaatiossa II renkaat ovat venemuodossa: osa ryhmistä on pimennetyissä asemissa, ja renkaan vastakkaisten päiden ryhmät ovat lähellä toisiaan. Tämä lisää hylkimistä ja jännitystä. Lisäksi konformaatiossa II renkaat ovat kiertyneet niin, että eri renkaiden ryhmät ovat lähempänä toisiaan. Konformaatiossa I renkaiden välille voi syntyä vetysidos, joka stabiloi rakennetta.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

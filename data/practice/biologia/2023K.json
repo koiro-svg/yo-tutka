@@ -1,0 +1,426 @@
+{
+ "subject": "biologia",
+ "session": "2023K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2023/kevat/2023-03-24_BI_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-03-24_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p)."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (1.1–1.10), joissa valitaan yksi paras vaihtoehto viidestä: esimerkki sopeutumislevittäytymisestä (1.1), energian ohivirtaus ravintoketjussa (1.2), typen kierto (1.3), entsyymit (1.4), fotosynteesi (1.5), mitokondriot (1.6), ihmekukan välimuotoinen periytyminen, kun risteytetään homotsygoottinen punainen ja homotsygoottinen valkoinen (1.7), säteily ja mutaatiot (1.8), verenkierto (1.9) ja operoni (1.10). Kohdissa 1.3–1.6 ja 1.8–1.10 etsitään virheellinen väite. Oikea vastaus 2 p. Vaihtoehdot ks. alkuperäinen koe.",
+     "hints": [
+      "Merkitse ensin kohdat, joissa haetaan virheellistä väitettä (niitä on seitsemän). Tarkista jokaisesta väitteestä sen tapahtumapaikka, suunta ja syy-seuraussuhde.",
+      "Kohta kohdalta: 1.1 yhdestä lajista monta lajia eri elinympäristöihin · 1.2 mihin porras käyttää saamansa energian · 1.3 kuinka suuri osa ilmasta on typpeä · 1.4 onko entsyymi spesifinen · 1.5 mikä tuottaa ATP:n valoreaktioissa · 1.6 missä glykolyysi tapahtuu · 1.7 $RR \\times rr$ · 1.8 periytyvätkö kehon solujen mutaatiot · 1.9 mihin suuntaan veri virtaa kammion supistuessa · 1.10 mihin operonin säätely perustuu."
+     ],
+     "solution": "Kirjaimet viittaavat vaihtoehtojen järjestykseen alkuperäisessä koenäkymässä (A = ylin).\n\n- **1.1 E** – saarelle saapunut kasvilaji eriytyy moniksi eri elinympäristöihin sopeutuneiksi lajeiksi. Muut vaihtoehdot kuvaavat tulokaslajin runsastumista, sukkession alkua, pullonkaulaa ja lajin vaikutusta elinympäristöön.\n- **1.2 B** – ohivirtaus tarkoittaa, että kuluttaja käyttää suuren osan saamastaan energiasta omaan aineenvaihduntaansa ja lämmöntuottoon, eikä se siirry seuraavalle portaalle.\n- **1.3 B** – väite on väärin: ilmakehästä noin 78 % on typpeä. Typpi on silti usein minimiravinne, koska kasvit eivät pysty käyttämään kaasumaista typpeä.\n- **1.4 B** – väite on väärin: entsyymit ovat spesifisiä, eli kukin katalysoi tiettyä reaktiota tai tiettyjä substraatteja.\n- **1.5 B** – väite on väärin: ADP ei ota valoa vastaan. Valon energian sitoo lehtivihreä, ja ATP syntyy ATP-syntaasissa protonigradientin avulla.\n- **1.6 D** – väite on väärin: glykolyysi tapahtuu solulimassa, eikä se tarvitse happea.\n- **1.7 C** – kaikki F1-yksilöt ovat vaaleanpunaisia, koska $RR \\times rr$ tuottaa pelkästään heterotsygootteja $Rr$, ja välimuotoisessa periytymisessä heterotsygootti on välimuoto.\n- **1.8 B** – väite on väärin: kehon (somaattisten) solujen mutaatiot eivät periydy jälkeläisille. Vain sukusoluihin johtavan solulinjan mutaatiot periytyvät.\n- **1.9 A** – väite on väärin: kammioiden supistuessa veri virtaa valtimoihin, ja läpät estävät paluun eteisiin.\n- **1.10 B** – väite on väärin: operonin tehtävä on juuri säädellä geenien ilmentymistä ympäristön mukaan (esim. laktoosioperoni käynnistyy, kun laktoosia on tarjolla).\n\n**Sudenkuoppa:** kohdassa 1.3 väite kuulostaa järkevältä, koska typpi todella on usein minimiravinne. Virhe on perustelussa, sillä typpeä on ilmassa runsaasti.",
+     "answer": "1.1 E · 1.2 B · 1.3 B · 1.4 B · 1.5 B · 1.6 D · 1.7 C · 1.8 B · 1.9 A · 1.10 B",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 6,
+     "prompt": "Nimeä solukuvaan numeroidut rakenteet 1–6 (ks. alkuperäisen tehtävän kuva 2.A).",
+     "hints": [
+      "Kuvassa on eläinsolu. Etsi ensin solun ulkoraja ja tuma ja sitten sytoplasman soluelimet.",
+      "Tumaan liittyy kaksi rakennetta: sitä ympäröivä kaksoiskalvo ja sen sisällä oleva tiivis alue, jossa ribosomit kootaan. Sytoplasmassa on sauvamainen kaksoiskalvoinen soluelin, ribosomien peittämä kalvoverkosto ja litteiden kalvopussien pino."
+     ],
+     "solution": "1. **solukalvo**\n2. **mitokondrio**\n3. **tumakotelo** eli tumakalvo\n4. **tumajyvänen**\n5. **(karkea) solulimakalvosto**\n6. **Golgin laite**\n\n**Vastaus: 1 solukalvo, 2 mitokondrio, 3 tumakotelo, 4 tumajyvänen, 5 solulimakalvosto, 6 Golgin laite**",
+     "answer": "1 solukalvo · 2 mitokondrio · 3 tumakotelo · 4 tumajyvänen · 5 solulimakalvosto · 6 Golgin laite",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 9,
+     "prompt": "Mitoosissa solusta syntyy kaksi tytärsolua, joissa on samat rakenteet. Selitä lyhyesti, miten kohdan 2.1 rakenteet 1–3 (solukalvo, mitokondrio ja tumakotelo) muodostuvat tytärsoluihin.",
+     "hints": [
+      "Käsittele kolme rakennetta erikseen ja kerro kustakin, missä solusyklin vaiheessa se jakautuu tai muodostuu uudelleen. Mitoosin vaiheiden yleinen kuvaus ei tuo pisteitä.",
+      "Solukalvo: solu kuroutuu kahtia telofaasin jälkeen ja kalvoa syntyy lisää. Mitokondriot: ne jakautuvat itsenäisesti välivaiheessa ja jakautuvat tasaisesti solulimaan. Tumakotelo: se hajoaa esivaiheessa ja kootaan uudelleen loppuvaiheessa solulimakalvoston kalvoista tai rakkuloista."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Solukalvo:** tuman jakauduttua loppuvaiheessa (telofaasi) solu alkaa kuroutua keskeltä kahtia.\n- Uutta solukalvoa muodostuu, ja lopulta syntyy kaksi erillistä tytärsolua, joilla kummallakin on oma solukalvonsa.\n- **Mitokondrio:** mitokondriot jakautuvat itsenäisesti jo ennen solun jakautumista, solusyklin välivaiheessa (interfaasi).\n- Ne jakautuvat tasaisesti solulimaan, joten kumpikin tytärsolu saa mitokondrioita.\n- **Tumakotelo:** mitoosin esivaiheessa (profaasi) tumakotelo hajoaa.\n- Kun kromosomit ovat erkaantuneet solun vastakkaisiin päihin, loppuvaiheessa (telofaasi) tumakotelo rakentuu uudelleen kummankin kromosomiryhmän ympärille.\n- Uusi tumakotelo kootaan solulimakalvoston osista tai kalvorakkuloista.\n\n**Esimerkkivastaus:** Mitokondriot eivät synny tyhjästä, vaan ne jakautuvat itsenäisesti bakteerien tapaan jo solusyklin välivaiheessa, jolloin niitä on emosolussa noin kaksinkertainen määrä. Ne jakautuvat tasaisesti solulimaan, joten kumpikin tytärsolu saa niitä. Tumakotelo hajoaa mitoosin esivaiheessa, jotta tumasukkula pääsee kiinnittymään kromosomeihin. Loppuvaiheessa, kun kromosomit ovat siirtyneet solun päihin, niiden ympärille kootaan solulimakalvoston kalvoista uusi tumakotelo. Samaan aikaan solun keskelle muodostuu kurouma, joka syvenee, kunnes solu jakautuu kahdeksi. Solukalvoa syntyy lisää, joten kumpikin tytärsolu saa oman solukalvonsa.\n\n**Sudenkuoppa:** mitoosin kaikkien vaiheiden yksityiskohtainen kuvaus ei tuo pisteitä, jos rakenteiden 1–3 muodostuminen jää kertomatta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Kasvisokeudella tarkoitetaan ilmiötä, jossa ihminen ei huomaa kasveja, koska hänen näköaistinsa ja aivonsa ovat evoluutiossa virittyneet havaitsemaan liikettä ja uhkaavia eläimiä. Siksi kasvien merkitystä usein vähätellään.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 7,
+     "prompt": "Kerro ja selitä, mitä kaikkea hyötyä kasveista on ihmiselle.",
+     "hints": [
+      "Ryhmittele hyödyt: ilmakehä ja ilmasto, ravinto, materiaalit ja energia, lääkkeet ja nautintoaineet sekä aineettomat hyödyt.",
+      "Muista ainakin: happi ja otsonikerros, hiilidioksidin sitominen, ravinto ja rehu, puu, kuidut ja biomateriaalit, fossiiliset polttoaineet fotosynteesin tuotteena, lääke- ja nautintoaineet, ilman puhdistus, eroosion esto sekä virkistys ja maisema."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kasvit tuottavat suurimman osan ilmakehän hapesta.\n- Hapen ansiosta yläilmakehään on muodostunut otsonikerros, joka suojaa UV-säteilyltä.\n- Kasvit sitovat ilmakehän hiilidioksidia.\n- Muinainen fotosynteesi on tuottanut fossiiliset polttoaineet.\n- Kasvit ovat ihmisen ravintoa (viljat, hedelmät, kasvikset, tärkkelys) ja kotieläinten rehua.\n- Kasveista saadaan kuituja, polttopuuta, rakennusmateriaaleja ja teollisuuden biomateriaaleja.\n- Kasveista valmistetaan lääkkeitä, nautintoaineita ja muita kemikaaleja (esim. kahvi, tee, vitamiinit, kipu- ja malarialääkkeet).\n- Kasvillisuus sitoo ilmasta pölyä ja haitallisia yhdisteitä, ja juuret estävät maaperän eroosiota.\n- Aineettomia hyötyjä: luontoelämykset, puutarhojen ja maiseman kauneus, varjo.\n\n**Esimerkkivastaus:** Kasvit ovat ihmiselle välttämättömiä. Fotosynteesissä ne tuottavat ilmakehän hapen, josta on muodostunut myös UV-säteilyltä suojaava otsonikerros, ja ne sitovat hiilidioksidia ja hillitsevät siten ilmastonmuutosta. Ravintomme perustuu kasveihin joko suoraan, kuten viljat, perunat ja hedelmät, tai välillisesti rehun kautta. Kasveista saadaan puuta rakentamiseen ja energiaksi, kuituja vaatteisiin ja paperiin sekä raaka-aineita biomuoveihin. Monet lääkkeet, kuten kipu- ja malarialääkkeet, ovat alun perin peräisin kasveista, samoin kahvi ja tee. Kasvillisuus sitoo pölyä ja estää maaperän kulumista, ja lisäksi luonto ja puutarhat tuottavat virkistystä ja kauneuselämyksiä.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 5,
+     "prompt": "Hedelmä kehittyy kukasta. Nimeä kukkakuvaan numeroidut osat 1–4 (ks. alkuperäinen kuva 3.A) ja kerro, mistä osasta hedelmä kehittyy.",
+     "hints": [
+      "Kukan osat sisältä ulos: emi keskellä, sen ympärillä heteet, sitten terälehdet ja uloimpana verholehdet. Hedelmä kehittyy siitä osasta, jonka sisällä siemenaiheet ovat.",
+      "Tunnista osat rakenteen perusteella. Siitepölyä tuottava osa on ohuen varren päässä oleva nuppi. Keskimmäinen osa on pullon muotoinen, ja sen paksuuntuneen tyven sisällä ovat siemenaiheet. Värikkäät lehdet houkuttelevat pölyttäjiä, ja uloimmat, yleensä vihreät lehdet suojaavat nuppua. Hedelmöityksen jälkeen siemenaiheista tulee siemeniä, ja niitä ympäröivä seinämä kasvaa hedelmäksi."
+     ],
+     "solution": "1. **hede** (ponsi ja palho)\n2. **emi** (luotti, vartalo ja sikiäin)\n3. **terälehti**\n4. **verholehti**\n\nHedelmä kehittyy **emistä** (osa 2), tarkemmin sen sikiäimestä, jonka sisällä siemenaiheet ovat.\n\n**Vastaus: 1 hede, 2 emi, 3 terälehti, 4 verholehti; hedelmä kehittyy emin sikiäimestä (osa 2)**",
+     "answer": "1 hede · 2 emi · 3 terälehti · 4 verholehti; hedelmä kehittyy emistä (sikiäin, osa 2)",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 3,
+     "prompt": "Selitä, mitä hyötyä hedelmän kehittymisestä on ollut kasveille evoluution kuluessa.",
+     "hints": [
+      "Mieti, mitä hedelmä tekee siemenille: suojaa ja levittää. Miten erilaiset hedelmät leviävät?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hedelmä suojaa kehittyviä siemeniä.\n- Hedelmä on leviämiselin: mitä paremmin siemenet leviävät, sitä laajemmalle laji voi levittäytyä.\n- Erilaiset hedelmät mahdollistavat erilaiset leviämistavat: tuuli (siivekkäät), vesi (kelluvat) tai eläimet (tarttuvat tai syötävät).\n- Värikkäät ja makeat hedelmät houkuttelevat eläimiä syömään niitä ja levittämään siemenet ulosteen mukana.\n\n**Esimerkkivastaus:** Hedelmä suojaa siemeniä niiden kehittyessä ja auttaa niitä leviämään kauas emokasvista. Värikkäät, makeat marjat houkuttelevat lintuja ja nisäkkäitä syömään niitä, ja siemenet leviävät ulosteiden mukana uusille paikoille. Toiset hedelmät leviävät tuulen, veden tai eläinten turkkiin tarttumalla. Tehokas leviäminen vähentää kilpailua emokasvin kanssa ja laajentaa lajin levinneisyyttä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Kromosomeissa oleva DNA on perinnöllisyyden perusta, ja sen molekyylirakenne mahdollistaa tiedon tallentamisen.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 2,
+     "prompt": "Aminohappojärjestyksen tieto on DNA:ssa kolmen emäksen ryhminä, kodoneina. Kerro, mitä kolmikkokoodi tarkoittaa.",
+     "hints": [
+      "Kerro, montako emästä kodonissa on, mitä yksi kodoni vastaa translaatiossa ja mikä siirtäjä-RNA:ssa pariutuu kodonin kanssa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kodoni on kolmen peräkkäisen emäksen jakso, jonka perusteella lähetti-RNA luetaan.\n- Translaatiossa jokaista aminohappoa vastaa tietty kolmen emäksen kodoni.\n- Lähetti-RNA:n kodoni pariutuu siirtäjä-RNA:n antikodonin kanssa.\n\n**Esimerkkivastaus:** Kolmikkokoodi tarkoittaa, että geenin emäsjärjestys luetaan kolmen emäksen ryhminä eli kodoneina. Translaatiossa ribosomi lukee lähetti-RNA:ta kodoni kerrallaan, ja kodoniin pariutuu antikodoniltaan sopiva siirtäjä-RNA, joka tuo tietyn aminohapon.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 6,
+     "prompt": "Proteiineissa on vain 20 aminohappoa, mutta erilaisia kodoneita on 64. Selitä, mistä tämä johtuu.",
+     "hints": [
+      "Laske, montako erilaista yhdistelmää saadaan neljästä emäksestä, jos kodonissa on kaksi tai kolme emästä.",
+      "$4^2=16$ ei riitä 20 aminohapolle, joten tarvitaan kolmen emäksen kodoni, ja silloin yhdistelmiä on $4^3=64$. Ylimääräiset kodonit tarkoittavat, että samaa aminohappoa koodaa usein useampi kodoni. Lisäksi kolme kodonia on lopetuskodoneita."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- DNA:ssa ja RNA:ssa on neljä eri emästä. Kolmen emäksen kodoneita voidaan muodostaa $4^3=64$ erilaista.\n- Kahden emäksen kodonilla yhdistelmiä olisi vain $4^2=16$, mikä ei riittäisi 20 aminohapolle. Siksi kodonissa on vähintään kolme emästä.\n- Koska kodoneita on enemmän kuin aminohappoja, samaa aminohappoa koodaa usein useampi kodoni (koodi on degeneroitunut).\n- Samaa aminohappoa koodaavissa kodoneissa kaksi ensimmäistä emästä ovat yleensä samat ja kolmas vaihtelee. Siksi kolmannen emäksen mutaatio ei aina vaihda aminohappoa.\n- Kolme kodonia (DNA:ssa TAA, TAG ja TGA, RNA:ssa UAA, UAG ja UGA) on lopetuskodoneita, jotka eivät koodaa aminohappoa.\n- Koodi voi poiketa hieman eri eliöillä (esim. mitokondrioissa).\n\n**Esimerkkivastaus:** Emäksiä on neljä. Jos kodonissa olisi kaksi emästä, erilaisia yhdistelmiä olisi vain $4^2=16$, mikä ei riittäisi 20 aminohapolle. Kolmen emäksen kodoneita on $4^3=64$, eli enemmän kuin tarvitaan. Siksi useimpia aminohappoja koodaa kaksi tai useampi kodoni, jotka eroavat yleensä vain kolmannen emäksen osalta. Tämä suojaa mutaatioilta, koska kolmannen emäksen vaihtuminen ei aina muuta aminohappoa. Kolme kodoneista ei koodaa aminohappoa ollenkaan, vaan ne ovat lopetuskodoneita, jotka päättävät translaation.",
+     "answer": "$4^3=64$ kodonia; useimpia aminohappoja koodaa useampi kodoni, ja kolme kodonia on lopetuskodoneita",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Selitä kodonitaulukon 4.A avulla, mitä aminohappoketjua lähetti-RNA:n emäsjärjestys AUGAAAGACCCAUAG vastaa. Taulukossa on koodaavan DNA:n kodonit (ks. alkuperäinen aineisto).",
+     "hints": [
+      "Jaa jakso kolmen emäksen kodoneihin alusta alkaen. Taulukko on koodaavan DNA-juosteen mukainen, joten vaihda RNA:n urasiili (U) tymiiniksi (T) ja etsi kodonit sellaisenaan. Älä muunna jaksoa mallijuosteeksi."
+     ],
+     "solution": "1. Lähetti-RNA on rakennettu mallijuosteen mukaan emäspariperiaatteella, joten se vastaa koodaavaa juostetta, jossa tymiinin tilalla on urasiili. Taulukkoa voi siis käyttää vaihtamalla U:n T:ksi.\n2. Jako kodoneihin: AUG | AAA | GAC | CCA | UAG.\n3. AUG (ATG) = **metioniini**, joka on myös aloituskodoni.\n4. AAA koodaa **lysiiniä**.\n5. GAC koodaa **asparagiinihappoa**.\n6. CCA koodaa **proliinia**.\n7. UAG (TAG) = **lopetuskodoni**, joka päättää translaation.\n\n**Vastaus: metioniini – lysiini – asparagiinihappo – proliini, minkä jälkeen translaatio päättyy lopetuskodoniin.**\n\n**Sudenkuoppa:** jos RNA-jakso muunnetaan ensin mallijuosteen emäksiksi ja luetaan vasta sitten koodaavan juosteen taulukosta, saadaan väärät aminohapot.",
+     "answer": "Met – Lys – Asp – Pro – lopetus (AUG aloitus, UAG lopetus)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.4",
+     "points": 3,
+     "prompt": "Tumallisten eliöiden kromosomeissa on DNA:n lisäksi histoneja. Pohdi histonien merkitystä kromosomien rakenteessa.",
+     "hints": [
+      "Mitä histonit ovat kemiallisesti, ja mitä DNA:lle tapahtuu niiden ympärillä? Miksi pakkaaminen on tärkeää jakautumisessa ja geenien säätelyssä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Histonit ovat proteiineja.\n- DNA kiertyy histonien ympärille, jolloin syntyy nukleosomeja.\n- Histonien avulla pitkä DNA-ketju pakkautuu tiiviiksi kromosomeiksi, mikä on välttämätöntä tuman jakautumisessa.\n- Histonit suojaavat DNA:ta vaurioilta.\n- Histonien kemialliset muutokset (esim. asetylaatio ja metylaatio) säätelevät, mitkä geenit ovat luettavissa (epigeneettinen säätely).\n\n**Esimerkkivastaus:** Histonit ovat proteiineja, joiden ympärille DNA-ketju kiertyy kuin lanka rullalle. Näin syntyy helminauhamainen rakenne, jossa jokainen helmi on nukleosomi, ja rakenne kiertyy edelleen yhä tiiviimmäksi. Ilman histoneja solun metrejä pitkä DNA ei mahtuisi tumaan eikä jakautuisi hallitusti. Histonit myös säätelevät geenien toimintaa: kun histoneja muokataan kemiallisesti, DNA voi löystyä luettavaksi tai tiivistyä hiljaiseksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 6,
+     "prompt": "Aineiston 5.A mukaan Mosambikin Gorongosan kansallispuistossa norsukanta pieneni salametsästyksen takia 90 %, ja syöksyhampaattomien naaraiden osuus kasvoi 18,5 %:sta 33 %:iin sodan jälkeen syntyneissä naaraissa. Syöksyhampaattomuus johtuu X-kromosomin dominoivasta mutaatiosta, joka on koirailla letaali. Selitä evoluution näkökulmasta, miten syöksyhampaattomuus yleistyi.",
+     "hints": [
+      "Käytä evoluution peruskäsitteitä: alleelimuuntelu, valinta ja alleelifrekvenssien muutos. Kuka toimi valitsijana?",
+      "Alleeli oli jo populaatiossa ennen sotaa. Salametsästäjät tappoivat syöksyhampaallisia norsuja, joten syöksyhampaattomien naaraiden kelpoisuus oli suurempi: ne selvisivät ja lisääntyivät. Kyse on ihmisen aiheuttamasta suuntaavasta valinnasta ja mikroevoluutiosta, joka oli poikkeuksellisen nopeaa hitaasti lisääntyvälle lajille."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Populaatiossa oli perinnöllistä muuntelua: syöksyhampaattomuuden alleeli oli jo olemassa, mikä mahdollisti sen nopean yleistymisen.\n- Salametsästys aiheutti suuntaavaa valintaa, joka suosi syöksyhampaattomuutta.\n- Valinta oli ihmisen aiheuttamaa, koska salametsästäjät tappoivat syöksyhampaallisia yksilöitä.\n- Syöksyhampaattomien naaraiden kelpoisuus kasvoi, koska ne jäivät henkiin ja saivat poikasia.\n- Muutos näkyi fenotyyppien osuuksissa ja populaation alleelipoolissa eli alleelien runsaussuhteissa.\n- Kyse on mikroevoluutiosta. Norsut lisääntyvät hitaasti, joten muutos oli poikkeuksellisen nopea.\n\n**Esimerkkivastaus:** Syöksyhampaattomuuden aiheuttava alleeli oli populaatiossa jo ennen sotaa, sillä lähes viidennes naaraista oli luonnostaan syöksyhampaattomia. Sisällissodan aikana salametsästäjät tappoivat norsuja niiden norsunluun takia ja valitsivat saaliiksi syöksyhampaallisia yksilöitä. Syöksyhampaattomat naaraat jäivät todennäköisemmin henkiin ja saivat poikasia, joten niiden kelpoisuus oli suurempi kuin syöksyhampaallisten. Kyse oli ihmisen aiheuttamasta suuntaavasta valinnasta. Koska syöksyhampaattomat naaraat siirsivät alleelinsa jälkeläisilleen, alleelin osuus populaation geenipoolissa kasvoi, ja sodan jälkeen syntyneistä naaraista jo kolmannes oli syöksyhampaattomia. Tämä on mikroevoluutiota, joka tapahtui poikkeuksellisen nopeasti, vaikka norsut lisääntyvät hitaasti.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 5,
+     "prompt": "Valitse aineiston 5.B sukupuista A–C se, joka sopii syöksyhampaattomuuden periytymiseen, kun naaras 1 on alleelin suhteen heterotsygootti. Perustele myös, miksi kaksi muuta sukupuuta eivät sovi (ks. alkuperäiset sukupuut, joissa musta symboli ilmentää alleelia).",
+     "hints": [
+      "Käytä kahta aineiston tietoa: alleeli on X-kromosomissa ja dominoiva, ja se on koirailla letaali. Tarkista jokaisesta sukupuusta, onko siinä ilmiasultaan mahdoton yksilö.",
+      "Käy jokainen sukupuu läpi kolmella testillä. 1) Onko siinä mustaksi merkitty koiras? Letaalin alleelin kantajakoiras ei voi olla elossa. 2) Onko naaras 1 musta? Dominoivan alleelin heterotsygootti ilmentää ominaisuuden. 3) Onko siinä musta jälkeläinen, jonka kumpikaan vanhempi ei ole musta? Sukupuu, joka läpäisee kaikki testit, on oikea, ja kahden muun kohdalla perustelu on se testi, johon ne kaatuvat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Periytymistä kuvaa **sukupuu B**.\n- **Sukupuu A** ei sovi, koska siinä on syöksyhampaaton koiras (7). Alleeli on koirailla letaali jo sikiövaiheessa, joten sellaista koirasta ei voisi syntyä.\n- **Sukupuu C** ei sovi, koska alleeli on dominoiva. Heterotsygoottisen naaraan 1 pitäisi olla syöksyhampaaton, mutta sukupuussa se on syöksyhampaallinen. Lisäksi naaras 5 ei voi olla syöksyhampaaton, kun kumpikaan vanhempi ei ilmennä alleelia.\n\n**Esimerkkivastaus:** Oikea sukupuu on B. Sukupuu A ei ole mahdollinen, koska siinä on syöksyhampaaton koiras 7. Koska mutaatio tappaa koiraat jo sikiövaiheessa, syöksyhampaattomia koiraita ei voi syntyä. Sukupuu C ei ole mahdollinen, koska mutaatio on dominoiva: heterotsygoottisen naaraan 1 pitäisi ilmentää sitä, mutta sukupuussa se on syöksyhampaallinen. Samasta syystä naaras 5 ei voisi olla syöksyhampaaton, kun kummallakaan vanhemmalla ei ole alleelia. Sukupuussa B kaikki on johdonmukaista: syöksyhampaattomia ovat vain naaraat, ja jokaisella niistä on syöksyhampaaton äiti.\n\n**Sudenkuoppa:** pelkkä oikean sukupuun valinta tuo vain pisteen. Loput pisteet tulevat siitä, että perustelet, miksi A ja C ovat mahdottomia.",
+     "answer": "sukupuu B",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 4,
+     "prompt": "Miten salametsästyksen aiheuttama syöksyhampaattomuuden yleistyminen (aineisto 5.A) on mahdollisesti muuttanut norsukannan sukupuolijakaumaa ja yksilöiden kelpoisuutta? Pohdi.",
+     "hints": [
+      "Mieti, mitä tapahtuu syöksyhampaattoman naaraan koiraspoikasille, joille alleeli periytyy, ja mitä syöksyhampaattomuus merkitsee norsulle, kun salametsästys loppuu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Koska alleeli on koirailla letaali ja sen kantajia on aiempaa enemmän, koiraita syntyy vähemmän kuin naaraita.\n- Poikasia syntyy kaikkiaan vähemmän, mikä heikentää syöksyhampaattomien naaraiden kelpoisuutta.\n- Jäljelle jääneillä syöksyhampaallisilla koirailla on enemmän kumppaneita, mikä parantaa niiden kelpoisuutta.\n- Norsut tarvitsevat syöksyhampaita ravinnonhankintaan ja puolustukseen, joten syöksyhampaattomien naaraiden kelpoisuus on muuten heikompi.\n- Populaatioon kohdistui siis ristikkäinen valintapaine: salametsästyksen aikana syöksyhampaattomuus oli etu, mutta metsästyksen loputtua siitä ei ole enää hyötyä.\n\n**Esimerkkivastaus:** Koska alleeli tappaa koiraat sikiövaiheessa, syöksyhampaattomien naaraiden koiraspuolisista poikasista osa kuolee ennen syntymää. Kun syöksyhampaattomia naaraita on enemmän, populaatioon syntyy enemmän naaraita kuin koiraita. Tämä vähentää syöksyhampaattomien naaraiden poikasten määrää ja siten niiden kelpoisuutta. Salametsästyksen aikana syöksyhampaattomuus oli silti etu, koska se suojasi naarasta metsästäjiltä. Kun salametsästys loppuu, etu häviää, ja syöksyhampaiden puuttuminen haittaa ravinnonhankintaa ja puolustautumista. Jäljelle jääneet syöksyhampaalliset koiraat taas hyötyvät, koska niillä on paljon kumppaneita.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Aineistossa 6.A on kaksi valokuvaa suomalaisista ekosysteemeistä (1: tunturimaisema poroineen, 2: lehtomainen metsä, jossa on kauris) ja aineistossa 6.B kaksi ilmastodiagrammia (A ja B). Yhdistä kuvat diagrammeihin ja perustele kumpikin yhdistäminen (ks. alkuperäinen aineisto).",
+     "hints": [
+      "Tunnista ensin ekosysteemit ja mieti, millainen ilmasto niille sopii. Vertaa sitten diagrammien talvien pituutta ja lämpötiloja sekä kasvukauden pituutta.",
+      "Diagrammissa B tammikuun keskilämpötila on noin −13 °C ja lämpimimmänkin kuukauden alle 15 °C, ja pakkaskausi kestää noin puoli vuotta. Diagrammissa A talvi on lyhyt ja lauha (keskilämpötilat vain vähän alle nollan) ja kesä lämpimämpi. Kumpi sopii tunturipaljakalle ja kumpi eteläiselle lehdolle?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Kuva 1 – diagrammi B.** Kuvassa on puutonta tunturipaljakkaa ja poroja. Diagrammissa B keskilämpötila on alhainen, talvi pitkä ja kylmä ja kasvukausi lyhyt.\n- **Kuva 2 – diagrammi A.** Kuvassa on metsäkauris ja jalojen lehtipuiden lehto eli eteläinen lehtimetsä. Diagrammissa A talvi on lyhyt ja lauha, kasvukausi pitkä ja vuoden keskilämpötila korkeampi.\n\n**Esimerkkivastaus:** Kuva 1 kuuluu diagrammiin B. Kuvassa on puuton tunturipaljakka ja poroja, eli kyseessä on pohjoinen ekosysteemi. Diagrammissa B keskilämpötila on alle nollan noin puolet vuodesta ja kylmimpänä kuukautena noin −13 °C, joten talvi on pitkä ja kasvukausi lyhyt, mikä estää puiden kasvun tuntureilla. Kuva 2 kuuluu diagrammiin A. Kuvassa on lehtomainen metsä, jossa kasvaa lehtipuita ja jossa elää metsäkauris, joka viihtyy vähälumisessa etelässä. Diagrammissa A talvi on lyhyt ja lauha ja kasvukausi pitkä, mikä sopii eteläiselle lehdolle.\n\n**Sudenkuoppa:** pelkkä oikea yhdistäminen tuo vain yhden pisteen. Loput pisteet tulevat perusteluista, joissa kuvan ekosysteemi tai lajit yhdistetään diagrammin ilmastopiirteisiin.",
+     "answer": "1–B (tunturi), 2–A (lehto)",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 10,
+     "prompt": "Arvioi, kummassa aineiston 6.A ekosysteemissä hajotustoiminta on nopeampaa, ja selitä, miten ympäristötekijät vaikuttavat hajotuksen aktiivisuuteen maaperässä.",
+     "hints": [
+      "Valitse ekosysteemi ja perustele kolmella tekijäryhmällä: ilmasto (lämpötila, talven pituus, kosteus, happi), karikkeen määrä ja laatu sekä hajottajien määrä ja aktiivisuus.",
+      "Lehdossa lämpötila on korkeampi ja talvi lyhyempi, perustuotanto ja karikkeen määrä ovat suurempia, lehtipuiden ja ruohojen karike hajoaa helpommin kuin varpujen, ja ravinteikkaassa maassa on paljon lieroja ja muita hajottajia. Kosteus tai happi ei kummassakaan rajoita hajotusta. Lumi voi eristää maata tunturissa, jolloin hajotus jatkuu hitaasti talvellakin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hajotustoiminta on nopeampaa **ekosysteemissä 2** eli lehdossa.\n- Korkea lämpötila nopeuttaa hajottajien aineenvaihduntaa, ja lehdon vuoden keskilämpötila on korkeampi.\n- Tunturissa talvi on pitkä, ja kylmällä hajotus on hidasta. Lumipeite voi kuitenkin eristää maata niin, että hajotus jatkuu hitaasti talvellakin.\n- Lehdossa perustuotanto on suurempi (puut ja rehevä kasvillisuus), joten hajotettavaa kariketta syntyy enemmän kuin puuttomalla paljakalla.\n- Lehtipuiden ja ruohojen karike hajoaa helpommin kuin varpujen (esim. puolukka, variksenmarja) kova karike.\n- Lehdon ravinteikkaassa maassa on enemmän hajottajia, esimerkiksi lieroja.\n- Lämpimässä vaihtolämpöiset hajottajaeläimet ovat aktiivisia suuremman osan vuodesta.\n- Hajotus tarvitsee kosteutta ja happea. Diagrammien mukaan kumpikaan alue ei ole kuiva, ja toisin kuin soilla, maaperässä on kummassakin happea, joten ne eivät selitä eroa.\n\n**Esimerkkivastaus:** Hajotus on nopeampaa lehdossa (ekosysteemi 2). Tärkein syy on lämpötila: hajottajien entsyymit ja aineenvaihdunta toimivat nopeammin lämpimässä, ja lehdon vuoden keskilämpötila on selvästi tunturia korkeampi. Tunturissa pakkaskausi kestää noin puoli vuotta, jolloin hajotus on hyvin hidasta, vaikka paksu lumi voi pitää maan sulana ja sallia vähäisen hajotuksen. Lehdossa myös kasvillisuus on rehevää, joten kariketta syntyy paljon, ja lehtipuiden lehdet ja ruohot hajoavat helposti, koska niissä on vähän ligniiniä ja paljon typpeä. Tunturin varvuista syntyvä karike on sitkeää ja hajoaa hitaasti. Ravinteikkaassa lehtomaassa elää runsaasti lieroja ja muita hajottajaeläimiä, jotka pilkkovat kariketta sienten ja bakteerien hajotettavaksi, ja ne ovat aktiivisia pitkän kasvukauden ajan. Kosteutta ja happea on molemmissa ekosysteemeissä riittävästi, joten ne eivät selitä eroa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Mikromuovin määrä vesiympäristöissä on viime vuosikymmeninä kasvanut jatkuvasti.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 5,
+     "prompt": "Kerro, mitä mikromuovilla tarkoitetaan ja mitä reittejä se kulkeutuu vesistöihin.",
+     "hints": [
+      "Aloita määritelmästä (kokoraja). Mieti sitten mikromuovin lähteitä kotona, liikenteessä ja luonnossa sekä reittejä vesistöön.",
+      "Lähteitä: kosmetiikan ja hammastahnan muovihelmet, keinokuituvaatteiden pesu, kengänpohjat, autonrenkaiden ja tiemerkintöjen kuluminen, maalit sekä isomman muovin hajoaminen (UV-säteily). Reitit: hule- ja valumavedet sekä jätevedenpuhdistamot."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Mikromuovi on alle 5 mm:n kokoisia muovikappaleita.\n- Osa on peräisin tuotteisiin lisätyistä muovihelmistä (esim. kosmetiikka, kuorintavoiteet, hammastahna).\n- Mikromuovia irtoaa keinokuituvaatteista ja kengänpohjista, liikenteestä (renkaat, asfaltti, tiemerkinnät) ja maaleista.\n- Se kulkeutuu vesistöihin hulevesien ja valumavesien mukana sekä jätevedenpuhdistamoilta.\n- Mikromuovia syntyy myös, kun isommat muovikappaleet hajoavat vedessä, ja UV-säteily nopeuttaa hajoamista.\n\n**Esimerkkivastaus:** Mikromuovilla tarkoitetaan alle viiden millimetrin muovihiukkasia. Osa niistä valmistetaan tarkoituksella pieniksi, kuten kosmetiikan ja kuorintavoiteiden muovihelmet. Suurin osa syntyy kuitenkin kulumalla: keinokuituvaatteista irtoaa kuituja pesussa, autonrenkaista ja tiemerkinnöistä irtoaa hiukkasia tielle, ja maalit ja kengänpohjat kuluvat. Sadevesi huuhtoo hiukkaset hulevesiviemäreihin ja ojiin, ja pesuveden kuidut kulkevat jätevedenpuhdistamoille, jotka eivät pysty poistamaan kaikkia. Lisäksi vesistöihin päätynyt isompi muovijäte hajoaa auringon UV-säteilyn ja aaltojen vaikutuksesta yhä pienemmiksi paloiksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 6,
+     "prompt": "Itämeren tutkijat tarjosivat erikokoisille katkoille (pieniä äyriäisiä, kuva 7.A) luontaisen ravinnon lisäksi mikromuovikappaleita ja laskivat kokeen lopuksi, montako kappaletta kukin katka oli syönyt (taulukko 7.B: kymmenen katkaa, pituus 7–38 mm). Piirrä tuloksista pistediagrammi ja selitä kokeen keskeiset tulokset.",
+     "hints": [
+      "Pistediagrammissa selittävä muuttuja (katkan pituus) on vaaka-akselilla ja selitettävä (syödyt kappaleet) pystyakselilla. Muista akselien nimet, yksiköt, jatkuva asteikko ja otsikko.",
+      "Katso, missä pituudessa katkat alkavat syödä muovia ja miten määrä muuttuu pituuden kasvaessa. Kolme lyhintä katkaa (alle 16 mm) ei syönyt yhtään kappaletta, ja pisimmät söivät 3–4 kappaletta. Pohdi myös otoskoon merkitystä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Diagrammi:** pistediagrammi, jossa vaaka-akselilla katkan pituus (mm) ja pystyakselilla syödyn mikromuovin määrä (kpl). Molemmat akselit on nimetty, ja vaaka-akselin asteikko on jatkuva ja tasavälinen.\n- Diagrammilla on kuvaava otsikko, esim. *Katkan pituuden yhteys syödyn mikromuovin määrään*.\n- **Tulokset:** katkat söivät mikromuovia, mutta vähän (enintään 4 kappaletta yksilöä kohti).\n- Pienimmät katkat (alle noin 16 mm) eivät syöneet mikromuovia lainkaan.\n- Syödyn mikromuovin määrä kasvaa katkan koon kasvaessa (pituuden ja kappalemäärän korrelaatiokerroin on noin 0,93).\n- Otos on pieni (10 katkaa), joten tulokseen voi vaikuttaa sattuma.\n\n**Esimerkkivastaus:** Piirrän taulukkolaskentaohjelmalla pistediagrammin, jonka vaaka-akselilla on katkan pituus millimetreinä ja pystyakselilla syödyn mikromuovin määrä kappaleina, ja annan sille otsikon *Katkan pituuden yhteys syödyn mikromuovin määrään*. Diagrammista näkyy, että katkat söivät mikromuovia, mutta yksittäinen katka söi enintään neljä kappaletta. Alle 16 millimetrin katkat eivät syöneet muovia lainkaan, ja muovin määrä kasvoi katkan pituuden kasvaessa melko säännöllisesti: pisteet asettuvat nousevaan jonoon, ja korrelaatiokerroin on noin 0,93. Suuremmat katkat pystyvät siis syömään suurempia kappaleita tai syövät enemmän. Koska katkoja oli vain kymmenen, tulosta pitäisi varmistaa suuremmalla otoksella.\n\n**Sudenkuoppa:** vaaka-akselin asteikko jää helposti epäjatkuvaksi, jos pituudet syötetään luokkina tai ohjelma käyttää viivadiagrammin tapaan tasavälisiä luokkia. Pistediagrammissa pituusakselin on oltava lukuasteikko.",
+     "answer": "Pistediagrammi (pituus mm – mikromuovi kpl); katkat söivät vähän muovia, pienimmät eivät lainkaan, ja määrä kasvaa koon mukana ($r\\approx 0{,}93$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.3",
+     "points": 4,
+     "prompt": "Pohdi mikromuovin haittoja vesien eliöille ja kokonaisille eliöyhteisöille.",
+     "hints": [
+      "Mieti haittoja kolmella tasolla: yksittäisen eläimen ruoansulatus, muovin mukana kulkevat haitalliset aineet ja ravintoverkko."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Mikromuovi voi häiritä ruoansulatusta tai tukkia suoliston, jolloin eläin saa vähemmän energiaa.\n- Muovissa voi olla haitallisia aineita, kuten pehmentimiä ja hormonitoimintaa häiritseviä aineita, ja siihen voi tarttua ympäristömyrkkyjä vedestä.\n- Haitalliset aineet voivat häiritä vesieliöiden lisääntymistä ja aineenvaihduntaa.\n- Mikromuovi ja sen haitta-aineet kertyvät eliöihin ja rikastuvat ravintoverkossa, joten ne voivat vaikuttaa koko eliöyhteisöön.\n\n**Esimerkkivastaus:** Kun eläin syö mikromuovia, muovi voi täyttää tai tukkia sen suoliston, jolloin se saa vähemmän ravintoa ja energiaa ja sen kasvu ja lisääntyminen heikkenevät. Muovissa on usein lisäaineita, kuten pehmentimiä, jotka voivat häiritä hormonitoimintaa, ja muovin pintaan tarttuu vedestä ympäristömyrkkyjä. Nämä aineet voivat häiritä eläinten lisääntymistä ja aineenvaihduntaa. Koska pienet eläimet, kuten katkat, ovat kalojen ja lintujen ravintoa, mikromuovi ja sen myrkyt kulkeutuvat ravintoverkossa ylöspäin ja rikastuvat petoihin. Näin mikromuovi voi vaikuttaa koko eliöyhteisöön.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 6,
+     "prompt": "Yhdistä aivojen rakenteisiin 8.1.1 aivolisäke, 8.1.2 aivorunko, 8.1.3 hippokampus, 8.1.4 ohimolohko, 8.1.5 pikkuaivot ja 8.1.6 takaraivolohko sopivin kuvaus. Kuvaukset koskevat näköaistimuksen syntyä, liikkeiden hienosäätöä, uusien asioiden muistamista, hormonien eritystä, kuuloimpulssien vastaanottoa ja aivojen yhdistämistä selkäytimeen. Jokaista kuvausta käytetään kerran. 1 p/rakenne.",
+     "hints": [
+      "Mieti jokaisesta rakenteesta, missä se sijaitsee: isoaivojen kuorella, isoaivojen sisällä, aivojen alapinnalla vai aivojen takaosassa.",
+      "Isoaivojen lohkoista takimmainen käsittelee näköä ja ohimon kohdalla oleva kuuloa. Isoaivojen sisällä oleva merihevosen muotoinen rakenne tallentaa uusia muistoja. Aivojen takaosan alla oleva rakenne hienosäätää liikkeitä. Väliaivojen alla roikkuva pieni rauhanen erittää hormoneja, ja aivojen alaosa jatkuu selkäytimeksi."
+     ],
+     "solution": "- **8.1.1 Aivolisäke** – umpirauhanen, joka erittää useita hormoneja (esim. kasvuhormoni, FSH ja LH).\n- **8.1.2 Aivorunko** – yhdistää aivot selkäytimeen. Se säätelee myös elintoimintoja, kuten hengitystä ja sykettä.\n- **8.1.3 Hippokampus** – sijaitsee isoaivojen sisäosassa ja on keskeinen uusien asioiden muistiin painamisessa.\n- **8.1.4 Ohimolohko** – isoaivojen osa, johon kuuloaistin hermoimpulssit tulevat.\n- **8.1.5 Pikkuaivot** – koordinoivat ja hienosäätävät liikkeitä yhdessä liikeaivokuoren kanssa.\n- **8.1.6 Takaraivolohko** – isoaivojen näköaivokuori, jossa näköaistimus muodostuu.",
+     "answer": "aivolisäke – hormonit · aivorunko – yhteys selkäytimeen · hippokampus – uusien asioiden muistaminen · ohimolohko – kuulo · pikkuaivot – liikkeiden hienosäätö · takaraivolohko – näkö",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 9,
+     "prompt": "Ihminen pystyy erottamaan tuhansia makuja. Pohdi, miksi esimerkiksi suklaajäätelö ja hampurilainen tuottavat aivoissa erilaisen makuaistimuksen.",
+     "hints": [
+      "Aloita perusmauista ja siitä, missä makuaistin reseptorisolut ovat ja miten tieto kulkee aivoihin.",
+      "Perusmakuja on viisi (makea, suolainen, hapan, karvas ja umami). Jäätelössä korostuu makea, hampurilaisessa suolainen ja umami. Makusilmujen reseptorisolut reagoivat molekyyleihin ja ioneihin, ja impulssi kulkee hermoja pitkin isoaivoihin. Makuaistimukseen vaikuttavat myös haju, lämpötila, ulkonäkö, rakenne (tuntoaisti) sekä aiemmat kokemukset ja tunteet."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Makuaistimus perustuu viiteen perusmakuun: makea, suolainen, hapan, karvas ja umami.\n- Jäätelön sokeri tuottaa makean maun, hampurilaisessa maistuvat esimerkiksi suola ja lihan umami.\n- Makuaistin reseptorisolut reagoivat ruoan makuaineisiin, jotka voivat olla molekyylejä (sokeri, glutamaatti) tai ioneja (natrium, vetyionit).\n- Reseptorisolut ovat makusilmuissa, joita on kielen makunystyissä. Kielen eri osien herkkyys voi vaihdella.\n- Reseptorisolussa syntyy impulssi, joka kulkee hermoja pitkin isoaivoihin, missä aistimus syntyy.\n- Makuaistimukseen vaikuttavat myös haju, ruoan lämpötila (kylmä jäätelö vs. lämmin hampurilainen), ulkonäkö ja väri sekä suussa tuntoaistilla aistittava rakenne.\n- Aiemmat kokemukset ja tunteisiin liittyvä limbinen järjestelmä muokkaavat aistimusta.\n\n**Esimerkkivastaus:** Makuaistin perustana on viisi perusmakua: makea, suolainen, hapan, karvas ja umami. Kielen makunystyjen makusilmuissa on reseptorisoluja, jotka reagoivat eri makuaineisiin. Suklaajäätelön sokeri aktivoi makeaa aistivia soluja, kun taas hampurilaisen suola ja lihan glutamaatti aktivoivat suolaista ja umamia aistivia soluja. Reseptorisoluissa syntyy hermoimpulsseja, jotka kulkevat aivohermoja pitkin isoaivojen makuaivokuorelle, jossa aistimus muodostuu eri perusmakujen yhdistelmästä. Suuri osa maun vivahteista tulee kuitenkin hajuaistista: ruoan tuoksumolekyylit kulkevat suusta nenäonteloon, ja suklaan ja paistetun lihan tuoksu ovat hyvin erilaisia. Lisäksi aivot yhdistävät makuun lämpötilan, rakenteen ja ulkonäön: jäätelö on kylmää ja pehmeää, hampurilainen lämmin ja rapea. Aiemmat kokemukset ja tunteet vaikuttavat myös siihen, miltä ruoka tuntuu.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Maapallolla on ollut useita joukkosukupuuttoja. Yksi tapahtui liitukauden lopussa noin 66 miljoonaa vuotta sitten, ja nyt on käynnissä niin sanottu kuudes joukkosukupuutto.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 10,
+     "prompt": "Liitukauden lopun joukkosukupuutossa noin 66 miljoonaa vuotta sitten hävisi suurin osa lajeista. Pohdi, millaiset ympäristön tekijät ja eliöiden piirteet ratkaisivat sen, että osa eläinryhmistä, kuten dinosaurukset, kuoli sukupuuttoon, ja osa, kuten nykyisten nisäkkäiden kantamuodot, selvisi. Voit käyttää aineistoja 9.A–9.C (teksti asteroiditörmäyksen seurauksista ja kuvat).",
+     "hints": [
+      "Kuvaa ensin, millaiset olot törmäys aiheutti (palot, kuumuus, tsunamit, pöly, pimeys ja kylmyys, ravinnon romahdus). Pohdi sitten, millaiset ominaisuudet auttoivat kestämään näitä oloja ja millaiset haittasivat. Täysiin pisteisiin tarvitaan sekä katoamisen että selviytymisen syitä.",
+      "Haavoittuvia olivat suuret maaeläimet: ne eivät löytäneet suojaa eivätkä riittävästi ravintoa, niitä oli vähän ja ne lisääntyivät hitaasti. Selviytymistä auttoivat pieni koko ja suojaan kaivautuminen, tasalämpöisyys kylmenevässä ilmastossa, kyky syödä raatoja ja kariketta, hidas aineenvaihdunta (vähän ravintoa) ja vesiympäristö. Myös sijainti ja sattuma vaikuttivat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Sukupuutolle alttiimpia olivat suurikokoiset maaeläimet, joiden oli vaikea löytää suojaa ja riittävästi ravintoa törmäyksen jälkeen.\n- Suurikokoisia lajeja on yleensä vähän yksilöitä ja ne lisääntyvät hitaasti, joten ne eivät pysty korvaamaan menetyksiä yhtä nopeasti kuin pienet lajit.\n- Sattumalla oli merkitystä: törmäyskohdan lähellä eläneet lajit tuhoutuivat koosta ja elintavoista riippumatta.\n- Liitukauden nisäkkäät olivat pieniä ja pystyivät hakeutumaan suojaan esimerkiksi maakoloihin.\n- Nisäkkäät olivat tasalämpöisiä, joten ne selvisivät paremmin, kun ilmasto kylmeni äkillisesti (impaktitalvi).\n- Kuollutta orgaanista ainesta oli runsaasti, joten raatoja ja hajoavaa ainesta syövät eläimet pärjäsivät.\n- Matelijat ja sammakkoeläimet ovat vaihtolämpöisiä, ja niiden hitaasta aineenvaihdunnasta oli hyötyä, koska ne tulivat toimeen vähemmällä ravinnolla.\n- Vesiympäristöt suojasivat katastrofin vaikutuksilta paremmin kuin kuiva maa.\n\n**Esimerkkivastaus:** Asteroidin törmäys aiheutti ensin iskuaaltoja, maailmanlaajuisia paloja, äkillistä kuumuutta ja tsunameja, ja sen jälkeen ilmakehään noussut pöly ja noki pimensivät taivaan. Fotosynteesi romahti ja ilmasto kylmeni pitkäksi aikaa, joten ravintoketjut hajosivat tuottajista alkaen. Suurikokoiset maaeläimet, kuten dinosaurukset, eivät löytäneet suojaa palojen ja kuumuuden aikana, ja niiden suuri ravinnontarve jäi tyydyttämättä, kun kasvillisuus kuoli. Suurten lajien populaatiot olivat myös pieniä ja ne lisääntyivät hitaasti, joten ne eivät toipuneet menetyksistä. Nisäkkäiden kantamuodot sen sijaan olivat pieniä eläimiä, jotka pystyivät piiloutumaan maakoloihin ja selviytymään vähällä ravinnolla. Tasalämpöisinä ne pysyivät aktiivisina kylmässäkin, ja monet niistä söivät hyönteisiä, siemeniä tai raatoja, joita katastrofin jälkeen riitti. Myös vedessä elävät lajit ja vaihtolämpöiset eläimet, joiden aineenvaihdunta on hidas, selvisivät usein. Lopulta myös sattuma vaikutti: törmäyksen lähialueilla lähes kaikki tuhoutui koosta riippumatta.\n\n**Sudenkuoppa:** jos vastaus käsittelee vain sitä, miksi dinosaurukset kuolivat, täysiä pisteitä ei saa. Mukaan tarvitaan myös syyt, miksi nisäkkäät ja muut ryhmät selvisivät.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 10,
+     "prompt": "Arvioi, mitkä piirteet ovat tyypillisiä nykyiselle kuudennelle sukupuuttoaallolle. Käytä apuna aineistoja 9.D (tutkimus selkärankaisten kantojen ja levinneisyyden pienenemisestä viiden vuosisadan aikana) ja 9.E (kuvaaja nisäkkäiden, lintujen, matelijoiden ja kalojen sukupuuttojen kasvusta vuodesta 1500).",
+     "hints": [
+      "Vertaa nykyistä sukupuuttoaaltoa liitukauden sukupuuttoon: mikä on samaa (millaiset lajit häviävät) ja mikä erilaista (syy ja nopeus)? Lue kuvaajasta, mitkä ryhmät häviävät nopeimmin ja milloin häviäminen kiihtyy.",
+      "Samaa: suuret, hitaasti lisääntyvät, erikoistuneet ja suppean levinneisyyden lajit häviävät. Erilaista: syy on ihminen, suoraan (metsästys, ylikalastus, elinympäristöjen tuhoaminen) ja epäsuorasti (ilmastonmuutos, ympäristömyrkyt, pirstoutuminen, vieraslajit ja taudit). Kuvaajan mukaan häviäminen on kiihtynyt 1800-luvulta alkaen kaikissa ryhmissä, eniten nisäkkäillä ja linnuilla."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kuten liitukauden lopussa, alttiimpia ovat suurikokoiset ja hitaasti lisääntyvät lajit.\n- Häviämiselle alttiita ovat myös elinympäristönsä ja ravintonsa suhteen erikoistuneet lajit ja lajit, joiden levinneisyysalue on suppea.\n- Aineiston 9.E mukaan sukupuuttonopeus on kiihtynyt kaikissa selkärankaisryhmissä viimeisen sadan vuoden aikana.\n- Nisäkkäitä ja lintuja kuolee sukupuuttoon nopeammin kuin matelijoita ja kaloja.\n- Toisin kuin liitukaudella, nykyinen sukupuuttoaalto on ihmisen aiheuttama.\n- Suoria syitä ovat metsästys ja vaino, ylikalastus ja elinympäristöjen tuhoaminen.\n- Epäsuoria syitä ovat ilmastonmuutos ja ympäristömyrkyt.\n- Elinympäristöt pirstoutuvat, eivätkä eläimet pääse asutuksen ja teiden takia siirtymään uusille, paremmille alueille.\n- Ihmisen mukana leviävät vieraslajit ja taudinaiheuttajat hävittävät alkuperäislajeja.\n- Parhaiten pärjäävät lajit, jotka tulevat toimeen ihmisen lähellä ja ihmisen muokkaamissa ympäristöissä.\n\n**Esimerkkivastaus:** Nykyinen sukupuuttoaalto muistuttaa liitukauden sukupuuttoa siinä, että eniten kärsivät suurikokoiset ja hitaasti lisääntyvät lajit sekä lajit, jotka ovat erikoistuneet tiettyyn elinympäristöön tai ravintoon tai joiden levinneisyysalue on pieni. Aineiston 9.D leijona on esimerkki suuresta pedosta, jonka levinneisyys ja kanta ovat romahtaneet. Kuvaajan 9.E mukaan sukupuutot ovat kiihtyneet selvästi 1800-luvulta alkaen, ja nisäkkäitä ja lintuja on hävinnyt suhteellisesti eniten, noin kaksi prosenttia lajeista, kun taas kalojen häviäminen alkoi kiihtyä vasta 1900-luvulla. Suurin ero liitukauteen on syy: nyt sukupuutot aiheuttaa ihminen. Suoraan ihminen hävittää lajeja metsästämällä, kalastamalla liikaa ja raivaamalla elinympäristöjä pelloiksi ja kaupungeiksi. Epäsuorasti vaikuttavat ilmastonmuutos, ympäristömyrkyt ja elinympäristöjen pirstoutuminen, joka estää lajeja siirtymästä sopivammille alueille. Lisäksi ihminen levittää vieraslajeja ja tauteja. Parhaiten selviävät lajit, jotka sopeutuvat ihmisen muokkaamaan ympäristöön.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Lihaskudoksia tarvitaan esimerkiksi raajojen liikuttamiseen, verenkierron ylläpitoon ja ruoan kuljettamiseen suolistossa.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 9,
+     "prompt": "Vertaa kolmea lihaskudostyyppiä (sileä lihas, poikkijuovainen luustolihas ja sydänlihas) ja kuvaile kunkin tunnusomaiset piirteet.",
+     "hints": [
+      "Vertaa kolmea kudosta samoilla mittareilla: solujen muoto ja koko, tumien määrä, juovaisuus, tahdonalaisuus ja säätely, väsyminen sekä sijainti elimistössä.",
+      "Sileä: sukkulamaiset, yksitumaiset solut, tahdosta riippumaton, autonomisen hermoston ja hormonien säätelemä, hidas ja väsymätön, sisäelimissä ja verisuonissa. Luustolihas: pitkät lieriömäiset monitumaiset solut, sarkomeerien juovat, tahdonalainen, väsyy nopeasti, kiinni luissa. Sydänlihas: haaroittuneet poikkijuovaiset solut, yleensä yksitumaiset, tahdosta riippumaton, väsymätön, vain sydämessä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Sileä lihaskudos:** solut ovat lyhyitä, sukkulamaisia ja yksitumaisia.\n- Sen toiminta on tahdosta riippumatonta, ja sitä säätelevät autonominen hermosto ja hormonit. Se supistuu hitaasti eikä juuri väsy.\n- Sitä on esimerkiksi verisuonten seinämissä, ruoansulatuskanavassa, virtsarakossa ja -teissä, sukuelimissä, silmässä ja karvankohottajalihaksissa. Se ei kiinnity luihin.\n- **Poikkijuovainen luustolihaskudos:** solut ovat suuria, pitkiä, lieriömäisiä ja monitumaisia.\n- Säännöllisesti järjestäytyneet sarkomeerit tekevät siitä juovaisen näköistä.\n- Se supistuu tahdonalaisesti ja nopeasti, mutta väsyy nopeasti. Se kiinnittyy yleensä luihin.\n- **Sydänlihaskudos:** sitä on vain sydämessä.\n- Sen solut ovat poikkijuovaisia, haaroittuneita ja yleensä yksitumaisia (myös kaksitumaisiksi kuvataan).\n- Sen toiminta on tahdosta riippumatonta, autonomisen hermoston ja hormonien säätelemää, ja se työskentelee väsymättä.\n\n**Esimerkkivastaus:** Sileän lihaskudoksen solut ovat pieniä, sukkulan muotoisia ja yksitumaisia, eikä niissä näy juovia. Sileä lihas supistuu hitaasti ja väsymättä ilman tahdonalaista ohjausta autonomisen hermoston ja hormonien säätelemänä. Sitä on onttojen elinten, kuten suoliston, verisuonten ja virtsarakon, seinämissä. Luustolihaksen solut ovat pitkiä, lieriömäisiä lihassyitä, joissa on monta tumaa, ja niiden sarkomeerit näkyvät poikittaisina juovina. Luustolihakset kiinnittyvät jänteillä luihin, niitä liikutetaan tahdonalaisesti, ja ne supistuvat nopeasti ja voimakkaasti mutta väsyvät. Sydänlihaskudosta on vain sydämessä. Sen solut ovat poikkijuovaisia mutta haaroittuneita ja yleensä yksitumaisia, ja ne liittyvät toisiinsa niin, että supistus leviää nopeasti koko sydämeen. Sydänlihas toimii tahdosta riippumatta ja väsymättä koko elämän ajan.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 9,
+     "prompt": "Selitä luustolihassolun supistumisen tapahtumat solun tasolla. Apuna voi käyttää kuvaa 10.A lihassolun rakenteesta (ks. alkuperäinen aineisto).",
+     "hints": [
+      "Etene syy-seurausketjuna hermoimpulssista koko lihaksen lyhenemiseen: hermo-lihasliitos, kalsium, aktiini ja myosiini, ATP ja sarkomeeri.",
+      "Liikehermosolun viejähaarakkeen päätteessä vapautuu asetyylikoliinia, joka käynnistää lihassolussa impulssin. Solun sisäisistä varastoista vapautuu kalsiumia, jonka ansiosta myosiini voi tarttua aktiiniin ja vetää sitä ATP:n energialla. Säikeet liukuvat lomittain, sarkomeerit lyhenevät ja lihas supistuu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Liikehermosolun (motorisen hermoston) viejähaarakkeen impulssi saapuu hermo-lihasliitokseen eli synapsiin.\n- Liitoksen välittäjäaine on asetyylikoliini, joka käynnistää lihassolussa sähköisen impulssin.\n- Aktiini ja myosiini ovat proteiineja, jotka muodostavat lihassolun sarkomeerit.\n- Impulssi saa lihassolun sisäiset varastot vapauttamaan kalsiumioneja.\n- Kalsiumin ansiosta myosiinin päät voivat tarttua aktiinisäikeisiin ja vetää niitä, jolloin säikeet liukuvat toistensa lomaan.\n- Liukumiseen kuluu ATP:n energiaa.\n- Sarkomeerit lyhenevät, joten lihassolu ja lopulta koko lihas lyhenee eli supistuu.\n\n**Esimerkkivastaus:** Supistus alkaa, kun liikehermosolun viejähaarakkeen hermoimpulssi saapuu hermo-lihasliitokseen. Hermopääte vapauttaa asetyylikoliinia, joka sitoutuu lihassolun kalvon reseptoreihin ja käynnistää lihassolussa impulssin. Impulssi saa solulimakalvoston kalsiumvarastot vapauttamaan kalsiumioneja lihassolun sisään. Kalsium paljastaa aktiinisäikeiden sitoutumiskohdat, joihin myosiinisäikeiden päät tarttuvat. Myosiinin päät kääntyvät ja vetävät aktiinisäikeitä kohti sarkomeerin keskustaa, irrottautuvat ja tarttuvat uudelleen, ja jokaiseen vetoon kuluu ATP:tä. Kun aktiini- ja myosiinisäikeet liukuvat lomittain, sarkomeerit lyhenevät. Koska lihassolussa on tuhansia peräkkäisiä sarkomeerejä, koko lihassolu lyhenee, ja kun monet lihassolut supistuvat, koko lihas supistuu.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 2,
+     "prompt": "Luustolihaksen supistus voi olla täydellinen tai osittainen. Pohdi, mihin osittainen supistus perustuu.",
+     "hints": [
+      "Yksittäinen lihassolu supistuu joko kokonaan tai ei ollenkaan. Mitä aivot silloin säätelevät, kun lihasta supistetaan vain vähän?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Yksittäinen luustolihassolu noudattaa kaikki tai ei mitään -periaatetta: se joko supistuu täysin tai ei lainkaan.\n- Aivot säätelevät, kuinka suuri osa lihaksen soluista (motorisista yksiköistä) aktivoidaan.\n- Aktivoitujen solujen määrä ratkaisee, kuinka voimakkaasti koko lihas supistuu. Vastavaikuttajalihas voi lisäksi rajoittaa supistusta.\n\n**Esimerkkivastaus:** Yksittäinen lihassolu supistuu aina täysin, kun se saa riittävän ärsykkeen. Osittainen supistus syntyy siitä, että aivot aktivoivat vain osan lihaksen motorisista yksiköistä. Mitä useampia lihassoluja supistuu, sitä voimakkaammin koko lihas supistuu, ja vastavaikuttajalihas voi lisäksi jarruttaa liikettä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Hyvä joulukuusi on tuuhea ja tiheäoksainen, mutta metsänviljelyn taimet on jalostettu harvaoksaisiksi sahapuiksi. Luonnonvarakeskuksessa etsitään keinoja tuottaa valmiiksi tuuheita joulukuusia (aineisto 11.A).",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Aineistossa 11.A (uutinen) kerrotaan, miten Luonnonvarakeskus etsii täydellistä joulukuusta: luonnosta löydettyjä tuuheaoksaisia yksilöitä on lisätty varttamalla, pistokkaina ja nyt solukkoviljelyllä. Arvioi, ovatko seuraavat väitteet oikein vai väärin: 11.1.1 kauniiden luonnonyksilöiden lisääminen joulukuusiksi on valintajalostusta; 11.1.2 kuusten leikkaaminen tuuheiksi on valintajalostusta; 11.1.3 harvaoksaiset sahapuukuuset ovat esimerkki heteroosista; 11.1.4 kuusen lisääminen solukkoviljelmässä on geenitekniikkaa. 1 p/kohta.",
+     "hints": [
+      "Mieti kunkin käsitteen määritelmä: valintajalostus muuttaa seuraavan sukupolven perimää valitsemalla lisättävät yksilöt, heteroosi on risteymän elinvoimaisuutta, ja geenitekniikassa perimää muokataan suoraan. Muuttaako kukin toimenpide perimää?"
+     ],
+     "solution": "- **11.1.1 Oikein.** Kun luonnosta valitaan kauneimmat yksilöt lisättäviksi, kyse on valintajalostuksesta: haluttu ominaisuus valitaan jatkoon.\n- **11.1.2 Väärin.** Leikkaaminen muuttaa vain kyseisen puun muotoa, ei perimää, joten se ei ole jalostusta.\n- **11.1.3 Väärin.** Heteroosi tarkoittaa risteymän parempaa elinvoimaa. Harvaoksaiset sahapuukuuset ovat valintajalostuksen tulos.\n- **11.1.4 Väärin.** Solukkoviljely on kasvullista lisäämistä, joka tuottaa klooneja. Perimää ei muokata, joten se ei ole geenitekniikkaa.",
+     "answer": "11.1.1 oikein · 11.1.2 väärin · 11.1.3 väärin · 11.1.4 väärin",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 5,
+     "prompt": "Pohdi, miksi tutkijat lisäsivät luonnosta löydettyä tuuheaoksaista kuusta solukkoviljelyllä eivätkä kasvattaneet uusia puita sen siemenistä.",
+     "hints": [
+      "Vertaa jälkeläisten perimää: mitä solukkoviljelyssä syntyy ja mistä siemenen perimä tulee?",
+      "Solukkoviljely tuottaa klooneja, joilla on sama perimä ja siten sama tuuheaoksaisuus. Siemenet syntyvät ristipölytyksessä (kuusi on tuulipölytteinen), joten puolet niiden geeneistä on tuntemattomalta isäpuulta, eikä tuuheaoksaisuus välttämättä periydy."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Solukkoviljely tuottaa klooneja eli geneettisesti identtisiä yksilöitä.\n- Kaikki kloonit ilmentävät emopuun haluttua ominaisuutta.\n- Siemenet syntyvät ristipölytyksessä, joten puolet siemenen geeneistä tulee toiselta puulta.\n- Kuusi on tuulipölytteinen, mikä tehostaa ristipölytystä, eikä isäpuuta voi tietää.\n- Siksi siemenestä kasvavat puut eivät välttämättä ole tuuheaoksaisia.\n\n**Esimerkkivastaus:** Solukkoviljelyssä emopuun soluista kasvatetaan uusia kasveja, jotka ovat emopuun klooneja eli perimältään täsmälleen samanlaisia, joten ne kaikki ovat yhtä tuuheaoksaisia kuin emopuu. Siemen taas syntyy suvullisesti: kuusi on tuulipölytteinen, ja siemenen isä on jokin tuntematon kuusi, jolta tulee puolet siemenen perimästä. Siemenistä kasvavat puut ovat siksi erilaisia, ja vain osa niistä olisi tuuheaoksaisia. Solukkoviljelyllä haluttu ominaisuus saadaan varmasti talteen.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 3,
+     "prompt": "Solukkoviljelmää kasvatettiin alustalla, jossa oli ravinteita, glukoosia ja kasvihormoneja. Selitä kunkin aineen merkitys.",
+     "hints": [
+      "Mieti kustakin aineesta, mihin jakautuva ja erilaistuva kasvisolu sitä tarvitsee: rakennusaineeksi, energiaksi vai ohjaukseen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Ravinteet:** jakautuvat solut tarvitsevat niitä uuden biomassan rakentamiseen (esim. typpi proteiineihin ja fosfori nukleiinihappoihin).\n- **Glukoosi:** jakautuvien solujen energianlähde ja hiilen lähde orgaanisten molekyylien rakentamiseen, koska viljelmä ei yhteytä riittävästi.\n- **Kasvihormonit:** ohjaavat erilaistumattomat solut jakautumaan ja erilaistumaan juuriksi, varreksi ja lehdiksi, jolloin syntyy kokonainen kasvi.\n\n**Esimerkkivastaus:** Ravinteista solut rakentavat uutta solukkoa, esimerkiksi typestä proteiineja ja fosforista nukleiinihappoja. Glukoosi on solujen energian ja hiilen lähde, koska erilaistumaton solukko ei pysty yhteyttämään. Kasvihormonit, kuten auksiinit ja sytokiniinit, saavat solut ensin jakautumaan ja sitten erilaistumaan versoiksi ja juuriksi, jolloin solukosta kehittyy kokonainen taimi.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 8,
+     "prompt": "Kuvaile, miten tuuheaoksaisia joulukuusia voitaisiin kehittää haploidijalostuksella.",
+     "hints": [
+      "Aloita haploidista lähtömateriaalista: mistä kuusen soluista saadaan haploideja kasveja? Mieti, mitä hyötyä on siitä, että jokaista geeniä on vain yksi kopio.",
+      "Siitepölyhiukkaset kasvatetaan alustalla, ja kasvihormonien avulla niistä kehittyy haploideja alkioita ja taimia. Koska jokaista geeniä on vain yksi alleeli, kaikki alleelit ilmenevät ja tuuheaoksaiset voidaan valita. Kromosomisto kaksinkertaistetaan kolkisiinilla, joka estää tumasukkulan muodostumisen, jolloin saadaan diploideja ja täysin homotsygoottisia puita."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Haploidijalostuksessa kuusen siitepölyhiukkasia kasvatetaan kasvatusalustalla. Siitepölyhiukkaset ovat haploideja.\n- Kasvihormonien avulla alustalle erilaistuu alkioita, joista kasvaa haploideja taimia.\n- Haploidissa yksilössä jokaista geeniä on vain yksi kopio, joten kaikki alleelit, myös resessiiviset, ilmenevät.\n- Taimista valitaan ne, jotka ilmentävät tuuheaoksaisuutta.\n- Valittujen yksilöiden kromosomisto kaksinkertaistetaan kolkisiinilla.\n- Kolkisiini estää tumasukkulan muodostumisen, joten kromosomit eivät erkane ja solusta tulee diploidi.\n- Syntyvät diploidit yksilöt ovat kaikkien alleeliparien suhteen homotsygoottisia, joten ne periyttävät tuuheaoksaisuuden varmasti.\n\n**Esimerkkivastaus:** Haploidijalostus alkaa kuusen siitepölystä, sillä siitepölyhiukkaset syntyvät meioosissa ja ovat siksi haploideja. Siitepölyhiukkaset kasvatetaan steriilillä alustalla, ja kasvihormonien avulla niistä saadaan erilaistumaan alkioita ja lopulta haploideja taimia. Koska haploidissa taimessa on jokaisesta geenistä vain yksi alleeli, resessiivinenkään alleeli ei piiloudu, vaan taimen ilmiasu kertoo suoraan sen perimästä. Taimista valitaan ne, joissa tuuheaoksaisuus ilmenee. Valittujen taimien kromosomisto kaksinkertaistetaan kolkisiinilla, joka estää tumasukkulan muodostumisen, jolloin kahdentuneet kromosomit jäävät samaan soluun. Näin syntyy diploideja kuusia, jotka ovat kaikkien geenien suhteen homotsygoottisia. Ne siirtävät tuuheaoksaisuuden alleelit varmasti jälkeläisilleen, ja niitä voidaan käyttää jalostuksen emopuina.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

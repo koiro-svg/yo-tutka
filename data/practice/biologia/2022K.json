@@ -1,0 +1,416 @@
+{
+ "subject": "biologia",
+ "session": "2022K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2022/Kevat/2022-03-30_BI_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-03-30_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p)."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Neljä yhdistelysarjaa (1.1–1.4), joissa jokaisessa on viisi 1 pisteen kohtaa. Väärästä vastauksesta ei vähennetä pisteitä.",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 5,
+     "prompt": "Aikajanalle on merkitty numerot 1–5 (ks. alkuperäisen tehtävän kuva). Sijoita aikajanalle viisi tapahtumaa: dinosaurusten sukupuutto, ensimmäiset monisoluiset eliöt, ensimmäiset kalat, fotosynteesin synty ja neandertalinihmisen sukupuutto. 1 p/kohta.",
+     "hints": [
+      "Aikajanan numerot etenevät ajassa vanhimmasta uusimpaan. Järjestä tapahtumat ensin aikajärjestykseen.",
+      "Suuruusluokat: fotosynteesi yli 3 miljardia vuotta sitten, monisoluiset noin miljardi vuotta sitten, kalat kambrikaudella noin 500 miljoonaa vuotta sitten, dinosaurukset kuolivat 66 miljoonaa vuotta sitten ja neandertalinihminen noin 40 000 vuotta sitten."
+     ],
+     "solution": "Tapahtumat aikajärjestyksessä:\n\n- **Fotosynteesin kehittyminen → 1.** Syanobakteerien kaltaiset eliöt yhteyttivät jo yli 3 miljardia vuotta sitten.\n- **Ensimmäiset monisoluiset → 2.** Monisoluisuus yleistyi aitotumallisilla noin miljardi vuotta sitten.\n- **Ensimmäiset kalat → 3.** Leuattomat kalat ilmestyivät kambrikaudella noin 500 miljoonaa vuotta sitten.\n- **Dinosaurusten sukupuutto → 4.** Liitukauden lopussa noin 66 miljoonaa vuotta sitten.\n- **Neandertalinihmisen sukupuutto → 5.** Noin 40 000 vuotta sitten.\n\n**Sudenkuoppa:** monisoluisuus ja kalat menevät helposti sekaisin. Kalat ovat jo pitkälle kehittyneitä monisoluisia selkäjänteisiä, joten monisoluisuuden täytyy olla paljon varhaisempi.",
+     "answer": "1.1.1 4 · 1.1.2 2 · 1.1.3 3 · 1.1.4 1 · 1.1.5 5",
+     "check": "hvp"
+    },
+    {
+     "id": "1.2",
+     "points": 5,
+     "prompt": "Sukupuussa periytyy autosomaalinen resessiivinen sairaus: musta symboli on sairas, valkoinen oireeton (ks. alkuperäisen tehtävän sukupuu). Valitse jokaiselle henkilölle 1–5 pudotusvalikosta se vaihtoehto, joka sisältää kaikki hänen mahdolliset genotyyppinsä (vaihtoehdoissa on yksi, kaksi tai kaikki kolme genotyyppiä $AA$, $Aa$ ja $aa$). 1 p/henkilö.",
+     "hints": [
+      "Sairas on aina $aa$. Oireeton on $AA$ tai $Aa$, ja hän on varmasti $Aa$, jos hänellä on sairas vanhempi tai sairas lapsi.",
+      "Etsi jokaiselle henkilölle vihje sukupuusta: onko hänen puolisonsa, vanhempansa tai lapsensa sairas? Henkilö 4:n isä on sairas. Henkilö 2:n puoliso ja poika ovat sairaita. Henkilöiden 1 ja 3 kohdalla varmaa kantajaa ei voi osoittaa."
+     ],
+     "solution": "Kirjain viittaa pudotusvalikon järjestykseen (A = vain AA, B = vain Aa, C = vain aa, D = Aa tai aa, E = AA tai Aa, F = AA, Aa tai aa).\n\n- **Henkilö 1: E (AA tai Aa).** Hänen poikansa on kantaja, koska pojan ja henkilö 4:n tytär on sairas. Alleeli $a$ voi kuitenkin tulla yhtä hyvin henkilö 1:n puolisolta, joten henkilö 1 voi olla $AA$ tai $Aa$.\n- **Henkilö 2: B (vain Aa).** Hän on oireeton, ja hänellä on sairaan puolison kanssa sairas poika ($aa$). Pojan toinen $a$-alleeli on tullut häneltä.\n- **Henkilö 3: E (AA tai Aa).** Hän on oireeton, ja hänen vanhemmistaan ainakin toinen on kantaja. Häneltä ei tunneta lapsia, joten kumpikin genotyyppi on mahdollinen.\n- **Henkilö 4: B (vain Aa).** Hänen isänsä on sairas ($aa$), joten hän on saanut isältään alleelin $a$. Lisäksi hänellä on sairas tytär.\n- **Henkilö 5: C (vain aa).** Hän sairastaa resessiivistä tautia.\n\n**Sudenkuoppa:** oireettoman henkilön genotyypiksi ei voi valita vaihtoehtoa, jossa on mukana $aa$.",
+     "answer": "henkilö 1: AA tai Aa · henkilö 2: vain Aa · henkilö 3: AA tai Aa · henkilö 4: vain Aa · henkilö 5: vain aa",
+     "check": "hvp"
+    },
+    {
+     "id": "1.3",
+     "points": 5,
+     "prompt": "Nimeä ihmisen sisäelinkuvaan nuolilla merkityt rakenteet 1–5 annetusta luettelosta (keuhko, maksa, munuainen, kilpirauhanen, virtsarakko, mahalaukku, ohutsuoli, kateenkorva, paksusuoli, umpilisäke). Ks. alkuperäinen kuva. 1 p/rakenne.",
+     "hints": [
+      "Käy kuva läpi ylhäältä alas: kaula, rintaontelo, ylävatsa ja alavatsa. Mieti, mitkä luettelon elimistä sijaitsevat missäkin.",
+      "Kaulan etupuolella on perhosen muotoinen umpirauhanen. Rintaontelossa ovat hengityselimet. Ylävatsassa oikealla on kehon suurin sisäelin ja vasemmalla ruoansulatuskanavan pussimainen laajentuma. Vatsaontelon reunoja kiertää kehyksen tavoin suolen loppuosa."
+     ],
+     "solution": "1. **kilpirauhanen** – kaulan etuosassa henkitorven edessä\n2. **keuhko** – rintaontelossa sydämen molemmin puolin\n3. **maksa** – ylävatsan oikealla puolella pallean alla, kehon suurin sisäelin\n4. **mahalaukku** – ylävatsan vasemmalla puolella\n5. **paksusuoli** – kiertää vatsaontelossa ohutsuolen ympärillä\n\n**Vastaus: 1 kilpirauhanen, 2 keuhko, 3 maksa, 4 mahalaukku, 5 paksusuoli**",
+     "answer": "1 kilpirauhanen · 2 keuhko · 3 maksa · 4 mahalaukku · 5 paksusuoli",
+     "check": "hvp"
+    },
+    {
+     "id": "1.4",
+     "points": 5,
+     "prompt": "Yhdistä viisi kuvausta biotekniikan käsitteisiin (vaihtoehdot: PCR-laite, koetin, DNA-siru, bioreaktori, geenipyssy, biopankki, elektroforeesilaite). Kuvaukset: 1.4.1 laite, joka erottelee esimerkiksi proteiineja tai nukleiinihappoja; 1.4.2 DNA:n monistaminen; 1.4.3 mikrobien kasvatus tuotantoa varten; 1.4.4 geenien vieminen soluun; 1.4.5 DNA-paloja sisältävä levy esimerkiksi tautien tunnistukseen. 1 p/kohta.",
+     "hints": [
+      "Mieti jokaisen laitteen toimintaperiaate: mikä erottelee, mikä monistaa, mikä kasvattaa, mikä siirtää ja mikä tunnistaa.",
+      "Erottelu perustuu molekyylien kulkuun geelissä sähkökentässä. Monistus tapahtuu lämpötilasykleissä. Mikrobit kasvavat säädellyissä oloissa suuressa säiliössä. Geenit voidaan ampua soluun metallihiukkasten pinnalla. Tuhansia DNA-koettimia on kiinnitetty pienelle alustalle. Biopankki ja koetin jäävät yli."
+     ],
+     "solution": "- **1.4.1 elektroforeesilaite** – sähkökenttä kuljettaa molekyylejä geelissä, ja pienet kulkevat nopeammin, joten molekyylit erottuvat koon mukaan.\n- **1.4.2 PCR-laite** – polymeraasiketjureaktio monistaa valitun DNA-jakson toistuvissa lämpötilasykleissä.\n- **1.4.3 bioreaktori** – säiliö, jossa lämpötila, pH, happi ja ravinteet pidetään mikrobeille sopivina, jotta ne tuottavat esimerkiksi lääkeainetta tai entsyymiä.\n- **1.4.4 geenipyssy** – ampuu DNA:lla päällystettyjä kulta- tai volframihiukkasia soluihin, usein kasvisoluihin.\n- **1.4.5 DNA-siru** – pieni alusta, jolle on kiinnitetty tunnettuja DNA-jaksoja. Siihen tarttuvasta näyte-DNA:sta voidaan tunnistaa esimerkiksi tautiin liittyviä geenimuotoja.",
+     "answer": "1.4.1 elektroforeesilaite · 1.4.2 PCR-laite · 1.4.3 bioreaktori · 1.4.4 geenipyssy · 1.4.5 DNA-siru",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 4,
+     "prompt": "Nimeä DNA:n rakennekuvaan merkityt osat 1–4 (ks. alkuperäisen tehtävän kuva 2.A).",
+     "hints": [
+      "DNA:n rakennusosa on nukleotidi, jossa on kolme osaa. Kuvan numerot osoittavat nukleotidin kolmea osaa ja lisäksi koko nukleotidia."
+     ],
+     "solution": "1. **fosfaatti** eli fosfaattiryhmä (juosteen runko)\n2. **sokeri** eli deoksiriboosi\n3. **emäs** (kuvassa guaniini tai sytosiini)\n4. **nukleotidi** eli fosfaatti, sokeri ja emäs yhdessä\n\n**Vastaus: 1 fosfaatti, 2 deoksiriboosi, 3 emäs, 4 nukleotidi**",
+     "answer": "1 fosfaatti · 2 deoksiriboosi · 3 emäs · 4 nukleotidi",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 4,
+     "prompt": "DNA:ssa on kaksi juostetta. Selitä lyhyesti, mikä merkitys juosteilla on proteiinisynteesissä ja DNA:n kahdentumisessa.",
+     "hints": [
+      "Proteiinisynteesissä juosteilla on eri roolit (mallijuoste ja koodaava juoste). Kahdentumisessa kumpikin juoste toimii mallina uudelle juosteelle."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Proteiinisynteesi:** toinen juoste on mallijuoste (−-juoste) ja toinen koodaava juoste (+-juoste).\n- Transkriptiossa vain mallijuoste luetaan: sen emäsjärjestys kopioidaan emäspariperiaatteella lähetti-RNA:ksi, joka vastaa koodaavan juosteen järjestystä.\n- **Kahdentuminen:** kaksoiskierre avautuu, ja kummankin juosteen rinnalle rakennetaan uusi juoste emäspariperiaatteen mukaisesti.\n- Toinen uusi juoste syntyy yhtenäisenä, toinen lyhyinä paloina, jotka liitetään toisiinsa (juosteet ovat vastakkaissuuntaiset).\n\n**Esimerkkivastaus:** Proteiinisynteesissä DNA:n juosteet eivät ole samanarvoisia: RNA-polymeraasi lukee vain mallijuostetta ja rakentaa sen emäksille vastakkaiset RNA-nukleotidit. Syntyvä lähetti-RNA vastaa siis koodaavan juosteen emäsjärjestystä. Kahdentumisessa kierre avautuu ja kumpikin juoste toimii mallina, jolle DNA-polymeraasi rakentaa uuden juosteen. Toinen uusi juoste valmistuu yhtenäisenä, toinen paloina, koska juosteet ovat vastakkaissuuntaiset.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 7,
+     "prompt": "Selitä, miten yhdestä geenistä voi syntyä proteiinisynteesissä useita erilaisia proteiineja. Voit käyttää apuna kuvaa 2.B (ks. alkuperäinen aineisto).",
+     "hints": [
+      "Avainkäsite on vaihtoehtoinen silmukointi. Aloita siitä, mitä transkriptiossa syntyy ja mistä osista se koostuu.",
+      "Esiaste-RNA:ssa on eksoneita (kuvassa värilliset) ja introneita (harmaat). Silmukoinnissa intronien lisäksi osa eksoneista voidaan jättää pois, jolloin samasta esiaste-RNA:sta syntyy erilaisia lähetti-RNA:ita ja niistä translaatiossa erilaisia proteiineja."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Useat proteiinit syntyvät yhdestä geenistä **vaihtoehtoisen silmukoinnin** avulla.\n- Transkriptiossa syntyy tumassa esiaste-RNA, jossa on eksoneita (kuvassa värilliset jaksot) ja introneita (harmaat jaksot).\n- Silmukointi tapahtuu tumassa: intronit poistetaan ja eksonit liitetään toisiinsa.\n- Vaihtoehtoisessa silmukoinnissa myös yksi tai useampi eksoni voidaan jättää pois, joten samasta esiaste-RNA:sta syntyy erilaisia lähetti-RNA-molekyylejä.\n- Translaatiossa erilaiset lähetti-RNA:t tuottavat proteiineja, joista osa rakenteesta puuttuu tai on erilainen (kuvassa kolme versiota).\n- Proteiinien rakenne ja siksi toiminta eroavat toisistaan.\n- Lisäksi proteiinia voidaan muokata translaation jälkeen, esimerkiksi katkaisemalla aminohappoketju (insuliini).\n\n**Esimerkkivastaus:** Geenistä syntyy transkriptiossa ensin esiaste-RNA, jossa on sekä eksoneita että introneita. Ennen kuin RNA lähtee tumasta, se silmukoidaan: intronit leikataan pois ja eksonit liitetään yhteen. Silmukointi ei aina tapahdu samalla tavalla, vaan eri soluissa tai eri tilanteissa osa eksoneista voidaan jättää pois. Näin samasta esiaste-RNA:sta saadaan useita erilaisia lähetti-RNA:ita, kuten kuvan kolme versiota. Ribosomit kääntävät kunkin lähetti-RNA:n omaksi proteiinikseen, joten proteiineissa on eri osia ja niiden toiminta voi erota. Lisäksi valmista aminohappoketjua voidaan muokata translaation jälkeen, esimerkiksi insuliini syntyy, kun esiasteesta katkaistaan pala pois.\n\n**Sudenkuoppa:** pelkkä maininta intronien poistosta ei selitä useita proteiineja, koska intronit poistetaan joka kerta. Olennaista on, että myös eksoneita voidaan valikoida.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 9,
+     "prompt": "Selitä, mitä tarkoittavat kromosomistomutaatio, kromosomimutaatio ja pistemutaatio (geenimutaatio), ja anna jokaisesta esimerkki.",
+     "hints": [
+      "Mutaatiotyypit eroavat siinä, kuinka suuri osa perimästä muuttuu: koko kromosomien määrä, kromosomin rakenne vai yksittäinen emäspari. Jokaisesta tarvitaan määritelmä, esimerkin nimi ja esimerkin selitys.",
+      "Esimerkkejä: kromosomisto – trisomia 21 (Downin oireyhtymä), Turnerin oireyhtymä (X0) tai polyploidia kasveilla. Kromosomi – häviämä, kahdentuma, kääntymä tai siirtymä. Piste – emäksen vaihtuminen (sirppisoluanemia), nonsense-mutaatio tai lukukehyksen siirtymä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Kromosomistomutaatio:** kromosomien lukumäärä muuttuu, joko yksittäisten kromosomien (aneuploidia) tai kokonaisten kromosomistojen (polyploidia) osalta.\n- Esimerkki: Downin oireyhtymä (trisomia 21), jossa kromosomia 21 on kolme kappaletta, koska vastinkromosomit eivät erkaantuneet meioosissa. Muita: Turnerin oireyhtymä (X0, monosomia) tai viljelykasvien polyploidia.\n- **Kromosomimutaatio:** kromosomi katkeaa ja sen rakenne muuttuu, jolloin geenien määrä, järjestys tai paikka muuttuu.\n- Esimerkki: häviämä (kromosomista puuttuu pala, esim. osa lihassurkastumataudeista), kahdentuma (pala toistuu kahdesti), kääntymä (pala kääntyy ympäri) tai siirtymä (kaksi eri kromosomia vaihtaa paloja).\n- **Pistemutaatio:** DNA:n yksi emäspari vaihtuu toiseksi, tai jaksoon tulee tai siitä häviää yksi tai muutama emäspari.\n- Esimerkki: sirppisoluanemiassa yksi emäsvaihdos vaihtaa hemoglobiinin yhden aminohapon (missense). Nonsense-mutaatio tuottaa ennenaikaisen lopetuskodonin (esim. osa kystisen fibroosin mutaatioista). Emäksen lisäys tai poisto siirtää lukukehystä. Neutraali mutaatio ei muuta aminohappoa.\n\n**Esimerkkivastaus:** Kromosomistomutaatiossa kromosomien määrä muuttuu. Esimerkiksi Downin oireyhtymässä kromosomia 21 on kolme kappaletta, koska vastinkromosomit eivät erkaantuneet meioosissa ja sukusoluun jäi ylimääräinen kromosomi. Kromosomimutaatiossa kromosomi katkeaa ja sen rakenne muuttuu. Esimerkiksi häviämässä kromosomista puuttuu pala, jolloin palan geenit puuttuvat. Pistemutaatio koskee yksittäistä emäsparia: emäs voi vaihtua toiseen tai jaksoon voi tulla tai siitä voi hävitä emäksiä. Sirppisoluanemiassa yksi emäsvaihdos muuttaa hemoglobiinin yhden aminohapon, jolloin punasolut muuttuvat sirpin muotoisiksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 6,
+     "prompt": "Miten yksilön mutaatiot vaikuttavat sen kelpoisuuteen, ja mitä se merkitsee evoluutiolle? Tarkastele.",
+     "hints": [
+      "Määrittele kelpoisuus ja erottele, missä soluissa tapahtuneet mutaatiot periytyvät.",
+      "Mutaation vaikutus voi olla haitallinen, neutraali tai hyödyllinen. Luonnonvalinta suosii kelpoisuutta parantavia mutaatioita. Mieti myös, milloin mutaatio ei vaikuta evoluutioon (somaattinen solu, mutaatio lisääntymisiän jälkeen) ja miksi polyploidia on kasveilla tärkeää."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kelpoisuus on yksilön kyky selvitä lisääntymisikään ja tuottaa lisääntymiskykyisiä jälkeläisiä.\n- Suvullisesti lisääntyvillä vain sukusoluihin johtavan solulinjan mutaatiot periytyvät ja voivat vaikuttaa jälkeläisten kelpoisuuteen ja evoluutioon. Suvuttomassa lisääntymisessä myös somaattiset mutaatiot voivat periytyä.\n- Lisääntymisiän jälkeen tapahtuvat mutaatiot eivät vaikuta jälkeläisten kelpoisuuteen.\n- Kelpoisuutta parantavaa mutaatiota luonnonvalinta suosii, jolloin se yleistyy ja edistää sopeutumista.\n- Haitallinen mutaatio heikentää kelpoisuutta (esim. sairaus), ja esimerkiksi aneuploidiset tai triploidiset yksilöt ovat usein steriilejä. Monet mutaatiot ovat neutraaleja.\n- Säätelygeenien mutaatiot voivat muuttaa monia ominaisuuksia kerralla ja nopeuttaa evoluutiota.\n- Kasveilla polyploidia voi parantaa sopeutumista vaativiin oloihin, ja lajiristeymä voi muuttua polyploidian ansiosta lisääntymiskykyiseksi.\n\n**Esimerkkivastaus:** Kelpoisuus kuvaa sitä, kuinka hyvin yksilö selviää ja saa lisääntymiskykyisiä jälkeläisiä. Mutaatio vaikuttaa evoluutioon vain, jos se periytyy, eli suvullisilla eliöillä sen on tapahduttava sukusoluihin johtavassa solulinjassa. Useimmat mutaatiot ovat neutraaleja, koska ne eivät muuta proteiinia. Haitallinen mutaatio, esimerkiksi perinnöllisen sairauden aiheuttava, heikentää kelpoisuutta, ja luonnonvalinta karsii sitä. Harvinainen hyödyllinen mutaatio parantaa kelpoisuutta, jolloin sen kantajat saavat enemmän jälkeläisiä ja alleeli yleistyy populaatiossa. Mutaatiot ovat siis uuden perinnöllisen muuntelun lähde, jota luonnonvalinta käyttää. Suuri vaikutus voi olla säätelygeenien mutaatioilla ja kasveilla polyploidialla, joka voi synnyttää kokonaan uuden lajin.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 8,
+     "prompt": "Kestävä kehitys tähtää siihen, että nykyisillä ja tulevilla sukupolvilla on hyvät elinmahdollisuudet, ja se jaetaan neljään ulottuvuuteen. Selitä lyhyesti taloudellinen, sosiaalinen, ekologinen ja kulttuurinen kestävyys.",
+     "hints": [
+      "Käsittele kaikki neljä ulottuvuutta, sillä täysiin pisteisiin tarvitaan jokainen. Mieti kustakin, mitä sen pitää turvata pitkällä aikavälillä.",
+      "Taloudellinen: tasapainoinen kasvu ilman velkaantumista, resurssitehokkuus ja kiertotalous. Sosiaalinen: tasa-arvo, terveys ja koulutus. Ekologinen: ekosysteemien toimivuus, monimuotoisuus ja luonnonvarojen kestävä käyttö sekä varovaisuusperiaate. Kulttuurinen: kielten, uskontojen ja tapojen säilyminen ja siirtyminen sukupolvelta toiselle."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Taloudellinen kestävyys:** talous kasvaa tasapainoisesti eikä nojaa pitkällä aikavälillä velkaan. Se perustuu uusiutuviin luonnonvaroihin tai uusiutumattomien säästeliääseen käyttöön, resurssi- ja materiaalitehokkuuteen ja kiertotalouteen. Sitä voi tarkastella yhteiskunnan, yritysten ja kuluttajien tasolla.\n- **Sosiaalinen kestävyys:** ihmiset ovat yhdenvertaisia ja tasa-arvoisia, ja kaikkien terveydestä ja turvallisuudesta huolehditaan. Maailmanlaajuisia haasteita ovat väestönkasvu, köyhyys, ruokaturva ja koulutus.\n- **Ekologinen kestävyys:** ekosysteemien toiminta ja luonnon monimuotoisuus säilyvät, ja uusiutuvia luonnonvaroja käytetään vain niiden uusiutumiskyvyn rajoissa.\n- Ekologiseen kestävyyteen kuuluu varovaisuusperiaate: ympäristönsuojelua ei lykätä siksi, että tieteellinen näyttö on vielä puutteellinen. Haitat pyritään ehkäisemään jo niiden lähteellä.\n- **Kulttuurinen kestävyys:** erilaisten kielellisten, uskonnollisten ja muiden ryhmien tavat ja tarpeet otetaan huomioon, ja jokainen kulttuuri voi säilyttää ajattelu- ja toimintatapansa ja siirtää ne seuraaville sukupolville.\n\n**Esimerkkivastaus:** Taloudellisesti kestävä kasvu ei perustu velkaan tai luonnonvarojen ryöstöön, vaan resurssien tehokkaaseen käyttöön ja kiertotalouteen, jossa materiaalit kiertävät uudelleen. Sosiaalinen kestävyys tarkoittaa, että kaikilla on yhtäläiset mahdollisuudet terveyteen, turvallisuuteen, koulutukseen ja toimeentuloon. Ekologisesti kestävässä toiminnassa ekosysteemit säilyvät toimintakykyisinä ja monimuotoisina, eikä uusiutuvia luonnonvaroja kuluteta nopeammin kuin ne uusiutuvat. Epävarmoissa tilanteissa noudatetaan varovaisuusperiaatetta. Kulttuurinen kestävyys turvaa eri kieli- ja kulttuuriryhmien mahdollisuuden ylläpitää omia tapojaan ja välittää niitä eteenpäin.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 7,
+     "prompt": "Arvioi, miten ilmastonmuutoksen mukanaan tuomat muutokset lämpötiloissa ja sademäärissä vaikuttavat siihen, toteutuuko ekologinen kestävyys.",
+     "hints": [
+      "Pysy tehtävän rajauksessa: käsittele lämpötilan ja sateiden muutoksia ja niiden vaikutusta ekosysteemeihin, monimuotoisuuteen ja luonnonvaroihin. Pisteet tulevat hyvin selitetyistä kohdista.",
+      "Mahdollisia näkökulmia: elinympäristöjen katoaminen ja lajien levinneisyyden siirtyminen (tulokaslajit), jäätiköiden sulaminen ja merenpinnan nousu, meren lämpeneminen ja korallien vaaleneminen, kuivuudet ja tulvat, lumipeitteen väheneminen, muutoksen nopeus suhteessa sopeutumiseen ja hiilinielujen muutos."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kasvuolot muuttuvat, ja monien lajien elinympäristöt kutistuvat tai katoavat.\n- Lajien levinneisyysalueet siirtyvät pohjoiseen ja ylemmäs. Tulokaslajit kilpailevat alkuperäislajien kanssa, ja lajimäärä voi vähentyä.\n- Jäätiköiden sulaminen nostaa merenpintaa ja uhkaa herkkiä rannikkoekosysteemejä.\n- Meriveden lämpeneminen aiheuttaa esimerkiksi koralliriuttojen vaalenemista.\n- Sään ääri-ilmiöt, kuten kuivuus ja rankkasateiden tulvat, lisääntyvät ja vahingoittavat laajoja alueita.\n- Lumipeite vähenee, mikä uhkaa kylmään ja lumeen sopeutuneita lajeja erityisesti arktisilla alueilla ja vuoristoissa.\n- Muutos voi olla nopeampi kuin lajien kyky sopeutua tai siirtyä.\n- Lämpötilan ja sateiden muutokset voivat heikentää tai parantaa ekosysteemien kykyä sitoa hiiltä, mikä vaikuttaa myös luonnonvarojen kestävään käyttöön.\n\n**Esimerkkivastaus:** Ilmastonmuutos vaikeuttaa ekologisen kestävyyden toteutumista, koska se muuttaa ekosysteemien perusedellytyksiä nopeammin kuin moni laji ehtii sopeutua. Lämpenemisen myötä lajien levinneisyysalueet siirtyvät pohjoiseen, jolloin eteläiset tulokkaat kilpailevat alkuperäislajien kanssa ja pohjoisimmat lajit menettävät elinympäristöään. Lumipeitteen väheneminen uhkaa esimerkiksi talvella valkoisiksi vaihtuvia eläimiä. Jäätiköiden sulaminen nostaa merenpintaa ja hävittää rannikon elinympäristöjä, ja lämpenevä merivesi vaalentaa koralliriuttoja, jotka ovat monimuotoisuuden keskittymiä. Muuttuvat sademäärät tuovat toisille alueille kuivuutta ja metsäpaloja, toisille tulvia. Kaikki tämä vähentää monimuotoisuutta ja voi heikentää metsien kykyä sitoa hiiltä, mikä tekee luonnonvarojen kestävästä käytöstä vaikeampaa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 10,
+     "prompt": "ATP on solujen energia-aineenvaihdunnan keskeinen yhdiste. Tarkastele, mistä ATP:n energia saadaan kolmessa solussa: eläimen lihassolussa, kasvin juuren solussa ja kasvin lehden perussolukon (viherhiukkasellisessa) solussa.",
+     "hints": [
+      "Mieti jokaisesta solusta kaksi asiaa: mistä energia on alun perin peräisin ja millä prosessilla ATP muodostuu. Kaikki kolme solua tekevät soluhengitystä, mutta vain yksi niistä voi yhteyttää.",
+      "Lihassolu: ravinnon glukoosi → glykolyysi, sitruunahappokierto ja elektroninsiirtoketju mitokondriossa. Hapettomissa oloissa maitohappokäyminen. Juuren solu: lehdistä nilaa pitkin tuleva sokeri → soluhengitys (ei viherhiukkasia). Lehden solu: valoreaktioiden protonigradientti ja ATP-syntaasi sekä lisäksi soluhengitys."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Lihassolu:** energia on peräisin ravinnosta. ATP:tä tuottaa soluhengitys.\n- Glykolyysissä syntyy vähän ATP:tä. Suurin osa syntyy mitokondrioissa sitruunahappokierron ja elektroninsiirtoketjun avulla.\n- Hapettomissa oloissa maitohappokäyminen ylläpitää glykolyysiä, jolloin ATP:tä syntyy edelleen jonkin verran.\n- **Juuren solu:** siinä ei ole lehtivihreää, joten se saa sokerinsa yhteyttävistä soluista nilaa pitkin.\n- Sokeri on peräisin fotosynteesistä, ja juuren solu tuottaa sen avulla ATP:tä soluhengityksellä samoin kuin eläinsolu.\n- **Lehden perussolukon solu:** ATP:tä syntyy fotosynteesin valoreaktioissa.\n- Valon energialla vesi hajotetaan protoneiksi, elektroneiksi ja hapeksi. Tylakoidikalvon elektroninsiirtoketju muodostaa protonigradientin, jonka avulla ATP-syntaasi tekee ATP:tä.\n- Lisäksi lehden solu tuottaa ATP:tä soluhengityksellä, esimerkiksi pimeällä.\n- Hapettomissa oloissa kasvisolu voi ylläpitää glykolyysiä maitohappo- tai etanolikäymisellä.\n\n**Esimerkkivastaus:** Lihassolu saa energiansa ravinnosta, esimerkiksi verestä otetusta glukoosista tai lihaksen omasta glykogeenivarastosta. Glukoosi hajotetaan ensin glykolyysissä, jossa syntyy vähän ATP:tä, ja sen jälkeen mitokondrioissa sitruunahappokierrossa ja elektroninsiirtoketjussa, jossa syntyy suurin osa ATP:stä. Kovassa rasituksessa, kun happea ei riitä, maitohappokäyminen pitää glykolyysin käynnissä. Juuren solussa ei ole viherhiukkasia, joten se saa sokerinsa lehdistä nilaa pitkin. Sokeri on siis fotosynteesin tuotetta, mutta juuren solu muuttaa sen ATP:ksi soluhengityksellä samoin kuin lihassolu. Lehden perussolukon solu tekee ATP:tä fotosynteesin valoreaktioissa: valon energialla vettä hajotetaan, elektroninsiirtoketju pumppaa protoneja tylakoidien sisään ja ATP-syntaasi käyttää protonigradienttia ATP:n tekemiseen. Lisäksi lehden solun mitokondriot tuottavat ATP:tä soluhengityksellä.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 5,
+     "prompt": "Selitä, mihin kohdan 5.1 kolme solua tarvitsevat ATP:tä.",
+     "hints": [
+      "ATP on solun lyhytaikainen energiavarasto. Mieti yhteisiä kulutuskohteita (rakentaminen, kuljetus, jakautuminen) ja kunkin solun erityistehtävää.",
+      "Yhteisiä: biosynteesit (proteiinit, lipidit, DNA), aktiivinen kuljetus ja kalvojännite, solunjakautuminen ja homeostaasi. Erityiset: lihassolussa supistuminen, juuren solussa ravinteiden otto maasta, lehden solussa Calvinin kierron sokerisynteesi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- ATP on kaikissa soluissa solunsisäinen, lyhytaikainen energian varasto ja välittäjä.\n- Sillä rakennetaan molekyylejä: proteiineja, lipidejä ja kasveissa tärkkelystä ja soluseinän aineita (selluloosa, ligniini).\n- ATP:tä kuluu DNA:n kahdentumiseen ja mitoosiin.\n- Sitä tarvitaan aktiiviseen kuljetukseen solukalvon läpi ja kalvojännitteen ylläpitoon sekä yleensä solun sisäisen tasapainon säätelyyn.\n- **Lihassolu:** supistuminen eli liike (aktiini- ja myosiinisäikeet).\n- **Juuren solu:** ravinne-ionien aktiivinen otto maaperästä.\n- **Lehden solu:** fotosynteesin pimeäreaktiot eli sokerin rakentaminen viherhiukkasessa.\n\n**Esimerkkivastaus:** Kaikissa kolmessa solussa ATP toimii lyhytaikaisena energiavarastona, jonka energialla solu rakentaa proteiineja, lipidejä ja muita molekyylejä, kopioi DNA:ta ja jakautuu. Lisäksi ATP:tä kuluu aktiiviseen kuljetukseen, esimerkiksi natrium-kaliumpumppuun, joka ylläpitää kalvojännitettä. Lihassolu käyttää valtaosan ATP:stä supistumiseen, kun myosiini vetää aktiinisäikeitä. Juuren solu tarvitsee ATP:tä ottaakseen maaperästä ravinne-ioneja pitoisuuseroa vastaan. Lehden solu käyttää valoreaktioissa syntyvää ATP:tä Calvinin kierrossa, jossa hiilidioksidista rakennetaan sokeria, ja kasvisolut tarvitsevat ATP:tä myös tärkkelyksen ja soluseinän rakentamiseen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Kalakantoja suojellaan lajikohtaisilla alimmilla pyyntimitoilla, ja alamittaiset kalat on laskettava takaisin veteen. Kuhan valtakunnallinen alin mitta on 42 cm, mutta vesialueen omistaja voi asettaa suuremman. Verkkokalastuksessa saaliskalojen kokoa säätelee verkon solmuväli (aineisto 6.A).",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 3,
+     "prompt": "Järvellä kuhan alin pyyntimitta on nostettu 45 senttiin. Arvioi aineiston 6.B kertymäkäyristä, mikä on pienin verkon solmuväli (40, 45, 50, 55 vai 60 mm), jolla vähintään 75 % saaliskuhista on tätä mittaa pidempiä.",
+     "hints": [
+      "Käyrät ovat kertymäkäyriä: käyrän arvo pituuden 45 cm kohdalla kertoo, kuinka suuri osa saaliista on alle 45-senttisiä. Arvon pitää siis olla enintään 25 %."
+     ],
+     "solution": "1. Vähintään 75 % saaliista pitää olla yli 45 cm, eli alle 45 cm:n kalojen kertymä saa olla enintään 25 %.\n2. Luetaan käyriltä kertymä pituuden 45 cm kohdalla: 40 ja 45 mm:n verkoilla se on selvästi yli 50 %, 50 mm:n verkolla noin 35–40 %, 55 mm:n verkolla noin 20 % ja 60 mm:n verkolla noin 10 %.\n3. Ehto täyttyy 55 ja 60 mm:n verkoilla, ja näistä pienempi on 55 mm.\n\n**Vastaus: 55 mm**\n\n**Sudenkuoppa:** kertymäkäyrältä luetaan pienempien kalojen osuus. Jos 75 % luetaan suoraan käyrältä, päätyy virheellisesti 45 tai 50 mm:n verkkoon.",
+     "answer": "55 mm",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 12,
+     "prompt": "Pohdi, miten alin sallittu pyyntimitta vaikuttaa kuhapopulaatioon ja kalansaaliiseen. Käytä apuna aineistoa 6.C, jossa näkyy kuhien sukupuoli ja sukukypsyys pituusluokittain (ks. alkuperäinen aineisto).",
+     "hints": [
+      "Jäsennä vastaus kolmeen osaan: vaikutus lisääntymiseen, vaikutus saaliiseen ja vaikutus populaation alleelikoostumukseen. Pisteet tulevat hyvin selitetyistä kohdista (2 p/kohta).",
+      "Aineistossa sukukypsiä kaloja alkaa olla vasta 35–40 cm:n pituudesta alkaen, naaraat kypsyvät isompina kuin koiraat, ja suurimmat kalat ovat naaraita. Kalastus on kokoon kohdistuvaa suuntaavaa valintaa: pieni pyyntimitta poistaa nopeakasvuiset ja suurikokoiset yksilöt ja suosii nuorena ja pienenä kypsyviä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Lisääntyminen:** pyyntimitta turvaa sen, että kalat ehtivät kutea ainakin kerran ennen kuin ne joutuvat saaliiksi.\n- Aineiston mukaan koiraat tulevat sukukypsiksi pienempinä kuin naaraat. Liian pieni pyyntimitta poistaa naaraita ennen kuin ne ehtivät kypsyä, ja sukukypsien kalojen sukupuolijakauma vinoutuu.\n- Suurimmat kuhat ovat sukukypsiä naaraita. Isot naaraat tuottavat eniten mätiä ja siten jälkeläisiä, joten niiden säästäminen on populaatiolle tärkeää.\n- **Saalis:** pieni pyyntimitta pienentää kalojen keskikokoa, ja pitkällä aikavälillä saalis pienenee.\n- Nopeasti kasvavat yksilöt jäävät pienellä pyyntimitalla saaliiksi ensimmäisinä, mikä sekin vähentää tulevia saaliita.\n- Kuha on petokala. Jos sen kanta pienenee, särkikalat voivat runsastua, jolloin saaliin taloudellinen arvo laskee.\n- **Alleelikoostumus:** kalastus on kalan kokoon kohdistuvaa keinotekoista, suuntaavaa valintaa.\n- Pienellä pyyntimitalla nopeaa kasvua ja suurta kokoa edistävät alleelit vähenevät populaatiosta.\n- Pitkällä aikavälillä yleistyvät alleelit, joiden kantajat kypsyvät nuorina ja pienikokoisina.\n\n**Esimerkkivastaus:** Alin pyyntimitta suojaa kuhia, joita ei ole vielä ehditty kutea. Aineiston mukaan alle 35-senttiset kuhat ovat kaikki nuoria, ja naaraat tulevat sukukypsiksi isompina kuin koiraat. Jos pyyntimitta on pieni, moni naaras kalastetaan ennen ensimmäistä kutua, ja populaation lisääntyminen heikkenee. Suurimmat kuhat ovat naaraita, ja isot naaraat tuottavat eniten mätiä, joten niiden säästäminen lisää poikasten määrää. Saaliin kannalta pieni pyyntimitta laskee kalojen keskikokoa ja pienentää pitkällä aikavälillä saalista. Kuhan kannan heiketessä myös särkikalat voivat runsastua, jolloin saalis on vähemmän arvokasta. Lisäksi kalastus on suuntaavaa valintaa: kun nopeasti kasvavat ja suuret yksilöt pyydetään pois, niiden alleelit vähenevät ja populaatiossa yleistyvät alleelit, joiden kantajat kasvavat hitaasti ja kypsyvät pieninä. Riittävän suuri pyyntimitta hidastaa tätä kehitystä ja turvaa sekä kalakannan että saaliit.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 6,
+     "prompt": "Nimeä luurankokuvaan merkityt rakenteet 1–6 annetusta luettelosta (reisiluu, solisluu, kyynärluu, lonkkaluu, rintalasta, pohjeluu, olkaluu, häntäluu, sääriluu, lapaluu, istuinluu, värttinäluu). Ks. alkuperäinen kuva. 1 p/rakenne.",
+     "hints": [
+      "Jaa luut alueisiin: hartiarengas ja rintakehä, lantio, yläraaja ja alaraaja. Katso, mihin alueeseen kukin numero osoittaa.",
+      "Hartialla vaakasuora luu kulkee rintalastasta olkapäähän, ja rintakehän keskellä on litteä luu, johon kylkiluut kiinnittyvät. Lantiossa on leveä siipimäinen luu ja sen alaosassa luu, jonka päällä istutaan. Säären luista paksumpi on sisäsyrjällä, ja olkavarressa on yksi pitkä luu."
+     ],
+     "solution": "1. **solisluu** – hartian vaakasuora luu rintalastan ja lapaluun välissä\n2. **rintalasta** – rintakehän etuosan keskellä, kylkiluut kiinnittyvät siihen\n3. **lonkkaluu** – lantion leveä luu\n4. **istuinluu** – lonkkaluun alaosa, jonka varassa istutaan\n5. **sääriluu** – säären luista paksumpi, sisäsyrjällä\n6. **olkaluu** – olkavarren ainoa luu\n\n**Vastaus: 1 solisluu, 2 rintalasta, 3 lonkkaluu, 4 istuinluu, 5 sääriluu, 6 olkaluu**",
+     "answer": "1 solisluu · 2 rintalasta · 3 lonkkaluu · 4 istuinluu · 5 sääriluu · 6 olkaluu",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 9,
+     "prompt": "Selitä, mitä tehtäviä luilla on ihmisen elimistössä.",
+     "hints": [
+      "Luettele tehtäviä eri näkökulmista: rakenne ja suojaus, liike, varastointi ja veren muodostus. Jokainen hyvin selitetty tehtävä tuo pisteitä.",
+      "Muista tuki ja muoto, elinten suojaus (kallo, rintakehä, selkäranka), liike nivelten ja jänteiden kautta, hampaat ja kuuloluut, kivennäisaineiden (kalsium, fosfori, magnesium) varasto, punaisen luuytimen verisolutuotanto ja keltaisen luuytimen rasvavarasto."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Luusto tukee kehoa ja sen osia ja antaa keholle muodon.\n- Luut suojaavat elimiä: kallo aivoja, selkäranka selkäydintä ja rintakehä sydäntä ja keuhkoja.\n- Luut liittyvät toisiinsa nivelillä. Jänteet kiinnittävät lihakset luihin nivelen kummallekin puolelle, jolloin luut toimivat vipuina liikkeessä.\n- Leukaluut kiinnittävät hampaat, joilla ruoka hienonnetaan.\n- Välikorvan kuuloluut välittävät ääntä ja osallistuvat kuuloaistin toimintaan.\n- Luut varastoivat kivennäisaineita, kuten kalsiumia, fosforia ja magnesiumia, ja luovuttavat niitä vereen tarvittaessa.\n- Punaisessa luuytimessä syntyy verisoluja, ja siellä kypsyvät esimerkiksi punasolut ja B-lymfosyytit.\n- Keltaisen luuytimen rasva on energiavarasto.\n\n**Esimerkkivastaus:** Luusto on kehon tukiranka, joka antaa keholle muodon ja kantaa sen painon. Samalla luut suojaavat tärkeitä elimiä: kallo ympäröi aivoja, selkäranka selkäydintä ja rintakehä sydäntä ja keuhkoja. Luut liittyvät toisiinsa nivelillä, ja lihakset kiinnittyvät niihin jänteillä, joten luut toimivat vipuina, joiden avulla liikumme. Leukaluut kiinnittävät hampaat, joilla ruoka pureskellaan, ja välikorvan kuuloluut välittävät äänivärähtelyä sisäkorvaan. Luut ovat myös kalsiumin, fosforin ja magnesiumin varasto, josta elimistö voi säädellä veren kalsiumpitoisuutta. Punaisessa luuytimessä muodostuu puna- ja valkosoluja ja verihiutaleita, ja keltaisen luuytimen rasva toimii energiavarastona.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 10,
+     "prompt": "Selitä, mitä biologinen merkkiaine eli biomarkkeri tarkoittaa. Arvioi, mitkä tekijät tekevät biomarkkerista luotettavan ja käyttökelpoisen.",
+     "hints": [
+      "Aloita määritelmästä ja anna esimerkkejä (verensokeri, verenpaine, CRP, kasvainmerkkiaine). Arvioinnissa mieti, millainen mittari on hyvä sekä lääkärin että potilaan ja yhteiskunnan kannalta.",
+      "Hyvän biomarkkerin ominaisuuksia: spesifisyys (kertoo juuri halutusta asiasta), luotettavat viitearvot, helppo havaita ja mitata, ajallinen tarkkuus (näkyy ajoissa ja riittävän kauan), kivuton näytteenotto, kustannustehokkuus ja laitteiden saatavuus. Mieti myös seulontaa ja omaseurantaa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Määritelmä:** biomarkkeri on mitattava muutos, joka kertoo terveydentilasta tai sen muutoksesta, esimerkiksi verestä määritettävä entsyymi, geenituote tai hormoni.\n- Se voi olla muutos biokemiallisessa prosessissa, molekyylissä (DNA, proteiini) tai rakenteessa, ja se voi ilmaista esimerkiksi puutostilaa tai sairautta.\n- Lääketieteessä biomarkkeri liittyy tiettyyn tautiin tai taudin vaiheeseen. Tavoitteena on löytää sairaus ajoissa ja estää vakavammat muutokset.\n- Uusien biomarkkereiden löytäminen vaatii suuria aineistoja, kuten biopankkeja, ja niiden analysointia bioinformatiikalla.\n- Esimerkkejä: kohonnut paastoverensokeri viittaa alkavaan tyypin 2 diabetekseen, kohonnut verenpaine sydänsairauden riskiin, ja kasvainmerkkiaineilla arvioidaan syövän aggressiivisuutta ja uusiutumista.\n- **Luotettavuus ja käyttökelpoisuus:** hyvä biomarkkeri on spesifinen eli kertoo juuri siitä asiasta, jota halutaan tietää.\n- Sen viitearvot voidaan määrittää luotettavasti, ja se toimii kattavasti eri ihmisillä.\n- Se on helppo havaita ja mitata, ja se näkyy ajoissa ja riittävän pitkään (esim. CRP voi nousta viiveellä).\n- Näytteenotto on tutkittavalle helppoa ja kivutonta.\n- Mittaus on kustannustehokas, ja laitteita on helposti saatavilla. Vakavien ja yleisten sairauksien tutkimisesta voi maksaa enemmän kuin lievien.\n- Spesifisiä biomarkkereita voi käyttää seulonnoissa (esim. papa-koe). Yleiset mittarit, kuten verenpaine ja verensokeri, auttavat ihmistä seuraamaan omaa terveyttään.\n\n**Esimerkkivastaus:** Biomarkkeri on elimistöstä mitattava merkki, joka kertoo terveydentilasta. Se voi olla esimerkiksi veren proteiini, hormoni, entsyymi tai geenimuunnos, tai yksinkertainen mittaus kuten verenpaine. Esimerkiksi kohonnut paastoverensokeri voi paljastaa alkavan diabeteksen, ja kasvainmerkkiaineet kertovat syövästä ja sen uusiutumisesta. Uusia biomarkkereita etsitään analysoimalla suuria biopankkiaineistoja. Hyvä biomarkkeri on ennen kaikkea spesifinen: sen muutos kertoo juuri tutkittavasta sairaudesta eikä synny muista syistä. Sille pitää pystyä määrittämään luotettavat viitearvot, ja muutoksen on näyttävä ajoissa ja riittävän pitkään. Käytännössä biomarkkerin täytyy myös olla helppo mitata esimerkiksi verinäytteestä, eikä näytteenotto saa olla kivulias. Menetelmän pitää olla edullinen ja laitteiden saatavilla, jotta sitä voidaan käyttää laajasti. Silloin sillä voi seuloa väestöä, ja yksinkertaisia mittareita, kuten verenpainetta, voi seurata myös itse.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 5,
+     "prompt": "Vertaile aineistojen 8.A (munasarjasyövän verinäytetesti), 8.B (tulehdusta mittaava CRP) ja 8.C (sydän- ja verisuonitautien ja diabeteksen riskiä ennustavat merkkiaineet) biomarkkereita sairauksien ehkäisyn ja toteamisen kannalta.",
+     "hints": [
+      "Kysy jokaisesta biomarkkerista: kertooko se jo alkaneesta sairaudesta vai riskistä sairastua? Kuinka tarkasti se osoittaa tietyn sairauden?",
+      "Vain 8.C:n merkkiaineet sopivat ehkäisyyn, koska ne ennustavat riskiä ja voivat saada ihmisen muuttamaan elintapojaan. 8.A on tarkin tietyn sairauden toteamisessa, mutta koskee vain naisia. CRP kertoo tulehduksesta yleisesti ja tarvitsee rinnalleen oireet."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Ehkäisy:** vain aineiston 8.C merkkiaineita voi käyttää sairauksien ehkäisyyn, koska ne kertovat riskistä ennen sairastumista. Aineistojen 8.A ja 8.B merkkiaineet osoittavat jo alkanutta sairautta.\n- Sydän- ja verisuonitautien ja diabeteksen riskiin vaikuttavat elintavat, joten riskitieto voi saada ihmisen muuttamaan elintapojaan ja pienentämään riskiään.\n- Munasarjasyövän merkkiaine sopii vain naisille, CRP ja 8.C:n merkkiaineet molemmille sukupuolille.\n- **Toteaminen:** munasarjasyövän merkkiaine on kolmesta spesifisin, koska se erottaa pahanlaatuisen ja hyvänlaatuisen kudoksen tuotteet.\n- CRP kertoo tulehduksesta yleisesti, mutta ei sitä, mikä sairaus on kyseessä. Oireisiin yhdistettynä se varmistaa diagnoosin ja kertoo hoitovasteesta.\n- Aineiston 8.C merkkiaineet eivät osoita sairautta lainkaan, vaan ainoastaan kohonneen riskin.\n\n**Esimerkkivastaus:** Kolme biomarkkeria palvelevat eri tarkoituksia. Aineiston 8.C merkkiaineet ovat ainoat, joita voi käyttää ehkäisyyn: ne eivät osoita sairautta, vaan ennustavat keski-ikäisen riskiä sairastua sydän- ja verisuonitautiin tai diabetekseen. Koska näihin sairauksiin vaikuttavat elintavat, tieto riskistä voi saada ihmisen muuttamaan ruokavaliotaan ja liikuntaansa. Aineistojen 8.A ja 8.B merkkiaineilla todetaan jo alkanut sairaus. Munasarjasyövän merkkiaine on niistä tarkin, koska se erottaa pahanlaatuisen kasvaimen hyvänlaatuisesta, mutta se sopii vain naisille. CRP nousee lähes minkä tahansa tulehduksen yhteydessä, joten se ei yksin kerro sairauden laatua, mutta oireiden kanssa se varmistaa tulehdusdiagnoosin ja auttaa seuraamaan hoidon tehoa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 4,
+     "prompt": "Kuvassa 9.A on neljä käyrää (1–4), jotka kuvaavat metsän muutosta 150 vuoden aikana palon jälkeen (ks. alkuperäinen kuva). Yhdistä käyrät suureisiin: biomassa (A), nettohiilensidonta (B), lajimäärä (C) ja hajoavan aineksen määrä (D). Perusteluja ei tarvita.",
+     "hints": [
+      "Mieti jokaisesta suureesta sen kulku ajassa: kasvaako se tasaisesti kyllästymiseen asti, nouseeko se nopeasti ja laskee lähes nollaan, alkaako se kasvaa vasta viiveellä vai nouseeko se huippuun ja tasaantuu?"
+     ],
+     "solution": "- **A biomassa → 2.** Biomassa kasvaa koko sukkession ajan ja tasaantuu vanhassa metsässä.\n- **B nettohiilensidonta → 1.** Nuori, nopeasti kasvava metsä sitoo eniten hiiltä. Vanhassa metsässä kasvu ja hajotus ovat tasapainossa, ja nettosidonta laskee lähes nollaan.\n- **C lajimäärä → 4.** Lajimäärä on suurimmillaan sukkession keskivaiheilla, kun eri vaiheiden lajit elävät rinnakkain, ja tasaantuu sen jälkeen. Arvostelussa hyväksyttiin myös käyrä 2.\n- **D hajoavan aineksen määrä → 3.** Kuollutta puuta ja kariketta alkaa kertyä vasta, kun puut vanhenevat ja kuolevat, joten käyrä nousee viiveellä.",
+     "answer": "A–2 · B–1 · C–4 (myös 2 hyväksyttiin) · D–3",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 5,
+     "prompt": "Nimeä aineiston 9.B neljä lajia (kuvat 1–4, ks. alkuperäinen aineisto). Kerro myös, mikä tai mitkä niistä ovat tyypillisimpiä sukkession varhaisimmassa vaiheessa. Perusteluja ei tarvita.",
+     "hints": [
+      "Kuvissa on yksi ruohovartinen kasvi, yksi havupuu, yksi pieni liitävä nisäkäs ja yksi kanalintu.",
+      "Varhaisin vaihe on valoisa avoin paloalue, jonka valtaavat nopeasti leviävät ruohot. Havupuu, liitävä nisäkäs ja kanalintu kuuluvat vanhaan metsään. Mainitse varhaiseen vaiheeseen vain yksi laji, sillä useamman lajin nimeämisestä ei saa pistettä."
+     ],
+     "solution": "1. **maitohorsma**\n2. **(metsä)kuusi**\n3. **liito-orava**\n4. **metso**\n\nSukkession varhaisimpaan vaiheeseen kuuluu **maitohorsma**, joka leviää tuulen kuljettamilla siemenillä valoisille ja ravinteikkaille paloalueille. Kuusi, liito-orava ja metso ovat varttuneen ja vanhan metsän lajeja.\n\n**Sudenkuoppa:** jos varhaisen vaiheen lajeiksi luetellaan useita kuvien lajeja, pistettä ei saa.",
+     "answer": "1 maitohorsma · 2 kuusi · 3 liito-orava · 4 metso; varhaisin vaihe: maitohorsma",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 11,
+     "prompt": "Pohdi, miten eliöyhteisö muuttuu vaihe vaiheelta palon jälkeen ja miten ympäristötekijät paloalueella muuttuvat samalla.",
+     "hints": [
+      "Nimeä sukkession vaiheet (esim. pioneeri- eli heinikkovaihe, pensaikko- ja lehtipuuvaihe, sekametsävaihe, kliimaksi- eli havumetsävaihe) ja kuvaa jokaisesta lajisto ja ympäristöolot. Kohtien 9.1 ja 9.2 asioista ei saa uusia pisteitä.",
+      "Tarkastele valoa, lämpötilan ja kosteuden vaihtelua, maaperän ravinteisuutta ja happamuutta. Alussa tuhka tekee maasta vähemmän happaman ja ravinteikkaan, ja olot ovat valoisat, kuumat ja kuivat. Myöhemmin varjostus lisääntyy, olot tasaantuvat ja havupuiden neulaset happamoittavat maata. Lopulta kuolleet puut synnyttävät lahopuuta ja aukkoja, joissa sukkessio alkaa alusta. Anna jokaisesta vaiheesta pari lajiesimerkkiä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Pioneeri- eli heinikkovaihe:** nopeasti kasvavat, tehokkaasti leviävät ja lisääntyvät, valoa vaativat heinät ja ruohot, jotka sietävät kuumuutta ja kuivuutta. Esimerkkejä: heinät, vadelma, harmaaleppä ja palanutta puuta hyödyntävät hyönteiset.\n- Tuhka tekee maasta aluksi vähemmän happaman, ja ravinteita on paljon.\n- **Pensaikko- ja lehtipuuvaihe:** lehtipuiden taimet muodostavat pensaskerroksen. Kasvit kasvavat hitaammin ja sietävät enemmän varjoa, ja puut kilpailevat valosta ja ravinteista. Esimerkkejä: pajut, koivut, jänis ja hirvi.\n- Lämpötilan ja kosteuden vaihtelut tasoittuvat, kun kasvillisuus varjostaa maata.\n- **Sekametsävaihe:** kuusen ja männyn taimista kasvaa puita, lehtipuut paksuuntuvat ja metsään ilmestyy ensimmäisiä kuolleita pystypuita. Esimerkkejä: puolukka ja mustikka.\n- Kenttä- ja pohjakerroksen valo vähenee, ravinteet vähenevät ja maaperä happamoituu.\n- **Kliimaksi- eli havumetsävaihe:** metsä on kerroksellinen, ja varjostus pitää olot kosteina. Valtaan pääsevät hitaasti kasvavat lajit, jotka kestävät varjostusta ja kilpailua. Kuusi tai mänty on syrjäyttänyt useimmat muut puulajit. Esimerkkejä: käävät, kolopesijät ja helmipöllö.\n- Neulaskarike happamoittaa maata. Kuolleet puut lahoavat, ja kaatuneiden puiden kohdalle avautuu aukkoja, joissa sukkessio käynnistyy uudelleen.\n- Lisäansioksi voi pohtia, miten palon voimakkuus, maaperä ja alkuperäinen metsätyyppi vaikuttavat sukkession kulkuun.\n\n**Esimerkkivastaus:** Palon jälkeen maa on avoin, valoisa ja kuuma, ja tuhka on vähentänyt maan happamuutta ja vapauttanut ravinteita. Pioneerivaiheessa alueen valtaavat nopeasti leviävät ja kasvavat valoa vaativat heinät ja ruohot, kuten kastikat ja vadelma, ja palaneesta puusta hyötyvät hyönteiset. Muutaman vuoden kuluttua alkaa pensaikko- ja lehtipuuvaihe: pajut, haavat ja koivut kasvavat nopeasti ja alkavat varjostaa maata. Olot tasaantuvat, ja kasvit kilpailevat valosta ja ravinteista. Alue houkuttelee lehtiä syöviä eläimiä, kuten jäniksiä ja hirviä. Sekametsävaiheessa kuusten ja mäntyjen taimet kasvavat lehtipuiden suojassa puiksi, ja lehtipuiden joukkoon syntyy ensimmäisiä kuolleita pystypuita. Aluskasvillisuus muuttuu varpuvaltaiseksi (mustikka, puolukka), valoa on vähemmän ja maa happamoituu. Kliimaksivaiheessa havupuut vallitsevat, metsä on monikerroksinen ja kostea, ja lajit sietävät varjoa ja kilpailua. Kuolleista puista syntyy lahopuuta, jossa elävät käävät ja jonka koloissa pesivät esimerkiksi helmipöllöt. Kun vanhoja puita kaatuu, syntyy aukkoja, joissa sukkessio alkaa uudelleen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Kierron aikana hormonipitoisuudet ja kohdun limakalvon paksuus vaihtelevat (ks. alkuperäinen aineisto 10.A).",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 8,
+     "prompt": "Kuvassa 10.A on kuukautiskierron aikaiset hormonipitoisuudet (hormonit 1–4) ja kohdun limakalvon paksuus (ks. alkuperäinen kuva). Nimeä hormonit 1–4 ja kerro, missä kutakin erittyy.",
+     "hints": [
+      "Kierrossa on kaksi aivolisäkkeen hormonia ja kaksi munasarjan hormonia. Mieti, kumpi aivolisäkkeen hormoneista nousee piikkinä kierron puolivälissä ja kumpi munasarjan hormoneista on korkeimmillaan ovulaation jälkeen.",
+      "Hormonit 1 ja 2 ovat aivolisäkkeen etulohkon follikkelia stimuloiva hormoni ja luteinisoiva hormoni. Hormonit 3 ja 4 ovat munarakkulan tuottama hormoni ja keltarauhasen tuottama hormoni."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Hormoni 1: FSH** (follikkelia stimuloiva hormoni) – aivolisäkkeen etulohko.\n- **Hormoni 2: LH** (luteinisoiva hormoni) – aivolisäkkeen etulohko.\n- **Hormoni 3: estrogeeni** – munasarjat, kypsyvä munarakkula.\n- **Hormoni 4: progesteroni** (keltarauhashormoni) – keltarauhanen munasarjassa (raskauden aikana myös istukka).\n\n**Esimerkkivastaus:** Hormoni 1 on FSH ja hormoni 2 LH. Molempia erittää aivolisäkkeen etulohko, ja LH:n pitoisuus nousee jyrkäksi piikiksi kierron puolivälissä. Hormoni 3 on estrogeeni, jota erittää munasarjassa kasvava munarakkula, ja se on korkeimmillaan juuri ennen ovulaatiota. Hormoni 4 on progesteroni, jota erittää ovulaation jälkeen munasarjaan syntyvä keltarauhanen. Raskauden aikana progesteronia tuottaa myös istukka.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 8,
+     "prompt": "Selitä, miten hormonit 1–4 (FSH, LH, estrogeeni ja progesteroni) ohjaavat kuukautiskierron kulkua.",
+     "hints": [
+      "Etene kierron järjestyksessä: munarakkulavaihe, ovulaatio, keltarauhasvaihe ja kuukautiset. Kerro jokaisessa vaiheessa, mikä hormoni vaikuttaa mihin.",
+      "FSH kypsyttää munarakkulaa, joka erittää estrogeenia. Estrogeeni kasvattaa kohdun limakalvoa ja laukaisee LH-piikin, joka aiheuttaa ovulaation. Munarakkulasta tulee keltarauhanen, joka erittää progesteronia ja estrogeenia. Jos hedelmöitystä ei tapahdu, hormonit laskevat ja limakalvo irtoaa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- FSH saa munasolun kypsymään munarakkulassa ja lisää munarakkulan estrogeenin eritystä.\n- Estrogeeni kasvattaa kohdun limakalvoa ja tekee kohdunkaulan limasta siittiöille läpäisevämpää.\n- Kun estrogeenin pitoisuus kasvaa suureksi, aivolisäke erittää nopeasti paljon LH:ta (LH-piikki).\n- LH-piikki laukaisee ovulaation, jossa munasolu irtoaa munarakkulasta.\n- Ovulaation jälkeen tyhjä munarakkula muuttuu keltarauhaseksi, joka erittää progesteronia ja estrogeenia.\n- Progesteroni ja estrogeeni valmistavat kohdun limakalvon mahdollista raskautta varten (limakalvo paksuuntuu ja verisuonittuu).\n- Jos hedelmöitystä ei tapahdu, keltarauhanen surkastuu, hormonipitoisuudet laskevat ja limakalvo irtoaa kuukautisvuotona. Silloin FSH:n eritys voi taas kasvaa ja uusi kierto alkaa.\n\n**Esimerkkivastaus:** Kierron alussa aivolisäkkeen FSH saa munasarjassa munarakkulan kasvamaan ja munasolun kypsymään. Kasvava munarakkula erittää estrogeenia, joka paksuntaa kohdun limakalvoa ja muuttaa kohdunkaulan liman siittiöille sopivaksi. Kun estrogeenia on paljon, aivolisäke vastaa siihen erittämällä suuren määrän LH:ta. Tämä LH-piikki saa munarakkulan puhkeamaan, ja munasolu vapautuu munanjohtimeen (ovulaatio). Munarakkulan jäänteestä muodostuu keltarauhanen, joka erittää progesteronia ja estrogeenia. Ne pitävät limakalvon paksuna ja ravinteikkaana alkion kiinnittymistä varten ja estävät samalla FSH:n ja LH:n eritystä. Jos munasolu ei hedelmöity, keltarauhanen surkastuu noin kahdessa viikossa, progesteroni ja estrogeeni vähenevät ja limakalvo irtoaa kuukautisvuotona. Hormonien väheneminen vapauttaa FSH:n erityksen, ja kierto alkaa alusta.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Kuvaile hormonitoiminnan muutokset tilanteessa, jossa munasolu on hedelmöittynyt ja raskaus on alkanut.",
+     "hints": [
+      "Mikä hormoni kertoo keltarauhaselle, että raskaus on alkanut, ja mitä keltarauhanen silloin tekee? Muista myös istukan rooli ja aivolisäkkeen hormonit."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kohtuun kiinnittynyt alkio alkaa tuottaa istukkahormonia eli koriongonadotropiinia (hCG), ja istukka jatkaa sen eritystä.\n- hCG pitää keltarauhasen toiminnassa.\n- Keltarauhanen jatkaa estrogeenin ja progesteronin tuotantoa, joten kohdun limakalvo säilyy eikä kuukautisia tule.\n- Myöhemmin istukka kehittyy niin pitkälle, että se tuottaa itse progesteronia ja ylläpitää raskautta.\n- FSH:n ja LH:n pitoisuudet pysyvät pieninä, joten uusia munasoluja ei kypsy.\n\n**Esimerkkivastaus:** Kun hedelmöittynyt munasolu on kiinnittynyt kohdun limakalvoon, alkio ja myöhemmin istukka alkavat erittää hCG-hormonia. Se estää keltarauhasta surkastumasta, joten keltarauhanen jatkaa estrogeenin ja progesteronin eritystä, ja kohdun limakalvo säilyy. Muutaman kuukauden kuluttua istukka tuottaa itse riittävästi progesteronia ja estrogeenia. Suuret progesteroni- ja estrogeenipitoisuudet pitävät FSH:n ja LH:n erityksen pienenä, joten kierto pysähtyy raskauden ajaksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Lyhytkuonoisilla koiraroduilla, kuten englanninbulldoggilla, ranskanbulldoggilla ja bostoninterrierillä, on usein hengitysvaikeuksia ja synnynnäisiä vikoja, ja niiden pennut syntyvät usein keisarinleikkauksella. Saksanpaimenkoiran selkälinja on sadassa vuodessa muuttunut viettäväksi, ja rodulla on lonkkaongelmia (aineistot 11.A–11.D).",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 6,
+     "prompt": "Monilla koiraroduilla on nykyään terveydelle haitallisia ominaisuuksia (esim. lyhytkuonoisten rotujen hengitysvaikeudet ja selkärangan epämuodostumat tai saksanpaimenkoiran viettävä selkälinja ja lonkkaongelmat, ks. aineistot 11.A–11.D). Selitä, mistä tämä johtuu.",
+     "hints": [
+      "Koirarodut ovat ihmisen tekemän valinnan tulosta. Mieti, mitä ominaisuuksia jalostuksessa on valittu ja mitä perimälle tapahtuu, kun rotu on alun perin pieni ja suljettu.",
+      "Keskeiset syyt: ulkonäköön painottuva valintajalostus ja näyttelyiden rotumääritelmät, sisäsiittoisuus ja kapea perimä, perustajavaikutus, kytkeytyneet geenit (haluttu ominaisuus tuo mukanaan haitan, kuten aineiston DVL2-geeni), suuren koon rasitusvammat ja valvomaton pentutehtailu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Monen rodun jalostuksessa ulkonäkö on ollut sukupolvesta toiseen tärkeämpää kuin terveys. Näyttelyiden tiukat ulkonäkövaatimukset ylläpitävät haitallisten piirteiden suosimista.\n- Rodut on tehty valintajalostuksella: vain halutun näköiset yksilöt ovat saaneet lisääntyä, joten niiden alleelit ovat yleistyneet.\n- Lähisukulaisten risteyttäminen on johtanut sisäsiittoisuuteen ja kapeaan perimään, jolloin haitalliset resessiiviset alleelit tulevat esiin.\n- Monet rodut ovat lähtöisin hyvin pienestä määrästä yksilöitä (perustajavaikutus), joten perimä on ollut alusta asti suppea.\n- Halutun ominaisuuden aiheuttavalla alleelilla voi olla myös haitallisia vaikutuksia, tai se on kytkeytynyt haitallisiin geeneihin (esim. aineiston geeni, joka lyhentää sekä kuonoa että raajoja).\n- Hyvin suurikokoisiksi jalostetut rodut kärsivät nivelten ja raajojen rasitusvammoista ja elävät lyhyemmän ajan.\n- Suosittujen rotujen pentutehtailu on valvomatonta, eikä koirien terveyttä seurata.\n- Koirarotujen muuttuminen ei ole luonnonvalintaa, vaan ihmisen tekemää keinotekoista valintaa.\n\n**Esimerkkivastaus:** Koirarotujen terveysongelmat johtuvat ihmisen tekemästä valinnasta. Rotuja on jalostettu vuosisatoja ulkonäön perusteella: jalostukseen on valittu yksilöitä, joilla on esimerkiksi lyhyt kuono tai viettävä selkä, koska näyttelyiden rotumääritelmät ja ostajat suosivat niitä. Samalla näitä piirteitä aiheuttavat alleelit ovat yleistyneet, vaikka ne haittaavat hengitystä, synnytystä tai liikkumista. Aineiston mukaan lyhytkuonoisuuteen liittyvä geenimuoto aiheuttaa samalla lyhyet raajat ja selkärangan muutoksia, joten haitta tulee halutun piirteen mukana. Lisäksi useimmat rodut ovat saaneet alkunsa muutamasta koirasta, ja niitä on risteytetty lähisukulaisten kesken. Sisäsiittoisuus kaventaa perimää ja nostaa haitallisia resessiivisiä alleeleja homotsygoottisiksi. Valvomaton pentutuotanto pahentaa ongelmia, koska vanhempien terveyttä ei tarkisteta.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 8,
+     "prompt": "Pohdi keinoja, joilla nykyisten koirarotujen terveysongelmia saataisiin vähennettyä.",
+     "hints": [
+      "Mieti keinoja jalostuksen, perimän monimuotoisuuden ja lainsäädännön kannalta. Pisteet tulevat hyvin perustelluista keinoista.",
+      "Keinoja: vain terveiden yksilöiden käyttö jalostukseen, geenitestit haitallisten alleelien kantajien tunnistamiseen, rotumääritelmien muuttaminen (esim. pidempi kuono), risteyttäminen terveempien rotujen kanssa ja takaisinristeytykset perimän laajentamiseksi sekä pahimpien rotujen jalostuksen rajoittaminen lailla. Hoito ja liikunta auttavat yksilöä, mutta eivät korjaa rodun perimää."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Valikoiva jalostus: vain terveimmät yksilöt saavat lisääntyä.\n- Geneettinen seulonta: geenitesteillä tunnistetaan haitallisia alleeleja kantavat koirat, ja ne jätetään jalostuksen ulkopuolelle.\n- Jalostuksessa suositaan tietoisesti hyviä fyysisiä ominaisuuksia. Rotumääritelmiä muutetaan tarvittaessa, esimerkiksi bulldoggeilla suositaan pidempikuonoisia yksilöitä.\n- Jos rodussa ei ole täysin terveitä yksilöitä, sitä voidaan risteyttää terveempien rotujen kanssa.\n- Takaisinristeytyksillä rodun alleelipohja laajenee, mutta rodun tyyppi säilyy.\n- Eniten kärsivien rotujen jalostus voidaan lopettaa tai kieltää lailla.\n- Oikea ruokinta, liikunta ja eläinlääkärin hoito auttavat yksittäistä koiraa, mutta ne eivät korjaa rodun perimää eivätkä eettistä ongelmaa.\n- Hännän tai korvien typistämisen kieltäminen ei ole jalostusta, eikä koirasusien tuottaminen sovi keinoksi.\n\n**Esimerkkivastaus:** Tärkein keino on muuttaa jalostuksen tavoitteita niin, että terveys menee ulkonäön edelle. Jalostukseen tulisi käyttää vain terveitä koiria, ja geenitesteillä voidaan tunnistaa haitallisia alleeleja kantavat yksilöt ja jättää ne pois. Rotumääritelmiä voidaan muuttaa, jotta esimerkiksi bulldoggeilla alettaisiin suosia pidempää kuonoa ja väljempiä hengitysteitä. Jos rodussa ei ole perimältään terveitä koiria, sitä voidaan risteyttää terveen rodun kanssa ja jatkaa takaisinristeytyksillä, jolloin perimä monipuolistuu mutta rodun tunnusmerkit säilyvät. Lisäksi yhteiskunta voi rajoittaa lailla pahimmin kärsivien rotujen jalostamista ja valvoa pentutuotantoa. Hyvä hoito, ruokinta ja liikunta helpottavat yksittäisen koiran oloa, mutta ne eivät korjaa rodun perinnöllisiä ongelmia.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 6,
+     "prompt": "Pohdi, miten koirien ominaisuudet ovat muuttuneet kesyyntymisen aikana niin, että ihmiset ovat hyötyneet muutoksista.",
+     "hints": [
+      "Vertaa koiraa sen kantamuotoon, suteen: mitkä luonteen, aistien, vietin, koon ja ravinnon muutokset ovat hyödyttäneet ihmistä? Anna käyttöesimerkkejä.",
+      "Esimerkkejä: lempeä ja tottelevainen luonne (seura-, opas- ja avustajakoirat), tarkat aistit (huume- ja pelastuskoirat), hillitty tai suunnattu metsästysvietti (paimen-, ajo- ja noutajakoirat), fyysinen kestävyys (rekikoirat, vinttikoirat), pieni koko ja kyky sulattaa kasviravintoa (vähemmän ruokaa, tilaa ja lihaa)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kesyyntymisessä koirille on valikoitunut lempeä ja tottelevainen luonne ja heikko taipumus aggressioon, mikä helpottaa yhteiselämää (seurakoirat, opaskoirat).\n- Tarkkoja aisteja on jalostettu hyötykäyttöön, esimerkiksi huume- ja pelastuskoirille.\n- Metsästysviettiä on hillitty, jotta koiria voi käyttää kotieläinten paimentamiseen ja vartiointiin.\n- Toisilla roduilla metsästysvietti on suunnattu ihmistä palvelevaksi, esimerkiksi ajokoirilla ja noutajilla.\n- Kestäviä rotuja käytetään vetojuhtina (rekikoirat) ja urheilussa (vinttikoirat).\n- Pieni koira syö vähemmän ja vie vähemmän tilaa.\n- Koira sulattaa tärkkelystä ja muuta kasviravintoa paremmin kuin susi, joten se tarvitsee vähemmän lihaa.\n\n**Esimerkkivastaus:** Suteen verrattuna koira on luonteeltaan lempeä ja tottelevainen, eikä se ole ihmiselle aggressiivinen. Siksi se sopii perheeseen seurakoiraksi ja voi toimia esimerkiksi opas- tai avustajakoirana. Koiran tarkkaa hajuaistia on jalostettu, ja sitä hyödynnetään huumeiden etsinnässä ja kadonneiden ihmisten etsinnässä. Metsästysviettiä on joko hillitty, jolloin koira voi paimentaa lampaita saalistamatta niitä, tai suunnattu, jolloin ajokoira ajaa riistaa metsästäjälle ja noutaja tuo ammutun linnun. Kestäviä rotuja on käytetty rekien vetämiseen. Koirat myös sulattavat tärkkelystä paremmin kuin sudet, joten ne pärjäävät vähemmällä lihalla, ja pienet rodut tarvitsevat vähemmän ruokaa ja tilaa.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

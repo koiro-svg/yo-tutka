@@ -1,0 +1,491 @@
+{
+ "subject": "fysiikka",
+ "session": "2024K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2024K_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-03-27_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen 20 pisteen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa eri osa-alueilta, kukin 2 p (vaihtoehdot koenäkymässä, A = ylin).\n\n- 1.1 $60\\,\\mathrm{m}$ juoksun aika puhelimen sekuntikellolla: mielekäs tarkkuus?\n- 1.2 Suurin suhteellinen virhe: $1{,}013 \\pm 0{,}003\\,\\mathrm{bar}$, $472 \\pm 5\\,\\mathrm{N}$, $9{,}8 \\pm 0{,}3\\,\\mathrm{m/s^2}$ vai $2{,}2 \\pm 0{,}2\\,\\mathrm{kg}$?\n- 1.3 Sähkösaunan kulutus yhdellä saunomiskerralla?\n- 1.4 Suurin energiankulutus henkilökilometriä kohti?\n- 1.5 Miten kasvihuonekaasut lämmittävät Maata?\n- 1.6 Suomessa 2020-luvulla eniten kasvanut sähköntuotantomuoto?\n- 1.7 Voimakkain vuorovaikutus alle $1\\,\\mathrm{fm}$ etäisyyksillä?\n- 1.8 Tavallisen aineen osuus maailmankaikkeudesta?\n- 1.9 Jousi lyhenee $0{,}1\\,\\mathrm{cm}$ voimalla $2{,}5\\,\\mathrm{N}$: venyykö se $100\\,\\mathrm{cm}$ voimalla $2500\\,\\mathrm{N}$?\n- 1.10 Mallin ennuste ja koetulos ristiriidassa: miten jatketaan?",
+     "hints": [
+      "Kertaa mittausten tarkkuus ja suhteellinen virhe, tavallisten laitteiden ja liikennevälineiden energiankulutus, kasvihuoneilmiö, Suomen energiantuotanto, perusvuorovaikutukset, maailmankaikkeuden koostumus, Hooken lain pätevyysalue ja tieteellinen menetelmä.",
+      "Kohta kohdalta: 1.1 käsin painetun ajanoton reaktioaika; 1.2 laske virheen ja arvon suhde; 1.3 kiukaan teho noin $6$–$9\\,\\mathrm{kW}$ kerrottuna noin tunnilla; 1.4 suurin kulutus matkustajaa kohti; 1.5 Maan pinnan lämpösäteily on infrapunaa; 1.6 viime vuosien suuret rakennushankkeet; 1.7 ytimen koossapito; 1.8 pimeä aine ja pimeä energia; 1.9 kimmoisuusrajan ylitys; 1.10 malli on alisteinen kokeelle."
+     ],
+     "solution": "1. **1.1 B** ($0{,}1\\,\\mathrm{s}$). Käsiajanoton epätarkkuus tulee ajanottajan reaktioajasta (luokkaa $0{,}1\\,\\mathrm{s}$), ei kellosta, joten sadasosat eivät ole mielekkäitä.\n2. **1.2 D** ($2{,}2 \\pm 0{,}2\\,\\mathrm{kg}$). Suhteelliset virheet: $0{,}3\\,\\%$, $1{,}1\\,\\%$, $3{,}1\\,\\%$ ja $\\dfrac{0{,}2}{2{,}2} \\approx 9\\,\\%$.\n3. **1.3 A** ($8\\,\\mathrm{kWh}$). Kiukaan teho on tyypillisesti $6$–$9\\,\\mathrm{kW}$, ja lämmitys ja saunominen kestävät noin tunnin.\n4. **1.4 D** (lentokone). Esimerkiksi lentokoneella pääsee noin $3\\,\\mathrm{km}$ kilowattitunnilla matkustajaa kohti, bussilla ja junalla selvästi pidemmälle ja sähköpyörällä noin $100\\,\\mathrm{km}$.\n5. **1.5 A** (kaasut absorboivat Maan pinnan lähettämää säteilyä, jolloin ilmakehä lämpenee). Maan pinta säteilee infrapunaa, jota kasvihuonekaasut absorboivat ja säteilevät osin takaisin alas. Ne eivät heijasta auringonvaloa eivätkä tuota lämpöä kemiallisesti.\n6. **1.6 B** (tuulivoima). Suomen tuulivoimakapasiteetti on kasvanut 2020-luvulla voimakkaasti.\n7. **1.7 C** (vahva vuorovaikutus). Se pitää atomiytimen nukleonit koossa protonien sähköisestä hylkimisestä huolimatta.\n8. **1.8 B** ($5\\,\\%$). Loput on pimeää ainetta (noin $27\\,\\%$) ja pimeää energiaa (noin $68\\,\\%$).\n9. **1.9 D** (ei; niin suurta venymää jousi ei kestä). Hooken laki pätee vain kimmoisella alueella; metrin venymä pilaisi pienen kynän jousen pysyvästi.\n10. **1.10 B** (ellei kokeesta löydy selvää virhettä, mallia on muutettava). Mittaustuloksia ei valikoida eikä hylätä sen mukaan, sopivatko ne malliin.\n\n**Vastaus: 1.1 B · 1.2 D · 1.3 A · 1.4 D · 1.5 A · 1.6 B · 1.7 C · 1.8 B · 1.9 D · 1.10 B**\n\n**Sudenkuoppa:** kohdassa 1.2 verrataan virheiden absoluuttisia arvoja ($\\pm 5\\,\\mathrm{N}$ näyttää suurimmalta). Suhteellinen virhe on virhe jaettuna mitatulla arvolla.",
+     "answer": "1.1 B · 1.2 D · 1.3 A · 1.4 D · 1.5 A · 1.6 B · 1.7 C · 1.8 B · 1.9 D · 1.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 5,
+     "prompt": "Omenamehupuristimen (kuva 2.A) kampea käännettiin kierros kerrallaan, ja astiasta valuneen mehun kokonaistilavuus mitattiin (aineisto 2.B). Yksi kierros laskee mäntää $4{,}0\\,\\mathrm{mm}$. Piirrä mehun tilavuus sen matkan funktiona, jonka mäntä on liikkunut ylimmästä asennostaan. Mittauspisteet näkyviin, mutta pisteitä ei yhdistetä viivoilla.",
+     "hints": [
+      "Aineistossa muuttujana on kierrosten lukumäärä, mutta vaaka-akselille tarvitaan männän kulkema matka.",
+      "Laske taulukkolaskennalla uusi sarake $x = 4{,}0\\,\\mathrm{mm}\\cdot N$, missä $N$ on kierrosmäärä. Vaaka-akselille $x\\ (\\mathrm{mm})$, pystyakselille $V\\ (\\mathrm{ml})$; pelkät pisteet, ei murtoviivaa."
+     ],
+     "solution": "1. Muunnetaan kierrokset männän kulkemaksi matkaksi: $x = 4{,}0\\,\\mathrm{mm}\\cdot N$. Aineiston kierrokset $0$–$50$ vastaavat matkoja $0$–$200\\,\\mathrm{mm}$.\n2. Piirretään tilavuus $V\\ (\\mathrm{ml})$ matkan $x\\ (\\mathrm{mm})$ funktiona erillisinä mittauspisteinä. Akseleille suureet ja yksiköt.\n3. Kuvaajassa näkyy kaksi osaa: aluksi tilavuus kasvaa hyvin hitaasti (noin $400\\,\\mathrm{ml}$:sta noin $490\\,\\mathrm{ml}$:aan), ja noin $80$–$90\\,\\mathrm{mm}$ kohdalta alkaen se kasvaa jyrkästi ja lähes tasaisesti noin $2{,}2\\,\\mathrm{l}$:aan asti.\n\n**Sudenkuoppa:** tilavuus piirretään kierrosmäärän funktiona, tai pisteet yhdistetään murtoviivaksi, vaikka tehtävä nimenomaan kieltää sen.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 4,
+     "prompt": "Mäntä liikkuu useita kierroksia ennen kuin se osuu omenamurskaan. Päättele kohdan 2.1 kuvaajan avulla, paljonko mehua oli valunut ennen kuin mäntä kosketti murskaa.",
+     "hints": [
+      "Kun mäntä alkaa puristaa murskaa, kuvaajan kulmakerroin muuttuu selvästi. Sovita kummankin osan pisteisiin oma suora ja etsi niiden leikkauskohta (tai kohta, jossa jyrkkä nousu alkaa)."
+     ],
+     "solution": "1. Ennen kosketusta mäntä liikkuu tyhjässä tilassa, ja mehua valuu vain murskan omasta painosta: kuvaajan alkuosa on lähes vaakasuora.\n2. Kun mäntä alkaa puristaa, tilavuus kasvaa jyrkästi ja tasaisesti. Sovitetaan kumpaankin osaan suora; suorat leikkaavat noin kohdassa $x \\approx 80$–$90\\,\\mathrm{mm}$ (noin 20–22 kierrosta).\n3. Leikkauskohdassa tilavuus on noin $490$–$500\\,\\mathrm{ml}$.\n\n**Vastaus: ennen puristuksen alkua mehua oli noin $0{,}5\\,\\mathrm{l}$ (noin $490$–$500\\,\\mathrm{ml}$).**\n\n(Jos oletetaan, että mittausastiassa oli jo alussa $400\\,\\mathrm{ml}$, ennen kosketusta valunut lisämäärä on noin $90$–$100\\,\\mathrm{ml}$. Oletus pitää silloin kertoa.)\n\n**Sudenkuoppa:** vastataan ilman perustelua kuvaajasta, esimerkiksi pelkästään taulukon lukujen perusteella.",
+     "answer": "$V \\approx 0{,}5\\,\\mathrm{l}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 6,
+     "prompt": "Puristusta jatkettiin, kunnes kampea oli käännetty yhteensä $79$ kierrosta. Oleta, että mehua tulee suoraan verrannollisesti murskan tilavuuden pienenemiseen. Arvioi kuvaajan avulla, kuinka paljon mehua omenoista saatiin yhteensä.",
+     "hints": [
+      "Kun mehun määrä kasvaa samassa suhteessa kuin murskan tilavuus pienenee, tilavuus kasvaa lineaarisesti männän matkan funktiona. Mikä matka vastaa 79 kierrosta?",
+      "$x = 79\\cdot 4{,}0\\,\\mathrm{mm} = 316\\,\\mathrm{mm}$. Sovita suora kuvaajan jyrkkään loppuosaan (puristusvaihe) ja ekstrapoloi se kohtaan $x = 316\\,\\mathrm{mm}$."
+     ],
+     "solution": "1. Oletuksen mukaan puristusvaiheessa tilavuus kasvaa lineaarisesti männän matkan funktiona, joten puristusvaiheen pisteisiin sovitetaan suora.\n2. Kohdasta $x \\approx 88\\,\\mathrm{mm}$ alkaen pisteisiin sovitettu suora on noin $V(x) = 14{,}6\\,\\tfrac{\\mathrm{ml}}{\\mathrm{mm}}\\cdot x - 794\\,\\mathrm{ml}$.\n3. 79 kierrosta vastaa matkaa $x = 79\\cdot 4{,}0\\,\\mathrm{mm} = 316\\,\\mathrm{mm}$.\n4. Ekstrapoloidaan: $V(316\\,\\mathrm{mm}) \\approx 14{,}6\\,\\tfrac{\\mathrm{ml}}{\\mathrm{mm}}\\cdot 316\\,\\mathrm{mm} - 794\\,\\mathrm{ml} \\approx 3830\\,\\mathrm{ml}$.\n5. Tulos riippuu hieman siitä, mistä kohtaa suoran sovitus aloitetaan (noin $3{,}8$–$4{,}0\\,\\mathrm{l}$).\n\n**Vastaus: mehua saatiin yhteensä noin $3{,}8\\,\\mathrm{l}$.**\n\n**Sudenkuoppa:** sovitetaan koko pistejoukkoon esimerkiksi polynomi tai eksponenttifunktio, jonka ekstrapolointi antaa aivan väärän tuloksen. Oletus suoraan verrannollisuudesta tarkoittaa suoraa.",
+     "answer": "$V \\approx 3{,}8\\,\\mathrm{l}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 7,
+     "prompt": "Uudenvuoden valussa lyijyn korvikkeena voi käyttää kidesokeria. Taulukon 3.A mukaan sokerin tiheys on $80\\,\\mathrm{g/dl}$, molaarinen lämpökapasiteetti $0{,}4225\\,\\mathrm{kJ/(mol\\,K)}$, molaarinen sulamislämpö $46{,}2\\,\\mathrm{kJ/mol}$, moolimassa $342{,}3\\,\\mathrm{g/mol}$ ja sulamispiste $462\\,\\mathrm{K}$. Osoita, että $30\\,\\mathrm{ml}$ huoneenlämpöisen ($21\\,^\\circ\\mathrm{C}$) sokerin sulattaminen vaatii $8{,}2\\,\\mathrm{kJ}$.",
+     "hints": [
+      "Energia kuluu kahteen vaiheeseen: sokeri lämmitetään sulamispisteeseen ja sulatetaan. Taulukon arvot ovat moolia kohti, joten tarvitset ainemäärän.",
+      "$m = \\rho V = 24\\,\\mathrm{g}$, $n = m/M$, $\\Delta T = 462\\,\\mathrm{K} - 294{,}15\\,\\mathrm{K}$. Kokonaisenergia $Q = C_\\mathrm{m} n\\Delta T + L_\\mathrm{m} n$."
+     ],
+     "solution": "1. Energia kuluu lämmittämiseen sulamispisteeseen ja sulattamiseen. Moolisuureilla: $Q = C_\\mathrm{m}n\\Delta T + L_\\mathrm{m}n$, missä $C_\\mathrm{m}$ on molaarinen lämpökapasiteetti ja $L_\\mathrm{m}$ molaarinen sulamislämpö.\n2. Massa: $m = \\rho V = 0{,}80\\,\\mathrm{g/ml}\\cdot 30\\,\\mathrm{ml} = 24\\,\\mathrm{g}$.\n3. Ainemäärä: $n = \\dfrac{m}{M} = \\dfrac{24\\,\\mathrm{g}}{342{,}3\\,\\mathrm{g/mol}} \\approx 0{,}0701\\,\\mathrm{mol}$.\n4. Lämpötilan muutos: $\\Delta T = 462\\,\\mathrm{K} - (273{,}15 + 21)\\,\\mathrm{K} = 167{,}85\\,\\mathrm{K}$.\n5. Lämmitys: $Q_1 = 0{,}4225\\,\\tfrac{\\mathrm{kJ}}{\\mathrm{mol\\,K}}\\cdot 0{,}0701\\,\\mathrm{mol}\\cdot 167{,}85\\,\\mathrm{K} \\approx 4{,}97\\,\\mathrm{kJ}$.\n6. Sulatus: $Q_2 = 46{,}2\\,\\tfrac{\\mathrm{kJ}}{\\mathrm{mol}}\\cdot 0{,}0701\\,\\mathrm{mol} \\approx 3{,}24\\,\\mathrm{kJ}$.\n7. Yhteensä $Q = Q_1 + Q_2 \\approx 8{,}21\\,\\mathrm{kJ} \\approx 8{,}2\\,\\mathrm{kJ}$, kuten piti osoittaa.\n\n**Vastaus: $Q \\approx 8{,}2\\,\\mathrm{kJ}$.**\n\n**Sudenkuoppa:** unohdetaan lämmitysvaihe (tulos vain $3{,}2\\,\\mathrm{kJ}$) tai käytetään taulukon moolisuureita ikään kuin ne olisivat ominaissuureita (kilogrammaa kohti).",
+     "answer": "$Q \\approx 8{,}2\\,\\mathrm{kJ}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 4,
+     "prompt": "Kohdan 3.1 sokeri sulatetaan $1200\\,\\mathrm{W}$:n keittolevyllä, ja sulaminen kestää $2{,}5\\,\\mathrm{min}$. Laske sulattamisen hyötysuhde.",
+     "hints": [
+      "Hyötysuhde on hyödyksi saatu energia jaettuna käytetyllä energialla: $\\eta = \\dfrac{Q}{Pt}$, missä $Q = 8{,}2\\,\\mathrm{kJ}$."
+     ],
+     "solution": "1. Levyn käyttämä energia: $E = Pt = 1200\\,\\mathrm{W}\\cdot 2{,}5\\cdot 60\\,\\mathrm{s} = 180\\,000\\,\\mathrm{J}$.\n2. Hyödyksi saatu energia on sokerin sulattamiseen kulunut $Q \\approx 8210\\,\\mathrm{J}$.\n3. $\\eta = \\dfrac{Q}{Pt} = \\dfrac{8210\\,\\mathrm{J}}{180\\,000\\,\\mathrm{J}} \\approx 0{,}046$.\n\n**Vastaus: hyötysuhde on noin $4{,}6\\,\\%$.**\n\nSuurin osa energiasta kuluu levyn, kauhan ja ympäröivän ilman lämmittämiseen.\n\n**Sudenkuoppa:** unohdetaan muuttaa minuutit sekunneiksi, jolloin hyötysuhteeksi tulee yli 100 %.",
+     "answer": "$\\eta \\approx 4{,}6\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.3",
+     "points": 4,
+     "prompt": "Videossa 3.B lyijyä ja sokeria kuumennetaan liedellä rinnakkain samoissa oloissa. Lyijypala sulaa nopeasti kokonaan, mutta osa sokerikeosta pysyy pitkään sulamattomana. Selitä ero.",
+     "hints": [
+      "Katso taulukosta sokerin lämmönjohtavuus ($0{,}15\\,\\mathrm{W/(m\\,K)}$) ja vertaa metalleihin. Mieti myös, miten lämpö kulkee yhtenäisessä kappaleessa verrattuna irtonaisista kiteistä koottuun kekoon."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- lyijy on metalli ja johtaa lämpöä hyvin, joten lämpö leviää koko kappaleeseen ja se sulaa tasaisesti; sokerin lämmönjohtavuus on hyvin pieni ($0{,}15\\,\\mathrm{W/(m\\,K)}$, lyijyllä noin $35\\,\\mathrm{W/(m\\,K)}$)\n- sokerikeko koostuu irrallisista kiteistä, joiden välissä on ilmaa, joten lämpö siirtyy kiteestä toiseen vielä huonommin kuin yhtenäisessä kappaleessa\n\n**Esimerkkivastaus:** Kummassakin kauhassa aine alkaa sulaa pohjasta heti, kun kauhaa koskettava osa on saavuttanut sulamispisteensä. Lyijy johtaa lämpöä hyvin, joten koko kimpaleen lämpötila nousee lähes yhtä aikaa ja se sulaa nopeasti kokonaan. Sokerin lämmönjohtavuus on satoja kertoja pienempi, ja keko on rakeinen: kiteiden väliset ilmaraot ja pienet kosketuspinnat heikentävät lämmön johtumista entisestään. Siksi pohjan sokeri sulaa, mutta lämpö etenee keon yläosiin hyvin hitaasti.\n\n**Sudenkuoppa:** selitetään eroa sulamispisteillä tai lämpökapasiteeteilla. Sokerin sulamispiste on jopa alempi kuin lyijyn, joten ne eivät selitä hidasta sulamista.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 4,
+     "prompt": "Kuvassa 4.1 on neljä voimakuviota (A–D) ilmassa lentävälle nuolelle, joka liikkuu oikealle. Mikä kuvio esittää nuoleen vaikuttavat ulkoiset voimat? Nimeä kuvion voimat.",
+     "hints": [
+      "Mitkä kappaleet koskettavat lentävää nuolta, ja mikä vaikuttaa siihen etäältä? Jousi ei enää työnnä nuolta, kun se on irronnut."
+     ],
+     "solution": "1. Lentävää nuolta koskettaa vain ilma, joka aiheuttaa liikettä vastustavan voiman taaksepäin. Etävoimista vaikuttaa Maan painovoima alaspäin.\n2. Nuolta eteenpäin työntävää voimaa ei ole (nuoli liikkuu hitautensa vuoksi), joten vaihtoehdot A ja D ($\\vec F_1$) karsiutuvat. Ylöspäin osoittavalle voimalle $\\vec F_3$ ei ole aiheuttajaa, joten myös B karsiutuu.\n\n**Vastaus: C; $\\vec F_4$ on (Maan) painovoima ja $\\vec F_2$ ilmanvastus.**\n\n**Sudenkuoppa:** lisätään kuvioon liikkeen suuntainen ”heittovoima”. Voimat syntyvät vuorovaikutuksista, eikä jousi enää vaikuta nuoleen.",
+     "answer": "C: $\\vec F_4$ painovoima, $\\vec F_2$ ilmanvastus",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 5,
+     "prompt": "Kuvassa 4.2 on voimakuviot A–D heiton jälkeen jäällä oikealle liukuvalle curling-kivelle. Valitse oikea kuvio ja nimeä sen voimat.",
+     "hints": [
+      "Heittäjän käsi ei enää koske kiveen. Mitkä kappaleet ovat kosketuksissa kiveen, ja mikä voima vaikuttaa etäältä?",
+      "Jää tukee kiveä (tukivoima ylös) ja jarruttaa sitä (kitka taaksepäin). Painovoima osoittaa alas. Mikään ei työnnä kiveä eteenpäin."
+     ],
+     "solution": "1. Kiveä koskettaa vain jää. Jään kivelle kohdistama voima jaetaan tukivoimaan (ylös) ja kitkaan (liikettä vastaan, eli vasemmalle). Lisäksi vaikuttaa painovoima alas.\n2. Eteenpäin osoittava voima ($\\vec F_1$ kuviossa B ja D, $\\vec F_2$ kuviossa C) puuttuu todellisuudesta, koska heittäjä ei enää koske kiveen. Kuviosta D puuttuu lisäksi tukivoima, ja kuviosta C kitka.\n3. Kuviossa A ovat täsmälleen oikeat voimat.\n\n**Vastaus: A; $\\vec F_3$ on kitka, $\\vec F_5$ jään tukivoima ja $\\vec F_6$ (Maan) painovoima.**\n\n**Sudenkuoppa:** ajatellaan, että liikkuvaan kappaleeseen täytyy vaikuttaa liikkeen suuntainen voima. Kivi liukuu hitautensa vuoksi ja hidastuu kitkan takia.",
+     "answer": "A: $\\vec F_3$ kitka, $\\vec F_5$ tukivoima, $\\vec F_6$ painovoima",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 6,
+     "prompt": "Kuvassa 4.3 on voimakuviot A–D vedessä liikkuvalle uimapoijulle, joka on kiinnitetty hihnalla oikealle uivan uimarin selkään. Valitse oikea kuvio ja nimeä voimat.",
+     "hints": [
+      "Luettele poijua koskettavat kappaleet (hihna, vesi) ja etävoimat. Vesi aiheuttaa poijuun kaksi eri voimaa.",
+      "Hihna vetää poijua uimarin suuntaan, vesi nostaa sitä (noste) ja vastustaa sen liikettä (vastusvoima), ja painovoima vetää alas. Hae kuvio, jossa on nämä neljä voimaa."
+     ],
+     "solution": "1. Poijuun vaikuttavat kosketusvoimat: hihnan jännitysvoima eteenpäin (uimaria kohti), veden noste ylös ja veden vastusvoima taaksepäin. Etävoimana Maan painovoima alas.\n2. Kuviosta A puuttuu noste, kuviosta B vastusvoima, ja kuviossa D ei ole eteenpäin vetävää voimaa ollenkaan ($\\vec F_2$ osoittaa taaksepäin).\n3. Kuviossa C ovat kaikki neljä voimaa oikeisiin suuntiin.\n\n**Vastaus: C; $\\vec F_1$ on hihnan jännitysvoima, $\\vec F_3$ veden vastusvoima, $\\vec F_4$ noste ja $\\vec F_5$ (Maan) painovoima.**\n\n**Sudenkuoppa:** nimetään $\\vec F_1$ uimarin voimaksi. Uimari ei koske poijuun, vaan poijuun vaikuttaa hihna.",
+     "answer": "C: $\\vec F_1$ hihnan jännitysvoima, $\\vec F_3$ vastusvoima, $\\vec F_4$ noste, $\\vec F_5$ painovoima",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 3,
+     "prompt": "Kun eksoplaneetta kulkee tähtensä editse, tähdestä tuleva valo himmenee (kuva 5.A). Kuvassa 5.B on Kepler-satelliitin mittaama tähden suhteellinen valon intensiteetti ajan funktiona. Kuinka monta prosenttia tähden näkyvästä pinta-alasta planeetta peittää enimmillään?",
+     "hints": [
+      "Havaittu intensiteetti on verrannollinen tähden näkyvissä olevaan pinta-alaan. Lue kuvasta, kuinka alas intensiteetti painuu himmennysten pohjalla."
+     ],
+     "solution": "1. Tähden pinta säteilee tasaisesti, joten havaittu intensiteetti on verrannollinen näkyvissä olevaan pinta-alaan.\n2. Kuvasta 5.B luetaan himmennysten pohjat: intensiteetti laskee keskimäärin noin arvoon $99{,}775\\,\\%$.\n3. Peittynyt osuus on $100\\,\\% - 99{,}775\\,\\% \\approx 0{,}225\\,\\%$.\n\n**Vastaus: planeetta peittää noin $0{,}23\\,\\%$ tähden pinta-alasta.**\n\n(Säteiden suhde on siis $\\sqrt{0{,}00225} \\approx 0{,}05$.)\n\n**Sudenkuoppa:** luetaan yksittäinen kohinapiikki tai vastataan peittyneen osuuden sijasta jäljelle jäävällä osuudella $99{,}8\\,\\%$.",
+     "answer": "$\\approx 0{,}23\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 4,
+     "prompt": "Määritä kuvan 5.B avulla planeetan kiertoaika tähden ympäri.",
+     "hints": [
+      "Jokainen himmennys on yksi ylikulku, eli planeetta on kiertänyt kierroksen edellisestä. Tarkkuus paranee, kun mittaat ajan ensimmäisestä viimeiseen ylikulkuun ja jaat sen väliin mahtuvien kierrosten määrällä."
+     ],
+     "solution": "1. Kuvassa on 8 himmennystä. Ensimmäinen on noin kohdassa $t \\approx 101\\,\\mathrm{h}$ ja viimeinen noin kohdassa $t \\approx 1241\\,\\mathrm{h}$.\n2. Ensimmäisen ja viimeisen välissä on $7$ kokonaista kierrosta (välien määrä on yhtä pienempi kuin himmennysten määrä).\n3. $T = \\dfrac{1241\\,\\mathrm{h} - 101\\,\\mathrm{h}}{7} = \\dfrac{1140\\,\\mathrm{h}}{7} \\approx 163\\,\\mathrm{h}$.\n\n**Vastaus: kiertoaika on noin $163\\,\\mathrm{h}$ (noin 6,8 vuorokautta).**\n\n**Sudenkuoppa:** jaetaan aikaväli himmennysten määrällä (8) välien määrän (7) sijaan, tai käytetään vain kahta vierekkäistä himmennystä, jolloin lukematarkkuus on huono.",
+     "answer": "$T \\approx 163\\,\\mathrm{h}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.3",
+     "points": 8,
+     "prompt": "Piirrä eksoplaneetan voimakuvio (pohja kuvassa 5.C). Rata on likimain ympyrä. Laske radan säde, kun tähden massa on $1{,}52$ Auringon massaa. Käytä kohdassa 5.2 määrittämääsi kiertoaikaa.",
+     "hints": [
+      "Mikä on ainoa planeettaan vaikuttava voima? Se toimii ympyräliikkeen keskeisvoimana.",
+      "Newtonin II laki: $\\gamma\\dfrac{Mm}{r^2} = m\\dfrac{v^2}{r}$ ja $v = \\dfrac{2\\pi r}{T}$. Ratkaise $r = \\sqrt[3]{\\dfrac{\\gamma MT^2}{4\\pi^2}}$; muista muuttaa $T$ sekunneiksi."
+     ],
+     "solution": "1. **Voimakuvio:** planeettaan vaikuttaa vain tähden gravitaatiovoima $\\vec F_G$, joka lähtee planeetasta ja osoittaa tähden keskipistettä kohti. Nopeutta tai kiihtyvyyttä ei piirretä voimakuvioon.\n2. Newtonin II laki ympyräradalla: $\\gamma\\dfrac{Mm}{r^2} = m\\dfrac{v^2}{r}$, missä $M$ on tähden massa ja $r$ radan säde.\n3. Ratanopeus kiertoajan avulla: $v = \\dfrac{2\\pi r}{T}$. Sijoitus: $\\gamma\\dfrac{M}{r^2} = \\dfrac{4\\pi^2 r}{T^2}$, josta\n$$r = \\sqrt[3]{\\frac{\\gamma MT^2}{4\\pi^2}}.$$\n4. Arvot: $M = 1{,}52\\cdot 1{,}989\\cdot 10^{30}\\,\\mathrm{kg} \\approx 3{,}02\\cdot 10^{30}\\,\\mathrm{kg}$, $T = 162{,}9\\,\\mathrm{h} = 5{,}863\\cdot 10^5\\,\\mathrm{s}$, $\\gamma = 6{,}674\\cdot 10^{-11}\\,\\mathrm{N\\,m^2/kg^2}$.\n5. $r = \\sqrt[3]{\\dfrac{6{,}674\\cdot 10^{-11}\\cdot 3{,}02\\cdot 10^{30}\\cdot (5{,}863\\cdot 10^5)^2}{4\\pi^2}}\\,\\mathrm{m} \\approx 1{,}21\\cdot 10^{10}\\,\\mathrm{m}$.\n\n**Vastaus: radan säde on noin $1{,}21\\cdot 10^{10}\\,\\mathrm{m}$ (noin $0{,}08$ AU).**\n\n**Sudenkuoppa:** voimakuvioon piirretään planeettaan kiinni nopeus- tai kiihtyvyysvektori tai ”keskipakoisvoima”, tai piirretään tähteen vaikuttava voima.",
+     "answer": "$r \\approx 1{,}21\\cdot 10^{10}\\,\\mathrm{m}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 4,
+     "prompt": "Levykondensaattorin levyjen väli on $2{,}6\\,\\mathrm{mm}$ (ilmaa), ja se kytketään $36\\,\\mathrm{V}$:n jännitelähteeseen. Kuinka voimakas levyjen välinen sähkökenttä on, ja mihin suuntaan se osoittaa?",
+     "hints": [
+      "Levyjen välinen kenttä on homogeeninen, joten $E = \\dfrac{U}{d}$. Kentän suunta on sama kuin positiiviseen koevaraukseen kohdistuvan voiman suunta."
+     ],
+     "solution": "1. Levyjen välissä kenttä on homogeeninen: $E = \\dfrac{U}{d} = \\dfrac{36\\,\\mathrm{V}}{2{,}6\\cdot 10^{-3}\\,\\mathrm{m}} \\approx 1{,}38\\cdot 10^4\\,\\mathrm{V/m}$.\n2. Kenttä on kohtisuorassa levyjä vastaan ja osoittaa positiiviselta levyltä negatiiviselle.\n\n**Vastaus: $E \\approx 14\\,\\mathrm{kV/m}$, suunta positiivisesta levystä negatiiviseen.**\n\n**Sudenkuoppa:** unohdetaan muuttaa millimetrit metreiksi tai annetaan suunta negatiiviselta levyltä positiiviselle.",
+     "answer": "$E \\approx 13{,}8\\,\\mathrm{kV/m}$, $+ \\to -$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.2",
+     "points": 3,
+     "prompt": "Positiivisella levyllä ollut pölyhiukkanen saa varauksen $5{,}7\\,\\mathrm{pC}$ ja irtoaa. Kuinka suuri sähköinen voima hiukkaseen vaikuttaa levyjen välissä?",
+     "hints": [
+      "Sähkökentässä varaukseen vaikuttaa voima $F = qE$. Käytä kohdan 6.1 kenttää ja muista, että $1\\,\\mathrm{pC} = 10^{-12}\\,\\mathrm{C}$."
+     ],
+     "solution": "1. Voima: $F = qE = 5{,}7\\cdot 10^{-12}\\,\\mathrm{C}\\cdot 1{,}385\\cdot 10^4\\,\\mathrm{V/m} \\approx 7{,}9\\cdot 10^{-8}\\,\\mathrm{N}$.\n2. Voima osoittaa kentän suuntaan, eli kohti negatiivista levyä, koska hiukkanen on positiivinen.\n\n**Vastaus: $F \\approx 79\\,\\mathrm{nN}$.**\n\n**Sudenkuoppa:** etuliite piko ($10^{-12}$) sekoitetaan nanoon tai mikroon.",
+     "answer": "$F \\approx 79\\,\\mathrm{nN}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 8,
+     "prompt": "Hiukkasen massa on $3{,}3\\,\\mathrm{mg}$. Oletetaan, että siihen vaikuttaa vain sähköinen voima. Millaista hiukkasen liike on, ja kuinka kauan kestää, että levosta lähtenyt hiukkanen saavuttaa negatiivisen levyn?",
+     "hints": [
+      "Onko voima levyjen välissä vakio? Mitä Newtonin II laki silloin kertoo kiihtyvyydestä ja liikkeen laadusta?",
+      "Kiihtyvyys $a = \\dfrac{F}{m} = \\dfrac{qU}{md}$. Levosta lähtevä hiukkanen kulkee matkan $d$ ajassa, joka ratkeaa yhtälöstä $d = \\tfrac12 at^2$."
+     ],
+     "solution": "1. Kenttä on homogeeninen, joten hiukkaseen vaikuttaa koko matkalla sama voima $F = qE$. Newtonin II lain mukaan kiihtyvyys $a = F/m$ on vakio, eli liike on **tasaisesti kiihtyvää** suoraviivaista liikettä kohti negatiivista levyä.\n2. Kiihtyvyys: $a = \\dfrac{F}{m} = \\dfrac{7{,}89\\cdot 10^{-8}\\,\\mathrm{N}}{3{,}3\\cdot 10^{-6}\\,\\mathrm{kg}} \\approx 0{,}0239\\,\\mathrm{m/s^2}$.\n3. Levosta lähtien $d = \\tfrac12 at^2$, joten $t = \\sqrt{\\dfrac{2d}{a}} = \\sqrt{\\dfrac{2d^2m}{qU}} = \\sqrt{\\dfrac{2\\cdot 2{,}6\\cdot 10^{-3}\\,\\mathrm{m}}{0{,}0239\\,\\mathrm{m/s^2}}} \\approx 0{,}47\\,\\mathrm{s}$.\n\n**Vastaus: liike on tasaisesti kiihtyvää, ja matka kestää noin $0{,}47\\,\\mathrm{s}$.**\n\n(Todellisuudessa hiukkasen paino, noin $3\\cdot 10^{-5}\\,\\mathrm{N}$, olisi paljon sähköistä voimaa suurempi; siksi se rajattiin tehtävässä pois.)\n\n**Sudenkuoppa:** todetaan vain, että liike on ”kiihtyvää”, perustelematta vakiovoimalla, että kiihtyvyys on vakio.",
+     "answer": "tasaisesti kiihtyvä, $t \\approx 0{,}47\\,\\mathrm{s}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 6,
+     "prompt": "Vuonna 2015 esitelty leijulauta leijuu kuparilattian yllä (kuva 7.A). Laudan moottorit pyörittävät kestomagneetteja. Miksi pyörivät magneetit saavat laudan leijumaan kuparin päällä?",
+     "hints": [
+      "Mitä pyörivien magneettien kenttä tekee lattian läpi kulkevalle magneettivuolle? Mitä muuttuva vuo saa aikaan johteessa?",
+      "Kupariin indusoituu pyörrevirtoja. Lenzin lain mukaan niiden oma magneettikenttä vastustaa vuon muutosta, eli virtojen ja magneettien vuorovaikutus on hylkivä."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- pyörivät magneetit saavat kuparilattian läpi kulkevan magneettivuon muuttumaan jatkuvasti\n- muuttuva vuo indusoi hyvin johtavaan kupariin pyörrevirtoja (induktiolaki)\n- Lenzin lain mukaan pyörrevirtojen magneettikenttä vastustaa vuon muutosta, joten lattia ja magneetit hylkivät toisiaan; kun hylkivä voima on yhtä suuri kuin laudan ja lautailijan paino, lauta leijuu\n\n**Esimerkkivastaus:** Kun magneetit pyörivät laudan sisällä, niiden kenttä lattiassa muuttuu koko ajan. Muuttuva magneettivuo indusoi kupariin sähkökentän, ja koska kupari johtaa hyvin, siihen syntyy voimakkaita pyörrevirtoja. Lenzin lain mukaan virtojen suunta on sellainen, että niiden magneettikenttä vastustaa vuon muutosta, joten lattian virtojen kenttä ja laudan magneetit hylkivät toisiaan. Riittävän nopealla pyörimisellä hylkivä magneettinen voima kasvaa yhtä suureksi kuin lautaan ja lautailijaan kohdistuva painovoima, ja lauta leijuu.\n\n**Sudenkuoppa:** selitetään leijuminen sähköisellä (staattisten varausten) vuorovaikutuksella tai väitetään kuparin olevan magneettista. Kupari ei ole ferromagneettinen; voima syntyy induktion kautta.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 3,
+     "prompt": "Miksi lauta ei leiju asfaltin päällä?",
+     "hints": [
+      "Mitä pyörrevirtojen syntyminen vaatii materiaalilta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- asfaltti ei johda sähköä (siinä ei ole vapaita varauksenkuljettajia), joten muuttuva magneettikenttä ei synnytä siihen pyörrevirtoja, eikä hylkivää magneettista voimaa synny\n\n**Esimerkkivastaus:** Leijuminen perustuu lattiaan indusoituviin pyörrevirtoihin. Asfaltti on eriste, joten vaikka magneettikenttä muuttuu siinä samalla tavalla, virtaa ei pääse kulkemaan. Ilman pyörrevirtoja ei synny magneettikenttää, joka hylkisi laudan magneetteja.\n\n**Sudenkuoppa:** vastataan vain, että asfaltti ”ei ole magneettista”. Myöskään kupari ei ole magneettista; ratkaisevaa on sähkönjohtavuus.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 3,
+     "prompt": "Mitkä voimat vaikuttavat lautaan kuvan 7.A tilanteessa?",
+     "hints": [
+      "Tarkastele vain lautaa: mitkä kappaleet koskettavat sitä, mikä vaikuttaa siihen etäältä ja mikä pitää sen ilmassa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- laudan oma paino (Maan painovoima lautaan)\n- lautailijan jalkojen lautaan kohdistama voima alaspäin (tukivoiman vastavoima)\n- lattian pyörrevirtojen aiheuttama magneettinen voima ylöspäin\n\n**Esimerkkivastaus:** Lautaan vaikuttaa Maan painovoima ja lautailijan jalkojen alaspäin painava kosketusvoima. Näitä vastaan ylöspäin vaikuttaa lattian pyörrevirtojen ja laudan magneettien välinen hylkivä magneettinen voima. Kun lauta leijuu paikallaan, ylöspäin vaikuttava voima on yhtä suuri kuin kahden muun summa.\n\n**Sudenkuoppa:** sanotaan lautailijan painon vaikuttavan lautaan. Paino vaikuttaa lautailijaan; lautaan vaikuttaa lautailijan jalkojen kosketusvoima.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.4",
+     "points": 3,
+     "prompt": "Miksi kuparilattia lämpenee, vaikka lauta ei koske siihen?",
+     "hints": [
+      "Mitä sähkövirta tekee johteessa, jolla on resistanssi?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- lattiaan indusoituvat pyörrevirrat kulkevat kuparissa, jolla on (pieni) resistiivisyys, joten virta muuttaa sähköenergiaa lämmöksi (Joulen lämpö, $P = RI^2$)\n\n**Esimerkkivastaus:** Lauta ei luovuta lämpöä kosketuksen kautta, mutta sen magneetit indusoivat lattiaan voimakkaita pyörrevirtoja. Kupari johtaa hyvin, mutta sen resistiivisyys ei ole nolla, joten virrat aiheuttavat resistiivisiä tehohäviöitä ja lattia lämpenee. Energia tulee lopulta laudan moottoreilta magneettikentän välityksellä.\n\n**Sudenkuoppa:** mainitaan pyörrevirrat mainitsematta resistanssia, joka tekee virrasta lämpöä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 4,
+     "prompt": "Olkiluoto 3:n sähköteho on $1600\\,\\mathrm{MW}$ ja sähköntuotannon hyötysuhde $0{,}375$. Yhdessä uraanin fissiossa vapautuu keskimäärin $0{,}20\\,\\mathrm{GeV}$. Kuinka monta fissiota laitoksessa tapahtuu sekunnissa täydellä teholla?",
+     "hints": [
+      "Fissioiden täytyy tuottaa lämpöteho, josta vain osa $\\eta$ muuttuu sähköksi: $P_\\mathrm{th} = P_\\mathrm{e}/\\eta$. Jaa lämpöteho yhden fission energialla (jouleina)."
+     ],
+     "solution": "1. Reaktorin lämpöteho: $P_\\mathrm{th} = \\dfrac{P_\\mathrm{e}}{\\eta} = \\dfrac{1600\\,\\mathrm{MW}}{0{,}375} \\approx 4{,}27\\cdot 10^9\\,\\mathrm{W}$.\n2. Yhden fission energia: $E_\\mathrm{f} = 0{,}20\\cdot 10^9\\,\\mathrm{eV}\\cdot 1{,}602\\cdot 10^{-19}\\,\\mathrm{J/eV} \\approx 3{,}20\\cdot 10^{-11}\\,\\mathrm{J}$.\n3. Fissioita sekunnissa: $N = \\dfrac{P_\\mathrm{th}}{E_\\mathrm{f}} = \\dfrac{4{,}27\\cdot 10^9\\,\\mathrm{J/s}}{3{,}20\\cdot 10^{-11}\\,\\mathrm{J}} \\approx 1{,}33\\cdot 10^{20}\\,\\mathrm{1/s}$.\n\n**Vastaus: noin $1{,}3\\cdot 10^{20}$ fissiota sekunnissa.**\n\n**Sudenkuoppa:** jaetaan sähköteho fission energialla, jolloin hyötysuhde unohtuu (tulos $5{,}0\\cdot 10^{19}$).",
+     "answer": "$N \\approx 1{,}33\\cdot 10^{20}\\,\\mathrm{1/s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.2",
+     "points": 4,
+     "prompt": "Laitos käy täydellä teholla $330$ vuorokautta vuodessa. Kuinka paljon polttoaineen massaa häviää vuodessa fissioiden seurauksena?",
+     "hints": [
+      "Vapautuva energia vastaa massakatoa $E = \\Delta m\\,c^2$. Laske vuoden aikana vapautuva lämpöenergia $E = \\dfrac{P_\\mathrm{e}}{\\eta}\\,t$."
+     ],
+     "solution": "1. Fissioissa vapautuva energia vuodessa: $E = P_\\mathrm{th}t = \\dfrac{P_\\mathrm{e}t}{\\eta} = \\dfrac{1600\\cdot 10^6\\,\\mathrm{W}\\cdot 330\\cdot 86\\,400\\,\\mathrm{s}}{0{,}375} \\approx 1{,}22\\cdot 10^{17}\\,\\mathrm{J}$.\n2. Massakato: $\\Delta m = \\dfrac{E}{c^2} = \\dfrac{1{,}22\\cdot 10^{17}\\,\\mathrm{J}}{(3{,}00\\cdot 10^8\\,\\mathrm{m/s})^2} \\approx 1{,}35\\,\\mathrm{kg}$.\n\n**Vastaus: noin $1{,}4\\,\\mathrm{kg}$ vuodessa.**\n\nVaihdettavaan $32$ tonnin polttoainemäärään verrattuna massakato on hyvin pieni, mutta se vastaa valtavaa energiaa.\n\n**Sudenkuoppa:** käytetään sähköenergiaa lämpöenergian sijaan (hyötysuhde unohtuu) tai lasketaan 365 päivällä.",
+     "answer": "$\\Delta m \\approx 1{,}35\\,\\mathrm{kg}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.3",
+     "points": 4,
+     "prompt": "Kivihiilivoimalaitos tarvitsisi saman sähkötehon tuottamiseen noin 100 000 kertaa enemmän polttoainetta massaltaan kuin ydinvoimalaitos. Selitä, mistä ero johtuu.",
+     "hints": [
+      "Mistä energia vapautuu hiilen palamisessa ja mistä uraanin fissiossa? Mikä vuorovaikutus kummassakin on kyseessä, ja minkä suuruusluokan energioista puhutaan yhtä reaktiota kohti?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- palaminen on kemiallinen reaktio: energia vapautuu, kun elektronien muodostamat kemialliset sidokset järjestyvät uudelleen (sähkömagneettinen vuorovaikutus), noin muutama elektronivoltti reaktiota kohti\n- fissiossa energia vapautuu ytimen nukleonien sidosenergiasta (vahva vuorovaikutus), noin $200\\,\\mathrm{MeV}$ reaktiota kohti eli kymmeniä miljoonia kertoja enemmän\n- siksi samaan energiaan tarvitaan hiiltä monta kertaluokkaa enemmän, vaikka uraaniatomit ovat raskaampia ja vain pieni osa polttoaineen uraanista ehtii haljeta\n\n**Esimerkkivastaus:** Kun hiili palaa, hiiliatomi sitoutuu happeen, ja energia tulee elektronien sidosten muutoksesta. Sitä vapautuu vain noin $4\\,\\mathrm{eV}$ yhtä hiiliatomia kohti. Uraaniytimen haljetessa vapautuu ytimen sidosenergiaa noin $200\\,\\mathrm{MeV}$, eli noin $5\\cdot 10^7$ kertaa enemmän reaktiota kohti. Massaa kohti ero on noin $\\dfrac{200\\,\\mathrm{MeV}/235\\,\\mathrm{u}}{4\\,\\mathrm{eV}/12\\,\\mathrm{u}} \\approx 2{,}5\\cdot 10^6$. Polttoaineesta fissioituu vain muutama prosentti, joten käytännön ero on noin $10^5$.\n\n**Sudenkuoppa:** todetaan vain, että uraani ”sisältää enemmän energiaa”, kertomatta, että ydinreaktion energia tulee vahvasta vuorovaikutuksesta ja kemiallisen reaktion energia elektronien sidoksista.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.4",
+     "points": 3,
+     "prompt": "Hiilivoimalaitos ja ydinvoimalaitos aiheuttavat käydessään ympäristöhaittoja ja riskejä. Esitä kolme merkittävää tapaa, joilla laitosten käytönaikaiset haitat ja riskit eroavat toisistaan.",
+     "hints": [
+      "Mieti, mitä kummastakin laitoksesta pääsee ilmaan tavallisessa käytössä, ja millaisia onnettomuusriskejä kummassakin on. Vertaa aina molempia."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme eroa, joissa molempia laitoksia verrataan, esimerkiksi:\n- hiilidioksidi: hiilivoimala päästää paljon $\\mathrm{CO_2}$:ta ja kiihdyttää ilmastonmuutosta, ydinvoimala ei käytön aikana juuri lainkaan\n- pienhiukkaset ja muut savukaasut (rikki- ja typen oksidit, raskasmetallit): hiilivoimalan päästöt heikentävät ilmanlaatua ja happamoittavat, ydinvoimalalla näitä ei ole\n- säteilyriski: ydinvoimalassa on suuri määrä radioaktiivisia aineita, joten vakavassa onnettomuudessa voi levitä radioaktiivisia päästöjä; hiilivoimalassa tällaista riskiä ei ole\n- (lisäksi esim. käytetty ydinpolttoaine on vaarallista radioaktiivista jätettä, hiilivoimalasta syntyy tuhkaa)\n\n**Esimerkkivastaus:** Hiilivoimala tuottaa jatkuvasti hiilidioksidia, joka lisää kasvihuoneilmiötä; ydinvoimala ei tuota sitä käydessään. Hiilivoimalan savukaasuissa on pienhiukkasia ja rikin ja typen oksideja, jotka aiheuttavat terveyshaittoja ja happamoitumista; ydinvoimalalla näitä päästöjä ei ole. Ydinvoimalassa taas on suuri määrä radioaktiivista ainetta, ja vakava onnettomuus voisi levittää sitä ympäristöön, kun hiilivoimalassa säteilyonnettomuuden riskiä ei ole.\n\n**Sudenkuoppa:** kuvataan vain toista voimalaa vertaamatta sitä toiseen tai verrataan rakentamisen ja polttoaineen hankinnan haittoja, vaikka kysytään käytönaikaisia eroja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 3,
+     "prompt": "Eteläsuomalaisen omakotitalon katolla on 18 aurinkopaneelin pienvoimala (teho 3.8.2022 kuvassa 9.A). Tuotanto vaihtelee kellonajan mukaan, ja ilmeisin syy on auringon nousu (elokuussa noin klo 5) ja lasku (noin klo 22). Mainitse kolme muuta tekijää, jotka muuttavat tuotantoa vuorokauden aikana.",
+     "hints": [
+      "Mieti, mikä estää auringonvaloa pääsemästä paneeleihin, missä kulmassa valo osuu paneeleihin eri aikoina ja miten paneelien oma tila muuttuu päivän mittaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme tekijää, esimerkiksi:\n- pilvisyys: pilvet varjostavat paneeleita, mikä näkyy tehon nopeina vaihteluina\n- auringon suunta ja korkeus paneeleihin nähden: säteilyn tulokulma muuttuu päivän mittaan (tämän voimalan huipputeho on vasta iltapäivällä, joten paneelit ovat ilmeisesti länteen päin)\n- varjostukset: puut ja rakennukset varjostavat paneeleita tiettyinä aikoina\n- paneelien lämpeneminen: hyötysuhde heikkenee lämpötilan noustessa\n- ilmakehän paksuus: matalalta paistava aurinko kulkee pidemmän matkan ilmakehässä, jolloin säteilyä absorboituu ja siroaa enemmän\n\n**Esimerkkivastaus:** Ohi kulkevat pilvet varjostavat paneeleita ja aiheuttavat tehon nopeat notkahdukset. Auringon suunta muuttuu koko päivän, joten säteily osuu paneeleihin eri kulmassa; kohtisuorassa osuessaan se tuottaa eniten. Lisäksi läheiset puut tai rakennukset voivat varjostaa katon tiettyinä kellonaikoina.\n\n**Sudenkuoppa:** luetellaan tekijöitä, jotka eivät vaihtele vuorokauden aikana (esimerkiksi paneelien määrä tai vuodenaika).",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 9,
+     "prompt": "Taulukossa 9.B on voimalan teho ajan funktiona viitenä saman viikon päivänä. Tee taulukosta tarkoitukseen sopiva kuvaaja ja määritä sen avulla, paljonko energiaa voimala voisi elokuun alussa enimmillään tuottaa yhdessä vuorokaudessa.",
+     "hints": [
+      "Enimmäistuotto saadaan täysin pilvettömänä päivänä. Mitä viidestä mitatusta päivästä voi päätellä pilvettömän päivän tehosta kullakin kellonajalla?",
+      "Valitse jokaiselle ajanhetkelle viiden päivän suurin teho ja piirrä nämä ajan funktiona. Energia on käyrän alle jäävä pinta-ala ($E = \\int P\\,dt$); muunna yksiköt, $1\\,\\mathrm{kWh} = 3{,}6\\,\\mathrm{MJ}$."
+     ],
+     "solution": "1. Pilvet vain pienentävät tehoa, joten kunkin ajanhetken suurin viidestä mitatusta tehosta on paras arvio pilvettömän päivän tehosta.\n2. Muodostetaan taulukkolaskennalla sarake, jossa on jokaisella rivillä viiden päivän suurin teho, ja piirretään se ajan (min keskiyöstä tai kellonaika) funktiona. Käyrä nousee aamulla, on suurimmillaan iltapäivällä noin $3{,}6\\,\\mathrm{kW}$:ssa ja laskee illalla nollaan.\n3. Vuorokauden energia on tämän käyrän alle jäävä pinta-ala: $E = \\int P\\,dt$. Puolisuunnikassäännöllä (tai ohjelman integroinnilla) saadaan noin $1{,}55\\cdot 10^6\\,\\mathrm{W\\,min}$.\n4. Muunnos: $E \\approx 1{,}55\\cdot 10^6\\,\\mathrm{W}\\cdot 60\\,\\mathrm{s} \\approx 9{,}3\\cdot 10^7\\,\\mathrm{J} \\approx 26\\,\\mathrm{kWh}$.\n\n**Vastaus: enimmillään noin $26\\,\\mathrm{kWh}$ (noin $93\\,\\mathrm{MJ}$) vuorokaudessa.**\n\n(Yksittäisten mitattujen päivien tuotot ovat vain noin $16$–$22\\,\\mathrm{kWh}$.)\n\n**Sudenkuoppa:** käytetään yhden päivän tai viiden päivän keskiarvon kuvaajaa, jolloin pilvien vaikutus jää mukaan eikä tulos ole enimmäistuotto.",
+     "answer": "$E \\approx 26\\,\\mathrm{kWh} \\approx 93\\,\\mathrm{MJ}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.3",
+     "points": 4,
+     "prompt": "Mihin kellonaikaan ja kuinka pitkän ajan tuotanto olisi suurimmillaan kohdan 9.2 ihannetilanteessa?",
+     "hints": [
+      "Katso kohdan 9.2 suurimpien tehojen kuvaajaa: millä aikavälillä teho pysyy lähellä huippuarvoaan?"
+     ],
+     "solution": "1. Kohdan 9.2 kuvaajassa (kunkin ajanhetken suurin teho) teho on lähellä huippuaan, noin $3{,}5$–$3{,}7\\,\\mathrm{kW}$, suunnilleen välillä $900$–$1020\\,\\mathrm{min}$ keskiyöstä.\n2. Kellonaikoina tämä on noin klo 15.00–17.00. Aikaväli on noin $1{,}5$–$2$ tuntia (luennasta riippuen $60$–$200\\,\\mathrm{min}$).\n3. Huippu osuu iltapäivään, joten paneelit on ilmeisesti suunnattu etelän ja lännen välille.\n\n**Vastaus: noin klo 15–17, noin 1,5–2 tunnin ajan.**\n\n**Sudenkuoppa:** annetaan vastaus ilman viittausta kuvaajaan tai oletetaan huipun olevan keskipäivällä ilman aineiston tukea.",
+     "answer": "noin klo 15–17, noin 1,5–2 h",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.4",
+     "points": 4,
+     "prompt": "Valmistaja ilmoittaa paneelien muuttavan $19\\,\\%$ niihin osuvasta säteilyenergiasta sähköksi. Mainitse kaksi syytä, miksi kaikkea osuvaa säteilyenergiaa ei saada sähköksi.",
+     "hints": [
+      "Mitä valolle voi tapahtua paneelin pinnalla? Aurinkokenno on puolijohde: mitä fotonin energialta vaaditaan, jotta se vapauttaisi elektronin, ja mitä ylimääräiselle energialle käy?"
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi syytä, esimerkiksi:\n- osa säteilystä heijastuu paneelin pinnasta\n- fotonin energian on ylitettävä puolijohteen kynnysenergia; pitkäaaltoinen (infrapuna)säteily ei riitä vapauttamaan elektroneja, joten sen energia ei muutu sähköksi\n- kun fotonin energia ylittää kynnysenergian (näkyvä valo, ultravioletti), ylimenevä osa muuttuu lämmöksi, koska yksi fotoni vapauttaa vain yhden elektronin\n\n**Esimerkkivastaus:** Osa auringonvalosta heijastuu paneelin pinnasta eikä pääse kennoon lainkaan. Kennoon päässyt fotoni voi vapauttaa elektronin vain, jos sen energia on vähintään puolijohteen kynnysenergia, joten suuri osa infrapunasäteilystä menee hukkaan. Toisaalta suurienergisen fotonin koko energiaa ei saada talteen: se luovuttaa energiansa yhdelle elektronille, ja kynnysenergian ylittävä osa muuttuu kennossa lämmöksi.\n\n**Sudenkuoppa:** kerrotaan vain, että ”energiaa heijastuu” tai ”menee hukkaan”, nimeämättä fysikaalista mekanismia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 6,
+     "prompt": "Leikkiauto ($37\\,\\mathrm{g}$) kulkee radalla, jossa on kolme pystysuoraa ympyräsilmukkaa, halkaisijat $51\\,\\mathrm{cm}$, $38\\,\\mathrm{cm}$ ja $25\\,\\mathrm{cm}$ (video 10.A). Radan ylimmässä kohdassa auto kulkee katto alaspäin putoamatta radalta. Mikä on pienin nopeus, jolla auto voi ohittaa tämän kohdan?",
+     "hints": [
+      "Radan korkein kohta on suurimman silmukan lakipiste. Mitkä voimat vaikuttavat autoon siinä, ja mikä on ympyräliikkeen ehto?",
+      "Lakipisteessä sekä painovoima että radan tukivoima osoittavat alas: $mg + N = m\\dfrac{v^2}{r}$. Pienin nopeus saadaan rajatapauksessa $N = 0$; $r = 0{,}255\\,\\mathrm{m}$."
+     ],
+     "solution": "1. Radan korkein kohta on suurimman silmukan ($d = 51\\,\\mathrm{cm}$, $r = 0{,}255\\,\\mathrm{m}$) lakipiste.\n2. Lakipisteessä autoon vaikuttavat painovoima $G = mg$ ja radan tukivoima $N$, molemmat alaspäin eli kohti silmukan keskipistettä. Newtonin II laki: $G + N = ma_\\mathrm{n} = m\\dfrac{v^2}{r}$.\n3. Mitä pienempi nopeus, sitä pienempi tukivoima. Rajatapauksessa auto on juuri irtoamassa radasta ja $N = 0$, jolloin $mg = m\\dfrac{v^2}{r}$.\n4. $v_\\mathrm{min} = \\sqrt{gr} = \\sqrt{9{,}81\\,\\mathrm{m/s^2}\\cdot 0{,}255\\,\\mathrm{m}} \\approx 1{,}58\\,\\mathrm{m/s}$.\n\n**Vastaus: pienin nopeus on noin $1{,}6\\,\\mathrm{m/s}$.**\n\n**Sudenkuoppa:** käytetään säteen sijasta halkaisijaa ($v = 2{,}2\\,\\mathrm{m/s}$) tai jätetään perustelematta, miksi tukivoima on rajatapauksessa nolla.",
+     "answer": "$v_\\mathrm{min} \\approx 1{,}6\\,\\mathrm{m/s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.2",
+     "points": 7,
+     "prompt": "Auto lähtee radalle nopeudella $3{,}1\\,\\mathrm{m/s}$. Radan lopussa se hyppää hyppyristä ja nousee $32\\,\\mathrm{cm}$ korkeuteen radan tasosta, ja lakipisteestä se laskeutuu radan tasolle $15\\,\\mathrm{cm}$ vaakasuoran matkan päähän (kuva 10.B). Ilmalennossa vastusvoimat voi jättää huomiotta. Kuinka suuren työn vastusvoimat tekivät autoon koko radalla?",
+     "hints": [
+      "Vertaa auton mekaanista energiaa lähtöhetkellä ja hypyn lakipisteessä. Ero on vastusvoimien työ. Lakipisteessä autolla on vielä vaakasuora nopeus.",
+      "Lakipisteestä auto putoaa kuin vaakasuora heitto: $h = \\tfrac12 gt^2$ ja $x = v_xt$, joten $v_x = x\\sqrt{\\dfrac{g}{2h}}$. Energiaperiaate: $\\tfrac12 mv_0^2 - W = mgh + \\tfrac12 mv_x^2$."
+     ],
+     "solution": "1. Energiaperiaate: auton mekaaninen energia pienenee vastusvoimien työn verran. Lähtöhetkellä (radan taso, $h = 0$) $E_1 = \\tfrac12 mv_0^2$. Hypyn lakipisteessä $E_2 = mgh + \\tfrac12 mv_x^2$, koska pystysuora nopeus on nolla. Ilmalennon aikana energiaa ei häviä, joten ero syntyy radalla.\n2. Nopeus lakipisteessä: lakipisteestä alkaa vaakasuora heittoliike. Pudotusaika: $h = \\tfrac12 gt^2 \\Rightarrow t = \\sqrt{\\dfrac{2h}{g}} = \\sqrt{\\dfrac{2\\cdot 0{,}32\\,\\mathrm{m}}{9{,}81\\,\\mathrm{m/s^2}}} \\approx 0{,}255\\,\\mathrm{s}$. Vaakanopeus: $v_x = \\dfrac{x}{t} = \\dfrac{0{,}15\\,\\mathrm{m}}{0{,}255\\,\\mathrm{s}} \\approx 0{,}587\\,\\mathrm{m/s}$.\n3. Vastusvoimien työn suuruus:\n$$W = \\tfrac12 mv_0^2 - mgh - \\tfrac12 mv_x^2 = 0{,}037\\,\\mathrm{kg}\\left(\\tfrac12(3{,}1\\,\\mathrm{m/s})^2 - 9{,}81\\,\\mathrm{m/s^2}\\cdot 0{,}32\\,\\mathrm{m} - \\tfrac12(0{,}587\\,\\mathrm{m/s})^2\\right).$$\n4. Luvut: $0{,}1778\\,\\mathrm{J} - 0{,}1162\\,\\mathrm{J} - 0{,}0064\\,\\mathrm{J} \\approx 0{,}055\\,\\mathrm{J}$.\n\n**Vastaus: vastusvoimat tekivät työn $-0{,}055\\,\\mathrm{J}$ (suuruus noin $0{,}055\\,\\mathrm{J}$).**\n\n**Sudenkuoppa:** unohdetaan auton liike-energia hypyn lakipisteessä, jolloin työksi saadaan liian suuri $0{,}062\\,\\mathrm{J}$.",
+     "answer": "$W \\approx -0{,}055\\,\\mathrm{J}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 7,
+     "prompt": "Valitaan auto, jonka lähtövauhti ja vastusvoimat ovat sellaiset, että se ohittaa ensimmäisen ja toisen silmukan lakipisteet pienimmällä mahdollisella nopeudella. Pääseekö se myös kolmannen silmukan läpi? Oleta, että vastusvoimat ovat keskimäärin yhtä suuret kaikissa silmukoissa.",
+     "hints": [
+      "Laske auton mekaaninen energia silmukoiden 1 ja 2 lakipisteissä (korkeus $d$, nopeus $\\sqrt{gr}$). Energian vähenemä on keskimääräisen vastusvoiman työ lakipisteiden välisellä radan osalla.",
+      "Lakipisteiden välinen radan pituus on noin puolet kummankin silmukan kehästä: $\\Delta x_1 = \\tfrac{\\pi}{2}(d_1 + d_2)$. Ratkaise $F = \\dfrac{E_1 - E_2}{\\Delta x_1}$, laske $E_3 = E_1 - F(\\Delta x_1 + \\Delta x_2)$ ja vertaa arvoon $mg\\bigl(d_3 + \\tfrac{d_3}{4}\\bigr)$."
+     ],
+     "solution": "1. Pienimmällä mahdollisella nopeudella tukivoima on lakipisteessä nolla, kuten kohdassa 10.1: $v_n = \\sqrt{gr_n}$. Lakipisteen korkeus radan tasosta on silmukan halkaisija $d_n$.\n2. Mekaaninen energia lakipisteessä: $E_n = mgd_n + \\tfrac12 mgr_n = mg\\left(d_n + \\tfrac{d_n}{4}\\right)$.\n   - Silmukka 1: $E_1 = 0{,}037\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2}\\cdot 0{,}6375\\,\\mathrm{m} \\approx 0{,}2314\\,\\mathrm{J}$.\n   - Silmukka 2: $E_2 = 0{,}037\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2}\\cdot 0{,}475\\,\\mathrm{m} \\approx 0{,}1724\\,\\mathrm{J}$.\n3. Lakipisteiden välillä auto kulkee puolikkaan silmukan 1 alas ja puolikkaan silmukan 2 ylös: $\\Delta x_1 = \\tfrac{\\pi}{2}(d_1 + d_2) = \\tfrac{\\pi}{2}\\cdot 0{,}89\\,\\mathrm{m} \\approx 1{,}398\\,\\mathrm{m}$.\n4. Keskimääräinen vastusvoima: $F = \\dfrac{E_1 - E_2}{\\Delta x_1} = \\dfrac{0{,}0590\\,\\mathrm{J}}{1{,}398\\,\\mathrm{m}} \\approx 0{,}0422\\,\\mathrm{N}$.\n5. Silmukan 2 lakipisteestä silmukan 3 lakipisteeseen: $\\Delta x_2 = \\tfrac{\\pi}{2}(d_2 + d_3) \\approx 0{,}990\\,\\mathrm{m}$. Energia silmukan 3 lakipisteessä: $E_3 = E_1 - F(\\Delta x_1 + \\Delta x_2) \\approx 0{,}2314\\,\\mathrm{J} - 0{,}0422\\,\\mathrm{N}\\cdot 2{,}388\\,\\mathrm{m} \\approx 0{,}131\\,\\mathrm{J}$.\n6. Läpi pääsemiseen tarvitaan vähintään $E_\\mathrm{min} = mg\\left(d_3 + \\tfrac{d_3}{4}\\right) = 0{,}037\\,\\mathrm{kg}\\cdot 9{,}81\\,\\mathrm{m/s^2}\\cdot 0{,}3125\\,\\mathrm{m} \\approx 0{,}113\\,\\mathrm{J}$.\n7. $E_3 > E_\\mathrm{min}$. Nopeutena: lakipisteessä $v_3 \\approx 1{,}47\\,\\mathrm{m/s}$, kun vähimmäisnopeus on $\\sqrt{gr_3} \\approx 1{,}11\\,\\mathrm{m/s}$.\n\n**Vastaus: kyllä, auto pääsee myös kolmannen silmukan läpi ($E_3 \\approx 0{,}131\\,\\mathrm{J} > 0{,}113\\,\\mathrm{J}$).**\n\n**Sudenkuoppa:** unohdetaan lakipisteen potentiaali- tai liike-energia, tai oletetaan vastusvoimien työ samaksi joka silmukassa, vaikka silmukoiden koot ja siten matkat ovat eri.",
+     "answer": "kyllä: $E_3 \\approx 0{,}131\\,\\mathrm{J} > E_\\mathrm{min} \\approx 0{,}113\\,\\mathrm{J}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Aineiston 11.A kuvassa röntgensäteet siroavat kiteen atomitasoista, joiden väli on $d$, ja säteen ja tason välinen kulma on $\\theta$. Johda kuvan avulla Braggin laki $2d\\sin\\theta = n\\lambda$ ($n$ on kertaluku).",
+     "hints": [
+      "Vertaa kahden säteen kulkemia matkoja, kun toinen siroaa ylemmästä ja toinen alemmasta atomitasosta. Milloin sironneet aallot vahvistavat toisiaan?",
+      "Piirrä alemmalle säteelle kohtisuorat aaltorintamat ylemmän säteen sirontapisteen kautta. Lisämatka koostuu kahdesta osasta, jotka ovat kumpikin suorakulmaisen kolmion kateetteja: $d\\sin\\theta$. Vahvistuminen vaatii, että matkaero on aallonpituuden monikerta."
+     ],
+     "solution": "1. Tarkastellaan kahta yhdensuuntaista sädettä, joista ylempi siroaa ylimmästä atomitasosta ja alempi seuraavasta tasosta, joka on etäisyydellä $d$ alempana. Kumpikin säde siroaa tasoon nähden kulmassa $\\theta$.\n2. Piirretään tulevalle säteelle kohtisuora aaltorintama ylemmän säteen sirontapisteen kautta, ja samoin lähtevälle säteelle. Rintamien ulkopuolella säteet kulkevat yhtä pitkät matkat.\n3. Alempi säde kulkee lisämatkan tasolle ja takaisin. Kuvaan syntyy kaksi suorakulmaista kolmiota, joiden hypotenuusa on sirontapisteiden välinen jana ja jossa $\\theta$:n vastainen kateetti on kumpikin $d\\sin\\theta$. Matkaero on siis $\\Delta s = 2d\\sin\\theta$.\n4. Sironneet aallot vahvistavat toisiaan (konstruktiivinen interferenssi), kun ne ovat samassa vaiheessa, eli kun matkaero on aallonpituuden kokonaislukumonikerta: $\\Delta s = n\\lambda$.\n5. Siis intensiteettimaksimeissa $2d\\sin\\theta = n\\lambda$, $n = 1, 2, 3, \\dots$ Sama ehto pätee kaikkiin peräkkäisiin tasoihin, joten kaikkien tasojen säteet vahvistavat toisiaan.\n\n**Vastaus: $2d\\sin\\theta = n\\lambda$ (matkaero $2d\\sin\\theta$ = aallonpituuden monikerta).**\n\n**Sudenkuoppa:** otetaan matkaeroksi vain $d\\sin\\theta$ (säteen meno- ja paluumatka unohtuu) tai käytetään kulmana tulokulmaa normaaliin nähden.",
+     "answer": "$2d\\sin\\theta = n\\lambda$",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 5,
+     "prompt": "Kuvan 11.B raudan röntgendiffraktiokuvaajassa on kolme ensimmäisen kertaluvun maksimia (a, b, c), ja säteilyn aallonpituus on $\\lambda = 0{,}15406\\,\\mathrm{nm}$. Mikä maksimi vastaa pienintä atomitasojen väliä, ja kuinka suuri se on?",
+     "hints": [
+      "Ratkaise Braggin laista $d = \\dfrac{\\lambda}{2\\sin\\theta}$ ($n = 1$). Miten $d$ muuttuu, kun $\\theta$ kasvaa?",
+      "Pienin tasoväli vastaa suurinta diffraktiokulmaa. Lue kuvasta tämän maksimin kulma (vaaka-akselilla on suoraan $\\theta$) ja sijoita."
+     ],
+     "solution": "1. Braggin laista ($n = 1$): $d = \\dfrac{\\lambda}{2\\sin\\theta}$. Välillä $0^\\circ$–$90^\\circ$ $\\sin\\theta$ kasvaa kulman kasvaessa, joten suurin kulma vastaa pienintä tasoväliä.\n2. Suurin kulma on maksimilla **c**. Kuvasta luetaan $\\theta \\approx 41{,}0^\\circ$.\n3. $d = \\dfrac{0{,}15406\\,\\mathrm{nm}}{2\\sin 41{,}0^\\circ} \\approx 0{,}117\\,\\mathrm{nm}$.\n\n**Vastaus: maksimi c; $d \\approx 0{,}117\\,\\mathrm{nm}$.**\n\n**Sudenkuoppa:** valitaan korkein piikki (a) tai käytetään kulmana $2\\theta$. Tässä kuvaajan vaaka-akselilla on suoraan kulma $\\theta$.",
+     "answer": "c, $d \\approx 0{,}117\\,\\mathrm{nm}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 6,
+     "prompt": "Molybdeenin $K_\\alpha$-röntgensäteilyn fotonin energia on $17{,}48\\,\\mathrm{keV}$. Toisessa kokeessa käytetään elektroneja, joiden de Broglien aallonpituus $\\lambda = h/p$ vastaa tämän röntgensäteilyn aallonpituutta. Kuinka monta prosenttia valon nopeudesta elektronien nopeus on?",
+     "hints": [
+      "Laske ensin röntgenfotonin aallonpituus yhtälöstä $E = hf = \\dfrac{hc}{\\lambda}$. Elektronin aallonpituus on $\\lambda = \\dfrac{h}{mv}$.",
+      "Kun aallonpituudet ovat yhtä suuret, $\\dfrac{hc}{E} = \\dfrac{h}{mv}$, josta $v = \\dfrac{E}{mc}$ ja $\\dfrac{v}{c} = \\dfrac{E}{mc^2}$. Elektronin lepoenergia $mc^2 = 511\\,\\mathrm{keV}$."
+     ],
+     "solution": "1. Fotonin aallonpituus: $E = \\dfrac{hc}{\\lambda}$, joten $\\lambda = \\dfrac{hc}{E} \\approx 7{,}09\\cdot 10^{-11}\\,\\mathrm{m}$.\n2. Elektronin de Broglien aallonpituus: $\\lambda = \\dfrac{h}{p} = \\dfrac{h}{mv}$ (nopeus osoittautuu pieneksi, joten klassinen liikemäärä kelpaa).\n3. Asetetaan yhtä suuriksi: $\\dfrac{hc}{E} = \\dfrac{h}{mv} \\Rightarrow v = \\dfrac{E}{mc}$, eli $\\dfrac{v}{c} = \\dfrac{E}{mc^2}$.\n4. $\\dfrac{v}{c} = \\dfrac{17{,}48\\,\\mathrm{keV}}{511\\,\\mathrm{keV}} \\approx 0{,}0342$. (SI-yksiköin: $v = \\dfrac{17{,}48\\cdot 10^3\\cdot 1{,}602\\cdot 10^{-19}\\,\\mathrm{J}}{9{,}109\\cdot 10^{-31}\\,\\mathrm{kg}\\cdot 2{,}998\\cdot 10^8\\,\\mathrm{m/s}} \\approx 1{,}03\\cdot 10^7\\,\\mathrm{m/s}$.)\n\n**Vastaus: noin $3{,}4\\,\\%$ valon nopeudesta.**\n\n**Sudenkuoppa:** käytetään fotonin aallonpituudelle kaavaa $\\lambda = h/p$ elektronin liikemäärällä tai sekoitetaan elektronin liike-energia fotonin energiaan (oletetaan, että elektronin liike-energia on $17{,}48\\,\\mathrm{keV}$).",
+     "answer": "$v/c \\approx 3{,}4\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Kuinka suurella jännitteellä levosta lähtevät elektronit on kiihdytettävä, jotta ne saavuttavat kohdan 11.3 nopeuden?",
+     "hints": [
+      "Nopeus on vain muutama prosentti valon nopeudesta, joten klassinen liike-energia riittää. Sähkökentän työ $eU$ muuttuu liike-energiaksi $\\tfrac12 mv^2$."
+     ],
+     "solution": "1. Koska $v \\approx 0{,}034c$, suhteellisuusteoriaa ei tarvita: $E_\\mathrm{k} = \\tfrac12 mv^2$.\n2. Kiihdytysjännitteen yli sähkökenttä tekee elektroniin työn $eU$, joka muuttuu liike-energiaksi: $eU = \\tfrac12 mv^2$.\n3. $U = \\dfrac{mv^2}{2e} = \\dfrac{9{,}109\\cdot 10^{-31}\\,\\mathrm{kg}\\cdot (1{,}026\\cdot 10^7\\,\\mathrm{m/s})^2}{2\\cdot 1{,}602\\cdot 10^{-19}\\,\\mathrm{C}} \\approx 299\\,\\mathrm{V}$.\n4. Tarkistus energioilla: $E_\\mathrm{k} = \\dfrac{(17{,}48\\,\\mathrm{keV})^2}{2\\cdot 511\\,\\mathrm{keV}} \\approx 0{,}299\\,\\mathrm{keV}$, eli $U \\approx 299\\,\\mathrm{V}$.\n\n**Vastaus: $U \\approx 300\\,\\mathrm{V}$.**\n\n**Sudenkuoppa:** oletetaan, että elektronin liike-energia on sama kuin röntgenfotonin energia, jolloin jännitteeksi tulee $17{,}5\\,\\mathrm{kV}$.",
+     "answer": "$U \\approx 300\\,\\mathrm{V}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

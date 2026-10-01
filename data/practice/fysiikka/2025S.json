@@ -1,0 +1,499 @@
+{
+ "subject": "fysiikka",
+ "session": "2025S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2025S_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-09-17_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "1.1–1.4",
+     "points": 8,
+     "prompt": "Neljä suuruusluokka-arviota monivalintana: kotitalouden vedenkeittimen teho (1.1), matkapuhelimen latausvirta (1.2), radioaaltojen kulkuaika Maasta Kuuhun (1.3) ja hiuksen paksuus (1.4). Vaihtoehdot ovat alkuperäisessä tehtävässä.",
+     "hints": [
+      "Arvioi jokainen suure arkitiedon tai yksinkertaisen laskun avulla ja valitse lähin kymmenen potenssi. Esimerkiksi kulkuaika saadaan kaavasta $t=\\frac sc$.",
+      "Kohta kohdalta:\n- 1.1: kuinka monta kilowattia pistorasiasta otetaan, kun vesi kiehuu parissa minuutissa?\n- 1.2: tavallinen laturi antaa 5 V ja muutaman watin tehon.\n- 1.3: Kuun etäisyys on noin $3{,}8\\cdot10^8$ m ja valon nopeus $3{,}0\\cdot10^8$ m/s.\n- 1.4: hiuksen erottaa paljain silmin, mutta se on paljon ohuempi kuin millimetri."
+     ],
+     "solution": "1. **1.1 C (1 000 W).** Vedenkeitin kiehauttaa litran vettä parissa minuutissa, mihin tarvitaan kilowattiluokan teho (tyypillisesti 1–2 kW).\n2. **1.2 C (1 A).** Laturin teho on muutamia watteja ja jännite 5 V, joten virta on $I=\\frac PU\\approx\\frac{5\\ \\text{W}}{5\\ \\text{V}}=1\\ \\text{A}$.\n3. **1.3 A (1 s).** $t=\\frac sc=\\frac{3{,}8\\cdot10^8\\ \\text{m}}{3{,}0\\cdot10^8\\ \\text{m/s}}\\approx 1{,}3\\ \\text{s}$.\n4. **1.4 B (100 µm).** Hiuksen paksuus on noin 0,05–0,1 mm eli kymmeniä mikrometrejä.\n\n**Vastaus: 1.1 C · 1.2 C · 1.3 A · 1.4 B**",
+     "answer": "1.1 C (1 000 W) · 1.2 C (1 A) · 1.3 A (1 s) · 1.4 B (100 µm)",
+     "check": "hvp"
+    },
+    {
+     "id": "1.5",
+     "points": 4,
+     "prompt": "Suure $X$ saadaan jakamalla energia massan ja kiihtyvyyden tulolla: $X=\\dfrac{\\text{energia}}{\\text{massa}\\cdot\\text{kiihtyvyys}}$. Päättele yksikkötarkastelulla $X$:n yksikkö (1.5.1) ja suureen nimi (1.5.2).",
+     "hints": [
+      "Kirjoita yksiköt SI-perusyksiköillä: $\\text{J}=\\text{kg}\\,\\text{m}^2/\\text{s}^2$. Mieti myös, mikä suure on massa kertaa kiihtyvyys."
+     ],
+     "solution": "1. $[X]=\\dfrac{\\text{J}}{\\text{kg}\\cdot\\text{m/s}^2}=\\dfrac{\\text{kg}\\,\\text{m}^2/\\text{s}^2}{\\text{kg}\\,\\text{m}/\\text{s}^2}=\\text{m}$.\n2. Tulkinta: massa kertaa kiihtyvyys on voima, ja energia (työ) jaettuna voimalla on matka, jonka yli voima tekee työn ($W=Fs$).\n\n**Vastaus: 1.5.1 metri (m); 1.5.2 matka (pituus, etäisyys)**",
+     "answer": "1.5.1 metri · 1.5.2 matka (pituus)",
+     "check": "hvp"
+    },
+    {
+     "id": "1.6",
+     "points": 4,
+     "prompt": "Suure $Y=\\sqrt{\\dfrac{\\text{voima}}{\\text{massa}/\\text{matka}}}$. Päättele yksikkötarkastelulla $Y$:n yksikkö (1.6.1) ja nimi (1.6.2).",
+     "hints": [
+      "Korvaa newton perusyksiköillä $\\text{N}=\\text{kg}\\,\\text{m}/\\text{s}^2$ ja sievennä juurrettava. (Kaava on tuttu kielen aaltoliikkeen nopeudesta $v=\\sqrt{F/\\mu}$.)"
+     ],
+     "solution": "1. $\\left[\\dfrac{\\text{voima}}{\\text{massa}/\\text{matka}}\\right]=\\dfrac{\\text{kg}\\,\\text{m}/\\text{s}^2}{\\text{kg}/\\text{m}}=\\dfrac{\\text{m}^2}{\\text{s}^2}$.\n2. Neliöjuuri: $[Y]=\\dfrac{\\text{m}}{\\text{s}}$. Kyseessä on nopeus, esimerkiksi jännitetyssä kielessä etenevän aallon nopeus $v=\\sqrt{F/\\mu}$, jossa $\\mu$ on massa pituusyksikköä kohti.\n\n**Vastaus: 1.6.1 metriä sekunnissa (m/s); 1.6.2 nopeus**",
+     "answer": "1.6.1 m/s · 1.6.2 nopeus",
+     "check": "hvp"
+    },
+    {
+     "id": "1.7",
+     "points": 4,
+     "prompt": "Suure $Z=\\dfrac{\\text{Planckin vakio}}{\\text{energia}}$. Päättele yksikkötarkastelulla $Z$:n yksikkö (1.7.1) ja nimi (1.7.2).",
+     "hints": [
+      "Planckin vakion yksikkö on $\\text{J}\\,\\text{s}$ (fotonin energia $E=hf$). Mitä jää jäljelle, kun jaat joulella?"
+     ],
+     "solution": "1. $[h]=\\text{J}\\,\\text{s}$, joten $[Z]=\\dfrac{\\text{J}\\,\\text{s}}{\\text{J}}=\\text{s}$.\n2. Tulkinta: kaavasta $E=hf$ saadaan $\\frac hE=\\frac1f=T$, eli suure on aika (esimerkiksi värähtelyn jaksonaika).\n\n**Vastaus: 1.7.1 sekunti (s); 1.7.2 aika**",
+     "answer": "1.7.1 sekunti · 1.7.2 aika",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Alkuperäisen tehtävän videolla 2.A teräskuula vierii alas kaltevaa putkea, jonka alaosa on täynnä vettä. Aineistossa 2.B kuulan kulkema matka $s$ on mitattu 0,1 sekunnin välein hetkestä 0 hetkeen 3,0 s.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 4,
+     "prompt": "Esitä taulukon 2.B mittaukset kuvaajana: kuulan kulkema matka ajan funktiona. Kuvaajaan ei piirretä sovitetta.",
+     "hints": [
+      "Syötä taulukko laskentaohjelmaan ja piirrä pistekaavio: aika $t$ (s) vaaka-akselille, matka $s$ (m) pystyakselille. Kaikki pisteet näkyviin, ei murtoviivaa eikä sovitetta."
+     ],
+     "solution": "1. Piirretään pistekaavio kaikista 31 mittauspisteestä: vaaka-akselilla aika $t$ (s), pystyakselilla matka $s$ (m).\n2. Akseleille merkitään suureet, yksiköt ja lukuarvot. Pisteitä ei yhdistetä viivalla, eikä niihin sovitettu käyrää.\n3. Kuvaajan muoto: aluksi (0–0,4 s) matka on nolla, sitten pisteet kaartuvat ylöspäin (kiihtyvä liike), ja noin 1,5 sekunnista alkaen ne asettuvat lähes suoralle (tasainen liike vedessä).\n\n**Vastaus: pistekaavio $s(t)$ ilman sovitetta.**\n\n**Sudenkuoppa:** murtoviiva tai sovite. Tässä kohdassa arvioidaan pelkkä mittausdatan esitys.",
+     "check": "laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 6,
+     "prompt": "Päättele kuvaajan avulla, milloin kuula osuu veteen. Mikä aikaväleistä a: 1,3–1,4 s, b: 1,4–1,5 s, c: 1,5–1,6 s vai d: 1,8–1,9 s on oikea? Perustele piirtämällä uusi kuvaaja, jossa osaan mittauspisteistä on sovitettu paraabeli.",
+     "hints": [
+      "Ennen veteen osumista kuula vierii tasaisesti kiihtyen, jolloin $s(t)$ on paraabeli. Sovita paraabeli kiihtyvän vaiheen pisteisiin ja katso, missä kohdassa mittauspisteet alkavat poiketa siitä.",
+      "Sovita paraabeli väliin noin 0,4–1,4 s: saat noin $s\\approx 0{,}709t^2-0{,}601t+0{,}129$ (yksiköt m ja s). Vertaa mallin arvoa ja mittausta hetkillä 1,4 s ja 1,5 s."
+     ],
+     "solution": "1. Kaltevassa putkessa ilman vettä kuulaan vaikuttavat voimat pysyvät vakioina, joten liike on tasaisesti kiihtyvää ja $s(t)$ on toisen asteen polynomi.\n2. Sovitetaan pisteisiin välillä 0,4–1,4 s paraabeli: $s\\approx 0{,}709\\,t^2-0{,}601\\,t+0{,}129$ ($s$ metreinä, $t$ sekunteina). Mittauspisteet osuvat sille millimetrin tarkkuudella, esimerkiksi hetkellä 1,4 s malli antaa 0,677 m ja mittaus on 0,679 m.\n3. Hetkellä 1,5 s malli antaisi noin 0,822 m, mutta mitattu matka on vain 0,760 m. Kuula on siis hidastunut selvästi, eli kokonaisvoima on muuttunut.\n4. Newtonin II lain mukaan kiihtyvyyden muutos edellyttää voiman muutosta: vedessä kuulaan alkaa vaikuttaa suuri väliaineen vastus. Kuula osui veteen hetkien 1,4 s ja 1,5 s välillä.\n5. Uuteen kuvaajaan piirretään mittauspisteet, sovitettu paraabeli yhtälöineen ja merkitään kohta, jossa pisteet erkanevat paraabelilta.\n\n**Vastaus: aikaväli b (1,4–1,5 s)**\n\n**Sudenkuoppa:** paraabelin sovittaminen myös vedessä mitattuihin pisteisiin, jolloin sovite ei kuvaa kumpaakaan vaihetta ja poikkeaman kohta hämärtyy.",
+     "answer": "b: 1,4–1,5 s",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Määritä kuulan nopeus siinä vaiheessa, jossa kuula liikkuu ja siihen vaikuttavat voimat ovat tasapainossa.",
+     "hints": [
+      "Voimien ollessa tasapainossa kuula ei kiihdy, vaan liikkuu tasaisesti. Etsi kuvaajasta vaihe, jossa pisteet ovat suoralla, ja sovita siihen suora. Nopeus on suoran kulmakerroin.",
+      "Pisteet ovat suoralla noin 1,7 sekunnista mittauksen loppuun. Heti veteen osumisen jälkeen (1,5–1,6 s) kuula vielä hidastuu, joten jätä ne pois sovituksesta."
+     ],
+     "solution": "1. Vedessä väliaineen vastus kasvaa nopeuden mukana, kunnes se yhdessä muiden voimien kanssa kumoaa painon putken suuntaisen komponentin. Silloin kuula liikkuu Newtonin I lain mukaan tasaisella nopeudella.\n2. Kuvaajassa tätä vaihetta vastaavat pisteet, jotka ovat suoralla: noin 1,7 sekunnista mittauksen loppuun (3,0 s).\n3. Sovitetaan suora välille 1,7–3,0 s: $s\\approx 0{,}207\\ \\tfrac{\\text{m}}{\\text{s}}\\cdot t+0{,}480\\ \\text{m}$.\n4. Nopeus on kulmakerroin: $v\\approx 0{,}21\\ \\text{m/s}$.\n\n**Vastaus: $v\\approx 0{,}21\\ \\text{m/s}$ (sovitusvälistä riippuen noin 0,20–0,22 m/s)**\n\n**Sudenkuoppa:** suoran sovittaminen heti veteen osumisen jälkeisiin pisteisiin (1,5–1,6 s), joissa kuula vielä hidastuu.",
+     "answer": "$v\\approx 0{,}21\\ \\text{m/s}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Omakotitalo lämpiää maalämmöllä: lämpöpumppu siirtää lämpöä kallioperästä talon kuumavesisäiliöön (ks. alkuperäisen tehtävän kaavio 3.A). Lämpökerroin tarkoittaa säiliöön siirtyneen lämmön ja pumpun kuluttaman sähköenergian suhdetta.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 3,
+     "prompt": "Mistä kallioperään varastoitunut lämpö on pääosin peräisin?",
+     "hints": [
+      "Maalämpökaivot ovat noin 100–300 metrin syvyisiä. Mieti, kumpi energiavirta on maan pinnalla paljon suurempi: Auringosta tuleva vai Maan sisältä tuleva."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Maalämpökaivojen syvyydellä lämpö on pääosin peräisin **Auringosta**.\n- Maan sisältä tuleva geoterminen lämpö tulee merkittäväksi vasta kilometrien syvyydessä.\n\n**Esimerkkivastaus:** Maalämpö on suurimmaksi osaksi varastoitunutta aurinkoenergiaa. Auringon säteily lämmittää maan pintaa, ja lämpö johtuu kallioon. Auringon säteilyn tuoma energia maan pinnalle on monta kertaluokkaa suurempi kuin Maan sisuksista johtuva lämpö, joten muutamien satojen metrien syvyydellä kallion lämpötila määräytyy pääosin Auringon lämmittävästä vaikutuksesta. Maan ytimen ja radioaktiivisen hajoamisen lämpö tulee merkittäväksi vasta kilometrien syvyydessä.\n\n**Sudenkuoppa:** vastaus ”Maan ytimestä” on tavallinen, mutta väärä maalämpöpumpun porakaivon syvyydellä.",
+     "answer": "Pääosin Auringosta",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 7,
+     "prompt": "Säiliöön johdetaan 350 litraa 7,0-asteista vettä, jonka laitteisto lämmittää 2,5 tunnissa 60 °C:seen kuluttaen 7,4 kWh sähköä. Laske järjestelmän lämpökerroin (veteen siirtyneen lämmön suhde kulutettuun sähköenergiaan) ja teho, jolla vesi lämpenee.",
+     "hints": [
+      "Veteen siirtynyt lämpö on $Q=cm\\Delta T$, jossa $m=\\rho V$. Lämpökerroin on $\\varepsilon=\\frac QE$ ja lämmitysteho $P=\\frac Qt$. Muunna kilowattitunnit jouleiksi ($1\\ \\text{kWh}=3{,}6\\ \\text{MJ}$).",
+      "Veden massa on noin 350 kg ja lämpötilan muutos 53 K, joten $Q\\approx 77{,}7\\ \\text{MJ}$. Sähköenergia on $7{,}4\\cdot3{,}6\\ \\text{MJ}\\approx 26{,}6\\ \\text{MJ}$."
+     ],
+     "solution": "1. Veden massa: $m=\\rho V\\approx 999{,}9\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot0{,}350\\ \\text{m}^3\\approx 350\\ \\text{kg}$.\n2. Veteen siirtynyt lämpö: $Q=cm\\Delta T=4{,}19\\ \\tfrac{\\text{kJ}}{\\text{kg K}}\\cdot350\\ \\text{kg}\\cdot(60-7{,}0)\\ \\text{K}\\approx 7{,}77\\cdot10^4\\ \\text{kJ}=77{,}7\\ \\text{MJ}$.\n3. Sähköenergia: $E=7{,}4\\ \\text{kWh}=7{,}4\\cdot3{,}6\\ \\text{MJ}\\approx 26{,}6\\ \\text{MJ}$.\n4. Lämpökerroin: $\\varepsilon=\\dfrac{Q}{E}=\\dfrac{77{,}7\\ \\text{MJ}}{26{,}6\\ \\text{MJ}}\\approx 2{,}9$.\n5. Lämmitysteho: $P=\\dfrac{Q}{t}=\\dfrac{77{,}7\\cdot10^6\\ \\text{J}}{2{,}5\\cdot3600\\ \\text{s}}\\approx 8{,}6\\cdot10^3\\ \\text{W}$.\n\n**Vastaus: lämpökerroin noin 2,9 ja lämmitysteho noin 8,6 kW**\n\n**Sudenkuoppa:** sähkötehon ($\\frac{7{,}4\\ \\text{kWh}}{2{,}5\\ \\text{h}}\\approx 3{,}0\\ \\text{kW}$) antaminen lämmitystehon paikalle. Veteen siirtyy lämpöä noin kolminkertaisesti sähköön verrattuna, koska pumppu siirtää lisäksi lämpöä kalliosta.",
+     "answer": "lämpökerroin $\\approx 2{,}9$; $P\\approx 8{,}6\\ \\text{kW}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.3",
+     "points": 5,
+     "prompt": "Piirrä lämpöpumpun energiavirtakaavio, nimeä siinä esiintyvät suureet ja kirjoita niitä yhdistävä yhtälö. Voit käyttää kuvaa 3.A pohjana.",
+     "hints": [
+      "Lämpöpumppuun tulee energiaa kahta reittiä ja siitä lähtee energiaa yhtä reittiä. Mitkä ne ovat maalämpöjärjestelmässä? Energian säilymislaki antaa yhtälön.",
+      "Pumppuun tulee lämpö kalliosta ($Q_1$) ja sähköenergia ($W$), ja siitä lähtee lämpö vesisäiliöön ($Q_2$). Kirjoita tulevien ja lähtevien energioiden tasapaino."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Kaavion, jossa **lämpö $Q_1$** siirtyy kalliosta (maapiiristä) pumppuun, **sähköenergia eli työ $W$** tulee pumppuun sähköverkosta ja **lämpö $Q_2$** siirtyy pumpusta kuumavesisäiliöön. Nuolet osoittavat energian kulkusuunnat.\n- Suureiden nimet: $Q_1$ = maasta otettu lämpö, $W$ = pumpun kompressorin sähköllä tekemä työ, $Q_2$ = vesisäiliöön luovutettu lämpö.\n- Energian säilymisen mukainen yhtälö: $Q_1+W=Q_2$.\n\n**Esimerkkivastaus:** Piirretään keskelle laatikko ”lämpöpumppu”. Vasemmalta alhaalta siihen tulee nuoli $Q_1$ (lämpö kallioperästä), ylhäältä nuoli $W$ (sähköenergia) ja oikealle lähtee paksumpi nuoli $Q_2$ (lämpö kuumavesisäiliöön). Energia säilyy, joten $Q_2=Q_1+W$. Lämpökerroin on $\\varepsilon=\\frac{Q_2}{W}>1$, koska säiliöön siirtyy enemmän energiaa kuin sähköä kuluu.\n\n**Sudenkuoppa:** lämpö ei ole tilansuure. Ei ole ”säiliön lämpöä”, vaan säiliöön siirtyvä lämpö.",
+     "answer": "$Q_1+W=Q_2$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Kuntoilija treenaa jalkaprässillä (ks. alkuperäisen tehtävän kuva 4.A). Kelkan ja siihen lisättyjen levypainojen yhteismassa on 160 kg, ja kiskot ovat 45° kulmassa vaakatasoon nähden. Kelkan ja kiskojen välinen kitka jätetään huomiotta.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Kuntoilija pitää jaloillaan kelkkaa levypainoineen paikallaan. Piirrä voimakuvio kelkalle ja painoille yhtenä kappaleena. Käytä pohjana kuvaa 4.B.",
+     "hints": [
+      "Kappaleeseen vaikuttaa kolme voimaa: paino, kiskojen tukivoima ja kuntoilijan jalkojen voima. Kitkaa ei ole. Mihin suuntaan kiskojen tukivoima osoittaa, ja mihin suuntaan jalat työntävät kelkkaa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Paino $\\vec G$ painopisteestä pystysuoraan alas.\n- Kiskojen tukivoima $\\vec N$ kohtisuoraan kiskoja vastaan (ei pystysuoraan).\n- Kuntoilijan voima $\\vec F$ kiskojen suuntaisesti ylös rinnettä, kohdassa jossa jalat koskettavat kelkkaa.\n- Voimien summa on nolla: $\\vec F$ ja $\\vec N$ kumoavat yhdessä painon, ja nuolten pituudet ovat sen mukaiset ($F=N=G\\cos45^\\circ$).\n- Kitkavoimaa ei piirretä, koska kitka jätetään huomiotta.\n\n**Esimerkkivastaus:** Kuvan 4.B kelkan painopisteestä piirretään alaspäin paino $\\vec G$. Kiskojen ja kelkan kosketuskohdasta piirretään kiskoja vastaan kohtisuora tukivoima $\\vec N$ ja jalkojen kohdalta kiskojen suuntainen, ylöspäin osoittava voima $\\vec F$. Koska kiskot ovat 45° kulmassa, $\\vec N$ ja $\\vec F$ ovat yhtä pitkiä, ja kumpikin on noin 0,71 kertaa painon pituus.\n\n**Sudenkuoppa:** tukivoiman unohtaminen tai sen piirtäminen pystysuoraan.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 6,
+     "prompt": "Kuinka suurella voimalla kuntoilijan on vähintään työnnettävä kelkkaa, jotta se pysyy painoineen ylhäällä paikallaan? Kelkan ja painojen massa on 160 kg ja kiskojen kaltevuus 45°.",
+     "hints": [
+      "Kelkka on levossa, joten voimien summa on nolla. Kirjoita tasapainoehto kiskojen suunnassa: vain paino ja kuntoilijan voima vaikuttavat tässä suunnassa.",
+      "Painon kiskojen suuntainen komponentti on $G\\sin45^\\circ$ (sama kuin $G\\cos45^\\circ$, koska kulma on 45°). Kuntoilijan voiman on kumottava se."
+     ],
+     "solution": "1. Kelkka ja painot ovat levossa, joten Newtonin I lain mukaan voimien summa on nolla.\n2. Kiskojen suunnassa vaikuttavat vain kuntoilijan voima $F$ ja painon kiskojen suuntainen komponentti. Tukivoima on kiskoja vastaan kohtisuora, eikä kitkaa ole.\n3. Tasapainoehto kiskojen suunnassa: $F-mg\\sin45^\\circ=0$.\n4. $F=mg\\sin45^\\circ=160\\ \\text{kg}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}\\cdot\\sin45^\\circ\\approx 1110\\ \\text{N}$.\n\n**Vastaus: $F\\approx 1{,}1\\ \\text{kN}$**\n\n**Sudenkuoppa:** laskimen kulmayksikkö radiaaneina tai trigonometrisen funktion sijoittaminen nimittäjään ($\\frac{G}{\\cos45^\\circ}$).",
+     "answer": "$F=mg\\sin45^\\circ\\approx 1{,}1\\ \\text{kN}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 6,
+     "prompt": "Jalkojen ojentaminen kestää 2,8 s, ja sinä aikana kelkka painoineen siirtyy kiskoja pitkin 55 cm ylöspäin. Mikä on kuntoilijan voiman keskimääräinen teho?",
+     "hints": [
+      "Kuntoilijan tekemä työ nostaa kelkan potentiaalienergiaa (hidas nosto, liike-energia ei juuri muutu). Laske työ ja jaa se ajalla: $P=\\frac Wt$.",
+      "Kelkka nousee pystysuunnassa $h=s\\sin45^\\circ\\approx 0{,}39\\ \\text{m}$. Työ on $W=mgh$, tai yhtä hyvin kohdan 4.2 voima kertaa kuljettu matka."
+     ],
+     "solution": "1. Nosto on hidas ja kelkka on levossa alussa ja lopussa, joten kuntoilijan tekemä työ muuttuu kelkan ja painojen potentiaalienergiaksi.\n2. Kelkka nousee pystysuunnassa $h=s\\sin45^\\circ=0{,}55\\ \\text{m}\\cdot\\sin45^\\circ\\approx 0{,}389\\ \\text{m}$.\n3. Työ: $W=mgh=160\\ \\text{kg}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}\\cdot0{,}389\\ \\text{m}\\approx 610\\ \\text{J}$. Sama tulos saadaan kohdan 4.2 voimasta: $W=Fs\\approx 1110\\ \\text{N}\\cdot0{,}55\\ \\text{m}$.\n4. Keskimääräinen teho: $P=\\dfrac{W}{t}=\\dfrac{610\\ \\text{J}}{2{,}8\\ \\text{s}}\\approx 218\\ \\text{W}$.\n\n**Vastaus: $P\\approx 220\\ \\text{W}$**\n\n**Sudenkuoppa:** senttimetrien jättäminen muuntamatta metreiksi tai koko painon kertominen kiskojen suuntaisella matkalla ($mgs$), jolloin nousukorkeus tulee liian suureksi.",
+     "answer": "$P\\approx 220\\ \\text{W}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Viisi kuviin perustuvaa monivalintakohtaa aalloista (ks. alkuperäisen tehtävän kuvat 5.1.A–5.5.A):\n\n- 5.1 Mitkä kaksi äänilähdettä (kuvaajat A–F) yhdessä tuottavat ylimmän kuvaajan paineen vaihtelun?\n- 5.2 Missä pisteistä A–E kahden aaltolähteen aiheuttama vedenpinta on lähimpänä tyyntä?\n- 5.3 Kaksi pulssia kulkee narussa kohti kiinteää seinää. Millainen naru on (kuvaajat A–E), kun oikeanpuoleinen pulssi on heijastunut?\n- 5.4 Mikä spektreistä A–D kuuluu ylimmän kuvaajan ääneen?\n- 5.5 Mikä on metallijousessa etenevän aallon aallonpituus?",
+     "hints": [
+      "Käytä superpositioperiaatetta (poikkeamat summautuvat), interferenssiehtoja (huippu + pohja kumoavat toisensa), heijastusta kiinteästä päästä (pulssi kääntyy ylösalaisin) ja tietoa siitä, että jaksollinen ääni koostuu perustaajuudesta ja sen monikerroista.",
+      "Kohta kohdalta:\n- 5.1: ylimmässä kuvaajassa on nopea värähtely, jonka keskikohta vaeltaa hitaasti. Etsi yksi nopea ja yksi hidas komponentti, joiden amplitudit ja vaiheet täsmäävät.\n- 5.2: etsi piste, jossa yhtenäinen viiva (huippu) ja katkoviiva (pohja) leikkaavat.\n- 5.3: kiinteästä päästä heijastunut pulssi on käänteinen ja kohtaa vielä tulevan pulssin.\n- 5.4: mittaa jakson pituus ja laske perustaajuus. Onko ääni siniaalto?\n- 5.5: etsi viivaimesta kahden peräkkäisen tihentymän etäisyys."
+     ],
+     "solution": "Vaihtoehdot ovat tässä tehtävässä kuvien kirjaimia, ja vastaukset annetaan niillä.\n\n1. **5.1: A ja C.** Ylimmässä kuvaajassa nopea värähtely (jakso noin 1 ms, amplitudi 1) on sama kuin kuvaajassa A. Sen keskikohta nousee hitaasti noin arvoon 1 noin 4–5 ms:n kohdalla ja laskee lopussa noin arvoon −0,8, mikä vastaa hidasta värähtelyä C. Superpositiossa paineet summautuvat: $p=p_A+p_C$.\n2. **5.2: piste B.** Pisteessä B yhden lähteen aallonhuippu (yhtenäinen viiva) kohtaa toisen lähteen aallonpohjan (katkoviiva), joten poikkeamat kumoavat toisensa (heikentävä interferenssi). Muissa pisteissä kohtaa huippu ja huippu tai pohja ja pohja.\n3. **5.3: kuvaaja C.** Kiinteästä päästä heijastunut pulssi kääntyy ylösalaisin ja kulkee takaisin vasemmalle. Se kohtaa vielä seinää lähestyvän suorakulmaisen pulssin, ja poikkeamat summautuvat. Suorakulmaiseen pulssiin syntyy siksi heijastuneen kolmiopulssin muotoinen painauma.\n4. **5.4: spektri D.** Äänen paine toistuu noin 2,7 ms:n jaksoin, joten perustaajuus on noin $\\frac{1}{2{,}7\\ \\text{ms}}\\approx 370\\ \\text{Hz}$. Muoto ei ole siniaalto, joten spektrissä on perustaajuuden lisäksi sen monikertoja (noin 0,37, 0,74, 1,1 … kHz), kuten spektrissä D. Yhden piikin spektrit vastaisivat siniääntä, ja tasainen spektri kohinaa.\n5. **5.5: C (aallonpituus 6 cm).** Jousen tihentymät toistuvat viivaimen mukaan noin 6 cm:n välein (esim. noin kohdissa 1–2 cm, 7–8 cm, 13–14 cm ja 19–20 cm). Aallonpituus on kahden peräkkäisen tihentymän etäisyys. Yksittäisten kierteiden väli (0,2–0,6 cm) ei ole aallonpituus.\n\n**Vastaus: 5.1 A ja C · 5.2 B · 5.3 C · 5.4 D · 5.5 C (6 cm)**\n\n**Sudenkuoppa:** kohdassa 5.5 jousen kierteiden välin sekoittaminen aallonpituuteen. Pitkittäisessä aallossa aallonpituus on tihentymästä tihentymään.",
+     "answer": "5.1 A ja C · 5.2 B · 5.3 C · 5.4 D · 5.5 C (6 cm)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Ilmaeristeinen levykondensaattori (0,95 µF) on kytketty 24 V:n tasajännitelähteeseen. Levyjen väli täytetään eristeellä, jonka suhteellinen permittiivisyys on 4,5. Kuinka paljon kondensaattorin energia muuttuu?",
+     "hints": [
+      "Lähde pitää jännitteen vakiona. Eriste kasvattaa kapasitanssin $\\varepsilon_r$-kertaiseksi. Käytä energian kaavaa $E=\\frac12CU^2$.",
+      "Alussa $E_1=\\frac12CU^2$ ja lopussa $E_2=\\frac12\\varepsilon_rCU^2$, joten $\\Delta E=\\frac12(\\varepsilon_r-1)CU^2$."
+     ],
+     "solution": "1. Kondensaattori on koko ajan kytkettynä lähteeseen, joten jännite pysyy arvossa $U=24\\ \\text{V}$.\n2. Levykondensaattorin kapasitanssi $C=\\varepsilon_r\\varepsilon_0\\frac Ad$ on verrannollinen permittiivisyyteen, joten eriste kasvattaa kapasitanssin arvoon $\\varepsilon_rC$.\n3. Energian muutos: $\\Delta E=\\frac12\\varepsilon_rCU^2-\\frac12CU^2=\\frac12(\\varepsilon_r-1)CU^2=\\frac12\\cdot3{,}5\\cdot0{,}95\\cdot10^{-6}\\ \\text{F}\\cdot(24\\ \\text{V})^2\\approx 9{,}6\\cdot10^{-4}\\ \\text{J}$.\n\n**Vastaus: energia kasvaa noin 0,96 mJ**\n\n**Sudenkuoppa:** varauksen olettaminen vakioksi. Se pätee vain, jos kondensaattori on irrotettu lähteestä.",
+     "answer": "$\\Delta E\\approx +0{,}96\\ \\text{mJ}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.2",
+     "points": 6,
+     "prompt": "Ilmaeristeinen levykondensaattori (1,9 µF) varataan 12 V:n jännitelähteellä ja irrotetaan sitten lähteestä. Levyjen väli kasvatetaan nelinkertaiseksi. Kuinka paljon energia muuttuu?",
+     "hints": [
+      "Irrotetun kondensaattorin varaus ei voi muuttua. Kapasitanssi on kääntäen verrannollinen levyjen väliin. Käytä muotoa $E=\\frac{Q^2}{2C}$.",
+      "Varaus on $Q=CU=22{,}8\\ \\mu\\text{C}$. Kun kapasitanssi pienenee neljäsosaan, energia $\\frac{Q^2}{2C}$ nelinkertaistuu."
+     ],
+     "solution": "1. Irrotetun kondensaattorin varaus säilyy: $Q=CU=1{,}9\\cdot10^{-6}\\ \\text{F}\\cdot12\\ \\text{V}=22{,}8\\ \\mu\\text{C}$.\n2. Kapasitanssi $C=\\varepsilon_0\\frac Ad$ on kääntäen verrannollinen levyjen väliin, joten se pienenee arvoon $\\frac C4$.\n3. Alussa $E_1=\\dfrac{Q^2}{2C}=\\frac12CU^2=\\frac12\\cdot1{,}9\\cdot10^{-6}\\ \\text{F}\\cdot(12\\ \\text{V})^2\\approx 0{,}137\\ \\text{mJ}$.\n4. Lopussa $E_2=\\dfrac{Q^2}{2\\cdot C/4}=4E_1$, joten $\\Delta E=E_2-E_1=3E_1\\approx 0{,}41\\ \\text{mJ}$.\n\n**Vastaus: energia kasvaa noin 0,41 mJ**\n\n**Sudenkuoppa:** jännitteen olettaminen vakioksi. Silloin energia näyttäisi pienenevän (0,10 mJ), vaikka levyjä erotettaessa tehdään työtä.",
+     "answer": "$\\Delta E\\approx +0{,}41\\ \\text{mJ}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 4,
+     "prompt": "Selitä, miksi levyjen siirtäminen kohdassa 6.2 muuttaa kondensaattorin energiaa.",
+     "hints": [
+      "Levyillä on vastakkaismerkkiset varaukset. Millainen voima niiden välillä vaikuttaa, ja mitä se tarkoittaa, kun levyjä vedetään erilleen?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Vastakkaismerkkisesti varatut levyt vetävät toisiaan puoleensa sähköisellä voimalla.\n- Levyjen erottamiseksi niihin on kohdistettava ulkoinen voima vetovoimaa vastaan, ja se tekee positiivisen työn.\n- Työ varastoituu kondensaattorin sähkökentän energiaksi (kenttä täyttää nyt suuremman tilavuuden samalla kentänvoimakkuudella).\n\n**Esimerkkivastaus:** Kondensaattorin levyillä on yhtä suuret mutta vastakkaismerkkiset varaukset, joten levyt vetävät toisiaan puoleensa. Kun levyjä siirretään kauemmas toisistaan, niitä on vedettävä tätä voimaa vastaan, eli ulkoinen voima tekee työtä. Koska kondensaattori on irti lähteestä, energia ei pääse minnekään muualle, vaan tehty työ varastoituu levyjen väliseen sähkökenttään. Siksi energia kasvaa.\n\n**Sudenkuoppa:** pelkkä viittaus kapasitanssin pienenemiseen ei selitä, mistä lisäenergia tulee.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Sauvamagneetti lähestyy toinen napa edellä oikosuljettua käämiä (ks. alkuperäisen tehtävän kuva). Miksi magneetin liike-energia pienenee?",
+     "hints": [
+      "Muuttuuko käämin läpi kulkeva magneettivuo, kun magneetti lähestyy? Mitä siitä seuraa oikosuljetussa käämissä, ja mistä käämin virran energia on peräisin?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Lähestyvä magneetti muuttaa käämin läpi kulkevaa magneettivuota, joten käämiin indusoituu jännite, ja oikosuljetussa käämissä kulkee virta.\n- Virta lämmittää käämiä (ja sen magneettikenttä vastustaa Lenzin lain mukaan magneetin liikettä).\n- Energian säilymisen mukaan käämiin siirtyvä energia otetaan magneetin liike-energiasta, joka siksi pienenee.\n\n**Esimerkkivastaus:** Kun magneetti lähestyy käämiä, käämin läpäisevä magneettivuo kasvaa. Faradayn induktiolain mukaan käämiin indusoituu jännite, ja koska käämi on oikosuljettu, siinä kulkee virta. Virta muuttaa sähköenergiaa lämmöksi käämin resistanssissa. Energia ei synny tyhjästä, vaan käämin lämpenemiseen kuluva energia otetaan liikkuvasta magneetista: Lenzin lain mukaan käämin virran magneettikenttä hylkii lähestyvää magneettia ja jarruttaa sitä.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 6,
+     "prompt": "Käämissä on $N$ kierrosta ja sen kokonaisresistanssi on $R$. Oletetaan, että käämin läpi kulkevan magneettivuon muutosnopeus on verrannollinen magneetin nopeuteen $v$ (verrannollisuuskerroin $k$). Johda käämin virran teholle lauseke, kun magneetti liikkuu nopeudella $v$. Miten teho muuttuu, kun käämin resistanssia muutetaan?",
+     "hints": [
+      "Kirjoita vuon muutosnopeus muodossa $\\frac{\\Delta\\Phi}{\\Delta t}=kv$ ja käytä induktiolakia $e=-N\\frac{\\Delta\\Phi}{\\Delta t}$. Teho resistanssissa on $P=\\frac{U^2}{R}$.",
+      "Induktiojännitteen suuruus on $|e|=Nkv$, joten $P=\\frac{(Nkv)^2}{R}$. Tarkastele, onko $R$ osoittajassa vai nimittäjässä."
+     ],
+     "solution": "1. Oletuksen mukaan vuon muutosnopeus on $\\dfrac{\\Delta\\Phi}{\\Delta t}=kv$.\n2. Faradayn induktiolaki $N$-kierroksiselle käämille: $e=-N\\dfrac{\\Delta\\Phi}{\\Delta t}=-Nkv$, eli jännitteen suuruus on $Nkv$.\n3. Ohmin laki: $I=\\dfrac{|e|}{R}=\\dfrac{Nkv}{R}$.\n4. Teho: $P=|e|I=\\dfrac{e^2}{R}=\\dfrac{(Nkv)^2}{R}=\\dfrac{N^2k^2v^2}{R}$.\n5. Teho on kääntäen verrannollinen resistanssiin: kun resistanssia pienennetään, teho kasvaa (ja magneetti jarruttuu voimakkaammin), ja kun resistanssia kasvatetaan, teho pienenee.\n\n**Vastaus: $P=\\dfrac{(Nkv)^2}{R}$; resistanssin pienentäminen kasvattaa tehoa ja suurentaminen pienentää sitä**\n\n**Sudenkuoppa:** kaavan $P=I^2R$ käyttäminen niin, että virta oletetaan resistanssista riippumattomaksi. Tässä induktiojännite on annettu, ja virta riippuu resistanssista.",
+     "answer": "$P=\\dfrac{(Nkv)^2}{R}$; teho kasvaa, kun $R$ pienenee",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 5,
+     "prompt": "Käämin tilalla on nyt pitkä, molemmista päistä avoin sähköä johtava putki, jonka sisään magneetti (52 g) laitetaan alkunopeudella 0,30 m/s. Kitkaa ja ilmanvastusta ei ole, mutta magneetti ei koskaan pääse putken toiseen päähän. Kuinka paljon energiaa siirtyy magneetista putkeen?",
+     "hints": [
+      "Mikä jarruttaa magneettia, kun kitkaa ja ilmanvastusta ei ole? Jos magneetti ei pääse putken läpi, mihin sen liike-energia lopulta päätyy?",
+      "Putkeen indusoituvat pyörrevirrat jarruttavat magneettia, kunnes se pysähtyy. Siirtyvä energia on siis magneetin alkuperäinen liike-energia $\\frac12mv^2$."
+     ],
+     "solution": "1. Liikkuva magneetti indusoi johtavaan putkeen pyörrevirtoja, jotka Lenzin lain mukaan jarruttavat magneettia ja lämmittävät putkea.\n2. Koska muita häviöitä ei ole ja magneetti pysähtyy putken sisään, sen koko liike-energia siirtyy putkeen.\n3. $E=\\frac12mv^2=\\frac12\\cdot0{,}052\\ \\text{kg}\\cdot(0{,}30\\ \\tfrac{\\text{m}}{\\text{s}})^2\\approx 2{,}3\\cdot10^{-3}\\ \\text{J}$.\n\n**Vastaus: noin 2,3 mJ**\n\n**Sudenkuoppa:** nopeuden neliön unohtaminen (tulos 7,8 mJ).",
+     "answer": "$E=\\frac12mv^2\\approx 2{,}3\\ \\text{mJ}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Tehtävässä kuvataan sähkömagneettisen säteilyn kolmea käyttäytymistapaa. Samaa koetta tai tilannetta saa käyttää useammassa kohdassa.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 6,
+     "prompt": "Sähkömagneettinen säteily käyttäytyy myös aaltona. Kuvaa kaksi koetta tai arkitilannetta, joissa aaltoluonne näkyy, ja selitä kummassakin havainto aaltomallin avulla.",
+     "hints": [
+      "Valitse ilmiöitä, joita hiukkasmalli ei selitä: interferenssi (kaksoisrako, hila, ohut kalvo), diffraktio tai polarisaatio. Kuvaa sekä koe että selitys.",
+      "Esimerkiksi hilakokeessa eri raoista tulevat aallot kulkevat eri pituiset matkat ja vahvistavat toisiaan, kun matkaero on $n\\lambda$. Polarisaatiosuodattimilla näkyy, että valon värähtely on poikittaista."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi koetta tai tilannetta, jotka kuvataan, ja kummallekin aaltomallin mukaisen selityksen. Sopivia ovat esimerkiksi:\n- **Kaksoisrako tai hila:** varjostimelle syntyy vuorottelevia kirkkaita ja tummia kohtia. Eri raoista tulleet aallot summautuvat: ne vahvistavat toisiaan, kun matkaero on aallonpituuden monikerta, ja heikentävät, kun matkaero on puolikkaan aallonpituuden pariton monikerta.\n- **Ohut kalvo (saippuakupla, öljykalvo):** kalvon pinnoilta heijastuneet aallot interferoivat, joten tietyt aallonpituudet vahvistuvat ja kalvo näyttää värikkäältä.\n- **Polarisaatio:** kun kahta polarisaatiosuodatinta kierretään toistensa suhteen, läpi pääsevän valon määrä muuttuu. Tämä selittyy poikittaisella aaltoliikkeellä, jossa sähkökenttä värähtelee tietyssä suunnassa.\n- **Taittuminen:** aaltomalli (Huygensin periaate) selittää taittumisen suunnan ja ennustaa valon olevan hitaampaa vedessä, mikä on mitattu.\n\n**Esimerkkivastaus:** *Hilakoe:* Laservalo ohjataan tiheän hilan läpi, ja varjostimelle ilmestyy terävien pisteiden sarja. Jokainen hilan rako toimii uutena aaltolähteenä, ja varjostimen kussakin kohdassa eri raoista tulleet aallot summautuvat. Kirkas piste syntyy suuntiin, joissa vierekkäisten rakojen aaltojen matkaero on kokonainen aallonpituus, ja muualla aallot kumoavat toisensa. *Polarisaatio:* Kun katsotaan valoa kahden polarisaatiosuodattimen läpi ja kierretään toista, valo himmenee ja lopulta lähes sammuu, kun suodattimet ovat ristissä. Ensimmäinen suodatin päästää läpi vain yhdessä suunnassa värähtelevän sähkökentän, eikä toinen, kohtisuora suodatin päästä sitä läpi. Ilmiö edellyttää poikittaista aaltoliikettä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 3,
+     "prompt": "Säteily voi käyttäytyä hiukkasten tavoin: sen vuorovaikutus aineen kanssa näkyy erillisinä osumina, tai ilmiön selitys vaatii, että energia ja liikemäärä siirtyvät kuten hiukkasten törmäyksissä. Kuvaa yksi tällainen koe tai tilanne ja selitä havainto hiukkasmallin avulla.",
+     "hints": [
+      "Hyviä esimerkkejä ovat valosähköinen ilmiö, Comptonin sironta ja hyvin heikon valon havaitseminen yksittäisinä osumina filmillä tai ilmaisimessa."
+     ],
+     "solution": "**Hyvä vastaus sisältää** yhden kokeen kuvauksen ja selityksen, esimerkiksi:\n- **Valosähköinen ilmiö:** metallista irtoaa elektroneja vain, jos valon aallonpituus on raja-arvoa lyhyempi, eikä valon voimakkuuden kasvattaminen auta pitkillä aallonpituuksilla. Yksi fotoni luovuttaa koko energiansa yhdelle elektronille kuin törmäyksessä.\n- **Comptonin sironta:** elektroneista sironneen röntgensäteilyn aallonpituus kasvaa sirontakulman mukana. Tämä selittyy fotonin ja elektronin kimmoisalla törmäyksellä, jossa energia ja liikemäärä säilyvät.\n- **Heikon valon ilmaisu:** hyvin heikko valo tuottaa filmille tai kuva-anturiin erillisiä pistemäisiä osumia, jotka vastaavat yksittäisiä fotoneja.\n\n**Esimerkkivastaus:** Comptonin kokeessa röntgensäteilyä sirotetaan grafiitista. Sironneessa säteilyssä on alkuperäisen aallonpituuden lisäksi pidempi aallonpituus, ja ero kasvaa sirontakulman kasvaessa. Ilmiö selittyy, kun röntgenfotoni ajatellaan hiukkaseksi, joka törmää elektroniin: fotoni luovuttaa osan energiastaan ja liikemäärästään elektronille, joten sironneen fotonin energia $hf$ pienenee ja aallonpituus kasvaa. Energian ja liikemäärän säilymislait antavat kulman ja aallonpituuden muutoksen välille täsmälleen havaitun riippuvuuden.\n\n**Sudenkuoppa:** pelkkä ilmiön nimeäminen ilman kokeen kuvausta tai selitystä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 6,
+     "prompt": "Säteily luovuttaa energiaa aineelle vain kvantteina, joiden koko määräytyy taajuudesta. Kuvaa kaksi koetta tai tilannetta, joissa tämä näkyy, ja selitä kummassakin havainto energian kvantittumisella.",
+     "hints": [
+      "Etsi ilmiöitä, joissa on kynnys tai tarkat energia-arvot: valosähköinen ilmiö, viivaspektrit, fluoresenssi tai parinmuodostus. Kvantin energia on $E=hf$.",
+      "Esimerkiksi viivaspektrissä atomi voi absorboida tai emittoida vain fotoneja, joiden energia on kahden energiatason erotus, joten spektrissä näkyy vain tietyt taajuudet. Valosähköisessä ilmiössä kvantin energian on ylitettävä irrotustyö."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi koetta tai tilannetta ja kummallekin selityksen energiakvantin $E=hf$ avulla, esimerkiksi:\n- **Valosähköinen ilmiö:** elektroni irtoaa vain, jos fotonin energia $hf$ on vähintään metallin irrotustyö. Liian pienitaajuinen valo ei irrota elektroneja, vaikka se olisi voimakasta.\n- **Viivaspektri (emissio tai absorptio):** atomin elektronit voivat olla vain tietyillä energiatasoilla, joten atomi lähettää tai absorboi vain fotoneja, joiden energia on tasojen erotus $hf=E_2-E_1$.\n- **Luminesenssi (fluoresenssi):** loisteaine hohtaa vain, kun sitä valaistaan riittävän lyhytaaltoisella valolla, koska virittymiseen tarvitaan tietyn suuruinen energiakvantti.\n- **Parinmuodostus:** gammafotoni voi synnyttää elektroni–positroni-parin vain, jos $hf\\ge 2m_ec^2$.\n- **Comptonin sironta:** fotonin ja elektronin välillä siirtyy energiaa kvantteina $h(f_1-f_2)$.\n\n**Esimerkkivastaus:** *Vedyn viivaspektri:* Kun vetykaasua kuumennetaan tai siihen johdetaan sähkövirta, sen valo hajoaa hilassa erillisiksi väriviivoiksi eikä jatkuvaksi spektriksi. Vetyatomin elektronin energia voi saada vain tiettyjä arvoja, ja kun elektroni siirtyy ylemmältä tasolta alemmalle, syntyy fotoni, jonka energia on tasojen erotus, $hf=E_n-E_m$. Siksi spektrissä näkyvät vain tietyt taajuudet. *Valosähköinen ilmiö:* Sinkkilevy, jolla on negatiivinen varaus, purkautuu ultraviolettivalossa, mutta ei kirkkaassakaan näkyvässä valossa. Näkyvän valon fotonin energia $hf$ on pienempi kuin sinkin irrotustyö, joten mikään fotoni ei yksinään pysty irrottamaan elektronia. UV-fotonin energia riittää.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Kala säätelee uimasyvyyttään uimarakolla, jonka joustavat seinät myötäilevät ympäröivää painetta. Rakon tilavuuden muutos muuttaa saman verran koko kalan tilavuutta, ja kala voi myös lisätä tai vähentää rakon ilmaa (ks. alkuperäisen tehtävän kuvat 9.A ja 9.B). Juuri pinnan alla kalan uimarakon tilavuus on $0{,}079\\ \\text{dm}^3$ ja kokonaistilavuus $0{,}623\\ \\text{dm}^3$. Ilmanpaine pinnalla on 101,3 kPa, ilman moolimassa 29,0 g/mol, pintaveden lämpötila 17,7 °C ja veden tiheys koko ajan $1{,}0\\ \\text{kg/dm}^3$.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 8,
+     "prompt": "Pinnan alla leijuva kala säikähtää ja syöksyy 7,6 m:n syvyyteen, jossa se hetkeksi pysähtyy. Rakon ilmamäärä ja kalan lämpötila ovat vielä ennallaan. Piirrä kalan voimakuvio tässä tilanteessa ja laske kalaan vaikuttavien voimien summa (suuruus ja suunta).",
+     "hints": [
+      "Kalaan vaikuttavat paino ja noste. Pinnalla ne olivat yhtä suuret. Syvemmällä suurempi paine puristaa uimarakkoa kokoon (Boylen laki, $pV$ vakio), ja kalan tilavuus pienenee yhtä paljon, joten noste pienenee.",
+      "Syvyydessä 7,6 m paine on $p_1=p_0+\\rho gh\\approx 175{,}9\\ \\text{kPa}$. Uimarakon tilavuus pienenee kertoimella $\\frac{p_0}{p_1}$, ja kokonaisvoima on $\\rho g\\Delta V$ alaspäin."
+     ],
+     "solution": "1. Kalaan vaikuttavat paino $\\vec G$ (alaspäin) ja noste $\\vec N$ (ylöspäin). Voimakuvioon piirretään nosteen nuoli painon nuolta hieman lyhyemmäksi.\n2. Pinnan alla kala kellui, joten $mg=\\rho V_0g$, jossa $V_0=0{,}623\\ \\text{dm}^3$ on kalan tilavuus.\n3. Nopeassa sukelluksessa lämpötila ja ilmamäärä pysyvät vakioina, joten Boylen lain mukaan $p_0V_0'=p_1V_1'$, jossa $V_0'=0{,}079\\ \\text{dm}^3$ on rakon alkutilavuus.\n4. Paine 7,6 metrin syvyydessä: $p_1=p_0+\\rho gh=101{,}3\\ \\text{kPa}+1000\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}\\cdot7{,}6\\ \\text{m}\\approx 175{,}9\\ \\text{kPa}$.\n5. Kalan tilavuus pienenee yhtä paljon kuin rakon: $\\Delta V=V_0'\\left(1-\\dfrac{p_0}{p_1}\\right)=0{,}079\\ \\text{dm}^3\\cdot\\left(1-\\dfrac{101{,}3}{175{,}9}\\right)\\approx 0{,}0335\\ \\text{dm}^3$.\n6. Kokonaisvoima (alaspäin positiivinen): $F=mg-\\rho(V_0-\\Delta V)g=\\rho g\\,\\Delta V=1000\\ \\tfrac{\\text{kg}}{\\text{m}^3}\\cdot9{,}81\\ \\tfrac{\\text{m}}{\\text{s}^2}\\cdot3{,}35\\cdot10^{-5}\\ \\text{m}^3\\approx 0{,}33\\ \\text{N}$.\n\n**Vastaus: kokonaisvoima on noin 0,33 N alaspäin (noste on noin 5 % painoa pienempi)**\n\n**Sudenkuoppa:** koko kalan tilavuuden käyttäminen Boylen laissa. Kokoon puristuu vain uimarakon ilma, ja kalan tilavuus muuttuu saman verran.",
+     "answer": "$F\\approx 0{,}33\\ \\text{N}$ alaspäin",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 6,
+     "prompt": "Kala jää 7,6 metrin syvyyteen, jossa veden lämpötila on 11,3 °C, ja sen lämpötila tasaantuu siihen. Paljonko ilmaa kalan on lisättävä uimarakkoon, jotta se kelluu tasapainossa tällä syvyydellä? Anna vastaus milligrammoina.",
+     "hints": [
+      "Kellumiseen tarvitaan sama kokonaistilavuus kuin pinnalla, eli uimarakon tilavuuden on palattava arvoon $0{,}079\\ \\text{dm}^3$. Laske ainemäärä tilanyhtälöstä $n=\\frac{pV}{RT}$ pinnalla ja syvyydessä ja ota erotus.",
+      "$\\Delta m=\\dfrac{MV_0'}{R}\\left(\\dfrac{p_1}{T_1}-\\dfrac{p_0}{T_0}\\right)$, jossa $p_1\\approx 175{,}9\\ \\text{kPa}$, $T_1=284{,}45\\ \\text{K}$, $p_0=101{,}3\\ \\text{kPa}$ ja $T_0=290{,}85\\ \\text{K}$."
+     ],
+     "solution": "1. Kala kelluu, kun noste on yhtä suuri kuin paino, eli kalan tilavuus on sama kuin pinnalla. Uimarakon tilavuuden on siis oltava taas $V'=0{,}079\\ \\text{dm}^3$.\n2. Ideaalikaasun tilanyhtälö $pV=nRT$. Rakon alkuperäinen ilmamäärä: $n_0=\\dfrac{p_0V'}{RT_0}$, ja tarvittava ilmamäärä syvyydessä: $n_1=\\dfrac{p_1V'}{RT_1}$.\n3. Lisäilman massa:\n$$\\Delta m=M(n_1-n_0)=\\frac{MV'}{R}\\left(\\frac{p_1}{T_1}-\\frac{p_0}{T_0}\\right)=\\frac{0{,}0290\\ \\tfrac{\\text{kg}}{\\text{mol}}\\cdot7{,}9\\cdot10^{-5}\\ \\text{m}^3}{8{,}314\\ \\tfrac{\\text{J}}{\\text{mol K}}}\\left(\\frac{175\\,856\\ \\text{Pa}}{284{,}45\\ \\text{K}}-\\frac{101\\,300\\ \\text{Pa}}{290{,}85\\ \\text{K}}\\right)$$\n4. $\\Delta m\\approx 7{,}4\\cdot10^{-5}\\ \\text{kg}=74\\ \\text{mg}$.\n\n**Vastaus: noin 74 mg**\n\n**Sudenkuoppa:** lämpötilan muutoksen unohtaminen. Viileämmässä vedessä sama ilmamäärä vie vähemmän tilaa, joten ilmaa tarvitaan hieman enemmän.",
+     "answer": "$\\Delta m\\approx 74\\ \\text{mg}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.3",
+     "points": 6,
+     "prompt": "Kaikuluotaimen ääni heijastuu kaloista, ja kala erottuu selvästi, kun ääni resonoi uimarakossa. Uimarakkoa mallinnetaan putkena, jonka kumpikin pää on suljettu. Eräs kala näkyi luotaimessa selvästi, kun taajuus oli vähintään 2,4 kHz, ja kaiku saapui 12 ms lähetyksen jälkeen. Laske, kuinka pitkä rakon suurin ontelo on ja kuinka kaukana kala on luotaimesta. Äänen nopeus: ilmassa 343 m/s, vedessä 1484 m/s.",
+     "hints": [
+      "Molemmista päistä suljetun putken kummassakin päässä on seisovan aallon solmukohta, joten perusvärähtelyssä putken pituus on puolet aallonpituudesta. Rakon sisällä ääni kulkee ilmassa. Kaiun ajassa ääni kulkee matkan edestakaisin vedessä.",
+      "Pituus $\\ell=\\frac{\\lambda}{2}=\\frac{v_{\\text{ilma}}}{2f}$ ja etäisyys $x=\\frac12v_{\\text{vesi}}t$."
+     ],
+     "solution": "1. Resonanssi tarkoittaa, että rakon ilmaan muodostuu seisova aalto. Koska putki on kummastakin päästä kiinni, kummassakin päässä on solmukohta, joten pienintä taajuutta (pisintä aallonpituutta) vastaa $\\lambda=2\\ell$.\n2. Taajuus säilyy väliaineesta toiseen, mutta aallonpituus rakon sisällä määräytyy äänen nopeudesta ilmassa: $\\ell=\\dfrac{\\lambda}{2}=\\dfrac{v_{\\text{ilma}}}{2f}=\\dfrac{343\\ \\tfrac{\\text{m}}{\\text{s}}}{2\\cdot2400\\ \\tfrac1{\\text{s}}}\\approx 0{,}0715\\ \\text{m}\\approx 7{,}1\\ \\text{cm}$.\n3. Kaiku kulkee luotaimelta kalaan ja takaisin, joten etäisyys on puolet kuljetusta matkasta: $x=\\frac12v_{\\text{vesi}}t=\\frac12\\cdot1484\\ \\tfrac{\\text{m}}{\\text{s}}\\cdot0{,}012\\ \\text{s}\\approx 8{,}9\\ \\text{m}$.\n\n**Vastaus: uimarakko noin 7,1 cm, kalan etäisyys noin 8,9 m**\n\n**Sudenkuoppa:** koko aallonpituuden antaminen rakon pituudeksi tai edestakaisen matkan antaminen etäisyydeksi.",
+     "answer": "$\\ell\\approx 7{,}1\\ \\text{cm}$; $x\\approx 8{,}9\\ \\text{m}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Johdonsuojakatkaisija (automaattisulake) katkaisee verkkovirran vikatilanteessa. Sen toimintaa kuvaa laukaisukäyrä (alkuperäisen tehtävän kuva 10.B): vaaka-akselilla on virta suhteessa nimellisvirtaan $I/I_n$ ja pystyakselilla (ei lineaarinen) aika. Alemman käyrän alapuolella virtaa ei katkaista, ylemmän yläpuolella se katkaistaan aina, ja niiden välissä ehkä. Aineistossa 10.A on lisää taustaa.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Miksi sähköisku vahingoittaa ihmistä? Mitä muita vaaratilanteita rikkinäinen sähkölaite voi aiheuttaa kotona?",
+     "hints": [
+      "Mieti, mitä ihmisen läpi kulkeva virta tekee hermostolle, lihaksille ja sydämelle sekä kudoksille. Toiseen kysymykseen: mitä liian kuuma laite tai johto voi aiheuttaa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Sähköiskussa ihminen tulee osaksi virtapiiriä. Virta häiritsee hermoston ja lihasten sähköistä toimintaa: se voi aiheuttaa kouristuksia (ote ei irtoa) ja sydämen rytmihäiriön, esimerkiksi kammiovärinän, sekä palovammoja.\n- Viallinen laite voi myös kuumentua ja sytyttää tulipalon.\n\n**Esimerkkivastaus:** Sähköiskussa virta kulkee ihmisen kehon läpi. Hermosto ja sydän toimivat pienillä sähköisillä signaaleilla, joten ulkoinen virta voi saada lihakset kouristumaan ja sekoittaa sydämen rytmin niin, että sydän alkaa värinän eikä pumppaa verta. Suuri virta lämmittää myös kudoksia ja aiheuttaa palovammoja. Lisäksi viallinen laite tai johto voi kuumentua liikaa ja sytyttää kodissa tulipalon.\n\n**Sudenkuoppa:** ”sydänkohtaus” on eri asia (sepelvaltimotukos). Sähkövirta aiheuttaa rytmihäiriön.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 6,
+     "prompt": "Laukaisukäyrä (kuva 10.B) jakautuu termiseen alueeseen (T) ja magneettiseen alueeseen (M). Minkä tyyppisiltä vioilta kumpikin alue suojaa piiriä?",
+     "hints": [
+      "Katso vaaka-akselilta, kuinka moninkertainen virta nimellisvirtaan verrattuna kullakin alueella on, ja pystyakselilta, kuinka nopeasti virta katkaistaan.",
+      "Terminen alue: virta on vain vähän (noin 1,1–5-kertaisesti) nimellisvirtaa suurempi, ja katkaisu tapahtuu sekunneissa tai minuuteissa. Magneettinen alue: virta on 5–10-kertainen tai suurempi, ja katkaisu tapahtuu sekunnin murto-osassa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- **Terminen alue (T):** virta on vain hieman tai muutamia kertoja nimellisvirtaa suurempi, eli piiri on ylikuormitettu (esimerkiksi liian monta laitetta samassa piirissä tai laite ottaa liikaa virtaa). Tällainen ylivirta on vaarallinen vasta pitkään jatkuessaan, koska johdot kuumenevat vähitellen ja voivat lopulta sytyttää tulipalon. Siksi katkaisuun on aikaa sekunneista tunteihin.\n- **Magneettinen alue (M):** virta on moninkertainen (noin 5–10-kertaisesta ylöspäin), kuten oikosulussa. Virta katkaistaan hyvin nopeasti, sekunnin sadasosissa tai kymmenyksissä, jotta johdot ja laitteet eivät vaurioidu ja tulipalo ei syty.\n\n**Esimerkkivastaus:** Termisellä alueella suojaudutaan ylikuormitukselta: virta on vain vähän nimellisarvoa suurempi, esimerkiksi kun samaan pistorasiaryhmään on kytketty liian monta tehokasta laitetta. Johdot lämpenevät hitaasti, joten katkaisija voi antaa ylityksen jatkua jonkin aikaa, mutta pitkään jatkuessaan ylikuumeneminen voisi sytyttää palon. Magneettisella alueella suojaudutaan oikosululta, jossa virta kasvaa äkillisesti monikymmenkertaiseksi. Silloin virta on katkaistava heti, sekunnin murto-osassa.\n\n**Sudenkuoppa:** alueiden nimien tulkitseminen mittaussuureiksi (lämpötila, magneettikenttä). Kysymys koskee sitä, millaisia vikoja alueet vastaavat.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 6,
+     "prompt": "Piirin katkaisijan nimellisvirta on 16 A. Laitteeseen tulee vika, ja piirissä kulkee 32 A:n virta. Paljonko energiaa laite ehtii saada sähköverkosta (230 V), ennen kuin katkaisija laukeaa?",
+     "hints": [
+      "Virta on kaksinkertainen nimellisvirtaan nähden ($I/I_n=2$). Lue laukaisukäyrästä, minkä aikavälin kuluessa katkaisu tapahtuu (alempi ja ylempi käyrä), ja laske energia $E=UIt$ kummallekin rajalle.",
+      "Kohdassa $I/I_n=2$ alempi käyrä on noin 10 sekunnin ja ylempi noin 45 sekunnin kohdalla. Pystyakseli ei ole lineaarinen, joten lue huolellisesti."
+     ],
+     "solution": "1. Virran suhde nimellisvirtaan on $\\dfrac{I}{I_n}=\\dfrac{32\\ \\text{A}}{16\\ \\text{A}}=2$.\n2. Laukaisukäyrän mukaan tällä virralla katkaisu tapahtuu aikaisintaan noin 10 sekunnin ja viimeistään noin 45 sekunnin kuluttua (käyrien väli).\n3. Laitteeseen siirtyvä energia $E=Pt=UIt$.\n4. Vähintään: $E_1=230\\ \\text{V}\\cdot32\\ \\text{A}\\cdot10\\ \\text{s}\\approx 7{,}4\\cdot10^4\\ \\text{J}$.\n5. Enintään: $E_2=230\\ \\text{V}\\cdot32\\ \\text{A}\\cdot45\\ \\text{s}\\approx 3{,}3\\cdot10^5\\ \\text{J}$.\n\n**Vastaus: noin 74–330 kJ**\n\n**Sudenkuoppa:** varauksen $It$ laskeminen energian sijaan tai logaritmisen aika-akselin lukeminen väärin.",
+     "answer": "noin 74 kJ – 330 kJ",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "Johdonsuojakatkaisija havaitsee vain liian suuren virran. Nimeä ainakin kaksi muuta verkkovirtapiirin vikaa, joilta on suojauduttava.",
+     "hints": [
+      "Mieti tilanteita, joissa virta ei kasva, mutta jotain on silti vialla: virta kulkee väärää reittiä (esim. ihmisen kautta maahan), jännite on häiriintynyt tai kolmivaihejärjestelmän vaihe puuttuu."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kaksi seuraavista:\n- **Vuotovirta (vikavirta):** osa virrasta palaa maadoituksen tai ihmisen kautta eikä nollajohdinta pitkin. Tulo- ja paluuvirta eivät ole yhtä suuret. Tähän tarvitaan vikavirtasuojakytkin.\n- **Vaihe-ero virran ja jännitteen välillä (loisvirta)**, jota katkaisija ei havaitse.\n- **Kolmivaihejärjestelmän vaiheen katkeaminen**, joka voi vaurioittaa esimerkiksi moottoreita.\n- **Jännitteen laatuhäiriöt:** ylijännitepiikit (esim. salamanisku), kohina tai muut poikkeamat sinimuotoisesta jännitteestä.\n\n**Esimerkkivastaus:** Ensimmäinen vika on vuotovirta: jos laitteen kuori on jännitteinen ja ihminen koskee siihen, osa virrasta kulkee ihmisen kautta maahan. Virta ei silti kasva yli nimellisarvon, joten katkaisija ei laukea, vaan suojaksi tarvitaan vikavirtasuojakytkin, joka vertaa meno- ja paluuvirtaa. Toinen vika on ylijännitepiikki, esimerkiksi ukkosella: hetkellinen jännitepiikki voi rikkoa elektroniikkaa, vaikka virta ei ehdi kasvaa.\n\n**Sudenkuoppa:** oikosulku ei kelpaa, koska katkaisija suojaa juuri siltä. Myöskään sähköisku ei ole vika vaan vian seuraus.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Alkuperäisen tehtävän videolla 11.A suprajohtavasta materiaalista tehdyn kiekon päällä on pieni lieriömagneetti pohjoisnapa ylöspäin. Kiekkoa jäähdytetään nestetypellä, jolloin siitä tulee suprajohtava ja magneetti nousee leijumaan. Aineiston 11.B teksti kertoo suprajohtavuudesta (kriittinen lämpötila, kriittinen magneettikenttä, tyypin I ja II suprajohteet, kriittinen virrantiheys).",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Selitä, miksi magneetti kohoaa leijumaan. Miksi Faradayn induktiolaki ei riitä selitykseksi?",
+     "hints": [
+      "Induktiolaki vaatii muuttuvan magneettivuon. Muuttuuko vuo, kun magneetti on paikallaan ja kiekko vain jäähtyy?",
+      "Aineiston 11.B mukaan suprajohde sulkee ulkoisen magneettikentän sisältään pintaan syntyvillä virroilla, joiden kenttä on ulkoiselle vastakkainen. Mitä vastakkaissuuntaiset kentät tekevät toisilleen?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Magneetti on alussa paikallaan kiekon päällä, joten kiekon läpi kulkeva magneettivuo ei muutu. Induktiolaki ($e=-\\frac{\\Delta\\Phi}{\\Delta t}$) ei siksi selitä virtojen syntymistä.\n- Suprajohtavaksi muuttuessaan kiekko sulkee ulkoisen kentän pois: sen pintaan syntyy pyörrevirtoja, joiden magneettikenttä on magneetin kentälle vastakkainen (Meissnerin ilmiö).\n- Vastakkaissuuntaiset kentät hylkivät toisiaan, joten magneettiin kohdistuu ylöspäin voima, joka kumoaa sen painon, ja magneetti leijuu.\n\n**Esimerkkivastaus:** Kun kiekko jäähtyy kriittisen lämpötilansa alle, siitä tulee suprajohde, joka ei päästä ulkoista magneettikenttää sisäänsä. Kiekon pintaan syntyy virtoja, joiden oma magneettikenttä kumoaa magneetin kentän kiekon sisällä. Virtojen kenttä on siis magneetin kenttää vastaan, ja kiekko käyttäytyy kuin magneetti, jonka samannimiset navat ovat vastakkain. Hylkivä voima nostaa magneetin ilmaan, kunnes se on yhtä suuri kuin magneetin paino. Induktiolaki ei selitä ilmiötä, koska magneetti ei liikkunut eikä kiekon läpi kulkeva vuo muuttunut ennen virtojen syntymistä: virrat syntyvät suprajohtavan tilan ominaisuutena.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 4,
+     "prompt": "Leijuva magneetti käännetään niin, että sen pohjoisnapa osoittaa suprajohdetta kohti. Pysyykö magneetti ilmassa vai putoaako se kiekon päälle?",
+     "hints": [
+      "Suprajohde hylkii mitä tahansa ulkoista kenttää luomalla vastakkaisen kentän. Riippuuko tämä siitä, kumpi napa on alaspäin?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Magneetti jatkaa leijumista.\n- Perustelu: suprajohde sulkee aina ulkoisen kentän pois. Kun magneetti käännetään, myös suprajohteen pintavirtojen suunta kääntyy, joten niiden kenttä on edelleen magneetin kentälle vastakkainen ja voima on edelleen hylkivä.\n\n**Esimerkkivastaus:** Magneetti jatkaa leijumista. Suprajohde ei ole kestomagneetti, jolla olisi kiinteät navat, vaan se reagoi mihin tahansa ulkoiseen kenttään synnyttämällä pintaansa virrat, joiden kenttä kumoaa ulkoisen kentän. Kun magneetti käännetään, ulkoinen kenttä muuttaa suuntaansa, ja pintavirrat kääntyvät vastakkaiseen suuntaan. Suprajohteen puoleinen napa kohtaa siis aina samannimisen ”navan”, ja voima pysyy hylkivänä.",
+     "answer": "Magneetti jatkaa leijumista",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Mitä hyötyä olisi, jos suprajohtavuus saataisiin aikaan huoneenlämpötilassa?",
+     "hints": [
+      "Suprajohteen resistanssi on nolla. Missä kaikkialla tavallisten johtimien resistanssi aiheuttaa energiahäviöitä ja lämpenemistä, ja mitä siitä seuraa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Suprajohteissa ei synny resistiivisiä energiahäviöitä, joten esimerkiksi sähkönsiirron muutaman prosentin häviöt poistuisivat.\n- Tästä seuraava konkreettinen hyöty, esimerkiksi energian ja rahan säästö, ohuemmat tai pidemmät siirtojohdot, pienempi jäähdytystarve elektroniikassa tai pienemmät laitteet. Nykyisin tarvittava kallis jäähdytys nestetypellä tai heliumilla jäisi pois.\n\n**Esimerkkivastaus:** Jos suprajohteet toimisivat huoneenlämmössä, sähköä voitaisiin siirtää voimalaitoksilta kuluttajille ilman vastushäviöitä, jotka nykyisin ovat muutamia prosentteja kaikesta siirrettävästä energiasta. Säästö olisi vuosittain valtava, ja kaapelit voisivat olla ohuempia. Myös elektroniikan komponentit eivät lämpenisi virran vaikutuksesta, joten jäähdytysrivoja ja tuulettimia ei tarvittaisi ja laitteet voisivat olla pienempiä. Lisäksi suprajohtavia magneetteja, esimerkiksi magneettikuvauslaitteissa, voitaisiin käyttää ilman kallista nestemäistä heliumia.\n\n**Sudenkuoppa:** pelkkä sovelluksen nimeäminen ilman, että hyöty liitetään energiahäviöiden poistumiseen.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Mitä materiaaliin liittyviä hankaluuksia korkean lämpötilan suprajohteissa on? Onko ohuen suprajohtavan langan virralla ylärajaa?",
+     "hints": [
+      "Aineiston 11.B mukaan korkean lämpötilan suprajohteet ovat keraameja. Toiseen kysymykseen: aineistossa mainitaan kriittinen virrantiheys, jonka yksikkö on $\\text{A/m}^2$."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Keraamiset materiaalit rikkoutuvat helposti (murtuvat, halkeilevat, eivät taivu), joten niistä on vaikea valmistaa taipuisia ja mekaanista rasitusta kestäviä kaapeleita.\n- Ei voi: jos virrantiheys ylittää kriittisen virrantiheyden $J_c$, johdin palaa normaalitilaan. Suurin virta on $I_{\\max}=J_cA$, joten ohuen langan poikkipinta-ala rajoittaa virtaa. Ylitys lämmittää johdinta nopeasti ja voi rikkoa sen.\n\n**Esimerkkivastaus:** Korkean lämpötilan suprajohteet ovat keraamisia aineita, jotka murtuvat helposti eivätkä kestä taivuttelua. Niistä on siksi vaikea tehdä pitkiä, joustavia kaapeleita, ja jo videon kiekossa näkyy halkeamia. Ohut suprajohtava lanka ei myöskään voi kuljettaa rajatonta virtaa, sillä jokaisella suprajohteella on kriittinen virrantiheys. Suurin mahdollinen virta on kriittinen virrantiheys kerrottuna langan poikkipinta-alalla. Jos se ylittyy, lanka muuttuu normaalijohteeksi, alkaa lämmetä ja voi sulaa.\n\n**Sudenkuoppa:** pelkkä aineiston sanan ”hauras” toistaminen ei riitä. Kerro, mitä se tarkoittaa johtimien kannalta.",
+     "answer": "Keraamit rikkoutuvat helposti; ei, virta rajoittuu arvoon $I_{\\max}=J_cA$",
+     "check": "hvp"
+    },
+    {
+     "id": "11.5",
+     "points": 3,
+     "prompt": "Miksi suprajohtavissa magneeteissa käytetään tyypin II suprajohteita?",
+     "hints": [
+      "Suprajohtavan käämin oma voimakas magneettikenttä kohdistuu myös käämin lankaan. Vertaa aineiston perusteella tyypin I ja tyypin II suprajohteiden kriittisiä kenttiä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n- Käämin synnyttämä voimakas kenttä vaikuttaa myös käämin omaan suprajohtavaan lankaan, eikä se saa ylittää langan kriittistä kenttää.\n- Tyypin I suprajohteen kriittinen kenttä $B_c$ on pieni, ja sen ylittyessä lanka siirtyy äkkiä normaalitilaan. Tyypin II suprajohde johtaa häviöttä sekatilassakin aina ylempään kriittiseen kenttään $B_{c2}$ asti, joka on suuri.\n\n**Esimerkkivastaus:** Suprajohtavalla käämillä halutaan tuottaa jopa kymmenien teslojen kenttiä, ja tämä kenttä läpäisee myös käämin langan. Tyypin I suprajohde menettäisi suprajohtavuutensa jo melko pienessä kentässä, ja lanka voisi vaurioitua, kun suuri virta yhtäkkiä kohtaa resistanssin. Tyypin II suprajohde pysyy häviöttömästi johtavana paljon voimakkaammissa kentissä, joten sillä voi rakentaa voimakkaita magneetteja turvallisesti.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

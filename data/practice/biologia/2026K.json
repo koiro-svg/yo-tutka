@@ -1,0 +1,381 @@
+{
+ "subject": "biologia",
+ "session": "2026K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2026/kevat/biologia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2026-03-25_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: 20 pisteen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä. Monivalinnoissa väärästä vastauksesta 0 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään seitsemästä. Tehtävän 2.1 energiapyramidi piirretään ja liitetään kuvakaappauksena."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään kolmesta. Tehtävän 10.3 pistediagrammi tehdään taulukkolaskentaohjelmalla. Koko kokeessa vastataan seitsemään tehtävään, yhteensä 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (2 p/kohta). Kohdat 1.1–1.3 koskevat lajien välisiä suhteita (käen pesäloisinta, esimerkki laidunnuksesta, esimerkki peto–saalis-suhteesta), kohdat 1.4–1.5 eliöiden luokittelua (mikä eläinryhmiä ja mikä kasveja ja sieniä koskeva väite pitää paikkansa) ja kohdat 1.6–1.10 aineiden kiertoa: denitrifikaatio, nitrifikaatiobakteerit, typpikaasun muuttuminen ammoniumioneiksi, kuolleen eliömassan fosforin kohtalo ja hiilen nopean kierron perusta.",
+     "hints": [
+      "Kertaa käsitteet: loisinta, laidunnus (eliö syö toista elävää eliötä tappamatta sitä), peto–saalis-suhde, selkärankaiset, niveljalkaiset, nilviäiset, putkilokasvit sekä typen kierron vaiheet (typensidonta, nitrifikaatio, denitrifikaatio).",
+      "Kohta kohdalta:\n- 1.1: hyötyykö käki ja kärsiikö isäntä?\n- 1.2 ja 1.3: kuka syö elävää eliötä tappamatta sitä ja kuka pyydystää ja tappaa saaliinsa?\n- 1.4 ja 1.5: mustekala on nilviäinen, meritähti piikkinahkainen, hämähäkki niveljalkainen ja kastemato nivelmato; rahkasammal on sammal ja mänty paljassiemeninen.\n- 1.6–1.8: denitrifikaatio palauttaa typen ilmaan, nitrifikaatio hapettaa ammoniumia, ja vain typensidonta hyödyntää ilman typpikaasua.\n- 1.9–1.10: fosfori ei kaasuunnu, ja nopea hiilen kierto on elävien eliöiden aineenvaihduntaa."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen.\n\n1. **1.1 E, loisinta.** Käki hyötyy, ja isäntälintu menettää pesintänsä, kun se kasvattaa käenpoikasta omiensa sijaan (pesäloisinta).\n2. **1.2 E, hyttynen imee verta.** Laidunnuksessa eläin syö elävästä eliöstä osan tappamatta sitä. Ameba ja kihokki tappavat saaliinsa, kettu syö raatoa ja sienet ovat hajottajia.\n3. **1.3 A, sudenkorento saalistaa kärpäsen.** Peto pyydystää ja tappaa toisen eläimen. Muut vaihtoehdot ovat laidunnusta tai loisintaa (kääpä).\n4. **1.4 B, kalat ja sammakot ovat selkärankaisia.** Mustekala on nilviäinen, korallit polttiaiseläimiä, hämähäkit niveljalkaisia mutta simpukat nilviäisiä, ja kastemadot nivelmatoja.\n5. **1.5 B, koivu on putkilokasvi.** Lehmäntatti on kantasieni, rahkasammal sammal, saniainen itiökasvi eikä siemenkasvi, ja mänty paljassiemeninen.\n6. **1.6 D, nitraatti-ionit pelkistyvät typpikaasuksi.** Denitrifikaatiobakteerit palauttavat typen ilmakehään hapettomissa oloissa.\n7. **1.7 B, ammoniumionit muuttuvat nitraatti-ioneiksi.** Nitrifikaatiobakteerit hapettavat ammoniumin nitriitin kautta nitraatiksi.\n8. **1.8 D, biologinen typensidonta.** Typensitojabakteerit (esim. palkokasvien juurinystyröissä ja syanobakteerit) muuttavat typpikaasun ammoniumiksi.\n9. **1.9 E, fosfori vapautuu fosfaatteina maaperään.** Fosforilla ei ole merkittävää kaasumaista vaihetta, vaan hajottajat vapauttavat sen fosfaatti-ioneina kasvien käyttöön.\n10. **1.10 C, fotosynteesi ja soluhengitys.** Tuottajat sitovat hiilidioksidia yhteyttämällä, ja kaikki eliöt vapauttavat sitä soluhengityksessä.\n\n**Sudenkuoppa:** kohdassa 1.2 on helppo valita kihokki, mutta se tappaa hyönteisen, joten kyse on saalistuksesta eikä laidunnuksesta.",
+     "answer": "1.1 E · 1.2 E · 1.3 A · 1.4 B · 1.5 B · 1.6 D · 1.7 B · 1.8 D · 1.9 E · 1.10 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 7,
+     "prompt": "Valitse kuvan 2.A arktisesta ravintoverkosta viiden trofiatason mittainen ketju. Tee siitä energiapyramidi, jonka jokaiseen portaaseen kirjoitat tason lajin, ja liitä piirros vastaukseen kuvakaappauksena.",
+     "hints": [
+      "Aloita tuottajasta ja seuraa nuolia (nuoli osoittaa syöjään) viisi tasoa ylöspäin, esimerkiksi meren puolella kasviplanktonista tai tunturin puolella jäkälästä.",
+      "Piirrä viisi päällekkäistä porrasta, joista jokainen on selvästi kapeampi kuin alempi, ja osoita, että seuraavalle tasolle siirtyy vain noin 10 % energiasta (esim. merkinnät 100 %, 10 %, 1 % …). Alimpana tuottaja, ylimpänä huippupeto ja välissä kuluttajat syömisjärjestyksessä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Viisi porrasta, yksi kullekin trofiatasolle.\n- Pyramidi kapenee ylöspäin, ja näkyy, että seuraavalle tasolle siirtyy vain noin 10 % energiasta (esim. suhteelliset leveydet tai merkinnät 100 %, 10 %, 1 %, 0,1 %, 0,01 %).\n- Alimpana ketjuun sopiva tuottaja ja ylimpänä huippupeto.\n- Kuluttajat välissä oikeassa järjestyksessä.\n\n**Esimerkkiratkaisu**\n\nKetju: kasviplankton → krilli → turska → hylje → jääkarhu (tai → miekkavalas).\n\nPyramidi alhaalta ylös:\n1. Tuottajat: kasviplankton (leveä pohja, 100 %)\n2. Kasvinsyöjä eli 1. asteen kuluttaja: krilli (noin 10 %)\n3. 2. asteen kuluttaja: turska (noin 1 %)\n4. 3. asteen kuluttaja: hylje (noin 0,1 %)\n5. Huippupeto: jääkarhu (noin 0,01 %)\n\nToinen käypä ketju maalta: jäkälä → sopuli → tunturipöllö → naali → susi (kuvan nuolten mukaan).\n\n**Sudenkuoppa:** ketjussa kasviplankton → simpukka → merisaukko → miekkavalas on vain neljä tasoa. Tarkista myös nuolten suunta: nuoli osoittaa syöjään.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 2,
+     "prompt": "Krilli syö elinaikanaan 500 g kasviplanktonia. Ketju jatkuu krillistä yhteen turskaan ja siitä yhteen miekkavalaaseen, ja jokaisen kuluttajan ekologinen tehokkuus on 10 %. Kuinka paljon miekkavalaan biomassa kasvaa? (Vaihtoehdot 500 g, 50 g, 5,0 g, 0,5 g ja 0,05 g.)",
+     "hints": [
+      "Kerro 500 g luvulla 0,1 jokaista kuluttajaa kohden. Kuluttajia on kolme: krilli, turska ja miekkavalas."
+     ],
+     "solution": "1. Krillin biomassa kasvaa $0{,}10\\cdot 500\\,\\text{g}=50\\,\\text{g}$.\n2. Turska syö krillin: $0{,}10\\cdot 50\\,\\text{g}=5{,}0\\,\\text{g}$.\n3. Miekkavalas syö turskan: $0{,}10\\cdot 5{,}0\\,\\text{g}=0{,}5\\,\\text{g}$.\n\n**Vastaus: $0{,}5\\,\\text{g}$ (vaihtoehto D).**\n\n**Sudenkuoppa:** jos tehokkuus otetaan huomioon vain kahdesti, saadaan 5,0 g. Myös krilli on kuluttaja, jonka kasvuun menee vain 10 % syödystä.",
+     "answer": "$0{,}5\\,\\text{g}$ (D)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 6,
+     "prompt": "Kuusi täydennyslausetta energian kulusta ekosysteemissä (1 p/kohta): mikä on tuottajien sitoma kokonaisenergia, mitä jää jäljelle, kun tuottajat ovat käyttäneet osan omiin elintoimintoihinsa, missä muodossa se on kasvinsyöjien käytettävissä, kuinka suuren osan ravinnon energiasta kuluttajat tyypillisesti käyttävät elintoimintoihinsa, miksi trofiatasoja on enintään 4–5 ja mihin energia lopulta päätyy.",
+     "hints": [
+      "Kertaa käsitteet brutto- ja nettoperustuotanto, jatkotuotanto ja ekologinen tehokkuus.",
+      "Kohta kohdalta:\n- 2.3.1: koko sidottu energia on bruttoa.\n- 2.3.2: kun omat elintoiminnot vähennetään, jäljelle jää netto.\n- 2.3.3: kasvinsyöjien kasvu on jatkotuotantoa.\n- 2.3.4: jos seuraavalle tasolle siirtyy noin 10 %, paljonko kuluu?\n- 2.3.5 ja 2.3.6: energia ei kierrä, vaan virtaa ekosysteemin läpi."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen.\n\n1. **2.3.1 E, bruttoperustuotanto:** kaikki energia, jonka tuottajat sitovat fotosynteesissä.\n2. **2.3.2 A, nettoperustuotanto:** osa, joka jää, kun tuottajien oma soluhengitys on vähennetty.\n3. **2.3.3 A, jatkotuotanto:** kasvinsyöjät käyttävät tuottajien biomassaa omaan kasvuunsa.\n4. **2.3.4 D, 90 %:** kuluttajat käyttävät suurimman osan syömästään energiasta elintoimintoihin ja lämmöksi, ja kasvuun jää noin 10 %.\n5. **2.3.5 C, energiaa ei riitä useammille tasoille:** jokaisella tasolla häviää noin 90 %.\n6. **2.3.6 D, poistuu lopulta lämpönä:** energia virtaa ekosysteemin läpi eikä kierrä kuten aineet.",
+     "answer": "2.3.1 E · 2.3.2 A · 2.3.3 A · 2.3.4 D · 2.3.5 C · 2.3.6 D",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 5,
+     "prompt": "Yksisoluinen silmälevä Euglena muistuttaa osin kasvisolua ja osin eläinsolua. Nimeä kuvan 3.A numeroilla 1–5 osoitetut soluelimet seitsemästä vaihtoehdosta, joita ovat mm. siima, vakuoli ja Golgin laite (1 p/kohta).",
+     "hints": [
+      "Tunnista rakenteet muodon perusteella. Mieti, mikä soluelin on pieni soikio, jonka sisäkalvo on poimuilla, mikä on vihreä ja mikä on solun suurin pyöreä rakenne.",
+      "Kaksi numeroitua rakennetta ovat kalvostoja: toinen on nystyräinen ja kiertyy tuman ympärille (pinnalla ribosomeja), toinen on erillinen pino kaarevia litteitä pusseja, joiden reunoilta irtoaa rakkuloita. Siima ja tähtimäinen vakuoli eivät ole numeroituja."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen.\n\n1. **Soluelin 1: mitokondrio (B).** Pieni soikio, jonka sisäkalvo on poimuttunut.\n2. **Soluelin 2: karkea solulimakalvosto (G).** Tuman ympärillä oleva kalvosto, jonka pinnalla on ribosomeja.\n3. **Soluelin 3: viherhiukkanen (C).** Vihreä, sisältä kalvopinoja sisältävä soluelin.\n4. **Soluelin 4: tuma (E).** Suuri pyöreä rakenne, jossa näkyy tumajyvänen.\n5. **Soluelin 5: Golgin laite (F).** Kaarevien litteiden kalvopussien pino, josta irtoaa rakkuloita.\n\n**Sudenkuoppa:** siima ja tähtimäinen supistuva vakuoli näkyvät kuvassa, mutta niitä ei ole numeroitu.",
+     "answer": "3.1.1 B · 3.1.2 G · 3.1.3 C · 3.1.4 E · 3.1.5 F",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 10,
+     "prompt": "Luokittele kuvan 3.A soluelimet 1–5 sen mukaan, esiintyvätkö ne tyypillisesti eläinsoluissa, kasvisoluissa vai kummissakin, ja kerro lyhyesti kunkin tehtävä.",
+     "hints": [
+      "Käy soluelimet läpi yksi kerrallaan: ensin, kenen soluissa sitä on, ja sitten sen tehtävä. Jokaisesta soluelimestä saa kaksi pistettä (esiintyminen ja tehtävä).",
+      "Mitokondrio, karkea solulimakalvosto, tuma ja Golgin laite ovat sekä eläin- että kasvisoluissa, viherhiukkanen vain kasvisoluissa (ja levissä). Tehtävät: soluhengitys ja ATP, eritettävien ja kalvoproteiinien synteesi, fotosynteesi, perimän säilytys ja transkription ohjaus, proteiinien muokkaus ja pakkaus rakkuloihin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Mitokondrio (1):** sekä eläin- että kasvisoluissa. Soluhengitys, jossa tuotetaan ATP:tä.\n- **Karkea solulimakalvosto (2):** molemmissa. Pinnan ribosomeilla syntetoidaan eritettäviä proteiineja ja kalvoproteiineja (translaatio), ja ne alkavat laskostua kalvoston sisällä.\n- **Viherhiukkanen (3):** kasvisoluille tyypillinen. Fotosynteesi, jossa valoenergia sidotaan glukoosiin.\n- **Tuma (4):** molemmissa. Sisältää solun perimän (DNA) ja ohjaa solun toimintaa; siellä DNA kahdentuu ja tapahtuu transkriptio.\n- **Golgin laite (5):** molemmissa (kasvisoluissa vastaavia rakenteita kutsutaan diktyosomeiksi, joten myös vastaus \"tyypillinen eläinsoluille\" hyväksytään). Muokkaa ja lajittelee proteiineja ja pakkaa ne rakkuloihin eritettäviksi tai lysosomeiksi.\n\n**Esimerkkivastaus**\n\nMitokondrio (1) on sekä eläin- että kasvisoluissa. Siinä tapahtuu soluhengitys, jossa glukoosin energiaa sidotaan ATP:hen solun käyttöön.\n\nKarkea solulimakalvosto (2) on myös molemmissa solutyypeissä. Sen pinnan ribosomit valmistavat proteiineja, jotka erittyvät solusta tai päätyvät solukalvolle.\n\nViherhiukkanen (3) on tyypillinen kasvisoluille. Siinä tapahtuu fotosynteesi, jossa valon energialla valmistetaan hiilidioksidista ja vedestä glukoosia. Tämän vuoksi Euglena pystyy yhteyttämään kuin kasvi.\n\nTuma (4) kuuluu molempiin solutyyppeihin. Siinä on solun DNA, jonka ohjeiden mukaan valmistetaan lähetti-RNA:ta proteiinisynteesiä varten.\n\nGolgin laite (5) on sekä eläin- että kasvisoluissa. Se muokkaa solulimakalvostolta tulleita proteiineja, esimerkiksi liittää niihin sokeriosia, ja pakkaa ne kalvorakkuloihin, jotka kuljettavat ne solukalvolle erittymään tai muodostavat lysosomeja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Kiinanharjakoirasta on karvaton ja karvainen muunnos (kuva 4.A). Karvattomuuden aiheuttaa autosomaalinen dominoiva alleeli, joka on homotsygoottina letaali. Karvattomilla koirilla hampaat, kynnet ja karvoitus kehittyvät epänormaalisti, iho on herkkä auringolle ja kuivumiselle, ja koirat ovat kylmänarkoja.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 6,
+     "prompt": "Risteytetään karvaton ja karvainen kiinanharjakoira. Selvitä risteytyskaavion avulla jälkeläisten genotyypit, fenotyypit ja niiden lukusuhde.",
+     "hints": [
+      "Merkitse alleelit (esim. K = karvattomuus, dominoiva; k = karvaisuus). Karvattomuus on letaali homotsygoottina: millainen genotyyppi elävällä karvattomalla koiralla voi olla?",
+      "Elävä karvaton koira on aina heterotsygootti Kk, ja karvainen on kk. Tee kaavio sukusoluista K, k ja k, k ja ilmoita tulos todennäköisyyksinä, ei pentujen tarkkoina lukumäärinä."
+     ],
+     "solution": "1. **Merkinnät:** K = karvattomuuden alleeli (dominoiva, homotsygoottina letaali), k = karvaisuuden alleeli.\n2. **Vanhemmat:** karvaton $Kk$, karvainen $kk$. Karvaton ei voi olla $KK$, koska se genotyyppi on letaali.\n3. **Sukusolut:** karvaton K ja k, karvainen k ja k.\n4. **Risteytyskaavio:**\n$$\\begin{array}{c|cc} & k & k \\\\ \\hline K & Kk & Kk \\\\ k & kk & kk \\end{array}$$\n5. **Genotyypit:** $Kk : kk = 1 : 1$.\n6. **Fenotyypit:** todennäköisyydellä $\\tfrac12$ (50 %) jälkeläinen on karvaton ja todennäköisyydellä $\\tfrac12$ karvainen.\n\n**Vastaus: genotyypit $Kk$ ja $kk$ suhteessa 1 : 1, eli karvattomia ja karvaisia syntyy yhtä todennäköisesti (50 % / 50 %).**\n\n**Sudenkuoppa:** tulos on todennäköisyys. Jos sanoo esimerkiksi, että neljästä pennusta tasan kaksi on karvattomia, pisteitä menetetään.",
+     "answer": "$Kk : kk = 1 : 1$, karvaton 50 %, karvainen 50 %",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 5,
+     "prompt": "Risteytetään kaksi karvatonta kiinanharjakoiraa. Selvitä risteytyskaavion avulla jälkeläisten genotyypit, fenotyypit ja niiden lukusuhde.",
+     "hints": [
+      "Molemmat vanhemmat ovat heterotsygootteja. Tee tavallinen 2 × 2 -kaavio ja mieti, mitä tapahtuu genotyypille KK.",
+      "Kaaviosta tulee $KK : Kk : kk = 1 : 2 : 1$. Koska KK-yksilöt kuolevat jo sikiöinä, laske osuudet elävinä syntyvistä: jäljelle jää kolme neljäsosaa."
+     ],
+     "solution": "1. **Vanhemmat:** molemmat $Kk$ (karvaton koira on aina heterotsygootti).\n2. **Sukusolut:** kummaltakin K ja k.\n3. **Risteytyskaavio:**\n$$\\begin{array}{c|cc} & K & k \\\\ \\hline K & KK & Kk \\\\ k & Kk & kk \\end{array}$$\n4. **Genotyypit hedelmöityksessä:** $KK : Kk : kk = 1 : 2 : 1$.\n5. $KK$ on letaali, joten nämä sikiöt kuolevat. Elävinä syntyvistä $Kk : kk = 2 : 1$.\n6. **Fenotyypit:** elävinä syntyneistä karvattomia $\\tfrac23$ (noin 67 %) ja karvaisia $\\tfrac13$ (noin 33 %).\n\n**Vastaus: elävinä syntyvät $Kk$ ja $kk$ suhteessa 2 : 1, eli karvattomia $\\tfrac23$ ja karvaisia $\\tfrac13$. Neljäsosa hedelmöityneistä ($KK$) kuolee.**\n\n**Sudenkuoppa:** suhde 3 : 1 on väärä, koska letaalit KK-yksilöt eivät synny. (Jakauma 25 % / 50 % / 25 % hyväksytään, jos vastauksessa sanotaan selvästi, että KK-yksilöt kuolevat.)",
+     "answer": "$Kk : kk = 2 : 1$, karvaton $\\tfrac23$, karvainen $\\tfrac13$ ($KK$ kuolee)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Pohdi karvattomien kiinanharjakoirien jalostusta ja kasvatusta eettisestä näkökulmasta: mikä siinä on ongelmallista?",
+     "hints": [
+      "Mieti koiran hyvinvointia: mitä letaalin alleelin ylläpitäminen tarkoittaa pennuille ja emolle, ja mitä haittoja karvattomuudesta seuraa (hampaat, kynnet, iho, kylmänarkuus)? Entä syntyvät karvaiset pennut ja sisäsiittoisuus?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Jalostuksessa ylläpidetään tarkoituksella letaalia alleelia, joka aiheuttaa terveysongelmia.\n- Ulkonäköihanne tuottaa koiralle haittaa, esimerkiksi hampaiden puutteellinen kehitys vaikeuttaa syömistä, iho palaa auringossa ja kuivuu ja koira palelee.\n- Karvattomien pariutuksissa neljäsosa sikiöistä kuolee, mikä voi kuormittaa emoa.\n- Pentueisiin syntyy myös karvaisia pentuja, jotka eivät vastaa kasvattajan tavoitetta.\n- Pieni jalostuspohja voi johtaa sisäsiittoisuuteen ja muihin perinnöllisiin sairauksiin.\n\n**Esimerkkivastaus**\n\nKarvattomien kiinanharjakoirien jalostus perustuu alleeliin, joka on homotsygoottina tappava. Jos kaksi karvatonta paritetaan, neljäsosa sikiöistä kuolee jo kohdussa, mikä on eettisesti arveluttavaa ja voi olla haitallista emolle. Karvattomuus itsessään heikentää koiran hyvinvointia: hampaat ja kynnet kehittyvät puutteellisesti, iho palaa ja kuivuu ja koira tarvitsee suojaa kylmältä. Ihmisen ulkonäköihanne asetetaan siis eläimen terveyden edelle. Lisäksi pentueisiin syntyy karvaisia pentuja, joiden asema voi olla huonompi, ja pieni jalostuspopulaatio lisää sisäsiittoisuuden riskiä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 8,
+     "prompt": "Tekstissä 5.A kerrotaan OTOP1-reseptorista, joka reagoi salmiakin ammoniumkloridiin. Kuvaa makuaistimuksen syntyminen ja pohdi, mikä OTOP1-reseptorin osuus siinä on.",
+     "hints": [
+      "Etene reitin mukaan: kemiallinen ärsyke → reseptori makusilmussa → jännitemuutos → hermoimpulssi → aivokuori. Mihin kohtaan ketjua OTOP1 kuuluu?",
+      "Makuaisti on kemiallinen aisti: veteen liuenneet aineet kiinnittyvät makusilmujen reseptoreihin kielen makunystyissä. OTOP1 on kemoreseptori, joka reagoi ammoniumkloridiin. Syntyvä jännitemuutos laukaisee impulssin makuhermossa, ja aistimus syntyy isoaivojen kuoren makualueella. Mainitse myös hajuaisti, aiemmat kokemukset ja limbinen järjestelmä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Makuaisti on kemiallinen aisti: se toimii kemoreseptorien avulla. Yksi niistä on ammoniumkloridiin reagoiva OTOP1.\n- Reseptorit reagoivat syljessä eli vedessä liuenneisiin aineisiin, ja eri reseptorit ovat erikoistuneet eri makuihin.\n- Reseptorit sijaitsevat kielen makunystyjen makusilmuissa; herkkyys voi vaihdella kielen eri osissa.\n- Reseptorisolussa syntyy jännitemuutos, joka laukaisee hermoimpulssin makuhermosolussa.\n- Impulssi kulkee sensorisia hermoratoja isoaivojen kuoren makualueelle, jossa syntyy makuaistimus.\n- Aistimus on usein perusmakujen yhdistelmä, ja siihen vaikuttavat hajuaisti, aiemmat kokemukset ja limbinen järjestelmä.\n\n**Esimerkkivastaus**\n\nMakuaisti on kemiallinen aisti. Kun salmiakki liukenee sylkeen, ammoniumkloridi kulkeutuu kielen makunystyjen makusilmuihin. Makusilmuissa on makureseptorisoluja, joiden kalvolla on eri makuihin erikoistuneita reseptoriproteiineja. Tekstin mukaan ammoniumkloridiin reagoi OTOP1-reseptori. Kun aine vaikuttaa reseptoriin, reseptorisolun kalvojännite muuttuu, ja solu välittää viestin makuhermosoluun, jossa syntyy hermoimpulssi.\n\nImpulssi kulkee aivohermoja pitkin aivorunkoon ja talamuksen kautta isoaivojen kuoren makualueelle. Vasta siellä syntyy tietoinen makuaistimus. Salmiakin maku on yhdistelmä ammoniumkloridin maun lisäksi esimerkiksi makeaa ja suolaista, ja myös haju ja aiemmat kokemukset vaikuttavat siihen, miltä maku tuntuu. Hiirikokeen perusteella OTOP1 on välttämätön: ilman sitä ammoniumkloridin makua ei aistittu.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 7,
+     "prompt": "Anna maistaa salmiakkia ensimmäistä kertaa, ei pidä mausta ja sylkäisee makeisen pois. Hänen mielestään sylkäisy oli refleksi. Arvioi väitteen paikkansapitävyyttä ja perustele. Hyödynnä tekstiä 5.A.",
+     "hints": [
+      "Määrittele ensin refleksi: millainen toiminta se on ja missä se kytkeytyy? Täysiin pisteisiin tarvitaan refleksioletuksen kumoaminen perusteluineen.",
+      "Refleksi on nopea, tahdosta riippumaton ja aina samanlaisena toistuva vaste, joka kytkeytyy refleksikaaressa (esim. selkäytimessä) ennen kuin aivot tiedostavat ärsykkeen. Annan sylkäisy tapahtui vasta, kun maku oli tunnistettu epämieluisaksi aivokuorella (toimiva OTOP1-reseptori), ja käsky lähti liikeaivokuorelta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Väite ei pidä paikkaansa: sylkäisy ei ole refleksi.\n- Refleksi (heijaste) on nopea ja tahdosta riippumaton vaste, joka toistuu aina samanlaisena.\n- Refleksi kytkeytyy heijastekaaressa, esimerkiksi selkäytimessä, ennen kuin ärsyke tiedostetaan aivoissa.\n- Salmiakin sylkäiseminen on tahdonalainen toiminto, joka tapahtuu vasta, kun aivot ovat tunnistaneet maun pahaksi.\n- Maun tunnistaminen vaatii toimivan OTOP1-reseptorin Annan kielessä.\n- Tahdonalainen liike käynnistyy isoaivojen liikeaivokuorelta.\n\n**Esimerkkivastaus**\n\nAnnan väite ei pidä paikkaansa. Refleksi eli heijaste on tahdosta riippumaton, nopea ja joka kerta samanlainen reaktio ärsykkeeseen. Se kulkee refleksikaarta pitkin: aistinsolusta tuleva viesti kytkeytyy esimerkiksi selkäytimessä suoraan liikehermosoluun, ja lihas reagoi ennen kuin ärsyke on tiedostettu.\n\nAnna sen sijaan maistoi salmiakkia. Hänen kielensä OTOP1-reseptorit reagoivat ammoniumkloridiin, ja viesti kulki aivokuoren makualueelle, jossa maku tunnistettiin ja arvioitiin epämiellyttäväksi. Vasta tämän jälkeen Anna päätti sylkäistä, ja käsky lähti liikeaivokuorelta suun ja kielen lihaksille. Koska toiminta perustui tietoiseen aistihavaintoon ja päätökseen, se oli tahdonalainen. Moni suomalainen taas pitää samasta mausta, mikä osoittaa, ettei reaktio ole automaattisesti aina sama.\n\n**Sudenkuoppa:** yökkäysrefleksi on oma asiansa. Tässä tehtävässä kuvattu pois sylkeminen maun tunnistamisen jälkeen on tahdonalaista.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Pohdi, miten maa- ja metsätalouden muutokset ovat voineet vähentää hyönteisiä Suomessa. Apuna voi käyttää tekstiä 6.A, jossa biologi kertoo havainnoistaan hyönteiskadosta.",
+     "hints": [
+      "Käsittele sekä maataloutta että metsätaloutta, sillä kummastakin saa enintään kolme pistettä. Mieti, mitkä elinympäristöt ja ravintolähteet ovat kadonneet ja mitä kemikaaleja käytetään.",
+      "Maatalous: torjunta-aineet (suora ja ravintoketjun kautta välittyvä vaikutus), niittyjen, laidunten ja pientareiden häviäminen tehomaatalouden ja yksipuolisten peltojen vuoksi, laiduntamisen loppuminen (ravintokasvit, lanta). Metsätalous: hakkuut ja pirstoutuminen, vanhojen puiden ja lahopuun väheneminen, yksipuolinen puulajisto, metsäpalojen väheneminen (hiiltynyt puu)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Maatalous*\n- Torjunta-aineet vähentävät hyönteisiä suoraan ja epäsuorasti ravintoketjujen kautta.\n- Niityt, laitumet ja pellonpientareet ovat hävinneet, kun on siirrytty tehomaatalouteen ja laajoihin yhden viljelykasvin peltoihin.\n- Kun karjaa ei enää laiduneta, monien hyönteisten ravintokasvit vähenevät, eikä lantaa ja siitä elantonsa saavia hyönteisiä ole entiseen tapaan.\n\n*Metsätalous*\n- Hakkuut pirstovat metsiä, mikä vaikeuttaa hyönteisten leviämistä.\n- Metsät hakataan nuorina, joten vanhoja heikkokuntoisia puita ja lahopuuta on vähän.\n- Talousmetsien puulajisto on yksipuolinen.\n- Metsäpalojen torjunnan vuoksi hiiltynyttä puuta tarvitsevien lajien elinympäristöt ovat vähentyneet.\n\n**Esimerkkivastaus**\n\nMaataloudessa on siirrytty suuriin, yhden kasvilajin peltoihin. Samalla luonnonniityt, pientareet, avo-ojat ja karjan laitumet ovat vähentyneet, ja niiden mukana monien pölyttäjien ja muiden hyönteisten ravintokasvit ja pesäpaikat. Laiduntamisen loppuminen on vähentänyt myös lantaa, josta monet kovakuoriaiset ja kärpäset ovat riippuvaisia. Torjunta-aineet tappavat hyönteisiä suoraan, ja rikkakasvien torjunta vie niiltä ravinnon.\n\nMetsätaloudessa avohakkuut pirstovat metsiä, jolloin sopivat elinympäristöt jäävät pieniksi saarekkeiksi, joiden välillä hyönteisten on vaikea liikkua. Talousmetsät hakataan ennen kuin puut vanhenevat, joten lahopuuta ja vanhoja puita on vähän, ja niistä riippuvaiset kovakuoriaiset ja muut lajit vähenevät. Puulajisto on yksipuolinen, ja metsäpalojen tehokas torjunta on vähentänyt palaneesta puusta riippuvaisia lajeja.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 10,
+     "prompt": "Suunnittele yksinkertainen tutkimus, jolla voisit selvittää, ovatko hyönteiset vähentyneet tai muuttumassa valitsemallasi alueella. Kuvaa tutkimus luonnontieteellisen tutkimuksen vaiheiden mukaan.",
+     "hints": [
+      "Rakenna vastaus tutkimusprosessin vaiheiden mukaan: havainto ja tutkimuskysymys, taustatieto ja hypoteesi, tutkimusasetelma, aineiston keruu, tulosten käsittely ja johtopäätökset, julkaiseminen. Täysiin pisteisiin tarvitaan konkreettinen hyönteistutkimus, jossa mitataan vähintään kahtena ajankohtana.",
+      "Tee suunnitelmasta konkreettinen: esim. samalla niityllä ja sen vertailualueella keräysmenetelmä (kuoppa-ansat, liima-ansat, haavinta tai valopyydys), vakioidut ajankohdat, sää ja pyyntiaika, toistot ja seuranta usean vuoden ajan. Tulokset taulukoidaan ja testataan tilastollisesti, hypoteesi hyväksytään tai hylätään, ja työ julkaistaan vertaisarvioinnin jälkeen. Mainitse myös rahoitus."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Havainto tai ongelma (esim. autojen tuulilasiin osuu vähemmän hyönteisiä kuin ennen) ja siitä muotoiltu tutkimuskysymys.\n- Perehtyminen aiempaan tutkimustietoon ja hypoteesin asettaminen.\n- Tutkimuksen suunnittelu hypoteesin pohjalta ja sopivan tutkimusalueen valinta.\n- Rahoituksen hankkiminen.\n- Vertailu- tai kontrollialue tai seuranta, johon tuloksia verrataan, ja mittausten toistaminen eri ajankohtina (jälkiseuranta).\n- Tulosten taulukointi ja tilastollinen analyysi.\n- Hypoteesin hyväksyminen tai hylkääminen.\n- Tulosten julkaiseminen vertaisarvioinnin jälkeen.\n\n**Esimerkkivastaus**\n\n*Havainto ja kysymys:* Kotikuntani laidunniityllä näyttää kesäisin lentävän vähemmän perhosia ja kimalaisia kuin lapsuudessani. Tutkimuskysymys: onko niityn pölyttäjähyönteisten yksilö- ja lajimäärä vähentynyt kymmenessä vuodessa?\n\n*Taustatieto ja hypoteesi:* Luen aiempia tutkimuksia hyönteiskadosta ja selvitän, onko alueelta olemassa aiempia seurantatietoja, esimerkiksi päiväperhosseurannan linjalaskentoja. Hypoteesi: niityn pölyttäjien yksilömäärä on pienentynyt, koska laidunnus on loppunut ja niitty on alkanut kasvaa umpeen.\n\n*Suunnittelu:* Valitsen tutkimusalueeksi niityn ja vertailualueeksi lähistöllä olevan laidunnetun niityn. Kummallekin asetan saman pituisen laskentalinjan ja kolme keltaista pyydysmaljaa. Laskennat tehdään kesäkuusta elokuuhun kahden viikon välein aurinkoisella, tyynellä säällä samaan kellonaikaan, jotta tulokset ovat vertailukelpoisia. Haen pienen apurahan pyydyksiin ja määritysoppaisiin.\n\n*Aineiston keruu:* Kirjaan jokaisella kerralla havaitut perhoset ja kimalaiset lajeittain sekä maljoihin jääneet yksilöt. Toistan saman asetelman ainakin viitenä peräkkäisenä kesänä ja vertaan tuloksia vanhoihin seurantatietoihin.\n\n*Tulokset ja johtopäätökset:* Kokoan havainnot taulukoihin ja kuvaajiin ja testaan tilastollisesti, eroavatko yksilömäärät vuosien ja alueiden välillä. Tulosten perusteella hyväksyn tai hylkään hypoteesin ja pohdin virhelähteitä, kuten säävaihtelua.\n\n*Julkaiseminen:* Raportoin tulokset ja, jos aineisto on riittävä, tarjoan ne julkaistavaksi tieteellisessä lehdessä vertaisarvioinnin jälkeen tai luovutan ne kansalliseen seurantaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 3,
+     "prompt": "Selitä lyhyesti, mihin siittiön osia pää, keskikappale ja häntä (kuva 7.A) tarvitaan.",
+     "hints": [
+      "Mieti jokaista osaa sen kannalta, mitä siittiön pitää tehdä: uida munasolun luo, tunkeutua sen suojakerrosten läpi ja viedä perimä perille."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Pää:** sisältää tuman eli isän perimän (haploidi kromosomisto). Kärjen akrosomin entsyymit auttavat läpäisemään munasolua ympäröivät kerrokset, ja perimä siirtyy munasoluun.\n- **Keskikappale:** siinä on paljon mitokondrioita, jotka tuottavat liikkumiseen tarvittavaa ATP:tä.\n- **Häntä (siima):** liikuttaa siittiötä kohti munasolua.\n\n**Esimerkkivastaus**\n\nSiittiön päässä on tuma, jossa on isältä peräisin oleva haploidi perimä, ja kärjessä akrosomi, jonka entsyymit hajottavat munasolun suojakerroksia, jotta perimä pääsee munasolun sisään. Keskikappaleen mitokondriot tuottavat ATP:tä, jota hännän liike vaatii. Häntä on siima, jonka piiskamainen liike kuljettaa siittiön munasolun luo.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 12,
+     "prompt": "Kuvaa siittiöiden syntyminen: missä elimessä ja millaisten vaiheiden kautta ne muodostuvat ja kypsyvät. Selitä lisäksi, millaiset hormonit ohjaavat siittiöiden tuotantoa ja miten ne vaikuttavat.",
+     "hints": [
+      "Jaa vastaus kahteen osaan: siittiöiden kehitys (paikka, solut, meioosi, kypsyminen) ja hormonaalinen säätely (hypotalamus, aivolisäke, kivekset). Täysiin pisteisiin tarvitaan molemmat.",
+      "Kehitys: kivesten siementiehyiden kantasolut → meioosi → haploidit siittiöt; tukisolut (Sertolin solut) ravitsevat ja ohjaavat; kypsyminen ja liikkumiskyky lisäkiveksissä. Säätely: hypotalamuksen GnRH → aivolisäkkeen etulohkon FSH ja LH; FSH tukisoluihin, LH välisoluihin (Leydigin solut) → testosteroni; testosteroni jarruttaa GnRH:n ja LH:n eritystä negatiivisella palautteella."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Kehitys ja kypsyminen*\n- Siittiöt muodostuvat kivesten siementiehyissä kantasoluista (spermatogonioista).\n- Haploidi kromosomisto syntyy meioosissa.\n- Siementiehyiden seinämän tukisolut huolehtivat kehittyvien siittiöiden ravinnosta ja ohjaavat niiden kypsymistä.\n- Kehityksen loppuvaiheessa siittiöt kulkeutuvat lisäkiveksiin, joihin ne varastoituvat ja joissa ne saavat liikkumiskykynsä.\n\n*Hormonaalinen säätely*\n- Hypotalamuksen GnRH (gonadoliberiini) ohjaa, kuinka paljon aivolisäkkeen etulohko erittää FSH:ta ja LH:ta.\n- FSH vaikuttaa tukisoluihin ja kiihdyttää siten siittiöiden tuotantoa.\n- LH stimuloi siementiehyiden välissä olevien välisolujen testosteronin tuotantoa, ja testosteroni edistää siittiöiden kehitystä.\n- Testosteroni säätelee negatiivisella palautteella hypotalamuksen ja aivolisäkkeen eritystä.\n\n**Esimerkkivastaus**\n\nSiittiöt kehittyvät murrosiästä alkaen kivesten kiemuraisissa siementiehyissä. Tiehyiden seinämässä olevat kantasolut jakautuvat mitoosilla, jolloin niitä riittää koko eliniän. Osa soluista siirtyy meioosiin, jonka kahdessa jakautumisessa syntyy neljä haploidia solua. Nämä kypsyvät siittiöiksi: tuma tiivistyy päähän, syntyvät akrosomi, mitokondrioita sisältävä keskikappale ja häntä. Kehitystä tukevat tiehyiden seinämän tukisolut, jotka ravitsevat siittiöitä ja ohjaavat niiden kypsymistä. Kehitys kestää noin kaksi kuukautta. Tiehyistä siittiöt kulkeutuvat lisäkiveksiin, joissa ne varastoituvat ja saavat liikkumiskykynsä.\n\nSiittiöiden tuotantoa säätelee hormonien ketju. Hypotalamus erittää gonadoliberiinia (GnRH), joka saa aivolisäkkeen etulohkon erittämään follikkelia stimuloivaa hormonia (FSH) ja luteinisoivaa hormonia (LH). FSH vaikuttaa tukisoluihin ja kiihdyttää siittiöiden tuotantoa. LH vaikuttaa siementiehyiden välissä oleviin välisoluihin, jotka tuottavat testosteronia. Testosteroni on välttämätön siittiöiden kehitykselle. Kun testosteronin pitoisuus veressä nousee, se hillitsee negatiivisen palautteen kautta hypotalamuksen GnRH:n ja aivolisäkkeen LH:n eritystä, joten hormonitasot pysyvät tasapainossa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Tomaatin jalostuksessa on suosittu suurta kokoa, ja samalla kaupan tomaattien maku on muuttunut miedommaksi kuin kirsikan kokoisilla villeillä sukulaisilla. Aineiston 8.A mukaan tutkijat löysivät geenin (SlCDPK27), jonka tuottama proteiini jarruttaa sokeria tuottavaa sakkaroosisyntaasia. Makeissa villitomaateissa geeni on pistemutaation vuoksi toimimaton, ja tutkijat tuottivat saman mutaation CRISPR-tekniikalla viljeltyihin tomaatteihin.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 5,
+     "prompt": "Aineiston 8.A mukaan makeiden villitomaattien geenissä on pistemutaatio joko proteiinia koodaavassa osassa tai promoottorissa. Selitä, mihin geeni tarvitsee promoottorialuetta ja miten promoottorin pistemutaatio voi estää geenin toiminnan.",
+     "hints": [
+      "Mikä entsyymi aloittaa transkription, ja mistä se tietää, mistä kohdasta aloittaa?",
+      "Promoottori on geenin koodaavan osan edessä oleva säätelyalue, johon RNA-polymeraasi (ja transkriptiotekijät) kiinnittyy aloittamaan lähetti-RNA:n rakentamisen. Mitä tapahtuu, jos kiinnittymiskohdan emäsjärjestys muuttuu?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Promoottorialuetta tarvitaan, jotta geenin luenta eli transkriptio käynnistyy.\n- Promoottori sijaitsee geenin koodaavan alueen edessä ja kuuluu geenin säätelyalueeseen.\n- RNA-polymeraasi kiinnittyy promoottoriin ja aloittaa RNA-molekyylin rakentamisen.\n- Pistemutaatio promoottorissa voi muuttaa emäsjärjestystä niin, että RNA-polymeraasi (tai transkriptiotekijät) ei tunnista kohtaa eikä kiinnity.\n- Silloin lähetti-RNA:ta ei synny eikä proteiinisynteesiä tapahdu.\n\n**Esimerkkivastaus**\n\nPromoottori on geenin säätelyalue, joka sijaitsee ennen proteiinia koodaavaa osaa. Transkriptiotekijät ja RNA-polymeraasi tunnistavat promoottorin tietyn emäsjärjestyksen ja kiinnittyvät siihen. Sen jälkeen RNA-polymeraasi alkaa rakentaa lähetti-RNA:ta DNA:n mallijuosteen mukaan.\n\nJos promoottorissa on pistemutaatio, eli yksi emäs on vaihtunut toiseen, tunnistuskohta voi muuttua niin, ettei RNA-polymeraasi pysty kiinnittymään. Tällöin geeniä ei lueta, lähetti-RNA:ta ei synny eikä ribosomeissa valmistu proteiinia. Villitomaatissa SlCDPK27-proteiini jää siksi syntymättä, eikä se voi jarruttaa sakkaroosisyntaasia, joten tomaatti on makea.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 10,
+     "prompt": "Kuvaa CRISPR-tekniikan toiminta tomaatin solussa, kun sillä tuotetaan aineiston 8.A pistemutaatio. Pohdi myös, miksi tutkijoiden piti selvittää tomaattikasvien perimä ennen CRISPR-tekniikan käyttöä.",
+     "hints": [
+      "CRISPR-Cas-järjestelmässä on kaksi osaa: entsyymi, joka leikkaa DNA:ta, ja RNA, joka ohjaa sen oikeaan kohtaan. Täysiin pisteisiin tarvitaan myös pohdinta sekvensoinnin merkityksestä.",
+      "Opas-RNA suunnitellaan sekvensoidun perimän perusteella niin, että se pariutuu komplementaarisesti kohdegeenin DNA:han. Cas-entsyymi katkaisee kohdassa DNA:n molemmat juosteet, ja solun korjausmekanismi korjaa katkoksen; korjauksessa syntyy haluttu muutos (tai korjausmallin avulla tietty emäsvaihdos). Sekvensointi paljastaa villi- ja viljelylajikkeiden erot ja varmistaa, ettei opas-RNA tartu muualle perimään."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- CRISPR-tekniikassa tarvitaan Cas-entsyymi (esim. Cas9) ja opas-RNA.\n- Opas-RNA:n emäsjärjestys suunnitellaan perimän sekvenssin avulla, ja se pariutuu kohde-DNA:n kanssa emäspariperiaatteen mukaan (komplementaarisesti).\n- Opas-RNA vie Cas-entsyymin kohdejaksoon, ja entsyymi katkaisee DNA:n kaksoisjuosteen.\n- Solu korjaa katkenneen DNA:n, ja korjauksen yhteydessä DNA:han saadaan aiheutettua haluttu mutaatio.\n- Sekvensoinnilla selvitetään villi- ja viljelytomaatin geneettiset erot eli se, mikä mutaatio makeuteen tarvitaan ja missä kohdassa.\n- Opas-RNA on suunniteltava niin, ettei se kiinnity muualle perimään (ei ei-toivottuja muutoksia).\n\n**Esimerkkivastaus**\n\nCRISPR-Cas9 on geenisaksimenetelmä, jossa tomaatin soluun viedään Cas9-entsyymi ja sitä ohjaava opas-RNA, esimerkiksi bakteerivektorin avulla. Opas-RNA:ssa on noin 20 emäksen jakso, joka on vastinjuoste SlCDPK27-geenin halutulle kohdalle. Solun tumassa opas-RNA pariutuu tähän kohtaan, ja Cas9 katkaisee DNA:n kaksoisjuosteen juuri siinä. Solu korjaa katkoksen omilla korjausentsyymeillään. Korjaus on usein epätarkka ja tuottaa pienen muutoksen, tai soluun voidaan antaa korjausmalliksi DNA-jakso, jossa on haluttu emäsvaihdos. Näin viljeltyyn tomaattiin saadaan sama pistemutaatio kuin villitomaatissa, eikä geenistä synny toimivaa proteiinia.\n\nTutkijoiden piti sekvensoida tomaattien perimät, koska vain vertaamalla makeiden villitomaattien ja viljeltyjen lajikkeiden DNA:ta voitiin löytää makeuteen vaikuttavat geenit ja niiden täsmälliset mutaatiokohdat. Opas-RNA:n emäsjärjestys on suunniteltava tarkalleen kohdegeenin mukaan. Koko perimän tunteminen auttaa lisäksi varmistamaan, ettei sama jakso esiinny muualla perimässä, jolloin Cas9 ei leikkaisi vääriä kohtia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Ihmisen toiminta on hävittänyt elinympäristöjä ja vähentänyt lajeja ja yksilöitä. Suomessa monimuotoisuuden heikkenemistä pyritään hidastamaan esimerkiksi vuonna 2023 voimaan tulleella uudella luonnonsuojelulailla ja -asetuksella. Pohdi, millaisin keinoin luonnon monimuotoisuutta suojellaan Suomessa.",
+     "hints": [
+      "Jäsennä vastaus monimuotoisuuden tasojen mukaan: ekosysteemien, lajien ja geneettinen monimuotoisuus. Määrittele ne ensin. Mieti sitten keinoja eri toimijoiden kannalta: lainsäädäntö ja kansainväliset sopimukset, suojeluohjelmat ja -alueet, lajien suojelu, geenivarat sekä kansalaisten, järjestöjen ja yritysten toiminta.",
+      "Jokaisesta keinosta saa pisteen ja sen konkreettisesta esimerkistä tai perustelusta toisen. Esimerkkejä: YK:n biodiversiteettisopimus, EU:n lintu- ja luontodirektiivi ja Natura 2000, METSO- ja Helmi-ohjelmat, YVA, kansallis- ja luonnonpuistot, viherkäytävät, rauhoitukset ja metsästysajat, vieraslajien torjunta, ennallistaminen ja perinnebiotooppien hoito, tekopesät, siemenpankit ja eläintarhojen suojeluohjelmat, siirtoistutukset, luonnonsuojelujärjestöt ja ympäristökasvatus. Kytke jokainen keino nimenomaan monimuotoisuuteen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Määritelmät*\n- Ekosysteemien monimuotoisuus: alueen erilaisten ekosysteemien ja elinympäristöjen määrä.\n- Lajimonimuotoisuus: alueen lajien (tai taksonien) määrä.\n- Geneettinen monimuotoisuus: lajin tai populaation sisäinen alleelivaihtelu.\n\n*Keinot (kustakin keino + esimerkki tai perustelu)*\n- **Kansainväliset sopimukset ja EU:** YK:n biodiversiteettisopimus, EU:n biodiversiteettistrategia, lintu- ja luontodirektiivi ja niiden perusteella perustettu Natura 2000 -verkosto (Natura-arviointi hankkeissa), luontopaneeli (IPBES).\n- **Kansallinen lainsäädäntö:** luonnonsuojelulaki (suojellut luontotyypit ja lajit, rauhoitus), metsälaki (erityisen tärkeät elinympäristöt), vesilaki, ympäristövaikutusten arviointi (YVA).\n- **Ohjelmat ja seuranta:** METSO (metsien suojelu, usein vapaaehtoisesti maanomistajan kanssa), Helmi (elinympäristöjen ennallistaminen, kuten soiden ja perinnebiotooppien kunnostus), VELMU (vedenalainen luonto), PUTTE (huonosti tunnetut lajit), uhanalaisuusarvioinnit.\n- **Suojelualueet ja elinympäristöt:** kansallis- ja luonnonpuistot, erämaa-alueet, Ramsar-kosteikot, yksityiset suojelualueet, kansalliset kaupunkipuistot; viherkäytävät alueiden välillä; sateenvarjolajit suojelualueiden rajauksessa; rehevöitymisen ja ympäristömyrkkyjen rajoittaminen.\n- **Lajien suojelu:** rauhoitus ja metsästysajat, avainlajien merkitys ravintoverkoille, esiintymispaikkojen ennallistaminen ja hoito, vieraslajien torjunta (vieraslajilaki), talviruokinta ja pölyttäjäkasvit, tekopesät, pöntöt ja hyönteishotellit.\n- **Geneettinen monimuotoisuus:** siemen- ja geenipankit, kasvitieteelliset puutarhat ja eläintarhojen suojeluohjelmat, uhanalaisten populaatioiden koon ylläpito, siirtoistutukset (esim. metsäpeura, saimaannorppa, raakku).\n- **Kansalaiset, järjestöt ja yritykset:** luonnonsuojelujärjestöt, vapaaehtoistyö ja talkoot, mielipidevaikuttaminen ja kansalaisaktivismi, yritysten ympäristöohjelmat, ympäristökasvatus opetussuunnitelmissa.\n\n**Esimerkkivastaus** (lyhennetty runko)\n\nLuonnon monimuotoisuus tarkoittaa ekosysteemien, lajien ja lajien sisäisen perinnöllisen vaihtelun kirjoa. Suomi on sitoutunut YK:n biologista monimuotoisuutta koskevaan sopimukseen ja EU:n biodiversiteettistrategiaan. EU:n lintu- ja luontodirektiivien pohjalta Suomeen on perustettu Natura 2000 -alueita, ja niihin vaikuttavista hankkeista on tehtävä Natura-arviointi. Suurissa rakennushankkeissa ympäristövaikutukset arvioidaan YVA-menettelyllä.\n\nEkosysteemien monimuotoisuutta turvataan suojelualueilla, kuten kansallispuistoilla ja luonnonpuistoilla, joissa luonto saa kehittyä ilman hakkuita. Uusi luonnonsuojelulaki laajensi suojeltujen luontotyyppien listaa. METSO-ohjelmassa maanomistajat voivat suojella vapaaehtoisesti arvokkaita metsäkohteitaan korvausta vastaan, ja Helmi-ohjelmassa ennallistetaan ojitettuja soita ja hoidetaan perinneniittyjä. Viherkäytävät yhdistävät suojelualueita, jolloin eliöt voivat liikkua niiden välillä.\n\nLajien tasolla uhanalaisia lajeja rauhoitetaan, niille rajataan metsästysaikoja ja niiden esiintymispaikkoja suojellaan. Esimerkiksi saimaannorppaa suojellaan kalastusrajoituksin ja apukinoksilla. Vieraslajeja, kuten jättipalsamia ja minkkiä, torjutaan, koska ne syrjäyttävät alkuperäisiä lajeja.\n\nGeneettistä monimuotoisuutta säilytetään siemen- ja geenipankeissa sekä eläintarhojen suojeluohjelmissa, ja pienentyneiden populaatioiden perinnöllistä vaihtelua lisätään siirtoistutuksilla, kuten metsäpeuran palautuksessa. Lisäksi luonnonsuojelujärjestöt, vapaaehtoiset talkoolaiset ja ympäristökasvatus lisäävät tietoa ja tukea suojelulle.\n\n**Sudenkuoppa:** yleiset ympäristöteot (esim. kierrätys) eivät tuo pisteitä, ellei niitä kytketä selvästi monimuotoisuuden säilymiseen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Kolibrit ovat pieniä, erittäin aktiivisia mettä syöviä lintuja, joiden aineenvaihdunta on kiivas. Tekstin 10.A mukaan Andeilla yli 3 500 metrin korkeudella elävät lajit vaipuvat öisin horrokseen, jossa ruumiinlämpö ja syke laskevat, ja aamulla ne lämmittävät itsensä lihasvärinällä. Vuoristossa on yöpakkasia mutta myös runsaasti kukkia ja vähän petoja. Taulukossa 10.B on kuuden lajin keskiarvoja (paino, lämmön laskunopeus, horroksen kesto, painonlasku).",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 8,
+     "prompt": "Alavilla mailla lähellä merenpintaa elävät kolibrit eivät horrosta öisin, toisin kuin niiden lähisukuiset vuoristolajit. Pohdi, miten evoluution kuluessa alavilla alueilla eläneistä kantamuodoista ovat kehittyneet vuoriston horrostavat lajit. Voit käyttää tekstiä 10.A.",
+     "hints": [
+      "Kerro tarina evoluutiomekanismien kautta: miksi populaatio levittäytyi vuoristoon, millaista muuntelua sillä oli ja mitä luonnonvalinta suosi. Ota mukaan sekä mikro- että makroevoluutio.",
+      "Alavilla mailla kilpailu, vuoristossa vapaita resursseja (kukkia) ja vähän saalistajia. Populaatiossa oli perinnöllistä muuntelua ja uusia mutaatioita, jotka vaikuttivat kykyyn hidastaa aineenvaihduntaa. Mitä korkeammalla, sitä tärkeämpää energian säästäminen yöllä oli, joten luonnonvalinta suosi horrostajia (parempi kelpoisuus) ja ominaisuus yleistyi (mikroevoluutio). Geenivirran katkettua syntyi lisääntymiseste ja uusia lajeja (makroevoluutio)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kantamuodon populaatio eli vuoriston lähellä; alavilla mailla oli kilpailua resursseista, vuoristossa vapaita resursseja ja vähän saalistajia.\n- Populaatiossa oli perinnöllistä muuntelua, ja mutaatiot saattoivat tuottaa uusia alleeleja, jotka paransivat yksilön kykyä hidastaa aineenvaihduntaansa.\n- Mitä korkeammalla ja kylmemmässä yksilöt elivät, sitä tarpeellisempaa energian säästäminen oli.\n- Fenotyyppinen muuntelu mahdollisti luonnonvalinnan, joka suosi parhaan kelpoisuuden yksilöitä: niitä, jotka keräsivät päivällä mettä korkealla ja säästivät energiaa yöllä hidastamalla aineenvaihduntaansa. Ne saivat enemmän jälkeläisiä.\n- Horrostamiseen liittyvät ominaisuudet yleistyivät populaatiossa (mikroevoluutio).\n- Suuntaava tai hajottava valinta erotti vuoriston ja alankojen populaatioita, geenivirta niiden välillä loppui ja syntyi lisääntymiseste (makroevoluutio, lajiutuminen).\n\n**Esimerkkivastaus**\n\nAlankojen kolibrien kantamuoto eli alueella, josta osa populaatiosta pystyi levittäytymään vuoristoon. Alangolla kilpailu kukkien medestä oli kovaa, kun taas ylempänä oli kukkia tarjolla ja vähemmän petoja. Vuoristoon siirtyneet yksilöt joutuivat kuitenkin selviämään kylmistä öistä.\n\nPopulaatiossa oli perinnöllistä muuntelua, ja mutaatiot toivat lisää alleeleja, jotka vaikuttivat esimerkiksi siihen, kuinka paljon yksilö pystyi laskemaan ruumiinlämpöään ja hidastamaan aineenvaihduntaansa yöllä. Kylmässä vuoristossa ne yksilöt, jotka säästivät yöllä energiaa, selviytyivät aamuun ja pystyivät lisääntymään muita paremmin. Luonnonvalinta suosi siis horrostamiskykyä, ja sitä edistävät alleelit yleistyivät sukupolvi sukupolvelta. Tätä muutosta populaation alleelifrekvensseissä kutsutaan mikroevoluutioksi.\n\nKun populaatiot elivät eri korkeuksilla, valintapaineet erosivat ja populaatioiden väliset parittelut harvinaistuivat. Geenivirran katkettua erot kasvoivat, ja lopulta populaatioiden välille syntyi lisääntymiseste. Näin vuoristoon kehittyi uusia, horrostavia kolibrilajeja (makroevoluutio). Tekstin mukaan pisimpään horrostavat lajit elävät korkeimmalla, mikä sopii luonnonvalinnan selitykseen.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 5,
+     "prompt": "Pohdi, mitkä kolibrien omat ominaisuudet ja mitkä Andien ympäristön erityispiirteet tekevät yöllisestä horrostamisesta edullista (teksti 10.A).",
+     "hints": [
+      "Käsittele erikseen linnun omat ominaisuudet ja ympäristö, sillä täysiin pisteisiin tarvitaan molemmat.",
+      "Linnun ominaisuudet: pieni koko ja kiivas aineenvaihdunta (paljon energiaa, vähän varastoja), nopeat ruumiinlämmön muutokset, lihasvärinä ja höyhenten pörhistys lämmön nostamiseksi aamulla. Ympäristö: jyrkkä vuorokautinen lämpötilan vaihtelu ja yöpakkaset, kukkien sulkeutuminen yöksi (ei ravintoa), vähän saalistajia (horros on turvallinen)."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (täysiin pisteisiin tarvitaan molemmat näkökulmat)\n\n*Kolibrien ominaisuudet*\n- Nopea aineenvaihdunta ja suuri energiankulutus.\n- Pieni koko: ei tilaa suurille energiavarastoille.\n- Pieni koko ja nopea aineenvaihdunta sallivat ruumiinlämmön nopeat muutokset.\n- Lihasvärinä nostaa lämpöä nopeasti aamulla, ja pörhistetyt höyhenet eristävät.\n- Korkean ruumiinlämmön ylläpito yöllä veisi paljon energiaa.\n\n*Elinympäristön erityispiirteet*\n- Vuoristossa lämpötila vaihtelee säännöllisesti vuorokauden aikana, ja yöt ovat kylmiä, joten lämmön ylläpito kuluttaisi liikaa energiaa.\n- Kukat sulkeutuvat yöksi, joten ravintoa ei saa yöllä.\n- Saalistajia on vähän, joten horros on suhteellisen turvallinen.\n\n**Esimerkkivastaus**\n\nKolibrit ovat hyvin pieniä ja aktiivisia, ja niiden aineenvaihdunta on kiivas. Pieni lintu menettää lämpöä nopeasti, eikä sen elimistöön mahdu suuria rasvavarastoja. Jos kolibri pitäisi ruumiinlämpönsä normaalina koko yön, se voisi kuluttaa energiavarastonsa loppuun ennen aamua. Pienen koon vuoksi ruumiinlämpö voi kuitenkin myös laskea ja nousta nopeasti: aamulla lintu nostaa lämpönsä värisyttämällä lihaksiaan.\n\nAndeilla yli 3 500 metrin korkeudessa päivät voivat olla leutoja, mutta yöt ovat pakkasen puolella. Kolibrien ravintona olevat kukat sulkeutuvat yöksi, joten yöllä ei voi syödä. Koska vuoristossa on vähän saalistajia, lintu voi turvallisesti vaipua horrokseen, jossa ruumiinlämpö ja sydämen syke laskevat ja energiaa säästyy.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 5,
+     "prompt": "Piirrä taulukon 10.B tiedoista pistediagrammi (hajontakuvio), joka näyttää kolibrilajien 1–6 horroksen keston ja horroksen aikaisen painonlaskun välisen yhteyden.",
+     "hints": [
+      "Tarvitset taulukosta vain kaksi saraketta. Pistediagrammissa jokainen laji on yksi piste; pylväs- tai viivakaavio ei käy.",
+      "Vaaka-akselille selittäjä (horroksen kesto, h), pystyakselille selitettävä (painonlasku, %). Nimeä akselit yksiköineen, anna otsikko, joka kertoo muuttujien suhteen, ja merkitse kuusi pistettä (voit numeroida ne lajien mukaan)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Oikea kaaviotyyppi: pistediagrammi, jossa jokainen laji on yksi piste (väärästä kaaviotyypistä ei saa pisteitä).\n- Oikeat arvot taulukosta kuudelle lajille.\n- Toisella akselilla horroksen kesto nimettynä ja toisella painonlasku nimettynä.\n- Akseleilla yksiköt: tunnit (h) ja prosentit (%).\n- Otsikko, joka kertoo kahden muuttujan suhteen, esim. \"Horroksen keston ja painonlaskun yhteys kuudella Andien kolibrilajilla\".\n\n**Toteutus**\n\n1. Kirjoita taulukkolaskentaohjelmaan kaksi saraketta: horroksen kesto (h) ja painonlasku (%). Muita taulukon sarakkeita ei tarvita.\n2. Valitse kaaviotyypiksi pistekaavio (XY).\n3. Vaaka-akseli: horroksen kesto (h), arvot noin 5,5–13 h, joten asteikko esim. 0–14 h. Pystyakseli: painonlasku (%), arvot noin 1,6–9,1 %, joten asteikko esim. 0–10 %.\n4. Lisää otsikko ja akselien nimet. Kuvaan voi merkitä lajien numerot pisteiden viereen.\n\nValmiissa kuvaajassa pisteet laskevat vasemmalta oikealle: lyhyimmin horrostaneiden lajien painonlasku on suurin.\n\n**Sudenkuoppa:** viivakaavio, jossa pisteet yhdistetään viivalla lajijärjestyksessä, antaa väärän kuvan, koska lajit eivät ole aikasarja.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 2,
+     "prompt": "Päättele kohdan 10.3 diagrammista, miten horroksen kesto on yhteydessä painonlaskuun, ja perustele.",
+     "hints": [
+      "Mihin suuntaan pisteet kulkevat, kun horros pitenee? Mieti, mihin laihtuminen horroksen aikana perustuu ja miten ruumiinlämmön lasku vaikuttaa siihen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Yhteys on käänteinen (negatiivinen korrelaatio): pitkä horros tarkoittaa pientä suhteellista painonlaskua ja lyhyt suurta.\n- Perustelu: painonlasku johtuu energiavarastojen (rasva, lihas) kulutuksesta lämmöntuotantoon. Pitkässä horroksessa ruumiinlämpö laskee enemmän ja aineenvaihdunta hidastuu, joten varastoja kuluu vähemmän.\n\n**Laskettu tarkistus:** taulukon kuuden lajin arvoista laskettu korrelaatiokerroin on $r\\approx-0{,}88$ ja regressiosuoran kulmakerroin noin $-0{,}75$ prosenttiyksikköä tuntia kohden, eli yhteys on selvästi negatiivinen.\n\n**Esimerkkivastaus**\n\nDiagrammin pisteet laskevat oikealle mentäessä: pisimpään horrostava laji laihtuu vähiten ja lyhyimmin horrostava eniten. Horroksen kesto ja painonlasku korreloivat siis negatiivisesti. Horroksessa ruumiinlämpö laskee ja aineenvaihdunta hidastuu. Mitä pidempi horros, sitä pidempään lintu on säästötilassa, joten rasvavarastoja kuluu lämmöntuotantoon vähemmän ja painoa katoaa suhteessa vähemmän.\n\n**Sudenkuoppa:** korrelaatio ei yksin todista syy-yhteyttä, ja lajeja on vain kuusi. Myös linnun koko vaihtelee lajeittain.",
+     "answer": "Negatiivinen yhteys: pidempi horros → pienempi suhteellinen painonlasku ($r\\approx-0{,}88$).",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Tekstin 11.A mukaan viherlevän solukalvossa on kanavarodopsiiniproteiineja, jotka avaavat natriumia läpäisevän ionikanavan, kun niihin osuu sininen valo. Kun geeni siirretään viruksen avulla hermosoluun, proteiini toimii myös hermosolun solukalvolla, ja siirrettyyn geeniin voidaan liittää merkkigeeni. Näin hermosoluja voidaan ohjata valolla (optogenetiikka).",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 6,
+     "prompt": "Selitä, miksi virukset sopivat geeninsiirron välineiksi, ja pohdi, millä tavoin kanavarodopsiinigeeni viedään virusten välityksellä hermosoluihin.",
+     "hints": [
+      "Mieti, mitä virus tekee luonnostaan: miten se pääsee soluun ja mitä sen perimälle solussa tapahtuu? Sen jälkeen: mitä geenille pitää tehdä ennen kuin se voidaan liittää viruksen perimään?",
+      "Virus infektoi soluja, usein vain tiettyä solutyyppiä, ja sen perimä voi liittyä isäntäsolun perimään, jolloin solu alkaa ilmentää viruksen mukana tullutta geeniä. Viruksen perimää muokataan niin, ettei se lisäänny. Geeni eristetään levästä, monistetaan PCR:llä ja liitetään viruksen perimään esimerkiksi restriktioentsyymien ja ligaasin avulla."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Virukset pystyvät infektoimaan soluja ja viemään niihin perimäänsä, usein spesifisti vain tietynlaisiin soluihin.\n- Viruksen perimä voi liittyä osaksi isäntäsolun DNA:ta.\n- Kun viruksen perimään on liitetty haluttu geeni, infektoitu solu alkaa tuottaa geenin koodaamaa proteiinia.\n- Viruksen perimää muokataan niin, ettei virus pysty monistumaan isäntäsolussa.\n- Kanavarodopsiinigeeni eristetään ja puhdistetaan levän DNA:sta, monistetaan PCR:llä ja liitetään viruksen perimään geenitekniikan menetelmin.\n\n**Esimerkkivastaus**\n\nVirukset ovat luonnostaan erikoistuneet viemään perimänsä soluihin. Ne tunnistavat solujen pinnan tietyt molekyylit, joten virusta valitsemalla geeni voidaan kohdistaa esimerkiksi hermosoluihin. Monet virukset, kuten retrovirukset, liittävät perimänsä isäntäsolun DNA:han, jolloin siirretty geeni säilyy ja ilmentyy solussa.\n\nGeeninsiirtoa varten kanavarodopsiinigeeni eristetään viherlevästä ja monistetaan PCR:llä. Viruksen perimästä poistetaan sen lisääntymiseen tarvittavat geenit, jotta virus ei monistu eikä tuhoa soluja. Kanavarodopsiinigeeni liitetään restriktioentsyymien ja ligaasin avulla viruksen perimään sopivan promoottorin perään. Muokatuilla viruksilla infektoidaan hermosoluja, jotka alkavat valmistaa kanavarodopsiinia solukalvoonsa.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 3,
+     "prompt": "Selitä, miten voidaan todeta, että kanavarodopsiinigeenin siirto on onnistunut.",
+     "hints": [
+      "Tekstissä 11.A mainitaan merkkigeeni. Mitä merkkigeeni voisi tuottaa, jotta ilmentyminen näkyisi? Voit mainita myös muita keinoja: mRNA:n tai proteiinin tunnistus, PCR tai sekvensointi ja solun reaktio siniseen valoon."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa kolme)\n\n- Geeniin liitetään merkkigeeni, joka koodaa esimerkiksi fluoresoivaa proteiinia (GFP); onnistunut siirto näkyy solujen fluoresenssina.\n- Ilmentyneen geenin mRNA:n tai kalvolle päätyneen proteiinin tunnistus, esimerkiksi vasta-aineilla.\n- Solun perimän sekvensointi tai PCR ja geelielektroforeesi, joilla näkyy, onko geeni siirtynyt.\n- Solun altistaminen siniselle valolle: jos solussa syntyy sähköinen vaste, kanavarodopsiini toimii.\n\n**Esimerkkivastaus**\n\nKanavarodopsiinigeeniin liitetään merkkigeeni, joka koodaa fluoresoivaa proteiinia. Jos siirto onnistuu, solut tuottavat molempia proteiineja ja hohtavat mikroskoopissa sopivassa valossa. Siirron voi varmistaa myös monistamalla solujen DNA:sta geenin PCR:llä ja tunnistamalla sen geelielektroforeesissa. Toiminnallinen testi on valaista soluja sinisellä valolla ja mitata elektrodilla, syntyykö niihin jännitemuutos.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 11,
+     "prompt": "Hermosolu tuottaa solukalvoonsa kanavarodopsiinia. Pohdi, mitä kalvolla tapahtuu, kun solua valaistaan sinisellä valolla, ja mitä tästä seuraa hermosolun toiminnassa.",
+     "hints": [
+      "Aloita lepotilasta: miten Na–K-pumppu ylläpitää ionien pitoisuuseroja ja lepopotentiaalia? Kuvaa sitten, mitä tapahtuu, kun valo avaa kanavarodopsiinin natriumkanavan, ja seuraa tapahtumia toimintajännitteeseen ja synapsiin asti.",
+      "Valo avaa kanavan → $\\ce{Na+}$-ioneja virtaa soluun → solun sisäpuoli muuttuu vähemmän negatiiviseksi (depolarisaatio). Jos muutos ylittää kynnysarvon, jänniteherkät natriumkanavat aukeavat, depolarisaatio voimistuu ja syntyy toimintajännite, joka etenee aksonia pitkin viereisten kanavien avautuessa. Hermopäätteessä vapautuu välittäjäainetta. Lopuksi natriumkanavat sulkeutuvat ja kaliumkanavat avautuvat: $\\ce{K+}$ virtaa ulos ja lepopotentiaali palautuu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Lepotila*\n- Solukalvon natrium-kaliumpumput pumppaavat ATP:n energialla jatkuvasti $\\ce{Na+}$-ioneja ulos ja $\\ce{K+}$-ioneja sisään, jolloin syntyy pitoisuusero soluliman ja soluväliaineen välille ja solun sisäpuoli on negatiivinen (lepopotentiaali).\n\n*Välitön vaste valoon*\n- Sininen valo avaa kanavarodopsiinin natriumkanavan, ja $\\ce{Na+}$-ioneja virtaa solukalvon läpi soluliman puolelle.\n- Solun sisäpuolen negatiivinen varaus pienenee, eli kalvo depolarisoituu ja syntyy jännitemuutos.\n\n*Toimintajännite*\n- Jos jännitemuutos on riittävän suuri (ylittää kynnysarvon), jänniteherkät natriumkanavat aukeavat ja depolarisaatio voimistuu.\n- Muutos avaa viereisiä jänniteherkkiä kanavia, ja syntyy toimintajännite (aktiopotentiaali), joka etenee hermoimpulssina kohti hermopäätettä.\n- Hermopäätteessä impulssi saa aikaan välittäjäaineen vapautumisen synapsiin.\n\n*Palautuminen*\n- Jänniteherkkien natriumkanavien sulkeuduttua avautuvat jänniteherkät kaliumkanavat. $\\ce{K+}$-ioneja virtaa ulos, ja kalvojännite palaa lepoarvoonsa.\n\n**Esimerkkivastaus**\n\nLevossa hermosolun solukalvon natrium-kaliumpumput käyttävät ATP:tä ja siirtävät kolme natriumionia ulos jokaista kahta sisään siirtämäänsä kaliumionia kohden. Natriumia on siksi paljon solun ulkopuolella ja kaliumia sisäpuolella. Kaliumia vuotaa kalvon läpi ulos, ja solun sisäpuoli jää noin 70 millivolttia ulkopuolta negatiivisemmaksi. Tämä on lepopotentiaali.\n\nKun sininen valo osuu kanavarodopsiiniin, proteiinin rakenne muuttuu ja sen natriumkanava avautuu. Natriumioneja virtaa pitoisuuseron ja sähköisen vetovoiman ajamina soluun, ja solun sisäpuoli muuttuu vähemmän negatiiviseksi. Jos tämä depolarisaatio on tarpeeksi voimakas ja saavuttaa kynnysarvon, hermosolun omat jänniteherkät natriumkanavat aukeavat. Natriumia virtaa sisään lisää, ja kalvojännite kääntyy hetkeksi positiiviseksi: syntyy toimintajännite.\n\nToimintajännite avaa viereisten kalvonosien jänniteherkkiä kanavia, joten se etenee aksonia pitkin hermoimpulssina. Hermopäätteessä impulssi saa synaptiset rakkulat vapauttamaan välittäjäainetta synapsirakoon, ja viesti välittyy seuraavaan soluun. Pian toimintajännitteen huipun jälkeen natriumkanavat menevät kiinni ja jänniteherkät kaliumkanavat avautuvat. Kaliumionit virtaavat ulos, ja kalvojännite palautuu lepoarvoonsa, jonka Na–K-pumppu ylläpitää. Näin valolla voidaan käynnistää hermoimpulssi yksittäisessä hermosolussa millisekunnin tarkkuudella.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,325 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2021S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2021S_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2021-09-21_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 4,
+    "note": "Kaikki neljä tehtävää ovat pakollisia. Käytössä taulukkokirja ja perusohjelmat; muut ohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Neljä monivalintakohtaa (3 p kukin), joissa oikea luku valitaan listasta. Perusteluja ei tarvita.\n\n- 1.1 Lausekkeen $1-3x$ arvo, kun $x=2$.\n- 1.2 Jonon termi $a_3$, kun $a_n=3\\cdot 2^n$.\n- 1.3 Jonon termi $b_4$, kun $b_6=6$ ja $b_{n+1}=b_n+4$.\n- 1.4 Polynomin $(x^2+5x+1)(x+3)$ toisen asteen termin kerroin.",
+     "hints": [
+      "Jokainen kohta on yksi suora laskutoimitus: sijoita luku lausekkeeseen, laske jonon termi kaavasta tai kulje rekursiota taaksepäin ja poimi tulosta vain se termi, jota kysytään.",
+      "Kohta kohdalta:\n- 1.1: laske $1-3\\cdot 2$.\n- 1.2: $a_3=3\\cdot 2^3$.\n- 1.3: jokainen askel eteenpäin lisää 4, joten taaksepäin kahden askeleen matkalla vähennetään $2\\cdot 4$.\n- 1.4: $x^2$-termi syntyy vain tuloista $x^2\\cdot 3$ ja $5x\\cdot x$."
+     ],
+     "solution": "1. **1.1:** $1-3\\cdot 2=1-6=-5$.\n2. **1.2:** $a_3=3\\cdot 2^3=3\\cdot 8=24$.\n3. **1.3:** Ehdosta $b_{n+1}=b_n+4$ saadaan $b_n=b_{n+1}-4$. Siis $b_5=6-4=2$ ja $b_4=2-4=-2$.\n4. **1.4:** Auki kerrottuna $(x^2+5x+1)(x+3)=x^3+3x^2+5x^2+15x+x+3=x^3+8x^2+16x+3$. Toisen asteen termin kerroin on $3+5=8$.\n\n**Vastaus: 1.1 $-5$ · 1.2 $24$ · 1.3 $-2$ · 1.4 $8$**\n\n**Sudenkuoppa:** kohdassa 1.3 rekursiota kuljetaan taaksepäin, joten nelonen vähennetään eikä lisätä.",
+     "answer": "1.1 $-5$ · 1.2 $24$ · 1.3 $-2$ · 1.4 $8$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuusi monivalintaa (2 p kukin), perusteluja ei tarvita. Vaihtoehdot näet alkuperäisestä tehtävästä.\n\n- 2.1 Leikkauspisteiden määrä: $y=4x^2$ ja $y=x^2-1$.\n- 2.2 Janan päätepisteet $(1,6)$ ja $(-1,-6)$: mille välille keskinormaalin kulmakerroin $k$ osuu?\n- 2.3 Ympyrän $9x^2+9y^2=1$ säde.\n- 2.4 Käyrä, jonka pisteet ovat yhtä etäällä kiinteästä pisteestä ja kiinteästä suorasta.\n- 2.5 Yhtälön $\\cos(3x)=0{,}5$ ratkaisujen määrä, kun $0\\lt x<\\pi$.\n- 2.6 Ympyrän $(x-1)^2+(y-1)^2=4$ tangentti kulkee pisteen $(0,-4)$ kautta: onko se nouseva, laskeva, jompikumpi, vaaka- vai pystysuora?",
+     "hints": [
+      "2.1: merkitse lausekkeet yhtä suuriksi. 2.2: keskinormaali on kohtisuorassa janaa vastaan. 2.3: jaa yhtälö muotoon $x^2+y^2=r^2$. 2.4: muistele kartioleikkausten määritelmiä. 2.5: kun $0\\lt x<\\pi$, niin $0<3x<3\\pi$. 2.6: tutki ensin, onko piste ympyrän ulkopuolella.",
+      "Kohta kohdalta:\n- 2.1: yhtälöstä tulee $3x^2=-1$.\n- 2.2: janan kulmakerroin on $\\frac{-6-6}{-1-1}=6$, ja kohtisuorien suorien kulmakertoimien tulo on $-1$.\n- 2.3: $x^2+y^2=\\frac19$.\n- 2.4: polttopiste ja johtosuora.\n- 2.5: $3x=\\frac{\\pi}{3}+n\\cdot 2\\pi$ tai $3x=-\\frac{\\pi}{3}+n\\cdot 2\\pi$.\n- 2.6: ulkopuolisesta pisteestä voi piirtää kaksi tangenttia. Etsi suorien $y=kx-4$ kulmakertoimet ehdosta, että keskipisteen $(1,1)$ etäisyys suorasta on 2."
+     ],
+     "solution": "1. **2.1: A (eivät leikkaa).** $4x^2=x^2-1 \\iff 3x^2=-1$, eikä tällä ole reaalisia ratkaisuja.\n2. **2.2: C ($-1\\lt k<0$).** Janan kulmakerroin on $\\frac{-6-6}{-1-1}=6$. Keskinormaali on kohtisuorassa janaa vastaan, joten $k=-\\frac16$, ja $-1<-\\frac16<0$.\n3. **2.3: E ($\\frac13$).** Jaetaan yhdeksällä: $x^2+y^2=\\frac19$, joten $r=\\sqrt{\\frac19}=\\frac13$.\n4. **2.4: D (paraabeli).** Paraabeli on niiden pisteiden joukko, jotka ovat yhtä kaukana polttopisteestä ja johtosuorasta.\n5. **2.5: 3.** Kun $0\\lt x<\\pi$, niin $0<3x<3\\pi$. Kosini saa arvon $0{,}5$ kohdissa $3x=\\frac{\\pi}{3}$, $3x=\\frac{5\\pi}{3}$ ja $3x=\\frac{7\\pi}{3}$ (seuraava $\\frac{11\\pi}{3}>3\\pi$). Siis $x=\\frac{\\pi}{9},\\frac{5\\pi}{9},\\frac{7\\pi}{9}$.\n6. **2.6: C (voi olla laskeva tai nouseva).** Pisteen $(0,-4)$ etäisyys keskipisteestä $(1,1)$ on $\\sqrt{26}>2$, joten piste on ympyrän ulkopuolella ja tangentteja on kaksi. Pystysuora $x=0$ ei kelpaa, koska sen etäisyys keskipisteestä on 1. Suoralle $y=kx-4$ eli $kx-y-4=0$ ehto $\\frac{|k-1-4|}{\\sqrt{k^2+1}}=2$ antaa $3k^2+10k-21=0$, joten $k\\approx 1{,}46$ tai $k\\approx -4{,}79$. Toinen tangentti on nouseva ja toinen laskeva.\n\n**Vastaus: 2.1 A · 2.2 C · 2.3 E · 2.4 D · 2.5 3 · 2.6 C**\n\n**Sudenkuoppa:** kohdassa 2.5 ratkaisuja haetaan muuttujalle $3x$ välillä $(0,3\\pi)$. Jos katsotaan vain väliä $(0,\\pi)$, löytyy vain yksi ratkaisu.",
+     "answer": "2.1 A (eivät leikkaa) · 2.2 C ($-1\\lt k<0$) · 2.3 E ($\\frac13$) · 2.4 D (paraabeli) · 2.5 3 · 2.6 C (voi olla laskeva tai nouseva)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Laske kolme integraalia. Kukin kohta on 4 pisteen arvoinen.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 4,
+     "prompt": "Laske integraali $\\int (x^2+1)\\,dx$.",
+     "hints": [
+      "Integroi termeittäin kaavalla $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C$. Määräämättömään integraaliin kuuluu integroimisvakio."
+     ],
+     "solution": "1. $\\int x^2\\,dx=\\frac{x^3}{3}$ ja $\\int 1\\,dx=x$.\n2. $\\int (x^2+1)\\,dx=\\frac13x^3+x+C$.\n\n**Vastaus: $\\frac13x^3+x+C$**\n\n**Sudenkuoppa:** integroimisvakio $C$ unohtuu.",
+     "answer": "$\\frac13x^3+x+C$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 4,
+     "prompt": "Laske integraali $\\int_0^{\\pi/2}\\cos(2x)\\,dx$.",
+     "hints": [
+      "Funktion $\\cos(2x)$ integraalifunktio on $\\frac12\\sin(2x)$ (tarkista derivoimalla). Sijoita rajat radiaaneina."
+     ],
+     "solution": "1. $\\int_0^{\\pi/2}\\cos(2x)\\,dx=\\left[\\frac12\\sin(2x)\\right]_0^{\\pi/2}$.\n2. $=\\frac12\\left(\\sin\\pi-\\sin 0\\right)=\\frac12(0-0)=0$.\n\n**Vastaus: $0$**\n\n**Sudenkuoppa:** tulos 0 ei tarkoita, että laskussa on virhe. Kuvaaja on välillä $\\left(0,\\frac{\\pi}{4}\\right)$ akselin yläpuolella ja välillä $\\left(\\frac{\\pi}{4},\\frac{\\pi}{2}\\right)$ yhtä paljon alapuolella. Pinta-alaa ei kysytty.",
+     "answer": "$0$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.3",
+     "points": 4,
+     "prompt": "Laske integraali $\\int_{-1}^{1}|x|^3\\,dx$.",
+     "hints": [
+      "Itseisarvo poistetaan jakamalla väli kahteen osaan: kun $x<0$, niin $|x|^3=-x^3$. Voit myös käyttää sitä, että integroitava on parillinen funktio."
+     ],
+     "solution": "1. $|x|^3$ on parillinen funktio, joten $\\int_{-1}^1|x|^3\\,dx=2\\int_0^1 x^3\\,dx$.\n2. $2\\int_0^1x^3\\,dx=2\\left[\\frac{x^4}{4}\\right]_0^1=2\\cdot\\frac14=\\frac12$.\n\n(Vaihtoehtoisesti $\\int_{-1}^0(-x^3)\\,dx+\\int_0^1x^3\\,dx=\\frac14+\\frac14$.)\n\n**Vastaus: $\\frac12$**\n\n**Sudenkuoppa:** jos itseisarvo jätetään pois, saadaan $\\int_{-1}^1x^3\\,dx=0$, mikä on väärin.",
+     "answer": "$\\frac12$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Tarkastellaan vektoria $\\overline v(t)=t\\,\\overline i+\\frac{1}{t^2}\\,\\overline j$, missä $t>0$.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Laske pistetulo $(\\overline i-\\overline j)\\cdot\\overline v(3)$.",
+     "hints": [
+      "Sijoita ensin $t=3$, jolloin saat vektorin koordinaattimuodossa. Pistetulo on vastinkoordinaattien tulojen summa."
+     ],
+     "solution": "1. $\\overline v(3)=3\\,\\overline i+\\frac{1}{3^2}\\,\\overline j=3\\,\\overline i+\\frac19\\,\\overline j$.\n2. $(\\overline i-\\overline j)\\cdot\\left(3\\,\\overline i+\\frac19\\,\\overline j\\right)=1\\cdot 3+(-1)\\cdot\\frac19=3-\\frac19=\\frac{26}{9}$.\n\n**Vastaus: $\\frac{26}{9}$**",
+     "answer": "$\\frac{26}{9}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 2,
+     "prompt": "Määritä vektorin $\\overline v(3)$ pituus.",
+     "hints": [
+      "Vektorin $x\\,\\overline i+y\\,\\overline j$ pituus on $\\sqrt{x^2+y^2}$. Anna tarkka arvo."
+     ],
+     "solution": "1. $|\\overline v(3)|=\\sqrt{3^2+\\left(\\frac19\\right)^2}=\\sqrt{9+\\frac{1}{81}}=\\sqrt{\\frac{730}{81}}$.\n2. $=\\frac{\\sqrt{730}}{9}\\approx 3{,}002$.\n\n**Vastaus: $\\frac{\\sqrt{730}}{9}\\approx 3{,}002$**",
+     "answer": "$\\frac{\\sqrt{730}}{9}\\approx 3{,}002$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 7,
+     "prompt": "Määritä se $t>0$, jolla vektorin $\\overline v(t)$ pituus on pienin.",
+     "hints": [
+      "Kirjoita vektorin pituus $t$:n funktiona. Juurifunktio on kasvava, joten riittää minimoida juurrettava. Etsi derivaatan nollakohdat.",
+      "Juurrettava on $g(t)=t^2+\\frac{1}{t^4}=t^2+t^{-4}$, ja $g'(t)=2t-\\frac{4}{t^5}$. Derivaatan nollakohdasta saadaan $t^6=2$. Perustele merkkikaaviolla, että kyseessä on minimi."
+     ],
+     "solution": "1. $|\\overline v(t)|=\\sqrt{t^2+\\frac{1}{t^4}}$. Koska neliöjuuri on kasvava funktio, pituus on pienin silloin, kun juurrettava $g(t)=t^2+t^{-4}$ on pienin.\n2. $g'(t)=2t-4t^{-5}=2t-\\frac{4}{t^5}$.\n3. $g'(t)=0 \\iff 2t^6=4 \\iff t^6=2$. Koska $t>0$, ainoa nollakohta on $t=\\sqrt[6]{2}\\approx 1{,}12$.\n4. Merkkikaavio: $g'(1)=2-4<0$ ja $g'(2)=4-\\frac18>0$. Derivaatta on jatkuva välillä $t>0$, joten se on negatiivinen, kun $0\\lt t<\\sqrt[6]2$, ja positiivinen, kun $t>\\sqrt[6]2$. Funktio $g$ on siis ensin vähenevä ja sitten kasvava, ja kohdassa $t=\\sqrt[6]{2}$ on pienin arvo.\n\n**Vastaus: $t=\\sqrt[6]{2}\\approx 1{,}12$**\n\n**Sudenkuoppa:** $\\frac{1}{t^2}$ korotetaan pituuden kaavassa toiseen potenssiin, jolloin saadaan $\\frac{1}{t^4}$. Jos kirjoitetaan $t^2+\\frac{1}{t^2}$, minimikohdaksi tulee väärin $t=1$.",
+     "answer": "$t=\\sqrt[6]{2}\\approx 1{,}12$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Ilmanpaine korkeudella $h$ (m) on $p(h)=p_0\\left(1-\\frac{0{,}00976\\,h}{T_0}\\right)^{3{,}50}$, missä $p_0$ (kPa) ja $T_0$ (K) ovat maanpinnan paine ja lämpötila. Lentokoneen lähtöhetkellä $p_0=101{,}3$ kPa ja $T_0=301$ K. Montako prosenttia ilmanpaine muuttuu, kun kone nousee 2 kilometristä 3 kilometriin?",
+     "hints": [
+      "Korkeus sijoitetaan kaavaan metreinä. Laske paine kummallakin korkeudella ja vertaa muutosta lähtötason eli 2 km:n paineeseen.",
+      "$p(2000)=101{,}3\\left(1-\\frac{0{,}00976\\cdot 2000}{301}\\right)^{3{,}5}\\approx 80{,}11$ kPa. Laske vastaavasti $p(3000)$ ja sitten suhteellinen muutos $\\frac{p(3000)-p(2000)}{p(2000)}$."
+     ],
+     "solution": "1. Korkeudet metreinä: $h=2000$ ja $h=3000$.\n2. $p(2000)=101{,}3\\left(1-\\frac{0{,}00976\\cdot 2000}{301}\\right)^{3{,}5}\\approx 80{,}111$ kPa.\n3. $p(3000)=101{,}3\\left(1-\\frac{0{,}00976\\cdot 3000}{301}\\right)^{3{,}5}\\approx 70{,}803$ kPa.\n4. Muutos on $70{,}803-80{,}111=-9{,}308$ kPa.\n5. Suhteellinen muutos lähtötasoon (2 km) verrattuna: $\\frac{-9{,}308}{80{,}111}\\approx -0{,}116=-11{,}6\\,\\%$.\n\n(Lähtöpaine $p_0$ supistuu suhteesta pois, joten prosenttimuutos ei riipu siitä.)\n\n**Vastaus: ilmanpaine pienenee noin $11{,}6\\,\\%$ (noin $12\\,\\%$).**\n\n**Sudenkuoppa:** muutoksen jakaminen 3 km:n paineella antaa väärin noin 13 %. Vertailukohta on se korkeus, josta lähdetään.",
+     "answer": "Pienenee noin $11{,}6\\,\\%$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Joukko $A$ koostuu tason pisteistä $(x,y)$, joiden etäisyys pisteestä $(-3,1)$ on 4. Anna joukon $A$ yhtälö ja selitä, miksi sitä ei voi esittää muodossa $y=f(x)$ millään funktiolla $f$.",
+     "hints": [
+      "Kirjoita pisteiden $(x,y)$ ja $(-3,1)$ etäisyys kaavalla ja aseta se yhtä suureksi kuin 4. Funktiolla on jokaista $x$:n arvoa kohti enintään yksi $y$:n arvo. Etsi joukosta kaksi pistettä, joilla on sama $x$-koordinaatti.",
+      "Neliöön korottamalla saadaan $(x+3)^2+(y-1)^2=16$, eli ympyrä, jonka keskipiste on $(-3,1)$ ja säde 4. Pystysuora suora $x=-3$ kulkee keskipisteen kautta ja leikkaa ympyrää kahdessa pisteessä."
+     ],
+     "solution": "**Yhtälö**\n\n1. Pisteen $(x,y)$ etäisyys pisteestä $(-3,1)$ on $\\sqrt{(x+3)^2+(y-1)^2}$.\n2. Ehto $\\sqrt{(x+3)^2+(y-1)^2}=4$ on yhtäpitävä yhtälön $(x+3)^2+(y-1)^2=16$ kanssa, koska molemmat puolet ovat ei-negatiivisia.\n3. Joukko $A$ on siis ympyrä, jonka keskipiste on $(-3,1)$ ja säde 4.\n\n**Miksi ei funktion kuvaaja**\n\n4. Funktio liittää jokaiseen määrittelyjoukon lukuun $x$ täsmälleen yhden arvon $f(x)$.\n5. Kun $x=-3$, yhtälöstä tulee $(y-1)^2=16$, joten $y=5$ tai $y=-3$. Pisteet $(-3,5)$ ja $(-3,-3)$ kuuluvat molemmat joukkoon $A$.\n6. Samaan $x$:n arvoon liittyy kaksi eri $y$:n arvoa (itse asiassa jokaisella $-7\\lt x<1$), joten joukko $A$ ei ole minkään funktion kuvaaja.\n\n**Vastaus: $(x+3)^2+(y-1)^2=16$. Esimerkiksi kohtaan $x=-3$ kuuluu kaksi pistettä, $(-3,5)$ ja $(-3,-3)$, joten kyseessä ei ole funktion kuvaaja.**",
+     "answer": "$(x+3)^2+(y-1)^2=16$; esim. $x=-3$ antaa kaksi $y$:n arvoa ($5$ ja $-3$), joten ei funktion kuvaaja",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 6,
+     "prompt": "Etsi kaikki $(1,2)$-keskiset ympyrät, jotka sivuavat ympyrää $x^2+(y-2)^2=4$, ja kirjoita niiden yhtälöt.",
+     "hints": [
+      "Piirrä kuva. Selvitä annetun ympyrän keskipiste ja säde ja tutki, onko piste $(1,2)$ sen sisä- vai ulkopuolella. Sivuamispiste on keskipisteiden kautta kulkevalla suoralla.",
+      "Annetun ympyrän keskipiste on $(0,2)$ ja säde 2, ja keskipisteiden etäisyys on 1. Piste $(1,2)$ on siis annetun ympyrän sisällä. Keskipisteiden kautta kulkeva suora $y=2$ leikkaa annetun ympyrän pisteissä $(2,2)$ ja $(-2,2)$."
+     ],
+     "solution": "1. Ympyrän $x^2+(y-2)^2=4$ keskipiste on $(0,2)$ ja säde 2. Kysytyn ympyrän yhtälö on muotoa $(x-1)^2+(y-2)^2=r^2$.\n2. Keskipisteiden etäisyys on $d=1<2$, joten $(1,2)$ on annetun ympyrän sisäpuolella. Ympyrät eivät siksi voi sivuta toisiaan ulkopuolisesti (silloin olisi $d=r+2>1$).\n3. Sisäpuolisessa sivuamisessa keskipisteiden etäisyys on säteiden erotus: $|r-2|=1$, joten $r=1$ tai $r=3$.\n4. Tarkistus kuvan avulla: keskipisteet ovat suoralla $y=2$, ja annettu ympyrä leikkaa sen pisteissä $(2,2)$ ja $(-2,2)$. Pisteen $(1,2)$ etäisyys niistä on 1 ja 3. Säteen 1 ympyrä sivuaa annettua ympyrää sisältä pisteessä $(2,2)$, ja säteen 3 ympyrä sulkee annetun ympyrän sisäänsä ja sivuaa sitä pisteessä $(-2,2)$.\n5. Muita säteitä ei ole, koska sivuamisehto $|r-2|=1$ on täsmälleen nämä kaksi.\n\n**Vastaus: $(x-1)^2+(y-2)^2=1$ ja $(x-1)^2+(y-2)^2=9$**\n\n**Sudenkuoppa:** vain pienemmän ympyrän löytäminen. Myös suuri ympyrä, joka sulkee annetun ympyrän sisäänsä, sivuaa sitä.",
+     "answer": "$(x-1)^2+(y-2)^2=1$ ja $(x-1)^2+(y-2)^2=9$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Monitahokkaan $M=ABCDEF$ pohja $ABCDE$ on säännöllinen viisikulmio, ja sen viisi sivutahkoa ovat tasasivuisia kolmioita, joten kaikki särmät ovat yhtä pitkiä. Tehtävässä piirretään kappaleesta kuva (4 p), lasketaan kulma, jonka särmä $AF$ muodostaa pohjatason kanssa (2 p), ja tahkon $ABF$ kaltevuuskulma pohjatasoon nähden (2 p). Lopuksi lasketaan tilavuus särmän pituuden $a$ avulla (4 p). Ohjelmistolla mittaaminen on sallittua, kunhan mittaukset näkyvät.",
+     "hints": [
+      "Kappale on viisikulmiopohjainen pyramidi, jonka huippu $F$ on pohjan keskipisteen $O$ yläpuolella. Tarvitset kolme mittaa: pohjan ympäri piirretyn ympyrän säteen $R=OA$, keskipisteen etäisyyden $r=OM$ sivun $AB$ keskipisteestä $M$ ja korkeuden $h=OF$. Laske ne särmän pituudella $a=1$ ja skaalaa lopuksi.",
+      "Keskuskulma on $72^\\circ$, joten $R=\\frac{a}{2\\sin 36^\\circ}\\approx 0{,}851a$, $r=\\frac{a}{2\\tan 36^\\circ}\\approx 0{,}688a$ ja $h=\\sqrt{a^2-R^2}\\approx 0{,}526a$. Särmän kulma saadaan suorakulmaisesta kolmiosta $AOF$, tahkon kulma kolmiosta $MOF$ ja pohjan ala viidestä kolmiosta $OAB$."
+     ],
+     "solution": "**Kuva**\n\n1. GeoGebran 3D-näkymässä piirretään säännöllinen viisikulmio, jonka sivu on 1, $xy$-tasoon ja sen keskipiste $O$. Huippu $F$ on pisteen $O$ kautta kulkevalla pystysuoralla suoralla siinä kohdassa, jossa sen etäisyys pohjan kärjistä on 1 (esim. pallo $A$-keskisenä säteellä 1 leikattuna tällä suoralla). Kuvassa näkyvät viisikulmiopohja ja viisi tasasivuista kolmiota, joiden yhteinen kärki on $F$. Sivujen pituudet tarkistetaan mittaamalla.\n\n**Apumitat (särmä $a$)**\n\n2. Kolmion $OAB$ kulma $O$:ssa on $\\frac{360^\\circ}{5}=72^\\circ$, joten $R=OA=\\frac{a}{2\\sin 36^\\circ}\\approx 0{,}8507a$.\n3. Sivun $AB$ keskipiste on $M$, ja $r=OM=\\frac{a}{2\\tan 36^\\circ}\\approx 0{,}6882a$.\n4. $F$ on pisteen $O$ yläpuolella ja $FA=a$, joten $h=OF=\\sqrt{a^2-R^2}\\approx 0{,}5257a$.\n\n**Särmän $AF$ ja pohjan kulma**\n\n5. Kulma on suorakulmaisen kolmion $AOF$ kulma $A$:ssa: $\\cos\\alpha=\\frac{R}{a}\\approx 0{,}8507$, joten $\\alpha\\approx 31{,}7^\\circ$.\n\n**Tahkon $ABF$ ja pohjan kulma**\n\n6. Sekä $FM$ että $OM$ ovat kohtisuorassa särmää $AB$ vastaan ($FAB$ on tasakylkinen ja $OAB$ tasakylkinen), joten tahkojen välinen kulma on kulma $FMO$.\n7. $\\tan\\beta=\\frac{h}{r}\\approx\\frac{0{,}5257}{0{,}6882}\\approx 0{,}764$, joten $\\beta\\approx 37{,}4^\\circ$.\n\n**Tilavuus**\n\n8. Pohja koostuu viidestä kolmiosta $OAB$: $A_p=5\\cdot\\frac12\\cdot a\\cdot r\\approx 1{,}7205a^2$.\n9. $V=\\frac13A_ph\\approx\\frac13\\cdot 1{,}7205\\cdot 0{,}5257\\,a^3\\approx 0{,}30a^3$. (Tarkka arvo on $\\frac{5+\\sqrt5}{24}a^3\\approx 0{,}3015a^3$.)\n\n**Vastaus: särmän ja pohjan kulma noin $31{,}7^\\circ$, tahkon ja pohjan kulma noin $37{,}4^\\circ$, tilavuus noin $0{,}30a^3$.**\n\n**Sudenkuoppa:** tahkon ja pohjan kulma mitataan särmää $AB$ vastaan kohtisuorassa tasossa, eli keskipisteen $M$ kautta. Kulma $FAO$ on särmän kulma eikä tahkon kulma.",
+     "answer": "Särmän ja pohjan kulma $\\approx 31{,}7^\\circ$, tahkon ja pohjan kulma $\\approx 37{,}4^\\circ$, tilavuus $\\approx 0{,}30a^3$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Tarkastellaan raja-arvoa $\\lim_{t\\to\\pi/4}\\frac{\\sin t-\\frac{1}{\\sqrt2}}{t-\\frac{\\pi}{4}}$.\n\n1. Laske lausekkeen likiarvot, kun $t-\\frac{\\pi}{4}=10^{-k}$ ja $k=2,3,4$. (4 p)\n2. Osoita, että raja-arvo on $\\frac{1}{\\sqrt2}$, tulkitsemalla lauseke erotusosamääräksi. (4 p)\n3. Laske kohdan 1 likiarvojen suhteelliset virheet. (4 p)",
+     "hints": [
+      "Kohdassa 1 sijoitetaan $t=\\frac{\\pi}{4}+10^{-k}$, ja laskimen on oltava radiaanitilassa. Kohdassa 2 huomaa, että $\\sin\\frac{\\pi}{4}=\\frac{1}{\\sqrt2}$, joten lauseke on sinifunktion erotusosamäärä kohdassa $\\frac{\\pi}{4}$.",
+      "Likiarvot ovat noin $0{,}703559$, $0{,}706753$ ja $0{,}707071$. Erotusosamäärän raja-arvo on derivaatta, ja $D\\sin t=\\cos t$. Suhteellinen virhe on $\\frac{\\text{likiarvo}-\\text{tarkka}}{\\text{tarkka}}$."
+     ],
+     "solution": "**Likiarvot**\n\n1. Sijoitetaan $t=\\frac{\\pi}{4}+10^{-k}$ (radiaaneina) ja lasketaan $\\frac{\\sin t-\\frac{1}{\\sqrt2}}{10^{-k}}$:\n- $k=2$: $\\approx 0{,}703559$\n- $k=3$: $\\approx 0{,}706753$\n- $k=4$: $\\approx 0{,}707071$\n\n**Tarkka arvo**\n\n2. Olkoon $f(t)=\\sin t$. Koska $f\\left(\\frac{\\pi}{4}\\right)=\\sin\\frac{\\pi}{4}=\\frac{1}{\\sqrt2}$, lauseke on $\\frac{f(t)-f\\left(\\frac{\\pi}{4}\\right)}{t-\\frac{\\pi}{4}}$, eli funktion $f$ erotusosamäärä kohdassa $\\frac{\\pi}{4}$.\n3. Sinifunktio on derivoituva, ja derivaatan määritelmän mukaan erotusosamäärän raja-arvo on $f'\\left(\\frac{\\pi}{4}\\right)$.\n4. $f'(t)=\\cos t$, joten raja-arvo on $\\cos\\frac{\\pi}{4}=\\frac{1}{\\sqrt2}\\approx 0{,}7071068$.\n\n**Suhteelliset virheet**\n\n5. Suhteellinen virhe on $\\frac{\\text{likiarvo}-\\frac{1}{\\sqrt2}}{\\frac{1}{\\sqrt2}}$:\n- $k=2$: $\\approx -0{,}005017$ eli noin $-0{,}50\\,\\%$\n- $k=3$: $\\approx -0{,}000500$ eli noin $-0{,}050\\,\\%$\n- $k=4$: $\\approx -0{,}0000500$ eli noin $-0{,}0050\\,\\%$\n\n(Virhe pienenee kymmenesosaan aina, kun askel pienenee kymmenesosaan.)\n\n**Vastaus: likiarvot $0{,}703559$, $0{,}706753$ ja $0{,}707071$. Raja-arvo on $f'\\left(\\frac{\\pi}{4}\\right)=\\cos\\frac{\\pi}{4}=\\frac{1}{\\sqrt2}$. Suhteelliset virheet ovat noin $-0{,}0050$, $-0{,}00050$ ja $-0{,}000050$.**\n\n**Sudenkuoppa:** laskin asteina. Silloin likiarvot ovat aivan vääriä. Kohdassa 2 laskimen antama raja-arvo ei kelpaa perusteluksi.",
+     "answer": "Likiarvot $\\approx 0{,}703559;\\ 0{,}706753;\\ 0{,}707071$; raja-arvo $\\cos\\frac{\\pi}{4}=\\frac{1}{\\sqrt2}$; suhteelliset virheet $\\approx -0{,}0050;\\ -0{,}00050;\\ -0{,}000050$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Mikko nostaa automaatista 370 euroa, ja automaatti antaa $x$ kappaletta 20 euron ja $y$ kappaletta 50 euron seteleitä. Kirjoita lukujen $x$ ja $y$ välinen yhtälö (3 p). Montako erilaista 20 ja 50 euron setelien yhdistelmää on mahdollista, kun järjestystä ei huomioida? (9 p)",
+     "hints": [
+      "Yhtälö saadaan laskemalla setelien yhteisarvo. Luvut $x$ ja $y$ ovat ei-negatiivisia kokonaislukuja. Rajaa ensin, kuinka suuri $y$ voi olla.",
+      "Yhtälö sievenee muotoon $2x+5y=37$. Koska $2x$ on parillinen ja 37 pariton, $5y$ on pariton, joten $y$ on pariton. Lisäksi $50y\\le 370$, joten $0\\le y\\le 7$."
+     ],
+     "solution": "**Yhtälö**\n\n1. Setelien arvo on $20x+50y$, joten $20x+50y=370$, missä $x$ ja $y$ ovat ei-negatiivisia kokonaislukuja. Jakamalla kymmenellä: $2x+5y=37$.\n\n**Ratkaisujen lukumäärä**\n\n2. Rajaus: $5y\\le 37$, joten $0\\le y\\le 7$.\n3. Pariteetti: $2x$ on parillinen ja 37 pariton, joten $5y$ ja siis $y$ on pariton. Mahdolliset arvot ovat $y=1,3,5,7$.\n4. Tarkistetaan: $y=1\\Rightarrow x=\\frac{37-5}{2}=16$; $y=3\\Rightarrow x=11$; $y=5\\Rightarrow x=6$; $y=7\\Rightarrow x=1$. Kaikki ovat ei-negatiivisia kokonaislukuja.\n5. Parillisilla $y$:n arvoilla $x$ ei ole kokonaisluku, joten muita ratkaisuja ei ole.\n\n**Vastaus: yhtälö $20x+50y=370$ (eli $2x+5y=37$). Tapoja on 4: $(x,y)=(16,1),(11,3),(6,5),(1,7)$.**\n\n**Sudenkuoppa:** muuttujien sekoittaminen ($x$ on 20 euron setelien määrä) tai perustelun unohtaminen sille, ettei muita ratkaisuja ole.",
+     "answer": "$20x+50y=370$; 4 tapaa: $(16,1),(11,3),(6,5),(1,7)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kahden muuttujan funktio on $f(x,y)=x^4+32x+y^2-6y+60$. Laske osittaisderivaatat $f_x$ ja $f_y$ (4 p). Funktion pienin arvo saavutetaan siinä pisteessä, jossa $f_x=0$ ja $f_y=0$ (ks. alkuperäisen tehtävän kuva 10.A). Määritä pienin arvo tämän tiedon avulla (8 p).",
+     "hints": [
+      "Osittaisderivaatassa $f_x$ derivoidaan $x$:n suhteen ja $y$ käsitellään vakiona, ja $f_y$:ssä päinvastoin. Tämän jälkeen ratkaise yhtälöpari $f_x=0$, $f_y=0$.",
+      "$f_x=4x^3+32$ ja $f_y=2y-6$. Yhtälöistä saadaan $x^3=-8$ ja $y=3$. Sijoita piste funktion lausekkeeseen."
+     ],
+     "solution": "**Osittaisderivaatat**\n\n1. $f_x(x,y)=4x^3+32$, koska $y$:tä sisältävät termit ja vakio ovat $x$:n suhteen vakioita.\n2. $f_y(x,y)=2y-6$.\n\n**Pienin arvo**\n\n3. $f_x=0 \\iff 4x^3=-32 \\iff x^3=-8 \\iff x=-2$.\n4. $f_y=0 \\iff 2y=6 \\iff y=3$.\n5. Pienin arvo on $f(-2,3)=(-2)^4+32\\cdot(-2)+3^2-6\\cdot 3+60=16-64+9-18+60=3$.\n\n(Tarkistus: $f(x,y)=(x^4+32x)+(y-3)^2+51$, ja yhden muuttujan funktion $x^4+32x$ pienin arvo on $-48$ kohdassa $x=-2$.)\n\n**Vastaus: $f_x=4x^3+32$, $f_y=2y-6$. Pienin arvo on $3$ (pisteessä $(-2,3)$).**\n\n**Sudenkuoppa:** pienimmäksi arvoksi ilmoitetaan piste $(-2,3)$. Kysytty on funktion arvo, eli luku 3.",
+     "answer": "$f_x=4x^3+32$, $f_y=2y-6$; pienin arvo $f(-2,3)=3$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kaksi pelaajaa heittää noppaa vuoron perään, A ensin. A:n vuorolla silmäluku 1 tai 2 tuo A:lle voiton, B:n vuorolla silmäluku 1, 2 tai 3 tuo B:lle voiton. Peli loppuu ensimmäiseen voittoon.\n\n1. Todennäköisyys, että A voittaa heti ensimmäisellä vuorollaan. (2 p)\n2. Todennäköisyys, että B voittaa omalla ensimmäisellä vuorollaan. (4 p)\n3. Kummankin pelaajan kokonaistodennäköisyys voittaa. (6 p)",
+     "hints": [
+      "B pääsee heittämään vain, jos A ei ole jo voittanut. Tarkastele yhtä kierrosta (A:n ja B:n heitto) ja sitä, millä todennäköisyydellä peli jatkuu seuraavalle kierrokselle.",
+      "Yhdellä kierroksella A voittaa todennäköisyydellä $\\frac13$, B todennäköisyydellä $\\frac23\\cdot\\frac12=\\frac13$, ja peli jatkuu todennäköisyydellä $\\frac13$. Kierroksella $k$ kumpikin voittaa todennäköisyydellä $\\left(\\frac13\\right)^{k-1}\\cdot\\frac13$. Summaa geometrinen sarja."
+     ],
+     "solution": "**1. A voittaa ensimmäisellä heitollaan**\n\n1. Suotuisia silmälukuja on kaksi kuudesta: $P=\\frac26=\\frac13$.\n\n**2. B voittaa ensimmäisellä heitollaan**\n\n2. B heittää vain, jos A ei voittanut: todennäköisyys $1-\\frac13=\\frac23$.\n3. B voittaa heitollaan todennäköisyydellä $\\frac36=\\frac12$.\n4. Heitot ovat riippumattomia, joten $P=\\frac23\\cdot\\frac12=\\frac13$.\n\n**3. Koko pelin voittotodennäköisyydet**\n\n5. Ensimmäisellä kierroksella A voittaa todennäköisyydellä $\\frac13$ ja B todennäköisyydellä $\\frac13$. Peli jatkuu todennäköisyydellä $1-\\frac13-\\frac13=\\frac13$.\n6. Jatkuessaan peli alkaa kuin alusta, joten kierroksella $k$ kumpikin voittaa todennäköisyydellä $\\left(\\frac13\\right)^{k-1}\\cdot\\frac13=\\frac{1}{3^k}$.\n7. $P(\\text{A voittaa})=\\sum_{k=1}^{\\infty}\\frac{1}{3^k}=\\frac{\\frac13}{1-\\frac13}=\\frac12$ (geometrinen sarja, suhdeluku $\\frac13$).\n8. Samoin $P(\\text{B voittaa})=\\frac12$. Summa on 1, joten peli päättyy varmasti jonkun voittoon.\n\n**Vastaus: 1. $\\frac13$ · 2. $\\frac13$ · 3. kumpikin voittaa todennäköisyydellä $\\frac12$.**\n\n**Sudenkuoppa:** kohdassa 2 vastataan $\\frac12$ unohtaen, että A:n on ensin epäonnistuttava.",
+     "answer": "1. $\\frac13$ · 2. $\\frac13$ · 3. kumpikin $\\frac12$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Paraabelit ovat symmetrisiä $y$-akselin suhteen, ja niiden kuvaajat kulkevat pisteiden $(-1,0)$ ja $(1,0)$ kautta.\n\n1. Anna tällaisten paraabelien yhtälö yleisessä muodossa. (2 p)\n2. Milloin kaksi tällaista paraabelia leikkaavat kohtisuorasti? (5 p)\n3. Kaksi kohtisuorasti leikkaavaa paraabelia rajaa alueen. Laske sen alan pienin arvo. (5 p)",
+     "hints": [
+      "Symmetrinen paraabeli on muotoa $y=ax^2+c$. Sijoita annetut pisteet. Kaksi käyrää leikkaa kohtisuorasti, kun niiden tangentit leikkauspisteessä ovat kohtisuorassa, eli kulmakertoimien tulo on $-1$.",
+      "Paraabelit ovat $y=a(x^2-1)$, $a\\neq 0$. Kohdassa $x=1$ kulmakerroin on $2a$, joten ehto on $2a\\cdot 2b=-1$. Kun $a>0>b$, pinta-ala on $\\int_{-1}^1\\left(b(x^2-1)-a(x^2-1)\\right)dx=\\frac43\\left(a+\\frac{1}{4a}\\right)$. Minimoi tämä."
+     ],
+     "solution": "**1. Yleinen yhtälö**\n\n1. $y$-akselin suhteen symmetrisessä paraabelissa ei ole $x$:n ensimmäisen asteen termiä: $y=ax^2+c$, $a\\neq 0$.\n2. Piste $(1,0)$: $a+c=0$, joten $c=-a$. (Piste $(-1,0)$ antaa saman ehdon.)\n3. Yhtälö on $y=ax^2-a=a(x^2-1)$, missä $a\\neq 0$.\n\n**2. Kohtisuoruusehto**\n\n4. Paraabelit $y=a(x^2-1)$ ja $y=b(x^2-1)$, $a\\neq b$, leikkaavat vain pisteissä $(\\pm1,0)$, koska $(a-b)(x^2-1)=0$. Symmetrian vuoksi riittää tarkastella kohtaa $x=1$.\n5. Derivaatta on $2ax$, joten tangentin kulmakerroin kohdassa $x=1$ on $2a$, ja toisella paraabelilla $2b$.\n6. Tangentit ovat kohtisuorassa, kun $2a\\cdot 2b=-1$, eli $ab=-\\frac14$.\n\n**3. Pienin pinta-ala**\n\n7. Ehdosta $ab=-\\frac14$ nähdään, että $a$ ja $b$ ovat erimerkkisiä. Olkoon $a>0$ ja $b=-\\frac{1}{4a}<0$. Välillä $(-1,1)$ on $x^2-1<0$, joten paraabeli $y=b(x^2-1)$ on ylempänä.\n8. $A(a)=\\int_{-1}^1\\left(b(x^2-1)-a(x^2-1)\\right)dx=(b-a)\\int_{-1}^1(x^2-1)\\,dx=(b-a)\\cdot\\left(-\\frac43\\right)=\\frac43\\left(a+\\frac{1}{4a}\\right)$.\n9. $A'(a)=\\frac43\\left(1-\\frac{1}{4a^2}\\right)=0 \\iff a^2=\\frac14 \\iff a=\\frac12$ (kun $a>0$). Derivaatta on negatiivinen, kun $0\\lt a<\\frac12$, ja positiivinen, kun $a>\\frac12$, joten kyseessä on minimi.\n10. $A\\left(\\frac12\\right)=\\frac43\\left(\\frac12+\\frac12\\right)=\\frac43$. Paraabelit ovat silloin $y=\\frac12(x^2-1)$ ja $y=-\\frac12(x^2-1)$.\n\n**Vastaus: 1. $y=a(x^2-1)$, $a\\neq 0$ · 2. $ab=-\\frac14$ · 3. pienin pinta-ala on $\\frac43$.**\n\n**Sudenkuoppa:** yleisestä yhtälöstä unohtuu ehto $a\\neq 0$, jolloin ”paraabeliksi” kelpaisi myös $x$-akseli.",
+     "answer": "1. $y=a(x^2-1)$, $a\\neq0$ · 2. $ab=-\\frac14$ · 3. pienin ala $\\frac43$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Tutki, montako positiivista ratkaisua yhtälöllä $e^{ax}=\\ln x$ on parametrin $a>0$ eri arvoilla.",
+     "hints": [
+      "Koska $e^{ax}>0$, ratkaisussa on oltava $\\ln x>0$ eli $x>1$. Silloin yhtälö voidaan logaritmoida ja ratkaista parametrin suhteen: $a=\\frac{\\ln(\\ln x)}{x}$. Ratkaisujen lukumäärä on sama kuin niiden $x>1$, joilla funktio $g(x)=\\frac{\\ln(\\ln x)}{x}$ saa arvon $a$.",
+      "$g'(x)=\\frac{\\frac{1}{\\ln x}-\\ln(\\ln x)}{x^2}$. Osoittaja on aidosti vähenevä, joten derivaatalla on täsmälleen yksi nollakohta $x_0\\approx 5{,}831$. Tutki funktion $g$ kulkua ja raja-arvoja, kun $x\\to1^+$ ja $x\\to\\infty$."
+     ],
+     "solution": "1. Koska $e^{ax}>0$, ratkaisussa on $\\ln x>0$, eli $x>1$. Kun $x>1$, yhtälö on yhtäpitävä yhtälön $ax=\\ln(\\ln x)$ eli $a=g(x)=\\frac{\\ln(\\ln x)}{x}$ kanssa (logaritmi on aidosti kasvava).\n2. $g'(x)=\\frac{\\frac{1}{x\\ln x}\\cdot x-\\ln(\\ln x)}{x^2}=\\frac{h(x)}{x^2}$, missä $h(x)=\\frac{1}{\\ln x}-\\ln(\\ln x)$.\n3. Kun $x>1$, sekä $\\frac{1}{\\ln x}$ että $-\\ln(\\ln x)$ ovat aidosti väheneviä, joten $h$ on aidosti vähenevä. Lisäksi $h(x)\\to\\infty$, kun $x\\to1^+$, ja $h(x)\\to-\\infty$, kun $x\\to\\infty$. Jatkuvana funktiona $h$:lla on täsmälleen yksi nollakohta $x_0$. Numeerisesti $x_0\\approx 5{,}8312$ (esim. $h(5)>0$ ja $h(6)<0$).\n4. $g$ on siis aidosti kasvava välillä $(1,x_0]$ ja aidosti vähenevä välillä $[x_0,\\infty)$. Suurin arvo on $g(x_0)\\approx 0{,}09726$. Nollakohdassa $\\ln(\\ln x_0)=\\frac{1}{\\ln x_0}$, joten tarkasti $g(x_0)=\\frac{1}{x_0\\ln x_0}$.\n5. Raja-arvot: $g(x)\\to-\\infty$, kun $x\\to1^+$, ja $g(x)\\to 0$, kun $x\\to\\infty$. Lisäksi $g(x)>0$, kun $x>e$.\n6. Positiivinen $a$ saavutetaan siis nousevalla osalla välillä $(e,x_0]$ enintään kerran ja laskevalla osalla välillä $[x_0,\\infty)$ enintään kerran. Välissä $0\\lt a\\lt g(x_0)$ kumpikin osa saavuttaa arvon $a$ (jatkuvuus ja väliarvolause), arvon $a=g(x_0)$ saavuttaa vain $x_0$, ja arvoa $a>g(x_0)$ ei saavuteta.\n\n**Vastaus:** merkitään $a^*=g(x_0)=\\frac{1}{x_0\\ln x_0}\\approx 0{,}0973$.\n- **$a>a^*$: ei yhtään ratkaisua.**\n- **$a=a^*$: täsmälleen yksi ratkaisu ($x\\approx 5{,}83$).**\n- **$0\\lt a\\lt a^*$: kaksi ratkaisua.**\n\n**Sudenkuoppa:** pelkät GeoGebra-kokeilut eivät riitä. On perusteltava, ettei ratkaisuja voi olla enempää kuin kaksi (tässä $g$:n monotonisuus osaväleillä).",
+     "answer": "$a>a^*$: 0 ratkaisua; $a=a^*$: 1; $0\\lt a\\lt a^*$: 2, missä $a^*=\\frac{1}{x_0\\ln x_0}\\approx 0{,}0973$ ja $x_0\\approx 5{,}831$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

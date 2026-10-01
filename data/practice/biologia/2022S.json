@@ -1,0 +1,372 @@
+{
+ "subject": "biologia",
+ "session": "2022S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2022/Syksy/2022-09-22_BI_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-09-22_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p)."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (1.1–1.10), joissa valitaan yksi vaihtoehto viidestä: evoluutio (1.1), fossiilirapu *Tanidromites nightwishorum* ja lajien tieteellinen nimeäminen (1.2), solutyypin tunnistaminen soluelinten perusteella (1.3), soluhengityksen tapahtumapaikka (1.4), tumaton ihmisen solu (1.5), solubiologian väitteet (1.6), proteiinit (1.7), kukanvärin risteytys $Vv \\times VV$ (1.8), marsun karvanlaadun risteytys heterotsygootti × resessiivinen homotsygootti (1.9) ja sukupuun tulkinta (1.10). Kohdissa 1.1, 1.2, 1.6 ja 1.7 etsitään virheellinen väite. Oikea vastaus 2 p. Vaihtoehdot ja sukupuu ks. alkuperäinen koe.",
+     "hints": [
+      "Merkitse ensin, missä kohdissa haetaan virheellistä väitettä. Risteytyksissä kirjoita vanhempien sukusolut ja tee pieni risteytysruudukko ennen kuin luet vaihtoehtoja.",
+      "Kohta kohdalta: 1.1 mitkä kasvit valtasivat maan ensimmäisinä · 1.2 onko tieteellinen nimi eri maissa erilainen · 1.3 kitiiniseinä ja mitokondriot · 1.4 missä glykolyysi tapahtuu · 1.5 mikä solu menettää tumansa kypsyessään · 1.6 tuottaako kasvi ATP:tä myös mitokondrioissa · 1.7 onko proteiineja muissakin kuin eläinsoluissa · 1.8 voiko $Vv \\times VV$ tuottaa $vv$-jälkeläisen · 1.9 $Kk \\times kk$ · 1.10 terveiden vanhempien sairas tytär."
+     ],
+     "solution": "Kirjaimet viittaavat vaihtoehtojen järjestykseen alkuperäisessä koenäkymässä (A = ylin).\n\n- **1.1 C** – väite on väärin: ensimmäiset maalle sopeutuneet kasvit olivat sammalten kaltaisia, ja sanikkaiset olivat ensimmäisiä putkilokasveja. Muut väitteet (kohtu nisäkkäiden avainsopeumana, nisäkkäiden yleistyminen dinosaurusten jälkeen, paljassiemeniset ensimmäisinä siemenkasveina, kalat ennen sammakkoeläimiä) pitävät paikkansa.\n- **1.2 C** – väite on väärin: tieteellinen nimi on kansainvälinen ja sama kaikkialla. Lajinimen jälkiosa yksilöi lajin, 150 miljoonaa vuotta sitten eli dinosauruksia, rapu on aitotumallinen, ja DNA-tutkimukset muuttavat luokittelua ja nimiä.\n- **1.3 A** (kärpässieni) – kitiiniseinä on sienten tuntomerkki. Kasvisolun seinä on selluloosaa, bakteerilla ei ole tumaa eikä mitokondrioita, ja eläinsoluilla ei ole soluseinää.\n- **1.4 E** (solulimassa ja mitokondrioissa) – glykolyysi tapahtuu solulimassa, sitruunahappokierto ja elektroninsiirtoketju mitokondriossa. YTL hyväksyi myös vaihtoehdon D (vain mitokondrioissa).\n- **1.5 C** (punasolu) – ihmisen punasolu menettää tumansa kypsyessään, jolloin siihen mahtuu enemmän hemoglobiinia.\n- **1.6 D** – väite on väärin: kasvisolut tuottavat ATP:tä myös mitokondrioissa soluhengityksellä, esimerkiksi pimeällä ja lehtivihreättömissä soluissa.\n- **1.7 B** – väite on väärin: proteiineja on kaikissa soluissa, myös kasvien, sienten ja bakteerien soluissa.\n- **1.8 B** (kaikki punakukkaisia) – $Vv \\times VV$ tuottaa jälkeläisiä $VV$ ja $Vv$ suhteessa $1:1$. Kaikilla on vallitseva alleeli $V$.\n- **1.9 E** (kiharat ja sileät noin $1:1$) – $Kk \\times kk$ tuottaa jälkeläisiä $Kk$ (kihara) ja $kk$ (sileä) yhtä paljon.\n- **1.10 C** (resessiivinen) – terveillä vanhemmilla on sairas tytär, joten vanhemmat kantavat piilevää alleelia. Sairaus ei myöskään voi olla X-kromosomaalinen resessiivinen, koska tytär on sairas, vaikka isä on terve.\n\n**Sudenkuoppa:** kohdassa 1.10 vaihtoehto, jonka mukaan periytyminen ei voi olla X-kromosomaalista, kuulostaa oikealta, mutta sen perustelu on väärä: terve äiti voi hyvin saada sairaan tyttären.",
+     "answer": "1.1 C · 1.2 C · 1.3 A · 1.4 E (myös D hyväksyttiin) · 1.5 C · 1.6 D · 1.7 B · 1.8 B · 1.9 E · 1.10 C",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 7,
+     "prompt": "Selitä, mitä hedelmöitys tarkoittaa. Vertaa aineiston 2.A eläinten 1 (rupikonna) ja 2 (orava) hedelmöitystapoja (ks. alkuperäiset kuvat).",
+     "hints": [
+      "Määrittele hedelmöitys sukusolujen ja kromosomiluvun avulla. Mieti sitten, missä sukusolut kohtaavat sammakkoeläimillä ja nisäkkäillä.",
+      "Rupikonnalla hedelmöitys on ulkoinen: naaras laskee mädin veteen ja koiras siittiöt sen päälle. Oravalla hedelmöitys on sisäinen naaraan sukuelimissä. Vertaa tarvittavien sukusolujen määrää ja riippuvuutta vedestä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hedelmöityksessä kaksi haploidia sukusolua, munasolu ja siittiö, yhdistyvät, ja syntyy diploidi tsygootti.\n- **Rupikonna (1):** sammakkoeläimillä hedelmöitys on ulkoinen, eli sukusolut yhtyvät naaraan elimistön ulkopuolella.\n- Naaras laskee munat (mädin) veteen, ja koiras vapauttaa siittiöt niiden päälle.\n- **Orava (2):** nisäkkäillä hedelmöitys on sisäinen, eli sukusolut yhtyvät naaraan sukuteissä.\n- Sisäisessä hedelmöityksessä tarvitaan vähemmän sukusoluja, koska ne kohtaavat varmemmin.\n- Sisäinen hedelmöitys ei vaadi vettä, kun taas ulkoinen onnistuu vain vedessä.\n\n**Esimerkkivastaus:** Hedelmöitys tarkoittaa, että haploidi munasolu ja haploidi siittiö sulautuvat yhteen, jolloin syntyy diploidi tsygootti, josta uusi yksilö kehittyy. Rupikonnalla hedelmöitys on ulkoinen: keväällä naaras laskee lampeen pitkät mätinauhat, ja naaraan selässä roikkuva koiras laskee siittiöt niiden päälle. Siittiöt uivat vedessä munasoluihin. Koska moni sukusolu hukkuu tai syödään, niitä tarvitaan paljon, ja lisääntyminen on sidottu veteen. Oravalla hedelmöitys on sisäinen: koiras siirtää siittiöt parittelussa naaraan sukuteihin, joissa ne kohtaavat munasolun. Sukusolut ovat suojassa, hedelmöitys onnistuu varmemmin ja lisääntyminen onnistuu maalla ilman vettä.\n\n**Sudenkuoppa:** lajien nimeämisestä ei saa pisteitä. Pisteet tulevat hedelmöitystapojen kuvauksesta ja vertailusta.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 8,
+     "prompt": "Selitä, mitä pölytys tarkoittaa. Vertaa aineiston 2.B kasvien 1 (mänty) ja 2 (mustikka) pölytystä (ks. alkuperäiset kuvat).",
+     "hints": [
+      "Määrittele pölytys: mistä mihin siitepöly siirtyy? Mieti sitten, millä välittäjällä kumpikin kasvi pölyttyy ja mihin kasviryhmiin ne kuuluvat.",
+      "Mänty on paljassiemeninen ja tuulipölytteinen: siitepölyä tuotetaan valtavasti, ja se lentää emikukan emilehdille, joissa siemenaiheet ovat paljaina. Mustikka on koppisiemeninen ja hyönteispölytteinen: kukka houkuttelee pölyttäjiä medellä ja tuoksulla, ja siemenaihe on suojassa sikiäimessä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Pölytys on siitepölyn siirtymistä heteestä emiin (koppisiemenisillä emin luotille, paljassiemenisillä emilehdelle siemenaiheen luo).\n- **Mänty (1)** on tuulipölytteinen: siitepölyä syntyy paljon, ja tuuli kuljettaa sen emikukkiin.\n- **Mustikka (2)** on hyönteispölytteinen: kukat houkuttelevat pölyttäjiä (esim. kimalaisia) medellä ja tuoksulla, ja hyönteinen kuljettaa siitepölyn kukasta toiseen.\n- Mänty on paljassiemeninen: siemenaihe on paljaana emilehden pinnalla.\n- Mustikka on koppisiemeninen: siemenaihe on suojassa emin sikiäimessä.\n- Molemmilla ristipölytys edistää siementen kehitystä.\n\n**Esimerkkivastaus:** Pölytyksellä tarkoitetaan siitepölyn siirtymistä kukan heteistä emiin, mikä on edellytys hedelmöitykselle. Mänty on paljassiemeninen tuulipölytteinen kasvi. Sen hedekukat tuottavat valtavasti kevyttä siitepölyä, jota tuuli kuljettaa emikukkiin. Emikukissa siemenaiheet ovat paljaina emisuomujen pinnalla, joten siitepöly pääsee niiden luo suoraan. Mustikka on koppisiemeninen, ja sen kukat pölyttyvät hyönteisten, kuten kimalaisten, välityksellä. Kukat houkuttelevat pölyttäjiä medellä ja tuoksulla, ja siitepöly tarttuu hyönteiseen ja siirtyy seuraavan kukan emin luotille. Siemenaihe on suojassa sikiäimen sisällä. Hyönteispölytys on täsmällisempää, joten siitepölyä tarvitaan vähemmän kuin tuulipölytyksessä.\n\n**Sudenkuoppa:** pölytys sekoitetaan helposti siementen leviämiseen. Pölytys koskee siitepölyä ennen hedelmöitystä, leviäminen valmiita siemeniä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Aitotumallisissa soluissa aineenvaihdunnan reaktiot on jaettu solun eri osiin. Kuvaile solulimakalvoston ja kalvorakkuloiden osuutta solun aineenvaihdunnassa.",
+     "hints": [
+      "Käsittele solulimakalvosto ja kalvorakkulat erikseen. Solulimakalvostosta: rakenne, sileän ja karkean ero ja kummankin tehtävät. Kalvorakkuloista: mistä ne syntyvät ja mihin ne kuljettavat aineita.",
+      "Karkean solulimakalvoston ribosomit tekevät eritettäviä ja kalvoproteiineja, ja sileä tuottaa lipidejä ja muokkaa aineita. Rakkulat kuljettavat proteiineja Golgin laitteeseen ja edelleen soluelimiin tai eksosytoosiin. Endosytoosi ja fagosytoosi tuovat aineita soluun. Lysosomit ja peroksisomit ovat entsyymejä sisältäviä rakkuloita."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Solulimakalvosto** on solun sisäinen kalvojen verkosto ja kuljetusreitti. Sen kalvo on fosfolipidikaksoiskerros.\n- Sileän solulimakalvoston pinnalla ei ole ribosomeja. Siinä tuotetaan lipidejä ja muokataan aineenvaihduntatuotteita (esim. myrkkyjen muuntaminen maksassa).\n- Karkean solulimakalvoston pintaan kiinnittyneet ribosomit tuottavat proteiineja, jotka eritetään solusta, kuljetetaan soluelimiin tai upotetaan kalvoihin.\n- Kun translaatio alkaa, ribosomi ja lähetti-RNA ohjautuvat solulimakalvostolle. Syntyvä aminohappoketju siirtyy kalvoston sisätilaan tai kiinnittyy osaksi kalvoa.\n- **Kalvorakkulat** ovat pieniä lipidikalvon ympäröimiä rakkuloita, jotka kuroutuvat solulimakalvostosta ja Golgin laitteesta.\n- Proteiinit kulkevat rakkuloissa solulimakalvostosta Golgin laitteeseen, jossa niitä muokataan (esim. liitetään hiilihydraattiosia), ja sieltä rakkuloissa eri soluelimiin, kuten vakuoleihin ja lysosomeihin.\n- Rakkulan pinnan tunnistusproteiinit määräävät, minne rakkula kulkee. Rakkuloita kuljetetaan solun tukirangan säikeitä pitkin.\n- Eksosytoosissa rakkula sulautuu solukalvoon ja sen sisältö vapautuu solun ulkopuolelle.\n- Endosytoosissa solukalvosta kuroutuu rakkula, joka tuo aineita soluun. Fagosytoosissa solu nielee suuria hiukkasia.\n- Lysosomien entsyymit hajottavat yhdisteitä ja vaurioituneita soluelimiä. Peroksisomien entsyymit (esim. katalaasi) pilkkovat esimerkiksi rasvahappoja.\n\n**Esimerkkivastaus:** Solulimakalvosto on kalvojen muodostama verkosto, joka jakaa solun sisätilan osastoihin ja toimii solun sisäisenä kuljetusreittinä. Karkean solulimakalvoston pinnalla on ribosomeja, jotka valmistavat solusta eritettäviä proteiineja ja kalvoproteiineja. Kun ribosomi alkaa tehdä tällaista proteiinia, se kiinnittyy kalvostoon, ja aminohappoketju kulkeutuu kalvoston sisään tai jää osaksi kalvoa. Sileässä solulimakalvostossa ei ole ribosomeja. Siellä valmistetaan lipidejä, kuten fosfolipidejä ja steroideja, ja muokataan aineita, esimerkiksi maksasolussa hajotetaan lääkeaineita. Kalvostosta kuroutuu kalvorakkuloita, jotka kuljettavat proteiinit Golgin laitteeseen. Siellä proteiineihin liitetään esimerkiksi sokeriosia ja ne lajitellaan uusiin rakkuloihin, joiden pintaproteiinit ohjaavat ne oikeaan kohteeseen. Eritettävien proteiinien rakkulat sulautuvat solukalvoon, ja sisältö vapautuu solun ulkopuolelle eksosytoosissa, kuten ruoansulatusentsyymit tai hormonit. Vastaavasti endosytoosissa solukalvo kuroutuu rakkulaksi ja tuo aineita soluun, ja syöjäsolut nielevät bakteereja fagosytoosilla. Lysosomit ovat hajotusentsyymejä sisältäviä rakkuloita, jotka pilkkovat nielaistuja aineita ja vanhoja soluelimiä, ja peroksisomit hajottavat esimerkiksi rasvahappoja ja vetyperoksidia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 7,
+     "prompt": "Selitä, millainen lajien välinen suhde loisinta on.",
+     "hints": [
+      "Määrittele ensin loisinta: kuka hyötyy, kuka kärsii ja miten loinen on riippuvainen isännästä.",
+      "Pohdi lisäksi: loiset eivät yleensä tapa isäntäänsä nopeasti, ne ovat usein isäntälajiin erikoistuneita, niillä voi olla väli-isäntiä ja ne voivat levittää tauteja. Anna esimerkki kasvin ja eläimen loisesta (muu kuin heisimato tai punkki)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Loinen elää toisen eliön, isännän, pinnalla tai sisällä ja tarvitsee sitä elääkseen ja lisääntyäkseen.\n- Loinen käyttää isännän energiaa ja ravintoa, joten isännälle suhteesta on vain haittaa.\n- Isäntänä voi toimia eläin tai kasvi. Moni loinen on mikrobi, esimerkiksi bakteeri tai sieni.\n- Loinen ei yleensä tapa isäntäänsä, tai se tappaa sen vasta tuotettuaan jälkeläisiä.\n- Loiset voivat levittää isäntään tauteja (esim. punkin levittämä borrelioosi).\n- Loiset ovat usein erikoistuneet tiettyyn isäntälajiin.\n- Elinkiertoon kuuluu usein väli-isäntä. Jotkin loiset muuttavat väli-isännän käyttäytymistä niin, että se joutuu helpommin lopullisen isännän syömäksi.\n- Osa lajeista loisii vain osan elämästään (esim. loispistiäisten toukat perhostoukissa).\n- Loisia on eniten, kun isäntäkanta on tiheä.\n- Esimerkkejä: kasvin loinen esim. härmäsieni tai kirvat, eläimen loinen esim. täi tai suolinkainen.\n\n**Esimerkkivastaus:** Loisinta on lajien välinen suhde, jossa loinen hyötyy ja isäntä kärsii. Loinen elää isännän pinnalla tai sisällä ja saa siltä ravintonsa, jolloin isännän energiaa kuluu loisen hyväksi. Loinen ei yleensä tapa isäntäänsä, koska se tarvitsee sitä elääkseen ja lisääntyäkseen, mutta se heikentää isännän kuntoa ja voi levittää tauteja, kuten punkki borrelioosia. Loiset ovat usein erikoistuneet yhteen tai muutamaan isäntälajiin, ja monen loisen elinkiertoon kuuluu väli-isäntä. Esimerkiksi täi loisii ihmisessä ja härmäsieni monissa kasveissa. Loisia on eniten, kun isäntiä on tiheässä, koska silloin loinen leviää helposti yksilöstä toiseen.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 8,
+     "prompt": "Vertaa sisä- ja ulkoloisten elintapoja ja lisääntymistä, ja pohdi, miten kumpikin ryhmä on sopeutunut elinympäristöönsä. Voit käyttää esimerkkeinä aineiston 4.A heisimatoa (sisäloinen) ja punkkia (ulkoloinen).",
+     "hints": [
+      "Vertaa neljää asiaa: rakenne ja aistit, kuinka pitkään loinen on isännässä, missä se lisääntyy ja millaiset olot sen ympärillä vallitsevat.",
+      "Sisäloinen on yksinkertaisempi ja elää lähes koko elämänsä isännässä tasaisissa mutta hapettomissa oloissa, ja sen munat leviävät ulosteen mukana väli-isäntien kautta. Ulkoloinen, kuten punkki, kiinnittyy isäntään vain aterioidakseen, puuduttaa pistokohdan ja estää syljellään veren hyytymisen, munii maahan ja altistuu sään vaihteluille."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Sisäloiset ovat yleensä rakenteeltaan yksinkertaisempia, ja niiden aistit ovat heikommin kehittyneet kuin ulkoloisilla.\n- Molemmat ovat sopeutuneet kiinnittymään isäntään (esim. heisimadon imukupit ja koukut, punkin suuosat).\n- Sisäloinen elää isännässä suurimman osan elämästään, usein suolistossa, mutta myös esim. aivoissa, silmässä, veressä tai lihaksissa.\n- Ulkoloinen voi irrota isännästä etsiäkseen paremman elinpaikan tai lisääntyäkseen. Punkki kiinnittyy isäntään vain väliaikaisesti imemään verta.\n- Ulkoloisen sylki puuduttaa pistokohdan ja estää verta hyytymästä.\n- Sisäloinen lisääntyy isännän sisällä, ulkoloinen isännän ulkopuolella.\n- Lapamato tuottaa suolistossa munia, jotka kulkeutuvat ulosteen mukana veteen. Toukat kulkevat äyriäisten ja kalojen kautta takaisin ihmiseen.\n- Punkki munii maahan, ja nuoruusvaiheen yksilöt etsivät itse uuden isännän.\n- Ulkoloiset altistuvat lämpötilan ja kosteuden vaihtelulle, sisäloisen ympäristö on tasainen.\n- Suolistoloiset kestävät hapettomuutta, ja niiden lepovaiheet kestävät mahalaukun happoa.\n- Lisäesimerkkejä: sisäloinen esim. suolinkainen tai malarialoinen, ulkoloinen esim. täi tai kirppu.\n\n**Esimerkkivastaus:** Sisäloinen, kuten heisimato, elää isäntänsä suolistossa lähes koko aikuisikänsä. Olot ovat siellä tasaiset ja ravintoa on runsaasti, joten madolta ovat surkastuneet aistit ja ruoansulatuskanava, ja se imee valmiiksi pilkottua ravintoa koko pinnallaan. Se kiinnittyy suolen seinämään koukuilla ja imukupeilla ja kestää hapettomuutta ja ruoansulatusentsyymejä. Heisimato lisääntyy isännän sisällä ja tuottaa valtavasti munia, jotka poistuvat ulosteen mukana. Munista kehittyvät toukat tarvitsevat väli-isäntiä, kuten äyriäisiä ja kaloja, ennen kuin ne päätyvät takaisin lopulliseen isäntään. Ulkoloinen, kuten punkki, elää isäntänsä pinnalla vain aterioidessaan. Sillä on toimivat aistit, joilla se löytää isännän, ja suuosat, joilla se kiinnittyy ihoon. Sen sylki puuduttaa pistokohdan ja estää veren hyytymisen, jotta isäntä ei huomaa sitä ja veri virtaa. Punkki irtoaa kylläisenä, munii maahan, ja jokainen kehitysvaihe etsii uuden isännän. Maassa punkki joutuu sietämään kuivuutta ja kylmyyttä, mikä on sisäloiselle harvoin ongelma.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 5,
+     "prompt": "Kerro lyhyesti, mitä tehtäviä iholla, ihmisen suurimmalla elimellä, on.",
+     "hints": [
+      "Luettele ihon tehtäviä: mitä vastaan se suojaa, mitä se säätelee, mitä se tuottaa ja mitä se aistii.",
+      "Muista suojaus mikrobeilta, kemikaaleilta, UV-säteilyltä ja kuivumiselta, ihon oma mikrobisto, lämmönsäätely, D-vitamiinin tuotanto, tunto-, lämpö- ja kipuaisti, eritys (hiki) sekä neste- ja rasvavarasto."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Suojaa taudinaiheuttajilta ja kemikaaleilta.\n- Ihon oma mikrobisto (bakteerit ja sienet) estää haitallisten mikrobien lisääntymistä.\n- Suojaa UV-säteilyltä (melaniini).\n- Säätelee kehon lämpötilaa (hikoilu, verisuonten laajeneminen ja supistuminen).\n- Tuottaa D-vitamiinia auringonvalossa.\n- Toimii aistinelimenä (tunto, lämpö, kylmä, kipu) ja erityselimenä (hiki).\n- Suojaa kuivumiselta ja toimii neste- ja rasvavarastona.\n\n**Esimerkkivastaus:** Iho on kehon suojakuori. Se estää mikrobeja ja kemikaaleja pääsemästä elimistöön, ja sen pinnan omat bakteerit ja sienet vaikeuttavat taudinaiheuttajien lisääntymistä. Melaniini suojaa UV-säteilyltä, ja iho estää kehoa kuivumasta. Iho säätelee lämpötilaa hikoilun ja verisuonten avulla, ja siinä muodostuu auringonvalon vaikutuksesta D-vitamiinia. Lisäksi ihon reseptorit aistivat kosketusta, lämpöä, kylmää ja kipua, hiki poistaa kuona-aineita ja ihonalainen rasva varastoi energiaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 10,
+     "prompt": "Nimeä ihon poikkileikkauskuvaan merkityt kerrokset 1–3 (ks. alkuperäinen kuva 5.A). Kuvaile kunkin kerroksen rakenne ja toiminta.",
+     "hints": [
+      "Iho jaetaan kolmeen kerrokseen pinnasta syvemmälle. Nimeä ne ja kerro jokaisesta, mistä kudoksesta se koostuu ja mitä siinä on.",
+      "Pintakerros on epiteeliä, joka uusiutuu tyvikerroksesta ja jonka uloin osa on kuollutta, sarveistunutta solukkoa, ja jossa melanosyytit tuottavat pigmenttiä. Keskikerros on sidekudosta, jossa on kollageenia, kimmosäikeitä, suonia, hermoja, aistinsoluja, rauhasia ja karvatuppia. Syvin kerros on rasvaa sisältävää sidekudosta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **1 orvaskesi:** pintakudosta (epiteeliä), joka uusiutuu jatkuvasti, kun tyvikerroksen solut jakautuvat.\n- Orvaskeden uloin osa, marraskesi, koostuu kuolleista, sarveisainetta (keratiinia) sisältävistä soluista, jotka hilseilevät pois ja suojaavat kuivumiselta ja mikrobeilta.\n- Orvaskeden alaosan melanosyytit tuottavat melaniinia, joka antaa iholle värin ja suojaa UV-säteilyltä.\n- **2 verinahka:** pääosin sidekudosta. Sidekudossolujen tuottama kollageeni tekee ihosta lujan, ja kimmosäikeet tekevät siitä joustavan.\n- Verinahassa on veri- ja imusuonia, hermopäätteitä ja aistinsoluja, karvatuppia ja karvankohottajalihaksia, talirauhasia sekä hikirauhasia, jotka erittävät hikeä.\n- **3 ihonalaiskudos:** sidekudosta ja rasvakudosta.\n- Se suojaa iskuilta, eristää lämpöä ja toimii energiavarastona.\n\n**Esimerkkivastaus:** Kerros 1 on orvaskesi. Se on monikerroksista epiteeliä, jonka tyvikerroksessa syntyy jatkuvasti uusia soluja. Solut siirtyvät pintaa kohti, täyttyvät sarveisaineella ja kuolevat, jolloin muodostuu marraskesi, joka suojaa kuivumiselta, hankaukselta ja mikrobeilta ja hilseilee vähitellen pois. Tyvikerroksen melanosyytit tuottavat melaniinia, joka suojaa UV-säteilyltä. Kerros 2 on verinahka. Se on sidekudosta, jossa kollageenisäikeet antavat lujuutta ja kimmosäikeet joustavuutta. Verinahassa kulkevat verisuonet, jotka ravitsevat ihoa ja säätelevät lämmönhukkaa, sekä hermot ja tunto-, lämpö- ja kipureseptorit. Siellä ovat myös karvatupet, talirauhaset, karvankohottajalihakset ja hikirauhaset. Kerros 3 on ihonalaiskudos, joka on löyhää sidekudosta ja rasvaa. Rasvakerros pehmentää iskuja, eristää lämpöä ja varastoi energiaa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 10,
+     "prompt": "Selitä perustellen, miten hankittu (adaptiivinen) immuniteetti syntyy esimerkiksi influenssavirusta vastaan.",
+     "hints": [
+      "Hankittu immuniteetti perustuu imusoluihin, joilla on tiettyä antigeenia tunnistava reseptori. Etene vaiheittain: tunnistus, solujen monistuminen, vasteen kaksi haaraa ja muisti.",
+      "B-solut kehittyvät plasmasoluiksi, jotka tuottavat vasta-aineita (humoraalinen vaste). Tappaja-T-solut tuhoavat virustartunnan saaneita soluja (soluvälitteinen vaste). Auttaja-T-solut aktivoivat muita sytokiineillä. Lopuksi jää muistisoluja. Immuniteetin voi saada sairastamalla tai rokotteella."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hankittu immuniteetti perustuu B- ja T-imusoluihin, joilla on spesifiset reseptorit.\n- B-solun reseptori on solukalvoon kiinnittynyt vasta-aine (IgM), T-solun reseptori T-solureseptori. Kullakin solulla on vain yhdenlainen reseptori, joten se tunnistaa vain yhden antigeenin.\n- Antigeeni voi olla esimerkiksi viruksen pintaproteiini.\n- Kun imusolu kohtaa sille sopivan antigeenin, se aktivoituu ja jakautuu nopeasti (klonaalinen monistuminen).\n- B-solut erilaistuvat plasmasoluiksi, jotka tuottavat vasta-aineita (humoraalinen vaste). B-solujen aktivoitumiseen tarvitaan auttaja-T-soluja.\n- Tappaja-T-solut tuhoavat viruksen infektoimia soluja (soluvälitteinen vaste).\n- T-soluja on eri tyyppejä: tappaja-, auttaja- ja säätelijä- eli estäjä-T-soluja. Auttaja-T-solut erittävät sytokiinejä, jotka tehostavat immuunivastetta.\n- Kun virus on tuhottu, osa B- ja T-soluista jää elimistöön muistisoluiksi, joiden ansiosta vaste käynnistyy seuraavalla kerralla nopeasti. Siksi samaa tautia ei yleensä sairasteta kahdesti.\n- Hankitun immuniteetin saa sairastamalla tai rokotuksella. Rokote voi sisältää tapettuja tai heikennettyjä mikrobeja, antigeenia tai antigeenia koodaavaa lähetti-RNA:ta.\n\n**Esimerkkivastaus:** Hankittu immuniteetti perustuu B- ja T-imusoluihin. Jokaisella imusolulla on pinnallaan yhdenlainen reseptori, joka tunnistaa vain tietyn antigeenin, esimerkiksi influenssaviruksen pintaproteiinin. Kun virus pääsee elimistöön, syöjäsolut esittelevät sen antigeeneja auttaja-T-soluille, jotka aktivoituvat ja erittävät sytokiinejä. Ne aktivoivat influenssaa tunnistavat B-solut ja tappaja-T-solut, jotka jakautuvat nopeasti suuriksi solujoukoiksi. B-solut kehittyvät plasmasoluiksi, jotka erittävät vereen vasta-aineita. Vasta-aineet sitoutuvat viruksiin, estävät niitä tarttumasta soluihin ja merkitsevät ne syöjäsolujen tuhottaviksi. Tappaja-T-solut tunnistavat viruksen infektoimat solut ja tuhoavat ne, jolloin virus ei pääse monistumaan. Kun tauti on voitettu, osa B- ja T-soluista jää elimistöön muistisoluiksi. Jos sama virus tulee uudelleen, muistisolut käynnistävät vasteen niin nopeasti, ettei ihminen välttämättä sairastu. Saman suojan voi saada myös rokotteesta, joka sisältää viruksen antigeeneja tai niitä koodaavaa lähetti-RNA:ta.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 5,
+     "prompt": "Pohdi, miksi yhtenä talvena sairastettu influenssa ei aina suojaa seuraavan talven influenssalta.",
+     "hints": [
+      "Muistisolut tunnistavat vain sen antigeenin, jonka ne ovat kohdanneet. Mieti, mikä viruksessa muuttuu vuodesta toiseen.",
+      "Influenssaviruksia on eri tyyppejä (A ja B). Virus muuntuu nopeasti mutaatioilla, koska RNA:n kopioinnissa syntyy virheitä, ja kaksi virusta voi vaihtaa perimää samassa solussa. Pintaproteiinit muuttuvat, eivätkä reseptorit enää tunnista niitä. Lisäksi vasta-aineiden ja muistisolujen määrä voi pienentyä ajan myötä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Influenssaviruksia on eri tyyppejä (esim. A ja B), eikä yhden tyypin sairastaminen suojaa toiselta.\n- Influenssavirus muuntuu nopeasti mutaatioiden takia, koska sen RNA:n kopioinnissa isäntäsolussa syntyy paljon virheitä.\n- Viruksissa tapahtuu myös rekombinaatiota: samassa solussa olevat virukset voivat vaihtaa RNA-jaksoja.\n- Siksi viruksen pintaproteiinit muuttuvat paljon.\n- B- ja T-solujen reseptorit ja muistisolut eivät enää tunnista muuttuneita pintaproteiineja.\n- Vasta-aineiden ja muistisolujen määrä voi vähentyä vuoden aikana.\n\n**Esimerkkivastaus:** Muistisolut ja vasta-aineet tunnistavat vain ne antigeenit, joita vastaan ne ovat syntyneet. Influenssaviruksia on useita tyyppejä, esimerkiksi A ja B, joten A-tyypin sairastaminen ei suojaa B-tyypiltä. Lisäksi influenssavirus muuttuu nopeasti. Sen RNA-perimän kopioinnissa syntyy paljon mutaatioita, ja jos samassa solussa on kaksi viruskantaa, ne voivat vaihtaa perimän osia. Näin viruksen pintaproteiinit muuttuvat vuodesta toiseen, eivätkä edellisen talven muistisolut enää tunnista niitä. Lisäksi vasta-aineiden ja muistisolujen määrä voi vähentyä ajan mittaan. Siksi influenssarokote päivitetään joka vuosi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 5,
+     "prompt": "Pohdi, mihin monisoluiset eliöt tarvitsevat solujen jakautumiskykyä elämänsä aikana.",
+     "hints": [
+      "Käy läpi elämänkaaren vaiheet: kasvu, kudosten uusiutuminen, vaurioiden korjaus ja lisääntyminen.",
+      "Anna esimerkkejä nopeasti uusiutuvista kudoksista (iho, suolen epiteeli, verisolut) ja korjaamisesta (haava, luunmurtuma). Muista kantasolut, meioosi sukusolujen synnyssä ja mitoosiin perustuva suvuton lisääntyminen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kasvuun ja yksilönkehitykseen: tsygootista kehittyy jakautumalla koko eliö.\n- Kudosten uusiutumiseen, esimerkiksi ihon, suolen epiteelin, verisolujen, luun, hiusten ja kynsien.\n- Kantasolut jakautuvat ja erilaistuvat ja mahdollistavat kudosten uusiutumisen.\n- Vaurioiden korjaamiseen, esimerkiksi haavojen ja luunmurtumien paranemiseen.\n- Sukusolujen muodostumiseen meioosissa (ihmisellä haploidit sukusolut).\n- Suvuttomaan lisääntymiseen mitoosin avulla, esimerkiksi sienieläimillä, laakamadoilla ja monilla kasveilla.\n\n**Esimerkkivastaus:** Monisoluinen eliö alkaa yhdestä solusta, tsygootista, joka jakautuu miljardeiksi soluiksi, kun yksilö kasvaa ja kehittyy. Aikuisenakin monet kudokset uusiutuvat jatkuvasti: ihon ja suolen pintasolut vaihtuvat päivien tai viikkojen välein, ja luuytimen kantasolut tuottavat koko ajan uusia verisoluja. Jakautumista tarvitaan myös vaurioiden korjaamiseen, esimerkiksi haavan umpeutumiseen ja luunmurtuman luutumiseen. Lisääntymisessä meioosi tuottaa haploideja sukusoluja, ja monet eliöt, kuten kasvit ja sienieläimet, voivat lisääntyä myös suvuttomasti mitoosin avulla.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 10,
+     "prompt": "Selitä lyhyesti yksilönkehityksen käsitteet apoptoosi, alkiorakkula ja neurulaatio. Liitä jokainen yhteen tai useampaan kehitysvaiheeseen: solunjakautumisvaihe, alkiovaihe, varsinainen sikiönkehitys.",
+     "hints": [
+      "Selitä jokaisesta käsitteestä, mitä se tarkoittaa ja missä kehityksen vaiheessa se tapahtuu. Huomaa, että yksi käsitteistä kuuluu useampaan vaiheeseen.",
+      "Apoptoosi on ohjelmoitu solukuolema, jota tapahtuu sekä alkio- että sikiövaiheessa (esim. sormien välit). Alkiorakkula on solunjakautumisvaiheen onttorakenteinen solurypäs, jonka sisäsolumassasta tulee alkio. Neurulaatio on alkiovaiheen tapahtuma, jossa ektodermista muodostuu hermostoputki."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Apoptoosi** on ohjelmoitu solukuolema, jonka solun omat säätelymekanismit käynnistävät.\n- Kehittyvästä alkiosta poistetaan sen avulla ylimääräisiä soluja, ja sikiöllä esimerkiksi sormien ja varpaiden välit muodostuvat apoptoosin avulla. Viallisia soluja poistetaan kaikissa vaiheissa.\n- Vaihe: **alkiovaihe ja varsinainen sikiönkehitys**.\n- **Alkiorakkula** on satojen solujen rypäs, jonka sisään on muodostunut nesteen täyttämä ontelo ja joka ei ole vielä kiinnittynyt kohdun seinämään.\n- Sen sisäsolumassasta kehittyy varsinainen alkio ja ulkosoluista sikiökalvot ja istukan sikiön puoleinen osa. Siinä on monikykyisiä kantasoluja.\n- Vaihe: **solunjakautumisvaihe**.\n- **Neurulaatio** on vaihe, jossa uloin alkiokerros (ektodermi) muodostaa hermostolevyn, joka kaartuu ja sulkeutuu hermostoputkeksi.\n- Hermostoputkesta kehittyvät aivot ja selkäydin eli keskushermosto.\n- Vaihe: **alkiovaihe**.\n\n**Esimerkkivastaus:** Apoptoosi on ohjelmoitua solukuolemaa, jossa solu tuhoaa itsensä hallitusti omien säätelymekanismiensa ohjaamana. Sitä tapahtuu alkiovaiheessa, kun ylimääräisiä soluja karsitaan, ja sikiönkehityksessä, kun esimerkiksi sormien väliset solut kuolevat ja sormet erkanevat. Alkiorakkula syntyy solunjakautumisvaiheessa, kun hedelmöittyneestä munasolusta jakautuneiden solujen rypään sisään muodostuu nesteontelo. Rakkulan sisäsolumassasta kehittyy alkio, ja ulkokerroksesta sikiökalvot ja istukan sikiön puoleinen osa. Neurulaatio tapahtuu alkiovaiheessa: alkion selkäpuolen ektodermi paksuuntuu hermostolevyksi, joka taipuu kouruksi ja sulkeutuu hermostoputkeksi. Hermostoputkesta kehittyvät aivot ja selkäydin.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Leikkokukkana käytetyltä neilikalta puuttuu sinistä väriä tuottava entsyymi ja sen geeni, mutta sinisille neilikoille olisi kysyntää (aineisto 8.A).",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 13,
+     "prompt": "Neilikalta puuttuu sinisen väriaineen delfinidiinin tuottamiseen tarvittava entsyymi ja sen geeni (aineistot 8.A ja 8.B). Florigene-yhtiön tutkijat eristivät petuniasta delfinidiiniä tuottavan entsyymin geenin ja liittivät sen agrobakteerin plasmidiin, johon lisättiin myös sopiva promoottori ja antibioottiresistenssigeeni. Lisäksi heillä oli valkokukkaisen neilikan steriili solukkoviljelmä. Selitä, miten tästä edetään myyntiin kasvatettaviin sinikukkaisiin neilikoihin.",
+     "hints": [
+      "Jaa prosessi vaiheisiin: plasmidi bakteeriin → oikeiden bakteerien valinta → geenin siirto kasvisoluihin → kasvien kasvattaminen soluista → sinisimpien valinta.",
+      "Plasmidi siirretään agrobakteeriin (lämpösokki tai sähköpulssi), ja muuntuneet bakteerit valitaan antibioottialustalla. Neilikkasoluviljelmä infektoidaan bakteereilla, jotka siirtävät plasmidin T-DNA-osan geenin kasvisolun perimään. Muuntuneista soluista kasvatetaan kasvihormonien avulla kokonaisia kasveja, jotka siirretään multaan. Lopuksi valitaan parhaiten siniset yksilöt ja lisätään ne."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Plasmidi siirretään agrobakteeriin (transformaatio), jota voidaan tehostaa lämpökäsittelyllä tai sähköpulssilla.\n- Bakteerit kasvatetaan antibioottia sisältävällä alustalla. Vain plasmidin saaneet bakteerit selviävät, koska niillä on antibioottiresistenssigeeni.\n- Plasmidissa voi olla myös merkkigeeni (esim. hohtogeeni) muuntuneiden kasvisolujen tunnistamiseksi.\n- Neilikan steriili solukkoviljelmä infektoidaan agrobakteereilla, joiden plasmidissa on delfinidiinientsyymin geeni. Infektiota tehostaa soluseinien vaurioittaminen.\n- Agrobakteeri siirtää plasmidin kasvisoluun. Plasmidin T-DNA-osa siirtää geenin kasvisolun tuman perimään.\n- Muuntuneet kasvisolut voidaan valita esimerkiksi herbisidi- tai antibioottiresistenssin avulla.\n- Kasvihormonien avulla muuntuneista soluista kasvatetaan kokonaisia kasveja, jotka siirretään lopulta multaan tavallisiin oloihin.\n- Kukan väriin vaikuttavat monet tekijät, eikä geeni ole kaikissa kasveissa yhtä aktiivinen (promoottorin toiminta vaihtelee), joten kasveista valitaan parhaiten siniset.\n- Sinikukkaisia neilikoita voi risteyttää muiden lajikkeiden kanssa haluttujen ominaisuuksien yhdistämiseksi.\n- Muuntogeenisten kasvien myyntiä säätelee tiukka lainsäädäntö (esim. EU:ssa), mikä hidastaa markkinoille pääsyä.\n\n**Esimerkkivastaus:** Ensin plasmidi, jossa ovat delfinidiinigeeni, promoottori ja antibioottiresistenssigeeni, siirretään agrobakteereihin esimerkiksi lämpösokilla tai sähköpulssilla. Bakteerit kasvatetaan antibioottia sisältävällä alustalla, jolloin vain plasmidin ottaneet bakteerit jäävät eloon. Näillä bakteereilla infektoidaan valkokukkaisen neilikan steriili solukkoviljelmä. Agrobakteeri siirtää luontaisesti osan plasmidistaan, T-DNA:n, kasvisolun tumaan, jolloin petunian geeni liittyy neilikan perimään. Muuntuneet solut voidaan valita antibiootti- tai herbisidialustalla. Valituista soluista kasvatetaan kasvihormonien avulla ensin kallus ja sitten versoja ja juuria, eli kokonaisia pieniä kasveja. Ne karaistaan ja siirretään kasvamaan multaan kasvihuoneeseen. Kun kasvit kukkivat, niistä valitaan ne, joissa geeni toimii parhaiten ja kukat ovat sinisimpiä, koska väriin vaikuttavat myös muut väriaineet ja solujen olot. Parhaita yksilöitä lisätään kasvullisesti myyntiin, ja niitä voidaan myös risteyttää muiden lajikkeiden kanssa. Ennen myyntiä muuntogeeniselle kasville tarvitaan viranomaisten lupa.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 2,
+     "prompt": "Päättele, miksi muuntogeenisessä neilikassa vain kukat ovat sinisiä eikä koko kasvi.",
+     "hints": [
+      "Kaikissa kasvin soluissa on sama perimä. Mieti, mikä ratkaisee, missä kudoksessa geeni ilmenee, ja mitä tehtävän plasmidiin liitettiin geenin lisäksi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Siirretty delfinidiinigeeni on kasvin jokaisessa solussa, samoin kuin muutkin geenit.\n- Geeniin liitettiin promoottori, joka on aktiivinen vain kukan (terälehtien) kehittyessä.\n- Juurissa, varressa ja lehdissä promoottori ei toimi, joten entsyymiä ei synny eikä väriainetta muodostu.\n\n**Esimerkkivastaus:** Siirretty geeni on neilikan jokaisessa solussa, mutta se ilmenee vain kukissa, koska tutkijat liittivät sen promoottoriin, joka käynnistää transkription vain kukan terälehtien kehittyessä. Muissa kudoksissa geeni pysyy hiljaa, joten sinistä väriainetta syntyy vain kukkiin. Kyse on geenien ilmentymisen säätelystä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 5,
+     "prompt": "Akvaarioon istutettiin vesikasveja (ahvenvita, kiehkuraärviä) ja eläimiä (särkiä, limakotiloita). Vesi pidettiin tasalämpöisenä ja akvaario päivänvalossa ikkunalla. Vedestä mitattiin kerran tunnissa 24 tunnin ajan happi- ja hiilidioksidipitoisuus (taulukko 9.A). Piirrä taulukon arvoista viivadiagrammi, joka näyttää molempien pitoisuuksien vuorokausivaihtelun.",
+     "hints": [
+      "Diagrammiin tarvitaan kaksi viivaa samoilla akseleilla. Mieti, mitä akseleille tulee, mitkä niiden nimet ja yksiköt ovat ja miten erotat viivat toisistaan.",
+      "Vaaka-akselille kellonaika 0–24 h (ei mittausnumeroa 1–25), pystyakselille pitoisuus (mg/l). Lisää selite (happi, hiilidioksidi) ja kuvaava otsikko."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Viivadiagrammi, jossa on kaksi muuttujaa: happipitoisuus ja hiilidioksidipitoisuus.\n- Vaaka-akselilla kellonaika 0–24 h, akseli nimetty.\n- Pystyakselilla pitoisuus, akseli nimetty ja yksikkö mg/l.\n- Selite, josta näkee, kumpi viiva on happi ja kumpi hiilidioksidi.\n- Kuvaava otsikko, esim. *Veden happi- ja hiilidioksidipitoisuus akvaariossa vuorokauden aikana*.\n\n**Esimerkkivastaus:** Taulukkolaskentaohjelmassa valitaan kellonaika ja kaksi pitoisuussaraketta ja luodaan viivadiagrammi, jonka vaaka-akselina on kellonaika. Vaaka-akselin otsikoksi tulee *kellonaika (h)*, pystyakselin otsikoksi *pitoisuus (mg/l)*, ja selitteessä viivat nimetään hapeksi ja hiilidioksidiksi. Valmiissa kuvaajassa happiviiva laskee aamuyöllä noin 2,4 mg/l:aan ja nousee iltapäivällä yli 11 mg/l:aan, kun taas hiilidioksidiviiva vaihtelee vähemmän, noin 3,3–6,5 mg/l.\n\n**Sudenkuoppa:** jos vaaka-akselille jää ohjelman oletuksena mittausten järjestysnumero 1–25 kellonajan 0–24 sijaan, tai pystyakselilta puuttuu yksikkö, pisteitä menetetään.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 8,
+     "prompt": "Tulkitse diagrammista, miten veden happipitoisuus muuttui vuorokauden aikana, ja selitä muutokset biologisesti.",
+     "hints": [
+      "Kuvaa ensin käyrän kulku (milloin pitoisuus laskee, milloin nousee, missä on minimi ja maksimi). Selitä sitten, mitkä prosessit tuottavat ja kuluttavat happea ja milloin.",
+      "Happipitoisuus laskee yöllä noin kello kuuteen asti (minimi noin 2,4 mg/l), nousee aamupäivästä ja on suurimmillaan iltapäivällä noin kello 16 (noin 11,3 mg/l), minkä jälkeen se laskee. Yhteyttäminen vaatii valoa, mutta soluhengitys kuluttaa happea koko ajan kaikilla eliöillä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Happipitoisuus pienenee yöllä ja on pienimmillään aamulla (noin 2,4 mg/l kello 6).\n- Pimeällä fotosynteesiä ei tapahdu, mutta kaikki eliöt, sekä eläimet että kasvit, kuluttavat happea soluhengityksessä.\n- Aamupäivällä valon lisääntyessä vesikasvit alkavat tuottaa happea fotosynteesissä, ja pitoisuus kasvaa nopeasti.\n- Pitoisuus on suurimmillaan iltapäivällä (noin 11,3 mg/l kello 16).\n- Illalla valo vähenee ja fotosynteesi hidastuu, jolloin hapenkulutus ylittää tuotannon ja pitoisuus alkaa laskea.\n\n**Esimerkkivastaus:** Happipitoisuus laskee koko yön, ja se on pienimmillään noin kello kuuden aikaan (noin 2,4 mg/l). Pimeällä vesikasvit eivät pysty yhteyttämään, mutta sekä kasvit että kalat ja kotilot käyttävät happea soluhengitykseen, joten happea kuluu mutta sitä ei tule lisää. Kun aamulla valoisuus kasvaa, kasvit alkavat yhteyttää ja vapauttaa happea veteen. Aamupäivällä happea syntyy enemmän kuin kuluu, ja pitoisuus kasvaa nopeasti, kunnes se on suurimmillaan iltapäivällä noin kello 16 (noin 11,3 mg/l). Illalla valo heikkenee, fotosynteesi hidastuu ja lopulta pysähtyy, joten soluhengityksen hapenkulutus alkaa taas pienentää pitoisuutta.\n\n**Sudenkuoppa:** pelkkä maininta, että fotosynteesi loppuu yöksi, ei selitä pitoisuuden laskua. Laskun aiheuttaa samaan aikaan jatkuva soluhengitys, joka kuluttaa happea. Hapen muutoksia ei myöskään voi selittää hiilidioksidin muutoksilla.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 7,
+     "prompt": "Tulkitse diagrammista, miten veden hiilidioksidipitoisuus muuttui vuorokauden aikana, ja selitä muutokset biologisesti.",
+     "hints": [
+      "Kuvaa käyrän kulku ja vertaa sitä happikäyrään. Mieti, mikä prosessi tuottaa hiilidioksidia koko ajan ja mikä kuluttaa sitä vain valoisalla.",
+      "Hiilidioksidipitoisuus kasvaa yöllä (enimmillään noin 6,5 mg/l aamulla), laskee aamupäivästä iltapäivään (vähimmillään noin 3,3 mg/l illalla) ja alkaa sitten taas kasvaa. Vertaa vaihteluvälin suuruutta happeen (noin 3,2 mg/l ja 8,9 mg/l)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hiilidioksidipitoisuus kasvaa yöllä, koska kasvit ja eläimet vapauttavat sitä soluhengityksessä, eikä fotosynteesi sido sitä.\n- Aamupäivällä pitoisuus alkaa pienentyä, kun fotosynteesi alkaa ja käyttää hiilidioksidia lähtöaineena.\n- Pitoisuus on pienimmillään illalla (noin 3,3 mg/l kello 18–19).\n- Illalla fotosynteesi hidastuu, jolloin soluhengityksen hiilidioksidia vapautuu sitomista nopeammin ja pitoisuus kasvaa taas.\n- Hiilidioksidipitoisuus vaihtelee vähemmän kuin happipitoisuus, koska soluhengitys jatkuu keskeytyksettä, mutta fotosynteesi tapahtuu vain valoisalla.\n\n**Esimerkkivastaus:** Hiilidioksidipitoisuus kasvaa yön aikana ja on suurimmillaan aamulla (noin 6,5 mg/l kello 6–8). Pimeällä kaikki akvaarion eliöt tuottavat soluhengityksessä hiilidioksidia, mutta kasvit eivät yhteytä, joten hiilidioksidia kertyy veteen. Kun valo lisääntyy aamupäivällä, vesikasvit sitovat hiilidioksidia fotosynteesissä, ja pitoisuus laskee. Pienimmillään se on illalla noin kello 18–19 (noin 3,3 mg/l). Hämärtyessä fotosynteesi hidastuu, eikä se enää riitä sitomaan soluhengityksessä syntyvää hiilidioksidia, joten pitoisuus alkaa taas kasvaa. Hiilidioksidipitoisuuden vaihtelu (noin 3 mg/l) on pienempää kuin happipitoisuuden (noin 9 mg/l), koska soluhengitys jatkuu tasaisesti koko vuorokauden, kun taas fotosynteesi tapahtuu vain valoisaan aikaan.\n\n**Sudenkuoppa:** hiilidioksidin kasvua yöllä ei voi selittää pelkästään fotosynteesin pysähtymisellä. Hiilidioksidia tuottaa samaan aikaan soluhengitys.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 3,
+     "prompt": "Selitä, mitä ekologinen tehokkuus tarkoittaa.",
+     "hints": [
+      "Ekologinen tehokkuus on hyötysuhde. Mieti, minkä energian osuutta se kuvaa ja mihin loppu energia kuluu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Ekologinen tehokkuus on hyötysuhde, joka kertoo, kuinka suuri osa ravinnon energiasta sitoutuu eliön biomassaan.\n- Sillä voidaan tarkoittaa myös sitä, kuinka suuri osa ravintoketjun tason energiasta siirtyy seuraavan tason käyttöön.\n- Loppu energia kuluu esimerkiksi soluhengitykseen, liikkumiseen, lämmöntuottoon ja lisääntymiseen tai poistuu ulosteissa (energian ohivirtaus).\n\n**Esimerkkivastaus:** Ekologinen tehokkuus kertoo, kuinka suuri osuus eliön ravinnosta saamasta energiasta sitoutuu sen omaan kudokseen eli biomassaan. Suurin osa energiasta ei sitoudu, vaan se kuluu soluhengityksessä liikkumiseen, lisääntymiseen ja lämmöntuottoon tai poistuu ulosteissa. Tätä sitoutumatta jäävää energiaa kutsutaan energian ohivirtaukseksi. Samasta syystä vain pieni osa ravintoketjun yhden tason energiasta siirtyy seuraavalle tasolle.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 7,
+     "prompt": "Aineiston 10.A kuvassa esitetään, miten heinäsirkan ja lehmän ravinnosta saama energia jakautuu eri käyttökohteisiin (ks. alkuperäinen kuva). Pohdi, mistä hyönteisen ja märehtijän ekologisen tehokkuuden ero johtuu.",
+     "hints": [
+      "Lue kuvasta kummankin eläimen biomassan kasvuun menevä osuus. Mieti sitten, mihin nauta käyttää energiaa, johon hyönteinen ei käytä sitä lainkaan.",
+      "Hyönteisellä biomassan kasvuun menee noin 29 %, naudalla noin 5 %. Naudalla energiaa kuluu ruumiinlämpöön (noin 18 %) ja maidontuotantoon (noin 15 %). Nauta hyödyntää ravintonsa paremmin (ulosteisiin menee pienempi osuus) pötsin mikrobien avulla, mutta tasalämpöisyys ja poikasen ruokkiminen vievät hyödyn."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Aineiston mukaan hyönteisen ekologinen tehokkuus (biomassan kasvu noin 29 %) on selvästi suurempi kuin naudan (noin 5 %).\n- Vaihtolämpöinen hyönteinen ei tarvitse energiaa oman lämpötilansa pitämiseen vakiona.\n- Nauta on tasalämpöinen, ja aineistossa lähes viidennes sen ravintoenergiasta kuluu ruumiinlämpöön.\n- Nauta hyödyntää ravintonsa paremmin: ulosteisiin menevä osuus on sillä pienempi (noin 37 % vs. 45 %). Pötsin mikrobit hajottavat selluloosaa.\n- Pötsin mikrobit kuluttavat kuitenkin itse energiaa ja tuottavat lämpöä.\n- Hyönteinen lisääntyy munimalla, mikä vie vähän energiaa. Naudan sikiön kehitys ja maidontuotanto vasikalle vievät paljon energiaa (aineistossa maito noin 15 %).\n- Naudan jalostaminen tuottamaan paljon maitoa ja kasvamaan nopeasti muuttaa sen energian käyttöä.\n\n**Esimerkkivastaus:** Kuvan mukaan heinäsirkan ravinnosta saamasta energiasta noin 29 % sitoutuu sen biomassaan, mutta lehmällä vain noin 5 %. Ero johtuu ennen kaikkea siitä, että nauta on tasalämpöinen ja käyttää lähes viidenneksen energiastaan ruumiinlämmön ylläpitoon, kun taas vaihtolämpöinen hyönteinen saa lämpönsä ympäristöstä. Lisäksi lypsävä lehmä käyttää noin 15 % energiasta maidontuotantoon, ja tiineys kuluttaa paljon energiaa, kun taas hyönteinen munii munansa vähällä energialla. Nauta tosin pystyy pötsinsä mikrobien avulla hajottamaan kasviravinnon selluloosaa, joten ulosteisiin jää pienempi osa energiasta kuin hyönteisellä. Mikrobit kuitenkin kuluttavat itsekin energiaa. Kokonaisuutena naudan hyötysuhde lihantuotannossa jää siksi paljon hyönteistä pienemmäksi.\n\n**Sudenkuoppa:** ero selitetään usein naudan suurella koolla tai pitkällä eliniällä. Ne vaikuttavat ravinnon tarpeeseen, mutta eivät suoraan hyötysuhteeseen. Kuvan prosentit ovat osuuksia syödystä energiasta.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 10,
+     "prompt": "Tuotteen hiilijalanjälki on sen koko elinkaaren aikana aiheuttamien kasvihuonekaasujen määrä. Yksittäispakatulla naudanlihaeinesaterialla se on suurempi kuin vastaavalla kasviproteiiniaterialla. Selitä, mistä hiilijalanjälki kertyy elinkaaren eri vaiheissa, ja arvioi, miksi naudanlihatuotteen jalanjälki on suurempi.",
+     "hints": [
+      "Jäsennä vastaus elinkaaren vaiheiden mukaan: raaka-aineiden tuotanto, jalostus ja pakkaaminen, kuljetus ja säilytys, käyttö ja hävikki sekä kierrätys ja hävitys. Kerro joka vaiheessa, miten päästöt syntyvät.",
+      "Naudanlihan suuremman jalanjäljen syitä: rehun viljely vaatii moninkertaisen peltoalan, märehtijän ruoansulatus tuottaa metaania, karjanhoito ja navetat kuluttavat energiaa, ja teurastus ja lihan käsittely lisäävät päästöjä. Muista ekologinen tehokkuus: suurin osa rehun energiasta ei päädy lihaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Raaka-aineet:** lannoitteiden ja torjunta-aineiden valmistus, maanmuokkaus ja sadonkorjuu tuottavat kasvihuonekaasuja.\n- **Jalostus:** raaka-aineiden kuljetus tehtaalle, tehtaiden energiankäyttö, pakkausmateriaalien valmistus ja jalostuksen hukka lisäävät päästöjä.\n- **Kuljetus ja jakelu:** valmiiden tuotteiden kuljetus ja kylmäsäilytys kuluttavat energiaa. Kaukaa tuotu ruoka aiheuttaa enemmän kuljetuspäästöjä kuin lähellä tuotettu.\n- **Käyttö:** lyhyen säilyvyyden takia osa aterioista jää myymättä ja päätyy hävikiksi, mikä kasvattaa jäljellä olevien aterioiden hiilijalanjälkeä.\n- **Kierrätys ja hävitys:** pakkausmateriaali vaikuttaa kierrätettävyyteen. Kierrätyskin tuottaa päästöjä, eivätkä kaikki kierrätä oikein.\n- **Naudanliha vs. kasvisateria:** naudan rehun kasvattamiseen tarvitaan paljon enemmän peltoa kuin kasvisruokaan, joten viljelyn päästöt ovat suuremmat.\n- Naudan ekologinen tehokkuus on pieni, joten suurin osa rehun energiasta kuluu soluhengitykseen, josta vapautuu hiilidioksidia.\n- Märehtijän ruoansulatuksessa syntyy metaania, joka on voimakas kasvihuonekaasu.\n- Karjanhoito (rakennukset, lämmitys, lanta) sekä teurastus ja lihan käsittely lisäävät päästöjä.\n\n**Esimerkkivastaus:** Valmisaterian hiilijalanjälki kertyy koko elinkaaren ajalta. Raaka-aineiden tuotannossa päästöjä syntyy lannoitteiden ja torjunta-aineiden valmistuksesta sekä maanmuokkauksesta ja sadonkorjuusta, joissa koneet käyttävät polttoainetta. Jalostuksessa raaka-aineet kuljetetaan tehtaalle, jossa ruoanvalmistus kuluttaa energiaa ja jossa syntyy hukkaa. Muovisten tai kartonkisten pakkausten valmistuskin tuottaa päästöjä. Valmiit ateriat kuljetetaan kauppoihin ja säilytetään kylmässä, mikä kuluttaa energiaa. Jos ateria vanhenee myymättä, kaikki siihen käytetty energia menee hukkaan. Lopuksi pakkauksen kierrätys tai hävittäminen aiheuttaa omat päästönsä. Naudanlihatuotteen jalanjälki on suurempi, koska nauta on huono muuttamaan rehua lihaksi: suurin osa rehun energiasta kuluu naudan omaan elämään, joten yhtä lihakiloa varten on viljeltävä moninkertainen määrä rehua ja siihen tarvitaan paljon peltoa. Lisäksi naudan pötsissä syntyy metaania, joka lämmittää ilmastoa hiilidioksidia voimakkaammin, ja navetat, lannan käsittely sekä teurastus lisäävät päästöjä. Kasviproteiini voidaan syödä suoraan ilman tätä välivaihetta.\n\n**Sudenkuoppa:** pelkkä elinkaaren vaiheiden luettelo ei riitä. Jokaisesta vaiheesta pitää kertoa, miten se tuottaa kasvihuonekaasuja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Aineiston 11.A mukaan oikeusgeneettisessä yksilöntunnistuksessa tutkitaan mikrosatelliitteja eli toistojaksoja. Selitä, mihin niiden käyttö perustuu.",
+     "hints": [
+      "Mikä mikrosatelliitti on, missä kohtaa perimää se on ja mikä siinä vaihtelee ihmisten välillä?",
+      "Toistojakso on muutaman emäsparin pituinen, ja toistojen määrä vaihtelee. Mieti, miksi geenien ulkopuolinen alue muuntelee paljon ja miksi tarvitaan useita kohtia. Kerro lopuksi, miten toistojaksot monistetaan ja erotellaan pituuden mukaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Mikrosatelliitit ovat lyhyiden, muutaman emäsparin mittaisten jaksojen toistoja geenien ulkopuolisilla alueilla.\n- Toistojen lukumäärä vaihtelee yksilöiden välillä.\n- Koska alueet eivät yleensä ole luonnonvalinnan kohteena, muuntelua on paljon.\n- Kun tutkitaan riittävän monta toistoaluetta (15–25), yksilön voi tunnistaa luotettavasti.\n- Näytteen DNA:sta monistetaan valitut toistoalueet PCR:llä, ja ne erotellaan pituuden (toistojen määrän) mukaan elektroforeesilla.\n\n**Esimerkkivastaus:** Mikrosatelliitit ovat perimän kohtia, joissa lyhyt, muutaman emäsparin jakso toistuu peräkkäin. Ne sijaitsevat yleensä geenien ulkopuolella, joten niiden muuttuminen ei vaikuta ominaisuuksiin, eikä luonnonvalinta karsi muuntelua. Siksi toistojen määrä vaihtelee paljon ihmisten välillä, ja jokainen perii kustakin kohdasta yhden version äidiltä ja toisen isältä. Kun tutkitaan 15–25 tällaista kohtaa, on erittäin epätodennäköistä, että kahdella eri ihmisellä olisi sama yhdistelmä. Tutkimuksessa valitut kohdat monistetaan PCR:llä ja erotellaan elektroforeesilla pituutensa mukaan, jolloin syntyy yksilöllinen DNA-tunniste.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 3,
+     "prompt": "Suuronnettomuuden jälkeen vainaja voidaan tunnistaa vertaamalla DNA-näytteitä. Pohdi, miksi vertailunäyte kannattaa ottaa lähisukulaiselta eikä kaukaiselta sukulaiselta.",
+     "hints": [
+      "Mieti, kuinka suuri osa perimästä on yhteistä vanhemman ja lapsen välillä ja mitä yhteiselle osuudelle tapahtuu jokaisessa sukupolvessa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Vanhempi ja lapsi jakavat puolet perimästään, joten tunnisteet ovat noin 50-prosenttisesti samanlaisia.\n- Jokaisessa sukupolvessa rekombinaatio ja sukusolujen muodostus sekoittavat alleeleja, joten yhteinen osuus pienenee.\n- Mitä kaukaisempi sukulainen, sitä vähemmän yhteisiä toistojaksoja ja sitä epävarmempi tunnistus.\n\n**Esimerkkivastaus:** Lapsi perii jokaisesta mikrosatelliittikohdasta toisen version äidiltä ja toisen isältä, joten vanhemman ja lapsen tunnisteista puolet täsmää varmasti. Jokaisessa sukupolvessa perimä sekoittuu ja yhteinen osuus pienenee puoleen, joten esimerkiksi serkun kanssa yhteisiä alleeleja on enää vähän, ja ne voivat olla yhteisiä myös sattumalta. Lähisukulaisen näyte antaa siksi paljon varmemman tunnistuksen.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 3,
+     "prompt": "Isyyttä selvitettiin ennen ABO-veriryhmien avulla. Selitä, miksi nykyään käytetään mikrosatelliitteja.",
+     "hints": [
+      "Mieti, montako erilaista ABO-veriryhmää on ja kuinka monella ihmisellä on sama veriryhmä. Mitä veriryhmällä voi osoittaa ja mitä ei?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- ABO-veriryhmiä on vain neljä, joten monella ihmisellä on sama veriryhmä, eikä veriryhmä ole yksilöllinen.\n- Veriryhmän avulla voi vain sulkea pois miehen, joka ei voi olla isä, mutta isyyttä ei voi osoittaa.\n- Mikrosatelliittitunniste on yksilöllinen, ja lapsen tunnisteesta puolet on peräisin äidiltä ja puolet isältä, joten isän voi tunnistaa luotettavasti.\n\n**Esimerkkivastaus:** ABO-järjestelmässä on vain neljä veriryhmää, joten sama veriryhmä on miljoonilla ihmisillä. Veriryhmän perusteella voi todeta, ettei mies voi olla lapsen isä, mutta ei sitä, että hän on isä. Mikrosatelliittitunniste on sen sijaan yksilöllinen. Kun lapsen tunnisteesta poistetaan äidiltä perityt alleelit, jäljelle jäävien alleelien täytyy löytyä isältä, joten isyys voidaan osoittaa lähes varmasti.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Lajeja tunnistetaan DNA-viivakoodauksella (aineisto 11.B). Selitä, mikä aineistossa mainittu DNA-viivakoodikirjasto on ja mihin sen käyttö perustuu.",
+     "hints": [
+      "Viivakoodikirjasto on tietokanta. Mieti, mitä siihen tallennetaan ja miten tuntematon näyte verrataan siihen. Muista, että viivakoodialueen muuntelun pitää olla pientä lajin sisällä ja suurta lajien välillä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- DNA-viivakoodikirjasto on tietokanta, johon on tallennettu eri lajien emäsjärjestykset samalta, viivakoodina käytettävältä geenialueelta (eläimillä mitokondrion COI-geeni, sienillä ITS-alue, kasveilla viherhiukkasen geenit).\n- Alue on valittu niin, että sen emäsjärjestys vaihtelee vähän lajin sisällä ja paljon lajien välillä.\n- Tuntemattoman näytteen viivakoodialue sekvensoidaan eli sen emäsjärjestys selvitetään.\n- Näytteen emäsjärjestystä verrataan kirjaston lajien vastaaviin alueisiin, ja paras vastaavuus kertoo lajin.\n\n**Esimerkkivastaus:** DNA-viivakoodikirjasto on tietokanta, johon on koottu mahdollisimman monen lajin emäsjärjestys samalta lyhyeltä geenialueelta, eläimillä yleensä mitokondrion COI-geenistä. Alue on valittu niin, että se on lähes sama saman lajin yksilöillä mutta erilainen eri lajeilla. Kun halutaan tunnistaa näyte, esimerkiksi toukka, ulostenäyte tai jauhettu kala, siitä eristetään DNA, viivakoodialue monistetaan ja sekvensoidaan, ja saatua emäsjärjestystä verrataan kirjastoon. Laji on se, jonka viivakoodi vastaa näytettä parhaiten.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.5",
+     "points": 5,
+     "prompt": "Suomen asutushistoriaa on tutkittu rautakautisten ja keskiaikaisten vainajien mitokondrio-DNA:sta. Selitä, miksi mitokondrion DNA sopii tällaiseen tutkimukseen erityisen hyvin.",
+     "hints": [
+      "Mieti, keneltä mitokondriot periytyvät ja mitä siitä seuraa rekombinaatiolle.",
+      "Mitokondrio-DNA on haploidi ja periytyy lähes aina vain äidiltä munasolun mukana, joten se ei sekoitu rekombinaatiossa. Muutoksia syntyy vain harvoin mutaatioina, jolloin voidaan seurata äitilinjoja sukupolvien yli."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Mitokondrioiden perimä on haploidi, ja lapsi saa mitokondriot äidiltään munasolun solulimassa.\n- Siksi rekombinaatiota ei tapahdu, ja sukupolvesta toiseen DNA muuttuu vain harvinaisten mutaatioiden kautta.\n- Mitokondrio-DNA:ssa on vähän geenien ulkopuolista aluetta, ja haitalliset mutaatiot karsiutuvat, joten DNA pysyy sukupolvesta toiseen hyvin samanlaisena.\n- Mitokondrio-DNA:n avulla voidaan muodostaa äitilinjoja, joiden avulla asutushistoriaa voidaan selvittää.\n- Suomen pienessä väestössä äitilinjoja on suhteellisen vähän, mikä helpottaa vertailua.\n- Hyvin harvoin mitokondrioita voi periytyä myös isältä, mutta sillä ei ole käytännön merkitystä äitilinjojen tulkinnassa.\n\n**Esimerkkivastaus:** Mitokondriot periytyvät lapselle lähes aina vain äidiltä, koska alkio saa ne munasolun solulimasta. Mitokondrion DNA on haploidi, eikä se sekoitu isän perimän kanssa rekombinaatiossa, joten se siirtyy äidiltä tyttärelle ja edelleen tämän lapsille lähes muuttumattomana. Eroja syntyy vain harvinaisista mutaatioista, jotka kertyvät hitaasti. Tämän ansiosta mitokondrio-DNA:n perusteella voidaan muodostaa äitilinjoja ja verrata muinaisten vainajien linjoja nykyisiin väestöihin. Näin voidaan päätellä, mistä suunnasta Suomen asukkaiden esiäidit ovat tulleet ja milloin. Lisäksi solussa on satoja mitokondrioita, joten mitokondrio-DNA:ta säilyy vanhoissa luissa enemmän kuin tuman DNA:ta.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

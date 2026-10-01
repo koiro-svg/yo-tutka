@@ -1,6 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "buildCommand": "python3 scripts/validate_tools.py",
+  "buildCommand": "python3 scripts/validate_tools.py && python3 scripts/validate_practice.py",
   "outputDirectory": "."
 }

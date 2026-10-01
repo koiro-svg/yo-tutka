@@ -1,0 +1,462 @@
+{
+ "subject": "kemia",
+ "session": "2021S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2021/Syksy/2021-09-23_KE_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2021-09-23_KE_fi/2021_s_ke.pdf",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään (15 p kukin)."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään (20 p kukin)."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintakohtaa (1.1–1.10, 2 p kukin):\n\n- 1.1 mikä on aina yhteistä saman alkuaineen neutraaleille atomeille\n- 1.2 metallihilan sidokset\n- 1.3 kiehumispiste-eroihin perustuva erotusmenetelmä\n- 1.4 pienin säde ioneista $\\ce{O^2-}$, $\\ce{F-}$, $\\ce{Mg^2+}$, $\\ce{Al^3+}$\n- 1.5 paineiden suhde: pullo (0,75 l, 9,0 g $\\ce{CO2}$, 25 °C) / rengas 2,25 bar\n- 1.6 reaktioyhtälö konsentraatiokuvaajasta (ks. alkuperäinen kuva)\n- 1.7 metaanin palamisen $\\Delta H$, kun vesi jää höyryksi (annettu $-890{,}4$ kJ nestemäiselle vedelle ja $-44{,}0$ kJ höyryn tiivistymiselle)\n- 1.8 $\\ce{2N2O5 <=> 4NO2 + O2}$: $\\ce{N2O5}$ 0,100 → 0,020 mmol/l; paljonko $\\ce{NO2}$ ja $\\ce{O2}$\n- 1.9 sama ainemäärä He, Ar ja Xe samassa paineessa ja lämpötilassa: mikä väite pätee\n- 1.10 neutraalin veden pH, kun $K_w=2{,}93\\cdot10^{-15}$ (mol/dm³)² (10 °C)",
+     "hints": [
+      "Käy kohdat läpi yksi kerrallaan. Laskukohdissa (1.5, 1.7, 1.8, 1.10) tee pieni oma lasku ennen kuin katsot vaihtoehtoja: ideaalikaasun tilanyhtälö, Hessin laki, stoikiometriset kertoimet ja $\\mathrm{pH}=-\\lg[\\ce{H3O+}]$.",
+      "Kohta kohdalta:\n- 1.1: neutraalissa atomissa elektroneja on yhtä monta kuin protoneja; isotoopit eroavat neutronimäärältään.\n- 1.2: metallisidos on elektronimeren sitoma vahva sidos, joka ei ole suuntautunut.\n- 1.4: sama elektronimäärä, joten suurin ydinvaraus vetää elektronit lähimmäs.\n- 1.5: $p=nRT/V$, $n=9{,}0/44{,}01$ mol.\n- 1.6: vertaa, kuinka paljon kunkin aineen konsentraatio muuttuu tasapainoon mennessä.\n- 1.7: reaktio (1) = (2) − 2 · (3).\n- 1.9: Avogadron laki; moolimassat ovat eri suuret.\n- 1.10: neutraalissa vedessä $[\\ce{H3O+}]=[\\ce{OH-}]=\\sqrt{K_w}$."
+     ],
+     "solution": "1. **1.1 C** – sama elektronien ja protonien lukumäärä. Alkuaineen määrää protonimäärä, ja neutraalissa atomissa elektroneja on yhtä monta. Massaluku ja neutronimäärä vaihtelevat isotoopista toiseen.\n2. **1.2 B** – metalliatomien välisiä vahvoja sidoksia. Metallisidos syntyy, kun delokalisoituneet elektronit sitovat metalliatomeja (kationeja) yhteen; sidos ei ole suuntautunut, eikä hilassa ole anioneja tai molekyylejä.\n3. **1.3 A** – tislaus. Tislauksessa haihtuvampi komponentti erotetaan höyrystämällä ja tiivistämällä.\n4. **1.4 D** – $\\ce{Al^3+}$. Kaikilla on 10 elektronia, mutta alumiinilla on eniten protoneja (13), joten se vetää elektronipilveä voimakkaimmin puoleensa.\n5. **1.5 C** – 3,0. $n(\\ce{CO2})=\\frac{9{,}0\\,\\mathrm{g}}{44{,}01\\,\\mathrm{g/mol}}=0{,}2045\\,\\mathrm{mol}$ ja $p=\\frac{nRT}{V}=\\frac{0{,}2045\\cdot 8{,}314\\cdot 298{,}15}{0{,}75\\cdot10^{-3}}\\,\\mathrm{Pa}\\approx 6{,}76\\,\\mathrm{bar}$. Suhde $\\frac{6{,}76}{2{,}25}\\approx 3{,}0$.\n6. **1.6 B** – $\\ce{A + 2B <=> C}$. Kuvaajassa A:n konsentraatio pienenee noin 0,48 mol/dm³, B:n noin 0,96 mol/dm³ ja C:n konsentraatio kasvaa noin 0,48 mol/dm³. Muutosten suhde on 1 : 2 : 1.\n7. **1.7 D** – $-802{,}4$ kJ. Reaktiosta (2) saadaan (1), kun kaksi moolia nestemäistä vettä höyrystetään: $\\Delta H_1=\\Delta H_2-2\\Delta H_3=-890{,}4\\,\\mathrm{kJ}+88{,}0\\,\\mathrm{kJ}=-802{,}4\\,\\mathrm{kJ}$.\n8. **1.8 A** – $x=0{,}160$ mmol/l ja $y=0{,}040$ mmol/l. $\\ce{N2O5}$:ta kului $0{,}080$ mmol/l, joten $\\ce{NO2}$:ta syntyi kaksinkertaisesti ($\\frac42$) ja happea puolet ($\\frac12$).\n9. **1.9 A** – kaikilla ilmapalloilla on sama tilavuus. Samassa paineessa ja lämpötilassa sama ainemäärä ideaalikaasua vie saman tilavuuden. Atomeja on yhtä monta, mutta massat ja tiheydet eroavat, koska moolimassat eroavat.\n10. **1.10 C** – 7,27. $[\\ce{H3O+}]=\\sqrt{2{,}93\\cdot10^{-15}}\\,\\mathrm{mol/dm^3}=5{,}41\\cdot10^{-8}\\,\\mathrm{mol/dm^3}$, joten $\\mathrm{pH}=7{,}27$. Vesi on silti neutraalia, koska $[\\ce{H3O+}]=[\\ce{OH-}]$.\n\n**Sudenkuoppa:** kohdassa 1.10 pH 7,00 on neutraali vain 25 °C:ssa. Kohdassa 1.5 paine on muutettava samaan yksikköön (bar) ennen suhteen laskemista.",
+     "answer": "1.1 C · 1.2 B · 1.3 A · 1.4 D · 1.5 C · 1.6 B · 1.7 D · 1.8 A · 1.9 A · 1.10 C",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 4,
+     "prompt": "Neljä aukkoa (1 p kukin), yksi sana kuhunkin: (1) yleisnimitys aineille, jotka nopeuttavat reaktiota kulumatta itse, (2) soluissa toimivien, reaktioita nopeuttavien proteiinien nimitys, (3) mitä nämä aineet pienentävät ja (4) miten niiden läsnä ollessa käy tasapainoreaktion käänteiselle reaktiolle, kun etenevä reaktio nopeutuu.",
+     "hints": [
+      "Mieti, miksi reaktio nopeutuu: katalyytti tarjoaa vaihtoehtoisen reaktiotien. Vaikuttaako se tasapainoasemaan vai vain siihen, kuinka nopeasti tasapaino saavutetaan?"
+     ],
+     "solution": "1. **katalyytti** – nopeuttaa reaktiota ja on reaktion lopussa muuttumattomana jäljellä.\n2. **entsyymi** – biologinen katalyytti, rakenteeltaan proteiini.\n3. **aktivoitumisenergia** (aktivaatioenergia) – katalyytti avaa reitin, jonka energiavalli on matalampi.\n4. **nopeutuu** – katalyytti madaltaa saman energiavallin molempiin suuntiin, joten etenevä ja palautuva reaktio nopeutuvat. Tasapainoasema ei muutu, vaan tasapaino saavutetaan nopeammin.\n\n**Sudenkuoppa:** väite, että katalyytti hidastaa käänteistä reaktiota tai siirtää tasapainoa, on väärä.",
+     "answer": "katalyytti · entsyymi · aktivoitumisenergia · nopeutuu",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 2,
+     "prompt": "Kaksi aukkoa: (1) nimitys voimakkaasti eksotermiselle hapetus-pelkistysreaktiolle, jossa alkuaine reagoi hapen kanssa, ja (2) mikä yhdisteryhmä tällaisessa reaktiossa syntyy.",
+     "hints": [
+      "Ajattele esimerkiksi magnesiumnauhan tai hiilen reaktiota ilman hapen kanssa. Mitä ilmiötä nimitetään, ja mitä happiyhdisteitä syntyy?"
+     ],
+     "solution": "1. **palaminen** (palamisreaktio) – alkuaine hapettuu ja vapautuu paljon lämpöä, esim. $\\ce{2Mg(s) + O2(g) -> 2MgO(s)}$.\n2. **oksidi** – tuote on alkuaineen oksidi, esimerkissä magnesiumoksidi.",
+     "answer": "palaminen · oksidi",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 3,
+     "prompt": "Kolme aukkoa: mitä metalli-ioni tekee (1) ja minkä hiukkasen suhteen (2), kun se pelkistyy, ja (3) minkä hiukkasen siirtyminen määrittelee happo-emäsreaktion.",
+     "hints": [
+      "Pelkistyminen on elektronien vastaanottamista (hapetusluku pienenee). Brønstedin mukaan happo luovuttaa ja emäs vastaanottaa saman hiukkasen."
+     ],
+     "solution": "1. **vastaanottaa** – pelkistyminen tarkoittaa elektronien vastaanottamista, esim. $\\ce{Cu^2+ + 2e- -> Cu}$.\n2. **elektronin** (tai useamman elektronin).\n3. **protonin** – happo-emäsreaktiossa siirtyy vetyioni $\\ce{H+}$ eli protoni.",
+     "answer": "vastaanottaa · elektronin · protonin",
+     "check": "hvp"
+    },
+    {
+     "id": "2.4",
+     "points": 3,
+     "prompt": "Kolme aukkoa: (1) ja (2) ovat yhdisteryhmät, joiden reaktiossa syntyy esteri ja vesi, ja (3) on nimitys esteröitymisen käänteiselle reaktiolle.",
+     "hints": [
+      "Esterin rakenne on $\\ce{R-COO-R'}$. Mistä kahdesta funktionaalisesta ryhmästä sen osat ovat peräisin, ja mikä reaktio pilkkoo sen takaisin veden avulla?"
+     ],
+     "solution": "1. **alkoholi** ja 2. **karboksyylihappo** (järjestyksellä ei väliä), esim. $\\ce{CH3COOH + CH3CH2OH <=> CH3COOCH2CH3 + H2O}$.\n3. **hydrolyysi** (esterihydrolyysi) – vesi pilkkoo esterin takaisin hapoksi ja alkoholiksi.",
+     "answer": "alkoholi · karboksyylihappo · hydrolyysi",
+     "check": "hvp"
+    },
+    {
+     "id": "2.5",
+     "points": 3,
+     "prompt": "Kolme aukkoa: (1) kvantitatiivisen työmenetelmän nimi, jossa tunnetun konsentraation liuosta lisätään tipoittain näytteeseen, (2) kohta, jossa näyte on juuri reagoinut kokonaan, ja (3) mittaväline, josta lisätyn liuoksen tilavuus luetaan.",
+     "hints": [
+      "Kyse on tavallisesta lukion kemian määritystyöstä, jossa indikaattorin värinmuutos kertoo lopetuskohdan."
+     ],
+     "solution": "1. **titraus**\n2. **ekvivalenttikohta** (ekvivalenttipiste) – reagoineet ainemäärät vastaavat reaktioyhtälön kertoimia.\n3. **byretti** – asteikollinen putki, jonka hanasta liuosta lisätään ja josta kulutus luetaan.\n\n**Sudenkuoppa:** ”päätepiste” on se kohta, jossa indikaattori vaihtaa väriä. Se on vain arvio ekvivalenttikohdasta.",
+     "answer": "titraus · ekvivalenttikohta · byretti",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 4,
+     "prompt": "Kirjoita (tai piirrä) reaktioyhtälöt niille kahdelle reaktiolle, joilla bioetanolista saadaan biopolyeteeniä (aineisto 3.A).",
+     "hints": [
+      "Ensin etanolista lohkeaa vesimolekyyli (eliminaatio eli dehydraatio), jolloin syntyy kaksoissidos. Sen jälkeen monomeerit liittyvät toisiinsa additiopolymeroitumisella."
+     ],
+     "solution": "1. Dehydraatio (esim. kuumennus happokatalyytin kanssa): $\\ce{CH3CH2OH -> CH2=CH2 + H2O}$\n2. Additiopolymerointi: kaksoissidos aukeaa, ja eteenimolekyylit liittyvät ketjuksi:\n$$n\\,\\ce{CH2=CH2} \\longrightarrow \\left[\\ce{-CH2-CH2-}\\right]_n$$\n\n**Sudenkuoppa:** polymeroinnissa ei lohkea vettä eikä muuta pientä molekyyliä. Kondensaatiopolymerointi on eri reaktiotyyppi.",
+     "answer": "$\\ce{CH3CH2OH -> CH2=CH2 + H2O}$; $n\\,\\ce{CH2=CH2} \\rightarrow \\left[\\ce{-CH2-CH2-}\\right]_n$",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 8,
+     "prompt": "Laske, paljonko (grammoina) hiilidioksidia ilmakehästä on sitoutunut yhteen kiloon (1,00 kg) biopolyeteeniä. Oletetaan, että polymeerin jokaista hiiliatomia kohden ilmakehästä on poistunut yksi $\\ce{CO2}$-molekyyli.",
+     "hints": [
+      "Selvitä, montako moolia hiiliatomeja kilossa polyeteeniä on. Polyeteenin toistuva yksikkö voidaan ajatella muotoon $\\ce{CH2}$ (tai $\\ce{C2H4}$, jolloin hiiliä on kaksi yksikköä kohden).",
+      "$M(\\ce{CH2})=14{,}026\\,\\mathrm{g/mol}$, joten $n(\\ce{C})\\approx 71{,}3\\,\\mathrm{mol}$. Koska $n(\\ce{CO2})=n(\\ce{C})$, jäljellä on vain massan laskeminen moolimassalla $M(\\ce{CO2})=44{,}01\\,\\mathrm{g/mol}$."
+     ],
+     "solution": "1. Polyeteenin toistuva yksikkö on $\\ce{-CH2-}$, ja $M(\\ce{CH2})=12{,}01+2\\cdot1{,}008=14{,}026\\,\\mathrm{g/mol}$.\n2. Hiiliatomien ainemäärä: $n(\\ce{C})=\\frac{m}{M}=\\frac{1000\\,\\mathrm{g}}{14{,}026\\,\\mathrm{g/mol}}=71{,}296\\,\\mathrm{mol}$.\n3. Oletuksen mukaan jokainen hiiliatomi vastaa yhtä $\\ce{CO2}$-molekyyliä: $n(\\ce{CO2})=n(\\ce{C})=71{,}296\\,\\mathrm{mol}$.\n4. $m(\\ce{CO2})=n\\cdot M=71{,}296\\,\\mathrm{mol}\\cdot 44{,}01\\,\\mathrm{g/mol}=3137{,}7\\,\\mathrm{g}\\approx 3140\\,\\mathrm{g}$.\n\n(Sama tulos saadaan hiilen massaosuudesta: $w(\\ce{C})=\\frac{12{,}01}{14{,}026}=85{,}63\\,\\%$, joten kilossa on 856,3 g hiiltä eli 71,30 mol.)\n\n**Vastaus: noin $3140\\,\\mathrm{g}$ eli $3{,}14\\,\\mathrm{kg}$ hiilidioksidia**\n\n**Sudenkuoppa:** jos lasketaan eteeniyksiköiden $\\ce{C2H4}$ ainemäärä (35,6 mol) ja unohdetaan, että kussakin on kaksi hiiltä, tulos jää puoleen.",
+     "answer": "$m(\\ce{CO2})\\approx 3140\\,\\mathrm{g}$ ($3{,}14\\,\\mathrm{kg}$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.3",
+     "points": 3,
+     "prompt": "Saako biopolyeteenistä tehdyn materiaalin lajitella biojätteeseen tai kotikompostiin? Perustele.",
+     "hints": [
+      "Aineiston mukaan biopohjainen polyeteeni on rakenteeltaan samaa kuin öljystä tehty. Ratkaiseeko kompostoitavuuden raaka-aineen alkuperä vai polymeerin rakenne?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- selvän kannan: ei saa laittaa biojätteeseen eikä kotikompostiin\n- perustelun: biopolyeteeni on rakenteeltaan ja ominaisuuksiltaan sama polymeeri kuin fossiilinen polyeteeni\n- johtopäätöksen: siksi se ei hajoa biologisesti kompostissa tai biojätteen käsittelyssä (”biopohjainen” ei tarkoita ”biohajoava”)\n\nEsimerkkivastaus: Biopolyeteeniä ei lajitella biojätteeseen eikä kotikompostiin. Vaikka hiili on peräisin kasveista, valmis polymeeri on täsmälleen samaa pitkäketjuista polyeteeniä kuin öljystä valmistettu. Mikrobit eivät pysty pilkkomaan sen hiilivetyketjuja kompostin olosuhteissa, joten se ei hajoa. Se lajitellaan muovipakkauksena.",
+     "answer": "Ei; biopolyeteeni on kemiallisesti samaa polyeteeniä kuin öljypohjainen, eikä se hajoa biologisesti.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Aineiston 4.A lähtöaine S on sitronellaali, $\\ce{OHC-CH2-CH(CH3)-CH2-CH2-CH=C(CH3)2}$, joka on piirretty tiettynä enantiomeerinä (hiilen 3 metyyliryhmä kiilasidoksella, hiilet numeroitu aldehydihiilestä alkaen). Esitä S:n enantiomeerin rakennekaava.",
+     "hints": [
+      "Etsi molekyylin stereokeskukset. Sitronellaalissa on vain yksi kiraalinen hiili (hiili 3). Enantiomeerissa sen konfiguraatio on käänteinen, mutta kaikki muu pysyy samana."
+     ],
+     "solution": "1. Ainoa stereokeskus on hiili 3, jossa on neljä eri ryhmää: $\\ce{-H}$, $\\ce{-CH3}$, $\\ce{-CH2CHO}$ ja $\\ce{-CH2CH2CH=C(CH3)2}$. Hiilten 6 ja 7 välinen kaksoissidos ei aiheuta cis–trans-isomeriaa, koska hiilessä 7 on kaksi metyyliryhmää.\n2. Aineiston S on (R)-sitronellaali (prioriteetit: $\\ce{CH2CHO}$ > $\\ce{CH2CH2\\ldots}$ > $\\ce{CH3}$ > H).\n3. Enantiomeeri piirretään samalla hiilirungolla, mutta hiilen 3 metyyliryhmä merkitään katkoviivakiilalla (osoittaa taaksepäin). Vaihtoehtoisesti koko molekyylin voi piirtää peilikuvana.\n4. Enantiomeeri on siis (S)-sitronellaali, eli (S)-3,7-dimetyyliokt-6-enaali.\n\n**Vastaus: sama rakenne $\\ce{OHC-CH2-CH(CH3)-CH2-CH2-CH=C(CH3)2}$, mutta hiilen 3 metyyli katkoviivakiilalla (S-konfiguraatio)**\n\n**Sudenkuoppa:** jos molekyylin vain kääntää tai piirtää ketjun toisin päin säilyttäen kiilat, saadaan sama yhdiste eikä enantiomeeriä.",
+     "answer": "(S)-sitronellaali: hiilen 3 metyyliryhmä katkoviivakiilalla kiilan sijaan",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 6,
+     "prompt": "Aineistossa 4.C on mentolin kolmiulotteinen rakenne. Missä konformaatiossa mentolin kuusirengas on, miksi se pysyy pääosin tässä konformaatiossa, ja miksi rakenteen jäykkyys on tärkeää viilentävän vaikutuksen kannalta?",
+     "hints": [
+      "Syklohekaanirenkaan tärkeimmät konformaatiot ovat tuoli ja vene. Mieti, kummassa jännitys on pienempi ja missä asemissa (aksiaalinen vai ekvatoriaalinen) isot substituentit ovat edullisimmin.",
+      "Mentolissa metyyli-, hydroksi- ja isopropyyliryhmä voivat olla kaikki samanaikaisesti ekvatoriaalisissa asemissa. Vaikutus syntyy, kun molekyyli sitoutuu kylmäaistimusta säätelevään reseptoriin, ja sitoutuminen vaatii sopivan avaruusmuodon."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- rengas on **tuolikonformaatiossa**\n- vene- ja kiertynyt venekonformaatio ovat energialtaan korkeampia, koska niissä on vääntö- ja steeristä jännitystä, joten ne ovat vähemmän pysyviä\n- mentolin kaikki kolme substituenttia ovat tuolissa ekvatoriaalisissa asemissa, mikä tekee juuri tästä tuolimuodosta erityisen edullisen (renkaan kääntyminen toiseen tuoliin siirtäisi kaikki aksiaalisiksi)\n- jäykkä rakenne pitää molekyylin kolmiulotteisen muodon oikeana\n- silloin molekyyli sopii kylmäreseptoriin (TRPM8) oikein ja sitoutuu siihen, mikä saa aikaan viileyden tunteen\n\nEsimerkkivastaus: Mentolin rengas on tuolikonformaatiossa. Tuolissa sidoskulmat ovat lähellä tetraedrikulmaa, eikä vierekkäisten hiilten vetyjen välillä ole pimennettyjä asentoja, joten jännitystä on vähän. Veneessä on vääntöjännitystä ja ”lipputanko”-vetyjen välistä hylkimistä, joten se on selvästi epäpysyvämpi. Lisäksi mentolissa metyyli, hydroksyyli ja isopropyyli ovat kaikki ekvatoriaalisissa asemissa, joten aksiaalista hylkimistä ei ole ja rengas pysyy lähes yksinomaan tässä muodossa. Viilentävä vaikutus perustuu siihen, että molekyyli sitoutuu hermopäätteiden kylmäreseptoriin. Sitoutuminen onnistuu vain, kun ryhmät ovat oikeissa paikoissa avaruudessa. Jäykkä rakenne säilyttää juuri tämän muodon, joten mentoli sopii reseptorin sitoutumiskohtaan.",
+     "answer": "Tuolikonformaatio; kaikki substituentit ekvatoriaalisina, joten vene on paljon epäpysyvämpi; jäykkä muoto sopii reseptoriin.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 3,
+     "prompt": "Kasveissa mentoli syntyy, kun ketoni mentoni pelkistyy entsyymin avulla. Esitä mentonin rakennekaava.",
+     "hints": [
+      "Kun ketoni pelkistyy, karbonyyliryhmästä $\\ce{C=O}$ tulee sekundäärinen alkoholiryhmä $\\ce{CH-OH}$. Tee mentolin rakenteeseen käänteinen muutos."
+     ],
+     "solution": "1. Mentolissa hydroksiryhmä on sekundäärisessä hiilessä. Pelkistyksessä $\\ce{C=O}$ on muuttunut ryhmäksi $\\ce{CH-OH}$.\n2. Mentonissa samassa renkaan hiilessä on siis karbonyyliryhmä, eikä siinä ole vetyä eikä OH-ryhmää. Muu rakenne on kuten mentolissa.\n3. Mentoni on 2-isopropyyli-5-metyylisykloheksanoni ($\\ce{C10H18O}$): kuusirengas, jonka hiilessä 1 on $\\ce{C=O}$, viereisessä hiilessä 2 isopropyyliryhmä $\\ce{-CH(CH3)2}$ ja hiilessä 5 metyyliryhmä.\n4. Stereokemia säilyy isopropyyli- ja metyylihiilissä samana kuin mentolissa. Luonnon mentoni on (2S,5R)-mentoni, mutta rakennekaava ilman stereomerkintöjä kertoo jo olennaisen.\n\n**Vastaus: 2-isopropyyli-5-metyylisykloheksanoni (mentolin OH-hiilessä karbonyyliryhmä)**",
+     "answer": "2-isopropyyli-5-metyylisykloheksanoni: mentolin $\\ce{CH-OH}$ tilalla $\\ce{C=O}$",
+     "check": "hvp"
+    },
+    {
+     "id": "4.4",
+     "points": 3,
+     "prompt": "Reaktiossa a) S muuttuu isomeerikseen T (isopulegoli), jossa on hydroksiryhmä ja isopropenyyliryhmä. Mistä S-molekyylin kohdasta on peräisin se vetyatomi, joka T:ssä on OH-ryhmässä? Perustelua ei vaadita.",
+     "hints": [
+      "Vertaa vetyatomien määrää reaktioon osallistuvissa hiilissä (1, 6, 7 ja 8) ennen ja jälkeen reaktion. Missä hiilessä vetyjä on reaktion jälkeen yksi vähemmän?"
+     ],
+     "solution": "1. Reaktio on renkaan sulkeva karbonyyli-een-reaktio: hiilten 1 ja 6 välille syntyy uusi $\\ce{C-C}$-sidos, ja kaksoissidos siirtyy hiilten 7 ja 8 välille (isopropenyyliryhmä).\n2. Samalla karbonyylin happi saa vetyatomin ja muuttuu OH-ryhmäksi.\n3. Hiilien 6 ja 7 vetymäärä ei muutu, mutta hiilessä 8 on ennen reaktiota kolme vetyä ja sen jälkeen kaksi ($\\ce{=CH2}$).\n4. Vety siirtyy siis hiileen 7 liittyvästä metyyliryhmästä.\n\n**Vastaus: hiileen 7 liittyvästä metyyliryhmästä (esim. hiili 8)**",
+     "answer": "Hiileen 7 liittyvästä metyyliryhmästä (hiili 8)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 11,
+     "prompt": "Videolla 5.A elektrolysoidaan laimeaa, hapanta natriumsulfaattiliuosta grafiittielektrodeilla. Liuokseen on lisätty bromikresolivihreää (keltainen happamassa, sininen emäksisemmässä). Kirjoita molempien elektrodien osareaktiot ja kokonaisreaktio, kerro kumpi osareaktio tapahtuu anodilla ja kumpi katodilla, ja selitä kemiallisesti videolla näkyvät havainnot.",
+     "hints": [
+      "Anodilla tapahtuu hapettuminen ja katodilla pelkistyminen. Kun vesi hapettuu, syntyy happikaasua, ja kun se pelkistyy, syntyy vetykaasua. Mieti, mitä ioneja kummallakin elektrodilla lisäksi syntyy ja miten ne näkyvät indikaattorin värissä.",
+      "Anodilla vesi hapettuu hapeksi ja vetyioneiksi, katodilla vesi pelkistyy vedyksi ja hydroksidi-ioneiksi. Kokonaisreaktiossa vetyä syntyy kaksi moolia yhtä happimoolia kohden. Havaintoja on kolme: kaasukuplat, kuplien määrien ero ja värinmuutokset elektrodien ympärillä."
+     ],
+     "solution": "**Osareaktiot ja kokonaisreaktio**\n1. Anodi (+), hapettuminen: $\\ce{2H2O(l) -> O2(g) + 4H+(aq) + 4e-}$\n2. Katodi (−), pelkistyminen: $\\ce{4H2O(l) + 4e- -> 2H2(g) + 4OH-(aq)}$\n3. Kokonaisreaktio (osareaktiot yhteen, $\\ce{4H+ + 4OH- -> 4H2O}$): $\\ce{2H2O(l) -> 2H2(g) + O2(g)}$\n\n**Havainnot ja niiden selitykset**\n\n4. Molemmilla elektrodeilla näkyy kaasukuplia: anodilla vapautuu happea, katodilla vetyä.\n5. Katodilla kuplia on selvästi enemmän kuin anodilla: kokonaisreaktion mukaan vetyä syntyy kaksi kertaa niin paljon kuin happea (sama lämpötila ja paine, joten tilavuussuhde on 2 : 1).\n6. Liuoksen väri muuttuu anodin ympärillä keltaiseksi: anodireaktiossa vapautuu $\\ce{H+}$-ioneja, liuos happamoituu, ja bromikresolivihreä on happamassa muodossaan keltainen.\n7. Katodin ympärillä väri muuttuu siniseksi: katodireaktiossa syntyy $\\ce{OH-}$-ioneja, liuos muuttuu emäksisemmäksi, ja indikaattori on emäsmuodossaan sininen.\n8. Natriumsulfaatti ei itse reagoi, vaan toimii elektrolyyttinä, joka johtaa virtaa.\n\n**Sudenkuoppa:** anodi ja katodi määritellään reaktion (hapettuminen/pelkistyminen) eikä pelkän navan perusteella. Elektrolyysissä anodi on kytketty virtalähteen plusnapaan.",
+     "answer": "Anodi: $\\ce{2H2O -> O2 + 4H+ + 4e-}$; katodi: $\\ce{4H2O + 4e- -> 2H2 + 4OH-}$; yhteensä $\\ce{2H2O -> 2H2 + O2}$",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 4,
+     "prompt": "Miten teollisen mittakaavan vesielektrolyysiä voi hyödyntää energiantuotannossa, ja mikä tekijä vaikuttaa ratkaisevasti prosessin hiilijalanjälkeen?",
+     "hints": [
+      "Mieti, mitä elektrolyysissä syntyvällä vedyllä voi tehdä ja mistä elektrolyysin vaatima energia tulee."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- elektrolyysillä tuotetaan vetyä polttoaineeksi: vety poltetaan tai siitä tehdään sähköä polttokennossa\n- vedyn avulla voi varastoida ylimääräistä aurinko- tai tuulisähköä myöhempää käyttöä varten\n- hiilijalanjälki riippuu ratkaisevasti siitä, miten elektrolyysin sähkö tuotetaan\n- päästöt ovat pienet, kun sähkö tulee uusiutuvista lähteistä (tuuli, aurinko, vesivoima), ja suuret, jos se tuotetaan fossiilisilla polttoaineilla\n\nEsimerkkivastaus: Elektrolyysissä syntyvä vety on energian kantaja. Sen voi polttaa tai muuttaa polttokennossa takaisin sähköksi, ja ainoa reaktiotuote on vesi. Vedyn avulla voi myös varastoida tuuli- ja aurinkosähköä silloin, kun sitä tuotetaan enemmän kuin kulutetaan. Elektrolyysi kuluttaa paljon sähköä, joten hiilijalanjälki määräytyy lähinnä sähkön tuotantotavasta. Uusiutuvalla sähköllä valmistetun vedyn päästöt ovat pienet, kun taas hiilivoimalla tuotettu vety voi aiheuttaa jopa enemmän päästöjä kuin fossiilisen polttoaineen käyttö suoraan.",
+     "answer": "Vety polttoaineeksi tai energiavarastoksi; hiilijalanjälki riippuu elektrolyysisähkön tuotantotavasta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Kaliumpermanganaatti hapettaa happamassa liuoksessa rauta(II)-ioneja: violetti $\\ce{MnO4-}$ pelkistyy värittömäksi $\\ce{Mn^2+}$-ioniksi. Kohdat nojaavat toisiinsa:\n\n1. (6.1, 3 p) Tasapainota yhtälö $\\ce{Fe^2+(aq) + MnO4-(aq) + H+(aq) -> Fe^3+(aq) + Mn^2+(aq) + H2O(l)}$.\n2. (6.2, 7 p) 1,10 g kidevedellistä rauta(II)sulfaattia $\\ce{FeSO4*7H2O}$ liuotettiin vahvaan happoon, ja liuoksen tilavuudeksi tuli 75,0 ml. Titrauksessa 0,0500 mol/l permanganaattiliuosta kului 15,6 ml, kunnes violetti väri jäi pysyväksi. Laske liuoksen $\\ce{Fe^2+}$-konsentraatio.\n3. (6.3, 5 p) Laske kiinteän näytteen puhtaus massaprosentteina.",
+     "hints": [
+      "Tasapainota hapetuslukujen avulla: mangaani pelkistyy hapetusluvusta +VII lukuun +II (5 elektronia), ja rauta hapettuu +II → +III (1 elektroni). Tasapainota lopuksi happiatomit vedellä ja vetyatomit $\\ce{H+}$-ioneilla. Titrauksessa ainemääräsuhde luetaan tasapainotetusta yhtälöstä.",
+      "Yhtälön mukaan $n(\\ce{Fe^2+})=5\\,n(\\ce{MnO4-})$, ja $n(\\ce{MnO4-})=7{,}80\\cdot10^{-4}\\,\\mathrm{mol}$. Puhtauden laskemiseen tarvitset tiedon, että $n(\\ce{FeSO4*7H2O})=n(\\ce{Fe^2+})$, sekä moolimassan $M(\\ce{FeSO4*7H2O})\\approx 278{,}0\\,\\mathrm{g/mol}$."
+     ],
+     "solution": "**6.1 Tasapainotus**\n1. Mn: +VII → +II, vastaanottaa 5 e⁻. Fe: +II → +III, luovuttaa 1 e⁻. Siksi yhtä permanganaatti-ionia kohden tarvitaan viisi rauta(II)-ionia.\n2. Permanganaatin 4 happiatomia muuttuvat 4 vesimolekyyliksi, joihin tarvitaan 8 $\\ce{H+}$.\n3. $\\ce{5Fe^2+(aq) + MnO4-(aq) + 8H+(aq) -> 5Fe^3+(aq) + Mn^2+(aq) + 4H2O(l)}$. Tarkistus: varaus vasemmalla $+10-1+8=+17$ ja oikealla $+15+2=+17$.\n\n**6.2 Konsentraatio**\n\n4. $n(\\ce{MnO4-})=cV=0{,}0500\\,\\mathrm{mol/l}\\cdot 0{,}0156\\,\\mathrm{l}=7{,}800\\cdot10^{-4}\\,\\mathrm{mol}$.\n5. Reaktioyhtälön mukaan $n(\\ce{Fe^2+})=5\\,n(\\ce{MnO4-})=3{,}900\\cdot10^{-3}\\,\\mathrm{mol}$.\n6. $c(\\ce{Fe^2+})=\\frac{n}{V}=\\frac{3{,}900\\cdot10^{-3}\\,\\mathrm{mol}}{0{,}0750\\,\\mathrm{l}}=0{,}0520\\,\\mathrm{mol/l}$.\n\n**6.3 Puhtaus**\n\n7. $M(\\ce{FeSO4*7H2O})=55{,}85+32{,}07+4\\cdot16{,}00+7\\cdot18{,}016=278{,}03\\,\\mathrm{g/mol}$.\n8. Jokaisessa kaavayksikössä on yksi $\\ce{Fe^2+}$, joten $n(\\ce{FeSO4*7H2O})=3{,}900\\cdot10^{-3}\\,\\mathrm{mol}$ ja $m=nM=3{,}900\\cdot10^{-3}\\,\\mathrm{mol}\\cdot278{,}03\\,\\mathrm{g/mol}=1{,}0843\\,\\mathrm{g}$.\n9. Puhtaus $=\\frac{1{,}0843\\,\\mathrm{g}}{1{,}10\\,\\mathrm{g}}\\cdot100\\,\\%=98{,}57\\,\\%\\approx 98{,}6\\,\\%$.\n\n**Vastaus: $\\ce{5Fe^2+ + MnO4- + 8H+ -> 5Fe^3+ + Mn^2+ + 4H2O}$; $c(\\ce{Fe^2+})=0{,}0520\\,\\mathrm{mol/l}$; puhtaus $98{,}6\\,\\%$**\n\n**Sudenkuoppa:** moolimassasta unohtuu kidevesi ($M(\\ce{FeSO4})=151{,}9\\,\\mathrm{g/mol}$), jolloin puhtaudeksi tulee mahdoton alle 60 %. Toinen tavallinen virhe on käyttää suhdetta 1 : 1.",
+     "answer": "$\\ce{5Fe^2+ + MnO4- + 8H+ -> 5Fe^3+ + Mn^2+ + 4H2O}$; $c(\\ce{Fe^2+})=0{,}0520\\,\\mathrm{mol/l}$; puhtaus $98{,}6\\,\\%$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 8,
+     "prompt": "Aineiston 7.A prosessin vaiheet 3–7 omin sanoin:\n- (3) uranyylinitraatin $\\ce{UO2(NO3)2}$ vesiliuokseen lisätään ammoniakkia ylimäärin, jolloin saostuu ammoniumdiuranaattia $\\ce{(NH4)2U2O7}$ ja liuokseen jää typpihappoa\n- (4) $\\ce{(NH4)2U2O7}$ kuumennetaan voimakkaasti hapen kanssa: syntyy $\\ce{UO3}$, NO ja vettä\n- (5) $\\ce{UO3}$ pelkistetään vetykaasulla $\\ce{UO2}$:ksi\n- (6) $\\ce{UO2}$ reagoi fluorivetyhapon kanssa: syntyy $\\ce{UF4}$\n- (7) $\\ce{UF4}$ reagoi fluorikaasun kanssa: syntyy $\\ce{UF6}$\n\nKirjoita vaiheiden 3–7 reaktioyhtälöt. Olomuotoja ei tarvitse merkitä.",
+     "hints": [
+      "Kirjoita ensin kunkin vaiheen lähtöaineet ja tuotteet kaavoina ja tasapainota vasta sitten. Vaiheessa 3 happi- ja vetyatomit eivät täsmää ilman vettä lähtöaineena. Vaiheessa 4 uraanin hapetusluku (+VI) ei muutu, mutta ammoniumin typpi hapettuu.",
+      "Vaiheessa 3 kahdesta uranyylinitraatista syntyy yksi $\\ce{(NH4)2U2O7}$ ja neljä $\\ce{HNO3}$. Vaiheessa 4 typpi hapettuu hapetusluvusta −III lukuun +II eli luovuttaa 5 elektronia, ja happimolekyyli vastaanottaa 4 elektronia. Tästä saat hapen kertoimen."
+     ],
+     "solution": "1. Vaihe 3: $\\ce{2UO2(NO3)2 + 2NH3 + 3H2O -> (NH4)2U2O7 + 4HNO3}$\n2. Vaihe 4: $\\ce{2(NH4)2U2O7 + 5O2 -> 4UO3 + 4NO + 8H2O}$. Neljä typpiatomia luovuttaa yhteensä 20 elektronia, joten tarvitaan viisi $\\ce{O2}$-molekyyliä.\n3. Vaihe 5: $\\ce{UO3 + H2 -> UO2 + H2O}$\n4. Vaihe 6: $\\ce{UO2 + 4HF -> UF4 + 2H2O}$\n5. Vaihe 7: $\\ce{UF4 + F2 -> UF6}$\n\nKaikki yhtälöt on tarkistettu laskemalla atomit ja varaukset molemmin puolin.\n\n**Sudenkuoppa:** vaiheessa 3 ammoniakkia on ylimäärin, joten se neutraloi syntyvän typpihapon ammoniumnitraatiksi: $\\ce{2UO2(NO3)2 + 6NH3 + 3H2O -> (NH4)2U2O7 + 4NH4NO3}$. Tämäkin on tasapainossa ja kemiallisesti perusteltu, mutta aineiston kuvauksen mukainen tuote on typpihappo. Vesi lähtöaineena unohtuu helposti.",
+     "answer": "(3) $\\ce{2UO2(NO3)2 + 2NH3 + 3H2O -> (NH4)2U2O7 + 4HNO3}$; (4) $\\ce{2(NH4)2U2O7 + 5O2 -> 4UO3 + 4NO + 8H2O}$; (5) $\\ce{UO3 + H2 -> UO2 + H2O}$; (6) $\\ce{UO2 + 4HF -> UF4 + 2H2O}$; (7) $\\ce{UF4 + F2 -> UF6}$",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 7,
+     "prompt": "Uranyyli-ioni on heikko happo: $\\ce{[UO2(H2O)4]^2+ + H2O <=> [UO2(H2O)3(OH)]+ + H3O+}$, $K_a=6{,}31\\cdot10^{-5}\\,\\mathrm{mol/dm^3}$. 10,0 g uraanirikastetta liuotettiin typpihappoon, ja vaiheen 2 jälkeen liuoksen tilavuus oli 500,0 ml ja pH 2,734. Kaikki uraani oletetaan uranyylinitraatiksi. Montako grammaa uraania rikasteessa oli?",
+     "hints": [
+      "Laske pH:sta oksoniumionien konsentraatio. Merkitse uranyyli-ionin alkukonsentraatiota $c$:llä ja kirjoita happovakion lauseke tasapainotilanteessa.",
+      "$x=[\\ce{H3O+}]=10^{-2{,}734}=1{,}845\\cdot10^{-3}\\,\\mathrm{mol/dm^3}$, ja $K_a=\\frac{x^2}{c-x}$. Ratkaise tästä $c$. Jokaisessa uranyyli-ionissa on yksi uraaniatomi."
+     ],
+     "solution": "1. Tasapainossa $[\\ce{H3O+}]=[\\ce{[UO2(H2O)3(OH)]+}]=x$ ja $[\\ce{[UO2(H2O)4]^2+}]=c-x$.\n2. $x=10^{-\\mathrm{pH}}=10^{-2{,}734}\\,\\mathrm{mol/dm^3}=1{,}8450\\cdot10^{-3}\\,\\mathrm{mol/dm^3}$.\n3. $K_a=\\frac{x^2}{c-x}$, josta $c=\\frac{x^2+K_a x}{K_a}=\\frac{(1{,}8450\\cdot10^{-3})^2+6{,}31\\cdot10^{-5}\\cdot1{,}8450\\cdot10^{-3}}{6{,}31\\cdot10^{-5}}\\,\\mathrm{mol/dm^3}=0{,}055792\\,\\mathrm{mol/dm^3}$.\n4. $n(\\ce{U})=n(\\text{uranyyli})=cV=0{,}055792\\,\\mathrm{mol/dm^3}\\cdot0{,}5000\\,\\mathrm{dm^3}=0{,}027896\\,\\mathrm{mol}$.\n5. $m(\\ce{U})=nM=0{,}027896\\,\\mathrm{mol}\\cdot238{,}03\\,\\mathrm{g/mol}=6{,}640\\,\\mathrm{g}\\approx6{,}64\\,\\mathrm{g}$.\n\n**Vastaus: uraania oli $6{,}64\\,\\mathrm{g}$**\n\n**Sudenkuoppa:** approksimaatio $c-x\\approx c$ antaa $c=x^2/K_a=0{,}0539\\,\\mathrm{mol/dm^3}$ ja massaksi 6,42 g. Virhe on noin 3 %, koska happo ei ole tässä tarpeeksi heikko approksimaatiolle. Uraanin moolimassaa ei myöskään saa korvata uranyylinitraatin moolimassalla.",
+     "answer": "$m(\\ce{U})\\approx 6{,}64\\,\\mathrm{g}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 7,
+     "prompt": "Kuvaajassa 8.A ovat ryhmien 16 ja 17 vety-yhdisteiden kiehumispisteet jaksoissa 2–5. Selitä molekyylien rakenteen ja sidosten avulla, miksi vesi ja vetyfluoridi kiehuvat selvästi korkeammassa lämpötilassa kuin ryhmänsä muut vety-yhdisteet.",
+     "hints": [
+      "Mitä erityistä on hapessa ja fluorissa verrattuna ryhmiensä raskaampiin alkuaineisiin? Mieti sidoksen poolisuutta ja molekyylien välisiä vuorovaikutuksia.",
+      "Kun vety on sitoutunut hyvin elektronegatiiviseen atomiin (O, F), sidos on voimakkaasti poolinen. Silloin molekyylien välille syntyy vetysidoksia, jotka ovat paljon vahvempia kuin muiden vety-yhdisteiden väliset dipoli-dipolisidokset."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- $\\ce{H2O}$:ssa ja $\\ce{HF}$:ssä vetyatomi on kiinnittynyt kovalenttisesti hyvin elektronegatiiviseen atomiin (O tai F)\n- sidoselektronit ovat siirtyneet lähemmäs happea tai fluoria, joten vetyyn jää voimakas positiivinen ja O- tai F-atomiin voimakas negatiivinen osittaisvaraus\n- viereisten molekyylien vastakkaisesti varautuneet osat vetävät toisiaan voimakkaasti puoleensa, ja tätä vahvaa dipoli-dipolisidosta kutsutaan vetysidokseksi\n- vetysidokset ovat vahvempia kuin rikin, seleenin, telluurin tai kloorin, bromin ja jodin vety-yhdisteiden väliset heikot dipoli-dipolisidokset\n- molekyylien erottaminen toisistaan kiehumisessa vaatii siksi enemmän energiaa, jolloin kiehumispiste on korkeampi\n\nEsimerkkivastaus: Happi ja fluori ovat jaksollisen järjestelmän elektronegatiivisimpia alkuaineita. Siksi $\\ce{O-H}$- ja $\\ce{F-H}$-sidosten elektronit ovat selvästi lähempänä happea tai fluoria, ja vetyatomiin jää voimakas positiivinen osittaisvaraus $\\delta^+$. Pieni, lähes paljas vetyatomi vetää puoleensa naapurimolekyylin hapen tai fluorin vapaata elektroniparia, jolloin syntyy vetysidos. $\\ce{H2S}$:ssä, $\\ce{HCl}$:ssä ja raskaammissa vety-yhdisteissä elektronegatiivisuusero on pienempi, ja molekyylien väliset dipoli-dipolisidokset ovat paljon heikompia. Vetysidosten katkaisemiseen tarvitaan enemmän energiaa, joten vesi ja vetyfluoridi kiehuvat huomattavasti korkeammassa lämpötilassa kuin ryhmiensä muut vety-yhdisteet.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 5,
+     "prompt": "Selitä, miksi kiehumispiste kasvaa kummassakin ryhmässä, kun siirrytään jakson 3 vety-yhdisteestä jakson 5 vety-yhdisteeseen ($\\ce{H2S -> H2Se -> H2Te}$ ja $\\ce{HCl -> HBr -> HI}$).",
+     "hints": [
+      "Näiden molekyylien välillä ei ole vetysidoksia. Mikä molekyylien välinen vuorovaikutus voimistuu, kun molekyylit ja niiden elektronipilvet kasvavat?",
+      "Alaspäin mentäessä atomin koko ja elektronimäärä kasvavat. Isompi elektronipilvi polarisoituu helpommin, jolloin hetkelliset dipolit ja niiden väliset dispersiovoimat (Londonin voimat) vahvistuvat."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- molekyylien välillä vaikuttavat dispersiovoimat (Londonin voimat)\n- ryhmässä alaspäin atomien koko ja elektronien määrä kasvavat\n- suurempi elektronipilvi polarisoituu helpommin, ja hetkellisiä varausjakaumia (hetkellisiä dipoleja) syntyy helpommin\n- dispersiovoimat vahvistuvat, ja kiehumispiste nousee\n\nEsimerkkivastaus: Rikin, seleenin ja telluurin sekä kloorin, bromin ja jodin vety-yhdisteiden välillä ei muodostu vetysidoksia, koska näiden atomien elektronegatiivisuus ei riitä. Molekyylejä pitävät yhdessä pääosin dispersiovoimat. Kun ryhmässä siirrytään alaspäin, atomit suurenevat ja niissä on enemmän elektroneja. Uloimmat elektronit ovat kauempana ytimestä, joten elektronipilvi muuttaa muotoaan helpommin ja molekyyliin syntyy helpommin hetkellinen dipoli, joka indusoi dipolin myös naapurimolekyyliin. Dispersiovoimat siis vahvistuvat molekyylin koon mukana, ja kiehumiseen tarvitaan enemmän energiaa.\n\n**Sudenkuoppa:** poolisuus ei selitä nousua, koska elektronegatiivisuusero itse asiassa pienenee alaspäin mentäessä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 3,
+     "prompt": "Selitä, miksi vetyfluoridin kiehumispiste on alempi kuin veden, vaikka fluori on hapen elektronegatiivisempi.",
+     "hints": [
+      "Laske, montako vetysidosta yksi molekyyli voi keskimäärin muodostaa: montako vetyatomia ja montako vapaata elektroniparia $\\ce{H2O}$:ssa ja $\\ce{HF}$:ssä on käytettävissä?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- sekä vesi- että vetyfluoridimolekyylien välille muodostuu vetysidoksia\n- vesimolekyylissä on kaksi vetyatomia ja kaksi vapaata elektroniparia, joten yksi vesimolekyyli voi olla mukana neljässä vetysidoksessa. $\\ce{HF}$:ssä on vain yksi vety, joten se muodostaa keskimäärin vain kaksi vetysidosta (ketjuja)\n- vedessä vetysidosten yhteenlaskettu voimakkuus on siksi suurempi, joten kiehumispiste on korkeampi\n\nEsimerkkivastaus: Yksittäinen $\\ce{F-H\\cdots F}$-vetysidos on jopa vahvempi kuin $\\ce{O-H\\cdots O}$-sidos, mutta vetyfluoridissa vetysidoksia on vähemmän. $\\ce{HF}$-molekyylissä on vain yksi vetyatomi, joten molekyylit liittyvät ketjuiksi, ja kukin molekyyli osallistuu kahteen vetysidokseen. Vesimolekyylissä on kaksi vetyatomia ja kaksi vapaata elektroniparia, joten se voi muodostaa neljä vetysidosta ja kolmiulotteisen verkon. Nesteen koossa pitävä vetysidosten kokonaisenergia on vedessä suurempi, joten vesi kiehuu korkeammassa lämpötilassa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Aineistossa 9.A salisyylihappo (2-hydroksibentseenikarboksyylihappo) reagoi etikkahappoanhydridin $\\ce{(CH3CO)2O}$ kanssa, jolloin syntyy asetyylisalisyylihappoa (aspiriinia) ja sivutuote X: salisyylihapon fenolinen OH-ryhmä muuttuu esteriryhmäksi $\\ce{-O-CO-CH3}$. Aineistossa 9.B on kaksi IR-spektriä (I ja II, alue 4000–1500 cm⁻¹) ja aineistossa 9.C korrelaatiotaulukko.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 8,
+     "prompt": "Toinen spektreistä on mitattu lähtöaineesta (salisyylihappo) ja toinen lopputuotteesta (asetyylisalisyylihappo). Päättele korrelaatiotaulukon avulla, kumpi on kumpi, ja perustele spektrien erojen ja yhtäläisyyksien avulla.",
+     "hints": [
+      "Mitkä funktionaaliset ryhmät ovat vain toisessa yhdisteessä? Salisyylihapossa on fenolinen OH-ryhmä, ja asetyylisalisyylihapossa on esteriryhmä. Etsi niille ominaiset piikit taulukosta ja spektreistä.",
+      "Spektrissä I näkyy selvä absorptio noin 3200 cm⁻¹:ssa (fenolin O–H), jota spektrissä II ei ole. Spektrissä II on kaksi vahvaa C=O-piikkiä, joista toinen on noin 1750 cm⁻¹:ssa (esteri). Molemmissa on leveä karboksyylihapon O–H-alue ja karboksyylihapon C=O-piikki."
+     ],
+     "solution": "**Erot**\n1. Spektrissä I on piikki noin 3200 cm⁻¹:n kohdalla, jota spektrissä II ei ole. Se osuu alkoholin tai fenolin O–H-sidoksen alueelle (3200–3550 cm⁻¹). Fenolinen OH-ryhmä on vain salisyylihapossa.\n2. Spektrissä II on vahva, terävä piikki noin 1750 cm⁻¹:ssa, jota spektrissä I ei ole. Se on esterin C=O-sidos (1735–1750 cm⁻¹). Esteriryhmä on vain asetyylisalisyylihapossa.\n\n**Yhtäläisyydet**\n\n3. Molemmissa on hyvin leveä absorptio noin 2500–3300 cm⁻¹:ssä: karboksyylihapon O–H-sidos (päällä myös C–H-venytyksiä).\n4. Molemmissa on vahva piikki noin 1650–1700 cm⁻¹:ssä: karboksyylihapon C=O-sidos (aromaattisessa yhdisteessä hieman matalammalla).\n5. Molemmissa on piikkejä noin 1500–1600 cm⁻¹:ssä: aromaattisen renkaan C=C-sidokset.\n\n**Johtopäätös**\n\n6. Molemmat ovat aromaattisia karboksyylihappoja, mutta vain toisessa on fenoli-OH ja vain toisessa esteri. **Spektri I on salisyylihapon (lähtöaine), ja spektri II on asetyylisalisyylihapon (lopputuote).**",
+     "answer": "Spektri I = salisyylihappo (fenolin O–H n. 3200 cm⁻¹), spektri II = asetyylisalisyylihappo (esterin C=O n. 1750 cm⁻¹)",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 8,
+     "prompt": "Mikä on synteesin sivutuote X (nimi tai rakennekaava)? Selitä perustellen, miten sen saa erotettua päätuotteesta.",
+     "hints": [
+      "Anhydridi $\\ce{(CH3CO)2O}$ luovuttaa fenolille vain toisen asetyyliryhmänsä. Mitä jää jäljelle? Vertaa sitten sivutuotteen ja aspiriinin poolisuutta ja liukoisuutta veteen.",
+      "X on pieni, hyvin poolinen ja veteen täysin sekoittuva karboksyylihappo. Aspiriinissa on suuri pooliton bentseenirengas, joten se liukenee huonosti kylmään veteen mutta hyvin orgaaniseen liuottimeen. Tätä eroa voi hyödyntää uutossa tai kiteiden pesussa."
+     ],
+     "solution": "1. Sivutuote X on **etikkahappo** (etaanihappo) $\\ce{CH3COOH}$: $\\ce{C7H6O3 + (CH3CO)2O -> C9H8O4 + CH3COOH}$.\n2. Erotus esimerkiksi **uuttamalla**: reaktioseos jaetaan veden ja veteen sekoittumattoman orgaanisen liuottimen (esim. etyyliasetaatti tai dietyylieetteri) kesken. Erotussuppilossa kerrokset erotetaan toisistaan.\n3. Asetyylisalisyylihappo jää orgaaniseen faasiin, koska sen suuri bentseenirengas tekee molekyylistä pääosin poolittoman.\n4. Etikkahappo siirtyy vesifaasiin, koska se on pieni ja poolinen molekyyli ja muodostaa karboksyyliryhmänsä kautta vetysidoksia veden kanssa.\n5. Orgaaninen liuotin haihdutetaan, jolloin jäljelle jää aspiriini.\n\nToinen hyväksyttävä tapa on kiteyttää tuote kylmästä vedestä ja suodattaa: aspiriini liukenee kylmään veteen huonosti ja jää suodattimelle, kun taas veteen sekoittuva etikkahappo kulkeutuu suodoksen mukana. Kiteet pestään kylmällä vedellä.\n\n**Vastaus: X on etikkahappo $\\ce{CH3COOH}$; sen voi erottaa esim. uuttamalla veteen, koska se on poolinen, kun taas aspiriini jää orgaaniseen faasiin**",
+     "answer": "X = etikkahappo $\\ce{CH3COOH}$; erotus esim. uutolla (etikkahappo vesifaasiin, aspiriini orgaaniseen faasiin)",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 4,
+     "prompt": "Molemmat aineet ovat huoneenlämmössä valkoisia kiteitä. Keksi IR-spektroskopian lisäksi toinen menetelmä, jolla aineet voi tunnistaa, ja perustele.",
+     "hints": [
+      "Mieti aineiden fysikaalisia ominaisuuksia, joita voi verrata taulukkoarvoihin, tai rakenteen eroa (fenolinen OH), jonka voi havaita jollakin spektroskopisella menetelmällä tai värireaktiolla."
+     ],
+     "solution": "Hyvä vastaus sisältää yhden menetelmän ja sen perustelun, esimerkiksi:\n- **Sulamispisteen määritys:** kummankin kiteiden sulamispiste mitataan ja verrataan taulukkoarvoihin (salisyylihappo noin 159 °C, asetyylisalisyylihappo noin 135 °C). Aineet eroavat selvästi, joten tunnistus onnistuu.\n- **NMR-spektroskopia:** molekyyleissä on eri määrä vety- ja hiiliatomeja erilaisissa kemiallisissa ympäristöissä. Esimerkiksi aspiriinin $^1$H-NMR-spektrissä näkyy asetyyliryhmän metyylivetyjen signaali (noin 2,3 ppm), jota salisyylihapossa ei ole. Spektriä verrataan tunnetun yhdisteen spektriin.\n- (Myös esim. rauta(III)kloridikoe: fenolinen OH antaa salisyylihapon kanssa violetin värin, aspiriinin kanssa ei.)\n\nEsimerkkivastaus: Mitataan kummankin aineen sulamispiste sulamispistelaitteella. Salisyylihapon sulamispiste on noin 159 °C, ja aspiriinin noin 135 °C. Se näyte, joka sulaa korkeammassa lämpötilassa, on salisyylihappoa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Messinki on kuparin ja sinkin seos. Näyteliuos N: 0,2553 g messinkiä liuotettiin väkevään typpihappoon, ja jäähtynyt liuos laimennettiin 100,0 ml:ksi. Spektrofotometriaa varten (aineisto 10.A) 5,00 ml liuosta N laimennettiin reagenssien kanssa 50,0 ml:ksi, ja kolmen rinnakkaisnäytteen absorbanssit mitattiin. Standardiliuosten $\\ce{Cu^2+}$-pitoisuudet (0–280 mg/l) ja absorbanssit ovat aineiston taulukossa. Sähkögravimetriassa (aineisto 10.B) kupari saostetaan platinakatodille: $\\ce{Cu^2+(aq) + 2e- -> Cu(s)}$.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 10,
+     "prompt": "Piirrä aineiston 10.A standardiliuosten perusteella standardisuora, määritä sen yhtälö ja laske messinkinäytteen kuparipitoisuus massaprosentteina (näytteiden absorbanssit 0,235, 0,232 ja 0,234).",
+     "hints": [
+      "Piirrä absorbanssi pitoisuuden funktiona ja sovita pisteisiin suora taulukkolaskennalla. Ratkaise suoran yhtälöstä mitattujen näytteiden pitoisuus. Muista, että mitattu liuos on laimennettu liuoksesta N.",
+      "Sovitteeksi saadaan noin $A=0{,}001459\\,\\frac{\\mathrm{l}}{\\mathrm{mg}}\\cdot c-0{,}0007$. Näytteiden keskimääräinen pitoisuus on noin 161 mg/l. Laimennuskerroin on $\\frac{50{,}0}{5{,}00}=10$, ja liuoksen N tilavuus on 0,1000 l."
+     ],
+     "solution": "1. Kuvaaja: vaaka-akselilla $\\ce{Cu^2+}$-pitoisuus (mg/l), pystyakselilla absorbanssi. Pisteet ovat hyvin suoralla, ja pienimmän neliösumman sovite on\n$$A=0{,}0014588\\,\\tfrac{\\mathrm{l}}{\\mathrm{mg}}\\cdot c-0{,}00069$$\n(Origon kautta pakotettu sovite $A=0{,}0014558\\,\\tfrac{\\mathrm{l}}{\\mathrm{mg}}\\cdot c$ käy myös, ja tulos muuttuu vain sadasosia.)\n2. Näytteiden absorbanssien keskiarvo on $\\bar A=0{,}2337$, josta $c=\\frac{0{,}2337+0{,}00069}{0{,}0014588}\\,\\mathrm{mg/l}=160{,}6\\,\\mathrm{mg/l}$. (Näytekohtaisesti 161,5, 159,5 ja 160,8 mg/l.)\n3. Mitattu liuos oli laimennettu kymmenkertaisesti (5,00 ml → 50,0 ml), joten liuoksessa N $c_N=10\\cdot160{,}6\\,\\mathrm{mg/l}=1606\\,\\mathrm{mg/l}$.\n4. Kuparin massa liuoksessa N: $m(\\ce{Cu})=c_N V=1606\\,\\mathrm{mg/l}\\cdot0{,}1000\\,\\mathrm{l}=160{,}6\\,\\mathrm{mg}$.\n5. Massaprosentti: $\\frac{160{,}6\\,\\mathrm{mg}}{255{,}3\\,\\mathrm{mg}}\\cdot100\\,\\%=62{,}9\\,\\%$ (näytekohtaisesti 63,3 %, 62,5 % ja 63,0 %).\n\n**Vastaus: kuparipitoisuus on $62{,}9\\,\\%$**\n\n**Sudenkuoppa:** laimennuksen unohtaminen antaa tulokseksi 6,3 %, mikä ei ole mahdollinen messingin koostumus (60–95 % kuparia).",
+     "answer": "$w(\\ce{Cu})\\approx 62{,}9\\,\\%$ (standardisuora $A\\approx0{,}001459\\,\\mathrm{l/mg}\\cdot c-0{,}0007$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.2",
+     "points": 6,
+     "prompt": "Sähkögravimetriaa varten pipetoitiin 50,0 ml näyteliuosta N. Platinakatodin massa oli ennen elektrolyysiä 12,0488 g ja sen jälkeen 12,1279 g. Laske messingin kuparipitoisuus massaprosentteina.",
+     "hints": [
+      "Katodin massan kasvu on saostuneen kuparin massa. Se kupari on peräisin vain osasta liuosta N.",
+      "Kuparia saostui 0,0791 g, ja se oli puolessa liuoksesta N (50,0 ml / 100,0 ml). Koko messinkinäytteessä kuparia on siis kaksinkertainen määrä."
+     ],
+     "solution": "1. Saostuneen kuparin massa: $m(\\ce{Cu})=12{,}1279\\,\\mathrm{g}-12{,}0488\\,\\mathrm{g}=0{,}0791\\,\\mathrm{g}$.\n2. 50,0 ml on puolet 100,0 ml:n liuoksesta N, joten koko liuoksessa kuparia on $2\\cdot0{,}0791\\,\\mathrm{g}=0{,}1582\\,\\mathrm{g}$.\n3. Massaprosentti: $\\frac{0{,}1582\\,\\mathrm{g}}{0{,}2553\\,\\mathrm{g}}\\cdot100\\,\\%=62{,}0\\,\\%$.\n\n**Vastaus: kuparipitoisuus on $62{,}0\\,\\%$**\n\n**Sudenkuoppa:** kun 0,0791 g jaetaan suoraan näytteen massalla, tulos on 31,0 %. Määrityksessä käytettiin vain puolet näytteestä.",
+     "answer": "$w(\\ce{Cu})\\approx 62{,}0\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Analysoi, mitkä tekijät voivat aiheuttaa virheitä spektrofotometriseen ja sähkögravimetriseen tulokseen. Näyteliuos N oletetaan virheettömäksi, ja reagenssit ja välineet puhtaiksi.",
+     "hints": [
+      "Käy läpi kummankin menetelmän työvaiheet: sähkögravimetriassa saostus, huuhtelu, kuivaus ja punnitus, spektrofotometriassa kalibrointi, näytteen käsittely ja kyvetti. Missä vaiheessa kuparia voi kadota tai massaa tai valon kulkua voi tulla lisää?"
+     ],
+     "solution": "Hyvä vastaus sisältää kummastakin menetelmästä useita virhelähteitä (ja kertoo, mihin suuntaan ne vaikuttavat), esimerkiksi:\n\nSähkögravimetria:\n- kaikki kupari ei ehdi saostua katodille (elektrolyysi lopetetaan liian aikaisin), jolloin tulos jää liian pieneksi\n- katodia ei ole kuivattu kunnolla ennen punnitusta, jolloin vesi kasvattaa massaa ja tulos on liian suuri\n- kuparia irtoaa verkkokatodilta huuhtelussa, kuivauksessa tai punnituksessa, jolloin tulos on liian pieni\n- (katodille saostuu myös jotain muuta, esim. sinkkiä, jos jännite ei pysy oikeana)\n\nSpektrofotometria:\n- standardiliuosten pitoisuuksissa tai kalibroinnissa on virhe, jolloin koko standardisuora on väärä\n- kyvetti on laitteessa väärin päin tai huonosti paikallaan, jolloin valo kulkee näytteen läpi eri tavalla kuin mittauksessa\n- kyvetissä on ilmakuplia, sormenjälkiä, likaa tai naarmuja, jotka lisäävät näennäistä absorbanssia\n- lisäksi pipetointi-, punnitus- ja laitevirheet sekä se, ettei värikompleksi ole muodostunut kokonaan (reagenssia liian vähän)\n\nEsimerkkivastaus: Sähkögravimetrian tulos (62,0 %) on hieman pienempi kuin spektrofotometrian tulos (62,9 %). Tämä sopii siihen, että kaikki kupari ei ehkä saostunut katodille tai sitä karisi verkosta huuhtelussa. Jos katodi punnittiin kosteana, virhe olisi päinvastainen. Spektrofotometriassa tulos riippuu standardisuorasta: virheellinen standardiliuos tai kyvetin naarmut, sormenjäljet tai ilmakuplat muuttavat absorbanssia ja siten laskettua pitoisuutta. Myös kyvetin asento ja puhtaus vaikuttavat, koska absorbanssi riippuu valon kulkemasta matkasta näytteessä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Aineiston 11.A mukaan organometalliyhdisteet (esim. dimetyyli- ja dietyylisinkki, organolitiumyhdisteet) ovat usein itsestään ilmassa syttyviä. Organolitiumyhdiste liittyy aldehydin tai ketonin karbonyylihiileen, jolloin syntyy litiumalkoksidi. Kun lisätään vettä, siitä muodostuu alkoholi ja LiOH. Esimerkissä linalooli $\\ce{(CH3)2C=CH-CH2-CH2-C(CH3)(OH)-CH=CH2}$ valmistetaan dietyylieetterissä organolitiumyhdisteestä I, $\\ce{(CH3)2C=CH-CH2-CH2Li}$, ja ketonista II, $\\ce{CH3-CO-CH=CH2}$.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 3,
+     "prompt": "Kun sinkkiä kuumennetaan nestemäisen jodietaanin kanssa, syntyy dietyylisinkkiä (neste) ja kiinteää sinkkijodidia. Kirjoita reaktioyhtälö olomuotoineen.",
+     "hints": [
+      "Dietyylisinkin kaava on $\\ce{(CH3CH2)2Zn}$ ja sinkkijodidin $\\ce{ZnI2}$. Kahdessa jodietaanimolekyylissä on juuri tarvittavat kaksi etyyliä ja kaksi jodia."
+     ],
+     "solution": "1. Lähtöaineet: $\\ce{Zn(s)}$ ja $\\ce{CH3CH2I(l)}$. Tuotteet: $\\ce{(CH3CH2)2Zn(l)}$ ja $\\ce{ZnI2(s)}$.\n2. Kaksi etyyliryhmää ja kaksi jodia vaativat kaksi jodietaania, ja tuotteissa on kaksi sinkkiatomia.\n3. $\\ce{2CH3CH2I(l) + 2Zn(s) -> (CH3CH2)2Zn(l) + ZnI2(s)}$\n\n**Sudenkuoppa:** summakaavat kuten $\\ce{C4H10Zn}$ ja $\\ce{I2Zn}$ eivät kerro rakennetta, joten niitä ei hyväksytä.",
+     "answer": "$\\ce{2CH3CH2I(l) + 2Zn(s) -> (CH3CH2)2Zn(l) + ZnI2(s)}$",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 2,
+     "prompt": "Metyylilitium reagoi kiivaasti veden kanssa: syntyy metaania, ja lämpöä vapautuu. Kirjoita reaktioyhtälö vesiliuoksessa tapahtuvalle reaktiolle (metyylilitiumin olomuotoa ei tarvitse merkitä).",
+     "hints": [
+      "Metyylilitiumin hiili käyttäytyy kuin hyvin vahva emäs ($\\ce{CH3-}$): se ottaa vesimolekyyliltä protonin. Mitä vedestä jää jäljelle, ja minkä yhdisteen se muodostaa litiumin kanssa?"
+     ],
+     "solution": "1. Metyyliryhmä ottaa vedeltä protonin, jolloin syntyy metaania. Jäljelle jäävä hydroksidi-ioni muodostaa litiumin kanssa litiumhydroksidia, joka jää liuokseen.\n2. $\\ce{CH3Li + H2O(l) -> CH4(g) + LiOH(aq)}$",
+     "answer": "$\\ce{CH3Li + H2O(l) -> CH4(g) + LiOH(aq)}$",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Kuvaile ja perustele metyylilitiumin poolisuus. Millaisen sidoksen metyylilitium muodostaa liuottimena olevan dietyylieetterin kanssa?",
+     "hints": [
+      "Vertaa hiilen ja litiumin elektronegatiivisuuksia. Mitä dietyylieetterin happiatomissa on, mikä voi vuorovaikuttaa positiivisesti osittaisvarautuneen litiumin kanssa?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- $\\ce{C-Li}$-sidos on erittäin poolinen, ja se on poolisen kovalenttisen sidoksen ja ionisidoksen rajalla\n- perustelu: elektronegatiivisuusero on noin 1,5 (C 2,5, Li 1,0), joten hiileen tulee negatiivinen ja litiumiin positiivinen (osittais)varaus\n- eetterin happiatomin vapaa elektronipari ja litium muodostavat sidoksen, joka on koordinaatiosidos tai ioni-dipolisidos\n- sidos syntyy eetterin hapen ja metyylilitiumin litiumatomin välille (litiumiin voi koordinoitua 1–3 eetterimolekyyliä)\n\nEsimerkkivastaus: Hiilen elektronegatiivisuus on noin 2,5 ja litiumin noin 1,0. Ero on noin 1,5, joten sidoselektronit ovat vahvasti hiilen puolella: hiili on negatiivisesti ja litium positiivisesti osittaisvarautunut, ja sidos on lähes ioninen. Siksi metyylilitium on voimakkaasti poolinen yhdiste. Dietyylieetterin happiatomissa on kaksi vapaata elektroniparia. Happi luovuttaa elektroniparin elektronivajaalle, positiivisesti varautuneelle litiumille, ja syntyy koordinaatiosidos (voi ajatella myös ioni-dipolivuorovaikutuksena), esim. $\\ce{(CH3CH2)2O->Li-CH3}$. Eetteri siis liuottaa ja stabiloi metyylilitiumia reagoimatta sen kanssa.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Linaloolin voi valmistaa myös metyylilitiumista samalla periaatteella kuin aineiston esimerkissä. Mikä on silloin toinen lähtöaine? Esitä sen rakennekaava.",
+     "hints": [
+      "Metyylilitium tuo karbonyylihiileen metyyliryhmän, ja karbonyylihiilestä tulee linaloolin OH-hiili. Poista linaloolin OH-hiilestä yksi metyyli ja muuta OH-ryhmä karbonyyliryhmäksi."
+     ],
+     "solution": "1. Linaloolissa OH-hiileen liittyvät $\\ce{-OH}$, $\\ce{-CH3}$, vinyyliryhmä $\\ce{-CH=CH2}$ ja ketju $\\ce{-CH2-CH2-CH=C(CH3)2}$.\n2. Uusi $\\ce{C-C}$-sidos syntyy metyylilitiumin metyylin ja karbonyylihiilen välille. Kun tämä metyyli poistetaan ja $\\ce{C-OH}$ korvataan ryhmällä $\\ce{C=O}$, saadaan lähtöaineena toimiva ketoni.\n3. Ketoni on $\\ce{CH2=CH-CO-CH2-CH2-CH=C(CH3)2}$, eli 7-metyyliokta-1,6-dien-3-oni.\n4. Reaktio: $\\ce{CH3Li}$ + ketoni → litiumalkoksidi, josta vesi vapauttaa linaloolin ja $\\ce{LiOH}$:n.\n\n**Vastaus: 7-metyyliokta-1,6-dien-3-oni, $\\ce{CH2=CH-CO-CH2-CH2-CH=C(CH3)2}$**",
+     "answer": "$\\ce{CH2=CH-CO-CH2-CH2-CH=C(CH3)2}$ (7-metyyliokta-1,6-dien-3-oni)",
+     "check": "hvp"
+    },
+    {
+     "id": "11.5",
+     "points": 7,
+     "prompt": "Opiskelija halusi tehdä metyylilitiumsynteesin kahdella muutoksella: (1) suojakaasuksi kuivattua ilmaa, jotta kosteus ei haittaa, ja (2) liuottimeksi etanolia dietyylieetterin sijaan, koska eetteri syttyy helpommin. Ohjaaja kielsi kokeen. Perustele, mitä vaaroja muutoksiin liittyy.",
+     "hints": [
+      "Mieti kummastakin muutoksesta erikseen: mikä ilmassa on vaarallista metyylilitiumille kosteuden lisäksi? Onko etanolissa ryhmä, joka reagoi metyylilitiumin kanssa samoin kuin vesi?",
+      "Kuivassakin ilmassa on happea, ja metyylilitium voi syttyä sen kanssa itsestään. Etanolin OH-ryhmä on protonin lähde kuten vesi: $\\ce{CH3Li + CH3CH2OH -> CH4 + CH3CH2OLi}$. Mieti lopuksi näiden reaktioiden seurauksia: lämpö, syttyvä kaasu, paine ja syövyttävät tuotteet."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n\nMuutos 1 (kuiva ilma suojakaasuna):\n- kuivassakin ilmassa on noin 21 % happea\n- metyylilitium reagoi hapen kanssa\n- ja voi syttyä itsestään palamaan (pyroforinen aine)\n\nMuutos 2 (etanoli liuottimena):\n- etanoli reagoi metyylilitiumin kanssa veden tapaan, koska siinä on happamia OH-vetyjä (ja etanolissa on usein myös vettä)\n- syntyy metaania ja litiumetoksidia: $\\ce{CH3Li + CH3CH2OH(l) -> CH4(g) + CH3CH2OLi}$\n- metyylilitium tuhoutuu, joten haluttua synteesiä ei tapahdu\n\nVaaralliset seuraukset (useita):\n- reaktiot ovat voimakkaasti eksotermisiä\n- syttyvä metaani tai liuotin voi syttyä palamaan, tai voi syntyä räjähtävä kaasuseos\n- kaasua kehittyy nopeasti, paine kasvaa ja seos voi kuohua yli astiasta\n- tuotteena syntyy voimakkaasti emäksistä, syövyttävää litiumhydroksidia tai -alkoksidia\n- kuumuus tai tulipalo aiheuttaa palovammoja\n\nEsimerkkivastaus: Ohjaaja oli oikeassa. Kuivattu ilma poistaa vain kosteuden, mutta siinä on yhä happea. Metyylilitium reagoi hapen kanssa ja voi syttyä itsestään, kuten aineiston organometalliyhdisteet. Suojakaasun pitää olla inertti, esimerkiksi typpi tai argon. Etanoli taas ei ole sopiva liuotin, koska sen hydroksyyliryhmän vety reagoi metyylilitiumin kanssa kuten vesi: syntyy metaania ja litiumetoksidia. Reaktio on kiivas ja lämpöä vapauttava. Se voi sytyttää syntyvän metaanin ja etanolihöyryn tai aiheuttaa räjähdyksen, ja nopea kaasunkehitys voi saada seoksen kuohumaan yli. Syntyvä emäksinen alkoksidi on lisäksi syövyttävää. Dietyylieetteri on tulenarka, mutta se ei reagoi metyylilitiumin kanssa, ja se stabiloi yhdistettä koordinoitumalla litiumiin.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

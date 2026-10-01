@@ -1,0 +1,418 @@
+{
+ "subject": "biologia",
+ "session": "2021S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2021/Syksy/2021-09-15_BI_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2021-09-15_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p)."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (1.1–1.10), joissa jokaisessa valitaan yksi paras vaihtoehto viidestä. Aiheet: populaation geenivarasto, järven rehevöityminen, eritettävien proteiinien pakkaaminen, transkription aloituskohta, kloonatun tiikerin perimä, sukupuoleen kytkeytyneet sairaudet, ihmisen lämmöntuotanto, ekosysteemipalvelut, immuunipuolustus ja populaatioekologia. Kohdissa 1.8–1.10 haetaan se vaihtoehto, joka *ei* sovi joukkoon tai on väärin. Oikea valinta 2 p, väärä tai tyhjä 0 p. Vaihtoehdot ks. alkuperäinen koe.",
+     "hints": [
+      "Tarkista jokaisesta kohdasta ensin, haetaanko oikeaa vai virheellistä väitettä. Karsi vaihtoehdot, joissa on ehdoton sana (vain, kaikki, aina) tai syy ja seuraus väärin päin.",
+      "Kohta kohdalta: 1.1 mikä tuottaa uusia alleeliyhdistelmiä · 1.2 mikä reagoi ravinnelisäykseen ensimmäisenä · 1.3 mikä soluelin lajittelee proteiinit rakkuloihin · 1.4 mihin RNA-polymeraasi kiinnittyy · 1.5 kenen tuman DNA:ta klooni kantaa · 1.6 montako X-kromosomia miehellä on · 1.7 missä soluissa energiaa kuluu eniten · 1.8 mikä vaihtoehto on ihmisen rakentama ratkaisu eikä luonnon tuottama hyöty · 1.9 antigeenin oikea määritelmä · 1.10 mitä pullonkaula tekee perinnölliselle muuntelulle."
+     ],
+     "solution": "Kirjaimet viittaavat vaihtoehtojen järjestykseen alkuperäisessä koenäkymässä (A = ylin).\n\n- **1.1 E** – uudet alleeliyhdistelmät syntyvät suvullisessa lisääntymisessä. Meioosin tekijäinvaihdunta, vastinkromosomien satunnainen erkaneminen ja hedelmöitys sekoittavat alleeleja joka sukupolvessa. Mutaatiot ja muuttoliike päinvastoin tuovat populaatioon uusia alleeleja, eikä geenivarasto ole pysyvä vakaassakaan ympäristössä.\n- **1.2 D** – ensimmäisenä runsastuvat planktonlevät, koska ne lisääntyvät nopeasti ja käyttävät lisäravinteet heti. Sisäistä kuormitusta on myös matalissa järvissä, rehevöityminen ei ole sama asia kuin saastuminen, kasvibiomassa kasvaa eikä pienene, ja ravinteista ratkaisee minimitekijä (usein fosfori).\n- **1.3 B** – Golgin laite muokkaa, lajittelee ja pakkaa karkean solulimakalvoston ribosomeilla tehdyt proteiinit kalvorakkuloihin, jotka vievät ne solukalvolle eksosytoosiin.\n- **1.4 D** – promoottori on geenin alussa oleva säätelyalue, johon transkriptiotekijät ja RNA-polymeraasi sitoutuvat.\n- **1.5 D** – kloonin tuman perimä on sama kuin tuman luovuttajalla, koska kloonaus tehdään tumansiirrolla. YTL hyväksyi arvostelussa myös vaihtoehdon C.\n- **1.6 B** – miehellä on vain yksi X-kromosomi, joten X-kromosomin resessiivinen alleeli ilmenee aina. Naisella toinen X-kromosomi voi peittää sen.\n- **1.7 C** – lämpö on soluhengityksen sivutuote. Eniten sitä syntyy elimissä, joiden aineenvaihdunta on vilkasta: aivoissa, maksassa ja lihaksissa.\n- **1.8 E** – kompostoiva käymälä on ihmisen rakentama jätehuoltoratkaisu. Muut ovat luonnon tuottamia hyötyjä: tulvien ehkäisy (säätelypalvelu), pölytys, pohjavesi ja puuaines (tuotantopalveluja).\n- **1.9 D** – väite on väärin, koska antigeeni on mikä tahansa rakenne (yleensä proteiini tai sokeriosa), jonka immuunijärjestelmä tunnistaa vieraaksi ja johon vasta-aine tai T-solu sitoutuu. Antigeenin ei tarvitse tunkeutua soluihin tai tuhota niitä.\n- **1.10 B** – väite on väärin, koska pullonkaulassa yksilöt kuolevat sattumanvaraisesti. Perinnöllinen muuntelu vähenee, eikä kelpoisuus parane. YTL hyväksyi myös vaihtoehdon E, jossa lisääntymisesteet oli liitetty saman lajin yksilöihin, vaikka ne erottavat eri lajit toisistaan.\n\n**Sudenkuoppa:** kohdissa 1.8–1.10 valitaan poikkeava tai virheellinen vaihtoehto. Moni vastaa niissä vahingossa ensimmäisen oikealta kuulostavan väitteen.",
+     "answer": "1.1 E · 1.2 D · 1.3 B · 1.4 D · 1.5 D (myös C hyväksyttiin) · 1.6 B · 1.7 C · 1.8 E · 1.9 D · 1.10 B (myös E hyväksyttiin)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Avainsopeuma on evoluution tuottama ominaisuus, jonka ansiosta eliöryhmä on päässyt hyödyntämään uusia elinympäristöjä tai resursseja. Kohdissa 2.1–2.5 pohditaan, mitä kukin avainsopeuma on merkinnyt selkärankaisille (3 p kukin).",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 3,
+     "prompt": "Pohdi istukan biologista merkitystä selkärankaisille.",
+     "hints": [
+      "Mieti, mitä sikiö saa emolta ja mitä se antaa takaisin, ja vertaa istukallisia eläimiä muniviin lajeihin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Istukan kautta sikiö saa emon verestä ravintoaineita, happea ja vasta-aineita.\n- Sikiön aineenvaihdunnan jätteet ja hiilidioksidi siirtyvät istukan kautta emon verenkiertoon ja poistuvat emon elimistöstä.\n- Sikiö kasvaa emon sisällä suojassa pedoilta ja ympäristön vaihteluilta, kun taas munat ovat alttiina saalistukselle ja säälle.\n- Istukallisilla syntyy kerralla vähemmän poikasia, mutta ne ovat pidemmälle kehittyneitä ja niiden eloonjääminen on todennäköisempää.\n\n**Esimerkkivastaus:** Istukka yhdistää sikiön emon verenkiertoon. Sen kautta sikiö saa happea, ravintoa ja emon vasta-aineita, ja sikiön kuona-aineet kulkevat emolle poistettaviksi. Koska sikiö kehittyy emon kohdussa, se on paremmin turvassa kuin maassa tai vedessä oleva muna. Istukallisten poikasia on vähän, mutta ne syntyvät kehittyneinä, mikä parantaa niiden selviytymistä.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 3,
+     "prompt": "Pohdi karvapeitteen biologista merkitystä selkärankaisille.",
+     "hints": [
+      "Käy läpi karvapeitteen tehtävät: lämpö, suoja, väritys ja puolustus."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Karvapeite eristää lämpöä, joten nisäkäs voi elää vaihtelevissa ja kylmissä oloissa.\n- Se suojaa ihoa auringon UV-säteilyltä ja mekaanisilta vaurioilta ja on osa elimistön ulkoista suojaa.\n- Väritys voi toimia suojavärinä, jolloin eläin sulautuu ympäristöönsä, tai näyttävänä viestinä lajitovereille.\n- Karvat voivat muuntua puolustukseksi, esimerkiksi siilin piikeiksi.\n\n**Esimerkkivastaus:** Karvapeite pitää lämmön eläimen kehossa, mikä on auttanut nisäkkäitä leviämään kylmille alueille. Se suojaa ihoa säteilyltä, naarmuilta ja taudinaiheuttajilta. Turkin väri voi naamioida eläimen ympäristöönsä tai viestiä lajitovereille, ja siilillä karvat ovat muuttuneet piikeiksi, jotka suojaavat pedoilta.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 3,
+     "prompt": "Pohdi keuhkojen biologista merkitystä selkärankaisille.",
+     "hints": [
+      "Mieti, mitä keuhkot mahdollistivat vedestä maalle siirtyneille eläimille ja mihin muuhun ilman kulkua voi käyttää."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Keuhkoilla voi hengittää ilmaa, mikä mahdollisti elämän maalla.\n- Keuhkorakkuloissa happi siirtyy vereen ja hiilidioksidi verestä uloshengitysilmaan.\n- Keuhkokaloilla keuhkot auttavat selviytymään happiköyhässä vedessä, kun ne haukkaavat ilmaa pinnalta.\n- Keuhkojen ilmavirta mahdollistaa monipuolisen ääntelyn ja ihmisellä puheen.\n- Tehokas kaasujenvaihto on mahdollistanut suuremman ruumiinkoon.\n\n**Esimerkkivastaus:** Keuhkojen ansiosta selkärankaiset saattoivat siirtyä maalle, koska ilmasta saa happea vain kostean ja laajan kaasujenvaihtopinnan kautta. Keuhkoissa happi siirtyy vereen ja hiilidioksidi poistuu. Jo keuhkokalat hyötyvät keuhkoista, kun vedessä on vähän happea. Lisäksi ilman virtaus keuhkoista kurkunpään läpi mahdollistaa äänet ja ihmisen puheen.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.4",
+     "points": 3,
+     "prompt": "Pohdi sisäisen hedelmöityksen biologista merkitystä selkärankaisille.",
+     "hints": [
+      "Määrittele ensin sisäinen hedelmöitys ja vertaa sitä kutemiseen veteen: kuinka moni sukusolu kohtaa toisensa ja mitä ympäristöltä vaaditaan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Sisäisessä hedelmöityksessä siittiö ja munasolu yhdistyvät naaraan elimistön sisällä.\n- Sukusolut ovat suojassa saalistajilta, kuivumiselta ja muilta vaaroilta.\n- Hedelmöitys onnistuu todennäköisemmin, joten sukusoluja tarvitaan vähemmän kuin ulkoisessa hedelmöityksessä.\n- Lisääntyminen ei enää vaadi vettä, joten se mahdollisti lisääntymisen maalla.\n\n**Esimerkkivastaus:** Sisäisessä hedelmöityksessä koiras siirtää siittiöt naaraan sisään, jossa ne kohtaavat munasolun. Sukusolut eivät joudu veteen, jossa ne laimenisivat, kuivuisivat tai joutuisivat syödyiksi. Siksi hedelmöitys onnistuu varmemmin ja sukusoluja kuluu vähemmän. Tärkeintä on, että lisääntyminen irtautui vedestä, joten matelijat, linnut ja nisäkkäät pystyivät lisääntymään kuivalla maalla.\n\n**Sudenkuoppa:** sisäinen hedelmöitys ei tarkoita sitä, että jälkeläinen kehittyisi emon sisällä. Esimerkiksi linnut ja useimmat matelijat munivat, vaikka hedelmöitys on sisäinen.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.5",
+     "points": 3,
+     "prompt": "Pohdi tasalämpöisyyden biologista merkitystä selkärankaisille.",
+     "hints": [
+      "Mistä tasalämpöisen eläimen lämpö tulee, ja mitä se voi tehdä silloin, kun vaihtolämpöinen jähmettyy kylmässä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Tasalämpöinen eläin tuottaa lämpönsä omalla aineenvaihdunnallaan ja säätelee ruumiinlämpöään.\n- Se pysyy aktiivisena myös kylmällä, esimerkiksi öisin ja talvella.\n- Tasalämpöiset ovat voineet levittäytyä maapallon kylmille alueille.\n- Ne voivat lämmittää myös munia ja poikasia (hautominen, imetys pesässä).\n\n**Esimerkkivastaus:** Linnut ja nisäkkäät tuottavat lämpönsä soluhengityksellä ja pitävät ruumiinlämmön lähes vakiona. Siksi entsyymit toimivat tasaisesti ja eläin voi olla liikkeellä yöllä ja talvella, kun vaihtolämpöiset ovat kankeita. Tasalämpöisyys on auttanut niitä asuttamaan kylmät alueet, ja ne voivat pitää myös munansa ja poikasensa lämpiminä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 10,
+     "prompt": "Vertaa mitokondrioita ja viherhiukkasia: mitä eroja ja yhtäläisyyksiä niiden rakenteessa ja toiminnassa on?",
+     "hints": [
+      "Tee itsellesi nelikenttä: rakenteen erot, toiminnan erot, rakenteen yhtäläisyydet ja toiminnan yhtäläisyydet. Vertaa aina molempia soluelimiä samassa lauseessa.",
+      "Erot: missä soluissa kumpaakin on, mikä prosessi niissä tapahtuu, missä kalvossa elektroninsiirto on, mitä ne kuluttavat ja tuottavat (glukoosi, hiilidioksidi, happi), mistä ATP:n energia tulee ja onko aineenvaihdunta hajottavaa vai rakentavaa. Yhtäläisyydet: kaksi kalvoa, oma DNA ja ribosomit, jakautuminen, elektroninsiirtoketju ja protonigradienttiin perustuva ATP:n tuotto."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Esiintyminen (ero):** mitokondrioita on lähes kaikissa aitotumallisissa soluissa, viherhiukkasia vain yhteyttävissä soluissa (kasvit, levät).\n- **Tehtävä (ero):** mitokondriossa tapahtuu soluhengitys, viherhiukkasessa fotosynteesi.\n- **Kalvorakenne (ero):** mitokondriossa elektroninsiirto on poimuttuneessa sisäkalvossa, viherhiukkasessa sisäkalvon sisäpuolisissa tylakoideissa eli yhteyttämiskalvostossa.\n- **Aineet (ero):** mitokondrio kuluttaa glukoosia ja happea ja vapauttaa hiilidioksidia, viherhiukkanen sitoo hiilidioksidia, tuottaa glukoosia ja vapauttaa happea.\n- **Energia (ero):** mitokondrio tekee ATP:tä ravinnon kemiallisesta energiasta, viherhiukkanen valon energiasta. Mitokondrion aineenvaihdunta on katabolista, viherhiukkasen anabolista.\n- **Yhtäläisyydet rakenteessa:** molemmat ovat sytoplasman soluelimiä, joilla on kaksi kalvoa, oma rengasmainen DNA ja omat ribosomit. Niiden määrä solussa vaihtelee.\n- **Yhtäläisyydet toiminnassa:** molemmissa on elektroninsiirtoketju, ATP syntyy protonigradientin avulla ATP-syntaasissa, molemmat tekevät omia proteiinejaan ja lisääntyvät jakautumalla. Kummankin entsyymireaktiot tapahtuvat enimmäkseen sisäkalvon sisäpuolella.\n\n**Esimerkkivastaus:** Mitokondrio ja viherhiukkanen ovat molemmat solun energia-aineenvaihdunnan soluelimiä, joilla on kaksoiskalvo, oma DNA ja omat ribosomit, ja molemmat lisääntyvät jakautumalla. Molemmissa elektroninsiirtoketju pumppaa protoneja kalvon yli ja ATP-syntaasi tekee ATP:tä protonigradientin avulla. Erot liittyvät tehtävään: mitokondriossa soluhengitys hajottaa glukoosia hapen avulla hiilidioksidiksi ja vedeksi, kun taas viherhiukkasessa fotosynteesi sitoo hiilidioksidia glukoosiksi ja vapauttaa happea. Mitokondrion energia tulee ravinnosta, viherhiukkasen auringonvalosta. Mitokondrioita on lähes kaikissa aitotumallisissa soluissa, viherhiukkasia vain yhteyttävissä soluissa. Mitokondrion elektroninsiirto tapahtuu poimuttuneessa sisäkalvossa, viherhiukkasen tylakoidikalvoissa.\n\n**Sudenkuoppa:** rakenteen ja toiminnan kuvaaminen erikseen kummastakin soluelimestä ei riitä. Pisteet tulevat vertailusta. Täysiin pisteisiin vaaditaan eroja ja yhtäläisyyksiä kummastakin näkökulmasta, rakenteesta ja toiminnasta.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 5,
+     "prompt": "Selitä endosymbioositeoria ja pohdi, mitkä havainnot tukevat sitä.",
+     "hints": [
+      "Teoriassa on kaksi osaa: mitä tapahtui (kuka nieli kenet ja kumpi jäi eloon) ja mitkä mitokondrion ja viherhiukkasen piirteet muistuttavat bakteereja.",
+      "Mitokondrio on alun perin aerobinen bakteeri (alfaproteobakteeri) ja viherhiukkanen syanobakteeri. Todisteita ovat koko, jakautuminen, oma rengas-DNA, bakteerimaiset ribosomit ja kaksi kalvoa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Teorian mukaan aitotumallisen solun esimuoto nieli solusyönnillä bakteereja, jotka eivät hajonneetkaan vaan jäivät elämään solun sisään yhteiselämään.\n- Mitokondriot polveutuvat aerobisista (proteo)bakteereista ja viherhiukkaset syanobakteereista. Tämä tapahtui ennen monisoluisten eliöiden syntyä.\n- **Tukevia havaintoja:** soluelimet ovat bakteerien kokoisia ja lisääntyvät jakautumalla.\n- Niissä on oma DNA, joka on bakteerien tapaan rengasmainen.\n- Niiden ribosomit muistuttavat bakteerien ribosomeja enemmän kuin tumallisen solun sytoplasman ribosomeja.\n- Ulkokalvossa on samoja kuljetusproteiineja (poriineja) kuin bakteerien kalvoissa, ja kaksi kalvoa sopii nielaisuun.\n\n**Esimerkkivastaus:** Endosymbioositeorian mukaan mitokondriot ja viherhiukkaset olivat alun perin vapaasti eläviä bakteereja. Tumallisen solun kantamuoto otti ne sisäänsä solusyönnillä, mutta ei hajottanut niitä, vaan ne alkoivat tuottaa isännälleen energiaa. Mitokondriot ovat peräisin aerobisista bakteereista ja viherhiukkaset syanobakteereista. Teoriaa tukee se, että soluelimet ovat bakteerin kokoisia, jakautuvat itsenäisesti ja niillä on oma rengasmainen DNA ja bakteerityyppiset ribosomit. Myös niiden kaksoiskalvo ja ulkokalvon poriiniproteiinit viittaavat bakteeriperään.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Albiinoeläimen kudoksissa ei muodostu melaniinipigmenttiä, joten albiinovaris on valkoinen ja sen silmät ovat punaiset (ks. alkuperäisen tehtävän aineisto 4.A).",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 7,
+     "prompt": "Normaalivärisille variksille syntyy albiino poikanen. Selitä risteytyskaavion avulla, millä todennäköisyydellä normaaliväriset vanhemmat voivat saada albiinon jälkeläisen. Oletetaan, että väri periytyy autosomaalisesti.",
+     "hints": [
+      "Päättele ensin, onko albinismin alleeli vallitseva vai resessiivinen, kun normaaliväriset vanhemmat saavat albiinon. Valitse alleeleille merkinnät.",
+      "Kummankin vanhemman täytyy olla heterotsygootti $Aa$. Kirjoita kummankin sukusolut ja yhdistä ne $2\times 2$-ruudukossa."
+     ],
+     "solution": "1. Albinismin aiheuttaa resessiivinen alleeli, koska normaaliväriset vanhemmat voivat saada albiinon poikasen.\n2. Merkinnät: $A$ = normaali väri (vallitseva), $a$ = albinismi (resessiivinen).\n3. Jotta albiino ($aa$) voi syntyä, molempien vanhempien täytyy kantaa alleelia $a$. Vanhemmat ovat siis heterotsygootteja: $Aa \\times Aa$.\n4. Kumpikin vanhempi tuottaa sukusoluja $A$ ja $a$ yhtä todennäköisesti.\n5. Risteytyskaavio:\n\n$$\\begin{array}{c|cc} & A & a \\\\ \\hline A & AA & Aa \\\\ a & Aa & aa \\end{array}$$\n\n6. Genotyyppisuhde on $AA : Aa : aa = 1 : 2 : 1$ ja fenotyyppisuhde normaali : albiino $= 3 : 1$.\n7. Albiinon todennäköisyys on $\\frac{1}{4} = 25\\,\\%$ jokaisen poikasen kohdalla.\n\n**Vastaus: heterotsygoottisten ($Aa$) normaalivärisien vanhempien poikanen on albiino todennäköisyydellä $25\\,\\%$.**\n\n**Sudenkuoppa:** todennäköisyys koskee jokaista poikasta erikseen. Se ei tarkoita, että neljästä poikasesta täsmälleen yksi olisi albiino.",
+     "answer": "$25\\,\\%$ (vanhemmat $Aa \\times Aa$; genotyypit $1:2:1$, fenotyypit $3:1$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 8,
+     "prompt": "Arvioi, miksi albiinovariksia on luonnossa vähän. Miksi ne eivät kuitenkaan katoa kokonaan?",
+     "hints": [
+      "Jaa vastaus kahteen osaan: luonnonvalinnan haitat albiinolle (saalistus, näkö, pariutuminen) ja syyt, miksi resessiivinen alleeli säilyy populaatiossa.",
+      "Haitat: valkoinen erottuu pedoille, pigmentin puute heikentää näköä ja höyheniä, ja naaras voi karttaa poikkeavan väristä koirasta (seksuaalivalinta). Säilyminen: alleeli piiloutuu heterotsygooteille, joihin valinta ei kohdistu, ja uusia mutaatioita syntyy."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Miksi harvinaisia:** luonnonvalinta karsii albiinoja, koska valkoinen lintu erottuu ja joutuu helpommin petojen saaliiksi (talvella valkoinen voi tosin suojata).\n- Silmän pigmentin puute heikentää näköä, mikä vaikeuttaa ravinnonhankintaa ja pedon havaitsemista.\n- Pigmentitön höyhen on heikompi, joten lento voi olla huonompaa. Albiinoilla voi olla myös muita kehityshäiriöitä.\n- Seksuaalivalinta: poikkeava väri voi heikentää pariutumismahdollisuuksia, jos lajitoverit karttavat sitä.\n- Heikentynyt eloonjääminen ja lisääntyminen merkitsevät pienempää kelpoisuutta.\n- **Miksi eivät häviä:** resessiivinen alleeli piiloutuu normaalivärisiin heterotsygootteihin, joihin valinta ei kohdistu. Albiinoja syntyy aina, kun kaksi kantajaa lisääntyy.\n- Albiinon normaaliväriset sisarukset ovat usein kantajia, joten alleeli siirtyy eteenpäin.\n- Kahden albiinon lisääntyminen keskenään on harvinaista, koska albiinot kuolevat usein nuorina.\n- Albinismia aiheuttavia mutaatioita syntyy spontaanisti yhä uudelleen.\n\n**Esimerkkivastaus:** Albiinovarikset ovat harvinaisia, koska luonnonvalinta toimii niitä vastaan. Valkoinen lintu näkyy kauas, joten petolinnut ja nisäkkäät saavat sen helpommin kiinni. Pigmentin puute heikentää myös näköä ja höyhenten lujuutta, mikä vaikeuttaa ravinnonhankintaa ja lentämistä. Lisäksi poikkeava ulkonäkö voi vähentää pariutumista. Albiinojen kelpoisuus on siis pieni. Albinismi ei kuitenkaan katoa, koska sen aiheuttava alleeli on resessiivinen. Suurin osa alleeleista on normaalivärisissä heterotsygooteissa, joiden kelpoisuus on tavallinen. Kun kaksi kantajaa pariutuu, neljännes poikasista on albiinoja. Lisäksi uusia albinismimutaatioita syntyy satunnaisesti.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 7,
+     "prompt": "Mistä metsänpohjan karike syntyy, ja miten se muuttuu ajan kuluessa? Perustele.",
+     "hints": [
+      "Kerro ensin, mitä karike on ja mistä sitä kertyy. Jatka hajotuksen vaiheilla: kuka hajottaa ja mitä hajotuksessa vapautuu.",
+      "Hajotus etenee vaiheittain: ensin selkärangattomat (kastemadot, änkyrimadot, punkit, hyppyhäntäiset) pilkkovat kariketta, sitten sienet ja bakteerit hajottavat sen epäorgaanisiksi aineiksi ja hiilidioksidiksi. Hajoamaton osa muuttuu humukseksi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Karike on kuollutta orgaanista ainesta: pudonneita lehtiä ja neulasia, oksia, kuihtuneita kasvinosia sekä eläinten ulosteita ja raatoja.\n- Karike on usein niukkaravinteista, koska kasvit siirtävät ravinteita lehdistä runkoon, juuriin tai maavarsiin ennen kuin lehdet kuihtuvat.\n- Hajottajat hajottavat kariketta vaiheittain. Tärkeimmät hajottajat ovat sienet ja bakteerit.\n- Hajotukseen osallistuu myös selkärangattomia, kuten kastemadot, änkyrimadot, sukkulamadot, maaperäpunkit, hyppyhäntäiset ja kovakuoriaiset. Hajotuksen edetessä hajottajat ovat yhä pienempiä.\n- Hajotuksessa vapautuu epäorgaanisia ravinteita maaperään ja hiilidioksidia ilmaan.\n- Karikkeen alle kertyy humusta: kosteudesta ja kasvillisuudesta riippuen multaa tai kangasturvetta, joka sekoittuu osin kivennäismaahan.\n\n**Esimerkkivastaus:** Karike on metsänpohjalle kertynyttä kuollutta orgaanista ainesta, kuten varisseita lehtiä, neulasia, risuja, kuolleita kasvinosia, raatoja ja ulosteita. Siinä on vähän ravinteita, koska puut ottavat ravinteita talteen ennen lehtien pudottamista. Aluksi selkärangattomat, kuten kastemadot, punkit ja hyppyhäntäiset, pilkkovat kariketta pienemmiksi paloiksi. Sen jälkeen sienet ja bakteerit hajottavat orgaanisen aineen. Hajotuksessa vapautuu hiilidioksidia ilmaan ja epäorgaanisia ravinteita maahan. Hitaasti hajoava osa muuttuu humukseksi, kuten mullaksi tai kangasturpeeksi, ja sekoittuu vähitellen kivennäismaahan.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 5,
+     "prompt": "Pohdi, miksi karike on tärkeää koko ekosysteemin toiminnalle.",
+     "hints": [
+      "Mieti karikkeen merkitystä kolmelle ryhmälle: hajottajille, kasveille ja muille eläimille.",
+      "Avainsana on aineiden kierto: karikkeen hajotessa vapautuvat typpi, fosfori ja kalium palaavat kasvien käyttöön. Lisäksi karike on hajottajaravintoverkon energianlähde ja monen lajin elinympäristö."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Karike on hajottajien energian ja ravinnon lähde.\n- Hajottajista rakentuu oma ravintoverkkonsa, ja ne lisäävät luonnon monimuotoisuutta.\n- Karike on kasvualusta sienirihmastoille, ja karikkeen syöjien ulosteet ovat kasvualusta mikrobeille.\n- Karike on elinympäristö monille selkärangattomille.\n- Hajotuksessa vapautuu kasveille välttämättömiä ravinteita (typpi, fosfori, kalium), joten aineet kiertävät ekosysteemissä.\n- Eläimet käyttävät kariketta pesänrakennukseen (esim. siili).\n\n**Esimerkkivastaus:** Karike on hajottajien energianlähde, ja karikkeen varassa elää laaja hajottajien ravintoverkko, joka lisää metsän monimuotoisuutta. Karike tarjoaa myös suojaa ja elinpaikan monille selkärangattomille sekä kasvualustan sienille ja mikrobeille. Tärkeintä on aineiden kierto: kun karike hajoaa, sen typpi, fosfori ja kalium vapautuvat maaperään kasvien uudelleen käyttöön. Ilman kariketta ja sen hajotusta ravinteet loppuisivat ja tuottajien kasvu hidastuisi. Myös eläimet, kuten siili, käyttävät kariketta pesätarpeina.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 3,
+     "prompt": "Perustele, miksi suolla karikkeesta muodostuu turvetta.",
+     "hints": [
+      "Turvetta syntyy, kun kariketta kertyy nopeammin kuin se hajoaa. Mieti, mitkä suon olosuhteet hidastavat hajottajia."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Suo on märkä, ja vedellä kyllästyneessä turpeessa on hyvin vähän happea.\n- Turve on hapanta.\n- Nämä olot hidastavat hajottajien toimintaa, joten karike hajoaa vain osittain ja kerrostuu turpeeksi.\n- Pohjoisessa viileys hidastaa hajotusta entisestään.\n\n**Esimerkkivastaus:** Suolla karike jää veden alle, jossa on hyvin vähän happea. Lisäksi suo on hapan ja pohjoisessa viileä. Sienet ja bakteerit eivät siksi pysty hajottamaan kasvijätettä kokonaan, joten osittain hajonnut kasviaines kertyy kerros kerrokselta turpeeksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Selitä, miten veriplasman glukoosipitoisuuden ja insuliinipitoisuuden vaihtelut liittyvät toisiinsa.",
+     "hints": [
+      "Aloita siitä, mikä hormoni laskee verensokeria ja missä sitä tuotetaan.",
+      "Kuvaa säätelykierto: haiman saarekkeiden solut aistivat glukoosin nousun → insuliinin eritys kasvaa → solut ottavat glukoosia ja maksa ja lihakset varastoivat sitä glykogeeniksi → glukoosipitoisuus laskee → insuliinin eritys vähenee."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Insuliini säätelee veriplasman glukoosipitoisuutta.\n- Insuliinia erittävät haiman Langerhansin saarekkeiden umpieritteiset solut (beetasolut).\n- Samat solut aistivat veren glukoosipitoisuuden: kun glukoosia on paljon, insuliinia erittyy enemmän.\n- Insuliini lisää glukoosinkuljettajia solukalvolle, jolloin glukoosi siirtyy kudoksiin, esimerkiksi lihaksiin ja maksaan.\n- Insuliini edistää glukoosin varastoitumista glykogeeniksi, joten veren glukoosipitoisuus laskee.\n- Kun glukoosipitoisuus laskee, insuliinin eritys vähenee (negatiivinen palaute). Vastavaikuttajana toimii glukagoni, joka nostaa verensokeria.\n\n**Esimerkkivastaus:** Veren glukoosipitoisuus ja insuliinipitoisuus muodostavat säätelyparin. Kun ruoasta imeytyy glukoosia, haiman Langerhansin saarekkeiden beetasolut havaitsevat pitoisuuden nousun ja erittävät insuliinia vereen. Insuliini saa lihas-, rasva- ja maksasolut ottamaan glukoosia sisäänsä, ja maksa ja lihakset varastoivat sitä glykogeeniksi. Tämän vuoksi glukoosipitoisuus laskee, ja kun se palaa normaaliksi, insuliinin eritys vähenee. Insuliinin pitoisuus seuraa siis glukoosin pitoisuutta pienellä viiveellä. Jos verensokeri laskee liikaa, haima erittää glukagonia, joka vapauttaa glukoosia maksan glykogeenivarastosta.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 9,
+     "prompt": "Sara syö välipalaksi kokojyväleivän, Rasmus suklaapatukan ja sokeroitua mehua. Aineiston 6.A kaksi diagrammia (koehenkilöt 1 ja 2) näyttävät glukoosi- ja insuliinipitoisuuden muutokset välipalan jälkeen. Päättele perustellen, kumpi diagrammi on Saran ja kumpi Rasmuksen, ja pohdi välipalojen vaikutusta jaksamiseen loppupäivänä.",
+     "hints": [
+      "Vertaa diagrammeja kolmella mittarilla: kuinka nopeasti glukoosi nousee, kuinka korkealle ja kuinka nopeasti se laskee. Yhdistä ne siihen, sisältääkö välipala nopeita vai hitaita hiilihydraatteja.",
+      "Koehenkilöllä 2 glukoosi nousee jo noin puolessa tunnissa yli 7 mmol/l:aan ja insuliini yli 300 pmol/l:aan, minkä jälkeen glukoosi laskee lähtötasolle. Koehenkilöllä 1 huippu on matalampi (noin 6 mmol/l) ja myöhemmin (noin tunnin kohdalla), ja pitoisuus pysyy pidempään lähtötason yläpuolella."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Tunnistus:** koehenkilö 1 on Sara ja koehenkilö 2 on Rasmus.\n- Rasmuksen välipalassa on paljon nopeasti imeytyviä sokereita, joten veren glukoosipitoisuus nousee nopeasti ja korkealle (noin 7 mmol/l jo puolen tunnin kohdalla).\n- Rasmuksen insuliinipitoisuus nousee yhtä nopeasti ja korkeaksi, ja sen seurauksena glukoosipitoisuus myös laskee nopeasti.\n- Saran kokojyväleivän tärkkelys ja kuidut pilkkoutuvat ja imeytyvät hitaasti, joten glukoosipitoisuus nousee hitaammin ja matalammalle (noin 6 mmol/l tunnin kohdalla).\n- Saran insuliinin nousu on maltillisempi, joten glukoosia riittää veressä pidempään.\n- **Jaksaminen:** Saran vireys säilyy tasaisena pitkään. Rasmuksella nopean nousun jälkeinen lasku voi tuoda väsymystä, keskittymisvaikeuksia ja uutta näläntunnetta.\n\n**Esimerkkivastaus:** Koehenkilö 2 on Rasmus. Hänen välipalansa sokerit imeytyvät nopeasti, joten glukoosipitoisuus nousee puolessa tunnissa yli 7 mmol/l:aan. Haima reagoi voimakkaalla insuliinierityksellä, ja insuliini nousee yli 300 pmol/l:aan. Tämän seurauksena glukoosipitoisuus laskee nopeasti takaisin lähtötasolle. Koehenkilö 1 on Sara. Kokojyväleivän tärkkelys pilkkoutuu glukoosiksi hitaasti, ja kuidut hidastavat imeytymistä, joten glukoosi nousee vasta tunnissa noin 6 mmol/l:aan ja insuliinivaste on maltillisempi. Saran glukoosipitoisuus pysyy kolmen tunnin ajan lähtötason yläpuolella, joten hänen vireytensä pysyy tasaisena. Rasmuksella nopeaa nousua seuraava lasku voi aiheuttaa väsymystä ja näläntunnetta jo iltapäivällä.\n\n**Sudenkuoppa:** tunnistus ilman perusteluja tuo vain osan pisteistä. Vertaa käyrien nousunopeutta, huipun korkeutta ja laskua ja kytke ne välipalan hiilihydraattien laatuun.",
+     "answer": "Koehenkilö 1 = Sara, koehenkilö 2 = Rasmus",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 5,
+     "prompt": "Millaisia vaatimuksia bakteereilla ja viruksilla on elinympäristönsä suhteen, jotta ne voivat elää ja monistua? Pohdi.",
+     "hints": [
+      "Käsittele bakteerit ja virukset erikseen: bakteeri on itsenäinen solu, virus ei ole.",
+      "Bakteereilla mieti hiilen ja energian lähdettä (omavaraiset, kemosynteettiset, hajottajat, symbiontit, taudinaiheuttajat) sekä abioottisia tekijöitä kuten lämpötila, pH ja happi. Viruksilla keskeistä on isäntäsolu ja isäntäspesifisyys."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Bakteerit** tarvitsevat hiilen lähteen ja energianlähteen.\n- Omavaraiset bakteerit, kuten syanobakteerit, tarvitsevat valoa, hiilidioksidia ja vettä. Kemosynteettiset bakteerit saavat energiansa epäorgaanisten aineiden hapetuksesta.\n- Hajottajabakteerit saavat ravintonsa kuolleesta eloperäisestä aineesta. Symbioottiset bakteerit tarvitsevat isännän (typensitojat hernekasveissa ja lepässä, suolistobakteerit suolessa), ja taudinaiheuttajat elävät isännässään.\n- Bakteerit tarvitsevat sopivat abioottiset olot: vettä, sopivan lämpötilan ja pH:n. Osa elää ääriolosuhteissa (kuumissa lähteissä, suolaisessa vedessä) tai muodostaa kestäviä itiöitä.\n- Osa bakteereista tarvitsee happea, osa elää hapettomassa ympäristössä.\n- **Virukset** eivät ole eliöitä. Ne lisääntyvät vain elävän isäntäsolun sisällä, ja monet virukset tartuttavat vain tiettyä isäntälajia tai solutyyppiä.\n- Isäntäsolun ulkopuolella osa viruksista säilyy pitkään kylmässä tai kuumassa, mutta voimakas UV-säteily tuhoaa sekä viruksia että bakteereja.\n\n**Esimerkkivastaus:** Bakteerit ovat itsenäisiä soluja, joten ne tarvitsevat ympäristöstään vettä, hiilen lähteen ja energiaa. Syanobakteerit yhteyttävät valon avulla, kemosynteettiset bakteerit hapettavat epäorgaanisia aineita ja hajottajabakteerit käyttävät kuollutta eloperäistä ainesta. Osa bakteereista elää toisen eliön kanssa, kuten typensitojat palkokasvien juurinystyröissä tai taudinaiheuttajat isännässään. Lisäksi lämpötilan, pH:n ja happipitoisuuden täytyy sopia lajille. Osa sietää ääriolosuhteita tai muodostaa lepoitiöitä. Virukset sen sijaan eivät pysty lisääntymään itsenäisesti, vaan ne tarvitsevat elävän isäntäsolun, jonka koneistolla ne monistuvat. Useimmat virukset ovat isäntäspesifisiä.\n\n**Sudenkuoppa:** bakteerien ja virusten käsittely yhtenä ryhmänä. Vastauksesta pitää näkyä, että bakteeri elää itsenäisesti, mutta virus tarvitsee isäntäsolun.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 10,
+     "prompt": "Selitä, miten perinnöllistä muuntelua syntyy bakteereilla ja viruksilla.",
+     "hints": [
+      "Bakteerit lisääntyvät jakautumalla, joten muuntelu syntyy mutaatioista ja geenien siirrosta solujen välillä. Nimeä kolme geeninsiirtotapaa.",
+      "Konjugaatio (DNA:n siirto pilusyhteyden kautta), transformaatio (vapaan DNA:n, esim. plasmidin, otto ympäristöstä) ja transduktio (bakteriofagi siirtää DNA:ta). Viruksilla muuntelu syntyy kopiointivirheistä (erityisesti RNA-viruksilla) ja perimän vaihdosta, kun samassa solussa on useita viruksia."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Bakteerit:** mutaatioita syntyy spontaanisti DNA:n kahdentumisessa. Koska bakteerin perimä on haploidi, mutaatio näkyy ilmiasussa heti.\n- Rekombinaatiossa bakteeri saa geenejä toiselta kannalta tai lajilta, ja syntyy uusia geeniyhdistelmiä.\n- **Konjugaatio:** kaksi bakteeria muodostaa piluksen avulla yhteyden, jonka kautta DNA:ta (usein plasmidi) siirtyy solusta toiseen.\n- **Transformaatio:** bakteeri ottaa ympäristöstä vapaata DNA:ta, esimerkiksi hajonneen bakteerin plasmidin.\n- **Transduktio:** bakteriofagi siirtää bakteerin DNA:ta toiseen bakteeriin, jopa lajista toiseen.\n- **Virukset:** kun virus monistaa perimäänsä isäntäsolussa, syntyy kopiointivirheitä eli mutaatioita.\n- RNA-virukset muuntuvat erityisen nopeasti, koska niiden RNA-polymeraasilla ja käänteiskopioijaentsyymillä ei ole oikolukua.\n- Jos samassa isäntäsolussa on kaksi virusta, ne voivat vaihtaa perimän osia. Viruksen perimään voi siirtyä myös isäntäsolun geenejä.\n\n**Esimerkkivastaus:** Bakteerit lisääntyvät jakautumalla, joten jälkeläiset ovat emosolun klooneja. Perinnöllistä muuntelua syntyy kuitenkin mutaatioista, joita tapahtuu DNA:n kahdentuessa. Koska bakteerilla on vain yksi kopio kustakin geenistä, mutaatio vaikuttaa ominaisuuksiin heti. Lisäksi bakteerit vaihtavat geenejä keskenään. Konjugaatiossa bakteeri siirtää plasmidin toiseen bakteeriin piluksen kautta, transformaatiossa bakteeri ottaa ympäristöstä vapaata DNA:ta ja transduktiossa bakteriofagi kuljettaa DNA:n palan edellisestä isännästä seuraavaan. Näin esimerkiksi antibioottiresistenssigeenit leviävät. Virukset muuntuvat, kun niiden perimän kopioinnissa syntyy virheitä. RNA-viruksilla virheitä syntyy paljon, koska niiden entsyymit eivät oikolue. Jos solussa on samaan aikaan kaksi viruskantaa, niiden perimä voi sekoittua, ja virus voi napata perimäänsä myös isäntäsolun geenejä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Poistogeenisiltä koe-eläimiltä on tutkimuksia varten poistettu jokin geeni, ja niitä voidaan tehdä CRISPR/Cas-menetelmällä. Yleisin tällainen koe-eläin on hiiri.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 8,
+     "prompt": "Selitä, miten CRISPR/Cas-tekniikalla voidaan tuottaa poistogeeninen hiiri eli hiiri, jolta jokin geeni on tehty toimimattomaksi.",
+     "hints": [
+      "Mieti menetelmän osat: mikä etsii oikean kohdan DNA:sta, mikä katkaisee sen ja mihin soluun kompleksi viedään, jotta koko hiiri olisi poistogeeninen.",
+      "Opas-RNA suunnitellaan komplementaariseksi kohdegeenille, ja se ohjaa Cas9-entsyymin katkaisemaan DNA:n juuri siitä kohdasta. Solun virhealtis korjaus rikkoo geenin. Kompleksi viedään hedelmöittyneeseen munasoluun, joka siirretään sijaisemoon."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Poistogeenisyys tarkoittaa, että tietty geeni on tehty toimimattomaksi.\n- Suunnitellaan ja valmistetaan opas-RNA, joka on emäsjärjestykseltään komplementaarinen poistettavan geenin DNA:lle.\n- Opas-RNA liittyy Cas-entsyymiin, joka pystyy katkaisemaan DNA:n.\n- Kompleksi viedään hedelmöittyneeseen munasoluun (mikroinjektiona, sähköpulssilla tai liposomissa).\n- Opas-RNA pariutuu emäspariperiaatteen mukaisesti kohdegeeniin ja ohjaa Casin katkaisemaan DNA:n juuri halutusta kohdasta.\n- Solu korjaa katkoksen, mutta korjauksessa syntyy usein virheitä (emäksiä häviää tai lisääntyy), jolloin geeni ei enää toimi.\n- Muokatut alkiot siirretään valeraskaana olevan naarashiiren kohtuun kehittymään.\n\n**Esimerkkivastaus:** Poistogeenisen hiiren tuottamiseksi valmistetaan ensin opas-RNA, jonka emäsjärjestys vastaa poistettavan geenin kohtaa. Opas-RNA liitetään Cas9-entsyymiin, ja kompleksi viedään hiiren hedelmöittyneeseen munasoluun esimerkiksi mikroinjektiolla tai sähköpulssin avulla. Solussa opas-RNA pariutuu kohdegeenin DNA:han, ja Cas9 katkaisee DNA:n molemmat juosteet siitä kohdasta. Solu yrittää korjata katkoksen, mutta korjaus on epätarkka ja geeniin syntyy virheitä, joten se lakkaa toimimasta. Muokattu alkio siirretään sijaisemoksi valmistellun naaraan kohtuun, jossa se kehittyy poikaseksi, jolta geeni puuttuu.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 4,
+     "prompt": "Kerro, miten saadaan aikaan eläinkanta, jonka jokainen yksilö on kyseisen geenin suhteen poistogeeninen.",
+     "hints": [
+      "Kaikki kohdan 8.1 jälkeläiset eivät ole muuntuneet. Mieti, miten muuntuneet tunnistetaan (PCR, sekvensointi tai merkkigeeni) ja miten muutoksesta saadaan homotsygoottinen kanta risteyttämällä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kohdan 8.1 jälkeläisistä valitaan ne, joilla geeni on poistunut.\n- Tunnistus: kohdegeeni eristetään, monistetaan PCR:llä ja sekvensoidaan. Vaihtoehtoisesti kompleksiin liitetään merkkigeeni (esim. valkoisen turkin geeni), jolloin muuntuneet poikaset tunnistaa ulkonäöstä.\n- Poistogeenisiä yksilöitä risteytetään keskenään useiden sukupolvien ajan.\n- Lopulta saadaan homotsygoottinen kanta, jonka kaikilta yksilöiltä geeni puuttuu.\n\n**Esimerkkivastaus:** Ensin tarkistetaan, keillä jälkeläisillä geeni todella on rikki. Kohdegeeni monistetaan PCR:llä ja sekvensoidaan, tai muuntuneet yksilöt tunnistetaan kompleksiin liitetyn merkkigeenin avulla. Muuntuneita yksilöitä risteytetään keskenään, ja jälkeläisistä valitaan jatkoon ne, joilla molemmat geenikopiot ovat toimimattomia. Kun tätä jatketaan, syntyy homotsygoottinen kanta, jonka kaikki yksilöt ovat poistogeenisiä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 3,
+     "prompt": "Pohdi, mitä poistogeenisillä eläinkannoilla voidaan tutkia.",
+     "hints": [
+      "Kun geeni puuttuu, mitä yksilössä muuttuu? Anna kaksi esimerkkiä tutkimusalasta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Poistetun geenin tehtävää: mitä yksilössä muuttuu, kun geeni ei toimi.\n- Geenin vaikutusta yksilönkehitykseen alkiovaiheesta lähtien.\n- Esimerkkejä: syövän synty, perinnölliset sairaudet, lääkkeiden testaus sairausmalleissa.\n- Samalla tekniikalla voidaan myös lisätä katkaisukohtaan geeni, esimerkiksi korvata viallinen geeni toimivalla.\n\n**Esimerkkivastaus:** Poistogeenisillä eläimillä selvitetään, mitä tietty geeni tekee: kun geeni puuttuu, tutkitaan, miten eläimen rakenne, aineenvaihdunta tai käyttäytyminen muuttuu, ja muutosta voidaan seurata jo alkionkehityksestä alkaen. Niitä käytetään esimerkiksi syöpätutkimuksessa ja perinnöllisten sairauksien malleina, joissa testataan myös uusia hoitoja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 4,
+     "prompt": "Kanadan arktisilla alueilla on tavattu jääkarhun ja ruskeakarhun risteymiä, jotka ovat lisääntymiskykyisiä (ks. alkuperäisen tehtävän aineisto 9.A). Päättele, mitä tämä kertoo lajien evolutiivisesta sukulaisuudesta.",
+     "hints": [
+      "Lisääntymiskykyinen risteymä tarkoittaa, että lisääntymisestettä ei ole syntynyt. Mitä se kertoo siitä, kuinka kauan sitten lajien kehityslinjat erosivat?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Jää- ja ruskeakarhu ovat hyvin läheistä sukua ja polveutuvat samasta kantamuodosta.\n- Niiden kromosomit ja sukusolut ovat vielä yhteensopivia, eli lisääntymisestettä ei ole syntynyt.\n- Lajit ovat eronneet toisistaan geologisesti lyhyt aika sitten, pleistoseenin jääkausien aikana.\n- Kantamuoto muistutti todennäköisesti enemmän ruskeakarhua, ja jääkarhun linja on ollut voimakkaan suuntaavan valinnan kohteena arktisissa oloissa.\n- Karhut voitaisiin jopa tulkita saman lajin alalajeiksi.\n\n**Esimerkkivastaus:** Koska jää- ja ruskeakarhun risteymät voivat lisääntyä, lajien välille ei ole ehtinyt kehittyä lisääntymisestettä. Niiden kromosomit ovat yhä niin samankaltaiset, että sukusolut ja meioosi toimivat risteymässä. Tämä kertoo, että lajien yhteinen kantamuoto eli melko äskettäin, jääkausien aikana, ja jääkarhu on eriytynyt siitä nopeasti arktisen ympäristön valintapaineessa. Biologisen lajikäsitteen perusteella niitä voisi pitää jopa saman lajin alalajeina.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 10,
+     "prompt": "Risteymäkarhujen kelpoisuus (fitness) on todennäköisesti erilainen kuin kummankaan emolajin. Pohdi, miten ero voi ilmetä ja miten elolliset (bioottiset) ja elottomat (abioottiset) ympäristötekijät vaikuttavat risteymien kelpoisuuteen.",
+     "hints": [
+      "Määrittele ensin kelpoisuus. Käy sitten läpi eloonjäämiseen ja lisääntymiseen vaikuttavat tekijät ja jaa ne bioottisiin (saalis, pedot, kumppanit, taudit, ihminen) ja abioottisiin (lämpötila, jää, vesi, lumi).",
+      "Risteymä on usein välimuoto: väri on liian tumma jäällä ja liian vaalea metsässä, uintikyky, talviuni ja ruoansulatus voivat olla puolivälissä, ja kumppani voi karttaa sitä. Ihminen voi metsästää tai hävittää risteymiä. Välimuotoisuus voi tosin olla etu muuttuvassa ympäristössä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kelpoisuus on yksilön kyky tuottaa lisääntymiskykyisiä jälkeläisiä seuraavaan sukupolveen.\n- Risteymien kelpoisuus on todennäköisesti heikompi kuin emolajien: niillä voi olla vähemmän poikasia, poikaskuolleisuus voi olla suurempi ja elinikä lyhyempi.\n- **Bioottiset tekijät:** välimuotoinen väri on huono suojaväri sekä jäällä että metsässä, joten saalistus vaikeutuu.\n- Kumppani ei välttämättä hyväksy poikkeavan näköistä karhua.\n- Ruoansulatus voi sopia huonosti kummankaan emolajin ravintoon (jääkarhu on lihansyöjä, ruskeakarhu kaikkiruokainen).\n- Risteymät voivat sairastua ja kärsiä loisista helpommin kuin emolajit.\n- Ihminen: harvinaisuutensa vuoksi risteymät voivat olla haluttua riistaa, ne eivät välttämättä ole lain suojaamia, ja viranomaiset voivat poistaa niitä jääkarhun suojelemiseksi.\n- **Abioottiset tekijät:** risteymä voi sietää kylmää huonommin kuin jääkarhu ja lämpöä huonommin kuin ruskeakarhu.\n- Se ui todennäköisesti huonommin kuin jääkarhu, mikä haittaa liikkumista jäälauttojen välillä.\n- Talviunen suhteen se voi olla välimuoto (ruskeakarhu nukkuu talviunta, jääkarhu ei).\n- Toisaalta muuttuvassa ympäristössä välimuotoiset ominaisuudet voivat myös parantaa kelpoisuutta.\n\n**Esimerkkivastaus:** Kelpoisuus tarkoittaa yksilön kykyä saada lisääntymiskykyisiä jälkeläisiä. Risteymäkarhu on monessa suhteessa emolajiensa välimuoto, mikä todennäköisesti heikentää sen kelpoisuutta. Sen väritys ei naamioi sitä hyvin jäällä eikä metsässä, joten hylkeiden tai muun saaliin pyydystäminen vaikeutuu. Se ui todennäköisesti huonommin kuin jääkarhu, ja sen suolisto ei välttämättä sovellu kummankaan emolajin ruokavalioon. Kylmänsietokyky voi olla heikompi kuin jääkarhulla ja lämmönsieto heikompi kuin ruskeakarhulla, ja talviunen tarve voi olla välimuotoinen. Lisäksi lajitoverit voivat karttaa sitä pariutumisessa, ja se voi olla alttiimpi taudeille ja loisille. Ihminen voi metsästää erikoisia yksilöitä tai poistaa niitä jääkarhujen suojelemiseksi. Näiden syiden takia risteymät saavat luultavasti vähemmän poikasia ja ne kuolevat nuorempina. Jos ympäristö muuttuu, välimuotoisuus voi kuitenkin myös olla etu.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 6,
+     "prompt": "Arvioi, mitä jää- ja ruskeakarhujen risteytymisestä voi seurata kummallekin lajille ilmaston lämmetessä.",
+     "hints": [
+      "Mieti, miten lajien elinalueet muuttuvat, kun merijää vähenee ja arktinen alue lämpenee, ja mitä se tekee lajien kohtaamisille.",
+      "Ruskeakarhu levittäytyy pohjoiseen ja jääkarhun elinalue kutistuu, joten risteymiä syntyy enemmän. Risteymät pariutuvat todennäköisemmin runsaamman ruskeakarhun kanssa, ja puhtaiden jääkarhujen osuus pienenee."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Merijään vähetessä jääkarhun elinympäristö kutistuu ja ruskeakarhun levinneisyys laajenee pohjoiseen.\n- Lajit kohtaavat useammin, joten risteymiä syntyy enemmän.\n- Risteymät pariutuvat todennäköisemmin runsaamman ruskeakarhun kanssa, joten jääkarhun geenit laimenevat ja puhtaiden jääkarhujen osuus pienenee.\n- Lajit kilpailevat samoista resursseista, ja kilpailu voi syrjäyttää jääkarhun.\n- Muuttuvassa ympäristössä jääkarhun erikoistuneet ominaisuudet voivat muuttua haitaksi.\n- Pahimmillaan jääkarhu voi kadota lajina sulautumalla ruskeakarhuun, mutta osa sen geeneistä voi säilyä risteymissä.\n\n**Esimerkkivastaus:** Kun arktinen alue lämpenee, merijää vähenee ja jääkarhun elinalue kutistuu, kun taas ruskeakarhu voi levittäytyä yhä pohjoisemmaksi. Lajit kohtaavat siksi useammin, ja risteymiä syntyy enemmän. Koska ruskeakarhuja on paljon enemmän, risteymät pariutuvat yleensä niiden kanssa, ja jääkarhun geenit laimenevat vähitellen ruskeakarhupopulaatioon. Lisäksi lajit kilpailevat samoista resursseista, ja jääkarhun erikoistumisesta jäällä saalistamiseen tulee haitta. Pitkällä aikavälillä jääkarhu voi kadota erillisenä lajina, vaikka osa sen geeneistä säilyisikin risteymissä. Ruskeakarhulle risteytyminen merkitsee lähinnä uusia geenejä, jotka voivat auttaa sopeutumaan pohjoisiin oloihin.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 6,
+     "prompt": "Aineiston 10.A (Mauna Loan mittaukset 1958–2019) mukaan ilman hiilidioksidipitoisuus on noussut 1960-luvun noin 320 ppm:stä yli 400 ppm:ään. Mitkä tekijät selittävät nousun?",
+     "hints": [
+      "Nousu johtuu ihmisen toiminnasta. Jaa syyt kahteen ryhmään: mikä lisää hiilidioksidin päästöjä ja mikä vähentää sen sitoutumista.",
+      "Päästöt: fossiiliset polttoaineet (kivihiili, öljy, maakaasu), turve ja puu energiantuotannossa, liikenteessä, lämmityksessä ja teollisuudessa. Nielut: metsien raivaus ja muu maankäytön muutos vähentävät yhteyttämistä, ja lämpeneminen lisää metsäpaloja."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Nousu johtuu ihmisen toiminnasta.\n- Fossiilisten polttoaineiden, kuten kivihiilen, öljyn ja maakaasun, polttaminen vapauttaa pitkään varastoituneen hiilen.\n- Polttoaineita ja puuta käytetään energiantuotannossa, liikenteessä, lämmityksessä ja teollisuudessa.\n- Myös turpeen poltto ja ojitettujen soiden hajoaminen lisäävät hiilidioksidia.\n- Maankäytön muutokset, kuten metsien raivaus ja muiden hiilinielujen tuhoaminen, vähentävät hiilidioksidin sitoutumista fotosynteesissä.\n- Ilmaston lämpeneminen lisää metsäpaloja, jotka vapauttavat hiiltä.\n\n**Esimerkkivastaus:** Hiilidioksidipitoisuuden nousu johtuu ihmisestä. Tärkein syy on fossiilisten polttoaineiden, kuten kivihiilen, öljyn ja maakaasun, sekä turpeen ja puun polttaminen sähkön- ja lämmöntuotannossa, liikenteessä ja teollisuudessa. Samalla hiiltä sitovia ekosysteemejä on hävitetty: sademetsiä on raivattu pelloiksi ja laitumiksi ja soita ojitettu, joten kasvit sitovat fotosynteesissä vähemmän hiilidioksidia. Lisäksi lämpenemisen myötä yleistyneet metsäpalot vapauttavat hiiltä ilmakehään.\n\n**Sudenkuoppa:** tulivuorenpurkaukset ja muut luonnolliset lähteet eivät selitä nousua, eikä niiden käsittely tuo pisteitä.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 5,
+     "prompt": "Aineiston 10.A käyrä sahaa vuosittain: pitoisuus kasvaa syksystä (lokakuu) kevääseen (huhtikuu) ja pienenee kevään ja syksyn välillä. Sama rytmi toistuu kaikkialla maapallolla. Pohdi vaihtelun syitä.",
+     "hints": [
+      "Mieti, milloin kasvit sitovat eniten hiilidioksidia ja millä pallonpuoliskolla on eniten maata ja metsää.",
+      "Pohjoisella pallonpuoliskolla on suurin osa maapinta-alasta ja metsistä. Pohjoisen kesällä yhteyttäminen sitoo hiilidioksidia, talvella hajotus ja soluhengitys vapauttavat sitä. Ilmavirtaukset sekoittavat pitoisuudet koko ilmakehään."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Pohjoisella pallonpuoliskolla on paljon enemmän maata ja metsää kuin eteläisellä, joka on enimmäkseen merta.\n- Pohjoisen kasvukaudella (keväästä syksyyn) kasvit sitovat fotosynteesissä runsaasti hiilidioksidia, joten pitoisuus laskee.\n- Talvella yhteyttäminen lähes pysähtyy, mutta soluhengitys ja hajotus jatkuvat, joten pitoisuus nousee.\n- Ilmavirtaukset sekoittavat ilmakehän, joten sama rytmi näkyy myös Mauna Loalla ja muualla.\n- Merten hiilidioksidin sidonnassa ei ole yhtä suurta vuodenaikaisvaihtelua.\n- Vaihtelu on suurempaa pohjoisessa. Eteläisellä pallonpuoliskolla se on pienempää ja tulee viiveellä.\n\n**Esimerkkivastaus:** Vaihtelu johtuu pohjoisen pallonpuoliskon kasvillisuudesta. Suurin osa maapallon maa-alasta ja metsistä on pohjoisella pallonpuoliskolla, kun taas eteläisellä on enimmäkseen merta. Pohjoisen kesällä valtavat metsät yhteyttävät ja sitovat hiilidioksidia, joten pitoisuus laskee huhtikuusta lokakuuhun. Talvella yhteyttäminen lähes loppuu, mutta hajottajat ja kasvien soluhengitys vapauttavat edelleen hiilidioksidia, joten pitoisuus nousee. Ilmavirtaukset sekoittavat ilmakehää, joten sama rytmi näkyy myös Havaijilla. Eteläisen pallonpuoliskon vähäinen maakasvillisuus ei pysty tasoittamaan vaihtelua.\n\n**Sudenkuoppa:** jos pohjoisen ja eteläisen pallonpuoliskon eroa ei mainita, vastaus jää vajaaksi, koska pelkkä kesän ja talven vaihtelu ei selitä, miksi rytmi näkyy koko maapallolla samassa tahdissa.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 9,
+     "prompt": "Selitä hiilidioksidin käyttö vihreiden kasvien fotosynteesin pimeäreaktioissa. Pohdi lisäksi, miten ilman kasvava hiilidioksidipitoisuus muuttaa fotosynteesin ja vedenkäytön tehokkuutta.",
+     "hints": [
+      "Aloita Calvinin kierrosta: mitä valoreaktioista saadaan ja mikä entsyymi sitoo hiilidioksidia. Vaikutuksia pohtiessa ajattele hiilidioksidia entsyymin substraattina ja muista minimitekijä.",
+      "Rubisco sitoo hiilidioksidin, ja sokeriksi pelkistämiseen käytetään valoreaktioiden ATP:tä ja NADPH:ta. Rubisco on hidas pienillä pitoisuuksilla, joten nousu tehostaa yhteyttämistä tiettyyn rajaan asti. Vedenkäyttö tehostuu, koska ilmarakoja voi pitää vähemmän auki."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Pimeäreaktioissa (Calvinin kierrossa) hiilidioksidi sidotaan orgaanisiksi hiiliyhdisteiksi ja lopulta sokereiksi.\n- Sitomiseen käytetään valoreaktioissa syntynyttä ATP:tä ja NADPH:ta (vedynsiirtäjä).\n- Hiilidioksidin sitoo entsyymi (Rubisco), joka toimii tehottomasti, kun hiilidioksidia on vähän.\n- Pitoisuuden noustessa hiilidioksidia diffundoituu ilmarakojen kautta lehteen enemmän, ja entsyymireaktio nopeutuu, koska substraattia on enemmän.\n- Fotosynteesi tehostuu ja kasvu lisääntyy, mutta vain tiettyyn rajaan asti.\n- Jos jokin muu tekijä, kuten valo, vesi tai jokin ravinne, on minimitekijä, hiilidioksidin nousun hyöty jää pieneksi.\n- Vedenkäyttö tehostuu: kasvi saa tarpeeksi hiilidioksidia, vaikka pitää ilmarakoja vähemmän auki, joten haihtumista on vähemmän.\n\n**Esimerkkivastaus:** Fotosynteesin pimeäreaktiot eli Calvinin kierto tapahtuvat viherhiukkasen stroomassa. Rubisco-entsyymi liittää hiilidioksidin viisihiiliseen sokeriin, ja syntyneet yhdisteet pelkistetään sokereiksi valoreaktioissa tuotetun ATP:n ja NADPH:n avulla. Rubisco on hidas entsyymi, eikä se toimi tehokkaasti, kun hiilidioksidia on vähän. Kun ilman hiilidioksidipitoisuus nousee, sitä diffundoituu ilmarakojen kautta lehden sisään nopeammin ja entsyymireaktio kiihtyy. Fotosynteesi ja kasvu siis tehostuvat, mutta vain siihen asti, kunnes jokin muu tekijä, kuten valo, lämpötila, vesi tai typpi, rajoittaa kasvua. Lisäksi kasvi voi pitää ilmarakojaan vähemmän auki ja saada silti tarpeeksi hiilidioksidia. Silloin vettä haihtuu vähemmän, joten vedenkäytön tehokkuus paranee.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Nimeä aineiston 11.A silmän poikkileikkauskuvaan numeroidut osat 1–5 (ks. alkuperäinen kuva).",
+     "hints": [
+      "Seuraa valon reittiä silmän etuosasta takaosaan ja mieti, minkä rakenteiden läpi valo kulkee ja mihin se lopulta osuu.",
+      "Etuosassa on värikalvo ja sen takana läpinäkyvä, kupera linssi. Silmän sisätilaa täyttää hyytelömäinen aine, takaseinää verhoaa aistinsolukerros, ja siitä lähtee paksu hermo aivoihin. Katso kuvasta, mikä numero osoittaa mitäkin."
+     ],
+     "solution": "1. mykiö eli linssi\n2. verkkokalvo\n3. värikalvo eli iiris\n4. lasiainen\n5. näköhermo (arvostelussa hyväksyttiin myös verisuoni)\n\n**Vastaus: 1 mykiö, 2 verkkokalvo, 3 värikalvo, 4 lasiainen, 5 näköhermo**",
+     "answer": "1 mykiö · 2 verkkokalvo · 3 värikalvo · 4 lasiainen · 5 näköhermo",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 8,
+     "prompt": "Selitä, miten kohdan 11.1 silmän osat (mykiö, verkkokalvo, värikalvo, lasiainen, näköhermo) toimivat näkemisessä ja miten aivot muodostavat lopullisen kuvan.",
+     "hints": [
+      "Seuraa valon ja sitten hermoimpulssin kulkua: mikä osa säätää valon määrää, mikä taittaa, minkä läpi valo kulkee, missä valo muuttuu hermosignaaliksi ja mikä vie sen aivoihin.",
+      "Aivojen osuus: näköhermoristeys, takaraivolohkon näköaivokuori, ylösalaisin olevan kuvan kääntäminen, kahden silmän kuvien yhdistäminen syvyysvaikutelmaksi ja värien tulkinta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Värikalvo säätää pupillin kokoa lihastensa avulla ja siten silmään tulevan valon määrää.\n- Mykiö taittaa valonsäteet ja kohdistaa kuvan verkkokalvolle. Sen kuperuus muuttuu (mukautuminen), kun katse siirtyy lähelle tai kauas.\n- Valo kulkee läpinäkyvän, hyytelömäisen lasiaisen läpi. Lasiainen myös pitää silmämunan muodossaan.\n- Verkkokalvon aistinsolut (sauvat hämäränäköön, tapit värinäköön) muuttavat valon hermoimpulsseiksi.\n- Näköhermo vie impulssit aivoihin.\n- **Aivojen merkitys:** näköhermot risteävät osittain, joten molempien silmien tietoa kulkee kummallekin aivopuoliskolle.\n- Lopullinen kuva muodostuu takaraivolohkon näköaivokuorella.\n- Aivot kääntävät verkkokalvon ylösalaisin olevan kuvan oikein päin, yhdistävät kahden silmän kuvat kolmiulotteiseksi näkymäksi ja tuottavat väriaistimuksen.\n\n**Esimerkkivastaus:** Kun valo tulee silmään, värikalvo säätelee pupillin kokoa: kirkkaassa valossa pupilli pienenee ja hämärässä suurenee. Mykiö taittaa valon niin, että terävä kuva syntyy verkkokalvolle, ja se muuttaa muotoaan, kun katsotaan lähelle tai kauas. Valo kulkee kirkkaan lasiaisen läpi, ja lasiainen pitää samalla silmän pyöreänä. Verkkokalvon sauvat ja tapit reagoivat valoon ja synnyttävät hermoimpulsseja, jotka näköhermo vie aivoihin. Näköhermoristeyksessä osa hermosyistä vaihtaa puolta, joten kumpikin aivopuolisko saa tietoa molemmista silmistä. Näköaivokuorella takaraivolohkossa aivot kääntävät ylösalaisin olevan kuvan oikein päin, yhdistävät kummankin silmän kuvat syvyysvaikutelmaksi ja tulkitsevat värit ja muodot. Varsinainen näkeminen tapahtuu siis aivoissa.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 7,
+     "prompt": "Aineiston 11.B uutiskatkelman mukaan älylaitteiden sininen valo haittaa unta hormonitoiminnan kautta. Nimeä hormoni ja selitä, mitä sininen valo tekee sen säätelemille elintoiminnoille.",
+     "hints": [
+      "Mikä hormoni saa meidät väsymään illalla, ja mikä sen eritystä säätelee?",
+      "Melatoniinia erittää käpyrauhanen pimeällä. Verkkokalvon siniselle valolle herkät solut viestivät sisäiselle kellolle, että on päivä, jolloin eritys vähenee. Mieti seurauksia vireyteen, nukahtamiseen ja muihin vuorokausirytmin mukaan vaihteleviin toimintoihin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kyseessä on melatoniini.\n- Melatoniinia erittää käpyrauhanen (väliaivojen yhteydessä), ja eritystä lisää pimeys.\n- Melatoniini aiheuttaa väsymystä ja tahdistaa vuorokausirytmiä.\n- Valo lopettaa normaalisti melatoniinin erityksen aamulla.\n- Myös näyttöjen keinotekoinen sininen valo vähentää melatoniinin eritystä illalla, joten vireys pysyy yllä ja nukahtaminen ja koko unirytmi siirtyvät myöhemmäksi.\n- Vuorokausirytmi säätelee myös muita toimintoja, kuten kasvuhormonin ja kortisolin eritystä, ruumiinlämpöä, sykettä ja verenpainetta, joten nekin voivat häiriintyä.\n\n**Esimerkkivastaus:** Uutisessa tarkoitettu hormoni on melatoniini. Sitä erittää aivoissa sijaitseva käpyrauhanen, kun on pimeää, ja se saa aikaan väsymyksen ja valmistaa elimistöä uneen. Verkkokalvolla on siniselle valolle erityisen herkkiä soluja, jotka viestivät aivojen sisäiselle kellolle, että on valoisaa. Silloin melatoniinin eritys vähenee. Jos katsoo puhelimen tai tietokoneen näyttöä myöhään illalla, melatoniinia erittyy vähemmän, vireys säilyy ja nukahtaminen viivästyy, jolloin koko unirytmi siirtyy myöhemmäksi. Koska myös kasvuhormonin ja kortisolin eritys, ruumiinlämpö, syke ja verenpaine vaihtelevat vuorokausirytmin mukaan, sininen valo voi sekoittaa myös niitä.\n\n**Sudenkuoppa:** pelkkä hormonin nimeäminen ei riitä. Vastauksessa pitää selittää, miten valo vaikuttaa melatoniinin eritykseen ja miten se näkyy unessa ja vireydessä.",
+     "answer": "Melatoniini",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

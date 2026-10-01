@@ -1,0 +1,410 @@
+{
+ "subject": "fysiikka",
+ "session": "2023K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2023K_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-03-24_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen 20 pisteen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Täydennä kukin lause valitsemalla pudotusvalikon vaihtoehto (vaihtoehdot koenäkymässä, A = ylin).\n\n- 1.1 Maan Kuuhun kohdistama vetovoima vs. Kuun Maahan kohdistama?\n- 1.2 Nollasta poikkeava kokonaisvoima: millainen liike?\n- 1.3 Impulssi on minkä suureen muutos?\n- 1.4 Onko energia skalaari vai vektori?\n- 1.5 Eristettyyn ideaalikaasuun tehdään työtä: lämpötila?\n- 1.6 Toisiaan hylkivien hiukkasten varaukset?\n- 1.7 Millainen aalto ääni on ilmassa?\n- 1.8 Mitä kaksikäämisellä muuntajalla muutetaan?\n- 1.9 Mikä säteilylaji ($\\beta^-$, $\\gamma$, $\\beta^+$, $\\alpha$) ionisoi ohutta kalvoa eniten?\n- 1.10 Millä aallonpituusalueella kasvihuonekaasut absorboivat tehokkaasti?",
+     "hints": [
+      "Kertaa perusperiaatteet: Newtonin III ja II laki, impulssiperiaate, skalaarit ja vektorit, termodynamiikan I pääsääntö, Coulombin laki, aaltotyypit, muuntajan toiminta, säteilylajien ionisointikyky ja Maan lämpösäteily.",
+      "Kohta kohdalta: 1.1 voima ja vastavoima; 1.2 $\\sum\\bar F = m\\bar a$; 1.3 $\\bar F\\Delta t = \\Delta\\bar p$; 1.4 energialla ei ole suuntaa; 1.5 $\\Delta U = Q + W$, $Q = 0$; 1.6 samanmerkkiset hylkivät; 1.7 painevaihtelut etenemissuunnassa; 1.8 muuntaja toimii induktiolla; 1.9 raskas, kaksinkertaisesti varattu hiukkanen; 1.10 Maan lämpösäteilyn aallonpituusalue."
+     ],
+     "solution": "1. **1.1 C** (yhtä suuri). Voima ja vastavoima ovat Newtonin III lain mukaan aina yhtä suuret.\n2. **1.2 B** (kiihtyvässä liikkeessä). Newtonin II lain mukaan nollasta poikkeava kokonaisvoima antaa kiihtyvyyden.\n3. **1.3 E** (liikemäärän). Impulssiperiaate: $\\bar F\\Delta t = \\Delta\\bar p$.\n4. **1.4 B** (skalaarisuure). Kaikki energialajit ovat skalaareja; liike-energiassakin on vain vauhdin neliö.\n5. **1.5 C** (nousee). Eristetyssä kaasussa $Q = 0$, joten $\\Delta U = W > 0$; ideaalikaasun sisäenergia kasvaa vain lämpötilan noustessa.\n6. **1.6 C** (samanmerkkiset). Samanmerkkiset varaukset hylkivät, varausten suuruudella ei ole merkitystä voiman suuntaan.\n7. **1.7 D** (pitkittäisenä). Ilmamolekyylit värähtelevät etenemissuunnassa, ja syntyy tihentymiä ja harventumia.\n8. **1.8 C** (vaihtojännitteen suuruutta). Muuntaja perustuu induktioon, joten se toimii vain vaihtojännitteellä, eikä taajuus muutu; jännitteiden suhde on kierroslukujen suhde.\n9. **1.9 D** ($\\alpha$). Alfahiukkanen on raskas ja kaksinkertaisesti varattu, joten se ionisoi hyvin tiheästi (sen kantama on vastaavasti lyhyt).\n10. **1.10 D** (infrapuna-alueella). Maan pinta säteilee lämpösäteilyä pääosin infrapuna-alueella, ja kasvihuonekaasut absorboivat sitä.\n\n**Vastaus: 1.1 C · 1.2 B · 1.3 E · 1.4 B · 1.5 C · 1.6 C · 1.7 D · 1.8 C · 1.9 D · 1.10 D**\n\n**Sudenkuoppa:** kohdassa 1.1 ajatellaan, että massiivisempi Maa vetää Kuuta voimakkaammin. Voimat ovat yhtä suuret; kiihtyvyydet ovat erisuuret.",
+     "answer": "1.1 C · 1.2 B · 1.3 E · 1.4 B · 1.5 C · 1.6 C · 1.7 D · 1.8 C · 1.9 D · 1.10 D",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 5,
+     "prompt": "Aineisto 2.A sisältää Ariane 5 -raketin ratavauhdin eri hetkinä yhden laukaisun ajalta. Laadi vauhdista ajan funktiona graafinen esitys, jossa näkyvät aineiston pisteet ja josta voi lukea vauhdin millä tahansa hetkellä välillä $0$–$1500\\,\\mathrm{s}$.",
+     "hints": [
+      "Pisteiden täytyy näkyä erillisinä, mutta tarvitset lisäksi jatkuvan viivan, jolta vauhdin voi lukea kaikkina hetkinä. Merkitse akseleihin suureet ja yksiköt.",
+      "Mieti, sopiiko tähän yksi sovitettu funktio vai interpolointi pisteestä toiseen. Viivan on kuljettava jokaisen pisteen kautta: esimerkiksi splini tai tiheän datan tapauksessa murtoviiva."
+     ],
+     "solution": "1. Piirretään vauhti $v\\ (\\mathrm{m/s})$ ajan $t\\ (\\mathrm{s})$ funktiona niin, että aineiston pisteet näkyvät erillisinä merkkeinä.\n2. Koska vauhti pitää voida lukea millä tahansa hetkellä, pisteiden kautta piirretään yhtenäinen viiva. Paras on splini-interpolaatio; tässä aineistossa myös pisteitä yhdistävä murtoviiva toimii hyvin, koska pisteitä on tiheästi siellä, missä vauhti muuttuu nopeasti.\n3. Kuvaajasta näkyy, että vauhti kasvaa noin $6{,}9\\,\\mathrm{km/s}$:iin noin $530\\,\\mathrm{s}$ kohdalla, pysyy hetken vakiona (vaiheiden erotus) ja kasvaa sen jälkeen tasaisemmin noin $9{,}4\\,\\mathrm{km/s}$:iin.\n\n**Sudenkuoppa:** yhden sovitetun funktion (esim. polynomin) piirtäminen niin, että se ei kulje mittauspisteiden kautta. Silloin vauhtia ei voi lukea luotettavasti.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Määritä raketin radallaan kulkema matka välillä $0$–$1500\\,\\mathrm{s}$ (aineisto 2.A)?",
+     "hints": [
+      "Kuljettu matka on vauhdin kuvaajan ja aika-akselin väliin jäävä pinta-ala: $s = \\int v\\,dt$.",
+      "Laske ala graafisesti tai numeerisesti, esimerkiksi puolisuunnikassäännöllä pisteiden välillä: $\\Delta s \\approx \\frac{v_i + v_{i+1}}{2}\\,(t_{i+1} - t_i)$. Muista muuttaa tulos kilometreiksi."
+     ],
+     "solution": "1. Matka on vauhdin integraali ajan suhteen, eli $v,t$-kuvaajan ja aika-akselin väliin jäävä pinta-ala: $s = \\int_0^{1500\\,\\mathrm{s}} v\\,dt$.\n2. Kaava $s = vt$ ei käy, koska vauhti muuttuu koko ajan.\n3. Lasketaan pinta-ala graafisesti (ohjelman integrointityökalulla splinin alta) tai puolisuunnikkaina pisteiden välillä. Esimerkiksi välillä $1363$–$1500\\,\\mathrm{s}$: $\\frac{9029 + 9366}{2}\\,\\mathrm{m/s}\\cdot 137\\,\\mathrm{s} \\approx 1{,}26\\cdot 10^6\\,\\mathrm{m}$.\n4. Kaikkien osien summa on noin $9{,}5\\cdot 10^6\\,\\mathrm{m}$ (splinillä $9490\\,\\mathrm{km}$, puolisuunnikkailla $9540\\,\\mathrm{km}$).\n\n**Vastaus: raketti kulki noin $9500\\,\\mathrm{km}$.**\n\n**Sudenkuoppa:** matka lasketaan yhdellä vauhdilla kaavalla $s = vt$.",
+     "answer": "$s \\approx 9500\\,\\mathrm{km}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Määritä raketin ratakiihtyvyys välillä $700$–$1400\\,\\mathrm{s}$.",
+     "hints": [
+      "Tarkastele kuvaajaa tällä välillä: onko se likimain suora? Mitä se kertoo kiihtyvyydestä?",
+      "Kuvaaja on välillä suora, joten kiihtyvyys on vakio. Sovita välin pisteisiin suora ja lue kulmakerroin $a = \\Delta v/\\Delta t$."
+     ],
+     "solution": "1. Välillä $700$–$1400\\,\\mathrm{s}$ vauhdin pisteet asettuvat suoralle, joten raketti on tasaisesti kiihtyvässä liikkeessä.\n2. Sovitetaan välin pisteisiin suora. Sen kulmakerroin on $a = \\dfrac{\\Delta v}{\\Delta t} \\approx 2{,}60\\,\\mathrm{m/s^2}$.\n3. Tarkistus päätepisteillä: $\\dfrac{(9029 - 7359)\\,\\mathrm{m/s}}{(1363 - 718)\\,\\mathrm{s}} \\approx 2{,}6\\,\\mathrm{m/s^2}$.\n\n**Vastaus: $a \\approx 2{,}6\\,\\mathrm{m/s^2}$.**\n\n**Sudenkuoppa:** hetkellisen kiihtyvyyden lukeminen yhdestä kohdasta tai keskikiihtyvyyden laskeminen koko lennolle.",
+     "answer": "$a \\approx 2{,}6\\,\\mathrm{m/s^2}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lämmönsiirtokoneita koskevat monivalinnat (vaihtoehdot koenäkymässä, A = ylin; 3.1 on 1 p, muut 2 p). Kohdat 3.1–3.3 koskevat ilmalämpöpumppua, joka siirtää energiaa kylmästä ulkoilmasta lämpimään sisäilmaan kiertävän aineen avulla.\n\n- 3.1 Miten ulkoyksikön aine voi ottaa lämpöä kylmästä ulkoilmasta?\n- 3.2 Mitä aineelle tapahtuu höyrystimessä?\n- 3.3 Sähköteho $1000\\,\\mathrm{W}$: lämmitystehon suuruusluokka?\n- 3.4 Huone lämpenee pysyvästi: jääkaapin sähkönkulutus?\n- 3.5 Käyvän jääkaapin ovi auki pitkään: huoneen lämpötila?\n- 3.6 Mikä energiavuokaavio kuvaa lämmönsiirtokonetta?\n- 3.7 Mikä kuvaaja on ideaalisen lämmönsiirtokoneen kierto (kaasu)?\n- 3.8 Työtä kaasuun ilman lämmönvaihtoa: lämpötila ja tilavuus?",
+     "hints": [
+      "Lämpö siirtyy itsestään vain kuumasta kylmään. Lämmönsiirtokone (lämpöpumppu, jääkaappi) siirtää lämpöä kylmästä kuumaan, kun siihen tehdään työtä. Muista myös energian säilyminen: sähköenergiakin päätyy lopulta lämmöksi.",
+      "Kohta kohdalta: 3.1 lämpötilaero; 3.2 höyrystyminen sitoo energiaa; 3.3 lämpökerroin on tyypillisesti noin 3; 3.4 suurempi lämpötilaero vaatii enemmän työtä; 3.5 jääkaappi vain siirtää lämpöä huoneen sisällä; 3.6 lämpö kylmästä koneeseen, työ koneeseen, lämpö kuumaan; 3.7 kierron suunta $pV$-kuvaajassa; 3.8 adiabaattinen puristus."
+     ],
+     "solution": "1. **3.1 A** (aine on ulkoilmaa kylmempää). Lämpöä siirtyy itsestään vain lämpimämmästä kylmempään, joten ulkoyksikössä aineen on oltava ulkoilmaa kylmempää.\n2. **3.2 A** (aine höyrystyy ja ottaa energiaa ympäristöstä). Höyrystyminen sitoo höyrystymislämmön.\n3. **3.3 C** ($3000\\,\\mathrm{W}$). Lämmitysteho on vähintään sähköteho, koska sähköenergiakin muuttuu lopulta lämmöksi; tyypillinen lämpökerroin on noin 3. Arvo $30\\,000\\,\\mathrm{W}$ on epärealistinen.\n4. **3.4 B** (kulutus kasvaa). Kun lämpötilaero kaapin ja huoneen välillä kasvaa, lämmön siirtäminen vaatii enemmän työtä, ja lisäksi lämpöä vuotaa kaappiin nopeammin.\n5. **3.5 B** (lämpötila nousee). Jääkaappi siirtää lämpöä vain huoneen sisällä paikasta toiseen, mutta sen käyttämä sähköenergia muuttuu lämmöksi huoneeseen.\n6. **3.6 D** (lämpöä kylmästä koneeseen, koneeseen tehdään työtä, ja lämpöä siirtyy kuumaan). Muut kaaviot rikkovat energian säilymisen tai kuvaavat lämpövoimakonetta.\n7. **3.7 B** (kierto $pV$-kuvaajassa vastapäivään). Lämmönsiirtokone on käänteinen lämpövoimakone: nettotyö tehdään kaasuun, ja matalassa lämpötilassa kaasu laajenee ja ottaa lämpöä vastaan. Myötäpäivään kiertävä prosessi (A) on lämpövoimakone.\n8. **3.8 C** (lämpötila nousee, tilavuus pienenee). Kaasuun tehdään työtä, eli sitä puristetaan; koska $Q = 0$, $\\Delta U = W > 0$ ja lämpötila nousee (adiabaattinen puristus).\n\n**Vastaus: 3.1 A · 3.2 A · 3.3 C · 3.4 B · 3.5 B · 3.6 D · 3.7 B · 3.8 C**\n\n**Sudenkuoppa:** kohdassa 3.5 ajatellaan, että auki oleva jääkaappi viilentää huonetta. Lämpö kiertää huoneen sisällä, ja moottorin työ lämmittää huonetta lisää.",
+     "answer": "3.1 A · 3.2 A · 3.3 C · 3.4 B · 3.5 B · 3.6 D · 3.7 B · 3.8 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 8,
+     "prompt": "Kondensaattori ensin varataan ja sitten puretaan. Kuvassa 4.A on kondensaattorin jännite ajan funktiona: jännite nousee ja laskee eksponentiaalisesti, ja varautuminen ja purkautuminen kestävät yhtä kauan. Täydennä kuvan 4.B kytkentäkaavio (paristo ja kondensaattori) kahdella kytkimellä, vastuksella, johtimilla ja jännitemittarilla niin, että piirillä saadaan kuvan 4.A käyrä. Selitä mittauksen kulku ja kytkimien käyttöjärjestys.",
+     "hints": [
+      "Mikä saa jännitteen muuttumaan eksponentiaalisesti eikä hyppäyksenä? Varautuminen ja purkautuminen ovat yhtä nopeita, joten mitä se kertoo vastuksen paikasta?",
+      "Vastuksen pitää olla kondensaattorin kanssa sarjassa sekä varattaessa että purettaessa. Yksi kytkin yhdistää pariston piiriin, toinen tekee purkauspiirin, joka ohittaa pariston mutta kulkee saman vastuksen kautta."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- vastus kytketään sarjaan kondensaattorin kanssa niin, että sama vastus on mukana sekä varautumisessa että purkautumisessa (yhtä suuret aikavakiot $RC$)\n- kytkin 1 on pariston ja vastuksen välissä; kytkin 2 on haarassa, joka yhdistää vastuksen pariston puoleisen pään suoraan pariston toiselle puolelle (kondensaattorin alapuolen johtimeen), jolloin purkauspiiri on kondensaattori–vastus–kytkin 2\n- jännitemittari kytketään kondensaattorin rinnalle\n- kytkinten järjestys: aluksi molemmat auki; varaus: suljetaan kytkin 1; purku: avataan kytkin 1 ja suljetaan kytkin 2\n\n**Esimerkkivastaus:** Kuvan yläjohtimen aukkoon piirretään paristosta lähtien kytkin 1 ja sen perään vastus $R$, joka johtaa kondensaattorin yläpuolelle. Kytkimen 1 ja vastuksen välisestä pisteestä vedetään johdin kytkimen 2 kautta alajohtimeen. Jännitemittari kytketään kondensaattorin napojen väliin. Kun kytkin 1 suljetaan (kytkin 2 auki), paristo varaa kondensaattoria vastuksen kautta, ja mittarin lukema nousee eksponentiaalisesti kohti pariston jännitettä. Kun jännite on tasaantunut, kytkin 1 avataan ja kytkin 2 suljetaan. Kondensaattori purkautuu saman vastuksen ja kytkimen 2 kautta, joten jännite laskee eksponentiaalisesti samalla aikavakiolla. Mittarin lukemat kirjataan ajan funktiona.\n\n**Sudenkuoppa:** vastus kytketään vain purkauspiiriin (kytkimen 2 kanssa sarjaan). Silloin varautuminen tapahtuu lähes hetkessä eikä käyrä vastaa kuvaa 4.A.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 4,
+     "prompt": "Onko virta kuvan 4.B pisteessä P (kondensaattorin alapuolella) ylös- vai alaspäin hetkellä $t_1$ (varautuminen) ja hetkellä $t_2$ (purkautuminen)?",
+     "hints": [
+      "Katso paristosymbolista, kumpi napa on positiivinen. Varautumisessa virta kulkee pariston plusnavasta piirin kautta miinusnapaan; purkautumisessa virran suunta kääntyy."
+     ],
+     "solution": "1. Pariston pitkä ohut viiva (plusnapa) on ylhäällä, joten varautumisessa virta kulkee yläjohdinta pitkin kondensaattorin yläpuolelle ja kondensaattorin alapuolelta pisteen P kautta takaisin pariston miinusnapaan.\n2. Hetkellä $t_1$ (varautuminen) virta pisteessä P on siis alaspäin.\n3. Purkautumisessa kondensaattori toimii lähteenä, ja virta kulkee vastakkaiseen suuntaan: hetkellä $t_2$ virta pisteessä P on ylöspäin.\n\n**Vastaus: $t_1$: alaspäin; $t_2$: ylöspäin.**",
+     "answer": "$t_1$ alaspäin, $t_2$ ylöspäin",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 3,
+     "prompt": "Miten muuttaisit piirin komponentteja, jos haluaisit hidastaa sekä varautumista että purkautumista?",
+     "hints": [
+      "Varautumisen ja purkautumisen nopeuden määrää aikavakio $\\tau = RC$."
+     ],
+     "solution": "1. Jännite muuttuu eksponentiaalisesti aikavakiolla $\\tau = RC$.\n2. Muutos hidastuu, kun resistanssia kasvatetaan (suurempi vastus tai toinen vastus sarjaan ensimmäisen kanssa) tai kun kapasitanssia kasvatetaan (suurempi kondensaattori).\n\n**Vastaus: kasvatetaan vastuksen resistanssia (tai lisätään vastus sarjaan) tai käytetään kapasitanssiltaan suurempaa kondensaattoria.**\n\n**Sudenkuoppa:** ehdotetaan toisen vastuksen lisäämistä kertomatta, että se kytketään sarjaan; rinnankytkentä pienentäisi resistanssia.",
+     "answer": "Suurempi $R$ (vastus sarjaan) tai suurempi $C$.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Palavan kynttilän pituutta seurattiin ajan funktiona (aineisto 5.A). Kynttilän alkupituus on $189\\,\\mathrm{mm}$, halkaisija $21\\,\\mathrm{mm}$ ja keskimääräinen tiheys $862\\,\\mathrm{kg/m^3}$.\n\n- 5.1 Esitä pituus ajan funktiona graafisesti mittauspisteinä ja niihin sopivalla mallilla.\n- 5.2 Samanlainen kynttilä poltetaan vedellä täytetyssä maljakossa, jossa se kelluu pystyssä (aineisto 5.B), koska sen tyveen on kiinnitetty $3{,}5\\,\\mathrm{g}$ metallirengas (tilavuus pieni). Määritä kynttilän paloaika maljakossa. Voit käyttää aineiston 5.C voimakuviota ja kohdan 5.1 esitystä.",
+     "hints": [
+      "Pituus näyttää pienenevän tasaisesti, joten sovita pisteisiin suora. Kelluvaan kynttilään vaikuttavat paino (kynttilä + rengas) ja noste. Mieti, milloin kynttilä ei enää pysty kellumaan: kun se on lyhentynyt niin paljon, että koko kynttilä on veden alla.",
+      "Tasapaino: $\\left(\\rho_k\\frac{\\pi D^2}{4}L + m\\right)g = \\rho_v\\frac{\\pi D^2}{4}hg$. Kynttilä sammuu, kun uponnut osa $h$ on koko pituus $L$: tästä $L = \\frac{4m}{\\pi D^2(\\rho_v - \\rho_k)}$. Lue sitten suorasta, milloin pituus on tämä."
+     ],
+     "solution": "**5.1 Kuvaaja ja malli**\n\n1. Piirretään pituus $L\\ (\\mathrm{mm})$ ajan $t\\ (\\mathrm{min})$ funktiona erillisinä pisteinä. Pisteet ovat alkua lukuun ottamatta suoralla, joten malliksi sovitetaan suora.\n2. Sovite: $L(t) \\approx 178\\,\\mathrm{mm} - 0{,}372\\,\\mathrm{\\tfrac{mm}{min}}\\cdot t$. Aivan alussa kynttilä lyhenee nopeammin, koska sen kärki on kapeampi.\n\n**5.2 Paloaika maljakossa**\n\n3. Kynttilään ja renkaaseen vaikuttavat paino $\\bar G$ ja noste $\\bar N$. Kynttilä kelluu, joten $G = N$.\n4. Paino: $G = \\left(\\rho_k\\dfrac{\\pi D^2}{4}L + m\\right)g$, missä $L$ on kynttilän pituus ja $m = 3{,}5\\,\\mathrm{g}$.\n5. Noste (syrjäytetyn veden paino): $N = \\rho_v\\dfrac{\\pi D^2}{4}hg$, missä $h$ on veden alla oleva osa. Kynttilän palaessa $L$ pienenee, ja $h/L$ kasvaa, koska renkaan paino pysyy samana.\n6. Kynttilä sammuu, kun liekki painuu veden alle, eli kun $h = L$: $\\rho_k\\dfrac{\\pi D^2}{4}L + m = \\rho_v\\dfrac{\\pi D^2}{4}L$, josta $L = \\dfrac{4m}{\\pi D^2(\\rho_v - \\rho_k)}$.\n7. $L = \\dfrac{4\\cdot 0{,}0035\\,\\mathrm{kg}}{\\pi(0{,}021\\,\\mathrm{m})^2\\cdot(1000 - 862)\\,\\mathrm{kg/m^3}} \\approx 0{,}0732\\,\\mathrm{m} = 73\\,\\mathrm{mm}$.\n8. Mallista: $178\\,\\mathrm{mm} - 0{,}372\\,\\mathrm{\\tfrac{mm}{min}}\\cdot t = 73\\,\\mathrm{mm}$, joten $t \\approx 280\\,\\mathrm{min}$.\n\n**Vastaus: malli on suora $L \\approx 178\\,\\mathrm{mm} - 0{,}37\\,\\mathrm{mm/min}\\cdot t$; kynttilä palaa maljakossa noin $280\\,\\mathrm{min}$ (noin 4,7 h), jolloin sen pituus on noin $73\\,\\mathrm{mm}$.**\n\n**Sudenkuoppa:** nosteessa käytetään parafiinin tiheyttä veden sijaan, tai unohdetaan, että kynttilän paino pienenee sen lyhentyessä.",
+     "answer": "$L \\approx 178\\,\\mathrm{mm} - 0{,}37\\,\\tfrac{\\mathrm{mm}}{\\mathrm{min}}\\,t$; paloaika $\\approx 280\\,\\mathrm{min}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 4,
+     "prompt": "Biohajoavan sipsipussin rapistelun intensiteettitaso oli $95\\,\\mathrm{dB}$ metrin päästä mitattuna. Mikä on intensiteettitaso samassa pisteessä, kun viisi ihmistä rapistelee omaa pussiaan samaan aikaan $1{,}0\\,\\mathrm{m}$ päässä mittarista?",
+     "hints": [
+      "Desibelit eivät summaudu, mutta intensiteetit summautuvat. Viiden pussin intensiteetti on viisinkertainen, ja $L = 10\\,\\mathrm{dB}\\cdot\\lg\\frac{I}{I_0}$."
+     ],
+     "solution": "1. Intensiteettitaso: $L = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{I}{I_0}$, $I_0 = 10^{-12}\\,\\mathrm{W/m^2}$.\n2. Yhden pussin intensiteetti: $I_1 = 10^{9{,}5}I_0 \\approx 3{,}2\\cdot 10^{-3}\\,\\mathrm{W/m^2}$.\n3. Viiden pussin intensiteetit summautuvat: $I_5 = 5I_1$.\n4. $L_5 = 10\\,\\mathrm{dB}\\cdot\\lg\\dfrac{5I_1}{I_0} = 95\\,\\mathrm{dB} + 10\\,\\mathrm{dB}\\cdot\\lg 5 \\approx 102\\,\\mathrm{dB}$.\n\n**Vastaus: noin $102\\,\\mathrm{dB}$ (noin $100\\,\\mathrm{dB}$).**\n\n**Sudenkuoppa:** tason kertominen viidellä ($475\\,\\mathrm{dB}$).",
+     "answer": "$\\approx 102\\,\\mathrm{dB}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.2",
+     "points": 3,
+     "prompt": "Tuotekehityksen jälkeen rapistelun taso oli $75\\,\\mathrm{dB}$. Montako prosenttia intensiteetti oli tällöin alkuperäisestä?",
+     "hints": [
+      "Tason muutos $\\Delta L$ vastaa intensiteettien suhdetta $\\frac{I_2}{I_1} = 10^{\\Delta L/(10\\,\\mathrm{dB})}$."
+     ],
+     "solution": "1. Tason muutos on $\\Delta L = 75\\,\\mathrm{dB} - 95\\,\\mathrm{dB} = -20\\,\\mathrm{dB}$.\n2. $\\dfrac{I_2}{I_1} = 10^{-20/10} = 10^{-2} = 1{,}0\\,\\%$.\n\n**Vastaus: $1{,}0\\,\\%$.**\n\n**Sudenkuoppa:** tasojen suhde $75/95 \\approx 79\\,\\%$ ei kerro intensiteettien suhdetta.",
+     "answer": "$1{,}0\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 5,
+     "prompt": "Arvioi, millä etäisyydellä alkuperäisen pussin ($95\\,\\mathrm{dB}$ metrin päästä) taso on laskenut tuulen huminan tasolle $30\\,\\mathrm{dB}$.",
+     "hints": [
+      "Oleta, että ääni leviää pistemäisestä lähteestä kaikkiin suuntiin. Miten intensiteetti riippuu etäisyydestä?",
+      "$I \\propto \\frac{1}{r^2}$, joten $\\frac{I_1}{I_2} = \\left(\\frac{r_2}{r_1}\\right)^2$. Tasoero on $65\\,\\mathrm{dB}$, eli intensiteetti pienenee tekijällä $10^{6{,}5}$."
+     ],
+     "solution": "1. Pistemäisestä lähteestä ääni leviää pallon pinnalle $A = 4\\pi r^2$, joten $I \\propto \\dfrac{1}{r^2}$.\n2. Tasoero: $95\\,\\mathrm{dB} - 30\\,\\mathrm{dB} = 65\\,\\mathrm{dB}$, joten $\\dfrac{I_1}{I_2} = 10^{6{,}5}$.\n3. $\\left(\\dfrac{r_2}{r_1}\\right)^2 = 10^{6{,}5}$, joten $r_2 = 1{,}0\\,\\mathrm{m}\\cdot 10^{3{,}25} \\approx 1{,}8\\cdot 10^3\\,\\mathrm{m}$.\n\n**Vastaus: noin $1{,}8\\,\\mathrm{km}$ päässä.**\n\n**Sudenkuoppa:** intensiteetti lasketaan ympyrän pinta-alan avulla ($I = P/(\\pi r^2)$) tai oletetaan intensiteetin pienenevän suoraan verrannollisesti etäisyyteen.",
+     "answer": "$r \\approx 1{,}8\\,\\mathrm{km}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.4",
+     "points": 3,
+     "prompt": "Miksi kohdan 6.3 etäisyysarvio ei ole realistinen oikeassa tilanteessa?",
+     "hints": [
+      "Kohdan 6.3 malli ottaa huomioon vain äänen leviämisen. Mitä muuta äänelle tapahtuu matkalla ilmassa ja esteisiin osuessaan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- ääntä absorboituu ilmaan ja matkan varrella oleviin esteisiin (maasto, rakennukset, kasvillisuus), jolloin sen energia muuttuu lämmöksi\n- ääni vaimenee siis nopeammin kuin pelkän leviämisen perusteella, ja todellinen etäisyys on selvästi pienempi kuin $1{,}8\\,\\mathrm{km}$\n\n**Esimerkkivastaus:** Laskussa oletettiin, että äänen teho vain jakautuu yhä suuremmalle pallopinnalle. Todellisuudessa ilma absorboi ääntä, ja maasto, rakennukset ja kasvillisuus imevät ja sirottavat sitä. Siksi rapistelu vaimenee tuulen huminan tasolle jo paljon lähempänä kuin kahden kilometrin päässä.\n\n**Sudenkuoppa:** perustellaan pelkillä taustaäänillä tai ”etäisyydellä” mainitsematta absorptiota.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 4,
+     "prompt": "Kampigeneraattorissa (aineisto 7.A) käämiä pyöritetään tasaisesti kestomagneetin kentässä, ja johtimien välillä havaitaan vaihtojännite. Mistä jännite syntyy?",
+     "hints": [
+      "Magneetin kenttä ei muutu. Mikä muuttuu, kun käämi pyörii kentässä, ja mitä induktiolaki siitä sanoo?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- pyörivän käämin läpi kulkeva magneettivuo $\\Phi = BA\\cos\\varphi$ muuttuu jatkuvasti, koska käämin asento kenttään nähden muuttuu\n- Faradayn induktiolain mukaan vuon muutos indusoi käämiin jännitteen $e = -N\\dfrac{d\\Phi}{dt}$; koska vuo vaihtelee jaksollisesti, syntyy vaihtojännite\n\n**Esimerkkivastaus:** Kun kampea pyöritetään, käämi kääntyy magneetin kentässä. Käämin läpi kulkeva magneettivuo on suurin, kun käämin taso on kohtisuorassa kenttää vastaan, ja nolla, kun taso on kentän suuntainen. Induktiolain mukaan tämä vuon muutos synnyttää käämiin jännitteen, jonka suuruus on verrannollinen vuon muutosnopeuteen. Vuo kasvaa ja pienenee vuorotellen, joten jännitteen suunta vaihtuu, ja syntyy vaihtojännite.\n\n**Sudenkuoppa:** väitetään magneettikentän muuttuvan. Kenttä on vakio; käämin läpäisevä vuo muuttuu.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 4,
+     "prompt": "Johda induktiolaista käämiin indusoituvan jännitteen huippuarvolle lauseke $|e| = NBA\\omega$ ($N$ kierrosmäärä, $B$ vuontiheys, $A$ käämin ala, $\\omega$ kulmanopeus).",
+     "hints": [
+      "Kirjoita vuo ajan funktiona: $\\Phi = BA\\cos(\\omega t)$. Derivoi ja sijoita induktiolakiin $e = -N\\frac{d\\Phi}{dt}$. Mikä on sinifunktion suurin itseisarvo?"
+     ],
+     "solution": "1. Kun käämin normaalin ja kentän välinen kulma on $\\varphi = \\omega t$, vuo on $\\Phi = BA\\cos(\\omega t)$.\n2. Induktiolaki: $e = -N\\dfrac{d\\Phi}{dt} = -NBA\\cdot\\dfrac{d}{dt}\\cos(\\omega t) = NBA\\omega\\sin(\\omega t)$.\n3. $\\sin(\\omega t)$ vaihtelee välillä $-1$…$1$, joten jännitteen itseisarvo on suurimmillaan, kun $|\\sin(\\omega t)| = 1$: $|e|_\\max = NBA\\omega$.\n\n**Vastaus: $|e| = NBA\\omega$ (huippuarvo).**",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 7,
+     "prompt": "Aineiston 7.B simulaatiossa voit säätää vetopyörän pyörimisnopeutta ja lukea käämin jännitteen $U$ ajan funktiona. Neliökäämissä on 150 kierrosta, ja sen sivun pituus on $6\\,\\mathrm{cm}$. Määritä magneettivuon tiheys käämin kohdalla.",
+     "hints": [
+      "Ratkaise kohdan 7.2 lausekkeesta $B$. Tarvitset kuvaajasta jännitteen huippuarvon ja jaksonajan (kulmanopeus $\\omega = 2\\pi/T$).",
+      "Valitse pyörimisnopeus, jolla jaksot näkyvät selvästi (esim. noin 2 kierrosta sekunnissa). Lue huippujännite (esim. noin $7{,}5\\,\\mathrm{V}$) ja jaksonaika useamman jakson keskiarvona (esim. 5 jaksoa $0{,}42\\,\\mathrm{s}$:ssa). Huomaa, että käämi pyörii nopeammin kuin vetopyörä."
+     ],
+     "solution": "1. Kohdan 7.2 tuloksesta $B = \\dfrac{|e|}{NA\\omega}$, missä $A = (0{,}06\\,\\mathrm{m})^2 = 3{,}6\\cdot 10^{-3}\\,\\mathrm{m^2}$ ja $\\omega = \\dfrac{2\\pi}{T}$.\n2. Simulaatiossa asetetaan vetopyörälle esimerkiksi 2 kierrosta sekunnissa. Kuvaajasta luetaan huippujännite $|e| \\approx 7{,}5\\,\\mathrm{V}$ ja viiden jakson kesto $0{,}42\\,\\mathrm{s}$, joten $T \\approx 0{,}084\\,\\mathrm{s}$.\n3. Jaksonaika luetaan kuvaajasta, koska käämi pyörii vetopyörää nopeammin (välityksen takia); vetopyörän pyörimisnopeutta ei voi käyttää suoraan.\n4. $B = \\dfrac{7{,}5\\,\\mathrm{V}}{150\\cdot 3{,}6\\cdot 10^{-3}\\,\\mathrm{m^2}\\cdot\\dfrac{2\\pi}{0{,}084\\,\\mathrm{s}}} \\approx 0{,}19\\,\\mathrm{T}$.\n\n**Vastaus: $B \\approx 0{,}2\\,\\mathrm{T}$.**\n\n**Sudenkuoppa:** käytetään simulaatioon syötettyä vetopyörän pyörimisnopeutta käämin kulmanopeutena.",
+     "answer": "$B \\approx 0{,}2\\,\\mathrm{T}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 2,
+     "prompt": "Aineiston 8.A artikkeli kertoo ensimmäisen maailmansodan siirrettävistä röntgenlaitteista. Miksi laitteita ei usein voitu kytkeä suoraan sähköverkkoon?",
+     "hints": [
+      "Etsi artikkelista, millaista sähköä Ranskassa tuolloin oli saatavilla ja oliko sitä kaikkialla."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- monissa kenttäsairaaloiksi otetuissa rakennuksissa ei ollut sähköä lainkaan\n- verkon jännite ja tyyppi vaihtelivat alueittain (tasa- tai vaihtovirtaa, noin $100$–$200\\,\\mathrm{V}$), joten yhtä sopivaa teholähdettä ei voitu tehdä\n\n**Esimerkkivastaus:** Sähköä ei ollut kaikissa kenttäsairaaloissa, ja siellä missä oli, se saattoi olla joko tasa- tai vaihtovirtaa ja jännite vaihteli paikkakunnittain. Siksi laitteet saivat virtansa autoon asennetusta generaattorista.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 5,
+     "prompt": "Säteily havaittiin joko kuvalevyllä tai fluoroskoopilla, jossa fluoresoivalla aineella päällystetyn lasilevyn läpi katsottiin potilaan kuvaa reaaliajassa (kuva 8.B). Kumpaa menetelmää käyttäisit nykyään ja miksi?",
+     "hints": [
+      "Vertaa menetelmiä siltä kannalta, kuinka kauan röntgenlähde on päällä ja kuka on säteilylle alttiina.",
+      "Fluoroskopiassa lähde on päällä koko tarkastelun ajan, ja lääkäri on usein säteilykeilan lähellä. Kuvalevy vaatii vain lyhyen valotuksen, ja kuva jää talteen."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- valinta: kuvalevy (tai sen nykyaikainen vastine)\n- perustelu säteilyannoksella: fluoroskopiassa röntgenlähde on päällä koko tarkastelun ajan, ja sekä potilas että lääkäri (joka katsoo levyä ja voi jopa leikata samanaikaisesti) saavat suuren annoksen; kuvalevylle riittää lyhyt valotus, joten annos on paljon pienempi\n- lisäksi kuvasta jää tallenne, johon voi palata\n\n**Esimerkkivastaus:** Valitsisin kuvalevyn. Fluoroskoopilla kuva syntyy vain niin kauan kuin säteily on päällä, joten tarkastelun aikana potilas ja lääkäri altistuvat röntgenlähteen säteilylle koko ajan, ja lääkäri on keilan välittömässä läheisyydessä. Kuvalevylle kuva tallentuu lyhyellä valotuksella, joten röntgenlähteestä saatava annos on selvästi pienempi. Nykyään tiedämme ionisoivan säteilyn haitat, joten annosten minimointi on tärkeämpää kuin kuvan saaminen hetkessä.\n\n**Sudenkuoppa:** valinta perustellaan pelkällä nopeudella, tai väitetään säteilyn tulevan fluoresoivasta levystä eikä röntgenlähteestä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 8,
+     "prompt": "Miksi artikkelissa kuvattuja vammoja (esim. luunmurtumat, sirpaleet) ja keuhkosairauksia voi havaita röntgenkuvalla? Aineistossa 8.C on influenssapotilaan keuhkokuva vuodelta 1918.",
+     "hints": [
+      "Röntgenkuva on varjokuva: se näyttää, kuinka paljon säteilyä on päässyt kehon läpi eri kohdissa. Mistä riippuu, kuinka paljon aine vaimentaa röntgensäteilyä?",
+      "Vaimenemiseen vaikuttavat aineen alkuaineiden järjestysluku ja aineen tiheys. Vertaa luuta (kalsium), metallisirpaleita, pehmytkudosta (H, C, O) ja ilmaa keuhkoissa."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kuva syntyy kehon läpi kulkeneesta säteilystä: eri kudokset vaimentavat säteilyä eri määrän, ja erot näkyvät kontrastina (ei heijastumista)\n- vaimeneminen kasvaa alkuaineiden järjestysluvun kasvaessa: luun kalsium ja metallisirpaleet absorboivat paljon enemmän kuin kevyistä alkuaineista (H, C, O) koostuva pehmytkudos\n- vaimeneminen kasvaa tiheyden kasvaessa: ilmaa sisältävät keuhkot päästävät säteilyä läpi paljon helpommin kuin neste tai kudos\n- esimerkit: luunmurtuma näkyy katkoksena vaaleassa luussa, sirpaleet kirkkaina täplinä; tulehduksessa keuhkoihin kertyvä neste vaimentaa enemmän kuin ilma, joten keuhkokuvaan tulee vaaleita varjostumia\n\n**Esimerkkivastaus:** Röntgensäteily läpäisee kehon osittain, ja kuvalevylle tai fluoresoivalle levylle tallentuu läpi päässyt säteily. Aine vaimentaa röntgensäteilyä sitä enemmän, mitä suurempi on sen alkuaineiden järjestysluku ja mitä tiheämpää se on. Luissa on paljon kalsiumia, ja metallisirpaleissa on raskaita alkuaineita, joten ne erottuvat selvästi pehmytkudoksesta, joka koostuu pääosin vedystä, hiilestä ja hapesta. Siksi murtumat ja sirpaleet näkyvät hyvin. Terveet keuhkot ovat täynnä ilmaa, jonka tiheys on pieni, joten ne näkyvät kuvassa tummina. Jos keuhkoihin on kertynyt nestettä tulehduksen takia, vaimeneminen kasvaa, ja kohta erottuu vaaleana varjostumana, kuten influenssapotilaan kuvassa.\n\n**Sudenkuoppa:** väitetään röntgensäteiden heijastuvan kehon sisältä, tai vain kuvaillaan mitä kuvissa näkyy selittämättä, miksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 6,
+     "prompt": "Gammafotonilla on kolme vuorovaikutustapaa aineen kanssa (ks. aineisto 9.A). Kuvaa fotonin kohtalo ja energian päätyminen (a) valosähköisessä ilmiössä ja (b) parinmuodostuksessa.",
+     "hints": [
+      "Kummassakaan ilmiössä fotoni ei jatka matkaansa. Mieti, mikä hiukkanen tai mitkä hiukkaset saavat energian.",
+      "Parinmuodostuksessa osa energiasta muuttuu massaksi: elektronin ja positronin lepoenergiat ovat yhteensä $2\\cdot 511\\,\\mathrm{keV} = 1022\\,\\mathrm{keV}$."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- (a) valosähköisessä ilmiössä fotoni absorboituu (katoaa) kokonaan, ja käytännössä kaikki energia päätyy atomin elektronille, joka irtoaa liike-energian saaneena (pieni osa kuluu sidosenergiaan)\n- (b) parinmuodostuksessa fotoni katoaa (atomiytimen lähellä) ja muuttuu elektroni–positroni-pariksi; energia muuttuu hiukkasten massaksi ($1022\\,\\mathrm{keV}$) ja loput niiden liike-energiaksi\n\n**Esimerkkivastaus:** Valosähköisessä ilmiössä fotoni luovuttaa koko energiansa yhdelle atomin elektronille ja lakkaa olemasta. Elektroni irtoaa atomista, ja sen liike-energia on fotonin energia vähennettynä elektronin sidosenergialla. Parinmuodostuksessa fotoni katoaa ytimen sähkökentässä ja synnyttää elektronin ja positronin. Fotonin energiasta $1022\\,\\mathrm{keV}$ muuttuu näiden hiukkasten lepoenergiaksi, ja ylimenevä osa jakautuu niiden liike-energiaksi. Siksi parinmuodostus on mahdollinen vain, kun fotonin energia on yli $1022\\,\\mathrm{keV}$.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 6,
+     "prompt": "Comptonin sironnassa fotoni siroaa elektronista, ja sironneen fotonin energia on $E^* = \\dfrac{E}{1 + \\frac{E}{m_ec^2}(1 - \\cos\\theta)}$, missä $\\theta$ on sirontakulma. Määritä elektronin suurin mahdollinen liike-energia, kun siitä siroaa $662\\,\\mathrm{keV}$:n fotoni.",
+     "hints": [
+      "Energian säilymisestä elektronin liike-energia on $E - E^*$. Millä sirontakulmalla $E^*$ on pienin?",
+      "$E^*$ on pienin, kun $1 - \\cos\\theta$ on suurin, eli $\\theta = 180^\\circ$ (takaisinsironta). Elektronin lepoenergia on $m_ec^2 = 511\\,\\mathrm{keV}$."
+     ],
+     "solution": "1. Energia säilyy, joten elektronin liike-energia on $E_e = E - E^*$.\n2. $E_e$ on suurin, kun $E^*$ on pienin, eli kun $1 - \\cos\\theta$ on suurin: $\\theta = 180^\\circ$, $1 - \\cos\\theta = 2$.\n3. $E^*_\\min = \\dfrac{E}{1 + \\frac{2E}{m_ec^2}} = \\dfrac{662\\,\\mathrm{keV}}{1 + \\frac{2\\cdot 662}{511}} \\approx 184\\,\\mathrm{keV}$.\n4. $E_{e,\\max} = 662\\,\\mathrm{keV} - 184\\,\\mathrm{keV} \\approx 478\\,\\mathrm{keV}$.\n\n**Vastaus: noin $478\\,\\mathrm{keV}$.**\n\n**Sudenkuoppa:** oletetaan, että energiansiirto on suurin kulmalla $90^\\circ$.",
+     "answer": "$E_{e,\\max} \\approx 478\\,\\mathrm{keV}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.3",
+     "points": 8,
+     "prompt": "Kahdella pienellä tuikeilmaisimella mitattiin Cs-137:n $662\\,\\mathrm{keV}$ gammasäteilyä (spektrit kuvassa 9.B). Toinen ilmaisin on muovia, toinen sisältää vismuttia, germaniumia ja happea. Ilmaisimet havaitsevat varattujen hiukkasten ionisaation, ja valon määrä on verrannollinen hiukkasen liike-energiaan. Fotoni vuorovaikuttaa vain kerran. Selitä, mistä spektrien tapahtumat alle $400\\,\\mathrm{keV}$ todennäköisesti johtuvat, mistä spektrin A piikki noin $660\\,\\mathrm{keV}$ kohdalla johtuu ja kumpi spektri on muovi-ilmaisimen.",
+     "hints": [
+      "Mitkä kolmesta vuorovaikutuksesta ovat mahdollisia $662\\,\\mathrm{keV}$ fotonilla? Kuinka paljon energiaa elektroni saa kussakin (ks. kohdat 9.1 ja 9.2)?",
+      "Compton-sironnassa elektroni saa enintään noin $478\\,\\mathrm{keV}$, joten se tuottaa jatkumon tämän alapuolelle. Valosähköisessä ilmiössä elektroni saa koko energian. Kuvan 9.A mukaan valosähköinen ilmiö on todennäköinen vain suuren järjestysluvun aineissa."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- parinmuodostus ei ole mahdollinen, koska $662\\,\\mathrm{keV} < 1022\\,\\mathrm{keV}$; kaikki havainnot syntyvät elektroneista, jotka saavat fotonilta energiaa\n- tapahtumat alle $400\\,\\mathrm{keV}$ (jatkumo): Compton-sironta, jossa elektroni saa vain osan energiasta (enintään noin $478\\,\\mathrm{keV}$, ks. kohta 9.2) ja sironnut fotoni karkaa ilmaisimesta\n- spektrin A piikki noin $660\\,\\mathrm{keV}$: valosähköinen ilmiö, jossa elektroni saa koko fotonin energian (kokonaisabsorptio)\n- spektri B on muovi-ilmaisimen: muovi koostuu kevyistä alkuaineista (H, C), joissa $662\\,\\mathrm{keV}$ fotoni vuorovaikuttaa kuvan 9.A mukaan lähes aina Compton-sironnalla, joten spektrissä ei ole täyden energian piikkiä; vismutin suuri järjestysluku tekee valosähköisestä ilmiöstä todennäköisen, joten spektrissä A on piikki\n\n**Esimerkkivastaus:** Fotonin energia on alle $1022\\,\\mathrm{keV}$, joten parinmuodostusta ei tapahdu. Kun fotoni Compton-siroaa ilmaisimen elektronista, elektroni saa osan energiasta sirontakulman mukaan, enintään noin $478\\,\\mathrm{keV}$, ja sironnut fotoni poistuu pienestä ilmaisimesta. Näin syntyy tasainen jakauma alle $500\\,\\mathrm{keV}$ energioille. Spektrin A piikki $660\\,\\mathrm{keV}$ kohdalla syntyy valosähköisestä ilmiöstä: fotoni absorboituu kokonaan, ja elektroni saa koko sen energian. Kuvan 9.A mukaan valosähköinen ilmiö on tällä energialla todennäköinen vain raskaissa alkuaineissa, kuten vismutissa. Muovissa on vain vetyä ja hiiltä, joten siinä tapahtuu käytännössä vain Compton-sirontaa. Spektri B, josta piikki puuttuu, on siis muovi-ilmaisimen spektri.\n\n**Sudenkuoppa:** piikki selitetään Compton-sironnalla tai muovin tunnistaminen perustellaan ilman järjestyslukujen vertailua.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 14,
+     "prompt": "Suunnittele mahdollisimman yksinkertainen koe parafiinin (sulamispiste $60\\,^\\circ\\mathrm{C}$) ominaissulamislämmön määrittämiseksi. Käytössä ovat styroksiastia, hanavesi ja vedenkeitin (teho tuntematon), huoneenlämpöinen ($20\\,^\\circ\\mathrm{C}$) kiinteä parafiini, sakset, pinsetit, teippi, muovipussit, alumiinifolio ja taulukkokirja veden arvoille. Luokasta saa lisäksi kellon, työntömitan, lämpömittarin, mittalasin, vaa'an, ominaispainomittarin, kosteusmittarin ja ohutseinäisen alumiiniastian. Kuvaa työn päävaiheet ja mittaukset, suureyhtälöt ja tarvittaessa graafinen esitys (piirrospohja 10.A) sekä luettele tarvitsemasi luokan välineet.",
+     "hints": [
+      "Sulattamiseen tarvittava lämpö voidaan saada kuumasta vedestä, jonka luovuttaman lämmön voi laskea: $Q = cm\\Delta T$. Parafiini on kuitenkin ensin lämmitettävä $60\\,^\\circ\\mathrm{C}$:een, ja sulamisen aikana lämpötila pysyy vakiona.",
+      "Lisää styroksiastiaan (jossa punnittu parafiinipala) kuumaa vettä pienissä punnituissa erissä ja mittaa tasapainolämpötila joka kerta. Kun lämpötila jumittuu $60\\,^\\circ\\mathrm{C}$:een, parafiini sulaa. Kuvaajasta $T(m_\\mathrm{vesi})$ saat vesimäärän $\\Delta M$, joka kului pelkkään sulamiseen: $s\\,m_p = c\\,\\Delta M\\,(T_0 - 60\\,^\\circ\\mathrm{C})$."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- tarvittavat luokan välineet: vaaka (parafiinin ja veden massat) ja lämpömittari; lisäksi voi käyttää kelloa, mittalasia ja alumiiniastiaa (työntömittaa, ominaispainomittaria ja kosteusmittaria ei tarvita)\n- menetelmä, jossa lämpötila mitataan tasapainotilassa ja parafiini lämmitetään ensin sulamispisteeseen ennen varsinaista sulamismittausta\n- suureyhtälöt: veden luovuttama lämpö $Q_v = c_v\\Delta M\\Delta T$ ja sulamiseen kuluva lämpö $Q_s = s\\,m_p$ sekä niistä $s = \\dfrac{c_v\\Delta M\\Delta T}{m_p}$; suureet määritelty ja kerrottu, miten ne mitataan\n- graafinen esitys, josta sulamiseen kulunut vesimäärä luetaan\n\n**Esimerkkimenetelmä:**\n1. Punnitaan parafiinipala ($m_p$) ja pannaan se styroksiastiaan (esimerkiksi alumiinifolion päälle, jottei vaha tartu astiaan).\n2. Kuumennetaan vettä keittimessä. Otetaan pieni erä kuumaa vettä, punnitaan se ja mitataan sen lämpötila $T_0$ juuri ennen kaatamista (pyritään samaan $T_0$:aan joka erällä, esim. kaatamalla heti keittimestä).\n3. Kaadetaan erä astiaan, sekoitetaan ja odotetaan tasapainoa. Mitataan lämpötila $T$.\n4. Toistetaan kohdat 2–3. Aluksi lämpötila nousee jokaisen erän jälkeen (parafiini ja vesi lämpenevät). Kun lämpötila saavuttaa $60\\,^\\circ\\mathrm{C}$, se pysyy vakiona, koska tuotu lämpö kuluu sulamiseen. Kun kaikki parafiini on sulanut, lämpötila alkaa taas nousta, ja mittaus lopetetaan.\n5. Piirretään tasapainolämpötila $T$ lisätyn kuuman veden kokonaismassan $m$ funktiona. Kuvaajassa on nouseva osa, vaakasuora osa $60\\,^\\circ\\mathrm{C}$:ssa ja taas nouseva osa. Vaakasuoran osan alku- ja loppukohdista luetaan massat $M_a$ ja $M_l$; sulamisen aikana lisätty vesi on $\\Delta M = M_l - M_a$.\n6. Tämä vesi jäähtyi lämpötilasta $T_0$ lämpötilaan $60\\,^\\circ\\mathrm{C}$ ja luovutti lämmön $Q = c_v\\Delta M(T_0 - 60\\,^\\circ\\mathrm{C})$, joka kului parafiinin sulattamiseen: $Q = s\\,m_p$.\n7. Siis $s = \\dfrac{c_v\\Delta M(T_0 - 60\\,^\\circ\\mathrm{C})}{m_p}$.\n\n**Sudenkuoppa:** mitataan sulamispiste eikä sulamislämpöä, sulatetaan parafiini $60\\,^\\circ\\mathrm{C}$ vedellä (lämpöä ei siirry), unohdetaan parafiinin lämmittäminen sulamispisteeseen tai mitataan lämpötilaa jatkuvasti muuttuvassa tilanteessa ilman tasapainoa.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 6,
+     "prompt": "Vertaat mittaamaasi sulamislämpöä kirjallisuusarvoon. Mainitse kolme merkittävää tekijää, jotka voivat aiheuttaa poikkeaman.",
+     "hints": [
+      "Mieti, mihin veden luovuttamaa lämpöä voi kulua muuhunkin kuin parafiinin sulamiseen, ja mitkä mittaukset ovat epätarkkoja.",
+      "Hyviä ehdokkaita: lämpöhäviöt ympäristöön, sulamisen alun ja lopun (vaakasuoran osan) määrittämisen epätarkkuus ja tasapainon saavuttaminen, sekä yksittäisen mittauksen (punnitus, lämpötila $T_0$) virhe."
+     ],
+     "solution": "**Hyvä vastaus sisältää** kolme eri tekijää, esimerkiksi:\n- lämpöhäviöt: kuumasta vedestä siirtyy lämpöä ilmaan, astiaan ja lämpömittariin ennen kuin se ehtii sulattaa parafiinia, jolloin tulos on liian suuri\n- sulamisen alkamis- ja päättymiskohdan epätarkkuus: vesi lisätään erissä, joten vaakasuoran osan päätepisteet ($M_a$, $M_l$) tiedetään vain erän tarkkuudella; lisäksi tasapainon saavuttaminen voi jäädä vajaaksi\n- mittausvirhe yksittäisessä suureessa: esimerkiksi kuuman veden lämpötila $T_0$ muuttuu kaadettaessa (jäähtyy), tai punnituksessa on epätarkkuutta\n\n**Esimerkkivastaus:** (1) Osa kuuman veden lämmöstä karkaa ympäristöön kaatamisen ja odottamisen aikana, joten laskettu $Q$ on todellista sulamislämpöä suurempi. (2) Sulamisen alku ja loppu voidaan paikantaa vain yhden vesierän tarkkuudella, mikä vaikuttaa suoraan $\\Delta M$:ään. (3) Kaadettavan veden lämpötila ei ole täsmälleen $T_0$, koska vesi jäähtyy mittaamisen ja kaatamisen välillä.\n\n**Sudenkuoppa:** mainitaan epämääräisesti ”mittausvirhe”, ”laskuvirhe” tai ilmanpaineen vaihtelu ilman yhteyttä koejärjestelyyn.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 3,
+     "prompt": "James Webb -avaruusteleskooppi havaitsee pääosin infrapunasäteilyä, ja se on sijoitettu paikkaan, jossa sen lämpötila on hyvin alhainen. Miksi matala lämpötila on tärkeä infrapunahavainnoissa?",
+     "hints": [
+      "Mitä kaikki kappaleet lähettävät lämpötilansa mukaan? Millä aallonpituusalueella huoneenlämpöinen kappale säteilee eniten?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- teleskooppi itse lähettää lämpösäteilyä, joka on huoneenlämmössä pääosin infrapunaa; oma säteily häiritsisi heikkojen kohteiden infrapunahavaintoja\n- kun teleskooppi ja ilmaisimet ovat hyvin kylmiä, niiden oma infrapunasäteily on vähäistä\n\n**Esimerkkivastaus:** Jokainen kappale säteilee lämpötilansa mukaisesti. Lämpimän teleskoopin ja sen ilmaisimien oma lämpösäteily osuisi infrapuna-alueelle ja peittäisi alleen kaukaisten kohteiden heikon infrapunasäteilyn. Siksi laitteet jäähdytetään hyvin kylmiksi, jolloin niiden oma säteily on pientä ja siirtyy pidemmille aallonpituuksille.\n\n**Sudenkuoppa:** vastataan vain, että lämpötilan on oltava matala, tai syytetään ympäristön säteilyä teleskoopin oman säteilyn sijaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 4,
+     "prompt": "Teleskoopin lämpösuoja (kuva 11.A) koostuu viidestä erillisestä kerroksesta eikä yhdestä yhtenäisestä levystä. Miksi?",
+     "hints": [
+      "Mieti lämmönsiirtymisen tapoja: johtuminen, kulkeutuminen ja säteily. Mitä kerrosten välissä on avaruudessa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- yhtenäisen kerroksen läpi lämpö johtuisi Auringon puolelta teleskoopin puolelle\n- kerrosten välissä on tyhjiö, jossa johtumista eikä kulkeutumista voi tapahtua; lämpö voi siirtyä kerroksesta toiseen vain säteilemällä, ja jokainen kerros säteilee osan lämmöstä sivuille pois\n\n**Esimerkkivastaus:** Jos suoja olisi yksi paksu kerros, lämpö johtuisi sen läpi Auringon puoleiselta kuumalta pinnalta kylmälle puolelle. Kun kerrokset ovat erillään, niiden välissä on tyhjiö, joka ei johda lämpöä. Lämpö pääsee kerroksesta seuraavaan vain säteilemällä, ja kerrosten välistä se säteilee avaruuteen. Jokainen kerros on siksi edellistä kylmempi, ja uloimman kerroksen lämpötila on hyvin alhainen.\n\n**Sudenkuoppa:** väitetään, että kerrosten välissä oleva ilma eristää, tai todetaan vain, että useampi kerros eristää yhtä paremmin.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Teleskooppi on Aurinko–Maa-järjestelmän Lagrangen pisteessä L2 (kuva 11.B): se kiertää Aurinkoa samassa tahdissa kuin Maa, Maan takana Auringosta katsoen. Esitä teleskooppiin vaikuttavat voimat voimakuviona nimettyinä.",
+     "hints": [
+      "Avaruudessa teleskooppiin vaikuttavat vain gravitaatiovoimat. Mitkä kaksi kappaletta ovat merkittäviä, ja missä suunnassa ne ovat teleskoopista katsoen?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- täsmälleen kaksi voimaa: Auringon gravitaatiovoima $\\bar G_\\mathrm{A}$ kohti Aurinkoa ja Maan gravitaatiovoima $\\bar G_\\mathrm{M}$ kohti Maata\n- koska Maa ja Aurinko ovat teleskoopista samassa suunnassa, voimat ovat samansuuntaiset (kohti radan keskipistettä); $\\bar G_\\mathrm{A}$ on selvästi suurempi\n- kuviossa ei ole Aurinkoon tai Maahan vaikuttavia voimia, eikä nopeutta tai kiihtyvyyttä piirretä voimiksi\n\n**Esimerkkivastaus:** Piirretään oikealle teleskooppi, sen vasemmalle puolelle Maa ja kauemmas vasemmalle Aurinko. Teleskoopista vasemmalle piirretään pitkä nuoli $\\bar G_\\mathrm{A}$ (Auringon vetovoima) ja lyhyt nuoli $\\bar G_\\mathrm{M}$ (Maan vetovoima). Niiden summa toimii keskeisvoimana, joka pitää teleskoopin ympyräradalla Auringon ympäri.\n\n**Sudenkuoppa:** voimakuvioon lisätään ”keskipakoisvoima” tai Maahan ja Aurinkoon kohdistuvia voimia.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 9,
+     "prompt": "Teleskooppi on $1{,}5\\cdot 10^6\\,\\mathrm{km}$ päässä Maasta. Osoita, että Newtonin II laki toteutuu tällä etäisyydellä, kun teleskooppi kiertää Aurinkoa samalla kiertoajalla kuin Maa.",
+     "hints": [
+      "Teleskooppi on ympyräliikkeessä Auringon ympäri säteellä $r + d$, missä $r$ on Maan etäisyys Auringosta ja $d$ teleskoopin etäisyys Maasta. Kirjoita Newtonin II laki: kahden gravitaatiovoiman summa = $ma_\\mathrm{n}$.",
+      "$a_\\mathrm{n} = \\left(\\frac{2\\pi}{T}\\right)^2(r+d)$, missä $T \\approx 365{,}2\\,\\mathrm{d}$. Vertaa sitä lausekkeeseen $\\gamma\\left(\\frac{m_\\mathrm{A}}{(r+d)^2} + \\frac{m_\\mathrm{M}}{d^2}\\right)$ arvolla $d = 1{,}5\\cdot 10^9\\,\\mathrm{m}$."
+     ],
+     "solution": "1. Teleskooppi kiertää Aurinkoa ympyräradalla, jonka säde on $r + d$ ($r = 1{,}496\\cdot 10^{11}\\,\\mathrm{m}$ Maan ratasäde, $d = 1{,}5\\cdot 10^9\\,\\mathrm{m}$), samalla kiertoajalla $T = 365{,}2\\,\\mathrm{d}$ kuin Maa.\n2. Newtonin II laki radan normaalin suunnassa: $ma_\\mathrm{n} = G_\\mathrm{A} + G_\\mathrm{M}$, missä $G_\\mathrm{A} = \\gamma\\dfrac{m_\\mathrm{A}m}{(r+d)^2}$ ja $G_\\mathrm{M} = \\gamma\\dfrac{m_\\mathrm{M}m}{d^2}$.\n3. Keskeiskiihtyvyys: $a_\\mathrm{n} = \\dfrac{v^2}{r+d} = \\left(\\dfrac{2\\pi}{T}\\right)^2(r+d)$, koska $v = \\dfrac{2\\pi(r+d)}{T}$.\n4. Supistetaan teleskoopin massa: $\\left(\\dfrac{2\\pi}{T}\\right)^2(r+d) = \\gamma\\left(\\dfrac{m_\\mathrm{A}}{(r+d)^2} + \\dfrac{m_\\mathrm{M}}{d^2}\\right)$.\n5. Vasen puoli: $\\left(\\dfrac{2\\pi}{365{,}2\\cdot 86\\,400\\,\\mathrm{s}}\\right)^2\\cdot 1{,}511\\cdot 10^{11}\\,\\mathrm{m} \\approx 5{,}9915\\cdot 10^{-3}\\,\\mathrm{m/s^2}$.\n6. Oikea puoli ($\\gamma = 6{,}674\\cdot 10^{-11}\\,\\mathrm{N\\,m^2/kg^2}$, $m_\\mathrm{A} = 1{,}989\\cdot 10^{30}\\,\\mathrm{kg}$, $m_\\mathrm{M} = 5{,}974\\cdot 10^{24}\\,\\mathrm{kg}$): Auringon osuus $5{,}814\\cdot 10^{-3}\\,\\mathrm{m/s^2}$ ja Maan osuus $0{,}177\\cdot 10^{-3}\\,\\mathrm{m/s^2}$, yhteensä $\\approx 5{,}9914\\cdot 10^{-3}\\,\\mathrm{m/s^2}$.\n7. Puolet ovat yhtä suuret laskutarkkuuden rajoissa, joten Newtonin II laki toteutuu, kun $d = 1{,}5$ miljoonaa kilometriä.\n\n**Vastaus: kummaksikin puoleksi saadaan noin $5{,}99\\cdot 10^{-3}\\,\\mathrm{m/s^2}$, joten etäisyys $1{,}5\\cdot 10^6\\,\\mathrm{km}$ on sopusoinnussa Newtonin II lain kanssa.**\n\nMaan vetovoima on vain noin 3 % Auringon vetovoimasta, mutta juuri se lisävoima mahdollistaa sen, että teleskooppi kiertää Aurinkoa Maan tahdissa, vaikka se on Maata kauempana.\n\n**Sudenkuoppa:** unohdetaan Maan tai Auringon vetovoima, tai käytetään radan säteenä Maan etäisyyttä ($r$) eikä teleskoopin etäisyyttä Auringosta ($r + d$).",
+     "answer": "$a_\\mathrm{n} \\approx \\sum G/m \\approx 5{,}99\\cdot 10^{-3}\\,\\mathrm{m/s^2}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

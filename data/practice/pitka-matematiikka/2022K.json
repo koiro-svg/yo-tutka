@@ -1,0 +1,393 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2022K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2022K_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-03-23_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 4,
+    "note": "Kaikki neljä tehtävää ovat pakollisia. Käytössä taulukkokirja ja perusohjelmat; muut ohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Vastauskenttiin kirjoitetaan pelkät lopputulokset (kokonaislukuja) ilman välivaiheita.",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 2,
+     "prompt": "Mikä on polynomin $p(x)=x^2-6x$ nollakohdista suurempi?",
+     "hints": [
+      "Ota $x$ yhteiseksi tekijäksi ja käytä tulon nollasääntöä. Vastaukseksi kirjoitetaan vain suurempi nollakohta."
+     ],
+     "solution": "1. $x^2-6x=x(x-6)=0$, joten $x=0$ tai $x=6$.\n2. Suurempi nollakohta on 6.\n\n**Vastaus: $6$**\n\n**Sudenkuoppa:** molempien nollakohtien kirjoittaminen, vaikka kysyttiin vain suurempaa.",
+     "answer": "$6$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.2",
+     "points": 2,
+     "prompt": "Laske $f(2)$, kun $f(x)=x^3-x^2+1$.",
+     "hints": [
+      "Sijoita $x=2$ jokaiseen termiin ja laske potenssit ennen yhteen- ja vähennyslaskua."
+     ],
+     "solution": "$f(2)=2^3-2^2+1=8-4+1=5$.\n\n**Vastaus: $5$**",
+     "answer": "$5$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.3",
+     "points": 2,
+     "prompt": "Laske $f'(2)$, kun $f(x)=x^3-x^2+1$.",
+     "hints": [
+      "Derivoi ensin termeittäin ($D\\,x^n=nx^{n-1}$) ja sijoita vasta sitten $x=2$."
+     ],
+     "solution": "1. $f'(x)=3x^2-2x$.\n2. $f'(2)=3\\cdot 4-2\\cdot 2=12-4=8$.\n\n**Vastaus: $8$**",
+     "answer": "$8$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.4",
+     "points": 2,
+     "prompt": "Ratkaise yhtälö $5^{k-5}=25$.",
+     "hints": [
+      "Kirjoita 25 viitosen potenssina, jolloin eksponentit voidaan merkitä yhtä suuriksi."
+     ],
+     "solution": "1. $25=5^2$, joten $5^{k-5}=5^2$.\n2. Eksponenttifunktio on aidosti kasvava, joten $k-5=2$ ja $k=7$.\n\n**Vastaus: $7$**",
+     "answer": "$7$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.5",
+     "points": 2,
+     "prompt": "Laske raja-arvo $\\lim_{x\\to4}\\frac{x^2-16}{x-4}$.",
+     "hints": [
+      "Sijoitus antaa muodon $\\frac00$. Jaa osoittaja tekijöihin (neliöiden erotus) ja supista."
+     ],
+     "solution": "1. $x^2-16=(x-4)(x+4)$, joten kun $x\\neq 4$, $\\frac{x^2-16}{x-4}=x+4$.\n2. $\\lim_{x\\to4}(x+4)=8$.\n\n**Vastaus: $8$**",
+     "answer": "$8$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.6",
+     "points": 2,
+     "prompt": "Laske lausekkeen $x^3+1$ arvo, kun $x^2+1=26$ ja $x<0$.",
+     "hints": [
+      "Ratkaise ensin $x$ ehdosta $x^2=25$ ja valitse negatiivinen ratkaisu."
+     ],
+     "solution": "1. $x^2=25$, joten $x=\\pm5$. Ehdon $x<0$ mukaan $x=-5$.\n2. $x^3+1=(-5)^3+1=-125+1=-124$.\n\n**Vastaus: $-124$**\n\n**Sudenkuoppa:** positiivinen juuri $x=5$ antaa väärän tuloksen 126.",
+     "answer": "$-124$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Yhtälöitä ratkaistaessa voi joko kertoa sulkeet auki tai ottaa yhteisen tekijän (osittelulaki kumpaankin suuntaan). Kummassakin kohdassa kaksi yhtälöä ratkaistaan eri menetelmillä, ja ratkaisusta on käytävä ilmi, kumpaa tapaa kummassakin käytettiin.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 6,
+     "prompt": "Ratkaise yhtälöt $(2x+1)(x-6)=0$ ja $(2y+1)(y-6)=-6$ niin, että toisessa kerrot sulkeet auki ja toisessa et.",
+     "hints": [
+      "Kun tulo on nolla, käytä tulon nollasääntöä ilman auki kertomista. Kun oikea puoli ei ole nolla, nollasääntöä ei voi käyttää suoraan: kerro sulkeet auki ja siirrä kaikki termit samalle puolelle.",
+      "Ensimmäisestä saadaan $2x+1=0$ tai $x-6=0$. Toinen sievenee muotoon $2y^2-11y-6=-6$ eli $2y^2-11y=0$, jonka voi ratkaista ottamalla $y$ yhteiseksi tekijäksi."
+     ],
+     "solution": "**Ensimmäinen yhtälö ilman auki kertomista**\n\n1. Tulo on nolla täsmälleen silloin, kun jokin tekijöistä on nolla: $2x+1=0$ tai $x-6=0$.\n2. Siis $x=-\\frac12$ tai $x=6$.\n\n**Toinen yhtälö kertomalla sulkeet auki**\n\n3. $(2y+1)(y-6)=2y^2-12y+y-6=2y^2-11y-6$.\n4. Yhtälö on $2y^2-11y-6=-6$ eli $2y^2-11y=0$.\n5. $y(2y-11)=0$, joten $y=0$ tai $y=\\frac{11}{2}$.\n\n**Vastaus: $x=-\\frac12$ tai $x=6$; $y=0$ tai $y=\\frac{11}{2}$.**\n\n**Sudenkuoppa:** yhtälöön $(2y+1)(y-6)=-6$ ei voi soveltaa nollasääntöä ($2y+1=-6$ tai $y-6=-6$ on väärin).",
+     "answer": "$x=-\\frac12$ tai $x=6$; $y=0$ tai $y=\\frac{11}{2}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 6,
+     "prompt": "Ratkaise yhtälöt $5(7x-2)+7(7x-2)=12$ ja $5(7y-2)+7(7y+2)=12$ niin, että toisessa kerrot sulkeet auki ja toisessa et.",
+     "hints": [
+      "Ensimmäisessä yhtälössä molemmissa sulkeissa on sama lauseke $7x-2$. Toisessa sulkeiden sisällöt eroavat, joten se on luontevaa ratkaista kertomalla sulkeet auki.",
+      "Ensimmäinen: ota $7x-2$ yhteiseksi tekijäksi, jolloin $(5+7)(7x-2)=12$. Toinen: auki kerrottuna vasen puoli on $35y-10+49y+14=84y+4$."
+     ],
+     "solution": "**Ensimmäinen yhtälö ilman auki kertomista**\n\n1. Otetaan yhteinen tekijä: $5(7x-2)+7(7x-2)=(5+7)(7x-2)=12(7x-2)$.\n2. $12(7x-2)=12 \\iff 7x-2=1 \\iff x=\\frac37$.\n\n**Toinen yhtälö kertomalla sulkeet auki**\n\n3. $5(7y-2)+7(7y+2)=35y-10+49y+14=84y+4$.\n4. $84y+4=12 \\iff 84y=8 \\iff y=\\frac{8}{84}=\\frac{2}{21}$.\n\n**Vastaus: $x=\\frac37$ ja $y=\\frac{2}{21}$.**\n\n**Sudenkuoppa:** jälkimmäisessä yhtälössä sulkeet ovat erilaiset ($7y-2$ ja $7y+2$), joten yhteistä tekijää ei voi ottaa samalla tavalla kuin ensimmäisessä.",
+     "answer": "$x=\\frac37$, $y=\\frac{2}{21}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 6,
+     "prompt": "Sievennä lauseke $(a^2+\\sqrt2\\,ab+b^2)(a^2-\\sqrt2\\,ab+b^2)$.",
+     "hints": [
+      "Tulo on muotoa $(u+v)(u-v)$, kun valitaan $u=a^2+b^2$ ja $v=\\sqrt2\\,ab$. Käytä muistikaavaa $(u+v)(u-v)=u^2-v^2$.",
+      "Saat $(a^2+b^2)^2-(\\sqrt2\\,ab)^2$. Avaa neliöt: $(a^2+b^2)^2=a^4+2a^2b^2+b^4$ ja $(\\sqrt2\\,ab)^2=2a^2b^2$."
+     ],
+     "solution": "1. Ryhmitellään: $(a^2+\\sqrt2\\,ab+b^2)(a^2-\\sqrt2\\,ab+b^2)=\\left((a^2+b^2)+\\sqrt2\\,ab\\right)\\left((a^2+b^2)-\\sqrt2\\,ab\\right)$.\n2. Summan ja erotuksen tulo: $=(a^2+b^2)^2-(\\sqrt2\\,ab)^2$.\n3. $=a^4+2a^2b^2+b^4-2a^2b^2$.\n4. $=a^4+b^4$.\n\n(Saman tuloksen saa kertomalla kaikki yhdeksän termiä auki: $\\sqrt2$-termit kumoutuvat, ja $a^2b^2$-termit ovat $a^2b^2-2a^2b^2+a^2b^2=0$.)\n\n**Vastaus: $a^4+b^4$**",
+     "answer": "$a^4+b^4$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 6,
+     "prompt": "Funktiolle $f(x)=Ae^{2x}+B\\cos(3x)$ pätee $f(0)=4$ ja $f'(0)=5$. Määritä vakiot $A$ ja $B$.",
+     "hints": [
+      "Sijoita $x=0$ funktioon ja sen derivaattaan. Muista, että $e^0=1$, $\\cos 0=1$ ja $\\sin 0=0$. Derivoinnissa tarvitset ketjusääntöä.",
+      "$f'(x)=2Ae^{2x}-3B\\sin(3x)$. Ehdoista saadaan yhtälöpari $A+B=4$ ja $2A=5$."
+     ],
+     "solution": "1. $f(0)=Ae^0+B\\cos 0=A+B$, joten $A+B=4$.\n2. Ketjusäännöllä $f'(x)=2Ae^{2x}-3B\\sin(3x)$.\n3. $f'(0)=2A\\cdot 1-3B\\cdot 0=2A$, joten $2A=5$ ja $A=\\frac52$.\n4. $B=4-\\frac52=\\frac32$.\n\n**Vastaus: $A=\\frac52$ ja $B=\\frac32$**\n\n**Sudenkuoppa:** kosinin derivaatan etumerkki ($D\\cos u=-u'\\sin u$) tai sisäfunktion derivaatan unohtaminen. Tässä virhe ei muuta tulosta, koska $\\sin 0=0$, mutta derivaatan lauseke arvioidaan.",
+     "answer": "$A=\\frac52$, $B=\\frac32$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Polynomit ovat $f(x)=(x-2)(x+2)(x-1)$ ja $g(x)=-2(x-2)(x+2)(x+1)$.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 4,
+     "prompt": "Kuvaajat leikkaavat pisteissä $(2,0)$, $(-2,0)$ ja $(x_0,y_0)$, missä $-2\\lt x_0<0$. Määritä piste $(x_0,y_0)$.",
+     "hints": [
+      "Kirjoita $f(x)=g(x)$ ja siirrä kaikki samalle puolelle. Molemmissa on tekijä $(x-2)(x+2)$, jonka voi ottaa yhteiseksi tekijäksi. Älä jaa sillä huomioimatta, että se voi olla nolla."
+     ],
+     "solution": "1. $f(x)-g(x)=(x-2)(x+2)\\left[(x-1)+2(x+1)\\right]=(x-2)(x+2)(3x+1)$.\n2. Tulon nollasäännöllä $x=2$, $x=-2$ tai $3x+1=0$. Kolmas leikkauskohta on $x_0=-\\frac13$, ja se on välillä $(-2,0)$.\n3. $y_0=f\\left(-\\frac13\\right)=\\left(-\\frac73\\right)\\cdot\\frac53\\cdot\\left(-\\frac43\\right)=\\frac{140}{27}$.\n\n**Vastaus: $(x_0,y_0)=\\left(-\\frac13,\\frac{140}{27}\\right)$**\n\n**Sudenkuoppa:** $y_0$ pitää antaa tarkkana murtolukuna. Likiarvo $5{,}19$ ei riitä.",
+     "answer": "$\\left(-\\frac13,\\frac{140}{27}\\right)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 8,
+     "prompt": "Kuinka suuri on se alue, jonka kuvaajat rajaavat välillä $[0,2]$? Laske sen pinta-ala.",
+     "hints": [
+      "Selvitä ensin, kumpi kuvaaja on välillä $[0,2]$ ylempänä (esim. testipiste $x=1$). Ala on ylemmän ja alemman funktion erotuksen integraali.",
+      "$g(1)=12>0=f(1)$, ja välillä $(0,2)$ ei ole leikkauskohtia, joten $g$ on ylempänä. Auki kerrottuna $g(x)-f(x)=-3x^3-x^2+12x+4$."
+     ],
+     "solution": "1. Leikkauskohdat ovat $-2$, $-\\frac13$ ja $2$, joten välillä $(0,2)$ erotus $g-f$ ei vaihda merkkiään. Testipiste: $g(1)=-2\\cdot(-1)\\cdot 3\\cdot 2=12$ ja $f(1)=0$, joten $g$ on ylempänä.\n2. $f(x)=x^3-x^2-4x+4$ ja $g(x)=-2x^3-2x^2+8x+8$, joten $g(x)-f(x)=-3x^3-x^2+12x+4$.\n3. $A=\\int_0^2(-3x^3-x^2+12x+4)\\,dx=\\left[-\\frac34x^4-\\frac13x^3+6x^2+4x\\right]_0^2$.\n4. $=-12-\\frac83+24+8=\\frac{52}{3}$.\n\n**Vastaus: $\\frac{52}{3}\\approx 17{,}3$**\n\n**Sudenkuoppa:** integroidaan $f-g$, jolloin saadaan negatiivinen luku. Pinta-ala on aina positiivinen.",
+     "answer": "$\\frac{52}{3}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Yhdeksän monivalintaa ilman perusteluja. Kohdat 5.1–5.6 ovat 1 p ja kohdat 5.7–5.9 ovat 2 p. Vaihtoehdot näet alkuperäisestä tehtävästä.\n\n- 5.1 Mikä ominaisuus suunnikkaan lävistäjillä on aina?\n- 5.2 Kuution tahkojen, kärkien ja särmien määrät.\n- 5.3 Mikä on suoran nimi, kun se leikkaa ympyrää kahdessa pisteessä?\n- 5.4 Paraabelin pisteet ovat yhtä kaukana johtosuorasta ja mistä muusta?\n- 5.5 Mitä saadaan, kun nollasta poikkeava vektori kerrotaan pituutensa käänteisluvulla?\n- 5.6 Mitä kolme eri pistettä avaruudessa ei koskaan määrää yksikäsitteisesti (pallo, ympyrä, kolmio vai taso)?\n- 5.7 Mikä ehto on reaaliluvuille yhtäpitävä ehdon $a\\lt b$ kanssa?\n- 5.8 Polynomin $(x^2+5x+1)(x+3)$ derivaatan arvo kohdassa 0.\n- 5.9 Mitä voidaan sanoa luvusta $x$, kun $x^x=100$?",
+     "hints": [
+      "Kohdat 5.1–5.6 ovat määritelmiä ja perusominaisuuksia. Mieti kohdassa 5.6, mitä kolme pistettä (voivat olla samalla suoralla) varmasti määräävät ja mitä ei. Kohdassa 5.7 etsi funktio, joka on aidosti kasvava koko reaalilukujen joukossa.",
+      "Kohta kohdalta:\n- 5.1: vertaa neliöön, suorakulmioon ja vinoneliöön; mikä ominaisuus on kaikilla.\n- 5.5: vektorin $\\overline a$ suuntainen yksikkövektori on $\\frac{1}{|\\overline a|}\\overline a$.\n- 5.6: kolmen pisteen kautta kulkee äärettömän monta palloa.\n- 5.7: $x\\mapsto x^3$ on aidosti kasvava, $x\\mapsto x^2$ ja $|x|$ eivät ole.\n- 5.8: derivaatan arvo nollassa on auki kerrotun polynomin $x$-termin kerroin.\n- 5.9: vertaa lukuihin $3^3=27$ ja $4^4=256$."
+     ],
+     "solution": "1. **5.1: B (puolittavat toisensa).** Suunnikkaan lävistäjät puolittavat aina toisensa, mutta ne ovat yhtä pitkät vain suorakulmiossa ja kohtisuorassa vain vinoneliössä.\n2. **5.2: C (6 tahkoa, 8 kärkeä, 12 särmää).** Tarkistus Eulerin kaavalla: $8-12+6=2$.\n3. **5.3: B (sekantti).** Tangentilla on yksi yhteinen piste, sekantilla kaksi.\n4. **5.4: C (polttopisteestä).**\n5. **5.5: D (samansuuntainen yksikkövektori).** $\\left|\\frac{1}{|\\overline a|}\\overline a\\right|=1$, ja kerroin on positiivinen.\n6. **5.6: A (palloa).** Kolmen pisteen kautta kulkee aina äärettömän monta palloa. Jos pisteet eivät ole samalla suoralla, ne määräävät yksikäsitteisesti ympyrän, kolmion ja tason, joten ne eivät käy vastaukseksi.\n7. **5.7: F ($a^3\\lt b^3$).** Funktio $x^3$ on aidosti kasvava koko $\\mathbb R$:ssä, joten $a\\lt b\\iff a^3\\lt b^3$. Muut kaatuvat esimerkiksi arvoilla $a=-2$, $b=1$.\n8. **5.8: F (16).** $(x^2+5x+1)(x+3)=x^3+8x^2+16x+3$, ja derivaatta $3x^2+16x+16$ on nollassa 16.\n9. **5.9: C ($3\\lt x<4$).** $3^3=27<100<256=4^4$, ja $x^x$ on kasvava, kun $x\\ge 1$ (kun $0\\lt x<1$, $x^x<1$). Ratkaisu on $x\\approx 3{,}60$.\n\n**Vastaus: 5.1 B · 5.2 C · 5.3 B · 5.4 C · 5.5 D · 5.6 A · 5.7 F · 5.8 F · 5.9 C**\n\n**Sudenkuoppa:** kohdassa 5.6 vastataan ”tasoa”. Kolme pistettä, jotka eivät ole samalla suoralla, määräävät tason yksikäsitteisesti, joten taso ei ole oikea vastaus.",
+     "answer": "5.1 B (puolittavat toisensa) · 5.2 C (6, 8, 12) · 5.3 B (sekantti) · 5.4 C (polttopiste) · 5.5 D (yksikkövektori) · 5.6 A (pallo) · 5.7 F ($a^3\\lt b^3$) · 5.8 F (16) · 5.9 C ($3\\lt x<4$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Ympyrä $x^2+(y-2)^2=r^2$ ($r>0$) sivuaa paraabelia $y=x^2$ kahdessa pisteessä. Käyrien väliin jää alue. Laske sen ala kahden merkitsevän numeron tarkkuudella. Ohjelmistolla saa ratkaista likimääräisesti, kunhan menetelmä käy ilmi.",
+     "hints": [
+      "Selvitä ensin säde $r$ ja sivuamispisteet. Sijoita $x^2=y$ ympyrän yhtälöön: saat toisen asteen yhtälön muuttujalle $y$. Sivuamisessa yhteisiä $y$-arvoja on vain yksi, eli diskriminantti on nolla.",
+      "Sijoitus antaa $y^2-3y+4-r^2=0$, ja diskriminantista $r^2=\\frac74$. Sivuamispisteet ovat $\\left(\\pm\\sqrt{\\frac32},\\frac32\\right)$. Alue on paraabelin yläpuolella ja ympyrän alakaaren $y=2-\\sqrt{\\frac74-x^2}$ alapuolella. Voit laskea sen esimerkiksi niin, että paraabelin ja suoran $y=\\frac32$ väliin jäävästä alasta vähennetään ympyräsegmentti."
+     ],
+     "solution": "**Säde ja sivuamispisteet**\n\n1. Sijoitetaan $x^2=y$ ympyrän yhtälöön: $y+(y-2)^2=r^2$ eli $y^2-3y+4-r^2=0$.\n2. Käyrät sivuavat toisiaan symmetrisesti kahdessa pisteessä, kun tällä yhtälöllä on täsmälleen yksi ratkaisu: $D=9-4(4-r^2)=0$, joten $r^2=\\frac74$ ja $r=\\frac{\\sqrt7}{2}\\approx 1{,}32$.\n3. Silloin $y=\\frac32$ ja $x=\\pm\\sqrt{\\frac32}\\approx\\pm 1{,}225$.\n\n**Pinta-ala**\n\n4. Alue on sivuamispisteiden välissä paraabelin yläpuolella ja ympyrän alakaaren alapuolella.\n5. Paraabelin ja suoran $y=\\frac32$ väliin jää $\\int_{-\\sqrt{3/2}}^{\\sqrt{3/2}}\\left(\\frac32-x^2\\right)dx=\\left[\\frac32x-\\frac{x^3}{3}\\right]_{-\\sqrt{3/2}}^{\\sqrt{3/2}}=2\\sqrt{\\frac32}=\\sqrt6\\approx 2{,}4495$.\n6. Tästä vähennetään ympyräsegmentti, joka jää suoran $y=\\frac32$ alapuolelle. Jänteen etäisyys keskipisteestä $(0,2)$ on $\\frac12$ ja puolikas jänne $\\sqrt{\\frac32}$, joten puolikas keskuskulma $\\alpha$ toteuttaa $\\tan\\alpha=\\frac{\\sqrt{3/2}}{1/2}=\\sqrt6$, eli $\\alpha\\approx 1{,}1832$ ja keskuskulma $2\\alpha\\approx 2{,}3664$.\n7. Sektorin ala on $\\frac12r^2\\cdot 2\\alpha=\\frac78\\cdot 2{,}3664\\approx 2{,}0706$, ja kolmion ala on $\\frac12\\cdot 2\\sqrt{\\frac32}\\cdot\\frac12\\approx 0{,}6124$. Segmentin ala on $\\approx 2{,}0706-0{,}6124=1{,}4582$.\n8. Kysytty ala on $\\approx 2{,}4495-1{,}4582\\approx 0{,}9913$.\n\n(Tarkistus integraalilla: $\\int_{-\\sqrt{3/2}}^{\\sqrt{3/2}}\\left(2-\\sqrt{\\frac74-x^2}-x^2\\right)dx\\approx 0{,}9913$.)\n\n**Vastaus: noin $0{,}99$**\n\n**Sudenkuoppa:** väliin jäävä alue on ympyrän alakaaren ja paraabelin välissä. Yläkaarta ei tarvita, eikä ala ole koko ympyrän ala miinus jotakin.",
+     "answer": "$\\approx 0{,}99$ ($r^2=\\frac74$, sivuamispisteet $\\left(\\pm\\sqrt{\\frac32},\\frac32\\right)$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 6,
+     "prompt": "Pussissa on 22 salmiakkia ja 19 hedelmäkarkkia. Eeri ottaa kolme karkkia. Millä todennäköisyydellä kaikki kolme ovat hedelmäkarkkeja?",
+     "hints": [
+      "Karkit otetaan palauttamatta, joten pussin sisältö muuttuu jokaisen noston jälkeen. Voit laskea joko kertolaskusäännöllä peräkkäisinä nostoina tai kombinaatioilla.",
+      "Karkkeja on yhteensä 41. Ensimmäinen on hedelmäkarkki todennäköisyydellä $\\frac{19}{41}$, toinen (ehdolla, että ensimmäinen oli) todennäköisyydellä $\\frac{18}{40}$ ja niin edelleen."
+     ],
+     "solution": "1. Karkkeja on $22+19=41$.\n2. Ensimmäinen on hedelmäkarkki todennäköisyydellä $\\frac{19}{41}$.\n3. Jos ensimmäinen oli hedelmäkarkki, jäljellä on 18 hedelmäkarkkia 40:stä, joten toinen on hedelmäkarkki todennäköisyydellä $\\frac{18}{40}$. Samoin kolmas todennäköisyydellä $\\frac{17}{39}$.\n4. Kertolaskusäännöllä $P=\\frac{19}{41}\\cdot\\frac{18}{40}\\cdot\\frac{17}{39}=\\frac{969}{10\\,660}\\approx 0{,}0909$.\n\n(Kombinaatioilla sama: $\\binom{19}{3}\\big/\\binom{41}{3}$.)\n\n**Vastaus: $\\frac{969}{10\\,660}\\approx 0{,}091\\approx 9{,}1\\,\\%$**",
+     "answer": "$\\frac{969}{10\\,660}\\approx 9{,}1\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 6,
+     "prompt": "Pussissa on nyt 22 salmiakkia ja 16 hedelmäkarkkia. Kuura ottaa viisi karkkia. Millä todennäköisyydellä joukossa on ainakin yksi kumpaakin lajia?",
+     "hints": [
+      "Käytä komplementtia: kysytty tapahtuma ei toteudu vain silloin, kun kaikki viisi ovat samaa lajia (kaikki salmiakkeja tai kaikki hedelmäkarkkeja).",
+      "$P(\\text{kaikki salmiakkeja})=\\binom{22}{5}\\big/\\binom{38}{5}\\approx 0{,}0525$ ja $P(\\text{kaikki hedelmäkarkkeja})=\\binom{16}{5}\\big/\\binom{38}{5}\\approx 0{,}0087$. Nämä tapahtumat ovat erillisiä."
+     ],
+     "solution": "1. Karkkeja on $22+16=38$, ja viiden karkin joukkoja on $\\binom{38}{5}=501\\,942$, kaikki yhtä todennäköisiä.\n2. Vastatapahtuma: kaikki viisi ovat samaa lajia. Tämä jakautuu kahteen erilliseen tapaukseen.\n3. Kaikki salmiakkeja: $\\frac{\\binom{22}{5}}{\\binom{38}{5}}=\\frac{26\\,334}{501\\,942}\\approx 0{,}05246$.\n4. Kaikki hedelmäkarkkeja: $\\frac{\\binom{16}{5}}{\\binom{38}{5}}=\\frac{4\\,368}{501\\,942}\\approx 0{,}00870$.\n5. $P(\\text{ainakin yksi kumpaakin})=1-0{,}05246-0{,}00870\\approx 0{,}9388$. Tarkka arvo on $\\frac{660}{703}$.\n\n**Vastaus: $\\frac{660}{703}\\approx 0{,}94=94\\,\\%$**\n\n**Sudenkuoppa:** komplementiksi otetaan vain ”ei yhtään salmiakkia” ja unohdetaan tapaus ”ei yhtään hedelmäkarkkia”.",
+     "answer": "$\\frac{660}{703}\\approx 94\\,\\%$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Keksi jatkuva funktio $f:\\mathbb R\\to\\mathbb R$, joka ei ole derivoituva kohdassa $x=1$. Näytä erotusosamäärän $\\frac{f(x)-f(1)}{x-1}$ avulla, ettei derivaattaa kohdassa 1 ole, ja perustele myös, että funktio on jatkuva.",
+     "hints": [
+      "Tuttu esimerkki kohdassa 0 on itseisarvofunktio $|x|$, jonka kuvaajassa on kärki. Siirrä kärki kohtaan $x=1$.",
+      "Valitse $f(x)=|x-1|$. Erotusosamäärä on $\\frac{|x-1|}{x-1}$, eli $1$, kun $x>1$, ja $-1$, kun $x<1$. Laske toispuoliset raja-arvot. Jatkuvuudessa tarkista, että toispuoliset raja-arvot ovat $f(1)$."
+     ],
+     "solution": "**Esimerkki:** $f(x)=|x-1|$, eli $f(x)=x-1$, kun $x\\ge 1$, ja $f(x)=1-x$, kun $x<1$.\n\n**Jatkuvuus**\n\n1. Kun $x\\neq 1$, $f$ on lähellä kohtaa $x$ polynomi, joten se on jatkuva.\n2. Kohdassa 1: $\\lim_{x\\to1^-}(1-x)=0$, $\\lim_{x\\to1^+}(x-1)=0$ ja $f(1)=0$. Toispuoliset raja-arvot ovat yhtä suuret kuin funktion arvo, joten $f$ on jatkuva myös kohdassa 1. Siis $f$ on jatkuva kaikkialla.\n\n**Ei derivoituva kohdassa 1**\n\n3. Erotusosamäärä on $\\frac{f(x)-f(1)}{x-1}=\\frac{|x-1|}{x-1}$.\n4. Kun $x>1$, se on $\\frac{x-1}{x-1}=1$, joten oikeanpuoleinen raja-arvo on $1$.\n5. Kun $x<1$, se on $\\frac{-(x-1)}{x-1}=-1$, joten vasemmanpuoleinen raja-arvo on $-1$.\n6. Toispuoliset raja-arvot ovat eri suuret, joten erotusosamäärän raja-arvoa ei ole, eikä $f$ ole derivoituva kohdassa $x=1$. Kuvaajassa on kohdassa $(1,0)$ kärki.\n\n**Vastaus: esimerkiksi $f(x)=|x-1|$: jatkuva, mutta erotusosamäärän toispuoliset raja-arvot kohdassa 1 ovat $-1$ ja $1$.**\n\n**Sudenkuoppa:** epäjatkuva esimerkki (esim. $\\frac{1}{x-1}$) ei kelpaa, koska tehtävässä vaaditaan jatkuva funktio, joka on määritelty kaikilla reaaliluvuilla.",
+     "answer": "Esim. $f(x)=|x-1|$; erotusosamäärän toispuoliset raja-arvot $-1$ ja $1$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Alue $B$ on neljännesympyrä $0\\le x\\le 1$, $0\\le y\\le\\sqrt{1-x^2}$, jonka ala on $\\frac{\\pi}{4}$. Alaa arvioidaan puolisuunnikassäännöllä ja keskipistesäännöllä (suorakaiteen korkeus on funktion arvo osavälin keskipisteessä). Valitse kolme väitettä neljästä ja perustele, ovatko ne tosia:\n\n1. Keskipistesääntö voi antaa todellista suuremman arvion.\n2. Keskipistesääntö voi antaa todellista pienemmän arvion.\n3. Puolisuunnikassääntö voi antaa todellista suuremman arvion.\n4. Puolisuunnikassääntö voi antaa todellista pienemmän arvion.",
+     "hints": [
+      "Funktion $f(x)=\\sqrt{1-x^2}$ kuvaaja on ympyrän kaari, joka kaartuu alaspäin (funktio on konkaavi). ”Voi antaa” -väitteen todistamiseen riittää yksi esimerkki, esimerkiksi yksi osaväli $[0,1]$. ”Ei voi koskaan” vaatii yleisen perustelun.",
+      "Yhdellä osavälillä keskipistesääntö antaa $f\\left(\\frac12\\right)=\\frac{\\sqrt3}{2}\\approx 0{,}866$ ja puolisuunnikassääntö $\\frac{f(0)+f(1)}{2}=\\frac12$. Vertaa lukuun $\\frac{\\pi}{4}\\approx 0{,}785$. Yleiseen perusteluun: puolisuunnikkaan yläreuna on kaaren jänne, ja keskipistesäännön suorakaiteen ala on sama kuin keskipisteeseen piirretyn tangentin alle jäävä ala."
+     ],
+     "solution": "Vertailukohta on $\\frac{\\pi}{4}\\approx 0{,}785$. Funktio $f(x)=\\sqrt{1-x^2}$ on konkaavi, sillä $f''(x)=-\\frac{1}{(1-x^2)^{3/2}}<0$ välillä $(-1,1)$ (kuvaaja on ympyrän yläkaari).\n\n**Väite 1: tosi.** Yhdellä osavälillä keskipistesääntö antaa $1\\cdot f\\left(\\frac12\\right)=\\frac{\\sqrt3}{2}\\approx 0{,}866>0{,}785$.\n\n**Väite 2: epätosi.** Tarkastellaan mitä tahansa osaväliä $[x_0-h,x_0+h]$ ja kaaren tangenttia $T(x)=f(x_0)+f'(x_0)(x-x_0)$ keskipisteessä $x_0$.\n1. Koska $f$ on konkaavi, kaari on tangenttinsa alapuolella: $f(x)\\le T(x)$ osavälillä.\n2. $\\int_{x_0-h}^{x_0+h}T(x)\\,dx=2h\\,f(x_0)$, koska termi $f'(x_0)(x-x_0)$ on pariton keskipisteen suhteen ja sen integraali on nolla. Tämä on juuri suorakaiteen ala.\n3. Siis suorakaiteen ala $\\ge\\int_{x_0-h}^{x_0+h}f(x)\\,dx$ jokaisella osavälillä, ja summaamalla koko arvio on vähintään $\\frac{\\pi}{4}$. Keskipistesääntö ei voi antaa liian pientä arviota.\n\n**Väite 3: epätosi.** Puolisuunnikkaan yläsivu on jana kahden kaaren pisteen välillä, eli ympyrän jänne. Jänne on ympyrän sisäpuolella eli kaaren alapuolella, joten jokainen puolisuunnikas on osavälin alueen osa. Arvio on aina todellista pienempi.\n\n**Väite 4: tosi.** Yhdellä osavälillä puolisuunnikassääntö antaa $\\frac{f(0)+f(1)}{2}=\\frac{1+0}{2}=\\frac12<0{,}785$.\n\n(Esimerkiksi neljällä osavälillä keskipistesääntö antaa $\\approx 0{,}796$ ja puolisuunnikassääntö $\\approx 0{,}749$, eli ne ovat eri puolilla todellista arvoa.)\n\n**Vastaus: väitteet 1 ja 4 ovat tosia, väitteet 2 ja 3 epätosia (kolme valitaan vastattavaksi).**\n\n**Sudenkuoppa:** epätoden väitteen ”voi olla” kumoamiseen ei riitä yksi laskuesimerkki. On näytettävä, ettei mikään jako voi tuottaa sellaista arviota.",
+     "answer": "1 tosi · 2 epätosi · 3 epätosi · 4 tosi",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Veistos tehdään rautatangoista (ks. alkuperäisen tehtävän kuva 10.A): alaosa on neliöpohjainen suorakulmainen särmiö, ja sen päällä on pyramidi. Tangot muodostavat kappaleiden särmät, myös pohjaneliön sivut. Sisätilavuuden on oltava 21 m³, ja pyramidin korkeus on puolet särmiön korkeudesta. Mikä on tarvittavan tangon pienin mahdollinen kokonaispituus $L$? Vastaus metreinä, kaksi merkitsevää numeroa.",
+     "hints": [
+      "Valitse muuttujiksi pohjaneliön sivu $x$ ja särmiön korkeus $y$ (pyramidin korkeus $\\frac y2$). Kirjoita tilavuusehto ja tankojen kokonaispituus. Pyramidin sivusärmän pituus saadaan Pythagoraan lauseella huipusta neliön kärkeen.",
+      "Tilavuus on $x^2y+\\frac13x^2\\cdot\\frac y2=\\frac76x^2y=21$, joten $x^2y=18$. Tankoja on $4y+8x$ särmiössä ja pyramidissa $4\\sqrt{\\frac{x^2}{2}+\\frac{y^2}{4}}$. Sijoita $y=\\frac{18}{x^2}$ ja minimoi yhden muuttujan funktio."
+     ],
+     "solution": "1. Olkoon pohjaneliön sivu $x$ ja särmiön korkeus $y$ (metreinä, $x,y>0$). Pyramidin korkeus on $\\frac y2$.\n2. Tilavuus: $x^2y+\\frac13\\cdot x^2\\cdot\\frac y2=\\frac76x^2y=21$, joten $x^2y=18$ ja $y=\\frac{18}{x^2}$.\n3. Särmiön tangot: 4 pystysärmää ($4y$) sekä ala- ja yläneliön sivut ($8x$).\n4. Pyramidin huippu on neliön keskipisteen yläpuolella. Keskipisteen etäisyys neliön kärjestä on puolet lävistäjästä, $\\frac{x}{\\sqrt2}$, joten sivusärmä on $\\sqrt{\\frac{x^2}{2}+\\frac{y^2}{4}}$. Sivusärmiä on neljä.\n5. $L(x)=4\\cdot\\frac{18}{x^2}+8x+4\\sqrt{\\frac{x^2}{2}+\\frac{81}{x^4}}=\\frac{72}{x^2}+8x+4\\sqrt{\\frac{x^2}{2}+\\frac{81}{x^4}}$, missä $x>0$.\n6. $L'(x)=-\\frac{144}{x^3}+8+\\frac{2\\left(x-\\frac{324}{x^5}\\right)}{\\sqrt{\\frac{x^2}{2}+\\frac{81}{x^4}}}$. Ohjelmistolla derivaatan ainoa positiivinen nollakohta on $x=\\sqrt[3]{18}\\approx 2{,}621$ (silloin myös $y=\\frac{18}{x^2}=\\sqrt[3]{18}$).\n7. Minimikohta: $L(x)\\to\\infty$, kun $x\\to0^+$ tai $x\\to\\infty$, ja derivaatta vaihtaa merkkinsä negatiivisesta positiiviseksi (esim. $L'(2)<0$ ja $L'(3)>0$), joten kyseessä on pienin arvo.\n8. $L\\left(\\sqrt[3]{18}\\right)\\approx 40{,}53$.\n\n**Vastaus: $L\\approx 41$ m**\n\n**Sudenkuoppa:** pohjaneliön tangot unohtuvat (tehtävä sanoo ne kuuluvan kehikkoon), tai pyramidin sivusärmänä käytetään sivutahkon korkeutta eli huipun etäisyyttä neliön sivun keskipisteestä.",
+     "answer": "$L\\approx 41$ m ($x=y=\\sqrt[3]{18}\\approx 2{,}62$ m)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Tason vektoreille $\\overline a$ ja $\\overline b$ pätee $(\\overline a+\\overline b)\\cdot(\\overline a-\\overline b)=2$ ja $2\\,\\overline a\\cdot\\overline a+3\\,\\overline b\\cdot\\overline b=5$.\n\n1. Määritä vektorien pituudet. (5 p)\n2. Lisäksi $\\overline a\\cdot\\overline b=\\frac{\\sqrt{11}}{10}$ ja $\\overline b\\cdot(\\sqrt3\\,\\overline i-\\overline j)=\\frac{1}{\\sqrt5}$. Olkoon $\\varphi$ vektorien $\\overline a$ ja $\\overline b$ välinen kulma ja $\\theta$ vektorien $\\sqrt3\\,\\overline i-\\overline j$ ja $\\overline b$ välinen kulma. Määritä $\\varphi$ ja $\\theta$. (5 p)\n3. Määritä kaikki kohtien 1 ja 2 ehdot täyttävät vektorit $\\overline a$, kun $\\overline b=-\\frac{1}{\\sqrt5}\\,\\overline j$. (2 p)",
+     "hints": [
+      "Käytä pistetulon laskusääntöjä: $\\overline a\\cdot\\overline a=|\\overline a|^2$ ja pistetulo on vaihdannainen, joten $(\\overline a+\\overline b)\\cdot(\\overline a-\\overline b)=|\\overline a|^2-|\\overline b|^2$. Kulmat saadaan kaavasta $\\overline u\\cdot\\overline v=|\\overline u||\\overline v|\\cos\\alpha$.",
+      "Merkitse $p=|\\overline a|^2$ ja $q=|\\overline b|^2$: $p-q=2$ ja $2p+3q=5$, joten $q=\\frac15$ ja $p=\\frac{11}{5}$. Kohdassa 2 molemmista kosineista tulee $\\frac12$. Kohdassa 3 vektori $\\overline b$ osoittaa suoraan alas, ja $\\overline a$ muodostaa sen kanssa $60^\\circ$:n kulman."
+     ],
+     "solution": "**1. Pituudet**\n\n1. $(\\overline a+\\overline b)\\cdot(\\overline a-\\overline b)=\\overline a\\cdot\\overline a-\\overline a\\cdot\\overline b+\\overline b\\cdot\\overline a-\\overline b\\cdot\\overline b=|\\overline a|^2-|\\overline b|^2$.\n2. Yhtälöpari: $|\\overline a|^2-|\\overline b|^2=2$ ja $2|\\overline a|^2+3|\\overline b|^2=5$.\n3. Kertomalla ensimmäinen kahdella ja vähentämällä: $5|\\overline b|^2=1$, joten $|\\overline b|^2=\\frac15$ ja $|\\overline a|^2=\\frac{11}{5}$.\n4. $|\\overline a|=\\sqrt{\\frac{11}{5}}=\\frac{\\sqrt{11}}{\\sqrt5}\\approx 1{,}48$ ja $|\\overline b|=\\frac{1}{\\sqrt5}\\approx 0{,}447$.\n\n**2. Kulmat**\n\n5. $\\cos\\varphi=\\frac{\\overline a\\cdot\\overline b}{|\\overline a||\\overline b|}=\\frac{\\sqrt{11}/10}{\\sqrt{11}/5}=\\frac12$, joten $\\varphi=60^\\circ$.\n6. $|\\sqrt3\\,\\overline i-\\overline j|=\\sqrt{3+1}=2$, joten $\\cos\\theta=\\frac{1/\\sqrt5}{2\\cdot\\frac{1}{\\sqrt5}}=\\frac12$ ja $\\theta=60^\\circ$.\n\n**3. Vektorit $\\overline a$**\n\n7. Tarkistus: $\\overline b=-\\frac{1}{\\sqrt5}\\overline j$ täyttää ehdon $\\overline b\\cdot(\\sqrt3\\,\\overline i-\\overline j)=\\frac{1}{\\sqrt5}$ ja sen pituus on $\\frac{1}{\\sqrt5}$.\n8. $\\overline b$:n suuntakulma on $-90^\\circ$. Vektorin $\\overline a$ on muodostettava sen kanssa $60^\\circ$:n kulma, joten $\\overline a$:n suuntakulma on $-30^\\circ$ tai $-150^\\circ$.\n9. $\\overline a=\\sqrt{\\frac{11}{5}}\\left(\\cos(-30^\\circ)\\,\\overline i+\\sin(-30^\\circ)\\,\\overline j\\right)=\\frac{\\sqrt{33}}{2\\sqrt5}\\,\\overline i-\\frac{\\sqrt{11}}{2\\sqrt5}\\,\\overline j$ tai $\\overline a=-\\frac{\\sqrt{33}}{2\\sqrt5}\\,\\overline i-\\frac{\\sqrt{11}}{2\\sqrt5}\\,\\overline j$.\n10. Tarkistus: kummallekin $\\overline a\\cdot\\overline b=\\frac{\\sqrt{11}}{2\\sqrt5}\\cdot\\frac{1}{\\sqrt5}=\\frac{\\sqrt{11}}{10}$, ja pituus on $\\sqrt{\\frac{33+11}{20}}=\\sqrt{\\frac{11}{5}}$.\n\n**Vastaus: 1. $|\\overline a|=\\frac{\\sqrt{11}}{\\sqrt5}$, $|\\overline b|=\\frac{1}{\\sqrt5}$ · 2. $\\varphi=\\theta=60^\\circ$ · 3. $\\overline a=\\pm\\frac{\\sqrt{33}}{2\\sqrt5}\\,\\overline i-\\frac{\\sqrt{11}}{2\\sqrt5}\\,\\overline j$.**\n\n**Sudenkuoppa:** kohdassa 3 löydetään vain toinen vektori. Kulman $60^\\circ$ voi kiertää kumpaan suuntaan tahansa $\\overline b$:stä.",
+     "answer": "1. $|\\overline a|=\\frac{\\sqrt{11}}{\\sqrt5}$, $|\\overline b|=\\frac{1}{\\sqrt5}$ · 2. $\\varphi=\\theta=60^\\circ$ · 3. $\\overline a=\\pm\\frac{\\sqrt{33}}{2\\sqrt5}\\,\\overline i-\\frac{\\sqrt{11}}{2\\sqrt5}\\,\\overline j$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Pascalin kolmion luvut $p_{n,k}$ (rivi $n$, kohta $k$, numerointi nollasta) määritellään rekursiivisesti: $p_{n,0}=p_{n,n}=1$ kaikilla $n\\ge 0$ ja $p_{n,k}=p_{n-1,k}+p_{n-1,k-1}$, kun $n\\ge 2$ ja $0\\lt k\\lt n$ (ks. alkuperäisen tehtävän animaatio 12.A). Todista induktiolla, että rivin $n$ lukujen summa on $2^n$, eli $\\sum_{k=0}^n p_{n,k}=2^n$.",
+     "hints": [
+      "Induktiotodistuksessa on alkuaskel, induktio-oletus, induktioväite ja väitteen todistus. Induktioaskeleessa erota rivin $n+1$ summasta reunimmaiset ykköset ja käytä sisempiin lukuihin rekursiokaavaa.",
+      "$\\sum_{k=0}^{n+1}p_{n+1,k}=p_{n+1,0}+\\sum_{k=1}^{n}\\left(p_{n,k}+p_{n,k-1}\\right)+p_{n+1,n+1}$. Jaa keskimmäinen summa kahdeksi summaksi ja tunnista, että kumpikin reunaykkösen kanssa on rivin $n$ koko summa."
+     ],
+     "solution": "1. **Alkuaskel ($n=0$):** $\\sum_{k=0}^0p_{0,k}=p_{0,0}=1=2^0$. Väite pätee. (Myös $n=1$: $p_{1,0}+p_{1,1}=2=2^1$.)\n2. **Induktio-oletus:** oletetaan, että jollakin $n\\ge 0$ pätee $\\sum_{k=0}^np_{n,k}=2^n$.\n3. **Induktioväite:** $\\sum_{k=0}^{n+1}p_{n+1,k}=2^{n+1}$.\n4. **Todistus:** Rivin $n+1$ reunaluvut ovat $p_{n+1,0}=1=p_{n,0}$ ja $p_{n+1,n+1}=1=p_{n,n}$. Sisäluvuille ($1\\le k\\le n$) pätee rekursio, koska $n+1\\ge 2$ aina, kun sisälukuja on. Siis\n$$\\sum_{k=0}^{n+1}p_{n+1,k}=p_{n,0}+\\sum_{k=1}^{n}\\left(p_{n,k}+p_{n,k-1}\\right)+p_{n,n}.$$\n5. Jaetaan summa kahtia: $\\left(\\sum_{k=1}^np_{n,k}+p_{n,0}\\right)+\\left(\\sum_{k=1}^np_{n,k-1}+p_{n,n}\\right)$.\n6. Ensimmäinen sulku on $\\sum_{k=0}^np_{n,k}$. Toisessa indeksin siirto $j=k-1$ antaa $\\sum_{j=0}^{n-1}p_{n,j}+p_{n,n}=\\sum_{j=0}^np_{n,j}$.\n7. Induktio-oletuksen nojalla summa on $2^n+2^n=2\\cdot 2^n=2^{n+1}$. (Tapauksessa $n=0$ sisälukuja ei ole, ja summa on suoraan $1+1=2$.)\n8. **Johtopäätös:** väite pätee, kun $n=0$, ja jos se pätee luvulla $n$, se pätee luvulla $n+1$. Induktioperiaatteen nojalla se pätee kaikilla $n\\ge 0$. $\\blacksquare$\n\n**Sudenkuoppa:** induktio-oletukseen kirjoitetaan ”kaikilla $n$”, jolloin oletetaan todistettava asia. Oletus koskee yhtä kiinnitettyä $n$:ää.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "intro": "Polynomi on $P(x)=x^{2n+1}-(x-n)(x-n+1)\\cdots(x+n-1)(x+n)$, missä $n>0$ on kokonaisluku ja $x$ reaaliluku. Kukin kohta on 4 pisteen arvoinen.",
+   "units": [
+    {
+     "id": "13.1",
+     "points": 4,
+     "prompt": "Perustele, että polynomilla $P(x)$ on vähintään yksi nollakohta.",
+     "hints": [
+      "Kirjoita tulo auki muutamalla tekijällä: $(x-n)\\cdots(x-1)\\cdot x\\cdot(x+1)\\cdots(x+n)$. Mikä tekijä on keskellä? Mitä tapahtuu, kun sijoitetaan $x=0$?"
+     ],
+     "solution": "1. Tulo $(x-n)(x-n+1)\\cdots(x+n-1)(x+n)$ sisältää kaikki tekijät $x+j$, $j=-n,\\dots,n$, siis myös tekijän $x$ (kun $j=0$).\n2. Molemmissa termeissä on tekijä $x$: $P(x)=x\\left(x^{2n}-(x-n)\\cdots(x-1)(x+1)\\cdots(x+n)\\right)$.\n3. Siis $P(0)=0$, ja $x=0$ on nollakohta.\n\n(Vaihtoehto: $P$ on jatkuva ja paritonta astetta. Tai suoraan $P(0)=0^{2n+1}-0=0$, kunhan perustellaan, miksi tulo on nolla.)\n\n**Vastaus: $x=0$ on nollakohta, koska tulossa on tekijä $x$.**",
+     "answer": "$P(0)=0$",
+     "check": "hvp"
+    },
+    {
+     "id": "13.2",
+     "points": 4,
+     "prompt": "Osoita, että polynomilla $P(x)$ on enintään $2n-1$ nollakohtaa.",
+     "hints": [
+      "Nollasta poikkeavalla polynomilla on enintään asteensa verran nollakohtia. Selvitä $P$:n aste: kumpikin termi on astetta $2n+1$, mutta korkeimman asteen termit kumoutuvat. Ryhmittele tulo pareiksi $(x-j)(x+j)=x^2-j^2$."
+     ],
+     "solution": "1. Ryhmitellään: $(x-n)\\cdots(x+n)=x(x^2-1^2)(x^2-2^2)\\cdots(x^2-n^2)$.\n2. Kun tämä kerrotaan auki, saadaan $x^{2n+1}-(1^2+2^2+\\dots+n^2)x^{2n-1}+\\dots$, eli tulossa on vain parittomia potensseja, ja korkein on $x^{2n+1}$ kertoimella 1.\n3. Erotuksessa $P(x)=x^{2n+1}-(\\dots)$ termit $x^{2n+1}$ kumoutuvat, ja seuraavaksi korkein termi on $(1^2+2^2+\\dots+n^2)x^{2n-1}$, jonka kerroin on positiivinen. ($x^{2n}$-termiä ei ole.)\n4. $P$ on siis nollasta poikkeava polynomi, jonka aste on $2n-1$, joten sillä on enintään $2n-1$ nollakohtaa.\n\n**Vastaus: $P$ on astetta $2n-1$ (johtava kerroin $1^2+\\dots+n^2>0$), joten nollakohtia on enintään $2n-1$.**\n\n**Sudenkuoppa:** päätellään, että nollakohtia on enintään $2n+1$, koska termit ovat astetta $2n+1$. Kumoutuminen on koko kohdan ydin.",
+     "answer": "$\\deg P=2n-1$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "13.3",
+     "points": 4,
+     "prompt": "Osoita, ettei polynomilla $P(x)$ ole nollakohtaa $x_0\\ge n$.",
+     "hints": [
+      "Käytä samaa ryhmittelyä kuin edellä: tulo on $x_0(x_0^2-1^2)\\cdots(x_0^2-n^2)$. Kun $x_0\\ge n$, jokainen sulkulauseke on ei-negatiivinen ja pienempi kuin $x_0^2$. Vertaa tuloa lukuun $x_0^{2n+1}$."
+     ],
+     "solution": "1. Olkoon $x_0\\ge n\\ge 1$. Tulo on $Q(x_0)=x_0(x_0^2-1^2)(x_0^2-2^2)\\cdots(x_0^2-n^2)$.\n2. Jokaisella $j=1,\\dots,n$ pätee $0\\le x_0^2-j^2\\lt x_0^2$, koska $x_0\\ge n\\ge j$ ja $j^2>0$.\n3. Ei-negatiivisten tekijöiden, joista kukin on pienempi kuin $x_0^2$, tulo on pienempi kuin $(x_0^2)^n$. Siis $Q(x_0)\\lt x_0\\cdot x_0^{2n}=x_0^{2n+1}$ (myös silloin, kun jokin tekijä on nolla, koska $x_0^{2n+1}>0$).\n4. Tällöin $P(x_0)=x_0^{2n+1}-Q(x_0)>0$, joten $x_0$ ei ole nollakohta.\n\n**Vastaus: kun $x_0\\ge n$, tulo on aidosti pienempi kuin $x_0^{2n+1}$, joten $P(x_0)>0$.**",
+     "answer": "$P(x_0)>0$, kun $x_0\\ge n$",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

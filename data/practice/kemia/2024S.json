@@ -1,0 +1,459 @@
+{
+ "subject": "kemia",
+ "session": "2024S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2024S_KE/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-09-18_KE_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen monivalintatehtävä (20 p)."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "15 pisteen tehtävät, vastaa neljään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "20 pisteen tehtävät, vastaa kahteen."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Kymmenen monivalintaa, 2 p kukin. Vaihtoehdot on lueteltu koenäkymän järjestyksessä (A = ylin). Kohdan 1.5 kuvaajassa C:n konsentraatio laskee arvosta 1 mol/l, A:n konsentraatio ensin nousee ja sitten laskee, ja B:n konsentraatio nousee kohti arvoa 1 mol/l. Vaihtoehdot on siinä merkitty muodossa (lähtöaine, välituote, lopputuote).",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "- 1.1 $\\ce{NaOH}$-liuoksen pitoisuus: A titraus, B imusuodatus, C elektrolyysi, D ohutlevykromatografia\n- 1.2 kovalenttinen sidos: A Na–O, B H–C, C K–F, D S–He\n- 1.3 rengas 3,00 bar 10 °C:ssa, paine 20 °C:ssa (V vakio): A 2,90, B 3,00, C 3,11, D 6,00 bar\n- 1.4 $\\ce{A(g) + B(g) -> C(g)}$, EI nopeuta: A tilavuuden pienennys, B argonin lisäys, C lämmitys, D A:n ja B:n lisäys\n- 1.5 aineiden roolit kuvaajan perusteella: A (B, A, C), B (B, C, A), C (A, B, C), D (C, A, B)\n- 1.6 ionisidos: A $\\ce{NH2CH3}$, B $\\ce{NH4Cl}$, C $\\ce{H2O}$, D $\\ce{CH3Cl}$\n- 1.7 kennon $\\ce{Fe | Fe^2+ || Au+ | Au}$ lähdejännite: A 0,45, B 1,24, C 1,69, D 2,14 V\n- 1.8 helium lämpenee vakiopaineessa: A V kasvaa, B V ei muutu, C n muuttuu, D V pienenee\n- 1.9 elektroniikan puolimetalli: A kulta, B litium, C kupari, D pii\n- 1.10 atomien liittyminen ja rungon haarautuminen: A MS, B nestekromatografia, C NMR, D titraus",
+     "hints": [
+      "Kertaa kaasujen tilanyhtälö, törmäysteoria, sidostyypit ja jännitesarja. Laskukohdissa (1.3, 1.7) muista kelvinasteet ja normaalipotentiaalien taulukko.",
+      "Kohta kohdalta:\n- 1.3: $\\frac{p_1}{T_1}=\\frac{p_2}{T_2}$ kelvineinä.\n- 1.4: muuttaako inertti kaasu lähtöaineiden konsentraatioita?\n- 1.5: lähtöaine kuluu alusta asti, välituote syntyy ja kuluu, lopputuote kertyy.\n- 1.6: ammoniumioni ja kloridi-ioni.\n- 1.7: $E^\\circ(\\ce{Fe^2+/Fe})=-0{,}45$ V ja $E^\\circ(\\ce{Au+/Au})=+1{,}69$ V.\n- 1.8: $V=\\frac{nRT}{p}$, kun $p$ ja $n$ ovat vakioita."
+     ],
+     "solution": "1. **1.1 A (titraus).** Tunnetun happoliuoksen kulutuksesta saadaan emäksen ainemäärä ja konsentraatio.\n2. **1.2 B (vety ja hiili).** Kaksi epämetallia, joiden elektronegatiivisuusero on pieni, jakavat elektroneja. Na–O ja K–F muodostavat ionisidoksen, eikä jalokaasu helium muodosta sidoksia.\n3. **1.3 C (3,11 bar).** $p_2=3{,}00\\,\\text{bar}\\cdot\\frac{293{,}15\\,\\text{K}}{283{,}15\\,\\text{K}}=3{,}11\\,\\text{bar}$. (YTL hyväksyi arvostelussa myös vaihtoehdon A.)\n4. **1.4 B (argonin lisääminen).** Inertti kaasu nostaa kokonaispainetta, mutta A:n ja B:n konsentraatiot eivät muutu, joten törmäyksiä ei tule enempää.\n5. **1.5 D (A välituote, B lopputuote, C lähtöaine).** C kuluu alusta asti, A syntyy ja kuluu, ja B kertyy loppuun asti.\n6. **1.6 B ($\\ce{NH4Cl}$).** Ammoniumkloridi koostuu ioneista $\\ce{NH4+}$ ja $\\ce{Cl-}$. Muut ovat molekyyliyhdisteitä.\n7. **1.7 D (2,14 V).** $E=E^\\circ_\\text{katodi}-E^\\circ_\\text{anodi}=1{,}69\\,\\text{V}-(-0{,}45\\,\\text{V})=2{,}14\\,\\text{V}$.\n8. **1.8 A (tilavuus kasvaa).** Vakiopaineessa $V\\propto T$, ja pallon ainemäärä pysyy samana.\n9. **1.9 D (pii).** Pii on puolijohde, jota käytetään mikropiireissä. Muut vaihtoehdot ovat metalleja.\n10. **1.10 C (NMR-spektroskopia).** NMR kertoo atomien kemialliset ympäristöt ja sen, mitkä atomit ovat vierekkäin, joten sillä selvitetään hiilirungon rakenne.\n\n**Vastaus: 1.1 A · 1.2 B · 1.3 C · 1.4 B · 1.5 D · 1.6 B · 1.7 D · 1.8 A · 1.9 D · 1.10 C**\n\n**Sudenkuoppa:** kohdassa 1.3 celsiusasteilla laskettu suhde $20/10$ antaa väärin 6,00 bar.",
+     "answer": "1.1 A · 1.2 B · 1.3 C · 1.4 B · 1.5 D · 1.6 B · 1.7 D · 1.8 A · 1.9 D · 1.10 C",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Täydennystehtävä jaksollisesta järjestelmästä. Kuhunkin aukkoon tulee enintään kaksi sanaa tai lukua.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 4,
+     "prompt": "Täydennä: (1) minkä suureen mukaan kasvavaan järjestykseen alkuaineet on jaksollisessa järjestelmässä asetettu, (2) mikä alkuaineen suure lasketaan isotooppien luonnollisten osuuksien avulla, (3) miksi järjestelmän vaakarivejä kutsutaan ja (4) miksi pystysarakkeita kutsutaan.",
+     "hints": [
+      "Kohta 1 on sama kuin ytimen protonien määrä. Kohdassa 2 on kyse keskimääräisestä massasta, joka on merkitty jaksolliseen järjestelmään."
+     ],
+     "solution": "1. **järjestysluvun** (eli protoniluvun) perusteella\n2. suhteellinen **atomimassa**\n3. vaakarivit ovat **jaksoja** (periodeja)\n4. pystysarakkeet ovat **ryhmiä**\n\n**Vastaus: järjestysluvun · atomimassa · jaksoiksi · ryhmiä**",
+     "answer": "järjestysluvun · atomimassa · jaksoiksi · ryhmiä",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Täydennä: (1) sen ryhmän nimi, jonka alkuaineet sulavat matalassa lämpötilassa, reagoivat rajusti veden kanssa ja tekevät liuoksesta emäksisen, (2) mikä ominaisuus on kaikilla vismuttia (Bi) seuraavilla alkuaineilla, (3) hiilen toisen oksidin nimi hiilidioksidin lisäksi, (4) millaisen liuoksen fosforin, rikin ja hiilen oksidit muodostavat veden kanssa ja (5) kalsiumin ja magnesiumin tavallisin hapetusluku yhdisteissä.",
+     "hints": [
+      "Mieti ryhmiä 1 ja 2: kumpi reagoi vedessä kiivaammin ja syntyy hydroksidia?",
+      "Epämetallien oksidit ovat happamia oksideja (esim. $\\ce{CO2 + H2O -> H2CO3}$). Vismuttia raskaammilla alkuaineilla ei ole pysyviä isotooppeja. Ryhmän 2 metallit luovuttavat kaksi elektronia."
+     ],
+     "solution": "1. **alkalimetalleiksi**: esim. $\\ce{2Na(s) + 2H2O(l) -> 2NaOH(aq) + H2(g)}$\n2. **radioaktiivisia**: vismuttia seuraavilla alkuaineilla ei ole pysyviä ytimiä\n3. **hiilimonoksidi** $\\ce{CO}$\n4. **happaman**: esim. $\\ce{SO2 + H2O -> H2SO3}$\n5. **+II**: ryhmän 2 metallit muodostavat ioneja $\\ce{Ca^2+}$ ja $\\ce{Mg^2+}$\n\n**Vastaus: alkalimetalleiksi · radioaktiivisia · hiilimonoksidi · happaman · +II**",
+     "answer": "alkalimetalleiksi · radioaktiivisia · hiilimonoksidi · happaman · +II",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 6,
+     "prompt": "Täydennä: (1) sen ominaisuuden nimi, joka kertoo, kuinka voimakkaasti atomi vetää sidoksen elektroneja ja saa negatiivisen osittaisvarauksen, (2) kummassa reunassa järjestelmää tämä ominaisuus on suurimmillaan, (3) mikä suure on pienin vasemman reunan alkuaineilla, jotka muodostavat helpoimmin positiivisen ionin, (4) miten atomin koko muuttuu jaksossa vasemmalta oikealle, (5) miten koko muuttuu ryhmässä ylhäältä alas ja (6) miten metalliatomin koko muuttuu, kun se luovuttaa elektroneja.",
+     "hints": [
+      "Jaksossa oikealle mentäessä ytimen varaus kasvaa, mutta elektronikuoria ei tule lisää. Ryhmässä alas mentäessä kuoria tulee lisää.",
+      "Positiivisen ionin muodostamiseen tarvittava energia on ionisoitumisenergia. Kun metalliatomi luovuttaa elektroneja, sen uloin kuori tyhjenee ja jäljelle jääviä elektroneja vetää sama ydinvaraus."
+     ],
+     "solution": "1. **elektronegatiivisuus**\n2. **oikeassa** reunassa (ylhäällä oikealla; jalokaasuja ei lasketa)\n3. **ionisoitumisenergia**: alkalimetallit luovuttavat uloimman elektroninsa helpoimmin\n4. koko muuttuu **pienemmäksi**, koska ydinvaraus kasvaa ja vetää samaa kuorta tiukemmin\n5. koko muuttuu **suuremmaksi**, koska elektronikuoria on enemmän\n6. koko **pienenee**, koska uloin kuori poistuu ja elektronien välinen hylkiminen vähenee\n\n**Vastaus: elektronegatiivisuus · oikeassa · ionisoitumisenergia · pienemmäksi · suuremmaksi · pienenee**",
+     "answer": "elektronegatiivisuus · oikeassa · ionisoitumisenergia · pienemmäksi · suuremmaksi · pienenee",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Selitä arkielämän ilmiöt kemian käsittein.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 5,
+     "prompt": "Kun jääkaappikylmä virvoitusjuomapullo avataan, juomaan syntyy kuplia (kuva alkuperäisessä tehtävässä). Selitä ilmiö ja kirjoita sitä kuvaava reaktioyhtälö olomuotoineen.",
+     "hints": [
+      "Mitä kaasua juomaan on liuotettu, ja miten kaasun liukoisuus riippuu sen paineesta nesteen yläpuolella?",
+      "Suljetussa pullossa liuennut ja kaasumainen hiilidioksidi ovat tasapainossa korkeassa paineessa. Kun korkki avataan, paine laskee. Kirjoita hiilihapon hajoaminen tai hiilidioksidin vapautuminen liuoksesta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Juomaan on liuotettu paineen alaisena hiilidioksidia, josta osa on hiilihappona.\n- Kun pullo avataan, paine pullossa laskee. Tasapaino ei enää päde, hiilidioksidin liukoisuus pienenee ja tasapaino siirtyy kaasumaisen hiilidioksidin suuntaan.\n- Liuoksesta vapautuu hiilidioksidikaasua, joka näkyy kuplina.\n- Reaktioyhtälö olomuotoineen:\n$$\\ce{H2CO3(aq) -> H2O(l) + CO2(g)}$$\ntai $\\ce{CO2(aq) -> CO2(g)}$.\n\n**Esimerkkivastaus:** Virvoitusjuomaan on pullotettaessa liuotettu hiilidioksidia suuressa paineessa, ja osa siitä on reagoinut veden kanssa hiilihapoksi. Suljetussa pullossa liuennut hiilidioksidi on tasapainossa pullon yläosan kaasun kanssa. Kun korkki avataan, paine laskee ilmanpaineeseen, jolloin hiilidioksidin liukoisuus pienenee ja ylimääräinen hiilidioksidi vapautuu kaasuna eli kuplina. Kylmässä kaasua liukenee enemmän kuin lämpimässä, mutta paineen lasku riittää vapauttamaan sitä.\n\n**Sudenkuoppa:** kuplissa ei ole happea eikä vetyä, vaan hiilidioksidia. Väärän kaasun mainitseminen vie pisteet.",
+     "answer": "$\\ce{H2CO3(aq) -> H2O(l) + CO2(g)}$ (tai $\\ce{CO2(aq) -> CO2(g)}$)",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 5,
+     "prompt": "Selitä saippuan rakenteen avulla, miksi saippualla saa rasvatahran pois. Esimerkkinä on natriumpalmitaatti $\\ce{CH3(CH2)14COO^- Na^+}$ (rakennekaava alkuperäisessä tehtävässä).",
+     "hints": [
+      "Jaa saippuamolekyyli kahteen osaan: pitkä hiilivetyketju ja karboksylaattipää. Kumpi osa on pooliton ja kumpi poolinen?",
+      "Samankaltainen liukenee samankaltaiseen. Mieti, mihin kumpikin osa kiinnittyy ja millaisia rakenteita monet saippuamolekyylit muodostavat rasvapisaran ympärille vedessä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Saippua on rasvahapon natrium- tai kaliumsuola, jossa on pitkä pooliton hiilivetyketju ja poolinen, varauksellinen karboksylaattiosa $\\ce{-COO-}$.\n- Pooliton hiilivetyketju kiinnittyy rasvaan dispersiovoimilla, eli se on rasvaliukoinen.\n- Poolinen pää on vesiliukoinen: se muodostaa vesimolekyylien kanssa vetysidoksia ja ioni–dipolisidoksia.\n- Monet saippuamolekyylit asettuvat rasvapisaran ympärille niin, että hiilivetyketjut ovat rasvassa ja pooliset päät ulospäin vettä kohti. Syntyy misellejä, ja huuhteluvesi vie rasvan mukanaan.\n\n**Esimerkkivastaus:** Saippuamolekyylissä on kaksi erilaista osaa. Pitkä hiilivetyketju on pooliton ja liukenee rasvaan, koska sen ja rasvamolekyylien välillä vaikuttavat dispersiovoimat. Karboksylaattipää on varauksellinen ja poolinen, joten se hakeutuu veteen ja muodostaa vesimolekyylien kanssa vetysidoksia. Kun saippuaa on riittävästi, molekyylit ympäröivät rasvapisaran misellinä: ketjut ovat pisaran sisällä ja varautuneet päät pinnalla. Tällainen miselli pysyy vedessä, ja rasva huuhtoutuu pois.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 5,
+     "prompt": "Rasvat ovat rasvahappojen estereitä. Selitä, miksi tyydyttyneet rasvat ovat huoneenlämmössä usein kiinteitä mutta tyydyttymättömät nestemäisiä. Vertailuna ovat steariinihappo $\\ce{CH3(CH2)16COOH}$ ja oleiinihappo eli öljyhappo $\\ce{CH3(CH2)7CH=CH(CH2)7COOH}$, jonka kaksoissidos on cis-muotoinen (rakennekaavat alkuperäisessä tehtävässä).",
+     "hints": [
+      "Vertaa ketjujen muotoa: onko ketju suora vai taipunut? Miten muoto vaikuttaa siihen, kuinka lähelle toisiaan molekyylit pääsevät?",
+      "Rasvamolekyylien välillä vaikuttavat lähinnä dispersiovoimat, jotka ovat sitä vahvemmat, mitä laajemmalta alalta molekyylit koskettavat toisiaan. Cis-kaksoissidos tekee ketjuun mutkan."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Tyydyttymättömissä rasvoissa (oleiinihappo) on hiiliatomien välisiä kaksoissidoksia, tyydyttyneissä (steariinihappo) ei ole.\n- Luonnon tyydyttymättömien rasvahappojen kaksoissidos on cis-muotoinen (Z-isomeeri), joten ketju on taipunut. Tyydyttyneet ketjut ovat suoria.\n- Suorat ketjut pakkautuvat tiiviisti vierekkäin, joten dispersiovoimia on niiden välillä enemmän kuin mutkaisten ketjujen välillä.\n- Vahvempien molekyylien välisten voimien katkaisemiseen tarvitaan enemmän energiaa, joten tyydyttyneiden rasvojen sulamispiste on korkeampi ja ne ovat huoneenlämmössä kiinteitä.\n\n**Esimerkkivastaus:** Steariinihapon hiiliketjussa on vain yksinkertaisia sidoksia, joten ketju on suora ja molekyylit pääsevät pakkautumaan tiiviisti. Pitkien ketjujen välille syntyy paljon dispersiovoimia, ja niiden rikkomiseen tarvitaan paljon energiaa, joten sulamispiste on korkea. Oleiinihapossa on cis-kaksoissidos, joka taivuttaa ketjun. Taipuneet molekyylit eivät asetu tiiviisti rinnakkain, dispersiovoimia on vähemmän ja sulamispiste on matalampi. Siksi tyydyttymättömät rasvat ovat huoneenlämmössä nestemäisiä.\n\n**Sudenkuoppa:** ero ei johdu karbonyyliryhmän $\\ce{C=O}$ kaksoissidoksesta, joka on molemmissa, eikä kolmoissidoksista.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Parkinsonin taudissa aivojen dopamiini vähenee. Rakenteet ovat alkuperäisen tehtävän kuvassa ja MarvinSketch-tiedostoissa 4.A ja 4.B. **Dopamiini** on 4-(2-aminoetyyli)bentseeni-1,2-dioli $\\ce{(HO)2C6H3-CH2CH2-NH2}$. **Rotigotiini** on lääkeaine, jonka runkona on tetrahydronaftaleeni: aromaattisessa renkaassa on OH-ryhmä ja tyydyttyneen renkaan yhdessä hiilessä typpi, johon on liittynyt propyyliryhmä ja 2-(tiofen-2-yyli)etyyliryhmä.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 2,
+     "prompt": "Mitkä rotigotiinin funktionaaliset ryhmät sisältävät typpeä tai happea? Nimeä ne.",
+     "hints": [
+      "Kuinka monta hiiltä typpeen on sitoutunut? Mihin renkaaseen OH-ryhmä on liittynyt? Tiofeenirenkaan rikki ei kuulu kysyttyihin."
+     ],
+     "solution": "1. Typpi on sitoutunut kolmeen hiileen: **tertiäärinen aminoryhmä**. Nimi \"amiiniryhmä\" ei kelpaa.\n2. OH-ryhmä on aromaattisessa renkaassa: **fenolinen hydroksiryhmä**.\n\n**Vastaus: tertiäärinen aminoryhmä ja fenolinen hydroksiryhmä**\n\n**Sudenkuoppa:** ylimääräiset, väärät ryhmät (esim. eetteri tai tioli) kumoavat oikeista ryhmistä saadut pisteet.",
+     "answer": "(tertiäärinen) aminoryhmä ja fenolinen hydroksiryhmä",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 5,
+     "prompt": "Onko rotigotiinilla konformaatioisomeriaa? Entä enantiomeriaa eli peilikuvaisomeriaa? Perustele molemmat.",
+     "hints": [
+      "Konformaatioisomeria edellyttää kiertyviä yksinkertaisia sidoksia. Enantiomeria edellyttää asymmetrista hiiltä, jossa on neljä erilaista sidosryhmää.",
+      "Tarkastele tyydyttyneen renkaan hiiltä, johon typpi on liittynyt: siihen on sitoutunut typpi, vety ja kaksi erilaista renkaan $\\ce{CH2}$-ryhmää (toinen kulkee aromaattiseen renkaaseen $\\ce{CH2}$:n kautta, toinen kahden $\\ce{CH2}$:n kautta)."
+     ],
+     "solution": "1. **Konformaatioisomeria: on.** Molekyylissä on yksinkertaisia sidoksia (esim. propyyliketjun C–C-sidokset, C–N-sidokset ja C–O-sidos), joiden ympäri molekyylin osat voivat kiertyä.\n2. **Enantiomeria: on.** Tyydyttyneen renkaan typpeä kantava hiili on asymmetrinen: siihen ovat sitoutuneet typpi, vety ja kaksi erilaista hiiliketjua renkaan eri suuntiin.\n3. Asymmetrinen hiili merkitään rakennekaavaan esimerkiksi tähdellä. Rotigotiinilla on siis kaksi peilikuvamuotoa (lääkkeenä käytetään S-muotoa).\n\n**Vastaus: kyllä molempia: konformaatioisomeriaa kiertyvien yksinkertaisten sidosten vuoksi ja enantiomeriaa typpeä kantavan asymmetrisen hiilen vuoksi.**\n\n**Sudenkuoppa:** tertiäärinen typpi ei tässä ole pysyvä asymmetriakeskus. Kysytty asymmetrinen atomi on hiili.",
+     "answer": "Molempia: kiertyvät yksinkertaiset sidokset ja asymmetrinen hiili (N:ää kantava renkaan hiili)",
+     "check": "hvp"
+    },
+    {
+     "id": "4.3",
+     "points": 4,
+     "prompt": "Piirrä rakennekaava suolasta, joka syntyy dopamiinin ja vetykloridin reaktiossa.",
+     "hints": [
+      "Mikä dopamiinin ryhmä on emäksinen ja ottaa protonin? Suola koostuu kationista ja anionista, joiden välillä ei piirretä kovalenttista sidosta."
+     ],
+     "solution": "1. Aminoryhmän typen vapaa elektronipari ottaa vastaan vetykloridin protonin: $\\ce{R-NH2 + HCl -> R-NH3+ Cl-}$.\n2. Kationi: $\\ce{(HO)2C6H3-CH2CH2-NH3+}$. Typpeen on sitoutunut kolme vetyä ja yksi hiili, ja typellä on positiivinen varaus.\n3. Anioni: kloridi-ioni $\\ce{Cl-}$ erillisenä ionina. Fenoliset OH-ryhmät eivät muutu.\n\n**Vastaus: dopamiinihydrokloridi $\\ce{(HO)2C6H3CH2CH2NH3+ Cl-}$**\n\n**Sudenkuoppa:** kovalenttinen sidos typen ja kloorin välille tai neljä vetyä typpeen (viisi sidosta) ovat periaatevirheitä.",
+     "answer": "$\\ce{(HO)2C6H3CH2CH2NH3+ Cl-}$",
+     "check": "hvp"
+    },
+    {
+     "id": "4.4",
+     "points": 4,
+     "prompt": "Dopamiinin amidijohdannaisia valmistetaan kondensoimalla dopamiinia karboksyylihappojen kanssa. Esitä rakennekaava amidista, joka syntyy dopamiinista ja etikkahaposta.",
+     "hints": [
+      "Amidi syntyy aminoryhmän ja karboksyyliryhmän välille, kun vesimolekyyli lohkeaa. Fenoliset OH-ryhmät jäävät ennalleen."
+     ],
+     "solution": "1. Aminoryhmän vety ja karboksyyliryhmän OH lohkeavat vetenä.\n2. Typen ja karbonyylihiilen välille syntyy amidisidos:\n$$\\ce{(HO)2C6H3CH2CH2NH2 + CH3COOH -> (HO)2C6H3CH2CH2NHCOCH3 + H2O}$$\n3. Tuote on N-asetyylidopamiini eli N-[2-(3,4-dihydroksifenyyli)etyyli]asetamidi.\n\n**Vastaus: $\\ce{(HO)2C6H3-CH2CH2-NH-CO-CH3}$ (N-asetyylidopamiini)**\n\n**Sudenkuoppa:** esteri fenolisen OH-ryhmän kautta ei ole amidi. Myös ylimääräiset ryhmät ovat periaatevirhe.",
+     "answer": "$\\ce{(HO)2C6H3CH2CH2NHCOCH3}$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Englantilainen sotalaiva Mary Rose upposi vuonna 1545 ja nostettiin merestä vuonna 1982. Puurungon säilyttämiseksi se ruiskutettiin muun muassa lyhytketjuisella polyetyleeniglykolilla (PEG, $\\ce{H(OCH2CH2)_nOH}$, tässä $n=4$), joka korvaa puuhun sitoutuneet vesimolekyylit. Puun kuiva-aineesta noin puolet on selluloosaa. Selluloosan ja tärkkelyksen (amyloosin) rakennekaavat ovat alkuperäisen tehtävän aineistossa 5.A.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 4,
+     "prompt": "Piirrä PEG-molekyyli, jossa on kaksi toistuvaa yksikköä ($n=2$). Nimeä molekyylin keskiosan funktionaalinen ryhmä.",
+     "hints": [
+      "Toistuva yksikkö on $\\ce{-O-CH2-CH2-}$. Kirjoita kaksi yksikköä peräkkäin ja lisää päihin $\\ce{H}$ ja $\\ce{OH}$ yleiskaavan mukaisesti."
+     ],
+     "solution": "1. $n=2$: $\\ce{H-O-CH2-CH2-O-CH2-CH2-OH}$ eli $\\ce{HOCH2CH2OCH2CH2OH}$ (dietyleeniglykoli).\n2. Päissä on hydroksiryhmät ja keskellä kahden hiilen välissä happi.\n\n**Vastaus: $\\ce{HOCH2CH2OCH2CH2OH}$; keskellä on eetteriryhmä $\\ce{C-O-C}$.**",
+     "answer": "$\\ce{HOCH2CH2OCH2CH2OH}$; eetteriryhmä",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 6,
+     "prompt": "Millaisilla sidoksilla PEG-molekyylit kiinnittyvät puun selluloosamolekyyleihin (rakenne aineistossa 5.A)? Miten nämä sidokset syntyvät?",
+     "hints": [
+      "Etsi kummastakin molekyylistä poolisia ryhmiä: selluloosassa on paljon OH-ryhmiä ja renkaan sekä glykosidisidoksen happia, PEG:ssä eetterihappia ja pääteryhmien OH:t.",
+      "Vetysidos syntyy, kun O–H-ryhmän positiivisesti osittaisvarautunut vety vetää toisen molekyylin happiatomin vapaata elektroniparia. Keksi vähintään kolme tällaista paria PEG:n ja selluloosan välille. Muista lisäksi dispersiovoimat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- PEG ja selluloosa sitoutuvat toisiinsa ennen kaikkea **vetysidoksilla** (lisäksi dipoli–dipolisidoksilla ja dispersiovoimilla).\n- Vetysidos muodostuu happiatomin ja toisen molekyylin OH-ryhmän vedyn välille. Mahdollisia pareja on kolme: (1) PEG:n eetterihappi ja selluloosan OH-ryhmän vety, (2) PEG:n OH-ryhmän vety ja selluloosan renkaan tai glykosidisidoksen happi sekä (3) PEG:n OH-ryhmä ja selluloosan OH-ryhmä.\n- Syntymekanismi: O–H-sidos on poolinen, koska happi on paljon elektronegatiivisempi kuin vety. Hapelle syntyy negatiivinen ja vedylle positiivinen osittaisvaraus.\n- PEG:n eetterihapessa on vapaita elektronipareja, ja poolisen C–O-sidoksen vuoksi happi on osittain negatiivinen.\n- Lisäksi molekyylien välillä on dispersiovoimia: elektronipilven hetkellinen epätasainen jakautuminen synnyttää hetkellisen dipolin, joka indusoi dipolin viereiseen molekyyliin.\n\n**Esimerkkivastaus:** PEG kiinnittyy selluloosaan pääasiassa vetysidoksilla. Selluloosan hydroksiryhmien vedyt ovat positiivisesti osittaisvarautuneita, koska happi vetää sidoselektroneja puoleensa. Ne vetävät puoleensa PEG:n eetterihappien vapaita elektronipareja. Vastaavasti PEG:n päiden OH-ryhmien vedyt voivat muodostaa vetysidoksen selluloosan renkaan happeen, glykosidisidoksen happeen tai OH-ryhmän happeen. Lisäksi pitkien molekyylien välillä vaikuttavat dispersiovoimat, jotka syntyvät hetkellisten ja indusoituneiden dipolien vetovoimasta.\n\n**Sudenkuoppa:** kovalenttiset tai ionisidokset PEG:n ja selluloosan välillä ovat väärin ja vievät kaikki pisteet.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 5,
+     "prompt": "Vertaa selluloosan ja tärkkelyksen (amyloosin) rakenteita aineiston 5.A perusteella. Miksi selluloosa muodostaa puun kuidut, mutta tärkkelys ei muodosta kuituja? Perustele rakenteilla.",
+     "hints": [
+      "Katso, miten glykosidisidos lähtee kustakin glukoosirenkaasta: renkaan tasossa vai tasosta poispäin? Millainen ketjusta silloin tulee?",
+      "Selluloosassa glukoosiyksiköt liittyvät β-1,4-sidoksin, amyloosissa α-1,4-sidoksin. Suorat ketjut voivat asettua rinnakkain ja sitoutua toisiinsa monilla vetysidoksilla."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Tärkkelyksen amyloosi muodostaa **kierteisen** ketjun, selluloosa **suoran** ketjun.\n- Ero johtuu glykosidisidoksesta: amyloosissa (α-1,4) sidos osoittaa renkaan tasosta poispäin, selluloosassa (β-1,4) se on renkaan tasossa, ja joka toinen glukoosiyksikkö on kääntynyt.\n- Selluloosaketjujen välille muodostuu runsaasti vetysidoksia hydroksiryhmien välille.\n- Suorat selluloosaketjut asettuvat tiiviisti rinnakkain ja sitoutuvat toisiinsa vetysidoksilla lujiksi kuitukimpuiksi. Kierteiset amyloosimolekyylit eivät pääse yhtä lähelle toisiaan, joten kuituja ei synny.\n\n**Esimerkkivastaus:** Sekä selluloosa että tärkkelys ovat glukoosin polymeerejä, mutta glykosidisidokset ovat erilaisia. Selluloosassa sidos on renkaan tasossa, joten ketju on suora ja pitkä. Tällaiset ketjut asettuvat vierekkäin ja sitoutuvat toisiinsa lukuisilla vetysidoksilla, jolloin syntyy lujia kuituja. Amyloosissa glykosidisidos osoittaa renkaan tasosta poispäin, ja ketju kiertyy spiraaliksi. Spiraalit eivät pakkaudu tiiviisti rinnakkain, eikä ketjujen välille synny kuiturakennetta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Aineistossa 6.A on kaavio typen kierrosta: typensidonta ($\\ce{N2}$ → ammoniakki tai ammoniumioni), nitrifikaatio (hapen läsnä ollessa → nitriitti → nitraatti), denitrifikaatio (hapettomissa oloissa → $\\ce{N2}$) ja anammox. Taulukossa 6.B on muodostumisentalpioita.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Määritä typen hapetusluku kussakin: $\\ce{N2}$, $\\ce{NH3}$, $\\ce{NH4+}$, $\\ce{NO2-}$ ja $\\ce{NO3-}$.",
+     "hints": [
+      "Alkuaineena atomin hapetusluku on 0. Vedyn hapetusluku on yhdisteissä +I ja hapen −II.",
+      "Hapetuslukujen summa on hiukkasen varaus. Esimerkiksi nitraatissa $x+3\\cdot(-2)=-1$."
+     ],
+     "solution": "1. $\\ce{N2}$: alkuaine, **0**.\n2. $\\ce{NH3}$: $x+3\\cdot(+1)=0$, joten **−III**.\n3. $\\ce{NH4+}$: $x+4\\cdot(+1)=+1$, joten **−III**.\n4. $\\ce{NO2-}$: $x+2\\cdot(-2)=-1$, joten **+III**.\n5. $\\ce{NO3-}$: $x+3\\cdot(-2)=-1$, joten **+V**.\n\n**Vastaus: 0 · −III · −III · +III · +V**",
+     "answer": "0 · −III · −III · +III · +V",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 7,
+     "prompt": "Anammox-reaktiossa nitriitti-ioni ja ammoniumioni reagoivat vesiliuoksessa, ja syntyy typpikaasua ja nestemäistä vettä. Kirjoita reaktioyhtälö olomuotoineen ja laske reaktioentalpia taulukon 6.B arvoilla: $\\Delta H_\\mathrm{f}(\\ce{NH4+(aq)})=-133{,}1$ kJ/mol, $\\Delta H_\\mathrm{f}(\\ce{NO2-(aq)})=-100{,}0$ kJ/mol, $\\Delta H_\\mathrm{f}(\\ce{H2O(l)})=-285{,}8$ kJ/mol ja $\\Delta H_\\mathrm{f}(\\ce{N2(g)})=0$.",
+     "hints": [
+      "Kumpikin ioni tuo yhden typpiatomin, joten niistä syntyy yksi typpimolekyyli. Tasapainota vety ja happi vedellä ja tarkista varaukset.",
+      "$\\Delta H_\\mathrm{r}=\\sum\\Delta H_\\mathrm{f}(\\text{tuotteet})-\\sum\\Delta H_\\mathrm{f}(\\text{lähtöaineet})$. Tuotteissa on kaksi moolia vettä."
+     ],
+     "solution": "1. Reaktioyhtälö: typpi +III ja −III → 0, joten elektroneja siirtyy kolme ja ionit reagoivat suhteessa 1 : 1.\n$$\\ce{NO2-(aq) + NH4+(aq) -> N2(g) + 2H2O(l)}$$\nTarkistus: N 2 = 2, H 4 = 4, O 2 = 2 ja varaus 0 = 0.\n2. $\\Delta H_\\mathrm{r}=\\left[\\Delta H_\\mathrm{f}(\\ce{N2})+2\\Delta H_\\mathrm{f}(\\ce{H2O})\\right]-\\left[\\Delta H_\\mathrm{f}(\\ce{NO2-})+\\Delta H_\\mathrm{f}(\\ce{NH4+})\\right]$\n3. $\\Delta H_\\mathrm{r}=\\left[0+2\\cdot(-285{,}8)\\right]\\,\\text{kJ/mol}-\\left[-100{,}0+(-133{,}1)\\right]\\,\\text{kJ/mol}=-571{,}6\\,\\text{kJ/mol}+233{,}1\\,\\text{kJ/mol}=-338{,}5\\,\\text{kJ/mol}$\n\n**Vastaus: $\\ce{NO2-(aq) + NH4+(aq) -> N2(g) + 2H2O(l)}$, $\\Delta H_\\mathrm{r}=-338{,}5$ kJ/mol**\n\n**Sudenkuoppa:** väärät etumerkit tai vesimoolien kertoimen 2 unohtaminen.",
+     "answer": "$\\ce{NO2-(aq) + NH4+(aq) -> N2(g) + 2H2O(l)}$, $\\Delta H=-338{,}5$ kJ/mol",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 3,
+     "prompt": "Typensitojabakteerien nitrogenaasientsyymit sitovat ilman typpeä. Miksi typpimolekyylin muuttaminen ammoniakiksi tai ammoniumioniksi vaatii entsyymin?",
+     "hints": [
+      "Millainen sidos typpimolekyylin atomien välillä on, ja mitä se merkitsee reaktion aktivaatioenergialle? Mikä on entsyymin tehtävä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Typpimolekyylissä on erittäin vahva kolmoissidos $\\ce{N#N}$.\n- Siksi typpimolekyyli on hyvin pysyvä, ja sen reaktioiden aktivaatioenergia on suuri: kolmoissidos katkeaa vasta suurella energialla.\n- Nitrogenaasi toimii biologisena katalyyttinä, alentaa aktivaatioenergiaa ja nopeuttaa reaktiota niin, että typpi sitoutuu maaperän lämpötilassa.\n\n**Esimerkkivastaus:** Typpimolekyylin atomit ovat liittyneet kolmoissidoksella, joka on yksi vahvimmista kemiallisista sidoksista. Molekyyli on siksi hyvin reagoimaton, ja typensidonnan aktivaatioenergia on suuri. Nitrogenaasi toimii katalyyttinä: se alentaa aktivaatioenergiaa, jolloin reaktio etenee bakteerissa tavallisessa lämpötilassa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Bentsoehappo $\\ce{C6H5COOH}$ on heikko yksiarvoinen happo, jonka $K_\\mathrm{a}=6{,}28\\cdot10^{-5}$ mol/l.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 12,
+     "prompt": "25,0 ml bentsoehappoliuosta titrataan 0,050 mol/l natriumhydroksidiliuoksella, ja pH:ta seurataan pH-mittarilla. Ekvivalenttipisteeseen kuluu 11,3 ml emäsliuosta. Laske liuoksen pH ekvivalenttipisteessä yhden desimaalin tarkkuudella (25 °C).",
+     "hints": [
+      "Ekvivalenttipisteessä kaikki happo on muuttunut bentsoaatti-ioneiksi, joiden ainemäärä on sama kuin lisätyn $\\ce{NaOH}$:n. Bentsoaatti on heikko emäs. Muista, että tilavuus on nyt molempien liuosten summa.",
+      "$c(\\ce{C6H5COO-})=\\frac{5{,}65\\cdot10^{-4}\\,\\text{mol}}{0{,}0363\\,\\text{l}}=0{,}015565$ mol/l ja $K_\\mathrm{b}=\\frac{K_\\mathrm{w}}{K_\\mathrm{a}}$. Laadi protolyysin $\\ce{C6H5COO- + H2O <=> C6H5COOH + OH-}$ tasapainotaulukko."
+     ],
+     "solution": "1. Titrausreaktio: $\\ce{C6H5COOH(aq) + OH-(aq) -> C6H5COO-(aq) + H2O(l)}$.\n2. $n(\\ce{NaOH})=0{,}050\\,\\text{mol/l}\\cdot0{,}0113\\,\\text{l}=5{,}65\\cdot10^{-4}\\,\\text{mol}=n(\\ce{C6H5COO-})$.\n3. Kokonaistilavuus $25{,}0+11{,}3=36{,}3$ ml, joten $c(\\ce{C6H5COO-})=\\frac{5{,}65\\cdot10^{-4}\\,\\text{mol}}{0{,}0363\\,\\text{l}}=0{,}015565\\,\\text{mol/l}$.\n4. $K_\\mathrm{b}=\\frac{K_\\mathrm{w}}{K_\\mathrm{a}}=\\frac{1{,}008\\cdot10^{-14}\\,(\\text{mol/l})^2}{6{,}28\\cdot10^{-5}\\,\\text{mol/l}}=1{,}6051\\cdot10^{-10}\\,\\text{mol/l}$.\n5. Tasapainotaulukko (mol/l): alussa $\\ce{C6H5COO-}$ 0,015565, $\\ce{C6H5COOH}$ 0 ja $\\ce{OH-}$ 0; tasapainossa $0{,}015565-x$, $x$ ja $x$.\n6. $K_\\mathrm{b}=\\frac{[\\ce{C6H5COOH}][\\ce{OH-}]}{[\\ce{C6H5COO-}]}=\\frac{x^2}{0{,}015565-x}=1{,}6051\\cdot10^{-10}$, josta positiivinen juuri $x=[\\ce{OH-}]=1{,}5805\\cdot10^{-6}\\,\\text{mol/l}$.\n7. $\\text{pOH}=-\\lg(1{,}5805\\cdot10^{-6})=5{,}80$ ja $\\text{pH}=\\text{p}K_\\mathrm{w}-\\text{pOH}=14{,}00-5{,}80=8{,}2$.\n\n**Vastaus: pH = 8,2**\n\n**Sudenkuoppa:** laimenemisen unohtaminen (käytetään vain 25,0 ml) tai heikon emäksen käsitteleminen neutraalina, jolloin saadaan virheellisesti pH 7.",
+     "answer": "pH = 8,2",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.2",
+     "points": 3,
+     "prompt": "Nimeä jokin muu kuin happo–emästitraus ja kerro, miten sen ekvivalenttipiste havaitaan.",
+     "hints": [
+      "Titrauksessa voidaan seurata myös hapettumista ja pelkistymistä, sakan muodostumista, kompleksin syntyä tai liuoksen sähkönjohtavuutta. Mikä muuttuu ekvivalenttipisteessä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää** yhden menetelmän ja sen ekvivalenttipisteen havaitsemisen, esimerkiksi:\n\n- **Hapetus-pelkistystitraus** (esim. permanganaattititraus): ekvivalenttipiste näkyy värinmuutoksena, kun ylimääräinen violetti permanganaatti jää liuokseen, tai jännitteen muutoksena.\n- **Saostustitraus** (esim. kloridin titraus hopeanitraatilla): sakan muodostuminen lakkaa, tai indikaattori (kromaatti) antaa värillisen sakan, tai jännite muuttuu.\n- **Kompleksometrinen titraus** (esim. EDTA): indikaattorin väri muuttuu, kun metalli-ionit ovat sitoutuneet kompleksiin.\n- **Johtokykytitraus**: liuoksen sähkönjohtavuuden kuvaajassa tapahtuu taite.\n\n**Sudenkuoppa:** mikään happo–emästitraus (ei myöskään eri indikaattorilla tehty) ei kelpaa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Majakin ydinpolttoainelaitoksella Venäjällä varastoitiin jäteliuosta, jossa oli pääasiassa natriumnitraattia $\\ce{NaNO3}$ ja natriumasetaattia $\\ce{CH3COONa}$ sekä liuosta lämmittäviä radioaktiivisia aineita. Syyskuussa 1957 säiliön jäähdytys lakkasi toimimasta, vesi haihtui ja jäljelle jäänyt kuiva seos reagoi räjähdysmäisesti.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 9,
+     "prompt": "Säiliössä tapahtui kaksi päireaktiota: natriumnitraatti hajosi typeksi, hapeksi ja natriumoksidiksi, ja natriumasetaatti paloi täydellisesti niin, että syntyi vain sen alkuaineiden oksideja. Kirjoita molempien reaktioiden yhtälöt olomuotoineen sekä niistä kokonaisreaktio, kun kaikki hajoamisessa vapautuva happi kuluu palamisessa.",
+     "hints": [
+      "Natriumasetaatin palamisessa syntyy $\\ce{CO2}$, $\\ce{H2O}$ ja $\\ce{Na2O}$. Tasapainota kumpikin yhtälö erikseen pienimmin kokonaislukukertoimin.",
+      "Hajoamisessa syntyy $5\\,\\ce{O2}$ neljää $\\ce{NaNO3}$:a kohti ja palamisessa kuluu $4\\,\\ce{O2}$ kahta asetaattia kohti. Kerro yhtälöt niin, että hapen määrä on molemmissa 20, ja laske ne yhteen."
+     ],
+     "solution": "1. Hajoaminen:\n$$\\ce{4NaNO3(s) -> 2Na2O(s) + 2N2(g) + 5O2(g)}$$\n2. Palaminen:\n$$\\ce{2CH3COONa(s) + 4O2(g) -> Na2O(s) + 4CO2(g) + 3H2O(g)}$$\n3. Hapen pienin yhteinen monikerta on 20: hajoamisyhtälö kerrotaan 4:llä ja palamisyhtälö 5:llä.\n4. Summa, josta happi supistuu pois:\n$$\\ce{16NaNO3(s) + 10CH3COONa(s) -> 13Na2O(s) + 8N2(g) + 20CO2(g) + 15H2O(g)}$$\nTarkistus: Na 26 = 26, N 16 = 16, C 20 = 20, H 30 = 30, O 68 = 68.\n\n**Vastaus: $\\ce{16NaNO3(s) + 10CH3COONa(s) -> 13Na2O(s) + 8N2(g) + 20CO2(g) + 15H2O(g)}$**\n\n**Sudenkuoppa:** jos jompikumpi osayhtälö on väärin tasapainotettu, myös kokonaisreaktion kertoimet menevät väärin.",
+     "answer": "$\\ce{16NaNO3(s) + 10CH3COONa(s) -> 13Na2O(s) + 8N2(g) + 20CO2(g) + 15H2O(g)}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.2",
+     "points": 6,
+     "prompt": "Kun vesi oli haihtunut, kiinteästä jäännöksestä 22,2 massaprosenttia oli natriumasetaattia ja 75,8 massaprosenttia natriumnitraattia (mukana myös vähäinen, huomiotta jätettävä määrä kaliumdikromaattia). Osoita laskemalla, kumpi lähtöaine rajoitti kokonaisreaktiota.",
+     "hints": [
+      "Oleta, että seosta on 100 g. Laske kummankin aineen ainemäärä ja vertaa niiden suhdetta kokonaisreaktion kerroinsuhteeseen.",
+      "$n(\\ce{NaNO3})=0{,}8918$ mol ja $n(\\ce{CH3COONa})=0{,}2706$ mol. Kokonaisreaktiossa suhde on $16:10=1{,}6$."
+     ],
+     "solution": "1. Moolimassat: $M(\\ce{NaNO3})=22{,}99+14{,}01+3\\cdot16{,}00=85{,}00\\,\\text{g/mol}$ ja $M(\\ce{CH3COONa})=2\\cdot12{,}01+3\\cdot1{,}008+2\\cdot16{,}00+22{,}99=82{,}034\\,\\text{g/mol}$.\n2. 100 grammassa seosta: $n(\\ce{NaNO3})=\\frac{75{,}8\\,\\text{g}}{85{,}00\\,\\text{g/mol}}=0{,}8918\\,\\text{mol}$ ja $n(\\ce{CH3COONa})=\\frac{22{,}2\\,\\text{g}}{82{,}034\\,\\text{g/mol}}=0{,}2706\\,\\text{mol}$.\n3. Kokonaisreaktion mukaan $n(\\ce{NaNO3}):n(\\ce{CH3COONa})=16:10$, joten asetaatin kanssa reagoisi $\\frac{16}{10}\\cdot0{,}2706\\,\\text{mol}=0{,}4330\\,\\text{mol}$ nitraattia.\n4. Nitraattia on 0,8918 mol eli selvästi enemmän kuin tarvitaan. Suhde $\\frac{0{,}8918}{0{,}2706}=3{,}30>1{,}6$.\n\n**Vastaus: natriumnitraattia on ylimäärin, joten natriumasetaatti on rajoittava tekijä.**\n\n**Sudenkuoppa:** rajoittavaa tekijää ei voi päätellä massaprosenteista suoraan, vaan vertailu tehdään ainemäärinä ja kerroinsuhteen avulla.",
+     "answer": "Natriumasetaatti on rajoittava tekijä",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Aromaattinen substituutio vaatii yleensä voimakkaita reagensseja: renkaan vetyatomi korvautuu, ja muu runko säilyy. Resorsinolille (bentseeni-1,3-dioli, OH-ryhmät hiilissä 1 ja 3) substituutio onnistuu miedosti kuumentamalla sitä ylimäärän natriumvetykarbonaattia sisältävässä vesiliuoksessa (synteesikaavio alkuperäisessä tehtävässä). **Vaihe 1:** resorsinoli + $\\ce{NaHCO3(aq)}$ → natriumresorsylaatti (natrium-2,4-dihydroksibentsoaatti). **Vaihe 2:** seos jäähdytetään ja lisätään suolahappoa, jolloin kylmään veteen niukkaliukoinen resorsyylihappo (2,4-dihydroksibentsoehappo) kiteytyy. Tuotteen ¹³C-NMR-spektrissä on piikit 172,3; 164,3; 163,7; 132,4; 108,5; 104,8 ja 102,7 ppm, resorsinolin spektrissä 160,1; 131,5; 107,7 ja 104,2 ppm.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 4,
+     "prompt": "Kaavion vaiheista 1 ja 2 puuttuu tuote tai tuotteita. Anna puuttuvien tuotteiden kaavat ja nimet.",
+     "hints": [
+      "Kirjoita molekyylikaavat: resorsinoli $\\ce{C6H6O2}$, natriumresorsylaatti $\\ce{C7H5O4Na}$ ja resorsyylihappo $\\ce{C7H6O4}$. Laske, mitä atomeja jää yli kummassakin vaiheessa."
+     ],
+     "solution": "1. Vaihe 1: $\\ce{C6H6O2 + NaHCO3 -> C7H5O4Na + H2O}$. Puuttuva tuote on **vesi $\\ce{H2O}$**.\n2. Vaihe 2: $\\ce{C7H5O4Na + HCl -> C7H6O4 + NaCl}$. Puuttuva tuote on **natriumkloridi $\\ce{NaCl}$**.\n\n**Vastaus: vaihe 1 vesi $\\ce{H2O}$, vaihe 2 natriumkloridi $\\ce{NaCl}$**",
+     "answer": "Vaihe 1: vesi $\\ce{H2O}$ · vaihe 2: natriumkloridi $\\ce{NaCl}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "9.2",
+     "points": 5,
+     "prompt": "Resorsyylihappokiteistä on poistettava reagoimattomat lähtöaineet, vesi ja suolat, jotta tuote on puhdasta ja kuivaa. Kuvaile menetelmä ja tarvittavat välineet.",
+     "hints": [
+      "Tuote on kiinteitä kiteitä nesteessä. Millä menetelmällä kiinteä aine erotetaan nopeimmin nesteestä?",
+      "Epäpuhtaudet ($\\ce{NaCl}$, $\\ce{NaHCO3}$) liukenevat veteen hyvin, tuote huonosti kylmään veteen. Millä kiteet kannattaa huuhdella, ja miten ne kuivataan tuotetta vahingoittamatta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Imusuodatus** (tai tavallinen suodatus): kiteet erotetaan nesteestä.\n- Välineet: Büchner-suppilo tai suodatussuppilo, suodatinpaperi, imupullo ja vesi-imu.\n- Kiteet **pestään kylmällä vedellä**, joka liuottaa suolat ja lähtöaineet mutta ei juuri tuotetta.\n- Tuote **kuivataan** esimerkiksi suodatinpaperin päällä huoneilmassa tai lämpökaapissa, ei liekillä.\n\n**Esimerkkivastaus:** Kiteinen resorsyylihappo imusuodatetaan Büchner-suppilossa, jossa on suodatinpaperi. Suppilo on imupullon päällä, ja alipaine saadaan vesi-imulla. Suppiloon jääneet kiteet huuhdellaan muutamalla pienellä annoksella jääkylmää vettä, joka vie mukanaan natriumkloridin ja ylimääräisen natriumvetykarbonaatin. Lopuksi kiteet levitetään suodatinpaperille ja annetaan kuivua huoneenlämmössä tai lämpökaapissa.\n\n**Sudenkuoppa:** dekantointi ei tuota puhdasta tuotetta, ja kuumentaminen polttimella voi hajottaa sen.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 3,
+     "prompt": "Resorsinolissa on kuusi hiiltä, mutta sen ¹³C-NMR-spektrissä näkyy vain neljä piikkiä. Selitä syy rakenteen avulla ja käytä hiilten numerointia 1–6 (OH-ryhmät hiilissä 1 ja 3).",
+     "hints": [
+      "Etsi molekyylistä symmetriataso. Mitkä hiilet ovat sen suhteen toistensa peilikuvia ja siksi samassa kemiallisessa ympäristössä?"
+     ],
+     "solution": "1. Resorsinolilla on symmetriataso, joka kulkee hiilten 2 ja 5 kautta.\n2. Hiilet 1 ja 3 (OH-hiilet) ovat samassa kemiallisessa ympäristössä, samoin hiilet 4 ja 6.\n3. Hiilet 2 ja 5 ovat kumpikin omassa ympäristössään.\n4. Erilaisia ympäristöjä on siis neljä: {1, 3}, 2, {4, 6} ja 5. Samanarvoiset hiilet antavat yhden yhteisen piikin.\n\n**Vastaus: symmetrian vuoksi C1 = C3 ja C4 = C6, joten erilaisia hiiliä on neljä ja piikkejä neljä.**",
+     "answer": "C1 ja C3 sekä C4 ja C6 ovat samanarvoisia → 4 ympäristöä",
+     "check": "hvp"
+    },
+    {
+     "id": "9.4",
+     "points": 8,
+     "prompt": "Synteesissä voisi syntyä myös resorsyylihapon paikkaisomeerejä. Esitä kaikkien paikkaisomeerien rakenteet ja perustele tuotteen ¹³C-NMR-spektrin avulla, ettei saatu tuote ole mikään niistä.",
+     "hints": [
+      "Resorsinolissa on kolme erilaista vetyä kantavaa paikkaa: hiili 2, hiilet 4/6 ja hiili 5. Karboksyyliryhmä voi korvata vedyn missä tahansa niistä. Hiili 4 antaa resorsyylihapon.",
+      "Muut vaihtoehdot ovat 2,6- ja 3,5-dihydroksibentsoehappo. Molemmat ovat symmetrisiä. Laske niiden erilaiset hiilet ja vertaa tuotteen seitsemään piikkiin."
+     ],
+     "solution": "1. Resorsyylihappo on 2,4-dihydroksibentsoehappo, jossa $\\ce{COOH}$ on korvannut resorsinolin hiilen 4 vedyn.\n2. Resorsinolista voi syntyä kaksi muuta paikkaisomeeriä:\n   - **2,6-dihydroksibentsoehappo**: $\\ce{COOH}$ OH-ryhmien välisessä hiilessä (resorsinolin C2)\n   - **3,5-dihydroksibentsoehappo**: $\\ce{COOH}$ resorsinolin C5:ssä, meta-asemassa kumpaankin OH-ryhmään\n3. Molemmilla on symmetriataso $\\ce{COOH}$-hiilen ja renkaan vastakkaisen hiilen kautta. Seitsemästä hiilestä kaksi paria on samanarvoisia, joten erilaisia hiiliä on viisi: $\\ce{COOH}$, $\\ce{COOH}$:n kantava rengashiili, OH-hiilet (pari), toinen pari ja vastakkainen hiili.\n4. Näiden isomeerien spektrissä olisi siis viisi piikkiä, mutta tuotteen spektrissä on seitsemän. Tuotteessa kaikki seitsemän hiiltä ovat erilaisia, mikä sopii epäsymmetriseen 2,4-isomeeriin.\n5. Jos lasketaan mukaan kaikki dihydroksibentsoehapot, isomeerejä ovat lisäksi 2,3-, 2,5- ja 3,4-dihydroksibentsoehappo. Niissä OH-ryhmät ovat orto- tai para-asemissa toisiinsa nähden, joten ne eivät voi syntyä resorsinolista, jonka OH-ryhmät ovat meta-asemissa ja pysyvät paikallaan. Niiden ennustetut (esim. MarvinSketch) ¹³C-spektrit eivät myöskään vastaa mitattua.\n\n**Vastaus: 2,6- ja 3,5-dihydroksibentsoehapossa on symmetrian vuoksi vain viisi erilaista hiiltä eli viisi piikkiä. Tuotteen spektrissä on seitsemän piikkiä, joten tuote on 2,4-dihydroksibentsoehappo.**\n\n**Sudenkuoppa:** sama isomeeri kahteen kertaan piirrettynä (esim. 2,4- ja 4,6-numerointi) kumoaa pisteitä. Tarkista numerointi ja symmetria.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Asetoni eli propan-2-oni $\\ce{CH3COCH3}$. Aineiston 10.A mukaan höyrynpaineen lämpötilariippuvuutta kuvaa Clausiuksen–Clapeyronin yhtälö $\\ln p=-\\frac{\\Delta H_\\mathrm{vap}}{R}\\cdot\\frac1T+\\text{vakio}$ ($p$ kilopascaleina, $R=8{,}314463$ J/(mol·K)), kun $\\Delta H_\\mathrm{vap}$ oletetaan vakioksi. Taulukossa 10.B on asetonin höyrynpaine viidessä lämpötilassa välillä 278,66–306,87 K (ks. alkuperäinen aineisto).",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Vedelle $\\Delta H_\\mathrm{vap}=40{,}66$ kJ/mol. Miksi arvo on suurempi kuin asetonilla? Perustele kemiallisesti.",
+     "hints": [
+      "Vertaa molekyylien välisiä sidoksia: voiko asetonimolekyyli muodostaa vetysidoksen toiseen asetonimolekyyliin? Entä vesi?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Vesimolekyylit muodostavat toisiinsa vetysidoksia (O–H-ryhmän vety ja toisen molekyylin happi).\n- Asetonimolekyylien välillä on dipoli–dipolisidoksia (poolinen karbonyyliryhmä) ja dispersiovoimia. Vetysidoksia ei synny, koska asetonissa ei ole happeen sitoutunutta vetyä.\n- Vetysidos on vahvempi vuorovaikutus kuin dipoli–dipolisidos.\n- Siksi vesimolekyylien irrottaminen toisistaan eli höyrystäminen vaatii enemmän energiaa.\n\n**Esimerkkivastaus:** Vesimolekyylien välillä on vahvoja vetysidoksia, koska vesimolekyylin vedyt ovat sitoutuneet elektronegatiiviseen happeen. Asetonissa on poolinen karbonyyliryhmä, joten sen molekyylien välillä on dipoli–dipolisidoksia, mutta vetysidoksia asetonimolekyylit eivät voi muodostaa keskenään. Vetysidokset ovat vahvempia kuin dipoli–dipolisidokset, joten veden höyrystäminen vaatii enemmän energiaa moolia kohti.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 8,
+     "prompt": "Piirrä taulukon 10.B arvoista sopiva kuvaaja ja määritä sen avulla asetonin höyrystymisentalpia.",
+     "hints": [
+      "Yhtälö on suoran yhtälö $y=kx+b$, kun $y=\\ln p$ ja $x=\\frac1T$. Laske jokaiselle pisteelle $1/T$ (yksikkö 1/K) ja $\\ln p$, piirrä pisteet ja sovita suora.",
+      "$1/T$ on välillä noin $3{,}26\\cdot10^{-3}$–$3{,}59\\cdot10^{-3}$ 1/K. Kulmakerroin on $k=-\\frac{\\Delta H_\\mathrm{vap}}{R}$, ja sen pitäisi olla noin $-3\\,850$ K."
+     ],
+     "solution": "1. Lasketaan jokaiselle mittapisteelle $x=1/T$ ja $y=\\ln p$ (p kPa:na).\n2. Kuvaaja: vaaka-akselilla $1/T$ (1/K), pystyakselilla $\\ln(p/\\text{kPa})$. Pisteet ovat suoralla, jonka kulmakerroin on negatiivinen.\n3. Lineaarinen sovitus: $\\ln p=-3\\,851\\,\\text{K}\\cdot\\frac1T+16{,}34$.\n4. $k=-\\frac{\\Delta H_\\mathrm{vap}}{R}$, joten\n$$\\Delta H_\\mathrm{vap}=-kR=3\\,850{,}7\\,\\text{K}\\cdot8{,}314463\\,\\tfrac{\\text{J}}{\\text{mol·K}}=32\\,016\\,\\tfrac{\\text{J}}{\\text{mol}}\\approx32{,}0\\,\\tfrac{\\text{kJ}}{\\text{mol}}$$\n\n**Vastaus: $\\Delta H_\\mathrm{vap}(\\text{asetoni})\\approx32{,}0\\,\\text{kJ/mol}$**\n\n**Sudenkuoppa:** vaaka-akselille $T$ eikä $1/T$ tai kulmakertoimen etumerkin unohtaminen. Tarkista, että tulos on pienempi kuin veden 40,66 kJ/mol (kohta 10.1).",
+     "answer": "$\\Delta H_\\mathrm{vap}\\approx32{,}0$ kJ/mol",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Todellisuudessa höyrystymisentalpia pienenee hieman lämpötilan noustessa. Perustele, miksi aine höyrystyy helpommin korkeammassa lämpötilassa.",
+     "hints": [
+      "Mitä molekyylien liike-energialle tapahtuu lämpötilan noustessa, ja mitä se tarkoittaa molekyylien välisille sidoksille nesteessä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lämpötilan noustessa nestemolekyylien liike-energia kasvaa, ja osa molekyylien välisistä sidoksista on jo katkennut tai heikentynyt.\n- Siksi molekyylin irtoaminen kaasufaasiin vaatii vähemmän lisäenergiaa, ja yhä useammalla molekyylillä on riittävästi energiaa siirtyä kaasuksi.\n\n**Esimerkkivastaus:** Kuumassa nesteessä molekyylit liikkuvat nopeammin, ja niiden väliset vuorovaikutukset ovat jo osittain katkenneet. Kun molekyyli irtoaa pinnasta, sidoksia on katkaistava vähemmän kuin kylmässä nesteessä, joten höyrystyminen vaatii vähemmän lisäenergiaa ja tapahtuu helpommin.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "Asetoni tuntuu iholla viileältä. Asetoni kiehuu 56 °C:ssa ja haihtuu iholta nopeasti. Perustele, mistä viileneminen johtuu.",
+     "hints": [
+      "Onko höyrystyminen endoterminen vai eksoterminen prosessi? Mistä höyrystymiseen tarvittava energia otetaan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Höyrystyminen sitoo energiaa (endoterminen muutos).\n- Energia otetaan ympäristöstä eli ihosta, jolloin ihon lämpötila laskee.\n- Asetonin molekyylien väliset voimat ovat heikkoja, joten se haihtuu nopeasti ja viilentää tehokkaasti.\n\n**Esimerkkivastaus:** Asetoni haihtuu iholta nopeasti, koska sen molekyylien väliset voimat ovat heikot. Höyrystyminen sitoo energiaa, sillä molekyylien väliset sidokset on katkaistava. Tämä energia siirtyy asetoniin ihosta lämpönä, joten iho jäähtyy ja tuntuu viileältä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Tuntemattoman yhdisteen $\\ce{C_xH_yN_z}$ empiirinen kaava määritetään kahdella kokeella. **Koe 1:** 0,1500 g yhdistettä hajotetaan, ja kaikki typpi vapautuu typpikaasuna: 16,4 ml, 27,0 °C, 97 300 Pa. **Koe 2:** 0,2000 g yhdistettä poltetaan täydellisesti, ja palamiskaasut johdetaan ensin kalsiumkloridiputken ja sitten kaliumhydroksidiputken läpi (kuva alkuperäisessä tehtävässä). Kalsiumkloridiputken massa kasvaa 0,1078 g ja kaliumhydroksidiputken 0,6026 g. Putkissa tapahtuvat reaktiot: $\\ce{CaCl2(s) + 2H2O -> CaCl2*2H2O(s)}$ ja $\\ce{2KOH(s) + CO2(g) -> K2CO3(s) + H2O(l)}$. Tuotteet jäävät putkiin.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Selitä annettujen reaktioyhtälöiden avulla, mihin kalsiumkloridi- ja kaliumhydroksidiputkien massan kasvu perustuu.",
+     "hints": [
+      "Mitkä ovat yhdisteen täydellisen palamisen tuotteet? Kumman tuotteen kukin putki pidättää?",
+      "Kalsiumkloridi sitoo vettä kidevedeksi. Kaliumhydroksidi reagoi hiilidioksidin kanssa, ja kaikki tuotteet (myös syntyvä vesi) jäävät putkeen. Miksi putkien järjestys on tärkeä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Palamisessa syntyvä vesi sitoutuu kalsiumkloridiin kidevedeksi ($\\ce{CaCl2*2H2O}$). Ensimmäisen putken massan kasvu on siis palamisessa syntyneen veden massa.\n- Palamisessa syntyvä hiilidioksidi reagoi kaliumhydroksidin kanssa kaliumkarbonaatiksi ja vedeksi, jotka jäävät putkeen. Toisen putken massan kasvu on siis hiilidioksidin massa.\n- Vesi on poistettava ensin, jotta kaliumhydroksidiputki ei pidättäisi myös vettä. Typpi ei jää kumpaankaan putkeen.\n\n**Esimerkkivastaus:** Kun yhdiste palaa, syntyy vettä, hiilidioksidia ja typpeä. Ensimmäisessä putkessa kalsiumkloridi sitoo kaiken vesihöyryn kidevedeksi, joten putken massa kasvaa veden massan verran. Toisessa putkessa hiilidioksidi reagoi kaliumhydroksidin kanssa kaliumkarbonaatiksi ja vedeksi, jotka molemmat jäävät putkeen. Massan kasvu vastaa siis sitoutuneen hiilidioksidin massaa. Typpikaasu kulkee molempien putkien läpi.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 15,
+     "prompt": "Määritä kokeiden tulosten perusteella yhdisteen $\\ce{C_xH_yN_z}$ empiirinen kaava.",
+     "hints": [
+      "Laske typen ainemäärä kokeesta 1 ideaalikaasun tilanyhtälöllä ($T$ kelvineinä, $V$ kuutiometreinä). Laske kokeesta 2 veden ja hiilidioksidin ainemäärät. Muista, että näytteiden massat ovat eri suuret.",
+      "$n(\\ce{N2})=6{,}394\\cdot10^{-4}$ mol 0,1500 grammasta. Skaalaa se 0,2000 grammaan kertoimella $\\frac{0{,}2000}{0{,}1500}$. Sitten $n(\\ce{N})=2n(\\ce{N2})$, $n(\\ce{C})=n(\\ce{CO2})$ ja $n(\\ce{H})=2n(\\ce{H2O})$. Jaa pienimmällä."
+     ],
+     "solution": "1. Koe 1: $n(\\ce{N2})=\\frac{pV}{RT}=\\frac{97\\,300\\,\\text{Pa}\\cdot16{,}4\\cdot10^{-6}\\,\\text{m}^3}{8{,}31446\\,\\frac{\\text{J}}{\\text{mol·K}}\\cdot300{,}15\\,\\text{K}}=6{,}3942\\cdot10^{-4}\\,\\text{mol}$.\n2. Skaalaus kokeen 2 näytemassaan: $n(\\ce{N2})=6{,}3942\\cdot10^{-4}\\,\\text{mol}\\cdot\\frac{0{,}2000\\,\\text{g}}{0{,}1500\\,\\text{g}}=8{,}5256\\cdot10^{-4}\\,\\text{mol}$, joten $n(\\ce{N})=2\\cdot8{,}5256\\cdot10^{-4}=1{,}7051\\cdot10^{-3}\\,\\text{mol}$.\n3. Vesi: $n(\\ce{H2O})=\\frac{0{,}1078\\,\\text{g}}{18{,}016\\,\\text{g/mol}}=5{,}9836\\cdot10^{-3}\\,\\text{mol}$, joten $n(\\ce{H})=1{,}1967\\cdot10^{-2}\\,\\text{mol}$.\n4. Hiilidioksidi: $n(\\ce{CO2})=\\frac{0{,}6026\\,\\text{g}}{44{,}01\\,\\text{g/mol}}=1{,}3692\\cdot10^{-2}\\,\\text{mol}=n(\\ce{C})$.\n5. Jaetaan pienimmällä ainemäärällä $n(\\ce{N})$: C $\\frac{1{,}3692\\cdot10^{-2}}{1{,}7051\\cdot10^{-3}}=8{,}03\\approx8$; H $\\frac{1{,}1967\\cdot10^{-2}}{1{,}7051\\cdot10^{-3}}=7{,}02\\approx7$; N 1.\n6. Tarkistus: näytteen C-, H- ja N-atomien massojen summa on $0{,}2004$ g, joten yhdisteessä ei ole muita alkuaineita.\n\n**Vastaus: empiirinen kaava on $\\ce{C8H7N}$** (esimerkiksi indoli)\n\n**Sudenkuoppa:** kokeiden eri näytemassojen unohtaminen, $n(\\ce{N})=n(\\ce{N2})$ tai $n(\\ce{H})=n(\\ce{H2O})$ tai empiirisen kaavan kutsuminen molekyylikaavaksi.",
+     "answer": "$\\ce{C8H7N}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

@@ -150,6 +150,14 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 .tag.sel{background:var(--accent);color:var(--accent-ink)}
 .task .pts{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);white-space:nowrap;padding-top:3px}
 .empty{color:var(--ink-3);font-size:14px;padding:10px 0}
+.task .prac{font-size:12px;line-height:1.7;border-radius:4px;padding:0 6px;background:var(--surface-2);color:var(--ink);text-decoration:none;font-weight:700}
+.task .prac:hover{background:var(--accent);color:var(--accent-ink)}
+.next{display:grid;margin:0;padding:0;list-style:none}
+.next li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;padding:7px 0;border-top:1px solid var(--line-2)}
+.next li:first-child{border-top:0}
+.next .nm{font-weight:700}
+.next .ms{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
+.next a{margin-left:auto;font-size:13px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
 .method{font-size:14px;color:var(--ink-2);max-width:78ch}
 .method summary{cursor:pointer;font-weight:700;color:var(--ink)}
 .method ul{margin:8px 0 0;padding-left:20px;display:grid;gap:4px}
@@ -177,6 +185,7 @@ h1{font-weight:800;letter-spacing:-.02em}
       <div class="eyebrow">Ylioppilastutkinto · syksy 2021 – syksy 2026 · 11 tutkintokertaa</div>
       <h1>YO-tutka</h1>
       <p class="lede">Mistä aiheista on kysytty, millaisia tehtävät ovat olleet ja kuinka todennäköisesti sama aihe tulee seuraavassa kokeessa.</p>
+      <p class="toplink"><a id="practiceLink" href="https://koirosvg.com/yo-harjoittelu">Harjoittele tehtäviä kaavaeditorilla, vihjeillä ja malliratkaisuilla →</a></p>
     </div>
     <nav class="subjects" id="subjects" aria-label="Oppiaine"></nav>
   </header>
@@ -249,6 +258,34 @@ h1{font-weight:800;letter-spacing:-.02em}
 
   const pClass = p => p>=0.9?'p4':p>=0.65?'p3':p>=0.35?'p2':'p1';
   const pWord = p => p>=0.9?'lähes varma':p>=0.65?'todennäköinen':p>=0.35?'mahdollinen':'harvinainen';
+  const PRACTICE = location.protocol==='file:' ? 'https://koirosvg.com/yo-harjoittelu' : '/yo-harjoittelu';
+  const practiceUrl = (a,k,n) => `${PRACTICE}#/t/${encodeURIComponent(a)}/${encodeURIComponent(k)}/${encodeURIComponent(n)}`;
+  // Self-assessed scores written by yo-harjoittelu.html (same origin): key "aine|kerta|n|unit" -> {p,max,at}.
+  function practiceScores(s){
+    let all={}; try{ all=(JSON.parse(localStorage.getItem('yo-practice')||'{}').scores)||{}; }catch(e){}
+    const byTask=new Map();
+    for(const [k,v] of Object.entries(all)){ const [a,session,n]=k.split('|'); if(a!==s.id||!v||!v.max) continue; const key=session+'|'+n; const x=byTask.get(key)||{p:0,max:0}; x.p+=v.p; x.max+=v.max; byTask.set(key,x); }
+    const topics=new Map();
+    for(const x of s.sessions) for(const t of x.tasks||[]){ const sc=byTask.get(x.id+'|'+t.n); if(!sc) continue; for(const id of t.topics||[]){ const m=topics.get(id)||{p:0,max:0,tasks:0}; m.p+=sc.p; m.max+=sc.max; m.tasks++; topics.set(id,m); } }
+    return {byTask, topics};
+  }
+  // Practice priority = probability of the topic x (1 - own mastery); untried topics count as 50 % mastery.
+  function nextUp(s, st){
+    const {byTask, topics} = practiceScores(s);
+    const rows = st.topics.filter(t=>t.total>0).map(t=>{ const m=topics.get(t.id); const mast=m&&m.max? m.p/m.max : null; return {t, m, mast, prio:t.p*(1-(mast==null?0.5:mast))}; }).sort((a,b)=>b.prio-a.prio).slice(0,5);
+    const newest = st.ss.slice().reverse();   // same (active) sessions the probabilities were computed from
+    for(const r of rows){
+      let fresh=null, weakest=null;
+      for(const x of newest) for(const t of x.tasks||[]){
+        if(!(t.topics||[]).includes(r.t.id)) continue;
+        const sc=byTask.get(x.id+'|'+t.n);
+        if(!sc){ if(!fresh) fresh={x,t}; continue; }
+        const ratio=sc.p/sc.max; if(!weakest || ratio<weakest.ratio) weakest={x,t,ratio};
+      }
+      r.task = fresh || weakest;
+    }
+    return {rows, any:topics.size>0};
+  }
   const heatClass = (c,max) => c===0?'h0': 'h'+Math.max(1,Math.min(5,Math.ceil(c/max*5)));
 
   function renderSubjects(){
@@ -274,6 +311,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     const th = (key,label,cls='') => `<th class="${cls}"><button type="button" data-sort="${key}" ${state.sort===key?`aria-sort="${state.sortDir<0?'descending':'ascending'}"`:''}>${label}${state.sort===key?(state.sortDir<0?' ▾':' ▴'):''}</button></th>`;
 
     const q = state.query.trim().toLowerCase();
+    const nu = nextUp(s, st);
     const matches = t => (!state.topic || (t.topics||[]).includes(state.topic)) && (!q || [t.title,t.summary,...(t.topics||[]).map(id=>topicName(s,id)),typeName(s,t.type)].join(' ').toLowerCase().includes(q));
 
     $('#panel').innerHTML = `
@@ -342,6 +380,11 @@ h1{font-weight:800;letter-spacing:-.02em}
       </div>
 
       <section class="sec">
+        <div class="sec-head"><h3>Harjoittele seuraavaksi</h3><span class="hint">${nu.any?'todennäköinen aihe × heikko oma osaaminen':location.protocol==='file:'?'todennäköisimmät aiheet':'todennäköisimmät aiheet · arvioi itsesi harjoittelussa, niin lista huomioi osaamisesi'}</span></div>
+        <ul class="next">${nu.rows.map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span>${r.task?`<a href="${esc(practiceUrl(s.id,r.task.x.id,r.task.t.n))}">${esc(shortLabel(r.task.x.id))} · ${esc(r.task.t.n)}. ${esc(r.task.t.title)} →</a>`:''}</li>`).join('')}</ul>
+      </section>
+
+      <section class="sec">
         <div class="sec-head"><h3>Tehtävät kerroittain</h3><span class="hint">uusin ensin${state.topic||q?' · suodatettu':''}</span></div>
         <div class="sessions" id="sessions">${allSessions.map((x,idx)=>{
           const has = x.tasks && x.tasks.length;
@@ -357,7 +400,7 @@ h1{font-weight:800;letter-spacing:-.02em}
                   <div class="t">${esc(t.title)}${t.optional?' <span class="chip" style="background:var(--surface-2);color:var(--ink-3)">valinnainen</span>':''}</div>
                   <div class="pts">${t.points!=null?esc(t.points)+' p':''}</div>
                   ${t.summary?`<div class="sum">${esc(t.summary)}</div>`:''}
-                  <div class="tags">${(t.topics||[]).map(id=>`<button type="button" class="tag ${state.topic===id?'sel':''}" data-topic="${esc(id)}">${esc(topicName(s,id))}</button>`).join('')}${t.type?`<span class="tag type">${esc(typeName(s,t.type))}</span>`:''}${t.format?`<span class="tag type">${esc(t.format)}</span>`:''}</div>
+                  <div class="tags">${(t.topics||[]).map(id=>`<button type="button" class="tag ${state.topic===id?'sel':''}" data-topic="${esc(id)}">${esc(topicName(s,id))}</button>`).join('')}${t.type?`<span class="tag type">${esc(typeName(s,t.type))}</span>`:''}${t.format?`<span class="tag type">${esc(t.format)}</span>`:''}<a class="prac" href="${esc(practiceUrl(s.id,x.id,t.n))}">Harjoittele →</a></div>
                 </div>`).join('') : '<p class="empty">Ei suodatukseen osuvia tehtäviä.</p>') : '<p class="empty">Tehtävälistaa ei löytynyt lähteistä.</p>'}
             </div>
           </details>`; }).join('')}</div>
@@ -366,6 +409,9 @@ h1{font-weight:800;letter-spacing:-.02em}
     bind();
   }
 
+  document.getElementById('practiceLink').href = PRACTICE;
+  // back from the practice page (bfcache): scores in localStorage may have changed
+  window.addEventListener('pageshow', e => { if (e.persisted) render(); });
   function setTopic(id){ state.topic = (state.topic===id)? null : id; render(); }
   function bind(){
     $('#weighting').onchange = e => { state.weighting=e.target.value; persist(); render(); };

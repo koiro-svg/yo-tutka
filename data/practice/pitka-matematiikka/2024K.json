@@ -1,0 +1,414 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2024K",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2024K_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-03-20_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 4,
+    "note": "Kaikki neljä tehtävää ovat pakollisia. Käytössä taulukkokirja ja perusohjelmat, laskinohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "intro": "Kuudessa kuviossa (ks. alkuperäisen tehtävän kuvat) on merkitty yksi tuntematon kulma. Vastaukseksi kirjoitetaan pelkkä kulman suuruus asteina kokonaislukuna.",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 2,
+     "prompt": "Kolmion jokainen sivu on 2 yksikköä pitkä. Kuinka suuri on kolmion kulma $\\alpha$?",
+     "hints": [
+      "Kun kaikki sivut ovat yhtä pitkiä, kolmio on tasasivuinen. Mitä se kertoo kulmista? Kulmien summa on $180^\\circ$."
+     ],
+     "solution": "1. Kaikki sivut ovat yhtä pitkiä, joten kolmio on tasasivuinen ja sen kaikki kulmat ovat yhtä suuria.\n2. $\\alpha=\\frac{180^\\circ}{3}=60^\\circ$.\n\n**Vastaus: $\\alpha=60^\\circ$**",
+     "answer": "$60^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.2",
+     "points": 2,
+     "prompt": "Kolmion kaksi kulmaa ovat $90^\\circ$ ja $65^\\circ$. Kuinka suuri on kolmas kulma $\\beta$?",
+     "hints": [
+      "Kolmion kulmien summa on $180^\\circ$. Vähennä tunnetut kulmat."
+     ],
+     "solution": "1. Kulmien summa on $180^\\circ$.\n2. $\\beta=180^\\circ-90^\\circ-65^\\circ=25^\\circ$.\n\n**Vastaus: $\\beta=25^\\circ$**",
+     "answer": "$25^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.3",
+     "points": 2,
+     "prompt": "Kolmion kaksi sivua ovat kumpikin 3, ja niiden välinen kulma on $78^\\circ$. Kuinka suuri on kulma $\\gamma$, joka on toisen 3:n pituisen sivun ja kolmannen sivun välissä?",
+     "hints": [
+      "Kolmio on tasakylkinen, joten kantakulmat ovat yhtä suuret. Huippukulma on $78^\\circ$."
+     ],
+     "solution": "1. Kaksi sivua ovat yhtä pitkiä, joten kolmio on tasakylkinen ja sen kantakulmat ovat yhtä suuret.\n2. Kantakulmien summa on $180^\\circ-78^\\circ=102^\\circ$.\n3. $\\gamma=\\frac{102^\\circ}{2}=51^\\circ$.\n\n**Vastaus: $\\gamma=51^\\circ$**",
+     "answer": "$51^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.4",
+     "points": 2,
+     "prompt": "Kolmion yksi kulma on suora. Toisen kärjen kohdalla sivua on jatkettu, ja jatkeen ja kolmion toisen sivun väliin jää $137^\\circ$:n kulma, eli kyseisen kärjen vieruskulma (ks. kuva). Kuinka suuri on kolmion kolmas kulma $\\delta$?",
+     "hints": [
+      "Vieruskulmat ovat yhteensä $180^\\circ$, joten saat ensin kolmion sisäkulman siinä kärjessä, jossa $137^\\circ$ on merkitty. Käytä sitten kulmien summaa."
+     ],
+     "solution": "1. $137^\\circ$:n kulma on kolmion sisäkulman vieruskulma, joten sisäkulma on $180^\\circ-137^\\circ=43^\\circ$.\n2. Kolmion kulmien summasta $\\delta=180^\\circ-90^\\circ-43^\\circ=47^\\circ$.\n\n(Saman saa suoraan: kolmion ulkokulma on kahden muun kulman summa, joten $137^\\circ=90^\\circ+\\delta$.)\n\n**Vastaus: $\\delta=47^\\circ$**\n\n**Sudenkuoppa:** vastaus $43^\\circ$ on sisäkulma väärässä kärjessä.",
+     "answer": "$47^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.5",
+     "points": 2,
+     "prompt": "Kolmion kaksi kulmaa ovat $50^\\circ$ ja $83^\\circ$. Kolmannesta kärjestä lähtee jana vastakkaiselle sivulle, ja se jakaa kolmannen kulman osiin $\\varepsilon$ ja $23^\\circ$ (ks. kuva). Määritä $\\varepsilon$.",
+     "hints": [
+      "Tarkastele koko isoa kolmiota: sen kolmas kulma on $\\varepsilon+23^\\circ$."
+     ],
+     "solution": "1. Ison kolmion kulmat ovat $50^\\circ$, $83^\\circ$ ja $\\varepsilon+23^\\circ$.\n2. Kulmien summasta $\\varepsilon+23^\\circ=180^\\circ-50^\\circ-83^\\circ=47^\\circ$.\n3. $\\varepsilon=47^\\circ-23^\\circ=24^\\circ$.\n\n**Vastaus: $\\varepsilon=24^\\circ$**",
+     "answer": "$24^\\circ$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.6",
+     "points": 2,
+     "prompt": "Ympyrän keskuskulma on $124^\\circ$. Kulma $\\zeta$ on kehäkulma, joka on piirretty samaa kaarta vastaan (ks. kuva). Määritä $\\zeta$.",
+     "hints": [
+      "Kehäkulmalause: kehäkulma on puolet samaa kaarta vastaavasta keskuskulmasta."
+     ],
+     "solution": "1. Kehäkulma ja keskuskulma rajaavat saman kaaren.\n2. Kehäkulmalauseen mukaan $\\zeta=\\frac{124^\\circ}{2}=62^\\circ$.\n\n**Vastaus: $\\zeta=62^\\circ$**",
+     "answer": "$62^\\circ$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Kaikissa kohdissa käsitellään polynomia $p(x)=12x^3+4x$. Vastaukseksi kirjoitetaan pelkkä kokonaisluku.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 3,
+     "prompt": "Laske $p(2)$.",
+     "hints": [
+      "Sijoita $x=2$ lausekkeeseen ja muista laskujärjestys: potenssi ensin."
+     ],
+     "solution": "1. $p(2)=12\\cdot 2^3+4\\cdot 2=12\\cdot 8+8=96+8=104$.\n\n**Vastaus: $104$**",
+     "answer": "$104$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 3,
+     "prompt": "Laske derivaatan arvo $p'(1)$.",
+     "hints": [
+      "Derivoi termeittäin kaavalla $D(x^n)=nx^{n-1}$ ja sijoita vasta sen jälkeen $x=1$."
+     ],
+     "solution": "1. $p'(x)=36x^2+4$.\n2. $p'(1)=36+4=40$.\n\n**Vastaus: $40$**\n\n**Sudenkuoppa:** sijoitus väärään kohtaan ($p'(2)=148$).",
+     "answer": "$40$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 3,
+     "prompt": "Laske $\\int_1^2 p(x)\\,dx$.",
+     "hints": [
+      "Integraalifunktio saadaan termeittäin kaavalla $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C$. Sijoita rajat ja vähennä."
+     ],
+     "solution": "1. Integraalifunktio on $P(x)=3x^4+2x^2$.\n2. $P(2)=48+8=56$ ja $P(1)=3+2=5$.\n3. $\\int_1^2 p(x)\\,dx=56-5=51$.\n\n**Vastaus: $51$**",
+     "answer": "$51$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.4",
+     "points": 3,
+     "prompt": "Kerro auki $\\bigl(p(x)\\bigr)^2=(12x^3+4x)^2$. Mikä on $x^4$-termin kerroin?",
+     "hints": [
+      "Käytä binomin neliötä $(a+b)^2=a^2+2ab+b^2$ ja katso, mistä termistä syntyy $x^4$."
+     ],
+     "solution": "1. $(12x^3+4x)^2=(12x^3)^2+2\\cdot 12x^3\\cdot 4x+(4x)^2=144x^6+96x^4+16x^2$.\n2. Neljännen asteen termi on $96x^4$.\n\n**Vastaus: $96$**\n\n**Sudenkuoppa:** kaksinkertaisen tulon unohtaminen antaa $48$.",
+     "answer": "$96$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Ratkaise yhtälö $|y+3|=|y+5|$ joko laskemalla tai itseisarvon etäisyystulkinnan avulla.",
+     "hints": [
+      "Kahden luvun itseisarvot ovat samat täsmälleen silloin, kun luvut ovat samat tai toistensa vastaluvut. Toinen tapa: $|y-a|$ on luvun $y$ etäisyys luvusta $a$ lukusuoralla.",
+      "Tapaukset ovat $y+3=y+5$ ja $y+3=-(y+5)$. Ensimmäinen johtaa ristiriitaan $3=5$. Geometrisesti etsit pistettä, joka on yhtä kaukana luvuista $-3$ ja $-5$."
+     ],
+     "solution": "**Algebrallisesti**\n\n1. $|a|=|b|$ täsmälleen silloin, kun $a=b$ tai $a=-b$.\n2. Tapaus $y+3=y+5$: sievenee muotoon $3=5$, joka on epätosi, joten tästä ei tule ratkaisuja.\n3. Tapaus $y+3=-(y+5)$: $y+3=-y-5$, joten $2y=-8$ ja $y=-4$.\n4. Tarkistus: $|-4+3|=1$ ja $|-4+5|=1$.\n\n**Geometrisesti**\n\n5. $|y+3|$ on luvun $y$ etäisyys luvusta $-3$ ja $|y+5|$ etäisyys luvusta $-5$. Lukusuoralla ainoa piste, joka on yhtä kaukana molemmista, on niiden keskipiste $\\frac{-3+(-5)}{2}=-4$. Muut pisteet ovat lähempänä jompaakumpaa.\n\n**Vastaus: $y=-4$**\n\n**Sudenkuoppa:** itseisarvomerkkien pudottaminen pois antaa yhtälön $y+3=y+5$ ja väärän johtopäätöksen, ettei ratkaisua ole.",
+     "answer": "$y=-4$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Ratkaise yhtälö $|x|+|x-5|=7$ joko laskemalla tai itseisarvon etäisyystulkinnan avulla.",
+     "hints": [
+      "Itseisarvojen lausekkeet vaihtavat merkkiään kohdissa $x=0$ ja $x=5$. Jaa lukusuora näiden kohtien avulla kolmeen osaan ja poista itseisarvot kussakin osassa.",
+      "Kun $x<0$, yhtälö on $-x-(x-5)=7$. Kun $0\\le x\\le 5$, vasen puoli on vakio $5$. Kun $x>5$, yhtälö on $x+x-5=7$. Tarkista, että saamasi ratkaisu kuuluu omaan väliinsä."
+     ],
+     "solution": "**Algebrallisesti**\n\n1. Merkinvaihtokohdat ovat $x=0$ ja $x=5$.\n2. Kun $x<0$: $|x|=-x$ ja $|x-5|=-(x-5)$, joten $-2x+5=7$ ja $x=-1$. Se toteuttaa ehdon $x<0$.\n3. Kun $0\\le x\\le 5$: $|x|=x$ ja $|x-5|=5-x$, joten vasen puoli on $x+5-x=5\\neq 7$. Tällä välillä ei ole ratkaisuja.\n4. Kun $x>5$: $x+x-5=7$, joten $2x=12$ ja $x=6$. Se toteuttaa ehdon $x>5$.\n5. Tarkistus: $|-1|+|-6|=7$ ja $|6|+|1|=7$.\n\n**Geometrisesti**\n\n6. Vasen puoli on luvun $x$ etäisyyksien summa pisteisiin $0$ ja $5$. Välillä $[0,5]$ summa on aina $5$. Välin ulkopuolella summa kasvaa kaksi yksikköä jokaista yksikköä kohden, jonka verran liikutaan välistä poispäin. Summa $7$ saavutetaan, kun ollaan yhden yksikön päässä välistä, eli kohdissa $-1$ ja $6$.\n\n**Vastaus: $x=-1$ tai $x=6$**\n\n**Sudenkuoppa:** välin $0\\le x\\le 5$ tapaus unohtuu tai ratkaisuja ei tarkisteta omaa väliään vastaan.",
+     "answer": "$x=-1$ tai $x=6$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Laskuvarjohyppääjän nopeus (m/s) on hetkellä $t$ (s) mallin mukaan $v(t)=80\\cdot\\frac{e^{t/4}-1}{e^{t/4}+1}$, $t\\ge 0$. Osoita derivoimalla, että lausekkeen $8\\ln\\bigl(e^{t/4}+1\\bigr)-t$ derivaatta on $\\frac{e^{t/4}-1}{e^{t/4}+1}$. Laske tämän tuloksen avulla matka $h=\\int_0^{20}v(t)\\,dt$, jonka hyppääjä putoaa 20 ensimmäisen sekunnin aikana.",
+     "hints": [
+      "Derivoi $\\ln\\bigl(e^{t/4}+1\\bigr)$ ketjusäännöllä: ulkofunktion derivaatta on $\\frac{1}{u}$ ja sisäfunktion $e^{t/4}+1$ derivaatta $\\frac14 e^{t/4}$. Integraalissa tarvitset integraalifunktion, ja derivointikaava antaa sen valmiina.",
+      "Derivaatta on aluksi muotoa $\\frac{2e^{t/4}}{e^{t/4}+1}-1$; laventamalla ykkönen samannimiseksi saat halutun muodon. Silloin $F(t)=80\\bigl(8\\ln(e^{t/4}+1)-t\\bigr)$ on funktion $v$ integraalifunktio, ja $h=F(20)-F(0)$."
+     ],
+     "solution": "**Derivointikaava**\n\n1. Ketjusäännöllä $D\\,\\ln\\bigl(e^{t/4}+1\\bigr)=\\frac{1}{e^{t/4}+1}\\cdot\\frac14 e^{t/4}$.\n2. Siis $D\\bigl(8\\ln(e^{t/4}+1)-t\\bigr)=\\frac{8\\cdot\\frac14 e^{t/4}}{e^{t/4}+1}-1=\\frac{2e^{t/4}}{e^{t/4}+1}-1$.\n3. Samannimiseksi: $\\frac{2e^{t/4}-(e^{t/4}+1)}{e^{t/4}+1}=\\frac{e^{t/4}-1}{e^{t/4}+1}$, mikä piti osoittaa.\n\n**Pudotusmatka**\n\n4. Kohdan 3 nojalla $v(t)=80\\,D\\bigl(8\\ln(e^{t/4}+1)-t\\bigr)$, joten $F(t)=80\\bigl(8\\ln(e^{t/4}+1)-t\\bigr)$ on funktion $v$ integraalifunktio.\n5. $h=\\int_0^{20}v(t)\\,dt=80\\Big[8\\ln\\bigl(e^{t/4}+1\\bigr)-t\\Big]_0^{20}$.\n6. Ylärajalla $e^{20/4}=e^5$ ja alarajalla $e^0=1$: $h=80\\bigl(8\\ln(e^5+1)-20-8\\ln 2\\bigr)=640\\ln\\frac{e^5+1}{2}-1600$.\n7. $h\\approx 1160{,}7$ m.\n\n**Vastaus: $h=640\\ln\\frac{e^5+1}{2}-1600\\approx 1\\,160$ m eli noin 1,2 km.**\n\n**Sudenkuoppa:** kertoimen 80 unohtaminen (tulos olisi noin 14,5 m, mikä on selvästi väärää suuruusluokkaa) tai alarajan termin $8\\ln 2$ unohtaminen.",
+     "answer": "$h=640\\ln\\frac{e^5+1}{2}-1600\\approx 1\\,160\\ \\text{m}$ (noin 1,2 km)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Ruudukossa (ks. alkuperäisen tehtävän taulukko 5.A) jokaisen ruudun lämpötilan pitäisi olla sen neljän sivunaapurin lämpötilojen keskiarvo. Kaksi ruutua on tuntemattomia, $x$ ja $y$. Muodosta keskiarvoehdosta tuntemattomia koskevat yhtälöt ja ratkaise ne.",
+     "hints": [
+      "Kirjoita keskiarvoehto jokaiselle ruudulle, jonka yhtälössä $x$ tai $y$ esiintyy: ruuduille $x$ ja $y$ itselleen mutta myös niiden tunnetuille naapureille, joilla on neljä naapuria. Tarkista lopuksi, toteuttaako ratkaisu kaikki yhtälöt.",
+      "Ruudun $x$ naapurit ovat $30$, $40$, $50$ ja $y$, ja ruudun $y$ naapurit $x$, $60$, $70$ ja $80$. Lisäksi ruudun $x$ vasemmalla puolella oleva 30-asteinen ruutu on sisäruutu, jonka naapureihin $x$ kuuluu. Mitä sen ehdosta seuraa?"
+     ],
+     "solution": "1. Ruudun $x$ naapurit ovat vasemmalla $30$, yllä $40$, alla $50$ ja oikealla $y$: $x=\\frac{30+40+50+y}{4}$, eli $4x=120+y$.\n2. Ruudun $y$ naapurit ovat $x$, $60$, $70$ ja $80$: $y=\\frac{x+60+70+80}{4}$, eli $4y=210+x$.\n3. Ensimmäisestä $y=4x-120$. Sijoitus toiseen: $16x-480=210+x$, joten $15x=690$, $x=46$ ja $y=4\\cdot 46-120=64$.\n4. Tuntematon $x$ esiintyy kuitenkin myös sen vasemman naapurin (lämpötila $30$) keskiarvoehdossa. Sen naapurit ovat $15$, $20$, $30$ ja $x$: $30=\\frac{15+20+30+x}{4}$, josta $x=55$.\n5. Kolmesta yhtälöstä saadaan ristiriita: kahden ensimmäisen mukaan $x=46$, kolmannen mukaan $x=55$. Yhtälöryhmällä ei siis ole ratkaisua, eli annettu ruudukko ei voi toteuttaa keskiarvoperiaatetta (tehtävän lähtötiedoissa on virhe).\n\n**Vastaus: Yhtälöt $4x=120+y$, $4y=210+x$ ja $120=65+x$. Kahdesta ensimmäisestä $x=46$ ja $y=64$, mutta kolmas vaatii $x=55$, joten ratkaisua ei ole.**\n\n**Sudenkuoppa:** vain kahden ilmeisen yhtälön ratkaiseminen. YTL antoi siitä enintään 10 pistettä, koska täysiin pisteisiin vaadittiin myös kolmas yhtälö ja ristiriidan toteaminen.",
+     "answer": "Kahdesta yhtälöstä $x=46$, $y=64$; kolmas ehto vaatii $x=55$, joten ratkaisua ei ole",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Piste $C$ on etäisyydellä $\\sqrt{20}$ pisteestä $A=(5,4)$ ja etäisyydellä $\\sqrt{65}$ pisteestä $B=(8,-2)$. Suora $s$ kulkee pisteen $B$ kautta vektorin $5\\bar i+2\\bar j$ suuntaan, ja pisteen $C$ etäisyys suorasta $s$ on pienempi kuin 7. Määritä $C$ ja sen tarkka etäisyys suorasta $s$.",
+     "hints": [
+      "Piste $C=(x,y)$ on kahden ympyrän leikkauspisteessä: keskipisteet $A$ ja $B$, säteet $\\sqrt{20}$ ja $\\sqrt{65}$. Leikkauspisteitä on kaksi, ja ehto etäisyydestä suoraan $s$ ratkaisee, kumpi kelpaa.",
+      "Vähentämällä ympyröiden yhtälöt toisistaan neliötermit kumoutuvat, ja saat $x=2y-3$. Suoran $s$ kulmakerroin on $\\frac25$, joten sen yhtälö on $2x-5y-26=0$. Käytä pisteen etäisyyden kaavaa $\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$."
+     ],
+     "solution": "1. Merkitään $C=(x,y)$. Etäisyysehdoista $(x-5)^2+(y-4)^2=20$ ja $(x-8)^2+(y+2)^2=65$.\n2. Auki kerrottuna $x^2+y^2-10x-8y+21=0$ ja $x^2+y^2-16x+4y+3=0$. Vähentämällä $6x-12y+18=0$, eli $x=2y-3$.\n3. Sijoitus ensimmäiseen: $(2y-3)^2+y^2-10(2y-3)-8y+21=5y^2-40y+60=0$, eli $y^2-8y+12=0$, josta $y=2$ tai $y=6$.\n4. Ehdokkaat ovat $C_1=(1,2)$ ja $C_2=(9,6)$.\n5. Suoran $s$ suuntavektori on $(5,2)$, joten sen normaalivektori on $(2,-5)$. Pisteen $B$ kautta: $2(x-8)-5(y+2)=0$, eli $2x-5y-26=0$.\n6. $d(C_1,s)=\\frac{|2\\cdot 1-5\\cdot 2-26|}{\\sqrt{2^2+5^2}}=\\frac{34}{\\sqrt{29}}\\approx 6{,}31<7$.\n7. $d(C_2,s)=\\frac{|18-30-26|}{\\sqrt{29}}=\\frac{38}{\\sqrt{29}}\\approx 7{,}06>7$, joten $C_2$ ei kelpaa.\n\n**Vastaus: $C=(1,2)$, ja sen etäisyys suorasta $s$ on $\\frac{34}{\\sqrt{29}}=\\frac{34\\sqrt{29}}{29}\\approx 6{,}31$.**\n\n**Sudenkuoppa:** vain toisen leikkauspisteen löytäminen, tai tarkan arvon sijaan pelkkä likiarvo, vaikka tarkkaa etäisyyttä kysytään.",
+     "answer": "$C=(1,2)$, etäisyys $\\frac{34}{\\sqrt{29}}\\approx 6{,}31$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Pussissa on 100 laattaa: 2 tyhjää, 56 konsonanttia ja 42 vokaalia. Vokaalilaatoista 9:ssä on kirjain A. Pussista nostetaan 7 laattaa ilman takaisinpanoa.",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Laske todennäköisyys sille, että vähintään yksi nostetuista laatoista on A.",
+     "hints": [
+      "”Vähintään yksi” on helpointa laskea vastatapahtuman kautta: millä todennäköisyydellä yhtään A-laattaa ei tule?",
+      "A-laatattomia laattoja on $100-9=91$. Ilman takaisinpanoa todennäköisyys, ettei A:ta tule, on $\\frac{91}{100}\\cdot\\frac{90}{99}\\cdots$ (seitsemän tekijää) tai yhtä hyvin $\\binom{91}{7}\\big/\\binom{100}{7}$."
+     ],
+     "solution": "1. Laattoja, joissa ei ole A:ta, on $91$.\n2. Todennäköisyys, ettei yhdessäkään seitsemästä laatasta ole A:ta, on kertolaskusäännöllä $\\frac{91}{100}\\cdot\\frac{90}{99}\\cdot\\frac{89}{98}\\cdot\\frac{88}{97}\\cdot\\frac{87}{96}\\cdot\\frac{86}{95}\\cdot\\frac{85}{94}$, sillä jokaisen noston jälkeen sekä A:ttomia että kaikkia laattoja on yksi vähemmän.\n3. Sama kombinaatioilla: $\\frac{\\binom{91}{7}}{\\binom{100}{7}}=\\frac{24\\,527\\,243}{48\\,507\\,760}\\approx 0{,}5056$.\n4. Vastatapahtuman avulla $P(\\text{ainakin yksi A})=1-0{,}5056\\ldots\\approx 0{,}494$.\n\n**Vastaus: $1-\\frac{\\binom{91}{7}}{\\binom{100}{7}}\\approx 0{,}49$**\n\n**Sudenkuoppa:** $1-0{,}91^7$ on laskettu kuin laatat palautettaisiin pussiin.",
+     "answer": "$1-\\binom{91}{7}\\big/\\binom{100}{7}\\approx 0{,}49$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Laske sama todennäköisyys ehdolla, että nostetuista laatoista tasan kolme on vokaaleja.",
+     "hints": [
+      "A-kirjain voi olla vain vokaalilaatassa. Ehdon jälkeen riittää tarkastella niitä kolmea vokaalia: ne ovat satunnainen kolmen laatan valinta 42 vokaalista.",
+      "Vokaaleja, joissa ei ole A:ta, on $42-9=33$. Todennäköisyys, ettei kolmessa vokaalissa ole yhtään A:ta, on $\\frac{33}{42}\\cdot\\frac{32}{41}\\cdot\\frac{31}{40}$."
+     ],
+     "solution": "1. A-kirjain on vain vokaalilaatoissa, joten muut neljä laattaa eivät vaikuta asiaan.\n2. Kun tiedetään, että vokaaleja on kolme, ne ovat symmetrian vuoksi satunnaisesti valittu kolmen laatan joukko 42 vokaalista.\n3. Vokaaleja ilman A:ta on $33$. $P(\\text{ei A:ta})=\\frac{33}{42}\\cdot\\frac{32}{41}\\cdot\\frac{31}{40}=\\frac{\\binom{33}{3}}{\\binom{42}{3}}=\\frac{682}{1435}\\approx 0{,}475$.\n4. $P(\\text{ainakin yksi A})=1-\\frac{682}{1435}=\\frac{753}{1435}\\approx 0{,}525$.\n\n**Vastaus: $\\frac{753}{1435}\\approx 0{,}52$**\n\n**Sudenkuoppa:** $1-\\left(\\frac{33}{42}\\right)^3$ olettaa takaisinpanon, ja neljän muun laatan ottaminen mukaan laskuun johtaa eri tehtävään.",
+     "answer": "$\\frac{753}{1435}\\approx 0{,}52$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Maan pyörimisakseli muodostaa $23{,}5^\\circ$:n kulman ratatason normaalin kanssa, ja akselin suunta pysyy avaruudessa samana. Kesäpäivänseisauksena pohjoisnapa on kallistunut Aurinkoa kohti (ks. alkuperäisen tehtävän video). Oletetaan rata ympyräksi. Laske kulma, jonka Maan akseli muodostaa Auringosta Maahan osoittavan säteen kanssa, kun kesäpäivänseisauksesta on kulunut kuukausi.",
+     "hints": [
+      "Kiinnitä koordinaatisto: Aurinko origoon ja rata $xy$-tasoon. Anna akselille suuntavektori ja Maan paikalle koordinaatit kesäpäivänseisauksena. Kuukaudessa Maa kiertää radallaan noin $\\frac{360^\\circ}{12}=30^\\circ$.",
+      "Jos Maa on kesäpäivänseisauksena pisteessä $(-1,0,0)$, akselin suunta on $\\bar u=(\\sin 23{,}5^\\circ,\\ 0,\\ \\cos 23{,}5^\\circ)$ (kallistunut kohti $+x$-akselia eli Aurinkoa). Kuukauden päästä Maa on pisteessä $(\\cos 210^\\circ,\\sin 210^\\circ,0)$. Laske vektorien välinen kulma pistetulon avulla."
+     ],
+     "solution": "1. Koska kysytään vain kulmaa, radan säteeksi voi valita 1. Aurinko on origossa, ja rata on $xy$-tasossa. Ratatason normaali on $\\bar k$.\n2. Kesäpäivänseisauksena Maa on pisteessä $(-1,0,0)$, jolloin Aurinko on Maasta katsoen $+x$-akselin suunnassa. Pohjoisnapa on kallistunut Aurinkoa kohti, joten akselin suuntavektori on $\\bar u=(\\sin 23{,}5^\\circ,\\ 0,\\ \\cos 23{,}5^\\circ)$. Se muodostaa normaalin $\\bar k$ kanssa $23{,}5^\\circ$:n kulman, ja sen suunta pysyy samana koko vuoden.\n3. Kuukaudessa Maa kiertää $\\frac{1}{12}$ kierroksesta eli $30^\\circ$ (tai $\\frac{30}{365}\\cdot 360^\\circ\\approx 29{,}6^\\circ$). Maa on silloin pisteessä $E=(\\cos 210^\\circ,\\sin 210^\\circ,0)=\\left(-\\frac{\\sqrt3}{2},-\\frac12,0\\right)$.\n4. Maasta Aurinkoon osoittava yksikkövektori on $\\bar v=-E=\\left(\\frac{\\sqrt3}{2},\\frac12,0\\right)$. Säde Auringosta Maahan on samalla suoralla.\n5. Pistetulosta $\\cos\\theta=\\bar u\\cdot\\bar v=\\frac{\\sqrt3}{2}\\sin 23{,}5^\\circ\\approx 0{,}3453$, joten $\\theta\\approx 69{,}8^\\circ$.\n6. Järkevyystarkistus: kesäpäivänseisauksena sama lasku antaa $\\cos\\theta=\\sin 23{,}5^\\circ$, eli $\\theta=66{,}5^\\circ=90^\\circ-23{,}5^\\circ$, kuten pitääkin. Kuukauden kuluttua kulma on hieman suurempi.\n\n(Jos akselin pohjoissuunnan ja säteen Aurinko → Maa välinen kulma mitataan suuntavektoreiden välisenä kulmana, saadaan vieruskulma $180^\\circ-69{,}8^\\circ=110{,}2^\\circ$. Suoran ja säteen välinen kulma ilmoitetaan tavallisesti terävänä kulmana.)\n\n**Vastaus: noin $69{,}8^\\circ$ (vuorokausiin perustuvalla $29{,}6^\\circ$:n kiertymällä noin $69{,}7^\\circ$).**\n\n**Sudenkuoppa:** kallistuksen asettaminen väärään suuntaan tai Maan paikan kiertäminen, vaikka akselin suunta pysyy samana. Selitä kuvalla tai sanoin, mitä koordinaatiston valinnat tarkoittavat.",
+     "answer": "noin $69{,}8^\\circ$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Keksi kääntyvä funktio $f:A\\to B$, joka ei ole monotoninen. Ilmoita määrittelyjoukko $A$ ja arvojoukko $B$ ja perustele molemmat ominaisuudet.",
+     "hints": [
+      "Käänteisfunktio on olemassa, kun $f$ saa jokaisen joukon $B$ arvon täsmälleen kerran. Monotonisuus koskee koko määrittelyjoukkoa, joten funktio voi olla kääntyvä, vaikka se vähenisi yhdellä osavälillä ja kasvaisi toisella tai ”hyppäisi”.",
+      "Esimerkiksi $f(x)=\\frac1x$ joukossa $A=B=\\mathbb{R}\\setminus\\{0\\}$: se on oma käänteisfunktionsa, koska $f(f(x))=x$. Ei-monotonisuuden osoittamiseen riittää kaksi paria pisteitä, joista toinen kasvaa ja toinen vähenee."
+     ],
+     "solution": "**Esimerkki:** $f:\\mathbb{R}\\setminus\\{0\\}\\to\\mathbb{R}\\setminus\\{0\\}$, $f(x)=\\frac1x$. Siis $A=B=\\mathbb{R}\\setminus\\{0\\}$.\n\n**Arvojoukko ja käänteisfunktio**\n\n1. $f(x)$ on määritelty kaikilla $x\\neq 0$, eikä se ole koskaan nolla, joten arvot kuuluvat joukkoon $B$.\n2. Olkoon $y\\in B$. Yhtälöllä $\\frac1x=y$ on täsmälleen yksi ratkaisu $x=\\frac1y\\in A$. Funktio saa siis jokaisen joukon $B$ arvon täsmälleen kerran, joten arvojoukko on koko $B$ ja $f$ on kääntyvä.\n3. Käänteisfunktio on $f^{-1}:B\\to A$, $f^{-1}(y)=\\frac1y$. Tarkistus: $f(f(x))=\\frac{1}{1/x}=x$.\n\n**Ei monotoninen**\n\n4. $-1<1$ ja $f(-1)=-1<1=f(1)$, joten $f$ ei ole vähenevä.\n5. $1<2$ ja $f(1)=1>\\frac12=f(2)$, joten $f$ ei ole kasvava.\n6. Siis $f$ ei ole monotoninen koko määrittelyjoukossaan, vaikka se on vähenevä kummallakin puolisuoralla erikseen.\n\n(Toinen kelpaava esimerkki: $g:\\{1,2,3\\}\\to\\{1,2,3\\}$, $g(1)=2$, $g(2)=1$, $g(3)=3$. Se on oma käänteisfunktionsa, mutta arvot ensin laskevat ja sitten nousevat.)\n\n**Vastaus: esimerkiksi $f(x)=\\frac1x$, $A=B=\\mathbb{R}\\setminus\\{0\\}$. Se on kääntyvä ($f^{-1}=f$), mutta $f(-1)=-1<1=f(1)$ ja $f(2)=\\frac12<1=f(1)$, joten se ei ole monotoninen.**\n\n**Sudenkuoppa:** joukkojen $A$ ja $B$ ilmoittamatta jättäminen tai funktio, joka saa jonkin arvon kahdesti (esim. paloittain määritelty funktio, jonka palat menevät päätepisteissä päällekkäin).",
+     "answer": "Esim. $f(x)=\\frac1x$, $A=B=\\mathbb{R}\\setminus\\{0\\}$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Tehtävän määritelmän mukaan alkuluku $q$ on alkulukukaksonen, jos $q+2$ tai $q-2$ on myös alkuluku. Aineistossa 10.A (ks. alkuperäinen tehtävä) tekoäly määrittelee kaksosen niin, että alkuluvun ja jonkin muun alkuluvun väliin jää täsmälleen yksi positiivinen kokonaisluku. Äärettömyyden se perustelee sillä, että alkulukuja on äärettömän monta ja kahden alkuluvun välissä on aina ainakin yksi kokonaisluku, joten sen mukaan minkä tahansa kahden alkuluvun välistä löytyy kaksospari.",
+   "units": [
+    {
+     "id": "a",
+     "points": 3,
+     "prompt": "Keksi alkuluku, joka ei ole alkulukukaksonen.",
+     "hints": [
+      "Kokeile alkulukuja järjestyksessä ja tarkista, onko $q-2$ tai $q+2$ alkuluku. Ensimmäinen sopiva löytyy kahdenkymmenen jälkeen (tai kokeile lukua 2)."
+     ],
+     "solution": "1. Valitaan $q=23$, joka on alkuluku.\n2. $q-2=21=3\\cdot 7$ ja $q+2=25=5\\cdot 5$, joten kumpikaan ei ole alkuluku.\n3. Siis 23 ei ole alkulukukaksonen. (Muita esimerkkejä: 2, 37, 47, 53.)\n\n**Vastaus: esimerkiksi 23, koska 21 ja 25 eivät ole alkulukuja.**",
+     "answer": "Esim. $23$ (luvut 21 ja 25 eivät ole alkulukuja)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "b",
+     "points": 3,
+     "prompt": "Ovatko tekoälyn määritelmä ja tehtävän määritelmä yhtäpitäviä?",
+     "hints": [
+      "Mitä tarkoittaa, että kahden kokonaisluvun välissä on täsmälleen yksi kokonaisluku? Kuinka kaukana luvut silloin ovat toisistaan?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kahden eri kokonaisluvun $q$ ja $p$ välissä on täsmälleen yksi kokonaisluku, jos ja vain jos $|p-q|=2$.\n- Tekoälyn ehto ”jokin toinen alkuluku $p$, jonka ja $q$:n välissä on yksi kokonaisluku” tarkoittaa siis, että $p=q+2$ tai $p=q-2$ on alkuluku.\n- Tämä on sama kuin tehtävän ehto, joten määritelmät ovat yhtäpitävät.\n\n**Esimerkkivastaus:** Ovat. Jos alkulukujen $q$ ja $p$ välissä on vain yksi kokonaisluku, niiden erotus on 2, eli $p=q\\pm 2$. Kääntäen, jos $q+2$ tai $q-2$ on alkuluku, niiden välissä on täsmälleen yksi luku ($q+1$ tai $q-1$). Välissä oleva luku on aina positiivinen, koska pienin mahdollinen pari on $3$ ja $5$.\n\n**Vastaus: kyllä, määritelmät ovat yhtäpitävät.**",
+     "answer": "Kyllä: yksi luku välissä $\\iff$ erotus 2",
+     "check": "hvp"
+    },
+    {
+     "id": "c",
+     "points": 6,
+     "prompt": "Onko tekoälyn perustelu sille, että alkulukukaksosia on äärettömän monta, matemaattisesti pätevä?",
+     "hints": [
+      "Tarkista tekoälyn väitteet yksi kerrallaan. Onko kahden alkuluvun välissä aina kokonaisluku? Seuraako siitä, että välissä on kaksospari?",
+      "Alkulukujen 2 ja 3 välissä ei ole kokonaislukuja. Tutki lisäksi väitettä, että jokaisen alkulukuparin välistä löytyy kaksospari, esimerkiksi peräkkäisillä alkuluvuilla 23 ja 29 tai kaksosilla 3 ja 5."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Johtopäätös ei ole pätevä, ja virhe osoitetaan konkreettisesti.\n- Välite ”kahden alkuluvun välissä on aina ainakin yksi kokonaisluku” on väärä: alkulukujen 2 ja 3 välissä ei ole yhtään.\n- Loppupäätelmä, että jokaisen alkulukuparin välistä löytyy kaksospari, on väärä: esimerkiksi peräkkäisten alkulukujen 23 ja 29 välissä ei ole yhtään alkulukua, eikä kaksosten 3 ja 5 välissä voi olla kaksosparia.\n- Vaikka välite pitäisi paikkansa, siitä ei seuraisi mitään kaksosista: välissä olevan luvun olemassaolo ei kerro, että jokin alkuluku olisi toisen alkuluvun etäisyydellä 2.\n\n**Esimerkkivastaus:** Perustelu ei ole pätevä. Ensinnäkin sen välivaihe on väärä, sillä alkulukujen 2 ja 3 välissä ei ole kokonaislukua. Toiseksi sen johtopäätös on väärä: alkulukujen 23 ja 29 välissä ei ole alkulukuja lainkaan, joten siellä ei voi olla kaksosparia. Samoin esimerkiksi kaksosten 3 ja 5 välissä on vain luku 4. Kolmanneksi päättelyssä ei ole loogista yhteyttä: vaikka kahden alkuluvun välissä on kokonaislukuja, siitä ei seuraa, että niiden joukossa olisi alkulukupari, jonka erotus on 2. Kysymys kaksosten määrästä on itse asiassa ratkaisematon ongelma.\n\n**Vastaus: ei ole pätevä.**\n\n**Sudenkuoppa:** pelkkä toteamus ”perustelu on väärä” ilman vastaesimerkkiä tai osoitusta, mikä kohta pettää.",
+     "answer": "Ei pätevä: esim. alkulukujen 23 ja 29 välissä ei ole kaksosparia",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Hiukkanen lähtee tason origosta ja ottaa neljä yksikön mittaista askelta. Jokainen askel on satunnaisesti ylös, alas, oikealle tai vasemmalle, kukin todennäköisyydellä $\\frac14$, toisista askelista riippumatta. Mitkä ovat hiukkasen $x$-koordinaatin mahdolliset arvot neljän askeleen jälkeen, ja millä todennäköisyydellä kukin toteutuu?",
+     "hints": [
+      "Kaikkia askeljonoja on $4^4=256$, ja ne ovat yhtä todennäköisiä. $x$-koordinaatti riippuu vain oikealle ja vasemmalle otetuista askelista; pysty-askel ei muuta sitä. Symmetrian vuoksi $P(x=-c)=P(x=c)$.",
+      "Laske, monellako jonolla päädytään kuhunkin arvoon: esimerkiksi $x=3$ vaatii kolme askelta oikealle ja yhden pystysuoran (ylös tai alas), eli $\\binom43\\cdot 2=8$ jonoa. Arvolle $x=2$ on kaksi tapausta: kaksi oikealle ja kaksi pystyyn, tai kolme oikealle ja yksi vasemmalle."
+     ],
+     "solution": "1. Jokainen neljän askeleen jono on yhtä todennäköinen, ja niitä on $4^4=256$. $x$-koordinaatti voi olla $-4,-3,\\dots,4$.\n2. Merkitään $O$ = oikealle, $V$ = vasemmalle ja $P$ = pystysuora askel (ylös tai alas, 2 vaihtoehtoa).\n3. $x=4$: $OOOO$, 1 jono.\n4. $x=3$: kolme $O$:ta ja yksi $P$. Paikan valinta $\\binom41=4$ ja suunta 2: $8$ jonoa.\n5. $x=2$: kaksi $O$:ta ja kaksi $P$:tä: $\\binom42\\cdot 2^2=24$. Kolme $O$:ta ja yksi $V$: $4$. Yhteensä $28$.\n6. $x=1$: yksi $O$ ja kolme $P$:tä: $4\\cdot 2^3=32$. Kaksi $O$:ta, yksi $V$ ja yksi $P$: $\\frac{4!}{2!}\\cdot 2=24$. Yhteensä $56$.\n7. $x=0$: neljä $P$:tä: $2^4=16$. Yksi $O$, yksi $V$ ja kaksi $P$:tä: $\\frac{4!}{2!}\\cdot 2^2=48$. Kaksi $O$:ta ja kaksi $V$:tä: $\\binom42=6$. Yhteensä $70$.\n8. Symmetrian vuoksi negatiivisille arvoille saadaan samat määrät. Tarkistus: $70+2(56+28+8+1)=256$.\n9. Todennäköisyydet saadaan jakamalla luvulla 256.\n\n(Nopea tarkistus: yhden askeleen vaikutus $x$:ään on $+1$, $0$ tai $-1$ todennäköisyyksin $\\frac14,\\frac12,\\frac14$, eli sama kuin kahden puolikkaan askeleen summa, kun kumpikin on $\\pm\\frac12$ todennäköisyydellä $\\frac12$. Siksi $P(x=c)=\\binom{8}{4+c}\\big/2^8$.)\n\n**Vastaus:**\n\n- $x=\\pm 4$: $\\frac{1}{256}$\n- $x=\\pm 3$: $\\frac{8}{256}=\\frac{1}{32}$\n- $x=\\pm 2$: $\\frac{28}{256}=\\frac{7}{64}$\n- $x=\\pm 1$: $\\frac{56}{256}=\\frac{7}{32}$\n- $x=0$: $\\frac{70}{256}=\\frac{35}{128}$\n\n**Sudenkuoppa:** askeleet ylös ja alas unohtuvat, jolloin $x$-koordinaatti lasketaan kuin hiukkanen liikkuisi vain vaakasuunnassa, tai jokin reittiryhmä (esim. $OOOV$) jää laskematta.",
+     "answer": "$P(x=\\pm4)=\\frac{1}{256}$, $P(x=\\pm3)=\\frac{1}{32}$, $P(x=\\pm2)=\\frac{7}{64}$, $P(x=\\pm1)=\\frac{7}{32}$, $P(x=0)=\\frac{35}{128}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "a",
+     "points": 6,
+     "prompt": "Olkoon $k$ positiivinen kokonaisluku. Todista: jos päättymättömässä kasvavassa aritmeettisessa lukujonossa esiintyvät luvut $k^2$ ja $k^3$, niin jonossa esiintyy myös $k^4$.",
+     "hints": [
+      "Aritmeettisessa jonossa kahden jäsenen erotus on aina differenssin $d$ kokonaislukumonikerta. Kirjoita $k^3-k^2=Ld$, missä $L$ on kokonaisluku.",
+      "Huomaa, että $k^4-k^3=k(k^3-k^2)$. Mikä kokonaisluku kertoo, montako $d$:n askelta on luvusta $k^3$ lukuun $k^4$? Käsittele tapaus $k=1$ erikseen tai totea, ettei se haittaa."
+     ],
+     "solution": "1. Olkoon jonon differenssi $d$. Koska jono on kasvava, $d>0$, ja jonon jäsenet ovat $a_n=a_1+(n-1)d$.\n2. Olkoon $k^2=a_m$ ja $k^3=a_n$. Silloin $k^3-k^2=(n-m)d=Ld$, missä $L=n-m$ on kokonaisluku. Koska $k^3\\ge k^2$, $L\\ge 0$.\n3. Nyt $k^4-k^3=k\\,(k^3-k^2)=kL\\,d$, eli $k^4=a_n+kL\\,d=a_{n+kL}$.\n4. Koska $kL$ on ei-negatiivinen kokonaisluku ja jono on päättymätön, $a_{n+kL}$ on jonon jäsen. Siis $k^4$ esiintyy jonossa. $\\square$\n\n(Tapaus $k=1$: silloin $L=0$ ja $k^4=1=k^2$ on jonossa suoraan.)\n\n**Sudenkuoppa:** oletetaan, että $k^2$ ja $k^3$ ovat peräkkäisiä jäseniä ($d=k^3-k^2$). Todistuksen on toimittava, vaikka niiden välissä olisi muita jäseniä.",
+     "check": "hvp"
+    },
+    {
+     "id": "b",
+     "points": 6,
+     "prompt": "Todista: jos luvut $r^2$, $r^3$ ja $r^4$ kuuluvat kaikki samaan aritmeettiseen lukujonoon, niin $r$ on rationaaliluku.",
+     "hints": [
+      "Kirjoita erotukset $r^3-r^2$ ja $r^4-r^3$ differenssin $d$ kokonaislukumonikertoina. Huomaa, että $r^4-r^3=r(r^3-r^2)$.",
+      "Jos $r^3-r^2=nd\\neq 0$ ja $r^4-r^3=md$, niin $r=\\frac{r^4-r^3}{r^3-r^2}=\\frac{m}{n}$. Mitä tapahtuu, jos $r^3-r^2=0$?"
+     ],
+     "solution": "1. Olkoon jonon differenssi $d$. Kahden jäsenen erotus on $d$:n kokonaislukukerta, joten on kokonaisluvut $n$ ja $m$, joille $r^3-r^2=nd$ ja $r^4-r^3=md$.\n2. **Tapaus $r^3-r^2\\neq 0$.** Silloin $nd\\neq 0$, joten $n\\neq 0$ ja $d\\neq 0$. Koska $r^4-r^3=r\\,(r^3-r^2)$, saadaan $r=\\frac{r^4-r^3}{r^3-r^2}=\\frac{md}{nd}=\\frac{m}{n}$, joka on kahden kokonaisluvun osamäärä eli rationaaliluku.\n3. **Tapaus $r^3-r^2=0$.** Silloin $r^2(r-1)=0$, joten $r=0$ tai $r=1$, ja molemmat ovat rationaalilukuja.\n4. Kummassakin tapauksessa $r$ on rationaalinen. $\\square$\n\n**Sudenkuoppa:** jakaminen lausekkeella $r^3-r^2$ tai luvulla $n$ tarkistamatta, ettei se ole nolla.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Perustele, että $\\lim_{x\\to 0}\\left(\\frac{1}{x^2}-\\frac{\\sin x}{x^3}\\right)=\\frac16$, seuraavin vaihein:\n\n1. $x-\\sin x-\\frac16x^3\\le 0$ välillä $0\\le x\\le 1$.\n2. $x-\\sin x-\\frac16x^3+\\frac{1}{120}x^5\\ge 0$ välillä $0\\le x\\le 1$.\n3. Näistä $\\frac16x^3-\\frac{1}{120}x^5\\le x-\\sin x\\le\\frac16x^3$ välillä $0\\le x\\le 1$.\n4. Välillä $-1\\le x\\le 0$ epäyhtälöt kääntyvät: $\\frac16x^3-\\frac{1}{120}x^5\\ge x-\\sin x\\ge\\frac16x^3$.\n5. Päättele näistä raja-arvo.\n\nVaiheet voi perustella toisistaan riippumatta.",
+     "hints": [
+      "Tutki funktiota $f(x)=x-\\sin x-\\frac16x^3$ derivoimalla useita kertoja. Kun jokin derivaatta on merkiltään tunnettu ja edellinen derivaatta on nolla kohdassa $0$, saat edellisen merkin monotonisuuden avulla. Vaihe 5 on suppiloperiaate.",
+      "$f'''(x)=\\cos x-1\\le 0$, ja $f''(0)=f'(0)=f(0)=0$. Funktiolle $g(x)=f(x)+\\frac{1}{120}x^5$ pätee $g''(x)=-f(x)$. Vaiheessa 4 hyödynnä sitä, että kaikki lausekkeet ovat parittomia funktioita. Vaiheessa 5 jaa epäyhtälöt luvulla $x^3$ (huomaa merkki!)."
+     ],
+     "solution": "**Vaihe 1**\n\n1. Olkoon $f(x)=x-\\sin x-\\frac16x^3$. Silloin $f'(x)=1-\\cos x-\\frac12x^2$, $f''(x)=\\sin x-x$ ja $f'''(x)=\\cos x-1\\le 0$.\n2. Koska $f'''\\le 0$, $f''$ on vähenevä. Koska $f''(0)=0$, on $f''(x)\\le 0$, kun $x\\ge 0$.\n3. Siis $f'$ on vähenevä, ja $f'(0)=0$, joten $f'(x)\\le 0$, kun $x\\ge 0$.\n4. Siis $f$ on vähenevä, ja $f(0)=0$, joten $f(x)\\le 0$ välillä $[0,1]$.\n\n**Vaihe 2**\n\n5. Olkoon $g(x)=f(x)+\\frac{1}{120}x^5$. Silloin $g'(x)=f'(x)+\\frac{1}{24}x^4$ ja $g''(x)=\\sin x-x+\\frac16x^3=-f(x)\\ge 0$ vaiheen 1 nojalla.\n6. $g'$ on siis kasvava, ja $g'(0)=0$, joten $g'(x)\\ge 0$. Edelleen $g$ on kasvava, ja $g(0)=0$, joten $g(x)\\ge 0$ välillä $[0,1]$.\n\n**Vaihe 3**\n\n7. $f(x)\\le 0$ tarkoittaa $x-\\sin x\\le\\frac16x^3$, ja $g(x)\\ge 0$ tarkoittaa $x-\\sin x\\ge\\frac16x^3-\\frac{1}{120}x^5$. Yhdessä nämä ovat vaiheen 3 epäyhtälöt.\n\n**Vaihe 4**\n\n8. Lausekkeet $x-\\sin x$, $\\frac16x^3$ ja $\\frac16x^3-\\frac{1}{120}x^5$ ovat parittomia: $h(-x)=-h(x)$.\n9. Olkoon $-1\\le x\\le 0$. Silloin $-x\\in[0,1]$, ja vaiheen 3 epäyhtälöt pätevät pisteessä $-x$. Parittomuuden vuoksi jokainen lauseke vaihtaa merkkinsä, ja kun epäyhtälöt kerrotaan luvulla $-1$, niiden suunta kääntyy. Saadaan $\\frac16x^3-\\frac{1}{120}x^5\\ge x-\\sin x\\ge\\frac16x^3$.\n\n**Vaihe 5**\n\n10. $\\frac{1}{x^2}-\\frac{\\sin x}{x^3}=\\frac{x-\\sin x}{x^3}$.\n11. Kun $0<x\\le 1$, jaetaan vaiheen 3 epäyhtälöt positiivisella luvulla $x^3$: $\\frac16-\\frac{x^2}{120}\\le\\frac{x-\\sin x}{x^3}\\le\\frac16$.\n12. Kun $-1\\le x<0$, jaetaan vaiheen 4 epäyhtälöt negatiivisella luvulla $x^3$, jolloin suunta kääntyy: $\\frac16-\\frac{x^2}{120}\\le\\frac{x-\\sin x}{x^3}\\le\\frac16$.\n13. Kun $x\\to 0$, alaraja $\\frac16-\\frac{x^2}{120}\\to\\frac16$ ja yläraja on vakio $\\frac16$. Suppiloperiaatteen nojalla $\\lim_{x\\to 0}\\frac{x-\\sin x}{x^3}=\\frac16$. $\\square$\n\n**Sudenkuoppa:** vaiheessa 5 jakaminen luvulla $x^3$ ilman huomiota sen merkistä, tai derivaattaketjussa pelkkä kuvaajaan vetoaminen ilman monotonisuusperustelua.",
+     "answer": "$\\frac16$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

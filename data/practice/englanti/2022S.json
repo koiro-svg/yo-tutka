@@ -1,0 +1,397 @@
+{
+ "subject": "englanti",
+ "session": "2022S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2022/Syksy/2022-09-16_EA_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-09-16_EA_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: Kuullun ymmärtäminen",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 8,
+    "note": "Vastaa kaikkiin. Varaa kuullun tehtäviin yhteensä noin tunti. Videot saa katsoa vapaasti, mutta äänitteiden kuuntelukerrat on rajattu tehtäväkohtaisesti."
+   },
+   {
+    "title": "Osa 2: Luetun ymmärtäminen",
+    "tasks": [
+     "9",
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 5,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 3: Sanasto ja rakenteet",
+    "tasks": [
+     "14",
+     "15",
+     "16"
+    ],
+    "answer": 3,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 4: Kirjallinen tuottaminen",
+    "tasks": [
+     "17.1",
+     "17.2",
+     "17.3",
+     "17.4"
+    ],
+    "answer": 1,
+    "note": "Valitse yksi aihe. Pituus 700–1 300 merkkiä ilman välilyöntejä ja rivinvaihtoja; ylityksestä seuraa pistevähennys. Jätä muut kentät tyhjiksi."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele podcastjakso saamelaisesta joiusta ja sen merkityksestä saamelaiskulttuurille. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Missä suhteessa joiku muistuttaa inuiittien kurkkulaulua?\n2. Kenen perimätiedon mukaan joiut alun perin syntyivät?\n3. Mikä joiussa on puhujan mukaan tärkeintä?\n4. Mikä muu tehtävä joiulla on saamelaisille?",
+     "hints": [
+      "Äänite on puhetta, ei laulua. Kysymykset 1.1–1.2 koskevat ensimmäistä ja 1.3–1.4 toista osaa. Puhuja vertaa joikua inuiittien kurkkulauluun kahdesti: alussa äänenmuodostuksen ja lopussa yhteisöllisen tehtävän kannalta. Pidä nämä vertailut erillään.",
+      "- 1.1: puhujan mukaan joiku on kurkkulaulun kaltainen ja samalla ei ole. Kumpi puoli on samanlainen: äänen tuottaminen vai esitys?\n- 1.2: joiun alkuperää ei ole kirjattu, koska kirjakieltä ei ollut. Keiden suullinen perimätieto kertoo antaneen joiut saamelaisille?\n- 1.3: sanat vaihtelivat alueittain ja melodioita tulkittiin vapaasti. Mitä sanojen takana oikeastaan oli?\n- 1.4: tutkimuksen mukaan joiulla on osansa saamelaisten terveydessä ja sitkeydessä. Riitojen ratkaiseminen liitetään toiseen kansaan."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **1.1 B** (ääni tuotetaan samalla tavalla). Molemmissa ääni muodostetaan syvällä kurkussa, mutta puhujan mukaan lopputulos ja esitystapa ovat täysin erilaiset, joten A on väärin. Yhteisestä historiallisesta alkuperästä (C) ei puhuta.\n- **1.2 C** (taruolennot). Suullisen perimätiedon mukaan arktisten maiden keijut ja haltiat lahjoittivat joiut saamelaisille. Luonnonilmiöt (A) ja esi-isät (B) ovat houkuttelevia arvauksia, mutta niitä ei mainita.\n- **1.3 B** (tunteet). Joiku oli hyvin henkilökohtainen, sanat vaihtelivat alueittain ja melodiat olivat vapaita, mutta joiun ytimessä olivat tunteet. Puhuja kutsuu joikua tarinankerronnan muodoksi.\n- **1.4 A tai B** (hyvinvointi tai identiteetin vahvistaminen). Tutkimusten mukaan joiulla on keskeinen asema saamelaiskulttuurin terveydessä ja kestävyydessä, mikä erottaa saamelaiset muista arktisista alkuperäiskansoista. HVP hyväksyy täysin pistein kumman tahansa. C (riitojen sovittelu) on ansa: sillä puhuja kuvaa Itä-Grönlannin inuiittien kurkkulaulua.",
+     "answer": "1.1 B · 1.2 C · 1.3 B · 1.4 A tai B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Katso video, jossa australialainen näyttelijä ja muusikko Tim Minchin kertoo valmistujaispuheessaan vuorikiipeilijästä. Videon saa katsoa niin monta kertaa kuin haluaa. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä varten vuorikiipeilijä palkattiin?\n2. Mikä tiivistää parhaiten kiipeilijän kokemukset?\n3. Mikä ihmetytti Minchiniä yrityksen valitsemassa puhujassa?\n4. Millainen on puheen yleissävy?",
+     "hints": [
+      "Minchin muistelee esiintymistään kirjanpito-ohjelmistoja myyvän yrityksen konferenssissa. Seuraa, mitä yritys tavoitteli palkkaamallaan puhujalla ja mitä Minchin siitä ajattelee. Hänen huumorinsa on kuivaa, joten sanat ja tarkoitus eivät aina vastaa toisiaan.",
+      "- 2.1: yritys halusi innostaa myyjiään. Mihin?\n- 2.2: mitä kiipeilijälle tapahtui vuorella?\n- 2.3: keneltä ohjelmistomyyjien pitäisi Minchinin mielestä kuulla?\n- 2.4: myyjä tuli oppimaan myyntiä ja lähti kotiin huolissaan raajojensa verenkierrosta. Onko Minchin vakavissaan?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **2.1 B** (työntekijöiden suoritusten parantaminen). Minchinin arvion mukaan yritys halusi innostaa myyjänsä entistä parempiin tuloksiin. Ohjelmistokehittäjät (A) eivät olleet kohderyhmä, eikä yrityskuvasta (C) puhuta.\n- **2.2 B** (menestys voi vaatia suuria henkilökohtaisia uhrauksia). Kiipeilijä jäi jumiin vuoren kielekkeelle ja menetti paleltumien takia pari raajaansa. Minchinkin arvelee, että raajojen menetys oli tarkoitettu uhrautumisen vertauskuvaksi.\n- **2.3 B** (puhujan asiantuntemus oli väärältä alalta). Minchinin mielestä myyjien olisi pitänyt kuulla joltakulta, jolla on pitkä ja onnistunut ura ohjelmistomyynnissä, eikä ylioptimistiselta entiseltä vuorikiipeilijältä. Koulutustaso (A) on ansa: vitsi taidealan tutkinnosta koskee kuulijoita, ei puhujaa. Palkkio (12 000) mainitaan, mutta se ei ole ihmettelyn syy (C).\n- **2.4 B** (sarkastinen). Minchin pilkkaa koko järjestelyä ja toteaa, ettei esitys innostanut vaan hämmensi. Sävy ei ole juhlallinen (A) eikä nöyristelevä (C).",
+     "answer": "2.1 B · 2.2 B · 2.3 B · 2.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele kuvaus Georgia O'Keeffen öljymaalauksesta *Summer Days*. Äänitteen saa kuunnella ensin kokonaan ja sitten kahtena lyhyenä osana. Vastaa suomeksi, kumpaankin enintään 150 merkkiä (3 p/kohta):\n\n- 3.1: mitkä kolme kuva-aihetta erottuvat maalauksessa taivasta vasten?\n- 3.2: mistä O'Keeffe sai aiheen maalaukseensa?",
+     "hints": [
+      "Kuvaus etenee maalauksen yläosasta alaspäin. Kirjoita muistiin jokainen asia, jonka kerrotaan olevan taivasta vasten tai sen alapuolella. 3.1 arvostellaan 1 p/kuva-aihe, joten kaikki kolme on nimettävä, ja yksikkö tai monikko voi ratkaista pisteen.",
+      "- 3.1: mikä eläimen osa hallitsee yläosaa, mitä sen alla leijuu, ja mitä on aivan alareunassa? Pilviä ei lasketa.\n- 3.2: taiteilija maalasi todellisia asioita omasta elämästään. Mihin osavaltioon hän lopulta muutti, ja mitä hän keräsi aavikolta?"
+     ],
+     "solution": "**3.1** *Peuran kallo (sarvineen), kukat ja kukkulat.* (1 p kustakin)\n\nYläosaa hallitsee vaalea peuran kallo sarvineen, sen alapuolella leijuu muutama punainen ja keltainen aavikon luonnonkukka, ja alareunassa on matalia aavikkokukkuloita. HVP hyväksyy myös yleisemmän eläimen tai hirvieläimen kallon, mutta ei poron tai hirven kalloa. Kukkia ei saa rajata kahteen, ja kukkulat tai vuoret on oltava monikossa. Pilvet eivät tuo pisteitä.\n\n**3.2** *Omasta elämästään, eli Yhdysvaltain lounaisosan (New Mexicon) aavikkomaisemista.*\n\nO'Keeffe alkoi vierailla Amerikan lounaisosissa vuonna 1929, rakastui seutuun ja muutti lopulta New Mexicoon. Jo ennen muuttoa hän keräsi aavikolta vaalenneita eläinten kalloja ja käytti niitä monissa töissään. HVP ei hyväksy pelkkää \"Meksiko\".",
+     "answer": "3.1 peuran kallo, kukat, kukkulat · 3.2 omasta elämästään / Amerikan lounaisosan (New Mexicon) maisemista",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Katso video, jossa Aidan kertoo multimediajournalismin opinnoistaan Glasgow Caledonian Universityssä (GCU). Videon saa katsoa vapaasti. Kolme monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä opinnoissa auttaa Aidania työllistymään?\n2. Miksi hän keskittyi journalismissa multimediaan?\n3. Mikä olisi videolle paras vaihtoehtoinen otsikko?",
+     "hints": [
+      "Video on alle minuutin mittainen esittely. Aidan luettelee tiiviisti opintojen piirteitä: tutkinnon akkreditoinnin, käytännönläheisen opetuksen, eri mediat ja yhteistyön alan kanssa. Vaihtoehdoissa on asioita, jotka kuulostavat uskottavilta mutta eivät tule videolla esiin.",
+      "- 4.1: millaisia toimeksiantoja opiskelijat tekevät ja kenen kanssa? Tutkinnon hinnasta tai ryhmätyöstä ei puhuta.\n- 4.2: miten journalismi muuttuu, ja monessako eri muodossa juttuja pitää pystyä tekemään?\n- 4.3: mikä sävyttää koko videota: alan nopea muutos vai verkostoituminen?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **4.1 A** (koulutus luo yhteyksiä journalismin alalle). Opiskelijat tekevät oikeiden asiakkaiden toimeksiantoja ja työskentelevät suoraan alan kanssa. Tutkinto on kaksinkertaisesti akkreditoitu, mutta sen hinnasta (B) ei puhuta, eikä ryhmätyötä (C) korosteta. Päinvastoin opettajat tukevat opiskelijoita kahden kesken.\n- **4.2 C** (monipuolinen ja joustava osaaminen). Journalismi muuttuu, ja Aidanin on pystyttävä tekemään juttuja televisioon, radioon, verkkoon ja lehtiin. Arvostuksesta (A) tai suorista lähetyksistä (B) ei puhuta.\n- **4.3 B** (ajantasaista osaamista nopeasti muuttuvaan mediamaailmaan). Video korostaa muuttuvaa alaa, uusia taitoja ja nopeatempoista mediasektoria. A painottaa verkostoja ja C tunteisiin vetoavaa tarinankerrontaa, jotka ovat videolla sivuseikkoja.",
+     "answer": "4.1 A · 4.2 C · 4.3 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Katso vlogi, jossa skotlantilainen tubettaja vastaa seuraajiensa kysymykseen skotlantilaisista suosikkisanoistaan. Videon saa katsoa vapaasti. Kerro suomeksi, mitä kolme sanaa tarkoittavat, kukin enintään 50 merkkiä (2 p/kohta): *crabbit* (5.1), *boggin* (5.2) ja *mingin* (5.3).",
+     "hints": [
+      "Puhuja selittää jokaisen sanan englanniksi heti sen mainittuaan, joten kuuntele sanaa seuraava selitys. Vastaukseksi riittää yksi suomenkielinen adjektiivi, eikä 50 merkin rajaan kannata edes pyrkiä.",
+      "- 5.1: *crabbit* kuvaa mielialaa. Puhuja käyttää kahta synonyymiä, *grouchy* ja *grumpy*.\n- 5.2: *boggin* kuvaa esineen kuntoa, ja esimerkkinä ovat kengät.\n- 5.3: puhuja sanoo *mingin*-sanan tarkoittavan samaa kuin edellinen. Kirjoita 5.2:een silti itse merkitys, sillä pelkkä \"sama kuin *mingin*\" ei kelpaa."
+     ],
+     "solution": "**5.1** *Äreä, kärttyisä, pahantuulinen.*\n\nPuhujasta sana kuulostaa juuri siltä, miltä huonolla tuulella tuntuu. HVP hyväksyy monia synonyymejä (kiukkuinen, ärtynyt, yrmeä), mutta ei vastauksia \"huono olo\", \"ilkeä\" tai \"rasittunut\".\n\n**5.2** *Likainen.*\n\nPuhuja käyttää sanaa esimerkiksi likaisista kengistä. Esimerkin saa mainita, mutta HVP:n mukaan pelkkä \"kun kengät ovat likaiset\" on liian rajattu (0 p). Myös epäsiisti tai sotkuinen kelpaa.\n\n**5.3** *Likainen (sama kuin boggin).*\n\nPuhuja toteaa sanojen tarkoittavan samaa.",
+     "answer": "5.1 äreä, pahantuulinen · 5.2 likainen · 5.3 likainen (= boggin)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele podcastin alku viruksista. Äänitteen saa kuunnella ensin kokonaan ja sitten kahtena lyhyenä osana. Vastaa suomeksi, kuhunkin enintään 150 merkkiä (3 p/kohta):\n\n- 6.1: mikä yllättävä muutos nähtiin autioituneissa kaupungeissa pandemian aikana?\n- 6.2: mitä seurasi siitä, että ilmansaasteet vähenivät?\n- 6.3: mikä on maitotölkin yhteys pandemiaan?\n- 6.4: mitä hyödyllistä virukset tekevät mahdolliseksi?",
+     "hints": [
+      "Podcast etenee nopeasti esimerkistä toiseen. Ensimmäinen osa käsittelee pandemian vaikutuksia kaupunkeihin ja ilmakehään, toinen viruksen määrää ja virusten hyviä puolia. Avoimet kohdat arvostellaan 3/0, joten täsmällisyys ratkaisee.",
+      "- 6.1: hanhia Las Vegasissa, sakaaleja Tel Avivissa, kojootteja San Franciscossa: mikä on yhteinen ilmiö?\n- 6.2: ilma kirkastui. Mikä suure muuttui, mihin suuntaan ja kuinka paljon? Otsonipitoisuus on eri asia.\n- 6.3: kuinka suuri määrä viruksia aiheutti koko myllerryksen? HVP vaatii monikon ja viittauksen menneeseen.\n- 6.4: osa ihmisen DNA:sta on peräisin viruksista. Mihin näitä perimän viruksia tarvitaan?"
+     ],
+     "solution": "**6.1** *Eläimet palasivat kaupunkeihin.*\n\nEsimerkkeinä ovat hanhet poikasineen Las Vegasin pääkadulla, sakaalit Tel Avivin puistossa ja kojootit San Franciscon kaduilla. HVP hyväksyy yleisen muotoilun tai esimerkit. Ilmanlaadun paraneminen ei tuo pisteitä, eikä \"eläinkanta kasvoi\" kelpaa.\n\n**6.2** *Ilman lämpötila nousi (noin viidesosa astetta).*\n\nTehdastuotannon ja liikenteen väheneminen romahdutti ilmansaasteet, ilma kirkastui ja lämpötila hyppäsi ylöspäin. HVP: pelkkä \"lämpötila muuttui\" ei riitä, eikä ilmaston lämpeneminen tai viiden asteen nousu kelpaa.\n\n**6.3** *Koko pandemian aiheuttanut virusmäärä mahtuisi maitotölkkiin.*\n\nViruksia oli siis hämmästyttävän vähän, mutta ne aiheuttivat valtavan sekasorron. HVP:n mukaan vastauksessa on puhuttava viruksista monikossa ja siitä määrästä, joka pandemian aiheutti. Väite, että yksi virus mahtuu tölkkiin tai että nykyiset virukset mahtuisivat siihen, on väärin.\n\n**6.4** *Ne mahdollistavat ihmisen lisääntymisen: niiden ansiosta hedelmöitetystä munasolusta kehittyy vauva.*\n\nOsa muinoin ihmisen perimään tunkeutuneista viruksista on välttämättömiä sikiön kehitykselle. HVP ei hyväksy pelkkää hedelmöittymistä, synnytystä tai vastustuskykyä.",
+     "answer": "6.1 eläimet palasivat kaupunkeihin · 6.2 ilman lämpötila nousi · 6.3 pandemian aiheuttaneet virukset mahtuisivat maitotölkkiin · 6.4 ihmisen lisääntymisen",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Potilas varaa lääkäriaikaa vastaanoton virkailijalta. Keskustelu on neljässä osassa. Virkailijan repliikin saa kuunnella kerran, ja potilaan kolmea vastausvaihtoehtoa A, B ja C (vain äänitteinä) niin monta kertaa kuin haluaa. Valitse jokaisessa osassa potilaan kohteliain vastaus (3 p/kohta).",
+     "hints": [
+      "Kaikki vaihtoehdot sanovat asiasisällöltään saman, joten ratkaisevaa on sävy. Kohtelias potilas pyytää pehmentäen (*I'd like*, *please*, *if that's possible*), hyväksyy vastauksen valittamatta ja kiittää. Kuuntele myös äänensävyä.",
+      "Karsi vaihtoehdot, joissa (1) esitetään vaatimus (*I want*, *I need*, *as soon as possible*), (2) valitetaan tarjotusta ajasta, (3) vastataan virkailijan kysymykseen tiukalla vastakysymyksellä tai (4) suostutaan vastahakoisesti (*I suppose*, *I guess*). 7.3:ssa kaikki kolme epäröivät kertoa käynnin syytä: valitse se, joka pahoittelee ja perustelee toiveensa pehmeimmin."
+     ],
+     "solution": "Vaihtoehdot ovat kokeessa vain äänitteinä, joten kirjain on äänitteen A, B tai C.\n\n- **7.1 C**. C pyytää aikaa *I'd like* -rakenteella, lisää *please* ja jättää ajankohdan joustavaksi (*if that's possible*). A:n *I want* on liian suora, ja B vaatii aikaa mahdollisimman pian.\n- **7.2 A**. A hyväksyy myöhemmän ajan ymmärtäväisesti ja kiittää. B toteaa odotuksen pitkäksi ja tyytyy aikaan vain pakon edessä, ja C:kin ilmaisee pettymyksensä.\n- **7.3 A**. A pahoittelee, kysyy kohteliaasti, miksi tieto tarvitaan, ja kertoo haluavansa puhua asiasta mieluummin lääkärin kanssa. B ja C kyseenalaistavat kysymyksen tylymmin: B vetoaa siihen, että asia kuuluu vain lääkärille, ja C kysyy suoraan, miksi virkailijan pitää tietää.\n- **7.4 C**. C ymmärtää selityksen, kiittää siitä ja kertoo vaivansa. A:n *I suppose* ja B:n *I guess* kuulostavat vastahakoisilta.",
+     "answer": "7.1 C · 7.2 A · 7.3 A · 7.4 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Kuuntele Manchesterin yliopiston kestävien energiajärjestelmien professorin Patricia Thornleyn puheenvuoro puulämmitteisistä takoista ja niiden ympäristövaikutuksista. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen jokaisen kolmesta osasta kerran. Kuusi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miten Thornley lähestyy aihetta alussa?\n2. Mitä mittaukset ovat osoittaneet päästöistä?\n3. Miten britit käyttävät takkojaan talvella muihin eurooppalaisiin verrattuna?\n4. Mitä Thornley sanoo niistä, jotka polttavat siihen sopimattomia aineita?\n5. Miksi sähkö ei ole hyvä lämmitysratkaisu maaseudulla?\n6. Mikä on Thornleyn loppupäätelmä puulämmityksestä?",
+     "hints": [
+      "Jokaisessa osassa on kaksi kysymystä järjestyksessä. Thornley puhuu varovasti ja punnitsee puolesta ja vastaan, joten jyrkät vaihtoehdot (esim. *contrary to common belief*) ovat usein ansoja.",
+      "- 8.1: hän esittää alussa kolme kysymystä. Pyrkiikö hän kumoamaan väärinkäsityksiä vai suhteuttamaan asiaa?\n- 8.2: mitä päästöille tapahtuu sytytysvaiheen jälkeen?\n- 8.3: miten Britannian ilmasto vaikuttaa siihen, kuinka pitkään tulisija on kerrallaan käytössä?\n- 8.4: mitä ihmiset tekisivät, *jos* he tietäisivät?\n- 8.5: mikä ei kestäisi, jos kaikki siirtyisivät sähkölämmitykseen?\n- 8.6: missä hiukkaspäästöjen lisäys olisi hyväksyttävää ja missä ei?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **8.1 B** (asioiden suhteuttaminen). Thornley myöntää, että kiinteä polttoaine tuottaa kaasua enemmän hiukkaspäästöjä, ja kysyy sitten, kuinka merkittäviä ne ovat kokonaisuuden kannalta ja miten niitä voi vähentää. Hän ei halua kohun ohittavan tiedettä. Yleistä käsitystä hän ei väitä vääräksi (A).\n- **8.2 C** (päästöt vaihtelevat palamisen vaiheen mukaan). Sytytysvaiheessa päästöt voivat olla todella suuria, mutta normaalin käytön aikana ne tasaantuvat. Mittauksia tehtiin useissa laitteissa, mutta tulos ei koske laitteiden välisiä eroja (A).\n- **8.3 A** (satunnaisemmin). Muualla Euroopassa takat ovat lämmityskaudella päällä pitkiä aikoja, mutta Britannian erilaisessa ilmastossa niitä sytytetään ja sammutetaan useammin. Tehokkuudesta (B) ei puhuta.\n- **8.4 B** (he eivät tiedä haitoista). Jätteen tai märän puun poltto lisää päästöjä, ja Thornleyn mukaan ihmiset toimisivat toisin, jos he ymmärtäisivät tämän. Perinteistä (A) tai säästämisestä (C) ei puhuta.\n- **8.5 A** (sähköverkon siirtokyky on rajallinen). Kaasuverkon ulkopuolella olevia, vaikeasti lämmitettäviä maalaistaloja ei voi siirtää kaikkia sähkölämmitykseen, koska verkko ei kestäisi sitä. Talojen huono energiatehokkuus (C) on ansa: se on ongelman tausta, ei syy.\n- **8.6 B** (puulämmityksen järkevyys riippuu sijainnista). Puulla voi vähentää kasvihuonekaasuja 70–90 %, mutta hiukkaspäästöt voivat joillain alueilla olla kestämättömiä. Maaseudulla, jossa ilma on valmiiksi puhdasta, puu voi olla hyväksyttävä tapa vähentää hiilipäästöjä. A on liian ehdoton, eikä Thornley väitä C:tä, vaan jättää punninnan avoimeksi.",
+     "answer": "8.1 B · 8.2 C · 8.3 A · 8.4 B · 8.5 A · 8.6 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Lue aineiston 9.A Time-lehden artikkeli (Katy Steinmetz) yksikössä käytettävästä *they*-pronominista. Kolme monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Millä perusteella yksiköllistä *they*-muotoa on vastustettu?\n2. Miksi muodolla on nykyään entistäkin suurempi merkitys?\n3. Mitä tyylioppaat sanovat sen käytöstä?\n\nSama teksti on myös tehtävässä 14.",
+     "hints": [
+      "Kysymykset etenevät tekstin kappaleiden järjestyksessä. Monet vaihtoehdot kuulostavat järkeviltä, mutta valitse se, jonka teksti todella sanoo.",
+      "- 9.1: ensimmäisessä kappaleessa kerrotaan, mitä kriitikot ovat aina ennustaneet kielen muuttuessa. Mitä he pelkäävät?\n- 9.2: kuka on vauhdittanut muotoa, ja keihin sillä voi nyt viitata?\n- 9.3: millä ehdoilla lehdet ja tyylioppaat sen sallivat? Vaatiiko yksikään niistä sitä?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **9.1 B** (pelko kielen rappeutumisesta). Artikkelin alussa kerrotaan, että kielen muutoksia vastustetaan aina ennustamalla kielen kuihtumista, ja yksikön *they* on yksi erityisesti paheksutuista muutoksista. Kieliopin asiantuntijat pitivät sitä sopimattomana painettuun tekstiin. Sekaannuksen vaarasta (A) ei puhuta.\n- **9.2 C** (sillä voi viitata erilaisiin identiteetteihin). Muoto on noussut esiin, koska sillä voi viitata myös muunsukupuolisiin, jotka eivät määrittele itseään miehiksi eivätkä naisiksi. Poliittinen jakolinja (B) on ansa: konservatiivit vastustavat muotoa, mutta se ei selitä sen merkitystä.\n- **9.3 A** (sitä saa käyttää tarpeen tai toiveen mukaan). Washington Post, AP:n tyyliopas ja Chicago Manual of Style sallivat sen, kun muu muotoilu olisi kömpelöä tai kun henkilö itse haluaa. Mikään niistä ei vaadi sitä korvaamaan *he*- ja *she*-pronomineja (B, C).",
+     "answer": "9.1 B · 9.2 C · 9.3 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Lue aineiston 10.A Time-lehden artikkeli Fordin täyssähköisestä F-150 Lightning -lava-autosta. Vastaa 10.1–10.2 suomeksi, kumpaankin enintään 150 merkkiä (3 p/kohta). Kohdat 10.3–10.9 ovat monivalintoja, kussakin kolme vaihtoehtoa (2 p/kohta):\n\n- 10.1: mihin autoa voi käyttää muuhunkin kuin ajamiseen?\n- 10.2: mikä ilahdutti O'Gormania Texasissa?\n- 10.3: miten GM eroaa Teslasta?\n- 10.4: mitä O'Gorman ennustaa?\n- 10.5: mikä väite F-150:stä Yhdysvalloissa pitää paikkansa?\n- 10.6: mikä on ollut Fordin ajatus kysynnästä alusta asti?\n- 10.7: mitä uutta muiden valmistajien sähköautoissa on?\n- 10.8: mitä lava-autojen kuljettajat arvostavat?\n- 10.9: millainen on F-150:n tulevaisuus?",
+     "hints": [
+      "Avoimet kohdat 10.1–10.2 ovat ensimmäisessä kappaleessa. Monivalinnat etenevät tekstin järjestyksessä. Lainausten merkitys on usein epäsuora (*a faster horse*, *not a science project*), joten mieti, mitä puhuja niillä tarkoittaa.",
+      "- 10.1: mitä auto tekee sähkökatkon aikana, ja kenelle?\n- 10.2: mitä O'Gorman näki talojen pihoilla, ja miksi se oli hänestä hyvä uutinen? Sähköversiota ei vielä ollut myynnissä.\n- 10.3: kuka on vanha tekijä, kuka nousukas?\n- 10.4: *pecking order* = arvojärjestys.\n- 10.5: myydyin auto lähes 40 vuotta: helpottaako vai vaikeuttaako se muutoksia?\n- 10.6: perustaja ei uskonut asiakkaiden tietävän, mitä he tarvitsevat.\n- 10.7: *crab walk*: mihin suuntaan auto liikkuu?\n- 10.8: miksi lava-auton ostaja arvostaisi varavirtaa?\n- 10.9: lopun lainaus: rakastettu, myydyin ja nyt sähköinen."
+     ],
+     "solution": "**10.1** *Varavirtalähteenä: sähkökatkon aikana auton akku voi pitää omistajan talon sähköt päällä päivien ajan.*\n\nHVP ei hyväksy pelkkää \"generaattori\" tai \"autossa on ylimääräinen akku\". Vastauksesta on käytävä ilmi, että auto syöttää sähköä taloon.\n\n**10.2** *Hän näki F-150-autoja todella monen talon pihatiellä, eli malli on hyvin suosittu.*\n\nTexasin sähkökriisin aikana O'Gorman pohti, kuinka moni hyötyisi varavirrasta, ja pihoilla näkyi lukemattomia F-150-malleja. HVP ei hyväksy katujen varsia tai pysäköintialueita, eikä väitettä, että hän näki sähkö-F-150:iä, koska sähköversio oli vasta tulossa.\n\nKirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **10.3 A** (GM:llä on vakiintuneempi asema). GM mainitaan vanhojen valmistajien joukossa, Tesla ja Rivian taas korkeasti arvostettuina uusina tulokkaina.\n- **10.4 A** (koko autoteollisuus muuttuu). O'Gorman ennustaa suurta ravistelua, jossa syntyy voittajia ja häviäjiä ja alan arvojärjestys muuttuu. Konkursseista (B) tai uusista yhdysvaltalaisvalmistajista (C) hän ei puhu.\n- **10.5 A** (suosio tekee suurista muutoksista riskialttiita). Malli on ollut Yhdysvaltain myydyin auto lähes neljä vuosikymmentä, joten siihen kajoaminen on arkaa, eivätkä asiakkaat halua radikaalia muutosta. B on siksi väärin, eikä sähköversion pitkäaikaisesta kysynnästä (C) puhuta.\n- **10.6 B** (uutta kysyntää pitää luoda). Perustajaan liitetty sanonta *nopeammasta hevosesta* tarkoittaa, että asiakas ei tiedä tarvitsevansa jotain ennen kuin sitä tarjotaan. A on ansa: hevonen on esimerkki siitä, mitä asiakas *luulee* haluavansa.\n- **10.7 B** (renkaat kääntyvät myös vinottain). GM:n sähkö-Hummerin *crab walk* liikuttaa autoa vinottain neljän pyörän ohjauksella. Ominaisuus helpottaa kyllä ahtaisiin paikkoihin pysäköintiä, mutta pysäköintiavustin (A) ei ole se, mitä kuvataan. Teslan ilmansuodatin ei ole ympäristöominaisuus (C).\n- **10.8 C** (riippumattomuus). Lava-auton ostajat arvostavat omavaraisuutta ja varautumista pahan päivän varalle.\n- **10.9 C** (ihmiset ostavat sitä myös sähköisenä). Lopussa todetaan, että auto on myydyin ja rakastettu ja nyt siitä tulee sähköinen, mikä voi vauhdittaa sähköautojen siirtymistä massamarkkinoille. B on liian vahva väite.",
+     "answer": "10.1 varavirtalähteenä talolle · 10.2 malli oli hyvin suosittu (monen talon pihalla) · 10.3 A · 10.4 A · 10.5 A · 10.6 B · 10.7 B · 10.8 C · 10.9 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Lue aineiston 11.A katkelma Curtis Sittenfeldin romaanista *Rodham*. Kertoja kuvaa tunnetta, jonka hän kokee ennen tärkeitä tilanteita. Kolme monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miten kertoja suhtautuu tärkeisiin tilanteisiin?\n2. Minkä merkittävän aiemman kokemuksen hän mainitsee?\n3. Mikä sanonta kuvaa katkelmaa parhaiten?",
+     "hints": [
+      "Katkelma on yksi kappale. Lue tarkasti, mistä tunne kertojan mukaan *ei* johdu ja mistä osista se koostuu.",
+      "- 11.1: onko hän hermostunut? Mitä hän tietää aina itsestään?\n- 11.2: kertoja mainitsee esimerkin tilanteesta, jolla oli seurauksia hänen elämäänsä. Mikä on LSAT?\n- 11.3: mikä sanonta sopii ihmiseen, joka valmistautuu huolellisesti ja esiintyy parhaimmillaan? Yksinäisyys ei tarkoita, että hän pitäisi itsestään meteliä."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **11.1 B** (varma siitä, että selviää). Tunne on kuin paino rinnassa, mutta se ei johdu hermostuneisuudesta: kertoja on aina valmistautunut ja tietää pystyvänsä suoritukseen. Kauhu (C) on siis väärin. A on ansa: yksinäisyys mainitaan, mutta se on osaavan ihmisen yksinäisyyttä, ei halua eristäytyä.\n- **11.2 C** (kokeeseen osallistuminen). Esimerkkinä on LSAT-pääsykoe, jonka hän teki luokkahuoneessa Harvardin kampuksella. Julkisesta virasta (A) tai opettamisesta (B) ei puhuta.\n- **11.3 C** (sanonta *put your best foot forward* eli näytä aina parhaat puolesi). Kertoja valmistautuu aina huolellisesti ja suoriutuu siitä, mihin useimmat eivät usko pystyvänsä. A (tyhjät tynnyrit kolisevat eniten) kuvaisi kerskailijaa, jolla ei ole katetta, ja B (kaadu seitsemän kertaa, nouse kahdeksan) sinnikkyyttä epäonnistumisten jälkeen, mutta epäonnistumisista ei puhuta.",
+     "answer": "11.1 B · 11.2 C · 11.3 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 24,
+     "prompt": "Kokeen tekstissä on Guardianin uutinen (Damian Carrington) Golfvirran eli Atlantin kiertoliikkeen (AMOC) heikkenemisestä, ja sen ohessa on kartta. Tekstissä on kahdeksan aukkoa, ja kuhunkin valitaan kolmesta vaihtoehdosta sopivin (3 p/aukko). Seitsemässä aukossa vaihtoehdot ovat lauseenosia, yhdessä (12.6) sidossanoja. Teksti on itse tehtävässä.",
+     "hints": [
+      "Aukon jälkeinen virke kertoo yleensä, mikä vaihtoehto sopii: se tarkentaa, perustelee tai jatkaa aukon ajatusta. Lue siksi aina aukon jälkeinen virke ennen valintaa.",
+      "- 12.1: virtaukset ovat jo hitaimmillaan, ja niiden vakaus on menetetty.\n- 12.2: kuinka laajalle alueelle seuraavassa luettelossa mainitut vaikutukset ulottuvat?\n- 12.3: vuosikymmen tai vuosisatoja: mitä ei siis voi tietää?\n- 12.4: jokainen ilmakehään päästetty gramma lisää riskiä.\n- 12.5: kaksoispisteen jälkeen kuvataan kaksi vaihtoehtoista tilaa.\n- 12.6: suolainen vesi ajaa kiertoa, sulava makea vesi hidastaa sitä. Onko kyse syystä vai vastakohdasta?\n- 12.7: aukon jälkeen todetaan, ettei kyse ole pelkästä virtausten reitin muutoksesta. Mikä siis muuttuu?\n- 12.8: kumpaan tilaan kiertoliike voi siirtyä?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **12.1 B** (virtaukset saattavat olla lähellä pysähtymistä). Virtaukset ovat jo hitaimmillaan ainakin 1 600 vuoteen, ja analyysi kertoo vakauden menetyksestä. Nopeutuminen (A) tai paluu normaaliksi (C) on ristiriidassa tekstin kanssa.\n- **12.2 A** (katastrofaaliset seuraukset kaikkialla maailmassa). Seuraava luettelo ulottuu Intiasta, Etelä-Amerikasta ja Länsi-Afrikasta Eurooppaan, Pohjois-Amerikkaan, Amazoniin ja Etelämantereelle, joten vaikutukset eivät rajoitu Golfvirran lähialueille (C).\n- **12.3 A** (romahduksen ajankohtaa on mahdoton ennustaa). Seuraavan virkkeen mukaan se voi tapahtua vuosikymmenen tai kahden sisällä tai vasta vuosisatojen päästä.\n- **12.4 A** (päästöt mahdollisimman pieniksi). Tutkijan mukaan romahduksen todennäköisyys kasvaa jokaisella hiilidioksidigrammalla, joten ainoa keino on pitää päästöt pieninä. Mittaaminen (B) ei vähennä riskiä.\n- **12.5 A** (kiertoliikkeellä on kaksi tilaa). Kaksoispisteen jälkeen kuvataan nopea ja vahva sekä hidas ja heikko tila, ja seuraava virke kertoo tilojen välillä vaihtamisesta.\n- **12.6 C** *but*. Aukko yhdistää kaksi vastakkaista asiaa: suolainen vesi pitää kiertoa yllä, *mutta* Grönlannin sulava makea vesi hidastaa sitä. *Hence* (siksi) ja *since* (koska) ilmaisevat syy-seuraussuhdetta.\n- **12.7 C** (virtausten epävakaus kasvaa). Aukon jälkeinen täsmennys puhuu virtauksista itsestään, joten jäätiköt (A) ja tuulet (B) eivät sovi.\n- **12.8 A** (heikkoon kiertotilaan). Viimeinen aukko palaa aiemmin esiteltyihin kahteen tilaan: kriittinen siirtymä tarkoittaa siirtymistä hitaaseen ja heikkoon tilaan.",
+     "answer": "12.1 B · 12.2 A · 12.3 A · 12.4 A · 12.5 A · 12.6 C (but) · 12.7 C · 12.8 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue aineiston 13.A Guardianin uutinen (Alison Flood) juontaja Ruth Watsonin vanhojen keittokirjojen kokoelmasta, joka on myynnissä huutokaupassa. Vastaa 13.1–13.3 suomeksi, kuhunkin enintään 150 merkkiä. Kohdat 13.4–13.5 ovat monivalintoja, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n- 13.1: mihin ongelmaan uskonnollinen teksti tarjosi ratkaisun?\n- 13.2: mitä vikaa eurooppalaisessa ruoanlaitossa oli varhaisen yhdysvaltalaisen keittokirjan mukaan?\n- 13.3: millä kouristuksia ennen hoidettiin?\n- 13.4: mitä kokoelman kirjat kertovat 1700-luvun ruokailusta?\n- 13.5: mitä Simon Roberts kertoo?",
+     "hints": [
+      "Uutinen etenee esimerkki kerrallaan, ja kysymykset seuraavat kappaleiden järjestystä. Avoimissa kohdissa (3/0 p) on oltava tarkka: HVP hylkää liian yleiset tai vähänkin väärät vastaukset.",
+      "- 13.1: 1600-luvun ohjeen mukaan vesi saa olla lehtien päällä vain psalmin lausumisen ajan. Mitä psalmilla siis mitataan?\n- 13.2: vuoden 1830 kirja suosi amerikkalaisia raaka-aineita. Mikä vaikeus eurooppalaisissa menetelmissä oli? Ajattele ruoansulatusta.\n- 13.3: vuoden 1653 lääkereseptit: minkä linnun ja mitä?\n- 13.4: *diets were the rage* = ruokavaliot olivat muotia.\n- 13.5: mitä Roberts huomasi toistuvan kirjoissa, ja mihin hän sitä vertasi? *Economy* ei ole ekologiaa."
+     ],
+     "solution": "**13.1** *Kuinka kauan teetä haudutetaan, eli miten tee valmistetaan parhaiten.*\n\nBrittien ikuinen kiista parhaasta teestä ulottuu 1600-luvulle, jolloin keittokirja neuvoi pitämään vettä lehtien päällä vain sen ajan, joka kuluu Miserere-psalmin hitaaseen lausumiseen. HVP ei hyväksy pelkkää \"miten tehdään kuppi teetä\", veden keittämisen kestoa tai teepussia.\n\n**13.2** *Eurooppalaiset valmistustavat tekivät ruoasta vaikeasti sulavaa.*\n\nVuoden 1830 kirja suositteli karpaloita, maissia, kalkkunaa ja vesimelonia eurooppalaisten menetelmien sijaan. Vastauksessa on oltava ruoansulatus: vaikeasti nieltävä, epäterveellinen tai vaikeasti saatava ruoka on väärin.\n\n**13.3** *Riikinkukon lannalla.*\n\nVuoden 1653 lääkeresepteissä neuvottiin hoitamaan kouristuksia riikinkukon lannalla ja keltatautia jauhetuilla kastematoilla. Pelkkä linnun tai eläimen lanta ei riitä.\n\nKirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **13.4 B** (erilaiset ruokavaliot olivat suosittuja jo silloin). Tekstin mukaan jo satoja vuosia sitten ruokavaliot olivat muotia, ja esimerkkeinä ovat hampaita valkaiseva jauhe ja rohto moniin tauteihin. Ruoan uskottiin päinvastoin suojaavan taudeilta, joten C on väärin. Mielialasta (A) ei puhuta.\n- **13.5 C** (vanhoissa ja nykyisissä keittokirjoissa on samoja aiheita). Roberts huomasi kirjoissa toistuvia viittauksia taloudellisuuteen, säästäväisyyteen ja terveyteen ja vertasi niitä omaan aikaamme. B on ansa: *economy* tarkoittaa säästäväisyyttä, ei ekologiaa. Tiukoista ohjeista (A) hän ei puhu.",
+     "answer": "13.1 miten teetä valmistetaan / kauanko sitä haudutetaan · 13.2 eurooppalaiset tavat tekivät ruoasta vaikeasti sulavaa · 13.3 riikinkukon lannalla · 13.4 B · 13.5 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "14",
+   "units": [
+    {
+     "id": "",
+     "points": 10,
+     "prompt": "Tehtävän 9 artikkelissa on viisi alleviivattua sanaa: *belly-aching*, *lamented*, *lurking*, *detractors* ja *convenient*. Valitse kullekin kolmesta vaihtoehdosta se, joka sopii yhteyteen ja on merkitykseltään lähin (2 p/kohta).",
+     "hints": [
+      "Korvaa alleviivattu sana vuorotellen jokaisella vaihtoehdolla ja mieti, säilyykö virkkeen merkitys. Monessa kohdassa yksi vaihtoehto on vastakohta, joten tunnista ensin, onko sanan sävy myönteinen vai kielteinen.",
+      "- 14.1: *belly-ache* = valittaa. Millaisessa mielentilassa valittaja on?\n- 14.2: *lament* = valittaa, surra.\n- 14.3: *lurk* = väijyä, olla piilossa. Muoto on vasta *nyt* nousemassa esiin.\n- 14.4: *detractor*: ketkä vähättelevät ja vastustavat?\n- 14.5: *convenient* = kätevä, helppo käyttää."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **14.1 A** *agitated*: *belly-ache* = marista, valittaa. Valittaja on kiihtynyt ja huolissaan kielen tulevaisuudesta. *Hushed* (hiljainen) ja *delighted* (ilahtunut) ovat päinvastaisia.\n- **14.2 B** *grieved*: *lament* = surra, valittaa. *Praised* (kehua) on vastakohta, ja *avoided* (välttää) ei tarkoita samaa.\n- **14.3 B** *hiding*: *lurk* = väijyä, piileskellä. *Surfacing* (nousta pintaan) on vastakohta, sillä tekstin mukaan muoto nousee esiin vasta nyt. *Abiding* ei sovi.\n- **14.4 B** *critics*: *detractor* = arvostelija, vähättelijä. Käyttäjät (A) ja asiantuntijat (C) eivät ole sama asia.\n- **14.5 A** *accessible*: *convenient* = kätevä, helposti käytettävissä. *Manageable* (hallittavissa) on merkitykseltään kauempana, ja *inappropriate* (sopimaton) on vastakohta. HVP hyväksyy vain vaihtoehdon *accessible*.",
+     "answer": "14.1 A · 14.2 B · 14.3 B · 14.4 B · 14.5 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "15",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Kokeen tekstissä kerrotaan roolipeli Dungeons & Dragonsin synnystä: miten Gary Gygax ja Dave Arneson tapasivat ja miten peli kehittyi Chainmail-sotapelistä ja Arnesonin Blackmoor-maailmasta (Ben Riggs, Geek and Sundry). Tekstissä on 15 aukkoa, ja kuhunkin valitaan kolmesta vaihtoehdosta sopivin (1 p/aukko). Aukot mittaavat verbimuotoja, prepositioita, artikkeleita, pronomineja, sidossanoja ja yhdysmerkkejä. Teksti on itse tehtävässä.",
+     "hints": [
+      "Lue virke aukon molemmin puolin ja mieti aukon kieliopillinen tehtävä: predikaatti, artikkeli, prepositio, pronomini vai sidossana. Monessa aukossa vain yksi vaihtoehto on kieliopillisesti mahdollinen.",
+      "- Verbimuodot: 15.1 (subjekti *the hills*), 15.6 (menneisyys), 15.8 (tarkoitus), 15.10 (relatiivilauseen korvaava muoto), 15.12 (menneisyyden tulevaisuus), 15.14 (passiivi, subjekti *He*).\n- Prepositiot: 15.3 passiivin tekijä, 15.5 *grow ___* 'saada alkunsa', 15.11 mistä mekaniikat otettiin, 15.13 'muutamassa viikossa'.\n- Muut: 15.2 artikkeli (väri on määritetty), 15.4 ja 15.15 subjektipronomini relatiivilauseessa ilman *that*-sanaa, 15.7 yhdysmerkit, 15.9 vastakohta."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **15.1 C** *roll*: monikollisen subjektin *hills* predikaatti preesensissä (kukkulat kumpuilevat).\n- **15.2 C** *the bright*: määräinen artikkeli, koska väri määrittyy *of the sunrise* -lisäyksellä.\n- **15.3 C** *by*: passiivin tekijä (*was created by*).\n- **15.4 B** *it*: *the institution it is today* = instituutio, joka se nykyään on. Relatiivipronomini jää pois, ja *it* on sivulauseen subjekti.\n- **15.5 B** *out of*: *grow out of* = saada alkunsa jostakin.\n- **15.6 C** *had*: kerronta on menneessä ajassa, ja predikaatin on oltava finiittimuoto.\n- **15.7 B** *14-year-old*: substantiivina käytetty ikä kirjoitetaan yhdysmerkein ja yksikössä (*a 14-year-old*).\n- **15.8 C** *to simulate*: tarkoitusta ilmaiseva infinitiivi.\n- **15.9 A** *However*: vastakohta: peli simuloi keskiaikaista taistelua, mutta lopussa oli laaja fantasialiite.\n- **15.10 B** *describing*: *-ing*-muoto korvaa relatiivilauseen (*which described*).\n- **15.11 A** *from*: mekaniikat otettiin muista peleistä (*pulled from*).\n- **15.12 C** *would portray*: menneisyyden tulevaisuus kuvaa pelin periaatetta: pelaajat esittäisivät vain yhtä hahmoa.\n- **15.13 C** *within*: *within weeks* = muutamassa viikossa.\n- **15.14 C** *was mailed*: Gygax oli vastaanottaja, joten passiivi yksikössä (*He was mailed 18 pages*). *Had mailed* tarkoittaisi, että hän itse lähetti sivut.\n- **15.15 C** *they*: *a ruleset they titled* = sääntökokoelma, jolle he antoivat nimen. Relatiivipronomini jää pois, ja *they* on sivulauseen subjekti.",
+     "answer": "15.1 C · 15.2 C · 15.3 C · 15.4 B · 15.5 B · 15.6 C · 15.7 B · 15.8 C · 15.9 A · 15.10 B · 15.11 A · 15.12 C · 15.13 C · 15.14 C · 15.15 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "16",
+   "units": [
+    {
+     "id": "",
+     "points": 11,
+     "prompt": "Saman Dungeons & Dragons -tekstin jatko kertoo pelin julkaisusta ja Gygaxin yrityksen TSR:n noususta. Täydennä 11 aukkoa englanniksi aukon kohdalla olevan vihjeen perusteella niin, että muoto sopii lauseeseen (1 p/aukko). Vihjeet ovat englanninkielisiä perusmuotoja (*exist*, *proliferate*, *consider*, *grow* + prepositio, *run*, *Isle of Man*), suomenkielisiä ilmauksia (*kesään mennessä*, *kirjaimellisesti ääretön*, *miljoonia dollareita*, *filosofin*) tai pelkkä ohje *prepositio*.",
+     "hints": [
+      "Vihje kertoo merkityksen, ja lause kertoo muodon. Kysy jokaisen aukon kohdalla: tarvitaanko substantiivi, tietty aikamuoto, passiivi vai *-ing*-muoto? Suomenkieliset vihjeet käännetään luontevaksi englanniksi, ei sanasta sanaan.",
+      "- 1: 'mennessä' = *by*.\n- 2: *of* + omistuspronomini + substantiivi.\n- 3: menneen ajan predikaatti monikolliselle subjektille.\n- 4: hintaa *pidettiin* kohtuuttomana: passiivi.\n- 5: *have something to do ___*.\n- 6: adverbi + adjektiivi.\n- 7: *-ing*-muoto + prepositio ennen sanoja *power and knowledge*.\n- 8: *from* + passiivinen *-ing*-muoto.\n- 9: monikko + *of*.\n- 10: saarelle sopiva prepositio ja artikkeli.\n- 11: viisasten kivi on englanniksi filosofin kivi."
+     ],
+     "solution": "- **1** (kesään mennessä) **by summer** (myös *by the summer*, *come summer*).\n- **2** (exist) **its existence**: prepositio *of* vaatii substantiivin, ja *its* viittaa peliin.\n- **3** (proliferate) **proliferated** (myös *were proliferating*, *began to proliferate*): kerronta on menneessä ajassa.\n- **4** (consider) **was considered** (myös *was considered to be*): passiivi, koska hintaa pidettiin kohtuuttomana.\n- **5** (prepositio) **with**: *have something to do with* = liittyä johonkin.\n- **6** (kirjaimellisesti ääretön) **literally infinite** (myös *literally limitless*, *endless*, *unlimited*).\n- **7** (grow + prepositio) **growing in** (myös *growing into*): *-ing*-muoto jatkaa virkettä, ja *grow in power* = kasvaa voimaltaan.\n- **8** (run) **being run** (myös *running*): prepositio *from* + passiivinen *-ing*-muoto, koska yritystä pyöritettiin ruokapöydän ääreltä.\n- **9** (miljoonia dollareita) **millions of dollars**: monikko ja *of*.\n- **10** (Isle of Man): saarista käytetään yleensä prepositiota *on*, eli **on the Isle of Man** (myös *in the Isle of Man*).\n- **11** (filosofin) **philosopher's**: *the philosopher's stone* = viisasten kivi. Genetiivi kirjoitetaan heittomerkillä.\n\nHVP:n mukaan myös muut oikeat ilmaukset hyväksytään.",
+     "answer": "by summer · its existence · proliferated · was considered · with · literally infinite · growing in · being run · millions of dollars · on the Isle of Man · philosopher's",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "17.1",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: kirje. Uusi yhdistys International Collectors United selvittää, mitä ihmiset keräävät. Kerro kirjeessä yhdistyksen sihteerille Sarah Scottille, joka kerää itse postimerkkejä, mitä sinä keräät ja miksi, ja kuvaile kokoelmaasi. HVP: −2 p, jos alun puhuttelu tai lopun oma nimi puuttuu.",
+     "hints": [
+      "Tekstilaji on kirje, joten aloita puhuttelulla (*Dear Ms Scott*) ja lopeta tervehdykseen ja omaan nimeen. Kerro, mitä keräät ja miksi, ja kuvaile kokoelmaa konkreettisesti.",
+      "Rakenne: kiitos kutsusta ja kokoelman esittely, miten keräily alkoi, mikä siinä viehättää, yhteys vastaanottajan postimerkkeihin ja kohtelias lopetus. Sanastoa: *collection, rare, second-hand, flea market, to be worth, to come across*. HVP vähentää 2 p, jos puhuttelu tai nimi puuttuu."
+     ],
+     "solution": "**Malliteksti** (836 merkkiä ilman välilyöntejä)\n\nDear Ms Scott,\n\nThank you for inviting members to share their hobbies. I have collected vinyl records for about four years, and I would be happy to tell you about my collection.\n\nIt all started when my grandfather gave me his old record player and a box of thirty albums from the 1970s. At first I played them out of curiosity, but I soon fell in love with the warm sound and the large, colourful covers. Today I own around two hundred records, mostly jazz and Finnish pop.\n\nFor me, collecting is a kind of treasure hunt. I spend Saturday mornings in flea markets and second-hand shops, and coming across a rare first pressing for two euros is the best feeling in the world. Every record also has a story: some have a name written on the cover, and I often wonder who owned them before me.\n\nAs a stamp collector, I am sure you know the feeling. A stamp, like a record, is a small piece of history that you can hold in your hand. I would love to hear which stamp is the most precious one in your collection.\n\nBest regards,\nAino Virtanen\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** kirjeessä on puhuttelu, lopputervehdys ja oma nimi, joiden puuttumisesta HVP vähentää pisteitä.\n- **Tehtävänannon kohdat:** mitä kirjoittaja kerää (vinyylilevyjä), miten kokoelma syntyi ja miksi keräily kiinnostaa.\n- **Vastaanottajan huomioiminen:** kirjoittaja yhdistää oman harrastuksensa Sarah Scottin postimerkkeihin ja päättää kysymykseen.\n- **Kieli:** kohtelias mutta lämmin sävy, aikamuotojen vaihtelu (*have collected*, *started*, *Today I own*) ja kuvailevat adjektiivit.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.2",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: puheenvuoro verkkokeskusteluun. Kuka on vastuussa terveydestäsi: sinä itse, vanhempasi, koulu vai koko yhteiskunta? Perustele kantasi tosiasioilla ja syillä. HVP: yleisellä tasolla kirjoittaminen on sallittua; −5 p, jos faktoja tai perusteluja ei ole lainkaan.",
+     "hints": [
+      "Tekstilaji on puheenvuoro verkkokeskusteluun, joten minämuoto ja muiden keskustelijoiden puhuttelu sopivat. Ota selvä kanta: kuka on vastuussa terveydestäsi?",
+      "Tehtävä vaatii faktoja ja perusteluja, ja ilman niitä vähennetään 5 p. Käy läpi eri tahot (itse, vanhemmat, koulu, yhteiskunta) ja perustele kunkin rooli esimerkillä, kuten uni, ruoka, liikunta, kouluruoka tai harrastusten hinta. Sanastoa: *to be responsible for, shared responsibility, habits, to set an example, to make healthy choices*."
+     ],
+     "solution": "**Malliteksti** (932 merkkiä ilman välilyöntejä)\n\nI have followed this thread with interest, and my answer is simple: in the end, I am responsible for my own health, but I cannot manage it alone.\n\nAs a teenager, I make dozens of choices every day. Nobody else decides whether I go to bed at midnight or at two in the morning, or whether I eat an apple or a bag of crisps. Surveys show that many Finnish teenagers sleep less than eight hours on school nights, and late-night screen time is one of the main reasons. That is something we can change ourselves.\n\nHowever, individual choices depend on our surroundings. Parents teach us our habits long before we can decide anything. Schools matter too: Finland has offered free school meals since 1948, so every pupil gets at least one balanced meal a day. And society plays a part: if sports clubs are too expensive, children from low-income families simply cannot join them.\n\nSo, in my view, health is a shared responsibility with different roles. Society should make the healthy choice the easy choice, parents should set an example and schools should provide knowledge. After that, it is up to me to use it. What do the rest of you think?\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** viittaus keskusteluketjuun, minämuoto ja lopun kysymys muille tekevät tekstistä keskustelupuheenvuoron.\n- **Selkeä kanta** heti alussa ja uudelleen lopussa: vastuu on jaettu, mutta viime kädessä se on itsellä.\n- **Faktat ja perustelut:** nuorten unimäärä, maksuton kouluruoka vuodesta 1948 ja harrastusten hinta. Näiden puuttumisesta HVP vähentää pisteitä.\n- **Kieli:** sidossanat (*However*, *So*, *After that*) ja rinnasteiset rakenteet (*Society should…, parents should…*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.3",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Opettajat ovat parin viime vuoden aikana kokeilleet monenlaisia etäopetuksen tapoja. Kerro hyvistä, huonoista ja suorastaan kurjista kokemuksista: mitkä menetelmät ja alustat toimivat ja mitkä eivät, ja miksi. HVP: −10 p, jos menetelmiä tai alustoja ei käsitellä lainkaan tai jos teksti koskee lähiopetusta; −5 p, jos ei perustella, miksi jokin ei toimi. Oppimisstrategioiden käsittely on sallittua.",
+     "hints": [
+      "Tehtävänanto jakaa aiheen valmiiksi kolmeen osaan: hyvä, huono ja kurja (*good, bad, ugly*). Käytä niitä rakenteena ja nimeä konkreettisia opetusmenetelmiä ja alustoja.",
+      "Perustele jokaisen menetelmän kohdalla, miksi se toimi tai ei toiminut. HVP vähentää 10 p, jos menetelmiä tai alustoja ei käsitellä tai teksti koskee lähiopetusta, ja 5 p, jos ei perustella, miksi jokin ei toimi. Sanastoa: *distance learning, live lesson, platform, assignment, deadline, interaction, to mute*."
+     ],
+     "solution": "**Malliteksti** (988 merkkiä ilman välilyöntejä)\n\nGood, Bad and Ugly: Lessons from Distance Learning\n\nWhen our school closed during the pandemic, teachers had to reinvent their teaching almost overnight. Looking back, some methods worked surprisingly well, while others were a disaster.\n\nThe good: short live lessons on Teams followed by independent tasks. Our maths teacher explained a new topic for twenty minutes and then stayed online so that we could ask questions. This worked because we got both structure and freedom. Shared documents were also useful, as we could see each other's work and give feedback.\n\nThe bad: long video lectures. After staring at slides for ninety minutes with our cameras off, most of us were checking our phones. Without any interaction, nobody really learnt anything.\n\nThe ugly: too many platforms. At one point we used five different apps, and every teacher posted assignments in a different place. Several students missed deadlines simply because they could not find the instructions, not because they were lazy.\n\nMy conclusion is that online teaching works when it is short, interactive and simple. Teachers should agree on one platform and use the camera for conversation, not for lecturing.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** kaikki kolme osaa (hyvä, huono, kurja), konkreettiset menetelmät ja alustat (lyhyet live-tunnit Teamsissa, jaetut dokumentit, videoluennot, liian monta sovellusta) ja perustelut sille, miksi ne toimivat tai eivät toimineet.\n- **Rakenne:** otsikko, johdanto, kolme tehtävänannon mukaista kappaletta ja johtopäätös, jossa on ehdotus.\n- **Kieli:** konkreettiset esimerkit ja syy-seuraussuhteet (*because*, *so that*, *simply because… not because*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "17.4",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: puhe. Olet kansainvälisessä väittelykerhossa, jonka päivän aiheena ovat kryptovaluutat, kuten Bitcoin ja Dogecoin. Tehtäväsi on esittää perusteluja niiden kieltämisen puolesta. HVP: −10 p, jos teksti käsittelee aihetta yleisesti tai myönteisesti ilman kieltonäkökulmaa; −2 p, jos alusta puuttuu yleisön tervehdys. Erillistä lopetusta ei vaadita.",
+     "hints": [
+      "Kirjoitat puheen väittelykerholle, ja sinun on puolustettava kryptovaluuttojen kieltämistä, vaikka olisit itse eri mieltä. Aloita yleisön tervehdyksellä.",
+      "Rakenna 2–3 perustetta (esim. rikollisuus, keinottelu ja tavallisten sijoittajien menetykset, sähkönkulutus) ja kumoa yksi vastapuolen väite. HVP vähentää 10 p, jos teksti käsittelee kryptovaluuttoja yleisesti tai myönteisesti ilman kieltonäkökulmaa, ja 2 p, jos tervehdys puuttuu. Sanastoa: *to ban, money laundering, ransom, volatile, speculation, energy consumption*."
+     ],
+     "solution": "**Malliteksti** (955 merkkiä ilman välilyöntejä)\n\nHonourable judges, fellow debaters, ladies and gentlemen,\n\nToday I will argue that cryptocurrencies such as Bitcoin and Dogecoin should be banned, and I have three reasons.\n\nFirst, they are a gift to criminals. Because payments are hard to trace, crypto is the favourite currency of drug markets, money launderers and ransomware gangs. When hackers take a hospital's computers hostage, they do not ask for euros. They ask for Bitcoin.\n\nSecond, cryptocurrencies are not real money but gambling. Their value can fall by half in a week because of a single tweet. Ordinary people, many of them young, have lost their savings chasing quick profits, while a few early investors have become rich.\n\nThird, they are an environmental disaster. Mining Bitcoin uses as much electricity as a medium-sized country, at a time when we are desperately trying to cut emissions. All that energy produces nothing useful: computers simply solve pointless puzzles.\n\nMy opponents will say that crypto means freedom from banks. But freedom that helps criminals, ruins families and heats the planet is not worth having. That is why I urge you to support a ban. Thank you.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** puhe alkaa yleisön tervehdyksellä, ja sen puuttumisesta HVP vähentää pisteitä. Lopussa on vetoomus ja kiitos.\n- **Kanta:** koko puhe perustelee kieltoa, eikä kryptovaluuttoja vain kuvailla.\n- **Rakenne:** kolme numeroitua perustetta ja vastapuolen argumentin kumoaminen lopussa.\n- **Kieli:** retoriset keinot (kolmen sarja, vastakohdat, lyhyet iskevät virkkeet) ja aiheen sanasto (*trace, launder, ransomware, mining*).",
+     "check": "malli"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,365 @@
+{
+ "subject": "biologia",
+ "session": "2023S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2023/syksy/biologia_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-09-13_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p). Kohdissa 1.11–1.20 väärästä vastauksesta −1 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Neljä viiden kohdan sarjaa, 1 p/kohta (vaihtoehdot ks. alkuperäinen koe).\n\n- **1.1–1.5:** yhdistä evoluutiota koskevat kuvaukset käsitteisiin (geenivirta, koevoluutio, lisääntymiseste, endeeminen laji, pullonkaulailmiö), kukin kerran.\n- **1.6–1.10:** valitse sopiva lisääntymistapa, esim. partenogeneesi tai kloonin muodostuminen, rataseläinten, ahvenen ja meriajokkaan kuvauksiin.\n- **1.11–1.15:** oikein vai väärin: mitokondrio-DNA:n häviämistä johtuvan Pearsonin taudin periytyminen sukupuussa (henkilöt 1–9).\n- **1.16–1.20:** oikein vai väärin: orvokin kukanväri, johon vaikuttavat alleelit Y (keltainen), B (sininen) ja W (valkoinen). Kasvinsyöjien mielestä siniset kukat maistuvat pahalta ja valkoiset miedoilta. Kokonaan valkoisia yksilöitä on vähän, ja kokonaan keltaiset kasvavat heikosti.\n\nKohdissa 1.11–1.20 väärä vastaus vähentää pisteen.",
+     "hints": [
+      "Sarjoissa 1.1–1.10 etsi jokaisesta kuvauksesta avainsana: muutto populaatioiden välillä, yhteensopimattomat sukusolut, vastavuoroinen vaikutus, esiintyy vain yhdellä alueella, äkillinen romahdus, ilman koirasta, hedelmöitys, katkenneista palasista. Väittämissä 1.11–1.20 vastaa vain, kun olet varma, koska väärä vastaus vie pisteen.",
+      "Kohta kohdalta:\n- 1.6: jälkeläinen kehittyy munasolusta ilman hedelmöitystä.\n- 1.7, 1.8 ja 1.10: sukusolut yhtyvät.\n- 1.9: palasista syntyvät yksilöt ovat perimältään identtisiä.\n- 1.11–1.14: mitokondriot tulevat lähes yksinomaan munasolun mukana, eli sairas äiti siirtää taudin kaikille lapsilleen ja sairas isä ei kenellekään. Tauti ei johdu tuman alleelista.\n- 1.15: X-kromosomissa resessiivisesti periytyvässä taudissa sairaan tyttären isä on aina sairas.\n- 1.16–1.20: esiintyykö kokonaan valkoisia yksilöitä lainkaan? Kumpaan suuntaan pahan maun ja miedon maun pitäisi ohjata valintaa?"
+     ],
+     "solution": "Käsitteiden kirjaimet vastaavat vaihtoehtojen järjestystä alkuperäisessä koenäkymässä (A = ylin). Sarjassa 1.1–1.5 A = geenivirta, B = koevoluutio, C = lisääntymiseste, D = endeeminen laji, E = pullonkaulailmiö. Sarjassa 1.6–1.10 A = klooni, B = suvullinen, C = kuroutuminen, D = itiöt, E = partenogeneesi.\n\n**Evoluutiokäsitteet**\n\n- **1.1 A, geenivirta:** muuttavat yksilöt vievät alleelejaan populaatiosta toiseen.\n- **1.2 C, lisääntymiseste:** sukusolut eivät sovi yhteen, joten yksilöt eivät saa yhteisiä jälkeläisiä.\n- **1.3 B, koevoluutio:** kaksi lajia ohjaa toistensa evoluutiota, esimerkiksi kukka ja sen pölyttäjä.\n- **1.4 D, endeeminen eli kotoperäinen laji:** eristyksissä syntynyt laji, jota ei tavata muualla.\n- **1.5 E, pullonkaulailmiö:** äkillinen tapahtuma romahduttaa populaation koon.\n\n**Lisääntymistavat**\n\n- **1.6 E, partenogeneesi:** naaraan munasolu kehittyy yksilöksi ilman hedelmöitystä. YTL hyväksyi myös vastauksen suvullinen lisääntyminen (B), koska jälkeläinen syntyy munasolusta.\n- **1.7 B, suvullinen lisääntyminen:** koiraan sukusolut hedelmöittävät munasolut.\n- **1.8 B, suvullinen lisääntyminen:** ahvenen mäti hedelmöittyy koiraan maidilla.\n- **1.9 A, kloonin muodostuminen:** meriajokkaan irronneista kappaleista kasvaa perimältään identtisiä yksilöitä.\n- **1.10 B, suvullinen lisääntyminen:** siitepöly kulkee hedekukasta emikukkaan, ja seuraa hedelmöitys.\n\n**Pearsonin tauti (sukupuu)**\n\n- **1.11 väärin:** isä 5 ei voi siirtää mitokondrioitaan lapsille, eikä hän ole sairastunut. Lapset ovat sairaita äidin 6 vuoksi.\n- **1.12 oikein:** lapset saavat mitokondriot munasolun mukana äidiltä 6, joka on sairas.\n- **1.13 oikein:** isän 1 mitokondriot eivät periydy, ja lasten 3–5 äiti 2 on terve.\n- **1.14 väärin:** tauti ei johdu resessiivisestä tuman alleelista. Naisen 4 mitokondriot ovat peräisin terveeltä äidiltä 2, joten hänen lapsensa olisivat terveitä.\n- **1.15 oikein:** tyttö saa toisen X-kromosominsa isältään. Jos tauti olisi X-kromosomaalinen resessiivinen, sairaan tyttären 8 isän 5 pitäisi olla sairas.\n\n**Orvokin kukanväri**\n\n- **1.16 väärin:** populaatiossa on kokonaan valkoisia (WW) yksilöitä, joten WW ei voi olla letaali.\n- **1.17 oikein:** kilpailu pölyttäjistä samaan aikaan kukkivien keltaisten lajien kanssa voi heikentää pölytystä ja siementen muodostusta.\n- **1.18 väärin:** paha maku suojaa sinisiä kukkia kasvinsyöjiltä, joten alleelin B pitäisi pikemminkin yleistyä.\n- **1.19 oikein:** kasvinsyöjät syövät mieluiten mietoja valkoisia kukkia, mikä on valintaa alleelia W vastaan.\n- **1.20 oikein:** jos Y-alleelin lähellä samassa kromosomissa on kelpoisuutta heikentäviä alleeleja, ne periytyvät yhdessä ja näkyvät YY-yksilöissä.\n\n**Sudenkuoppa:** kohdassa 1.14 on houkuttelevaa päätellä tavallisen resessiivisen periytymisen tapaan, että terve nainen voisi olla kantaja. Mitokondriotaudissa kantajuutta tuman alleelin mielessä ei ole: ratkaisevaa on vain, onko äidin mitokondrioissa virhe.",
+     "answer": "1.1 A · 1.2 C · 1.3 B · 1.4 D · 1.5 E · 1.6 E (myös B hyväksyttiin) · 1.7 B · 1.8 B · 1.9 A · 1.10 B · 1.11 väärin · 1.12 oikein · 1.13 oikein · 1.14 väärin · 1.15 oikein · 1.16 väärin · 1.17 oikein · 1.18 väärin · 1.19 oikein · 1.20 oikein",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 7,
+     "prompt": "Pohdi, mistä syystä lehdet asettuvat usein valonlähdettä kohti, ja selitä, mihin lehden solut käyttävät valoa.",
+     "hints": [
+      "Aloita lehden asennosta: milloin pintaan osuu eniten valoa ja miten se näkyy fotosynteesin tehossa? Jatka sitten fotosynteesin valoreaktioihin.",
+      "Käy valoreaktioiden ketju läpi: viherhiukkasten lehtivihreä sitoo valoenergian → vesi hajotetaan protoneiksi, elektroneiksi ja hapeksi → elektroninsiirtoketju muodostaa protonigradientin → energia päätyy ATP:hen ja NADPH:hon → niitä kuluu hiilidioksidin sitomiseen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lehteen osuu eniten valoa, kun sen pinta on kohtisuorassa valon tulosuuntaan nähden.\n- Kun valoa on enemmän, fotosynteesi tehostuu (kunnes jokin muu tekijä alkaa rajoittaa sitä).\n- Lehden soluissa on paljon viherhiukkasia eli kloroplasteja.\n- Viherhiukkasten lehtivihreä (klorofylli) sitoo valon energiaa fotosynteesin käyttöön.\n- Valon energialla vesi pilkotaan: syntyy happea, elektroneja ja protoneja (vetyioneja).\n- Elektronien kulkiessa elektroninsiirtoketjussa tylakoidikalvon yli muodostuu protonigradientti.\n- Energia sitoutuu lopulta ATP:hen ja pelkistyneeseen vedynsiirtäjään (NADPH).\n- ATP:tä ja NADPH:ta käytetään hiilensidontareaktioissa, joissa hiilidioksidista rakennetaan sokeria.\n\n**Esimerkkivastaus:** Lehti kerää sitä enemmän valoa, mitä lähempänä kohtisuoraa kulmaa valo osuu sen pintaan. Siksi lehdet kääntyvät kohti valoa, jolloin fotosynteesi tehostuu ja kasvi saa tuotettua enemmän sokeria. Lehden solukoissa on runsaasti viherhiukkasia, joiden tylakoidikalvoilla oleva lehtivihreä sitoo valon energiaa. Valoreaktioissa tämän energian avulla vesi hajotetaan: vapautuu happea, protoneja ja elektroneja. Elektronit kulkevat elektroninsiirtoketjussa, ja samalla protoneja kertyy tylakoidin sisälle, jolloin syntyy protonigradientti. Sen avulla ATP-syntaasi tuottaa ATP:tä, ja elektronit päätyvät lopulta vedynsiirtäjälle NADPH:lle. Hiilensidontareaktioissa ATP:n energiaa ja NADPH:n vetyä käytetään, kun hiilidioksidista muodostetaan glukoosia.\n\n**Sudenkuoppa:** pelkkä fotosynteesin kokonaisreaktio ei riitä. Pisteet tulevat siitä, että kerrot, mihin valon energiaa käytetään vaihe vaiheelta.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 3,
+     "prompt": "Lehdissä on paljon ilmarakoja. Selvitä, millä tavalla niiden avautuminen ja sulkeutuminen vaikuttaa fotosynteesiin.",
+     "hints": [
+      "Mitkä fotosynteesin kaasut kulkevat ilmarakojen kautta ja mitä muuta ilmaraoista haihtuu? Mieti, mitä kasvi tekee kuivuudessa ja mitä siitä seuraa fotosynteesille."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Fotosynteesin lähtöaine hiilidioksidi pääsee lehden sisään ilmarakojen kautta.\n- Fotosynteesissä syntyvä happi poistuu lehdestä ilmarakojen kautta.\n- Ilmaraoista haihtuu myös vettä, joten niillä kasvi säätelee vesitalouttaan.\n- Kuivuudessa kasvi sulkee ilmarakoja säästääkseen vettä, mutta silloin hiilidioksidia pääsee lehteen vähemmän ja fotosynteesi hidastuu.\n\n**Esimerkkivastaus:** Ilmarakojen kautta lehteen diffundoituu hiilidioksidia, jota tarvitaan fotosynteesin hiilensidontaan, ja niiden kautta poistuu fotosynteesissä syntyvä happi. Samalla ilmaraoista haihtuu vesihöyryä. Kun vettä on niukasti, kasvi sulkee ilmarakonsa, jottei se kuivuisi. Tällöin myös hiilidioksidin saanti heikkenee, ja fotosynteesi hidastuu. Ilmarakojen säätely on siis tasapainoilua veden säästämisen ja fotosynteesin välillä.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Puolukan lehtien vahapeite (kutikula) on paksumpi kuin mustikan. Pohdi aineiston 2.A lajikuvausten avulla, miten ero vaikuttaa lajien lehtien vedenhaihduntaan niiden kasvupaikoilla eri vuodenaikoina.",
+     "hints": [
+      "Mitä kutikula läpäisee huonosti ja miksi on hyödyllistä, että vesi haihtuu pääosin ilmarakojen kautta? Vertaa sitten aineistosta lajien kasvupaikkoja ja sitä, säilyvätkö lehdet talven yli.",
+      "Aineistossa on kaksi ratkaisevaa eroa. Puolukka kasvaa aurinkoisilla ja kuivilla paikoilla, ja sen lehdet talvehtivat. Mustikka viihtyy puolivarjossa tuoreissa ja kosteissa metsissä ja pudottaa lehtensä syksyllä. Yhdistä kumpikin ero kesän kuivuuteen ja talven pakkaskuivumiseen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Vahoista muodostuva kutikula läpäisee huonosti vettä ja kaasuja.\n- Kutikula vähentää säätelemätöntä haihtumista, jolloin vesi haihtuu pääosin ilmarakojen kautta ja kasvi pystyy säätelemään sitä.\n- Puolukka kasvaa aineiston mukaan aurinkoisilla ja kuivilla paikoilla, joten paksu vahakerros suojaa sitä kesällä kuivumiselta.\n- Puolukan lehdet ovat ainavihantia. Talvella juuret eivät saa vettä jäätyneestä maasta, joten paksu kutikula suojaa lehtiä pakkaskuivumiselta.\n- Mustikka kasvaa varjoisemmilla ja kosteammilla paikoilla metsän pohjalla, joten ohut vahakerros riittää rajoittamaan haihtumista.\n- Mustikka pudottaa lehtensä syksyllä, joten sen lehtien ei tarvitse kestää talven pakkaskuivumista.\n\n**Esimerkkivastaus:** Kutikula on lehden pintaa peittävä vahakerros, joka läpäisee huonosti vettä. Sen ansiosta vesi haihtuu lähinnä ilmarakojen kautta, joita kasvi voi avata ja sulkea tarpeen mukaan. Aineiston mukaan puolukka viihtyy aurinkoisilla, kuivilla kankailla ja kallioilla, joten kesällä sen lehdet ovat alttiita kuivumiselle, ja paksu vahapeite vähentää haihtumista. Puolukka on lisäksi ainavihanta: sen lehdet ovat kiinni koko talven. Kun maa on jäässä, kasvi ei saa vettä juurista, mutta aurinko ja tuuli voivat haihduttaa vettä lehdistä. Paksu kutikula estää tätä pakkaskuivumista. Mustikka kasvaa kosteammissa ja varjoisemmissa metsissä, joissa haihtuminen on vähäisempää ja vettä on paremmin saatavilla, joten ohut vahakerros riittää. Koska mustikka pudottaa lehtensä syksyllä, sen lehtien ei tarvitse kestää talvea.\n\n**Sudenkuoppa:** vuodenaikojen vaikutus jää helposti käsittelemättä. Talven pakkaskuivuminen ja lehtien talvehtiminen tuovat tehtävässä merkittävän osan pisteistä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Selitä lyhyesti viisi solubiologian käsitettä (eksosytoosi, glykolyysi, hiilensidontareaktiot, histoni ja sitruunahappokierto) ja liitä kukin yhteen rakenteeseen: mitokondrio, solukalvo, solulima, tuma tai viherhiukkanen. Jokaista rakennetta käytetään vain kerran.",
+     "hints": [
+      "Kustakin käsitteestä saa pisteen oikeasta rakenteesta ja enintään kaksi pistettä selityksestä. Kysy jokaisesta käsitteestä: mikä se on tai mitä siinä tapahtuu, missä ja mikä on lopputulos.",
+      "Parit löytyvät tehtävän perusteella: aineiden vienti solusta ulos kalvorakkulassa tapahtuu solun ulkorajalla, glukoosin ensimmäinen pilkkominen tapahtuu solun nestemäisessä osassa, hiilidioksidia sidotaan yhteyttävässä soluelimessä, DNA:n pakkausproteiinit ovat siellä, missä DNA on, ja hiiliatomien hapetus hiilidioksidiksi tapahtuu soluhengityksen soluelimessä. Mainitse selityksissä lopputuotteet, kuten pyruvaatti, ATP, sokeri ja pelkistyneet vedynsiirtäjät."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Eksosytoosi – solukalvo:** kalvorakkula, jonka sisällä on eritettävää ainetta (esim. hormonia, entsyymiä tai kuona-ainetta), sulautuu solukalvoon ja tyhjentää sisältönsä solun ulkopuolelle. Se kuluttaa energiaa eli on aktiivista kuljetusta.\n- **Glykolyysi – solulima:** glukoosi pilkotaan kahdeksi pyruvaatiksi, ja samalla syntyy vähän ATP:tä. Pyruvaatti jatkaa mitokondrioon soluhengityksen seuraaviin vaiheisiin.\n- **Hiilensidontareaktiot – viherhiukkanen:** fotosynteesin vaihe (entiseltä nimeltään pimeäreaktiot), jossa hiilidioksidi sidotaan ja siitä muodostuu hiilihydraattia, esimerkiksi glukoosia. Reaktiot tarvitsevat valoreaktioissa syntyneitä ATP:tä ja NADPH:ta.\n- **Histoni – tuma:** tumassa oleva proteiini, jonka ympärille DNA kiertyy. Näin muodostuu nukleosomeja, ja pitkä DNA mahtuu pieneen tilaan.\n- **Sitruunahappokierto – mitokondrio:** soluhengityksen vaihe, jossa ravinnon hiiliatomit hapettuvat hiilidioksidiksi. Samalla syntyy pelkistyneitä vedynsiirtäjiä (NADH, FADH₂), jotka vievät energian elektroninsiirtoketjuun, sekä vähän ATP:tä.\n\n**Esimerkkivastaus:** Eksosytoosi liittyy solukalvoon: solun sisällä muodostunut kalvorakkula kuljettaa eritettävän aineen, esimerkiksi ruoansulatusentsyymin, solukalvolle, sulautuu siihen ja vapauttaa sisältönsä solun ulkopuolelle energiaa kuluttaen. Glykolyysi tapahtuu solulimassa. Siinä glukoosimolekyyli pilkotaan kahdeksi pyruvaatiksi, ja energiaa sitoutuu ATP:hen. Hiilensidontareaktiot tapahtuvat viherhiukkasen sisällä. Niissä hiilidioksidi liitetään orgaanisiin yhdisteisiin ja muutetaan sokeriksi valoreaktioissa tuotetun ATP:n ja NADPH:n avulla. Histoni liittyy tumaan: histonit ovat proteiineja, joiden ympärille DNA kiertyy, jolloin DNA pakkautuu nukleosomeiksi ja kromatiiniksi. Sitruunahappokierto tapahtuu mitokondriossa. Siinä pyruvaatista peräisin olevat hiiliatomit hapetetaan hiilidioksidiksi, ja vapautuva energia siirtyy vedynsiirtäjiin ja ATP:hen.\n\n**Sudenkuoppa:** jos selität käsitteen oikein mutta liität sen väärään rakenteeseen, menetät yhdistämispisteen. Muista myös, että kukin rakenne kuuluu vain yhdelle käsitteelle.",
+     "answer": "solukalvo (eksosytoosi) · solulima (glykolyysi) · viherhiukkanen (hiilensidontareaktiot) · tuma (histoni) · mitokondrio (sitruunahappokierto)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Aineisto 4.A kertoo Karibian mangrovesoiden pohjalta löydetystä bakteerista *Thiomargarita magnifica*. Se saa energiansa rikkiyhdisteitä hapettamalla, sen yksi solu voi olla jopa 2 cm pitkä, noin 75 % solun tilavuudesta on vakuolia ja perimä (noin 11 miljoonaa emäsparia ja noin 11 000 geeniä) on ribosomien kanssa kalvojen ympäröimissä rakenteissa. Vertaa bakteerin ominaisuuksia muihin bakteereihin ja aitotumallisiin eliöihin. Voit käsitellä solun rakennetta, kokoa, perimää ja energianhankintaa.",
+     "hints": [
+      "Tee itsellesi vertailutaulukko: rivit ovat solun rakenne, koko, perimä ja energianhankinta, sarakkeet tavallinen bakteeri, *T. magnifica* ja aitotumallinen eliö. Hyvä vastaus vertaa sekä bakteereihin että aitotumallisiin.",
+      "Avainluvut ja -asiat: tavallinen bakteeri on noin 0,001–0,01 mm pitkä, joten 2 cm:n solu on noin 2 000–20 000 kertaa pidempi. Tavallisessa bakteerissa on noin 500–5 000 geeniä, joten 11 000 geeniä on hiivan kaltaisen aitotumallisen luokkaa. Rakenteeltaan bakteeri muistuttaa aitotumallisia (perimä kalvon sisällä, iso vakuoli), mutta ribosomit ovat samassa kalvorakenteessa kuin perimä. Energianhankintatapa on kemosynteesi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Rakenne:** bakteerit ovat esitumallisia, eli niiden DNA on vapaana solulimassa ilman tumakoteloa.\n- *T. magnifican* perimä on kalvojen ympäröimä kuten aitotumallisilla. Toisin kuin aitotumallisilla, samojen kalvojen sisällä ovat myös ribosomit.\n- Suuri vakuoli muistuttaa kasvisolun solunesterakkulaa, jota käytetään veden ja jätteiden varastointiin ja kasveilla nestejännityksen (turgorin) ylläpitoon.\n- Rakenteessa on siis piirteitä sekä bakteereista että aitotumallisista.\n- **Koko:** tavallinen bakteeri on noin 0,001–0,01 mm, joten *T. magnifica* on pituudeltaan tuhansia kertoja tavallisia bakteereja pidempi ja kookkaampi kuin monet aitotumalliset solut ja jopa pienet eliöt, kuten banaanikärpänen.\n- Suuressa solussa välimatkat pitenevät ja aineiden kuljetus solun sisällä vaikeutuu. Aitotumallisissa soluissa tätä helpottaa toimintojen jakaminen soluelimiin (tuma, mitokondriot jne.).\n- *T. magnifican* solu on pitkä ja kapea, joten mikään solun osa ei ole kaukana solun pinnasta.\n- **Perimä:** tavallisen bakteerin kromosomissa on noin 500–5 000 geeniä, joten *T. magnifican* noin 11 000 geeniä on moninkertainen määrä.\n- Perimän koko on samaa luokkaa kuin joillakin aitotumallisilla, esimerkiksi leivinhiivalla, mutta paljon suurempi kuin useimmilla bakteereilla.\n- **Energianhankinta:** *T. magnifica* tuottaa energiansa kemosynteesillä hapettamalla rikkiyhdisteitä, kuten monet maaperän ja syvänmeren bakteerit.\n- Aitotumalliset eliöt eivät pysty kemosynteesiin.\n- *T. magnifica* on omavarainen (autotrofi) samoin kuin eräät muut bakteerit ja yhteyttävät aitotumalliset, mutta sen energianlähde on kemiallinen eikä valo.\n\n**Esimerkkivastaus:** *Thiomargarita magnifica* on bakteeri, mutta monessa suhteessa se muistuttaa aitotumallisia eliöitä. Tavallisilla bakteereilla DNA on vapaana solulimassa, mutta *T. magnifican* perimä on kalvojen sisällä, mikä muistuttaa aitotumallisten tumaa. Erikoista on, että samojen kalvojen sisällä ovat myös ribosomit, kun taas aitotumallisilla ribosomit ovat tuman ulkopuolella. Solun keskellä on suuri vakuoli, joka muistuttaa kasvisolun solunesterakkulaa ja voi varastoida vettä ja aineita. Tavallinen bakteeri on vain 1–10 mikrometriä pitkä, joten jopa 2 cm pitkä *T. magnifica* on tuhansia kertoja suurempi ja kookkaampi kuin monet aitotumalliset solut. Suuri koko on tavallisesti ongelma, koska aineiden kuljetusmatkat pitenevät. Aitotumalliset ovat ratkaisseet tämän soluelimillä, mutta *T. magnifican* solu on pitkä ja ohut, ja vakuoli täyttää suurimman osan tilavuudesta, joten toiminnot ovat lähellä solun pintaa. Bakteerin perimässä on noin 11 000 geeniä, kun tavallisella bakteerilla niitä on muutamasta sadasta muutamaan tuhanteen, ja perimän koko vastaa leivinhiivaa. Energiansa *T. magnifica* saa kemosynteesillä hapettamalla rikkiyhdisteitä. Se on siis omavarainen kuten kasvit ja syanobakteerit, mutta ei tarvitse valoa. Kemosynteesiä esiintyy vain bakteereilla ja arkeoneilla, ei aitotumallisilla.\n\n**Sudenkuoppa:** vastaus, joka vertaa bakteeria vain muihin bakteereihin (tai vain aitotumallisiin), jää vajaaksi. Vertailu on tehtävä kumpaankin suuntaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Arvioi kolmen maankäytön toimenpiteen vaikutuksia luonnon monimuotoisuuteen ja ympäristön tilaan:\n\n1. Moottoritie rakennetaan yhtenäisen metsäalueen halki.\n2. Metsätalouden takia ojitettu suo ennallistetaan: ojat tukitaan ja ympäristön ojista ohjataan vettä suolle.\n3. Pellon ja sen vieressä virtaavan puron väliin jätetään kaista, jolla kasvaa monivuotisia kasveja, kuten heiniä ja pensaita.",
+     "hints": [
+      "Käsittele toimenpiteet erikseen. Kustakin saa enintään 6 pistettä, joten tarvitset jokaisesta useita eri vaikutuksia: vaikutukset populaatioihin ja lajeihin, aineiden kiertoon ja vesistöihin.",
+      "- Moottoritie: elinympäristön pirstoutuminen → eläinten liikkuminen ja geenivirta vaikeutuvat → geneettinen monimuotoisuus pienenee; lisäksi päästöt, melu, valo ja liikennekuolemat.\n- Ennallistus: vedenpinta nousee → puut kärsivät ja rahkasammalet ja muut suokasvit hyötyvät, hajotus hidastuu, turvetta alkaa taas kertyä (hiilinielu), metaania syntyy enemmän, ravinteiden ja humuksen huuhtoutuminen vähenee.\n- Suojakaista: eroosio, ravinteiden ja torjunta-aineiden valuminen puroon, rehevöityminen ja uusi elinympäristö."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Moottoritie:** yhtenäinen metsä pirstoutuu, ja eläinten liikkuminen alueelta toiselle vaikeutuu.\n- Yksilöiden muutto populaatioiden välillä vähenee ja geenivirta pienenee, mikä heikentää populaatioiden geneettistä monimuotoisuutta.\n- Liikenteen pakokaasut (esim. typen oksidit, hiilivedyt ja pienhiukkaset) kuormittavat ympäristöä.\n- Melu ja valosaaste häiritsevät eläimiä, ja eläimiä kuolee liikenteessä.\n- **Suon ennallistaminen:** suolajeille tyypilliset elinympäristöt palaavat, mikä lisää luonnon monimuotoisuutta sekä lajien että ekosysteemien tasolla.\n- Kun vedenpinta nousee, puusto taantuu, ja rahkasammalet ja muut suokasvit runsastuvat.\n- Märkyys hidastaa hajotusta ja lisää metaanin muodostusta.\n- Turvetta alkaa jälleen kertyä, ja suo toimii pitkäaikaisena hiilinieluna.\n- Ojien tukkiminen vähentää humuksen ja ravinteiden huuhtoutumista vesistöihin, ja suomarjojen (lakka, karpalo) sato voi kasvaa.\n- **Suojakaista pellon ja puron välissä:** monivuotinen kasvillisuus sitoo maata ja vähentää eroosiota.\n- Kaista vähentää ravinteiden ja torjunta-aineiden kulkeutumista puroon, ja kasvien biomassaan sitoutuu ravinteita.\n- Vesistön ulkoinen kuormitus pienenee, joten rehevöityminen vähenee ja vesi pysyy kirkkaampana.\n- Kaistalla voi elää niittykasveja, hyönteisiä ja lintuja, joten monimuotoisuus kasvaa.\n\n**Esimerkkivastaus:** Moottoritie pilkkoo yhtenäisen metsän pienempiin osiin. Monet eläimet eivät pysty tai uskalla ylittää tietä, joten populaatiot eristyvät toisistaan, geenivirta vähenee ja pienten populaatioiden geneettinen monimuotoisuus heikkenee. Liikenne tuottaa typen oksideja ja muita päästöjä, melua ja valoa, jotka häiritsevät eläimiä, ja eläimiä jää autojen alle. Suon ennallistaminen palauttaa ojituksen kuivattaman suon vesitalouden. Kun vedenpinta nousee, puusto taantuu ja rahkasammalet ja muut suokasvit valtaavat alaa, joten suolajien elinympäristöt palautuvat ja monimuotoisuus kasvaa. Märässä turpeessa hajotus hidastuu, joten turvetta alkaa taas kertyä ja suo sitoo hiiltä pitkäksi aikaa, vaikka metaania vapautuu enemmän. Samalla humuksen ja ravinteiden huuhtoutuminen alapuolisiin vesiin vähenee. Pellon ja puron väliin jätetty kasvillisuuskaista toimii suojavyöhykkeenä. Juuret sitovat maata ja vähentävät eroosiota, ja kasvit ottavat talteen pellolta valuvia ravinteita. Siksi puroon päätyy vähemmän typpeä, fosforia ja torjunta-aineita, ja vesistön rehevöityminen hidastuu. Kaista on myös elinympäristö hyönteisille, linnuille ja niittykasveille.\n\n**Sudenkuoppa:** älä keskity vain yhteen toimenpiteeseen. Yhdestä kohdasta saa enintään 6 pistettä, joten täysiin pisteisiin tarvitaan kaikki kolme.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Aineistossa 6.A on kevätvehnälle käytettävän lannoitteen ravinnekoostumus (ks. alkuperäinen taulukko): typpi on siinä ammonium- ja nitraattimuodossa, ja fosforista pieni osa ei liukene veteen. Selitä, miten vehnän juuret ottavat lannoitetusta maasta typpeä (N) ja fosforia (P).",
+     "hints": [
+      "Missä ionimuodossa kasvi ottaa typen ja fosforin? Mieti myös, mistä muualta kuin lannoitteesta kasvi saa niitä maassa ja miten ionit pääsevät juurisoluun.",
+      "Typpi otetaan ammonium- ($\\ce{NH4+}$) ja nitraatti-ioneina ($\\ce{NO3-}$) ja fosfori fosfaattina ($\\ce{PO4^3-}$), aina veteen liuenneina. Lannoitteen liukenematon fosfori ei ole heti käytettävissä. Maaperän mikrobit vapauttavat orgaanisesta aineksesta typpeä ja fosforia ja sitovat ilman typpeä. Ionit kulkevat juurisolujen solukalvon läpi kuljetusproteiinien avulla."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lannoitteessa typpi ja fosfori ovat kasville käyttökelpoisessa muodossa.\n- Kasvi ottaa typpeä ammoniumina ($\\ce{NH4+}$) ja nitraattina ($\\ce{NO3-}$).\n- Fosfori otetaan fosfaattina ($\\ce{PO4^3-}$).\n- Ravinteet otetaan veteen liuenneina ioneina. Lannoitteen veteen liukenematonta fosforia kasvi ei pysty käyttämään suoraan.\n- Maaperän hajottajat muuttavat orgaanisia typpiyhdisteitä ammoniumiksi ja orgaanisia fosforiyhdisteitä fosfaatiksi.\n- Maassa voi olla typensitojabakteereja, jotka muuttavat ilman typpikaasua ($\\ce{N2}$) kasville käyttökelpoiseen muotoon.\n- Ionit kulkevat juurisolun solukalvon läpi ionikanavien ja ionipumppujen avulla.\n\n**Esimerkkivastaus:** Lannoitteen typpi on ammonium- ja nitraatti-ioneina ja fosfori pääosin vesiliukoisena fosfaattina, eli juuri niissä muodoissa, joita kasvi pystyy käyttämään. Kun lannoite liukenee maan veteen, vehnän juuret ottavat ionit maavedestä. Ionit kulkevat juurisolujen solukalvon läpi kuljetusproteiinien, kuten ionikanavien ja energiaa kuluttavien pumppujen, avulla. Lannoitteen pieni veteen liukenematon fosforiosuus ei ole heti kasvin käytettävissä. Lannoitteen lisäksi vehnä saa typpeä ja fosforia maaperän mikrobeilta: hajottajat pilkkovat kuollutta eloperäistä ainesta ja vapauttavat siitä ammoniumia ja fosfaattia, ja typensitojabakteerit voivat muuttaa ilman typpikaasua ammoniumiksi.\n\n**Sudenkuoppa:** fosforin ionimuoto unohtuu helposti. Pelkkä toteamus, että kasvi ottaa ravinteita juurilla, ei tuo pisteitä ilman ionimuotoja ja kulkeutumistapaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 5,
+     "prompt": "Mihin biomolekyyleihin kasvisolu tarvitsee typpeä ja mihin fosforia? Selitä.",
+     "hints": [
+      "Käy läpi biomolekyyliryhmät (hiilihydraatit, lipidit, proteiinit ja nukleiinihapot) sekä energiaa ja vetyä siirtävät molekyylit. Missä on aminoryhmiä tai typpiemäksiä, missä fosfaattiryhmiä?",
+      "Typpeä on jokaisen aminohapon aminoryhmässä ja siten proteiineissa sekä nukleotidien typpiemäksissä. Fosforia on nukleotidien fosfaattiryhmissä. Mieti vielä, mikä fotosynteesin väriaine sisältää typpeä, mikä kalvojen rakennusaine sisältää fosforia ja mitkä energiaa ja elektroneja kuljettavat molekyylit ovat nukleotidijohdannaisia."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Typpi:** tärkein kohde ovat proteiinit, sillä jokaisessa aminohapossa on typpeä (aminoryhmä).\n- Typpeä on lehtivihreässä.\n- Typpeä on myös nukleiinihappojen emäksissä, ATP:ssä ja vedynsiirtäjissä (NADH, NADPH).\n- **Fosfori:** fosforia on nukleiinihappojen (DNA, RNA) fosfaattiryhmissä.\n- Fosforia on ATP:ssä (myös ADP:ssä ja AMP:ssä), vedynsiirtäjissä ja solukalvojen fosfolipideissä.\n- Fosforia käytetään myös proteiinien toiminnan säätelyyn, kun niihin liitetään fosfaattiryhmä (fosforylaatio).\n\n**Esimerkkivastaus:** Kasvi käyttää typpeä ennen kaikkea proteiineihin, koska jokaisessa aminohapossa on typpeä sisältävä aminoryhmä. Entsyymit, kuljetusproteiinit ja rakenneproteiinit vaativat siis kaikki typpeä. Typpeä on myös lehtivihreässä, joten typen puute näkyy lehtien kellastumisena. Lisäksi nukleotidien emäkset sisältävät typpeä, joten sitä on DNA:ssa, RNA:ssa, ATP:ssä ja vedynsiirtäjissä. Fosforia on nukleotidien fosfaattiryhmissä, eli sitä tarvitaan DNA:n ja RNA:n rakentamiseen sekä energiaa siirtävään ATP:hen ja vedynsiirtäjiin NADPH ja NADH. Solukalvojen fosfolipidit sisältävät fosforia, ja fosfaattiryhmien liittäminen proteiineihin on tavallinen tapa säädellä entsyymien toimintaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 4,
+     "prompt": "Mihin kasvi käyttää kaliumia (K) ja rikkiä (S)? Perustele, miksi niitä lisätään lannoitteeseen.",
+     "hints": [
+      "Kalium on kasvissa liuenneena ionina: mieti osmoosia ja solukalvon sähköistä varausta. Rikki on osa kahta aminohappoa: millaisia sidoksia se muodostaa proteiineissa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Kalium** on pääravinne, jota kasvi tarvitsee kasvuun runsaasti.\n- Kalium on soluissa ionina ($\\ce{K+}$) liuenneena solulimaan.\n- Kaliumionit vaikuttavat osmoosiin ja siten solujen nestejännitykseen sekä kalvojännitteeseen (esim. ilmarakojen avautuminen perustuu kaliumionien siirtoon).\n- **Rikki** on osa aminohappoja kysteiini ja metioniini, joten sitä on proteiineissa.\n- Kysteiinien väliset rikkisillat lujittavat proteiinien rakennetta.\n- Rikkiä tarvitaan myös lipidien valmistukseen ja biokemiallisten reaktioiden säätelyyn.\n\n**Esimerkkivastaus:** Kalium on yksi kasvin pääravinteista. Se ei rakenna biomolekyylejä, vaan on soluissa liuenneena kaliumioneina, jotka ylläpitävät osmoottista painetta ja siten solujen nestejännitystä. Kaliumionit vaikuttavat myös solukalvon sähköiseen varaukseen, ja niiden siirtyminen sulkusoluihin avaa ilmarakoja. Rikkiä kasvi tarvitsee pienempiä määriä proteiinien rakentamiseen, sillä aminohapot kysteiini ja metioniini sisältävät rikkiä. Kysteiinien väliset rikkisillat pitävät proteiinin kolmiulotteisen rakenteen koossa. Rikkiä käytetään myös lipidien valmistuksessa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 11,
+     "prompt": "Selitä, mitä reittiä ulkoilman happi kulkee ihmisen elimistön soluihin ja miten se siirtyy kussakin vaiheessa.",
+     "hints": [
+      "Seuraa happimolekyylin matkaa vaihe vaiheelta: sisäänhengityksen mekaniikka → hengitystiet → keuhkorakkulat → veri → kudokset → solun käyttö. Uloshengityksestä ei saa pisteitä.",
+      "Avainsanat: pallea ja ulommat kylkivälilihakset supistuvat → rintaontelo laajenee → alipaine; nenä tai suu → henkitorvi → keuhkoputket → keuhkorakkulat; diffuusio osapaine-eron mukaan; keuhkolaskimo → sydän → iso verenkierto; hemoglobiini punasoluissa; diffuusio kudoksiin; soluhengitys."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hengityslihasten (pallea ja ulommat kylkivälilihakset) supistuminen laajentaa rintaonteloa.\n- Keuhkoihin syntyy alipaine, ja ilmaa virtaa sisään.\n- Ilma kulkee nenä- tai suuontelon kautta henkitorveen.\n- Henkitorvesta ilma jatkaa keuhkoputkia pitkin keuhkoihin ja niissä keuhkorakkuloihin (alveoleihin).\n- Keuhkorakkuloissa happi siirtyy diffuusiolla hiussuonten vereen korkeammasta osapaineesta matalampaan.\n- Hapekas veri kulkee keuhkolaskimoita pitkin sydämeen ja sieltä ison verenkierron kautta muualle elimistöön.\n- Veressä happi kulkee pääosin punasolujen hemoglobiiniin sitoutuneena.\n- Kudoksissa happi siirtyy diffuusiolla hiussuonista soluihin.\n- Soluissa happea käytetään soluhengityksessä (mitokondrioiden elektroninsiirtoketjussa).\n\n**Esimerkkivastaus:** Kun pallea ja ulommat kylkivälilihakset supistuvat, rintaontelo laajenee ja keuhkoihin syntyy alipaine, joten ilmaa virtaa sisään. Ilma kulkee nenän tai suun kautta nieluun ja henkitorveen, joka haarautuu keuhkoputkiksi. Keuhkoputket haarautuvat yhä pienemmiksi, kunnes ilma päätyy keuhkorakkuloihin. Rakkuloiden ohuen seinämän ympärillä on tiheä hiussuoniverkosto. Koska hapen osapaine on rakkulassa suurempi kuin laskimoverestä tulevassa veressä, happi diffundoituu vereen. Veressä happi sitoutuu punasolujen hemoglobiiniin. Hapekas veri virtaa keuhkolaskimoita pitkin sydämen vasempaan eteiseen ja kammioon, josta se pumpataan aortan kautta koko elimistöön. Kudosten hiussuonissa hemoglobiini luovuttaa happea, ja happi diffundoituu soluihin, joissa osapaine on pienempi. Soluissa happea käytetään mitokondrioissa soluhengityksessä, jossa se toimii elektroninsiirtoketjun viimeisenä elektronien vastaanottajana.\n\n**Sudenkuoppa:** uloshengityksen ja hiilidioksidin kulun kuvaaminen ei tuo pisteitä. Keskity hapen reittiin sisään ja soluihin asti.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 4,
+     "prompt": "Aineiston 7.A taulukossa on ilmanpaine sekä hapen osapaine ulkoilmassa, keuhkorakkuloissa ja laskimoveressä merenpinnan tasolla ja 4 500 metrin korkeudessa. Pohdi, miten korkean vuoriston olot vaikuttavat vuorikiipeilijän hengitykseen.",
+     "hints": [
+      "Laske taulukosta hapen osapaine-ero keuhkorakkuloiden ja laskimoveren välillä kummallakin korkeudella, sillä ero ajaa diffuusiota. Mieti sitten, miten elimistö reagoi lyhyellä ja pitkällä aikavälillä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Korkealla ilmanpaine on pienempi kuin merenpinnan tasolla (4 500 metrissä noin 35 % pienempi), eli ilma on ohutta.\n- Mitä ylempänä ollaan, sitä pienempi on hapen osapaine ulkoilmassa (4 500 metrissä noin 45 % pienempi kuin merenpinnalla).\n- Hapen osapaine-ero keuhkorakkuloiden ja laskimoveren välillä kutistuu noin 8,7 kPa:sta noin 2,0 kPa:iin, joten happea diffundoituu vereen hitaammin.\n- Elimistön on siksi vaikeampi saada kudoksiin tarpeeksi happea.\n- Elimistö yrittää korvata puutetta kiihdyttämällä hengitystä.\n- Tiheä hengitys voi järkyttää veren happi–hiilidioksiditasapainoa.\n- Pitkässä oleskelussa punasolujen määrä ja hemoglobiinipitoisuus kasvavat, mikä parantaa hapensaantia.\n\n**Esimerkkivastaus:** Korkealla vuoristossa ilmanpaine on pienempi, joten jokaisessa sisäänhengityksessä saadaan vähemmän happimolekyylejä. Aineiston mukaan hapen osapaine on 4 500 metrissä noin 45 % pienempi kuin merenpinnalla, ja myös keuhkorakkuloissa se on alhainen. Hapen siirtyminen vereen perustuu diffuusioon, jota ajaa osapaine-ero. Keuhkorakkuloiden ja laskimoveren välinen ero on merenpinnalla noin 8,7 kPa, mutta 4 500 metrissä vain noin 2 kPa, joten veri hapettuu huonommin. Kiipeilijän elimistö yrittää korjata tilannetta hengittämällä tiheämmin ja syvemmin, ja syke nousee. Kiihtynyt hengitys poistaa samalla hiilidioksidia, mikä voi järkyttää veren happamuutta ja happi–hiilidioksiditasapainoa. Jos kiipeilijä oleskelee vuoristossa pitkään, elimistö tuottaa lisää punasoluja ja hemoglobiinia, jolloin veri pystyy kuljettamaan enemmän happea.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 6,
+     "prompt": "Selitä lyhyesti lähetti-RNA:n (mRNA) ja siirtäjä-RNA:n (tRNA) tehtävät proteiinisynteesissä.",
+     "hints": [
+      "Jaa vastaus transkriptioon ja translaatioon: missä kumpikin RNA syntyy tai toimii ja mitä se kuljettaa?",
+      "mRNA syntyy tumassa DNA:n mallijuosteen perusteella ensin esiaste-RNA:na, joka silmukoidaan. Se vie geenin tiedon solulimaan ribosomille, jossa se luetaan kolmen emäksen jaksoina. tRNA tuo aminohapon ribosomille, ja sen antikodoni pariutuu mRNA:n kodonin kanssa, jolloin aminohappo liitetään kasvavaan ketjuun."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Lähetti-RNA syntyy tumassa transkriptiossa DNA:n mallijuosteen emäsjärjestyksen perusteella.\n- Aluksi syntyy esiaste-RNA, josta silmukoinnissa muodostuu valmis lähetti-RNA.\n- Lähetti-RNA kuljettaa geenin tiedon tumasta solulimaan.\n- Translaatiossa ribosomi lukee lähetti-RNA:ta kolmen emäksen jaksoina eli kodoneina.\n- Siirtäjä-RNA:han on kiinnittynyt aminohappo, jonka se tuo ribosomille.\n- Siirtäjä-RNA:n antikodoni pariutuu lähetti-RNA:n vastaavan kodonin kanssa.\n- Aminohappo liitetään kasvavaan aminohappoketjuun.\n\n**Esimerkkivastaus:** Lähetti-RNA:n tehtävä on siirtää geenin tieto DNA:lta ribosomille. Tumassa RNA-polymeraasi valmistaa DNA:n mallijuosteen mukaan esiaste-RNA:n, josta silmukoinnissa poistetaan intronit, jolloin saadaan valmis lähetti-RNA. Se kulkee tumahuokosten kautta solulimaan ribosomille. Translaatiossa ribosomi lukee lähetti-RNA:ta kodoni kerrallaan. Siirtäjä-RNA:t tuovat ribosomille aminohappoja: kuhunkin siirtäjä-RNA:han on kiinnittynyt tietty aminohappo, ja sen antikodoni pariutuu vastaavan kodonin kanssa. Näin aminohapot liittyvät ketjuun lähetti-RNA:n määräämässä järjestyksessä.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 9,
+     "prompt": "Soluissa on myös mikro-RNA:ta, ja RNA-virusten perimä on RNA:ta. Pohdi, miten mikro-RNA:n ja RNA-viruksen perimän emäsjärjestys vaikuttaa proteiinisynteesiin.",
+     "hints": [
+      "Käsittele kaksi asiaa erikseen. Mikro-RNA: kuinka pitkä se on, mihin se tarttuu emäspariutumalla ja mitä siitä seuraa? RNA-virus: mitä viruksen RNA koodaa ja kenen ribosomeilla se luetaan?",
+      "Mikro-RNA (noin 20–22 nukleotidia, geenit tumassa) pariutuu sille komplementaarisen lähetti-RNA:n kanssa. Silloin lähetti-RNA hajotetaan tai se ei pääse ribosomille, ja proteiinia syntyy vähemmän. Virukset: positiivinen yksijuosteinen RNA toimii suoraan lähetti-RNA:na, negatiivinen on ensin kopioitava, ja retrovirus tekee käänteiskopioijaentsyymillä DNA:ta, joka liitetään isännän perimään. Virus valjastaa isäntäsolun proteiinisynteesin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Mikro-RNA** on lyhyt RNA-molekyyli (noin 20–22 nukleotidia), ja sitä koodaavat geenit ovat tumassa.\n- Ne säätelevät proteiinisynteesiä.\n- Mikro-RNA tarttuu tiettyyn lähetti-RNA:han, jos niiden emäsjärjestykset ovat toisiaan vastaavat (komplementaariset).\n- Silloin lähetti-RNA ei pääse sitoutumaan ribosomiin tai se hajotetaan.\n- Kyseisen proteiinin synteesi estyy tai hidastuu.\n- **RNA-viruksen** perimän emäsjärjestys koodaa viruksen proteiineja, jotka valmistetaan isäntäsolussa.\n- Positiivisen yksijuosteisen RNA-viruksen perimää ribosomi voi lukea sellaisenaan kuten lähetti-RNA:ta.\n- Negatiivisen yksijuosteisen RNA-viruksen perimästä on ensin tehtävä lähetti-RNA-kopio.\n- Retroviruksen käänteiskopioijaentsyymi valmistaa RNA:sta DNA:ta, joka liitetään isäntäsolun perimään.\n- Virus valjastaa isäntäsolun proteiinisynteesin tuottamaan omia proteiinejaan, ja perimään liittyminen voi häiritä solun omaa proteiinisynteesiä.\n\n**Esimerkkivastaus:** Mikro-RNA:t ovat noin parinkymmenen nukleotidin mittaisia RNA-molekyylejä, joiden geenit ovat tumassa. Ne eivät koodaa proteiineja, vaan säätelevät muiden geenien ilmentymistä. Kun mikro-RNA:n emäsjärjestys on komplementaarinen jonkin lähetti-RNA:n jakson kanssa, mikro-RNA pariutuu sen kanssa. Tällöin lähetti-RNA joko hajotetaan tai ribosomi ei pääse lukemaan sitä, joten vastaavan proteiinin tuotanto hidastuu tai loppuu. RNA-viruksen perimän emäsjärjestys taas sisältää ohjeet viruksen omien proteiinien valmistamiseen. Virus käyttää isäntäsolun ribosomeja, siirtäjä-RNA:ita ja aminohappoja, joten solu alkaa tuottaa viruksen proteiineja. Jos viruksen perimä on positiivista yksijuosteista RNA:ta, ribosomi voi lukea sitä sellaisenaan. Negatiivisen juosteen viruksen on ensin kopioitava perimänsä lähetti-RNA:ksi. Retrovirukset, kuten HI-virus, kopioivat RNA:nsa käänteiskopioijaentsyymillä DNA:ksi, joka liitetään isännän kromosomiin. Tällöin isäntäsolu tuottaa viruksen proteiineja pitkään, ja liittyminen voi häiritä solun omien geenien toimintaa.\n\n**Sudenkuoppa:** vastauksesta jää helposti puuttumaan tehtävän ydin eli emäsjärjestyksen merkitys. Kerro, että mikro-RNA:n vaikutus perustuu emästen pariutumiseen ja viruksen RNA:n emäsjärjestys koodaa proteiineja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Hyönteislajeja arvioidaan olevan maailmassa 6–10 miljoonaa, joista vain noin miljoona tunnetaan. Hyönteisiä elää lähes kaikkialla.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 5,
+     "prompt": "Tunnista viiden kuvan hyönteiset (ks. alkuperäiset kuvat 9.1.1–9.1.5). Vaihtoehdot ovat 9.1.1 neitoperhonen, nokkosperhonen tai sitruunaperhonen; 9.1.2 ampiainen, mehiläinen tai kimalainen; 9.1.3 leppäkerttu, kovakuoriainen tai torakka; 9.1.4 banaanikärpänen, sokeritoukka tai paarma; 9.1.5 heinäsirkka, vesimittari tai sudenkorento.",
+     "hints": [
+      "Katso lajien tuntomerkkejä: siipien värit ja kuviot, karvaisuus, ruumiin muoto, tuntosarvien pituus, silmien väri ja takajalkojen koko.",
+      "- 9.1.1: siivissä on suuret silmää muistuttavat täplät.\n- 9.1.2: pullea, tiheäkarvainen ja raidallinen pistiäinen.\n- 9.1.3: litteä ruskea hyönteinen, jolla on pitkät tuntosarvet.\n- 9.1.4: pieni kärpänen, jolla on punaiset silmät.\n- 9.1.5: pitkät, vahvat hyppyjalat."
+     ],
+     "solution": "Vaihtoehtojen kirjaimet ovat alkuperäisen järjestyksen mukaiset (A = ylin).\n\n- **9.1.1 A, neitoperhonen:** siipien kulmissa ovat tunnusomaiset silmätäplät.\n- **9.1.2 C, kimalainen:** pullea ja karvainen, toisin kuin kapeavyötäröinen ampiainen.\n- **9.1.3 C, torakka:** litteä ruumis ja pitkät tuntosarvet (metsätorakka).\n- **9.1.4 A, banaanikärpänen:** pieni kärpänen, jolla on kirkkaanpunaiset silmät.\n- **9.1.5 A, heinäsirkka:** pitkät hyppyjalat ja pitkät tuntosarvet.\n\n**Sudenkuoppa:** torakka on helppo sekoittaa kovakuoriaiseen. Kovakuoriaisella on kovat peitinsiivet ja yleensä lyhyemmät tuntosarvet.",
+     "answer": "9.1.1 A neitoperhonen · 9.1.2 C kimalainen · 9.1.3 C torakka · 9.1.4 A banaanikärpänen · 9.1.5 A heinäsirkka",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 4,
+     "prompt": "Neljä monivalintaa hyönteisistä: aikuisen hyönteisen raajojen määrä (4–8), hyönteisten lähimmät sukulaiset (piikkinahkaiset, hämähäkkieläimet, nilviäiset, nivelmadot tai selkärankaiset), elinympäristö, josta hyönteiset puuttuvat (sademetsät, valtamerten syvänteet, tunturit, aavikot tai ihmisten kodit), ja hyönteisille tyypillinen piirre (keuhkot, tuntosarvet, tasalämpöisyys, sisäinen tukiranka tai hampaat).",
+     "hints": [
+      "Hyönteiset ovat niveljalkaisia: mieti niiden ruumiinrakennetta (kolme ruumiinosaa, ulkoinen tukiranka, ilmaputkihengitys) ja sitä, mikä vaihtoehtojen ryhmä kuuluu samaan pääjaksoon. Yksi elinympäristö on hyönteisille lähes täysin tavoittamaton."
+     ],
+     "solution": "Vaihtoehtojen kirjaimet ovat alkuperäisen järjestyksen mukaiset (A = ylin).\n\n- **9.2.1 C, 6 raajaa:** hyönteisellä on kolme jalkaparia keskiruumiissa.\n- **9.2.2 B, hämähäkkieläimet:** ne ovat vaihtoehdoista ainoat niveljalkaiset. (Molekyylitutkimusten mukaan äyriäiset ovat vielä läheisempiä, mutta ne eivät olleet vaihtoehtona.)\n- **9.2.3 B, valtamerten syvänteet:** hyönteisiä on lähes kaikkialla maalla ja makeissa vesissä, mutta meressä, varsinkin syvänteissä, niitä ei juuri ole.\n- **9.2.4 B, tuntosarvet:** hyönteisillä on yksi pari tuntosarvia. Ne hengittävät ilmaputkilla eivätkä keuhkoilla, ovat vaihtolämpöisiä, niillä on ulkoinen tukiranka eikä niillä ole hampaita.",
+     "answer": "9.2.1 C (6 raajaa) · 9.2.2 B (hämähäkkieläimet) · 9.2.3 B (valtamerten syvänteet) · 9.2.4 B (tuntosarvet)",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 11,
+     "prompt": "Pohdi hyönteisten merkitystä ravintoverkoissa sekä niiden hyötyjä ja haittoja ihmiselle.",
+     "hints": [
+      "Jaa vastaus kahteen osaan, joista kummastakin saa enintään 6 p: rooli ravintoverkoissa eri trofiatasoilla ja merkitys ihmiselle (sekä hyödyt että haitat). Punkit ja hämähäkit eivät ole hyönteisiä.",
+      "Ravintoverkko: pölyttäjät, kasvinsyöjät, puun, raatojen ja lannan hajottajat, petohyönteiset, loiset ja saaliseläimet muille. Ihminen: viljelykasvien pölytys ekosysteemipalveluna, biologinen torjunta, proteiinipitoinen ravinto, hunaja, vaha ja silkki, tutkimus (banaanikärpänen), rikostutkinta; haitat: tuholaiset pelloilla, varastoissa, vaatteissa ja metsissä, tautien levittäjät (esim. malaria) sekä pistot ja allergiat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Ravintoverkoissa** hyönteiset toimivat usealla trofiatasolla.\n- Ne pölyttävät kasveja ja auttavat niitä lisääntymään.\n- Monet hyönteiset ovat kasvinsyöjiä.\n- Osa hyönteisistä käyttää ravinnokseen kuollutta puuta, raatoja tai lantaa, mikä nopeuttaa hajotusta.\n- Petohyönteiset syövät pieniä eläimiä, kuten toisia hyönteisiä, ja osa hyönteisistä on loisia.\n- Aikuiset hyönteiset ja toukat ovat saalista monille eläimille, kuten linnuille, kaloille ja sammakoille.\n- **Hyödyt ihmiselle:** hyönteiset pölyttävät viljelykasveja, mikä on tärkeä ekosysteemipalvelu.\n- Hyönteisiä käytetään tuholaisten biologisessa torjunnassa.\n- Hyönteiset sisältävät paljon proteiinia, joten niistä voi tulla tärkeää ihmisravintoa.\n- Hyönteiset tuottavat hunajaa, mehiläisvahaa ja silkkiä.\n- Hyönteisiä, erityisesti banaanikärpästä, käytetään tutkimuksessa, ja raadonsyöjähyönteisistä on apua kuolinsyytutkinnassa. Jotkut pitävät hyönteisiä lemmikkeinä.\n- **Haitat:** tuhohyönteiset vahingoittavat viljelykasveja, elintarvikkeita, vaatteita sekä metsiä ja puurakenteita.\n- Verta imevät hyönteiset levittävät ihmisten ja kotieläinten tauteja (esim. malaria, unitauti, pilkkukuume) ja toimivat loisten väli-isäntinä.\n- Hyönteisten pistot voivat aiheuttaa allergisia reaktioita.\n- Lajiesimerkit (esim. mehiläinen, hyttynen, kirjanpainaja) tekevät vastauksesta havainnollisen.\n\n**Esimerkkivastaus:** Hyönteiset ovat ravintoverkoissa monella tasolla. Kasvinsyöjät, kuten perhostoukat ja kirvat, siirtävät tuottajien energiaa eteenpäin, ja hyönteiset ja niiden toukat ovat tärkeää ravintoa linnuille, kaloille, sammakoille ja lepakoille. Petohyönteiset, kuten leppäkertut ja sudenkorennot, syövät muita hyönteisiä, ja loispistiäiset kehittyvät toisten hyönteisten sisällä. Pölyttäjät, kuten mehiläiset ja kimalaiset, mahdollistavat monien kasvien lisääntymisen. Raatoja, lantaa ja kuollutta puuta syövät hyönteiset pilkkovat eloperäistä ainesta ja nopeuttavat hajotusta ja ravinteiden kiertoa. Ihmiselle hyönteisten suurin hyöty on viljelykasvien pölytys. Lisäksi mehiläiset tuottavat hunajaa ja vahaa ja silkkiperhosen toukat silkkiä. Petohyönteisiä käytetään kasvihuoneissa tuholaisten biologisessa torjunnassa, banaanikärpänen on genetiikan tärkeä mallieliö, ja hyönteiset ovat proteiinipitoista ruokaa. Toisaalta tuhohyönteiset, kuten kirjanpainaja tai viljavarastojen kuoriaiset, aiheuttavat suuria taloudellisia vahinkoja, ja koit syövät vaatteita. Hyttyset levittävät malariaa, ja ampiaisen pisto voi aiheuttaa vakavan allergisen reaktion.\n\n**Sudenkuoppa:** punkit ja hämähäkit eivät ole hyönteisiä, joten niihin perustuvat esimerkit eivät tuo pisteitä. Muista käsitellä sekä hyödyt että haitat.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Hormonit ovat umpirauhasten erittämiä viestiaineita, jotka muuttavat tiettyjen kohdesolujen aineenvaihduntaa ja säätelevät siten elimistön toimintaa.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 9,
+     "prompt": "Kuvassa 10.A on merkitty ihmisen umpirauhasia: aivolisäke, kilpirauhanen, lisämunuainen, haima ja munasarja (ks. alkuperäinen kuva). Valitse näistä kolme, nimeä kustakin yksi sen erittämä hormoni ja kuvaile lyhyesti, millaisia muutoksia aineenvaihdunnassa hormoni saa aikaan.",
+     "hints": [
+      "Kustakin rauhasesta saa hormonin nimestä 1 p ja vaikutuksesta 2 p. Valitse rauhaset, joiden hormonin aineenvaihduntavaikutuksen tunnet parhaiten, ja nimeä kustakin vain yksi hormoni, koska vain ensimmäinen arvostellaan.",
+      "Esimerkiksi haima – insuliini, kilpirauhanen – tyroksiini ja lisämunuainen – adrenaliini tai kortisoli. Kerro jokaisesta kaksi asiaa: mihin kudokseen tai aineeseen hormoni vaikuttaa ja mihin suuntaan (esim. verensokeri, glykogeenivarastot, perusaineenvaihdunta, lämmöntuotto)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kolme oikeaa rauhanen–hormoni-paria (1 p kukin) ja kunkin hormonin aineenvaihduntavaikutus (2 p kukin).\n- **Aivolisäke:** kasvuhormoni lisää valkuaisaineiden valmistusta ja solujen jakautumista ja vapauttaa rasvaa energiaksi. ADH lisää veden takaisinimeytymistä munuaisissa. Follitropiini ja lutropiini säätelevät sukurauhasten toimintaa.\n- **Kilpirauhanen:** tyroksiini kiihdyttää perusaineenvaihduntaa, solujen hapenkulutusta ja lämmöntuottoa. Kalsitoniini vähentää veren kalsiumpitoisuutta ohjaamalla kalsiumia luustoon.\n- **Lisämunuainen:** adrenaliini (ja noradrenaliini) vapauttaa glukoosia maksan glykogeenista ja rasvahappoja rasvakudoksesta. Kortisoli lisää glukoosin muodostusta maksassa ja nostaa verensokeria. Aldosteroni lisää natriumin takaisinottoa munuaisissa.\n- **Haima:** insuliini lisää glukoosin ottoa soluihin ja glykogeenin ja rasvan muodostusta, joten verensokeri laskee. Glukagoni hajottaa maksan glykogeenia glukoosiksi, joten verensokeri nousee.\n- **Munasarja:** estrogeeni lisää kohdun limakalvon kasvua ja naisen sukupuoliominaisuuksien kehitystä ja vaikuttaa rasvan kertymiseen. Progesteroni (keltarauhashormoni) valmistaa kohdun limakalvoa raskautta varten.\n\n**Esimerkkivastaus:** Haima erittää insuliinia, kun verensokeri nousee aterian jälkeen. Insuliini lisää lihas- ja rasvasolujen glukoosinottoa ja edistää glykogeenin muodostumista maksassa ja lihaksissa sekä rasvan varastoitumista, joten veren glukoosipitoisuus laskee. Kilpirauhanen erittää tyroksiinia, joka kiihdyttää lähes kaikkien solujen aineenvaihduntaa: solut kuluttavat enemmän happea ja ravintoaineita, ja lämmöntuotto kasvaa. Lisämunuaisen ydinosa erittää stressitilanteessa adrenaliinia, joka hajottaa maksan glykogeenia glukoosiksi ja vapauttaa rasvahappoja rasvakudoksesta, jolloin lihakset saavat nopeasti energiaa.\n\n**Sudenkuoppa:** jos nimeät samasta rauhasesta useita hormoneja, vain ensimmäinen arvostellaan. Jos hormoni liitetään väärään rauhaseen, vaikutuksen kuvauksesta ei saa pisteitä.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 8,
+     "prompt": "Vesi- ja rasvaliukoiset hormonit kulkevat verenkierrossa rauhasesta kohdesoluihin, joissa niiden reseptorit ovat. Selitä, miten niiden kuljetus veressä eroaa, ja vertaa näiden hormonityyppien reseptorien toimintaa kohdesolussa.",
+     "hints": [
+      "Mieti liukoisuutta: kumpi liukenee veriplasmaan sellaisenaan ja kumpi tarvitsee kantajan? Kumpi pääsee solukalvon lipidikaksoiskerroksen läpi?",
+      "Rasvaliukoiset hormonit (steroidit, kilpirauhashormoni) kulkevat plasmassa kuljettajaproteiineihin, kuten albumiiniin, sitoutuneina, läpäisevät solukalvon diffuusiolla ja sitoutuvat solulimassa tai tumassa olevaan reseptoriin. Vesiliukoiset hormonit (peptidit, adrenaliini) kulkevat plasmaan liuenneina eivätkä läpäise solukalvoa, vaan sitoutuvat solukalvon reseptoriin, joka käynnistää toisiolähetin välittämän ketjureaktion."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Kuljetus veressä:** rasvaliukoiset hormonit sitoutuvat kuljettajaproteiineihin, esimerkiksi albumiiniin, ja kulkevat niihin sitoutuneina veriplasmassa.\n- Vesiliukoiset hormonit kulkevat plasmaan liuenneina.\n- **Reseptorit:** rasvaliukoiset hormonit pääsevät solukalvon läpi diffuusiolla.\n- Rasvaliukoisen hormonin reseptori sijaitsee solun sisällä, solulimassa tai tumassa.\n- Vesiliukoinen hormoni ei läpäise solukalvoa, joten sen reseptori on solukalvolla.\n- Kun vesiliukoinen hormoni sitoutuu reseptoriinsa, solussa käynnistyy ketjureaktio, jossa muodostuu toisiolähetti (esim. cAMP).\n- Toisiolähetti välittää viestin solun sisällä.\n\n**Esimerkkivastaus:** Rasvaliukoiset hormonit, kuten steroidihormonit, eivät liukene veteen, joten ne kulkevat veressä kuljettajaproteiineihin, esimerkiksi albumiiniin, sitoutuneina. Vesiliukoiset hormonit, kuten insuliini ja muut peptidihormonit, kulkevat liuenneina veriplasmassa. Kohdesolussa ero jatkuu. Rasvaliukoinen hormoni läpäisee solukalvon lipidikaksoiskerroksen diffuusiolla ja sitoutuu solulimassa tai tumassa olevaan reseptoriin. Vesiliukoinen hormoni taas ei pääse kalvon läpi, vaan se sitoutuu solukalvon pinnalla olevaan reseptoriin. Reseptori muuttaa muotoaan ja käynnistää solun sisällä ketjureaktion, jossa syntyy toisiolähetti, esimerkiksi syklinen AMP. Toisiolähetti välittää viestin eteenpäin solun sisällä, joten hormoni itse jää solun ulkopuolelle.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 3,
+     "prompt": "Hormonin vaikutus näkyy kohdesolussa aineenvaihdunnan muutoksena. Selitä, miten hormoni saa muutoksen aikaan.",
+     "hints": [
+      "Aineenvaihduntaa ohjaavat entsyymit. Hormoni voi muuttaa joko entsyymien määrää geenien ilmentymisen kautta tai jo olemassa olevien entsyymien aktiivisuutta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hormoni säätelee geenien toimintaa toimimalla (reseptorinsa kanssa) säätelytekijänä eli transkriptiotekijänä geenin säätelyalueella.\n- Hormoni voi joko lisätä tai vähentää geenin ilmentymistä.\n- Tämä muuttaa translaatiossa syntyvän proteiinin, esimerkiksi entsyymin, määrää.\n- Lisäksi hormoni voi muuttaa valmiiksi solussa olevien entsyymien aktiivisuutta tai avata esimerkiksi ionikanavia.\n\n**Esimerkkivastaus:** Solun aineenvaihduntaa ohjaavat entsyymit, joten hormoni muuttaa aineenvaihduntaa muuttamalla entsyymien määrää tai toimintaa. Esimerkiksi steroidihormoni sitoutuu reseptoriinsa, ja kompleksi toimii tumassa transkriptiotekijänä, joka käynnistää tai hiljentää tiettyjä geenejä. Silloin entsyymiä syntyy enemmän tai vähemmän. Vesiliukoinen hormoni puolestaan aktivoi toisiolähettien avulla solussa jo olevia entsyymejä tai estää niitä, esimerkiksi fosforyloimalla niitä, tai avaa ionikanavia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Kloonauksella tuotetaan perimältään samanlaisia yksilöitä. Kasvinjalostuksessa se on tavallista, mutta nisäkkäitä kloonataan harvoin. Aineisto 11.A kertoo ensimmäisestä onnistuneesta apinan kloonauksesta.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 5,
+     "prompt": "Aineistossa 11.A kerrotaan kahden jaavanmakakin kloonauksesta samalla menetelmällä, jolla Dolly-lammas tehtiin. Selitä, mitä menetelmiä nisäkkäiden kloonauksessa käytetään.",
+     "hints": [
+      "Tärkein menetelmä on tumansiirto. Kuvaile sen vaiheet järjestyksessä: mistä munasolu tulee, mitä sille tehdään, mistä uusi tuma saadaan, miten kehitys käynnistetään ja missä alkio kasvaa.",
+      "Hedelmöittymättömästä munasolusta poistetaan tuma, ja tilalle siirretään kloonattavan yksilön solun tuma. Munasolu saadaan jakautumaan esimerkiksi sähköimpulssilla, ja alkio siirretään sijaisemon kohtuun. Mieti lisäksi, mistä klooni saa mitokondrionsa, ja kaksi muuta tapaa: alkion jakaminen varhaisvaiheessa ja kantasoluiksi ohjelmoitujen solujen käyttö."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Tumansiirto:** hedelmöittymättömästä munasolusta poistetaan tuma.\n- Tilalle siirretään kloonattavan yksilön solun tuma.\n- Munasolu aktivoidaan jakautumaan esimerkiksi sähkövirralla.\n- Alkio siirretään sijaisemon kohtuun, jossa se kehittyy kuten tavallinen alkio syntymään asti.\n- Klooni ei ole täysin identtinen, koska mitokondriot tulevat munasolun mukana munasolun luovuttajalta.\n- Kloonaukseen voidaan käyttää myös jakautuvia kehon soluja (esim. sidekudos-, rasva- tai ihosoluja), jotka ohjelmoidaan kantasoluiksi ja siirretään tumattomaan munasoluun, minkä jälkeen kehitys käynnistetään kemiallisesti.\n- Kloonaus onnistuu myös jakamalla varhainen alkio osiin, jolloin syntyy keinotekoisia identtisiä kaksosia.\n\n**Esimerkkivastaus:** Nisäkkäiden tavallisin kloonausmenetelmä on tumansiirto, jolla myös Dolly ja aineiston makakit tuotettiin. Munasolun luovuttajalta otetaan hedelmöittymätön munasolu, ja siitä poistetaan oma tuma. Kloonattavalta yksilöltä, makakkien tapauksessa sikiöltä, otetaan kehon solu, jonka tuma siirretään tumattomaan munasoluun. Munasolu saadaan jakautumaan esimerkiksi sähköimpulssilla, ja muodostunut alkio siirretään sijaisemon kohtuun, jossa se kehittyy syntymään asti. Syntyvä yksilö ei ole aivan täydellinen klooni, koska sen mitokondriot ovat peräisin munasolusta. Toinen tapa on ohjelmoida kehon soluja kantasoluiksi ja käyttää niitä tumansiirrossa. Yksinkertaisin keino on jakaa varhainen alkio kahtia, jolloin syntyy identtisiä kaksosia.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 6,
+     "prompt": "Miksi kloonaus on kasvinjalostuksessa arkipäivää mutta nisäkkäiden jalostuksessa harvinaista? Selitä.",
+     "hints": [
+      "Vertaa lisääntymistä: mitkä kasvit lisääntyvät luonnostaan suvuttomasti ja miten kasveista saadaan uusia yksilöitä solukkoviljelyllä? Mitä nisäkkäällä tarvitaan saman aikaansaamiseksi?",
+      "Nisäkkäiden ongelmia ovat suvuttoman lisääntymisen puuttuminen, solujen monikykyisyyden nopea häviäminen, geenien leimautuminen (osa geeneistä toimii vain isältä tai äidiltä perittynä, ks. aineiston 11.A asiantuntijan kommentti), sijaisemojen tarve, pitkä kasvuaika, heikko onnistumisprosentti (makakeilla 2 elävää poikasta 79 alkiosta eli noin 2,5 %), korkea hinta ja eettiset kysymykset."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kasveja on ylipäätään helpompi kloonata, koska monet niistä lisääntyvät luonnostaan suvuttomasti (esim. rönsyt, mukulat, juurivesat).\n- Nisäkkäät eivät lisäänny luonnossa suvuttomasti.\n- Kasveja voidaan kloonata solukkoviljelyllä kasvattamalla pienistä solukkopaloista kokonaisia kasveja kasvihormonien avulla.\n- Nisäkkäiden kantasolut menettävät yksilönkehityksen aikana melko nopeasti monikykyisyytensä.\n- Nisäkkäillä esiintyy geenien leimautumista: tiettyjen geenien ilmentyminen riippuu siitä, onko geeni peritty isältä vai äidiltä. Kloonilta puuttuu tämä kahden vanhemman tasapaino, joten alkio ei välttämättä kehity normaalisti.\n- Nisäkkään kasvu tuotantoikään kestää yleensä kauemmin kuin kasvin.\n- Jos klooni on sijaisemoa kookkaampi, synnytys voi olla vaikea.\n- Tekniikka on vaativaa ja vaatii laboratorion, ja se on kallista eikä siksi taloudellisesti kannattavaa.\n- Nisäkkäiden kloonaus herättää paljon enemmän eettisiä kysymyksiä kuin kasvien.\n\n**Esimerkkivastaus:** Monet kasvit lisääntyvät luonnostaan suvuttomasti esimerkiksi rönsyjen, mukuloiden tai juurivesojen avulla, ja puutarhuri voi kasvattaa uuden yksilön pistokkaasta. Laboratoriossa kasveja kloonataan solukkoviljelyllä: pienestä kasvinpalasta saadaan kasvihormonien avulla kasvamaan satoja perimältään samanlaisia taimia. Kasvisolut säilyttävät kykynsä erilaistua uudelleen, mutta nisäkkäiden solut menettävät monikykyisyytensä jo varhain kehityksen aikana. Nisäkkäät eivät myöskään lisäänny luonnostaan suvuttomasti, joten kloonaus vaatii vaativan tumansiirron, munasolujen luovuttajia ja sijaisemoja. Onnistumisprosentti on hyvin pieni: aineiston makakeista vain kaksi syntyi elävänä 79 siirretystä alkiosta. Yksi syy on geenien leimautuminen, sillä osa geeneistä toimii vain, jos se on peritty tietyltä vanhemmalta, eikä kloonialkio saa tätä tasapainoa oikein. Lisäksi nisäkkäät kasvavat tuotantoikään hitaasti, tekniikka on kallista ja siihen liittyy eettisiä ongelmia.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 5,
+     "prompt": "Pohdi, millaisia hyötyjä nisäkkäiden kloonaus voisi tuoda.",
+     "hints": [
+      "Mieti eri tahoja: maatalous ja eläinjalostus, luonnonsuojelu, tutkimus ja lemmikkien omistajat.",
+      "Esimerkkejä: perimältään identtiset kopiot huippuyksilöistä (maidontuotanto, lihakkuus, kylmänkestävyys, kilpahevosen nopeus), uhanalaisten kotieläinrotujen ja luonnonvaraisten lajien säilyttäminen, jopa sukupuuttoon kuolleiden lajien palauttaminen, identtiset koe-eläimet tautimalleiksi ja kuolleen lemmikin kopiointi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kloonaamalla saadaan perimältään samanlaisia kopioita arvokkaista yksilöistä, joilla on haluttu ominaisuus.\n- Esimerkkejä ominaisuuksista ovat hyvä liha- tai maidontuotanto, kylmänkestävyys ja kilpahevosen nopeus.\n- Kloonaus voi auttaa suojelemaan harvinaisia kotieläinrotuja ja uhanalaisia luonnonvaraisia nisäkkäitä.\n- Tulevaisuudessa voi olla mahdollista palauttaa sukupuuttoon kuolleita lajeja, kuten mammutti.\n- Tutkimuksessa perimältään identtiset eläimet, esimerkiksi tautimallieläimet, tekevät kokeista luotettavampia.\n- Kaupallisesti kloonausta tarjotaan kuolleen lemmikin korvaamiseksi.\n\n**Esimerkkivastaus:** Kloonauksen avulla karjatalous voisi monistaa poikkeuksellisen hyviä yksilöitä, esimerkiksi runsaasti maitoa tuottavia lehmiä tai hyvin kylmää kestäviä rotuja, jolloin arvokas ominaisuus ei laimene risteytyksissä. Samoin menestyneestä kilpahevosesta voitaisiin saada perimältään identtinen kopio. Luonnonsuojelussa kloonauksella voidaan lisätä uhanalaisten lajien ja harvinaisten kotieläinrotujen yksilömäärää ja säilyttää niiden perimää. Tulevaisuudessa voi olla mahdollista palauttaa jopa sukupuuttoon kuolleita lajeja, jos niistä on säilynyt käyttökelpoista DNA:ta. Tutkimuksessa perimältään identtiset koe-eläimet ovat hyödyllisiä, koska perimän aiheuttama vaihtelu ei häiritse tuloksia, ja kloonatuilla tautimalleilla voidaan tutkia esimerkiksi ihmisen sairauksia. Lisäksi yritykset tarjoavat kuolleen lemmikin kloonausta.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Arvioi nisäkkäiden kloonaukseen liittyviä eettisiä ongelmia.",
+     "hints": [
+      "Mieti eläinten hyvinvointia (kloonit, sijaisemot, munasolujen luovuttajat ja epäonnistuneet alkiot), lemmikin omistajan odotuksia ja populaation geneettistä monimuotoisuutta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kloonatut eläimet kärsivät usein kehityshäiriöistä ja sairauksista, mikä voi heikentää niiden hyvinvointia ja lyhentää elinikää.\n- Kloonauksessa menetetään paljon alkioita ja sikiöitä, joilla voidaan katsoa olevan oikeuksia.\n- Munasolujen luovuttajat ja sijaisemot joutuvat kokemaan turhaa rasitusta.\n- Lemmikin kloonaaja odottaa saavansa samanlaisen eläimen, mutta eläimen luonne ei riipu pelkästään perimästä, eikä kloonaus voi toistaa entisen lemmikin kokemuksia.\n- Laajamittainen kloonaus vähentäisi geneettistä monimuotoisuutta.\n\n**Esimerkkivastaus:** Nisäkkäiden kloonaus on tehotonta: aineiston makakeista vain kaksi syntyi elävänä kymmenistä alkioista, ja Dolly oli ainoa onnistunut satojen alkioiden joukosta. Epäonnistuneet raskaudet ja kuolleet sikiöt aiheuttavat kärsimystä, ja munasolujen luovuttajat ja sijaisemot joutuvat toimenpiteisiin ilman omaa hyötyä. Syntyneet kloonit sairastuvat usein ja voivat kuolla nuorina. Lemmikin kloonaus perustuu usein väärään käsitykseen, sillä eläimen luonne muovautuu myös ympäristön ja kokemusten vaikutuksesta, joten klooni ei ole sama yksilö. Jos kotieläimiä kloonattaisiin laajasti, populaatioiden geneettinen monimuotoisuus vähenisi ja ne olisivat alttiimpia taudeille.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

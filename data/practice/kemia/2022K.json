@@ -1,0 +1,545 @@
+{
+ "subject": "kemia",
+ "session": "2022K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2022/Kevat/2022-03-25_KE_fi/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-03-25_KE_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään (15 p kukin)."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään (20 p kukin)."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintakohtaa (1.1–1.10, 2 p kukin):\n\n- 1.1 millainen aine $\\ce{NaCl(aq)}$ on\n- 1.2 ioniluonteisin: $\\ce{KH}$, $\\ce{H2S}$, $\\ce{HI}$ vai $\\ce{PH3}$\n- 1.3 mikä sidoksista on vetysidos\n- 1.4 reniumkloridin suhdekaava (Re 63,6 massa-%)\n- 1.5 lähdejännite: $\\ce{Ag+}/\\ce{Ag}$ 0,80 V ja $\\ce{S2O8^2-}/\\ce{SO4^2-}$ 2,01 V\n- 1.6 saostumisjärjestys katodille liuoksesta, jossa on 1,0 M $\\ce{Au+}$, $\\ce{Co^2+}$, $\\ce{Mg^2+}$ ja $\\ce{Sn^2+}$\n- 1.7 menetelmä proteiinin 3D-rakenteen selvittämiseen\n- 1.8 mittavälineet tarkkuusjärjestykseen (25,0 ml)\n- 1.9 vapaan katalyytin käyrä (ks. alkuperäinen kuva)\n- 1.10 reaktion $\\ce{Fe2O3 + 3CO -> 2Fe + 3CO2}$ lämpö muodostumisentalpioista ($-822{,}2$; $-110{,}5$; 0; $-393{,}5$ kJ/mol)",
+     "hints": [
+      "Käy kohdat läpi yksi kerrallaan. Laskukohdissa (1.4, 1.5, 1.10) laske tulos itse ennen vaihtoehtojen katsomista: ainemääräsuhde, $E=E_{\\text{katodi}}^\\circ-E_{\\text{anodi}}^\\circ$ ja $\\Delta H=\\sum\\Delta H_f(\\text{tuotteet})-\\sum\\Delta H_f(\\text{lähtöaineet})$.",
+      "Kohta kohdalta:\n- 1.2: suurin elektronegatiivisuusero, eli metalli + vety.\n- 1.3: vetysidos on molekyylien välinen vuorovaikutus, jossa vety on kiinni N:ssä, O:ssa tai F:ssä.\n- 1.4: $n(\\ce{Cl})/n(\\ce{Re})$ massaosuuksista.\n- 1.6: katso pelkistyspotentiaalit taulukosta. Mitä pelkistyy ennen magnesiumia vesiliuoksessa?\n- 1.8: täyspipetti on kalibroitu yhdelle tilavuudelle.\n- 1.9: katalyytti sitoutuu välivaiheeseen ja vapautuu lopussa, joten sen määrä palaa alkuarvoonsa."
+     ],
+     "solution": "1. **1.1 A** – homogeeninen seos. Suola on liuennut veteen tasaisesti, joten liuos on yksifaasinen seos eikä puhdas aine.\n2. **1.2 A** – $\\ce{KH}$. Kalium on hyvin elektropositiivinen, joten kaliumhydridi on ioniyhdiste $\\ce{K+H-}$. Muissa sidos on kovalenttinen.\n3. **1.3 C** – $\\ce{NH3}$-molekyylien välinen sidos. Vedyn ja typen välinen sidos molekyylin sisällä on kovalenttinen, eikä $\\ce{H2}$-molekyylien välillä ole vetysidoksia.\n4. **1.4 C** – $\\ce{ReCl3}$. 100 g:ssa on $\\frac{63{,}6}{186{,}21}=0{,}3416$ mol Re ja $\\frac{36{,}4}{35{,}45}=1{,}027$ mol Cl. Suhde on $3{,}01\\approx3$.\n5. **1.5 B** – 1,21 V. Peroksodisulfaatti pelkistyy (katodi), hopea hapettuu (anodi): $E=2{,}01\\,\\mathrm{V}-0{,}80\\,\\mathrm{V}=1{,}21\\,\\mathrm{V}$.\n6. **1.6 B** – Au, Sn, Co, mutta Mg ei saostu. Ensin pelkistyy ioni, jonka pelkistyspotentiaali on suurin: $\\ce{Au+}$ (n. +1,7 V), $\\ce{Sn^2+}$ (−0,14 V), $\\ce{Co^2+}$ (−0,28 V). Magnesiumin potentiaali (−2,37 V) on niin pieni, että vesi pelkistyy vedyksi ennen sitä.\n7. **1.7 D** – röntgenkristallografialla. Kiteen röntgendiffraktiokuviosta voi laskea atomien paikat.\n8. **1.8 B** – täyspipetti, mittapipetti, mittalasi, dekantterilasi. Dekantterilasin asteikko on vain suuntaa antava.\n9. **1.9 B** – käyrä B. Sen konsentraatio pienenee alussa (katalyytti sitoutuu välituotteeseen C) ja palaa lopussa alkuperäiseen arvoonsa, eli katalyyttiä ei kulu.\n10. **1.10 A** – lämpöä vapautuu 26,8 kJ. $\\Delta H=3(-393{,}5)-[-822{,}2+3(-110{,}5)]\\,\\mathrm{kJ}=-26{,}8\\,\\mathrm{kJ}$.\n\n**Sudenkuoppa:** kohdassa 1.5 potentiaaleja ei kerrota elektronien määrällä, vaikka puolireaktiota kerrottaisiin kahdella.",
+     "answer": "1.1 A · 1.2 A · 1.3 C · 1.4 C · 1.5 B · 1.6 B · 1.7 D · 1.8 B · 1.9 B · 1.10 A",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Rikkihappoa valmistetaan kontaktimenetelmällä pyriitistä $\\ce{FeS2}$ neljässä vaiheessa:\n\n1. $\\ce{4FeS2(s) + 11O2(g) -> 2Fe2O3(s) + 8SO2(g)}$\n2. $\\ce{2SO2(g) + O2(g) -> 2SO3(g)}$\n3. $\\ce{SO3(g) + H2SO4(aq) -> H2S2O7(aq)}$\n4. $\\ce{H2S2O7(aq) + H2O(l) -> 2H2SO4(aq)}$",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 5,
+     "prompt": "Muodosta prosessin kokonaisreaktion yhtälö.",
+     "hints": [
+      "Kerro vaiheyhtälöt sopivilla luvuilla niin, että välituotteet ($\\ce{SO2}$, $\\ce{SO3}$, $\\ce{H2S2O7}$) kumoutuvat yhteenlaskussa. Vaihe 1 tuottaa $\\ce{8SO2}$, joten vaihe 2 kerrotaan neljällä ja vaiheet 3 ja 4 kahdeksalla.",
+      "Kun vaihe 3 kerrotaan kahdeksalla, lähtöaineissa on $\\ce{8H2SO4}$, ja vaihe 4 tuottaa $\\ce{16H2SO4}$. Nettotuotoksi jää siis 8 moolia rikkihappoa. Laske yhteen hapen ja veden moolit."
+     ],
+     "solution": "1. Vaihe 1 sellaisenaan: $\\ce{4FeS2 + 11O2 -> 2Fe2O3 + 8SO2}$\n2. Vaihe 2 kertaa 4: $\\ce{8SO2 + 4O2 -> 8SO3}$\n3. Vaihe 3 kertaa 8: $\\ce{8SO3 + 8H2SO4 -> 8H2S2O7}$\n4. Vaihe 4 kertaa 8: $\\ce{8H2S2O7 + 8H2O -> 16H2SO4}$\n5. Lasketaan yhteen ja supistetaan molemmilla puolilla esiintyvät $\\ce{8SO2}$, $\\ce{8SO3}$, $\\ce{8H2S2O7}$ ja $\\ce{8H2SO4}$:\n$$\\ce{4FeS2(s) + 15O2(g) + 8H2O(l) -> 2Fe2O3(s) + 8H2SO4(aq)}$$\nTarkistus: Fe 4 = 4, S 8 = 8, O $30+8=38$ = $6+32=38$, H 16 = 16.\n\n**Sudenkuoppa:** jos rikkihappoa ei supisteta, se jää yhtälön molemmille puolille. Jokainen supistamatta jäänyt aine on virhe.",
+     "answer": "$\\ce{4FeS2(s) + 15O2(g) + 8H2O(l) -> 2Fe2O3(s) + 8H2SO4(aq)}$",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 7,
+     "prompt": "Pyriittiä on 3 755 kg. Paljonko (kg) siitä saadaan 100-prosenttista rikkihappoa, ja paljonko se vastaa 95-massaprosenttista rikkihappoa?",
+     "hints": [
+      "Laske pyriitin ainemäärä. Rikkiatomit säilyvät: kukin $\\ce{FeS2}$ sisältää kaksi rikkiatomia ja kukin $\\ce{H2SO4}$ yhden (sama suhde näkyy kokonaisreaktiosta).",
+      "$n(\\ce{FeS2})=31\\,294\\,\\mathrm{mol}$ ja $n(\\ce{H2SO4})=2\\,n(\\ce{FeS2})$. 95-prosenttisen hapon massa saadaan jakamalla puhtaan hapon massa massaosuudella 0,95."
+     ],
+     "solution": "1. $M(\\ce{FeS2})=55{,}85+2\\cdot32{,}07=119{,}99\\,\\mathrm{g/mol}$, joten $n(\\ce{FeS2})=\\frac{3\\,755\\,000\\,\\mathrm{g}}{119{,}99\\,\\mathrm{g/mol}}=31\\,294\\,\\mathrm{mol}$.\n2. Kokonaisreaktion mukaan $n(\\ce{H2SO4})=\\frac{8}{4}\\,n(\\ce{FeS2})=62\\,589\\,\\mathrm{mol}$.\n3. $M(\\ce{H2SO4})=98{,}086\\,\\mathrm{g/mol}$, joten $m=62\\,589\\,\\mathrm{mol}\\cdot98{,}086\\,\\mathrm{g/mol}=6\\,139\\,000\\,\\mathrm{g}\\approx 6\\,139\\,\\mathrm{kg}$.\n4. 95-prosenttisessa hapossa $\\ce{H2SO4}$:n osuus on 0,95: $m_{95}=\\frac{6\\,139\\,\\mathrm{kg}}{0{,}95}=6\\,462\\,\\mathrm{kg}$.\n\n**Vastaus: $6\\,139\\,\\mathrm{kg}$ puhdasta rikkihappoa, joka vastaa $6\\,462\\,\\mathrm{kg}$ 95-prosenttista happoa**\n\n**Sudenkuoppa:** kertominen luvulla 0,95 (tulos 5 832 kg) on väärin päin: laimeampaa happoa saadaan massaltaan enemmän kuin puhdasta.",
+     "answer": "$6\\,139\\,\\mathrm{kg}$ (100 %) ja $6\\,462\\,\\mathrm{kg}$ (95 %)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 3,
+     "prompt": "95-prosenttisesta rikkihaposta tehdään laboratoriossa 1,00 mol/l liuosta. Mitkä työturvallisuusasiat on otettava huomioon? Perustele.",
+     "hints": [
+      "Mieti väkevän rikkihapon ominaisuuksia (syövyttävyys, voimakas lämmön vapautuminen laimennettaessa) ja niistä seuraavia suojaimia ja työjärjestystä."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- väkevä rikkihappo on voimakkaasti syövyttävää\n- siksi käytetään suojalaseja, suojakäsineitä ja laboratoriotakkia\n- työ tehdään vetokaapissa, ja laimennettaessa mittapulloon laitetaan ensin vettä, johon happo lisätään varovasti (ei koskaan vettä happoon), koska laimeneminen vapauttaa paljon lämpöä ja voi aiheuttaa roiskeita\n\nEsimerkkivastaus: Väkevä rikkihappo syövyttää ihoa ja silmiä, joten työssä käytetään suojalaseja, hanskoja ja suojatakkia. Rikkihapon laimeneminen on voimakkaasti eksotermistä. Jos vettä lisätään happoon, pinnalle jäävä vesi voi kiehahtaa ja roiskuttaa happoa. Siksi mittapulloon laitetaan ensin osa vedestä, happo pipetoidaan sen joukkoon hitaasti sekoittaen, ja pullo täytetään merkkiin vasta jäähdyttyään. Työ on turvallisinta tehdä vetokaapissa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Laboratorion jätepullossa oli merkintä vain $\\ce{C3H6O2}$. Tehtävässä tarkastellaan tämän molekyylikaavan rakenneisomeerejä.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 2,
+     "prompt": "Piirrä se $\\ce{C3H6O2}$:n rakenneisomeeri, jonka vesiliuos on selvästi hapan.",
+     "hints": [
+      "Selvästi hapan liuos syntyy, kun yhdisteessä on karboksyyliryhmä $\\ce{-COOH}$. Montako hiiltä jää ketjuun?"
+     ],
+     "solution": "1. Karboksyyliryhmä $\\ce{-COOH}$ sisältää yhden hiilen ja molemmat happiatomit, joten ketjuun jää kaksi hiiltä.\n2. Yhdiste on propaanihappo: $\\ce{CH3-CH2-COOH}$.\n\n**Vastaus: propaanihappo $\\ce{CH3CH2COOH}$**",
+     "answer": "$\\ce{CH3CH2COOH}$ (propaanihappo)",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 4,
+     "prompt": "Piirrä kaikki $\\ce{C3H6O2}$:n rakenneisomeerit, joissa on esteriryhmä.",
+     "hints": [
+      "Esterissä on ryhmä $\\ce{R-COO-R'}$. Jaa kolme hiiltä happo-osan ja alkoholiosan kesken kaikilla mahdollisilla tavoilla (happo-osassa on vähintään karbonyylihiili)."
+     ],
+     "solution": "1. Happo-osassa on 2 hiiltä, alkoholiosassa 1: metyyliasetaatti (metyylietanaatti) $\\ce{CH3-COO-CH3}$.\n2. Happo-osassa on 1 hiili, alkoholiosassa 2: etyyliformiaatti (etyylimetanaatti) $\\ce{H-COO-CH2-CH3}$.\n3. Muita jakoja ei ole: jos happo-osassa olisi kolme hiiltä, alkoholiosa puuttuisi.\n\n**Vastaus: $\\ce{CH3COOCH3}$ ja $\\ce{HCOOCH2CH3}$**\n\n**Sudenkuoppa:** $\\ce{CH3COOCH3}$ ja $\\ce{CH3OCOCH3}$ ovat sama yhdiste eri tavalla kirjoitettuna. Samaa isomeeriä ei saa laskea kahdesti.",
+     "answer": "$\\ce{CH3COOCH3}$ (metyylietanaatti) ja $\\ce{HCOOCH2CH3}$ (etyylimetanaatti)",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 4,
+     "prompt": "Piirrä kaikki $\\ce{C3H6O2}$:n rakenneisomeerit, joiden hapettuessa molekyyliin syntyy aldehydiryhmä.",
+     "hints": [
+      "Aldehydiryhmä syntyy, kun primäärinen alkoholi ($\\ce{-CH2OH}$) hapettuu. Etsi isomeerit, joissa on $\\ce{-CH2OH}$-ryhmä ja toinen happi karbonyyliryhmässä."
+     ],
+     "solution": "1. Molekyylissä on oltava primäärinen hydroksiryhmä $\\ce{-CH2OH}$, sillä se hapettuu aldehydiksi.\n2. Molekyylikaavasta $\\ce{C3H6O2}$ puuttuu kaksi vetyä tyydyttyneestä diolista ($\\ce{C3H8O2}$), joten toinen happi voi olla karbonyyliryhmässä.\n3. 3-hydroksipropanaali $\\ce{HO-CH2-CH2-CHO}$: primäärinen OH hapettuu, ja syntyy toinen aldehydiryhmä (propaanidiaali).\n4. 1-hydroksipropan-2-oni (hydroksiasetoni) $\\ce{HO-CH2-CO-CH3}$: primäärinen OH hapettuu aldehydiksi.\n\nHuom.: 2-hydroksipropanaali $\\ce{CH3-CH(OH)-CHO}$ ei kelpaa. Siinä on jo aldehydiryhmä, ja sen sekundäärinen OH hapettuu ketoniksi eikä aldehydiksi. (Myös rengasrakenteisessa glysidolissa, 2,3-epoksipropan-1-olissa, on primäärinen OH, mutta tehtävässä odotetaan avoketjuisia isomeerejä.)\n\n**Vastaus: $\\ce{HOCH2CH2CHO}$ ja $\\ce{HOCH2COCH3}$**",
+     "answer": "$\\ce{HOCH2CH2CHO}$ (3-hydroksipropanaali) ja $\\ce{HOCH2COCH3}$ (1-hydroksipropan-2-oni)",
+     "check": "hvp"
+    },
+    {
+     "id": "3.4",
+     "points": 3,
+     "prompt": "Piirrä yksi $\\ce{C3H6O2}$:n rakenneisomeeri, jossa on asymmetriakeskus, ja merkitse keskus (esim. tähdellä).",
+     "hints": [
+      "Asymmetriakeskus on hiili, jossa on neljä erilaista ryhmää. Kokeile hiilirunkoa, jonka keskimmäisessä hiilessä on H, $\\ce{CH3}$, OH ja jokin kolmas happipitoinen ryhmä."
+     ],
+     "solution": "1. 2-hydroksipropanaali $\\ce{CH3-C^{*}H(OH)-CHO}$: keskimmäisessä hiilessä ovat H, $\\ce{CH3}$, OH ja CHO, eli neljä eri ryhmää.\n2. Toinen mahdollisuus on glysidoli (oksiraani-2-yylimetanoli), jossa renkaan $\\ce{CH}$-hiili on asymmetrinen: siihen liittyvät H, renkaan happi, renkaan $\\ce{CH2}$ ja $\\ce{CH2OH}$.\n\n**Vastaus: esim. $\\ce{CH3-C^{*}H(OH)-CHO}$ (tähti keskimmäisessä hiilessä)**",
+     "answer": "Esim. 2-hydroksipropanaali $\\ce{CH3-C^{*}H(OH)-CHO}$",
+     "check": "hvp"
+    },
+    {
+     "id": "3.5",
+     "points": 2,
+     "prompt": "Mitä merkintöjä kemikaalijätepullossa olisi pitänyt olla?",
+     "hints": [
+      "Mieti, mitä jätteen käsittelijä tarvitsee tietää: mitä pullossa on, kuinka vaarallista se on ja kenen vastuulla se on."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- merkinnän, että kyseessä on jäte, ja jätteen koostumuksen (aineiden nimet, mielellään pitoisuudet)\n- vaaralliseen aineeseen liittyvät varoitusmerkit (GHS-varoitusmerkit)\n- lisäksi jätteen tuottajan nimen ja päivämäärän\n\nEsimerkkivastaus: Pullossa olisi pitänyt olla teksti ”jäte”, jätteen sisältämien yhdisteiden nimet ja likimääräiset pitoisuudet sekä niiden varoitusmerkit (esim. syttyvä, syövyttävä). Lisäksi pulloon merkitään, kuka jätteen on tuottanut ja milloin.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Aineistossa 4.A määritellään synteesin materiaalitehokkuuden suureet: atomiekonomia $AE=\\frac{\\nu(\\text{tuote})M(\\text{tuote})}{\\sum\\nu_iM_i}\\cdot100\\,\\%$ (summa lähtöaineiden yli) ja E-tekijä = jätteiden ja sivutuotteiden massa / puhdistetun tuotteen massa. Aineistossa 4.B butyyliasetaattia valmistettiin reaktiolla $\\ce{CH3(CH2)3OH + CH3COOH <=> CH3COO(CH2)3CH3 + H2O}$ 37,0 grammasta butan-1-olia ja 60,0 grammasta etikkahappoa (rikkihappokatalyytti, jota ei huomioida). Tuotteen erotukseen ja puhdistukseen kului 250 g vettä, pesuihin 125 g vettä ja 25,0 g natriumvetykarbonaattiliuosta sekä kuivaukseen 5,0 g natriumsulfaattia. Puhdasta tuotetta saatiin 40,0 g. Mitään ei kierrätetty.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 4,
+     "prompt": "Laske butyyliasetaatin saantoprosentti.",
+     "hints": [
+      "Selvitä ensin rajoittava lähtöaine vertaamalla ainemääriä (reaktiosuhde 1 : 1). Teoreettinen saanto lasketaan rajoittavan lähtöaineen ainemäärästä."
+     ],
+     "solution": "1. $n(\\text{butan-1-oli})=\\frac{37{,}0\\,\\mathrm{g}}{74{,}12\\,\\mathrm{g/mol}}=0{,}4992\\,\\mathrm{mol}$ ja $n(\\text{etikkahappo})=\\frac{60{,}0\\,\\mathrm{g}}{60{,}052\\,\\mathrm{g/mol}}=0{,}9991\\,\\mathrm{mol}$.\n2. Suhde on 1 : 1, joten butan-1-oli on rajoittava tekijä.\n3. Teoreettinen tuote: $m=0{,}4992\\,\\mathrm{mol}\\cdot116{,}156\\,\\mathrm{g/mol}=57{,}98\\,\\mathrm{g}$.\n4. Saanto $=\\frac{40{,}0\\,\\mathrm{g}}{57{,}98\\,\\mathrm{g}}\\cdot100\\,\\%=69{,}0\\,\\%$.\n\n**Vastaus: saanto on $69{,}0\\,\\%$**",
+     "answer": "$69{,}0\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 3,
+     "prompt": "Laske synteesin atomiekonomia kolmen merkitsevän numeron tarkkuudella.",
+     "hints": [
+      "Atomiekonomia lasketaan pelkästä reaktioyhtälöstä: tuotteen moolimassa kertoimella kerrottuna jaetaan lähtöaineiden moolimassojen summalla. Todelliset massat ja ylimäärä eivät vaikuta."
+     ],
+     "solution": "1. Kertoimet ovat kaikki 1: $\\sum\\nu_iM_i=74{,}12+60{,}052=134{,}172\\,\\mathrm{g/mol}$.\n2. $AE=\\frac{116{,}156}{134{,}172}\\cdot100\\,\\%=86{,}57\\,\\%\\approx86{,}6\\,\\%$.\n\n**Vastaus: $AE=86{,}6\\,\\%$**\n\n**Sudenkuoppa:** käytettyjä massoja (37,0 g ja 60,0 g) ei käytetä. Atomiekonomia on reaktioyhtälön ominaisuus.",
+     "answer": "$86{,}6\\,\\%$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 3,
+     "prompt": "Laske synteesin E-tekijä.",
+     "hints": [
+      "Kaikki syötetty materiaali, joka ei päädy puhdistettuun tuotteeseen, on jätettä: vesi, pesuliuokset, kuivausaine ja lähtöaineiden massasta se osa, josta ei tullut tuotetta."
+     ],
+     "solution": "1. Syötetyt aineet yhteensä: $250+125+25{,}0+5{,}0+37{,}0+60{,}0=502\\,\\mathrm{g}$.\n2. Jätteen massa = kaikki syötetty − tuote $=502\\,\\mathrm{g}-40{,}0\\,\\mathrm{g}=462\\,\\mathrm{g}$ (sisältää reagoimattomat lähtöaineet ja sivutuotteena syntyneen veden).\n3. $E=\\frac{462\\,\\mathrm{g}}{40{,}0\\,\\mathrm{g}}=11{,}55\\approx11{,}6$.\n\n**Vastaus: $E\\approx11{,}6$**",
+     "answer": "$E\\approx11{,}6$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.4",
+     "points": 5,
+     "prompt": "Mitkä olisivat saannon, atomiekonomian ja E-tekijän arvot ihanteellisessa synteesissä? Arvioi butyyliasetaattisynteesin materiaalitehokkuutta ja ympäristökuormitusta kohtien 4.1–4.3 lukujen ja reaktioyhtälön avulla.",
+     "hints": [
+      "Ihanteellisessa synteesissä kaikki lähtöaine päätyy tuotteeseen eikä jätettä synny. Vertaa lukujasi näihin arvoihin ja mieti, mistä erot johtuvat.",
+      "Saanto 69,0 %, $AE$ 86,6 % ja $E$ noin 11,6. Pohdi kutakin: mitä tasapainoreaktio tarkoittaa saannolle, mikä sivutuote pienentää atomiekonomiaa, ja mistä vaiheesta suurin osa jätteestä on peräisin (ja millaista jäte on)?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- ihannearvot: saanto 100 %, $AE$ 100 % ja $E=0$\n- saanto 69,0 % on kohtuullinen, kun reaktio on tasapainoreaktio (esteröityminen ei mene loppuun). Teollisessa mittakaavassa 31 %:n hukka olisi kuitenkin suuri\n- atomiekonomia 86,6 % on hyvä: ainoa sivutuote on pieni vesimolekyyli (kerroin 1)\n- E-tekijä 11,6 on suuri: jätettä syntyy yli kymmenkertaisesti tuotteeseen nähden, ja se tulee pääosin erotus- ja pesuvaiheista. Suurin osa jätteestä on kuitenkin vettä tai vesiliuoksia, jotka ovat melko haitattomia\n- suureet eivät kerro kaikkea: ympäristökuormitukseen vaikuttavat myös energiankulutus ja sen tuotantotapa sekä aineiden vaarallisuus\n\nEsimerkkivastaus: Ihanteellisessa synteesissä saanto ja atomiekonomia olisivat 100 % ja E-tekijä 0. Esteröityminen on tasapainoreaktio, joten 69 %:n saanto on hyväksyttävä, vaikka osa butanolista jää reagoimatta. Atomiekonomia on korkea (86,6 %), koska sivutuotteena syntyy vain vettä. Materiaalitehokkuutta heikentää eniten puhdistus: E-tekijä 11,6 tarkoittaa, että jokaista tuotegrammaa kohden syntyi yli 11 g jätettä. Jäte on kuitenkin enimmäkseen vettä ja laimeita suolaliuoksia sekä ylimääräistä etikkahappoa, joten sen haitallisuus on vähäinen. Kokonaiskuvaan tarvittaisiin vielä tieto energiankulutuksesta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Johtokykymittari mittaa kahden grafiittielektrodin välisen resistanssin ja muuttaa sen sähkönjohtavuudeksi $\\kappa$ (mS/cm). Sopivalla alueella $\\kappa$ kasvaa lineaarisesti suolan konsentraation mukana. Aineistossa 5.A on neljän $\\ce{NaCl}$-standardiliuoksen (0,100–0,220 mol/l) sähkönjohtavuudet.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 7,
+     "prompt": "Piirrä standardisuora aineiston 5.A tuloksista ja määritä sen yhtälö. Fysiologisessa suolaliuoksessa on 4,50 g natriumkloridia 500,0 ml:ssa. Määritä sen sähkönjohtavuus.",
+     "hints": [
+      "Piirrä sähkönjohtavuus konsentraation funktiona ja sovita pisteisiin suora. Laske sitten fysiologisen suolaliuoksen $\\ce{NaCl}$-konsentraatio ja sijoita se suoran yhtälöön.",
+      "Suoraksi saadaan $\\kappa=102{,}5\\,\\frac{\\mathrm{mS\\,l}}{\\mathrm{cm\\,mol}}\\cdot c-0{,}25\\,\\mathrm{mS/cm}$, ja fysiologisen liuoksen konsentraatio on $0{,}154\\,\\mathrm{mol/l}$."
+     ],
+     "solution": "1. Pisteet ovat täsmälleen suoralla, ja pienimmän neliösumman sovite on\n$$\\kappa=102{,}5\\,\\tfrac{\\mathrm{mS\\cdot l}}{\\mathrm{cm\\cdot mol}}\\cdot c(\\ce{NaCl})-0{,}25\\,\\mathrm{mS/cm}$$\n(Kuvaajaan merkitään akselien nimet ja yksiköt.)\n2. $n(\\ce{NaCl})=\\frac{4{,}50\\,\\mathrm{g}}{58{,}44\\,\\mathrm{g/mol}}=0{,}07700\\,\\mathrm{mol}$ ja $c=\\frac{0{,}07700\\,\\mathrm{mol}}{0{,}5000\\,\\mathrm{l}}=0{,}1540\\,\\mathrm{mol/l}$.\n3. $\\kappa=102{,}5\\cdot0{,}1540-0{,}25=15{,}54\\,\\mathrm{mS/cm}\\approx15{,}5\\,\\mathrm{mS/cm}$.\n\n**Vastaus: $\\kappa\\approx15{,}5\\,\\mathrm{mS/cm}$**",
+     "answer": "$\\kappa=102{,}5\\,c-0{,}25$ (mS/cm, c mol/l); fysiologinen liuos $\\approx15{,}5\\,\\mathrm{mS/cm}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 4,
+     "prompt": "Mitä seuraa, jos suonensisäisen nesteytyksen liuos on laimeampi tai väkevämpi kuin fysiologinen suolaliuos?",
+     "hints": [
+      "Fysiologinen suolaliuos on isotoninen veren kanssa. Mieti osmoosia: mihin suuntaan vesi siirtyy solukalvon läpi, jos solun ulkopuolinen liuos on laimeampi tai väkevämpi kuin solun sisällä?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- osmoosissa vesi siirtyy puoliläpäisevän kalvon läpi laimeammasta liuoksesta väkevämpään, kunnes pitoisuuserot tasoittuvat\n- laimeammalla (hypotonisella) liuoksella vettä siirtyy plasmasta soluihin, jolloin solut turpoavat ja voivat hajota (punasolujen hemolyysi)\n- väkevämmällä (hypertonisella) liuoksella vettä siirtyy soluista plasmaan, jolloin solut, kuten punasolut, kutistuvat\n\nEsimerkkivastaus: Fysiologisen suolaliuoksen osmoottinen paine on sama kuin veren, joten vettä ei siirry solujen ja plasman välillä. Jos liuos on laimeampi, plasman ionipitoisuus laskee, ja vesi siirtyy osmoosin vuoksi punasoluihin. Solut turpoavat ja voivat haljeta (hemolyysi). Jos liuos on väkevämpi, vesi siirtyy soluista plasmaan ja solut kutistuvat, mikä haittaa niiden toimintaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.3",
+     "points": 4,
+     "prompt": "Johtokykymittarin kalibrointia varten tehtiin 25 ml:n mittapulloon $\\ce{NaCl}$-liuos, jonka sähkönjohtavuus on 20,0 mS/cm. Se laimennettiin 2,00 mol/l kantaliuoksesta. Montako millilitraa kantaliuosta pipetoitiin?",
+     "hints": [
+      "Ratkaise standardisuoran yhtälöstä konsentraatio, jolla $\\kappa=20{,}0\\,\\mathrm{mS/cm}$. Laimennuksessa ainemäärä säilyy: $c_1V_1=c_2V_2$."
+     ],
+     "solution": "1. Standardisuorasta: $c=\\frac{\\kappa+0{,}25}{102{,}5}=\\frac{20{,}0+0{,}25}{102{,}5}\\,\\mathrm{mol/l}=0{,}1976\\,\\mathrm{mol/l}$.\n2. Laimennus: $V_{\\text{kanta}}=\\frac{c_{\\text{std}}V_{\\text{std}}}{c_{\\text{kanta}}}=\\frac{0{,}1976\\,\\mathrm{mol/l}\\cdot25\\,\\mathrm{ml}}{2{,}00\\,\\mathrm{mol/l}}=2{,}47\\,\\mathrm{ml}$.\n\n**Vastaus: $2{,}47\\,\\mathrm{ml}$**",
+     "answer": "$V\\approx2{,}47\\,\\mathrm{ml}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Putkenavaajaliuoksen $\\ce{NaOH}$-pitoisuus määritettiin titraamalla, ja indikaattorina oli valkosipulijauhe. Se on lähes hajuton, mutta ekvivalenttikohdassa syntyy haisevia rikkiyhdisteitä (aineisto 6.A). Näytettä oli 10,00 ml (massa 11,3 g), jauhetta lisättiin 0,41 g, ja 0,200 mol/l suolahappoa kului 17,7 ml.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 2,
+     "prompt": "Mikä on titrauksen pH ekvivalenttikohdassa? Perustele.",
+     "hints": [
+      "Mitkä ovat titrauksen happo ja emäs, ja kuinka vahvoja ne ovat? Protolysoituuko syntyvä suola?"
+     ],
+     "solution": "1. Natriumhydroksidi on vahva emäs ja suolahappo vahva happo: $\\ce{NaOH(aq) + HCl(aq) -> NaCl(aq) + H2O(l)}$.\n2. Ekvivalenttikohdassa liuoksessa on vain $\\ce{NaCl}$:a, jonka ionit eivät protolysoidu.\n\n**Vastaus: pH on 7 (25 °C)**",
+     "answer": "pH = 7",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 6,
+     "prompt": "Laske putkenavaajaliuoksen pH.",
+     "hints": [
+      "Laske suolahapon ainemäärä ja siitä natriumhydroksidin ainemäärä (suhde 1 : 1). Konsentraatio lasketaan näytteen tilavuudella, ja vahva emäs on täysin ionisoitunut.",
+      "$c(\\ce{NaOH})=0{,}354\\,\\mathrm{mol/l}=[\\ce{OH-}]$. Laske ensin pOH ja siitä pH."
+     ],
+     "solution": "1. $n(\\ce{HCl})=cV=0{,}200\\,\\mathrm{mol/l}\\cdot0{,}0177\\,\\mathrm{l}=3{,}54\\cdot10^{-3}\\,\\mathrm{mol}$.\n2. Reaktioyhtälön mukaan $n(\\ce{NaOH})=n(\\ce{HCl})=3{,}54\\cdot10^{-3}\\,\\mathrm{mol}$.\n3. $c(\\ce{NaOH})=\\frac{3{,}54\\cdot10^{-3}\\,\\mathrm{mol}}{0{,}01000\\,\\mathrm{l}}=0{,}354\\,\\mathrm{mol/l}=[\\ce{OH-}]$.\n4. $\\mathrm{pOH}=-\\lg0{,}354=0{,}451$ ja $\\mathrm{pH}=14{,}00-0{,}451=13{,}55$.\n\n**Vastaus: pH on $13{,}55$**\n\n**Sudenkuoppa:** konsentraatio lasketaan näytteen tilavuudella 10,00 ml, ei kuluneen suolahapon tilavuudella. Näytteen massa ja jauheen määrä eivät vaikuta laskuun.",
+     "answer": "$\\mathrm{pH}\\approx13{,}55$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "6.3",
+     "points": 4,
+     "prompt": "Millä ehdoilla hajun muuttumista voi käyttää titrauksen indikaattorina? Tarkastele sekä ekvivalenttikohdan havaitsemista että käytännön työskentelyä.",
+     "hints": [
+      "Hyvä indikaattori reagoi täsmälleen oikealla hetkellä. Hajuindikaattorissa titraaja myös hengittää signaalin. Mitä siitä seuraa?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- hajun on synnyttävä juuri ekvivalenttikohdassa ja erotuttava selvästi. Hajua tuottava reaktio ei saa alkaa ennen ekvivalenttikohtaa\n- syntyvät kaasut eivät saa olla myrkyllisiä tai terveydelle haitallisia hengitettyinä\n- lisäksi esim.: hajun on säilyttävä aistittavana riittävän kauan, se ei saa turruttaa hajuaistia eikä olla liian voimakas tai epämiellyttävä, ja menetelmän on oltava toistettava\n\nEsimerkkivastaus: Hajun on muututtava selvästi ja nopeasti juuri ekvivalenttikohdassa, jotta titraus voidaan lopettaa oikeaan kohtaan. Jos haju alkaa tuntua jo ennen ekvivalenttikohtaa, tulos jää liian pieneksi. Koska titraaja haistelee liuosta, syntyvät yhdisteet eivät saa olla terveydelle vaarallisia. Hajun on myös säilyttävä muutaman sekunnin ajan, eikä se saa turruttaa hajuaistia, jotta rinnakkaistitraukset onnistuvat.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.4",
+     "points": 3,
+     "prompt": "Ekvivalenttikohdan haju johtuu disulfidista ja tiosulfonaatista, jotka syntyvät aineiston 6.A reaktioissa A–C. Mikä tehtävä allinaasilla on reaktiossa A, ja minkä tyyppisiä reaktiot B ja C ovat?",
+     "hints": [
+      "Aineiston kuvassa reaktiossa A allinaasi on nuolen päällä. Vertaa reaktion B lähtöaineita ja tuotteita (mikä pieni molekyyli lohkeaa?) ja reaktiossa C rikkiatomien hapetuslukuja."
+     ],
+     "solution": "1. **Allinaasi** on entsyymi eli biologinen katalyytti, joka nopeuttaa reaktiota A kulumatta itse.\n2. **Reaktio B** on kondensaatioreaktio: kaksi sulfeenihappomolekyyliä liittyy yhteen, ja vesimolekyyli lohkeaa.\n3. **Reaktio C** on hapettumis-pelkistymisreaktio (disproportioituminen): rikki pelkistyy disulfidissa ja hapettuu tiosulfonaatissa.",
+     "answer": "Allinaasi = entsyymi (katalyytti); B = kondensaatio; C = hapettumis-pelkistymisreaktio",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Jalokaasujen uloin elektronikuori on täysi, mutta ksenon muodostaa tietyissä olosuhteissa yhdisteitä, joissa sen hapetusluku on +2, +4, +6 tai +8. Pysyvimpiä ovat fluoridit, kuten ksenondifluoridi.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 5,
+     "prompt": "Kun kiinteä $\\ce{XeF2}$ reagoi (hitaasti) veden kanssa, syntyy ksenonia, happea ja vetyfluoridia. Kirjoita reaktioyhtälö ja kerro, miten atomien hapetusluvut muuttuvat.",
+     "hints": [
+      "Kirjoita ensin aineet kaavoina. Tasapainota elektroninsiirron avulla: ksenon pelkistyy, ja jokin alkuaine hapettuu. Kumpi, fluori vai vedessä oleva happi?",
+      "Xe: +II → 0 (vastaanottaa 2 e⁻). O: −II → 0 (luovuttaa 2 e⁻ atomia kohden, eli yksi $\\ce{O2}$ vaatii 4 e⁻). Tarvitaan siis kaksi $\\ce{XeF2}$:ta yhtä happimolekyyliä kohden."
+     ],
+     "solution": "1. Hapetusluvut: $\\ce{XeF2}$:ssa Xe +II ja F −I, vedessä H +I ja O −II.\n2. Ksenon pelkistyy (+II → 0), ja happi hapettuu (−II → 0). Fluorin (−I) ja vedyn (+I) hapetusluvut eivät muutu.\n3. Elektronitase: 2 Xe vastaanottaa 4 e⁻, ja 2 O luovuttaa 4 e⁻ muodostaen yhden $\\ce{O2}$:n.\n4. $\\ce{2XeF2(s) + 2H2O(l) -> 2Xe(g) + 4HF(aq) + O2(g)}$\n\n**Vastaus: $\\ce{2XeF2(s) + 2H2O(l) -> 2Xe(g) + 4HF(aq) + O2(g)}$; Xe +II → 0, O −II → 0, F ja H ennallaan**",
+     "answer": "$\\ce{2XeF2(s) + 2H2O(l) -> 2Xe(g) + 4HF(aq) + O2(g)}$; Xe +II→0, O −II→0",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 6,
+     "prompt": "Ksenonhapon $\\ce{H2XeO4}$ suoloja ovat ksenaatit. Kiinteä natriumvetyksenaatti $\\ce{NaHXeO4}$ reagoi natriumhydroksidiliuoksen kanssa: syntyy liukoista natriumperksenaattia $\\ce{Na4XeO6}$, ksenonkaasua, happea ja vettä. Kirjoita reaktioyhtälö ja kerro hapetuslukujen muutokset.",
+     "hints": [
+      "Määritä ksenonin hapetusluku lähtöaineessa ja kummassakin tuotteessa. Osa ksenonista hapettuu ja osa pelkistyy, ja lisäksi osa hapesta hapettuu.",
+      "Xe: +VI → +VIII (luovuttaa 2 e⁻) ja +VI → 0 (vastaanottaa 6 e⁻). Happi −II → 0: yksi $\\ce{O2}$ luovuttaa 4 e⁻. Kun muodostuu yksi $\\ce{Na4XeO6}$, yksi Xe ja yksi $\\ce{O2}$, elektronit täsmäävät ($2+4=6$)."
+     ],
+     "solution": "1. Hapetusluvut: $\\ce{NaHXeO4}$:ssa Na +I, H +I, O −II ja Xe +VI. $\\ce{Na4XeO6}$:ssa Xe +VIII, alkuaineina Xe 0 ja $\\ce{O2}$ 0.\n2. Elektronitase: Xe(+VI → +VIII) luovuttaa 2 e⁻, 2 O(−II → 0) luovuttavat 4 e⁻, ja Xe(+VI → 0) vastaanottaa 6 e⁻. Tase täsmää, kun kutakin muodostuu yksi.\n3. Kaksi ksenonatomia tarvitsee kaksi $\\ce{NaHXeO4}$:a. Natriumien tasapainottamiseen (4) tarvitaan $\\ce{2NaOH}$, ja vedyt muodostavat kaksi vesimolekyyliä:\n$$\\ce{2NaHXeO4(s) + 2NaOH(aq) -> Na4XeO6(aq) + Xe(g) + O2(g) + 2H2O(l)}$$\n4. Tarkistus: Na 4 = 4, H 4 = 4, Xe 2 = 2, O $8+2=10$ = $6+2+2=10$.\n\nMuutokset: Xe +VI → +VIII ja +VI → 0, osa hapesta −II → 0, Na ja H ennallaan.\n\n(Koska hapettumisia on kaksi, myös esimerkiksi $\\ce{6NaHXeO4 + 2NaOH -> 2Na4XeO6 + 4Xe + 5O2 + 4H2O}$ on tasapainossa.)",
+     "answer": "$\\ce{2NaHXeO4(s) + 2NaOH(aq) -> Na4XeO6(aq) + Xe(g) + O2(g) + 2H2O(l)}$; Xe +VI→+VIII ja +VI→0, O −II→0",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 4,
+     "prompt": "Heliumilla ja neonilla ei tunneta pysyviä yhdisteitä, mutta ksenonilla on monia yhdisteitä, joissa se on kationina. Miksi ksenonista syntyy helpommin kationeja?",
+     "hints": [
+      "Kationi syntyy, kun atomi luovuttaa elektroneja. Vertaa ionisaatioenergiaa ryhmässä ylhäältä alas: miten ulkoelektronien etäisyys ytimestä ja varjostus muuttuvat?"
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- kationin muodostuminen tarkoittaa, että atomi luovuttaa elektroneja eli hapettuu (ionisoituu)\n- ksenonin ionisaatioenergia on paljon pienempi kuin heliumin ja neonin, koska ionisaatioenergia pienenee ryhmässä alaspäin\n- syy: ksenonilla on enemmän elektronikuoria, joten ulkoelektronit ovat kauempana ytimestä, ja sisäkuoret varjostavat ydinvarausta\n- johtopäätös: ksenonin ulkoelektronit ovat heikommin sidottuja ja irtoavat helpommin\n\nEsimerkkivastaus: Kun ksenon esiintyy yhdisteessä kationina, se on luovuttanut elektroneja. Heliumin ja neonin ulkoelektronit ovat lähellä ydintä, ja ydin vetää niitä voimakkaasti, joten niiden ionisaatioenergia on hyvin suuri. Ksenonilla on viisi elektronikuorta, joten sen ulkoelektronit ovat kaukana ytimestä ja sisempien kuorten elektronit varjostavat ydinvarausta. Ulkoelektronit ovat siksi heikommin sidottuja, ja ionisaatioenergia on pienempi. Siksi ksenon voi luovuttaa elektroneja hyvin elektronegatiiviselle fluorille tai hapelle.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Vesikaasun siirtoreaktio: $\\ce{CO(g) + H2O(g) <=> CO2(g) + H2(g)}$. Aineistossa 8.A on reaktion tasapainovakio $K$ lämpötiloissa 300–1500 K. Arvoja: 500 K:ssa $K=101$ ja 700 K:ssa $K=9{,}23$, ja $K$ pienenee koko alueella lämpötilan noustessa.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 3,
+     "prompt": "Onko siirtoreaktio eksoterminen vai endoterminen? Perustele aineiston 8.A avulla.",
+     "hints": [
+      "Miten $K$ muuttuu lämpötilan noustessa, ja mitä se kertoo tasapainon siirtymisestä? Le Chatelier'n periaatteen mukaan lämmitys suosii endotermistä suuntaa."
+     ],
+     "solution": "1. Aineiston mukaan $K$ pienenee, kun lämpötila nousee (esim. 101 → 9,23, kun lämpötila nousee 500 K:sta 700 K:iin).\n2. Pienempi $K$ tarkoittaa, että tasapainossa on vähemmän tuotteita, eli tasapaino siirtyy lähtöaineiden puolelle lämmitettäessä.\n3. Le Chatelier'n periaatteen mukaan lämmitys siirtää tasapainoa endotermiseen suuntaan, joten käänteinen reaktio on endoterminen ja etenevä eksoterminen.\n\n**Vastaus: reaktio on eksoterminen**",
+     "answer": "Eksoterminen",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 6,
+     "prompt": "Suljetussa 5,00 litran astiassa on 500 K:ssa 0,019 mol CO, 0,52 mol $\\ce{H2O}$, 0,95 mol $\\ce{CO2}$ ja 0,95 mol $\\ce{H2}$. Osoita laskemalla, ettei seos ole tasapainossa, ja päättele, onko etenevä reaktio nopeampi kuin palautuva.",
+     "hints": [
+      "Laske konsentraatiot ja niistä reaktio-osamäärä $Q$ samalla lausekkeella kuin tasapainovakio. Vertaa $Q$:ta arvoon $K=101$.",
+      "$Q\\approx91$. Jos $Q<K$, osamäärän pitää kasvaa, jotta tasapaino saavutetaan. Kumman suunnan reaktio silloin on nopeampi?"
+     ],
+     "solution": "1. $K=\\frac{[\\ce{CO2}][\\ce{H2}]}{[\\ce{CO}][\\ce{H2O}]}=101$ (500 K).\n2. Konsentraatiot: $[\\ce{CO}]=0{,}0038$, $[\\ce{H2O}]=0{,}104$, $[\\ce{CO2}]=[\\ce{H2}]=0{,}190\\,\\mathrm{mol/l}$.\n3. $Q=\\frac{0{,}190\\cdot0{,}190}{0{,}0038\\cdot0{,}104}=91$ (tilavuus supistuu, koska moolimäärä ei muutu).\n4. $Q<K$, joten seos ei ole tasapainossa.\n5. Tasapainon saavuttamiseksi osoittajan on kasvettava, eli tuotteita syntyy lisää. Etenevä reaktio on siis nopeampi kuin palautuva.\n\n**Vastaus: $Q\\approx91<K=101$, joten seos ei ole tasapainossa, ja etenevä reaktio on nopeampi**",
+     "answer": "$Q\\approx91<K=101$; etenevä reaktio on nopeampi",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.3",
+     "points": 6,
+     "prompt": "Toisessa kokeessa 5,00 litran astian tasapainokonsentraatiot 500 K:ssa olivat $[\\ce{CO}]=0{,}0104$, $[\\ce{H2O}]=0{,}0550$, $[\\ce{CO2}]=[\\ce{H2}]=0{,}240$ mol/l. Seos lämmitettiin 700 K:iin, ja tasapaino asettui uudelleen. Laske uudet tasapainokonsentraatiot kolmella merkitsevällä numerolla.",
+     "hints": [
+      "Lämmitettäessä $K$ pienenee, joten tasapaino siirtyy lähtöaineiden suuntaan. Merkitse muutosta $x$:llä: CO ja $\\ce{H2O}$ kasvavat $x$:n verran, ja $\\ce{CO2}$ ja $\\ce{H2}$ pienenevät saman verran.",
+      "Ratkaistava yhtälö on $\\frac{(0{,}240-x)^2}{(0{,}0104+x)(0{,}0550+x)}=9{,}23$. Positiivinen, fysikaalisesti järkevä juuri on $x\\approx0{,}0376\\,\\mathrm{mol/l}$."
+     ],
+     "solution": "1. 700 K:ssa $K=9{,}23$ (aineisto 8.A). Koska $K$ pieneni, tasapaino siirtyy vasemmalle.\n2. Tasapainossa: $[\\ce{CO}]=0{,}0104+x$, $[\\ce{H2O}]=0{,}0550+x$, $[\\ce{CO2}]=[\\ce{H2}]=0{,}240-x$.\n3. $\\frac{(0{,}240-x)^2}{(0{,}0104+x)(0{,}0550+x)}=9{,}23 \\iff 8{,}23x^2+1{,}0836x-0{,}05232=0$.\n4. Ratkaisut ovat $x=0{,}03756$ ja $x=-0{,}1692$. Jälkimmäinen hylätään, koska silloin $[\\ce{CO}]$ olisi negatiivinen.\n5. $[\\ce{CO}]=0{,}0480\\,\\mathrm{mol/l}$, $[\\ce{H2O}]=0{,}0926\\,\\mathrm{mol/l}$ ja $[\\ce{CO2}]=[\\ce{H2}]=0{,}202\\,\\mathrm{mol/l}$.\n\nTarkistus: $\\frac{0{,}2024^2}{0{,}04796\\cdot0{,}09256}=9{,}23$.\n\n**Vastaus: $[\\ce{CO}]=0{,}0480$, $[\\ce{H2O}]=0{,}0926$, $[\\ce{CO2}]=[\\ce{H2}]=0{,}202$ mol/l**",
+     "answer": "$[\\ce{CO}]=0{,}0480$, $[\\ce{H2O}]=0{,}0926$, $[\\ce{CO2}]=[\\ce{H2}]=0{,}202\\,\\mathrm{mol/l}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Propranololi on beetasalpaaja, $\\ce{ArO-CH2-CH(OH)-CH2-NH-CH(CH3)2}$ (Ar = 1-naftyyli). Aineistossa 9.A on kaksi synteesireittiä:\n\n- **I:** a) 1-naftoli + raseeminen epikloorihydriini (kloorimetyylioksiraani) kaliumkarbonaatin vesiliuoksessa → glysidyylieetteri E (1-naftyylioksimetyylioksiraani), b) E + isopropyyliamiini F → propranololi.\n- **II:** c) bromiketoni G, $\\ce{ArO-CH2-CO-CH2Br}$, + F → aminoketoni, d) vety ja kiraalinen Rh-katalyytti → (S)-propranololi.\n\nAineisto 9.B näyttää, miten propranololin log D riippuu pH:sta. Log D on noin 0,5, kun pH on alle 4, ja noin 3,3, kun pH on yli 10. $D$ on yhdisteen kokonaiskonsentraatioiden suhde oktan-1-olissa ja vesipuskurissa.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 3,
+     "prompt": "Vaiheessa a) käytetään kaliumkarbonaattia, joka tekee liuoksesta emäksisen. Miten 1-naftoli reagoi emäksisessä liuoksessa ennen epikloorihydriinin lisäämistä, ja mitä liuokseen vapautuisi vaiheessa a) ilman kaliumkarbonaattia?",
+     "hints": [
+      "1-naftoli on fenoli, eli heikko happo. Mikä sen vastinemäs on? Vertaa lähtöaineita ja tuotetta E: mitkä atomit jäävät yli, kun naftolin O liittyy epikloorihydriinin hiileen?"
+     ],
+     "solution": "1. 1-naftoli on fenolina heikko happo. Emäksisessä liuoksessa se luovuttaa protonin (protoninsiirtoreaktio), ja syntyy vastinemäs, naftolaatti-ioni $\\ce{ArO-}$, joka on hyvä nukleofiili.\n2. Kun naftolin happi liittyy epikloorihydriiniin ja kloori lähtee, jäljelle jää naftolin H ja Cl. Ilman emästä liuokseen vapautuisi siis vetykloridia (suolahappoa, $\\ce{HCl}$). Karbonaatti neutraloi sen.\n\n**Vastaus: naftoli deprotonoituu naftolaatti-ioniksi; ilman emästä vapautuisi HCl**",
+     "answer": "Naftoli luovuttaa protonin (naftolaatti-ioni); ilman emästä vapautuisi $\\ce{HCl}$",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 2,
+     "prompt": "Vaiheessa b) amiini F reagoi E:n kanssa. Miksi E:n reagoiva ryhmä on tavallista reaktiivisempi?",
+     "hints": [
+      "Mikä E:n funktionaalinen ryhmä reagoi amiinin kanssa, ja millainen rengas se on? Vertaa renkaan sidoskulmia tetraedrikulmaan."
+     ],
+     "solution": "1. Reagoiva ryhmä on eetteri, joka on kolmijäsenisessä renkaassa (epoksidi eli oksiraani).\n2. Kolmirenkaan sidoskulmat (noin 60°) poikkeavat paljon tetraedrikulmasta (109,5°), joten rengas on voimakkaasti jännittynyt. Renkaan aukeaminen vapauttaa jännityksen, ja siksi amiini avaa sen helposti, toisin kuin tavallisen eetterin.\n\n**Vastaus: E:n eetteriryhmä on jännittyneessä kolmirenkaassa (epoksidi)**",
+     "answer": "Eetteriryhmä on jännittyneessä kolmirenkaassa (epoksidi)",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 3,
+     "prompt": "Miksi vaiheessa c) amiinia F on käytettävä ylimäärin?",
+     "hints": [
+      "Kirjoita vaiheen c) reaktio: amiinin N–H korvaa bromin. Mikä epäorgaaninen sivutuote syntyy, ja miten se reagoi emäksisen amiinin kanssa?"
+     ],
+     "solution": "1. Substituutiossa amiini korvaa bromin, ja syntyy myös vetybromidia $\\ce{HBr}$.\n2. $\\ce{HBr}$ on vahva happo, ja se reagoi emäksisen amiinin kanssa ammoniumsuolaksi: $\\ce{(CH3)2CHNH2 + HBr -> (CH3)2CHNH3+ + Br-}$.\n3. Protonoitunut amiini ei enää toimi nukleofiilina, joten osa amiinista kuluu neutralointiin. Ylimäärä takaa, että G reagoi loppuun.\n\n**Vastaus: sivutuotteena syntyvä HBr neutraloi osan amiinista, joten amiinia tarvitaan ylimäärin**",
+     "answer": "Syntyvä HBr kuluttaa (protonoi) osan amiinista",
+     "check": "hvp"
+    },
+    {
+     "id": "9.4",
+     "points": 4,
+     "prompt": "Reitti II tuottaa pääosin (S)-propranololia, mutta reitti I tuottaa sekä (S)- että (R)-muotoa. Miksi reitti I ei tuota pelkkää (S)-muotoa, ja kuinka suuri osa reitin I tuotteesta on (S)-propranololia? Perustele.",
+     "hints": [
+      "Katso reitin I lähtöaineiden kuvausta: onko epikloorihydriini yksittäinen enantiomeeri? Käytetäänkö reitillä I mitään kiraalista reagenssia tai katalyyttiä?"
+     ],
+     "solution": "1. Reitillä I käytetty epikloorihydriini on raseemista: sen kahta enantiomeeriä on yhtä paljon. Reitillä ei ole kiraalista reagenssia tai katalyyttiä, joka suosisi toista enantiomeeriä, joten molemmat enantiomeerit reagoivat samalla tavalla.\n2. Siksi myös tuote on raseeminen seos.\n\n**Vastaus: raseeminen lähtöaine ilman kiraalista katalyyttiä antaa raseemisen tuotteen, joten (S)-propranololia on 50 %**",
+     "answer": "Tuote on raseeminen: 50 % (S)-propranololia",
+     "check": "hvp"
+    },
+    {
+     "id": "9.5",
+     "points": 8,
+     "prompt": "Kuvaile sanoin tai piirroksin, miten propranololin vallitseva muoto eroaa pH:ssa 3 ja pH:ssa 11. Miksi log D on pH:ssa 11 suurempi kuin pH:ssa 3?",
+     "hints": [
+      "Mikä propranololin funktionaalinen ryhmä on emäksinen ja voi protonoitua? Mieti sen muotoa hyvin happamassa ja hyvin emäksisessä liuoksessa.",
+      "Sekundäärinen aminoryhmä on pH:ssa 3 protonoitunut ($\\ce{-NH2+-}$, positiivinen varaus) ja pH:ssa 11 neutraali ($\\ce{-NH-}$). Suuri log D tarkoittaa, että yhdiste on enemmän oktanolissa kuin vedessä."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- pieni log D tarkoittaa, että yhdiste on enimmäkseen vesifaasissa, ja suuri log D, että se on enimmäkseen oktan-1-olissa (rasvaliukoinen)\n- propranololin sekundäärinen aminoryhmä on emäksinen ja voi protonoitua\n- pH:ssa 3 aminoryhmä on protonoitunut: $\\ce{ArO-CH2-CH(OH)-CH2-NH2+-CH(CH3)2}$, ja molekyylillä on positiivinen varaus\n- pH:ssa 11 aminoryhmä on neutraalissa emäsmuodossa: $\\ce{ArO-CH2-CH(OH)-CH2-NH-CH(CH3)2}$\n- varautunut happomuoto on paljon poolisempi, ja se liukenee veteen (ioni-dipolisidokset), kun taas neutraali muoto liukenee suuren naftaleeniosan ansiosta hyvin oktanoliin\n- siksi log D on pienempi happamassa (noin 0,5) ja suurempi emäksisessä (noin 3,3) liuoksessa\n\nEsimerkkivastaus: Propranololin sekundäärinen amiini on emäs. Happamassa liuoksessa (pH 3) typpi on sitonut protonin, ja molekyyli on kationi $\\ce{R2NH2+}$. Ioni hydratoituu hyvin, eli sen ja vesimolekyylien välille syntyy ioni-dipolisidoksia, joten suurin osa yhdisteestä pysyy vesifaasissa ja D on pieni. Emäksisessä liuoksessa (pH 11) aminoryhmä on neutraali $\\ce{R2NH}$. Molekyylin suuri pooliton naftaleenirengas ja isopropyyliryhmä tekevät siitä rasvaliukoisen, joten se siirtyy oktan-1-oliin ja log D on suuri. Kuvaajan nousu tapahtuu noin pH-alueella 6–10, eli aminoryhmän protonoitumisen muuttuessa.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Puskurikapasiteetti kertoo, paljonko happoa tai emästä puskuriin voi lisätä ilman, että pH muuttuu merkittävästi. Tehtävässä liuos toimii puskurina, kun $\\frac{[\\ce{HA}]}{[\\ce{A-}]}$ on välillä 0,1–10.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 4,
+     "prompt": "Puskuri tehdään typpihapokkeesta $\\ce{HNO2}$ ja natriumnitriitistä. Millä pH-välillä se toimii puskurina? Perustele laskemalla.",
+     "hints": [
+      "Hae typpihapokkeen $K_a$ taulukosta. Hendersonin–Hasselbalchin yhtälön mukaan $\\mathrm{pH}=\\mathrm{p}K_a+\\lg\\frac{[\\ce{A-}]}{[\\ce{HA}]}$. Sijoita suhteen ääriarvot."
+     ],
+     "solution": "1. Taulukkokirjasta $K_a(\\ce{HNO2})=7{,}2\\cdot10^{-4}\\,\\mathrm{mol/l}$, joten $\\mathrm{p}K_a=3{,}14$.\n2. $[\\ce{H3O+}]=K_a\\frac{[\\ce{HA}]}{[\\ce{A-}]}$, joten $\\mathrm{pH}=\\mathrm{p}K_a-\\lg\\frac{[\\ce{HA}]}{[\\ce{A-}]}$.\n3. Kun $\\frac{[\\ce{HA}]}{[\\ce{A-}]}=10$: $\\mathrm{pH}=3{,}14-1=2{,}14$.\n4. Kun $\\frac{[\\ce{HA}]}{[\\ce{A-}]}=0{,}1$: $\\mathrm{pH}=3{,}14+1=4{,}14$.\n\n**Vastaus: pH-välillä $2{,}14$–$4{,}14$**\n\n(Jos taulukkoarvo on eri, esim. $K_a=5{,}6\\cdot10^{-4}$, väli on noin 2,25–4,25. Periaate on sama: $\\mathrm{p}K_a\\pm1$.)",
+     "answer": "$\\mathrm{pH}\\approx2{,}14$–$4{,}14$ ($\\mathrm{p}K_a\\pm1$)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.2",
+     "points": 6,
+     "prompt": "Fosfaattipuskuri ylläpitää solujen pH:ta noin 7,4:ssä. Silloin fosfaatti on muodoissa $\\ce{H2PO4-}$ (39 %) ja $\\ce{HPO4^2-}$ (61 %). Mitä puskurissa tapahtuu, kun siihen lisätään vähitellen yhä enemmän happoa tai emästä?",
+     "hints": [
+      "Kumpi puskurin muodoista reagoi lisätyn hapon ($\\ce{H+}$) ja kumpi lisätyn emäksen ($\\ce{OH-}$) kanssa? Mitä tapahtuu, kun toinen muoto alkaa loppua?",
+      "$\\ce{HPO4^2- + H+ -> H2PO4-}$ ja $\\ce{H2PO4- + OH- -> HPO4^2- + H2O}$. Aluksi pH muuttuu vähän. Mieti, mitä tapahtuu, kun suhde $[\\ce{H2PO4-}]:[\\ce{HPO4^2-}]$ ylittää 10 tai alittaa 0,1."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- happoa lisättäessä vetyionit reagoivat vetyfosfaatti-ionien kanssa, jolloin syntyy divetyfosfaatti-ioneja: $\\ce{HPO4^2-(aq) + H+(aq) -> H2PO4-(aq)}$\n- emästä lisättäessä hydroksidi-ionit reagoivat divetyfosfaatti-ionien kanssa, jolloin syntyy vetyfosfaatti-ioneja ja vettä: $\\ce{H2PO4-(aq) + OH-(aq) -> HPO4^2-(aq) + H2O(l)}$\n- vahva happo tai emäs muuttuu heikoksi hapoksi tai emäkseksi, joka protolysoituu vain vähän, joten pH muuttuu aluksi vain vähän\n- kun happoa tai emästä on lisätty niin paljon, että suhde $[\\ce{H2PO4-}]:[\\ce{HPO4^2-}]$ on yli 10 tai alle 0,1 (toinen muoto on lähes loppunut), puskurointikyky loppuu ja pH muuttuu jyrkästi\n\nEsimerkkivastaus: Kun puskuriin lisätään happoa, vetyfosfaatti-ionit sitovat oksoniumionit ja muuttuvat divetyfosfaatti-ioneiksi. Emäksen hydroksidi-ionit taas neutraloituvat, kun divetyfosfaatti luovuttaa niille protonin. Vahva happo tai emäs korvautuu heikolla, joten pH laskee tai nousee vain hieman, ja suhde $[\\ce{H2PO4-}]:[\\ce{HPO4^2-}]$ muuttuu vähitellen. Kun lisäystä jatketaan, toinen muoto lopulta kuluu lähes loppuun. Kun suhde on yli 10 tai alle 0,1, puskuri ei enää pysty neutraloimaan lisäystä, ja pH muuttuu nopeasti kuten puhtaassa vedessä.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 3,
+     "prompt": "pH-mittari kalibroidaan usein puskureilla, joiden pH on 4,00 ja 7,00 (25 °C). Miksi pH:n 7,00 kalibroinnissa ei käytetä pelkkää vettä?",
+     "hints": [
+      "Pysyykö puhtaan veden pH tasan 7,00:ssa laboratoriossa? Mieti veden puskurointikykyä, ilmasta liukenevia kaasuja ja lämpötilan vaikutusta."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- vesi ei ole puskuri: pienetkin epäpuhtaudet muuttavat sen pH:ta\n- veteen liukenee ilmasta hiilidioksidia, joka muodostaa hiilihappoa: $\\ce{CO2(aq) + 2H2O(l) <=> HCO3-(aq) + H3O+(aq)}$, ja pH laskee alle 7:n (tyypillisesti noin 5,6)\n- puhtaan veden pH riippuu lisäksi lämpötilasta, koska $K_w$ muuttuu\n- puskuriliuos pitää pH:n vakiona, koska se neutraloi esim. hiilihapon vaikutuksen\n\nEsimerkkivastaus: Vesi ei vastusta pH:n muutoksia, joten jo pieni määrä epäpuhtautta muuttaa sen pH:ta. Säilytyksen aikana veteen liukenee ilmasta hiilidioksidia, joka reagoi hiilihapoksi ja happamoittaa veden, joten ”neutraalin” veden pH voi olla lähempänä kuutta kuin seitsemää. Lisäksi puhtaan veden pH on 7,00 vain 25 °C:ssa. Puskuriliuoksen pH pysyy vakiona, vaikka siihen liukenisi hieman hiilidioksidia, joten kalibrointi on luotettava.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 7,
+     "prompt": "Puskuri tehtiin liuottamalla 0,273 g natriumasetaattia ja lisäämällä 13,0 ml 0,250 mol/l etikkahappoa. Kokonaistilavuus oli 100,0 ml. Liuokseen lisätään kiinteää KOH:ta rae kerrallaan (0,06 g/rae, tilavuus ei muutu). Montako kokonaista raetta tarvitaan vähintään, jotta liuos lakkaa olemasta puskuri? Perustele laskemalla.",
+     "hints": [
+      "KOH reagoi etikkahapon kanssa: $\\ce{OH- + CH3COOH -> CH3COO- + H2O}$. Jokainen rae siis vähentää happomuotoa ja lisää emäsmuotoa saman ainemäärän verran. Puskurointikyky loppuu, kun $[\\ce{A-}]>10[\\ce{HA}]$.",
+      "Alussa $n(\\ce{CH3COO-})=3{,}328\\cdot10^{-3}$ mol ja $n(\\ce{CH3COOH})=3{,}250\\cdot10^{-3}$ mol. Yhdessä rakeessa on $1{,}069\\cdot10^{-3}$ mol KOH:ta. Muodosta epäyhtälö rakeiden määrälle $x$."
+     ],
+     "solution": "1. $n(\\ce{CH3COO-})=\\frac{0{,}273\\,\\mathrm{g}}{82{,}034\\,\\mathrm{g/mol}}=3{,}328\\cdot10^{-3}\\,\\mathrm{mol}$ ja $n(\\ce{CH3COOH})=0{,}0130\\,\\mathrm{l}\\cdot0{,}250\\,\\mathrm{mol/l}=3{,}250\\cdot10^{-3}\\,\\mathrm{mol}$.\n2. Yksi rae: $n(\\ce{KOH})=\\frac{0{,}06\\,\\mathrm{g}}{56{,}108\\,\\mathrm{g/mol}}=1{,}069\\cdot10^{-3}\\,\\mathrm{mol}$.\n3. Lisätty hydroksidi reagoi: $\\ce{OH-(aq) + CH3COOH(aq) -> CH3COO-(aq) + H2O(l)}$. Kun rakeita on $x$ kappaletta, $n(\\ce{HA})=3{,}250\\cdot10^{-3}-x\\cdot1{,}069\\cdot10^{-3}$ ja $n(\\ce{A-})=3{,}328\\cdot10^{-3}+x\\cdot1{,}069\\cdot10^{-3}$.\n4. Tilavuus on sama, joten ehto voidaan kirjoittaa ainemäärinä: puskurointikyky loppuu, kun $n(\\ce{A-})>10\\,n(\\ce{HA})$.\n5. $3{,}328+1{,}069x>10(3{,}250-1{,}069x)$, josta $11\\cdot1{,}069x>32{,}50-3{,}328$ ja $x>2{,}48$.\n6. Rakeita on oltava kokonaisluku, joten tarvitaan 3 raetta. (Kolmen rakeen jälkeen happoa on jäljellä vain $0{,}04\\cdot10^{-3}$ mol.)\n\n**Vastaus: vähintään 3 KOH-raetta**\n\n**Sudenkuoppa:** jos lisätty KOH lasketaan vain emäsmuodon kasvuksi eikä happomuotoa vähennetä, tulos on väärä.",
+     "answer": "3 raetta ($x>2{,}48$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Proteiinien toiminta riippuu niiden kolmiulotteisesta rakenteesta, joka syntyy peptidiketjun laskostuessa. Aineistossa 11.A on oksitosiinin rakenne tikkumallina (vedyt piilotettu yhtä N–H-vetyä lukuun ottamatta), 11.B insuliinin nauhamalli ja 11.C osa kollageenin ketjusta pallotikkumallina.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 6,
+     "prompt": "Oksitosiini on yhdeksästä aminohaposta koostuva peptidihormoni. Päättele aineiston 11.A mallista aminohappojen järjestys kysteiinistä Cys1 kysteiiniin Cys6 asti (kolmikirjaimiset lyhenteet).",
+     "hints": [
+      "Seuraa peptidiketjua Cys1:stä eteenpäin: jokaisen amidisidoksen (C(=O)–N) jälkeen alkaa uusi aminohappo. Tunnista kunkin sivuketju: aromaattinen rengas, jossa on OH, haaroittunut hiilivety tai amidiryhmä $\\ce{-CONH2}$.",
+      "Välissä on neljä aminohappoa. Niiden sivuketjut ovat järjestyksessä 4-hydroksifenyylimetyyli, sec-butyyli, $\\ce{-CH2CH2CONH2}$ ja $\\ce{-CH2CONH2}$."
+     ],
+     "solution": "1. Cys1:n jälkeen on aminohappo, jonka sivuketjussa on bentseenirengas ja OH para-asemassa: tyrosiini (Tyr).\n2. Seuraavan sivuketju on haaroittunut neljän hiilen hiilivety ($\\ce{-CH(CH3)CH2CH3}$): isoleusiini (Ile).\n3. Seuraavan sivuketjussa on kaksi $\\ce{CH2}$-ryhmää ja amidiryhmä $\\ce{-CONH2}$: glutamiini (Gln).\n4. Seuraavan sivuketjussa on yksi $\\ce{CH2}$ ja amidiryhmä: asparagiini (Asn).\n5. Sen jälkeen tulee Cys6.\n\n**Vastaus: Cys1–Tyr–Ile–Gln–Asn–Cys6**\n\n**Sudenkuoppa:** glutamiini ja asparagiini eroavat vain yhden $\\ce{CH2}$-ryhmän verran. Laske sivuketjun hiilet tarkasti.",
+     "answer": "Cys1–Tyr–Ile–Gln–Asn–Cys6",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 5,
+     "prompt": "Mikä vuorovaikutus aineiston 11.A kuvaan on merkitty pisteviivalla? Millä sidoksella Cys1 ja Cys6 ovat liittyneet toisiinsa? Miten nämä kaksi vaikuttavat oksitosiinin laskostumiseen?",
+     "hints": [
+      "Pisteviiva kulkee N–H-vedystä karbonyylihappeen. Cys1:n ja Cys6:n välissä on keltainen (rikki) yhteys: millainen sidos kahden kysteiinin tiolien välille voi syntyä?",
+      "Pisteviiva on vetysidos ja rikkien välinen yhteys kovalenttinen rikkisilta. Mieti, mitä rengasrakenne ja vetysidos tekevät muuten taipuisalle peptidiketjulle ja miksi muoto on hormonille tärkeä."
+     ],
+     "solution": "Hyvä vastaus sisältää:\n- pisteviiva on vetysidos (N–H-ryhmän vedyn ja karbonyyliryhmän hapen välillä)\n- Cys1 ja Cys6 ovat liittyneet rikkisillalla eli disulfidisidoksella: kahden rikkiatomin välinen kovalenttinen sidos $\\ce{-S-S-}$\n- vaikutukset: rikkisilta lukitsee peptidin rengasrakenteeksi, ja vetysidos ja rikkisilta vakauttavat kolmiulotteista muotoa (laskosta). Molekyyli säilyttää toiminnalle ja reseptoriin sitoutumiselle tarvittavan muodon\n\nEsimerkkivastaus: Pisteviiva on vetysidos amidiryhmän N–H-vedyn ja toisen amidin karbonyylihapen välillä. Cys1 ja Cys6 ovat kiinni toisissaan disulfidisidoksella: kysteiinien tioliryhmät ovat hapettuneet, ja rikkiatomien välille on muodostunut kovalenttinen sidos. Rikkisilta sulkee ketjun kuusi ensimmäistä aminohappoa renkaaksi, ja vetysidos jäykistää renkaan tiettyyn konformaatioon. Yhdessä ne vakauttavat oksitosiinin kolmiulotteisen rakenteen, jota hormonin sitoutuminen reseptoriinsa edellyttää.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 3,
+     "prompt": "Aineistossa 11.B insuliinin sekundäärirakenne on esitetty punaisena leveänä nauhana ja harmaana kapeana nauhana. Mikä sekundäärirakenne on kuvattu punaisena leveänä nauhana, ja mitä muita sekundäärirakenteita proteiineissa yleisesti on?",
+     "hints": [
+      "Nauhamallissa kierteinen leveä nauha on tyypillinen tietylle sekundäärirakenteelle. Proteiinien sekundäärirakenteet syntyvät pääketjun vetysidoksista, ja päätyyppejä on kaksi."
+     ],
+     "solution": "1. Punainen leveä, kierteinen nauha on **α-kierre** (alfaheliksi).\n2. Muita tavallisia sekundäärirakenteita ovat **β-laskos** (beetalevy) ja β-käänne.\n\n**Vastaus: α-kierre; muita ovat β-laskos ja β-käänne**",
+     "answer": "α-kierre; lisäksi β-laskos (ja β-käänne)",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 6,
+     "prompt": "Kollageenissa on proliinia, glysiiniä ja lisäksi aminohappoa, joka ei kuulu 20 tavallisen joukkoon. Se syntyy, kun proteiinin aminohappo hapettuu entsymaattisesti (entsyymi tarvitsee C-vitamiinia, ja puute aiheuttaa keripukin). Piirrä tämän aminohapon rakennekaava niin, että asymmetristen hiilten stereokemia näkyy.",
+     "hints": [
+      "Aineiston 11.C mallissa kolmas aminohappo muistuttaa proliinia, mutta sen renkaassa on yksi lisähappiatomi. Hapetus lisää proliinin renkaaseen hydroksiryhmän.",
+      "Kyseessä on 4-hydroksiproliini: OH on renkaan hiilessä 4, eli karboksyylihiilestä katsoen renkaan vastakkaisella puolella. Asymmetrisiä hiiliä on kaksi (C2 ja C4). Luonnon muodossa OH ja COOH ovat renkaan eri puolilla (trans)."
+     ],
+     "solution": "1. Proliinin hydroksylaatiossa syntyy **4-hydroksiproliini** (Hyp).\n2. Rakenne: viisijäseninen pyrrolidiinirengas (typpi ja neljä hiiltä). Hiilessä 2 (typen vieressä) on karboksyyliryhmä $\\ce{-COOH}$, ja hiilessä 4 on hydroksiryhmä $\\ce{-OH}$.\n3. Asymmetriset hiilet ovat C2 ja C4. Kollageenin hydroksiproliini on trans-4-hydroksi-L-proliini eli (2S,4R)-4-hydroksiproliini.\n4. Piirrettäessä: kun rengas on paperin tasossa ja typpi alhaalla, C2:n COOH on kiilasidoksella (kohti katsojaa) ja C4:n OH katkoviivakiilalla (poispäin), eli ryhmät ovat renkaan vastakkaisilla puolilla.\n\n**Vastaus: trans-4-hydroksi-L-proliini, (2S,4R)-4-hydroksipyrrolidiini-2-karboksyylihappo**\n\n**Sudenkuoppa:** 3-hydroksiproliini on eri paikkaisomeeri, ja cis-muoto on väärä diastereomeeri.",
+     "answer": "(2S,4R)-4-hydroksiproliini (trans-4-hydroksi-L-proliini)",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

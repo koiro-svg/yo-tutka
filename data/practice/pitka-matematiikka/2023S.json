@@ -1,0 +1,419 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2023S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2023S_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-09-19_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 4,
+    "note": "Kaikki neljä tehtävää ovat pakollisia. Käytössä taulukkokirja ja perusohjelmat; muut ohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "1.1",
+     "points": 3,
+     "prompt": "Ratkaise yhtälö $-7x+3=17$.",
+     "hints": [
+      "Siirrä vakiotermi toiselle puolelle ja jaa $x$:n kertoimella."
+     ],
+     "solution": "1. $-7x=17-3=14$.\n2. Jaetaan luvulla $-7$: $x=-2$.\n\n**Vastaus: $x=-2$**",
+     "answer": "$x=-2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.2",
+     "points": 3,
+     "prompt": "Ratkaise epäyhtälö $-7x+3<17$.",
+     "hints": [
+      "Toimi kuten yhtälössä, mutta muista, että negatiivisella luvulla jakaminen kääntää epäyhtälön suunnan."
+     ],
+     "solution": "1. $-7x<14$.\n2. Jaetaan negatiivisella luvulla $-7$, jolloin merkki kääntyy: $x>-2$.\n\n**Vastaus: $x>-2$**\n\n**Sudenkuoppa:** merkin kääntäminen unohtuu, ja vastaukseksi tulee väärin $x<-2$.",
+     "answer": "$x>-2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.3",
+     "points": 3,
+     "prompt": "Ratkaise yhtälö $x^2+x=2$.",
+     "hints": [
+      "Siirrä kaikki termit samalle puolelle, jolloin saat muodon $ax^2+bx+c=0$. Käytä ratkaisukaavaa tai jaa tekijöihin."
+     ],
+     "solution": "1. $x^2+x-2=0$.\n2. Ratkaisukaavalla $x=\\frac{-1\\pm\\sqrt{1+8}}{2}=\\frac{-1\\pm3}{2}$, joten $x=1$ tai $x=-2$. (Tekijöinä: $(x-1)(x+2)=0$.)\n\n**Vastaus: $x=1$ tai $x=-2$**\n\n**Sudenkuoppa:** tulon nollasääntöä ei voi käyttää muodossa $x(x+1)=2$ (”$x=2$ tai $x+1=2$” on väärin).",
+     "answer": "$x=1$ tai $x=-2$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "1.4",
+     "points": 3,
+     "prompt": "Ratkaise epäyhtälö $x^2+x-2\\le 0$.",
+     "hints": [
+      "Etsi ensin vastaavan yhtälön nollakohdat (edellinen kohta). Mieti sitten, millä välillä ylöspäin aukeava paraabeli on $x$-akselilla tai sen alapuolella."
+     ],
+     "solution": "1. Polynomin $x^2+x-2$ nollakohdat ovat $x=-2$ ja $x=1$ (kohta 1.3).\n2. Kuvaaja on ylöspäin aukeava paraabeli, koska $x^2$:n kerroin on positiivinen. Se on $x$-akselin alapuolella nollakohtien välissä ja akselilla nollakohdissa.\n3. Siis $x^2+x-2\\le 0$, kun $-2\\le x\\le 1$.\n\n**Vastaus: $-2\\le x\\le 1$**",
+     "answer": "$-2\\le x\\le 1$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Vastauskenttiin kirjoitetaan pelkät lopputulokset (kokonaislukukoordinaatit) muodossa (x,y) ilman välilyöntejä, välivaiheita tai perusteluja.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 2,
+     "prompt": "Missä pisteessä suora $y=3x+7$ leikkaa $y$-akselin?",
+     "hints": [
+      "$y$-akselilla $x=0$. Sijoita se suoran yhtälöön."
+     ],
+     "solution": "Kun $x=0$, $y=3\\cdot 0+7=7$.\n\n**Vastaus: $(0,7)$**\n\n**Sudenkuoppa:** piste on $(0,7)$, ei $(7,0)$.",
+     "answer": "$(0,7)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 2,
+     "prompt": "Mikä on pisteiden $(0,0)$ ja $(6,8)$ välisen janan keskipiste?",
+     "hints": [
+      "Keskipisteen koordinaatit ovat päätepisteiden koordinaattien keskiarvot."
+     ],
+     "solution": "$\\left(\\frac{0+6}{2},\\frac{0+8}{2}\\right)=(3,4)$.\n\n**Vastaus: $(3,4)$**",
+     "answer": "$(3,4)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 2,
+     "prompt": "Missä pisteessä suorat $x+y=0$ ja $2x+5y=3$ leikkaavat?",
+     "hints": [
+      "Ratkaise yhtälöpari. Ensimmäisestä yhtälöstä $x=-y$; sijoita se toiseen."
+     ],
+     "solution": "Sijoitus $x=-y$ antaa $-2y+5y=3$, joten $y=1$ ja $x=-1$.\n\n**Vastaus: $(-1,1)$**",
+     "answer": "$(-1,1)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.4",
+     "points": 2,
+     "prompt": "Mikä käyrän $xy=6$ pisteistä on se, jonka $y$-koordinaatti on 3?",
+     "hints": [
+      "Sijoita $y=3$ käyrän yhtälöön ja ratkaise $x$."
+     ],
+     "solution": "$3x=6$, joten $x=2$.\n\n**Vastaus: $(2,3)$**",
+     "answer": "$(2,3)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.5",
+     "points": 2,
+     "prompt": "Mikä on ympyrän $(x+1)^2+(y-2)^2=5$ keskipiste?",
+     "hints": [
+      "Ympyrän $(x-x_0)^2+(y-y_0)^2=r^2$ keskipiste on $(x_0,y_0)$. Tarkkaile etumerkkejä."
+     ],
+     "solution": "$(x+1)^2=(x-(-1))^2$, joten $x_0=-1$ ja $y_0=2$.\n\n**Vastaus: $(-1,2)$**\n\n**Sudenkuoppa:** merkkivirhe: $(x+1)^2$ tarkoittaa, että $x_0=-1$.",
+     "answer": "$(-1,2)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.6",
+     "points": 2,
+     "prompt": "Mikä on paraabelin $y=(x-3)^2+1$ huippu?",
+     "hints": [
+      "Huippumuodossa $y=a(x-x_0)^2+y_0$ huippu on $(x_0,y_0)$."
+     ],
+     "solution": "Neliö $(x-3)^2$ on pienimmillään nolla, kun $x=3$, jolloin $y=1$.\n\n**Vastaus: $(3,1)$**",
+     "answer": "$(3,1)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Etsi funktion $f(x)=x^2+\\frac{16}{x^2}$ pienin arvo, kun $x>0$.",
+     "hints": [
+      "Derivoi, kun $\\frac{16}{x^2}=16x^{-2}$. Etsi derivaatan nollakohdat ehdolla $x>0$ ja perustele kulkukaaviolla, että löydetty kohta on minimi.",
+      "$f'(x)=2x-\\frac{32}{x^3}$. Ehdosta $f'(x)=0$ saadaan $x^4=16$, ja positiivinen ratkaisu on $x=2$."
+     ],
+     "solution": "1. $f(x)=x^2+16x^{-2}$, joten $f'(x)=2x-32x^{-3}=2x-\\frac{32}{x^3}$.\n2. $f'(x)=0 \\iff 2x^4=32 \\iff x^4=16$. Kun $x>0$, ainoa ratkaisu on $x=2$.\n3. Kulkukaavio välillä $x>0$: $f'(1)=2-32<0$ ja $f'(3)=6-\\frac{32}{27}>0$. Derivaatta on jatkuva ja sillä on vain yksi nollakohta, joten $f'<0$, kun $0\\lt x<2$, ja $f'>0$, kun $x>2$. Funktio on ensin vähenevä ja sitten kasvava.\n4. Pienin arvo on siis $f(2)=4+\\frac{16}{4}=8$.\n\n(Vaihtoehto ilman derivaattaa: $f(x)=\\left(x-\\frac4x\\right)^2+8\\ge 8$, ja yhtäsuuruus pätee, kun $x=\\frac4x$ eli $x=2$.)\n\n**Vastaus: pienin arvo on $8$ (kohdassa $x=2$).**\n\n**Sudenkuoppa:** vastataan kohta $x=2$, vaikka kysyttiin funktion pienintä arvoa.",
+     "answer": "$8$ (kohdassa $x=2$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "intro": "Vektorit ovat $\\overline u=3\\overline i+\\overline j-2\\overline k$, $\\overline v=\\overline i+2\\overline j-2\\overline k$ ja $\\overline w=-5\\overline i-5\\overline j+6\\overline k$.",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Laske $\\overline u+2\\overline v-\\overline w$.",
+     "hints": [
+      "Kerro ensin $\\overline v$ kahdella ja vaihda $\\overline w$:n kaikkien komponenttien etumerkit. Laske sitten komponentit yhteen."
+     ],
+     "solution": "1. $2\\overline v=2\\overline i+4\\overline j-4\\overline k$ ja $-\\overline w=5\\overline i+5\\overline j-6\\overline k$.\n2. $\\overline u+2\\overline v-\\overline w=(3+2+5)\\overline i+(1+4+5)\\overline j+(-2-4-6)\\overline k=10\\overline i+10\\overline j-12\\overline k$.\n\n**Vastaus: $10\\overline i+10\\overline j-12\\overline k$**",
+     "answer": "$10\\overline i+10\\overline j-12\\overline k$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 9,
+     "prompt": "Vektorit $\\overline u$ ja $\\overline v$ ovat origon kautta kulkevan tason $T$ suuntavektorit. Laske pisteen $(6,7,1)$ etäisyys tasosta $T$.",
+     "hints": [
+      "Tarvitset tason normaalivektorin, eli vektorin, joka on kohtisuorassa sekä $\\overline u$:ta että $\\overline v$:tä vastaan (ristitulo tai kahden pistetuloehdon yhtälöpari). Koska origo on tasossa, tason yhtälö on $ax+by+cz=0$.",
+      "Normaali on $\\overline n=2\\overline i+4\\overline j+5\\overline k$ (tarkista: $\\overline n\\cdot\\overline u=0$ ja $\\overline n\\cdot\\overline v=0$). Taso on $2x+4y+5z=0$. Käytä pisteen etäisyyden kaavaa $\\frac{|ax_0+by_0+cz_0+d|}{\\sqrt{a^2+b^2+c^2}}$."
+     ],
+     "solution": "1. Normaalivektori $\\overline n=a\\overline i+b\\overline j+c\\overline k$ toteuttaa ehdot $\\overline n\\cdot\\overline u=3a+b-2c=0$ ja $\\overline n\\cdot\\overline v=a+2b-2c=0$.\n2. Vähentämällä: $2a-b=0$, joten $b=2a$, ja silloin $3a+2a=2c$, eli $c=\\frac52a$. Valitaan $a=2$: $\\overline n=2\\overline i+4\\overline j+5\\overline k$. (Sama tulos ristitulosta $\\overline u\\times\\overline v$.)\n3. Taso kulkee origon kautta, joten sen yhtälö on $2x+4y+5z=0$.\n4. Pisteen $(6,7,1)$ etäisyys: $d=\\frac{|2\\cdot 6+4\\cdot 7+5\\cdot 1|}{\\sqrt{2^2+4^2+5^2}}=\\frac{45}{\\sqrt{45}}=\\sqrt{45}=3\\sqrt5\\approx 6{,}71$.\n\n(Tarkistus: tason lähin piste on $\\overline u+\\overline v=(4,3,-4)$, ja erotusvektori $(2,4,5)$ on normaalin suuntainen. Sen pituus on $\\sqrt{45}$.)\n\n**Vastaus: $3\\sqrt5\\approx 6{,}7$**\n\n**Sudenkuoppa:** etäisyydeksi lasketaan pisteen etäisyys origosta, $\\sqrt{86}$, joka ei ole etäisyys tasosta.",
+     "answer": "$3\\sqrt5\\approx 6{,}7$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kymmenen sanallista kuvausta, joille valitaan parhaiten sopiva symbolinen merkintä (kohdat 5.3 ja 5.8 ovat 2 p, muut 1 p). Vaihtoehdot näet alkuperäisestä tehtävästä.\n\n- 5.1 Luvun 6 kuutiojuuri.\n- 5.2 Kaikki parilliset kokonaisluvut.\n- 5.3 Itseisarvo summasta, jossa lasketaan yhteen luvun $\\frac75$ käänteisluku ja vastaluku.\n- 5.4 $A$ ja $B$ ovat suoraan verrannollisia, verrannollisuuskerroin $k$.\n- 5.5 Samakantaisten potenssien tulossa eksponentit lasketaan yhteen.\n- 5.6 Hinta 129 € alennetaan ensin 10 % ja sitten vielä 20 %; lopullinen hinta.\n- 5.7 Lukusuoran pisteen $x$ etäisyys luvusta $-2$ on 3.\n- 5.8 Tasopisteen $(x,y)$ etäisyys pisteestä $(1,-3)$ on 4.\n- 5.9 Suorien $2x-3y=1$ ja $-x+4y=-2$ leikkauspiste.\n- 5.10 $f$:n arvo kohdassa 2 on suurempi kuin $g$:n arvo kohdassa $-3$.",
+     "hints": [
+      "Käännä sanallinen kuvaus itse ensin kaavaksi ja etsi sitten vaihtoehdoista sama. Tarkista käsitteet: käänteisluku, vastaluku, suoraan verrannollinen, etäisyys lukusuoralla ja tasossa.",
+      "Kohta kohdalta:\n- 5.3: $\\frac75$:n käänteisluku on $\\frac57$ ja vastaluku $-\\frac75$.\n- 5.4: suoraan verrannollisilla suhde on vakio.\n- 5.6: peräkkäiset prosenttimuutokset kerrotaan (kertoimet $0{,}9$ ja $0{,}8$).\n- 5.7–5.8: etäisyys on $|x-a|$ lukusuoralla ja $\\sqrt{(x-x_0)^2+(y-y_0)^2}$ tasossa.\n- 5.9: leikkauspiste on yhtälöparin ratkaisu; tarkista, onko $(1,-2)$ todella ratkaisu."
+     ],
+     "solution": "1. **5.1: D ($\\sqrt[3]6$).** $6^3$ on kuutio, ei kuutiojuuri, ja kuutiojuurella ei ole $\\pm$-merkkiä.\n2. **5.2: B ($2k,\\ k\\in\\mathbb Z$).** $2k+1$ antaa parittomat.\n3. **5.3: C ($\\left|\\frac57+\\left(-\\frac75\\right)\\right|$).** Käänteisluku $\\frac57$ plus vastaluku $-\\frac75$, ja koko summasta itseisarvo.\n4. **5.4: A ($A:B=k$).** Suoraan verrannollisten suureiden suhde on vakio.\n5. **5.5: A ($x^nx^m=x^{n+m}$).**\n6. **5.6: F ($0{,}8\\cdot 0{,}9\\cdot 129$ €).** Ensin jää 90 %, ja siitä vielä 80 %. Prosentteja ei saa laskea yhteen ($0{,}7\\cdot 129$ € on väärin).\n7. **5.7: D ($|x-(-2)|=3$).**\n8. **5.8: C ($\\sqrt{(x-1)^2+(y+3)^2}=4$).**\n9. **5.9: B (yhtälöpari $2x-3y=1$, $-x+4y=-2$).** Leikkauspiste on tämän yhtälöparin ratkaisu. Piste $(1,-2)$ ei toteuta yhtälöä $2x-3y=1$ ($2+6=8$), joten se ei käy.\n10. **5.10: C ($f(2)>g(-3)$).**\n\n**Vastaus: 5.1 D · 5.2 B · 5.3 C · 5.4 A · 5.5 A · 5.6 F · 5.7 D · 5.8 C · 5.9 B · 5.10 C**\n\n**Sudenkuoppa:** kohdassa 5.6 prosenttien laskeminen yhteen (30 %:n alennus). Toinen alennus lasketaan jo alennetusta hinnasta.",
+     "answer": "5.1 D ($\\sqrt[3]6$) · 5.2 B ($2k$) · 5.3 C · 5.4 A ($A:B=k$) · 5.5 A · 5.6 F ($0{,}8\\cdot0{,}9\\cdot129$ €) · 5.7 D · 5.8 C · 5.9 B (yhtälöpari) · 5.10 C ($f(2)>g(-3)$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kokonaiset appelsiinit maksavat 1,50 €/kg ja kuoritut 9,50 €/kg. Kuorimattoman appelsiinin ympärysmitta on 25,0 cm, ja kuori on 6,0 mm paksu. Appelsiini oletetaan palloksi ja kuori tasapaksuksi.\n\n1. Kuinka suuri osa appelsiinin tilavuudesta on kuorta? (6 p)\n2. Kuinka monta prosenttia kuoritun appelsiinin hinnasta on kuorimistyötä, kun kuoren ja hedelmälihan tiheys on sama ja kuori on arvoton? (6 p)",
+     "hints": [
+      "Ympärysmitasta saat säteen: $2\\pi r=25{,}0$ cm. Kuorettoman osan säde on 0,6 cm pienempi. Pallojen tilavuuksien suhde on säteiden suhteen kolmas potenssi.",
+      "$r=\\frac{25}{2\\pi}\\approx 3{,}979$ cm ja sisäsäde $\\approx 3{,}379$ cm, joten kuoren osuus on $1-\\left(\\frac{3{,}379}{3{,}979}\\right)^3\\approx 0{,}39$. Kilo kuorittuja vaatii $\\frac{1}{1-0{,}388}$ kg kokonaisia appelsiineja. Laske niiden hinta ja vertaa hintaan 9,50 €."
+     ],
+     "solution": "**1. Kuoren osuus**\n\n1. Ympärysmitasta $2\\pi r=25{,}0$ cm saadaan $r=\\frac{25{,}0}{2\\pi}\\approx 3{,}979$ cm.\n2. Kuorettoman osan säde on $r-0{,}60\\approx 3{,}379$ cm.\n3. Tilavuudet ovat $\\frac43\\pi r^3\\approx 263{,}9$ cm³ ja $\\frac43\\pi(r-0{,}6)^3\\approx 161{,}6$ cm³.\n4. Kuoren osuus: $\\frac{263{,}9-161{,}6}{263{,}9}=1-\\left(\\frac{3{,}379}{3{,}979}\\right)^3\\approx 0{,}388\\approx 39\\,\\%$.\n\n**2. Kuorimistyön osuus**\n\n5. Tiheydet ovat samat, joten massa on verrannollinen tilavuuteen. Kuoritun hedelmän osuus kokonaisen massasta on $1-0{,}3876=0{,}6124$.\n6. Kilo kuorittuja appelsiineja vaatii $\\frac{1}{0{,}6124}\\approx 1{,}633$ kg kokonaisia appelsiineja, joiden hinta on $1{,}633\\cdot 1{,}50\\approx 2{,}45$ €.\n7. Kuoren arvo on nolla, joten loput kuoritun kilon hinnasta, $9{,}50-2{,}45=7{,}05$ €, on kuorimistyötä.\n8. Osuus: $\\frac{7{,}05}{9{,}50}\\approx 0{,}74=74\\,\\%$.\n\n**Vastaus: 1. noin 39 % tilavuudesta on kuorta · 2. kuorimistyön osuus hinnasta on noin 74 %.**\n\n**Sudenkuoppa:** kuoren osuutta lasketaan säteiden tai pinta-alojen suhteena. Tilavuudessa suhde on kolmannessa potenssissa.",
+     "answer": "1. $\\approx 39\\,\\%$ · 2. $\\approx 74\\,\\%$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kenguru Ken Guru on $3\\times3$-ruudukon vasemmassa yläkulmassa (ruutu A) ja hyppii oikeaan alakulmaan (ruutu B). Yksi hyppy vie viereiseen ruutuun joko oikealle tai alas, ei vinottain eikä ruudukosta ulos. Kun vaihtoehtoja on kaksi, kumpikin valitaan todennäköisyydellä 0,5; muuten hypätään ainoaan mahdolliseen ruutuun.\n\n1. Laske jokaisen mahdollisen reitin todennäköisyys. (8 p)\n2. Paluumatkalla B:stä A:han Ken hyppii samalla periaatteella vain vasemmalle tai ylös. Millä todennäköisyydellä se kulkee täsmälleen menoreitin takaisin? (4 p)",
+     "hints": [
+      "Kirjoita reitti kirjainjonona: o = oikealle, a = alas. Jokaisessa reitissä on kaksi o:ta ja kaksi a:ta. Reitin todennäköisyys on sen varrella tehtyjen valintojen todennäköisyyksien tulo; valinta tapahtuu vain ruuduissa, joista pääsee kahteen suuntaan.",
+      "Reittejä on $\\binom42=6$. Reunaa pitkin kulkevissa (oo aa ja aa oo) Ken tekee vain kaksi valintaa, koska kulmaan päädyttyään suunta on pakotettu, joten niiden todennäköisyys on $\\frac14$. Muissa neljässä reitissä valintoja on kolme. Paluussa kukin reitti toistuu samalla todennäköisyydellä kuin menossa."
+     ],
+     "solution": "**1. Reittien todennäköisyydet**\n\n1. Merkitään hyppyä oikealle o ja alas a. Reitissä on kaksi o:ta ja kaksi a:ta, joten reittejä on $\\binom42=6$: ooaa, oaoa, oaao, aooa, aoao ja aaoo.\n2. Valinta (todennäköisyys $\\frac12$) tehdään aina, kun sekä oikealle että alas on tilaa. Kun oikea reuna tai alareuna on saavutettu, jatko on pakotettu.\n3. ooaa: kaksi valintaa, sitten Ken on oikeassa yläkulmassa ja loput hypyt ovat pakotettuja. $P=\\frac12\\cdot\\frac12=\\frac14$. Samoin aaoo: $P=\\frac14$.\n4. oaoa, oaao, aooa ja aoao: kolme valintaa ennen kuin reuna saavutetaan, joten $P=\\left(\\frac12\\right)^3=\\frac18$ kullekin.\n5. Tarkistus: $2\\cdot\\frac14+4\\cdot\\frac18=1$.\n\n**2. Sama reitti takaisin**\n\n6. Paluumatka on menomatkan peilikuva (ruudukon keskipisteen suhteen), joten kunkin reitin kulkeminen takaperin on yhtä todennäköistä kuin sama reitti menossa: reunareitit $\\frac14$, muut $\\frac18$.\n7. Meno- ja paluumatkan valinnat ovat riippumattomia, joten\n$$P=2\\cdot\\frac14\\cdot\\frac14+4\\cdot\\frac18\\cdot\\frac18=\\frac18+\\frac1{16}=\\frac3{16}.$$\n\n**Vastaus: 1. reunoja kiertävät reitit (oikealle, oikealle, alas, alas ja alas, alas, oikealle, oikealle) $\\frac14$ kumpikin, muut neljä reittiä $\\frac18$ kukin · 2. $\\frac3{16}\\approx 0{,}19$.**\n\n**Sudenkuoppa:** oletetaan kaikki kuusi reittiä yhtä todennäköisiksi ($\\frac16$). Pakotetut hypyt reunalla tekevät reunareiteistä todennäköisempiä.",
+     "answer": "1. reunareitit $\\frac14$, muut neljä $\\frac18$ · 2. $\\frac{3}{16}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 3,
+     "prompt": "Mikä on suurin luonnollinen luku $k$, jolla $1023\\equiv -1\\pmod{2^k}$?",
+     "hints": [
+      "Kongruenssi $a\\equiv b\\pmod m$ tarkoittaa, että $m$ jakaa erotuksen $a-b$. Mikä on $1023-(-1)$?"
+     ],
+     "solution": "1. $1023\\equiv-1\\pmod{2^k} \\iff 2^k\\mid 1023+1=1024$.\n2. $1024=2^{10}$, joten $2^k$ jakaa luvun 1024 täsmälleen silloin, kun $k\\le 10$.\n3. Kun $k\\ge 11$, $\\frac{1024}{2^k}$ ei ole kokonaisluku. Suurin arvo on siis $k=10$.\n\n**Vastaus: $k=10$**",
+     "answer": "$k=10$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "8.2",
+     "points": 9,
+     "prompt": "Todista, että $2^{12345678910}-1$ on jaollinen luvulla 1023.",
+     "hints": [
+      "Huomaa, että $1023=2^{10}-1$, joten $2^{10}\\equiv 1\\pmod{1023}$. Kirjoita eksponentti 12345678910 kymmenen monikertana.",
+      "$12345678910=10\\cdot 1\\,234\\,567\\,891$, joten $2^{12345678910}=\\left(2^{10}\\right)^{1\\,234\\,567\\,891}$. Korota kongruenssi $2^{10}\\equiv 1$ tähän potenssiin."
+     ],
+     "solution": "1. Väite on yhtäpitävä sen kanssa, että $2^{12345678910}\\equiv 1\\pmod{1023}$.\n2. $2^{10}=1024=1023+1$, joten $2^{10}\\equiv 1\\pmod{1023}$.\n3. Eksponentti päättyy nollaan, joten se on jaollinen kymmenellä: $12345678910=10\\cdot 1\\,234\\,567\\,891$.\n4. Kongruensseja voi korottaa potenssiin, joten $2^{12345678910}=\\left(2^{10}\\right)^{1\\,234\\,567\\,891}\\equiv 1^{1\\,234\\,567\\,891}=1\\pmod{1023}$.\n5. Siis $1023\\mid 2^{12345678910}-1$. $\\blacksquare$\n\n(Ilman kongruensseja: $a^m-1=(a-1)(a^{m-1}+\\dots+a+1)$, ja kun $a=2^{10}$, tekijä $a-1=1023$.)\n\n**Sudenkuoppa:** laskin ei pysty käsittelemään näin suurta lukua, joten todistuksen on oltava algebrallinen.",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Taidemuseon aidan pinta-alaa mallinnetaan integraalilla $\\int_0^4\\left(\\frac{\\cos(10x+x^2)}{2}+1\\right)dx$. Arvioi integraalia puolisuunnikassäännöllä 10 ja 100 osavälillä. Integraalin arvo viidellä desimaalilla on 3,98636. Laske kummankin arvion suhteellinen virhe.",
+     "hints": [
+      "Käytä ohjelmistoa, esimerkiksi GeoGebran komentoa Puolisuunnikassumma(funktio, 0, 4, n) tai taulukkolaskentaa. Laskimen on oltava radiaanitilassa. Suhteellinen virhe on $\\frac{\\text{arvio}-\\text{tarkka}}{\\text{tarkka}}$.",
+      "Osavälin pituus on $h=\\frac{4}{n}$, ja puolisuunnikassääntö on $h\\left(\\frac{g(0)}{2}+g(h)+\\dots+g(4-h)+\\frac{g(4)}{2}\\right)$. Kymmenellä osavälillä saat noin $4{,}29$ ja sadalla noin $3{,}99$."
+     ],
+     "solution": "1. Merkitään $g(x)=\\frac{\\cos(10x+x^2)}{2}+1$ ja $h=\\frac4n$. Puolisuunnikassääntö: $T_n=h\\left(\\frac{g(0)}{2}+\\sum_{k=1}^{n-1}g(kh)+\\frac{g(4)}{2}\\right)$.\n2. Ohjelmistolla (esim. Puolisuunnikassumma(g, 0, 4, 10)): $T_{10}\\approx 4{,}28823$.\n3. Samoin $T_{100}\\approx 3{,}98699$.\n4. Suhteelliset virheet:\n- $n=10$: $\\frac{4{,}28823-3{,}98636}{3{,}98636}\\approx 0{,}0757\\approx 7{,}6\\,\\%$.\n- $n=100$: $\\frac{3{,}98699-3{,}98636}{3{,}98636}\\approx 0{,}00016\\approx 0{,}016\\,\\%$.\n\n(Kymmenellä osavälillä väli on liian harva nopeasti värähtelevälle kosinille, joten virhe on suuri.)\n\n**Vastaus: $T_{10}\\approx 4{,}288$ (suhteellinen virhe noin $7{,}6\\,\\%$) ja $T_{100}\\approx 3{,}987$ (suhteellinen virhe noin $0{,}016\\,\\%$).**\n\n**Sudenkuoppa:** nimittäjään laitetaan arvio tarkan arvon sijaan, tai laskin on astetilassa.",
+     "answer": "$T_{10}\\approx 4{,}288$ ($\\approx 7{,}6\\,\\%$), $T_{100}\\approx 3{,}987$ ($\\approx 0{,}016\\,\\%$)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Funktiota $h:\\mathbb R\\to\\mathbb R$ kutsutaan parilliseksi, kun ehto $h(-x)=h(x)$ pätee jokaisella reaaliluvulla $x$, ja parittomaksi, kun jokaisella $x$ pätee $h(-x)=-h(x)$. Kohdat 10.1–10.4 ovat monivalintoja, kohdat 10.5 ja 10.6 perustellaan.",
+   "units": [
+    {
+     "id": "10.1–10.4",
+     "points": 4,
+     "prompt": "Valitse kullekin funktiolle: parillinen, pariton vai ei kumpikaan (1 p kukin, vaihtoehdot tässä järjestyksessä alkuperäisessä tehtävässä). 10.1 $a(x)=\\sin x$ · 10.2 $b(x)=\\cos x$ · 10.3 $c(x)=x\\sin x$ · 10.4 $d(x)=\\sin x+\\cos x$.",
+     "hints": [
+      "Laske kullekin $h(-x)$ ja vertaa lausekkeisiin $h(x)$ ja $-h(x)$. Muista, että $\\sin(-x)=-\\sin x$ ja $\\cos(-x)=\\cos x$. Kahden parittoman funktion tulo on parillinen."
+     ],
+     "solution": "1. **10.1: B (pariton).** $\\sin(-x)=-\\sin x$.\n2. **10.2: A (parillinen).** $\\cos(-x)=\\cos x$.\n3. **10.3: A (parillinen).** $(-x)\\sin(-x)=(-x)(-\\sin x)=x\\sin x$.\n4. **10.4: C (ei kumpikaan).** $d(-x)=-\\sin x+\\cos x$. Se ei ole $d(x)$ eikä $-d(x)$ yleisesti: esimerkiksi $d\\left(\\frac{\\pi}{4}\\right)=\\sqrt2$, mutta $d\\left(-\\frac{\\pi}{4}\\right)=0$.\n\n**Vastaus: 10.1 B · 10.2 A · 10.3 A · 10.4 C**",
+     "answer": "10.1 B (pariton) · 10.2 A (parillinen) · 10.3 A (parillinen) · 10.4 C (ei kumpikaan)",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.5",
+     "points": 4,
+     "prompt": "Todista, että jokaiselle parittomalle funktiolle $f$ pätee $f(0)=0$.",
+     "hints": [
+      "Sijoita parittomuuden määritelmään $f(-x)=-f(x)$ arvo $x=0$ ja käytä tietoa $-0=0$."
+     ],
+     "solution": "1. Parittomuuden mukaan $f(-x)=-f(x)$ kaikilla $x$, myös kun $x=0$: $f(-0)=-f(0)$.\n2. Koska $-0=0$, vasen puoli on $f(0)$. Siis $f(0)=-f(0)$.\n3. Tästä $2f(0)=0$, joten $f(0)=0$. $\\blacksquare$\n\n**Sudenkuoppa:** pelkkä viittaus kuvaajan symmetriaan origon suhteen ei ole todistus.",
+     "answer": "$f(0)=0$",
+     "check": "hvp"
+    },
+    {
+     "id": "10.6",
+     "points": 4,
+     "prompt": "Todista, että parillisen derivoituvan funktion $g$ derivaatta $g'$ on pariton.",
+     "hints": [
+      "Derivoi yhtälön $g(-x)=g(x)$ kumpikin puoli $x$:n suhteen. Vasemmalla puolella tarvitset ketjusääntöä."
+     ],
+     "solution": "1. Parillisuuden mukaan $g(-x)=g(x)$ kaikilla $x$.\n2. Derivoidaan puolittain. Ketjusäännöllä $D\\,g(-x)=g'(-x)\\cdot(-1)=-g'(-x)$, ja oikea puoli on $g'(x)$.\n3. Siis $-g'(-x)=g'(x)$ eli $g'(-x)=-g'(x)$ kaikilla $x$, joten $g'$ on pariton. $\\blacksquare$\n\n**Sudenkuoppa:** yksittäinen esimerkki (kuten $D\\cos x=-\\sin x$) ei todista väitettä kaikille parillisille funktioille.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Välillä $[-1,1]$ määritelty funktio $f$ toteuttaa väliarvolauseen ehdon, jos $f'(a)=\\frac{f(1)-f(-1)}{1-(-1)}$ jollakin $a\\in\\,]-1,1[$. Jokaisessa kohdassa esimerkki perustellaan.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Keksi funktio, joka on jatkuva suljetulla välillä $[-1,1]$ ja derivoituva avoimella välillä $]-1,1[$ ja jolle ehto toteutuu.",
+     "hints": [
+      "Väliarvolauseen mukaan kaikki tällaiset funktiot toteuttavat ehdon. Valitse yksinkertainen funktio, laske erotusosamäärä $\\frac{f(1)-f(-1)}{2}$ ja etsi kohta $a$, jossa derivaatta saa saman arvon."
+     ],
+     "solution": "1. Esimerkki: $f(x)=x^2$. Se on polynomina jatkuva ja derivoituva kaikkialla.\n2. $\\frac{f(1)-f(-1)}{2}=\\frac{1-1}{2}=0$.\n3. $f'(x)=2x$, ja $f'(0)=0$. Siis ehto toteutuu arvolla $a=0\\in\\,]-1,1[$.\n\n**Vastaus: esimerkiksi $f(x)=x^2$ ja $a=0$.**",
+     "answer": "Esim. $f(x)=x^2$, $a=0$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.2",
+     "points": 4,
+     "prompt": "Keksi funktio, jolle ehto ei toteudu ja joka ei ole derivoituva koko avoimella välillä $]-1,1[$, vaikka se on jatkuva välillä $[-1,1]$.",
+     "hints": [
+      "Tarvitset kärjen, jossa derivaattaa ei ole. Kokeile itseisarvofunktiota: sen erotusosamäärä välillä $[-1,1]$ on nolla, mutta mikä on derivaatta muualla?"
+     ],
+     "solution": "1. Esimerkki: $f(x)=|x|$. Se on jatkuva, mutta ei derivoituva kohdassa $0$ (kärki).\n2. $\\frac{f(1)-f(-1)}{2}=\\frac{1-1}{2}=0$.\n3. $f'(x)=-1$, kun $-1\\lt x<0$, ja $f'(x)=1$, kun $0\\lt x<1$, ja kohdassa $0$ derivaattaa ei ole.\n4. Millään $a\\in\\,]-1,1[$ ei siis ole $f'(a)=0$, joten ehto ei toteudu.\n\n**Vastaus: esimerkiksi $f(x)=|x|$: erotusosamäärä on 0, mutta derivaatta on $\\pm1$ tai sitä ei ole.**",
+     "answer": "Esim. $f(x)=|x|$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Keksi funktio, jolle ehto ei toteudu ja jolla on derivaatta kaikkialla välin $]-1,1[$ sisällä, vaikka se on epäjatkuva välillä $[-1,1]$.",
+     "hints": [
+      "Epäjatkuvuus voi olla välin päätepisteessä. Ota funktio, joka on sisäpisteissä suora, mutta muuta sen arvoja päätepisteissä niin, että erotusosamäärä muuttuu."
+     ],
+     "solution": "1. Esimerkki: $f(x)=x$, kun $-1\\lt x<1$, ja $f(-1)=f(1)=0$.\n2. Funktio on derivoituva välillä $]-1,1[$ ja $f'(x)=1$ siellä. Kohdissa $\\pm1$ se ei ole jatkuva, koska esim. $\\lim_{x\\to1^-}f(x)=1\\neq 0=f(1)$.\n3. $\\frac{f(1)-f(-1)}{2}=\\frac{0-0}{2}=0$.\n4. $f'(a)=1\\neq 0$ kaikilla $a\\in\\,]-1,1[$, joten ehto ei toteudu.\n\n**Vastaus: esimerkiksi $f(x)=x$ välin sisällä ja $f(\\pm1)=0$.**\n\n**Sudenkuoppa:** esimerkki, joka ei ole määritelty koko välillä $[-1,1]$ (esim. $\\frac1x$ tai funktio, jota ei ole päätepisteissä), ei kelpaa.",
+     "answer": "Esim. $f(x)=x$ välillä $]-1,1[$, $f(\\pm1)=0$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Olkoon $f_n(x)=x^n\\sin x$ ja $g_n(x)=x^n\\cos x$, $n=0,1,2,\\dots$, sekä $S_n=\\int_0^{\\pi}x^n\\sin x\\,dx$ ja $C_n=\\int_0^{\\pi}x^n\\cos x\\,dx$.\n\n1. Laske $f_n'(x)$ ja $g_n'(x)$. (2 p)\n2. Laske $S_0$ ja $C_0$. (2 p)\n3. Oletetaan, että $S_n=nC_{n-1}+\\pi^n$ ja $C_n=-nS_{n-1}$, kun $n\\ge1$. Laske näiden avulla $S_4$. (2 p)\n4. Integroi kohdan 1 derivaatat välillä $[0,\\pi]$ ja johda kohdan 3 palautuskaavat. (6 p)",
+     "hints": [
+      "Kohdassa 1 käytä tulon derivointisääntöä. Kohdassa 3 laske $S_4$ taaksepäin: $S_4$ tarvitsee $C_3$:n, joka tarvitsee $S_2$:n ja niin edelleen. Kohdassa 4 käytä sitä, että derivaatan integraali on funktion arvojen erotus: $\\int_0^{\\pi}f_n'(x)\\,dx=f_n(\\pi)-f_n(0)$.",
+      "$f_n'(x)=nx^{n-1}\\sin x+x^n\\cos x$, joten $\\int_0^{\\pi}f_n'(x)\\,dx=nS_{n-1}+C_n$, ja toisaalta se on $f_n(\\pi)-f_n(0)=0$. Vastaavasti $\\int_0^{\\pi}g_n'(x)\\,dx=nC_{n-1}-S_n=g_n(\\pi)-g_n(0)=-\\pi^n$."
+     ],
+     "solution": "**1. Derivaatat**\n\n1. $f_n'(x)=nx^{n-1}\\sin x+x^n\\cos x$.\n2. $g_n'(x)=nx^{n-1}\\cos x-x^n\\sin x$.\n\n**2. Alkuarvot**\n\n3. $S_0=\\int_0^{\\pi}\\sin x\\,dx=\\left[-\\cos x\\right]_0^{\\pi}=1+1=2$.\n4. $C_0=\\int_0^{\\pi}\\cos x\\,dx=\\left[\\sin x\\right]_0^{\\pi}=0$.\n\n**3. $S_4$**\n\n5. $S_4=4C_3+\\pi^4$, $C_3=-3S_2$, $S_2=2C_1+\\pi^2$ ja $C_1=-S_0=-2$.\n6. $S_2=-4+\\pi^2$, $C_3=12-3\\pi^2$ ja $S_4=48-12\\pi^2+\\pi^4\\approx 26{,}97$.\n\n**4. Palautuskaavojen johto**\n\n7. Integroidaan $f_n'$: $\\int_0^{\\pi}f_n'(x)\\,dx=n\\int_0^{\\pi}x^{n-1}\\sin x\\,dx+\\int_0^{\\pi}x^n\\cos x\\,dx=nS_{n-1}+C_n$.\n8. Toisaalta $\\int_0^{\\pi}f_n'(x)\\,dx=f_n(\\pi)-f_n(0)=\\pi^n\\sin\\pi-0=0$. Siis $nS_{n-1}+C_n=0$, eli $C_n=-nS_{n-1}$.\n9. Integroidaan $g_n'$: $\\int_0^{\\pi}g_n'(x)\\,dx=nC_{n-1}-S_n$.\n10. Toisaalta $\\int_0^{\\pi}g_n'(x)\\,dx=g_n(\\pi)-g_n(0)=\\pi^n\\cos\\pi-0^n\\cos 0=-\\pi^n$, kun $n\\ge1$. Siis $nC_{n-1}-S_n=-\\pi^n$, eli $S_n=nC_{n-1}+\\pi^n$.\n\n**Vastaus: $f_n'(x)=nx^{n-1}\\sin x+x^n\\cos x$, $g_n'(x)=nx^{n-1}\\cos x-x^n\\sin x$; $S_0=2$, $C_0=0$; $S_4=\\pi^4-12\\pi^2+48\\approx 26{,}97$; palautuskaavat seuraavat yhtälöistä $nS_{n-1}+C_n=0$ ja $nC_{n-1}-S_n=-\\pi^n$.**\n\n**Sudenkuoppa:** kohdassa 4 sijoitukset $f_n(\\pi)-f_n(0)$ ja $g_n(\\pi)-g_n(0)$ jätetään näyttämättä. Ilman niitä kaavat voisi vain arvata tehtävänannosta.",
+     "answer": "$S_0=2$, $C_0=0$, $S_4=\\pi^4-12\\pi^2+48\\approx 26{,}97$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Perustele epäyhtälöt:\n\n1. $\\ln k\\le\\int_k^{k+1}\\ln x\\,dx$, kun $k=1,2,3,\\dots$ (3 p)\n2. $\\sum_{k=1}^{n}\\ln k\\le\\int_1^{n+1}\\ln x\\,dx$, kun $n=1,2,3,\\dots$ (3 p)\n3. $n!\\le e\\left(\\frac{n+1}{e}\\right)^{n+1}$, kun $n=1,2,3,\\dots$ (6 p)",
+     "hints": [
+      "Kohta 1: $\\ln x$ on kasvava, joten välillä $[k,k+1]$ se on vähintään $\\ln k$. Luku $\\ln k$ on myös vakiofunktion integraali yhden pituisella välillä. Kohta 2: summaa kohdan 1 epäyhtälöt. Kohta 3: $\\ln n!=\\sum_{k=1}^n\\ln k$.",
+      "Kohdassa 2 integraalit $\\int_k^{k+1}$ yhdistyvät yhdeksi integraaliksi $\\int_1^{n+1}$. Kohdassa 3 laske $\\int_1^{n+1}\\ln x\\,dx=(n+1)\\ln(n+1)-n$ (osittaisintegrointi tai valmis integraalifunktio $x\\ln x-x$) ja käytä eksponenttifunktion kasvavuutta."
+     ],
+     "solution": "**1.**\n\n1. Funktio $\\ln x$ on kasvava, joten $\\ln x\\ge\\ln k$, kun $k\\le x\\le k+1$.\n2. Integroimalla yli välin, jonka pituus on 1: $\\int_k^{k+1}\\ln x\\,dx\\ge\\int_k^{k+1}\\ln k\\,dx=\\ln k$. $\\blacksquare$\n\n(Geometrisesti: suorakulmio, jonka leveys on 1 ja korkeus $\\ln k$, mahtuu käyrän $y=\\ln x$ alle välillä $[k,k+1]$.)\n\n**2.**\n\n3. Lasketaan kohdan 1 epäyhtälöt yhteen, kun $k=1,\\dots,n$: $\\sum_{k=1}^n\\ln k\\le\\sum_{k=1}^n\\int_k^{k+1}\\ln x\\,dx=\\int_1^{n+1}\\ln x\\,dx$, koska vierekkäiset välit muodostavat yhdessä välin $[1,n+1]$. $\\blacksquare$\n\n**3.**\n\n4. $\\ln n!=\\ln(1\\cdot 2\\cdots n)=\\sum_{k=1}^n\\ln k$.\n5. Integraalifunktio $x\\ln x-x$ antaa $\\int_1^{n+1}\\ln x\\,dx=(n+1)\\ln(n+1)-(n+1)-(0-1)=(n+1)\\ln(n+1)-n$.\n6. Kohdan 2 mukaan $\\ln n!\\le(n+1)\\ln(n+1)-n$.\n7. Eksponenttifunktio on aidosti kasvava, joten $n!\\le e^{(n+1)\\ln(n+1)-n}=\\frac{(n+1)^{n+1}}{e^n}=e\\cdot\\frac{(n+1)^{n+1}}{e^{n+1}}=e\\left(\\frac{n+1}{e}\\right)^{n+1}$. $\\blacksquare$\n\n(Esimerkiksi $n=5$: $5!=120\\le e\\cdot\\left(\\frac6e\\right)^6\\approx 314$.)\n\n**Sudenkuoppa:** kokeilu muutamalla $n$:n arvolla ei ole perustelu. Kohdassa 3 on myös mainittava, miksi epäyhtälö säilyy, kun molemmat puolet viedään eksponenttiin.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

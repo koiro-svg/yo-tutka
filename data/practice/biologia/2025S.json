@@ -1,0 +1,426 @@
+{
+ "subject": "biologia",
+ "session": "2025S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2025/syksy/biologia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-09-17_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: 20 pisteen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen tehtävä. Monivalinnoissa väärästä vastauksesta 0 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään seitsemästä. Tehtävän 6.1 viivadiagrammi tehdään taulukkolaskentaohjelmalla."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään kolmesta. Koko kokeessa vastataan seitsemään tehtävään, yhteensä 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kaksi monivalintasarjaa (2 p/kohta).\n\n**1.1 Männyn hiilihydraatit (1.1.1–1.1.5):** männyn puuaines on pääosin hiilihydraatteja, kuten selluloosaa. Mistä mänty saa hiilihydraattinsa ja mistä niiden vety-, happi- ja hiiliatomit sekä niihin sitoutunut energia ovat peräisin?\n\n**1.2 Cohenin oireyhtymä (1.2.1–1.2.5):** suomalaiseen tautiperimään kuuluva oireyhtymä, jonka aiheuttavat VPS13B-geenin mutaatiot. Sukupuun (alkuperäisen tehtävän kuva) avulla päätellään periytymistapa, selitetään sairaiden lasten syntyminen kahdessa perheessä ja lasketaan kaksi kantajuuden todennäköisyyttä (oireeton poika IV 10 sekä poika IV 1, kun hänen äitinsä III 1 ei ole kantaja).",
+     "hints": [
+      "1.1: kirjoita fotosynteesin reaktioyhtälö $\\ce{6CO2 + 6H2O -> C6H12O6 + 6O2}$ ja mieti, mitkä atomit päätyvät glukoosiin ja mitkä vapautuvat hapeksi. 1.2: onko sairailla lapsilla sairaita vanhempia, ja onko sairaita sekä miehiä että naisia?",
+      "Kohta kohdalta:\n- 1.1.2–1.1.4: veden happi vapautuu happikaasuna, joten hiilihydraatin happi ja hiili tulevat hiilidioksidista ja vety vedestä. Energia on valon energiaa.\n- 1.2.1: terveillä vanhemmilla on sairaita tyttäriä ja poikia.\n- 1.2.2 ja 1.2.4: tarkista, keitä III 3 ja III 4 ovat toisilleen; kummankin vanhemman on oltava kantaja.\n- 1.2.3: oireeton lapsi kahdelta kantajalta; lasketaan ehdollinen todennäköisyys (rajaa aa pois).\n- 1.2.5: IV 5 on kantaja (hänellä on sairaita lapsia), eikä hänen äitinsä III 1 ole, joten mikä on III 2:n genotyyppi?"
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen.\n\n**1.1 Männyn hiilihydraatit**\n\n1. **1.1.1 B:** mänty muokkaa fotosynteesin tuottamaa glukoosia muiksi hiilihydraateiksi, kuten tärkkelykseksi ja selluloosaksi.\n2. **1.1.2 D:** vety on peräisin vedestä, joka hajotetaan fotosynteesin valoreaktioissa.\n3. **1.1.3 A:** happi on peräisin sidotusta hiilidioksidista. Veden happi vapautuu ilmaan happikaasuna.\n4. **1.1.4 D:** hiili on peräisin ilman hiilidioksidista, joka sidotaan Calvinin kierrossa.\n5. **1.1.5 D:** energia on auringonvalon energiaa, joka sidotaan kemialliseksi energiaksi.\n\n**1.2 Cohenin oireyhtymä**\n\n6. **1.2.1 C, autosomissa resessiivisesti periytyvä alleeli.** Terveillä vanhemmilla on sairaita lapsia (resessiivinen), ja sairaita on sekä tyttäriä että poikia terveiden isien lapsina, joten periytyminen ei ole X-kromosomaalista.\n7. **1.2.2 B, serkkuavioliitto.** III 3 ja III 4 ovat serkkuja (heidän äitinsä ovat sisaruksia). Molemmat ovat kantajia, ja siksi heille syntyi sairaita lapsia. III 2 on voinut myös olla kantaja, mutta hänen puolisonsa ei ole.\n8. **1.2.3 E, 66,7 %.** III 3 ja III 4 ovat $Aa$. Oireettoman lapsen mahdolliset genotyypit ovat $AA$ (1 osa) ja $Aa$ (2 osaa), joten $P(Aa \\mid \\text{oireeton})=\\frac{1/2}{3/4}=\\tfrac23\\approx 66{,}7\\,\\%$.\n9. **1.2.4 B, molemmat vanhemmat ovat heterotsygootteja.** Resessiivinen tauti ilmenee vain, jos lapsi saa tautialleelin kummaltakin vanhemmalta.\n10. **1.2.5 D, 50,0 %.** IV 5 on kantaja, koska hänellä on sairaita lapsia. Koska III 1 ei ole kantaja, alleeli on tullut III 2:lta, joka on siis $Aa$. Risteytys $AA \\times Aa$ antaa $\\tfrac12$ kantajia.\n\n**Sudenkuoppa:** kohdassa 1.2.3 vastaus ei ole 50 %. Koska poika on oireeton, $aa$ ei ole mahdollinen, ja jäljelle jäävistä kolmesta yhtä todennäköisestä yhdistelmästä kaksi on kantajia.",
+     "answer": "1.1.1 B · 1.1.2 D · 1.1.3 A · 1.1.4 D · 1.1.5 D · 1.2.1 C · 1.2.2 B · 1.2.3 E (66,7 %) · 1.2.4 B · 1.2.5 D (50,0 %)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Pohjoisessa talvi kestää suuren osan vuodesta. Pohdi, millaisia talvehtimiskeinoja eläimille ja kasveille on kehittynyt.",
+     "hints": [
+      "Käsittele sekä eläimet että kasvit (kummastakin enintään noin 11 pistettä) ja anna esimerkkilajeja. Jäsennä eläinten keinot esimerkiksi näin: aineenvaihdunnan hidastaminen, lämmöneristys ja lämmöntuotanto, suojautuminen, ravinnon varastointi ja muutto.",
+      "Eläimet: kylmänhorros (vaihtolämpöiset) ja talvihorros (tasalämpöiset) sekä talviuni, talviturkki ja pörhistys, lihasvärinä, ruskea rasva, lumikieppi ja ryhmässä lämmittely, suojaväri, ruokavarastot, muutto, jäänestoaineet, viivästynyt alkionkehitys. Kasvit: lepotila, lehtien pudotus ja ravinteiden talteenotto, silmut ja silmusuomut, havujen vahapinta, talvehtiminen juurakkona, mukulana tai siemenenä, kylmäjakson tarve itämiselle ja lumen suoja."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Eläimet*\n- Aineenvaihdunnan hidastuminen pienentää energiantarvetta: vaihtolämpöisillä kylmänhorros (lämpötila seuraa ympäristöä, esim. sammakko), tasalämpöisillä säädelty talvihorros (esim. siili, lepakot) ja talviuni, jossa ruumiinlämpö laskee vain vähän (karhu).\n- Suoja pakkaselta: lumikieppi (teeri), rakennukset tai kolot, ryhmässä lämmittely.\n- Lämmöneristys: paksu talviturkki tai höyhenpuku, ontot karvat, pörhistys.\n- Lämmöntuotanto: lihasvärinä, ruskea rasva.\n- Talveksi vaihtuva valkoinen väri suojavärinä (metsäjänis, kärppä).\n- Kesällä kerätty rasvakerros ja ruokavarastot (orava), ravinnon vaihtaminen, vaellus tai muutto lämpimämpään.\n- Kalat vähentävät aktiivisuuttaan.\n- Jäänestoaineet soluissa, viivästynyt alkionkehitys (esim. mäyrä), talvehtiminen tietyssä kehitysvaiheessa (muna, kotelo).\n\n*Kasvit*\n- Talvehtimistapoja on monta (Raunkiaerin elomuodot); talvi vietetään lepotilassa.\n- Lehtipuut pudottavat lehtensä, ja klorofyllin hajotustuotteet ja ravinteet otetaan talteen runkoon ja oksiin.\n- Kasvupisteet ovat suojassa silmuissa, joita peittävät vahapintaiset silmusuomut.\n- Havupuiden pienet vahapintaiset neulaset vähentävät haihtumista.\n- Monet talvehtivat maan alla juurakkona, maavartena, juurina, mukulana tai sipulina; yksivuotiset kasvit siemeninä, joiden kova kuori estää kuivumista.\n- Monet tarvitsevat kylmäjakson ennen kasvun tai itämisen alkua, jolloin ne eivät idä väärään aikaan.\n- Lumipeite suojaa matalia kasveja, ja kuusen oksien rakenne kestää lumikuormaa.\n\n**Esimerkkivastaus** (tiivistetty)\n\nEläimet selviävät talvesta joko säästämällä energiaa, tuottamalla lämpöä tai välttämällä talven kokonaan. Siili ja lepakot vaipuvat talvihorrokseen, jossa ruumiinlämpö laskee säädellysti lähelle nollaa ja aineenvaihdunta hidastuu murto-osaan. Karhun talviunessa lämpö laskee vain muutaman asteen. Vaihtolämpöiset, kuten sammakot ja hyönteiset, vaipuvat kylmänhorrokseen, ja osa kestää jopa jäätymisen, koska niiden soluissa on jäänestoaineita. Monet hyönteiset talvehtivat munana tai koteloina.\n\nTalvella aktiivisina pysyvät eläimet kasvattavat paksun turkin tai höyhenpuvun ja pörhistävät sitä, jolloin eristävä ilmakerros kasvaa. Lämpöä tuotetaan lihasvärinällä ja ruskean rasvan avulla. Teeri kaivautuu lumikieppiin, ja pikkulinnut yöpyvät ryhmissä. Metsäjänis ja kärppä vaihtavat valkoisen talvipuvun. Orava kerää ruokavarastoja, ja monet linnut muuttavat etelään.\n\nKasvit viettävät talven lepotilassa. Koivu pudottaa lehtensä, mutta ottaa niistä ensin talteen ravinteita. Kasvupisteet talvehtivat silmuissa, joita suojaavat vahapintaiset silmusuomut. Männyn ja kuusen neulaset ovat pieniä ja vahapintaisia, joten ne haihduttavat vähän vettä, kun maa on jäässä. Moni ruohokasvi talvehtii maan alla juurakkona tai mukulana, ja yksivuotiset kasvit selviävät talvesta siemeninä. Lumi eristää maanpintaa, joten matalat varvut ja sammalet ovat lumen alla suojassa pakkaselta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 4,
+     "prompt": "Apinoiden planeetta -elokuvissa muut ihmisapinat ovat syrjäyttäneet nykyihmisen maapallon valtalajina. Poimi videolta 3.A neljä apinoiden ominaisuutta tai taitoa, joita todellisuudessa on vain ihmiseen johtaneella kehityslinjalla.",
+     "hints": [
+      "Katso, mitä apinat videolla tekevät: miten ne liikkuvat, viestivät, käyttävät käsiään ja millaisia välineitä, eläimiä ja tulta niillä on. Valitse neljä, joita nykyisillä ihmisapinoilla ei ole."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa neljä, 1 p/kpl)\n\n- puhekyky\n- pystyasento ja kaksijalkainen kävely\n- tarkkuusote\n- tulen käyttö\n- kasvien viljely\n- eläinten kesyttäminen (esim. ratsastus)\n- kulttuurievoluutio eli kulttuurin kehitys\n- tunteiden säätelykyky\n- korkea älykkyys\n\n**Sudenkuoppa:** yksinkertaisten työkalujen käyttö tai sosiaalinen elämä eivät kelpaa, koska simpanssit ja muut ihmisapinat osaavat niitä.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 11,
+     "prompt": "Pohdi kohdassa 3.1 valitsemiesi neljän ominaisuuden tai taidon kehittymistä ihmisen kehityslinjassa sekä sitä, miten ne ovat hyödyttäneet ihmistä.",
+     "hints": [
+      "Käsittele jokaisesta ominaisuudesta kaksi asiaa: mikä rakenteellinen muutos tai ympäristön valintapaine sen taustalla oli ja mitä hyötyä siitä oli selviytymiselle.",
+      "Esimerkkejä: puhe (isot poimuttuneet aivot, kurkunpään muutos → yhteistoiminta, metsästys, myöhemmin kirjoitus); pystyasento (metsien muuttuminen savanneiksi, selkärangan, lantion ja raajojen muutokset → energiatehokas liike, näkyvyys, vähemmän auringonsäteilyä, kädet vapaiksi); tarkkuusote (peukalon pituus ja nivel → työkalut, vaatteet); tuli (kypsennys → parempi ravinnon saanti ja isommat aivot, suoja, lämpö); kulttuurievoluutio (tiedon siirtyminen sukupolvelta toiselle)."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (esimerkkejä neljästä ominaisuudesta)\n\n- **Puhekyky:** aivojen koon kasvu ja poimuttuminen sekä kurkunpään muutokset tekivät puheen tuottamisen ja tulkitsemisen mahdolliseksi. Puhe tehosti yhteistoimintaa, esimerkiksi metsästystä, ja loi pohjan kirjoitus- ja lukutaidolle.\n- **Pystyasento:** ilmaston muuttuessa sademetsät vaihtuivat savanneiksi, mikä loi valintapaineen. Selkärangan, lantion ja raajojen rakenne muuttui (esim. pidempi alaselkä). Kahdella jalalla liikkuminen oli energiatehokasta ja nopeaa, paransi näkyvyyttä ympäristöön, vähensi auringonsäteilyn osumista kehoon ja vapautti kädet kantamiseen. Hikirauhasten määrä kasvoi.\n- **Tarkkuusote:** peukalon pidentyminen ja nivelen rakenne mahdollistivat peukalon ja etusormen vastakkain asettamisen. Tämä teki mahdolliseksi työkalujen valmistuksen (tehokkaampi metsästys ja proteiinin saanti), vaatteiden ompelemisen (lämpö, suoja) ja kulkuvälineet.\n- **Tulen käyttö:** kypsennys paransi ravinnon imeytymistä, säilyvyyttä ja hygieniaa, mikä tuki aivojen kasvua; tuli antoi suojaa pedoilta, lämpöä ja valoa ja auttoi siirtymään kylmemmille alueille.\n- **Eläinten kesyttäminen:** koira suojaksi ja metsästykseen, hevonen liikkumiseen, härkä maatöihin; ravintoa, villaa ja nahkaa.\n- **Kulttuurievoluutio:** tietoa voitiin siirtää lajitovereille ja uusille sukupolville, mikä kehitti yhteisöjä ja paransi jälkeläisten eloonjääntiä.\n- Pohdintaan kuuluu valintapaineen merkitys: ympäristö, kilpailu ja pedot suosivat näitä ominaisuuksia.\n\n**Esimerkkivastaus** (kaksi ominaisuutta neljästä)\n\n*Pystyasento.* Noin 6–7 miljoonaa vuotta sitten Afrikan ilmasto kuivui ja metsät harvenivat savanneiksi. Avoimessa maastossa kahdella jalalla liikkuvat yksilöt näkivät pidemmälle heinikon yli, altistuivat pienemmälle auringonsäteilylle ja kuluttivat pitkillä matkoilla vähemmän energiaa, joten luonnonvalinta suosi niitä. Lantio leveni ja muuttui maljamaiseksi, selkäranka kaartui S-kirjaimen muotoon ja jalkaterän kaari kehittyi. Pystyasento vapautti kädet kantamaan ravintoa, lapsia ja työkaluja.\n\n*Tulen käyttö.* Tulen hallinta alkoi ehkä salaman sytyttämien palojen hyödyntämisestä, ja myöhemmin tulta opittiin sytyttämään iskemällä kiviä yhteen. Kypsennetty ruoka on helpompi sulattaa, ja siitä saadaan enemmän energiaa, mikä on mahdollistanut suurten, energiaa kuluttavien aivojen kehittymisen. Kuumentaminen tappoi ruoan taudinaiheuttajia ja paransi säilyvyyttä. Nuotio antoi lämpöä ja valoa ja piti pedot loitolla, joten ihminen pystyi levittäytymään kylmempiin ilmastoihin.\n\n(Samalla tavalla käsitellään kaksi muuta kohdassa 3.1 nimettyä ominaisuutta.)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Luonnossa eläinlajit risteytyvät keskenään harvoin. Pohdi, mikä estää risteytymistä, miksi syntyneiden hybridien kelpoisuus jää heikoksi ja miksi vankeudessa, kuten eläintarhoissa, risteymiä syntyy useammin.",
+     "hints": [
+      "Jaa vastaus kolmeen osaan: (1) hedelmöitystä edeltävät isolaatiotekijät, (2) hedelmöityksen jälkeiset esteet ja kelpoisuuden heikkous, (3) vankeuden erityispiirteet. Määrittele kelpoisuus.",
+      "Ennen hedelmöitystä: maantieteellinen ja ekologinen erillisyys, erilainen lisääntymisaika, soidinkäyttäytyminen, ulkonäkö, ääntely ja feromonit, rakenteellisesti sopimattomat sukuelimet, yhteensopimattomat sukusolut ja eri kromosomiluvut. Hedelmöityksen jälkeen: alkion kehitys keskeytyy, risteymä on steriili (esim. muuli) tai sen jälkeläiset heikkenevät, kumppanin löytäminen on vaikeaa. Vankeudessa: oman lajin kumppania ei ole, luonnossa erillään elävät lajit kohtaavat, leimautuminen väärään lajiin, heikot yksilöt selviävät, ihminen risteyttää tarkoituksella."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kelpoisuus tarkoittaa yksilön kykyä siirtää geenejään seuraaviin sukupolviin.\n- Lajien välillä on isolaatiotekijöitä, jotka estävät risteytymisen.\n\n*Hedelmöitystä edeltävät (pretsygoottiset) esteet*\n- Maantieteellinen isolaatio: lajit elävät eri alueilla. Ekologinen isolaatio: eri elinympäristöt.\n- Käyttäytymisen isolaatio: erilainen soidinkäyttäytyminen (esim. lintujen soidin ja laulu).\n- Ajallinen isolaatio: lisääntymisajat eri aikaan.\n- Erilainen ulkonäkö, ääntely tai haju (feromonit), joten lajit eivät tunnista toisiaan kumppaneiksi.\n- Rakenteellinen isolaatio: sopimattomat sukuelimet.\n- Sukusolut eivät sovi yhteen, tai kromosomiluvut eroavat.\n\n*Hedelmöityksen jälkeiset (postsygoottiset) esteet ja heikko kelpoisuus*\n- Alkion tai sikiön kehitys keskeytyy.\n- Risteymä voi elää mutta olla lisääntymiskyvytön, tai elinkyky heikkenee seuraavissa sukupolvissa.\n- Nisäkkäillä suuri kokoero voi estää synnytyksen.\n- Risteymän on vaikea löytää kumppania, koska seksuaalivalinta ei suosi välimuotoja; myös ravinnon hankinta ja petojen välttäminen voivat olla sille vaikeita.\n- Esimerkki luonnon risteymästä (esim. metson ja teeren risteymä korpimetso, suden ja kojootin tai jääkarhun ja harmaakarhun risteymät).\n\n*Vankeus*\n- Oman lajin kumppania ei ole tarjolla.\n- Luonnossa eri alueilla elävät lajit kohtaavat.\n- Vankeudessa kasvanut eläin voi leimautua väärään lajiin.\n- Heikot yksilöt selviävät lisääntymisikään.\n- Ihminen voi risteyttää lajeja tarkoituksella.\n- Esimerkki vankeuden risteymästä (esim. liger eli leijona × tiikeri, muuli eli aasi × hevonen).\n\n**Esimerkkivastaus** (tiivistetty)\n\nLajit pysyvät erillään, koska niiden välillä on lisääntymistä estäviä tekijöitä. Monet lähisukuiset lajit elävät eri alueilla tai eri elinympäristöissä, jolloin ne eivät edes kohtaa. Samalla alueella elävillä lajeilla on usein eri kiima- tai soidinaika, erilainen soidinmeno, laulu tai tuoksu, joten naaras ei hyväksy toisen lajin koirasta. Jos parittelu tapahtuu, sukuelimet tai sukusolut eivät välttämättä sovi yhteen, eikä hedelmöitystä tapahdu.\n\nVaikka hedelmöitys onnistuisi, eri kromosomiluvut ja geenien yhteensopimattomuus voivat pysäyttää alkion kehityksen. Syntynyt risteymä on usein steriili, kuten muuli, jonka kromosomit eivät pariudu meioosissa. Jos risteymä on hedelmällinen, sen jälkeläisten elinkyky voi heiketä. Välimuotoinen ulkonäkö ja käytös heikentävät kumppanin löytämistä, eikä risteymä välttämättä ole sopeutunut kummankaan vanhempilajin ekolokeroon. Risteymien kelpoisuus, eli kyky siirtää geenejä jälkipolville, on siksi heikko.\n\nEläintarhoissa samaan tilaan voidaan tuoda lajeja, jotka eivät luonnossa koskaan kohtaa, kuten leijona ja tiikeri, joiden risteymä on liger. Oman lajin kumppania ei aina ole, ja ihmisen kasvattama eläin voi leimautua väärään lajiin. Vankeudessa heikommatkin yksilöt selviävät, ja joskus ihminen risteyttää lajeja tarkoituksella.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 9,
+     "prompt": "Hapan laskeuma vaurioitti metsiä 1900-luvun loppupuolella, mutta Euroopassa se on sittemmin vähentynyt, ja kriittinen kuormitus (suurin laskeuma, joka ei pitkälläkään aikavälillä vaurioita ekosysteemiä merkittävästi) ylittyy harvemmin (kartta 5.A). Selitä, miten hapan laskeuma syntyy ja miten se vaikuttaa metsäekosysteemiin.",
+     "hints": [
+      "Käsittele kaksi osaa: laskeuman syntyminen (noin 3–5 p) ja vaikutukset metsäekosysteemiin (noin 4–6 p). Mistä rikin ja typen oksidit tulevat ja mitä niille tapahtuu ilmakehässä?",
+      "Syntyminen: palamisessa (esim. fossiiliset polttoaineet, liikenne) syntyy rikki- ja typpioksideja, jotka hapettuvat ja liukenevat pisaroihin rikki- ja typpihapoksi; laskeuma tulee maahan kuiva- ja märkälaskeumana ja voi kulkeutua kauas. Vaikutukset: neulasten vahapinnan ja ilmarakojen vauriot, harsuuntuminen, alttius tuholaisille; maaperän happamoituminen, ravinteiden huuhtoutuminen, raskasmetallien liukeneminen, sienijuurten ja hajottajien häiriöt, lajiston muutos (esim. naavat)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Syntyminen*\n- Happamoituminen johtuu rikin ja typen oksideista, jotka syntyvät palamisessa (fossiiliset polttoaineet, teollisuus, liikenne).\n- Ilmakehässä oksidit reagoivat hapen ja veden kanssa ja muodostavat rikki- ja typpihappoa.\n- Laskeuma tulee maahan kuivalaskeumana (kaasut ja hiukkaset) ja märkälaskeumana (sade, lumi).\n- Tuulet kuljettavat yhdisteitä kauas päästölähteistä (kaukokulkeuma).\n\n*Vaikutukset metsäekosysteemiin*\n- Happamoituminen tarkoittaa maaperän tai vesien pH:n laskua; merkittäviä vaurioita syntyy, kun kriittinen kuormitus ylittyy.\n- Lehtien ja neulasten vahakerros vahingoittuu, jolloin vettä haihtuu enemmän, ilmaraot eivät toimi kunnolla ja yhteyttäminen heikkenee; puut harsuuntuvat ja altistuvat taudeille ja tuholaisille.\n- Maaperä happamoituu: ravinteita (esim. kalsium, magnesium, kalium) huuhtoutuu pois juurten ulottuvilta, ja raskasmetallien (esim. alumiini) liukoisuus kasvaa.\n- Sienijuuret (mykorritsa) vaurioituvat, mikä heikentää puiden ravinteiden saantia; hajottajien toiminta muuttuu.\n- Lajit sietävät happamuutta eri tavoin, joten lajisto, kilpailusuhteet ja monimuotoisuus muuttuvat (esim. naavat ja lupot ovat herkkiä).\n\n**Esimerkkivastaus**\n\nKun fossiilisia polttoaineita poltetaan voimalaitoksissa, teollisuudessa ja liikenteessä, ilmaan vapautuu rikkidioksidia ja typen oksideja. Ne hapettuvat ilmakehässä ja liukenevat pilvipisaroihin, jolloin syntyy rikkihappoa ja typpihappoa. Yhdisteet laskeutuvat maahan sateen ja lumen mukana märkälaskeumana tai kaasuina ja hiukkasina kuivalaskeumana. Tuulet voivat kuljettaa niitä satojen kilometrien päähän, joten Suomeenkin tuli laskeumaa Keski-Euroopasta.\n\nMetsässä hapan laskeuma syövyttää neulasten vahakerrosta, jolloin neulaset haihduttavat enemmän vettä ja ilmarakojen toiminta häiriintyy. Fotosynteesi heikkenee, neulasia varisee ja latvus harsuuntuu. Heikentyneet puut ovat alttiimpia tuholaisille ja taudeille. Kun maaperän pH laskee, vetyionit syrjäyttävät maahiukkasista kasvinravinteita, jotka huuhtoutuvat pois, ja alumiini sekä raskasmetallit liukenevat juurille myrkyllisiksi. Puiden sienijuuret ja maaperän hajottajat kärsivät, joten ravinteiden kierto hidastuu. Happamuudelle herkät lajit, kuten naavat, vähenevät, ja kestävät lajit yleistyvät, joten metsän lajisto ja monimuotoisuus muuttuvat.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 6,
+     "prompt": "Vaikka happaman laskeuman kuormitus on pienentynyt, valtamerten happamoituminen on yhä kasvava huoli. Selitä sen syy (voit käyttää kuvaajaa 5.B ilman hiilidioksidipitoisuudesta, meriveden hiilidioksidin osapaineesta ja pH:sta), ja pohdi, miten se vaikuttaa meren eliöihin ja eliöyhteisöihin.",
+     "hints": [
+      "Käsittele syy (noin 2–4 p) ja vaikutukset (noin 2–4 p). Mitä hiilidioksidille tapahtuu, kun se liukenee veteen, ja mihin suuntaan kuvaajan käyrät kulkevat?",
+      "Syy: ilman $\\ce{CO2}$-pitoisuus kasvaa fossiilisten polttoaineiden vuoksi, sitä liukenee mereen, syntyy hiilihappoa ja pH laskee (kuvaajassa pitoisuus ja osapaine nousevat, pH laskee). Vaikutukset: kalkkikuoriset ja kalkkirankaiset eliöt (simpukat, korallit, osa planktonista) eivät saa rakennettua kuoriaan, toukkavaiheet ovat herkkiä, korallien levät kärsivät, ravintoverkot muuttuvat; osa levistä voi hyötyä lisääntyneestä hiilidioksidista."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Syy*\n- Ilman hiilidioksidia liukenee meriveteen, ja syntyy hiilihappoa, joka laskee veden pH:ta.\n- Fossiilisten polttoaineiden käyttö nostaa jatkuvasti ilmakehän hiilidioksidipitoisuutta (kuvaaja 5.B).\n- Suurempi pitoisuus ilmassa tarkoittaa, että mereen liukenee enemmän hiilidioksidia ja pH laskee enemmän.\n\n*Vaikutukset*\n- Kalkkikuoriset eliöt ja kalkkirankaiset, kuten simpukat ja korallit, kärsivät, koska ne eivät saa kalkkia kuoren ja rangan rakennusaineeksi.\n- Korallien kanssa elävien levien toiminta voi häiriintyä.\n- Toukat ja muut nuoruusvaiheet kärsivät usein eniten.\n- Kestävät lajit voivat hyötyä, kun kilpailu vähenee, ja osa vesikasveista ja levistä hyötyy lisääntyneestä hiilidioksidista.\n- Lajien erilainen herkkyys muuttaa lajien välisiä suhteita ja ravintoverkkoja, esimerkiksi peto–saalis-suhteita; koralliriuttoja suoja- ja lisääntymispaikkoina käyttävät lajit ovat vaarassa.\n\n**Esimerkkivastaus**\n\nKuvaajan 5.B mukaan ilman hiilidioksidipitoisuus ja meriveden hiilidioksidin osapaine ovat nousseet viime vuosikymmeninä, ja samaan aikaan meriveden pH on laskenut. Fossiilisten polttoaineiden käyttö lisää ilman hiilidioksidia, ja valtameret sitovat siitä merkittävän osan. Veteen liuennut hiilidioksidi muodostaa hiilihappoa, joka vapauttaa vetyioneja, ja meri happamoituu.\n\nHappamoituminen vähentää vedessä olevia karbonaatti-ioneja, joita kalkkikuoriset eliöt tarvitsevat. Simpukoiden, korallien, merisiilien ja kalkkikuoristen planktonlevien on vaikeampi rakentaa kuoriaan ja rankaansa, ja niiden toukkavaiheet kärsivät eniten. Kun korallit heikkenevät, riutoilla elävät kalat ja selkärangattomat menettävät suoja- ja lisääntymispaikkojaan. Koska lajit reagoivat eri tavoin, ravintoverkot muuttuvat: esimerkiksi kalkkikuorisen planktonin väheneminen vaikuttaa sitä syöviin eläimiin. Toisaalta osa levistä ja meriruohoista voi hyötyä, koska hiilidioksidia on enemmän yhteyttämiseen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Vesitystaudissa virtsaa erittyy hyvin runsaasti, jopa yli 10 litraa vuorokaudessa, ja potilas janoaa jatkuvasti. Syynä on aivolisäkkeen liian vähäinen antidiureettisen hormonin (ADH) eritys. Taulukossa 6.A on vesipaaston tulokset ja kuvassa 6.B nefronin osat (hiussuonikeränen, kotelo, munuaistiehyt, hiussuoniverkosto, kokoojatiehyt).",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 5,
+     "prompt": "Vesitystaudin toteamiseksi tehdään vesipaasto: tutkittava ei juo, hänen virtsansa määrä ja väkevyys mitataan, ja jonkin ajan kuluttua hänelle annetaan keinotekoista ADH:ta. Laadi taulukon 6.A kahdeksan tunnin mittaustuloksista viivadiagrammi ja liitä se vastaukseen kuvakaappauksena.",
+     "hints": [
+      "Taulukossa on kaksi muuttujaa, joilla on eri yksiköt (ml/h ja mosm/kg), mutta sama aika-akseli. Mieti, miten ne saa samaan kuvaan niin, että muutokset näkyvät yhtä aikaa.",
+      "Tee viivadiagrammi, jonka vaaka-akseli on aika (h) jatkuvana asteikkona, ja käytä kahta pystyakselia: vasemmalla virtsan määrä (ml/h), oikealla väkevyys (mosm/kg). Lisää selitteet kummallekin viivalle ja otsikko tai kuvateksti. Taulukkolaskentaohjelmassa toinen sarja siirretään toissijaiselle akselille."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Viivadiagrammi, jossa on molemmat muuttujat.\n- Vaaka-akselilla aika jatkuvana asteikkona, akseli nimetty ja yksikkö (h).\n- Kaksi pystyakselia: virtsan määrä (ml/h) ja virtsan väkevyys (mosm/kg), nimettyinä ja yksiköineen.\n- Selitteet, joista näkee, kumpi viiva on määrä ja kumpi väkevyys.\n- Sopiva otsikko tai kuvateksti, esim. \"Virtsan määrä ja väkevyys vesipaaston aikana\".\n\n**Toteutus taulukkolaskentaohjelmassa**\n\n1. Valitse kaikki kolme saraketta ja lisää viivakaavio, jossa ensimmäinen sarake on vaaka-akseli (1–8 h).\n2. Siirrä väkevyyssarja toissijaiselle pystyakselille, koska arvot ovat eri suuruusluokkaa (määrä enimmillään noin 600 ml/h, väkevyys noin 150–350 mosm/kg).\n3. Nimeä akselit yksiköineen, lisää selite ja otsikko.\n\nKuvaajassa virtsan määrä pysyy ensimmäiset tunnit suurena (noin 400–600 ml/h) ja romahtaa loppua kohti, kun taas väkevyys pysyy aluksi matalana ja kasvaa viimeisinä tunteina selvästi.\n\n**Sudenkuoppa:** kaksi erillistä kuvaajaa hyväksytään, mutta ne antavat enintään 3 pistettä, koska muutosten samanaikaisuus ei näy. Pylväskaavio, jossa aika ei ole jatkuva, ei ole viivadiagrammi.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 4,
+     "prompt": "Tutkittava sai keinotekoista ADH:ta kolme tuntia vesipaaston alkamisen jälkeen. Pohdi kohdan 6.1 diagrammin perusteella, onko hänellä vesitystauti.",
+     "hints": [
+      "Selitä ensin lyhyesti, miten ADH vaikuttaa munuaisissa (akvaporiinit). Vertaa sitten virtsan määrää ennen ADH:n antamista terveen ihmisen odotettuun reaktioon janotessa ja katso, mitä ADH:n jälkeen tapahtuu. Täysiin pisteisiin tarvitaan johtopäätös vesitystaudista."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- ADH lisää veden takaisinimeytymistä munuaisissa: se saa akvaporiineja (vesikanavia) kuljetettua rakkuloissa kokoojaputken solujen solukalvolle, jolloin vettä imeytyy takaisin ja virtsa on niukkaa ja väkevää.\n- Ennen ADH:n antamista tutkittavalla muodostuu paljon virtsaa, vaikka hän ei juo, mikä viittaa vähäiseen omaan ADH:n eritykseen.\n- Keinotekoisen ADH:n jälkeen virtsan määrä pienenee ja väkevyys kasvaa.\n- Johtopäätös: tutkittavalla on vesitystauti (ADH:n puutteesta johtuva).\n\n**Esimerkkivastaus**\n\nADH lisää munuaisten kokoojaputkien seinämän solukalvoille akvaporiineja, joiden kautta vettä imeytyy takaisin vereen. Terveellä ihmisellä vesipaasto nostaisi veren osmoottista painetta, ADH:ta erittyisi enemmän ja virtsaa syntyisi jo alussa vähän ja väkevänä. Tutkittavalla virtsaa muodostui kuitenkin ensimmäiset tunnit runsaasti ja se oli laimeaa, vaikka hän ei juonut mitään. Hänen oma ADH:n erityksensä on siis riittämätöntä. Kun hän sai keinotekoista ADH:ta, virtsan määrä pieneni viiveellä voimakkaasti ja virtsa väkevöityi, eli munuaiset reagoivat hormoniin normaalisti. Tulos sopii vesitystautiin, joka johtuu aivolisäkkeen vähäisestä ADH:n erityksestä.\n\n**Sudenkuoppa:** jos munuaiset eivät reagoisi annettuun ADH:hon, syy olisi munuaisissa eikä aivolisäkkeessä.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 6,
+     "prompt": "Selitä kuvan 6.B nefronin osien nimiä käyttäen, miten ADH säätelee virtsan määrää nefronissa, kun ihminen juo paljon vettä.",
+     "hints": [
+      "Kulje nefroni läpi alusta loppuun (hiussuonikeränen ja kotelo → munuaistiehyt → kokoojatiehyt) ja mieti, missä kohdassa vesi imeytyy aina ja missä kohdassa ADH:n vaikutuksesta.",
+      "Runsas juominen laimentaa verta, minkä hypotalamus havaitsee → aivolisäkkeen takalohkosta erittyy vähän ADH:ta → kokoojatiehyen soluihin ei siirry akvaporiineja → vettä imeytyy takaisin vähän → syntyy paljon laimeaa virtsaa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Alkuvirtsa suodattuu hiussuonikeräsestä sitä ympäröivään koteloon.\n- Osa vedestä palaa munuaistiehyestä ympäröiviin hiussuoniin ADH:n määrästä riippumatta.\n- Kun juodaan paljon, veren vesipitoisuus kasvaa, ja hypotalamus tunnistaa sen.\n- Aivolisäkkeen takalohko vapauttaa vain vähän ADH:ta.\n- ADH:n ja sen reseptorin muodostamia komplekseja on vähemmän, jolloin akvaporiineja ei siirry tiehyen loppuosan ja kokoojatiehyen solukalvoille.\n- Vettä imeytyy takaisin vain vähän, ja syntyy paljon laimeaa virtsaa.\n\n**Esimerkkivastaus**\n\nNefronin alussa verenpaine painaa hiussuonikeräsestä vettä ja pieniä molekyylejä koteloon, jolloin syntyy alkuvirtsaa. Munuaistiehyessä suurin osa vedestä, suoloista ja glukoosista imeytyy takaisin hiussuoniverkostoon, ja tämä tapahtuu ADH:n määrästä riippumatta.\n\nKun ihminen juo paljon, veri laimenee. Hypotalamuksen osmoreseptorit havaitsevat tämän, ja aivolisäkkeen takalohkosta erittyy vähemmän ADH:ta. ADH vaikuttaa munuaistiehyen loppuosan ja kokoojatiehyen soluihin: kun hormonia on vähän, solukalvolle ei siirry vesikanavia eli akvaporiineja. Tiehyen seinämä ei silloin juuri läpäise vettä, joten vesi jää virtsaan. Kokoojatiehyeen kertyy runsaasti laimeaa virtsaa, ja veren vesipitoisuus palautuu normaaliksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "intro": "Solut käyttävät ATP:tä energianlähteenä esimerkiksi lihasten supistumiseen ja ionipumppujen toimintaan. ATP:tä syntyy hapettomasti solulimassa glykolyysissä ja hapellisesti mitokondriossa sitruunahappokierrossa ja elektroninsiirtoketjussa. Kuva 7.A on kaavio siitä, miten proteiinit, hiilihydraatit ja rasvat kulkevat glykolyysiin, asetyylikoentsyymi A:han ja sitruunahappokiertoon.",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 5,
+     "prompt": "Kuva 7.A esittää ravintoaineiden pääasialliset aineenvaihduntareitit solussa. Selitä, miten solu tuottaa ATP:tä hiilihydraateista.",
+     "hints": [
+      "Seuraa kuvassa hiilihydraattien reittiä glukoosista pyruvaattiin ja siitä eteenpäin. Kerro jokaisesta vaiheesta, missä se tapahtuu ja mitä siinä syntyy.",
+      "Glykolyysi solulimassa: glukoosi → pyruvaatti, tuloksena vähän ATP:tä ja pelkistyneitä elektroninsiirtäjiä (NADH). Mitokondriossa pyruvaatista tulee asetyylikoentsyymi A, joka menee sitruunahappokiertoon (ATP:tä, NADH ja FADH2). Elektroninsiirtoketjussa elektronien energialla pumpataan protoneja, ja protonien paluuvirtaus ATP-syntaasin läpi tuottaa suurimman osan ATP:stä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hiilihydraatit pilkotaan monosakkarideiksi, kuten glukoosiksi.\n- Glykolyysissä glukoosista syntyy pyruvaattia, ATP:tä ja pelkistyneitä elektroninsiirtäjiä (NADH).\n- Mitokondriossa pyruvaatista tehdään asetyylikoentsyymi A:ta, josta sitruunahappokierto lähtee liikkeelle.\n- Kierrossa muodostuu ATP:tä sekä pelkistyneitä elektroninsiirtäjiä.\n- Elektroninsiirtäjät vievät hiiliyhdisteistä irronneet elektronit elektroninsiirtoketjuun.\n- Elektronien energialla pumpataan protoneja, ja protonien virtaus ATP-syntaasin läpi tuottaa ATP:tä.\n\n**Esimerkkivastaus**\n\nRuoan hiilihydraatit pilkotaan ruoansulatuksessa monosakkarideiksi, ja solu käyttää glukoosia. Solulimassa tapahtuvassa glykolyysissä glukoosi pilkotaan kahdeksi pyruvaatiksi. Samalla syntyy kaksi ATP:tä ja NADH-molekyylejä. Hapellisissa oloissa pyruvaatti siirtyy mitokondrioon, jossa siitä irtoaa hiilidioksidi ja se muuttuu asetyylikoentsyymi A:ksi. Asetyyliryhmä hapettuu sitruunahappokierrossa hiilidioksidiksi, ja kierrosta saadaan ATP:tä sekä runsaasti NADH:ta ja FADH2:ta.\n\nPelkistyneet elektroninsiirtäjät luovuttavat elektroninsa mitokondrion sisäkalvon elektroninsiirtoketjuun. Elektronien kulkiessa ketjussa vapautuva energia pumppaa protoneja kalvojen väliseen tilaan. Kun protonit virtaavat takaisin ATP-syntaasin läpi, entsyymi liittää ADP:hen fosfaatin. Lopuksi elektronit ja protonit liittyvät happeen, ja syntyy vettä. Suurin osa ATP:stä syntyy tässä vaiheessa.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 3,
+     "prompt": "Selitä kuvan 7.A avulla, miten solu tuottaa ATP:tä rasvoista.",
+     "hints": [
+      "Rasva hajoaa kahteen osaan. Seuraa kuvasta kummankin osan reittiä: toinen päätyy asetyylikoentsyymi A:han beetaoksidaatiossa, toinen muokataan glukoosiksi."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa kolme)\n\n- Rasvat pilkotaan glyseroliksi ja rasvahapoiksi.\n- Rasvahapot muokataan beetaoksidaatiossa asetyylikoentsyymi A:ksi.\n- Asetyylikoentsyymi A hapetetaan sitruunahappokierrossa, jossa syntyy ATP:tä.\n- Suurin osa ATP:stä syntyy elektroninsiirtoketjun ylläpitämän protonigradientin avulla ATP-syntaasissa.\n- Glyserolista voidaan tehdä glukoosia, joka tuottaa ATP:tä glykolyysin kautta.\n\n**Esimerkkivastaus**\n\nRasva pilkotaan glyseroliksi ja rasvahapoiksi. Mitokondriossa rasvahapoista pilkotaan beetaoksidaatiossa kahden hiilen paloja, jotka liitetään asetyylikoentsyymi A:ksi. Se hapetetaan sitruunahappokierrossa, ja elektroninsiirtoketju ja ATP-syntaasi tuottavat ATP:tä. Glyseroli muokataan glukoosiksi tai glykolyysin välituotteeksi, josta saadaan ATP:tä glykolyysissä. Rasvahappojen hajotus vaatii happea.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.3",
+     "points": 3,
+     "prompt": "Selitä kuvan 7.A avulla, miten solu tuottaa ATP:tä proteiineista.",
+     "hints": [
+      "Mikä on proteiinin rakenneyksikkö, ja mitä siitä on poistettava ennen kuin hiilirunkoa voidaan käyttää? Katso kuvasta, mihin kohtiin aminohappojen hiilirungot voivat liittyä."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa kolme)\n\n- Proteiinit pilkotaan aminohapoiksi.\n- Aminohapoista poistetaan aminoryhmä.\n- Jäljelle jäävä hiiliyhdiste voidaan muokata glukoosiksi tai glykolyysin välituotteeksi, josta syntyy ATP:tä glykolyysissä.\n- Hiilirunko voidaan muokata asetyylikoentsyymi A:ksi.\n- Hiilirunkoja voi liittyä myös suoraan sitruunahappokierron eri vaiheisiin.\n\n**Esimerkkivastaus**\n\nProteiinit pilkotaan aminohapoiksi. Aminohaposta poistetaan aminoryhmä (maksassa siitä tehdään ureaa), ja jäljelle jää hiilirunko. Aminohaposta riippuen hiilirunko voidaan muokata glukoosiksi tai pyruvaatiksi ja käyttää glykolyysissä, muuttaa asetyylikoentsyymi A:ksi tai liittää suoraan sitruunahappokiertoon. Tämän jälkeen ATP syntyy samoin kuin hiilihydraateista, eli suurin osa elektroninsiirtoketjun ja ATP-syntaasin avulla.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.4",
+     "points": 4,
+     "prompt": "Yhdistä neljä aineenvaihduntaan liittyvää kuvausta sopivimpaan käsitteeseen (1 p/kohta): aine, joka sellaisenaan kelpaa ATP:n tuottamiseen ilman happea; aine, josta saadaan ATP:tä vain hapellisissa oloissa; polypeptidi, jonka pilkkomisesta saadaan lähtöaineita ATP:n tuotantoon; sekä molekyylit, joista elimistö pääasiassa valmistaa glukoosia, kun hiilihydraattivarastot ovat vähissä.",
+     "hints": [
+      "Vaihtoehdot kohdissa 7.4.1–7.4.3 ovat aminohappo, glukoosi, glyseroli, proteiini ja rasvahappo. Mieti kuvan 7.A reittejä: mikä aine kulkee glykolyysin kautta, mikä ohittaa sen ja menee suoraan asetyylikoentsyymi A:ksi, ja kumpi on polypeptidi, aminohappo vai proteiini?"
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen (7.4.1–7.4.3: aminohappo, glukoosi, glyseroli, proteiini, rasvahappo).\n\n1. **7.4.1 B, glukoosi.** Glykolyysi ei tarvitse happea, ja siinä syntyy ATP:tä.\n2. **7.4.2 E, rasvahappo.** Rasvahapot muutetaan asetyylikoentsyymi A:ksi, joka hapetetaan sitruunahappokierrossa ja elektroninsiirtoketjussa, ja nämä vaativat happea.\n3. **7.4.3 D, proteiini.** Proteiini on yksi tai useampi polypeptidiketju, joka pilkotaan aminohapoiksi.\n4. **7.4.4 B, glyseroli ja aminohapot.** Maksa valmistaa niistä glukoosia (glukoneogeneesi). Ihminen ei pysty muuttamaan rasvahappoja glukoosiksi.\n\n**Sudenkuoppa:** 7.4.4:ssä vaihtoehto \"glyseroli ja rasvahapot\" on houkutteleva, mutta rasvahapoista saadaan vain asetyylikoentsyymi A:ta, josta ihminen ei voi tehdä glukoosia.",
+     "answer": "7.4.1 B · 7.4.2 E · 7.4.3 D · 7.4.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Bacillus thuringiensis -bakteeri tuottaa tuhohyönteisiä tappavaa proteiinia. Bakteeria sisältävää liuosta käytetään torjunta-aineena, ja proteiinia koodaavaa BT-geeniä on siirretty myös muuntogeenisiin kasveihin. Tekstissä 8.A kolumnisti pohtii, miksi luomuliuos ja geenimuunneltu kasvi herättävät erilaisia tunteita, vaikka niiden proteiini on sama.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 6,
+     "prompt": "Muuntogeeniset kasvit voivat olla siirtogeenisiä tai poistogeenisiä. Selitä käsitteet muuntogeeninen kasvi, siirtogeeninen kasvi ja poistogeeninen kasvi.",
+     "hints": [
+      "Mikä käsitteistä on yläkäsite ja mitkä sen alalajeja? Jokaisesta käsitteestä saa noin kaksi pistettä, joten kerro myös lisätieto, kuten mistä siirretty geeni voi olla peräisin.",
+      "Muuntogeenisen kasvin perimää on muutettu geenitekniikalla (siirto, poisto tai muokkaus). Siirtogeeniseen on lisätty geeni toisesta lajista tai saman lajin toisesta yksilöstä. Poistogeenisessä jokin geeni on tehty toimimattomaksi (esim. poistamalla siitä osia), jolloin geenituotetta ei synny. Voit mainita esimerkkimenetelmän (esim. Agrobacterium-vektori, CRISPR)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Muuntogeeninen kasvi:** sen perimää on muutettu geenitekniikan menetelmin. Käsite on yläkäsite, joka kattaa geenien siirron, poiston ja muokkauksen.\n- **Siirtogeeninen kasvi:** kasviin on liitetty vieras geeni, joka voi tulla toisesta lajista tai toisesta saman lajin yksilöstä.\n- **Poistogeeninen kasvi:** kasvin oma geeni on hiljennetty, esimerkiksi leikkaamalla siitä pala pois, joten geenin tuote ei enää toimi.\n- Lisäpisteen voi saada esimerkistä menetelmästä (esim. Agrobacterium tumefaciens -bakteerin plasmidi vektorina, geenipyssy, CRISPR-Cas9).\n\n**Esimerkkivastaus**\n\nMuuntogeeninen kasvi on kasvi, jonka perimää on muutettu geenitekniikalla tavalla, joka ei tapahtuisi luonnollisessa risteytyksessä. Se on yläkäsite: muunteluna voi olla geenin lisääminen, poistaminen tai muokkaaminen.\n\nSiirtogeeniseen kasviin on liitetty uusi geeni, joka voi olla peräisin toisesta lajista, kuten BT-maissin bakteerigeeni, tai saman lajin toisesta yksilöstä. Geeni voidaan viedä kasvisoluihin esimerkiksi Agrobacterium-bakteerin plasmidin avulla.\n\nPoistogeenisessä kasvissa jokin kasvin oma geeni on hiljennetty tai tuhottu esimerkiksi CRISPR-tekniikalla leikkaamalla siitä pala pois. Geenin koodaamaa proteiinia ei silloin synny, ja siihen liittyvä ominaisuus katoaa.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 2,
+     "prompt": "Selitä, miksi BT-geenin sisältävä kasvi kestää tuhohyönteisiä paremmin.",
+     "hints": [
+      "Mitä siirretty geeni ohjaa kasvin soluja tekemään, ja mitä tapahtuu hyönteiselle, joka syö kasvia?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kasvi ilmentää siihen siirrettyä BT-geeniä.\n- Sen solut tuottavat tuhohyönteisiä tappavaa proteiinia, joka vaikuttaa hyönteisen ruoansulatuskanavassa, kun se syö kasvia.\n\n**Esimerkkivastaus**\n\nBT-geeni koodaa bakteerin myrkkyproteiinia. Kun geeni on siirretty kasviin, kasvin solut valmistavat itse tätä proteiinia. Kun tuhohyönteinen syö kasvia, proteiini päätyy sen suolistoon ja vaurioittaa suolen seinämää, jolloin hyönteinen kuolee.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 3,
+     "prompt": "Pohdi, millä keinolla BT-geeni saadaan ilmentymään joko kaikissa kasvin osissa tai ainoastaan esimerkiksi lehdissä tai juurissa.",
+     "hints": [
+      "Geenin ilmentymistä ohjaa koodaavan alueen edessä oleva säätelyalue (promoottori). Millainen säätelyalue toimii kaikissa soluissa ja millainen vain tietyssä kudoksessa?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Geenin edessä oleva säätelyalue (promoottori ja muut säätelyjaksot) määrää, missä ja milloin geeni ilmenee.\n- Kun proteiinia halutaan kaikkialle kasviin, geenin eteen liitetään säätelyalue, joka toimii kaikissa kasvinosissa.\n- Jos geenin halutaan ilmenevän vain tietyssä osassa, liitetään säätelyalue, joka aktivoituu vain siinä kasvinosassa tai solukossa (esim. lehdissä, juurissa, kukissa tai hedelmissä).\n\n**Esimerkkivastaus**\n\nGeenin ilmentymistä ohjaa sen koodaavan osan edessä oleva säätelyalue, johon transkriptiotekijät ja RNA-polymeraasi kiinnittyvät. Kun BT-geeni siirretään kasviin, sen eteen liitetään valittu promoottori. Jatkuvasti toimiva promoottori saa geenin ilmenemään kaikissa kasvin soluissa. Jos taas käytetään esimerkiksi lehden tai juuren soluille ominaista promoottoria, jonka aktivoivia transkriptiotekijöitä on vain niissä soluissa, proteiinia syntyy vain lehdissä tai vain juurissa.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.4",
+     "points": 4,
+     "prompt": "EU:ssa BT-bakteeria sisältävää liuosta saa käyttää tuhohyönteisten torjuntaan, mutta BT-proteiinia tuottavien muuntogeenisten kasvien viljely on kielletty tai luvanvaraista. Arvioi, mistä ero johtuu. Aineistona on kolumni 8.A.",
+     "hints": [
+      "Vertaa kahta tapaa: mistä liuoksen bakteeri on peräisin ja miten sen käyttöä voidaan hallita, ja mitä huolia liittyy geenimuunneltuihin kasveihin (terveys, geenien leviäminen, tiedon puute, asenteet)?"
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa neljä)\n\n- Bakteeriliuosta pidetään luonnollisena torjuntakeinona, koska Bacillus thuringiensis on yleinen maaperäbakteeri.\n- Muuntogeenisten kasvien pitkäaikaisvaikutuksista koetaan olevan liian vähän tietoa, ja ennakkoluulot ja epäluottamus vaikuttavat suhtautumiseen.\n- Osa ihmisistä pelkää, että muuntogeeniset kasvit vaikuttavat terveyteen ennalta arvaamattomasti.\n- Huolena on myös, että siirretty geeni leviää risteytymällä luonnonvaraisiin sukulaislajeihin, esimerkiksi rikkakasveihin, ja parantaa niiden kilpailukykyä.\n- Liuoksen käyttöä on helpompi säännöstellä kuin lisääntyvien ja leviävien kasvien.\n\n**Esimerkkivastaus**\n\nBT-liuoksen bakteeri elää luonnostaan maaperässä, ja liuosta on käytetty yli sata vuotta, myös luomuviljelyssä. Sitä pidetään siksi luonnollisena ja hyvin tunnettuna keinona. Liuosta ruiskutetaan tarpeen mukaan, joten sen käyttöä voidaan rajoittaa ja lopettaa.\n\nMuuntogeeninen kasvi taas lisääntyy ja voi levitä siemeninä tai siitepölynä. Pelkona on, että BT-geeni siirtyy risteytymällä sukulaiskasveihin, kuten rikkakasveihin, jotka saisivat kilpailuedun. Osa ihmisistä pelkää myös pitkäaikaisia terveysvaikutuksia, vaikka proteiini on sama kuin liuoksessa. EU:n varovaisuusperiaate, epäluottamus geenitekniikkaan ja tiedon puute pitkäaikaisvaikutuksista selittävät, miksi viljely on tiukemmin säänneltyä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Viisaudenhampaat ovat hammaskaaren päähän noin 20 vuoden iässä puhkeavia kolmansia poskihampaita, ja jos ne eivät mahdu, ne poistetaan. Hampaan juurista kulkee tuntohermo aivoihin, ja ennen poistoa hermon lähelle ruiskutetaan puudutusainetta. Poiston jälkeen kudosvaurion tulehdusreaktio turvottaa poskea muutaman päivän.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 5,
+     "prompt": "Selitä, miten hampaan lähellä olevat kipuaistinsolut tuottavat kiputiedon, kun hammas poistetaan.",
+     "hints": [
+      "Etene ärsykkeestä aistimukseen: kudosvaurio → vapaat hermopäätteet → kalvojännitteen muutos → kynnysarvo → hermoimpulssi → aivokuori.",
+      "Hampaan irrottaminen vaurioittaa kudosta ikenessä ja juuren ympärillä, ja vapaiden hermopäätteiden kalvojännite muuttuu (depolarisaatio). Kun muutos ylittää kynnysarvon, viejähaarakkeessa syntyy hermoimpulsseja, jotka kulkevat sensorista hermorataa (kasvojen tuntohermo) aivoihin. Kipu tulkitaan tuntoaivokuorella, ja voimakkaampi ärsytys tuottaa tiheämpiä impulsseja ja voimakkaamman kivun."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Hampaan poisto aiheuttaa kudosvaurion.\n- Vaurio muuttaa ikenen ja hampaan juuren alueen kipuaistinsolujen vapaiden hermopäätteiden toimintaa.\n- Hermosolun kalvojännite muuttuu (depolarisoituu).\n- Kun muutos on riittävän suuri (kynnysarvo), aistinsolun viejähaarakkeessa laukeaa hermoimpulsseja.\n- Impulssit kulkevat sensorista hermorataa aivoihin, ja aivot tulkitsevat viestin kivuksi tuntoaivokuorella.\n- Voimakkaampi ärsytys tuottaa voimakkaamman aistimuksen.\n\n**Esimerkkivastaus**\n\nKun hammasta väännetään irti, ientä ja hampaan kiinnityskudosta repeytyy. Kipuaistinsolut ovat vapaita hermopäätteitä, joiden kalvolla on mekaaniseen venytykseen ja vaurioituneista soluista vapautuviin aineisiin reagoivia ionikanavia. Kanavien avautuessa positiivisia ioneja virtaa soluun, ja kalvojännite muuttuu. Jos muutos ylittää kynnysarvon, hermosolussa syntyy toimintajännite, joka etenee hermoimpulssina kasvojen tuntohermoa pitkin aivorunkoon ja talamuksen kautta isoaivojen tuntoaivokuorelle. Vasta siellä syntyy tietoinen kipuaistimus. Mitä voimakkaampi ärsyke, sitä tiheämmin impulsseja syntyy ja sitä voimakkaammalta kipu tuntuu.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 4,
+     "prompt": "Kuvaile, miten puudutus estää kivun tuntemisen, kun hammas poistetaan.",
+     "hints": [
+      "Puudutusaine ruiskutetaan hermon lähelle. Mieti, mikä ionikanava on välttämätön toimintajännitteen syntymiselle ja etenemiselle, ja mitä tapahtuu, jos se tukitaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Puudutusaine estää jänniteherkkien natriumkanavien toiminnan hampaan hermossa (hyväksytään myös vaikutus välittäjäaineiden kautta).\n- Toimintajännitettä ei synny, eikä hermoimpulssi pääse etenemään.\n- Kipuviesti ei saavu aivoihin, joten kipuaistimusta ei synny.\n\n**Esimerkkivastaus**\n\nPuudutusaine kulkeutuu hermon aksoneihin ja tukkii niiden jänniteherkät natriumkanavat. Vaikka kudosvaurio ärsyttäisi kipuaistinsoluja, natriumia ei pääse virtaamaan aksoniin, joten toimintajännitettä ei synny eikä impulssi etene hermoa pitkin. Koska kiputietoa ei välity aivoihin, potilas ei tunne kipua, vaikka kudosvaurio syntyy. Tunto palaa, kun puudutusaine hajoaa ja poistuu kudoksesta.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 5,
+     "prompt": "Selitä, miten hampaan poistosta syntyvä verenvuoto tyrehtyy.",
+     "hints": [
+      "Verenvuodon tyrehtymisessä on kolme vaihetta: verisuonen supistuminen, verihiutaletulppa ja hyytymisreaktio.",
+      "Vaurio supistaa suonia (monet puudutusaineet tehostavat tätä). Paljastunut kollageeni tekee verihiutaleista tahmeita, ja ne kasautuvat tulpaksi. Hyytymistekijöiden ketjussa protrombiini muuttuu trombiiniksi, joka pilkkoo fibrinogeenista fibriiniä; fibriiniverkko sitoo verihiutaleet ja punasolut hyytymäksi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Vaurio saa verisuonet supistumaan, mikä pienentää vuotoa; monet puudutusaineet voimistavat supistumista.\n- Hyytymisreaktio käynnistyy.\n- Verihiutaleet muuttuvat tahmeiksi, kun vauriokohdassa paljastuu kollageenia, ja ne tarttuvat toisiinsa ja vauriopintaan.\n- Protrombiini muuttuu trombiiniksi, joka pilkkoo fibrinogeenin fibriinisäikeiksi.\n- Fibriinisäikeet sitovat verihiutaleet ja punasolut hyytymäksi eli ruveksi.\n\n**Esimerkkivastaus**\n\nKun hammas irrotetaan, pienet verisuonet repeytyvät. Ensin vaurioituneet suonet supistuvat, mikä vähentää verenvuotoa, ja hammaslääkärin puudutusaineeseen lisätty adrenaliini tehostaa tätä. Seinämän vaurion kohdalla paljastuu kollageenia, johon verihiutaleet tarttuvat. Ne aktivoituvat, muuttuvat tahmeiksi ja kasautuvat toisiinsa, jolloin syntyy löyhä verihiutaletulppa.\n\nSamalla käynnistyy hyytymistekijöiden ketjureaktio, jossa protrombiini muuttuu aktiiviseksi trombiiniksi. Trombiini pilkkoo veressä liukoisena olevan fibrinogeenin fibriiniksi. Fibriinisäikeet muodostavat verkon, johon tarttuu verihiutaleita ja punasoluja, ja poistokuoppaan syntyy kiinteä verihyytymä, joka tyrehdyttää vuodon ja suojaa haavaa sen parantuessa.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.4",
+     "points": 6,
+     "prompt": "Kuvaile, miksi hampaan poiston jälkeen poski turpoaa. Pohdi myös, miksi poistokohta ei yleensä tulehdu bakteeri-infektioksi.",
+     "hints": [
+      "Turvotus on osa tulehdusreaktiota. Mikä aine vapautuu vauriokohdassa, ja mitä se tekee verisuonille? Toinen osa: mitkä elimistön puolustuskeinot toimivat vauriokohdassa heti ja mitkä sinne saapuvat?",
+      "Histamiini laajentaa pikkuvaltimoita ja tekee hiussuonista läpäisevämpiä, jolloin plasmaa valuu kudosnesteeseen ja poski turpoaa. Kudoksen makrofagit, verestä tulevat valkosolut ja komplementti tuhoavat bakteereja; syljen entsyymit (esim. lysotsyymi) ja steriilit työvälineet vähentävät infektioita."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Turvotus*\n- Kudosvaurio käynnistää tulehdusreaktion, jossa vapautuu histamiinia.\n- Histamiinin vaikutuksesta pikkuvaltimot laajenevat ja hiussuonet avautuvat ja muuttuvat läpäisevämmiksi.\n- Verisuonista pääsee plasmaa kudosnesteeseen, ja poski turpoaa.\n\n*Miksi infektiota ei yleensä synny*\n- Makrofageja on kudoksessa jo valmiiksi.\n- Plasman mukana alueelle saapuu valkosoluja, ja ne tuhoavat taudinaiheuttajia komplementtiproteiinien avulla; immuunireaktio käynnistyy.\n- Tulehdusreaktio on keino torjua bakteerien pääsy kudokseen.\n- Syljen bakteereja tuhoavat entsyymit ehkäisevät suun infektioita.\n- Hammaslääkärin steriilit työvälineet vähentävät infektioriskiä.\n\n**Esimerkkivastaus**\n\nHampaan poisto vaurioittaa kudosta, ja vaurioituneet solut sekä syöttösolut vapauttavat välittäjäaineita, kuten histamiinia. Histamiini laajentaa alueen pikkuvaltimoita, jolloin verta virtaa enemmän, ja tekee hiussuonten seinämistä läpäisevämpiä. Plasmaa tihkuu kudosnesteeseen, ja poski turpoaa ja voi punoittaa ja kuumottaa.\n\nSama tulehdusreaktio suojaa haavaa. Kudoksessa on valmiina syöjäsoluja eli makrofageja, ja laajentuneista suonista siirtyy kudokseen lisää valkosoluja, kuten neutrofiilejä. Ne nielevät bakteereja, ja plasman komplementtiproteiinit auttavat tuhoamaan niitä. Syljessä on bakteereja hajottavaa lysotsyymiä, ja verihyytymä peittää haavan. Lisäksi hammaslääkäri käyttää steriilejä välineitä, joten infektio syntyy harvoin.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Mustekalat ovat merieläimiä, joilla on iso pää, kehittyneet silmät ja suun ympärillä kahdeksan tai kymmenen lonkeroa. Yli puolet niiden hermosoluista on lonkeroissa. Tekstin 10.A mukaan mustekalat muokkaavat lähetti-RNA:taan veden lämpötilan mukaan, ja kuva 10.B vertaa mustekalan ja ihmisen silmää.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 2,
+     "prompt": "Nimeä mustekalojen domeeni ja pääjakso.",
+     "hints": [
+      "Domeeneja on kolme: bakteerit, arkeonit ja aitotumalliset. Mustekalan lähimpiä sukulaisia ovat etanat ja simpukat."
+     ],
+     "solution": "1. **Domeeni: aitotumalliset** (eukaryootit), koska mustekalan soluissa on tuma.\n2. **Pääjakso: nilviäiset**, samaan pääjaksoon kuuluvat kotilot ja simpukat.\n\n**Vastaus: aitotumallisten domeeni, nilviäisten pääjakso.**",
+     "answer": "aitotumalliset (domeeni), nilviäiset (pääjakso)",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 9,
+     "prompt": "Tekstissä 10.A kerrotaan mustekalojen poikkeuksellisesta lähetti-RNA:n muokkauksesta, jossa entsyymit muuttavat adeniinin inosiiniksi, joka käyttäytyy kuin guaniini. Pohdi, miten tämä eroaa tavallisesta esiaste-RNA:n käsittelystä, joka tuottaa lähetti-RNA:n kaikissa tumallisissa soluissa.",
+     "hints": [
+      "Kuvaa ensin tavallinen muokkaus: silmukointi ja vaihtoehtoinen silmukointi. Vertaa sitten: mitä kummassakin muuttuu (pituus vai yksittäinen emäs), mihin RNA:han muutos kohdistuu ja milloin se tapahtuu?",
+      "Silmukoinnissa poistetaan intronit, ja vaihtoehtoisessa silmukoinnissa eksoneita yhdistellään, jolloin samasta geenistä syntyy eripituisia proteiineja. Mustekalan muokkauksessa emäsjärjestys vaihtuu yhden emäksen kohdalla (A → I, luetaan G:nä), kuten pistemutaatiossa: kodoni ja yksittäinen aminohappo voivat muuttua, mutta pituus ei muutu (paitsi jos syntyy lopetuskodoni). Muutos ei ole perinnöllinen, ja se tapahtuu vain tietyissä oloissa valmiissa lähetti-RNA:ssa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n*Tavallinen muokkaus*\n- Transkription jälkeen esiaste-RNA silmukoidaan: intronit poistetaan.\n- Vaihtoehtoisessa silmukoinnissa samasta esiaste-RNA:sta syntyy eripituisia lähetti-RNA:ita.\n- Valmiissa lähetti-RNA:ssa voi olla mukana vain osa geenin tiedosta, joten samasta geenistä voi syntyä proteiinin eri muotoja.\n- Näissä ei ole eroa mustekalan ja muiden tumallisten välillä (bakteereilla introneita ja silmukointia ei yleensä ole).\n\n*Mustekalan muokkaus*\n- Lähetti-RNA:n emäsjärjestys muuttuu: adeniini muuttuu inosiiniksi, joka luetaan guaniinina.\n- Tuotetussa proteiinissa voi vaihtua yksittäinen aminohappo tai useampi, jos niiden kodoneissa on muokattu adeniini.\n- Muutos on selvästi vähäisempi kuin silmukoinnin vaihtelussa, eikä polypeptidin pituus muutu, ellei synny lopetuskodonia.\n- Muutos vaikuttaa kodoneihin samalla tavalla kuin pistemutaatio, mutta se ei ole perinnöllinen, koska DNA ei muutu.\n- Muokkaus tapahtuu vain tietyissä oloissa, ja se kohdistuu valmiiseen lähetti-RNA:han.\n\n**Esimerkkivastaus**\n\nTumallisissa eliöissä transkriptiossa syntyy ensin esiaste-RNA, jossa on sekä eksoneita että introneita. Silmukoinnissa intronit leikataan pois ja eksonit liitetään yhteen. Vaihtoehtoisessa silmukoinnissa samasta esiaste-RNA:sta voidaan jättää eri eksoneita pois, jolloin syntyy eripituisia lähetti-RNA:ita ja erilaisia proteiineja. Näin tapahtuu myös mustekaloilla.\n\nMustekalojen erikoinen muokkaus on eri asia. Siinä ei poisteta RNA:n osia, vaan entsyymi muuttaa yksittäisen adeniinin inosiiniksi, jonka ribosomi lukee guaniinina. Emäskolmion merkitys voi siksi muuttua, ja proteiiniin tulee toinen aminohappo, samaan tapaan kuin pistemutaatiossa. Proteiinin pituus ei yleensä muutu, ellei muokkaus synnytä lopetuskodonia. Muutos koskee vain lähetti-RNA:ta, ei DNA:ta, joten se ei periydy jälkeläisille. Lisäksi muokkausta tapahtuu vain tietyissä oloissa, kuten kylmässä vedessä, ja se voi muuttua muutamassa tunnissa.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 5,
+     "prompt": "Pohdi, mitä hyötyä mustekaloille on poikkeuksellisesta lähetti-RNA:n muokkauksesta.",
+     "hints": [
+      "Tekstin 10.A mukaan muokkaus muuttuu veden lämpötilan mukaan ja on voimakkainta hermosoluissa. Mitä tämä merkitsee vaihtolämpöiselle eläimelle?",
+      "Muokkaus muuttaa proteiinien rakennetta ja toimintaa, joten hermosolujen kalvot ja synapsit voivat toimia eri lämpötiloissa. Tämä laajentaa sietokykyä ja parantaa eloonjääntiä ja kelpoisuutta. Vertaa nopeutta ja riskiä: muutos tapahtuu tunneissa, nopeammin kuin geenien säätely tai mutaatiot, ja muutokset ovat pieniä ja palautuvia."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Muokkaus muuttaa proteiinin rakennetta ja sitä kautta sen toimintaa.\n- Näin mustekala voi sopeutua muuttuviin oloihin, kuten veden lämpötilaan, ja ylläpitää hermosolujen toimintaa eri lämpötiloissa.\n- Sietokyky lämpötilan vaihteluille laajenee, mikä parantaa eloonjääntiä ja kelpoisuutta.\n- Proteiinien toiminnalliset erot ovat todennäköisesti pieniä, joten haitallisten muutosten riski on pieni.\n- Proteiinien toiminta muuttuu nopeammin kuin geenien ilmentymisen säätelyllä tai mutaatioiden kautta olisi mahdollista.\n\n**Esimerkkivastaus**\n\nMustekala on vaihtolämpöinen, joten sen ruumiinlämpö seuraa veden lämpötilaa. Kylmässä proteiinien toiminta hidastuu, mikä haittaisi etenkin hermosolujen ionikanavia ja synapseja. Lähetti-RNA:n muokkauksen avulla mustekala voi muuttaa näiden proteiinien aminohappojärjestystä niin, että ne toimivat paremmin kylmässä. Hermosto toimii silloin sekä kesällä että talvella, ja mustekala pystyy saalistamaan ja pakenemaan petoja eri lämpötiloissa, mikä parantaa sen eloonjääntiä ja lisääntymismenestystä.\n\nMuokkaus on nopeaa, sillä se tapahtuu tunneissa, kun taas uusi perinnöllinen muunnos vaatisi sukupolvia. Muutos myös palautuu, koska DNA pysyy ennallaan, ja yksittäisten aminohappojen vaihdokset muuttavat proteiinia vain vähän, joten suurten haittojen riski on pieni.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 4,
+     "prompt": "Vertaa kuvan 10.B avulla mustekalan ja ihmisen silmän rakennetta ja pohdi, mitä hyötyä mustekalalle on sen silmistä.",
+     "hints": [
+      "Katso verkkokalvon kerrosten järjestystä: kummalla valo kulkee ensin välittävien hermosolujen läpi ennen aistinsoluja, ja mistä näköhermo lähtee? Täysiin pisteisiin tarvitaan sekä rakenteen vertailu että hyötyjen pohdinta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Mustekalalla verkkokalvon aistinsolut ovat valon tulosuunnassa ennen välittäviä hermosoluja, ihmisellä hermosolujen takana.\n- Valo osuu mustekalalla suoraan aistinsoluihin kulkematta hermosolukerroksen läpi, aistinsolut saavat enemmän valoa, eikä hermosolukerroksen tarvitse päästää valoa läpi; etu korostuu hämärässä.\n- Ihmisellä näköhermon aksonit kulkevat verkkokalvon läpi sokean täplän kohdalta, jolloin näkökentässä on aukko; mustekalalla sokeaa täplää ei ole.\n- Mustekalan silmä välittää siksi tarkempaa tietoa, mikä auttaa ravinnonhankinnassa ja petojen välttämisessä.\n\n**Esimerkkivastaus**\n\nIhmisen verkkokalvossa valo kulkee ensin hermosolukerrosten läpi ennen kuin se osuu sauvoihin ja tappeihin, ja hermosolujen aksonit kokoontuvat näköhermoksi, joka lävistää verkkokalvon sokean täplän kohdalla. Mustekalan silmässä aistinsolut ovat valoa kohti ja hermosolut niiden takana, joten valo osuu suoraan aistinsoluihin eikä sokeaa täplää ole. Mustekalan silmä hyödyntää vähäisenkin valon, mikä on tärkeää hämärässä ja syvässä vedessä, ja näkökenttä on yhtenäinen. Tämä auttaa mustekalaa havaitsemaan saaliin ja pedot.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Nimeä influenssaviruksen kuvaan 11.1.A merkityt rakenteet 1–4 (vaihtoehdot: aminohappo, ribosomi, proteiinikuori eli kapsidi, nukleiinihappo, pintaproteiini, vaippa), 1 p/kohta.",
+     "hints": [
+      "Käy virus läpi sisältä ulospäin: perimä, sitä ympäröivä proteiinikuori, uloin lipidikalvo ja siitä ulos työntyvät nuppimaiset rakenteet. Viruksilla ei ole ribosomeja."
+     ],
+     "solution": "Vaihtoehdot kirjaimin ylhäältä alkaen.\n\n1. **Rakenne 1: nukleiinihappo (D).** Kuoren sisällä oleva kiemurainen ketju on viruksen perimä (influenssaviruksella RNA).\n2. **Rakenne 2: pintaproteiini (E).** Vaipasta ulospäin työntyvät nupit, esim. hemagglutiniini ja neuraminidaasi.\n3. **Rakenne 3: vaippa (F).** Isäntäsolun kalvosta peräisin oleva lipidikaksoiskalvo.\n4. **Rakenne 4: proteiinikuori eli kapsidi (C).** Monikulmainen kuori perimän ympärillä.",
+     "answer": "11.1.1 D · 11.1.2 E · 11.1.3 F · 11.1.4 C",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 6,
+     "prompt": "Lintujen H1N1-influenssavirus lisääntyy ylähengitysteiden soluissa, joissa on sille sopivat reseptorit, mutta ei ihmisen soluissa, koska sen pinta ei sovi ihmisen reseptoreihin. Minkkien kaltaisilla näätäeläimillä on reseptorit sekä lintu- että ihmisinfluenssavirukselle. Selitä videon 11.2.A avulla, miten ihmiselle vaarattomasta lintuinfluenssaviruksesta voi kehittyä pandemiaa aiheuttava virus.",
+     "hints": [
+      "Minkki toimii eräänlaisena sekoitusastiana. Mitä tapahtuu, jos sama solu saa tartunnan kahdesta eri influenssaviruksesta?",
+      "Kun lintuvirus ja ihmisen influenssavirus lisääntyvät samassa minkin solussa, niiden perimän osat voivat sekoittua (rekombinaatio), ja syntyy uusi virustyyppi. Jos sen pintaproteiinit tarttuvat ihmisen ylähengitysteiden reseptoreihin, virus voi tarttua ihmisestä toiseen hengitysilman aerosoleissa, eikä väestöllä ole sitä vastaan muistisoluja."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Eläinten hoitajat ovat tekemisissä lintujen ja minkkien kanssa.\n- Jos sama solu saa sekä ihmisen influenssaviruksen että lintuinfluenssaviruksen ja molemmat lisääntyvät siinä, voi syntyä uudenlainen virustyyppi.\n- Uudessa viruksessa on perimää kummastakin viruksesta (viruksen rekombinaatio).\n- Jos uuden viruksen pintaproteiinit ovat muuttuneet niin, että ne tarttuvat ihmisen ylähengitysteiden solukalvoreseptoreihin, virus voi tarttua ihmisestä toiseen hengitysilman mukana (aerosolit).\n- Ihmisillä ei ole uutta virusta vastaan muistisoluihin perustuvaa immuniteettia, joten virus voi aiheuttaa pandemian.\n\n**Esimerkkivastaus**\n\nLintuinfluenssavirus ei pysty tarttumaan ihmisen hengitysteiden soluihin, mutta minkin soluihin se pystyy. Minkkiin voi tarttua myös ihmisen influenssavirus esimerkiksi sairaalta tarhan työntekijältä. Jos sama minkin solu saa tartunnan molemmista viruksista, uusien viruspartikkelien kokoamisessa niiden perimän jaksot voivat yhdistyä uudella tavalla. Syntyy uusi virustyyppi, jossa on osia sekä lintu- että ihmisviruksesta.\n\nJos uusi virus saa ihmisviruksen pintaproteiinit mutta säilyttää lintuviruksen muita ominaisuuksia, se voi tarttua ihmisen ylähengitysteiden soluihin ja levitä ihmisestä toiseen pisaroina ja aerosoleina. Koska kenelläkään ei ole aiempaa kosketusta tähän virukseen, ihmisillä ei ole muistisoluja eikä vasta-aineita sitä vastaan. Virus voi silloin levitä nopeasti maailmanlaajuiseksi pandemiaksi.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Minkki on yleisin turkistarhoilla kasvatettu eläin. Arvioi kuvan 11.3.A avulla, miksi turkistarhat voivat olla uusien influenssapandemioiden syntypaikkoja.",
+     "hints": [
+      "Mieti, mistä virukset pääsevät tarhaan: villilinnut, ruoka ja rakenteet, työntekijät. Ja mikä tarhan oloissa edistää leviämistä eläimestä toiseen (tiheys, stressi)?"
+     ],
+     "solution": "**Hyvä vastaus sisältää** (mitkä tahansa neljä)\n\n- Tarhat ovat rakenteeltaan avoimia, joten villilinnut pääsevät niihin.\n- Linnut koskettavat turkiseläinten ruokaa ja tarhan rakenteita, ja virusta siirtyy niihin.\n- Minkki voi saada tartunnan myös koskettamalla sairasta lintua.\n- Influenssaa sairastava työntekijä voi tartuttaa ihmisen influenssaviruksen minkkeihin.\n- Stressaantuneiden tarhaminkkien vastustuskyky voi olla heikentynyt.\n- Ahtaat tilat edistävät virusten leviämistä eläimestä toiseen.\n\n**Esimerkkivastaus**\n\nTurkistarhojen häkit ovat ulkona katoksissa, joten lokit, varikset ja muut linnut pääsevät syömään rehua ja ulostamaan tarhan rakenteille. Lintuinfluenssavirus voi siten päätyä minkkien rehuun ja häkkeihin tai tarttua suoraan sairaasta linnusta. Samaan aikaan tarhan työntekijä voi tartuttaa minkkeihin ihmisen influenssan. Koska minkeillä on reseptorit kummallekin virukselle, ne voivat kantaa molempia yhtä aikaa. Tarhoilla eläimiä on tuhansia tiheästi vierekkäin, ja ahtaissa oloissa stressaantuneiden eläinten vastustuskyky on heikompi, joten virus leviää nopeasti ja sillä on paljon tilaisuuksia muuntua.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 6,
+     "prompt": "Lintuinfluenssa on zoonoosi eli eläimistä ihmisiin tarttuva tauti. Pohdi, miksi luontokadon ja tuotantoeläinten tehotuotannon arvioidaan lisäävän zoonooseja.",
+     "hints": [
+      "Käsittele erikseen luontokato ja tehotuotanto, sillä täysiin pisteisiin tarvitaan molemmat. Mieti kummassakin, miten ihmisen ja eläinten kosketukset lisääntyvät.",
+      "Luontokato: elinympäristöjen raivaus pelloiksi, laitumiksi, asutukseksi, kaivoksiksi ja teiksi tuo villieläimet lähemmäs ihmistä; pienet populaatiot menettävät geneettistä monimuotoisuutta ja vastustuskykyä; laiton eläinkauppa ja elävien eläinten torit. Tehotuotanto: paljon eläimiä suljetussa tilassa, sairastuvat helposti, taudit leviävät työntekijöihin ja muihin lajeihin, rehun mikrobit, antibioottiresistenssi."
+     ],
+     "solution": "**Hyvä vastaus sisältää** (täysiin pisteisiin tarvitaan molemmat näkökulmat)\n\n*Luontokato*\n- Luontokatoa aiheuttaa elinympäristöjen tuhoutuminen ja pirstoutuminen, kun alueita raivataan pelloiksi, laitumiksi, asutukseksi, kaivoksiksi ja teiksi.\n- Villieläimet joutuvat lähemmäs ihmisiä, joten taudin siirtyminen eläimestä ihmiseen on todennäköisempää.\n- Kun populaatiot pienenevät, niiden geenipooli kapenee ja vastustuskyky heikkenee.\n- Laiton eläinkauppa, esimerkiksi elävien eläinten torit, lisää luontokatoa ja tartuntoja.\n\n*Tehotuotanto*\n- Suuri määrä eläimiä elää ahtaasti sisätiloissa, joten ne sairastuvat herkästi.\n- Taudit leviävät eläinten kanssa työskenteleviin ihmisiin tai muihin lajeihin.\n- Rehussa voi olla mikrobeja, jotka leviävät eläimiin.\n- Tehotuotanto voi lisätä bakteerien antibioottiresistenssiä.\n\n**Esimerkkivastaus**\n\nKun sademetsiä ja muita luonnonalueita raivataan viljelyyn, laitumiksi, kaivoksille ja teille, villieläinten elinympäristöt pienenevät ja pirstoutuvat. Eläimet, kuten lepakot, jyrsijät ja apinat, joutuvat yhä useammin kosketuksiin ihmisten ja kotieläinten kanssa, ja niiden kantamilla viruksilla ja bakteereilla on enemmän tilaisuuksia siirtyä ihmiseen. Pienentyneissä populaatioissa perinnöllinen vaihtelu vähenee, jolloin eläimet voivat olla alttiimpia taudeille ja erittää enemmän taudinaiheuttajia. Villieläinten kauppa ja elävien eläinten torit tuovat eri lajeja ja ihmisiä tiiviisti yhteen.\n\nTehotuotannossa tuhansia sikoja tai kanoja pidetään ahtaasti samassa hallissa. Tauti leviää niiden välillä nopeasti, ja taudinaiheuttajalla on paljon isäntiä, joissa se voi muuntua. Eläimiä hoitavat ihmiset altistuvat tartunnoille, ja jos villilintuja tai muita lajeja pääsee kosketuksiin tuotantoeläinten kanssa, virukset voivat siirtyä lajista toiseen. Antibioottien runsas käyttö voi lisäksi synnyttää resistenttejä bakteereja, jotka voivat tarttua ihmisiin.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

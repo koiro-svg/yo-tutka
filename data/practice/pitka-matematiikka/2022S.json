@@ -1,0 +1,398 @@
+{
+ "subject": "pitka-matematiikka",
+ "session": "2022S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2022S_MAA/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-09-20_M_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "A-osa",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 4,
+    "note": "Kaikki neljä tehtävää ovat pakollisia. Käytössä taulukkokirja ja perusohjelmat; muut ohjelmat vasta A-osan palauttamisen jälkeen."
+   },
+   {
+    "title": "B1-osa",
+    "tasks": [
+     "5",
+     "6",
+     "7",
+     "8",
+     "9"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään. Kaikki ohjelmat käytössä, kun A-osa on palautettu."
+   },
+   {
+    "title": "B2-osa",
+    "tasks": [
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "answer": 3,
+    "note": "Vastaa kolmeen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuusi monivalintaa (2 p kukin), perusteluja ei tarvita. Vaihtoehdot näet alkuperäisestä tehtävästä.\n\n- 1.1 Sievennä $(x+6)^2-(-2x^2+x-5)$.\n- 1.2 Mikä on yhtälön $-4x^3+8x^2+12x=0$ oikea tulomuoto?\n- 1.3 Lausekkeen $\\sqrt{12}\\cdot\\sqrt3-\\sqrt3+4\\sqrt3-\\sqrt{\\frac43}$ tarkka arvo.\n- 1.4 Mitkä luvut ratkaisevat yhtälön $\\frac x7=\\frac7x$? (vaihtoehdoissa $x=7$ yksin, yhdessä käänteislukunsa kanssa, yhdessä vastalukunsa kanssa tai ei mikään)\n- 1.5 Funktion $f(x)=x^2+3x$ arvo, kun $x=-2$ (valitaan luku listasta).\n- 1.6 Funktion $f(x)=x^2+3x$ derivaatan arvo $f'(10)$ (valitaan luku listasta).",
+     "hints": [
+      "1.1: avaa neliö ja muista, että miinusmerkki sulkujen edessä vaihtaa jokaisen termin merkin. 1.2: ota ensin yhteinen tekijä. 1.3: sievennä juuret muotoon $k\\sqrt3$. 1.4: kerro ristiin. 1.5–1.6: sijoita ja derivoi.",
+      "Kohta kohdalta:\n- 1.1: $(x+6)^2=x^2+12x+36$.\n- 1.2: $-4x^3+8x^2+12x=-4x(x^2-2x-3)$; jaa toisen asteen tekijä.\n- 1.3: $\\sqrt{12}\\cdot\\sqrt3=6$ ja $\\sqrt{\\frac43}=\\frac{2}{\\sqrt3}=\\frac{2\\sqrt3}{3}$.\n- 1.4: $x^2=49$.\n- 1.5: $(-2)^2+3\\cdot(-2)$.\n- 1.6: $f'(x)=2x+3$."
+     ],
+     "solution": "1. **1.1: C ($3x^2+11x+41$).** $(x+6)^2-(-2x^2+x-5)=x^2+12x+36+2x^2-x+5=3x^2+11x+41$.\n2. **1.2: D ($-4x(x+1)(x-3)=0$).** $-4x^3+8x^2+12x=-4x(x^2-2x-3)=-4x(x+1)(x-3)$.\n3. **1.3: D ($6+\\frac{7\\sqrt3}{3}$).** $\\sqrt{12}\\cdot\\sqrt3=\\sqrt{36}=6$, $-\\sqrt3+4\\sqrt3=3\\sqrt3$ ja $\\sqrt{\\frac43}=\\frac{2\\sqrt3}{3}$. Summa on $6+3\\sqrt3-\\frac{2\\sqrt3}{3}=6+\\frac{7\\sqrt3}{3}$. (Desimaaliluku $10{,}0414\\ldots$ on vain likiarvo, ei tarkka arvo.)\n4. **1.4: C ($x=7$ ja sen vastaluku).** Ristiin kertomalla $x^2=49$, joten $x=\\pm7$.\n5. **1.5: $-2$.** $f(-2)=4-6=-2$.\n6. **1.6: $23$.** $f'(x)=2x+3$, joten $f'(10)=23$.\n\n**Vastaus: 1.1 C · 1.2 D · 1.3 D · 1.4 C · 1.5 $-2$ · 1.6 $23$**\n\n**Sudenkuoppa:** kohdassa 1.4 negatiivinen ratkaisu unohtuu, ja kohdassa 1.1 sulkujen edessä olevaa miinusta ei viedä kaikkiin termeihin.",
+     "answer": "1.1 C ($3x^2+11x+41$) · 1.2 D ($-4x(x+1)(x-3)=0$) · 1.3 D ($6+\\frac{7\\sqrt3}{3}$) · 1.4 C ($x=\\pm7$) · 1.5 $-2$ · 1.6 $23$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Kolme toisistaan riippumatonta kohtaa, 4 p kukin.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 4,
+     "prompt": "Määritä janan $AB$ keskipiste, kun $A=(5,5)$ ja $B=\\left(-2,\\frac32\\right)$.",
+     "hints": [
+      "Keskipisteen koordinaatit ovat päätepisteiden vastinkoordinaattien keskiarvot."
+     ],
+     "solution": "1. $x=\\frac{5+(-2)}{2}=\\frac32$.\n2. $y=\\frac{5+\\frac32}{2}=\\frac{\\frac{13}{2}}{2}=\\frac{13}{4}$.\n\n**Vastaus: $\\left(\\frac32,\\frac{13}{4}\\right)$**",
+     "answer": "$\\left(\\frac32,\\frac{13}{4}\\right)$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.2",
+     "points": 4,
+     "prompt": "Ratkaise yhtälö $|3x+4|=5$.",
+     "hints": [
+      "Luvun itseisarvo on 5 täsmälleen silloin, kun luku on $5$ tai $-5$. Ratkaise kaksi tavallista yhtälöä."
+     ],
+     "solution": "1. $|3x+4|=5 \\iff 3x+4=5$ tai $3x+4=-5$.\n2. $3x+4=5 \\iff x=\\frac13$.\n3. $3x+4=-5 \\iff 3x=-9 \\iff x=-3$.\n\n**Vastaus: $x=-3$ tai $x=\\frac13$**\n\n**Sudenkuoppa:** vain tapauksen $3x+4=5$ käsitteleminen.",
+     "answer": "$x=-3$ tai $x=\\frac13$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "2.3",
+     "points": 4,
+     "prompt": "Määritä ympyrän $x^2+y^2+2x-8=0$ keskipiste ja säde.",
+     "hints": [
+      "Täydennä $x$-termit neliöksi, jolloin yhtälö saadaan muotoon $(x-x_0)^2+(y-y_0)^2=r^2$."
+     ],
+     "solution": "1. $x^2+2x=(x+1)^2-1$.\n2. Yhtälö on $(x+1)^2-1+y^2-8=0$ eli $(x+1)^2+y^2=9$.\n3. Keskipiste on $(-1,0)$ ja säde $\\sqrt9=3$.\n\n**Vastaus: keskipiste $(-1,0)$, säde $3$**\n\n**Sudenkuoppa:** keskipisteen merkkivirhe: $(x+1)^2$ tarkoittaa, että $x_0=-1$.",
+     "answer": "Keskipiste $(-1,0)$, säde $3$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 4,
+     "prompt": "Määritä integraali $\\int(-2x^2+6x-4)\\,dx$.",
+     "hints": [
+      "Integroi termeittäin kaavalla $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}$ ja lisää integroimisvakio."
+     ],
+     "solution": "1. $\\int -2x^2\\,dx=-\\frac23x^3$, $\\int 6x\\,dx=3x^2$ ja $\\int(-4)\\,dx=-4x$.\n2. $\\int(-2x^2+6x-4)\\,dx=-\\frac23x^3+3x^2-4x+C$.\n\n**Vastaus: $-\\frac23x^3+3x^2-4x+C$**",
+     "answer": "$-\\frac23x^3+3x^2-4x+C$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "3.2",
+     "points": 8,
+     "prompt": "Laske käyrien $y=(x-1)(3-x)$ ja $y=(x-1)^2$ rajaaman alueen pinta-ala.",
+     "hints": [
+      "Ratkaise ensin käyrien leikkauskohdat ja selvitä, kumpi käyrä on niiden välissä ylempänä. Ala on ylemmän ja alemman funktion erotuksen integraali leikkauskohtien välillä.",
+      "Erotus on $(x-1)(3-x)-(x-1)^2=-2x^2+6x-4=-2(x-1)(x-2)$, joten leikkauskohdat ovat $x=1$ ja $x=2$. Erotus on välillä $(1,2)$ positiivinen. Voit käyttää kohdan 3.1 integraalifunktiota."
+     ],
+     "solution": "1. Erotus: $(x-1)(3-x)-(x-1)^2=(-x^2+4x-3)-(x^2-2x+1)=-2x^2+6x-4$.\n2. Leikkauskohdat: $-2x^2+6x-4=0 \\iff x^2-3x+2=0 \\iff (x-1)(x-2)=0$, joten $x=1$ tai $x=2$.\n3. Testipiste $x=1{,}5$: erotus on $-4{,}5+9-4=0{,}5>0$, joten $y=(x-1)(3-x)$ on välillä $(1,2)$ ylempänä.\n4. $A=\\int_1^2(-2x^2+6x-4)\\,dx=\\left[-\\frac23x^3+3x^2-4x\\right]_1^2=\\left(-\\frac{16}{3}+12-8\\right)-\\left(-\\frac23+3-4\\right)=-\\frac43+\\frac53=\\frac13$.\n\n**Vastaus: $\\frac13$**\n\n**Sudenkuoppa:** integroidaan väärään suuntaan ja saadaan $-\\frac13$. Pinta-alan on oltava positiivinen, joten järjestys (ylempi miinus alempi) kannattaa perustella.",
+     "answer": "$\\frac13$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 3,
+     "prompt": "Kumpi on suurempi: $A=\\frac{333\\,333\\,331}{333\\,333\\,334}$ vai $B=\\frac{222\\,222\\,221}{222\\,222\\,223}$?",
+     "hints": [
+      "Molemmat ovat hiukan ykköstä pienempiä. Kirjoita ne muotoon $1-\\frac{\\text{luku}}{\\text{nimittäjä}}$ ja vertaa vähennettäviä, tai laske tarkalla laskimella erotus $B-A$."
+     ],
+     "solution": "1. $A=1-\\frac{3}{333\\,333\\,334}$ ja $B=1-\\frac{2}{222\\,222\\,223}$.\n2. Verrataan vähennettäviä ristiin kertomalla: $3\\cdot 222\\,222\\,223=666\\,666\\,669$ ja $2\\cdot 333\\,333\\,334=666\\,666\\,668$.\n3. Koska $666\\,666\\,669>666\\,666\\,668$, on $\\frac{3}{333\\,333\\,334}>\\frac{2}{222\\,222\\,223}$. Luvusta $A$ vähennetään siis enemmän, joten $A\\lt B$. (Erotus on $B-A\\approx 1{,}35\\cdot 10^{-17}$.)\n\n**Vastaus: $B$ on suurempi.**\n\n**Sudenkuoppa:** tavallinen laskin pyöristää kummankin luvuksi $0{,}99999999$, jolloin ne näyttävät yhtä suurilta.",
+     "answer": "$B$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 9,
+     "prompt": "Kumpi on suurempi: $C$, jonka osoittajassa on 2022 kolmosta ja sen perässä numero 1 ja nimittäjässä 2022 kolmosta ja numero 4, vai $D$, jonka osoittajassa on 2022 kakkosta ja numero 1 ja nimittäjässä 2022 kakkosta ja numero 3?",
+     "hints": [
+      "Laskin ei riitä, joten tarvitaan yleinen päättely. Huomaa, että $C$:n osoittaja on 3 pienempi kuin nimittäjä ja $D$:n osoittaja 2 pienempi kuin nimittäjä. Kirjoita $C=1-\\frac{3}{N_C}$ ja $D=1-\\frac{2}{N_D}$.",
+      "Vertaa murtolukuja $\\frac{3}{N_C}$ ja $\\frac{2}{N_D}$ ristiin kertomalla. Laske tulot $3N_D$ ja $2N_C$ numero kerrallaan: $3\\cdot 2=6$, $3\\cdot 3=9$, $2\\cdot 3=6$ ja $2\\cdot 4=8$ (ei muistinumeroita)."
+     ],
+     "solution": "1. Merkitään $N_C$ = luku, jossa on 2022 kolmosta ja lopussa 4, ja $N_D$ = luku, jossa on 2022 kakkosta ja lopussa 3. Osoittajat ovat $N_C-3$ ja $N_D-2$.\n2. Siis $C=\\frac{N_C-3}{N_C}=1-\\frac{3}{N_C}$ ja $D=1-\\frac{2}{N_D}$.\n3. $D-C=\\frac{3}{N_C}-\\frac{2}{N_D}=\\frac{3N_D-2N_C}{N_CN_D}$.\n4. $3N_D$: kerrotaan jokainen numero kolmella, eikä muistinumeroita synny ($3\\cdot 2=6$, $3\\cdot 3=9$). Tulos on luku, jossa on 2022 kuutosta ja lopussa 9.\n5. $2N_C$: samoin ($2\\cdot 3=6$, $2\\cdot 4=8$) tulos on luku, jossa on 2022 kuutosta ja lopussa 8.\n6. Siis $3N_D-2N_C=1>0$, joten $D-C=\\frac{1}{N_CN_D}>0$.\n\n(Sama päättely toimii kohdassa 4.1, jossa kolmosia ja kakkosia on 8.)\n\n**Vastaus: $D$ on suurempi.**\n\n**Sudenkuoppa:** ”supistaminen” poistamalla yhteisiä numeroita (esim. päätelmä $C\\approx\\frac14$) on virheellistä. Myöskään toteamus ”menee kuten kohta 4.1” ei ole perustelu.",
+     "answer": "$D$",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Vektorit ovat $\\overline a=\\overline i+2\\overline j+3\\overline k$ ja $\\overline b=3\\overline i+2\\overline j+\\overline k$.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 3,
+     "prompt": "Laske $\\overline a-\\overline b$.",
+     "hints": [
+      "Vähennä vastinkomponentit toisistaan: $\\overline i$-kertoimet keskenään, $\\overline j$-kertoimet keskenään ja $\\overline k$-kertoimet keskenään."
+     ],
+     "solution": "$\\overline a-\\overline b=(1-3)\\overline i+(2-2)\\overline j+(3-1)\\overline k=-2\\overline i+2\\overline k$.\n\n**Vastaus: $-2\\overline i+2\\overline k$**",
+     "answer": "$-2\\overline i+2\\overline k$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.2",
+     "points": 3,
+     "prompt": "Laske pistetulo $\\overline a\\cdot\\overline b$.",
+     "hints": [
+      "Pistetulo on vastinkomponenttien tulojen summa. Tulos on luku, ei vektori."
+     ],
+     "solution": "$\\overline a\\cdot\\overline b=1\\cdot 3+2\\cdot 2+3\\cdot 1=3+4+3=10$.\n\n**Vastaus: $10$**",
+     "answer": "$10$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.3",
+     "points": 6,
+     "prompt": "Onko piste $(4,6,8)$ sillä origon kautta kulkevalla suoralla, jonka suuntavektori on $\\overline a$?",
+     "hints": [
+      "Suoran pisteet ovat muotoa $r\\overline a=r\\overline i+2r\\overline j+3r\\overline k$, $r\\in\\mathbb R$. Piste on suoralla, jos sen paikkavektori voidaan kirjoittaa tässä muodossa.",
+      "Ehto $4\\overline i+6\\overline j+8\\overline k=r(\\overline i+2\\overline j+3\\overline k)$ antaa kolme yhtälöä: $r=4$, $2r=6$ ja $3r=8$. Onko niillä yhteinen ratkaisu?"
+     ],
+     "solution": "1. Suoran parametriesitys: $\\overline{OP}=r\\,\\overline a=r\\overline i+2r\\overline j+3r\\overline k$, $r\\in\\mathbb R$.\n2. Piste $(4,6,8)$ on suoralla, jos $4\\overline i+6\\overline j+8\\overline k=r(\\overline i+2\\overline j+3\\overline k)$ jollakin $r$.\n3. Komponenteittain: $r=4$, $2r=6$ ja $3r=8$.\n4. Ensimmäisestä $r=4$, mutta silloin $2r=8\\neq 6$. Yhtälöryhmällä ei ole ratkaisua.\n\n**Vastaus: ei ole.**\n\n**Sudenkuoppa:** tarkistetaan vain kaksi koordinaattia tai verrataan pelkkiä suhteita huolimattomasti. Kaikkien kolmen yhtälön on toteuduttava samalla $r$:n arvolla.",
+     "answer": "Ei ole",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "intro": "Okku huomasi GeoGebralla kaksi suorakulmaisten kolmioiden ominaisuutta. Perustele ne algebrallisesti Pythagoraan lauseen avulla.",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Todista, että suorakulmaisen kolmion hypotenuusa on pidempi kuin kumpikin kateetti.",
+     "hints": [
+      "Merkitse kateetteja $a$ ja $b$ ja hypotenuusaa $c$. Kaikki ovat positiivisia. Lähde Pythagoraan lauseesta $c^2=a^2+b^2$ ja arvioi oikeaa puolta alaspäin.",
+      "Koska $b>0$, on $b^2>0$ ja siis $c^2=a^2+b^2>a^2$. Koska $c$ ja $a$ ovat positiivisia, neliöiden järjestyksestä seuraa lukujen järjestys."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Pythagoraan lause $c^2=a^2+b^2$, missä $a,b,c>0$.\n- Arvion $a^2+b^2>a^2$, koska $b^2>0$.\n- Perustelun sille, että epäyhtälöstä $c^2>a^2$ seuraa $c>a$ (luvut ovat positiivisia).\n- Toteamuksen, että $c>b$ saadaan samoin.\n\n**Todistus**\n\n1. Pythagoraan lauseen mukaan $c^2=a^2+b^2$, missä sivujen pituudet $a,b,c$ ovat positiivisia.\n2. Koska $b>0$, on $b^2>0$, joten $c^2=a^2+b^2>a^2$.\n3. Neliöjuuri on aidosti kasvava, ja $c,a>0$, joten $c=\\sqrt{c^2}>\\sqrt{a^2}=a$.\n4. Vaihtamalla kateettien roolit ($a^2>0$) saadaan samoin $c>b$. $\\blacksquare$\n\n**Sudenkuoppa:** GeoGebra-kokeilut tai lukuesimerkit eivät ole todistus. Tehtävä vaatii algebrallisen perustelun.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 6,
+     "prompt": "Todista, että suorakulmaisen kolmion hypotenuusa on lyhyempi kuin kateettien pituuksien summa.",
+     "hints": [
+      "Vertaa hypotenuusan neliötä kateettien summan neliöön $(a+b)^2$. Avaa neliö ja käytä Pythagoraan lausetta.",
+      "$(a+b)^2=a^2+2ab+b^2=c^2+2ab$, ja $2ab>0$, koska kateetit ovat positiivisia. Koska $c$ ja $a+b$ ovat positiivisia, neliöiden järjestyksestä seuraa lukujen järjestys."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Pythagoraan lauseen ja neliön $(a+b)^2=a^2+2ab+b^2$.\n- Arvion $c^2=a^2+b^2\\lt a^2+b^2+2ab=(a+b)^2$, koska $ab>0$.\n- Perustelun sille, että neliöiden järjestyksestä seuraa $c\\lt a+b$ (luvut ovat positiivisia).\n\n**Todistus**\n\n1. Pythagoraan lauseen mukaan $c^2=a^2+b^2$.\n2. Koska $a>0$ ja $b>0$, on $2ab>0$, ja siis $c^2=a^2+b^2\\lt a^2+2ab+b^2=(a+b)^2$.\n3. Koska $c>0$ ja $a+b>0$, epäyhtälöstä $c^2<(a+b)^2$ seuraa $c\\lt a+b$. $\\blacksquare$\n\n(Tämä on kolmioepäyhtälön erikoistapaus.)\n\n**Sudenkuoppa:** päätellään neliöistä suoraan lukujen järjestys mainitsematta, että luvut ovat positiivisia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Yhteensä 99 samankokoisesta punaisesta pikkukuutiosta kootaan kolme isoa kuutiota: $2\\times2\\times2$, $3\\times3\\times3$ ja $4\\times4\\times4$. Isojen kuutioiden ulkopinnat maalataan sinisiksi, minkä jälkeen ne puretaan takaisin pikkukuutioiksi.\n\n1. Yksi pikkukuutio valitaan satunnaisesti. Millä todennäköisyydellä se on kokonaan punainen? (6 p)\n2. Kolme pikkukuutiota valitaan satunnaisesti. Millä todennäköisyydellä ainakin yksi niistä on kokonaan punainen? (6 p)",
+     "hints": [
+      "Kokonaan punaiseksi jää vain pikkukuutio, joka on ison kuution sisällä, eikä sillä ole yhtään sivua ulkopinnalla. Laske sisäkuutiot kustakin isosta kuutiosta.",
+      "$n\\times n\\times n$ -kuution sisäosa on $(n-2)\\times(n-2)\\times(n-2)$ -kuutio, joten sisäkuutioita on $0+1+8=9$. Kohdassa 2 käytä vastatapahtumaa ”yksikään valituista ei ole kokonaan punainen”, ja valinnat tehdään palauttamatta."
+     ],
+     "solution": "**1. Yksi kuutio**\n\n1. Pikkukuutio jää kokonaan punaiseksi, jos se ei ole ison kuution pinnalla.\n2. $2\\times2\\times2$: kaikki 8 ovat pinnalla, sisäkuutioita 0.\n3. $3\\times3\\times3$: sisällä on $1^3=1$ kuutio.\n4. $4\\times4\\times4$: sisällä on $2^3=8$ kuutiota.\n5. Kokonaan punaisia on $0+1+8=9$, joten $P=\\frac{9}{99}=\\frac{1}{11}\\approx 0{,}091$.\n\n**2. Kolme kuutiota**\n\n6. Vastatapahtuma: yksikään valituista ei ole kokonaan punainen. Muita kuin kokonaan punaisia on $99-9=90$.\n7. Peräkkäin palauttamatta: $P(\\text{ei yhtään})=\\frac{90}{99}\\cdot\\frac{89}{98}\\cdot\\frac{88}{97}$, missä kukin tekijä on todennäköisyys, että seuraavakin valittu on jokin jäljellä olevista ei-punaisista.\n8. $P(\\text{ainakin yksi})=1-\\frac{90\\cdot 89\\cdot 88}{99\\cdot 98\\cdot 97}=\\frac{1193}{4753}\\approx 0{,}25$.\n\n(Kombinaatioilla sama: $1-\\binom{90}{3}\\big/\\binom{99}{3}$.)\n\n**Vastaus: 1. $\\frac{1}{11}\\approx 9\\,\\%$ · 2. $\\frac{1193}{4753}\\approx 25\\,\\%$**\n\n**Sudenkuoppa:** kohdassa 2 laskeminen takaisinpanolla, $1-\\left(\\frac{90}{99}\\right)^3\\approx 0{,}249$. Kuutioita ei palauteta, joten nimittäjät pienenevät.",
+     "answer": "1. $\\frac{1}{11}\\approx 9\\,\\%$ · 2. $\\frac{1193}{4753}\\approx 25\\,\\%$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Etsi kaikki positiiviset kokonaisluvut $x$ ja $y$, jotka toteuttavat yhtälön $x^6+2x^3y^3+y^6=4225$.",
+     "hints": [
+      "Vasen puoli on binomin neliö, kun ajattelet muuttujina lukuja $x^3$ ja $y^3$.",
+      "Yhtälö on $(x^3+y^3)^2=4225=65^2$. Koska $x,y>0$, saadaan $x^3+y^3=65$. Rajaa, kuinka suuri $x$ voi olla, ja käy tapaukset läpi."
+     ],
+     "solution": "1. $x^6+2x^3y^3+y^6=(x^3+y^3)^2$, joten yhtälö on $(x^3+y^3)^2=4225$.\n2. $\\sqrt{4225}=65$, joten $x^3+y^3=65$ tai $x^3+y^3=-65$. Jälkimmäinen hylätään, koska $x,y>0$.\n3. Koska $y\\ge 1$, on $x^3\\le 64$, joten $x\\in\\{1,2,3,4\\}$.\n4. Tapaukset:\n- $x=1$: $y^3=64$, joten $y=4$. Ratkaisu.\n- $x=2$: $y^3=57$, ei kokonaisluvun kuutio.\n- $x=3$: $y^3=38$, ei kokonaisluvun kuutio.\n- $x=4$: $y^3=1$, joten $y=1$. Ratkaisu.\n\n**Vastaus: $(x,y)=(1,4)$ ja $(x,y)=(4,1)$**\n\n**Sudenkuoppa:** vain toisen ratkaisun löytäminen tai sen jättäminen perustelematta, ettei muita ole (rajaus $x\\le 4$ ja kaikkien tapausten tarkistus).",
+     "answer": "$(1,4)$ ja $(4,1)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Olkoon $f(x)=x^4+ax^2+bx+c$, missä $a>0$ ja $x\\in\\mathbb R$.\n\n1. Osoita, että derivaattafunktio $f'$ on aidosti kasvava. (4 p)\n2. Osoita, että yhtälöllä $f(x)=0$ on enintään kaksi eri reaalijuurta. (8 p)",
+     "hints": [
+      "Kohdassa 1 tutki derivaatan derivaattaa $f''$. Kohdassa 2 mieti, montako nollakohtaa aidosti kasvavalla funktiolla $f'$ voi olla ja mitä se kertoo funktion $f$ kulusta.",
+      "$f'(x)=4x^3+2ax+b$ ja $f''(x)=12x^2+2a>0$. Funktiolla $f'$ on enintään yksi nollakohta $x_0$ (itse asiassa täsmälleen yksi, koska $f'$ saa kaikki arvot). Silloin $f$ on vähenevä välillä $(-\\infty,x_0]$ ja kasvava välillä $[x_0,\\infty)$."
+     ],
+     "solution": "**1. $f'$ on aidosti kasvava**\n\n1. $f'(x)=4x^3+2ax+b$ ja $f''(x)=12x^2+2a$.\n2. $12x^2\\ge 0$ ja $2a>0$, joten $f''(x)>0$ kaikilla $x$. Siis $f'$ on aidosti kasvava.\n\n**2. Enintään kaksi juurta**\n\n3. Aidosti kasvavalla funktiolla $f'$ on enintään yksi nollakohta. Lisäksi $f'(x)\\to-\\infty$, kun $x\\to-\\infty$, ja $f'(x)\\to\\infty$, kun $x\\to\\infty$, joten jatkuvana funktiona sillä on täsmälleen yksi nollakohta $x_0$.\n4. Koska $f'$ on aidosti kasvava, $f'(x)<0$, kun $x\\lt x_0$, ja $f'(x)>0$, kun $x>x_0$.\n5. Siis $f$ on aidosti vähenevä välillä $(-\\infty,x_0]$ ja aidosti kasvava välillä $[x_0,\\infty)$.\n6. Aidosti monotoninen funktio saa jokaisen arvon (myös nollan) enintään kerran. Näin ollen $f$:llä on enintään yksi nollakohta välillä $(-\\infty,x_0]$ ja enintään yksi välillä $[x_0,\\infty)$.\n7. Yhteensä eri reaalijuuria on enintään kaksi. $\\blacksquare$\n\n**Sudenkuoppa:** pelkkä toteamus ”derivaatalla on yksi nollakohta, joten juuria on enintään kaksi” ei riitä. Kulkukaavio ja monotonisuuden käyttö on esitettävä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Aaro ja Siiri kirjoittavat vuorotellen jonkin luvun 1–10. Lukua ei saa kirjoittaa, jos se on jonkin jo kirjoitetun luvun tekijä (jakaa sen). Se, joka ei enää voi kirjoittaa uutta lukua, häviää.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 3,
+     "prompt": "Aaro aloittaa luvulla 8. Mitä lukuja Siiri voi kirjoittaa omalla vuorollaan?",
+     "hints": [
+      "Kielletyt ovat ne luvut, jotka jakavat jo kirjoitetun luvun 8 (mukaan lukien 1 ja 8 itse)."
+     ],
+     "solution": "1. Luvun 8 tekijät ovat 1, 2, 4 ja 8, joten niitä ei voi enää kirjoittaa.\n2. Jäljelle jäävät 3, 5, 6, 7, 9 ja 10. Mikään niistä ei ole luvun 8 tekijä.\n\n**Vastaus: 3, 5, 6, 7, 9 ja 10**\n\n**Sudenkuoppa:** luvun 8 monikertojen tai luvun 8 itsensä sallimisen sekoittaminen tekijöihin. Kielletty on se, joka jakaa kirjoitetun luvun.",
+     "answer": "3, 5, 6, 7, 9, 10",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.2",
+     "points": 3,
+     "prompt": "Anna esimerkki siitä, miten luvulla 8 alkava peli voisi edetä loppuun. Pelkkä lukujen järjestys riittää.",
+     "hints": [
+      "Tarkista jokaisella siirrolla, ettei uusi luku jaa mitään jo kirjoitettua lukua. Huomaa, että luvun 6 tai 9 kirjoittaminen kieltää luvun 3 ja luvun 10 kirjoittaminen luvun 5."
+     ],
+     "solution": "1. Esimerkiksi: 8 (Aaro), 6 (Siiri), 7 (Aaro), 9 (Siiri), 10 (Aaro).\n2. Tarkistus: 6 ei jaa lukua 8; 7 ei jaa lukuja 8 ja 6; 9 ei jaa aiempia; 10 ei jaa aiempia.\n3. Nyt kielletty on myös 3 (jakaa luvut 6 ja 9) ja 5 (jakaa luvun 10), joten Siiri ei voi kirjoittaa mitään ja häviää.\n\n(Toinen kelpaava jatko: 8, 3, 5, 6, 7, 9, 10. Luvun 3 on tultava ennen lukuja 6 ja 9 ja luvun 5 ennen lukua 10.)\n\n**Vastaus: esimerkiksi 8, 6, 7, 9, 10**",
+     "answer": "Esim. 8, 6, 7, 9, 10",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "10.3",
+     "points": 6,
+     "prompt": "Siirin strategia: hän aloittaa luvulla 6 ja vastaa aina vastustajan lukuun sen parilla, kun parit ovat $(4,5)$, $(7,9)$ ja $(8,10)$. Peli etenee 6, $a$ (Aaro), $b$ (Siiri), $c$ (Aaro), 9 (Siiri), eikä Siiri ole vielä voittanut. Mitkä ovat vaihtoehdot luvuille $a$, $b$ ja $c$?",
+     "hints": [
+      "Kun 6 on kirjoitettu, 1, 2 ja 3 ovat kiellettyjä. Siiri kirjoittaa aina edellisen luvun parin, joten luvusta 9 voi päätellä luvun $c$. Luvut $a$ ja $b$ ovat pari. Kokeile, kumpi jäljellä olevista pareista jättää pelin kesken.",
+      "Siiri vastasi $c$:hen luvulla 9, joten $c=7$. Jos $\\{a,b\\}=\\{8,10\\}$, luvut 4 ja 5 ovat kiellettyjä (ne jakavat luvut 8 ja 10), ja Aarolla ei ole siirtoa, eli Siiri voittaisi heti. Tarkista vaihtoehto $\\{a,b\\}=\\{4,5\\}$."
+     ],
+     "solution": "1. Luvun 6 jälkeen kiellettyjä ovat 1, 2, 3 ja 6. Pelattavissa ovat 4, 5, 7, 8, 9 ja 10, eli täsmälleen parien luvut.\n2. Siiri vastaa aina parilla. Hän kirjoitti luvun 9, joten Aaron edellinen luku oli sen pari: $c=7$.\n3. Luvut $a$ ja $b$ ovat siis joko pari $(4,5)$ tai pari $(8,10)$ jommassakummassa järjestyksessä.\n4. Jos $\\{a,b\\}=\\{8,10\\}$: pelin 6, 8, 10, 7, 9 jälkeen luku 4 jakaa luvun 8 ja luku 5 luvun 10, joten mitään ei voi kirjoittaa. Aaro häviäisi, ja Siiri olisi voittanut luvulla 9. Tämä on ristiriidassa tehtävän kanssa.\n5. Jos $\\{a,b\\}=\\{4,5\\}$: pelin 6, 4, 5, 7, 9 jälkeen luvut 8 ja 10 ovat vielä sallittuja (kumpikaan ei jaa kirjoitettuja lukuja), joten peli jatkuu. Tämä sopii.\n6. Kummassakin järjestyksessä Siirin siirto $b$ on sallittu: 5 ei jaa lukuja 6 ja 4, eikä 4 jaa lukuja 6 ja 5.\n\n**Vastaus: $(a,b,c)=(4,5,7)$ tai $(a,b,c)=(5,4,7)$**\n\n**Sudenkuoppa:** mukaan otetaan vaihtoehdot $a=8$ tai $a=10$, vaikka silloin Siiri voittaisi jo luvulla 9.",
+     "answer": "$(a,b,c)=(4,5,7)$ tai $(5,4,7)$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Positiivisen funktion kuvaajan alle jäävää alaa arvioidaan puolisuunnikassäännöllä: jakovälille $[x_k,x_{k+1}]$ tulee puolisuunnikas, jonka kärjet ovat $(x_k,0)$, $(x_k,f(x_k))$, $(x_{k+1},f(x_{k+1}))$ ja $(x_{k+1},0)$. Välit saavat olla eri pituisia. Tässä funktio on $f(x)=\\sin(3x^2)+2$, väli on $1\\le x\\le 3$ ja jakopisteet ovat $1$, $\\frac32$, $2$ ja $3$.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 3,
+     "prompt": "Piirrä funktion $f$ kuvaaja ja jakopisteiden $1$, $\\frac32$, $2$, $3$ mukaiset puolisuunnikkaat.",
+     "hints": [
+      "Piirrä kuvaaja GeoGebralla välillä $[1,3]$ (radiaanit). Kunkin puolisuunnikkaan kärjet ovat $(x_k,0)$, $(x_k,f(x_k))$, $(x_{k+1},f(x_{k+1}))$ ja $(x_{k+1},0)$. Esim. komento Monikulmio(...) piirtää ne."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kuvaajan $y=\\sin(3x^2)+2$ välillä $[1,3]$. Arvot vaihtelevat välillä $1\\ldots3$, ja käyrä värähtelee yhä tiheämmin, kun $x$ kasvaa.\n- Kolme puolisuunnikasta väleillä $\\left[1,\\frac32\\right]$, $\\left[\\frac32,2\\right]$ ja $[2,3]$. Kunkin yläsivu on jana käyrän pisteiden välillä.\n- Kuvasta näkyy, että viimeinen, leveä puolisuunnikas ei seuraa käyrän värähtelyä lainkaan.\n\n**Sudenkuoppa:** laskin asteina. Silloin kuvaaja näyttää lähes suoralta.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 7,
+     "prompt": "Tarkka ala on $A\\approx 3{,}862\\,059$. Laske annetun jaon kolmen puolisuunnikkaan alat, niiden summa $A'$ ja absoluuttinen virhe $|A'-A|$.",
+     "hints": [
+      "Puolisuunnikkaan ala välillä $[x_k,x_{k+1}]$ on $\\frac{f(x_k)+f(x_{k+1})}{2}\\cdot(x_{k+1}-x_k)$. Välit ovat eri pituisia, joten tasavälisen säännön valmis kaava ei käy.",
+      "Tarvitset arvot $f(1)\\approx 2{,}1411$, $f\\left(\\frac32\\right)\\approx 2{,}4500$, $f(2)\\approx 1{,}4634$ ja $f(3)\\approx 2{,}9564$. Kahden ensimmäisen välin leveys on $\\frac12$ ja viimeisen 1."
+     ],
+     "solution": "1. Funktion arvot (radiaanit): $f(1)=\\sin 3+2\\approx 2{,}14112$, $f\\left(\\frac32\\right)=\\sin 6{,}75+2\\approx 2{,}45004$, $f(2)=\\sin 12+2\\approx 1{,}46343$ ja $f(3)=\\sin 27+2\\approx 2{,}95638$.\n2. $A_1=\\frac{f(1)+f(1{,}5)}{2}\\cdot\\frac12\\approx 1{,}147\\,791$.\n3. $A_2=\\frac{f(1{,}5)+f(2)}{2}\\cdot\\frac12\\approx 0{,}978\\,368$.\n4. $A_3=\\frac{f(2)+f(3)}{2}\\cdot 1\\approx 2{,}209\\,902$.\n5. $A'=A_1+A_2+A_3\\approx 4{,}336\\,060$.\n6. $|A'-A|\\approx|4{,}336\\,060-3{,}862\\,059|\\approx 0{,}474\\,001$.\n\n**Vastaus: puolisuunnikkaiden alat $\\approx 1{,}1478$, $0{,}9784$ ja $2{,}2099$; $A'\\approx 4{,}3361$ ja $|A'-A|\\approx 0{,}4740$.**\n\n**Sudenkuoppa:** tasavälisen puolisuunnikassäännön kaavan käyttäminen, vaikka välit ovat eri pituisia.",
+     "answer": "$A'\\approx 4{,}3361$ (osat $1{,}1478$; $0{,}9784$; $2{,}2099$), $|A'-A|\\approx 0{,}4740$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "11.3",
+     "points": 2,
+     "prompt": "Miten edellisen kohdan menetelmän tarkkuutta voi parantaa?",
+     "hints": [
+      "Mieti, miksi virhe on nyt suuri: kuinka hyvin yksi jana kuvaa värähtelevää käyrää leveällä välillä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Jakoa tihennetään, eli käytetään enemmän ja kapeampia osavälejä.\n- Erityisesti välillä $[2,3]$, jossa käyrä värähtelee nopeasti, tarvitaan tiheä jako.\n\n**Esimerkkivastaus:** Tarkkuus paranee, kun jakopisteitä lisätään. Silloin puolisuunnikkaiden yläsivut seuraavat käyrää paremmin. Erityisesti välillä $[2,3]$ yksi puolisuunnikas ohittaa useita käyrän huippuja ja pohjia.",
+     "answer": "Tihennetään jakoa (lisää jakopisteitä etenkin välille $[2,3]$)",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "1. Kun $0\\le a\\le\\frac{\\pi}{2}$, todista epäyhtälö $\\sin a+\\sin\\left(\\frac{\\pi}{2}-a\\right)\\le 2\\sin\\frac{\\pi}{4}$. (4 p)\n2. Todista, että jokaisella positiivisella kokonaisluvulla $n$ pätee $\\sum_{k=0}^n\\sin\\left(\\frac{\\pi}{2n}k\\right)=\\frac12\\sum_{k=0}^n\\left(\\sin\\left(\\frac{\\pi}{2n}k\\right)+\\sin\\left(\\frac{\\pi}{2n}(n-k)\\right)\\right)$. (4 p)\n3. Todista epäyhtälö $\\sum_{k=0}^n\\sin\\left(\\frac{\\pi}{2n}k\\right)\\le\\frac{n+1}{\\sqrt2}$. (4 p)",
+     "hints": [
+      "Kohdassa 1: $\\sin\\left(\\frac{\\pi}{2}-a\\right)=\\cos a$, ja summan $\\sin a+\\cos a$ voi kirjoittaa yhtenä sinifunktiona tai tutkia neliöön korottamalla. Kohdassa 2: mitä lukuja $n-k$ käy läpi, kun $k$ käy läpi luvut $0,\\dots,n$?",
+      "Kohta 1: $(\\sin a+\\cos a)^2=1+\\sin 2a\\le 2$, ja $2\\sin\\frac{\\pi}{4}=\\sqrt2$. Kohta 2: summat $\\sum\\sin\\left(\\frac{\\pi}{2n}k\\right)$ ja $\\sum\\sin\\left(\\frac{\\pi}{2n}(n-k)\\right)$ ovat samat, koska termit ovat samat eri järjestyksessä. Kohta 3: huomaa, että $\\frac{\\pi}{2n}(n-k)=\\frac{\\pi}{2}-\\frac{\\pi}{2n}k$, ja käytä kohtaa 1 jokaiseen termipariin."
+     ],
+     "solution": "**1.**\n\n1. $\\sin\\left(\\frac{\\pi}{2}-a\\right)=\\cos a$, ja $2\\sin\\frac{\\pi}{4}=2\\cdot\\frac{1}{\\sqrt2}=\\sqrt2$.\n2. Välillä $0\\le a\\le\\frac{\\pi}{2}$ on $\\sin a+\\cos a\\ge 0$, joten epäyhtälön voi korottaa neliöön: väite on yhtäpitävä epäyhtälön $(\\sin a+\\cos a)^2\\le 2$ kanssa.\n3. $(\\sin a+\\cos a)^2=\\sin^2a+2\\sin a\\cos a+\\cos^2a=1+\\sin 2a\\le 1+1=2$, koska sinin arvot ovat enintään 1. $\\blacksquare$\n\n(Vaihtoehto: $\\sin a+\\cos a=\\sqrt2\\sin\\left(a+\\frac{\\pi}{4}\\right)\\le\\sqrt2$.)\n\n**2.**\n\n4. Kun $k$ käy läpi luvut $0,1,\\dots,n$, luku $j=n-k$ käy läpi samat luvut käänteisessä järjestyksessä. Siis $\\sum_{k=0}^n\\sin\\left(\\frac{\\pi}{2n}(n-k)\\right)=\\sum_{j=0}^n\\sin\\left(\\frac{\\pi}{2n}j\\right)$.\n5. Oikea puoli on siten $\\frac12\\left(S+S\\right)=S$, missä $S=\\sum_{k=0}^n\\sin\\left(\\frac{\\pi}{2n}k\\right)$. $\\blacksquare$\n\n**3.**\n\n6. Kohdan 2 mukaan $S=\\frac12\\sum_{k=0}^n\\left(\\sin a_k+\\sin\\left(\\frac{\\pi}{2}-a_k\\right)\\right)$, missä $a_k=\\frac{\\pi}{2n}k$, koska $\\frac{\\pi}{2n}(n-k)=\\frac{\\pi}{2}-a_k$.\n7. Jokaisella $k$ pätee $0\\le a_k\\le\\frac{\\pi}{2}$, joten kohdan 1 mukaan jokainen sulkulauseke on enintään $2\\sin\\frac{\\pi}{4}=\\sqrt2$.\n8. Termejä on $n+1$, joten $S\\le\\frac12(n+1)\\sqrt2=\\frac{n+1}{\\sqrt2}$. $\\blacksquare$\n\n**Sudenkuoppa:** laskimen ”true” muutamilla $n$:n arvoilla ei ole todistus. Kohta 3 on tarkoitus johtaa kohdista 1 ja 2.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "13.1",
+     "points": 4,
+     "prompt": "Havainnollista funktion $f(x)=\\ln x$ avulla kohdassa $x=2$, mitä derivaatan määritelmä tarkoittaa geometrisesti.",
+     "hints": [
+      "Piirrä kuvaaja $y=\\ln x$, piste $(2,\\ln 2)$ ja sen kautta sekantti johonkin toiseen kuvaajan pisteeseen. Mitä erotusosamäärä on sekantin kannalta, ja mitä tapahtuu, kun toinen piste lähestyy ensimmäistä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kuvan tai kuvauksen: kuvaaja $y=\\ln x$, piste $(2,\\ln 2)$ ja sen kautta kulkeva sekantti (sekä tangentti).\n- Erotusosamäärä $\\frac{\\ln(2+h)-\\ln 2}{h}$ on sekantin kulmakerroin (pystysuora muutos jaettuna vaakasuoralla muutoksella).\n- Kun $h\\to 0$, sekantti lähestyy tangenttia, ja raja-arvo $f'(2)$ on tangentin kulmakerroin eli kuvaajan jyrkkyys kohdassa 2.\n\n**Esimerkkivastaus:** Piirretään käyrä $y=\\ln x$ ja sille pisteet $P=(2,\\ln 2)$ ja $Q=(2+h,\\ln(2+h))$. Erotusosamäärä on pisteiden $P$ ja $Q$ kautta kulkevan sekantin kulmakerroin. Kun $h$ lähestyy nollaa, piste $Q$ liukuu käyrää pitkin kohti pistettä $P$, ja sekantti kääntyy kohti käyrän tangenttia pisteessä $P$. Derivaatta $f'(2)$ on tämän tangentin kulmakerroin (tässä $\\frac12$).",
+     "check": "hvp"
+    },
+    {
+     "id": "13.2",
+     "points": 8,
+     "prompt": "Todista derivaatan määritelmän avulla, että $D\\ln x=\\frac1x$, kun $x>0$. Saat käyttää tietoa $\\lim_{t\\to0}(1+t)^{1/t}=e$.",
+     "hints": [
+      "Kirjoita erotusosamäärä $\\frac{\\ln(x+h)-\\ln x}{h}$ ja yhdistä logaritmit yhdeksi logaritmiksi laskusäännöillä. Tavoitteena on saada lauseke muotoon, jossa esiintyy $(1+t)^{1/t}$.",
+      "$\\frac{\\ln(x+h)-\\ln x}{h}=\\frac1h\\ln\\left(1+\\frac hx\\right)=\\ln\\left(1+\\frac hx\\right)^{1/h}$. Merkitse $t=\\frac hx$, jolloin $\\frac1h=\\frac{1}{x}\\cdot\\frac1t$, ja $t\\to0$, kun $h\\to0$."
+     ],
+     "solution": "1. Määritelmän mukaan $f'(x)=\\lim_{h\\to0}\\frac{\\ln(x+h)-\\ln x}{h}$.\n2. Logaritmin laskusäännöillä: $\\frac{\\ln(x+h)-\\ln x}{h}=\\frac1h\\ln\\frac{x+h}{x}=\\frac1h\\ln\\left(1+\\frac hx\\right)=\\ln\\left(1+\\frac hx\\right)^{1/h}$.\n3. Merkitään $t=\\frac hx$ ($x>0$ on kiinteä). Silloin $\\frac1h=\\frac1x\\cdot\\frac1t$, joten lauseke on $\\ln\\left(\\left(1+t\\right)^{1/t}\\right)^{1/x}=\\frac1x\\ln\\left(1+t\\right)^{1/t}$.\n4. Kun $h\\to0$, myös $t\\to0$, ja oletuksen mukaan $(1+t)^{1/t}\\to e$.\n5. Logaritmifunktio on jatkuva, joten $\\lim_{h\\to0}\\frac1x\\ln(1+t)^{1/t}=\\frac1x\\ln e=\\frac1x$.\n6. Siis $f'(x)=\\frac1x$, kun $x>0$. $\\blacksquare$\n\n**Sudenkuoppa:** raja-arvon siirtäminen logaritmin sisään mainitsematta logaritmin jatkuvuutta, tai raja-arvon laskeminen laskimella, mikä ei ole todistus.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "subject": "englanti",
+ "session": "2023S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2023/syksy/englanti_pitka/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2023-09-15_EA_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: Kuullun ymmärtäminen",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "answer": 7,
+    "note": "Vastaa kaikkiin. Varaa kuullun tehtäviin yhteensä noin tunti. Videot saa katsoa vapaasti, mutta äänitteiden kuuntelukerrat on rajattu tehtäväkohtaisesti."
+   },
+   {
+    "title": "Osa 2: Luetun ymmärtäminen",
+    "tasks": [
+     "8",
+     "9",
+     "10",
+     "11",
+     "12"
+    ],
+    "answer": 5,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 3: Sanasto ja rakenteet",
+    "tasks": [
+     "13",
+     "14",
+     "15"
+    ],
+    "answer": 3,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 4: Kirjallinen tuottaminen",
+    "tasks": [
+     "16.1",
+     "16.2",
+     "16.3",
+     "16.4"
+    ],
+    "answer": 1,
+    "note": "Valitse yksi aihe. Pituus 700–1 300 merkkiä ilman välilyöntejä ja rivinvaihtoja (suositeltu vähimmäismäärä on 700); ylityksestä seuraa pistevähennys. Jätä muut kentät tyhjiksi."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele podcast, jossa Chris Ryan puhuu rikkauden vaikutuksista ihmismieleen. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mihin varallisuus voi tutkimusten mukaan johtaa?\n2. Miksi maanviljelyn synty loi varallisuuseroja?\n3. Mikä rikkaudessa on ironista?\n4. Miten varallisuus vaikuttaa niiden yhdysvaltalaisten onnellisuuteen, jotka ansaitsevat yli 70 000 dollaria vuodessa?",
+     "hints": [
+      "Puhuja perustelee väitteensä tutkimuksilla ja historialla: ensin rikkaiden käyttäytyminen, sitten metsästäjä-keräilijöiden ja maanviljelijöiden erot ja lopuksi raha ja onnellisuus. Vaihtoehdoissa on sanoja, jotka muistuttavat äänitteen sanoja mutta tarkoittavat eri asiaa.",
+      "- 1.1: pysähtyykö kalliin auton kuljettaja päästämään kepin kanssa kulkevan vanhuksen yli? Mitä tämä kertoo suhtautumisesta muihin?\n- 1.2: *accumulated resources*: mitä maanviljely tuotti ensimmäistä kertaa? Poliittiset hierarkiat ovat vasta seurausta.\n- 1.3: ryhmästä sulkeminen on ihmiselle tuskallisinta. Mitä rikkaat silti ostavat rahallaan?\n- 1.4: *levels off*: mitä tietyn tulotason jälkeen tapahtuu?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **1.1 A** (yleinen välinpitämättömyys muita kohtaan). Kalliimman auton kuljettaja pysähtyy harvemmin päästämään vanhuksen tien yli, ja varallisuuteen liittyy oikeutuksen tunnetta ja vieraantumista muista. C on ansa: rikkaus heikentää kykyä tulkita toisten *tunteita* kasvoilta, ei aikeita. Omien tunteiden ilmaisemisesta (B) ei puhuta.\n- **1.2 A** (tavaraa oli yhtäkkiä ylijäämäksi). Maanviljely tuotti ensimmäistä kertaa kerättyjä varantoja, ja vasta sen jälkeen syntyivät poliittiset hierarkiat, jotka päättivät sadon jakamisesta. C on siis seuraus eikä syy, eikä sadon alueellisista eroista (B) puhuta.\n- **1.3 B** (rahalla ostetaan jotain haitallista). Metsästäjä-keräilijälle ryhmästä sulkeminen merkitsi kuolemaa, ja siksi eristetyksi tuleminen tuntuu yhä tuskalliselta. Silti ylimääräisellä rahalla ostetaan yksityisyyttä ja eristäytymistä: isompi talo, isompi piha ja korkeampi muuri.\n- **1.4 A** (sillä ei ole merkitystä onnellisuudelle). Varallisuuden ja onnellisuuden yhteys tasaantuu nopeasti noin 70 000 dollarin vuosituloissa, eivätkä hyvin rikkaat ole onnellisempia. Onnellisuus ei myöskään vähene (C).",
+     "answer": "1.1 A · 1.2 A · 1.3 B · 1.4 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Katso uusiseelantilaisen aamu-tv:n video, jossa siemenasiantuntijat Kay Baxter ja Peta Mathias keskustelevat toimittaja Jeanette Thomasin kanssa perinnesiemenistä. Videon saa katsoa vapaasti. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä perinnesiemenet ovat?\n2. Mitä tapahtui 30 vuotta sitten?\n3. Miten perinnesiemenet eroavat tutkimusten mukaan tavallisista siemenistä?\n4. Miksi Kay Baxter ja hänen miehensä perustivat Koanga-instituutin?",
+     "hints": [
+      "Haastattelu etenee kysymysten järjestyksessä, ja Kay Baxter vastaa useimpiin kysymyksiin. Vaihtoehdot ovat pitkiä, joten tarkista jokaisen osan paikkansapitävyys.",
+      "- 2.1: *selected and bred*: kuka valitsi siemenet, ja miten ne siirtyivät eteenpäin? Ovatko lajikkeet kuolleet sukupuuttoon?\n- 2.2: 30 vuotta sitten elossa oli viimeinen sukupolvi, joka oli viljellyt koko ikänsä. Mitä Kay silloin alkoi tehdä?\n- 2.3: maku ja ulkonäkö huomataan ensin, mutta mitä tiede on osoittanut?\n- 2.4: miksi työ siirrettiin hyväntekeväisyyssäätiölle? Kenelle se oli tärkeää?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **2.1 C** (huolella valikoidut hedelmä- ja vihanneslajikkeiden siemenet). Esivanhemmat valitsivat, jalostivat ja kasvattivat siemenet ja siirsivät ne sukupolvelta toiselle, ja ne valittiin nimenomaan ravitsemaan. Lajikkeet eivät ole kadonneet (B), eikä siemeniä piilotettu (A).\n- **2.2 C** (Kay Baxter alkoi kerätä perinnesiemeniä pelastaakseen ne). Viimeinen koko ikänsä viljellyt sukupolvi etsi tuolloin ihmisiä, joille siirtää siemenensä, ja Kay alkoi kerätä niitä. A on ansa: vanhat puutarhurit eivät modernisoineet menetelmiään, vaan kotiviljely loppui. Peta Mathiaksen vanhemmat (B) kasvattivat vihanneksia kuten kaikki muutkin, mutta se ei ole 30 vuoden takainen tapahtuma.\n- **2.3 B** (ne ovat ravitsevampia). Maku ja ulkonäkö erottuvat heti, mutta tiede on osoittanut, että ravintosisällössä on suuria eroja. Pidempi sadonkorjuukausi ei tarkoita, että ne voi kylvää milloin tahansa (A), eikä tuoreudesta (C) puhuta.\n- **2.4 B** (he pitivät sitä tärkeänä koko maalle). Pariskunta teki työtä aluksi kahdestaan, mutta siirsi sen hyväntekeväisyyssäätiölle, koska se oli heidän mielestään tehtävä kansakunnan hyväksi. A on ansa: jatkuvuus liittyy aiheeseen, mutta perusteluna mainitaan kansakunta. Varainkeruusta (C) ei puhuta.",
+     "answer": "2.1 C · 2.2 C · 2.3 B · 2.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele podcast, jossa kanadalaisen ympäristöalan järjestön johtaja Kieran Hanley puhuu puhtaasta teknologiasta. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä on yleinen väärinkäsitys puhtaasta teknologiasta?\n2. Mikä on puhtaalle teknologialle ominaista?\n3. Missä Kraken Robotics -yhtiön teknologia auttaa?\n4. Mitä DuXion Motors -yhtiön teknologia tekee?",
+     "hints": [
+      "Ensimmäisessä osassa Hanley määrittelee käsitteen, toisessa hän antaa kaksi yritysesimerkkiä. Määritelmässä on tärkeää huomata, että uusiutuva energia on vain *osa* puhdasta teknologiaa.",
+      "- 3.1: *conflated with*: minkä kanssa käsite sekoitetaan?\n- 3.2: miten Hanley itse määrittelee käsitteen? Esimerkkeinä ovat tuulivoimala, polttoainetta säästävä laite ja ohjelmisto.\n- 3.3: kaikuluotaimet ja laserit: mitä merenpohjasta saadaan selville?\n- 3.4: *hybridization*: mitä sähkö tekee dieselin rinnalla?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **3.1 B** (että se tarkoittaa samaa kuin vihreä energia). Hanleyn mukaan suurin väärinkäsitys on, että puhdas teknologia sekoitetaan puhtaaseen energiaan, kuten tuulivoimaloihin ja aurinkopaneeleihin. C on ansa: uusiutuva energia on tärkeä osa puhdasta teknologiaa, mutta vain osa. Suorituskyvystä (A) ei puhuta.\n- **3.2 C** (se on jollain tavalla hyödyksi ympäristölle). Puhdasta teknologiaa ovat tuotteet ja palvelut, jotka parantavat ympäristön kannalta suoriutumista: tuulivoimala, polttoainetta säästävä pieni laite tai toimintaa optimoiva ohjelmisto. Jätteettömyydestä (A) tai käyttäjistä (B) ei puhuta.\n- **3.3 B** (monipuolisen tiedon keräämisessä merenpohjasta). Yhtiön kaikuluotaimet, laseranturit ja miehittämättömien vedenalaisten alusten akut mahdollistavat merenpohjan ympäristön tarkan kartoittamisen ja seurannan. Roskien poistamisesta (A) ei puhuta, eikä yhtiö rakenna itse aluksia (C).\n- **3.4 A** (se antaa laivojen käyttää useita voimanlähteitä). Käytössä olevat laivat muutetaan hybrideiksi, jotka käyttävät sähköä dieselin rinnalla. Laivat eivät tuota itse sähköä (B), eikä diesel muutu ympäristöystävälliseksi (C).",
+     "answer": "3.1 B · 3.2 C · 3.3 B · 3.4 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Kuuntele kolme äänitettä, joissa henkilökohtaisen talouden asiantuntija Ken Okoroafor esittelee sivutyöideoita. Kunkin äänitteen saa kuunnella kaksi kertaa. Vastaa suomeksi, kuhunkin enintään 100 merkkiä (3 p/kohta):\n\n- 4.1: millainen sivutyö Okoroaforin ystävällä on?\n- 4.2: mihin ystävä on sijoittanut osan tuotoistaan?\n- 4.3: miksi Little Kickersin tapaisen yrityksen perustaminen ei vaadi suurta pääomaa?\n- 4.4: mitä urheiluyritystä perustavan on syytä ottaa huomioon?\n- 4.5: mistä sisar maksaa 650 puntaa kuukaudessa?\n- 4.6: millä toisella palvelulla sisar ansaitsee rahaa?",
+     "hints": [
+      "Kukin äänite esittelee yhden idean, ja kummankin siihen liittyvän kysymyksen vastaus on samassa äänitteessä. Kuuntele erityisesti verbejä: mitä ihmiset *tekevät* koneille, tiloille ja palveluille (vuokraavat, vievät, sijoittavat). HVP on tarkka yksityiskohdista, kuten siitä, vuokrataanko vai ostetaanko ja onko sana yksikössä vai monikossa.",
+      "- 4.1: lastenjuhlien nurkassa on usein hattarakone. Mistä ne tulevat? Ystävä ei itse myy hattaraa juhlissa.\n- 4.2: *reinvested some of the profits*: mitä muuta juhliin vietävää hän hankki?\n- 4.3: viikonloppuisin koulut ovat kiinni ja liikuntakeskuksissa on käyttämättömiä tiloja. Mitä yrittäjän ei siis tarvitse hankkia?\n- 4.4: äänitteen lopussa puhuja mainitsee asian, joka on otettava huomioon mutta joka ei saa muodostua esteeksi.\n- 4.5: tila vuokrataan kuukausittain. Millainen tila (yksikkö)?\n- 4.6: rahaa tulee kahdesta lähteestä: tilan vuokrasta ja mistä muusta?"
+     ],
+     "solution": "**4.1** *Hän vuokraa hattarakoneita ja vie niitä lastenjuhliin.*\n\nYstävä markkinoi itseään ihmisenä, joka tuo koneet juhliin, ja ansaitsee sillä 1 500–2 000 puntaa kuussa. HVP ei hyväksy vastausta, jonka mukaan ystävä menee itse juhliin tekemään tai myymään hattaraa, eikä verbejä \"ostaa\" tai \"omistaa\" koneita.\n\n**4.2** *Toiminnan laajentamiseen: pomppulinnoihin ja muihin juhliin vietäviin laitteisiin.*\n\nYstävä sijoitti osan voitoistaan takaisin yritykseen. \"Toiseen bisnekseen\" tai \"muihin asioihin\" on liian epämääräinen.\n\n**4.3** *Koska siinä käytetään valmiiksi olemassa olevia tiloja ja välineitä.*\n\nKoulut ovat viikonloppuisin kiinni, ja liikuntakeskuksilla on kalliita tiloja, jotka ovat välillä tyhjillään. Yrittäjä tuo vain palvelunsa ja brändinsä. HVP ei hyväksy vastauksia, joissa tilat rajataan pelkkiin kouluihin tai joiden mukaan välineitä ei tarvita lainkaan.\n\n**4.4** *Terveys- ja turvallisuusasiat (vastuu osallistujien terveydestä ja turvallisuudesta).*\n\nPuhujan mukaan niiden ei kuitenkaan pidä antaa muodostua esteeksi. HVP ei hyväksy pelkkää \"terveellisyys\", \"vakuutukset\" tai oman terveyden huomioimista.\n\n**4.5** *Juhlasalin vuokraamisesta.*\n\nSisar vuokraa hallin kuukausittain ja vuokraa sen edelleen juhlien järjestäjille, jotka löytävät sen hakukoneella. Tila on yksikössä: HVP ei hyväksy juhlatilojen vuokraamista monikossa.\n\n**4.6** *Baaripalvelulla eli juomatarjoilulla juhlissa.*\n\nSisar ansaitsee salin vuokran lisäksi pitämällä juhlissa baaria. Pelkkä \"alkoholi\" tai pitopalvelu ei riitä.",
+     "answer": "4.1 vuokraa hattarakoneita juhliin · 4.2 pomppulinnoihin (toiminnan laajentamiseen) · 4.3 olemassa olevat tilat ja välineet · 4.4 terveys ja turvallisuus · 4.5 juhlasalin vuokraan · 4.6 baari- eli juomapalvelu",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Asiakas yrittää tilata kahvia baarissa. Keskustelu on neljässä osassa. Baarimikon repliikki on kokeessa myös kirjoitettuna, ja sen saa kuunnella kerran. Asiakkaan kolmea vastausvaihtoehtoa A, B ja C (vain äänitteinä) saa kuunnella vapaasti. Valitse jokaisessa osassa asiakkaan kohteliain vastaus (3 p/kohta).",
+     "hints": [
+      "Asiakkaalla on koko keskustelun ajan hyvä syy olla harmissaan: ulkona luvataan kahvia koko päivän, mutta kahvia ei saa. Kohtelias asiakas ilmaisee asiansa silti pehmentäen: kiittää, pahoittelee ja ehdottaa eikä vaadi.",
+      "- 5.1: kuka tilaa kiittäen, kuka käskee?\n- 5.2: kuka syyttää baarimikkoa ja kuka esittää asian omana väärinkäsityksenään (*I'm sorry, I thought*)?\n- 5.3: *you should clearly*, *you have to* vai *can I suggest*?\n- 5.4: kaikki lähtevät muualle. Kuka kiittää ja jättää oven auki?"
+     ],
+     "solution": "Vaihtoehdot ovat kokeessa vain äänitteinä, joten kirjain on äänitteen A, B tai C.\n\n- **5.1 A**. A tilaa lyhyesti mutta kiittäen. B:n käskymuoto kuulostaa tylyltä, ja C:stä puuttuu kohteliaisuussana.\n- **5.2 B**. B pahoittelee ja esittää asian omana väärinkäsityksenään (*I thought*). A:n *But wait a minute* on syyttävä, ja C korostaa varmuuttaan kyltistä.\n- **5.3 B**. B ehdottaa kysymyksen muodossa (*Can I suggest*), että kyltti otettaisiin pois. A:n *you should clearly* ja C:n *you have to* ovat käskeviä, ja molemmat syyttävät baaria harhaanjohtavasta mainonnasta.\n- **5.4 C**. C kiittää tarjouksesta, selittää halunneensa nimenomaan kahvia ja lupaa tulla toisella kertaa. A ja B ilmoittavat lähtevänsä muualle kiittämättä.",
+     "answer": "5.1 A · 5.2 B · 5.3 B · 5.4 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele lyhyt tiedeuutinen vieraslajeista Etelämantereella. Äänitteen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miten ihmiset ovat lisänneet Etelämantereen ympäristöön kohdistuvia riskejä?\n2. Mitä Kevin Hughes on yrittänyt selvittää?\n3. Miksi ravut ovat niin suuri uhka mantereen nykyisille eliöille?\n4. Miksi Etelämanner on tärkeää suojella vieraslajeilta?",
+     "hints": [
+      "Uutinen etenee kysymysten järjestyksessä. Luvut (50 tutkimusasemaa, 42 000 turistia, 103 ja 13 lajia) auttavat pysymään kärryillä, mutta vastaukset ovat niiden selityksissä.",
+      "- 6.1: mitä luvut tutkimusasemista ja turisteista kertovat? Ovatko ihmiset levittäytyneet koko mantereelle?\n- 6.2: 103 lajin listasta valittiin 13, jotka todennäköisimmin saapuvat seuraavan vuosikymmenen aikana. Menneisyyttä vai tulevaisuutta?\n- 6.3: rapuja ei ole ollut näissä elinympäristöissä miljooniin vuosiin. Mihin paikalliset eliöt eivät siis ole tottuneet?\n- 6.4: miksi manner halutaan pitää koskemattomana, ja mitä varten?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **6.1 A** (heitä matkustaa sinne yhä enemmän). Niemimaalla on yli 50 tutkimusasemaa, ja yhden kauden aikana siellä kävi 42 000 turistia, joiden mukana kulkee tahattomia \"liftareita\". Ihmiset eivät ole levittäytyneet koko mantereelle (C), vaan toiminta keskittyy niemimaalle. Häiritsevistä kokeista (B) ei puhuta.\n- **6.2 A** (mitkä eliöt todennäköisimmin ilmestyvät lähitulevaisuudessa). Hughesin ryhmä kävi läpi 103 lajin listan ja valitsi 13, jotka todennäköisimmin saapuvat, asettuvat ja muuttuvat haitallisiksi seuraavan vuosikymmenen aikana.\n- **6.3 C** (eliöt eivät ole sopeutuneet elämään rapujen kanssa). Rapuja ei ole ollut Etelämantereen matalissa vesissä miljooniin vuosiin, joten merenpohjan eliöt eivät ole tottuneet tällaisiin saalistajiin. Ravinnon riittävyydestä (A) tai taudeista (B) ei puhuta.\n- **6.4 B** (sen ainutlaatuisesta ympäristöstä voi oppia paljon). Hughesin mukaan manner on pidettävä koskemattomana tieteellistä tutkimusta varten, koska se on kertonut paljon maailman, ilmaston ja ekosysteemien toiminnasta. A on ansa: ilmastonmuutos mainitaan vain syynä siihen, miksi vieraslajien on yhä helpompi asettua.",
+     "answer": "6.1 A · 6.2 A · 6.3 C · 6.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Katso Central Lancashiren yliopiston (Englanti) arkeologian koulutusta esittelevä video, jossa puhuvat tohtori Rick Peterson ja opiskelija Lucy Fox. Videon saa katsoa vapaasti. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä on Petersonin mielestä yliopiston arkeologian koulutuksen tärkein piirre?\n2. Miten kampuksella opiskelu voi Lucyn mielestä auttaa hänen urallaan?\n3. Mikä on arkeologien tärkein työllistäjä?\n4. Miten arkeologian opinnot valmistavat töihin muilla aloilla?",
+     "hints": [
+      "Video on mainos, joten puhujat korostavat koulutuksen vahvuuksia. Kaikki vaihtoehdot kuulostavat myönteisiltä, joten valitse se, jonka puhuja todella sanoo, äläkä sitä, mikä olisi yleisesti totta.",
+      "- 7.1: mikä tekee kurssista ainutlaatuisen? Kuinka monta viikkoa kenttätyötä on pakollista?\n- 7.2: Lucy kertoo kaivauksista ja siitä, keitä hän on niillä tavannut.\n- 7.3: *part of the construction industry*: kuka maksaa arkeologeille ja miksi?\n- 7.4: mitä muut työnantajat arvostavat arkeologian tutkinnon suorittaneissa? Kuuntele luettelo tarkkaan."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **7.1 B** (todellinen kokemus historiallisten jäänteiden käsittelystä). Petersonin mukaan kurssin ainutlaatuisuus on sen käytännönläheisyys: tutkintoon kuuluu kymmenen viikkoa pakollista, arvosteltua kenttätyötä. Yhteistutkimus alan yritysten kanssa (A) mainitaan myöhemmin, mutta ei tärkeimpänä piirteenä, eikä muinaishistorian tuntemusta (C) korosteta.\n- **7.2 A** (tutustuttamalla alan ammattilaisiin). Lucy on kaivauksilla tavannut monia alalla työskenteleviä, ja se antaa käsityksen siitä, miten yliopistosta edetään töihin. Kampuksella pääsee käsittelemään ihmisen luurankoja, mutta sitä Lucy ei esitä apuna uralle (C). Matkoista (B) ei puhuta.\n- **7.3 A** (neuvonta yrityksille uusissa rakennushankkeissa). Arkeologian ammattisektori on osa rakennusalaa: rakennuttajat maksavat arkeologeille, jotta nämä ratkaisevat rakentamisen esteeksi tulevat ongelmat. Yliopistotutkimus (B) ja ympäristöviranomaiset (C) eivät ole pääasiallinen työllistäjä.\n- **7.4 C** (yhteistyö- ja ongelmanratkaisutaidot). Tutkinnon suorittaneet sopivat aloille, jotka arvostavat tiimityötä, käytännön taitoja ja kykyä tulkita ja ajatella samalla, kun työskentelee. Kriittistä ajattelua ja viestintää (A) tai innovointia (B) ei mainita.",
+     "answer": "7.1 B · 7.2 A · 7.3 A · 7.4 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Lue aineiston 8.A katkelma Elly Griffithsin romaanista *The Midnight Hour*. Kolme monivalintaa (3 p/kohta):\n\n1. Millaisessa paikassa Sam vierailee?\n2. Mikä kolmesta valokuvasta kuvaa maisemaa parhaiten?\n3. Mitä Sam ajattelee omasta ulkonäöstään?",
+     "hints": [
+      "Katkelma on lyhyt, ja jokainen vastaus on yhdessä virkkeessä. Kiinnitä huomiota yrityksen nimeen, rakennusten ja aukion kuvaukseen ja katkelman viimeiseen virkkeeseen.",
+      "- 8.1: *Productions*: millaisen yrityksen nimessä tämä sana on?\n- 8.2: korkeat klassiset rakennukset katsovat alas vihreälle aukiolle. Mikä kuva vastaa kuvausta?\n- 8.3: vastaanottovirkailijan oranssi minimekko saa Samin tuntemaan itsensä *dowdy and provincial*. Mitä *provincial* tarkoittaa?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **8.1 A** (mediayhtiö). Samin kohde on Bert Billington Productions, tuotantoyhtiö Lontoon Sohossa. Lääkärin vastaanotosta (B) tai lainayrityksestä (C) ei ole viitteitä.\n- **8.2 C** (kolmas kuva: klassisia kerrostaloja kaupungissa ja etualalla aidattu puistoaukio). Katkelmassa korkeat klassiset rakennukset reunustavat lehtien peittämää vihreää aukiota. Köynnöksen peittämä korkea talo (A) ja modernien pilvenpiirtäjien siluetti (B) eivät vastaa kuvausta.\n- **8.3 B** (maalaismainen). Vastaanottovirkailijan tyylikkään asun rinnalla Sam tuntee itsensä yhtäkkiä nuhjuiseksi ja maalaiseksi. Klassinen (A) ja käytännöllinen (C) eivät vastaa kielteistä tunnetta.",
+     "answer": "8.1 A · 8.2 C · 8.3 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue aineiston 9.A Science Daily -sivuston tiedote tutkimuksesta, jossa selvitettiin, voiko virtuaalitodellisuudessa harjoittelu vähentää stressiä ja ahdistusta. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miksi tutkijat ovat alkaneet tutkia immersiivisen virtuaalitodellisuuden (IVR) vaikutuksia?\n2. Mitä tapahtui ensimmäisessä kokeessa?\n3. Miten kaksi koeasetelmaa erosivat toisistaan?\n4. Miten toisen kokeen vaikutuksia mitattiin?\n5. Mikä olisi artikkelille sopiva vaihtoehtoinen otsikko?",
+     "hints": [
+      "Teksti kuvaa kaksi tutkimusta: aiemman (kappale 3) ja nykyisen (kappaleet 4–5). Pidä ne erillään, sillä kysymykset 9.2–9.4 vertaavat niitä.",
+      "- 9.1: IVR suunniteltiin viihteeksi. Mikä sen mahdollinen käyttö kiinnostaa tutkijoita?\n- 9.2: *acute cognitive and neural benefits*: mitä tämä tarkoittaa suomeksi?\n- 9.3: ensimmäisessä kokeessa katsottiin virtuaalivartaloa, toisessa harjoitus koettiin minänäkökulmasta avatarin kautta. Mikä muuttui?\n- 9.4: *salivary*: mistä sylki otetaan?\n- 9.5: tutkimus avaa uuden mahdollisuuden niille, jotka eivät voi liikkua. Onko se sohvaperunan unelma?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **9.1 C** (se tarjoaa uusia mahdollisuuksia). Alun perin viihteeksi suunniteltu tekniikka kiinnostaa tutkijoita, koska sitä voisi käyttää kliinisesti, esimerkiksi potilailla, joille liikunta on mahdotonta tai vaarallista. Tutkimusympäristön helppoudesta (A) tai käyttäjien määrästä (B) ei puhuta.\n- **9.2 A** (osallistujien aivotoiminta parani). Liikkuvan virtuaalivartalon katsominen muutti sykettä, vaikka koehenkilöt istuivat paikallaan, ja seurauksena oli välittömiä kognitiivisia ja hermostollisia hyötyjä kuten oikean liikunnan jälkeen. Fyysinen kunto (C) ei voinut kohentua, koska he eivät liikkuneet.\n- **9.3 C** (osallistuminen oli toisessa kokeessa syvempää). Toisessa kokeessa koehenkilöt kokivat harjoituksen avatarin kautta minänäkökulmasta, mikä loi illuusion siitä, että liikkeet olivat heidän omiaan. Harjoituksen rasittavuudesta (B) tai virtuaalimaailman yksityiskohdista (A) ei kerrota.\n- **9.4 A** (he ottivat näytteitä osallistujien suusta). Stressiä mitattiin syljen alfa-amylaasista ja ahdistusta kyselylomakkeella. Verikokeita (B) tai hikeä ja virtsaa (C) ei käytetty.\n- **9.5 A** (virtuaalitodellisuus harjoittelun uutena aluevaltauksena). Artikkeli esittelee uuden tavan saada liikunnan hyötyjä. B on ansa: menetelmä on tarkoitettu niille, jotka eivät voi liikkua, ei laiskoille. C (ei kipua, ei hyötyä) on tulosten vastainen.",
+     "answer": "9.1 C · 9.2 A · 9.3 C · 9.4 A · 9.5 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 30,
+     "prompt": "Kokeen tekstissä (Jon Lapidese, Oceanwide Expeditions) kerrotaan, miten Grönlannin inuiittien perinteinen metsästyskulttuuri muuttuu nykymaailman, metsästyskiintiöiden ja ilmastonmuutoksen paineessa. Tekstissä on kymmenen aukkoa, ja kuhunkin valitaan vaihtoehdoista (kolme tai neljä) sopivin lause tai sanaryhmä (3 p/aukko). Teksti on itse tehtävässä.",
+     "hints": [
+      "Lue aukon molemmat puolet: edeltävä virke kertoo, mihin aukko jatkaa, ja seuraava virke usein perustelee tai tarkentaa aukon sisällön. Katso myös sidossanoja (*However*, *Though*, *This allows*), jotka paljastavat, onko kyse vastakohdasta vai jatkumosta.",
+      "- 10.1: elämäntapa on ollut sama satoja vuosia, mutta seuraavassa kappaleessa puhutaan sopeutumisesta.\n- 10.2: nykymaailma rajoittaa metsästystä ja ilmasto muuttuu. Mitä tämä tarkoittaa kulttuurin tulevaisuudelle?\n- 10.3: *Until about fifty years ago*: miten he elivät ennen palkkatyötä?\n- 10.4: aukon jälkeen kerrotaan, että perinteinen ruokavalio ja vaatetus jatkuvat. Mikä vaihtoehto johdattaa tähän?\n- 10.5: *well-meaning people* ja *animal rights campaigns*: ketkä asettavat kiintiöitä?\n- 10.6: kulttuurien yhteentörmäys: mitä se voi merkitä inuiiteille?\n- 10.7: seuraava virke kertoo UNESCOn suojelusta. Onko se huono vai hyvä kehitys?\n- 10.8: aukon jälkeen metsästäjät kertovat maan ja jään muuttumisesta.\n- 10.9: aukon jälkeen kerrotaan, että osa miehistä voi siksi jatkaa metsästystä. Mikä sen mahdollistaa?\n- 10.10: *not only… but*: kenen hyväksi tieto inuiiteista lopulta on?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (aukossa 10.4 A–D, muissa A–C).\n\n- **10.1 B** (on nyt muuttumassa). Tekstin mukaan inuiitit sopeutuvat nyt uuteen maailmaan, joten elämäntapa ei ole elpymässä (A) eikä kadonnut (C).\n- **10.2 C** (kulttuuriin liittyy epävarmuutta). Metsästystä rajoittava nykymaailma ja muuttuva ilmasto tekevät tulevaisuudesta epävarman. Tekstissä ei sanota, että maailman kiinnostus olisi vähentynyt (A) tai että inuiitit vastustaisivat aktiivisesti ilmastonmuutosta (B).\n- **10.3 B** (elivät täysin maan ja meren antimista). Vastakohtana on seuraava virke: nykyään Grönlanti ei ole ensisijaisesti metsästysyhteiskunta.\n- **10.4 D** (metsästyskulttuuri ja ruokavalio ovat silti yhä osa elämää ja identiteettiä). Aukon jälkeen kerrotaan perinteisestä ruokavaliosta ja metsästyssaaliista tehdyistä vaatteista. A ja C jatkaisivat muutoksesta, eikä jännitteistä modernien ja perinteisten inuiittien välillä (B) puhuta.\n- **10.5 B** (erilaiset ympäristöjärjestöt). Hyvää tarkoittavat ulkopuoliset eläinoikeuskampanjat ovat se taho, joka rajoittaa metsästystä. Oppositiopuolueet (A) tai perinteiset metsästäjät (C) eivät sovi, koska metsästäjät itse kärsivät kiintiöistä.\n- **10.6 B** (voi uhata yhden maailman viimeisistä alkuperäiskansoista elämäntapaa). Kiintiöt vaikeuttavat metsästäjien elämää, joten törmäys uhkaa kulttuuria. Päättäväisyyden vahvistuminen (A) tai palkkatyöhön siirtymisen hidastuminen (C) ei seuraa tekstin logiikasta.\n- **10.7 B** (tilanteen helpottamiseksi harkitaan kuitenkin toimia). Seuraava virke kertoo UNESCOn harkitsevan karibunmetsästyksen suojelemista, mikä on myönteinen toimenpide. A ja C ovat kielteisiä.\n- **10.8 B** (sää on yhä arvaamattomampi). Aukon jälkeen metsästäjät kertovat maan ja merijään muuttumisesta ja matkustamisen vaarallisuudesta. Eläinkantojen väheneminen (C) ei liity kappaleeseen, joka käsittelee säätä ja jäätä.\n- **10.9 C** (naiset tekevät palkkatyötä ansaitakseen rahaa kaupan tuotteisiin). Seuraavan virkkeen mukaan tämä mahdollistaa miesten metsästyksen, mutta naiset alkavat menettää perinteisiä taitojaan. A ja B olisivat ristiriidassa taitojen katoamisen kanssa.\n- **10.10 B** (se auttaa pitkällä aikavälillä meitä kaikkia). Edellinen kappale toteaa, että arktisen alueen tapahtumat ennakoivat muun maailman kehitystä, joten tieto hyödyttää inuiittien lisäksi kaikkia.",
+     "answer": "10.1 B · 10.2 C · 10.3 B · 10.4 D · 10.5 B · 10.6 B · 10.7 B · 10.8 B · 10.9 C · 10.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Lue aineiston 11.A Britannian viestintäviranomaisen Ofcomin tiedote teleoperaattoreita koskevista uusista säännöistä. Vastaa suomeksi, kuhunkin enintään 100 merkkiä (3 p/kohta):\n\n- 11.1: mitä operaattorin on annettava asiakkaalle ennen kuin tämä tekee sopimuksen?\n- 11.2: miksi yllättävät hinnankorotukset ovat nyt erityisen haitallisia?\n- 11.3: mitä operaattorin on tehtävä sen varalta, että asiakas purkaa sopimuksen?\n- 11.4: miten operaattorin on esitettävä inflaatioon sidottu hinnankorotus?",
+     "hints": [
+      "Tiedote on lyhyt ja virallinen, ja jokainen vastaus on yhdessä virkkeessä. Vastausraja on vain 100 merkkiä, joten kirjoita ydin ja jätä yleiset toteamukset pois. HVP on tarkka sanavalinnoista.",
+      "- 11.1: *summary*: pelkät ehdot tai kopio sopimuksesta eivät riitä.\n- 11.2: kenen budjetit ovat kovilla? Mainitse kotitaloudet.\n- 11.3: mitä operaattorin on esitettävä, jos sopimus päätetään ennen aikojaan?\n- 11.4: *a straightforward price example*: pelkkä \"selkeästi\" ei riitä."
+     ],
+     "solution": "**11.1** *Tiivistelmä sopimuksen tärkeimmistä ehdoista.*\n\nHVP ei hyväksy pelkkiä \"ehtoja\" tai \"kopiota sopimuksesta\": vastauksessa on oltava ajatus tiivistelmästä tai pääkohdista.\n\n**11.2** *Koska kotitalouksien budjetit ovat valmiiksi tiukoilla.*\n\nVastauksesta on käytävä ilmi, että kyse on kotitalouksista tai yksityishenkilöistä eikä esimerkiksi koko yhteiskunnan taloudesta. Pelkkä \"inflaation vuoksi\" ei tuo pisteitä.\n\n**11.3** *Esittämään ehdot, jotka koskevat sopimuksen purkamista ennen aikojaan.*\n\nPelkkä \"asiakkaan ohjeistaminen\" tai \"asiakkaalle kertominen\" ei riitä, vaan vastauksessa on mainittava ehdot tai säännöt.\n\n**11.4** *Antamalla selkeän esimerkin siitä, miten korotus vaikuttaa maksettavaan hintaan.*\n\nHVP hyväksyy myös laskelman tai hinta-arvion. Pelkkä \"selkeästi\" tai kysymyksen toistaminen toisin sanoin ei tuo pisteitä.",
+     "answer": "11.1 tiivistelmä tärkeimmistä ehdoista · 11.2 kotitalouksien budjetit ovat tiukoilla · 11.3 esittää sopimuksen purkamisen ehdot · 11.4 antaa selkeä hintaesimerkki",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue aineiston 12.A Yale Environment 360 -julkaisun artikkeli (Nicola Jones) ilmassa lentävien tuulivoimaloiden eli leijavoimaloiden kehityksestä. Viisi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä Mauritiuksen tuulileijassa on ainutlaatuista?\n2. Mitä vuoteen 2050 mennessä odotetaan tapahtuvan?\n3. Mikä on perinteisten tuulipuistojen ongelma?\n4. Mikä on yksi ilmassa lentävien tuulivoimajärjestelmien etu?\n5. Mikä on ollut suurin este niiden kehittämisessä?\n\nSama teksti on myös tehtävässä 13.",
+     "hints": [
+      "Kysymykset etenevät tekstin järjestyksessä. Luvut (100 kW, 11-kertainen kasvu, 70 %, 40 %, 71 eekkeriä) ovat houkuttelevia, mutta tarkista, mihin kukin luku liittyy.",
+      "- 12.1: SkySailsin siipi on maailman ensimmäinen täysin itsenäinen kaupallinen järjestelmä.\n- 12.2: tuuli ja aurinko yhdessä kattavat 70 % sähköntarpeesta. Onko tuuli yksin pääasiallinen lähde?\n- 12.3: turbiinit eivät yllä korkeuksiin, joissa tuulee kovimmin.\n- 12.4: vertaa tuulipuiston ja fossiilisen voimalan tarvitsemaa pinta-alaa. Leija tarvitsee vain tien tai laiturin.\n- 12.5: Googlen ostama yhtiö lopetti, koska järjestelmää ei saatu toimimaan *economically*."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **12.1 B** (se on uraauurtava malli). SkySailsin siipi on maailman ensimmäinen täysin itsenäisesti toimiva kaupallinen ilmassa lentävä tuulivoimajärjestelmä. Tuotanto jää hieman alle tavoitteen, joten A on väärin, ja siiven koko (C) on vain kuvausta, ei ainutlaatuisuutta.\n- **12.2 B** (vihreät lähteet tuottavat yli kaksi kolmasosaa energiasta). Tuuli- ja aurinkovoima kattavat ennusteen mukaan 70 % maapallon sähköntarpeesta. Tuulivoiman kasvu on valtava, mutta sen ei sanota olevan pääasiallinen lähde (C), eikä nollapäästöjä (A) luvata tuohon mennessä.\n- **12.3 C** (ne sijaitsevat melko matalalla). Perinteiset turbiinit eivät yllä korkeuksiin, joissa tuulee kovimmin. Sade ei haittaa niitä (B), eikä etäisyyttä asutukseen (A) mainita.\n- **12.4 C** (ne tarvitsevat vähän tilaa). Tuulipuistot vievät megawattia kohden valtavan maa-alan, kun taas leijan voi viedä minne tahansa, mihin pääsee tietä tai laituria pitkin, tai kiinnittää proomuun. Kestävyydestä (A) tai energian varastoinnista (B) ei puhuta.\n- **12.5 C** (tuotannon saaminen kannattavaksi). Esimerkiksi Googlen ostama yhtiö lopetti toimintansa, koska järjestelmää ei saatu toimimaan taloudellisesti. B on ansa: ongelma ei ollut laitteiden toimimattomuus vaan kannattavuus.",
+     "answer": "12.1 B · 12.2 B · 12.3 C · 12.4 C · 12.5 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 8,
+     "prompt": "Tehtävän 12 artikkelissa on kahdeksan alleviivattua sanaa: *nascent*, *looping*, *fraction*, *plummeted*, *convert*, *whopping*, *tethered* ja *bumpy*. Valitse kullekin kolmesta vaihtoehdosta se, joka tarkoittaa yhteydessään lähes samaa (1 p/kohta).",
+     "hints": [
+      "Korvaa alleviivattu sana vuorotellen jokaisella vaihtoehdolla ja mieti, säilyykö virkkeen merkitys. Osa vaihtoehdoista on vastakohtia (nousu ja lasku, tasainen ja kuoppainen), joten tunnista ensin sanan suunta.",
+      "- 13.1: *nascent* = syntymässä oleva.\n- 13.2: purje lentää kahdeksikkoja. Mitä se siis tekee?\n- 13.3: *a tiny fraction*: pieni osa.\n- 13.4: *plummet* = syöksyä alas.\n- 13.5: siivet muuttavat leijan vedon energiaksi.\n- 13.6: 71 eekkeriä on paljon.\n- 13.7: *tether* = sitoa köydellä.\n- 13.8: *bumpy path*: tie ei ole ollut helppo."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **13.1 C** *beginning*: *nascent* = alkuvaiheessa oleva. *Aquatic* (vesi-) ja *uncertain* (epävarma) eivät tarkoita samaa, vaikka jälkimmäinen sopisi asiayhteyteen.\n- **13.2 A** *circuiting*: *loop* = kiertää silmukkaa. *Shifting* (siirtyä) ja *dropping* (pudota) eivät kuvaa kahdeksikkoja.\n- **13.3 A** *proportion*: *fraction* = murto-osa, osuus.\n- **13.4 C** *collapsed*: *plummet* = romahtaa. *Increased* on vastakohta.\n- **13.5 B** *transform*: *convert* = muuntaa.\n- **13.6 C** *massive*: *whopping* = valtava. *Mediocre* (keskinkertainen) ja *multiple* (moninkertainen) eivät sovi.\n- **13.7 C** *attached*: *tether* = kiinnittää köydellä. *Released* (päästää irti) on vastakohta.\n- **13.8 C** *difficult*: *bumpy* = kuoppainen, vaikea. *Smooth* on vastakohta, ja *intense* on eri asia.",
+     "answer": "13.1 C · 13.2 A · 13.3 A · 13.4 C · 13.5 B · 13.6 C · 13.7 C · 13.8 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "14",
+   "units": [
+    {
+     "id": "",
+     "points": 11,
+     "prompt": "Aineistona on työhakemus, jolla Miitu Meikäläinen hakee assistentin paikkaa The Globe and Mail -lehdestä. Kirjeen kymmenen alleviivattua ilmausta on korvattava muodollisemmilla niin, että ne sopivat lauseen rakenteeseen: *Mr. Johnson* (puhuttelu), *job* (työpaikka), *work experience list* (ansioluettelo), *seeker* (hakija), *helped* (auttoi), *whenever you like* (milloin haluatte), *am waiting to speak* (odotan pääseväni puhumaan), *work* (työ), *chance* (mahdollisuus) ja *Best* (lopputervehdys). Kohta 6 on 2 pisteen ja muut 1 pisteen arvoisia.",
+     "hints": [
+      "Muodollisessa hakemuksessa käytetään vakiintuneita ilmauksia. Mieti, miten virallinen kirje alkaa ja päättyy ja millä sanoilla työpaikkaa, hakijaa ja ansioluetteloa kutsutaan. Tarkista, että korvaava ilmaus sopii lauseeseen (esim. artikkeli ja verbin muoto).",
+      "- 1 ja 10: kirjeen avaus- ja lopetusfraasit.\n- 2, 4, 8 ja 9: latinaperäiset synonyymit (paikka, hakija, työsuhde, tilaisuus).\n- 3: ansioluettelon vakiintunut nimi (lyhennekin käy).\n- 5: muodollisempi verbi auttamiselle.\n- 6: vakiofraasi *at your …*.\n- 7: *I look forward to* + mikä muoto?"
+     ],
+     "solution": "- **1** **Dear Mr Johnson** (myös *Dear Mr. Johnson*): muodollinen kirje alkaa *Dear*-sanalla.\n- **2** **position** (myös *post*).\n- **3** **curriculum vitae** (myös *CV*, *résumé*).\n- **4** **candidate** (myös *applicant*).\n- **5** **assisted** (myös *aided*, *supported*).\n- **6** **at your convenience** (myös *at any time*) (2 p).\n- **7** **look forward to speaking**: *look forward to* + *-ing*-muoto, koska *to* on tässä prepositio.\n- **8** **employment**.\n- **9** **opportunity**.\n- **10** **Yours sincerely** (myös *Kind regards*, *Sincerely*): kun vastaanottaja on nimetty, brittiläinen käytäntö on *Yours sincerely*.\n\nHVP:n mukaan myös muut oikeat ilmaisut hyväksytään.",
+     "answer": "Dear Mr Johnson · position · curriculum vitae (CV) · candidate · assisted · at your convenience · look forward to speaking · employment · opportunity · Yours sincerely",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "15",
+   "units": [
+    {
+     "id": "",
+     "points": 10,
+     "prompt": "Kokeen tekstissä (Diana Hannikainen, Sky & Telescope) kirjoittaja kertoo tähtiharrastajien tapahtumasta Nebraskan preerialla. Tekstissä on kymmenen aukkoa, ja kuhunkin valitaan kolmesta vaihtoehdosta sopivin (1 p/aukko). Aukot mittaavat sanastoa, prepositioita, artikkeleita, aikamuotoja ja lyhenteitä. Teksti on itse tehtävässä.",
+     "hints": [
+      "Lue virke aukon molemmin puolin ja mieti, mittaako aukko sanastoa (merkitys) vai rakennetta (muoto). Muutamassa aukossa on kiinteä ilmaus, jonka joko tuntee tai jonka voi päätellä.",
+      "- 15.1: millaisia tähtiharrastajat ovat: innokkaita, eloisia vai haaleita?\n- 15.2: *trickle ___* = saapua vähitellen.\n- 15.3: *for decades* ja teon jatkuminen nykyhetkeen asti.\n- 15.4: viittaus ihmisiin, jotka voi laskea.\n- 15.5: kiinteä ilmaus *from ___ to horizon*.\n- 15.6: *void ___* = vailla jotakin.\n- 15.7: vakiintunut toimintatapa latinasta lyhennettynä.\n- 15.8: lyhyt huudahdus kappaleen lopussa: tapahtunut asia.\n- 15.9: auto on täynnä varusteita: *-ing*-muoto.\n- 15.10: kuu nousi: imperfekti."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **15.1 A** *avid*: innokkaat tähtiharrastajat. *Vivid* (elävä, kirkas) kuvaa värejä tai mielikuvia, ja *tepid* (haalea, laimea) on sävyltään väärä.\n- **15.2 B** *in*: *trickle in* = saapua vähitellen, tipoittain.\n- **15.3 B** *have been*: perfektin kestomuoto kertoo, että osa on käynyt tapahtumassa vuosikymmeniä ja käy yhä. *Had it* ja *were* eivät muodosta oikeaa rakennetta.\n- **15.4 A** *many*: *many of those who* viittaa laskettaviin ihmisiin. *Few* olisi merkitykseltään outo, koska mäki oli nimetty illinoisilaisten mukaan, ja *much* käytetään ainesanojen kanssa.\n- **15.5 A** *horizon*: kiinteä ilmaus *from horizon to horizon* ilman artikkelia.\n- **15.6 C** *of*: *void of* = vailla jotakin.\n- **15.7 A** *MO*: *modus operandi* = vakiintunut toimintatapa. *VAT* on arvonlisävero ja *RSVP* vastauspyyntö kutsussa.\n- **15.8 C** *bagged*: yksi komeetta \"kaadettu\" eli löydetty; lyhennetty passiivirakenne.\n- **15.9 C** *brimming*: auto täpötäynnä varusteita (lauseenvastike).\n- **15.10 A** *rose*: kuu nousi (imperfekti, epäsäännöllinen verbi *rise–rose–risen*).",
+     "answer": "15.1 A · 15.2 B · 15.3 B · 15.4 A · 15.5 A · 15.6 C · 15.7 A · 15.8 C · 15.9 C · 15.10 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "16.1",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa; suositeltu vähimmäismäärä on 700). Nuortenlehti Young and Successful kysyy lukijoiltaan, miten koulunsa päättävien nuorten kannattaa hoitaa rahojaan: säästää pankkitilille, sijoittaa osakemarkkinoille vai jotain muuta? Kirjoita suosituksesi ja perustele ne. HVP: kysymyksiin ei tarvitse vastata erikseen, ja myös yleisönosastokirjoitus tai kirje käy; −5 p, jos mielipidettä ei perustella.",
+     "hints": [
+      "Tekstilaji on kirjoitus nuortenlehteen. Anna koulunsa päättäville konkreettisia rahaneuvoja ja perustele jokainen. Tehtävänannon kysymyksiin (säästötili, osakkeet) ei tarvitse vastata erikseen, vaan yleisempikin käsittely riittää.",
+      "Kokoa 3–4 suositusta (esim. puskurirahasto, pienet säännölliset sijoitukset, pikarikastumisen välttäminen, budjetointi) ja kerro jokaisen kohdalla, miksi. HVP vähentää 5 p, jos mielipidettä ei perustella. Sanastoa: *savings account, emergency fund, index fund, compound interest, to budget, risk*."
+     ],
+     "solution": "**Malliteksti** (932 merkkiä ilman välilyöntejä)\n\nMoney Tips for School Leavers\n\nLeaving school means making your own financial decisions for the first time. Here are my four recommendations.\n\nFirst, build a safety net. Before you think about investing, put aside enough money to cover two or three months of living costs in an ordinary savings account. Phones break and summer jobs end, and a small buffer means you will not have to borrow at a high interest rate.\n\nSecond, start investing early, even with small amounts. A bank account is safe, but inflation slowly eats its value. A monthly investment of just 30 euros in a low-cost index fund spreads the risk over hundreds of companies, and thanks to compound interest, time does most of the work.\n\nThird, avoid get-rich-quick schemes. Social media is full of influencers promising huge profits from day trading or new cryptocurrencies. If something sounds too good to be true, it usually is.\n\nFinally, keep track of where your money goes. A simple budgeting app will show you how much you really spend on takeaway coffee and streaming services.\n\nNone of this is exciting, but boring habits give you freedom in the long run.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** neljä konkreettista suositusta, ja jokaiselle on perustelu. Perustelujen puuttumisesta HVP vähentää pisteitä.\n- **Tekstilaji:** otsikko, lukijan puhuttelu ja neuvova sävy sopivat nuortenlehteen.\n- **Rakenne:** johdanto, järjestyssanoin (*First, Second, Third, Finally*) etenevät kappaleet ja iskevä lopetus.\n- **Kieli:** talouden sanasto (*safety net, index fund, compound interest, budgeting*) ja ehtolauseet (*If something sounds…*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "16.2",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa; suositeltu vähimmäismäärä on 700). Kansainvälinen nuorisojärjestö International Youth for Biodiversity palkitsee parhaan luonnon monimuotoisuutta käsittelevän esseen. Ilmastonmuutoksen rinnalla huolta herättää luontokato, ja Suomessa joka yhdeksäs laji on uhanalainen. Mitä sinä voit tehdä suunnan muuttamiseksi? Esitä käytännön ratkaisu ja kerro, miten saisit muut seuraamaan esimerkkiäsi. HVP: −10 p, jos teksti käsittelee vain ilmastonmuutosta mainitsematta luontokatoa; −5 p, jos käytännön ratkaisu puuttuu. Muiden vakuuttaminen voi näkyä myös epäsuorasti.",
+     "hints": [
+      "Aiheena on luonnon monimuotoisuus eli luontokato, ei ilmastonmuutos: HVP vähentää 10 p, jos luontokatoa ei käsitellä. Keksi yksi konkreettinen asia, jonka voit itse tehdä.",
+      "Rakenne: ongelma lyhyesti, käytännön ratkaisu ja sen vaikutus (−5 p, jos ratkaisu puuttuu), keinot muiden vakuuttamiseen (voivat näkyä myös ratkaisun kautta) ja lopetus. Esimerkkejä: niittykaista nurmikon tilalle, hyönteishotelli, lahopuun jättäminen metsään, vieraslajien kitkeminen. Sanastoa: *biodiversity, habitat, endangered, pollinator, native species, to set an example*."
+     ],
+     "solution": "**Malliteksti** (987 merkkiä ilman välilyöntejä)\n\nA Meadow Instead of a Lawn\n\nWhen people talk about saving nature, they often think of rainforests far away. However, the loss of species is happening right here: one in nine Finnish species is under threat, and one of the main reasons is that traditional meadows have almost disappeared. My practical solution is simple: stop mowing part of your lawn.\n\nLast summer our family left a quarter of our garden uncut and sowed seeds of native wildflowers such as harebells and yarrow. By July, the area was full of bumblebees, butterflies and beetles that we had never seen before. It cost us nothing, and we even saved time and petrol.\n\nConvincing others is the harder part, because many people think an uncut lawn looks lazy. That is why I would start with information and good examples. I would put up a small sign saying \"Meadow in progress: home for pollinators\" so that neighbours understand the idea. I would also post photos of the insects in our town's online group and offer free seeds to anyone who wants to try.\n\nIf thousands of households gave up just a few square metres, we would create a network of small habitats across the country. Protecting biodiversity can start in your own back yard.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** luontokato mainitaan heti alussa, ja käytännön ratkaisu (niittykaista nurmikon tilalle) on kuvattu konkreettisesti tuloksineen.\n- **Muiden vakuuttaminen:** kyltti, kuvat verkossa ja ilmaiset siemenet, ja ennakoitu vastaväite (laiskan näköinen nurmikko) otetaan huomioon.\n- **Rakenne:** ongelma, oma kokemus, keinot muiden vakuuttamiseen ja laajempi vaikutus lopussa.\n- **Kieli:** aiheen sanasto (*native wildflowers, pollinators, habitats*) ja ehtolause (*If thousands of households gave up…*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "16.3",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa; suositeltu vähimmäismäärä on 700). Plain English Campaign -järjestön mukaan monet tekstit, kuten Instagramin kaltaisten verkkopalvelujen käyttöehdot, ovat liian vaikeita muille kuin juristeille. Missä muualla selkeää englantia tarvittaisiin? Kirjoita kansainvälisen nuorisofoorumin osallistujille puhe, jossa esittelet muita alueita, joilla selkokieltä pitäisi käyttää, ja perustele näkemyksesi. HVP: −2 p, jos puheen tunnusmerkit puuttuvat; −5 p, jos perustelut puuttuvat; −5 p, jos käsittelet vain Instagramin käyttöehtoja.",
+     "hints": [
+      "Tekstilaji on puhe nuorisofoorumin osallistujille: tervehdi kuulijoita alussa, puhuttele heitä ja kiitä lopussa. HVP vähentää 2 p, jos puheen tunnusmerkit puuttuvat.",
+      "Esitä 2–3 muuta aluetta kuin verkkopalvelujen käyttöehdot (esim. lääkkeiden pakkausselosteet, viranomaisten kirjeet, vuokra- ja lainasopimukset, koulujen säännöt) ja perustele, miksi selkeä kieli on niissä tärkeää. HVP vähentää 5 p, jos perustelut puuttuvat tai jos käsittelet vain Instagramia. Sanastoa: *jargon, small print, to be misled, accessible, equality*."
+     ],
+     "solution": "**Malliteksti** (981 merkkiä ilman välilyöntejä)\n\nDear friends and fellow delegates at the Youth Forum,\n\nHave you ever accepted the terms of an app without reading them? Of course you have. We all have. Such texts are written for lawyers, not for us. But today I want to talk about three other places where clear language is just as badly needed.\n\nThe first is medicine. The leaflet inside a packet of pills should tell you how much to take and what to do if something goes wrong. Instead, it is often full of Latin terms and tiny print. When people misunderstand the instructions, their health is at risk.\n\nThe second is letters from the authorities. My grandmother once received a letter about her pension that was so complicated that she thought she owed money, and she worried for a week before anyone could explain it. Official letters affect people's rights, so everyone must be able to understand them, not only experts.\n\nThe third is rental agreements and loan contracts. Young people moving away from home sign these documents for the first time, often without knowing what they have promised.\n\nClear language is not childish. It is about respect and equality. Let's demand plain English wherever our lives are affected. Thank you.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** puhe alkaa kuulijoiden tervehdyksellä, kuulijoita puhutellaan kysymyksellä ja lopussa on vetoomus ja kiitos.\n- **Tehtävänanto:** kolme muuta aluetta kuin verkkopalvelujen käyttöehdot (pakkausselosteet, viranomaiskirjeet, vuokra- ja lainasopimukset), ja jokaisen kohdalla on perustelu.\n- **Rakenne:** järjestyssanat (*The first, The second, The third*) ja henkilökohtainen esimerkki (isoäidin kirje) tekevät puheesta helposti seurattavan.\n- **Kieli:** retoriset keinot (*Of course you have. We all have.*) ja lyhyet, iskevät virkkeet lopussa.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "16.4",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa; suositeltu vähimmäismäärä on 700). Kirjoita tunnettu tarina uudelleen niin, että sen konna on sankari. Miltä esimerkiksi Tuhkimo näyttää ilkeän äitipuolen silmin, tai millainen olisi Tähtien sota, jos Darth Vader olisi sankari? Mainitse, mitä tarinaa kirjoitat uudelleen. HVP: −5 p, jos alkuperäistä tarinaa, sankaria tai konnaa ei ole nimetty tunnistettavasti. Tarinan uskollisuutta alkuperäiselle ei arvioida.",
+     "hints": [
+      "Valitse tunnettu tarina (satu, elokuva tai kirja) ja kerro se uudelleen niin, että sen konna on sankari. Nimeä tarina ja henkilöt tunnistettavasti: HVP vähentää 5 p, jos alkuperäistä tarinaa ei tunnista.",
+      "Toimiva keino on minäkertoja: konna kertoo oman versionsa. Käytä tuttuja yksityiskohtia, mutta anna niille uusi selitys. Kerronnassa tarvitset menneitä aikamuotoja (imperfekti, pluskvamperfekti) ja ehkä dialogia. Tarinan uskollisuutta alkuperäiselle ei arvioida."
+     ],
+     "solution": "**Malliteksti** (925 merkkiä ilman välilyöntejä)\n\nLittle Red Riding Hood: The Wolf's Side of the Story\n\nEverybody knows the tale of Little Red Riding Hood, the sweet girl and the Big Bad Wolf. But nobody has ever asked me, the wolf, what really happened in the forest that day.\n\nIt was a cold autumn morning, and I was guarding the forest as I always did. Hunters had been setting traps near the path, and I had already rescued two foxes and a hare. Then I saw a girl in a red hood picking flowers right next to a trap. I stepped out to warn her, but she screamed and ran off before I could say a word.\n\nI was worried, so I hurried to her grandmother's cottage to ask the old lady to keep the girl out of the woods. The door was open, but Grandma had gone to the village. I was exhausted, so I lay down on her bed for a moment. I admit that trying on her nightcap was a silly idea.\n\nWhen the girl arrived, she asked me why my eyes were so big. \"To see the traps!\" I tried to explain, but at that very moment a hunter burst in with his gun. I escaped through the window, and since that day my name has been ruined.\n\nSo next time you hear the story, remember: the wolf was the only one trying to keep the forest safe.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tehtävänanto:** tarina ja henkilöt nimetään heti otsikossa ja alussa, ja konnasta (susi) tulee sankari, metsän vartija.\n- **Uudelleentulkinta:** tutut yksityiskohdat (isoäidin mökki, yömyssy, isot silmät, metsästäjä) saavat uuden, hauskan selityksen.\n- **Kerronta:** minäkertoja, aikajärjestys ja lopun opetus lukijalle.\n- **Kieli:** menneet aikamuodot (*had been setting*, *had already rescued*, *has been ruined*) ja lyhyt repliikki elävöittävät tekstiä.",
+     "check": "malli"
+    }
+   ]
+  }
+ ]
+}

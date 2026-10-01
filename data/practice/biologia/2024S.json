@@ -1,0 +1,373 @@
+{
+ "subject": "biologia",
+ "session": "2024S",
+ "examUrl": "https://yle.fi/plus/abitreenit/2024/syksy/biologia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-09-24_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p). Oikea vastaus 2 p, väärä 0 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään. Kohdassa 2.3 väärästä vastauksesta −1 p."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Kymmenen monivalintaa (1.1–1.10, 2 p/kohta, väärä vastaus 0 p), joissa valitaan paras viidestä vaihtoehdosta: kaksineuvoisuus eläimen lisääntymistapana (1.1), miksi viruksia ei lueta eliöiksi (1.2), eläinryhmien piirteet, virheellinen väite (1.3), endeemisen lajin määritelmä (1.4), kasvien kaasujenvaihto, oikea väite (1.5), kasvisolun vakuolin tehtävä (1.6), mitokondrion toiminnan edellytys (1.7), silmä ja näkeminen, virheellinen väite (1.8), ruoansulatus, virheellinen väite (1.9) ja jalostusmenetelmät, virheellinen väite (1.10). Vaihtoehdot ks. alkuperäinen koe.",
+     "hints": [
+      "Merkitse ensin kohdat, joissa haetaan virheellistä väitettä (1.3, 1.8, 1.9 ja 1.10). Kaksineuvoinen yksilö tuottaa sekä munasoluja että siittiöitä, ja elämän tunnusmerkkeihin kuuluu oma aineenvaihdunta.",
+      "Kohta kohdalta:\n- 1.1: mitkä selkärangattomat ovat tunnetusti kaksineuvoisia?\n- 1.2: mitä virukselta puuttuu solun ulkopuolella?\n- 1.3: onko simpukan tai etanan kuori sisäinen vai ulkoinen?\n- 1.4: kuinka laajalla alueella laji esiintyy?\n- 1.5: mitä valossa yhteyttävä lehti ottaa sisäänsä?\n- 1.6: mitä solunesteessä on?\n- 1.7: mistä mitokondrio saa lähtöaineensa?\n- 1.8: mitä sädelihas tekee, kun katsotaan lähelle?\n- 1.9: missä suolen osassa ravintoaineet imeytyvät?\n- 1.10: kuinka nopeasti valintajalostus voi tuottaa tuloksia?"
+     ],
+     "solution": "Vaihtoehtojen kirjaimet vastaavat järjestystä alkuperäisessä koenäkymässä (A = ylin).\n\n- **1.1 E, kasteliero:** kastelierot ovat kaksineuvoisia, vaikka ne parittelevat ja vaihtavat siittiöitä keskenään. Varis, ahven, hämähäkki ja perhonen ovat erillissukuisia.\n- **1.2 A, ei omaa aineenvaihduntaa:** virus ei pysty tuottamaan energiaa eikä valmistamaan aineita ilman isäntäsolua. Viruksella on perimä, eivätkä taudinaiheuttajuus, loisuus tai pieni koko erota sitä eliöistä.\n- **1.3 B, virheellinen väite nilviäisten sisäisestä tukirangasta:** nilviäisillä ei ole sisäistä tukirankaa, vaan monilla on ulkoinen kalkkikuori.\n- **1.4 A:** endeeminen laji elää vain tietyllä rajatulla alueella.\n- **1.5 B:** valossa lehdet ottavat ilmarakojen kautta hiilidioksidia fotosynteesiin. Valossa lehdistä haihtuu myös vesihöyryä, ja pimeässä ne ottavat happea ja vapauttavat hiilidioksidia.\n- **1.6 D, suolojen varastointi:** vakuoli varastoi suoloja, sokereita, väriaineita ja kuona-aineita. Rasvojen ja proteiinien valmistus ja hiilensidonta tapahtuvat muualla.\n- **1.7 B:** glykolyysi tuottaa solulimassa palorypälehappoa eli pyruvaattia, joka on mitokondrion lähtöaine. Mitokondrio tarvitsee happea, ja hiilidioksidi on sen lopputuote.\n- **1.8 C, virheellinen väite sädelihaksesta:** kun katse kohdistuu kauas, sädelihas rentoutuu ja mykiö litistyy. Sädelihas supistuu, kun katsotaan lähelle.\n- **1.9 B, virheellinen väite paksusuolesta:** valtaosa ravintoaineista imeytyy ohutsuolessa. Paksusuolessa imeytyy lähinnä vettä ja suoloja.\n- **1.10 B, virheellinen väite valintajalostuksen kestosta:** valintajalostus ei aina vaadi satoja vuosia, vaan tuloksia voi syntyä muutamassa sukupolvessa.\n\n**Sudenkuoppa:** kohdissa 1.3, 1.8, 1.9 ja 1.10 etsitään virheellistä väitettä. Jos niissä valitsee oikean väitteen, menettää pisteet, vaikka tuntisi asian.",
+     "answer": "1.1 E · 1.2 A · 1.3 B · 1.4 A · 1.5 B · 1.6 D · 1.7 B · 1.8 C · 1.9 B · 1.10 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "intro": "Sienikuntaan kuuluu noin 144 000 tunnettua lajia, ja vanhimmat sienet ovat prekambrikaudelta 700–800 miljoonan vuoden takaa.",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 6,
+     "prompt": "Selitä, millä tavoin sienet saavat ravintonsa.",
+     "hints": [
+      "Sienet ovat toisenvaraisia. Mieti, mistä eri lähteistä ne saavat orgaanista ainetta: kuolleesta aineksesta, elävistä kumppaneista vai isännistä?",
+      "Tapoja on neljä: hajottajat (kuollut eloperäinen aines), symbioosi (sienijuuri eli mykorritsa kasvien kanssa, jäkälä levän tai syanobakteerin kanssa; kumppani antaa sokereita), loiset ja harvinaisina saalistajat (pyyntirihmat sukkulamadoille). Mainitse myös, että sienirihmasto erittää ruoansulatusentsyymejä ympäristöönsä ja imee pilkotut aineet."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Sienet ovat toisenvaraisia (heterotrofisia): ne eivät yhteytä, vaan saavat ravintonsa muista eliöistä.\n- Monet sienet ovat hajottajia, jotka käyttävät ravinnokseen kuolleita eliöitä.\n- Monet sienet elävät symbioosissa kasvien kanssa sienijuurena eli mykorritsana tai levän kanssa jäkälänä.\n- Symbioosissa kasvi tai levä antaa sienelle yhteyttämistuotteita, kuten sokereita.\n- Osa sienistä on loisia, jotka ottavat ravintonsa elävästä isännästä.\n- Jotkin sienet saalistavat pyyntirihmoillaan pieniä eliöitä, kuten sukkulamatoja.\n\n**Esimerkkivastaus:** Sienet eivät pysty yhteyttämään, joten ne ovat toisenvaraisia ja saavat orgaanisen aineen muista eliöistä. Sienirihmasto erittää ruoansulatusentsyymejä ympäristöönsä ja imee pilkotut ravintoaineet itseensä. Monet sienet ovat hajottajia, jotka käyttävät ravinnokseen kuollutta kasviainesta, kuten karikkeita ja lahopuuta. Monet metsän sienet muodostavat puiden juurien kanssa sienijuuren: sieni auttaa puuta saamaan vettä ja kivennäisaineita ja saa vastineeksi sokereita. Jäkälässä sieni elää levän tai syanobakteerin kanssa ja saa siltä yhteyttämistuotteita. Osa sienistä loisii kasveissa tai eläimissä, ja muutamat sienet jopa pyydystävät sukkulamatoja tahmeilla pyyntirihmoilla.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Sienilajien määrä kasvoi voimakkaasti jura- ja liitukaudella noin 200–65 miljoonaa vuotta sitten, ja dinosaurukset hävittäneessä joukkosukupuutossa sieniä kuoli sukupuuttoon vain vähän. Pohdi syitä sienten monimuotoistumiseen ja niiden hyvään selviytymiseen.",
+     "hints": [
+      "Vastauksessa on kaksi osaa. Mikä muu eliöryhmä syntyi ja monipuolistui samaan aikaan, ja miten sienet ovat siitä riippuvaisia? Mitä joukkosukupuutossa tapahtui valolle, lämpötilalle ja kuolleen aineksen määrälle?",
+      "Siemenkasvien kehitys toi uusia symbioosikumppaneita ja karikkeita → koevoluutio ja sopeutumislevittäytyminen. Joukkosukupuutossa maaperässä elävät sienet olivat suojassa lämpötilan vaihteluilta, ne eivät tarvinneet valoa, hajottajille oli valtavasti kuollutta ainesta, ravinnonhankintatapoja oli monia, ja sienet tuottavat runsaasti kestäviä ja helposti leviäviä itiöitä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Monimuotoistuminen:** sienten lajiutuminen kiihtyi siemenkasvien syntyessä ja monipuolistuessa.\n- Uudet kasvit lisäsivät erityisesti kasvien kanssa symbioosissa elävien sienten lajimäärää. Sienet ja kasvit kehittyivät koevoluutiossa, mikä edisti sopeutumislevittäytymistä.\n- Runsas kasvillisuus tarjosi paljon ravintoa myös hajottajasienille.\n- **Selviytyminen:** monet sienet elävät maaperässä, jossa ne olivat suojassa joukkosukupuuttoon liittyneiltä lämpötilan vaihteluilta.\n- Hajottajasienille oli joukkosukupuuton jälkeen tarjolla runsaasti kuolleita eliöitä.\n- Sienet eivät tarvitse auringonvaloa, jota meteoriitin törmäyksen jälkeen oli vähän.\n- Monipuoliset ravinnonhankintatavat lisäsivät selviytymismahdollisuuksia.\n- Sienet tuottavat valtavasti itiöitä, jotka säilyvät pitkään ja leviävät helposti.\n\n**Esimerkkivastaus:** Jura- ja liitukaudella siemenkasvit, erityisesti kukkakasvit, kehittyivät ja levisivät nopeasti. Sienten monimuotoisuus kasvoi samaan aikaan, sillä uudet kasvilajit tarjosivat sienille uusia symbioosikumppaneita, joiden kanssa ne muodostivat sienijuuria. Sienet ja kasvit kehittyivät rinnakkain koevoluutiossa, ja sienet sopeutumislevittäytyivät uusiin ekolokeroihin. Samalla kasvava kasvimassa tarjosi hajottajasienille runsaasti ravintoa. Kun asteroidi iski maahan liitukauden lopulla, pöly pimensi taivaan, fotosynteesi romahti ja lämpötila vaihteli rajusti. Sienet eivät tarvitse valoa, ja maaperässä ne olivat suojassa lämpötilan muutoksilta. Joukkotuho tuotti hajottajasienille valtavasti kuollutta ainesta. Lisäksi sienet tuottavat runsaasti kestäviä itiöitä, jotka säilyvät huonojen aikojen yli ja leviävät helposti uusille paikoille.",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 4,
+     "prompt": "Tunnista neljän kuvan lakkisienet (ks. alkuperäiset kuvat 2.3.1–2.3.4). Vaihtoehdot joka kohdassa: herkkutatti, kangashapero, korvasieni tai valkokärpässieni. Väärä vastaus −1 p.",
+     "hints": [
+      "Muistele lajien tuntomerkit. Valkokärpässieni on kokonaan valkoinen, ja sillä on rengas ja tyvimalja. Herkkutatilla on ruskea lakki, lakin alapinnalla pillistö ja paksu jalka. Kangashaperolla on punainen lakki ja valkoiset heltat. Korvasienen ruskea lakki on aivomaisesti poimuttunut."
+     ],
+     "solution": "Vaihtoehtojen järjestys: A = herkkutatti, B = kangashapero, C = korvasieni, D = valkokärpässieni.\n\n- **2.3.1 D, valkokärpässieni:** valkoinen lakki, heltat, jalan rengas ja tyvimalja. Tappavan myrkyllinen.\n- **2.3.2 A, herkkutatti:** ruskea lakki ja lakin alla pillistö heltojen sijaan, paksu jalka.\n- **2.3.3 B, kangashapero:** punertava lakki ja valkoiset heltat, hauras malto.\n- **2.3.4 C, korvasieni:** kevään sieni, jonka lakki on aivomaisesti poimuttunut. Raakana myrkyllinen.\n\n**Sudenkuoppa:** väärästä vastauksesta vähennetään piste. Jos et tunnista lajia varmasti, jätä kohta tyhjäksi.",
+     "answer": "2.3.1 D valkokärpässieni · 2.3.2 A herkkutatti · 2.3.3 B kangashapero · 2.3.4 C korvasieni",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "intro": "Aineisto 3.A kertoo, että Suomen teiden varsilla on säännöllisesti niitettyjä pientareita noin kolminkertaisesti enemmän kuin hoidettuja perinneympäristöjä, joiden pinta-ala on pienentynyt voimakkaasti.",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 7,
+     "prompt": "Pohdi, mitkä ympäristötekijät tekevät tienvarsista tärkeitä luonnon monimuotoisuudelle. Voit käyttää aineistoa 3.A.",
+     "hints": [
+      "Aloita siitä, miksi perinneympäristöt ovat vähentyneet ja millaisia lajeja niissä eli. Mieti sitten, mikä tienvarressa muistuttaa niittyä.",
+      "Säännöllinen niitto korvaa laidunnuksen. Tienvarsi on aurinkoinen ja lämmin, ja lumi sulaa aikaisin (hyönteiset, perhoset). Maa on vähäravinteista, joten niukkaravinteisten paikkojen lajit pärjäävät. Ojat tarjoavat kosteita elinympäristöjä, ja reunavaikutus lisää lajistoa. Yhtenäinen tieverkko ja ajoneuvot levittävät lajeja. Voit mainita myös monimuotoisuuden kolme tasoa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Niityt ja kedot syntyivät aikoinaan karjan laidunnuksen ansiosta. Laidunnuksen vähennyttyä niiden pinta-ala on pienentynyt jyrkästi.\n- Tienpientareet ovat tarjonneet korvaavan elinympäristön monille niitty- ja ketolajeille, koska olot muistuttavat niittyä.\n- Pientareita niitetään säännöllisesti näkyvyyden takia, ja niitto vaikuttaa kasvillisuuteen samaan tapaan kuin laidunnus.\n- Tienvarret saavat runsaasti valoa, ja lumi sulaa niiltä aikaisin keväällä, mikä edistää kasvien kasvua.\n- Aurinkoinen piennar on lämmin, mistä hyötyvät perhoset ja muut hyönteiset.\n- Pientareiden maa on usein vähäravinteista, joten niukkaravinteisuuteen sopeutuneet lajit menestyvät siellä.\n- Tienvarsiojat tarjoavat elinympäristön kosteiden paikkojen lajeille, ja reunavaikutus lisää lajistoa.\n- Ajoneuvot kuljettavat siemeniä ja pieniä eläimiä, ja Suomen kattava tieverkko auttaa lajeja leviämään laajalle.\n- Tienvarret voivat lisätä monimuotoisuutta sen kaikilla kolmella tasolla: geneettisellä, lajien ja ekosysteemien tasolla.\n\n**Esimerkkivastaus:** Suomen perinteiset niityt, kedot ja hakamaat ovat syntyneet karjan laiduntaessa. Kun karjatalous muuttui, laidunnus väheni ja perinneympäristöt kasvoivat umpeen, joten niiden lajit menettivät elinympäristönsä. Aineiston mukaan säännöllisesti niitettyjä tienpientareita on nykyään moninkertaisesti enemmän kuin hoidettuja perinneympäristöjä, ja monet niitty- ja ketolajit elävätkin nyt teiden varsilla. Pientareita niitetään, jotta näkyvyys säilyy, ja niitto estää pensoittumisen samaan tapaan kuin laidunnus. Tienvarsi on avoin ja aurinkoinen, joten maa lämpenee ja lumi sulaa aikaisin, mikä hyödyttää kasveja, perhosia ja muita hyönteisiä. Pientareen maa on usein vähäravinteista, joten kookkaat ravinteisuutta vaativat kasvit eivät tukahduta pieniä niittykasveja. Ojissa viihtyvät kosteiden paikkojen lajit. Koska tieverkosto on yhtenäinen ja kattava ja autot kuljettavat siemeniä, lajit voivat levitä pientareita pitkin laajalle alueelle.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 8,
+     "prompt": "Pohdi, mitkä tekijät voivat hankaloittaa tienvarsilla elävien kasvien ja eläinten elämää.",
+     "hints": [
+      "Mieti liikenteen suoria vaikutuksia (törmäykset, esteet, päästöt, melu), tienpidon vaikutuksia (niitto, suolaus, rakennustyöt) ja vieraslajeja.",
+      "Esimerkkejä: eläimiä jää autojen alle; leveä tie pirstoo elinympäristöjä ja on este maassa liikkuville; pakokaasut, roskat, mikromuovi, pöly (tukkii ilmarakoja) ja tiesuola; melu peittää lintujen laulun; lupiini, kurtturuusu ja jättipalsami syrjäyttävät alkuperäiskasveja ja niistä riippuvia hyönteisiä; väärään aikaan tehty niitto tuhoaa pesiä ja estää siementen kypsymisen; aurinkoinen piennar kuivuu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Eläimiä kuolee liikenteessä.\n- Tiet pirstovat elinympäristöjä, ja leveä tie voi olla ylittämätön este esimerkiksi sammakoille, pikkunisäkkäille ja lentokyvyttömille hyönteisille.\n- Liikenteen päästöt, roskat, pöly ja tiesuola haittaavat kasveja ja eläimiä. Esimerkiksi pöly voi estää ilmarakojen sulkeutumisen ja haitata kaasujenvaihtoa ja yhteyttämistä.\n- Mikromuovi voi aiheuttaa eläimille terveyshaittoja.\n- Liikenteen melu häiritsee eläimiä: esimerkiksi linnut eivät kuule lajitoveriensa laulua.\n- Pientareilla menestyvät vieraslajit, kuten lupiini, kurtturuusu ja jättipalsami, vievät tilaa alkuperäisiltä kasveilta.\n- Alkuperäiskasvien väheneminen vähentää myös niitä syöviä ja pölyttäviä hyönteisiä.\n- Tienvarsien korjaus- ja rakennustyöt ja muu ihmistoiminta häiritsevät eläimiä.\n- Väärään aikaan tehty niitto voi tuhota lintujen pesiä ja poikasia tai estää niittykasvien siementen kypsymisen.\n- Runsas auringonvalo kuivattaa maata, joten kosteutta vaativat kasvit eivät menesty.\n\n**Esimerkkivastaus:** Tienvarsi on monelle lajille vaarallinen paikka. Liikenteessä kuolee vuosittain suuri määrä eläimiä, ja leveä, vilkas tie estää esimerkiksi sammakoiden, pikkunisäkkäiden ja lentokyvyttömien hyönteisten liikkumisen, joten elinympäristöt pirstoutuvat. Liikenteestä tulee pakokaasuja, renkaiden mikromuovia, roskia ja pölyä, joka voi peittää lehtien pinnan ja häiritä ilmarakojen toimintaa, ja talvella levitetty tiesuola muuttaa maan suolapitoisuutta. Melu vaikeuttaa lintujen viestintää, koska laulu ei kuulu liikenteen äänten yli. Pientareilla leviävät vieraslajit, kuten komealupiini, kurtturuusu ja jättipalsami, valtaavat tilaa alkuperäisiltä niittykasveilta, jolloin myös niistä riippuvaiset perhoset ja pölyttäjät vähenevät. Jos piennar niitetään alkukesällä, maassa pesivien lintujen pesät tuhoutuvat eivätkä kasvit ehdi tehdä siemeniä. Lisäksi paahteinen piennar kuivuu kesällä, mikä haittaa kosteutta tarvitsevia lajeja.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Amylaasi on ohutsuolessa toimiva entsyymi, jota haiman solut valmistavat. Selitä kunkin rakenteen osuus amylaasin valmistuksessa ja erityksessä: tuma, ribosomit, Golgin laite, kalvorakkulat ja mitokondriot.",
+     "hints": [
+      "Etene proteiinin valmistuksen ja erityksen järjestyksessä: geeni → lähetti-RNA → polypeptidi → muokkaus → pakkaus → kuljetus → eritys. Kustakin rakenteesta saa enintään 3 p, joten kerro jokaisesta kolme asiaa.",
+      "- Tuma: amylaasigeeni, transkriptio, lähetti-RNA.\n- Ribosomi: karkean solulimakalvoston pinnalla, translaatio, kodonit → aminohappojärjestys.\n- Golgin laite: proteiinin muokkaus, sokeriosien liittäminen ja pakkaus rakkuloihin.\n- Kalvorakkula: kuljetus solulimakalvostolta Golgin laitteelle ja solukalvolle, eksosytoosi.\n- Mitokondrio: soluhengityksen ATP, jota kuluu transkriptiossa, translaatiossa, kuljetuksessa ja eksosytoosissa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Tuma:** amylaasi on proteiini, ja sen valmistusohje eli amylaasigeeni on tuman DNA:ssa.\n- Tumassa tapahtuu transkriptio, jossa geenistä valmistetaan amylaasia koodaavaa lähetti-RNA:ta.\n- **Ribosomi:** eritettäviä proteiineja valmistavat ribosomit ovat kiinni karkeassa solulimakalvostossa.\n- Ribosomissa tapahtuu translaatio: lähetti-RNA:n koodi luetaan ja siitä muodostuu polypeptidin aminohappojärjestys.\n- **Golgin laite:** siellä proteiinia muokataan lopulliseen muotoonsa, ja siihen liitetään sokeriosia.\n- Golgin laitteessa valmis entsyymi pakataan kalvorakkuloihin eritystä varten.\n- **Kalvorakkula:** entsyymi siirtyy solulimakalvostolta Golgin laitteelle ja edelleen solukalvolle kalvorakkuloiden sisällä.\n- Eksosytoosissa rakkula yhtyy solukalvoon ja tyhjentää amylaasin solusta ulos.\n- **Mitokondrio:** soluhengityksen sitruunahappokierto ja elektroninsiirtoketju tuottavat mitokondriossa ATP:tä.\n- ATP:tä kuluu monessa vaiheessa: transkriptiossa, translaatiossa, proteiinin muokkauksessa ja pakkaamisessa, rakkuloiden kuljetuksessa ja eksosytoosissa.\n\n**Esimerkkivastaus:** Amylaasi on proteiini, joten sen valmistus alkaa tumasta. Tuman DNA:ssa on amylaasigeeni, josta RNA-polymeraasi valmistaa transkriptiossa lähetti-RNA:ta. Lähetti-RNA kulkee tumahuokosten kautta solulimaan karkean solulimakalvoston ribosomeille. Ribosomit lukevat lähetti-RNA:n kodoneja translaatiossa ja liittävät aminohapot oikeaan järjestykseen, ja syntyvä polypeptidi siirtyy solulimakalvoston sisään. Solulimakalvostosta proteiini kulkee kalvorakkuloissa Golgin laitteelle, jossa se muokataan lopulliseen muotoonsa ja siihen liitetään sokeriosia. Golgin laite pakkaa valmiin amylaasin eritysrakkuloihin. Rakkulat kuljettavat entsyymin solukalvolle, sulautuvat siihen ja vapauttavat amylaasin eksosytoosilla haiman tiehyeen, josta se kulkeutuu ohutsuoleen. Kaikki nämä vaiheet vaativat energiaa. Mitokondriot tuottavat soluhengityksessä ATP:tä, jota kuluu esimerkiksi aminohappojen liittämisessä, rakkuloiden kuljetuksessa ja eksosytoosissa.\n\n**Sudenkuoppa:** jos kerrot vain rakenteen yleisen tehtävän (esim. mitokondrio tuottaa energiaa) mutta et yhdistä sitä amylaasin valmistukseen, pisteitä jää saamatta.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "intro": "Tutkija löysi punasilmäisten banaanikärpästen joukosta violettisilmäisiä yksilöitä. Hän risteytti violettisilmäisen naaraan punasilmäisen koiraan kanssa. F1-polvessa syntyi 484 naarasta ja 482 koirasta, ja kaikki olivat punasilmäisiä.",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 4,
+     "prompt": "Päättele F1-polven perusteella, periytyykö violettisilmäisyys autosomissa vai X-kromosomissa ja onko se dominoiva vai resessiivinen. Perustele; risteytyskaaviota ei tarvita.",
+     "hints": [
+      "Käsittele kaksi vaihtoehtoa erikseen. Jos alleeli olisi X-kromosomissa, minkä X-kromosomin koiraspoikaset saavat ja keneltä? Jos violettisilmäisyys olisi dominoiva, miltä F1-polven pitäisi näyttää?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Jos violettisilmäisyys periytyisi X-kromosomissa, koiraat saisivat ainoan X-kromosominsa violettisilmäiseltä äidiltä, ja ainakin osa koiraista olisi violettisilmäisiä.\n- Koska kaikki koiraat olivat punasilmäisiä, violettisilmäisyys periytyy autosomissa.\n- Jos violettisilmäisyys olisi dominoiva, se näkyisi F1-polvessa.\n- Koska se ei näy, violettisilmäisyys on resessiivinen.\n\n**Esimerkkivastaus:** Jos violettisilmäisyyden alleeli olisi X-kromosomissa, violettisilmäinen naaras olisi sen suhteen homotsygootti, ja jokainen koiraspoikanen saisi siltä ainoan X-kromosominsa. Tällöin koiraat olisivat violettisilmäisiä. F1-polven 482 koirasta olivat kuitenkin kaikki punasilmäisiä, joten alleeli on autosomissa. Jos violettisilmäisyys olisi dominoiva, ainakin osa jälkeläisistä olisi violettisilmäisiä. Koska kaikki olivat punasilmäisiä, violettisilmäisyys on resessiivinen ominaisuus.",
+     "answer": "autosomaalinen ja resessiivinen",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 7,
+     "prompt": "Oletetaan, että P-polven punasilmäinen koiras on homotsygootti. Laadi risteytyskaavio ja selvitä sen avulla F1-polven mahdolliset genotyypit ja fenotyypit. Hyödynnä kohdan 5.1 päätelmää.",
+     "hints": [
+      "Valitse alleelimerkinnät (esim. V = punainen, v = violetti) ja päättele vanhempien genotyypit: koiraan genotyyppi on annettu, ja violettisilmäisen naaraan genotyypin saat kohdan 5.1 päätelmästä.",
+      "Naaras $vv$ tuottaa vain v-munasoluja ja koiras $VV$ vain V-siittiöitä. Kaavioon tulee siis 2 × 2 ruutua, joissa kaikissa on sama genotyyppi."
+     ],
+     "solution": "1. **Merkinnät:** V = punasilmäisyyden alleeli (dominoiva), v = violettisilmäisyyden alleeli (resessiivinen).\n2. **Vanhemmat:** naaras $vv$, koska resessiivinen ominaisuus näkyy vain homotsygootilla, ja koiras $VV$, koska se on annettu homotsygootiksi.\n3. **Sukusolut:** naaras v ja v, koiras V ja V.\n4. **Risteytyskaavio** (rivit munasolut, sarakkeet siittiöt):\n$$\\begin{array}{c|cc} & V & V \\\\ \\hline v & Vv & Vv \\\\ v & Vv & Vv \\end{array}$$\n5. **Genotyyppi:** kaikki jälkeläiset ovat $Vv$.\n6. **Fenotyyppi:** kaikki jälkeläiset ovat punasilmäisiä, koska V on dominoiva.\n\n**Vastaus: F1-polven kaikki yksilöt ovat genotyypiltään $Vv$ ja fenotyypiltään punasilmäisiä.**\n\n**Sudenkuoppa:** muista merkitä myös alleelien merkitykset ja vanhempien sukusolut, sillä niistä saa omat pisteensä.",
+     "answer": "kaikki $Vv$, punasilmäisiä",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "5.3",
+     "points": 4,
+     "prompt": "Yksi F1-polven koiras ja yksi naaras risteytettiin keskenään. F2-polvessa syntyi punasilmäisiä naaraita 363 ja koiraita 374 sekä violettisilmäisiä naaraita 119 ja koiraita 120. Päättele risteytyskaavion avulla, vastaako tulos sitä fenotyyppien lukusuhdetta, jota aiempien päätelmiesi perusteella odotat.",
+     "hints": [
+      "F1-yksilöt ovat kaikki heterotsygootteja. Laadi kaavio $Vv \\times Vv$, päättele odotettu fenotyyppisuhde ja vertaa sitä, kun lasket yhteen kaikki punasilmäiset ja kaikki violettisilmäiset."
+     ],
+     "solution": "1. **Vanhemmat:** F1-polven naaras ja koiras ovat molemmat $Vv$.\n2. **Risteytyskaavio:**\n$$\\begin{array}{c|cc} & V & v \\\\ \\hline V & VV & Vv \\\\ v & Vv & vv \\end{array}$$\n3. **Odotettu suhde:** punasilmäiset ($VV$, $Vv$) : violettisilmäiset ($vv$) = 3 : 1.\n4. **Havaittu:** punasilmäisiä $363 + 374 = 737$ ja violettisilmäisiä $119 + 120 = 239$, yhteensä 976. Suhde on $737 : 239 \\approx 3{,}08 : 1$.\n5. Odotusarvot olisivat 732 ja 244, joten poikkeama on pieni. (Lisätarkastelu: $\\chi^2 \\approx 0{,}14$, mikä on selvästi alle raja-arvon 3,84, joten ero mahtuu sattuman rajoihin.)\n\n**Vastaus: tulos vastaa odotettua lukusuhdetta 3 : 1 (737 : 239 ≈ 3,1 : 1).**\n\n**Sudenkuoppa:** suhde lasketaan fenotyypeistä, ei sukupuolista. Myös sukupuolittain laskettu suhde (naaraat noin 3,05 : 1, koiraat noin 3,12 : 1) tai prosenttiosuudet (violettisilmäisiä noin 24,5 %) kelpaavat.",
+     "answer": "vastaa: 737 : 239 ≈ 3,1 : 1 eli odotettu 3 : 1",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 6,
+     "prompt": "Maksa muuttaa monia yhdisteitä vaarattomiksi. Selitä, miten maksa käsittelee alkoholia (etanolia) ja miten raskasmetalleja (esim. kadmiumia), ja miten käsittely eroaa näiden välillä.",
+     "hints": [
+      "Keskeinen ero: etanoli on orgaaninen yhdiste, jonka entsyymit voivat pilkkoa, mutta raskasmetalli on alkuaine. Mitä alkuaineelle voi tehdä?",
+      "Etanoli → asetaldehydi → etikkahappo eli asetaatti → mitokondrioissa soluhengityksessä hiilidioksidiksi ja vedeksi, jolloin aine poistuu. Raskasmetallia ei voi hajottaa, joten maksa varastoi sen, ja se kertyy elimistöön."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Etanoli on hiiltä sisältävä orgaaninen molekyyli, joten maksan entsyymit pystyvät pilkkomaan sen.\n- Kadmium ja muut raskasmetallit ovat alkuaineita, eikä niitä voi pilkkoa.\n- Etanolin hajotuksen ensimmäinen välituote on asetaldehydi, josta muodostuu etikkahappoa eli asetaattia.\n- Asetaattia voidaan käyttää solujen energiantuotannossa mitokondrioissa, jolloin syntyy hiilidioksidia ja vettä, ja haitallinen aine poistuu elimistöstä.\n- Maksa ei pysty muuttamaan raskasmetalleja vähemmän haitallisiksi, joten se varastoi ne.\n- Raskasmetallit eivät siksi poistu elimistöstä, vaan kertyvät.\n\n**Esimerkkivastaus:** Etanoli on orgaaninen yhdiste, joten maksasolujen entsyymit pystyvät pilkkomaan sen. Alkoholidehydrogenaasi muuttaa etanolin asetaldehydiksi, joka on myrkyllistä, ja seuraava entsyymi muuttaa asetaldehydin etikkahapoksi eli asetaatiksi. Asetaatti voidaan käyttää energiaksi mitokondrioissa, joissa se hapetetaan soluhengityksessä hiilidioksidiksi ja vedeksi. Näin alkoholi poistuu elimistöstä. Raskasmetallit, kuten kadmium, ovat alkuaineita, joita ei voi hajottaa pienemmiksi osiksi eikä muuttaa entsymaattisesti vaarattomiksi. Maksa sitoo ne esimerkiksi proteiineihin ja varastoi ne, joten ne kertyvät elimistöön vähitellen.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 7,
+     "prompt": "Vanhat punasolut hajotetaan pernassa ja imukudoksessa, jolloin hemoglobiinista irtoaa globiiniketjuja ja hemiryhmiä. Selitä, mitä elimistö tekee näille yhdisteille.",
+     "hints": [
+      "Käsittele kaksi osaa erikseen: proteiiniosa (globiini) ja hemiryhmä (rauta ja loput rakenteesta). Mikä käytetään uudelleen, mikä poistetaan ja mitä reittiä?",
+      "Globiini pilkotaan aminohapoiksi, joita käytetään proteiinisynteesiin tai sokerin uudismuodostukseen. Hemistä irrotetaan rauta, joka kierrätetään uusien punasolujen hemoglobiiniin. Loput hemistä muutetaan bilirubiiniksi → veren mukana maksaan → maksa liittää sen glukuronihappoon → sappeen → sappirakko → ohutsuoli → uloste. Osa erittyy virtsaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Globiini on proteiini, joka pilkotaan aminohapoiksi.\n- Aminohapot käytetään uudelleen solujen proteiinisynteesissä tai hiilirunkoina sokerin uudismuodostuksessa.\n- Hemiryhmän rauta otetaan talteen ja käytetään uusien punasolujen hemoglobiinin valmistukseen.\n- Hemin loppuosa muutetaan bilirubiiniksi, joka kulkeutuu verenkierron mukana maksaan.\n- Maksassa bilirubiini liitetään glukuronihappoon ja eritetään sappeen.\n- Sappirakosta sappi virtaa ohutsuoleen, ja bilirubiinin hajoamistuotteet poistuvat ulosteessa.\n- Osa bilirubiinin hajoamistuotteista poistuu virtsan mukana.\n\n**Esimerkkivastaus:** Kun vanha punasolu hajotetaan, sen hemoglobiini jakautuu proteiiniosaan eli globiiniin ja hemiryhmiin. Globiini pilkotaan aminohapoiksi, jotka elimistö käyttää uudelleen uusien proteiinien rakentamiseen tai tarvittaessa glukoosin valmistamiseen. Hemiryhmästä irrotetaan rauta, joka kuljetetaan luuytimeen ja käytetään uusien punasolujen hemoglobiiniin. Jäljelle jäävästä rakenteesta muodostuu keltaista bilirubiinia, joka kulkee veressä maksaan. Maksasolut liittävät bilirubiinin glukuronihappoon, jolloin se liukenee veteen, ja se eritetään sappeen. Sappi varastoidaan sappirakkoon, josta se erittyy ohutsuoleen, ja bilirubiinin hajoamistuotteet poistuvat ulosteen mukana ja antavat sille ruskean värin. Pieni osa poistuu virtsan mukana.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.3",
+     "points": 2,
+     "prompt": "Kun elimistö käyttää proteiineja energiaksi, syntyy ammoniakkia. Selitä maksan osuus ammoniakin käsittelyssä.",
+     "hints": [
+      "Mistä ammoniakki syntyy aminohappojen hajotuksessa, miksi se on vaarallista ja mihin vähemmän myrkylliseen yhdisteeseen maksa sen muuttaa? Mitä kautta tuo yhdiste poistuu?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Proteiineista saadut aminohapot pilkotaan maksassa, ja sivutuotteena syntyy myrkyllistä ammoniakkia.\n- Maksa muuttaa ammoniakin virtsa-aineeksi eli ureaksi.\n- Urea poistuu munuaisten kautta virtsan mukana.\n\n**Esimerkkivastaus:** Kun aminohappoja käytetään energiaksi, niistä irrotetaan aminoryhmä, josta syntyy myrkyllistä ammoniakkia. Maksa muuttaa ammoniakin vähemmän haitalliseksi virtsa-aineeksi eli ureaksi, joka kulkeutuu veren mukana munuaisiin ja poistuu virtsassa.",
+     "answer": "maksa muuttaa ammoniakin ureaksi (virtsa-aineeksi), joka poistuu virtsaan munuaisten kautta",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 10,
+     "prompt": "Selitä lyhyesti, mitä allergiset reaktiot ovat ja miten ne liittyvät immuunijärjestelmän toimintaan.",
+     "hints": [
+      "Määrittele allergia ja allergeeni ja erota toisistaan välitön ja viivästynyt reaktio. Täysiin pisteisiin tarvitaan immuunijärjestelmän mekanismi, ei pelkkiä oireita.",
+      "Välitön: ensimmäinen altistus → plasmasolut tuottavat vasta-aineita → ne kiinnittyvät syöttösolujen reseptoreihin (herkistyminen) → uudessa altistuksessa allergeeni sitoutuu syöttösolun vasta-aineisiin → histamiinia vapautuu → tulehdusreaktio (kutina, punoitus, nokkosihottuma, nuha, hengitysteiden ahtautuminen, pahimmillaan anafylaktinen sokki). Viivästynyt: T-imusolut tunnistavat allergeenin ja käynnistävät tulehduksen vasta pitkän ajan kuluttua. Hoitoja: antihistamiinit ja siedätyshoito."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Allergisessa reaktiossa elimistö reagoi voimakkaasti aineeseen, joka on tavallisesti vaaraton.\n- Reaktion aiheuttavaa ainetta kutsutaan allergeeniksi, ja allergeeneja on esimerkiksi siitepölyssä, eläinten hilseessä ja hyönteisten myrkyissä.\n- Allerginen reaktio voi olla välitön tai viivästynyt.\n- Välittömässä reaktiossa elimistö on kohdannut allergeenin aiemmin, ja plasmasolut ovat tuottaneet sitä vastaan vasta-aineita.\n- Vasta-aineet kiinnittyvät syöttösolujen pinnan reseptoreihin.\n- Kun sama allergeeni tulee uudelleen, se sitoutuu syöttösolujen pinnan vasta-aineisiin, ja syöttösolut vapauttavat histamiinia.\n- Histamiini käynnistää tulehdusreaktion, joka näkyy esimerkiksi kutinana, punoituksena, nokkosihottumana, silmien ja nenän vuotamisena tai hengitysteiden ahtautumisena.\n- Voimakas reaktio voi johtaa henkeä uhkaavaan anafylaktiseen sokkiin.\n- Viivästyneen allergian käynnistävät T-imusolut, jotka reagoivat allergeeniin ja aiheuttavat tulehduksen vasta pitkän ajan kuluttua.\n- Allergisia reaktioita voidaan hillitä antihistamiineilla tai siedätyshoidolla.\n\n**Esimerkkivastaus:** Allergia on immuunijärjestelmän liian voimakas vastaus aineeseen, joka ei yleensä ole vaarallinen, kuten siitepölyyn, eläinten hilseeseen tai ampiaisen myrkkyyn. Tällaista ainetta kutsutaan allergeeniksi. Välitön allergia syntyy kahdessa vaiheessa. Ensimmäisellä kerralla elimistö herkistyy: B-imusoluista kehittyneet plasmasolut tuottavat allergeenia vastaan vasta-aineita, jotka kiinnittyvät kudosten syöttösolujen pinnalle. Kun ihminen altistuu samalle allergeenille uudelleen, allergeeni tarttuu syöttösolun pinnan vasta-aineisiin, ja syöttösolu vapauttaa histamiinia. Histamiini laajentaa verisuonia ja lisää niiden läpäisevyyttä, jolloin syntyy tulehdusreaktio: iho punoittaa ja kutisee, nenä vuotaa ja pahimmassa tapauksessa hengitystiet ahtautuvat tai verenpaine romahtaa anafylaktisessa sokissa. Viivästyneessä allergiassa, kuten nikkeliallergiassa, reaktion käynnistävät T-imusolut, ja oireet ilmaantuvat vasta tuntien tai päivien kuluttua. Oireita voidaan lievittää antihistamiineilla, ja siedätyshoidolla elimistö totutetaan allergeeniin vähitellen.\n\n**Sudenkuoppa:** täysiin pisteisiin tarvitaan sekä käsitteen selitys että sen yhdistäminen immuunijärjestelmän toimintaan. Pelkkä oireiden luettelo ei riitä.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Selitä lyhyesti, mitä autoimmuunisairaudet ovat ja miten ne liittyvät immuunijärjestelmän toimintaan.",
+     "hints": [
+      "Mitä immuunijärjestelmän pitäisi osata erottaa, ja mitä tapahtuu, kun se epäonnistuu? Mieti myös syitä ja esimerkkejä.",
+      "Puolustus erehtyy pitämään elimistön omia soluja vieraina ja hyökkää niitä vastaan, joskus siksi, että omat pintaproteiinit muistuttavat taudinaiheuttajan antigeenejä. Taustalla ovat perimä, sukupuoli (naiset sairastuvat useammin), ikä ja ympäristö. Yleistymistä on selitetty liian vähäisellä mikrobialtistuksella. Esimerkkejä: tyypin 1 diabetes, keliakia, nivelreuma, MS-tauti ja psoriaasi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Autoimmuunisairaudessa puolustusjärjestelmä pitää elimistön omia soluja vieraina ja tuhoaa niitä.\n- Joskus elimistön solujen pintaproteiinit muistuttavat taudinaiheuttajien antigeenejä, jolloin puolustus kohdistuu molempiin.\n- Autoimmuunisairauksia on kymmeniä, ja monissa taustalla on perimä. Naisilla sairauksia on enemmän kuin miehillä, ja myös ympäristötekijät ja ikä vaikuttavat. Tarkkaa syytä ei usein tiedetä.\n- Yleistymisen on arveltu liittyvän liian steriiliin elinympäristöön ja mikrobiston muutoksiin.\n- Esimerkkejä: tyypin 1 diabetes, keliakia, nivelreuma, MS-tauti, psoriaasi ja kilpirauhasen vajaatoiminta.\n\n**Esimerkkivastaus:** Normaalisti immuunijärjestelmä oppii erottamaan elimistön omat rakenteet vieraista ja hyökkää vain vieraita vastaan. Autoimmuunisairaudessa tämä sietokyky pettää: imusolut ja vasta-aineet tunnistavat jonkin elimistön oman rakenteen vieraaksi ja tuhoavat sitä. Joskus syynä on se, että taudinaiheuttajan antigeeni muistuttaa elimistön omaa proteiinia, jolloin infektion jälkeen puolustus kohdistuu myös omiin soluihin. Esimerkiksi tyypin 1 diabeteksessa immuunijärjestelmä tuhoaa haiman insuliinia tuottavia soluja, ja keliakiassa gluteeni käynnistää ohutsuolen limakalvoa vaurioittavan reaktion. Sairastumiseen vaikuttavat perimä, sukupuoli, ikä ja ympäristötekijät, ja yleistymisen on arveltu liittyvän vähäiseen altistumiseen ympäristön mikrobeille.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Tekstiä tuottavat tekoälyohjelmat muodostavat lauseita opetusaineistonsa perusteella ymmärtämättä sisältöä. Aineisto 8.A on tekoälyn kirjoittama kuvaus virusten lisääntymisestä.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 10,
+     "prompt": "Aineiston 8.A tekstissä on viisi asiavirhettä. Etsi ne ja korjaa ne (ks. alkuperäinen teksti).",
+     "hints": [
+      "Lue teksti vaihe kerrallaan (tartunta, sisäänpääsy, kopiointi, proteiinisynteesi, vapautuminen) ja tarkista jokaisesta lauseesta termit: kulkeeko aine soluun vai ulos, mikä entsyymi kopioi RNA:ta, onko viruksella solukalvo ja kuuluuko kaikki biologiaan? Jokaisesta virheestä saa pisteen löytämisestä ja pisteen korjauksesta.",
+      "Selviä virheitä on ainakin näissä: soluun ottamisen termi (ulos vai sisään), yhtäkkinen siirtyminen tietokoneisiin, RNA:n kopiointiin mainittu entsyymi, viruksen \"solukalvo\" ja väite, ettei isäntäsolu koskaan vaurioidu. Epätarkkoja ovat myös väitteet, että virus menee aina kokonaan soluun, että DNA-virusten perimä aina integroituu ja että kopiointi tehdään pelkästään isännän proteiineilla."
+     ],
+     "solution": "Jokaisesta virheestä saa 2 p (löytäminen ja korjaus). Arvostelussa huomioidaan viisi ensimmäistä nimettyä virhettä. Hyväksyttäviä virheitä ovat:\n\n1. **Eksosytoosi → endosytoosi.** Teksti väittää viruksen pääsevän soluun eksosytoosilla. Eksosytoosi poistaa aineita solusta. Soluun virus otetaan endosytoosilla, jossa solukalvo kuroutuu viruksen ympärille.\n2. **Tietokoneet eivät kuulu asiaan.** Tekstiin on eksynyt kappale tietokoneviruksista. Tekoäly on sekoittanut tietotekniikan ja biologian virus-sanan.\n3. **DNA-polymeraasi → RNA-polymeraasi.** RNA-virus ei monista RNA:taan DNA-polymeraasilla, joka kopioi DNA:ta. RNA:ta kopioi RNA-polymeraasi.\n4. **Viruksella ei ole solukalvoa.** Viruksen perimää ympäröi proteiinikuori eli kapsidi. Monilla RNA-viruksilla kapsidin ulkopuolella on lisäksi isäntäsolun kalvosta peräisin oleva vaippa, jonka proteiineja voidaan valmistaa proteiinisynteesissä.\n5. **Isäntäsolu voi tuhoutua.** Teksti väittää, ettei isäntäsolu koskaan vaurioidu. Usein vapautuvat virukset puhkaisevat solukalvon, ja solu tuhoutuu.\n6. **Kaikki virukset eivät mene kokonaan soluun.** Bakteriofagit ruiskuttavat bakteeriin vain perimänsä, ja kuori jää ulkopuolelle.\n7. **Kaikkien DNA-virusten perimä ei integroidu.** Vain osa liittää perimänsä isäntäsolun DNA:han. Monet monistavat perimänsä erillään, esimerkiksi omalla DNA-polymeraasillaan.\n8. **Kopiointi ei tapahdu pelkästään isännän proteiineilla.** RNA-virusten perimä koodaa oman kopiointientsyymin, jonka virus tuo mukanaan tai valmistuttaa isäntäsolussa.\n\n**Sudenkuoppa:** kirjoita jokaisesta virheestä sekä se, mikä on väärin, että oikea tieto. Pelkkä virheen osoittaminen tuo vain puolet pisteistä.",
+     "answer": "esim. eksosytoosi → endosytoosi · tietokonekappale ei kuulu biologiaan · DNA-polymeraasi → RNA-polymeraasi · solukalvo → proteiinikuori (kapsidi) · isäntäsolu voi tuhoutua",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 5,
+     "prompt": "Aineiston tekstissä ei mainita virusten rekombinaatiota. Selitä, mitä se tarkoittaa.",
+     "hints": [
+      "Mitä tapahtuu, jos samaan soluun tunkeutuu yhtä aikaa kaksi erilaista virusta tai saman viruksen kaksi kantaa?",
+      "Isäntäsolu valmistaa kummankin viruksen perimiä ja osia, ja uusiin viruksiin kootaan sattumanvaraisesti osia kummastakin. Syntyy viruksia, joilla on ominaisuuksia molemmista (esim. influenssan uudet alatyypit). Viruksen perimään voi tarttua myös isännän geenejä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Rekombinaatiota tapahtuu, kun virukset lisääntyvät isäntäsolussa.\n- Samaan soluun voi tunkeutua samaan aikaan useampi erilainen virus.\n- Silloin virusten perimät sekoittuvat, kun uusia viruksia kootaan satunnaisesti kummankin viruksen osista.\n- Syntyvillä viruksilla voi olla usean eri viruksen tai saman viruksen eri kantojen ominaisuuksia.\n- Myös isännän geenejä voi päätyä viruksen perimään.\n\n**Esimerkkivastaus:** Virusten rekombinaatio tarkoittaa perimäaineksen sekoittumista virusten lisääntyessä. Jos samaan isäntäsoluun tunkeutuu yhtä aikaa kaksi eri virusta tai saman viruksen kaksi kantaa, solu valmistaa molempien perimää ja proteiineja. Uusia viruspartikkeleita koottaessa osat yhdistyvät sattumanvaraisesti, joten syntyy viruksia, joiden perimässä on osia kummastakin. Esimerkiksi influenssavirukset voivat vaihtaa perimänsä jaksoja keskenään, jolloin syntyy uusia alatyyppejä, joita vastaan väestöllä ei ole vastustuskykyä. Viruksen perimään voi myös tarttua isäntäsolun geenejä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Aineisto 9.A kertoo Etelämantereella noin 500 metrin paksuisen jään alta löydetystä ekosysteemistä: jääluolassa virtaavassa joessa elää runsaasti noin 5 mm:n kokoisia katkoja (äyriäisiä), jotka ovat eläneet pitkään eristyksissä muusta maailmasta.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 13,
+     "prompt": "Kuvaile, mitkä elämän tunnusmerkit jäätikön alta löydetyillä lajeilla on yhteisiä kaikkien muiden tunnettujen eliöiden kanssa.",
+     "hints": [
+      "Pisteitys: tunnusmerkin nimeäminen 1 p ja selitys 1–2 p. Tarvitset siis noin viisi tunnusmerkkiä selityksineen tai useampia lyhyemmin. Käytä katkoja esimerkkinä.",
+      "Tunnusmerkkejä: järjestyneisyys (atomit → molekyylit → soluelimet → solut → kudokset), samankaltainen kemiallinen koostumus, solurakenne, perinnöllinen informaatio (DNA → proteiinit), lisääntyminen, elinkaari, aineenvaihdunta (energia, hajottavat ja rakentavat reaktiot), homeostaasi ja itsesäätely, ärtyvyys eli reagointi ympäristöön sekä evoluutio."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Järjestyneisyys:** eliöt ovat järjestyneet eri tasoille atomeista ja molekyyleistä soluelimiin, soluihin ja kudoksiin.\n- **Kemiallinen koostumus:** eliöt rakentuvat samoista alkuaineista ja samantyyppisistä yhdisteistä, esimerkiksi solukalvojen lipidejä ja DNA:ta.\n- **Solurakenne:** eliö voi koostua yhdestä tai monesta solusta, kaikkien solujen perusrakenne on samankaltainen, ja solut vaihtavat aineita ympäristönsä kanssa.\n- **Perinnöllinen informaatio:** kaikilla eliöillä on geeneissä tietoa, jonka avulla solut valmistavat tarvitsemansa proteiinit ja muut aineet.\n- **Lisääntyminen:** geenien informaatio siirtyy lisääntymisessä seuraavalle sukupolvelle, ja lisääntyminen voi olla suvullista tai suvutonta.\n- **Elinkaari:** yksilö syntyy, kasvaa ja lopulta kuolee.\n- **Aineenvaihdunta:** soluissa kulkee jatkuvasti reaktioita, joissa aineita sekä pilkotaan (katabolia) että rakennetaan (anabolia), ja tähän tarvitaan energiaa.\n- **Homeostaasi ja itsesäätely:** eliöt pitävät yllä sisäistä tasapainoaan ja säätelevät elintoimintojaan, esimerkiksi ruumiinlämpöä tai suolapitoisuutta.\n- **Ärtyvyys:** eliöt aistivat ympäristöään ja muuttavat toimintaansa, esimerkiksi liikkumistaan, sen mukaan.\n- **Evoluutio:** eliöiden geeneissä tapahtuu muutoksia, parhaiten sopeutuneet saavat eniten jälkeläisiä, ja vähitellen syntyy uusia lajeja.\n\n**Esimerkkivastaus:** Jään alta löydetyt katkat ovat eristyneisyydestään huolimatta tavallisia eliöitä, joilla on samat elämän tunnusmerkit kuin muilla. Ne ovat järjestyneitä: atomit muodostavat molekyylejä, molekyylit soluelimiä ja soluja, ja solut kudoksia ja elimiä. Niiden kemiallinen koostumus on sama kuin muilla eliöillä, esimerkiksi niiden solukalvot koostuvat lipideistä ja perimä on DNA:ta. Katkat ovat monisoluisia, ja niiden solut ottavat ravintoaineita ja happea ja poistavat kuona-aineita. Niiden perimässä on geenejä, joiden ohjeilla solut valmistavat proteiineja, ja lisääntyessään katkat siirtävät geeninsä jälkeläisilleen. Jokainen yksilö syntyy, kasvaa ja kuolee. Aineenvaihdunnassa ne pilkkovat ravintoa energiaksi ja rakentavat siitä omia molekyylejään. Katkat säätelevät sisäistä tasapainoaan, kuten suola- ja vesitasapainoa, ja reagoivat ympäristöönsä esimerkiksi uimalla ravinnon luo. Lisäksi niiden populaatio on eristyksissä ollessaan kehittynyt evoluution kautta ja sopeutunut oloihinsa.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 7,
+     "prompt": "Pohdi, millaisiin vaikeisiin oloihin jään alla pitkään eläneet eliöt ovat joutuneet sopeutumaan. Käsittele sekä bioottisia että abioottisia tekijöitä.",
+     "hints": [
+      "Määrittele ensin abioottiset ja bioottiset tekijät. Mieti sitten jääluolan joen oloja: valo, lämpötila, paine, suolaisuus, virtaus, ravinto ja muut eliöt.",
+      "Abioottiset: ei valoa → ei yhteyttäviä tuottajia ja luultavasti vähän happea; kylmä (entsyymit toimivat matalassa lämpötilassa); yli 500 metrin syvyydessä suuri paine; merivesi ja sulamisvesi → suolapitoisuus vaihtelee (homeostaasi); virtaava vesi. Bioottiset: niukka ravinto ja kova kilpailu, kemosynteettiset perustuottajat, eristyneisyys → vähäinen geneettinen monimuotoisuus ja sisäsiitos."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Abioottisia eli elottomia tekijöitä ovat esimerkiksi lämpötila, valo, paine, suolaisuus ja ravinteet.\n- Bioottiset tekijät ovat elollisia tekijöitä, kuten ravinnon saatavuus ja vuorovaikutus muiden eliöiden kanssa.\n- Valoa ei ole, joten yhteyttäviä perustuottajia, kuten kasviplanktonia, ei ole ravinnoksi, ja happea on luultavasti vähemmän kuin tavallisesti.\n- Perustuottajina voivat toimia kemosynteettiset eliöt.\n- Karussa jääluolassa ravintoa on vaikea löytää, joten kilpailu ravinnosta on kovaa.\n- Virtaavassa vedessä paikallaan pysyminen on vaikeaa.\n- Pitkä eristyneisyys vähentää geneettistä monimuotoisuutta ja lisää sisäsiitoksen riskiä.\n- Eliöt elävät yli 500 metrin syvyydessä, joten ne ovat sopeutuneet suureen paineeseen.\n- Vesi on hyvin kylmää, joten eliöiden entsyymit toimivat parhaiten matalassa lämpötilassa.\n- Sisäisen tasapainon (homeostaasin) ylläpito on vaikeaa, kun vedessä sekoittuu suolaista merivettä ja makeaa jään sulamisvettä.\n\n**Esimerkkivastaus:** Jään alla elävien eliöiden ympäristö on äärimmäinen sekä abioottisten eli elottomien että bioottisten eli elollisten tekijöiden osalta. Paksu jää estää valon pääsyn, joten yhteyttäviä leviä ei ole, eikä ravintoketju voi perustua fotosynteesiin. Energia on peräisin muualta kulkeutuneesta orgaanisesta aineksesta tai kemosynteettisistä bakteereista, ja happea on todennäköisesti niukasti. Vesi on lähellä jäätymispistettä, joten katkojen entsyymien on toimittava kylmässä. Yli 500 metrin jää ja vesi aiheuttavat suuren paineen. Joessa sekoittuu suolaista merivettä ja makeaa sulamisvettä, joten katkojen on säädeltävä jatkuvasti suola- ja vesitasapainoaan. Virtaava vesi voi huuhtoa eliöt mukanaan. Bioottisista tekijöistä tärkein on ravinnon niukkuus, joka tekee kilpailusta kovaa. Lisäksi populaatio on ollut pitkään eristyksissä, joten sen geneettinen monimuotoisuus on vähäistä ja sisäsiitoksen riski suuri.\n\n**Sudenkuoppa:** hyvä vastaus käsittelee sekä abioottisia että bioottisia tekijöitä. Pelkkä kylmyyden ja pimeyden kuvaus jää vajaaksi.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 8,
+     "prompt": "Syanobakteerien massaesiintymät ovat rehevöitymisen näkyvin merkki. Pohdi, millaisia muita muutoksia rehevöityminen aiheuttaa järvissä.",
+     "hints": [
+      "Aloita määritelmästä (ravinteet lisääntyvät → perustuotanto kasvaa). Seuraa sitten muutosketjuja: valo ja kasvillisuus, hajotus ja happi, pohjan ravinteet ja kalasto.",
+      "Vesi samenee → uposkasvit vähenevät, rantakasvillisuus rehevöityy. Kuollutta ainesta on enemmän → hajottajat kuluttavat happea → pohjalle syntyy happikato → pohjasta vapautuu fosfaattia (sisäinen kuormitus) → kalakuolemia, särkikalat runsastuvat ja lohikalat taantuvat, lajisto yksipuolistuu."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Rehevöitymisellä tarkoitetaan perustuotannon kasvua, jonka aiheuttaa ravinteiden, erityisesti typen ja fosforin, lisääntyminen.\n- Vesi samenee, ja kun valoa on vähemmän, osa uposkasveista vähenee.\n- Ravinteiden lisääntyessä rantakasvillisuus runsastuu.\n- Kuolleen orgaanisen aineksen määrä kasvaa, ja hajottajia on enemmän.\n- Hajotus kuluttaa happea, mikä voi johtaa happikatoon.\n- Hapettomissa oloissa pohjasedimentistä vapautuu fosfaattia, mikä kiihdyttää rehevöitymistä.\n- Happikato voi aiheuttaa kalakuolemia ja yksipuolistaa lajistoa.\n- Kalastossa särkikalojen osuus kasvaa ja lohikalat vähenevät.\n- Yleistyvät lajit ovat niitä, jotka sietävät sameaa vettä ja runsasravinteisia oloja.\n\n**Esimerkkivastaus:** Rehevöityminen tarkoittaa, että järveen tulee tavallista enemmän ravinteita, etenkin fosforia ja typpeä, jolloin perustuotanto kasvaa. Kasviplanktonin runsastuminen samentaa veden, joten valo ei enää ulotu syvälle, ja pohjan uposkasvit, kuten näkinsammalet, vähenevät. Rannoilla ruovikot ja muu vesikasvillisuus sen sijaan leviävät. Kun kasviplanktonia ja kasveja kuolee enemmän, pohjalle kertyy paljon orgaanista ainesta. Sitä hajottavat bakteerit kuluttavat happea, ja erityisesti talvella jään alla tai kesän kerrostuneisuuden aikana pohjalle voi syntyä happikato. Hapettomissa oloissa pohjasedimentistä liukenee fosfaattia takaisin veteen, mikä ruokkii rehevöitymistä entisestään. Happikato voi tappaa kaloja ja pohjaeläimiä. Kalastossa särkikalat, kuten särki ja lahna, runsastuvat, kun taas kirkasta ja hapekasta vettä vaativat lohikalat, kuten muikku, taantuvat, ja koko lajisto yksipuolistuu.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 8,
+     "prompt": "Littoistenjärveen lisättiin vuonna 2017 polyalumiinikloridia, joka saostaa fosforia, koska järvessä oli joka vuosi syanobakteerien massaesiintymiä. Kemikaalikäsittely on yleensä viimeinen keino. Pohdi, millä muilla keinoilla syanobakteerien massaesiintymiä voitaisiin ehkäistä.",
+     "hints": [
+      "Jaa keinot kahteen ryhmään: ulkoisen kuormituksen vähentäminen valuma-alueella (piste- ja hajakuormitus, kaukokulkeuma) ja järvessä tehtävät kunnostuskeinot.",
+      "Valuma-alueella: jätevesien puhdistus, suojavyöhykkeet peltojen ja vesistöjen välissä, oikea lannoitusmäärä ja -ajoitus, lannan multaus heti levityksen jälkeen, kipsin tai kalkin levitys pelloille (sitoo fosforia). Järvessä: vesikasvien niitto ja poisto, hoitokalastus (pohjaa pöllyttäviä särkikaloja pois) ja ruoppaus."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Järven ravinteet tulevat ulkoisesta kuormituksesta: pistekuormituksesta (taajamat, teollisuus), hajakuormituksesta (maa- ja metsätalous) ja kaukokulkeumasta.\n- Tärkein keino on pienentää valuma-alueen ravinnevirtaa järveen, esimerkiksi puhdistamalla jätevedet tehokkaammin.\n- Suojavyöhykkeet jokien ja peltojen välissä vähentävät ravinteiden pääsyä vesistöön, koska niiden kasvillisuus sitoo ravinteita.\n- Kun lannoitetaan maltillisesti kasvukauden aikana ja lanta mullataan saman tien, pelloilta huuhtoutuu vähemmän ravinteita.\n- Pelloille levitetty kipsi tai kalkki vähentää fosforin valumista vesistöihin.\n- Järvessä jo olevia ravinteita voidaan vähentää poistamalla vesikasvillisuutta.\n- Hoitokalastuksessa poistetaan pohjaa pöllyttäviä kaloja.\n- Ruoppaamalla pohjasta saadaan pois ravinteikasta lietettä.\n\n**Esimerkkivastaus:** Syanobakteerien massaesiintymät johtuvat ravinteiden, etenkin fosforin, runsaudesta, joten tärkeintä on vähentää järveen tulevaa kuormitusta. Pistekuormitusta voidaan vähentää puhdistamalla asutuksen ja teollisuuden jätevedet tehokkaasti ja liittämällä haja-asutus viemäriverkkoon. Maatalouden hajakuormitusta vähentävät lannoituksen mitoittaminen kasvien tarpeen mukaan, lannoitus kasvukaudella eikä syksyllä, lannan multaaminen heti sekä peltojen ja purojen väliin jätettävät suojavyöhykkeet, joiden kasvit sitovat ravinteita. Peltoihin levitettävä kipsi tai kalkki sitoo fosforia maahan. Järvessä voidaan poistaa ravinteita keräämällä pois niitettyä vesikasvillisuutta ja kalastamalla pois särkikaloja, jotka pöllyttävät pohjaa ja vapauttavat ravinteita. Ruoppaamalla voidaan poistaa pohjaan kertynyttä ravinteikasta lietettä.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Syanobakteerien massaesiintymää kutsutaan arkikielessä sinileväkukinnaksi. Selitä, mikä termissä on biologisesti väärin.",
+     "hints": [
+      "Termissä on kaksi harhaanjohtavaa sanaa: levä ja kukinta. Mitä eliöitä syanobakteerit ovat, ja millä eliöillä on kukkia? Miten syanobakteerit lisääntyvät?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Syanobakteerit (vanha nimi sinilevät) ovat esitumallisia bakteereja, eivät leviä.\n- Syanobakteerit eivät kuki, koska kukka on siemenkasvien lisääntymiselin.\n- Syanobakteerit monistuvat yleensä suvuttomasti solunjakautumisella.\n\n**Esimerkkivastaus:** Syanobakteerit eli entiset sinilevät ovat esitumallisia bakteereja, joilla ei ole tumaa eikä kalvorakenteisia soluelimiä, joten ne eivät ole leviä, jotka ovat aitotumallisia. Myöskään kukinta ei ole oikea termi, sillä kukka on siemenkasvien lisääntymiselin. Syanobakteerit lisääntyvät suvuttomasti jakautumalla, ja massaesiintymässä niiden määrä kasvaa lyhyessä ajassa valtavasti.",
+     "answer": "syanobakteerit ovat bakteereja eivätkä leviä, eivätkä ne kuki (kukka on siemenkasvien lisääntymiselin); ne lisääntyvät jakautumalla",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Ympäristö-DNA (eDNA) on DNA:ta, jota eliöt jättävät ympäristöönsä esimerkiksi eritteissä, hilseessä, karvoissa, raadoissa ja kuolleissa kasvinosissa. Sitä tutkimalla selviää, mitä lajeja elinympäristössä on. Aineisto 11.A kertoo ilmanäytteistä tunnistetuista eläintarhan lajeista ja 11.B eDNA:n käytöstä ympäristön tilan seurannassa.",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 12,
+     "prompt": "Selitä, mitä työvaiheita ympäristö-DNA-näytteen tutkimiseen kuuluu. Käytä käsitteitä DNA:n eristäminen, polymeraasiketjureaktio, sekvensoiminen ja geenitietokanta.",
+     "hints": [
+      "Etene näytteestä tulokseen: näytteenotto → DNA:n eristäminen → monistus PCR:llä → sekvensointi → vertailu tietokantaan. Täysiin pisteisiin kaikki neljä käsitettä on käsiteltävä.",
+      "Näytteenotossa vältetään kontaminaatiota ja säilytetään näyte oikein. Eristyksessä solut rikotaan, proteiinit ja hiilihydraatit poistetaan ja DNA saostetaan alkoholilla. PCR tarvitsee alukkeet, DNA-polymeraasin ja vapaat nukleotidit, ja lämpötilaa vaihdellaan jaksoittain. Sekvensoinnissa luetaan emäsjärjestys (esim. rinnakkaissekvensointi tai Sangerin menetelmä). Lopuksi sekvenssejä verrataan tietokannan tunnettuihin sekvensseihin, ja laji tunnistetaan."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Tutkittavasta elinympäristöstä kerätään näytteitä, esimerkiksi maata, vettä tai ilmaa.\n- Näytteet on suojattava kontaminaatiolta, ja ne on kuljetettava ja säilytettävä oikeissa oloissa.\n- **DNA:n eristäminen** tehdään laboratoriossa: solut rikotaan, hiilihydraatit ja proteiinit poistetaan ja DNA saostetaan alkoholilla.\n- Eristetty DNA monistetaan **polymeraasiketjureaktiolla** (PCR).\n- PCR:ssä tarvitaan alukkeita, DNA-polymeraasia ja vapaita nukleotideja, ja DNA monistuu, kun PCR-laite vaihtelee lämpötilaa jaksoittain.\n- Monistetun DNA:n emäsjärjestys luetaan eli **sekvensoidaan**, nykyään yleensä automaattisilla laitteilla, ja sekvensointi voidaan yhdistää PCR:ään.\n- Menetelmiä ovat esimerkiksi rinnakkaissekvensointi ja satunnaissekvensointi. Vanhemmassa Sangerin menetelmässä muokatut nukleotidit katkaisevat ketjun sattumanvaraisiin kohtiin, palat erotellaan koon mukaan ja emäkset tunnistetaan fluoresoivista väreistä.\n- Laji tunnistetaan vertaamalla saatua emäsjärjestystä **geenitietokantojen** (sekvenssitietokantojen) tunnettuihin sekvensseihin.\n\n**Esimerkkivastaus:** Ensin tutkittavasta ympäristöstä kerätään näyte, esimerkiksi litroja järvivettä, maata, lunta tai ilmaa. Näytteenotossa käytetään puhtaita välineitä, jotta näytteeseen ei päädy tutkijan tai muiden lähteiden DNA:ta, ja näyte säilytetään kylmässä. Laboratoriossa näytteestä eristetään DNA: solut ja kudoskappaleet rikotaan, proteiinit ja hiilihydraatit poistetaan, ja DNA saostetaan alkoholin avulla. Koska DNA:ta on näytteessä hyvin vähän, se monistetaan polymeraasiketjureaktiolla. PCR-laitteessa näytteeseen lisätään alukkeita, jotka tunnistavat tietyn lajiryhmälle tyypillisen geenijakson, sekä DNA-polymeraasia ja vapaita nukleotideja. Lämpötilaa vaihdellaan jaksoittain, jolloin juosteet erkanevat, alukkeet kiinnittyvät ja polymeraasi rakentaa uudet juosteet, ja jokaisella kierroksella jakso kahdentuu. Monistetun DNA:n emäsjärjestys selvitetään sekvensoimalla, yleensä rinnakkaissekvensoinnilla, jolla voidaan lukea samanaikaisesti miljoonia eri lajeista peräisin olevia jaksoja. Lopuksi saatuja sekvenssejä verrataan geenitietokantoihin, joissa on tunnettujen lajien sekvenssejä, ja näin selviää, minkä lajien DNA:ta näytteessä oli.\n\n**Sudenkuoppa:** täysiin pisteisiin vaaditaan kaikki neljä annettua käsitettä. Geenitietokanta unohtuu helposti, vaikka laji tunnistetaan juuri sen avulla.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 8,
+     "prompt": "Pohdi, mitä hyötyä eDNA:sta on lajintunnistusta vaativissa tutkimuksissa, kuten luonnon monimuotoisuuden kartoituksessa ja ympäristön tilan seurannassa eli biomonitoroinnissa.",
+     "hints": [
+      "Vertaa perinteisiin menetelmiin (näkö- ja jälkihavainnot, näytteiden tunnistaminen mikroskoopilla): mitä niissä jää huomaamatta, ja mikä on vaikeaa, hidasta tai kallista?",
+      "Etuja: löytää piileskelevät, yöaktiiviset ja mikroskooppiset lajit; hilse tai karva riittää; vaikeasti erotettavat lajit tunnistetaan varmemmin; vieraslajit havaitaan aikaisin; alueella käyneet tai jo kadonneet lajit näkyvät; menetelmä on nopeampi ja usein edullisempi, joten esimerkiksi ilmastonmuutoksen aiheuttamat lajistomuutokset huomataan nopeasti; saadaan tietoa lajimäärästä, ravintoverkoista ja lajinsisäisestä geneettisestä monimuotoisuudesta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Ympäristöstä voidaan tunnistaa lajeja, joita ei havaittaisi silmällä, esimerkiksi yöllä liikkuvia tai niin pieniä, että ne vaatisivat mikroskopointia.\n- Tunnistukseen voi riittää hilse tai muu pieni kappale, josta lajia ei perinteisin menetelmin voisi määrittää.\n- Vaikeasti tunnistettavat lajit saadaan määritettyä DNA:n avulla varmemmin kuin ulkoisten tuntomerkkien perusteella.\n- Uudet lajit, kuten vieraslajit, voidaan huomata aiemmin kuin silmämääräisesti.\n- Voidaan havaita alueella vain käyneet lajit tai sieltä jo kadonneet lajit.\n- Tunnistus voi olla nopeampaa ja edullisempaa kuin perinteisesti.\n- Esimerkiksi ilmastonmuutoksen aiheuttamat lajistomuutokset voidaan havaita nopeammin.\n- Menetelmä kertoo myös lajimonimuotoisuudesta, ravintoverkoista ja lajien välisistä vuorovaikutuksista, ja sillä voidaan arvioida lajinsisäistä geneettistä monimuotoisuutta.\n\n**Esimerkkivastaus:** Perinteinen lajiseuranta perustuu siihen, että tutkija näkee eliön tai sen jäljet tai pyydystää sen ja tunnistaa sen tuntomerkeistä. Se on hidasta ja vaatii asiantuntijoita, ja monet lajit jäävät huomaamatta. Ympäristö-DNA:n avulla voidaan havaita myös arkoja, yöaktiivisia ja hyvin pieniä eliöitä, sillä tunnistamiseen riittävät vedessä tai ilmassa leijuvat solut, karvat tai hilse. DNA erottaa myös lajeja, jotka näyttävät lähes samanlaisilta, esimerkiksi hyönteisten toukkia. Koska yhdestä vesinäytteestä saadaan kerralla kymmenien lajien tiedot, seuranta on nopeampaa ja usein halvempaa. Siksi vieraslajien saapuminen, uhanalaisten lajien esiintyminen ja ilmastonmuutoksen aiheuttamat muutokset lajistossa huomataan varhain. Näytteestä voi näkyä myös laji, joka on vain käynyt alueella. Lisäksi DNA-aineisto kertoo lajimäärästä, ravintoverkoista ja lajinsisäisestä geneettisestä vaihtelusta.",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

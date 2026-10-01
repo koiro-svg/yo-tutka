@@ -1,0 +1,411 @@
+{
+ "subject": "biologia",
+ "session": "2024K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2024/kevat/biologia/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2024-03-27_BI_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: pakollinen tehtävä",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Vastaa tehtävään 1 (20 p). Kohdissa 1.1.1–1.1.5 väärästä vastauksesta −1 p."
+   },
+   {
+    "title": "Osa 2: 15 pisteen tehtävät",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään tehtävään. Kohdissa 2.1 ja 2.2 väärästä vastauksesta −1 p."
+   },
+   {
+    "title": "Osa 3: 20 pisteen tehtävät",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen tehtävään. Kokeen maksimi 120 p."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Neljä viiden kohdan sarjaa, 1 p/kohta (vaihtoehdot ks. alkuperäinen koe).\n\n- **1.1:** onko siirtyminen solukalvon läpi aktiivista (vaatii ATP:tä) vai passiivista kuljetusta? Tapahtumat: valkosolu nielee bakteerin, etanoli pääsee hermosoluun, kaliumioni pumpataan soluun, vesi siirtyy maasta juurisoluun ja happi siirtyy keuhkorakkulasta hiussuoneen. Väärä vastaus −1 p.\n- **1.2:** yhdistä viiteen perinnöllisyyden kuvaukseen sopiva käsite yhdeksästä (mm. alleelipari, heterotsygootti, lokus, resessiivinen, yhteisvallitseva).\n- **1.3:** valitse ympäristömyrkky (DDT, elohopea, lyijy, PCB tai rikkidioksidi), joka sopii kuvaukseen sen vaikutuksista.\n- **1.4:** valitse bakteeriryhmä, joka sopii kuvaukseen (geeninsiirto kasveihin, hapatetut elintarvikkeet, K-vitamiini, hapen tuotanto, antibioottien kestävyys).",
+     "hints": [
+      "Passiivinen kuljetus tapahtuu pitoisuuseron suuntaan ilman ATP:tä (diffuusio, osmoosi), aktiivinen vaatii pumpun tai solukalvon muodonmuutoksen. Muissa sarjoissa etsi kuvauksesta avainsana: paikka, vallitsevuussuhde, kuolleisuus, montako muotoa; rikastuminen, hyönteismyrkky, hermosto, happamoituminen; geeninsiirto, hapatus, vitamiini, happi, antibiootit.",
+      "Kohta kohdalta:\n- 1.1: solusyönti muokkaa solukalvoa ja pumppu kuluttaa ATP:tä. Pienet rasvaliukoiset molekyylit, kaasut ja vesi kulkevat itsestään.\n- 1.2: sijaintikohdalla on oma terminsä; ominaisuus näkyy vain kahtena kopiona; kaksi alleelia näkyy yhtä aikaa; populaatiossa on enemmän kuin kaksi muotoa.\n- 1.3: metyloituva raskasmetalli, kielletty hyönteismyrkky, entinen bensiinin lisäaine, rasvaliukoinen teollisuuskemikaali, happosateen aiheuttaja.\n- 1.4: kasvien geeninsiirron apuväline, hapatus, paksusuolen bakteeristo, happea tuottava fotosynteesi, sairaaloissa leviävä resistenssi."
+     ],
+     "solution": "Vaihtoehtojen kirjaimet vastaavat järjestystä alkuperäisessä koenäkymässä (A = ylin).\n\n**1.1 Kuljetus solukalvon läpi** (A = aktiivinen, B = passiivinen)\n\n- **1.1.1 A, aktiivinen:** solusyönti (fagosytoosi) vaatii solukalvon ja tukirangan muokkaamista, mikä kuluttaa energiaa.\n- **1.1.2 B, passiivinen:** pieni etanolimolekyyli diffundoituu solukalvon läpi.\n- **1.1.3 A, aktiivinen:** ionipumppu kuljettaa kaliumia pitoisuuseroa vastaan ATP:n energialla.\n- **1.1.4 B, passiivinen:** vesi siirtyy juurisoluun osmoosilla.\n- **1.1.5 B, passiivinen:** happi diffundoituu suuremmasta osapaineesta pienempään.\n\n**1.2 Perinnöllisyyden käsitteet**\n\n- **1.2.1 F, lokus:** geenin paikka kromosomissa.\n- **1.2.2 H, resessiivinen:** alleelin vaikutus näkyy vain, kun yksilöllä on se kahtena kopiona.\n- **1.2.3 E, letaalialleeli:** alleeli, joka lisää kuolleisuutta huomattavasti.\n- **1.2.4 I, yhteisvallitseva:** kumpikin alleeli näkyy ilmiasussa itsenäisesti (esim. veriryhmä AB).\n- **1.2.5 G, multippeli alleeli:** geenistä on populaatiossa useampia kuin kaksi muotoa.\n\n**1.3 Ympäristömyrkyt**\n\n- **1.3.1 B, elohopea:** metyylielohopeana se kertyy kaloihin ja rikastuu ravintoketjussa kalaa syöviin lintuihin.\n- **1.3.2 A, DDT:** laajavaikutteinen hyönteismyrkky, jonka käyttö on kielletty Euroopassa.\n- **1.3.3 C, lyijy:** päätyi ympäristöön aikoinaan bensiinistä ja vaurioittaa hermostoa.\n- **1.3.4 D, PCB:** rasvaliukoinen ja hitaasti hajoava yhdiste, joka kertyy ravintoketjun huipulle ja aiheuttaa kehityshäiriöitä. YTL hyväksyi myös DDT:n (A), koska kuvaus sopii siihenkin.\n- **1.3.5 E, rikkidioksidi:** kulkeutuu ilmassa ja happamoittaa laskeumaa.\n\n**1.4 Bakteeriryhmät**\n\n- **1.4.1 A, agrobakteerit:** niiden plasmidin avulla geenejä siirretään kasveihin.\n- **1.4.2 B, maitohappobakteerit:** hapattavat esimerkiksi jogurtin ja hapankaalin.\n- **1.4.3 D, suolistobakteerit:** paksusuolen bakteerit tuottavat K-vitamiinia.\n- **1.4.4 E, syanobakteerit:** tekevät happea tuottavaa fotosynteesiä.\n- **1.4.5 C, sairaalabakteerit:** monille antibiooteille vastustuskykyisiä kantoja, jotka leviävät hoitolaitoksissa.\n\n**Sudenkuoppa:** kohdassa 1.1.2 moni vastaa aktiivinen, koska kyse on hermosolusta. Kuljetustapa riippuu kuitenkin molekyylistä: pieni etanoli läpäisee kalvon diffuusiolla.",
+     "answer": "1.1.1 A · 1.1.2 B · 1.1.3 A · 1.1.4 B · 1.1.5 B · 1.2.1 F lokus · 1.2.2 H resessiivinen · 1.2.3 E letaalialleeli · 1.2.4 I yhteisvallitseva · 1.2.5 G multippeli alleeli · 1.3.1 B elohopea · 1.3.2 A DDT · 1.3.3 C lyijy · 1.3.4 D PCB (myös A) · 1.3.5 E rikkidioksidi · 1.4.1 A agrobakteerit · 1.4.2 B maitohappobakteerit · 1.4.3 D suolistobakteerit · 1.4.4 E syanobakteerit · 1.4.5 C sairaalabakteerit",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "2.1",
+     "points": 5,
+     "prompt": "r-strategian lajit ovat yleensä pienikokoisia ja lisääntyvät nopeasti, K-strategian lajit taas suuria ja hitaasti lisääntyviä. Päättele, sopiiko ominaisuus paremmin r- vai K-strategiaan: 2.1.1 jälkeläisistä huolehtiminen, 2.1.2 paljon jälkeläisiä kerralla, 2.1.3 hidas kehittyminen sukukypsäksi, 2.1.4 lisääntyminen vain kerran elämässä ja 2.1.5 pitkä elinikä. Väärä vastaus −1 p.",
+     "hints": [
+      "r-strategisti panostaa määrään: paljon jälkeläisiä, vähän hoivaa, nopea kehitys ja lyhyt elämä. K-strategisti panostaa laatuun: vähän jälkeläisiä, joista pidetään huolta.",
+      "Kohta kohdalta: hoiva vie aikaa ja energiaa, joten kumpi strategia voi panostaa siihen? Suuri jälkeläismäärä kuuluu toiseen strategiaan. Hidas sukukypsyys ja pitkä ikä kuuluvat yhteen. Kerran lisääntyvät lajit (esim. monet hyönteiset ja yksivuotiset kasvit) käyttävät kaiken energiansa yhteen lisääntymiskertaan."
+     ],
+     "solution": "Vaihtoehdot: A = r-strategia, B = K-strategia.\n\n- **2.1.1 K (B):** jälkeläisten hoito on tyypillistä lajeille, joilla jälkeläisiä on vähän ja joiden kunkin jälkeläisen selviytyminen on tärkeää.\n- **2.1.2 r (A):** runsas jälkeläismäärä korvaa sen, että useimmat jälkeläiset kuolevat nuorina.\n- **2.1.3 K (B):** hidas kehitys kuuluu suurikokoisille ja pitkäikäisille lajeille.\n- **2.1.4 r (A):** kertalisääntyjät, kuten monet hyönteiset ja yksivuotiset kasvit, panostavat yhteen suureen lisääntymiskertaan.\n- **2.1.5 K (B):** K-strategistit elävät pitkään ja lisääntyvät useita kertoja.",
+     "answer": "2.1.1 K · 2.1.2 r · 2.1.3 K · 2.1.4 r · 2.1.5 K",
+     "check": "hvp"
+    },
+    {
+     "id": "2.2",
+     "points": 5,
+     "prompt": "Aineiston 2.A kuvaajat esittävät, kuinka suuri osa ikäluokasta on elossa eri iässä (ks. alkuperäinen kuva). Kuvaajassa 1 lähes kaikki yksilöt elävät pitkään ja kuolevat vasta vanhoina, kuvaajassa 2 suurin osa kuolee jo nuorena. Yhdistä aineiston 2.B lajit kuvaajaan 1 tai 2: A hauki, B tunturimittari (aikuinen ja toukka), C tupasvilla, D tunturipöllö ja E ahma. Väärä vastaus −1 p.",
+     "hints": [
+      "Kuvaaja 1 on tyypillinen K-strategisteille (vähän jälkeläisiä, hoivaa, pieni kuolleisuus nuorena) ja kuvaaja 2 r-strategisteille (valtava jälkeläismäärä, suurin osa kuolee nuorena).",
+      "Mieti jokaisesta lajista jälkeläisten määrää ja hoivaa. Hauki kutee kymmeniätuhansia mätimunia. Tunturimittari munii paljon, ja toukat joutuvat pedoille. Tupasvilla tuottaa valtavasti siemeniä. Ahmalla on muutama poikanen, joita emo hoitaa pitkään. Tunturipöllö on välimuoto: se on suuri ja pitkäikäinen lintu, mutta sen poikasmäärä ja poikasten selviytyminen vaihtelevat myyrävuosien mukaan."
+     ],
+     "solution": "- **A hauki → 2:** kala kutee valtavan määrän mätiä eikä hoida poikasiaan, joten valtaosa kuolee munana tai poikasena.\n- **B tunturimittari → 2:** perhonen munii paljon munia, ja suuri osa toukista ja koteloista kuolee.\n- **C tupasvilla → 2:** kasvi tuottaa suuren määrän tuulen levittämiä siemeniä, joista vain harva itää ja kasvaa aikuiseksi.\n- **D tunturipöllö → 1:** suuri ja pitkäikäinen petolintu, joka hoitaa poikasiaan. YTL hyväksyi myös kuvaajan 2, koska huonoina myyrävuosina poikasista suuri osa kuolee.\n- **E ahma → 1:** suuri nisäkäs, jolla on vähän poikasia ja pitkä hoitoaika, joten yksilöt elävät yleensä pitkään.\n\n**Sudenkuoppa:** eloonjäämiskuvaajat kuvaavat kuolleisuutta suhteessa lajin maksimi-ikään, eivät absoluuttista elinikää. Pitkäikäinenkin laji (esim. hauki) voi noudattaa kuvaajaa 2, jos sen poikaskuolleisuus on suuri.",
+     "answer": "A 2 · B 2 · C 2 · D 1 (myös 2 hyväksyttiin) · E 1",
+     "check": "hvp"
+    },
+    {
+     "id": "2.3",
+     "points": 5,
+     "prompt": "Erityisesti selkärankaisilla eliniän ylärajan arvellaan liittyvän kromosomien telomeereihin. Kerro, mitä telomeerit ovat, ja selitä, miten ne voivat vaikuttaa yksilön elinikään.",
+     "hints": [
+      "Missä kohtaa kromosomia telomeeri on ja mitä siinä on, geenejä vai toistojaksoja? Mitä juosteen päälle tapahtuu, kun DNA kahdentuu?",
+      "DNA-polymeraasi ei pysty kopioimaan juosteen päätä loppuun asti, joten telomeeri lyhenee jokaisessa solunjakautumisessa. Telomeeri toimii puskurina, joka suojaa geenejä. Kun se on kulunut liian lyhyeksi, solu ei enää jakaudu normaalisti tai ajautuu apoptoosiin, ja kudokset vanhenevat."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Telomeeri on kromosomin pään alue.\n- Telomeerin DNA on toistuvaa jaksoa, eikä siinä ole geenejä.\n- Kun solu kahdentaa DNA:ta ennen jakautumista, DNA-polymeraasi ei pysty kopioimaan juostetta aivan päähän asti.\n- Siksi telomeeri lyhenee jokaisessa solunjakautumisessa.\n- Telomeeri suojaa kromosomin geenialueita, jotka kopioituvat kokonaan niin kauan kuin telomeeria on jäljellä.\n- Kun telomeeri on lyhentynyt liikaa, geenialueen kopioituminen voi häiriintyä ja solun jakautuminen estyä tai solu ajautuu apoptoosiin.\n- Vähitellen kudokset eivät enää uusiudu, mikä liittyy vanhenemiseen ja yksilön kuolemaan. Telomeerien lyheneminen on yhdistetty myös joihinkin sairauksiin.\n\n**Esimerkkivastaus:** Telomeerit ovat kromosomien päissä olevia toistuvia DNA-jaksoja, joissa ei ole geenejä. Ne suojaavat kromosomin geenejä sisältäviä osia. DNA:n kahdentuessa DNA-polymeraasi ei pysty kopioimaan juosteen loppupäätä kokonaan, joten jokaisessa solunjakautumisessa telomeeri lyhenee hieman. Niin kauan kuin telomeeria on jäljellä, lyheneminen ei haittaa geenejä. Kun telomeeri on kulunut hyvin lyhyeksi, geenialueiden kopioiminen vaarantuu, ja solu lopettaa jakautumisen tai tuhoutuu ohjelmoidusti apoptoosissa. Kun yhä useampi solu menettää jakautumiskykynsä, kudokset eivät enää uusiudu, elimistö vanhenee ja lopulta yksilö kuolee. Tästä syystä telomeerien pituuden ajatellaan asettavan ylärajan eliniälle.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "3.1",
+     "points": 3,
+     "prompt": "Tunnista ja nimeä viherhiukkasen kuvassa 3.A numeroilla 1–3 merkityt osat (ks. alkuperäinen kuva).",
+     "hints": [
+      "Viherhiukkasessa on kolme pääosaa: sitä ympäröivä kalvo (montako kerrosta?), sisällä pinoina olevat litteät kalvopussit ja niiden ympärillä oleva nestemäinen tila. Katso, mihin kukin nuoli osoittaa: reunaan, pinoihin vai väliin jäävään tilaan."
+     ],
+     "solution": "1. **Kaksoiskalvo** eli ulko- ja sisäkalvo (kaksi yksikkökalvoa).\n2. **Tylakoidit** eli yhteyttämiskalvosto (pinoina tylakoidikalvoja).\n3. **Strooma** eli viherhiukkasen nestemäinen välitila.\n\n**Vastaus: 1 kaksoiskalvo, 2 tylakoidit (yhteyttämiskalvosto), 3 strooma (välitila)**",
+     "answer": "1 kaksoiskalvo (ulko- ja sisäkalvo) · 2 tylakoidit · 3 strooma",
+     "check": "hvp"
+    },
+    {
+     "id": "3.2",
+     "points": 7,
+     "prompt": "Selitä lyhyesti, miten ATP:tä muodostuu ja hiilidioksidia sidotaan viherhiukkasessa ja missä viherhiukkasen osassa kumpikin tapahtuu.",
+     "hints": [
+      "Käsittele kaksi vaihetta erikseen, kumpikin 3–4 p: valoreaktiot tylakoidikalvolla ja hiilensidonta stroomassa.",
+      "ATP: valo virittää lehtivihreän → elektroninsiirtoketju pumppaa protoneja tylakoidin sisälle → syntyy protonigradientti → ATP-syntaasi liittää ADP:hen fosfaatin, ja ATP vapautuu stroomaan. Hiilidioksidi: Calvinin kierrossa RuBisCO-entsyymi liittää hiilidioksidin orgaaniseen yhdisteeseen, ja ATP:n ja NADPH:n avulla syntyy sokeria."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **ATP:n muodostus** tapahtuu tylakoidikalvolla fotosynteesin valoreaktioissa.\n- Valo virittää tylakoidikalvon lehtivihreämolekyylit, ja viritystilan energia siirtyy elektroninsiirtoketjuun.\n- Ketjun toiminta pumppaa protoneja tylakoidin sisätilaan, jolloin tylakoidin sisäosan ja strooman välille syntyy protonigradientti.\n- Protonit virtaavat takaisin tylakoidikalvon ATP-syntaasin (ATPaasin) läpi, ja entsyymi liittää ADP:hen fosfaattiryhmän.\n- Syntynyt ATP vapautuu stroomaan.\n- **Hiilidioksidin sidonta** tapahtuu stroomassa hiilensidontareaktioissa (Calvinin kierto, entinen nimi pimeäreaktiot).\n- RuBisCO-entsyymi liittää hiilidioksidin orgaaniseen yhdisteeseen.\n- Valoreaktioissa syntyneiden ATP:n ja NADPH:n avulla sidotusta hiilestä muodostuu lopulta glukoosia.\n\n**Esimerkkivastaus:** ATP:tä muodostuu valoreaktioissa viherhiukkasen tylakoidikalvoilla. Valo virittää kalvoissa olevan lehtivihreän, ja virittyneet elektronit kulkevat elektroninsiirtoketjussa. Samalla protoneja siirtyy stroomasta tylakoidin sisälle, ja kalvon eri puolille muodostuu protonigradientti. Protonit palaavat stroomaan kalvon ATP-syntaasin kautta, ja entsyymi käyttää niiden liikkeen energiaa liittääkseen fosfaatin ADP:hen. Hiilidioksidi sidotaan stroomassa Calvinin kierrossa. Siinä RuBisCO-entsyymi liittää hiilidioksidimolekyylin viisihiiliseen sokeriin, ja valoreaktioissa syntyneiden ATP:n ja NADPH:n avulla syntyvistä yhdisteistä muodostetaan glukoosia.\n\n**Sudenkuoppa:** pelkkä maininta, että ATP syntyy valoreaktioissa ja hiili sidotaan pimeäreaktioissa, ei riitä. Tehtävä kysyy sekä tapahtumapaikkaa että mekanismia.",
+     "check": "hvp"
+    },
+    {
+     "id": "3.3",
+     "points": 5,
+     "prompt": "Vesirutto (*Elodea canadensis*) on uposkasvi, joka kasvaa lähellä vedenpintaa ja runsastuu rehevöityneissä järvissä. Pohdi, mitkä elottomat tekijät tekevät sen nopean fotosynteesin ja kasvun mahdolliseksi.",
+     "hints": [
+      "Käy läpi elottomat tekijät: valo, hiilidioksidi, ravinteet, lämpötila, veden liike ja pH. Mieti, miten rehevöityminen ja kasvupaikka lähellä pintaa vaikuttavat kuhunkin.",
+      "Samea vesi päästää valoa vain pintakerrokseen, mutta vesirutto kasvaa juuri siellä. Rehevässä järvessä on paljon hiilidioksidia sekä typpeä ja fosforia (ulkoinen ja sisäinen kuormitus), joita tarvitaan proteiineihin, nukleiinihappoihin ja lehtivihreään. Pintavesi lämpenee kesällä, ja järvessä virtaus on heikko."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Rehevöityneen järven vesi on sameaa, joten valoa riittää vain pintakerrokseen, mutta vesirutto kasvaa juuri pinnan lähellä.\n- Rehevässä järvessä on runsaasti hiilidioksidia, mikä tehostaa fotosynteesiä.\n- Järveen tulee ravinteita valumavesistä (ulkoinen kuormitus) ja pohjasta (sisäinen kuormitus).\n- Tärkeimpiä ovat pääravinteet, erityisesti typpi ja fosfori.\n- Niitä tarvitaan esimerkiksi proteiinien, nukleiinihappojen, lehtivihreän ja kalvolipidien rakentamiseen.\n- Aurinko lämmittää pintavettä, mikä nopeuttaa fotosynteesiä ja kasvua.\n- Järvessä virtaus on heikko ja olosuhteet tasaiset, ja sopiva pH edistää kasvua.\n\n**Esimerkkivastaus:** Rehevöityneen järven vesi on leväkasvuston ja humuksen takia sameaa, joten valoa riittää lähinnä pintakerrokseen. Vesirutto kasvaa juuri pinnan lähellä, joten se saa valoa hyvin. Rehevässä järvessä on myös runsaasti hiilidioksidia, jota kasvi sitoo fotosynteesissä. Pelloilta ja asutuksesta huuhtoutuu järveen typpeä ja fosforia, ja pohjasedimentistä vapautuu lisää ravinteita. Niiden avulla vesirutto rakentaa proteiineja, nukleiinihappoja ja lehtivihreää ja pystyy kasvamaan nopeasti. Lisäksi aurinko lämmittää pintaveden kesällä, mikä nopeuttaa entsyymien toimintaa, ja järvessä veden liike on vähäistä, joten kasvusto pysyy paikallaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 10,
+     "prompt": "Kuvassa 4.A on Havaijin saarilla eläviä peippolajeja eli havaijinpeippoja. Ne ovat kehittyneet kantamuodosta (kuvan laji 1), joka saapui saarille yli viisi miljoonaa vuotta sitten, ja lajit 2–27 eroavat toisistaan esimerkiksi nokan muodoltaan. Pohdi, mitkä elinympäristön piirteet selittävät, miksi yhdestä kantamuodosta syntyi näin monta erilaista lajia.",
+     "hints": [
+      "Käytä käsitettä sopeutumislevittäytyminen (adaptiivinen radiaatio). Mieti, millainen ympäristö saarilla oli kantamuodon saapuessa: kilpailijat, vapaat ravintolähteet ja toisistaan erillään olevat saaret.",
+      "Avainaskeleet: vähän kilpailijoita → vapaita ekolokeroita → erikoistuminen eri ravintoon näkyy nokissa (siemensyöjän paksu nokka → hyönteissyöjän hento nokka, medensyöjän pitkä käyrä nokka ja koevoluutio kukkien kanssa) → luonnonvalinta suosii eri piirteitä eri ympäristöissä → kilpailu vähenee ja geenivirta populaatioiden välillä heikkenee (eri saaret, erilaiset olot) → mikroevoluutio → lajiutuminen. Mainitse myös väritys ja aistit."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Kyse on sopeutumislevittäytymisestä eli adaptiivisesta radiaatiosta: peipot levisivät saariston eri osiin ja lajiutuivat nopeasti.\n- Kantamuoto saapui uuteen ympäristöön, jossa oli vain vähän kilpailijoita.\n- Peipot pystyivät siksi ottamaan käyttöön ravintoa ja elinympäristöjä, joita niiden mantereella elävät sukulaiset eivät juuri käytä.\n- Eri elinympäristöissä parhaan kelpoisuuden antoivat eri ominaisuudet.\n- Mantereen peipot syövät pääasiassa siemeniä, joten kantamuodolla oli todennäköisesti paksu siemensyöjän nokka.\n- Osasta lajeista kehittyi hyönteissyöjiä, joilla on ohut ja hento nokka, ja osasta medensyöjiä, joiden pitkä ja usein kaareva nokka ylettyy kukan pohjalle.\n- Mettä syövien peippojen ja saarten kukkakasvien välillä on tapahtunut koevoluutiota: kukkien muodot ja nokkien muodot ovat sopeutuneet toisiinsa.\n- Erikoistuminen vähensi lajien välistä kilpailua ravinnosta.\n- Elinympäristöjen erot ovat vaikuttaneet myös höyhenpuvun väritykseen, ruoansulatukseen ja aisteihin.\n- Saaret ovat erikokoisia ja olosuhteiltaan erilaisia, joten eri saarilla on hyötyä eri ominaisuuksista.\n- Erikoistuneiden populaatioiden välinen geenivirta heikkeni, mikä johti mikroevoluutioon ja lopulta lajiutumiseen.\n\n**Esimerkkivastaus:** Havaijinpeippojen monimuotoisuus on esimerkki sopeutumislevittäytymisestä. Kun kantamuoto saapui syrjäisille saarille, siellä oli vain vähän muita lintuja, joten tarjolla oli paljon käyttämättömiä ravintolähteitä ja elinympäristöjä. Kantamuoto oli todennäköisesti siemensyöjä, jolla oli paksu nokka. Populaatioiden levitessä eri saarille ja eri elinympäristöihin luonnonvalinta suosi eri paikoissa erilaisia ominaisuuksia. Hyönteisiä syövillä kehittyi ohut ja terävä nokka, mettä syövillä pitkä ja kaareva nokka, joka ulottuu syvälle kukkaan. Medensyöjien ja kasvien välillä tapahtui koevoluutiota, kun kukkien ja nokkien muodot sopeutuivat toisiinsa. Erikoistuminen eri ravintoon vähensi kilpailua. Eri saarten ja elinympäristöjen olosuhteet vaikuttivat myös höyhenpuvun väriin, ruoansulatukseen ja aisteihin. Koska saaret ovat erillään ja populaatiot erikoistuivat eri ympäristöihin, niiden välinen geenivirta heikkeni. Erot kasvoivat mikroevoluution kautta, kunnes populaatiot eivät enää risteytyneet keskenään, eli ne olivat lajiutuneet.\n\n**Sudenkuoppa:** pelkkä nokkien kuvailu ei riitä. Tehtävä kysyy elinympäristön tekijöitä, kuten kilpailun puutetta, vapaita ekolokeroita ja saarten eristyneisyyttä.",
+     "check": "hvp"
+    },
+    {
+     "id": "4.2",
+     "points": 5,
+     "prompt": "Monet havaijinpeipot ovat uhanalaisia tai jo hävinneet, kuten monet muutkin valtamerten saarten lajit ihmisen saavuttua saarille. Arvioi, miksi saarten alkuperäislajit kuolevat sukupuuttoon herkemmin kuin mantereen lajit.",
+     "hints": [
+      "Mieti kahta asiaa: saarten pieni koko (elinympäristöt, populaatiot, kotoperäisyys) ja se, millaisiksi lajit ovat kehittyneet ilman kilpailijoita ja petoja.",
+      "Kotoperäinen laji häviää kokonaan, kun se häviää yhdeltä saarelta. Pienissä populaatioissa geneettistä vaihtelua on vähän, eikä pakopaikkoja ole. Ilman petoja kehittyneet lajit voivat olla pelottomia tai lentokyvyttömiä, ne lisääntyvät hitaasti eivätkä kestä ihmisen tuomia vieraslajeja (rotat, kissat) ja tauteja. Merenpinnan nousu uhkaa matalia saaria."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Monet saarten lajit ovat kotoperäisiä (endeemisiä), joten häviäminen yhdeltä saarelta voi merkitä koko lajin sukupuuttoa.\n- Saaret ovat pieniä, joten sopivaa elinympäristöä ja populaatioita on vähän.\n- Saarten populaatiot ovat yleensä pienempiä kuin mantereen sukulaislajien, ja suppea geenivarasto lisää sukupuuton riskiä.\n- Rajallisella saarella eläimet eivät pääse pakoon ihmisen aiheuttamia muutoksia.\n- Vähäisen kilpailun ja petojen puutteen vuoksi lajeille on kehittynyt piirteitä, jotka tekevät niistä alttiita ihmiselle ja vieraslajeille: esimerkiksi osa linnuista on menettänyt lentokykynsä, ja monet ovat pelottomia.\n- Saarilajit saavat usein vähemmän jälkeläisiä kuin mantereen sukulaisensa.\n- Niillä voi olla heikko vastustuskyky ulkopuolelta tuotuja tauteja vastaan.\n- Merenpinnan nousu uhkaa matalien saarten lajeja.\n\n**Esimerkkivastaus:** Valtamerten saarten lajit ovat usein kotoperäisiä, eli niitä ei ole missään muualla. Saaret ovat pieniä, joten lajien populaatiot ovat pieniä ja geneettinen vaihtelu vähäistä, eikä eläimillä ole minne paeta, kun ihminen raivaa elinympäristöjä. Koska saarilla ei ollut petoja eikä paljon kilpailijoita, monet lajit kehittyivät pelottomiksi, maassa pesiviksi tai jopa lentokyvyttömiksi, ja ne lisääntyvät hitaasti. Ihmisen mukana saarille tulleet rotat, kissat ja siat saalistivat helposti tällaisia lajeja ja niiden munia. Ihminen toi myös tauteja, esimerkiksi Havaijilla hyttysten levittämää lintumalariaa, jota vastaan saarten linnuilla ei ollut vastustuskykyä. Lisäksi ilmastonmuutoksen aiheuttama merenpinnan nousu voi hävittää matalien saarten elinympäristöjä.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Suurin osa maailman tavarakuljetuksista kulkee meriteitse. Pohdi laivojen ja laivaliikenteen vaikutuksia ympäristöön ja merieliöihin. Voit käyttää apuna aineiston 5.A kuvia.",
+     "hints": [
+      "Jaa vastaus teemoihin: öljy ja muut päästöt veteen ja ilmaan, roskat ja myrkyt, vaikutukset eliöihin ja elinympäristöihin (melu, valo, törmäykset, aallot) sekä vieraslajit. Täysiin pisteisiin tarvitaan laaja kirjo eri vaikutuksia.",
+      "Esimerkkejä: öljyonnettomuus → linnun höyhenpuku menettää eristyskykynsä, plankton kärsii; pohjamaaleista irtoaa raskasmetalleja ja mikromuovia, jotka rikastuvat ravintoverkossa; jätevedet → rehevöityminen; hiilidioksidi-, rikki- ja typpipäästöt → ilmastonmuutos ja happamoituminen (kalkkikuoriset eliöt); potkurien melu häiritsee valaita, ja isot eläimet voivat törmätä laivoihin; potkurivirtaus nostattaa pohjasedimenttiä ja aallot kuluttavat rantoja; valosaaste; painolastivesi ja pohjaan kiinnittyneet eliöt levittävät vieraslajeja; kanavat (esim. Suez) yhdistävät meriä; hylyt voivat toimia keinoriuttoina."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Öljy ja päästöt:** laivoista vuotava polttoaine saastuttaa vettä, ja tankkerionnettomuudessa mereen voi päätyä kerralla valtava määrä öljyä.\n- Öljy tuhoaa lintujen höyhenpuvun vettä hylkivän rakenteen ja lämmöneristyksen, ja se vahingoittaa myös planktonia, joka on merten ravintoketjujen perusta.\n- Laivojen pohjamaaleista irtoaa veteen raskasmetalleja ja mikromuovia, ja myrkyt kertyvät ravintoverkon ylempiin portaisiin.\n- Laivoista päätyy mereen roskia, esimerkiksi hylättyjä kalaverkkoja, joihin eläimet voivat takertua.\n- Jätevedet rehevöittävät rannikkovesiä.\n- Polttoaineen hiilidioksidipäästöt kiihdyttävät ilmastonmuutosta, ja yhdessä rikin ja typen oksidien kanssa ne happamoittavat merta, mikä haittaa kalkkikuorisia eliöitä.\n- **Eliöt ja elinympäristöt:** potkurien vedenalainen melu häiritsee etenkin valaita, ja valaat ja muut suuret eläimet voivat kuolla törmätessään laivoihin tai potkureihin.\n- Suurten laivojen potkurit sekoittavat vettä ja matalikoilla pohjasedimenttiä.\n- Laivojen aallot kuluttavat rantoja.\n- Laivojen valot aiheuttavat öisin valosaastetta, joka häiritsee merieläinten käyttäytymistä.\n- Hylyt voivat muodostaa keinoriuttoja, joissa eliöt löytävät suojaa ja lisääntymispaikkoja.\n- **Vieraslajit:** laivojen painolastiveden mukana leviää eläimiä ja niiden toukkia, ja laivojen pohjaan kiinnittyy esimerkiksi merirokkoja ja laivamatoja.\n- Laivaliikennettä varten kaivetut kanavat, kuten Suezin kanava Punaisenmeren ja Välimeren välillä, avaavat eliöille uusia leviämisreittejä.\n\n**Esimerkkivastaus:** Laivaliikenne vaikuttaa meriin monella tavalla. Suurin yksittäinen uhka on öljy: pienet polttoainevuodot ovat jatkuvia, ja tankkerin karilleajo voi levittää mereen tuhansia tonneja öljyä. Öljy liimaa lintujen höyhenet yhteen, jolloin ne kastuvat ja linnut kuolevat kylmään, ja öljy myrkyttää planktonia ja rantojen eliöitä. Laivojen pohjamaaleista liukenee raskasmetalleja ja irtoaa mikromuovia, jotka kertyvät ravintoverkon ylempiin portaisiin. Laivojen jätevedet lisäävät ravinteita ja rehevöittävät rannikkovesiä. Polttoaineesta syntyvä hiilidioksidi lämmittää ilmastoa ja happamoittaa merivettä yhdessä rikin ja typen oksidien kanssa, mikä vaikeuttaa simpukoiden ja korallien kalkkikuorten muodostumista. Potkurien melu häiritsee valaiden ääniviestintää, ja suuret eläimet voivat kuolla törmäyksissä. Matalilla väylillä potkurit nostattavat pohjasedimenttiä ja laivojen aallot syövät rantoja. Kalastusalusten ja muiden laivojen valot häiritsevät öisin eläinten käyttäytymistä. Painolastiveden mukana ja laivojen kyljissä kulkeutuu vieraslajeja uusille alueille, ja kanavat, kuten Suez, yhdistävät aiemmin erillisiä merialueita. Toisaalta uponneet hylyt voivat muodostaa keinotekoisia riuttoja, joissa eliöt löytävät suojaa.\n\n**Sudenkuoppa:** vastaus, joka käsittelee vain öljyvahinkoja, jää kauas täysistä pisteistä. Tehtävässä palkitaan monipuolisuudesta: myrkyt, melu, valo, vieraslajit ja ilmastovaikutukset.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "6.1",
+     "points": 11,
+     "prompt": "Aineiston 6.A taulukossa verenpaine luokitellaan systolisen ja diastolisen paineen mukaan (optimaalinen, normaali, kohonnut). Selitä, miten verenpaine syntyy verenkiertoelimistössä ja mitä systolinen ja diastolinen paine tarkoittavat.",
+     "hints": [
+      "Jaa vastaus kahteen osaan: verenpaineen muodostuminen (enintään 7 p) sekä systolinen ja diastolinen paine (enintään 4 p). Mitkä tekijät vaikuttavat paineeseen: sydän, veren määrä, suonet, läpät, hermosto ja hormonit?",
+      "Paineeseen vaikuttavat sydämen pumppausvoima ja syke, veren tilavuus, verisuonten vastus (valtimoiden sileän lihaksen supistuminen tai laajeneminen), läpät, rasitus ja lepo, sympaattinen hermosto (stressi) sekä hormonit (ADH ja reniini–angiotensiini–aldosteroni-järjestelmä). Systolinen paine on huippuarvo kammioiden supistuessa ja pumpatessa verta valtimoihin, diastolinen pohja-arvo kammioiden levätessä ja täyttyessä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Verenpaine on veren verisuonten seinämiin kohdistama paine.\n- Painetta synnyttää sydämen pumppaustoiminta.\n- Paineeseen vaikuttavat verenkierron nestemäärä, verenkierron vastus ja läpät, jotka estävät veren virtauksen taaksepäin.\n- Verisuonten seinämän sileä lihas säätelee suonten läpimittaa ja siten painetta.\n- Verenpaine vaihtelee kuormituksen mukaan: liikkuessa se nousee ja levossa laskee.\n- Hermosto säätelee verenpainetta, ja esimerkiksi jännittäminen tai stressi nostaa sitä.\n- Myös hormonit säätelevät painetta (ADH sekä reniini–angiotensiini–aldosteroni-järjestelmä).\n- **Systolinen ja diastolinen paine:** paine vaihtelee sydämen sykkeen tahdissa.\n- Paine on suurimmillaan, kun sydänkammiot supistuvat ja pumppaavat verta valtimoihin. Tämä on yläpaine eli systolinen paine.\n- Paine on pienimmillään supistusten välillä, kun sydän lepää ja kammiot täyttyvät verellä. Tämä on alapaine eli diastolinen paine.\n\n**Esimerkkivastaus:** Verenpaine tarkoittaa painetta, jolla veri painaa verisuonten seinämiä. Paineen synnyttää sydän, joka pumppaa verta valtimoihin, ja läpät pitävät virtauksen yhdensuuntaisena. Paineen suuruuteen vaikuttavat sydämen supistusvoima ja syke, veren määrä sekä verisuonten vastus. Kun valtimoiden seinämän sileä lihas supistuu, suonet kapenevat ja paine nousee, ja kun se rentoutuu, paine laskee. Liikunnan aikana paine kohoaa ja levossa se laskee. Autonominen hermosto säätelee sykettä ja suonten läpimittaa, joten esimerkiksi jännitys nostaa painetta. Hormonit vaikuttavat veren määrään: ADH vähentää virtsan erittymistä, ja reniini–angiotensiini–aldosteroni-järjestelmä supistaa suonia ja lisää natriumin ja veden takaisinottoa. Verenpaine ilmoitetaan kahtena lukuna. Systolinen eli yläpaine mitataan, kun kammiot supistuvat ja työntävät verta valtimoihin, jolloin paine on korkeimmillaan. Diastolinen eli alapaine mitataan supistusten välillä, kun sydänlihas lepää ja kammiot täyttyvät, jolloin paine on matalimmillaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "6.2",
+     "points": 4,
+     "prompt": "Pohdi, miksi liian korkea verenpaine on vaarallista ja mitkä tekijät nostavat sitä.",
+     "hints": [
+      "Vastauksessa on kaksi osaa, kumpikin enintään 2 p: vaarat (sydämen kuormitus, valtimoiden vauriot ja niistä seuraavat sairaudet) ja syyt (elintavat, lääkkeet, stressi ja perimä)."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- **Vaarat:** korkea paine rasittaa sydäntä ja verisuonistoa, sillä sydän joutuu pumppaamaan suurempaa vastusta vastaan.\n- Vasen kammio voi laajentua ja sen seinämä paksuuntua.\n- Pitkään jatkuessaan korkea paine altistaa valtimonkovettumataudille, sepelvaltimotaudille, aivoverenkierron häiriöille ja sydämen vajaatoiminnalle.\n- **Syyt:** liiallinen suola, tupakointi ja alkoholi, ylipaino ja liikunnan puute.\n- Jotkin lääkkeet ja hormonivalmisteet (esim. ehkäisypillerit, tulehduskipulääkkeet) sekä stressi nostavat painetta.\n- Ravinnon rasvat voivat edistää kolesterolin kertymistä suoniin, ja perimä voi lisätä alttiutta.\n\n**Esimerkkivastaus:** Korkea verenpaine pakottaa sydämen tekemään jatkuvasti ylimääräistä työtä, ja vasen kammio, joka pumppaa verta koko elimistöön, voi paksuuntua ja laajentua. Suuri paine vaurioittaa myös valtimoiden seinämiä, mikä edistää valtimonkovettumataudin, sepelvaltimotaudin, aivoinfarktin tai -verenvuodon ja sydämen vajaatoiminnan kehittymistä. Verenpainetta nostavat erityisesti runsas suolan käyttö, ylipaino, liikunnan puute, tupakointi, alkoholi ja pitkäaikainen stressi. Myös jotkin lääkkeet, kuten ehkäisypillerit ja tulehduskipulääkkeet, voivat nostaa painetta, ja taipumus kohonneeseen verenpaineeseen voi olla perinnöllinen.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 10,
+     "prompt": "Kuvaile, miten viesti siirtyy synapsissa hermosolulta seuraavalle solulle kemiallisen välittäjäaineen avulla.",
+     "hints": [
+      "Etene tapahtumajärjestyksessä: sähköinen viesti saapuu → muuttuu kemialliseksi → vaikuttaa kohdesoluun → viesti päättyy.",
+      "Aktiopotentiaali saapuu hermopäätteeseen → kalsiumkanavat aukeavat ja $\\ce{Ca^2+}$-ioneja virtaa sisään → välittäjäainerakkulat sulautuvat solukalvoon eksosytoosilla → välittäjäaine kulkee synapsirakoon ja sitoutuu kohdesolun reseptoreihin → ionikanavat avautuvat (esim. $\\ce{Na+}$ sisään) → välittäjäaine hajotetaan entsyymeillä tai otetaan takaisin, ja viesti päättyy."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Synapsi on liitoskohta, jossa hermosolu välittää impulssin toiselle hermosolulle tai muulle kohdesolulle.\n- Kemiallisessa synapsissa sähköinen viesti muutetaan kemialliseksi.\n- Aktiopotentiaali saapuu aksonin päätenappiin (hermopäätteeseen).\n- Hermopäätteen solukalvon kalsiumkanavat aukeavat, ja kalsiumioneja virtaa sisään.\n- Kalsium saa välittäjäainetta sisältävät rakkulat sulautumaan solukalvoon eksosytoosilla.\n- Välittäjäaine vapautuu synapsirakoon ja sitoutuu kohdesolun solukalvon reseptoreihin, jotka aktivoituvat.\n- Jos reseptori on ionikanava, se päästää läpi ioneja, esimerkiksi natriumia, ja muuttaa kohdesolun kalvojännitettä.\n- Välittäjäaine poistetaan synapsiraosta: entsyymit pilkkovat sitä, ja lähettävä solu ottaa sitä takaisin.\n- Näin ärsytys päättyy.\n\n**Esimerkkivastaus:** Synapsi on liitoskohta, jossa hermosolu välittää viestin toiselle hermosolulle tai esimerkiksi lihassolulle. Kun aktiopotentiaali saapuu aksonin päätenappiin, solukalvon jänniteherkät kalsiumkanavat aukeavat ja kalsiumioneja virtaa hermopäätteeseen. Kalsium saa välittäjäainetta sisältävät rakkulat sulautumaan solukalvoon, jolloin välittäjäaine vapautuu eksosytoosilla synapsirakoon. Välittäjäaine diffundoituu kapean raon yli ja kiinnittyy kohdesolun kalvon reseptoreihin. Monet reseptorit ovat ionikanavia, jotka avautuvat ja päästävät esimerkiksi natriumioneja soluun, jolloin kohdesolun kalvojännite muuttuu ja siihen voi syntyä uusi aktiopotentiaali. Jotta viesti ei jatkuisi loputtomiin, välittäjäaine hajotetaan synapsiraossa entsyymien avulla tai kuljetetaan takaisin lähettävään soluun.",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 5,
+     "prompt": "Pohdi, mitä hyötyä hermoston toiminnalle on siitä, että hermosolut ovat yhteydessä toisiinsa synapsien välityksellä.",
+     "hints": [
+      "Mieti viestin kulkusuuntaa, viestien yhdistelyä ja sitä, voiko synapsi vahvistaa tai estää viestiä.",
+      "Välittäjäainetta vapautuu vain aksonin päätteestä, joten viesti kulkee yhteen suuntaan. Kiihottavien ja estävien synapsien vaikutukset summautuvat kohdesolussa, ja summa ratkaisee, syntyykö aktiopotentiaali. Yksi hermosolu voi viestiä monelle solulle ja vastaanottaa viestejä monelta, jolloin syntyy hermoverkkoja. Estävät synapsit suodattavat epäolennaista tietoa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Viesti kulkee vain yhteen suuntaan, koska välittäjäainerakkuloita on vain hermopäätteissä eikä dendriiteissä.\n- Osa synapseista kiihottaa kohdesolua ja osa estää sitä.\n- Kiihottavien ja estävien viestien yhteisvaikutus ratkaisee kohdesolun aktiivisuuden eli sen, syntyykö siihen aktiopotentiaali.\n- Hermosolu voi muodostaa synapsin monen kohdesolun kanssa, ja monet hermosolut voivat säädellä samaa kohdesolua.\n- Näin hermosolut muodostavat toiminnallisia kokonaisuuksia, hermoverkkoja.\n- Estävät synapsit suodattavat tietoa, joten kaikki ärsykkeet eivät kulje eteenpäin.\n\n**Esimerkkivastaus:** Synapsit tekevät hermostosta yksisuuntaisen ja säädeltävän. Välittäjäainetta vapautuu vain aksonin päätteestä, joten viesti etenee aina samaan suuntaan. Synapsit voivat olla kiihottavia tai estäviä, ja kohdesolu yhdistää kaikkien saapuvien viestien vaikutuksen: vain jos kiihottavia viestejä on riittävästi, soluun syntyy uusi aktiopotentiaali. Tämä mahdollistaa tiedon käsittelyn, eli epäolennaiset ärsykkeet voidaan suodattaa pois. Koska yksi hermosolu voi muodostaa synapseja tuhansien solujen kanssa ja vastaanottaa viestejä yhtä monelta, hermosolut muodostavat verkkoja, joissa oppiminen ja muisti ovat mahdollisia.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "intro": "Aineisto 8.A on tiedeuutinen: kiinalaistutkijat lisäsivät riisiin ylimääräisen kopion kasvin omasta OsDREB1C-säätelygeenistä, joka aktivoituu typen puutteessa. Lisäkopio tehosti typen ottoa ja yhteyttämistä, ja kenttäkokeissa sato kasvoi jopa 40 %.",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 2,
+     "prompt": "Aineiston 8.A tutkimus koskee säätelygeenejä. Päättele aineiston perusteella, mitä säätelygeeni tarkoittaa.",
+     "hints": [
+      "Tutkittu geeni ei itse ota typpeä maasta, vaan se käynnistyy typen puutteessa ja saa aikaan muutoksia monessa kasvin toiminnossa. Mitä se siis tekee muille geeneille?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Säätelygeeni on geeni, joka vaikuttaa muiden geenien toimintaan.\n- Se voi joko käynnistää tai hiljentää toisia geenejä.\n- Säätely tapahtuu säätelygeenin tuottaman proteiinin (esim. transkriptiotekijän) tai RNA:n välityksellä.\n\n**Esimerkkivastaus:** Säätelygeeni ohjaa muiden geenien toimintaa. Sen tuote, yleensä proteiini, sitoutuu toisten geenien säätelyalueille ja lisää tai vähentää niiden ilmentymistä. Aineiston OsDREB1C-geeni käynnistyi typen puutteessa ja lisäsi monien typen ottoon ja yhteyttämiseen liittyvien toimintojen tehoa.",
+     "answer": "geeni, joka säätelee (käynnistää tai hiljentää) muiden geenien ilmentymistä",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 3,
+     "prompt": "Tutkijat hiljensivät OsDREB1C-geenin osasta riisikasveja (aineisto 8.A). Mitä geenin sammuttamisella tarkoitetaan ja miten se voidaan tehdä? Mitä tutkijat saivat sen avulla selville tästä geenistä?",
+     "hints": [
+      "Geeni tehdään toimimattomaksi esimerkiksi katkaisemalla se ylimääräisellä DNA:lla tai poistamalla siitä osa. Vertaa sitten aineistosta, miten kasvit, joilla geeni ei toiminut, kasvoivat verrattuna muihin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Geenin sammuttaminen eli hiljentäminen tarkoittaa, että geeni tehdään toimimattomaksi.\n- Se voidaan tehdä esimerkiksi siirtämällä geenin keskelle ylimääräistä DNA:ta tai poistamalla geenistä osia.\n- Sammuttamalla voidaan tutkia, mikä merkitys geenillä on aineenvaihdunnassa.\n- Tässä tutkimuksessa kasvit, joilta geeni puuttui, kasvoivat heikommin, mikä osoitti geenin edistävän voimakkaasti riisin kasvua.\n\n**Esimerkkivastaus:** Kun geeni sammutetaan, sitä muutetaan niin, ettei siitä enää synny toimivaa tuotetta. Näin voidaan tehdä esimerkiksi lisäämällä geenin keskelle vierasta DNA:ta tai poistamalla siitä osa. Vertaamalla sammutettuja kasveja tavallisiin nähdään, mitä geeni tekee. Tutkimuksessa riisit, joiden OsDREB1C-geeni oli sammutettu, kasvoivat huonommin kuin vertailukasvit, joten geeni edistää riisin kasvua.\n\n**Sudenkuoppa:** täydet pisteet edellyttävät molempia osia: mitä sammuttaminen on ja mitä sillä selvisi juuri tässä tutkimuksessa.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 5,
+     "prompt": "Arvioi, miksi yksi ylimääräinen kopio riisin omasta geenistä lisäsi satoa näin paljon.",
+     "hints": [
+      "Mihin geeni aineiston mukaan vaikuttaa, ja mikä ravinne rajoittaa usein kasvien kasvua?",
+      "Ketju: lisäkopio → enemmän säätelyproteiinia → typen otto tehostuu (typpi on usein minimiravinne) → enemmän proteiineja, viherhiukkasia ja RuBisCO-entsyymiä → fotosynteesi tehostuu → versot ja juuret kasvavat ja kasvi kukkii → enemmän siemeniä eli satoa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- OsDREB1C-geeni tehostaa riisin typenottoa maaperästä.\n- Typpeä on maassa usein niukimmin suhteessa tarpeeseen, eli se on minimiravinne.\n- Ylimääräinen geenikopio tehosti typen ottoa.\n- Se lisäsi myös fotosynteesiä (aineiston mukaan viherhiukkasia ja RuBisCOa oli noin kolmanneksen enemmän).\n- Tämä edisti riisin kasvua ja kukintaa ja sitä kautta siementen tuotantoa eli satoa.\n\n**Esimerkkivastaus:** OsDREB1C on säätelygeeni, joka tehostaa typen ottoa. Kun riisiin lisättiin geenistä toinen kopio, kasvi tuotti säätelyproteiinia tavallista enemmän ja otti maasta enemmän typpeä. Koska typpi on usein kasvua rajoittava minimiravinne, lisätyppi lisäsi proteiinien, lehtivihreän ja RuBisCO-entsyymin valmistusta, ja viherhiukkasia oli enemmän. Fotosynteesi tehostui, versot ja juuret kasvoivat ja kasvi kukki paremmin, joten siemeniä syntyi enemmän. Koska yksi säätelygeeni ohjaa monia muita geenejä, pienikin muutos sen määrässä voi vaikuttaa koko kasvin kasvuun.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.4",
+     "points": 3,
+     "prompt": "Pohdi, onko satoisa riisi tuotettu polyploidiajalostuksella.",
+     "hints": [
+      "Mitä polyploidiajalostuksessa tapahtuu kromosomistolle, ja millä aineella se tehdään? Vertaa siihen, kuinka paljon DNA:ta riisiin lisättiin."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Polyploidiajalostuksessa koko kromosomisto moninkertaistetaan, esimerkiksi kolkisiinilla.\n- Tässä tutkimuksessa perimään lisättiin vain yhden geenin kopio.\n- Siksi kyse ei ole polyploidiajalostuksesta.\n\n**Esimerkkivastaus:** Polyploidiajalostuksessa kasvin koko kromosomisto kaksinkertaistetaan tai moninkertaistetaan esimerkiksi kolkisiinilla, joka estää kromosomien erkanemisen solunjakautumisessa. Satoisaan riisiin lisättiin vain yksi kopio yhdestä geenistä, joten kromosomien määrä ei muuttunut. Kyse ei siis ole polyploidiajalostuksesta.",
+     "answer": "ei ole: vain yksi geeni kahdennettiin, kromosomistoa ei moninkertaistettu",
+     "check": "hvp"
+    },
+    {
+     "id": "8.5",
+     "points": 2,
+     "prompt": "Pohdi, voiko satoisaa riisiä pitää muuntogeenisenä eli geenimuunneltuna kasvina.",
+     "hints": [
+      "Muuntogeenisyys tarkoittaa, että perimää on muokattu geenitekniikalla. Onko ratkaisevaa, onko lisätty geeni lajille vieras vai sen oma?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Riisiin ei lisätty vierasta geeniä, vaan kopio sen omasta geenistä.\n- Perimää muokattiin kuitenkin geenitekniikan menetelmillä, joten riisiä voi pitää muuntogeenisenä.\n\n**Esimerkkivastaus:** Satoisan riisin perimään ei tuotu toisen lajin geenejä, vaan sen omasta geenistä lisättiin toinen kopio. Muutos tehtiin kuitenkin geenitekniikan keinoin laboratoriossa, joten riisiä voidaan pitää muuntogeenisenä kasvina.",
+     "answer": "voi pitää: perimää muokattiin geenitekniikalla, vaikka lisätty geeni on riisin oma",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "intro": "Human Genome Project -hanke selvitti nykyihmisen perimän, ja sen pohjalta on voitu selvittää myös sukupuuttoon kuolleiden neandertalin- ja denisovanihmisen perimää. Aineistot: 9.A genomitutkimuksesta ja vertailugenomeista, 9.B Svante Pääbon muinais-DNA-tutkimuksista ja 9.C kaavio nykyihmisen ja muinaisihmisten kehityslinjoista.",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 10,
+     "prompt": "Arvioi aineistojen 9.A–9.C avulla, mitä nykyihmisten ja muinaisihmisten genomien vertailu on kertonut ihmislajien sukulaisuudesta.",
+     "hints": [
+      "Mieti, mitä risteytymisestä, muinaisihmisten geenien jakautumisesta nykyisiin väestöihin ja lajimääritelmästä voi päätellä. Tarkastele aineiston 9.C kaaviota: mistä kehityslinjasta mihin on siirtynyt geenejä?",
+      "Keskeiset tulokset: nykyihminen risteytyi neandertalin- ja denisovanihmisen kanssa, ja jälkeläiset olivat lisääntymiskykyisiä. Afrikan ulkopuolisilla väestöillä on muutaman prosentin verran neandertalilaisperimää. Denisovalaisperimää on Aasian ja Tyynenmeren väestöillä, ja Saharan eteläpuolisilla afrikkalaisilla ei ole kumpaakaan. Neandertalin- ja denisovanihmisellä on yhteinen kantamuoto. DNA paljastaa myös lajeja, joista ei ole fossiileja, ja risteytyminen haastaa biologisen lajikäsitteen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Perimien vertailu on paljastanut ihmislajien keskinäiset sukulaisuussuhteet.\n- Levitessään uusille alueille eri ihmislajit kohtasivat toisiaan ja saivat yhteisiä jälkeläisiä, jotka pystyivät lisääntymään.\n- Risteytymisen vuoksi monien nykyihmisväestöjen perimässä on neandertalin- ja denisovanihmisen geenejä.\n- Neandertalinihmisen geenejä on esimerkiksi eurooppalaisilla (Afrikan ulkopuolisilla noin 2–3 % perimästä).\n- Denisovanihmisen geenejä on Aasian ja Tyynenmeren alueen väestöillä.\n- Saharan eteläpuolisilla afrikkalaisilla ei ole kummankaan muinaisihmisen geenejä, joten heidän esivanhempansa eivät kohdanneet näitä lajeja.\n- Neandertalin- ja denisovanihmisellä on ollut yhteinen kantamuoto.\n- Muinais-DNA:n perusteella on voitu päätellä sellaistenkin ihmislajien olemassaolo, joista ei ole löydetty fossiileja, koska niiden geenejä on toisten lajien perimässä.\n- Aineiston lajien lisäksi on ollut muita, varhaisempia ihmislajeja, joilta ei ole saatu säilynyttä DNA:ta.\n- Risteytyminen herättää kysymyksen, olivatko nykyihminen, neandertalinihminen ja denisovanihminen biologisen lajimääritelmän mukaan eri lajeja vai saman lajin muotoja.\n\n**Esimerkkivastaus:** Genomitutkimukset ovat osoittaneet, että ihmislajien historia on ollut verkostomainen eikä yksinkertainen sukupuu. Kun nykyihminen levisi Afrikasta muualle maailmaan, se kohtasi neandertalinihmisiä ja denisovanihmisiä ja risteytyi niiden kanssa. Jälkeläiset olivat lisääntymiskykyisiä, sillä muinaisihmisten geenejä on yhä nykyihmisissä: Afrikan ulkopuolella elävien perimästä muutama prosentti on peräisin neandertalilaisilta, ja denisovalaisten geenejä on erityisesti Itä-Aasian ja Tyynenmeren väestöillä, kuten tiibetiläisillä. Saharan eteläpuolisilla afrikkalaisilla näitä geenejä ei ole, mikä kertoo, että risteytyminen tapahtui vasta Afrikan ulkopuolella. Vertailu osoittaa myös, että neandertalilaiset ja denisovalaiset polveutuvat yhteisestä kantamuodosta, joka erkani nykyihmisen linjasta aiemmin. Joidenkin tuntemattomien ihmisryhmien olemassaolo on pääteltävissä vain niiden perimään jättämistä jäljistä, vaikka fossiileja ei ole. Koska lajit saivat lisääntymiskykyisiä jälkeläisiä, voidaan kysyä, olivatko ne biologisen lajikäsitteen mukaan todella eri lajeja.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 4,
+     "prompt": "Pohdi, mitä muinais-DNA voi kertoa sukupuuttoon kuolleista ihmislajeista sellaista, mitä pelkät fossiiliset luut eivät paljasta.",
+     "hints": [
+      "Luut kertovat ruumiinrakenteesta ja liikkumisesta. Mieti, mitä geenit voivat kertoa pehmytkudoksista, ulkonäöstä, aivoista, puhekyvystä, taudinvastustuskyvystä ja populaatioiden rakenteesta."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Luut kertovat lähinnä ruumiinrakenteesta, ravinnosta ja liikkumisesta, mutta DNA voi paljastaa tietoa pehmytkudoksista, ulkonäöstä, aivojen kehityksestä ja elintoiminnoista.\n- DNA voi antaa viitteitä käyttäytymisestä: neandertalilaisilla oli puheen kehitykseen liittyvä FOXP2-geeni, joten heillä oli luultavasti jonkinlaista äänellä tapahtuvaa viestintää.\n- Neandertalilaisten perimästä on löydetty ihon, hiusten ja silmien väriin vaikuttavia geenejä.\n- Muinaisihmisillä on ollut ominaisuuksia, kuten taudinvastustuskykyä tai sopeutumista vähähappiseen vuoristoon, jotka ovat säilyneet nykyihmisessä.\n- Muinais-DNA kertoo perinnöllisistä sairauksista.\n- Vertaamalla saman lajin eri yksilöiden DNA:ta voidaan tutkia sukupuuttoon kuolleiden lajien populaatiogenetiikkaa, esimerkiksi populaatiokokoa ja geneettistä monimuotoisuutta.\n\n**Esimerkkivastaus:** Fossiilisista luista nähdään ruumiinrakenne, koko ja liikkumistapa, ja joskus niistä voi päätellä ravintoa. Muinais-DNA taas kertoo ominaisuuksista, jotka eivät säily luissa. Geeneistä voidaan päätellä esimerkiksi ihon, hiusten ja silmien väriä sekä aivojen kehitykseen ja elintoimintoihin liittyviä piirteitä. Neandertalilaisilta löytynyt FOXP2-geeni viittaa siihen, että heillä oli kykyä äänelliseen viestintään. DNA:sta on löydetty myös vastustuskykyä tauteja vastaan ja sopeutumia vuoriston ohueen ilmaan, jotka ovat siirtyneet nykyihmisille. Vertaamalla useiden yksilöiden DNA:ta saadaan tietoa populaatioiden koosta ja sukulaisuussuhteista.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.3",
+     "points": 6,
+     "prompt": "Pohdi, millaisia ongelmia tutkijat kohtaavat, kun he hankkivat ja analysoivat näytteitä sukupuuttoon kuolleiden ihmislajien perimän selvittämiseksi.",
+     "hints": [
+      "Jaa ongelmat näytteen hankintaan (löytyykö sopivaa fossiilia, onko DNA säilynyt, saako näytettä ottaa) ja analyysiin (kontaminaatio, vertailugenomit, laitteet ja raha).",
+      "DNA hajoaa ajan kuluessa, joten hyvin vanhoista luista sitä ei saa. Näytteenotto rikkoo fossiilia. Luissa on myös nykyihmisten ja bakteerien DNA:ta (aineisto 9.B). DNA on pilkkoutunut lyhyiksi paloiksi, ja perimän kokoaminen vaatii vertailugenomin (aineisto 9.A). Lisäksi tarvitaan puhdastiloja ja kallista laitteistoa."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Ensimmäinen haaste on löytää fossiili, jonka DNA on säilynyt käyttökelpoisena.\n- DNA hajoaa ajan kuluessa, joten hyvin vanhoissa fossiileissa sitä ei ole enää riittävästi.\n- Näytteen ottaminen vahingoittaa fossiilia, joten arvokkaista löydöistä ei välttämättä saa lupaa ottaa näytettä.\n- Nykyisen DNA:n (esim. luita käsitelleiden ihmisten tai bakteerien) aiheuttama kontaminaatio voi tehdä näytteestä käyttökelvottoman.\n- Sukupuuttoon kuolleen lajin perimän kokoamiseen voi olla vaikea löytää sopivaa vertailugenomia.\n- Tutkimus vaatii erikoistuneita laitteita ja puhtaita laboratoriotiloja, joita kaikilla ei ole.\n- Tutkimus maksaa paljon, eikä rahoitusta ole aina tarjolla.\n\n**Esimerkkivastaus:** Ensimmäinen ongelma on löytää fossiili, jossa DNA:ta on vielä jäljellä. DNA pilkkoutuu ajan kuluessa, joten satojentuhansien vuosien ikäisistä luista sitä saadaan hyvin vähän tai ei lainkaan, ja lämpimissä oloissa DNA hajoaa nopeammin. DNA:n eristäminen vaatii luun jauhamista, joten arvokkaita löytöjä ei aina saa rikkoa. Luissa on lisäksi bakteerien ja niitä käsitelleiden ihmisten DNA:ta, ja koska nykyihmisen DNA muistuttaa muinaisihmisten perimää, kontaminaation erottaminen on vaikeaa. Muinais-DNA on lyhyinä paloina, ja palojen kokoaminen kokonaiseksi perimäksi vaatii vertailugenomin, jota sukupuuttoon kuolleesta lajista ei ole. Työ edellyttää erityisiä puhdastiloja ja kalliita sekvensointilaitteita, eikä rahoitusta ole aina saatavilla.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "intro": "Aineisto 10.A kertoo rupiliskon (rupimanterin) ekologiasta Suomessa. Laji on täällä levinneisyytensä pohjoisrajalla, elää lähes koko ikänsä pienen kalattoman lisääntymislammen lähellä ja liikkuu hitaasti. Kartalle on merkitty lammet, joissa rupiliskon poikasia on havaittu.",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 10,
+     "prompt": "Määrittele käsite metapopulaatio. Mitkä tekijät vaikuttavat siihen, pääsevätkö rupiliskot siirtymään kartalle merkittyjen lisääntymislampien välillä? Selvitä.",
+     "hints": [
+      "Aloita käsitteistä populaatio, paikallispopulaatio ja metapopulaatio, ja kerro, mitä yksilöiden siirtyminen merkitsee geenivirralle. Sitten siirtymiseen vaikuttavat tekijät: etäisyys, eläimen ominaisuudet ja maisema.",
+      "Metapopulaatio on laikuttaisessa ympäristössä elävien paikallispopulaatioiden verkosto, jonka välillä yksilöt liikkuvat ja geenit virtaavat. Pienet osapopulaatiot voivat hävitä paikallisesti. Siirtymiseen vaikuttavat lampien välimatka (rupilisko etenee alle 30 m tunnissa ja korkeintaan noin kilometrin vuodessa), ekologiset käytävät, kostean ihon kuivumisriski, pedot, suuret vesistöt (Saimaa), hakkuut, tiet, asutus ja ojitukset."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Populaatio on saman lajin yksilöt, jotka voivat kohdata ja lisääntyä keskenään.\n- Laikuttaisessa elinympäristössä laji muodostaa paikallispopulaatioita.\n- Paikallispopulaatiot, joiden välillä yksilöitä ainakin toisinaan liikkuu, muodostavat yhdessä metapopulaation, jonka osien välillä on geenivirtaa.\n- Metapopulaatioita syntyy, kun sopiva elinympäristö on luonnostaan tai ihmisen toimesta pirstoutunut epäsopivan ympäristön sekaan.\n- Pienet osapopulaatiot voivat helposti hävitä paikallisesti.\n- Rupiliskot voivat siirtyä lampien välillä, jos lammet ovat riittävän lähellä toisiaan ja niiden välillä on sopivia reittejä eli ekologisia käytäviä.\n- Kartalla osa lammista on lähellä toisiaan, joten niiden välillä liikkuminen on mahdollista.\n- Rupilisko liikkuu hitaasti, joten kaukana toisistaan olevien esiintymien välillä se ei pysty siirtymään.\n- Siirtymistä rajoittavat myös hengitykselle välttämättömän kostean ihon kuivumisriski ja saalistus maalla.\n- Liikkumista estävät Järvi-Suomen suuret vesistöt, kuten Saimaa, sekä metsien hakkuut, asutus, tiet ja ojitukset.\n\n**Esimerkkivastaus:** Populaatiolla tarkoitetaan saman lajin yksilöitä, jotka elävät samalla alueella ja voivat lisääntyä keskenään. Jos sopiva elinympäristö on laikuttainen, esimerkiksi erillisiä lampia metsän keskellä, laji muodostaa pieniä paikallispopulaatioita. Kun yksilöt pystyvät ainakin joskus siirtymään paikallispopulaatiosta toiseen, ne muodostavat metapopulaation, jonka osien välillä on geenivirtaa. Pienet osapopulaatiot voivat hävitä, mutta alue voi asuttua uudelleen naapurilammista. Rupiliskon siirtymiseen vaikuttaa ennen kaikkea lampien välimatka. Laji on paikkauskollinen ja hidas, joten kilometrin matkaan kuluu kymmeniä tunteja, ja kartan kaukaiset esiintymät ovat käytännössä eristyksissä. Sammakkoeläimen iho on pidettävä kosteana, koska se osallistuu hengitykseen, joten kuivat ja avoimet alueet ovat vaarallisia, ja maalla liikkuvat yksilöt joutuvat petojen saaliiksi. Hakkuualueet, pellot, tiet, asutus ja ojitukset katkaisevat kulkureittejä, ja suuret järvet, kuten Saimaa, ovat ylitsepääsemättömiä esteitä. Toisaalta lähekkäin olevien lampien välillä yksilöt voivat liikkua, jos välissä on yhtenäistä kosteaa metsää.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 10,
+     "prompt": "Arvioi, miten lämpenevä ilmasto voi heikentää tai vahvistaa Suomen rupiliskopopulaatioita.",
+     "hints": [
+      "Käsittele vaikutuksia elinkierron eri vaiheisiin: lisääntymislammet ja toukat, ravinto, talvehtiminen, aktiivisuus, kilpailijat ja taudit sekä metapopulaation rakenne. Muista, että Suomi on lajin levinneisyyden pohjoisreunalla.",
+      "Myönteistä: pohjoisreunalla elävä laji voi hyötyä lämmöstä, hyönteisravintoa voi olla enemmän ja toukat kehittyvät nopeammin. Kielteistä: haihdunta kuivattaa lampia kesällä ennen kuin kiduksilla hengittävät toukat ehtivät muuttua, lumipeitteen oheneminen ja leudot talvet häiritsevät maalla talvehtimista, uudet kilpailijat ja taudit leviävät pohjoiseen ja sulamisvesien ravinteet rehevöittävät lampia. Suurissa, monen lammen metapopulaatioissa on enemmän geneettistä vaihtelua ja tulomuuttoa kuin pienissä erillisesiintymissä."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Ilmaston lämmetessä lajien levinneisyysalueet siirtyvät pohjoiseen, ja rupiliskon alueelle voi tulla kilpailijoita samaan ekolokeroon.\n- Toisaalta Suomessa laji elää levinneisyytensä pohjoisreunalla, joten lämpeneminen voi myös parantaa populaatioiden elinvoimaa.\n- Lämpimämpi vesi voi lisätä hyönteisiä eli ravintoa, ja toukat kehittyvät nopeammin.\n- Haihdunta lisääntyy, joten lisääntymislammet voivat kuivua, ja toukat kuolevat etenkin kuivina kesinä.\n- Talven sademäärät kasvavat, ja sulamisvedet voivat pitää lampia vedellisinä, mutta niiden mukana voi tulla ravinteita, jotka rehevöittävät lampia.\n- Lämpenemiseen liittyvä UV-säteilyn lisääntyminen voi vahingoittaa poikasia.\n- Vaihtolämpöisen rupiliskon aktiivisuus riippuu lämpötilasta.\n- Rupilisko talvehtii aikuisena maalla, joten ohuempi lumipeite ja leudot talvet heikentävät horrosta.\n- Rupiliskon taudit ja loiset voivat hyötyä lämpenemisestä.\n- Metapopulaatiot, joissa on monta lisääntymislampea, kestävät muutoksia parhaiten, kun taas pienet erilliset esiintymät (esim. Parikkala ja Nilsiä) häviävät todennäköisemmin.\n- Elinvoimaisessa populaatiossa on riittävästi yksilöitä geneettisen vaihtelun ylläpitämiseen, ja sen säilyminen edellyttää riittävää syntyvyyttä ja tulomuuttoa suhteessa kuolleisuuteen ja poismuuttoon.\n\n**Esimerkkivastaus:** Suomessa rupilisko elää levinneisyytensä pohjoisreunalla, joten lämpenevä ilmasto voi osin parantaa sen elinoloja: pidempi kasvukausi ja lämpimämpi vesi nopeuttavat toukkien kehitystä ja lisäävät hyönteisravintoa. Samalla riskit kasvavat. Kuumina kesinä haihdunta voi kuivattaa pienet lisääntymislammet ennen kuin kiduksilla hengittävät toukat ehtivät siirtyä maalle, ja koko vuoden poikastuotto voi mennä hukkaan. Toisaalta talvien sateet ja sulamisvedet voivat täyttää lampia, mutta tuoda niihin ravinteita, jotka rehevöittävät vettä. Aikuiset talvehtivat maalla, joten ohut lumipeite ja leudot, vaihtelevat talvet heikentävät horrosta ja lisäävät jäätymisriskiä. Lämpeneminen voi tuoda alueelle uusia kilpailijoita, tauteja ja loisia. Vaikutukset riippuvat myös populaation rakenteesta. Suurissa metapopulaatioissa on monta lampea, joten yksittäisen lammen kuivuminen ei hävitä koko populaatiota, ja geenivirta ylläpitää vaihtelua. Pienet, eristyneet esiintymät voivat sen sijaan hävitä kokonaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "intro": "Aineistoissa 11.A ja 11.B on kahden elintarvikkeen pakkausmerkinnät ravintoaineista (ks. alkuperäiset kuvat; lähteiden mukaan 11.A on auringonkukansiemeniä ja 11.B maustamatonta jogurttia).",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 6,
+     "prompt": "Selitä, miten aineiston 11.A elintarvikkeen ravintoaineista pilkkoutuu ruoansulatuskanavassa glukoosia, jota esimerkiksi lihassolu käyttää supistumisen energianlähteenä.",
+     "hints": [
+      "Mikä ravintoaineryhmä tuottaa glukoosia? Erota aineiston hiilihydraateista sokerit ja pitkäketjuiset hiilihydraatit, ja seuraa niiden pilkkoutumista suusta ohutsuoleen.",
+      "Elintarvikkeen hiilihydraateista lähes 90 % on muuta kuin sokeria, eli pääosin tärkkelystä. Syljen amylaasi aloittaa tärkkelyksen pilkkomisen suussa, haiman amylaasi jatkaa ohutsuolessa, ja ohutsuolen seinämän entsyymit (esim. maltaasi, laktaasi) pilkkovat kaksisokerit yksinkertaisiksi sokereiksi, kuten glukoosiksi."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Glukoosia saadaan hiilihydraateista.\n- Osa hiilihydraateista on sokereita, esimerkiksi kaksisokereita (maltoosi, laktoosi).\n- Suurin osa elintarvikkeen hiilihydraateista on pitkäketjuisia, esimerkiksi tärkkelystä (aineistosta laskettuna lähes 90 % hiilihydraateista on muuta kuin sokeria).\n- Tärkkelyksen pilkkominen alkaa suussa syljen amylaasin vaikutuksesta.\n- Pilkkominen jatkuu ohutsuolessa haiman erittämän amylaasin avulla.\n- Ohutsuolen omat entsyymit, kuten maltaasi ja laktaasi, pilkkovat kaksisokerit yksinkertaisiksi sokereiksi, esimerkiksi glukoosiksi.\n\n**Esimerkkivastaus:** Glukoosi on peräisin elintarvikkeen hiilihydraateista. Aineiston 11.A tuotteessa vain pieni osa hiilihydraateista on sokeria, joten suurin osa on tärkkelystä. Tärkkelyksen pilkkominen alkaa suussa, kun syljen amylaasi katkoo pitkiä glukoosiketjuja lyhyemmiksi. Mahalaukun happamuus pysäyttää amylaasin toiminnan, mutta ohutsuolessa haiman erittämä amylaasi jatkaa pilkkomista, kunnes tärkkelyksestä on tullut pääosin maltoosia. Ohutsuolen seinämän entsyymit, kuten maltaasi, pilkkovat maltoosin ja muut kaksisokerit yksinkertaisiksi sokereiksi. Glukoosi imeytyy ohutsuolen nukkalisäkkeiden kautta vereen ja kulkeutuu lihassoluihin.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 6,
+     "prompt": "Selitä, miten aineiston 11.A elintarvikkeen ravintoaineista pilkkoutuu ruoansulatuskanavassa aminohappoja, joita lihassolu tarvitsee kasvuunsa.",
+     "hints": [
+      "Seuraa proteiinia mahalaukusta ohutsuoleen: missä pilkkominen alkaa, mikä entsyymi sen aloittaa ja miten entsyymi aktivoituu? Mitkä entsyymit viimeistelevät työn?",
+      "Mahalaukussa suolahappo muuttaa pepsinogeenin pepsiiniksi, joka pilkkoo proteiinit lyhyemmiksi peptideiksi. Ohutsuolessa haiman trypsiini ja kymotrypsiini sekä ohutsuolen seinämän peptidaasit pilkkovat peptidit yksittäisiksi aminohapoiksi, jotka imeytyvät vereen."
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Aminohapot ovat peräisin proteiineista, joita elintarvikkeessa 11.A on runsaasti.\n- Proteiinien pilkkominen alkaa mahalaukussa pepsiinin avulla.\n- Mahalaukku erittää pepsiiniä passiivisena pepsinogeenina, joka muuttuu suolahapon vaikutuksesta aktiiviseksi pepsiiniksi.\n- Pepsiini pilkkoo proteiinit lyhyemmiksi peptidiketjuiksi.\n- Ohutsuolessa peptidit pilkotaan aminohapoiksi haiman erittämien trypsiinin ja kymotrypsiinin avulla.\n- Lopuksi ohutsuolen omat peptidaasit pilkkovat lyhyet peptidit yksittäisiksi aminohapoiksi.\n\n**Esimerkkivastaus:** Aineiston 11.A elintarvikkeessa on runsaasti proteiinia, josta elimistö saa aminohappoja. Proteiinien pilkkominen alkaa mahalaukussa. Mahalaukun seinämä erittää pepsinogeenia, joka muuttuu happamassa mahanesteessä suolahapon vaikutuksesta aktiiviseksi pepsiiniksi. Pepsiini katkoo proteiineja lyhyemmiksi peptideiksi. Ohutsuoleen haima erittää trypsiiniä ja kymotrypsiiniä, jotka pilkkovat peptidejä edelleen, ja ohutsuolen seinämän peptidaasit irrottavat niistä yksittäisiä aminohappoja. Aminohapot imeytyvät vereen ja kulkeutuvat lihassoluihin, joissa niistä rakennetaan uusia proteiineja.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Elintarvike 11.A on hyvä raudan lähde. Mihin ihminen tarvitsee rautaa? Selitä.",
+     "hints": [
+      "Mieti hapen kuljetusta veressä ja varastointia lihaksissa sekä soluhengityksen viimeistä vaihetta. Mikä sairaus seuraa raudan puutteesta?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Rauta on punasolujen hemoglobiinin rakenneosa.\n- Hemoglobiinin rauta sitoo happea, jota soluhengitys tarvitsee.\n- Lihaksissa rauta on myoglobiinin osana, ja myoglobiini varastoi happea.\n- Mitokondrioissa elektroninsiirtoketjun molekyyleissä on rautaa.\n- Rauta toimii monien entsyymien kofaktorina.\n- Riittävä raudan saanti ehkäisee anemiaa.\n\n**Esimerkkivastaus:** Rauta on hemoglobiinin rakenneosa: jokaisessa hemoglobiinin alayksikössä on rautaa sisältävä hemiryhmä, johon happi sitoutuu keuhkoissa. Siksi rautaa tarvitaan, jotta punasolut voivat kuljettaa happea kudosten soluhengitykseen. Lihaksissa happea varastoi myoglobiini, jossa on myös rautaa. Mitokondrioiden elektroninsiirtoketjun sytokromeissa on rautaa, ja rauta toimii monien entsyymien kofaktorina. Jos rautaa saadaan liian vähän, hemoglobiinia muodostuu vähemmän ja seurauksena on anemia, joka näkyy väsymyksenä ja heikentyneenä suorituskykynä.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 4,
+     "prompt": "Arvioi, kumpi elintarvike (11.A vai 11.B) tukee paremmin luuston terveyttä.",
+     "hints": [
+      "Vertaa pakkausmerkinnöistä kahta luustolle tärkeää ravintoainetta: mitä kivennäisainetta luusto on, ja mikä vitamiini auttaa sen imeytymistä?"
+     ],
+     "solution": "**Hyvä vastaus sisältää**\n\n- Luuston terveyttä tukee paremmin elintarvike 11.B.\n- Siinä on runsaasti kalsiumia, joka vahvistaa luustoa.\n- Siinä on myös D-vitamiinia, josta elimistössä muodostuu aktiivista kalsitriolia.\n- D-vitamiini tehostaa kalsiumin imeytymistä suolistosta ja auttaa säätelemään veren kalsiumpitoisuutta.\n- Riittävä kalsiumin ja D-vitamiinin saanti ehkäisee riisitautia ja osteoporoosia.\n\n**Esimerkkivastaus:** Parempi vaihtoehto luuston kannalta on elintarvike 11.B. Siinä on paljon kalsiumia, joka on luun kovan osan tärkein kivennäisaine. Lisäksi siinä on D-vitamiinia, jonka elimistö muuttaa maksassa ja munuaisissa aktiiviseksi kalsitrioliksi. Kalsitrioli lisää kalsiumin imeytymistä ohutsuolesta ja pitää veren kalsiumpitoisuuden tasaisena, jolloin kalsiumia riittää luustoon. Riittävä kalsiumin ja D-vitamiinin saanti ehkäisee lapsilla riisitautia ja aikuisilla osteoporoosia. Elintarvikkeen 11.A merkinnöissä ei ole kumpaakaan.",
+     "answer": "elintarvike 11.B (kalsium ja D-vitamiini)",
+     "check": "hvp"
+    }
+   ]
+  }
+ ]
+}

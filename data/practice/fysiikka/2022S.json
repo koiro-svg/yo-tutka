@@ -1,0 +1,380 @@
+{
+ "subject": "fysiikka",
+ "session": "2022S",
+ "examUrl": "https://files.mafy.fi/Yo-kokeet/2022S_FY/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2022-09-22_FY_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1",
+    "tasks": [
+     "1"
+    ],
+    "answer": 1,
+    "note": "Pakollinen 20 pisteen tehtävä."
+   },
+   {
+    "title": "Osa 2",
+    "tasks": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 4,
+    "note": "Vastaa neljään 15 pisteen tehtävään."
+   },
+   {
+    "title": "Osa 3",
+    "tasks": [
+     "9",
+     "10",
+     "11"
+    ],
+    "answer": 2,
+    "note": "Vastaa kahteen 20 pisteen tehtävään."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 20,
+     "prompt": "Valitse kussakin kohdassa paras vaihtoehto (vaihtoehdot koenäkymässä, A = ylin). Kohdat 1.1–1.3: lapsi hyppii trampoliinilla samanlaisia hyppyjä.\n\n- 1.1 Trampoliini jarruttaa lasta: voimien suuruudet?\n- 1.2 Suurin venymä: trampoliinin voima vs. paino?\n- 1.3 Vauhti irtoamisen jälkeen?\n- 1.4 Ei lämmönsiirtoa kappaleiden välillä: mikä on varmaa?\n- 1.5 Kiehumisen ja haihtumisen ero?\n- 1.6 Miten pölyhuiska varautuu?\n- 1.7 Miksi huiska vetää pölyä?\n- 1.8 Magneetti pitää yhden arkin, ei kymmentä: miksi?\n- 1.9 Energian siirtyminen valosta metalliin?\n- 1.10 Mitkä suureet säilyvät hajoamisessa?",
+     "hints": [
+      "Käy kohdat läpi peruslaeilla: Newtonin III ja II laki, lämpötasapaino, olomuodon muutokset, hankaussähkö ja polarisaatio, magneettikentän heikkeneminen etäisyyden mukana, fotonin energia ja säilymislait.",
+      "Kohta kohdalta: 1.1 voima ja vastavoima; 1.2 lapsi kiihtyy ylöspäin; 1.3 ilmassa vain paino vaikuttaa; 1.4 lämpöä siirtyy lämpötilaeron takia; 1.5 kiehumispiste; 1.6 hankaus; 1.7 varaamaton pöly polarisoituu; 1.8 etäisyys; 1.9 $E = hf = hc/\\lambda$; 1.10 mikään säilymislaki ei rikkoudu."
+     ],
+     "solution": "1. **1.1 D** (voimat ovat yhtä suuret). Newtonin III lain mukaan voima ja vastavoima ovat aina yhtä suuret ja vastakkaissuuntaiset, vaikka lapsi hidastuu.\n2. **1.2 C** (trampoliinin voima on painoa suurempi). Käännöskohdassa lapsen kiihtyvyys osoittaa ylöspäin, joten Newtonin II lain mukaan ylöspäin vaikuttavan voiman on oltava painoa suurempi.\n3. **1.3 A** (vauhti pienenee). Irtoamisen jälkeen lapseen vaikuttaa (ilmanvastusta lukuun ottamatta) vain paino, joka hidastaa nousua.\n4. **1.4 D** (sama lämpötila). Lämpöä siirtyy vain lämpötilaeron vaikutuksesta; massat, lämpökapasiteetit ja materiaalit voivat olla mitä tahansa.\n5. **1.5 A** (kiehuminen vain kiehumispisteessä, haihtuminen myös alemmissa lämpötiloissa). Kiehumisessa höyrykuplia syntyy koko nesteeseen, kun höyrynpaine saavuttaa ulkoisen paineen; haihtumista tapahtuu nesteen pinnalta kaikissa lämpötiloissa.\n6. **1.6 D** (kuidut hankautuvat toisiinsa ja pintaan). Hankauksessa elektroneja siirtyy materiaalista toiseen.\n7. **1.7 A** (huiska polarisoi pölyhiukkaset). Varattu huiska saa hiukkasen varaukset jakautumaan epätasaisesti; lähempänä oleva vastakkaismerkkinen osa vetää voimakkaammin kuin kauempana oleva hylkii.\n8. **1.8 B** (kenttä heikkenee nopeasti etäisyyden kasvaessa). Paperi ei juuri vaikuta magneettikenttään, mutta nippu kasvattaa magneetin ja teräsoven välistä etäisyyttä.\n9. **1.9 D** (kvantteina, joiden suuruuden määrää aallonpituus). Fotonin energia on $E = hf = hc/\\lambda$; intensiteetti kertoo fotonien määrän.\n10. **1.10 A** (varaus, energia ja liikemäärä säilyvät). Säilymislait pätevät myös ydinreaktioissa ja hajoamisissa.\n\n**Vastaus: 1.1 D · 1.2 C · 1.3 A · 1.4 D · 1.5 A · 1.6 D · 1.7 A · 1.8 B · 1.9 D · 1.10 A**\n\n**Sudenkuoppa:** kohdassa 1.1 päätellään hidastumisesta, että trampoliinin voima on lapsen voimaa suurempi. Hidastuminen johtuu lapseen vaikuttavien voimien summasta, ei voimaparin epäsymmetriasta.",
+     "answer": "1.1 D · 1.2 C · 1.3 A · 1.4 D · 1.5 A · 1.6 D · 1.7 A · 1.8 B · 1.9 D · 1.10 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "John Young hyppäsi vuonna 1972 Kuussa lähes suoraan ylöspäin (video 2.A). Mittausaineistossa 2.B on hänen reppunsa yläreunan korkeus Kuun pinnasta ajan funktiona.\n\n- 2.1 Esitä korkeus ajan funktiona graafisesti mittauspisteinä ja sovita niihin fysikaalisen mallin mukainen käyrä. Mikä liikkeen malli on kyseessä?\n- 2.2 Millä hetkellä astronautti on korkeimmillaan?\n- 2.3 Määritä aineistosta putoamiskiihtyvyys Kuun pinnalla.",
+     "hints": [
+      "Ilmassa astronauttiin vaikuttaa vain Kuun painovoima, joka on vakio. Millainen on tasaisesti kiihtyvän liikkeen paikan lauseke ajan funktiona, ja millainen sovite siitä seuraa?",
+      "Sovita toisen asteen polynomi $y = At^2 + Bt + C$. Vertaa sitä yhtälöön $y = y_0 + v_0t - \\frac12 g t^2$: $A = -\\frac12 g$. Huippu on derivaatan nollakohdassa $t = -\\frac{B}{2A}$."
+     ],
+     "solution": "**2.1 Kuvaaja ja malli**\n\n1. Piirretään korkeus $y\\ (\\mathrm{m})$ ajan $t\\ (\\mathrm{s})$ funktiona erillisinä pisteinä.\n2. Hypyn aikana astronauttiin vaikuttaa vain vakiosuuruinen painovoima (Kuussa ei ole ilmanvastusta), joten liike on **tasaisesti muuttuvaa (tasaisesti kiihtyvää) liikettä**, jonka paikan lauseke on $y = y_0 + v_0t - \\frac12 gt^2$.\n3. Sovitetaan pisteisiin toisen asteen polynomi: $y = -0{,}867\\,\\mathrm{m/s^2}\\cdot t^2 + 1{,}314\\,\\mathrm{m/s}\\cdot t + 1{,}542\\,\\mathrm{m}$. Sovite ja sen yhtälö merkitään kuvaajaan.\n\n**2.2 Korkein kohta**\n\n4. Korkeimmassa kohdassa pystynopeus on nolla: $\\dfrac{dy}{dt} = 2\\cdot(-0{,}867\\,\\mathrm{m/s^2})t + 1{,}314\\,\\mathrm{m/s} = 0$.\n5. $t = \\dfrac{1{,}314\\,\\mathrm{m/s}}{1{,}734\\,\\mathrm{m/s^2}} \\approx 0{,}76\\,\\mathrm{s}$.\n\n**2.3 Putoamiskiihtyvyys**\n\n6. Vertaamalla sovitetta liikeyhtälöön: $-\\frac12 g_\\mathrm{Kuu} = -0{,}867\\,\\mathrm{m/s^2}$, joten $g_\\mathrm{Kuu} = 2\\cdot 0{,}867\\,\\mathrm{m/s^2} \\approx 1{,}7\\,\\mathrm{m/s^2}$.\n7. Tarkistus: alkunopeus $v_0 = 1{,}314\\,\\mathrm{m/s}$ ja nousuaika $0{,}758\\,\\mathrm{s}$ antavat $g = v_0/t \\approx 1{,}7\\,\\mathrm{m/s^2}$. Taulukkoarvo on $1{,}62\\,\\mathrm{m/s^2}$, joten tulos on järkevä.\n\n**Vastaus: tasaisesti kiihtyvä liike (paraabelisovite); korkein kohta noin hetkellä $0{,}76\\,\\mathrm{s}$; $g_\\mathrm{Kuu} \\approx 1{,}7\\,\\mathrm{m/s^2}$.**\n\n**Sudenkuoppa:** sovitteen $t^2$-kertoimen tulkitseminen suoraan kiihtyvyydeksi. Kerroin on $\\frac12 a$, joten se on kerrottava kahdella. Myös Kuun painovoiman laskeminen gravitaatiolaista aineistoa käyttämättä ei vastaa kysymykseen.",
+     "answer": "tasaisesti kiihtyvä liike; $t \\approx 0{,}76\\,\\mathrm{s}$; $g_\\mathrm{Kuu} \\approx 1{,}7\\,\\mathrm{m/s^2}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Kuvan 3.A vastapainohississä hissikorin ja kuorman massa on yhteensä $830\\,\\mathrm{kg}$ ja vastapainon $670\\,\\mathrm{kg}$. Niitä yhdistävä vaijeri kulkee moottorin vetopyörän yli liukumatta. Hissi lähtee ylöspäin, ja sen vauhti kasvaa tasaisesti nollasta arvoon $1{,}6\\,\\mathrm{m/s}$ ajassa $1{,}2\\,\\mathrm{s}$.\n\n- 3.1 Määritä voimat, joilla vaijeri vetää hissikoria ja vastapainoa kiihdytyksen aikana.\n- 3.2 Mitkä ovat hissin nopeus ja moottorin mekaaninen teho hetkellä $0{,}80\\,\\mathrm{s}$ lähdöstä?",
+     "hints": [
+      "Laske ensin kiihtyvyys. Piirrä voimakuvio erikseen hissikorille (kiihtyy ylös) ja vastapainolle (kiihtyy alas) ja kirjoita kummallekin Newtonin II laki. Vaijerin voimat kappaleisiin eivät ole yhtä suuret, koska moottori vetää vetopyörää.",
+      "$a = \\frac{1{,}6\\,\\mathrm{m/s}}{1{,}2\\,\\mathrm{s}} \\approx 1{,}33\\,\\mathrm{m/s^2}$, $F_\\mathrm{H} = m_\\mathrm{H}(g + a)$ ja $F_\\mathrm{V} = m_\\mathrm{V}(g - a)$. Hetkellinen teho on voiman ja nopeuden tulo; vastapainon puolen voima tekee negatiivista työtä, joten $P = (F_\\mathrm{H} - F_\\mathrm{V})v$."
+     ],
+     "solution": "**3.1 Vaijerin voimat**\n\n1. Kiihtyvyys: $a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{1{,}6\\,\\mathrm{m/s}}{1{,}2\\,\\mathrm{s}} = 1{,}333\\,\\mathrm{m/s^2}$. Kori kiihtyy ylöspäin ja vastapaino yhtä suurella kiihtyvyydellä alaspäin.\n2. Voimakuviot: korissa paino $\\bar G_\\mathrm{H}$ alas ja vaijerin voima $\\bar F_\\mathrm{H}$ ylös ($F_\\mathrm{H} > G_\\mathrm{H}$); vastapainossa paino $\\bar G_\\mathrm{V}$ alas ja vaijerin voima $\\bar F_\\mathrm{V}$ ylös ($F_\\mathrm{V} < G_\\mathrm{V}$).\n3. Newtonin II laki korille (ylös positiivinen): $F_\\mathrm{H} - m_\\mathrm{H}g = m_\\mathrm{H}a$, joten $F_\\mathrm{H} = m_\\mathrm{H}(g + a) = 830\\,\\mathrm{kg}\\cdot(9{,}81 + 1{,}333)\\,\\mathrm{m/s^2} \\approx 9{,}2\\,\\mathrm{kN}$.\n4. Vastapainolle (alas positiivinen): $m_\\mathrm{V}g - F_\\mathrm{V} = m_\\mathrm{V}a$, joten $F_\\mathrm{V} = m_\\mathrm{V}(g - a) = 670\\,\\mathrm{kg}\\cdot(9{,}81 - 1{,}333)\\,\\mathrm{m/s^2} \\approx 5{,}7\\,\\mathrm{kN}$.\n\n**3.2 Nopeus ja teho**\n\n5. Nopeus: $v = at = 1{,}333\\,\\mathrm{m/s^2}\\cdot 0{,}80\\,\\mathrm{s} \\approx 1{,}1\\,\\mathrm{m/s}$.\n6. Moottori vetää korin puolta voimalla $F_\\mathrm{H}$ liikkeen suuntaan (teho $F_\\mathrm{H}v$), ja vastapainon puolella vaijerin voima on liikettä vastaan (teho $-F_\\mathrm{V}v$). Moottorin teho on siis $P = (F_\\mathrm{H} - F_\\mathrm{V})v = (9249 - 5679)\\,\\mathrm{N}\\cdot 1{,}067\\,\\mathrm{m/s} \\approx 3{,}8\\,\\mathrm{kW}$.\n\n**Vastaus: $F_\\mathrm{H} \\approx 9{,}2\\,\\mathrm{kN}$ ja $F_\\mathrm{V} \\approx 5{,}7\\,\\mathrm{kN}$; hetkellä $0{,}80\\,\\mathrm{s}$ nopeus on noin $1{,}1\\,\\mathrm{m/s}$ ja teho noin $3{,}8\\,\\mathrm{kW}$.**\n\n**Sudenkuoppa:** oletetaan vaijerin voima samaksi molemmissa päissä tai lasketaan keskiteho hetkellisen tehon sijaan.",
+     "answer": "$F_\\mathrm{H} \\approx 9{,}2\\,\\mathrm{kN}$, $F_\\mathrm{V} \\approx 5{,}7\\,\\mathrm{kN}$; $v \\approx 1{,}1\\,\\mathrm{m/s}$, $P \\approx 3{,}8\\,\\mathrm{kW}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "4.1",
+     "points": 7,
+     "prompt": "Kirurginen diatermialaite johtaa kudoksen läpi suurtaajuista sinimuotoista vaihtovirtaa, ja kudos toimii vastuksena. Laitteen teho on $58\\,\\mathrm{W}$. Toimenpiteessä $1{,}1\\,\\mathrm{g}$ kudosnestettä (lähes vettä) lämmitetään ruumiinlämmöstä $37\\,^\\circ\\mathrm{C}$ kiehumispisteeseen, minkä jälkeen siitä höyrystyy $0{,}40\\,\\mathrm{g}$. Kuinka kauan toimenpide kestää?",
+     "hints": [
+      "Tarvittava energia koostuu kahdesta osasta: lämmitys ($Q_1 = cm\\Delta T$) ja höyrystys ($Q_2 = rm$). Aika saadaan tehosta: $P = Q/t$.",
+      "$Q_1 = 4190\\,\\mathrm{\\tfrac{J}{kg\\,K}}\\cdot 1{,}1\\cdot 10^{-3}\\,\\mathrm{kg}\\cdot 63\\,\\mathrm{K} \\approx 290\\,\\mathrm{J}$ ja $Q_2 = 2{,}26\\cdot 10^6\\,\\mathrm{J/kg}\\cdot 0{,}40\\cdot 10^{-3}\\,\\mathrm{kg} \\approx 904\\,\\mathrm{J}$."
+     ],
+     "solution": "1. Lämmitys $37\\,^\\circ\\mathrm{C}$ → $100\\,^\\circ\\mathrm{C}$ ($\\Delta T = 63\\,\\mathrm{K}$): $Q_1 = c m_1\\Delta T = 4190\\,\\mathrm{\\tfrac{J}{kg\\,K}}\\cdot 1{,}1\\cdot 10^{-3}\\,\\mathrm{kg}\\cdot 63\\,\\mathrm{K} \\approx 290\\,\\mathrm{J}$.\n2. Höyrystys: $Q_2 = r m_2 = 2{,}26\\cdot 10^6\\,\\mathrm{J/kg}\\cdot 0{,}40\\cdot 10^{-3}\\,\\mathrm{kg} = 904\\,\\mathrm{J}$.\n3. Yhteensä $Q = Q_1 + Q_2 \\approx 1194\\,\\mathrm{J}$.\n4. Tehon määritelmästä $P = Q/t$: $t = \\dfrac{Q}{P} = \\dfrac{1194\\,\\mathrm{J}}{58\\,\\mathrm{W}} \\approx 21\\,\\mathrm{s}$.\n\n**Vastaus: noin $21\\,\\mathrm{s}$.**\n\n**Sudenkuoppa:** höyrystyminen unohtuu tai höyrystymislämpö lasketaan koko $1{,}1\\,\\mathrm{g}$ massalle.",
+     "answer": "$t \\approx 21\\,\\mathrm{s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.2",
+     "points": 5,
+     "prompt": "Kudoksessa kulkevan virran tehollinen arvo on $0{,}45\\,\\mathrm{A}$ (teho edelleen $58\\,\\mathrm{W}$). Mikä on jännitteen huippuarvo?",
+     "hints": [
+      "Vaihtovirran teho lasketaan tehollisilla arvoilla: $P = UI$. Ratkaise ensin tehollinen jännite.",
+      "Sinimuotoisella vaihtojännitteellä huippuarvo on $\\sqrt2$-kertainen teholliseen arvoon nähden: $u_0 = \\sqrt2\\,U$."
+     ],
+     "solution": "1. Resistiivisessä kuormassa $P = UI$, missä $U$ ja $I$ ovat teholliset arvot: $U = \\dfrac{P}{I} = \\dfrac{58\\,\\mathrm{W}}{0{,}45\\,\\mathrm{A}} \\approx 128{,}9\\,\\mathrm{V}$.\n2. Sinimuotoisella jännitteellä $U = \\dfrac{u_0}{\\sqrt2}$, joten $u_0 = \\sqrt2\\,U = \\sqrt2\\cdot 128{,}9\\,\\mathrm{V} \\approx 180\\,\\mathrm{V}$.\n\n**Vastaus: jännitteen huippuarvo on noin $180\\,\\mathrm{V}$.**\n\n**Sudenkuoppa:** tehollinen arvo $130\\,\\mathrm{V}$ annetaan huippuarvona.",
+     "answer": "$u_0 \\approx 180\\,\\mathrm{V}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "4.3",
+     "points": 3,
+     "prompt": "Kuinka suuri on poltettavan kudoksen resistanssi toimenpiteen aikana ($P = 58\\,\\mathrm{W}$, $I_\\mathrm{teh} = 0{,}45\\,\\mathrm{A}$)?",
+     "hints": [
+      "Yhdistä Ohmin laki $U = RI$ ja teho $P = UI$ niin, että jännite häviää."
+     ],
+     "solution": "1. $P = UI = RI^2$, joten $R = \\dfrac{P}{I^2}$.\n2. $R = \\dfrac{58\\,\\mathrm{W}}{(0{,}45\\,\\mathrm{A})^2} \\approx 290\\,\\Omega$.\n\n**Vastaus: noin $290\\,\\Omega$.**",
+     "answer": "$R \\approx 290\\,\\Omega$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "5.1",
+     "points": 7,
+     "prompt": "Kaksi samanlaista pientä alumiinikuulaa on $0{,}10\\,\\mathrm{m}$ päässä toisistaan, ja ne vetävät toisiaan $1{,}0\\,\\mathrm{N}$ voimalla. Kuulat kosketetaan toisiinsa ja palautetaan samalle etäisyydelle, jolloin ne hylkivät toisiaan yhtä suurella voimalla. Selitä, miksi kuulat vetävät toisiaan ennen kosketusta ja miksi ne kosketuksen jälkeen hylkivät toisiaan.",
+     "hints": [
+      "Coulombin lain mukaan voiman suunta riippuu varausten merkeistä. Mitä voit päätellä merkeistä ennen kosketusta ja sen jälkeen?",
+      "Alumiini johtaa sähköä ja kuulat ovat samanlaiset. Miten kokonaisvaraus jakautuu kosketuksessa? Jos kuulat hylkivät toisiaan jälkikäteen, mitä se kertoo alkuperäisten varausten itseisarvoista?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kuulien välillä on sähköinen vuorovaikutus (Coulombin laki); vetovoima tarkoittaa erimerkkisiä varauksia\n- kosketuksessa elektroneja siirtyy kuulasta toiseen, ja koska kuulat ovat samanlaisia johteita, kokonaisvaraus jakautuu tasan\n- kosketuksen jälkeen kummallakin on sama varaus, joten ne hylkivät toisiaan\n- koska kuuliin jää nollasta poikkeava varaus, alkuperäisten varausten itseisarvot olivat erisuuret\n\n**Esimerkkivastaus:** Ennen kosketusta kuulat vetävät toisiaan, joten niillä on Coulombin lain mukaan erimerkkiset varaukset. Kun johtavat kuulat koskettavat, elektroneja siirtyy negatiivisesta kuulasta positiiviseen, kunnes kummallakin on sama varaus: puolet kokonaisvarauksesta. Kosketuksen jälkeen kuulat ovat samanmerkkisesti varattuja ja siksi hylkivät toisiaan. Hylkiminen edellyttää, että kokonaisvaraus ei ole nolla, eli kuulien alkuperäiset varaukset olivat itseisarvoltaan eri suuret.\n\n**Sudenkuoppa:** oletetaan, että varaukset olivat aluksi yhtä suuret. Silloin kosketuksen jälkeen kuulat olisivat neutraaleja eivätkä hylkisi toisiaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "5.2",
+     "points": 8,
+     "prompt": "Määritä kuulien varaukset ennen kosketusta (etäisyys $0{,}10\\,\\mathrm{m}$, voima $1{,}0\\,\\mathrm{N}$ sekä ennen että jälkeen kosketuksen).",
+     "hints": [
+      "Merkitse alkuvaraukset $q_1$ ja $q_2$. Kosketuksen jälkeen kummankin varaus on $\\frac{q_1 + q_2}{2}$. Kirjoita Coulombin laki kummallekin tilanteelle.",
+      "Ennen: $k\\frac{q_1q_2}{d^2} = -F$ (vetovoima, $q_1q_2 < 0$). Jälkeen: $k\\frac{(q_1+q_2)^2}{4d^2} = F$. Näistä saat $q_1^2 + 6q_1q_2 + q_2^2 = 0$, eli $q_1 = (-3 \\pm 2\\sqrt2)q_2$."
+     ],
+     "solution": "1. Olkoot alkuvaraukset $q_1$ ja $q_2$. Coulombin laki: $F = k\\dfrac{|q_1q_2|}{d^2}$, $k = 8{,}988\\cdot 10^9\\,\\mathrm{N\\,m^2/C^2}$.\n2. Ennen kosketusta voima on vetävä, joten $q_1q_2 < 0$ ja $q_1q_2 = -\\dfrac{Fd^2}{k}$.\n3. Kosketuksen jälkeen kummankin varaus on $\\dfrac{q_1+q_2}{2}$, ja voima on hylkivä: $k\\dfrac{(q_1+q_2)^2}{4d^2} = F$, joten $(q_1+q_2)^2 = \\dfrac{4Fd^2}{k}$.\n4. Yhdistetään: $(q_1+q_2)^2 = -4q_1q_2$, eli $q_1^2 + 6q_1q_2 + q_2^2 = 0$. Ratkaisu: $q_1 = (-3 \\pm 2\\sqrt2)\\,q_2$.\n5. Sijoitetaan kohtaan 2 ja ratkaistaan: $\\dfrac{Fd^2}{k} = \\dfrac{1{,}0\\,\\mathrm{N}\\cdot(0{,}10\\,\\mathrm{m})^2}{8{,}988\\cdot 10^9\\,\\mathrm{N\\,m^2/C^2}} = 1{,}113\\cdot 10^{-12}\\,\\mathrm{C^2}$. Kun $q_1 = (-3 + 2\\sqrt2)q_2 \\approx -0{,}1716\\,q_2$: $q_2^2 = \\dfrac{1{,}113\\cdot 10^{-12}}{0{,}1716}\\,\\mathrm{C^2}$, joten $|q_2| \\approx 2{,}55\\,\\mathrm{\\mu C}$ ja $|q_1| \\approx 0{,}44\\,\\mathrm{\\mu C}$.\n6. Tarkistus: $\\frac{2{,}55 - 0{,}44}{2}\\,\\mathrm{\\mu C} \\approx 1{,}05\\,\\mathrm{\\mu C}$ kummallekin, ja $k\\frac{(1{,}05\\,\\mathrm{\\mu C})^2}{(0{,}10\\,\\mathrm{m})^2} \\approx 1{,}0\\,\\mathrm{N}$.\n7. Etumerkkejä ei voi päätellä, joten ratkaisuja on neljä: $(q_1, q_2) = (-0{,}44;\\ 2{,}55)$, $(2{,}55;\\ -0{,}44)$, $(0{,}44;\\ -2{,}55)$ tai $(-2{,}55;\\ 0{,}44)\\,\\mathrm{\\mu C}$.\n\n**Vastaus: toisen kuulan varaus oli noin $2{,}5\\,\\mathrm{\\mu C}$ ja toisen noin $0{,}44\\,\\mathrm{\\mu C}$ vastakkaismerkkisenä (kumpi tahansa voi olla positiivinen).**\n\n**Sudenkuoppa:** vain yhden ratkaisun ilmoittaminen. Kuulien järjestys ja varausten merkit voivat vaihtua.",
+     "answer": "$\\approx 2{,}5\\,\\mathrm{\\mu C}$ ja $0{,}44\\,\\mathrm{\\mu C}$ erimerkkisinä (4 merkkiyhdistelmää)",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Neliön muotoinen johdinsilmukka on rajatun kokoisessa homogeenisessa magneettikentässä. Yhdistä jokainen tapaus aineiston 6.A virta–aika-kuvaajaan (A–H). Sama kuvaaja voi sopia useaan kohtaan.\n\n- 6.1 Silmukka pyörii tasaisella kulmanopeudella akselin ympäri, joka on kohtisuorassa kenttää vastaan.\n- 6.2 Silmukka pyörii tasaisesti akselin ympäri, joka on kentän suuntainen.\n- 6.3 Silmukka on aluksi levossa kentässä ja pääsee putoamaan vapaasti (ks. kuva alkuperäisessä tehtävässä), jolloin se putoaa ulos kentästä.\n- 6.4 Silmukka on paikallaan, ja kenttä katoaa yhtäkkiä.\n- 6.5 Silmukka on paikallaan, ja vuontiheys vuorotellen kasvaa ja pienenee tasaisesti.",
+     "hints": [
+      "Faradayn induktiolaki: indusoitunut jännite ja siten virta on verrannollinen magneettivuon muutosnopeuteen $\\frac{\\Delta\\Phi}{\\Delta t}$. Mieti jokaisessa tapauksessa, miten vuo $\\Phi = BA\\cos\\alpha$ muuttuu ajan funktiona.",
+      "Kohta kohdalta: 6.1 vuo vaihtelee kosinina; 6.2 kentän suuntainen akseli ei muuta vuota; 6.3 vuo alkaa pienentyä vasta, kun silmukka ylittää kentän reunan, ja nopeus $v = gt$ kasvaa; 6.4 vuon muutos lyhyessä ajassa; 6.5 vuon muutosnopeus on vuorotellen vakio positiivinen ja vakio negatiivinen."
+     ],
+     "solution": "1. **6.1 A** (sinimuotoinen virta). Vuo $\\Phi = BA\\cos\\omega t$ vaihtelee jaksollisesti, ja sen muutosnopeus on sinimuotoinen, joten virtakin on sinimuotoinen.\n2. **6.2 H** (virta on koko ajan nolla). Kun akseli on kentän suuntainen, silmukan taso pysyy kentän suuntaisena, eikä sen läpi kulkeva vuo muutu.\n3. **6.3 F** (virta nolla, sitten lineaarisesti kasvava, lopuksi taas nolla). Kun silmukka on kokonaan kentässä, vuo ei muutu. Kun sen alareuna on ohittanut kentän reunan, vuo pienenee nopeudella $Blv$, ja vapaassa pudotuksessa $v = gt$ kasvaa tasaisesti, joten virta kasvaa lineaarisesti. Kun silmukka on kokonaan ulkona, virta loppuu.\n4. **6.4 G** (lyhyt, voimakas virtapulssi). Vuo muuttuu arvosta $BA$ nollaan hyvin lyhyessä ajassa, joten syntyy hetkellinen suuri virta.\n5. **6.5 C** (kanttiaalto). Kun vuontiheys kasvaa tasaisesti, vuon muutosnopeus on vakio ja virta vakio; kun se pienenee tasaisesti, virta on yhtä suuri mutta vastakkaissuuntainen.\n\n**Vastaus: 6.1 A · 6.2 H · 6.3 F · 6.4 G · 6.5 C**\n\n**Sudenkuoppa:** kohdassa 6.3 valitaan kuvaaja E (kaareva kasvu). Vuon muutosnopeus on verrannollinen nopeuteen, joka vapaassa pudotuksessa kasvaa lineaarisesti ajan funktiona.",
+     "answer": "6.1 A · 6.2 H · 6.3 F · 6.4 G · 6.5 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "7.1",
+     "points": 2,
+     "prompt": "Peltipurkkipuhelimessa (kuva 7.A) kaksi purkkia on yhdistetty $75\\,\\mathrm{m}$ pitkällä kireällä messinkilangalla. Millaisena mekaanisena aaltona ääni kulkee langassa?",
+     "hints": [
+      "Mieti, mihin suuntaan purkin pohja liikuttaa lankaa: langan suuntaisesti vai sitä vastaan kohtisuoraan?"
+     ],
+     "solution": "1. Värähtelevä purkin pohja vetää ja löysää lankaa langan suunnassa, jolloin langassa etenee tihentymiä ja harventumia.\n2. Hiukkasten värähtely on etenemissuunnan suuntaista.\n\n**Vastaus: pitkittäisenä aaltoliikkeenä.**",
+     "answer": "pitkittäisenä aaltona",
+     "check": "hvp"
+    },
+    {
+     "id": "7.2",
+     "points": 4,
+     "prompt": "Äänen nopeus ohuessa messinkilangassa on $v = \\sqrt{E/\\rho}$, missä kimmokerroin $E = 10{,}5\\cdot 10^{10}\\,\\mathrm{N/m^2}$ ja tiheys $\\rho = 8{,}4\\cdot 10^3\\,\\mathrm{kg/m^3}$. Äänen nopeus ilmassa on $343\\,\\mathrm{m/s}$. Kuinka paljon aikaisemmin ääni tulee kuulijalle ($75\\,\\mathrm{m}$ päässä) puhelimella kuin huutamalla? Purkkien pituuksia ei huomioida.",
+     "hints": [
+      "Kummassakin tapauksessa ääni kulkee saman matkan $x = 75\\,\\mathrm{m}$. Laske kulkuajat $t = x/v$ ja niiden erotus."
+     ],
+     "solution": "1. Äänen nopeus langassa: $v = \\sqrt{\\dfrac{E}{\\rho}} = \\sqrt{\\dfrac{10{,}5\\cdot 10^{10}\\,\\mathrm{N/m^2}}{8{,}4\\cdot 10^3\\,\\mathrm{kg/m^3}}} \\approx 3540\\,\\mathrm{m/s}$.\n2. Molemmissa tapauksissa matka on $x = 75\\,\\mathrm{m}$. Kulkuajat: $t_\\mathrm{ilma} = \\dfrac{75\\,\\mathrm{m}}{343\\,\\mathrm{m/s}} \\approx 0{,}219\\,\\mathrm{s}$ ja $t_\\mathrm{lanka} = \\dfrac{75\\,\\mathrm{m}}{3536\\,\\mathrm{m/s}} \\approx 0{,}021\\,\\mathrm{s}$.\n3. Erotus: $\\Delta t = x\\left(\\dfrac{1}{v_\\mathrm{ilma}} - \\sqrt{\\dfrac{\\rho}{E}}\\right) \\approx 0{,}20\\,\\mathrm{s}$.\n\n**Vastaus: puhelimella ääni tulee noin $0{,}20\\,\\mathrm{s}$ aikaisemmin.**\n\n**Sudenkuoppa:** vastaukseksi annetaan nopeuksien suhde, vaikka kysytään aikaeroa.",
+     "answer": "$\\Delta t \\approx 0{,}20\\,\\mathrm{s}$",
+     "check": "hvp+laskettu"
+    },
+    {
+     "id": "7.3",
+     "points": 9,
+     "prompt": "Langassa ääni vaimenee vain absorption takia: $I = I_1e^{-\\alpha x}$, $\\alpha = 0{,}086\\,\\mathrm{m^{-1}}$. Puhujan purkin pohjassa, $7{,}0\\,\\mathrm{cm}$ päässä suusta, intensiteettitaso on $72\\,\\mathrm{dB}$. Laske intensiteettitaso kuulijan purkin pohjassa. Laske myös taso $75\\,\\mathrm{m}$ päässä, jos puhuja puhuu yhtä voimakkaasti ilman puhelinta (ilman absorptiota ei huomioida). Vertaa tuloksia.",
+     "hints": [
+      "Intensiteettitaso on $L = 10\\lg\\frac{I}{I_0}$. Kun intensiteetti kerrotaan jollakin tekijällä, taso muuttuu termillä $10\\lg(\\text{tekijä})$.",
+      "Langassa tekijä on $e^{-\\alpha x}$. Ilmassa ääni leviää palloaaltona, $I \\propto 1/r^2$, joten tekijä on $(r_1/r_2)^2$ ja tasosta vähennetään $20\\lg\\frac{r_2}{r_1}$."
+     ],
+     "solution": "1. Intensiteettitaso: $L = 10\\lg\\dfrac{I}{I_0}$. Jos $I_2 = kI_1$, niin $L_2 = L_1 + 10\\lg k$.\n2. **Langassa:** $I_2 = I_1e^{-\\alpha x}$, joten $L_2 = 72\\,\\mathrm{dB} + 10\\lg\\left(e^{-0{,}086\\,\\mathrm{m^{-1}}\\cdot 75\\,\\mathrm{m}}\\right)\\mathrm{dB} = 72\\,\\mathrm{dB} - 28\\,\\mathrm{dB} \\approx 44\\,\\mathrm{dB}$.\n3. **Ilmassa:** ääni leviää pallomaisesti, joten $I \\propto \\dfrac{1}{r^2}$ ja $\\dfrac{I_2}{I_1} = \\left(\\dfrac{r_1}{r_2}\\right)^2$.\n4. $L_2 = 72\\,\\mathrm{dB} - 20\\lg\\dfrac{75\\,\\mathrm{m}}{0{,}070\\,\\mathrm{m}}\\,\\mathrm{dB} = 72\\,\\mathrm{dB} - 60{,}6\\,\\mathrm{dB} \\approx 11\\,\\mathrm{dB}$.\n5. Vertailu: puhelimella kuulija saa noin $44\\,\\mathrm{dB}$ tason, mikä vastaa hiljaista puhetta ja on hyvin kuultavissa. Ilman puhelinta taso on noin $11\\,\\mathrm{dB}$, mikä on lähellä kuulokynnystä (hengityksen ääni). Ero on noin $33\\,\\mathrm{dB}$, eli intensiteetti on puhelimella noin 2000-kertainen.\n\n**Vastaus: puhelimella noin $44\\,\\mathrm{dB}$, ilman puhelinta noin $11\\,\\mathrm{dB}$; puhelin välittää äänen paljon voimakkaampana, koska lanka ei levitä ääntä joka suuntaan.**\n\n**Sudenkuoppa:** desibeliarvoja käsitellään kuin intensiteettejä (esim. kerrotaan $72\\,\\mathrm{dB}$ vaimennuskertoimella).",
+     "answer": "puhelimella $\\approx 44\\,\\mathrm{dB}$, ilman $\\approx 11\\,\\mathrm{dB}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "8.1",
+     "points": 4,
+     "prompt": "Ilmakehässä $^{14}\\mathrm{C}$ syntyy, kun typpiydin $^{14}\\mathrm{N}$ kaappaa kosmisen säteilyn tuottaman neutronin ja lähettää protonin. $^{14}\\mathrm{C}$ hajoaa $\\beta^-$-hajoamisella. Kirjoita syntymisen ja hajoamisen reaktioyhtälöt.",
+     "hints": [
+      "Merkitse jokaiseen hiukkaseen massaluku ja varausluku ja tarkista, että ne säilyvät. $\\beta^-$-hajoamisessa syntyy elektroni ja elektronin antineutriino."
+     ],
+     "solution": "1. Syntyminen: $^{14}_{7}\\mathrm{N} + {}^{1}_{0}\\mathrm{n} \\to {}^{14}_{6}\\mathrm{C} + {}^{1}_{1}\\mathrm{p}$. Massaluvut $14 + 1 = 14 + 1$, varausluvut $7 + 0 = 6 + 1$.\n2. Hajoaminen: $^{14}_{6}\\mathrm{C} \\to {}^{14}_{7}\\mathrm{N} + {}^{0}_{-1}\\mathrm{e} + \\bar\\nu_e$. Neutroni muuttuu ytimessä protoniksi, joten järjestysluku kasvaa yhdellä.\n\n**Vastaus: $^{14}_{7}\\mathrm{N} + {}^{1}_{0}\\mathrm{n} \\to {}^{14}_{6}\\mathrm{C} + {}^{1}_{1}\\mathrm{p}$ ja $^{14}_{6}\\mathrm{C} \\to {}^{14}_{7}\\mathrm{N} + {}^{0}_{-1}\\mathrm{e} + \\bar\\nu_e$**\n\n**Sudenkuoppa:** antineutriino unohtuu tai sen tilalle kirjoitetaan neutriino.",
+     "answer": "$^{14}_{7}\\mathrm{N} + {}^{1}_{0}\\mathrm{n} \\to {}^{14}_{6}\\mathrm{C} + {}^{1}_{1}\\mathrm{p}$; $^{14}_{6}\\mathrm{C} \\to {}^{14}_{7}\\mathrm{N} + {}^{0}_{-1}\\mathrm{e} + \\bar\\nu_e$",
+     "check": "hvp"
+    },
+    {
+     "id": "8.2",
+     "points": 4,
+     "prompt": "Arkeologisten orgaanisten näytteiden (esim. hiiltynyt puu, luu) ikä voidaan arvioida hiilen isotooppien avulla. Mihin radiohiiliajoitus perustuu?",
+     "hints": [
+      "Mieti, mistä elävä eliö saa hiilensä ja mitä sen $^{14}\\mathrm{C}$-osuudelle tapahtuu elinaikana ja kuoleman jälkeen."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- $^{14}\\mathrm{C}$:n osuus ilmakehän hiilestä pysyy lähes vakiona, koska sitä syntyy jatkuvasti kosmisen säteilyn vaikutuksesta ja hajoaa samaa tahtia\n- kasvit sitovat ilmakehän hiiltä yhteyttäessään ja eläimet syömällä, joten elävässä eliössä isotooppisuhde on sama kuin ilmakehässä\n- kuoleman jälkeen uutta hiiltä ei tule, ja $^{14}\\mathrm{C}$:n osuus pysyviin isotooppeihin nähden pienenee eksponentiaalisesti ($T_{1/2} = 5730\\,\\mathrm{a}$)\n- mittaamalla isotooppisuhde (tai aktiivisuus) ja vertaamalla sitä ilmakehän arvoon saadaan kuolemasta kulunut aika\n\n**Esimerkkivastaus:** Ilmakehässä radioaktiivisen $^{14}\\mathrm{C}$:n osuus kaikesta hiilestä on käytännössä vakio. Eliö ottaa hiiltä ympäristöstään koko elämänsä ajan, joten sen hiilessä isotoopit ovat samassa suhteessa kuin ilmakehässä. Kun eliö kuolee, hiilen vaihto loppuu, ja $^{14}\\mathrm{C}$-ytimet hajoavat hajoamislain mukaan, kun taas $^{12}\\mathrm{C}$ ja $^{13}\\mathrm{C}$ säilyvät. Mitä pienempi $^{14}\\mathrm{C}$:n osuus näytteessä on, sitä kauemmin eliön kuolemasta on kulunut. Ikä ratkaistaan hajoamislaista.",
+     "check": "hvp"
+    },
+    {
+     "id": "8.3",
+     "points": 7,
+     "prompt": "Ilmakehässä hiilestä $98{,}9\\,\\%$ on $^{12}\\mathrm{C}$:tä, $1{,}1\\,\\%$ $^{13}\\mathrm{C}$:tä ja $^{14}\\mathrm{C}$:n osuus on $1{,}2\\cdot 10^{-12}$ ($T_{1/2} = 5730\\,\\mathrm{a}$). Kivikautiselta asuinpaikalta löytyneessä luussa lukumääräsuhde $N(^{14}\\mathrm{C})/N(^{13}\\mathrm{C})$ on $3{,}5\\cdot 10^{-11}$. Arvioi, kuinka kauan sitten asuinpaikkaa käytettiin.",
+     "hints": [
+      "Laske ensin sama suhde $N(^{14}\\mathrm{C})/N(^{13}\\mathrm{C})$ ilmakehässä (eli eläimen kuollessa). Pysyvän $^{13}\\mathrm{C}$:n määrä ei muutu, joten suhde pienenee hajoamislain mukaan.",
+      "Ilmakehässä suhde on $\\frac{1{,}2\\cdot 10^{-12}}{1{,}1\\cdot 10^{-2}} \\approx 1{,}09\\cdot 10^{-10}$. Ratkaise $t$ yhtälöstä $3{,}5\\cdot 10^{-11} = 1{,}09\\cdot 10^{-10}\\cdot e^{-\\lambda t}$, missä $\\lambda = \\frac{\\ln 2}{T_{1/2}}$."
+     ],
+     "solution": "1. Eläimen kuollessa suhde oli sama kuin ilmakehässä: $r_0 = \\dfrac{N_0(^{14}\\mathrm{C})}{N_0(^{13}\\mathrm{C})} = \\dfrac{1{,}2\\cdot 10^{-12}}{1{,}1\\cdot 10^{-2}} \\approx 1{,}09\\cdot 10^{-10}$.\n2. $^{13}\\mathrm{C}$ on pysyvä, ja $^{14}\\mathrm{C}$ hajoaa lain $N = N_0e^{-\\lambda t}$ mukaan, joten suhde on $r = r_0e^{-\\lambda t}$, missä $\\lambda = \\dfrac{\\ln 2}{T_{1/2}}$.\n3. Ratkaistaan: $t = -\\dfrac{T_{1/2}}{\\ln 2}\\ln\\dfrac{r}{r_0} = -\\dfrac{5730\\,\\mathrm{a}}{\\ln 2}\\ln\\dfrac{3{,}5\\cdot 10^{-11}}{1{,}09\\cdot 10^{-10}} \\approx 9400\\,\\mathrm{a}$.\n\n**Vastaus: asuinpaikkaa käytettiin noin $9400$ vuotta sitten.**\n\n**Sudenkuoppa:** mitattua suhdetta verrataan suoraan $^{14}\\mathrm{C}$:n osuuteen kaikesta hiilestä ($1{,}2\\cdot 10^{-12}$), jolloin ikä tulee aivan väärä (noin $200\\,000$ vuotta).",
+     "answer": "noin $9400$ vuotta sitten",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "9.1",
+     "points": 6,
+     "prompt": "Kerro, miten diodi käyttäytyy virtapiirissä ja mihin diodeja käytetään.",
+     "hints": [
+      "Mieti, mitä tapahtuu, kun diodi kytketään kumpaankin suuntaan. Mikä on kynnysjännite?",
+      "Diodi johtaa vain päästösuuntaan ja vasta, kun jännite ylittää kynnysjännitteen. Keksi lisäksi ainakin yksi käyttökohde (esim. tasasuuntaus, ledi)."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- diodi päästää virran läpi vain yhteen suuntaan (päästösuunta); estosuuntaan virta on lähes nolla\n- päästösuunnassa virta alkaa kulkea vasta, kun jännite ylittää kynnysjännitteen (piidiodilla noin $0{,}6$–$0{,}7\\,\\mathrm{V}$, ledeillä noin $2$–$3\\,\\mathrm{V}$), ja johtavan diodin yli oleva jännite pysyy likimain kynnysjännitteen suuruisena\n- käyttökohteita: vaihtovirran tasasuuntaus, ledit valaistuksessa ja merkkivaloina, suojaus väärältä napaisuudelta, Zener-diodi jännitteen vakauttamiseen, aurinkokennot\n\n**Esimerkkivastaus:** Diodi on puolijohdekomponentti, joka toimii sähkövirran yksisuuntaisena venttiilinä. Kun diodi on kytketty päästösuuntaan ja jännite sen yli ylittää kynnysjännitteen, virta pääsee kulkemaan ja kasvaa jännitteen mukana hyvin jyrkästi, joten diodin jännite pysyy lähes vakiona. Estosuunnassa virta on käytännössä nolla. Diodeja käytetään esimerkiksi laturien tasasuuntaajissa muuttamaan vaihtovirta tasavirraksi, ja valodiodit eli ledit tuottavat valoa valaisimissa ja merkkivaloissa.",
+     "check": "hvp"
+    },
+    {
+     "id": "9.2",
+     "points": 14,
+     "prompt": "Suunnittele mittaus, jolla määrität tuntemattoman diodin ominaiskäyrän. Käytössä on diodi, johtimia, jännitemittari, säädettävä tasajännitelähde (0–5 V) ja useita tunnetun resistanssin vastuksia (ei virtamittaria). Millaisen ominaiskäyrän odotat saavasi?",
+     "hints": [
+      "Ominaiskäyrässä on virta pystyakselilla ja diodin oma jännite vaaka-akselilla. Virtamittaria ei ole, joten mieti, miten virran voi määrittää tunnetun vastuksen avulla.",
+      "Kytke jännitelähde, tunnettu vastus $R$ ja diodi sarjaan. Mittaa vastuksen jännite $U_R$, jolloin $I = U_R/R$, ja diodin jännite (mittaamalla tai $U_d = U - U_R$). Toista eri lähdejännitteillä ja myös diodi toisin päin (estosuunta)."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- ominaiskäyrä on diodin virta $I$ diodin jännitteen $U_d$ funktiona\n- kytkentäkaavio: jännitelähde, tunnettu vastus $R$ ja diodi sarjassa; jännitemittari vastuksen tai diodin rinnalla\n- virta määritetään Ohmin lailla vastuksen jännitteestä: $I = U_R/R$ (sama virta kulkee diodin läpi)\n- diodin jännite mitataan suoraan tai lasketaan $U_d = U - U_R$ (Kirchhoffin II laki)\n- lähdejännitettä muutetaan välillä $0$–$5\\,\\mathrm{V}$ pienin askelin, ja mittaus toistetaan diodi (tai lähde) toisin päin kytkettynä estosuunnan saamiseksi\n- odotettu käyrä: estosuunnassa ja kynnysjännitettä pienemmillä päästöjännitteillä virta on lähes nolla; kynnysjännitteen jälkeen virta kasvaa jyrkästi (eksponentiaalisesti)\n\n**Esimerkkivastaus:**\n1. Kytketään säädettävä jännitelähde, tunnettu vastus (esim. $R = 100\\,\\Omega$, joka rajoittaa virran diodille turvalliseksi) ja diodi sarjaan. Diodi kytketään ensin päästösuuntaan.\n2. Asetetaan lähteen jännite esimerkiksi arvoon $0{,}2\\,\\mathrm{V}$. Mitataan jännitemittarilla vastuksen jännite $U_R$ ja sen jälkeen diodin jännite $U_d$.\n3. Lasketaan virta $I = U_R/R$. Kirjataan pari $(U_d, I)$ taulukkoon.\n4. Kasvatetaan lähteen jännitettä askelin aina $5\\,\\mathrm{V}$:iin asti. Kynnysjännitteen lähellä askelia tihennetään, koska virta muuttuu siellä nopeasti.\n5. Käännetään diodi estosuuntaan ja toistetaan mittaukset. Estosuunnan jännitteet merkitään negatiivisiksi.\n6. Piirretään $I$ jännitteen $U_d$ funktiona.\n\nOdotettu tulos: estosuunnassa virta on nolla (koko mittausalueella $-5$–$0\\,\\mathrm{V}$). Päästösuunnassa virta pysyy lähes nollana kynnysjännitteeseen asti (esim. noin $0{,}6\\,\\mathrm{V}$ piidiodilla tai $2\\,\\mathrm{V}$ punaisella ledillä), minkä jälkeen se kasvaa hyvin jyrkästi, jolloin käyrä on lähes pystysuora.\n\n**Sudenkuoppa:** piiriin lisätään virtamittari, jota ei ole käytettävissä, tai ominaiskäyrän jännitteeksi ilmoitetaan lähteen jännite diodin jännitteen sijaan.",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "10.1",
+     "points": 5,
+     "prompt": "Saippuakuplasta heijastuva auringonvalo näyttää värikkäältä. Mistä värit syntyvät?",
+     "hints": [
+      "Kalvolla on kaksi pintaa, ja valoa heijastuu molemmista. Mitä tapahtuu, kun kaksi heijastunutta aaltoa kohtaavat?",
+      "Kalvon sisäpinnasta heijastunut aalto kulkee noin matkan $2d$ pidemmälle. Lisäksi ulkopinnan heijastuksessa syntyy puolen aallonpituuden vaihesiirto. Vahvistava interferenssi: $2d = \\left(m + \\frac12\\right)\\frac{\\lambda}{n}$."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- valoa heijastuu sekä kalvon ulkopinnasta että sisäpinnasta, ja nämä kaksi heijastunutta aaltoa interferoivat\n- sisäpinnasta heijastunut aalto kulkee kalvossa noin matkan $2d$ pidemmälle; ulkopinnan heijastuksessa (optisesti tiheämmästä aineesta) syntyy lisäksi puolen aallonpituuden vaihesiirto\n- vahvistava interferenssi aallonpituudelle $\\lambda$, kun $2d = \\left(m + \\frac12\\right)\\frac{\\lambda}{n}$, ja vaimentava, kun $2d = m\\frac{\\lambda}{n}$\n- vahvistuva väri riippuu kalvon paksuudesta (ja katselukulmasta), ja paksuus vaihtelee kuplan eri kohdissa, joten näkyy erivärisiä vyöhykkeitä\n\n**Esimerkkivastaus:** Saippuakalvo on hyvin ohut, sen paksuus on valon aallonpituuden luokkaa. Osa valosta heijastuu kalvon ulkopinnasta ja osa kulkee kalvon läpi ja heijastuu sisäpinnasta. Heijastuneet aallot kohtaavat ja interferoivat. Niiden välinen vaihe-ero riippuu kalvon paksuudesta ja aallonpituudesta. Tietyllä paksuudella esimerkiksi sininen valo vahvistuu ja punainen heikkenee, toisella päinvastoin. Koska kalvo on eri kohdista eri paksu ja valo tulee eri kulmissa, kuplassa näkyy värikkäitä raitoja.\n\n**Sudenkuoppa:** värit selitetään taittumisella ja dispersiolla (kuten prismassa) tai kuplan vastakkaisen seinän heijastuksella.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.2",
+     "points": 3,
+     "prompt": "Kuplan värit haalistuvat ajan mittaan, ja juuri ennen puhkeamista ne ovat lähes kadonneet. Selitä ilmiö.",
+     "hints": [
+      "Kalvo ohenee ajan myötä. Mikä on pienin kalvon paksuus, jolla vahvistava interferenssi on mahdollinen ($m = 0$)?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kalvo ohenee (haihtuminen, nesteen valuminen alas)\n- vahvistavan interferenssin ehto $2d = \\left(m + \\frac12\\right)\\frac{\\lambda}{n}$ edellyttää vähintään paksuutta $d = \\frac{\\lambda}{4n}$ ($m = 0$)\n- kun kalvo on ohuempi kuin tämä lyhimmällekin näkyvälle aallonpituudelle (violetti), mikään väri ei enää vahvistu; hyvin ohuesta kalvosta heijastuneet aallot kumoavat toisensa lähes kokonaan (vaihesiirron takia), ja kalvo näyttää tummalta tai värittömältä\n\n**Esimerkkivastaus:** Kuplan kalvo ohenee koko ajan. Kun paksuus pienenee, vahvistuvat värit vaihtuvat, ja lopulta kalvo on niin ohut, ettei edes lyhytaaltoisin näkyvä valo voi vahvistua. Silloin kahden pinnan heijastukset kumoavat toisensa lähes täysin, koska niiden vaihe-ero on käytännössä pelkkä heijastuksen puolen aallonpituuden siirto. Värit häviävät juuri ennen puhkeamista, koska silloin kalvo on ohuimmillaan.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.3",
+     "points": 4,
+     "prompt": "Saippuakupla puhkeaa yleensä muutamassa minuutissa. Miksi? Jos samasta nestemäärästä tehdään eri kokoisia kuplia, suuret puhkeavat ennen pieniä. Miksi?",
+     "hints": [
+      "Mieti, mikä ohentaa kalvoa ajan kuluessa. Jos saman nestemäärän levittää suuremmalle pinta-alalle, miten kalvon paksuus muuttuu?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- kalvosta haihtuu vettä, ja painovoima valuttaa nestettä kuplan alaosaan, jolloin kalvo (etenkin yläosa) ohenee\n- riittävän ohuessa kalvossa pintajännitys repäisee reiän, ja kupla puhkeaa\n- sama nestemäärä jakautuu isossa kuplassa suuremmalle pinta-alalle ($A = 4\\pi r^2$), joten ison kuplan kalvo on ohuempi ja saavuttaa kriittisen paksuuden nopeammin\n\n**Esimerkkivastaus:** Kuplan kalvosta haihtuu jatkuvasti vettä, ja neste valuu painovoiman vaikutuksesta alaspäin, joten kalvo ohenee etenkin kuplan yläosassa. Kun kalvo on ohentunut tarpeeksi, se repeää ja kupla puhkeaa. Jos samasta nestemäärästä puhalletaan iso kupla, kalvon pinta-ala on suuri ja paksuus pieni. Ohuempi kalvo saavuttaa repeämispaksuuden nopeammin, joten iso kupla puhkeaa ennen pientä.",
+     "check": "hvp"
+    },
+    {
+     "id": "10.4",
+     "points": 8,
+     "prompt": "Tyynessä ilmassa eräs kupla pysyy leijuen paikallaan. Saippuaveden tiheys on $1{,}0\\cdot 10^3\\,\\mathrm{kg/m^3}$, ilman lämpötila kuplan sisällä $26\\,^\\circ\\mathrm{C}$ ja ulkona $21\\,^\\circ\\mathrm{C}$, kuplan säde $5{,}0\\,\\mathrm{cm}$. Ilmassa on sekä sisällä että ulkona $79\\,\\%$ typpeä ja $21\\,\\%$ happea. Määritä kalvon paksuus.",
+     "hints": [
+      "Leijuvalle kuplalle noste on yhtä suuri kuin kuplan kokonaispaino. Kokonaispainoon kuuluvat kalvon vesi ja sisällä oleva lämmin ilma. Noste on syrjäytetyn ulkoilman paino.",
+      "Ilman massat saadaan tilanyhtälöstä: $m = \\frac{pVM}{RT}$, missä $M = 0{,}21\\cdot 32{,}0 + 0{,}79\\cdot 28{,}0\\,\\mathrm{g/mol}$. Kalvon massa on noin $4\\pi r^2 d\\rho$. Ratkaise $d$ yhtälöstä $m_\\mathrm{ulko} = m_\\mathrm{sisä} + m_\\mathrm{kalvo}$."
+     ],
+     "solution": "1. Kupla leijuu, joten noste (syrjäytetyn ulkoilman paino) on yhtä suuri kuin kuplan paino: $m_\\mathrm{syrj}g = m_\\mathrm{kalvo}g + m_\\mathrm{sisä}g$.\n2. Ilma on ideaalikaasu: $m = nM = \\dfrac{pVM}{RT}$, missä $V = \\frac43\\pi r^3$ ja ilman moolimassa $M = 0{,}21\\cdot 32{,}0\\,\\mathrm{g/mol} + 0{,}79\\cdot 28{,}0\\,\\mathrm{g/mol} = 28{,}84\\,\\mathrm{g/mol}$. Paine on sisällä ja ulkona likimain sama, $p \\approx 1{,}0\\cdot 10^5\\,\\mathrm{Pa}$.\n3. Kalvon massa, kun $d \\ll r$: $m_\\mathrm{kalvo} = 4\\pi r^2d\\rho$.\n4. Sijoitetaan: $4\\pi r^2 d\\rho = \\dfrac{pVM}{R}\\left(\\dfrac{1}{T_\\mathrm{ulko}} - \\dfrac{1}{T_\\mathrm{sisä}}\\right)$, joten $d = \\dfrac{prM}{3\\rho R}\\left(\\dfrac{1}{T_\\mathrm{ulko}} - \\dfrac{1}{T_\\mathrm{sisä}}\\right)$.\n5. Lukuarvot: $T_\\mathrm{ulko} = 294{,}15\\,\\mathrm{K}$, $T_\\mathrm{sisä} = 299{,}15\\,\\mathrm{K}$, $r = 0{,}050\\,\\mathrm{m}$: $d = \\dfrac{1{,}0\\cdot 10^5\\,\\mathrm{Pa}\\cdot 0{,}050\\,\\mathrm{m}\\cdot 0{,}02884\\,\\mathrm{kg/mol}}{3\\cdot 1000\\,\\mathrm{kg/m^3}\\cdot 8{,}314\\,\\mathrm{J/(mol\\,K)}}\\cdot\\left(\\dfrac{1}{294{,}15\\,\\mathrm{K}} - \\dfrac{1}{299{,}15\\,\\mathrm{K}}\\right) \\approx 3{,}3\\cdot 10^{-7}\\,\\mathrm{m}$.\n\n**Vastaus: kalvon paksuus on noin $330\\,\\mathrm{nm}$.**\n\nTulos on näkyvän valon aallonpituuden luokkaa, mikä sopii yhteen kohdan 10.1 interferenssivärien kanssa.\n\n**Sudenkuoppa:** kuplan sisällä olevan ilman massa unohdetaan. Silloin kalvon paksuudeksi tulee monikymmenkertainen arvo.",
+     "answer": "$d \\approx 330\\,\\mathrm{nm}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "11.1",
+     "points": 4,
+     "prompt": "Aineiston 11.A lehtiartikkelissa kolme juomaa (metallitölkki, lasipullo, muovipullossa oleva $0{,}5\\,\\mathrm{l}$ kola) laitetaan jääkaappiin. Miksi ne jäähtyvät eri tahtiin?",
+     "hints": [
+      "Vertaa pakkausmateriaalien lämmönjohtavuuksia sekä juomamääriä ja pinta-alan suhdetta tilavuuteen."
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- pakkausten lämmönjohtavuudet eroavat: metalli johtaa lämpöä hyvin, lasi huonommin ja muovi vielä huonommin, joten tölkistä siirtyy lämpöä nopeimmin\n- kolapullossa on enemmän juomaa ($0{,}5\\,\\mathrm{l}$ vs. $0{,}33\\,\\mathrm{l}$), joten siitä on siirrettävä enemmän energiaa, ja isommalla pullolla on vähemmän pintaa tilavuusyksikköä kohden\n\n**Esimerkkivastaus:** Juomasta siirtyy lämpöä jääkaapin ilmaan pakkauksen seinän läpi. Metallitölkin seinä johtaa lämpöä hyvin, lasipullon seinä on paksumpi ja huonompi johde, ja muovi eristää vielä paremmin. Kolassa on lisäksi enemmän nestettä, jonka lämmönluovutus on suurempi, ja isommalla pullolla on vähemmän pintaa litraa kohden, joten kola jäähtyy hitaimmin.\n\n**Sudenkuoppa:** ero selitetään pelkästään pakkausmateriaalien ominaislämpökapasiteeteilla.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.2",
+     "points": 4,
+     "prompt": "Toisessa kokeessa juomien ympärille kääritään kostea paperi. Miksi kääre nopeuttaa jäähtymistä parvekkeella paljon enemmän kuin jääkaapissa?",
+     "hints": [
+      "Mikä olomuodon muutos tapahtuu märässä paperissa, ja mistä sen tarvitsema energia tulee? Missä olosuhteissa tämä muutos on nopea?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- märästä kääreestä haihtuu vettä; höyrystymislämpö on suuri, ja energia otetaan suurelta osin juomasta, joka jäähtyy\n- haihtuminen on parvekkeella tehokkaampaa, koska lämpimällä ulkoilmalla on pienempi suhteellinen kosteus kuin kylmällä jääkaappi-ilmalla ja ilma vaihtuu (tuuli) parvekkeella, kun taas suljetun jääkaapin ilma kyllästyy nopeasti kosteudesta\n\n**Esimerkkivastaus:** Kääreen vesi haihtuu, ja haihtumiseen tarvittava höyrystymislämpö tulee pääosin juomasta. Haihtuminen on nopeaa, kun ympäröivä ilma on kuivaa ja vaihtuu. Parvekkeella ilma on lämmintä, joten sen suhteellinen kosteus on pieni, ja tuuli vie kostean ilman pois. Jääkaapissa ilma on kylmää ja suljettua, joten se kyllästyy vesihöyrystä, ja haihtuminen jää vähäiseksi.\n\n**Sudenkuoppa:** eroa selitetään pelkästään lämpötilalla ilman kosteuden tai ilman vaihtumisen merkitystä.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.3",
+     "points": 4,
+     "prompt": "Kolmannessa kokeessa juomat jäähdytetään jäävedessä. Miksi jäähaude jäähdyttää nopeasti, ja miksi suolan lisääminen nopeuttaa jäähtymistä?",
+     "hints": [
+      "Vertaa veden ja ilman lämmönjohtavuutta. Mitä suola tekee jään sulamispisteelle, ja mitä jään sulaminen vaatii?"
+     ],
+     "solution": "**Hyvä vastaus sisältää:**\n- vesi johtaa lämpöä paljon paremmin kuin ilma, ja jää–vesi-seos pysyy $0\\,^\\circ\\mathrm{C}$:ssa, joten juoma on koko ajan kosketuksessa kylmään hyvin johtavaan aineeseen\n- suola alentaa jään sulamispistettä; jäätä sulaa lisää, ja sulaminen sitoo sulamislämpöä hauteesta, jolloin hauteen lämpötila laskee nollan alapuolelle\n- suurempi lämpötilaero juoman ja hauteen välillä kasvattaa lämmön siirtymisnopeutta\n\n**Esimerkkivastaus:** Jäävedessä juoma luovuttaa lämpöä veteen, joka johtaa lämpöä noin kaksikymmenkertaisesti ilmaan verrattuna. Jään sulaminen pitää hauteen $0\\,^\\circ\\mathrm{C}$:ssa. Kun joukkoon lisätään suolaa, jään sulamispiste laskee. Jää alkaa sulaa ja sitoo sulamislämpöä hauteesta, jolloin seos jäähtyy selvästi pakkasen puolelle. Lämpötilaero juomaan kasvaa, ja juoma jäähtyy nopeammin.\n\n**Sudenkuoppa:** väitetään suolan parantavan veden lämmönjohtavuutta.",
+     "check": "hvp"
+    },
+    {
+     "id": "11.4",
+     "points": 8,
+     "prompt": "Ajatuskoe: litra $25\\,^\\circ\\mathrm{C}$ olutta on pyöreän putken pohjalla ilmatiiviin männän alla. Kun mäntää nostetaan hitaasti, olutta höyrystyy syntyvään tyhjään tilaan, ja olut jäähtyy. Putken säde on $6\\,\\mathrm{cm}$. Mikä putken korkeuden pitäisi olla, jotta olut jäähtyisi $9\\,^\\circ\\mathrm{C}$:een? Oleta, että olut vastaa vettä ja vain pieni osa siitä höyrystyy.",
+     "hints": [
+      "Energiatase: juoman jäähtyessä luovuttama lämpö $cm\\Delta T$ kuluu höyrystymiseen $rm_2$. Höyry täyttää männän alle syntyvän tilan.",
+      "Tila on täynnä kylläistä vesihöyryä, jonka paine $9\\,^\\circ\\mathrm{C}$:ssa on noin $1{,}15\\,\\mathrm{kPa}$ (taulukkokirja). Höyryn massa tilanyhtälöstä: $m_2 = \\frac{pVM}{RT}$, ja $V = \\pi r^2 h$."
+     ],
+     "solution": "1. Juoma jäähtyy $\\Delta T = 16\\,\\mathrm{K}$ ja luovuttaa lämmön $Q = cm\\Delta T$, joka sitoutuu höyrystymiseen: $cm\\Delta T = rm_2$. Koska höyrystyvä massa on pieni, nesteen massana voi käyttää $m = 1{,}0\\,\\mathrm{kg}$.\n2. $m_2 = \\dfrac{cm\\Delta T}{r} = \\dfrac{4190\\,\\mathrm{\\tfrac{J}{kg\\,K}}\\cdot 1{,}0\\,\\mathrm{kg}\\cdot 16\\,\\mathrm{K}}{2{,}26\\cdot 10^6\\,\\mathrm{J/kg}} \\approx 0{,}0297\\,\\mathrm{kg}$.\n3. Männän alla on kylläistä vesihöyryä. Loppulämpötilassa $T = 282{,}15\\,\\mathrm{K}$ kylläisen höyryn paine on $p \\approx 1{,}148\\,\\mathrm{kPa}$. Ideaalikaasuna: $m_2 = \\dfrac{pVM}{RT}$, $M = 18{,}0\\,\\mathrm{g/mol}$.\n4. Tilavuus $V = \\pi r^2h$, joten $h = \\dfrac{cm\\Delta T\\,RT}{\\pi r^2\\,r_\\mathrm{h}\\,pM}$ (tässä $r_\\mathrm{h}$ on höyrystymislämpö).\n5. Sijoitetaan: $h = \\dfrac{0{,}0297\\,\\mathrm{kg}\\cdot 8{,}314\\,\\mathrm{J/(mol\\,K)}\\cdot 282{,}15\\,\\mathrm{K}}{\\pi(0{,}06\\,\\mathrm{m})^2\\cdot 1148\\,\\mathrm{Pa}\\cdot 0{,}018\\,\\mathrm{kg/mol}} \\approx 300\\,\\mathrm{m}$.\n\n**Vastaus: putken pitäisi olla noin $300\\,\\mathrm{m}$ korkea.**\n\nTulos selittää, miksi menetelmä on käytännössä järjetön: höyryn tiheys on näin matalassa paineessa hyvin pieni (noin $9\\,\\mathrm{g/m^3}$).\n\n**Sudenkuoppa:** lasketaan isobaarisen laajenemisen työ tai käytetään höyryn paineena normaalia ilmanpainetta.",
+     "answer": "$h \\approx 300\\,\\mathrm{m}$",
+     "check": "hvp+laskettu"
+    }
+   ]
+  }
+ ]
+}

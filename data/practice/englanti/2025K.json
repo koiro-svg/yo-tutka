@@ -1,0 +1,415 @@
+{
+ "subject": "englanti",
+ "session": "2025K",
+ "examUrl": "https://yle.fi/plus/abitreenit/2025/kevat/englanti_pitka/index.html",
+ "gradingUrl": "https://tiedostot.ylioppilastutkinto.fi/kokeet/2025-03-17_EA_fi/grading-instructions.html",
+ "exam": {
+  "minutes": 360,
+  "sections": [
+   {
+    "title": "Osa 1: Kuullun ymmärtäminen",
+    "tasks": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "answer": 8,
+    "note": "Vastaa kaikkiin. Varaa kuullun tehtäviin yhteensä noin tunti. Videot saa katsoa vapaasti, mutta äänitteiden kuuntelukerrat on rajattu tehtäväkohtaisesti."
+   },
+   {
+    "title": "Osa 2: Luetun ymmärtäminen",
+    "tasks": [
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14"
+    ],
+    "answer": 6,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 3: Sanasto ja rakenteet",
+    "tasks": [
+     "15",
+     "16",
+     "17"
+    ],
+    "answer": 3,
+    "note": "Vastaa kaikkiin."
+   },
+   {
+    "title": "Osa 4: Kirjallinen tuottaminen",
+    "tasks": [
+     "18.1",
+     "18.2",
+     "18.3",
+     "18.4"
+    ],
+    "answer": 1,
+    "note": "Valitse yksi aihe. Pituus 700–1 300 merkkiä ilman välilyöntejä ja rivinvaihtoja; ylityksestä seuraa pistevähennys. Jätä muut kentät tyhjiksi."
+   }
+  ]
+ },
+ "tasks": [
+  {
+   "n": "1",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele tarina belgialaisista Lotus-kekseistä. Äänite on kahdessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Vastaa suomeksi, jokaiseen enintään 100 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 1.1: mihin ominaisuuteen keksin nimi (puhtautta symboloiva lootuskukka) viittaa?\n- 1.2: mitä keksille tapahtui vuonna 1958?\n- 1.3: millä keinolla leipuri Jan Boone piti keksit tuoreina?\n- 1.4: miksi keksi ja kahvi sopivat yhteen?",
+     "hints": [
+      "Kysymykset 1.1–1.2 ovat ensimmäisessä osassa ja 1.3–1.4 toisessa. Äänite on mainosmainen tarina, jossa on paljon ylisanoja. Poimi vain tosiasiat: mistä keksi tehdään, missä se tuli tunnetuksi, miten se pakataan ja mitä maulle tapahtuu kahvin kanssa. Arvostelu on 3/0, joten täsmällisyys ratkaisee.",
+      "- 1.1: nimen yhteydessä kerrotaan, mistä keksi valmistetaan. Pelkkä \"puhtaista aineksista\" ei riitä.\n- 1.2: missä tapahtumassa tuhannet turistit tutustuivat keksiin, ja mitä siitä seurasi?\n- 1.3: pakkaaminen yksin ei riitä: miten keksit pakattiin?\n- 1.4: peittääkö keksi kahvin aromin, vai mitä maut tekevät toisilleen?"
+     ],
+     "solution": "- **1.1** *Keksi tehtiin pelkästään luonnollisista raaka-aineista.* Nimi viittaa puhtauteen, koska keksi valmistettiin vain luonnollisista aineksista. HVP:n mukaan \"puhtaista\", \"tuoreista\" tai \"orgaanisista\" aineksista ei ole sama asia.\n- **1.2** *Tuhannet turistit löysivät keksin Brysselin maailmannäyttelyssä, ja siitä tuli tunnettu.* Pelkkä maininta näyttelystä ei riitä, vaan vastauksessa pitää näkyä, mitä keksille tapahtui.\n- **1.3** *Hän alkoi pakata keksit yksitellen.* Näin keksi pysyi tuoreena ja rapeana. Sana *yksitellen* tai *erikseen* on välttämätön.\n- **1.4** *Keksi ja kahvi täydentävät ja korostavat toistensa makua.* Keksi ei peitä kahvin tuoksua tai aromia, vaan maut vahvistavat toisiaan ja ovat tasapainossa. Vastaukset \"maut ovat samanlaiset\" tai \"syntyy uusi maku\" hylätään.",
+     "answer": "1.1 luonnolliset raaka-aineet · 1.2 tuli tunnetuksi (turistit Brysselin maailmannäyttelyssä) · 1.3 pakkasi keksit yksitellen · 1.4 maut täydentävät toisiaan",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "2",
+   "units": [
+    {
+     "id": "",
+     "points": 18,
+     "prompt": "Katso video Aucklandin eläintarhan (Uusi-Seelanti) vapaaehtoisohjelmasta. Videon saa katsoa niin monta kertaa kuin haluaa. Kuusi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mikä ohjelman 30-vuotisjuhlassa oli merkittävintä?\n2. Mitä vapaaehtoistyö eläintarhassa on enimmäkseen?\n3. Mitä ohjelmalta puuttui alkuvuosina?\n4. Mikä on Fiona Hodgkinsonin ansio?\n5. Mitä tapahtui Hodgkinsonin ensimmäisenä päivänä?\n6. Mikä parannus auttoi vapaaehtoisten arkityötä?",
+     "hints": [
+      "Videolla puhuu kaksi ihmistä: ohjelman johtaja Jill Conway ja Fiona Hodgkinson, joka aloitti vapaaehtoisena vuonna 1996. Kohdat 2.1–2.4 koskevat enimmäkseen Jillin kertomaa ja 2.5–2.6 Fionan muistoja. Moni väärä vaihtoehto käyttää videolla mainittua sanaa (esim. kaappi, norsut) väärässä yhteydessä.",
+      "- 2.1: mitä erityistä yhdestä vapaaehtoisesta kerrotaan?\n- 2.2: kenen kanssa vapaaehtoiset useimmiten puhuvat?\n- 2.3: ohjelmaa pyöritettiin \"kaapista\" ilman perehdytystä. Onko kaappi tässä kirjaimellinen säilytystila?\n- 2.4: mitä Jill sanoo Fionan kysymyksistä ja ideoista?\n- 2.5: miksi tunnin lounastauko turhautti Fionaa?\n- 2.6: mikä uusi käytäntö otettiin käyttöön aamuisin?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **2.1 C** (yksi vapaaehtoinen oli ollut mukana koko ajan). Ohjelma alkoi vuonna 1989, ja 30-vuotisjuhlassa 2019 mukana oli yhä vapaaehtoinen, joka oli ollut ohjelmassa alusta asti. Vapaaehtoisten määrän kasvusta (B) ei puhuta.\n- **2.2 B** (eläintarhan toiminnan esittely kävijöille). Suuri osa tehtävistä liittyy kävijöiden kohtaamiseen: vapaaehtoiset kertovat eläintarhojen nykyisestä roolista, suojelutyöstä ja eläimistä. Eläintenhoitajien avustaminen (A) ei ole pääasia.\n- **2.3 A** (selkeät tavoitteet). Ohjelma ei kuulunut mihinkään osastoon, eikä perehdytystä tai koulutusta ollut, vaan vapaaehtoiset päästettiin eläintarhaan melko vähin ohjein. C on ansa: kaappi on vertauskuva vaatimattomasta alusta.\n- **2.4 A** (hän sai aikaan monia muutoksia). Fionan kysymykset ja ideat käynnistivät suuren osan nykyisestä ohjelmasta. Ohjelman johtaja on Jill (B), eikä Fiona ollut ensimmäinen vapaaehtoinen (C), koska ohjelma alkoi jo vuonna 1989.\n- **2.5 A** (hän ei olisi halunnut pitää taukoa). Tunnin lounastauko turhautti häntä, koska hän halusi päästä tekemään jotain. B on päinvastainen, ja norsuja ei pyydystetty (C), vaan vapaaehtoiset kulkivat niiden perässä ämpärin ja lapion kanssa.\n- **2.6 A** (säännölliset tiimipalaverit). Yksi suurista muutoksista oli aamupalaveri, jossa vapaaehtoiset saivat ajantasaista tietoa eläintarhan tapahtumista. Orankinäyttely syntyi yhteistyössä hoitajan kanssa, ei suojelujärjestöjen (B).",
+     "answer": "2.1 C · 2.2 B · 2.3 A · 2.4 A · 2.5 A · 2.6 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "3",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele näkövammaisille tarkoitettu kuvailu Frida Kahlon öljymaalauksesta (omakuva). Äänitteen saa kuunnella kaksi kertaa. Vastaa suomeksi, kumpaankin enintään 50 merkkiä (3 p/kohta, arvostelu 3/0):\n\n- 3.1: millainen asu maalauksen hahmolla on?\n- 3.2: mitä hahmo on tehnyt?",
+     "hints": [
+      "Kuvailu etenee järjestyksessä: tausta, hahmo ja asu, kädet ja lattia. Kuvailussa on paljon värejä ja yksityiskohtia, mutta kysymykset koskevat kahta keskeistä asiaa. 50 merkkiä riittää, kun kirjoitat pelkän vastauksen.",
+      "- 3.1: vastauksessa tarvitaan kaksi tietoa: kenen vaatteet ja minkä kokoiset. Pelkkä \"liian iso puku\" tai pelkkä \"miehen puku\" ei riitä.\n- 3.2: hahmolla on kädessään sakset, ja lattialla on paljon jotain. Mitä hän on siis tehnyt, ja kenen hiuksille?"
+     ],
+     "solution": "- **3.1** *Liian suuri miesten puku.* Kuvailun mukaan hahmolla on ylisuuri miesten puku. Kumpikin tieto tarvitaan: pelkkä \"liian iso puku\" tai \"miehen puku\" ei riitä, eikä \"liian suuret vaatteet\" tai \"pikkutakki\".\n- **3.2** *Leikannut omat hiuksensa.* Hänen hiuksensa ovat lyhyiksi leikatut, kädessä on hopeiset sakset, ja pitkiä hiuksia on sylissä ja pitkin lattiaa. Pelkkä saksien mainitseminen ei kerro, mitä hahmo on tehnyt.",
+     "answer": "3.1 liian suuri miesten puku · 3.2 leikannut hiuksensa",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "4",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Kuuntele lyhyt katkelma ilmastonmuutoksen vaikutuksesta kahviin. Äänite on kolmessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen jokaisen osan kerran. Kolme monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Miten ilmastonmuutos voi vaikuttaa kahvinviljelyyn?\n2. Mikä uhkaa kahvisatoa?\n3. Miten ilmastonmuutos vaikuttaa kahvin saatavuuteen?",
+     "hints": [
+      "Jokainen kysymys vastaa yhtä äänitteen osaa, ja osat ovat lyhyitä. Väärät vaihtoehdot ovat uskottavia ilmastonmuutoksen seurauksia, mutta äänitteessä sanotaan jotain tarkempaa. Kuuntele siis syy-seuraussuhteet tarkasti.",
+      "- 4.1: mikä säässä kasvaa ja tekee viljelijöiden työstä vaikeampaa?\n- 4.2: kuumuus mainitaan, mutta mikä on suurin ongelma kukinnan aikana? Mitä kukille ja marjoille tapahtuu?\n- 4.3: puhuja mainitsee kaksi seurausta: yksi on varma ja toinen koskee vain kalleimpia kahveja. Kumpi vaihtoehdoista vastaa varmempaa?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **4.1 B** (kasvuolosuhteita on vaikeampi hallita). Sään kasvava arvaamattomuus vaikeuttaa kahvinviljelijöiden menestymistä. Laadun heikkenemisestä (A) tai muutamaan lajikkeeseen turvautumisesta (C) ei puhuta.\n- **4.2 C** (sade estää marjojen kehittymisen). Jos sataa kahvipensaan kukkiessa, sade pudottaa kukat, eivätkä marjat kehity, jolloin satoa ei tule. Kuumuus stressaa kasveja, mutta kukkien kuivumisesta (B) ei puhuta, eikä myrskyistä (A).\n- **4.3 A** (myynnissä on vähemmän eri kahvilaatuja). Nyt kahvilasta saa kahvia Kolumbiasta, Ruandasta ja Burundista, mutta tulevaisuudessa valikoima kapenee. Puhuja arvelee myös, että kalliimmat laatukahvit todennäköisesti kallistuvat, joten B:n väite kahvista paljon kalliimpana juomana on liian yleinen.",
+     "answer": "4.1 B · 4.2 C · 4.3 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "5",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele työtovereiden Davidin ja Janicen keskustelu, kun he ovat lähdössä töiden jälkeen ravintolaan. Äänite on neljässä osassa. Kussakin David sanoo repliikin (se on kokeessa myös kirjoitettuna), ja Janicen kolme vastausvaihtoehtoa A, B ja C ovat vain äänitteinä. Valitse kohteliain vastaus. Vaihtoehdot saa kuunnella kaksi kertaa (4 kohtaa, 3 p/kohta). Tilanteet: myöhästymisen uhka, kadonneet avaimet, taksiehdotus ja avainten löytyminen taskusta.",
+     "hints": [
+      "Kaikki vaihtoehdot ovat sisällöltään mahdollisia, joten ratkaisevaa on sävy. Kohtelias vastaus on myötätuntoinen, ei syyttele ja kiittää avusta. Epäkohtelias vastaus moittii, hoputtaa tai myöntyy nihkeästi.",
+      "- 5.1: kuka kysyy asiasta myötätuntoisesti ja kuka olettaa, että David on tehnyt jotain väärää?\n- 5.2: kuka rauhoittelee ja tarjoutuu auttamaan etsimisessä?\n- 5.3: David tarjoutuu maksamaan taksin. Kuka kiittää tarjouksesta?\n- 5.4: David moittii itseään. Kuka lohduttaa, ja kuka yhtyy moitteeseen?"
+     ],
+     "solution": "Vaihtoehdot ovat kokeessa vain äänitteinä, joten kirjain on äänitteen A, B tai C.\n\n- **5.1 C**. Janice päivittelee myötätuntoisesti ja kysyy, mikä on vialla. A olettaa, että David on tehnyt jotain, ja B on kysymyksenä tyly.\n- **5.2 B**. Janice rauhoittelee ja ehdottaa, että he etsivät yhdessä. A kutsuu tilannetta typeräksi, ja C käskee etsimään paremmin.\n- **5.3 A**. Janice kiittää ystävällisestä tarjouksesta. B ja C suostuvat, mutta vastahakoisesti eivätkä kiitä.\n- **5.4 B**. Janice lohduttaa, että sellaista sattuu kaikille, ja ehdottaa lähtöä. A myöntää, että David on hölmö, ja C hoputtaa.\n\n**Sudenkuoppa:** pelkkä myöntävä vastaus ei ole kohtelias. Kohdassa 5.3 kaikki suostuvat taksiin, mutta vain yksi kiittää.",
+     "answer": "5.1 C · 5.2 B · 5.3 A · 5.4 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "6",
+   "units": [
+    {
+     "id": "",
+     "points": 12,
+     "prompt": "Kuuntele podcast-jakso, jossa rakennusinsinööri Roma Agrawal ja juontaja Roman Mars keskustelevat naulojen historiasta. Äänite on kahdessa osassa: sen saa kuunnella kerran kokonaan ja sen jälkeen kummankin osan kerran. Neljä monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä roomalaiset tekivät, kun heidän piti lähteä Skotlannista?\n2. Mikä nauloihin liittyvä seikka ei ole yleisesti tunnettu?\n3. Miksi Yhdysvalloissa poltettiin aikoinaan taloja?\n4. Mitä Virginian vanhassa laissa määrättiin?",
+     "hints": [
+      "Podcastissa kerrotaan kaksi tarinaa: roomalaisten naulakätkö Skotlannissa ja siirtokuntien talonpoltot Amerikassa. Molempien taustalla on sama ajatus nauloista. Kuuntele, miksi nauloja kohdeltiin niin kuin kohdeltiin. Kohdat 6.1–6.2 ovat ensimmäisessä osassa ja 6.3–6.4 toisessa.",
+      "- 6.1: mihin roomalaiset jättivät naulat, ja miksi he eivät halunneet paikallisten saavan niitä?\n- 6.2: juontaja myöntää, ettei ollut ajatellut naulojen olevan jotain. Mitä? Olivatko ne maksuväline vai arvokas kauppatavara?\n- 6.3: brittiläiset kielsivät naulojen viennin siirtomaihin. Mitä poltetun talon tuhkasta tehtiin?\n- 6.4: vuoden 1619 laki kielsi talojen polttamisen, mutta mitä se lupasi niille, jotka jättivät talonsa ehjäksi?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **6.1 C** (he kätkivät naulansa). Roomalaiset jättivät yli 875 000 naulaa ojaan ja peittivät ne, jotta paikalliset eivät saisi arvokasta rautaa ja tekniikkaa käyttöönsä. Nauloja ei viety mukana (A) eikä tuhottu (B).\n- **6.2 A** (ne olivat kallista kauppatavaraa). Juontaja ei ollut tullut ajatelleeksi, että naula voisi olla niin arvokas, ja Agrawal kertoo raaka-aineiden ja taidon olleen niukkoja. Naulat olivat iso osa maailmankauppaa, mutta maksuvälineenä (C) niitä ei kuvata.\n- **6.3 B** (uuden talon rakentamisen helpottamiseksi). Koska britit kielsivät naulojen viennin siirtomaihin, muuttajat polttivat vanhan talonsa, keräsivät naulat tuhkasta ja veivät ne mukanaan uuden talon rakentamiseen. Naulojen myymisestä (A) ei puhuta, ja poltto oli kiellon kiertämistä eikä tottelemista (C).\n- **6.4 A** (vanhan talon säästämisestä saa korvauksen). Vuonna 1619 Virginiassa kiellettiin omien talojen polttaminen, ja muuttajille luvattiin korvaus, jos he jättivät talon naulat paikalleen. B on ansa: laki kielsi polton, mutta rangaistuksesta ei puhuta.",
+     "answer": "6.1 C · 6.2 A · 6.3 B · 6.4 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "7",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Kuuntele podcast-katkelma, jossa Sophie Bushwick ja Tulika Bose keskustelevat tekoälyn ja erityisesti suurten kielimallien vaaroista. Äänitteen saa kuunnella kaksi kertaa. Kaksi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Mitä varten tekoälyn suojarajat (*guardrails*) ovat?\n2. Miten jotkut ovat kiertäneet suojarajoja?",
+     "hints": [
+      "Ensimmäinen puhuja kertoo, mihin kielimalleja voisi käyttää väärin, ja toinen kertoo esimerkin suojarajojen kiertämisestä. Kuuntele esimerkki tarkasti: mitä tekoälylle kerrottiin ja miksi se toimi?",
+      "- 7.1: suojarajat estävät mallia tekemästä juuri niitä asioita, jotka luetellaan ensin (huijaukset, haittakoodi). Kenen tekoja ne siis rajoittavat?\n- 7.2: pyysikö käyttäjä tekoälyä suoraan rikkomaan sääntöjä, vai syöttikö hän sille keksityn tarinan?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **7.1 B** (estää ihmisiä aiheuttamasta haittaa tekoälyn avulla). Kielimalleilla voisi esimerkiksi huijata tuhansia ihmisiä kerralla tai kirjoittaa haittakoodia, ja suojarajat ovat sääntöjä, jotka estävät juuri tämän. Lähdekoodin suojaamisesta (A) tai virheiden vähentämisestä (C) ei puhuta.\n- **7.2 B** (syöttämällä tekoälylle väärää tietoa). Käyttäjä pyysi mallia esittämään isoäitiään ja kertoi, että isoäiti oli kertonut iltasatuja työstään napalmitehtaassa. Kun malli sitten kertoi \"iltasadun\", se antoi ohjeet napalmin valmistukseen. C on ansa: sääntöjen rikkomista ei pyydetty suoraan, vaan malli huijattiin keksityllä tarinalla.",
+     "answer": "7.1 B · 7.2 B",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "8",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Katso video, jossa mallit ja teinit väittelevät siitä, ovatko mallit hyviä roolimalleja teinitytöille. Videon saa katsoa niin monta kertaa kuin haluaa. Viidelle puhujalle (Alizée, Stini, Ruby, Olivia ja Acacia) valitaan alasvetovalikosta väite, joka tiivistää parhaiten hänen näkemyksensä (3 p/puhuja). Kuudesta väitteestä yksi jää yli. Väitteet koskevat: viestin väärinymmärrystä, alustan vastuutonta käyttöä, kauneusihanteen monia vaikuttajia, unelmiin kannustamista, tyttöjen tarvetta muokata kuviaan ja mallien avoimuutta kuvankäsittelystä.",
+     "hints": [
+      "Puhujat esiintyvät videolla samassa järjestyksessä kuin kysymykset. Kirjoita jokaisesta puhujasta ensin yhden rivin tiivistelmä omin sanoin ja vertaa sitä vasta sitten väitteisiin. Yksi väite ei sovi kenellekään, joten jokaista väitettä ei tarvitse käyttää.",
+      "- 8.1 Alizée: kuka muu kuin mallit asettaa kauneusihanteita?\n- 8.2 Stini: mitä monet mallit nykyään kertovat yleisölle kuvanmuokkauksesta?\n- 8.3 Ruby: hyviä malleja on, mutta onko heitä enemmän vai vähemmän kuin Kim Kardashianin kaltaisia?\n- 8.4 Olivia: mitä tyttö ajattelee, kun tietää kuvia muokattavan?\n- 8.5 Acacia: mikä mallin ensisijainen tehtävä on, ja ymmärtävätkö katsojat sen?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C). Vaihtoehdot ovat samat kaikille puhujille.\n\n- **8.1 C** (kauneusihanteeseen vaikuttavat monet ihmiset). Alizéen mukaan kauneusihanteita eivät aseta vain mallit, vaan myös näyttelijät ja urheilijat, jotka edustavat brändejä. Hän ei itse valinnut ihannetta.\n- **8.2 F** (mallit alkavat kertoa avoimemmin kuvankäsittelystä). Stinin mukaan monet mallit kertovat nykyään rehellisesti retusoinnista ja näyttävät, miltä iho oikeasti näyttää.\n- **8.3 B** (useimmat mallit eivät käytä alustaansa vastuullisesti). Rubyn mukaan verhon raottajia on paljon vähemmän kuin niitä, jotka väittävät ulkonäkönsä johtuvan vain hyvästä ruokavaliosta.\n- **8.4 E** (tytöt kokevat tarvetta muokata kuviaan mallien takia). Olivian mukaan tieto kuvien muokkaamisesta saa tytöt ajattelemaan, että heidänkin pitäisi muokata omia kuviaan.\n- **8.5 A** (mallien viestiä ymmärretään usein väärin). Acacian mukaan mallin tehtävä on myydä tuotetta, esimerkiksi huulikiiltoa, eikä kertoa, miltä ihmisten pitäisi näyttää.\n\nVäite D (ala kannustaa tyttöjä tavoittelemaan unelmiaan) jää yli.",
+     "answer": "8.1 C · 8.2 F · 8.3 B · 8.4 E · 8.5 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "9",
+   "units": [
+    {
+     "id": "",
+     "points": 9,
+     "prompt": "Lue raportin alku, jossa selvitetään kapellimestarin roolia amerikkalaisissa orkestereissa: mitä kapellimestari tekee, millaisia ominaisuuksia hän tarvitsee ja miksi häntä on vaikea arvioida. Sama teksti on myös tehtävässä 15. Kolme monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Kuka hyötyy tekstistä todennäköisesti eniten?\n2. Mikä kuvaa parhaiten menestyvältä kapellimestarilta vaadittavia taitoja?\n3. Miksi kapellimestareita arvioidaan joskus pinnallisin perustein?",
+     "hints": [
+      "Teksti on raportin johdanto, joten sen ensimmäinen kappale kertoo, mihin raporttia voi käyttää. Seuraavat kappaleet käsittelevät kapellimestarin taitoja ja arvioinnin vaikeutta. Etsi kustakin kysymyksestä kappale ja lue se tarkasti.",
+      "- 9.1: mihin kolmeen tarkoitukseen tekstin kriteerejä voi käyttää? Kuka tekee niitä asioita?\n- 9.2: toisessa kappaleessa luetellaan viisi ominaisuutta. Kuuluvatko ne kaikki samaan lajiin?\n- 9.3: mitkä kaksi asiaa tekevät arvioinnista vaikeaa, ja mitä siitä seuraa? Mystiikka mainitaan, mutta mihin se liittyy?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **9.1 B** (ne, jotka kouluttavat ammattimuusikoita). Tekstiä voi käyttää kriteeristönä kapellimestarien tunnistamiseen, valintaan ja koulutukseen, ja sen toivotaan tarjoavan orkesterialalle yhteisen sanaston. Levy-yhtiöiden kykyjenetsijöistä (A) tai konserttiyleisöstä (C) ei puhuta.\n- **9.2 A** (tarvitaan monenlaisia taitoja). Kapellimestarilta vaaditaan intohimoa, älyä, näkemystä, musiikillista lahjakkuutta ja karismaa sekä kykyä viestiä liikkein ja sanoin. B ja C nostavat esiin vain yhden osa-alueen.\n- **9.3 C** (musiikin laadusta voi perustellusti olla eri mieltä). Teoksen esittämiseen ei ole yhtä oikeaa tapaa, ja on epäselvää, johtuuko hyvä esitys kapellimestarista vai orkesterista. Siksi arviot voivat perustua pinnallisiin seikkoihin, kuten siihen, miltä kapellimestari näyttää. A on ansa: mystiikka liittyy siihen, että huijari voi päästä läpi, ei pinnallisten kriteerien syntyyn.",
+     "answer": "9.1 B · 9.2 A · 9.3 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "10",
+   "units": [
+    {
+     "id": "",
+     "points": 21,
+     "prompt": "Lue The Economistin artikkeli siitä, miten Hollywood laajentaa toimintaansa valkokankaan ulkopuolelle: teatteriesitykset, teemapuistot, oheistuotteet ja muut elämykset. Seitsemän kohtaa (3 p/kohta), joista neljä on monivalintoja ja kolme avoimia (suomeksi):\n\n1. (enintään 100 merkkiä) Miksi Stranger Things -sarjan uusimmalla osalla on vain muutama tuhat katsojaa?\n2. Miksi studiot laajentavat toimintaansa elokuvien ja television ulkopuolelle?\n3. Millainen viihdeala oli 1950-luvulla verrattuna nykyiseen?\n4. Mihin *lightsabres* viittaa tekstissä?\n5. Miten elokuvissa käynti kehittyi Yhdysvalloissa ennen pandemiaa?\n6. (enintään 50 merkkiä) Mikä on Disneylle tärkeää sen teemapuistoissa?\n7. (enintään 100 merkkiä) Mitä hyvää kirjoittaja näkee yhtiöiden uudessa toiminnassa?",
+     "hints": [
+      "Kysymykset etenevät tekstin järjestyksessä: 10.1 ensimmäinen kappale, 10.7 viimeinen. Avoimet vastaukset arvostellaan 3/0, joten kirjoita lyhyesti ja täsmällisesti ja käytä oikeaa aikamuotoa: jos teksti kuvaa nykyhetkeä, kirjoita preesensissä.",
+      "- 10.1: miten uusi Stranger Things eroaa aiemmista kausista: missä sen näkee?\n- 10.2: mitä Netflixin markkinointijohtaja sanoo suurfaneista?\n- 10.3: Walt Disneyn kaavio 1950-luvulta: onko nykyinen toimintatapa uusi vai vanha?\n- 10.4: sana on parina vuoristoratojen kanssa. Mitä ne edustavat?\n- 10.5: vertaa lukuja vuodelta 2000 ja ajalta ennen koronaa.\n- 10.6: millä silmällä Disneyn puistojen hinnat on asetettu? Vertaa Netflixiin.\n- 10.7: viimeinen kappale: mitä yleisöllä on nyt enemmän syitä tehdä?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **10.1** *Sitä esitetään teatterissa eikä suoratoisteta.* Sarjan uusi osa on näytelmä Lontoon teatterialueella, joten sen ovat nähneet vain teatterikatsojat. Käytä preesensiä: HVP hylkää imperfektin (\"esitettiin\"), koska esityksiä on yhä.\n- **10.2 A** (yleisö haluaa uusia elämyksiä). Elokuvissa käynnin vähetessä studiot etsivät uusia tapoja innostaa faneja, ja markkinointijohtajan mukaan suurfanit haluavat aina lisää. Taidenäyttelyt mainitaan esimerkkinä, mutta taiteen esittely (B) ei ole syy.\n- **10.3 A** (perusosat olivat samat). Walt Disney piirsi 1950-luvulla kaavion, jossa elokuvat, televisio, teemapuistot ja oheistuotteet tukevat toisiaan, ja nykyinen suunta on uusi versio vanhasta toimintamallista. C on väärin, koska kaaviossa elokuvat mainostivat televisiota eikä päinvastoin.\n- **10.4 C** (elokuviin liittyvät tuotteet). Vuoristoradat ja muoviset valomiekat edustavat teemapuistoja ja oheistuotteita, joista Hollywood on nyt entistä riippuvaisempi.\n- **10.5 B** (se oli laskussa). Jo ennen koronaa keskivertoamerikkalainen kävi elokuvissa kolme ja puoli kertaa vuodessa, kun vuonna 2000 kertoja oli viisi.\n- **10.6** *Tuotto eli voitto.* Disneyn puistojen hinnat on asetettu tulosta silmällä pitäen, kun taas Netflix pitää tapahtumiaan mainoksina sarjoilleen. HVP hylkää vastauksen \"ne ovat päätulonlähde\", koska kysymys koskee sitä, mikä puistoissa on Disneylle tärkeää.\n- **10.7** *Ihmiset lähtevät kotoa ja viettävät aikaa toistensa kanssa.* Kirjoittajan mukaan yleisöllä on nyt enemmän syitä nousta sohvalta ja pitää hauskaa yhdessä, vaikka yhtiöiden perimmäinen tavoite on saada heidät katsomaan vielä enemmän televisiota. Pelkkä \"nousevat sohvalta\" ei HVP:n mukaan riitä, koska kotoa lähteminen puuttuu.",
+     "answer": "10.1 esitetään teatterissa, ei suoratoisteta · 10.2 A · 10.3 A · 10.4 C · 10.5 B · 10.6 tuotto/voitto · 10.7 ihmiset lähtevät kotoa ja tapaavat muita",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "11",
+   "units": [
+    {
+     "id": "",
+     "points": 8,
+     "prompt": "Lue arvio Beatlesin kappaleesta *Now and Then*, joka julkaistiin 2023 ja joka on yhtyeen viimeinen \"uusi\" kappale. Neljä monivalintaa, kussakin kolme vaihtoehtoa (2 p/kohta):\n\n1. Miksi on virheellistä sanoa kappaletta Beatlesin ensimmäiseksi uudeksi kappaleeksi 50 vuoteen?\n2. Miksi kappale julkaistiin vasta nyt?\n3. Mikä on kirjoittajan johtopäätös kappaleesta?\n4. Mikä olisi tekstille sopiva vaihtoehtoinen otsikko?",
+     "hints": [
+      "Teksti kertoo kappaleen syntyhistorian aikajärjestyksessä: Lennonin demot 1970-luvulla, keskeneräinen yritys 1990-luvulla ja valmistuminen tekoälyn avulla. Merkitse lukiessasi vuosikymmenet, sillä väärät vaihtoehdot sekoittavat ne.",
+      "- 11.1: kuinka monta muuta \"uutta\" Beatles-kappaletta on julkaistu vuoden 1970 jälkeen, ja milloin?\n- 11.2: miksi 1990-luvulla ei saatu valmista? Mikä demossa peitti mitä?\n- 11.3: tekstin lopussa kirjoittaja vertaa kappaletta yhtyeen ja jäsenten soolouran perintöön. Onko hän silti pettynyt?\n- 11.4: kappale valmistui noin 45 vuoden aikana ja päätti yhtyeen keskeneräiset asiat."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **11.1 C** (1990-luvulla julkaistiin muutamia uusia kappaleita). Vuoden 1970 jälkeen on julkaistu kaksi muuta \"uutta\" Beatles-kappaletta, *Free as a Bird* ja *Real Love*, Anthology-kokoelmilla vuosina 1995–96. Demot oli äänitetty 1970-luvun lopulla, ei 1980-luvulla (A).\n- **11.2 B** (Lennonin laulu kuului demossa huonosti). 1990-luvulla kappaletta ei saatu valmiiksi, koska Lennonin piano peitti paikoin hänen äänensä. Tekoälyn avulla laulu saatiin nyt eristettyä. A on ansa: ongelma ei ollut soiton laatu vaan se, että piano peitti laulun.\n- **11.3 B** (yhtyeen ja jäsenten omat urat ovat sitä parempia). Kirjoittajan mukaan kappale ei tietenkään yllä Beatlesin tai jäsenten sooloteosten perinnön tasolle. Hän pitää sitä silti odottamattomana ilona, joten C on liian kielteinen, ja kappale päättää yhtyeen keskeneräiset asiat, joten A on väärin.\n- **11.4 C** *Better late than never* (parempi myöhään kuin ei milloinkaan). Kappale valmistui noin 45 vuoden aikana ja sulki viimeisen keskeneräisen asian. A korostaisi odottamisen palkitsevuutta, ja B ei liity tekstiin.",
+     "answer": "11.1 C · 11.2 B · 11.3 B · 11.4 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "12",
+   "units": [
+    {
+     "id": "",
+     "points": 24,
+     "prompt": "Kokeessa on teksti lumikenkien historiasta: arvoituksellinen alkuperä, leviäminen Amerikkaan, eri heimojen mallit, lumikenkäily urheiluna ja nykyiset materiaalit. Tekstissä on kahdeksan aukkoa, ja kuhunkin valitaan alasvetovalikosta kolmesta vaihtoehdosta sopivin sanaryhmä (3 p/aukko). Teksti on itse tehtävässä.",
+     "hints": [
+      "Lue ensin koko teksti aukoista välittämättä. Ratkaise sitten jokainen aukko sen jälkeen tulevan virkkeen avulla, koska se joko perustelee, täsmentää tai jatkaa aukon väitettä. Kiinnitä huomiota sidossanoihin: *but* aukon jälkeen tarkoittaa, että aukon ja jatkon välillä on jännite.",
+      "- 12.1: seuraava virke kertoo, että arkeologista aineistoa on vähän.\n- 12.3: esimerkkeinä ovat Cree-heimon pitkät kengät tasangoille ja irokeesien lyhyet kengät metsiin. Mitä ne kertovat heimoista?\n- 12.4: jatkossa on *but*, ja todisteita ei ole tarpeeksi. Kuinka varma aukon väite voi olla?\n- 12.6: jatkossa heimot käyttivät kenkiä tansseissa ja urheilussa.\n- 12.8: seuraava virke alkaa *In addition* ja kertoo huollon vähentyneen. Mikä myönteinen asia sitä edeltää?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C).\n\n- **12.1 C** (lumikenkäilyn historia on hieman arvoituksellinen). Arkeologista aineistoa on vähän, ja uudet tiedot ovat horjuttaneet vallitsevaa teoriaa. B on päinvastainen, eikä keksintö ole uusi (A).\n- **12.2 C** (kun nämä ihmiset levittäytyivät ympäri maailmaa). Kengät kehittyivät eri muotoihin, kun Keski-Aasiasta lähteneet ryhmät levisivät eri suuntiin, ja seuraava virke kertoo itään kulkeneista.\n- **12.3 A** (jokainen muokkasi lumikenkää ympäristönsä tarpeisiin). Esimerkit kertovat eri mallien tarkoituksesta (tasanko ja metsä), eivät materiaaleista (B) tai siitä, tarvittiinko kenkiä (C).\n- **12.4 C** (se on mahdollista). Jatkossa on *but* ja toteamus, ettei todisteita vielä ole tarpeeksi, joten väitteen pitää olla varovainen. A olisi liian varma.\n- **12.5 C** (vaikka alkuperästä tiedetään vähän). Myönnytys sopii jatkoon, jonka mukaan lähihistoriasta tiedetään paljon. Uutta arkeologista aineistoa (B) ei ole.\n- **12.6 A** (muu kuin käytännöllinen käyttö ei luultavasti ole uusi ilmiö). Alkuperäiskansat käyttivät kenkiä tansseissa ja luultavasti urheilussa ennen eurooppalaisia. B on ansa: laji yleistyi urheiluna 1840-luvulla, mutta aukon jälkeen kerrotaan, että alkuperäiskansat käyttivät kenkiä näin jo aiemmin.\n- **12.7 C** (jos heillä ei ollut hyviä sisäharjoittelutiloja). Yleisurheilijat harjoittelivat talvella lumikengillä vuoteen 1945 asti, kun sisähallia ei ollut. A ja B eivät ole loogisia syitä.\n- **12.8 C** (kenkä oli kevyempi ja kestävämpi). Alumiini ja nailon keventivät kenkää, ja seuraava virke lisää (*In addition*) toisen hyödyn: huoltoa tarvittiin vähän. B on päinvastainen.",
+     "answer": "12.1 C · 12.2 C · 12.3 A · 12.4 C · 12.5 C · 12.6 A · 12.7 C · 12.8 C",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "13",
+   "units": [
+    {
+     "id": "",
+     "points": 6,
+     "prompt": "Lue lyhyt romaanikatkelma, jossa Troy Delaney katselee lapsuutensa katuja veljensä auton ikkunasta. Kaksi monivalintaa, kussakin kolme vaihtoehtoa (3 p/kohta):\n\n1. Millainen ympäristö on?\n2. Miltä Troysta tuntuu?",
+     "hints": [
+      "Katkelma on yksi kappale: ensin kuvataan katua, sitten Troyn tunnetta siitä. Erota kuvaus (mitä hän näkee) ja tunne (miten hän siihen suhtautuu). Katkelman viimeinen virke on avain toiseen kysymykseen.",
+      "- 13.1: nurmikot, pensasaidat, postinkantaja pyörällä, koiranulkoiluttaja. Onko kadulla vilskettä vai rauhallista?\n- 13.2: kaikessa ei ole mitään vikaa, mutta loputon mukavuus tuntuu siltä kuin hänet tukahdutettaisiin rakastavasti peitolla. Onko tunne inho, kaipaus vai jokin lievempi?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **13.1 C** (rauhallinen). Katu on siisti ja hoidettu: rehevät nurmikot, terävät pensasaidat, verkkaisesti kulkeva koiranulkoiluttaja ja lastenrattaita työntävä äiti. Kaoottisuudesta (A) tai eloisuudesta (B) ei ole merkkejä.\n- **13.2 A** (levoton, vaivautunut). Troy myöntää, ettei ympäristössä ole mitään vikaa, mutta sen jatkuva mukavuus tuntuu tukahduttavalta. C (inho) on liian vahva, koska tukahduttaminen on kuvattu rakastavaksi. B (kaipaus) ei sovi, vaikka kyse on lapsuuden kaduista.",
+     "answer": "13.1 C · 13.2 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "14",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Lue kuvaus Walesin Gowerin niemimaalla sijaitsevasta Worm's Headista, kapeasta vuorovesisaaresta. Viisi kohtaa (3 p/kohta), joista neljä on monivalintoja ja yksi avoin:\n\n1. Mikä on Worm's Headin suhde Gowerin niemimaahan?\n2. Miksi osa Worm's Headista on kestänyt eroosiota?\n3. Mikä kuvaa niemekettä (*promontory*) parhaiten?\n4. Mikä väitteistä pitää paikkansa?\n5. (suomeksi, enintään 50 merkkiä) Milloin Worm's Headista saa parhaat valokuvat?",
+     "hints": [
+      "Teksti on maantieteellinen kuvaus, jossa on paljon mittoja ja nimiä. Piirrä itsellesi luonnos: niemeke, saaren neljä osaa järjestyksessä ja niiden korkeudet. Näin väittämien tarkistaminen on helppoa.",
+      "- 14.1: mihin saari on yhdistetty, ja mikä on sen asema niemimaalla?\n- 14.2: millaista kalkkikiveä saari on? Mitä sana *carboniferous* tarkoittaa kirjaimellisesti (vrt. *carbon*)?\n- 14.3: minkä muotoinen niemekkeen yläosa on? Venettä tarvitaan saarelle, ei niemekkeelle.\n- 14.4: vertaa korkeuksia (140 ja 150 jalkaa) ja sitä, mitä Devil's Bridge erottaa.\n- 14.5: viimeisen kappaleen lopussa kerrotaan, milloin jotain paljastuu ja maisemasta tulee vielä kuvauksellisempi."
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **14.1 C** (se on niemimaan uloin osa). Worm's Head on yhdistetty pengertiellä niemekkeeseen, ja se muodostaa Gowerin niemimaan läntisimmän kärjen. Saari on siis yhteydessä niemimaahan (ei A), eikä tekstissä kerrota sen irronneen niemimaasta (B).\n- **14.2 B** (osa sisältää runsaasti hiiltä). Saari on suhteellisen kestävää *carboniferous*-kalkkikiveä. Sana tarkoittaa kirjaimellisesti hiiltä sisältävää (lat. *carbo* = hiili), kun taas välissä oleva hiekkakivi on pehmeämpää ja kulunut nopeammin. Kerroksista (C) tai tuulensuojasta (A) ei puhuta.\n- **14.3 A** (sen maasto on tasainen). Niemeke on laakea tasanne noin 175 jalkaa meren yläpuolella. B on ansa: vuoksen aikaan avovesi erottaa *saaren*, ei niemekettä, ja lohikäärme (C) viittaa saaren nimeen ja muotoon.\n- **14.4 A** (Outer Head on korkeampi kuin Inner Head). Uloin osa on saaren korkein (noin 150 jalkaa), kun Inner Head kohoaa noin 140 jalkaan. Devil's Bridge erottaa Lower Neckin ja Middle Headin, ei Inner Headia ja Lower Neckiä (B).\n- **14.5** *Laskuveden aikaan.* Kun vesi vetäytyy, esiin tulee laaja vyöhyke monimuotoisia kalkkikivimuodostelmia, mikä tekee maisemasta vielä kuvauksellisemman. Pelkkä \"kun vesi on matalalla\" ei HVP:n mukaan riitä, koska se ei viittaa vuorovedeen.",
+     "answer": "14.1 C · 14.2 B · 14.3 A · 14.4 A · 14.5 laskuveden aikaan",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "15",
+   "units": [
+    {
+     "id": "",
+     "points": 7,
+     "prompt": "Tehtävän 9 tekstissä (kapellimestari) on kolme alleviivattua sanaa: *emanating*, *vigorous* ja *innate*. Valitse kullekin kolmesta vaihtoehdosta se, joka sopii yhteyteen ja tarkoittaa lähes samaa (15.1 3 p, 15.2 ja 15.3 2 p).",
+     "hints": [
+      "Korvaa alleviivattu sana vuorotellen jokaisella vaihtoehdolla ja lue virke uudelleen. Päättele vieraan sanan merkitys yhteydestä ennen kuin katsot vaihtoehtoja: mistä keskustelut syntyvät, millaisia erimielisyydet ovat ja mistä ominaisuudet tulevat.",
+      "- 15.1: keskustelut, jotka *lähtevät* tästä tekstistä. Mikä vaihtoehto tarkoittaa alkunsa saamista?\n- 15.2: rehelliset ja *vigorous* erimielisyydet: tarkoittaako sana voimakasta ja palavaa vai jotain kielteistä?\n- 15.3: seuraava virke vertaa näitä ominaisuuksia niihin, jotka *opitaan* ajan kanssa. Mikä on vastakohta?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alkuperäisessä kokeessa ylhäältä lukien (A, B, C).\n\n- **15.1 C** *originating*: *emanate from* = lähteä, saada alkunsa jostakin. *Indicating* = osoittaa, *insinuating* = vihjailla.\n- **15.2 B** *ardent*: *vigorous* = tarmokas, voimakas. Erimielisyydet ovat kiihkeitä, eivät ilkeitä (*mean*) tai turhia (*futile*).\n- **15.3 A** *inborn*: *innate* = synnynnäinen. Seuraava virke vahvistaa tämän: muut ominaisuudet hankitaan ajan myötä. *Insidious* = salakavala.",
+     "answer": "15.1 C · 15.2 B · 15.3 A",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "16",
+   "units": [
+    {
+     "id": "",
+     "points": 15,
+     "prompt": "Kokeen aukkotekstissä pohditaan, pitääkö sanonta \"vastakohdat vetävät toisiaan puoleensa\" paikkansa ihmissuhteissa. Esimerkkeinä ovat Disneyn sadut ja sosiologi Robert Francis Winchin 1950-luvun tutkimus. Tekstissä on 15 aukkoa, ja kuhunkin valitaan alasvetovalikosta kolmesta vaihtoehdosta sopivin (1 p/aukko). Aukot mittaavat sanontoja, verbimuotoja, kysyviä sanoja, prepositioita, artikkeleita ja sekoittuvia sanapareja.",
+     "hints": [
+      "Katso jokaisessa aukossa sanaa, johon aukko liittyy. Verbimuodossa etsi subjekti ja aikamuoto, prepositiossa vakiintunut pari (*in almost every way*, *sweep someone ___ their feet*, *content ___*) ja artikkelissa se, onko henkilö tuttu hahmo. Sanaparit *complement*/*compliment* ja *each other*/*others* sekoittuvat helposti.",
+      "- 16.1: *However* kertoo, että aukkoon tulee sanonta, joka on vastakohtaisen sanonnan vastakohta.\n- 16.3: valitaan kahdesta sanonnasta: mikä kysyvä sana tarkoittaa \"kumpi\"?\n- 16.6: tunnettu satuhahmo, jota määrittää adjektiivi.\n- 16.9: *(as ___ by societal standards)* on lyhennetty passiivirakenne.\n- 16.11–16.12: *___ opposites* on subjektina oleva *-ing*-muoto, ja *you may ___ attracted to* on passiivi.\n- 16.13: yhdyssanamainen ilmaus *___ selection*, kuten *mate selection*.\n- 16.14: täydentää vai kehua?"
+     ],
+     "solution": "Kirjain = vaihtoehdon paikka alasvetovalikossa ylhäältä lukien (A, B, C).\n\n- **16.1 C** (sanonta *birds of a feather...* eli vakka kantensa valitsee). Se on vastakohtaisen sanonnan vastakohta, ja *However* ilmaisee juuri tätä.\n- **16.2 B** *continues*: yksikön preesens (*Modern science*).\n- **16.3 B** *which*: valinta kahden sanonnan välillä (*which phrase* = kumpi sanonta).\n- **16.4 A** *regarding* = koskien.\n- **16.5 A** *in*: *in almost every way* = lähes kaikin tavoin.\n- **16.6 C** *the underprivileged Cinderella*: tuttu hahmo, jota adjektiivi määrittää, saa määräisen artikkelin. *A* ei käy vokaalin edellä.\n- **16.7 A** *off*: *sweep someone off their feet* = viedä jalat alta, hurmata.\n- **16.8 A** *other*: *for each other* = toisilleen.\n- **16.9 C** *deemed*: *as deemed by* = sellaisina kuin ne katsotaan (passiivin partisiippi).\n- **16.10 A** *Aside from* = sen lisäksi, lukuun ottamatta.\n- **16.11 B** *Being*: *Being opposites* = se, että on vastakohtia, toimii subjektina.\n- **16.12 C** *be*: *be attracted to* = tuntea vetoa johonkin.\n- **16.13 A** *mate*: *mate selection* = puolison valinta, ilman artikkelia.\n- **16.14 C** *complement* = täydentää. *Compliment* = kehua, ja *complete* = saattaa loppuun.\n- **16.15 B** *with*: *be content with* = olla tyytyväinen johonkin.",
+     "answer": "birds of a feather… · continues · which · regarding · in · the underprivileged Cinderella · off · other · deemed · Aside from · Being · be · mate · complement · with",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "17",
+   "units": [
+    {
+     "id": "",
+     "points": 5,
+     "prompt": "Viidessä lyhyessä virkkeessä on kussakin yksi virheellinen sana: se on joko kirjoitettu väärin tai kieliopillisesti väärin. Kirjoita vastaukseksi vain korjattu sana (1 p/kohta). Virkkeet käsittelevät sitä, onko englannin kielioppi liian vaikeaa, ja kehottavat muuttamaan ajattelutapaa. Virheitä on relatiivipronominissa, isossa alkukirjaimessa, kahdessa samalta kuulostavassa sanassa ja adverbissa.",
+     "hints": [
+      "Lue jokainen virke sana sanalta ja tarkista kaksi asiaa: onko sana kirjoitettu oikein ja onko se oikeassa muodossa. Virheellinen sana voi olla oikein kirjoitettu, mutta väärä sana (esim. samalta kuulostava sana, jolla on toinen merkitys).",
+      "- 17.1: sivulause viittaa koko edeltävään lauseeseen, ei yhteen sanaan. Mikä relatiivipronomini silloin käytetään?\n- 17.2: kielten nimet kirjoitetaan englannissa aina isolla.\n- 17.3: *chance* = tilaisuus. Mikä verbi tarkoittaa muuttamista?\n- 17.4: *loose* = löysä. Mikä verbi tarkoittaa menettämistä?\n- 17.5: *most ___ right* vaatii adverbin, ja kantasana on *probable*."
+     ],
+     "solution": "- **17.1 which**: kun relatiivilause viittaa koko edeltävään lauseeseen, käytetään pilkun jälkeen *which*, ei *what*.\n- **17.2 English**: kielten ja kansallisuuksien nimet kirjoitetaan englannissa isolla alkukirjaimella.\n- **17.3 change**: *change one's thinking* = muuttaa ajattelutapaansa. *Chance* on substantiivi (tilaisuus).\n- **17.4 lose**: *have nothing to lose* = ei ole mitään menetettävää. *Loose* on adjektiivi (löysä).\n- **17.5 probably**: adverbi *probably* (todennäköisesti) muodostetaan sanasta *probable*, ja se kirjoitetaan *b*:llä, ei *p*:llä.\n\nTehtävä arvostellaan keskitetysti, ja vastaukseen kirjoitetaan vain yksi sana.",
+     "answer": "which · English · change · lose · probably",
+     "check": "hvp"
+    }
+   ]
+  },
+  {
+   "n": "18.1",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: kirjoitus kansainväliselle futurologiseuralle, joka haluaa kuulla nuorten ennusteita tulevaisuudesta. Millainen maailma on viidensadan vuoden kuluttua? Kirjoita omista ajatuksistasi. Inspiraationa voi käyttää aineiston musiikkivideota *In the Year 2525*. HVP: −10 p, jos teksti käsittelee pääosin nykyaikaa. Videon lauluun ei ole pakko viitata.",
+     "hints": [
+      "Tärkein vaatimus on aikajänne: kirjoita tulevaisuudesta noin 500 vuoden päähän. Jos kirjoitat vain nykyajan ongelmista, menetät 10 p. Nykyhetkeen voi viitata lyhyesti johdannossa tai lopussa, mutta pääosa tekstistä kuvaa tulevaisuutta.",
+      "Rakenne: johdanto (miten paljon maailma muuttui edellisten 500 vuoden aikana) → 2–3 ennustetta eri alueilta, esim. asuminen avaruudessa, luonto ja ilmasto, työ ja teknologia → yksi riski tai kysymys → johtopäätös. Käytä tulevaisuuden rakenteita monipuolisesti: *will*, *will have + partisiippi* (futuurin perfekti), *is likely to*, *I predict that*."
+     ],
+     "solution": "**Malliteksti** (1 110 merkkiä ilman välilyöntejä)\n\n**Postcard from the Twenty-Sixth Century**\n\nFive hundred years is a long time. Five hundred years ago, people crossed oceans in wooden ships and believed the Earth was the centre of the universe. So my predictions may sound wild, but so would a smartphone to someone in the 1500s.\n\nI believe that by the 2500s, humanity will no longer live only on Earth. Small cities will exist on the Moon and on Mars, protected by domes and powered by the sun. Children born there will visit Earth the way we visit national parks, to see oceans and forests they have only read about.\n\nOn Earth itself, I predict that most heavy industry will have moved into space, and large areas of land will have been returned to nature. After centuries of climate disasters, people will finally have learned to live in balance with the planet. Food will be grown in vertical farms, and meat will be produced in laboratories.\n\nMachines will do almost all physical work, which raises the biggest question: what will humans do with their time? I hope we will use it for art, science and caring for each other. However, there is also a risk that people become passive and let artificial intelligence make every decision for them.\n\nIn the end, the future depends on the choices we make today. I am optimistic, but only if we remember that technology should serve people, not replace them.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Aikajänne:** koko teksti käsittelee 2500-lukua, ja nykyhetki mainitaan vain vertailuna (ei −10 p:n vähennystä).\n- **Omat ennusteet ja perustelut:** avaruuskaupungit, luonnon palauttaminen, koneet työssä sekä niiden seuraukset.\n- **Pohdinta:** ennusteisiin liittyy riski (passiivisuus ja tekoälyn päätösvalta), mikä tekee tekstistä muutakin kuin listan.\n- **Kieli:** futuurin perfekti (*will have moved, will have been returned*), passiivi ja vertailu (*the way we visit national parks*).\n- **Sidosteisuus:** *On Earth itself, However, In the end*.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "18.2",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: vastaus verkkokeskusteluun. Keskustelussa rikosviihteestä (*true crime*) yksi kirjoittaja pitää koko ilmiötä vastenmielisenä: hänen mukaansa ihmiset viihdyttävät itseään uhrien ja omaisten tuskalla ja tekevät tietämättöminä arvioita rikollisista ja uhreista. Kirjoita vastauksesi.",
+     "hints": [
+      "Tekstilaji on vastaus toisen viestiin, joten reagoi suoraan kirjoittajan väitteisiin: mistä olet samaa mieltä ja mistä eri mieltä? Kiihtyneeseen viestiin kannattaa vastata asiallisesti ja perustellen, ei hyökkäävästi.",
+      "Rakenne: myönnytys (mikä kritiikissä on totta) → vasta-argumentit (tutkiva journalismi, vanhojen tapausten uudelleenavaaminen, halu ymmärtää rikollisuutta) → oma kanta: kysymys ei ole *saako* vaan *miten* → kysymys muille keskustelijoille. Hyödyllistä sanastoa: *genre, wrongly convicted, cold case, ethical, sensationalise, respect the victims*."
+     ],
+     "solution": "**Malliteksti** (1 085 merkkiä ilman välilyöntejä)\n\nI understand why you feel that way, and I agree with part of your point. Some true crime podcasts and TV series really do treat terrible events like cheap entertainment. When a presenter jokes about a murder or shows photos of the victims without asking their families, it is disrespectful and hurtful.\n\nHowever, I don't think the whole genre deserves to be condemned. Good true crime is actually a form of journalism. There are cases where podcasts have uncovered new evidence and even helped to free people who were wrongly convicted. Others have put pressure on the police to reopen cold cases that had been forgotten for decades. For the families of the victims, this can be the only way to finally get answers.\n\nI also think many people listen to true crime not for pleasure but to understand why people commit crimes and how to protect themselves. Personally, I have learned a lot about how the justice system works, and how easily it can fail.\n\nSo instead of asking whether we have the right to listen, maybe we should ask how the stories are told. Creators should respect the victims, check their facts and avoid turning criminals into celebrities. As listeners, we can choose to support only the programmes that do this responsibly.\n\nWhat do others think? Is there a true crime series you consider ethical?\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** vastaus puhuttelee aiempaa kirjoittajaa suoraan ja päättyy kysymykseen muille keskustelijoille.\n- **Vivahteikas kanta:** kritiikki myönnetään osin oikeaksi, ja sen jälkeen esitetään konkreettisia vasta-argumentteja.\n- **Perustelut:** väärin tuomittujen vapauttaminen, vanhojen tapausten uudelleen avaaminen ja halu ymmärtää.\n- **Rakentava johtopäätös:** kysymys käännetään muotoon *how*, ja siihen tarjotaan ratkaisu (tekijöiden ja kuuntelijoiden vastuu).\n- **Sävy:** asiallinen ja kohtelias, vaikka alkuperäinen viesti oli kiihtynyt.",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "18.3",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: puhe kansainvälisen nuorisofoorumin väittelykerholle. Aihe: onnellisuuden ja menestyksen merkitys. Muista perustella kantasi. HVP: −5 p, jos perustelut puuttuvat, ja −2 p, jos puheen tunnusmerkit puuttuvat.",
+     "hints": [
+      "Kaksi pakollista asiaa: perustelut (−5 p) ja puheen tunnusmerkit (−2 p), kuten yleisön puhuttelu alussa, suora puhe kuulijoille ja kiitos lopussa. Valitse selvä kanta, koska kyse on väittelystä.",
+      "Rakenne: puhuttelu (*Honourable judges, dear fellow debaters*) → koukku, esim. kahden ihmisen vertailu tai kysymys yleisölle → kanta ja numeroidut perustelut (*First, Second, Third*) → vastaväitteen huomioiminen (*Of course, I am not saying that...*) → johtopäätös ja kiitos. Hyödyllistä sanastoa: *fulfilment, achievement, burnout, well-being, measure, define*."
+     ],
+     "solution": "**Malliteksti** (1 067 merkkiä ilman välilyöntejä)\n\nHonourable judges, dear fellow debaters,\n\nImagine two people. One is a millionaire who works eighty hours a week and never sees their children. The other earns an ordinary salary, but goes home every evening feeling content. Which of them would you rather be? I am here to argue that being happy matters more than being successful, and I have three reasons.\n\nFirst, success is usually defined by other people. Money, titles and followers are measured by comparing ourselves to others, and there is always someone richer or more famous. Happiness, by contrast, is something we can define for ourselves.\n\nSecond, success without happiness does not last. Research on so-called burnout shows that many high achievers end up exhausted and depressed. Happy people, on the other hand, tend to be healthier, more creative and better at working with others.\n\nThird, and most importantly, happiness often leads to success, not the other way round. When we enjoy what we do, we work harder and give up less easily. Many of the world's best scientists and artists were driven by curiosity and joy, not by the hope of becoming famous.\n\nOf course, I am not saying that success is worthless. But if we have to choose, let us choose the life that makes us smile at the end of the day.\n\nThank you for listening!\n\n**Mikä tekee tekstistä hyvän**\n\n- **Puheen tunnusmerkit:** puhuttelu, retorinen kysymys yleisölle, *we*- ja *you*-muodot sekä kiitos lopussa (ei −2 p:n vähennystä).\n- **Perustelut:** kolme numeroitua perustelua, joista viimeinen on korostettu (*most importantly*), joten −5 p:n vähennystä ei tule.\n- **Väittelyn keinot:** alun vertailu herättää huomion, ja vastaväitteen huomioiminen lopussa tekee kannasta uskottavamman.\n- **Sidosteisuus:** *First, Second, Third, by contrast, on the other hand, Of course*.\n- **Kieli:** vertailut ja vastakohdat (*not the other way round*) sekä kehotus (*let us choose*).",
+     "check": "malli"
+    }
+   ]
+  },
+  {
+   "n": "18.4",
+   "units": [
+    {
+     "id": "",
+     "points": 99,
+     "prompt": "Kirjoita englanniksi 700–1 300 merkkiä (välilyöntejä ja rivinvaihtoja ei lasketa). Tekstilaji: kertomus. Otsikon sananlaskun mukaisesti kirjoita tarina, joka havainnollistaa ja selittää, että ulkokuori voi pettää. HVP: −10 p, jos teksti ei ole tarina vaan yleistä pohdintaa aiheesta.",
+     "hints": [
+      "Tärkein vaatimus on tekstilaji: kirjoita *tarina*, jossa on henkilöt, tapahtumat ja käänne. Yleinen pohdinta ulkonäön pettävyydestä maksaa 10 p. Tarinan pitää näyttää, miten ensivaikutelma osoittautuu vääräksi.",
+      "Rakenne: alku (henkilö ja ensivaikutelma, kertojan ennakkoluulo) → tapahtuma, joka tuo henkilöt yhteen → käänne (paljastuu, kuka henkilö todella on) → loppu, jossa kertoja ymmärtää erehdyksensä. Kertomuksessa kerronnan aikamuoto on imperfekti, ja taustatieto tulee pluskvamperfektissä (*had lost*). Repliikit ja aistihavainnot elävöittävät."
+     ],
+     "solution": "**Malliteksti** (1 029 merkkiä ilman välilyöntejä)\n\n**The Man on the Bench**\n\nEvery morning on my way to school, I passed an old man sitting on the same bench outside the train station. His coat was torn, his beard was long and grey, and he always had a plastic bag full of papers next to him. Most people walked past quickly, and to be honest, so did I. I assumed he was homeless and probably drunk.\n\nOne rainy Tuesday in November, I was hurrying across the square when I slipped on the wet stones and dropped my bag. My maths notes flew everywhere. Before I could react, the old man was on his feet, collecting the soaked papers. He glanced at one of them and smiled.\n\n\"You've made a mistake here,\" he said, pointing at an equation. \"The derivative is wrong.\"\n\nI stared at him. Then he patiently explained the problem to me, more clearly than my teacher ever had. It turned out that he was a retired university professor who had lost his wife a year earlier. He came to the bench every day because it was where they used to wait for the train together. The bag was full of letters she had written to him.\n\nAfter that day, I always stopped to talk to him, and he helped me prepare for my exams. I passed maths with a top grade.\n\nI often think about how close I came to never knowing him. His coat told me nothing about who he really was.\n\n**Mikä tekee tekstistä hyvän**\n\n- **Tekstilaji:** selvä tarina, jossa on alku, käänne ja loppu (ei −10 p:n vähennystä).\n- **Tehtävänanto täyttyy:** ensivaikutelma (kodittomalta näyttävä mies) osoittautuu vääräksi, ja lopun oivallus selittää opetuksen suoraan sanomatta sananlaskua.\n- **Kerronnan keinot:** repliikki, konkreettiset yksityiskohdat (märkä muovipussi, kirjeet) ja kertojan oma ennakkoluulo, jonka hän myöntää.\n- **Aikamuodot:** imperfekti kerronnassa, pluskvamperfekti taustassa (*had lost, had written*) ja *used to* toistuvasta tavasta.\n- **Rakenne:** kappaleet etenevät ajassa, ja viimeinen virke sitoo tarinan otsikkoon.",
+     "check": "malli"
+    }
+   ]
+  }
+ ]
+}

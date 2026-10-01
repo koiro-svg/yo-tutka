@@ -1,8 +1,8 @@
 # koirosvg.com (repo koiro-svg/yo-tutka)
 
-Mikä tämä on: koirosvg.com-sivuston julkaisurepo. Kotivalikko (`index.html`) ja kolme
-työkalua: AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`) ja YO-tutka
-(`yo-tutka.html`). Repo on **julkinen**.
+Mikä tämä on: koirosvg.com-sivuston julkaisurepo. Kotivalikko (`index.html`) ja työkalut:
+AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
+(`yo-tutka.html`) ja sen harjoitusosio YO-harjoittelu (`yo-harjoittelu.html`). Repo on **julkinen**.
 
 ## Build & run
 - Ei buildia. `python3 -m http.server` repon juuressa ja avaa `/ai-opas.html`
@@ -24,6 +24,14 @@ työkalua: AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`) 
   committia. Ei API-avainta eikä GitHub Actionia.
 - YO-tutkan lähde on `~/sovellukset/yo-tutka/` (data + koosta.py); tänne tuodaan
   vain data README:n komennolla.
+- YO-harjoittelu (`/yo-harjoittelu`): Abitti-tyylinen vastauseditori (digabi/MathQuill +
+  MathJax CDN:stä), vihjeet ja malliratkaisut, itsearvio, kertauslista, koesimulaatio ja
+  apuvälinepaneeli (Mafy-taulukot, GeoGebra, Desmos upotettuina). Tehtävälistan se hakee
+  `yo-tutka.html`:n `yo-data`-lohkosta fetchillä; harjoitussisältö on
+  `data/practice/<aine>/<kerta>.json` (kirjoitusohje `scripts/PRACTICE_CONTENT.md`,
+  tarkistus `scripts/validate_practice.py`, kopiointitarkistus `scripts/check_overlap.py`).
+  Vastaukset (IndexedDB) ja arviot (localStorage `yo-practice`) ovat vain käyttäjän selaimessa.
+  YO-tutka lukee samat arviot "Harjoittele seuraavaksi" -listaan.
 
 ## Known sharp edges (don't regress these)
 - YO-tutka on `yo-tutka.html`, ei `index.html` – README:n datansiirtokomento
@@ -75,3 +83,41 @@ työkalua: AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`) 
 - Työkalupakin linkit renderöidään vain `https://`-alkuisina (`safeUrl`, validaattori
   vaatii saman), ja kaikki teksti menee `esc()`:n läpi. Älä ohita näitä uusissa kentissä.
 - `ai-tyokalut.html` hakee datan fetchillä, joten file:// ei toimi (sama kuin AI-oppaassa).
+- **YO-harjoittelu, tekijänoikeus:** YTL:n tehtävätekstejä ja aineistoja ei saa julkaista, ja repo on
+  julkinen. Harjoitussisällössä on vain omin sanoin kirjoitettu kuvaus, omat vihjeet ja ratkaisut sekä
+  linkki alkuperäiseen. Jokainen uusi tiedosto ajetaan `check_overlap.py`:n läpi (6 sanan yhteiset
+  jaksot = 0, paitsi lähdeviitteet). Validaattori hylkää yli 900 merkin `prompt`in.
+- `yo-harjoittelu.html` jäsentää tehtävälistan `yo-tutka.html`:n `<script id="yo-data">`-lohkosta
+  (sama kuin validaattori). Älä nimeä tai poista lohkoa. Sivu ei toimi file://-osoitteesta.
+- localStorage-avain `yo-practice` ja arvion avainmuoto `aine|kerta|n|yksikkö` ovat yhteisiä
+  `yo-harjoittelu.html`:lle ja `yo-tutka.html`:n `practiceScores()`:lle (myös sovellukset-kopiossa).
+  Muuta molempia kerralla.
+- Vastauskenttä (`.answer`) on tarkoituksella vaalea "paperi" tumman teeman keskellä, koska kaavat
+  tallennetaan mustina SVG-kuvina (`<img>` ei peri `currentColor`ia). Samasta syystä MathJaxin
+  `svg.fontCache` on `'none'` (kaavakuva on itsenäinen). Älä vaihda kumpaakaan.
+- MathJaxin `ignoreHtmlClass` jättää `.answer`- ja `.eq-edit`-alueet pois, muuten käyttäjän
+  kirjoittama `$` ladottaisiin kaavaksi.
+- Vastaus-HTML kulkee aina `sanitize()`:n läpi (teksti, `br`, `div`, `img.eq` + `data-latex`,
+  `img.shot` vain `data:image/…`). "Avaa tallennettu" lukee ulkopuolisen tiedoston, joten älä
+  löysää sääntöä.
+- digabi/MathQuill ei tunne kaikkia LaTeX-komentoja (esim. `\rightleftharpoons` kirjoittaa tyhjää).
+  Tällaiset merkit syötetään `typedText`illä (`CHARS`-taulun tila 2). Testaa uusi painike
+  katsomalla `mf.latex()`-tulos.
+- Työkalupalkin napit estävät `mousedown`in oletustoiminnon, jotta kursori pysyy vastauksessa.
+  Älä poista sitä, tai merkit ja kaavat lisätään väärään kohtaan.
+- Äidinkielen kaksi koetta ovat samassa tiedostossa. Osioiden `group` erottaa ne omiksi
+  simulaatioikseen, ja osion `examUrl`/`gradingUrl`/`minutes` ohittavat tiedoston yleiset.
+- Kirjastot on lukittu versioihin: jQuery 3.7.1 (cdnjs), @digabi/mathquill 0.10.12 ja mathjax 3.2.2
+  (jsdelivr). digabi-haara on sama kuin Abitissa ja Mafynetissä. Älä vaihda sitä perus-MathQuilliin.
+  jQueryllä, MathQuillilla ja sen CSS:llä on SRI-tarkiste (`integrity`). Jos vaihdat version, laske
+  tarkiste uudelleen, muuten selain estää kirjaston. MathJax ladataan vasta ensimmäisen kaavan kohdalla
+  (`mjReady`), ja kaikki MathJax-kutsut kulkevat jonossa (`mjRun`), koska mhchem latautuu kesken ladonnan.
+- Leveät kaavat 320 px:n näytöllä: MathJax 3 ei rivitä kaavoja. Siksi `.md`, `.unit` ja `.help` ovat
+  `grid-template-columns:minmax(0,1fr)` ja `.md>*{min-width:0}`, rivinsisäisen kaavan SVG:llä on `max-width:100%`
+  ja näkymättömällä `mjx-assistive-mml`:llä `max-width:100%`. Jos yksikin puuttuu, sivu levenee (testattu
+  fysiikan ja kemian ratkaisuilla). Älä korjaa tätä `overflow-x:auto`-kääreellä.
+- Apuvälinepaneelin laskimet (GeoGebra, Desmos) vievät näppäimistön fokuksen latautuessaan. Sivun
+  latautuessa palautettu laskin odottaa siksi "Avaa"-napin painallusta (`showAid(id, restore)`).
+- Koesimulaation vastaukset tallentuvat avaimella `koe|aine|kerta|n|yksikkö`, erillään harjoitusvastauksista.
+  "Uusi yritys" poistaa ne. Arviot (`scores`) ovat yhteisiä, ja kertauslista etenee vain, kun kohta on
+  erääntynyt (`r.due <= today()`), jotta arvion korjaaminen ei hyppää kertausvälejä yli.
