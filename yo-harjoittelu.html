@@ -50,7 +50,15 @@ body.aids-open .layout{max-width:1680px}
 .masthead{display:grid;gap:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .masthead .eyebrow{color:var(--accent)}
 .lede{color:var(--ink-2);max-width:70ch;font-size:16px}
-.crumb{display:inline-flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--font-mono);font-size:13px}
+.crumb{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--font-mono);font-size:13px}
+.crumb .acct{margin-left:auto;max-width:30ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--accent)}
+.crumb .acct.err,.crumb .acct.offline{color:var(--warn)}
+.form{display:grid;gap:12px;max-width:440px}
+.form label{display:grid;gap:4px;font-size:14px}
+.form label.check{display:flex;gap:8px;align-items:flex-start}
+.form input[type=email],.form input[type=password]{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:9px 12px;width:100%}
+.formmsg{font-size:14px;color:var(--ink-2);min-height:1.4em}
+.formmsg.bad{color:var(--bad)}
 .crumb a{padding-block:8px;text-decoration:none;color:var(--ink-3)}
 .crumb a:hover{color:var(--accent)}
 .muted{color:var(--ink-3)}
@@ -260,7 +268,9 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   try { Object.assign(S, JSON.parse(localStorage.getItem(LS) || '{}')); } catch (e) {}
   // every self-assessment ever made (progress view); older saves are seeded from their latest scores
   if (!Array.isArray(S.history)) S.history = Object.entries(S.scores).map(([k, v]) => ({ k, p: v.p, max: v.max, at: v.at })).sort((x, y) => x.at - y.at);
-  const persist = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
+  const persistLocal = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
+  let onPersist = null;          // set by the account module: schedules a sync when signed in
+  const persist = () => { persistLocal(); if (onPersist) onPersist(); };
   // another tab saved: take its state, so our next persist() does not overwrite it
   window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); } catch (err) {} } });
 
@@ -389,22 +399,26 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 
   /* ---------- scores, weak topics and review list ---------- */
   const INTERVALS = [1, 3, 7, 14, 30];
-  const freshReview = () => ({ box: 0, due: addDays(1) });
+  // Review entries carry `at`; a removed entry stays as a tombstone {gone, at}, so a sync from another
+  // device cannot bring it back (the newer `at` wins in mergeState).
+  const freshReview = () => ({ box: 0, due: addDays(1), at: Date.now() });
+  const reviewOf = key => { const r = S.review[key]; return r && !r.gone ? r : null; };
+  const dropReview = key => { S.review[key] = { gone: true, at: Date.now() }; };
   function setScore(key, p, max) {
     S.scores[key] = { p, max, at: Date.now() };
     S.history.push({ k: key, p, max, at: S.scores[key].at });
     if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
-    const ratio = max ? p / max : 0, r = S.review[key];
+    const ratio = max ? p / max : 0, r = reviewOf(key);
     if (ratio < 0.7) S.review[key] = freshReview();
     else if (r && r.due <= today()) {   // advance only a due review; re-scoring the same day must not skip intervals
       const box = r.box + 1;
-      if (box >= INTERVALS.length) delete S.review[key];
-      else S.review[key] = { box, due: addDays(INTERVALS[box]) };
+      if (box >= INTERVALS.length) dropReview(key);
+      else S.review[key] = { box, due: addDays(INTERVALS[box]), at: Date.now() };
     }
     persist();
   }
   function toggleReview(key) {
-    if (S.review[key]) delete S.review[key]; else S.review[key] = freshReview();
+    if (reviewOf(key)) dropReview(key); else S.review[key] = freshReview();
     persist();
   }
   const scoreCls = r => r >= 0.8 ? 'ok' : r >= 0.5 ? 'warn' : 'bad';
@@ -633,11 +647,12 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     countChars(root);
   }
   const saveTimers = new WeakMap();
+  let onAnswerSaved = null;      // set by the account module: uploads the answer when signed in
   function saveAnswer(root) {
     clearTimeout(saveTimers.get(root));
     saveTimers.set(root, setTimeout(() => {
-      const html = answerHtml(root);
-      html.trim() ? idb.set(root.dataset.key, { html, at: Date.now() }) : idb.del(root.dataset.key);
+      const html = answerHtml(root), key = root.dataset.key;
+      (html.trim() ? idb.set(key, { html, at: Date.now() }) : idb.del(key)).then(() => { if (onAnswerSaved) onAnswerSaved(key); });
       countChars(root);
     }, 400));
   }
@@ -830,7 +845,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   }
   const masthead = (crumbs, title, lede) => `
     <header class="masthead">
-      <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="${TUTKA}">YO-tutka</a>${crumbs || ''}</nav>
+      <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="${TUTKA}">YO-tutka</a>${crumbs || ''}${accountOn() ? `<a href="#/tili" id="acctLink" class="acct ${acct.status}">${esc(acctLabel())}</a>` : ''}</nav>
       <div class="eyebrow">YO-tutka · Harjoittelu</div>
       <h1>${title}</h1>
       ${lede ? `<p class="lede">${lede}</p>` : ''}
@@ -839,15 +854,16 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const homeCrumb = a => `<a href="#/${esc(a)}">Harjoittelu</a>`;
   const footer = () => `<footer>
       <p>Tehtävänannot ovat Ylioppilastutkintolautakunnan tekijänoikeuden alaisia, joten tässä on vain lyhyt kuvaus ja linkki alkuperäiseen tehtävään. Vihjeet ja malliratkaisut ovat tämän sivuston omia. Ne on kirjoitettu tekoälyn avulla ja loppuvastaukset on tarkistettu YTL:n hyvän vastauksen piirteitä vasten tai laskemalla, kun se on ollut mahdollista (merkintä jokaisessa kohdassa). Virheitä voi silti olla.</p>
-      <p>Kaavaeditori: <a href="https://github.com/digabi/mathquill" target="_blank" rel="noopener">digabi/MathQuill</a> (sama kuin Abitissa) ja <a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>.</p>
+      <p>Kaavaeditori: <a href="https://github.com/digabi/mathquill" target="_blank" rel="noopener">digabi/MathQuill</a> (sama kuin Abitissa) ja <a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>.${accountOn() ? ' <a href="/tietosuoja">Tietosuojaseloste</a>.' : ''}</p>
     </footer>`;
 
   function home(prefer) {
     const a = subj(prefer) ? prefer : (subj(S.ui.subject) ? S.ui.subject : DATA[0].id);
     S.ui.subject = a; persist();
     const s = subj(a), idx = scoreIndex(), sessions = sessionsDesc(s);
-    const due = Object.entries(S.review).filter(([, r]) => r.due <= today()).map(([k]) => k);
-    const upcoming = Object.keys(S.review).length - due.length;
+    const live = Object.entries(S.review).filter(([, r]) => r && !r.gone);
+    const due = live.filter(([, r]) => r.due <= today()).map(([k]) => k);
+    const upcoming = live.length - due.length;
     const m = Array.from(mastery(s, idx).values()).sort((x, y) => x.p / x.max - y.p / y.max);
     const reviewItem = key => {
       const x = parseKey(key), t = taskOf(x.a, x.k, x.n); if (!t) return '';
@@ -910,7 +926,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const CHECK_TXT = { 'hvp': 'tarkistettu YTL:n hyvän vastauksen piirteitä vasten', 'laskettu': 'loppuvastaus laskettu koneellisesti', 'hvp+laskettu': 'tarkistettu hyvän vastauksen piirteitä vasten ja laskettu koneellisesti', 'malli': 'esimerkkivastaus: yhtä oikeaa vastausta ei ole, malli noudattaa YTL:n arviointikriteerejä', 'ei': 'ei tarkistettu' };
   const CHECK_CHIP = { 'ei': ['warn', 'ei tarkistettu'], 'malli': ['', 'esimerkkivastaus'] };
   const revLabel = on => on ? '✓ Kertauslistalla' : 'Kertaa myöhemmin';
-  function syncRev(btn, key) { if (!btn) return; const on = !!S.review[key]; btn.setAttribute('aria-pressed', String(on)); btn.textContent = revLabel(on); }
+  function syncRev(btn, key) { if (!btn) return; const on = !!reviewOf(key); btn.setAttribute('aria-pressed', String(on)); btn.textContent = revLabel(on); }
   function unitBlock(ctx, u, { prefix = '', showHelp = true } = {}) {
     const key = ukey(ctx.a, ctx.k, ctx.n, u.id);
     const hints = u.hints || [];
@@ -921,7 +937,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       ? `<p class="muted small">Tälle tehtävälle ei ole vielä vihjeitä eikä malliratkaisua. Katso <a href="${esc(ctx.gradingUrl || ctx.examUrl || '#')}" target="_blank" rel="noopener">YTL:n hyvän vastauksen piirteet</a> ja arvioi itsesi.</p>`
       : `<div class="row">${hints.map(hintBtn).join('')}
           <button type="button" class="btn" data-act="sol" aria-expanded="false">Näytä malliratkaisu</button>
-          <button type="button" class="btn ghost" data-act="rev" aria-pressed="${!!S.review[key]}">${revLabel(!!S.review[key])}</button></div>
+          <button type="button" class="btn ghost" data-act="rev" aria-pressed="${!!reviewOf(key)}">${revLabel(!!reviewOf(key))}</button></div>
           ${hints.map((h, i) => `<div class="reveal hint md" data-hintbox="${i}" hidden><div class="rh">Vihje ${i + 1}</div>${md(h)}</div>`).join('')}
           <div class="reveal sol md" data-solbox hidden><div class="rh">Malliratkaisu</div>${md(u.solution)}${u.answer ? `<p><b>Vastaus:</b> ${md(u.answer).replace(/^<p>|<\/p>$/g, '')}</p>` : ''}${u.check ? `<p class="muted small">${esc(CHECK_TXT[u.check] || '')}</p>` : ''}</div>`;
     return `<section class="unit" id="u-${esc(u.id || '_')}" data-key="${esc(key)}">
@@ -967,7 +983,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       setScore(key, p, max);
       sec.dispatchEvent(new CustomEvent('yo:score', { bubbles: true }));
       assess.innerHTML = assessHtml(key, max);
-      $('[data-assessnote]', assess).textContent = `Tallennettu ${p}/${max} p.` + (S.review[key] ? ` Kohta on kertauslistalla (${fmtDate(S.review[key].due)}).` : '');
+      $('[data-assessnote]', assess).textContent = `Tallennettu ${p}/${max} p.` + (reviewOf(key) ? ` Kohta on kertauslistalla (${fmtDate(reviewOf(key).due)}).` : '');
       syncRev(rev, key);
       const chip = scoreChip(S.scores[key], 'data-score title="oma arvio"'), old = $('[data-score]', sec);
       if (old) old.outerHTML = chip; else $('.uhead', sec).insertAdjacentHTML('beforeend', chip);
@@ -1229,11 +1245,11 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   // The file comes from outside: every value is re-validated and every answer goes through clean().
   const UNIT_KEY = /^[a-z-]+\|\d{4}[KS]\|[^|<>"]+\|[^|<>"]+$/, SIM_KEY = /^[a-z-]+\|\d{4}[KS](\|[a-z]+)?$/;
   const num = x => (Number.isFinite(+x) ? +x : null);
-  async function importBackup(file) {
-    let data = null;
-    try { data = JSON.parse(await file.text()); } catch (e) {}
-    if (!data || data.type !== 'yo-practice-backup' || !data.state) { alertBox('Tiedosto ei ole YO-harjoittelun varmuuskopio.'); return; }
-    const st = data.state; let scores = 0, answers = 0;
+  // Merge another copy of the state (backup file or the server) into S: newer score wins, history is a union,
+  // review items and exam simulations are added when missing. Returns how many scores changed.
+  function mergeState(st) {
+    st = st && typeof st === 'object' ? st : {};
+    let scores = 0;
     for (const [k, v] of Object.entries(st.scores || {})) {
       if (!UNIT_KEY.test(k) || !v || num(v.p) == null || num(v.max) == null || num(v.at) == null) continue;
       if (!S.scores[k] || S.scores[k].at < +v.at) { S.scores[k] = { p: +v.p, max: +v.max, at: +v.at }; scores++; }
@@ -1245,25 +1261,317 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     }
     S.history.sort((x, y) => x.at - y.at);
     if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
-    for (const [k, r] of Object.entries(st.review || {}))
-      if (UNIT_KEY.test(k) && r && num(r.due) != null && !S.review[k]) S.review[k] = { box: Math.max(0, Math.min(INTERVALS.length - 1, Math.round(+r.box) || 0)), due: +r.due };
+    for (const [k, r] of Object.entries(st.review || {})) {
+      if (!UNIT_KEY.test(k) || !r || (!r.gone && num(r.due) == null)) continue;
+      const cur = S.review[k], at = num(r.at) || 0;
+      if (cur && (num(cur.at) || 0) >= at) continue;   // newer wins; entries from before timestamps (at 0) never override
+      S.review[k] = r.gone ? { gone: true, at } : { box: Math.max(0, Math.min(INTERVALS.length - 1, Math.round(+r.box) || 0)), due: +r.due, at };
+    }
     for (const [k, m] of Object.entries(st.sims || {})) {
       if (!SIM_KEY.test(k) || !m || num(m.start) == null || S.sims[k]) continue;
       const res = m.result && { total: num(m.result.total) || 0, totalMax: num(m.result.totalMax) || 0, assessed: num(m.result.assessed) || 0 };
       S.sims[k] = { start: +m.start, paused: num(m.paused) || 0, pauseAt: num(m.pauseAt), submitted: num(m.submitted),
         chosen: (Array.isArray(m.chosen) ? m.chosen : []).filter(n => typeof n === 'string').slice(0, 50), ...(res ? { result: res } : {}) };
     }
-    for (const [k, v] of Array.isArray(data.answers) ? data.answers : []) {
-      if (typeof k !== 'string' || !UNIT_KEY.test(k.replace(/^koe\|/, '')) || !v || typeof v.html !== 'string') continue;
-      const cur = await idb.get(k);
-      if (cur && cur.at >= (num(v.at) || 0)) continue;
-      const tpl = document.createElement('template'); tpl.innerHTML = v.html;
-      await idb.set(k, { html: clean(tpl.content).innerHTML, at: num(v.at) || Date.now() }); answers++;
-    }
+    return scores;
+  }
+  // Merge one answer if it is newer than the local copy; refreshes an open editor that is not being typed in.
+  async function mergeAnswer(k, v) {
+    if (typeof k !== 'string' || !UNIT_KEY.test(k.replace(/^koe\|/, '')) || !v || typeof v.html !== 'string') return false;
+    const cur = await idb.get(k);
+    if (cur && cur.at >= (num(v.at) || 0)) return false;
+    const tpl = document.createElement('template'); tpl.innerHTML = v.html;
+    const html = clean(tpl.content).innerHTML;
+    await idb.set(k, { html, at: num(v.at) || Date.now() });
+    const root = $$('.answer', app).find(r => r.dataset.key === k);
+    if (root && !root.contains(document.activeElement)) setAnswer(root, html);
+    return true;
+  }
+  async function importBackup(file) {
+    let data = null;
+    try { data = JSON.parse(await file.text()); } catch (e) {}
+    if (!data || data.type !== 'yo-practice-backup' || !data.state) { alertBox('Tiedosto ei ole YO-harjoittelun varmuuskopio.'); return; }
+    const scores = mergeState(data.state);
+    let answers = 0;
+    for (const [k, v] of Array.isArray(data.answers) ? data.answers : []) if (await mergeAnswer(k, v)) answers++;
     persist(); progressView();
+    if (acct.user) syncAll();
     alertBox(`Varmuuskopio palautettu: ${scores} arviota ja ${answers} vastausta päivitettiin. Tämän selaimen uudemmat tiedot säilyivät.`);
   }
   $('#backupPick').addEventListener('change', e => { const f = e.target.files && e.target.files[0]; e.target.value = ''; if (f) importBackup(f); });
+
+  /* ---------- user accounts + cross-device sync (Supabase) ---------- */
+  // Public values by design (row level security protects the data, see supabase/schema.sql). Empty = accounts hidden.
+  const SUPABASE = { url: '', key: '' };
+  const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js';
+  const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
+  const AUTH_KEY = 'yo-practice-auth';   // where supabase-js keeps the session (localStorage)
+  const ANSWER_MAX = 1e6;               // bytes per synced answer; same limit as practice_answers_size in schema.sql
+  const PW_MIN = 10;
+  const acct = { client: null, user: null, status: 'off', last: 0, skipped: new Set(), recovery: false };
+  function accountOn() { return !!(SUPABASE.url && SUPABASE.key); }
+  const STATUS_TXT = { off: '', busy: 'Synkronoidaan…', ok: 'Synkronoitu', err: 'Synkronointi epäonnistui – yritetään uudelleen seuraavan muutoksen yhteydessä', offline: 'Ei verkkoyhteyttä – tallennetaan, kun yhteys palaa' };
+  function acctLabel() {
+    if (!acct.user) return 'Kirjaudu';
+    return ({ busy: '◌ ', err: '! ', offline: '○ ' }[acct.status] || '● ') + acct.user.email;
+  }
+  function paintAcct() {
+    const a = document.getElementById('acctLink');
+    if (a) { a.textContent = acctLabel(); a.className = 'acct ' + acct.status; a.title = STATUS_TXT[acct.status] || ''; }
+    const st = document.getElementById('syncStatus'); if (st) st.textContent = syncLine();
+  }
+  const syncLine = () => (STATUS_TXT[acct.status] || '') + (acct.last ? ` · viimeksi ${new Date(acct.last).toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' })}` : '');
+  function setStatus(s) { acct.status = s; if (s === 'ok') acct.last = Date.now(); paintAcct(); }
+
+  let sbLoad = null;
+  function sbClient() {
+    return sbLoad || (sbLoad = new Promise((resolve, reject) => {
+      const el = document.createElement('script');
+      el.src = SB_JS; el.integrity = SB_SRI; el.crossOrigin = 'anonymous';
+      el.onerror = () => { sbLoad = null; reject(new Error('Kirjautumispalvelu ei latautunut. Tarkista verkkoyhteys.')); };
+      el.onload = () => {
+        acct.client = window.supabase.createClient(SUPABASE.url, SUPABASE.key,
+          { auth: { storageKey: AUTH_KEY, persistSession: true, autoRefreshToken: true, detectSessionInUrl: false } });
+        acct.client.auth.onAuthStateChange((event, session) => {
+          const before = acct.user && acct.user.id;
+          acct.user = session ? session.user : null;
+          if (event === 'PASSWORD_RECOVERY') acct.recovery = true;
+          // supabase-js must not be awaited inside this callback, so the sync starts on the next tick
+          if (acct.user && acct.user.id !== before) { lastPushed = ''; acct.skipped.clear(); setTimeout(syncAll, 0); }
+          if (!acct.user) { acct.status = 'off'; acct.last = 0; }
+          paintAcct();
+        });
+        resolve(acct.client);
+      };
+      document.head.append(el);
+    }));
+  }
+
+  // ---- sync: the server copy is merged into the local one with the backup rules, then the result is uploaded
+  const syncedFields = () => ({ scores: S.scores, review: S.review, sims: S.sims, history: S.history });
+  let lastPushed = '';
+  async function pullState() {
+    const { data, error } = await acct.client.from('practice_state').select('state').maybeSingle();
+    if (error) throw error;
+    const changed = data && data.state ? mergeState(data.state) : 0;
+    persistLocal();
+    return changed;
+  }
+  async function pushState() {
+    const body = JSON.stringify(syncedFields());
+    if (body === lastPushed) return;
+    const { error } = await acct.client.from('practice_state').upsert({ user_id: acct.user.id, state: syncedFields(), updated_at: new Date().toISOString() });
+    if (error) throw error;
+    lastPushed = body;
+  }
+  async function pushAnswer(k) {
+    const v = await idb.get(k);
+    if (!v) { const { error } = await acct.client.from('practice_answers').delete().eq('key', k); if (error) throw error; return; }
+    if (new Blob([v.html]).size > ANSWER_MAX) { acct.skipped.add(k); return; }
+    const { error } = await acct.client.from('practice_answers').upsert({ user_id: acct.user.id, key: k, html: v.html, at: v.at });
+    if (error && /quota/i.test(error.message || '')) { acct.skipped.add(k); return; }
+    if (error) throw error;
+    acct.skipped.delete(k);
+  }
+  const failStatus = () => setStatus(navigator.onLine === false ? 'offline' : 'err');
+  let syncing = null;
+  function syncAll() {   // full two-way sync: on sign-in, on page load, after a backup import and from "Synkronoi nyt"
+    if (!acct.user) return Promise.resolve();
+    if (syncing) return syncing;
+    syncing = (async () => {
+      setStatus('busy');
+      try {
+        const changed = await pullState();
+        const { data: rows, error } = await acct.client.from('practice_answers').select('key,at');
+        if (error) throw error;
+        const remote = new Map(rows.map(r => [r.key, Number(r.at)]));
+        const local = new Map(await idb.entries());
+        const down = [...remote].filter(([k, at]) => !local.has(k) || (num(local.get(k).at) || 0) < at).map(([k]) => k);
+        let got = 0;
+        for (let i = 0; i < down.length; i += 5) {   // 5 per request: answers may carry images
+          const { data, error: e2 } = await acct.client.from('practice_answers').select('key,html,at').in('key', down.slice(i, i + 5));
+          if (e2) throw e2;
+          for (const r of data) if (await mergeAnswer(r.key, r)) got++;
+        }
+        for (const [k, v] of local) if (!remote.has(k) || remote.get(k) < (num(v.at) || 0)) await pushAnswer(k);
+        await pushState();
+        setStatus('ok');
+        // new data from another device: redraw list-like views (task and exam views keep their editors)
+        if ((changed || got) && !/^#\/(t|koe)\//.test(location.hash)) route();
+      } catch (e) { failStatus(); }
+      finally { syncing = null; }
+    })();
+    return syncing;
+  }
+  let stateTimer = null, answerTimer = null;
+  const dirtyAnswers = new Set();
+  onPersist = () => {
+    if (!acct.user) return;
+    clearTimeout(stateTimer);
+    stateTimer = setTimeout(async () => {
+      if (syncing || JSON.stringify(syncedFields()) === lastPushed) return;
+      setStatus('busy');
+      try { await pullState(); await pushState(); setStatus('ok'); } catch (e) { failStatus(); }
+    }, 3000);
+  };
+  onAnswerSaved = key => {
+    if (!acct.user) return;
+    dirtyAnswers.add(key); clearTimeout(answerTimer);
+    answerTimer = setTimeout(async () => {
+      const keys = [...dirtyAnswers]; dirtyAnswers.clear();
+      setStatus('busy');
+      try { for (const k of keys) await pushAnswer(k); setStatus('ok'); } catch (e) { keys.forEach(k => dirtyAnswers.add(k)); failStatus(); }
+    }, 3000);
+  };
+  window.addEventListener('online', () => { if (acct.user) syncAll(); });
+
+  // ---- account views
+  function authError(e) {
+    const m = String((e && (e.code || e.message)) || e || '');
+    if (/invalid_credentials|invalid login/i.test(m)) return 'Sähköposti tai salasana on väärin.';
+    if (/email_not_confirmed|not confirmed/i.test(m)) return 'Vahvista ensin sähköpostiosoitteesi: avaa saamasi viesti ja paina linkkiä.';
+    if (/weak_password|password should/i.test(m)) return `Salasana on liian heikko. Käytä vähintään ${PW_MIN} merkkiä.`;
+    if (/same_password|different from the old/i.test(m)) return 'Uusi salasana ei voi olla sama kuin vanha.';
+    if (/rate.?limit|too many|429/i.test(m)) return 'Liian monta yritystä. Odota hetki ja yritä uudelleen.';
+    if (/otp_expired|expired|invalid.*(token|otp)/i.test(m)) return 'Linkki on vanhentunut tai jo käytetty. Pyydä uusi.';
+    if (/fetch|network/i.test(m)) return 'Ei yhteyttä palvelimeen. Tarkista verkkoyhteys.';
+    return 'Jokin meni vikaan (' + m + ').';
+  }
+  const msg = (text, bad) => { const el = document.getElementById('formMsg'); if (el) { el.textContent = text; el.classList.toggle('bad', !!bad); } };
+  const accountPage = (title, body) => setView(masthead(homeCrumb(S.ui.subject || ''), title) + body + footer());
+  function busyForm(form, on) { $$('button,input', form).forEach(x => { x.disabled = on; }); }
+
+  async function accountView(tab) {
+    const signal = accountPage('Käyttäjätili', '<p class="muted">Ladataan…</p>');
+    if (!accountOn()) { accountPage('Käyttäjätili', '<p class="muted">Käyttäjätilit eivät ole vielä käytössä.</p>'); return; }
+    try { await sbClient(); await acct.client.auth.getSession(); } catch (e) { if (!signal.aborted) accountPage('Käyttäjätili', `<p class="warnbox">${esc(authError(e))}</p>`); return; }
+    if (signal.aborted) return;
+    const q = new URLSearchParams(location.search), tokenHash = q.get('token_hash'), type = q.get('type');
+    if (tokenHash && /^(email|signup|recovery)$/.test(type || '')) return confirmView(tokenHash, type === 'recovery');
+    if (acct.recovery && acct.user) return newPasswordView();
+    return acct.user ? signedInView() : signedOutView(tab || 'kirjaudu');
+  }
+
+  // Email links land here. Verifying needs a click, so mail scanners that open links cannot use up the token.
+  function confirmView(tokenHash, recovery) {
+    accountPage(recovery ? 'Uusi salasana' : 'Vahvista sähköposti', `<section class="card form">
+      <p>${recovery ? 'Jatka painamalla nappia. Sen jälkeen valitset uuden salasanan.' : 'Ota tili käyttöön painamalla nappia.'}</p>
+      <div class="row"><button type="button" class="btn primary" id="doVerify">${recovery ? 'Jatka' : 'Vahvista'}</button></div>
+      <p class="formmsg" id="formMsg" role="status"></p></section>`);
+    $('#doVerify').onclick = async e => {
+      e.currentTarget.disabled = true; msg('Tarkistetaan…');
+      const { error } = await acct.client.auth.verifyOtp({ token_hash: tokenHash, type: recovery ? 'recovery' : 'email' });
+      history.replaceState(null, '', location.pathname + '#/tili');
+      if (error) { msg(authError(error) + ' Voit pyytää uuden linkin kirjautumissivulta.', true); return; }
+      if (recovery) { acct.recovery = true; newPasswordView(); }
+      else { signedInView(); alertBox('Sähköposti vahvistettu ja olet kirjautunut sisään. Edistymisesi synkronoidaan nyt kaikille laitteillesi.'); }
+    };
+  }
+  function newPasswordView() {
+    accountPage('Uusi salasana', `<section class="card"><form class="form" id="pwNew">
+      <label>Uusi salasana<input type="password" name="pw" autocomplete="new-password" minlength="${PW_MIN}" required></label>
+      <label>Uusi salasana uudelleen<input type="password" name="pw2" autocomplete="new-password" minlength="${PW_MIN}" required></label>
+      <div class="row"><button class="btn primary">Tallenna salasana</button></div>
+      <p class="formmsg" id="formMsg" role="status"></p></form></section>`);
+    $('#pwNew').onsubmit = async e => {
+      e.preventDefault(); const f = e.currentTarget;
+      if (f.pw.value !== f.pw2.value) return msg('Salasanat eivät täsmää.', true);
+      busyForm(f, true); msg('Tallennetaan…');
+      const { error } = await acct.client.auth.updateUser({ password: f.pw.value });
+      busyForm(f, false);
+      if (error) return msg(authError(error), true);
+      acct.recovery = false;
+      await acct.client.auth.signOut({ scope: 'others' });   // a reset password logs out every other device
+      signedInView(); alertBox('Salasana vaihdettu. Muut laitteet kirjattiin ulos.');
+    };
+  }
+  function signedOutView(tab) {
+    const tabs = [['kirjaudu', 'Kirjaudu'], ['luo', 'Luo tili'], ['unohdin', 'Unohtunut salasana']];
+    const forms = {
+      kirjaudu: `<form class="form" id="fLogin">
+        <label>Sähköposti<input type="email" name="email" autocomplete="email" required></label>
+        <label>Salasana<input type="password" name="pw" autocomplete="current-password" required></label>
+        <div class="row"><button class="btn primary">Kirjaudu</button><a href="#/tili/unohdin" class="small">Unohditko salasanan?</a></div>
+        <p class="formmsg" id="formMsg" role="status"></p></form>`,
+      luo: `<form class="form" id="fSignup">
+        <label>Sähköposti<input type="email" name="email" autocomplete="email" required></label>
+        <label>Salasana (vähintään ${PW_MIN} merkkiä)<input type="password" name="pw" autocomplete="new-password" minlength="${PW_MIN}" required></label>
+        <label>Salasana uudelleen<input type="password" name="pw2" autocomplete="new-password" minlength="${PW_MIN}" required></label>
+        <label class="check"><input type="checkbox" name="ok" required> <span>Olen lukenut <a href="/tietosuoja" target="_blank" rel="noopener">tietosuojaselosteen</a>.</span></label>
+        <div class="row"><button class="btn primary">Luo tili</button></div>
+        <p class="formmsg" id="formMsg" role="status"></p></form>`,
+      unohdin: `<form class="form" id="fForgot">
+        <p class="muted">Lähetämme sähköpostiisi linkin, jolla voit asettaa uuden salasanan.</p>
+        <label>Sähköposti<input type="email" name="email" autocomplete="email" required></label>
+        <div class="row"><button class="btn primary">Lähetä linkki</button></div>
+        <p class="formmsg" id="formMsg" role="status"></p></form>`
+    };
+    if (!forms[tab]) tab = 'kirjaudu';
+    accountPage('Käyttäjätili', `<p class="lede">Kirjautuneena arviosi, kertauslistasi, koesimulaatiosi ja vastauksesi tallentuvat tiliisi, ja voit jatkaa mistä tahansa laitteesta. Ilman tiliä kaikki tallentuu vain tähän selaimeen.</p>
+      <nav class="filters" aria-label="Tilin toiminnot">${tabs.map(([id, t]) => `<button type="button" data-tab="${id}" aria-pressed="${id === tab}">${t}</button>`).join('')}</nav>
+      <section class="card">${forms[tab]}</section>`);
+    $$('[data-tab]', app).forEach(b => b.onclick = () => { location.hash = '#/tili/' + b.dataset.tab; });
+    const form = $('form', app);
+    form.onsubmit = async e => {
+      e.preventDefault(); const f = e.currentTarget, email = f.email.value.trim().toLowerCase();
+      if (tab === 'luo' && f.pw.value !== f.pw2.value) return msg('Salasanat eivät täsmää.', true);
+      busyForm(f, true); msg('Hetki…');
+      let error = null;
+      if (tab === 'kirjaudu') ({ error } = await acct.client.auth.signInWithPassword({ email, password: f.pw.value }));
+      else if (tab === 'luo') ({ error } = await acct.client.auth.signUp({ email, password: f.pw.value, options: { emailRedirectTo: location.origin + '/yo-harjoittelu' } }));
+      else ({ error } = await acct.client.auth.resetPasswordForEmail(email, { redirectTo: location.origin + '/yo-harjoittelu' }));
+      busyForm(f, false);
+      if (error) return msg(authError(error), true);
+      if (tab === 'kirjaudu') { signedInView(); return; }
+      f.reset();
+      // the same answer whether or not the address already has an account (no account enumeration)
+      msg(tab === 'luo' ? `Lähetimme vahvistuslinkin osoitteeseen ${email}. Avaa viesti ja paina linkkiä (katso myös roskaposti).`
+        : `Jos osoitteella ${email} on tili, lähetimme siihen linkin uuden salasanan asettamista varten.`);
+    };
+  }
+  function signedInView() {
+    const skipped = acct.skipped.size;
+    accountPage('Käyttäjätili', `
+      <section class="card"><h2>Kirjautuneena</h2><p><b>${esc(acct.user.email)}</b></p>
+        <p class="muted small" id="syncStatus">${esc(syncLine())}</p>
+        ${skipped ? `<p class="warnbox">${skipped} vastausta on kuvineen yli 1 Mt, joten ne ovat vain tällä laitteella. Pienennä kuvia tai poista niitä, niin ne synkronoituvat.</p>` : ''}
+        <div class="row"><button type="button" class="btn primary" id="syncNow">Synkronoi nyt</button>
+        <button type="button" class="btn" id="logout">Kirjaudu ulos</button>
+        <button type="button" class="btn ghost" id="logoutWipe">Kirjaudu ulos ja tyhjennä tämä selain</button></div>
+        <p class="muted small">Käytä tyhjentävää uloskirjautumista yhteiskäyttöisellä koneella (esim. koulun kone).</p></section>
+      <section class="card"><h2>Vaihda salasana</h2><form class="form" id="pwChange">
+        <label>Uusi salasana<input type="password" name="pw" autocomplete="new-password" minlength="${PW_MIN}" required></label>
+        <label>Uusi salasana uudelleen<input type="password" name="pw2" autocomplete="new-password" minlength="${PW_MIN}" required></label>
+        <div class="row"><button class="btn">Vaihda salasana</button></div><p class="formmsg" id="formMsg" role="status"></p></form></section>
+      <section class="card"><h2>Poista tili</h2>
+        <p class="muted">Poistaa tilin ja kaikki palvelimelle tallennetut tiedot pysyvästi. Tämän selaimen tiedot jäävät, ellet tyhjennä niitä. Lataa ensin <a href="#/edistyminen">varmuuskopio</a>, jos haluat säilyttää edistymisen.</p>
+        <div class="row"><button type="button" class="btn" id="delAcct">Poista tili</button></div></section>
+      <p class="small"><a href="/tietosuoja">Tietosuojaseloste</a></p>`);
+    $('#syncNow').onclick = () => syncAll().then(() => { if (location.hash.startsWith('#/tili')) signedInView(); });
+    $('#logout').onclick = async () => { await acct.client.auth.signOut({ scope: 'local' }); location.hash = '#/tili'; accountView(); };
+    armConfirm($('#logoutWipe'), 'Varmasti? Tyhjennä ja kirjaudu ulos', async () => {
+      await acct.client.auth.signOut({ scope: 'local' });
+      try { localStorage.removeItem(LS); } catch (e) {}
+      try { indexedDB.deleteDatabase('yo-practice'); } catch (e) {}
+      location.replace(location.pathname + '#/');
+      location.reload();
+    });
+    armConfirm($('#delAcct'), 'Varmasti? Poista tili pysyvästi', async () => {
+      const { error } = await acct.client.rpc('delete_my_account');
+      if (error) { alertBox(authError(error)); return; }
+      await acct.client.auth.signOut({ scope: 'local' });
+      accountView(); alertBox('Tili ja palvelimen tiedot poistettiin.');
+    });
+    $('#pwChange').onsubmit = async e => {
+      e.preventDefault(); const f = e.currentTarget;
+      if (f.pw.value !== f.pw2.value) return msg('Salasanat eivät täsmää.', true);
+      busyForm(f, true); msg('Tallennetaan…');
+      const { error } = await acct.client.auth.updateUser({ password: f.pw.value });
+      busyForm(f, false);
+      if (error) return msg(authError(error), true);
+      f.reset(); msg('Salasana vaihdettu.');
+    };
+  }
 
   /* ---------- router ---------- */
   const decode = x => { try { return decodeURIComponent(x); } catch (e) { return x; } };
@@ -1274,11 +1582,15 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
     if (p[0] === 'edistyminen') return progressView();
+    if (p[0] === 'tili') return accountView(p[1]);
     if (p[0] === 'pika' && p.length >= 3 && startPika(p[1], p[2], true, null, true)) return;   // link from YO-tutka
     home(p[0]); window.scrollTo(0, 0);
   }
 
   buildToolbar();
+  // email links (?token_hash=…) open the account view; a stored session starts the background sync
+  if (accountOn() && new URLSearchParams(location.search).has('token_hash')) history.replaceState(null, '', location.pathname + location.search + '#/tili');
+  if (accountOn() && (localStorage.getItem(AUTH_KEY) || location.hash.startsWith('#/tili'))) sbClient().catch(() => setStatus('offline'));
   const first = hashParts();
   if ((first[0] === 't' || first[0] === 'koe') && first[2]) getContent(first[1], first[2]);   // fetch in parallel with the task list
   loadMeta().then(() => {

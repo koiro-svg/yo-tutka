@@ -36,6 +36,12 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   arvioimattoman. Edistyminen (`#/edistyminen`) piirtää `S.history`-arviohistoriasta aineittain
   osaamisen ajan mittaan (käsin kirjoitettu SVG, ei kaaviokirjastoa) ja listaa koesimulaatioiden
   `sim.result`-pisteet. Lähteet itse hakeva kopiointitarkistus: `scripts/recheck_overlap.py`.
+- Käyttäjätilit (`#/tili`, `/tietosuoja`): Supabase Auth (sähköposti + salasana, vahvistus- ja
+  palautuslinkit Resendin SMTP:n kautta) ja Postgres-taulut `practice_state` + `practice_answers`
+  (`supabase/schema.sql`, rivitason suojaus). Kirjautuneena `syncAll()` yhdistää palvelimen kopion
+  paikalliseen (`mergeState`/`mergeAnswer`, samat säännöt kuin varmuuskopiossa) ja lähettää tuloksen.
+  Muutokset lähtevät 3 s viiveellä (`onPersist`, `onAnswerSaved`). Tilit ovat piilossa, kunnes
+  `SUPABASE`-vakiossa on osoite ja julkinen avain. Käyttöönotto: `supabase/README.md`.
 
 - Hyppymittari (`/hyppymittari`): kopio `~/sovellukset/hyppymittari/`:sta (README:n rsync-komento),
   ei muokata täällä. Oma ulkoasu (lime) tarkoituksella – kameran päälle piirretty luuranko tarvitsee
@@ -138,6 +144,18 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   (`UNIT_KEY`/`SIM_KEY`), luvut muunnetaan `num()`illa ja vastaukset kulkevat `clean()`in läpi ennen
   IndexedDB:hen tallennusta. Yhdistäminen pitää uudemman tiedon (`at`). Älä tallenna tiedoston arvoja
   sellaisenaan.
+- **Käyttäjätilit:** `SUPABASE.url` ja `key` (publishable) ovat julkisia tarkoituksella. Tietojen suoja on
+  `supabase/schema.sql`:n RLS-säännöissä: älä koskaan poista niitä äläkä laita `service_role`/secret-avainta
+  sivuun, repoon tai GitHub-muuttujiin. Muutokset `schema.sql`:ään ja `supabase/email/`-pohjiin pitää ajaa/liittää
+  Supabasen hallintapaneelissa käsin, sillä deploy ei vie niitä minnekään.
+- Sähköpostilinkit tuovat `?token_hash=…&type=email|recovery` ja vaativat napin painalluksen ennen `verifyOtp`:ia,
+  koska sähköpostipalvelujen linkkiskannerit avaavat linkit. Älä vaihda Supabasen oletuslinkkiin
+  (`{{ .ConfirmationURL }}`): se ei toimi toisella laitteella eikä #-reitityksen kanssa.
+- `onAuthStateChange`-kutsun sisällä ei saa odottaa supabase-js-kutsuja (lukkiutuu), joten synkronointi käynnistyy
+  `setTimeout`illa. Kertausmerkinnöillä on `at` ja poistetut ovat `{gone, at}`-merkintöjä, ettei toinen laite
+  palauta niitä. `ANSWER_MAX` (1 Mt) = `practice_answers_size` tietokannassa, ja kiintiö on 15 Mt per käyttäjä.
+- Ilmainen Supabase-projekti nukahtaa viikon käyttämättömyyden jälkeen: `.github/workflows/supabase-keepalive.yml`
+  pingaa päivittäin repomuuttujilla `SUPABASE_URL`/`SUPABASE_KEY`. supabase-js on lukittu (2.117.2) SRI-tarkisteella.
 - `S.history` on ainoa paikka, jossa vanhat arviot säilyvät (`S.scores` pitää vain viimeisimmän). Älä tyhjennä
   sitä arvion korjauksen yhteydessä. Vanhoissa tallennuksissa se luodaan `scores`ista. Raja on 5 000 riviä.
 - Koesimulaation vastaukset tallentuvat avaimella `koe|aine|kerta|n|yksikkö`, erillään harjoitusvastauksista.
