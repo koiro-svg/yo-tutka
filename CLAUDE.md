@@ -32,6 +32,10 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   tarkistus `scripts/validate_practice.py`, kopiointitarkistus `scripts/check_overlap.py`).
   Vastaukset (IndexedDB) ja arviot (localStorage `yo-practice`) ovat vain käyttäjän selaimessa.
   YO-tutka lukee samat arviot "Harjoittele seuraavaksi" -listaan.
+  Pikatesti (`#/pika/<aine>/<aihe>`, myös tutkan listasta) arpoo aiheen tehtävän, ensisijaisesti
+  arvioimattoman. Edistyminen (`#/edistyminen`) piirtää `S.history`-arviohistoriasta aineittain
+  osaamisen ajan mittaan (käsin kirjoitettu SVG, ei kaaviokirjastoa) ja listaa koesimulaatioiden
+  `sim.result`-pisteet. Lähteet itse hakeva kopiointitarkistus: `scripts/recheck_overlap.py`.
 
 ## Known sharp edges (don't regress these)
 - YO-tutka on `yo-tutka.html`, ei `index.html` – README:n datansiirtokomento
@@ -115,9 +119,13 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
 - Leveät kaavat 320 px:n näytöllä: MathJax 3 ei rivitä kaavoja. Siksi `.md`, `.unit` ja `.help` ovat
   `grid-template-columns:minmax(0,1fr)` ja `.md>*{min-width:0}`, rivinsisäisen kaavan SVG:llä on `max-width:100%`
   ja näkymättömällä `mjx-assistive-mml`:llä `max-width:100%`. Jos yksikin puuttuu, sivu levenee (testattu
-  fysiikan ja kemian ratkaisuilla). Älä korjaa tätä `overflow-x:auto`-kääreellä.
+  fysiikan ja kemian ratkaisuilla). Älä korjaa tätä `overflow-x:auto`-kääreellä. Samasta syystä `.wrap` on
+  `overflow-wrap:anywhere` (pitkät kemialliset nimet otsikoissa), `.card` on `minmax(0,1fr)` ja `.row>label>select`
+  on `width:100%` (valikko on muuten pisimmän vaihtoehtonsa levyinen).
 - Apuvälinepaneelin laskimet (GeoGebra, Desmos) vievät näppäimistön fokuksen latautuessaan. Sivun
   latautuessa palautettu laskin odottaa siksi "Avaa"-napin painallusta (`showAid(id, restore)`).
+- `S.history` on ainoa paikka, jossa vanhat arviot säilyvät (`S.scores` pitää vain viimeisimmän). Älä tyhjennä
+  sitä arvion korjauksen yhteydessä. Vanhoissa tallennuksissa se luodaan `scores`ista. Raja on 5 000 riviä.
 - Koesimulaation vastaukset tallentuvat avaimella `koe|aine|kerta|n|yksikkö`, erillään harjoitusvastauksista.
   "Uusi yritys" poistaa ne. Arviot (`scores`) ovat yhteisiä, ja kertauslista etenee vain, kun kohta on
   erääntynyt (`r.due <= today()`), jotta arvion korjaaminen ei hyppää kertausvälejä yli.
