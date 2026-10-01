@@ -134,6 +134,10 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   on `width:100%` (valikko on muuten pisimmän vaihtoehtonsa levyinen).
 - Apuvälinepaneelin laskimet (GeoGebra, Desmos) vievät näppäimistön fokuksen latautuessaan. Sivun
   latautuessa palautettu laskin odottaa siksi "Avaa"-napin painallusta (`showAid(id, restore)`).
+- Varmuuskopion palautus (Edistyminen-sivu) lukee ulkopuolisen JSON-tiedoston: jokainen avain tarkistetaan
+  (`UNIT_KEY`/`SIM_KEY`), luvut muunnetaan `num()`illa ja vastaukset kulkevat `clean()`in läpi ennen
+  IndexedDB:hen tallennusta. Yhdistäminen pitää uudemman tiedon (`at`). Älä tallenna tiedoston arvoja
+  sellaisenaan.
 - `S.history` on ainoa paikka, jossa vanhat arviot säilyvät (`S.scores` pitää vain viimeisimmän). Älä tyhjennä
   sitä arvion korjauksen yhteydessä. Vanhoissa tallennuksissa se luodaan `scores`ista. Raja on 5 000 riviä.
 - Koesimulaation vastaukset tallentuvat avaimella `koe|aine|kerta|n|yksikkö`, erillään harjoitusvastauksista.
