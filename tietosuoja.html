@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tietosuojaseloste – YO-harjoittelu</title>
+<meta name="description" content="Mitä tietoja YO-harjoittelun käyttäjätili tallentaa, miksi ja miten ne poistetaan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
+:root{
+  color-scheme:dark;
+  --bg:#081427; --bg-glow:#0E2140; --surface:#0F213D; --line:#1F3B66;
+  --ink:#E6EEF8; --ink-2:#B4C3D8; --ink-3:#8FA3BF; --accent:#5CE1C6; --warn-soft:#3A3222; --focus:#5CE1C6;
+  --font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;padding-inline:clamp(16px,3vw,40px);padding-block:20px 60px}
+main{max-width:760px;margin:0 auto;display:grid;gap:18px;overflow-wrap:anywhere}
+h1,h2{font-family:var(--font-display);margin:0;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(26px,4vw,38px);font-weight:800}
+h2{font-size:18px;margin-top:10px}
+p,ul{margin:0}
+ul{padding-left:22px;display:grid;gap:4px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.crumb{font-family:var(--font-mono);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 14px}
+.crumb a{color:var(--ink-3);text-decoration:none;padding-block:8px}
+.crumb a:hover{color:var(--accent)}
+.muted{color:var(--ink-3);font-size:14px}
+.note{background:var(--warn-soft);border-radius:10px;padding:12px 14px}
+</style>
+</head>
+<body>
+<main>
+  <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="/yo-harjoittelu">YO-harjoittelu</a></nav>
+  <h1>Tietosuojaseloste</h1>
+  <p class="muted">YO-harjoittelun käyttäjätilit · päivitetty 1.10.2026</p>
+
+  <h2>Rekisterinpitäjä</h2>
+  <p>koirosvg.com-sivuston ylläpitäjä. Yhteydenotot: <span id="contact">[yhteystieto lisätään ennen tilien käyttöönottoa]</span>.</p>
+
+  <h2>Mitä tietoja tallennetaan</h2>
+  <ul>
+    <li><b>Tilin tiedot:</b> sähköpostiosoite ja salasanan tiiviste (salasanaa itseään ei tallenneta), tilin luonti- ja kirjautumisajat.</li>
+    <li><b>Harjoittelun tiedot:</b> omat pistearviosi ja niiden historia, kertauslista, koesimulaatioiden tiedot sekä vastauksesi, joihin voi sisältyä itse liittämiäsi kuvia.</li>
+  </ul>
+  <p>Palvelu ei kerää muuta: ei nimeä, ei analytiikkaa eikä mainosevästeitä.</p>
+
+  <h2>Miksi</h2>
+  <p>Tiedot tallennetaan vain, jotta voit kirjautua ja jatkaa harjoittelua miltä tahansa laitteelta. Käsittelyn peruste on palvelun tarjoaminen käyttäjän pyynnöstä (EU:n tietosuoja-asetus, 6 art. 1 b). Tietoja ei myydä, luovuteta markkinointiin eikä käytetä muuhun tarkoitukseen.</p>
+
+  <h2>Kuka käsittelee tietoja</h2>
+  <ul>
+    <li><b>Supabase</b> säilyttää tilit ja harjoittelun tiedot. Palvelin sijaitsee EU:ssa (Frankfurt).</li>
+    <li><b>Resend</b> lähettää vahvistus- ja salasanaviestit. Se käsittelee vain sähköpostiosoitetta viestin lähettämiseksi (Yhdysvallat, EU:n vakiosopimuslausekkeet).</li>
+    <li><b>Vercel</b> tarjoaa sivuston. Selaimesi lataa ohjelmakirjastoja jsDelivr- ja cdnjs-palveluista ja kirjasimia Google Fontsista.</li>
+    <li>Apuvälinepaneelin Mafy-taulukot, GeoGebra ja Desmos ovat ulkopuolisia palveluita, jotka latautuvat vasta, kun avaat ne.</li>
+  </ul>
+
+  <h2>Kuinka kauan</h2>
+  <p>Tiedot säilyvät, kunnes poistat tilin. Kirjautumattomana kaikki tallentuu vain omaan selaimeesi eikä mitään lähetetä palvelimelle.</p>
+
+  <h2>Oikeutesi</h2>
+  <ul>
+    <li><b>Poisto:</b> Käyttäjätili-sivun <i>Poista tili</i> poistaa tilin ja kaikki palvelimen tiedot heti ja pysyvästi.</li>
+    <li><b>Tietojen saaminen ja siirto:</b> Edistyminen-sivun <i>Lataa varmuuskopio</i> antaa kaikki tietosi yhtenä tiedostona.</li>
+    <li><b>Oikaisu ja muut pyynnöt:</b> ota yhteyttä yllä olevaan osoitteeseen. Voit myös tehdä valituksen tietosuojavaltuutetulle (<a href="https://tietosuoja.fi" target="_blank" rel="noopener">tietosuoja.fi</a>).</li>
+  </ul>
+
+  <h2>Tietoturva</h2>
+  <p>Yhteydet ovat salattuja (HTTPS). Jokainen käyttäjä näkee tietokannassa vain omat tietonsa, ja salasanat tallennetaan tiivisteinä. Käytä salasanaa, jota et käytä muualla.</p>
+</main>
+</body>
+</html>

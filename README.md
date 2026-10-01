@@ -8,6 +8,7 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
 | `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka |
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
+| `/tietosuoja` | `tietosuoja.html` | YO-harjoittelun käyttäjätilien tietosuojaseloste |
 | `/hyppymittari` | `hyppymittari/index.html` | Hyppymittari: vertikaalihypyn korkeus kameralla (MediaPipe, laitteella) |
 
 ## AI-malliopas – automaattinen päivitys
@@ -81,6 +82,10 @@ rsync -a --delete --exclude '/test-jump.js' --exclude '/test.sh' --exclude '/CLA
 
 Ankkuroi poissulkemiset (`/README.md`), muuten MediaPipen lisenssitiedosto
 `vendor/mediapipe/README.md` jää pois.
+
+## YO-harjoittelu – käyttäjätilit
+Supabase (tilit ja tiedot, EU) + Resend (sähköpostit). Käyttöönotto-ohje, tietokanta ja sähköpostipohjat:
+`supabase/`. Tilit näkyvät sivulla vasta, kun `yo-harjoittelu.html`:n `SUPABASE`-vakio on täytetty.
 
 ## Haarat
 Muissa haaroissa tehdyt pushit saavat oman preview-osoitteen, eivät mene tuotantoon.

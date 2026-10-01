@@ -1,0 +1,10 @@
+<!-- Supabase → Authentication → Emails → "Confirm signup". Subject: Vahvista YO-harjoittelun tili -->
+<div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;color:#141B26;line-height:1.5">
+  <h2 style="margin:0 0 12px">Vahvista sähköpostiosoitteesi</h2>
+  <p>Joku (toivottavasti sinä) loi YO-harjoitteluun tilin osoitteella <b>{{ .Email }}</b>.</p>
+  <p>Ota tili käyttöön avaamalla linkki ja painamalla sivulla <b>Vahvista</b>:</p>
+  <p><a href="{{ .SiteURL }}/yo-harjoittelu?token_hash={{ .TokenHash }}&type=email"
+        style="display:inline-block;background:#5CE1C6;color:#06221C;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold">Vahvista sähköposti</a></p>
+  <p style="color:#5A6475;font-size:13px">Linkki on voimassa vuorokauden. Jos et luonut tiliä, voit ohittaa tämän viestin – tiliä ei oteta käyttöön ilman vahvistusta.</p>
+  <p style="color:#5A6475;font-size:13px">koirosvg.com · YO-harjoittelu</p>
+</div>
