@@ -151,6 +151,10 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
 - Sähköpostilinkit tuovat `?token_hash=…&type=email|recovery` ja vaativat napin painalluksen ennen `verifyOtp`:ia,
   koska sähköpostipalvelujen linkkiskannerit avaavat linkit. Älä vaihda Supabasen oletuslinkkiin
   (`{{ .ConfirmationURL }}`): se ei toimi toisella laitteella eikä #-reitityksen kanssa.
+- **Login CSRF:** sähköpostilinkki (`verifyOtp`) kirjaa sisään sen tilin, jonka linkki on – myös jonkun toisen.
+  Siksi synkronointi pysyy pidossa (`held()`, `S.ui.holdUser`), kunnes käyttäjä vahvistaa näytetyn osoitteen,
+  paitsi jos sama selain pyysi linkin (`S.ui.pendingEmail`). Ulkoa tulevat aikaleimat rajataan `capAt`illa
+  (enintään vuorokausi tulevaisuuteen), muuten väärennetty aikaleima voittaisi jokaisen yhdistämisen.
 - `onAuthStateChange`-kutsun sisällä ei saa odottaa supabase-js-kutsuja (lukkiutuu), joten synkronointi käynnistyy
   `setTimeout`illa. Kertausmerkinnöillä on `at` ja poistetut ovat `{gone, at}`-merkintöjä, ettei toinen laite
   palauta niitä. `ANSWER_MAX` (1 Mt) = `practice_answers_size` tietokannassa, ja kiintiö on 15 Mt per käyttäjä.
