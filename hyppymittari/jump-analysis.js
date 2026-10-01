@@ -11,14 +11,20 @@ export const EYE_RATIO = 0.936;        // eye height / stature (Drillis & Contin
 export const DEFAULT_STATURE_CM = 175;
 export const MIN_FLIGHT_S = 0.2;       // ≈ 5 cm; shorter "flights" are running strides or noise
 export const MAX_FLIGHT_S = 1.5;       // ≈ 2.8 m; longer means a slowed-down clip
+/** px per cm from a standing eye-to-floor height in px (the stature-based scale). */
+export const cmPxFromScale = (scalePx, statureCm) => scalePx / (EYE_RATIO * statureCm);
 const MIN_VIS = 0.3;
 const TAKEOFF_CM = 5;                  // detector: airborne once the feet are this far up…
 const LANDED_CM = 2.5;                 // …and landed again below this
 const EDGE_FIT_S = 0.045;              // airborne samples within this window of an edge are fitted
+// BlazePose's "index" point is the index-finger knuckle, not the fingertip. The fingers reach about
+// as far again past the knuckle as the knuckle is from the wrist, along the same line.
+export const FINGER_RATIO = 0.95;
 
 // MediaPipe pose landmark indices
 export const P = {
   NOSE: 0, L_EYE: 2, R_EYE: 5, L_SH: 11, R_SH: 12, L_EL: 13, R_EL: 14, L_WR: 15, R_WR: 16,
+  L_INDEX: 19, R_INDEX: 20,
   L_HIP: 23, R_HIP: 24, L_KNEE: 25, R_KNEE: 26, L_ANK: 27, R_ANK: 28,
   L_HEEL: 29, R_HEEL: 30, L_TOE: 31, R_TOE: 32,
 };
@@ -32,8 +38,11 @@ export const FLAG_TEXT = {
   slowed: 'Hyppy kesti epäuskottavan kauan – video on todennäköisesti hidastettu. Valitse hidastuskerroin.',
   ground: 'Alastulo eri korkeudelle kuin ponnistus (liikuit kameraa kohti/poispäin tai laskeuduit korokkeelle) – tulos epävarma.',
 };
-/** Flags that make a result unusable rather than merely uncertain: never saved to history. */
-export const BLOCKING_FLAGS = new Set(['slowed']);
+/** Flags that make a result unusable rather than merely uncertain: never saved to history.
+ *  ('count' = a horizontal attempt with fewer bounds than its event: it isn't that event.) */
+export const BLOCKING_FLAGS = new Set(['slowed', 'count']);
+/** Flags that only say "less precise": the ± already covers them, so they don't block records. */
+export const INFO_FLAGS = new Set(['uncalibrated']);
 export const isSaveable = r => !r.flags.some(f => BLOCKING_FLAGS.has(f));
 
 // ---------- flight-time physics (shared by automatic and manual measurement) ----------
@@ -80,7 +89,7 @@ function linfit(xs, ys) {                       // least squares y = a + b·x
   return { a: my - b * mx, b };
 }
 
-function parabolaFit(ts, ys) {                  // least squares y = c + b·u + a·u², u = t − mean(t)
+export function parabolaFit(ts, ys) {                  // least squares y = c + b·u + a·u², u = t − mean(t)
   const n = ts.length, m = ts.reduce((s, t) => s + t, 0) / n;
   let s1 = 0, s2 = 0, s3 = 0, s4 = 0, y0 = 0, y1 = 0, y2 = 0;
   for (let i = 0; i < n; i++) {
@@ -120,12 +129,28 @@ export function frameFeatures(lm, w, h) {
     Math.hypot(x(P.L_WR) - x(P.L_HIP), y(P.L_WR) - y(P.L_HIP)),
     Math.hypot(x(P.R_WR) - x(P.R_HIP), y(P.R_WR) - y(P.R_HIP)),
   ) / torso;
+  // Per-foot points for side-view distance work: [x, y] or null when that point isn't visible.
+  const pt = i => (vis(i) ? [x(i), y(i)] : null);
+  const sides = [[P.L_HEEL, P.L_TOE], [P.R_HEEL, P.R_TOE]].map(([hi, ti]) => {
+    const heel = pt(hi), toe = pt(ti);
+    return heel || toe ? { heel, toe } : null;
+  }).filter(Boolean);
+  // Highest estimated fingertip (touch height).
+  let tip = null;
+  for (const [wi, ii] of [[P.L_WR, P.L_INDEX], [P.R_WR, P.R_INDEX]]) {
+    if (!vis(wi) || !vis(ii)) continue;
+    const t = [x(ii) + (x(ii) - x(wi)) * FINGER_RATIO, y(ii) + (y(ii) - y(wi)) * FINGER_RATIO];
+    if (!tip || t[1] < tip[1]) tip = t;
+  }
   return {
     foot,
     hip,
+    hipX,
     eye: (y(P.L_EYE) + y(P.R_EYE)) / 2,
     leg: (y(P.L_ANK) + y(P.R_ANK)) / 2 - hip,
     wrist: wristOff,
+    sides,
+    tip,
   };
 }
 
@@ -167,7 +192,7 @@ export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref
   // scale and inflate every cm value.
   const scale = ref ? ref.scale : scaleHint;
   if (!(scale > 0)) return { ok: false, reason: 'scale' };
-  const cmPx = scale / (EYE_RATIO * statureCm);          // px per cm
+  const cmPx = cmPxFromScale(scale, statureCm);         // px per cm
   const gPx = G * 100 * cmPx;                            // gravity in px/s²
 
   // Ground line = median of the ground-contact samples. The 90th percentile only picks out which
@@ -341,7 +366,7 @@ export class JumpDetector {
     this.ground = quantile(win.map(w => w.f.foot), 0.9);
     // Scale = standing height over the last 3 s: a squat must not shrink the thresholds.
     const scale = quantile(this._window(idx, 3.0).map(w => w.f.foot - w.f.eye), 0.9);
-    const cmPx = scale / (EYE_RATIO * this.statureCm);
+    const cmPx = cmPxFromScale(scale, this.statureCm);
 
     let ev = null;
     const st = this._window(idx, 0.5);
