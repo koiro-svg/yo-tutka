@@ -34,6 +34,9 @@ h3{font-size:16px;font-weight:700}
 p{margin:0}
 a{color:var(--accent)}
 button,select,input,textarea{font:inherit;color:inherit}
+/* a select is as wide as its longest option; width:100% inside a capped label lets it shrink on phones */
+.row>label{max-width:100%;min-width:0}
+.row>label>select{width:100%}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 [hidden]{display:none!important}
 
@@ -67,7 +70,7 @@ body.aids-open .layout{max-width:1680px}
 .filters button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font-weight:700;font-size:14px}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
-.card{background:linear-gradient(180deg,rgba(92,225,198,.05),transparent 200px),var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.card{background:linear-gradient(180deg,rgba(92,225,198,.05),transparent 200px),var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-content:start;min-width:0}
 .grid2{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .chip{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--surface-2);color:var(--ink-2);white-space:nowrap}
 .chip.K{background:#173A2E;color:var(--spring)} .chip.S{background:#3A2A22;color:var(--autumn)}
@@ -160,6 +163,23 @@ details.simtask>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:
 .simbody{display:grid;gap:12px;padding:0 14px 14px}
 .total{font-family:var(--font-display);font-size:28px}
 
+/* quick test + progress view */
+.pikabar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--accent-soft);border:1px solid var(--accent);border-radius:12px;padding:10px 14px}
+.hero{font-family:var(--font-display);font-size:34px;line-height:1}
+.delta.up{color:var(--ok)} .delta.down{color:var(--bad)}
+.chart{position:relative}
+.chart svg{width:100%;height:auto;display:block;overflow:visible;touch-action:pan-y}
+.chart .g{stroke:var(--line-2);stroke-width:1}
+.chart .ax{fill:var(--ink-3);font:11px var(--font-mono)}
+.chart .ln{fill:none;stroke:var(--accent);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.chart .dot{fill:var(--accent);stroke:var(--surface);stroke-width:2}
+.chart .lbl{fill:var(--ink);font:600 12px var(--font-mono)}
+.chart .xh{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:3 3}
+.chart .tip{position:absolute;top:-8px;max-width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:12px;pointer-events:none}
+.ptable{width:100%;border-collapse:collapse;font-size:13px}
+.ptable th,.ptable td{text-align:left;padding:5px 6px;border-bottom:1px solid var(--line-2);vertical-align:top}
+.ptable th{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);font-weight:600}
+
 /* aids panel */
 .aids{position:sticky;top:calc(var(--toolbar-h,0px) + 12px);height:calc(100vh - var(--toolbar-h,0px) - 24px);display:grid;grid-template-rows:auto minmax(0,1fr);gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px}
 .aids .tabs{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -235,8 +255,10 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   /* ---------- persistent state (small data in localStorage, answers in IndexedDB) ---------- */
   // localStorage 'yo-practice' is also read by yo-tutka.html (scores → weak topics). Keep the key format.
   const LS = 'yo-practice';
-  const S = { v: 1, scores: {}, review: {}, sims: {}, ui: {} };
+  const S = { v: 1, scores: {}, review: {}, sims: {}, history: null, ui: {} };
   try { Object.assign(S, JSON.parse(localStorage.getItem(LS) || '{}')); } catch (e) {}
+  // every self-assessment ever made (progress view); older saves are seeded from their latest scores
+  if (!Array.isArray(S.history)) S.history = Object.entries(S.scores).map(([k, v]) => ({ k, p: v.p, max: v.max, at: v.at })).sort((x, y) => x.at - y.at);
   const persist = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
   // another tab saved: take its state, so our next persist() does not overwrite it
   window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); } catch (err) {} } });
@@ -364,6 +386,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const freshReview = () => ({ box: 0, due: addDays(1) });
   function setScore(key, p, max) {
     S.scores[key] = { p, max, at: Date.now() };
+    S.history.push({ k: key, p, max, at: S.scores[key].at });
+    if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
     const ratio = max ? p / max : 0, r = S.review[key];
     if (ratio < 0.7) S.review[key] = freshReview();
     else if (r && r.due <= today()) {   // advance only a due review; re-scoring the same day must not skip intervals
@@ -403,6 +427,24 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   function simStatus(prefix) {   // exact sim key, or "aine|kerta" for every exam of the session
     const st = Object.entries(S.sims).filter(([key]) => key === prefix || key.startsWith(prefix + '|')).map(([, v]) => v);
     return !st.length ? '' : st.every(v => v.submitted) ? ' (tehty)' : ' (kesken)';
+  }
+
+  // Pikatesti: a random task of one topic, preferring tasks that have not been self-assessed yet.
+  function pickTask(a, topic, fresh, not) {
+    const s = subj(a); if (!s) return null;
+    const idx = scoreIndex(), all = [];
+    for (const x of sessionsDesc(s)) for (const t of x.tasks)
+      if ((t.topics || []).includes(topic) && !(not && not.k === x.id && not.n === t.n)) all.push({ k: x.id, t });
+    const unseen = all.filter(c => !idx.has([a, c.k, c.t.n].join('|')));
+    const pool = fresh && unseen.length ? unseen : all;
+    return pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
+  }
+  function startPika(a, topic, fresh, not, replace = false) {
+    const c = pickTask(a, topic, fresh, not);
+    if (!c) { alertBox('Aiheesta ei löytynyt muita tehtäviä.'); return false; }
+    S.ui.pika = { a, topic, fresh }; persist();
+    replace ? location.replace(taskHref(a, c.k, c.t.n)) : (location.hash = taskHref(a, c.k, c.t.n));
+    return true;
   }
 
   /* ---------- answer editor (Abitti / Mafynetti style) ---------- */
@@ -809,6 +851,10 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       const pct = Math.round(t.p / t.max * 100);
       return `<div class="meter"><span>${esc(t.name)} <span class="muted small">· ${t.tasks} teht.</span></span><div class="track"><div class="fill ${scoreCls(t.p / t.max)}" style="width:${pct}%"></div></div><span class="v">${pct} %</span></div>`;
     };
+    const topicCounts = new Map();
+    for (const x of sessions) for (const t of x.tasks) for (const id of t.topics || []) topicCounts.set(id, (topicCounts.get(id) || 0) + 1);
+    const topics = Array.from(topicCounts, ([id, c]) => ({ id, c, name: topicName(s, id) })).sort((x, y) => x.name.localeCompare(y.name, 'fi'));
+    const lastPika = S.ui.pika && S.ui.pika.a === a ? S.ui.pika.topic : null;
     const taskRow = (x, t) => {
       const sc = idx.get([a, x.id, t.n].join('|'));
       return `<a class="trow" href="${taskHref(a, x.id, t.n)}"><span class="n">${esc(t.n)}</span><span class="t">${esc(t.title)}</span><span class="st">${sc ? scoreChip(sc) : `<span class="muted">${t.points != null ? esc(t.points) + ' p' : ''}</span>`}</span>${t.summary ? `<span class="s">${esc(t.summary)}</span>` : ''}</a>`;
@@ -826,14 +872,24 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
           ${m.length ? `<div class="list">${m.slice(0, 10).map(meterRow).join('')}</div>
             <p class="small"><a href="${TUTKA}">Katso YO-tutkasta</a>, mitkä heikot aiheet tulevat kokeeseen todennäköisimmin.</p>`
           : '<p class="muted">Ei vielä arvioituja tehtäviä tässä aineessa. Kun näytät malliratkaisun ja arvioit pisteesi, aihekohtainen osaaminen näkyy tässä ja YO-tutkassa.</p>'}
+          <p class="small"><a href="#/edistyminen">Edistyminen ajan mittaan →</a></p>
         </section>
       </div>
-      <section class="card" aria-labelledby="sim-h">
-        <h2 id="sim-h">Koesimulaatio</h2>
-        <p class="muted">Tee kokonainen koe oikealla rakenteella ja kellolla. Valitse tehtävät kuten oikeassa kokeessa. Vihjeet ja ratkaisut aukeavat vasta, kun palautat kokeen.</p>
-        <div class="row"><label>Tutkintokerta <select id="simSel">${sessions.map(x => `<option value="${esc(x.id)}">${esc(x.label)}${simStatus(simKey(a, x.id))}</option>`).join('')}</select></label>
-        <button type="button" class="btn primary" id="simGo">Avaa koe</button></div>
-      </section>
+      <div class="grid2">
+        <section class="card" aria-labelledby="pika-h">
+          <h2 id="pika-h">Pikatesti</h2>
+          <p class="muted">Arpoo satunnaisen tehtävän valitsemastasi aiheesta kaikilta tutkintokerroilta. Tehtävän sivulla voit arpoa heti seuraavan.</p>
+          <div class="row"><label>Aihe <select id="pikaTopic">${topics.map(t => `<option value="${esc(t.id)}" ${t.id === lastPika ? 'selected' : ''}>${esc(t.name)} (${t.c})</option>`).join('')}</select></label>
+          <label><input type="checkbox" id="pikaFresh" checked> Vain tehtävät, joita en ole arvioinut</label>
+          <button type="button" class="btn primary" id="pikaGo">Arvo tehtävä</button></div>
+        </section>
+        <section class="card" aria-labelledby="sim-h">
+          <h2 id="sim-h">Koesimulaatio</h2>
+          <p class="muted">Tee kokonainen koe oikealla rakenteella ja kellolla. Valitse tehtävät kuten oikeassa kokeessa. Vihjeet ja ratkaisut aukeavat vasta, kun palautat kokeen.</p>
+          <div class="row"><label>Tutkintokerta <select id="simSel">${sessions.map(x => `<option value="${esc(x.id)}">${esc(x.label)}${simStatus(simKey(a, x.id))}</option>`).join('')}</select></label>
+          <button type="button" class="btn primary" id="simGo">Avaa koe</button></div>
+        </section>
+      </div>
       <section style="display:grid;gap:10px" aria-labelledby="ses-h">
         <h2 id="ses-h">Tehtävät kerroittain</h2>
         ${sessions.map((x, i) => `<details class="sess" ${i === 0 ? 'open' : ''}><summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}<span class="sp muted small mono">${x.tasks.length} tehtävää</span></summary>
@@ -842,6 +898,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       ${footer()}`);
     $$('[data-subj]', app).forEach(b => b.onclick = () => { location.hash = '#/' + b.dataset.subj; });
     $('#simGo', app).onclick = () => { location.hash = `#/koe/${encodeURIComponent(a)}/${encodeURIComponent($('#simSel', app).value)}`; };
+    $('#pikaGo', app).onclick = () => startPika(a, $('#pikaTopic', app).value, $('#pikaFresh', app).checked);
   }
 
   const CHECK_TXT = { 'hvp': 'tarkistettu YTL:n hyvän vastauksen piirteitä vasten', 'laskettu': 'loppuvastaus laskettu koneellisesti', 'hvp+laskettu': 'tarkistettu hyvän vastauksen piirteitä vasten ja laskettu koneellisesti', 'malli': 'esimerkkivastaus: yhtä oikeaa vastausta ei ole, malli noudattaa YTL:n arviointikriteerejä', 'ei': 'ei tarkistettu' };
@@ -928,6 +985,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const ctx = ctxFor(a, k, task, examFor(content, session));
     const list = session.tasks, i = list.indexOf(task), prev = list[i - 1], next = list[i + 1];
     const part = task.part ? task.part + '-osa' : task.exam || '';
+    const pika = S.ui.pika && S.ui.pika.a === a && (task.topics || []).includes(S.ui.pika.topic) ? S.ui.pika : null;
     setView(masthead(homeCrumb(a) + `<a href="#/${esc(a)}">${esc(s.name.split(',')[0])}</a>`, title) + `
       <section class="taskhead">
         <div class="row"><span class="chip ${k.slice(-1)}">${esc(shortLabel(k))}</span><span class="eyebrow">${esc(s.name)} · ${esc(session.label)}${part ? ' · ' + esc(part) : ''} · ${esc(task.points)} p${task.optional ? ' · valinnainen' : ''}</span></div>
@@ -941,6 +999,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
         </div>
         <p class="muted small">Alkuperäinen tehtävä aukeaa uuteen välilehteen. Tehtävänantoa ei kopioida tänne tekijänoikeuksien vuoksi. Alla on lyhyt kuvaus jokaisesta kohdasta.</p>
       </section>
+      ${pika ? `<div class="pikabar" role="region" aria-label="Pikatesti"><span><b>Pikatesti:</b> ${esc(topicName(s, pika.topic))}</span><span class="sp"></span><button type="button" class="btn primary" id="pikaNext">Arvo uusi tehtävä</button><button type="button" class="btn ghost" id="pikaStop">Lopeta pikatesti</button></div>` : ''}
       ${intro ? `<div class="md intro">${md(intro)}</div>` : ''}
       ${content === false ? '<p class="warnbox">Vihjeiden ja malliratkaisujen lataus epäonnistui. Päivitä sivu yrittääksesi uudelleen.</p>'
         : !content ? '<p class="warnbox">Tälle tutkintokerralle ei ole vielä vihjeitä eikä malliratkaisuja. Voit silti vastata ja arvioida itsesi.</p>' : ''}
@@ -953,6 +1012,10 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     mountUnits(app, units);
     $('#saveTask', app).onclick = () => exportTask(ctx);
     $('#openTask', app).onclick = () => { importTarget = { a, k, n }; $('#filePick').click(); };
+    if (pika) {
+      $('#pikaNext', app).onclick = () => startPika(a, pika.topic, pika.fresh, { k, n });
+      $('#pikaStop', app).onclick = () => { delete S.ui.pika; persist(); $('.pikabar', app).remove(); };
+    }
     const target = unitId && document.getElementById('u-' + unitId);
     if (target) target.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0);
   }
@@ -1003,6 +1066,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       return { total, totalMax, assessed };
     };
     const tot = totals(), idx = scoreIndex();
+    if (done) { sim.result = tot; persist(); }   // shown in the progress view
     const simTask = n => {
       const t = taskOf(a, k, n), on = chosen.has(n);
       if (!t || (done && !on)) return '';
@@ -1047,7 +1111,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       simView(a, k, g);
     });
     if (done) {
-      app.addEventListener('yo:score', () => { const x = totals(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; }, { signal });
+      app.addEventListener('yo:score', () => { const x = totals(); sim.result = x; persist(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; }, { signal });
       return;
     }
     const unpause = t => { if (sim.pauseAt) { sim.paused += t - sim.pauseAt; sim.pauseAt = null; } };
@@ -1064,6 +1128,85 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     signal.addEventListener('abort', () => clearInterval(timer));
   }
 
+  /* ---------- progress over time ---------- */
+  const fmtDay = t => { const d = new Date(t); return `${d.getDate()}.${d.getMonth() + 1}.${String(d.getFullYear()).slice(2)}`; };
+  // Mastery after each day = latest self-assessment of every unit so far, summed (the same figure the home view shows).
+  function masterySeries(events) {
+    const latest = new Map(), byDay = new Map();
+    let p = 0, max = 0;
+    for (const e of events) {
+      const old = latest.get(e.k); if (old) { p -= old.p; max -= old.max; }
+      latest.set(e.k, e); p += e.p; max += e.max;
+      const day = new Date(e.at); day.setHours(0, 0, 0, 0);
+      const prev = byDay.get(day.getTime());
+      byDay.set(day.getTime(), { at: day.getTime(), pct: max ? p / max : 0, units: latest.size, n: (prev ? prev.n : 0) + 1 });
+    }
+    return Array.from(byDay.values());
+  }
+  function chartGeom(pts) {
+    const g = { W: 600, H: 170, L: 40, R: 48, T: 14, B: 26 };
+    const t0 = pts[0].at, span = Math.max(pts[pts.length - 1].at - t0, 864e5);
+    g.x = at => pts.length === 1 ? (g.L + g.W - g.R) / 2 : g.L + (at - t0) / span * (g.W - g.L - g.R);
+    g.y = v => g.T + (1 - v) * (g.H - g.T - g.B);
+    return g;
+  }
+  function lineChart(pts) {
+    const g = chartGeom(pts), last = pts[pts.length - 1];
+    const grid = [0, 0.5, 1].map(v => `<line x1="${g.L}" x2="${g.W - g.R}" y1="${g.y(v)}" y2="${g.y(v)}" class="g"/><text x="${g.L - 6}" y="${g.y(v) + 4}" text-anchor="end" class="ax">${v * 100} %</text>`).join('');
+    const path = pts.map((p, i) => `${i ? 'L' : 'M'}${g.x(p.at).toFixed(1)},${g.y(p.pct).toFixed(1)}`).join('');
+    const dots = pts.length <= 40 ? pts.map(p => `<circle cx="${g.x(p.at).toFixed(1)}" cy="${g.y(p.pct).toFixed(1)}" r="4" class="dot"/>`).join('')
+      : `<circle cx="${g.x(last.at).toFixed(1)}" cy="${g.y(last.pct).toFixed(1)}" r="4" class="dot"/>`;
+    return `<svg viewBox="0 0 ${g.W} ${g.H}" role="img" aria-label="Arvioitu osaaminen päivittäin, ${fmtDay(pts[0].at)}–${fmtDay(last.at)}">${grid}
+      <text x="${g.L}" y="${g.H - 6}" class="ax">${fmtDay(pts[0].at)}</text>${pts.length > 1 ? `<text x="${g.W - g.R}" y="${g.H - 6}" text-anchor="end" class="ax">${fmtDay(last.at)}</text>` : ''}
+      <line class="xh" y1="${g.T}" y2="${g.H - g.B}" hidden/><path d="${path}" class="ln"/>${dots}
+      <text x="${g.x(last.at) + 8}" y="${g.y(last.pct) + 4}" class="lbl">${Math.round(last.pct * 100)} %</text></svg><div class="tip" hidden></div>`;
+  }
+  // Crosshair + tooltip on the nearest day (the table under each chart is the non-pointer alternative).
+  function bindChart(el, pts) {
+    const svg = $('svg', el), tip = $('.tip', el), xh = $('.xh', svg), g = chartGeom(pts);
+    const show = e => {
+      const r = svg.getBoundingClientRect(), vx = (e.clientX - r.left) / r.width * g.W;
+      let best = pts[0]; for (const p of pts) if (Math.abs(g.x(p.at) - vx) < Math.abs(g.x(best.at) - vx)) best = p;
+      const px = g.x(best.at);
+      xh.setAttribute('x1', px); xh.setAttribute('x2', px); xh.removeAttribute('hidden');
+      tip.textContent = `${fmtDay(best.at)} · ${Math.round(best.pct * 100)} % · ${best.units} kohtaa arvioitu · ${best.n} arviota tänä päivänä`;
+      tip.hidden = false;
+      tip.style.left = Math.max(0, Math.min(px / g.W * r.width - tip.offsetWidth / 2, r.width - tip.offsetWidth)) + 'px';
+    };
+    svg.addEventListener('pointermove', show); svg.addEventListener('pointerdown', show);
+    svg.addEventListener('pointerleave', () => { tip.hidden = true; xh.setAttribute('hidden', ''); });
+  }
+  function progressView() {
+    const bySubj = new Map();
+    for (const e of S.history) { const a = e.k.split('|')[0]; if (!subj(a) || !e.max) continue; if (!bySubj.has(a)) bySubj.set(a, []); bySubj.get(a).push(e); }
+    const charts = [];
+    const cards = DATA.filter(s => bySubj.has(s.id)).map(s => {
+      const ev = bySubj.get(s.id).sort((x, y) => x.at - y.at), pts = masterySeries(ev), last = pts[pts.length - 1];
+      const weekAgo = pts.slice().reverse().find(p => p.at <= addDays(-7));
+      const delta = weekAgo ? Math.round((last.pct - weekAgo.pct) * 100) : null;
+      const recent = ev.filter(e => e.at >= addDays(-6)).length;
+      charts.push({ id: 'ch-' + s.id, pts });
+      return `<section class="card" aria-label="${esc(s.name)}">
+        <div class="row"><h2>${esc(s.name.split(',')[0])}</h2><span class="sp"></span><a class="small" href="#/${esc(s.id)}">Harjoittele →</a></div>
+        <div class="row"><span class="hero">${Math.round(last.pct * 100)} %</span><span class="muted small">arvioitu osaaminen · ${last.units} kohtaa${delta != null ? ` · <span class="delta ${delta >= 0 ? 'up' : 'down'}">${delta >= 0 ? '+' : ''}${delta} %-yks. viikossa</span>` : ''} · ${recent} arviota 7 päivässä</span></div>
+        <div class="chart" id="ch-${esc(s.id)}">${lineChart(pts)}</div>
+        <details><summary class="small">Näytä taulukkona</summary><table class="ptable"><thead><tr><th>Päivä</th><th>Osaaminen</th><th>Kohtia</th><th>Arvioita</th></tr></thead><tbody>${pts.map(p => `<tr><td>${fmtDay(p.at)}</td><td>${Math.round(p.pct * 100)} %</td><td>${p.units}</td><td>${p.n}</td></tr>`).join('')}</tbody></table></details>
+      </section>`;
+    });
+    const sims = Object.entries(S.sims).filter(([, v]) => v && v.submitted && v.result).sort((x, y) => y[1].submitted - x[1].submitted).map(([key, v]) => {
+      const [a, k, g] = key.split('|'), s = subj(a), x = sessionOf(a, k); if (!s || !x) return '';
+      const r = v.result, pct = r.totalMax ? Math.round(r.total / r.totalMax * 100) : 0;
+      return `<tr><td>${fmtDay(v.submitted)}</td><td><a href="#/koe/${encodeURIComponent(a)}/${encodeURIComponent(k)}${g ? '/' + encodeURIComponent(g) : ''}">${esc(s.name.split(',')[0])} · ${esc(x.label)}${g ? ' · ' + esc(g) : ''}</a></td><td>${Number(r.total)} / ${Number(r.totalMax)} p (${pct} %)<br><span class="muted">${Number(r.assessed)} kohtaa arvioitu</span></td></tr>`;
+    }).join('');
+    setView(masthead(homeCrumb(S.ui.subject || ''), 'Edistyminen', 'Arvioitu osaaminen = omien arvioidesi pisteet suhteessa maksimiin, jokaisesta kohdasta viimeisin arvio. Käyrä näyttää, miten se on kehittynyt päivä päivältä.') + `
+      ${cards.length ? `<div class="grid2">${cards.join('')}</div>` : '<p class="muted">Ei vielä arvioita. Kun teet tehtävän, näytät malliratkaisun ja arvioit pisteesi, edistyminen näkyy tässä.</p>'}
+      <section class="card" aria-labelledby="simres-h"><h2 id="simres-h">Koesimulaatiot</h2>
+        ${sims ? `<table class="ptable"><thead><tr><th>Palautettu</th><th>Koe</th><th>Arvioidut pisteet</th></tr></thead><tbody>${sims}</tbody></table>` : '<p class="muted">Ei vielä palautettuja koesimulaatioita.</p>'}</section>
+      ${footer()}`);
+    for (const c of charts) bindChart(document.getElementById(c.id), c.pts);
+    window.scrollTo(0, 0);
+  }
+
   /* ---------- router ---------- */
   const decode = x => { try { return decodeURIComponent(x); } catch (e) { return x; } };
   const hashParts = () => location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decode);
@@ -1072,6 +1215,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const p = hashParts();
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
+    if (p[0] === 'edistyminen') return progressView();
+    if (p[0] === 'pika' && p.length >= 3 && startPika(p[1], p[2], true, null, true)) return;   // link from YO-tutka
     home(p[0]); window.scrollTo(0, 0);
   }
 

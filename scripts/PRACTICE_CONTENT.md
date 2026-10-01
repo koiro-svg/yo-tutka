@@ -189,3 +189,14 @@ tekijänoikeuden alaisia ja repo on julkinen. `.gitignore` estää `*.txt`-tiedo
 ```sh
 python3 scripts/check_overlap.py data/practice/<aine>/<kerta>.json /tmp/…/koeteksti.txt /tmp/…/hvp.txt
 ```
+
+## Työnkulku uudelle tutkintokerralle (näin syksyn 2026 sisältö tehtiin)
+1. Lisää kerta ensin YO-tutkaan (README).
+2. Kirjoita `data/practice/<aine>/<kerta>.json` tämän ohjeen mukaan. Käytä aineen valmiita
+   tiedostoja mallina. Työn voi antaa agentille, jolle kerrotaan aine, kerta ja tämä ohje. Yksi agentti
+   ehtii 2–3 kertaa ennen kuin konteksti täyttyy.
+3. Tarkista: `python3 scripts/validate_practice.py <tiedosto>`, `scripts/check_tex.mjs` (Node) ja
+   `python3 scripts/recheck_overlap.py <aine>/<kerta>`. Viimeinen hakee lähteet itse.
+4. Muotoile kopiointiosumat uudelleen. Lähdeviitteet, termi- ja nimilistat sekä vastaussanat saavat jäädä.
+   HVP:n mukailu lause lauseelta ei näy kuuden sanan tarkistuksessa, kun sanat taipuvat eri tavalla, joten
+   lue analyysitehtävien ratkaisut rinnakkain HVP:n kanssa.

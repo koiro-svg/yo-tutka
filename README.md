@@ -7,7 +7,7 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
 | `/` | `index.html` | Kotivalikko |
 | `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka |
-| `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, koesimulaatio |
+| `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
 
 ## AI-malliopas – automaattinen päivitys
 - `.github/workflows/update-models.yml` ajaa joka toinen päivä (04:17 UTC) skriptin

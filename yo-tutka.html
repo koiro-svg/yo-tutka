@@ -157,7 +157,8 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 .next li:first-child{border-top:0}
 .next .nm{font-weight:700}
 .next .ms{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
-.next a{margin-left:auto;font-size:13px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.next .go{margin-left:auto;display:flex;flex-wrap:wrap;gap:2px 12px;justify-content:flex-end}
+.next a{font-size:13px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
 .method{font-size:14px;color:var(--ink-2);max-width:78ch}
 .method summary{cursor:pointer;font-weight:700;color:var(--ink)}
 .method ul{margin:8px 0 0;padding-left:20px;display:grid;gap:4px}
@@ -381,7 +382,7 @@ h1{font-weight:800;letter-spacing:-.02em}
 
       <section class="sec">
         <div class="sec-head"><h3>Harjoittele seuraavaksi</h3><span class="hint">${nu.any?'todennäköinen aihe × heikko oma osaaminen':location.protocol==='file:'?'todennäköisimmät aiheet':'todennäköisimmät aiheet · arvioi itsesi harjoittelussa, niin lista huomioi osaamisesi'}</span></div>
-        <ul class="next">${nu.rows.map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span>${r.task?`<a href="${esc(practiceUrl(s.id,r.task.x.id,r.task.t.n))}">${esc(shortLabel(r.task.x.id))} · ${esc(r.task.t.n)}. ${esc(r.task.t.title)} →</a>`:''}</li>`).join('')}</ul>
+        <ul class="next">${nu.rows.map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span><span class="go">${r.task?`<a href="${esc(practiceUrl(s.id,r.task.x.id,r.task.t.n))}">${esc(shortLabel(r.task.x.id))} · ${esc(r.task.t.n)}. ${esc(r.task.t.title)} →</a>`:''}<a href="${esc(PRACTICE+'#/pika/'+encodeURIComponent(s.id)+'/'+encodeURIComponent(r.t.id))}" title="Satunnainen tehtävä tästä aiheesta">Pikatesti →</a></span></li>`).join('')}</ul>
       </section>
 
       <section class="sec">
