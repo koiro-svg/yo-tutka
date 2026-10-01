@@ -23,6 +23,9 @@ create table if not exists public.practice_answers (
 alter table public.practice_state   enable row level security;
 alter table public.practice_answers enable row level security;
 
+-- Signed-out visitors have no business with these tables at all (RLS would return nothing anyway).
+revoke all on public.practice_state, public.practice_answers from anon;
+
 drop policy if exists "own state"   on public.practice_state;
 drop policy if exists "own answers" on public.practice_answers;
 create policy "own state" on public.practice_state for all to authenticated
@@ -34,6 +37,10 @@ create policy "own answers" on public.practice_answers for all to authenticated
 create or replace function public.practice_answers_quota() returns trigger
 language plpgsql security definer set search_path = '' as $$
 begin
+  -- runs before RLS: refuse foreign rows first, so the size check cannot be used to probe other users
+  if new.user_id is distinct from (select auth.uid()) then
+    raise exception 'not allowed' using errcode = '42501';
+  end if;
   if (select coalesce(sum(octet_length(a.html)), 0) from public.practice_answers a
        where a.user_id = new.user_id and a.key <> new.key) + octet_length(new.html) > 15000000 then
     raise exception 'answers quota exceeded' using errcode = 'P0001';

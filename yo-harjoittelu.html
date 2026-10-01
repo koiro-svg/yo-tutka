@@ -254,6 +254,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const fmtDate = t => { const d = new Date(t); return d.getDate() + '.' + (d.getMonth() + 1) + '.'; };
   const TUTKA = '/yo-tutka';
   const MATHJAX_URL = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js';
+  const MATHJAX_SRI = 'sha384-KKWa9jJ1MZvssLeOoXG6FiOAZfAgmzsIIfw8BXwI9+kYm0lPCbC6yTQPBC00F1/L';
 
   // Keys shared with yo-tutka.html: unit score key "aine|kerta|n|yksikkö" ('_' = whole task).
   const ukey = (a, k, n, u) => [a, k, n, u || '_'].join('|');
@@ -387,7 +388,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
         options: { ignoreHtmlClass: 'tex2jax_ignore|answer|eq-edit' },
         startup: { typeset: false, ready() { MathJax.startup.defaultReady(); MathJax.startup.promise.then(resolve, reject); } }
       };
-      const el = document.createElement('script'); el.src = MATHJAX_URL; el.async = true;
+      const el = document.createElement('script'); el.src = MATHJAX_URL; el.integrity = MATHJAX_SRI; el.crossOrigin = 'anonymous'; el.async = true;
       el.onerror = () => reject(new Error('MathJax ei latautunut'));
       document.head.append(el);
     }));
@@ -1247,23 +1248,26 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const num = x => (Number.isFinite(+x) ? +x : null);
   // Merge another copy of the state (backup file or the server) into S: newer score wins, history is a union,
   // review items and exam simulations are added when missing. Returns how many scores changed.
+  // A timestamp from outside may not lie in the future: otherwise it would win every later merge.
+  const capAt = at => Math.min(at, Date.now() + 864e5);
   function mergeState(st) {
     st = st && typeof st === 'object' ? st : {};
     let scores = 0;
     for (const [k, v] of Object.entries(st.scores || {})) {
       if (!UNIT_KEY.test(k) || !v || num(v.p) == null || num(v.max) == null || num(v.at) == null) continue;
-      if (!S.scores[k] || S.scores[k].at < +v.at) { S.scores[k] = { p: +v.p, max: +v.max, at: +v.at }; scores++; }
+      const at = capAt(+v.at);
+      if (!S.scores[k] || S.scores[k].at < at) { S.scores[k] = { p: +v.p, max: +v.max, at }; scores++; }
     }
     const seen = new Set(S.history.map(e => e.k + '@' + e.at));
     for (const e of Array.isArray(st.history) ? st.history : []) {
       if (!e || !UNIT_KEY.test(e.k) || num(e.p) == null || num(e.max) == null || num(e.at) == null || seen.has(e.k + '@' + e.at)) continue;
-      S.history.push({ k: e.k, p: +e.p, max: +e.max, at: +e.at }); seen.add(e.k + '@' + e.at);
+      S.history.push({ k: e.k, p: +e.p, max: +e.max, at: capAt(+e.at) }); seen.add(e.k + '@' + e.at);
     }
     S.history.sort((x, y) => x.at - y.at);
     if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
     for (const [k, r] of Object.entries(st.review || {})) {
       if (!UNIT_KEY.test(k) || !r || (!r.gone && num(r.due) == null)) continue;
-      const cur = S.review[k], at = num(r.at) || 0;
+      const cur = S.review[k], at = capAt(num(r.at) || 0);
       if (cur && (num(cur.at) || 0) >= at) continue;   // newer wins; entries from before timestamps (at 0) never override
       S.review[k] = r.gone ? { gone: true, at } : { box: Math.max(0, Math.min(INTERVALS.length - 1, Math.round(+r.box) || 0)), due: +r.due, at };
     }
@@ -1278,11 +1282,11 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   // Merge one answer if it is newer than the local copy; refreshes an open editor that is not being typed in.
   async function mergeAnswer(k, v) {
     if (typeof k !== 'string' || !UNIT_KEY.test(k.replace(/^koe\|/, '')) || !v || typeof v.html !== 'string') return false;
-    const cur = await idb.get(k);
-    if (cur && cur.at >= (num(v.at) || 0)) return false;
+    const at = capAt(num(v.at) || Date.now()), cur = await idb.get(k);
+    if (cur && cur.at >= at) return false;
     const tpl = document.createElement('template'); tpl.innerHTML = v.html;
     const html = clean(tpl.content).innerHTML;
-    await idb.set(k, { html, at: num(v.at) || Date.now() });
+    await idb.set(k, { html, at });
     const root = $$('.answer', app).find(r => r.dataset.key === k);
     if (root && !root.contains(document.activeElement)) setAnswer(root, html);
     return true;
@@ -1302,17 +1306,21 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 
   /* ---------- user accounts + cross-device sync (Supabase) ---------- */
   // Public values by design (row level security protects the data, see supabase/schema.sql). Empty = accounts hidden.
-  const SUPABASE = { url: '', key: '' };
+  const SUPABASE = { url: 'https://mybfsckcywtiqttlbfav.supabase.co', key: 'sb_publishable_eB5DMKPnvtQXmI1qDRtQwQ_2c7TmI_i' };
   const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js';
   const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
   const AUTH_KEY = 'yo-practice-auth';   // where supabase-js keeps the session (localStorage)
   const ANSWER_MAX = 1e6;               // bytes per synced answer; same limit as practice_answers_size in schema.sql
   const PW_MIN = 10;
-  const acct = { client: null, user: null, status: 'off', last: 0, skipped: new Set(), recovery: false };
+  const acct = { client: null, user: null, status: 'off', last: 0, skipped: new Set(), recovery: false, verifying: false };
+  // An email link opened in a browser that did not ask for it (S.ui.pendingEmail) could be someone else's link
+  // (login CSRF). Sync stays on hold until the user confirms the account shown (S.ui.holdUser = that user id).
+  const held = () => !!(acct.user && S.ui.holdUser === acct.user.id);
   function accountOn() { return !!(SUPABASE.url && SUPABASE.key); }
   const STATUS_TXT = { off: '', busy: 'Synkronoidaan…', ok: 'Synkronoitu', err: 'Synkronointi epäonnistui – yritetään uudelleen seuraavan muutoksen yhteydessä', offline: 'Ei verkkoyhteyttä – tallennetaan, kun yhteys palaa' };
   function acctLabel() {
     if (!acct.user) return 'Kirjaudu';
+    if (held()) return '! Vahvista tili';
     return ({ busy: '◌ ', err: '! ', offline: '○ ' }[acct.status] || '● ') + acct.user.email;
   }
   function paintAcct() {
@@ -1337,8 +1345,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
           acct.user = session ? session.user : null;
           if (event === 'PASSWORD_RECOVERY') acct.recovery = true;
           // supabase-js must not be awaited inside this callback, so the sync starts on the next tick
-          if (acct.user && acct.user.id !== before) { lastPushed = ''; acct.skipped.clear(); setTimeout(syncAll, 0); }
-          if (!acct.user) { acct.status = 'off'; acct.last = 0; }
+          if (acct.user && acct.user.id !== before) { lastPushed = ''; acct.skipped.clear(); if (!acct.verifying) setTimeout(syncAll, 0); }
+          if (!acct.user) { acct.status = 'off'; acct.last = 0; if (S.ui.holdUser) { delete S.ui.holdUser; persistLocal(); } }
           paintAcct();
         });
         resolve(acct.client);
@@ -1376,7 +1384,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const failStatus = () => setStatus(navigator.onLine === false ? 'offline' : 'err');
   let syncing = null;
   function syncAll() {   // full two-way sync: on sign-in, on page load, after a backup import and from "Synkronoi nyt"
-    if (!acct.user) return Promise.resolve();
+    if (!acct.user || held()) return Promise.resolve();
     if (syncing) return syncing;
     syncing = (async () => {
       setStatus('busy');
@@ -1406,7 +1414,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   let stateTimer = null, answerTimer = null;
   const dirtyAnswers = new Set();
   onPersist = () => {
-    if (!acct.user) return;
+    if (!acct.user || held()) return;
     clearTimeout(stateTimer);
     stateTimer = setTimeout(async () => {
       if (syncing || JSON.stringify(syncedFields()) === lastPushed) return;
@@ -1415,7 +1423,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     }, 3000);
   };
   onAnswerSaved = key => {
-    if (!acct.user) return;
+    if (!acct.user || held()) return;
     dirtyAnswers.add(key); clearTimeout(answerTimer);
     answerTimer = setTimeout(async () => {
       const keys = [...dirtyAnswers]; dirtyAnswers.clear();
@@ -1448,6 +1456,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     if (signal.aborted) return;
     const q = new URLSearchParams(location.search), tokenHash = q.get('token_hash'), type = q.get('type');
     if (tokenHash && /^(email|signup|recovery)$/.test(type || '')) return confirmView(tokenHash, type === 'recovery');
+    if (held()) return holdView();
     if (acct.recovery && acct.user) return newPasswordView();
     return acct.user ? signedInView() : signedOutView(tab || 'kirjaudu');
   }
@@ -1460,12 +1469,32 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       <p class="formmsg" id="formMsg" role="status"></p></section>`);
     $('#doVerify').onclick = async e => {
       e.currentTarget.disabled = true; msg('Tarkistetaan…');
-      const { error } = await acct.client.auth.verifyOtp({ token_hash: tokenHash, type: recovery ? 'recovery' : 'email' });
+      acct.verifying = true;   // no automatic sync until we know whose account this is
+      const { data, error } = await acct.client.auth.verifyOtp({ token_hash: tokenHash, type: recovery ? 'recovery' : 'email' });
+      acct.verifying = false;
       history.replaceState(null, '', location.pathname + '#/tili');
       if (error) { msg(authError(error) + ' Voit pyytää uuden linkin kirjautumissivulta.', true); return; }
-      if (recovery) { acct.recovery = true; newPasswordView(); }
-      else { signedInView(); alertBox('Sähköposti vahvistettu ja olet kirjautunut sisään. Edistymisesi synkronoidaan nyt kaikille laitteillesi.'); }
+      const user = (data && data.user) || acct.user;
+      if (recovery) acct.recovery = true;
+      if (user && S.ui.pendingEmail && S.ui.pendingEmail === (user.email || '').toLowerCase()) {
+        delete S.ui.pendingEmail; persistLocal(); syncAll();
+        if (recovery) newPasswordView();
+        else { signedInView(); alertBox('Sähköposti vahvistettu ja olet kirjautunut sisään. Edistymisesi synkronoidaan nyt kaikille laitteillesi.'); }
+      } else if (user) { S.ui.holdUser = user.id; persistLocal(); holdView(); }
     };
+  }
+  function holdView() {
+    accountPage('Vahvista tili', `<section class="card form">
+      <p>Olet kirjautunut tiliin <b>${esc(acct.user.email)}</b>.</p>
+      <p>Onko tämä sinun tilisi? Jos jatkat, tämän selaimen harjoittelutiedot yhdistetään tähän tiliin ja synkronoidaan.
+      Jos et tunnista osoitetta, kirjaudu ulos: joku on voinut lähettää sinulle oman linkkinsä.</p>
+      <div class="row"><button type="button" class="btn primary" id="holdOk">Tämä on minun tilini – jatka</button>
+      <button type="button" class="btn" id="holdNo">En tunnista – kirjaudu ulos</button></div></section>`);
+    $('#holdOk').onclick = () => {
+      delete S.ui.holdUser; delete S.ui.pendingEmail; persistLocal(); syncAll();
+      acct.recovery ? newPasswordView() : signedInView();
+    };
+    $('#holdNo').onclick = async () => { acct.recovery = false; await acct.client.auth.signOut({ scope: 'local' }); accountView(); };
   }
   function newPasswordView() {
     accountPage('Uusi salasana', `<section class="card"><form class="form" id="pwNew">
@@ -1523,6 +1552,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       busyForm(f, false);
       if (error) return msg(authError(error), true);
       if (tab === 'kirjaudu') { signedInView(); return; }
+      S.ui.pendingEmail = email; persistLocal();   // this browser asked for the email link (see held())
       f.reset();
       // the same answer whether or not the address already has an account (no account enumeration)
       msg(tab === 'luo' ? `Lähetimme vahvistuslinkin osoitteeseen ${email}. Avaa viesti ja paina linkkiä (katso myös roskaposti).`
