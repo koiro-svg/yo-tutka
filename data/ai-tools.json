@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-09-29T07:50:00Z",
+ "updated": "2026-10-01T03:27:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -84,7 +84,7 @@
      "url": "https://manus.im",
      "kind": "automatisoi",
      "bestFor": "Kertaluonteiset isot toimeksiannot, esim. liidilistat tai kilpailijavertailut.",
-     "why": "Täysin autonominen pilviagentti, joka selaa, koodaa ja palauttaa valmiin tiedoston. Kiina purki Metan oston 2026, ja yhtiö toimii taas itsenäisesti.",
+     "why": "Täysin autonominen pilviagentti, joka selaa, koodaa ja palauttaa valmiin tiedoston. Syyskuussa 2026 julkaistu Manus 2.0 (Cascade-arkkitehtuuri) laski kustannuksia noin 32 % ja toi Cue-sovelluksen agenttien yhteistyöhön. Kiina purki Metan oston 2026, ja yhtiö toimii taas itsenäisesti.",
      "price": "Ilmainen (300 kr/pv) · Pro 20–200 $/kk",
      "fi": "kohtalainen",
      "pick": false
@@ -378,12 +378,12 @@
    "intro": "Asiakasrekisteri, liidien etsintä ja rikastus, myyntiputken hallinta sekä automaattinen yhteydenotto.",
    "tools": [
     {
-     "name": "HubSpot (Breeze-agentit)",
+     "name": "HubSpot (Agent Hub)",
      "vendor": "HubSpot",
      "url": "https://www.hubspot.com",
      "kind": "automatisoi",
      "bestFor": "Ilmainen CRM, jonka päälle saa valmiit AI-agentit liidien hankintaan.",
-     "why": "Breeze Prospecting Agent tutkii liidit ja kirjoittaa henkilökohtaiset viestit, ja maksat vain laadukkaista liideistä (1 $/liidi huhtikuusta 2026). Markkinointi, myynti ja asiakaspalvelu toimivat samassa järjestelmässä.",
+     "why": "Prospecting Agent (ent. Breeze Prospecting Agent) tutkii liidit ja kirjoittaa henkilökohtaiset viestit; maksat vain laadukkaista liideistä (1 $/liidi). HubSpot nimesi Breeze-agenttialustan Agent Hubiksi heinäkuussa 2026. Markkinointi, myynti ja asiakaspalvelu toimivat samassa järjestelmässä.",
      "price": "Ilmainen CRM · Starter ~15 $/paikka/kk · agentit krediiteillä",
      "fi": "kohtalainen",
      "pick": true
@@ -821,7 +821,7 @@
      "url": "https://business.linkedin.com/hire/hiring-assistant",
      "kind": "automatisoi",
      "bestFor": "Pienyritys, joka hakee osaajia LinkedInistä ilman rekrytoijaa.",
-     "why": "Tammikuussa 2026 julkaistu agentti etsii ja lajittelee ehdokkaat ja tekee ensimmäisen seulonnan luonnollisella kielellä annettujen ohjeiden pohjalta. Käytössä englanniksi, saksaksi ja ranskaksi, lisää kieliä tulossa 2026 aikana.",
+     "why": "Tammikuussa 2026 julkaistu agentti etsii ja lajittelee ehdokkaat ja tekee ensimmäisen seulonnan luonnollisella kielellä annettujen ohjeiden pohjalta. Käytössä englanniksi, saksaksi ja ranskaksi, lisää kieliä tulossa 2026 aikana. Syyskuussa 2026 esitelty Hiring Assistant 2 parantaa muistia ja personointia; käyttöön ilmaiseksi marraskuusta 2026 alkaen.",
      "price": "Maksullinen lisäosa LinkedIn Recruiteriin, hinta LinkedInin mukaan",
      "fi": "heikko",
      "pick": false
@@ -998,6 +998,18 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-01",
+   "text": "Manus julkaisi Manus 2.0:n (Cascade-arkkitehtuuri) 28.9.2026 – kustannukset laskivat noin 32 % ja uusi Cue-sovellus tuo agenttien yhteistyön."
+  },
+  {
+   "date": "2026-10-01",
+   "text": "LinkedIn esitteli Hiring Assistant 2:n (parempi muisti ja personointi) 30.9.2026 – käyttöön ilmaiseksi marraskuusta 2026."
+  },
+  {
+   "date": "2026-10-01",
+   "text": "Korjattu: HubSpot nimesi Breeze-agenttialustan Agent Hubiksi jo heinäkuussa 2026 – Prospecting Agent ei enää käytä Breeze-etuliitettä."
+  },
   {
    "date": "2026-09-29",
    "text": "Korjattu Gensparkin hinnoittelun voimassaoloaika: 30.6.2027, ei 31.12.2026 kuten aiemmin luki."
