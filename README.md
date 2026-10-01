@@ -76,7 +76,7 @@ Lähde on `~/sovellukset/hyppymittari/` (testit, CLAUDE.md, README siellä). Tä
 vain ajettavat tiedostot:
 
 ```sh
-rsync -a --delete --exclude '/test-jump.js' --exclude '/test.sh' --exclude '/CLAUDE.md' \
+rsync -a --delete --exclude '/test-*.js' --exclude '/test.sh' --exclude '/CLAUDE.md' \
   --exclude '/README.md' --exclude '.DS_Store' ~/sovellukset/hyppymittari/ hyppymittari/
 ```
 
