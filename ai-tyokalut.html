@@ -90,7 +90,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     <h1>Mikä työkalu mihinkin?</h1>
     <p class="lede">Yrityksen pyörittämiseen tarvittavat tekoälytyökalut, alustat ja sovellukset osa-alueittain – tutkimuksesta ja markkinoinnista kirjanpitoon ja rekrytointiin. Jokaisesta kerrotaan, mihin se on paras, <b>automatisoiko</b> se työn puolestasi vai <b>avustaako</b> se sinua tekemään sen itse, sekä hintataso ja suomen kielen tuki.</p>
     <p class="status" id="status">Ladataan…</p>
-    <p class="status">Mallien paremmuusjärjestys löytyy <a href="/ai-opas">AI-malliopaasta</a></p>
+    <p class="status">Mallien ja koodausagenttien paremmuusjärjestys löytyy <a href="/ai-opas">AI-malliopaasta</a></p>
   </header>
 
   <section class="starter" aria-labelledby="starter-h">
@@ -155,7 +155,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const html = AREAS.filter(a => area === 'all' || area === a.id).map(a => {
       const tools = a.tools.filter(t => matches(t, a)).sort((x, y) => (y.pick ? 1 : 0) - (x.pick ? 1 : 0));
       if (!tools.length) return '';
-      return `<section class="group" id="${esc(a.id)}"><header><h2>${esc(a.title)}</h2><p class="intro">${esc(a.intro)}</p></header>
+      const more = a.id === 'rakentaminen' ? '<p class="intro">Koodausagentit rinnakkain (tulos, hinta ja aika tehtävää kohden): <a href="/ai-opas#koodausagentit">AI-malliopas →</a></p>' : '';
+      return `<section class="group" id="${esc(a.id)}"><header><h2>${esc(a.title)}</h2><p class="intro">${esc(a.intro)}</p>${more}</header>
         <div class="cards">${tools.map(card).join('')}</div></section>`;
     }).join('<div style="height:16px"></div>');
     $('#content').innerHTML = html || '<p class="empty">Ei osumia. Kokeile toista hakusanaa tai poista suodattimet.</p>';

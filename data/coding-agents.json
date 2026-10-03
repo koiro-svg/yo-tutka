@@ -1,0 +1,225 @@
+{
+ "revision": 1,
+ "updated": "2026-10-03T19:49:35Z",
+ "source": "https://artificialanalysis.ai/agents/coding-agents",
+ "indexName": "Coding Agent Index v1.5",
+ "indexEvals": "DeepSWE v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA",
+ "agents": [
+  {
+   "name": "Claude Code",
+   "vendor": "Anthropic",
+   "url": "https://claude.com/product/claude-code",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app",
+    "web",
+    "cloud"
+   ],
+   "openSource": false,
+   "repo": null,
+   "models": "Claude Opus 5.5 (oletus), Sonnet 5.5, Fable 5.1 ja Haiku",
+   "price": "Sis. Claude Pro 20 $/kk · Max 100–200 $/kk · tai API-käyttö tokenihinnoin",
+   "aa": {
+    "index": 68,
+    "model": "Sonnet 5.5 (max)",
+    "costPerTask": 14.19,
+    "minutesPerTask": 87.4
+   },
+   "bestFor": "Kun haluat parhaan tuloksen vaativiin muutoksiin ja saman agentin terminaaliin, editoriin, sovellukseen ja selaimeen.",
+   "why": "Korkein tulos (68), mutta kärkiasetus on hidas ja kallis: noin 1,5 h ja 14 $ tehtävää kohden API-hinnoin. Sonnet 5.5 xhigh-tasolla yltää 63 pisteeseen noin 3,3 dollarilla ja 27 minuutissa. Ilmaisversiossa Claude Codea ei ole."
+  },
+  {
+   "name": "Google Antigravity",
+   "vendor": "Google",
+   "url": "https://antigravity.google/",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app"
+   ],
+   "openSource": false,
+   "repo": null,
+   "models": "Gemini 3.8 Flash, 3.7 Flash, 3.6 Flash ja 3.1 Pro sekä GPT-OSS-120b; Pro- ja Ultra-tilauksella myös Claude Sonnet 5.5 ja Opus 5.5",
+   "price": "Ilmainen perusrajoin · Google AI Pro 22,99 €/kk · Ultra 99,99–229,99 €/kk (Suomen hinnat)",
+   "aa": {
+    "index": 42,
+    "model": "Gemini 3.8 Flash (high), Antigravity SDK",
+    "costPerTask": 2.47,
+    "minutesPerTask": 11.7
+   },
+   "bestFor": "Kun haluat aloittaa ilmaiseksi ja käyttää samaa agenttia editorissa, työpöytäsovelluksessa ja päätteessä.",
+   "why": "Korvasi Gemini CLI:n kuluttajakäytössä 18.6.2026. AA on mitannut Antigravity CLI:lle 64 pistettä Gemini 4 Argon -mallilla, joka ei ole vielä julkisesti saatavilla – tässä näkyy julkisella mallilla mitattu tulos."
+  },
+  {
+   "name": "Codex",
+   "vendor": "OpenAI",
+   "url": "https://openai.com/codex/",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app",
+    "web",
+    "cloud"
+   ],
+   "openSource": true,
+   "repo": "https://github.com/openai/codex",
+   "models": "GPT-6 Astra, GPT-6.1 Sol ja GPT-6 Luna; API-avaimella myös muut Responses API -yhteensopivat mallit",
+   "price": "Sis. ChatGPT Plus 20 $/kk · Pro 100–500 $/kk · Free ja Go (8 $/kk) vain GPT-6 Luna työpöytäsovelluksessa",
+   "aa": {
+    "index": 63,
+    "model": "GPT-6.1 Sol (xhigh)",
+    "costPerTask": 1.04,
+    "minutesPerTask": 15.5
+   },
+   "bestFor": "Kun haluat hyvän tuloksen edullisesti ja nopeasti ja sinulla on jo ChatGPT-tilaus.",
+   "why": "Selvästi halvin ja nopein kärkipään vaihtoehto: 63 pistettä noin dollarilla ja 16 minuutissa tehtävää kohden. Sama agentti toimii sovelluksessa, terminaalissa, editorissa ja pilvessä, ja CLI on avointa lähdekoodia (Apache-2.0)."
+  },
+  {
+   "name": "Devin",
+   "vendor": "Cognition",
+   "url": "https://devin.ai/",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app",
+    "web",
+    "cloud"
+   ],
+   "openSource": false,
+   "repo": null,
+   "models": "Oma SWE-2 sekä Anthropicin, OpenAI:n, Googlen ja SpaceXAI:n mallit; Fusion-tila yhdistää kärkimallin ja SWE-2:n",
+   "price": "Ilmainen (kevyt kiintiö) · Pro 20 $/kk · Max 200 $/kk · Teams 80 $/kk + 40 $/kk per käyttäjä",
+   "aa": {
+    "index": 62,
+    "model": "Fusion: Claude Fable 5.1 (xhigh) + SWE-2 (medium)",
+    "costPerTask": 7.9,
+    "minutesPerTask": 35.8
+   },
+   "bestFor": "Kun haluat delegoida isoja tehtäviä rinnakkaisille pilviagenteille ja tarkistaa valmiit pull requestit.",
+   "why": "AA mittasi Devin CLI:n Fusion-tilan (62 pistettä): kärkimalli suunnittelee ja halvempi SWE-2 tekee rutiinityön. Windsurf-editori nimettiin Devin Desktopiksi 2.6.2026; pilviagentit (Devin Cloud) kuuluvat Pro-tasoon."
+  },
+  {
+   "name": "Grok Build",
+   "vendor": "SpaceXAI (xAI)",
+   "url": "https://docs.x.ai/build/overview",
+   "surfaces": [
+    "cli"
+   ],
+   "openSource": true,
+   "repo": "https://github.com/xai-org/grok-build",
+   "models": "Grok 4.7; asetuksilla myös mikä tahansa oma malli",
+   "price": "Sis. Grok-tileihin ilmaisesta alkaen · SuperGrok 30 $/kk · SuperGrok Plus 100 $/kk · tai xAI API",
+   "aa": {
+    "index": 56,
+    "model": "Grok 4.7 (xhigh)",
+    "costPerTask": 8.82,
+    "minutesPerTask": 39.2
+   },
+   "bestFor": "Kun käytät jo Grokia tai haluat avoimen lähdekoodin terminaaliagentin xAI:n malleille.",
+   "why": "Vahva DeepSWE-tulos (73 %), mutta Terminal-Bench vain 33 %, joten indeksi jää 56:een. Apache-2.0-lisensoitu terminaaliagentti, jota voi ajaa myös skripteissä ilman käyttöliittymää."
+  },
+  {
+   "name": "Muse Code",
+   "vendor": "Meta",
+   "url": "https://dev.meta.ai/products/muse-code/",
+   "surfaces": [
+    "cli"
+   ],
+   "openSource": false,
+   "repo": null,
+   "models": "Muse Spark 1.3 ja 1.2",
+   "price": "Muse Code -tilaus 5 $/kk · 15 $/kk · 50 $/kk tai Meta Model API tokenihinnoin",
+   "aa": {
+    "index": 54,
+    "model": "Muse Spark 1.3 (max)",
+    "costPerTask": 3.98,
+    "minutesPerTask": 18.4
+   },
+   "bestFor": "Kun haluat halvan kuukausitilauksen terminaalissa toimivaan agenttiin tavalliseen ohjelmointityöhön.",
+   "why": "Halvin tilaus (5 $/kk) ja nopea (18 min tehtävää kohden), mutta heikko Terminal-Bench-tulos (32 %) laskee indeksin 54:ään. Julkaistiin betana 5.8.2026 ja toimii vain terminaalissa."
+  },
+  {
+   "name": "OpenCode",
+   "vendor": "Anomaly",
+   "url": "https://opencode.ai/",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app"
+   ],
+   "openSource": true,
+   "repo": "https://github.com/anomalyco/opencode",
+   "models": "Mikä tahansa malli yli 75 palveluntarjoajalta, myös paikalliset mallit; käy myös GitHub Copilot- tai ChatGPT Plus/Pro -tilillä",
+   "price": "Ilmainen (avoin) + mallin API-kulut · OpenCode Go 10 $/kk · Go Plus 40 $/kk",
+   "aa": {
+    "index": 54,
+    "model": "GLM-5.3 (max)",
+    "costPerTask": 4.24,
+    "minutesPerTask": 48.1
+   },
+   "bestFor": "Kun haluat avoimen agentin, jossa voit käyttää mitä tahansa mallia tai jo maksamaasi tilausta.",
+   "why": "MIT-lisensoitu ja malliriippumaton, joten hinta ja laatu riippuvat valitusta mallista. AA on mitannut sen vain GLM-5.3-mallilla (54 pistettä), joten tulos ei kerro, miten se toimii Claude- tai GPT-malleilla."
+  },
+  {
+   "name": "Kimi Code",
+   "vendor": "Moonshot AI (Kiina)",
+   "url": "https://www.kimi.com/code",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app"
+   ],
+   "openSource": true,
+   "repo": "https://github.com/MoonshotAI/kimi-code",
+   "models": "Kimi K3, K2.8 Preview ja K2.7 Code HighSpeed; asetuksilla myös muiden palveluntarjoajien malleja",
+   "price": "Sis. Kimi Plus 19 $/kk · Pro 39 $/kk · Max 99 $/kk · Ultra 199 $/kk",
+   "aa": {
+    "index": 52,
+    "model": "Kimi K3",
+    "costPerTask": 5.05,
+    "minutesPerTask": 61.5
+   },
+   "bestFor": "Kun haluat avoimen lähdekoodin agentin ja K3-mallin kiinteällä kuukausihinnalla.",
+   "why": "Vahva koodikannan ymmärtämisessä (SWE-Atlas-QnA 66 %), mutta Terminal-Bench vain 21 % ja tehtävä kestää noin tunnin. CLI on MIT-lisensoitu; Kimi Code vaatii vähintään Plus-jäsenyyden."
+  },
+  {
+   "name": "Cursor",
+   "vendor": "Anysphere (SpaceX)",
+   "url": "https://cursor.com/",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app",
+    "web",
+    "cloud"
+   ],
+   "openSource": false,
+   "repo": null,
+   "models": "Grok 4.7, Composer 2.5 sekä Clauden, GPT:n, Geminin, Kimin, GLM:n ja Muse Sparkin malleja",
+   "price": "Ilmainen Hobby · Pro 20 $/kk · Pro+ 60 $/kk · Ultra 200 $/kk",
+   "aa": null,
+   "bestFor": "Kun haluat kokonaisen editorin, jossa voit vaihtaa mallia vapaasti ja ajaa agentteja myös pilvessä.",
+   "why": "Laaja mallivalikoima yhdessä editorissa sekä pilviagentit, CLI ja Bugbot-koodikatselmointi. SpaceX osti Cursorin 14.8.2026, ja OpenAI on ilmoittanut lopettavansa mallien tarjoamisen Cursorille ehdotetusti 12.11.2026; AA ei ole mitannut Cursoria."
+  },
+  {
+   "name": "GitHub Copilot",
+   "vendor": "GitHub (Microsoft)",
+   "url": "https://github.com/features/copilot",
+   "surfaces": [
+    "cli",
+    "ide",
+    "app",
+    "web",
+    "cloud"
+   ],
+   "openSource": false,
+   "repo": null,
+   "models": "Valinta Anthropicin, OpenAI:n, Googlen, xAI:n ja Kimin malleista, esim. Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7 ja Kimi K3",
+   "price": "Ilmainen (rajattu) · Pro 10 $/kk · Pro+ 39 $/kk · Max 100 $/kk",
+   "aa": null,
+   "bestFor": "Kun koodisi on GitHubissa ja haluat antaa issueita agentille, joka palauttaa pull requestin.",
+   "why": "Halvin maksullinen taso (10 $/kk) ja tiivis GitHub-integraatio: pilviagentti, CLI, editorit ja koodikatselmointi Pro-tasosta alkaen. Käyttö kuluttaa GitHub AI Credits -krediittejä; AA ei ole mitannut Copilotia."
+  }
+ ]
+}

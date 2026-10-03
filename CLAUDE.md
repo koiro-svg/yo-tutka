@@ -18,6 +18,12 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
   `ai-opas.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
+- Koodausagentit (AI-oppaan ryhmä ja ankkuri `#koodausagentit`): `data/coding-agents.json`
+  → `ai-opas.html` (`agentSection()`, kytketty ryhmän `render`-kenttään). Kolme rankingkorttia
+  (`AGENT_CARDS`) lasketaan sivulla `aa`-tuloksista ja piirretään samalla `card()`-funktiolla kuin
+  mallien kortit (`cat.fmt` muotoilee luvut). Jokaisella ryhmällä on `id`, ja `syncHash()` näyttää
+  `#ryhmä`-linkin kohteen, vaikka suodatin piilottaisi sen. Dataa päivittää työkalupakin rutiini,
+  koska AA:n Coding Agent Index ei ole API:ssa.
 - AI-työkalupakki: `data/ai-tools.json` → `ai-tyokalut.html` renderöi (fetch). Dataa
   päivittää ajastettu Claude-pilviagentti (routine) joka toinen päivä ohjeen
   `scripts/UPDATE_TOOLS.md` mukaan, ja `scripts/validate_tools.py` tarkistaa sen ennen
@@ -94,6 +100,12 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   varalla origin/main), joten raja toimii myös Vercelin buildissa. Käsin tehtävä
   rakennemuutos: nosta `revision` samassa commitissa. Agentti ei saa koskea siihen.
   Älä löysää näitä rajoja, koska repo julkaisee suoraan.
+- `validate_tools.py` tarkistaa myös `data/coding-agents.json`:n (max `MAX_AGENT_SWAPS` agenttivaihtoa
+  kerralla, `aa`-luvut rajoissa). Rutiinin kehote (trig_012scGEYHeVknUS9bMSjQ7g6) sallii commitoida
+  vain nämä kaksi tiedostoa. Jos lisäät rutiinille uuden datatiedoston, päivitä sekä
+  `UPDATE_TOOLS.md` että rutiinin kehote, muuten agentti ei saa koskea siihen.
+- Koodausagenttien `aa`-luvut ovat AA:n sivuilta (ei API:sta), joten footerin linkki
+  artificialanalysis.ai/agents/coding-agents on lähdeviite. Älä poista sitä.
 - `vercel.json`:n `buildCommand` ajaa validaattorin jokaisessa deployssa. Epävalidi data
   kaataa deployn ja edellinen versio jää näkyviin. Älä poista sitä.
 - `updated` = viimeisin onnistunut tarkistus. Sivu näyttää varoituksen, jos se on yli 5 pv
