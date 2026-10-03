@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-01T03:27:00Z",
+ "updated": "2026-10-03T03:40:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -237,7 +237,7 @@
      "url": "https://www.canva.com",
      "kind": "avustaa",
      "bestFor": "Kaikki somekuvat, mainosbannerit ja esitteet yhdestä paikasta.",
-     "why": "Canva AI 2.0 rakentaa muokattavan designin kirjoitetusta tai puhutusta pyynnöstä; Magic Resize tekee samasta kuvasta kaikki somekoot. Pro-tilaukseen kuuluu nyt myös ilmainen Affinity ja Leonardo-kuvagenerointi.",
+     "why": "Canva AI 2.0 rakentaa muokattavan designin kirjoitetusta tai puhutusta pyynnöstä; Magic Resize tekee samasta kuvasta kaikki somekoot. Affinity-paketti on nyt ilmainen kaikille Canva-käyttäjille, ja Leonardo-kuvageneraattori sisältyy vasta Business-tasosta ylöspäin.",
      "price": "Ilmainen · Pro ~15–18 $/kk",
      "fi": "hyvä",
      "pick": true
@@ -383,7 +383,7 @@
      "url": "https://www.hubspot.com",
      "kind": "automatisoi",
      "bestFor": "Ilmainen CRM, jonka päälle saa valmiit AI-agentit liidien hankintaan.",
-     "why": "Prospecting Agent (ent. Breeze Prospecting Agent) tutkii liidit ja kirjoittaa henkilökohtaiset viestit; maksat vain laadukkaista liideistä (1 $/liidi). HubSpot nimesi Breeze-agenttialustan Agent Hubiksi heinäkuussa 2026. Markkinointi, myynti ja asiakaspalvelu toimivat samassa järjestelmässä.",
+     "why": "Prospecting Agent (ent. Breeze Prospecting Agent) tutkii liidit ja kirjoittaa henkilökohtaiset viestit; maksat vain laadukkaista liideistä (1 $/liidi). Agentti vaatii Sales- tai Service Hub Professional- tai Enterprise-tilauksen, ei pelkkää ilmaista CRM:ää. HubSpot nimesi Breeze-agenttialustan Agent Hubiksi heinäkuussa 2026.",
      "price": "Ilmainen CRM · Starter ~15 $/paikka/kk · agentit krediiteillä",
      "fi": "kohtalainen",
      "pick": true
@@ -540,8 +540,8 @@
      "url": "https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365",
      "kind": "avustaa",
      "bestFor": "Jos yritys elää jo Outlookissa, Teamsissa ja Excelissä.",
-     "why": "Business Standard + Copilot -paketista tuli pysyvä tuote 7/2026. Teams-palaverien yhteenvedot ja Outlook-luonnokset toimivat hyvin suomeksi.",
-     "price": "Business Standard + Copilot ~23,50 $/käyttäjä/kk · lisäosa ~21 $",
+     "why": "Business Standard + Copilot -paketista tuli pysyvä tuote 7/2026, ja samalla hinta nousi. Teams-palaverien yhteenvedot ja Outlook-luonnokset toimivat hyvin suomeksi.",
+     "price": "Business Standard + Copilot ~35 $/käyttäjä/kk (heinäkuusta 2026) · lisäosa ~21 $",
      "fi": "hyvä",
      "pick": false
     },
@@ -614,7 +614,7 @@
      "kind": "avustaa",
      "bestFor": "Analyysityökalu ei-teknisille, myös ajastetut raportit.",
      "why": "Kytkeytyy tietokantoihin ja Google Sheetsiin, ja tekee raportit ja visualisoinnit luonnollisella kielellä.",
-     "price": "Ilmainen 15 viestiä/kk · Plus 20 $/kk · Pro 45 $/kk",
+     "price": "Ilmainen 15 viestiä/kk · Plus 35 $/kk · Pro 45 $/kk",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -737,7 +737,7 @@
      "url": "https://github.com/anthropics/claude-for-legal",
      "kind": "avustaa",
      "bestFor": "Pienyrittäjän sopimuskatselmointi, NDA-triage ja vastaukset ilman erillistä legal-ohjelmistoa.",
-     "why": "Ilmainen legal-plugin (helmikuu 2026) antaa valmiit komennot sopimuksen tarkistukseen, NDA-triageen ja toimittajan compliance-tarkistukseen omaa playbookia vasten. Plugin on laajentunut toukokuusta 2026 lähtien, ja suomenkieliset sopimukset sujuvat hyvin.",
+     "why": "Ilmainen Claude for Legal -paketti (helmikuu 2026) laajeni toukokuussa 2026 12 erikoisalan pluginiin (mm. sopimukset, työsuhteet, tietosuoja) ja yli 20 integraatioon (iManage, DocuSign, LexisNexis, Westlaw ym.) omaa playbookia vasten. Suomenkieliset sopimukset sujuvat hyvin.",
      "price": "Claude Pro 20 $/kk (plugin ilmainen)",
      "fi": "hyvä",
      "pick": true
@@ -957,7 +957,7 @@
      "kind": "avustaa",
      "bestFor": "Sovellus, joka tarvitsee oman taustapalvelun, ajastuksia tai integraatioita.",
      "why": "Agent rakentaa, ajaa ja julkaisee sovelluksen selaimessa. Laskutus menee työmäärän mukaan: pieni muutos maksaa alle 0,25 $, kokonainen ominaisuus noin 1–3 $.",
-     "price": "Ilmainen · Core ~20–25 $/kk + käyttö",
+     "price": "Ilmainen · Core 20 $/kk (18 $ vuosilaskutuksella) + käyttö",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -978,7 +978,7 @@
      "url": "https://cursor.com",
      "kind": "avustaa",
      "bestFor": "Koodieditori sille, joka koodaa itse ja haluaa tekoälyn mukaan joka riville.",
-     "why": "VS Code -pohjainen editori, jossa on agenttitila ja useiden mallien valinta. Maksullisissa tasoissa kuukausihinnan verran mallikrediittejä, ja raskas käyttö maksaa lisää.",
+     "why": "VS Code -pohjainen editori, jossa on agenttitila ja useiden mallien valinta. Maksullisissa tasoissa kuukausihinnan verran mallikrediittejä, ja raskas käyttö maksaa lisää. OpenAI on ilmoittanut katkaisevansa GPT-mallien käytön Cursorista marraskuussa 2026 SpaceX-kaupan omistajanvaihdoslausekkeen vuoksi – tilanne on yhä kesken.",
      "price": "Ilmainen · Pro 20 $/kk · Pro+ 60 $/kk",
      "fi": "kohtalainen",
      "pick": false
@@ -998,6 +998,30 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-03",
+   "text": "Korjattu Julius AI:n Plus-tason hinta: 35 $/kk, ei 20 $/kk."
+  },
+  {
+   "date": "2026-10-03",
+   "text": "Microsoft 365 Copilot Businessin paketti (Business Standard + Copilot) nousi noin 35 $/käyttäjä/kk:aan heinäkuussa 2026 (oli ~23,50 $)."
+  },
+  {
+   "date": "2026-10-03",
+   "text": "Korjattu: Affinity on ilmainen kaikille Canva-käyttäjille, ja Leonardo-kuvageneraattori sisältyy vasta Business-tasoon, ei Prohon."
+  },
+  {
+   "date": "2026-10-03",
+   "text": "OpenAI ilmoitti katkaisevansa GPT-mallien käytön Cursorista marraskuussa 2026 sen jälkeen, kun SpaceX osti emoyhtiö Anysphere-kaupan 60 mrd. dollarilla."
+  },
+  {
+   "date": "2026-10-03",
+   "text": "Anthropic laajensi Claude for Legal -pluginin 12 erikoisalan pluginiin ja yli 20 integraatioon (mm. DocuSign, LexisNexis, Westlaw) toukokuussa 2026."
+  },
+  {
+   "date": "2026-10-03",
+   "text": "Korjattu: HubSpotin Prospecting Agent vaatii Sales- tai Service Hub Professional- tai Enterprise-tilauksen, ei pelkkää ilmaista CRM:ää."
+  },
   {
    "date": "2026-10-01",
    "text": "Manus julkaisi Manus 2.0:n (Cascade-arkkitehtuuri) 28.9.2026 – kustannukset laskivat noin 32 % ja uusi Cue-sovellus tuo agenttien yhteistyön."
@@ -1053,30 +1077,6 @@
   {
    "date": "2026-09-28",
    "text": "Claude yhdisti chatin ja Cowork-agentin samaan sovellukseen 16.9.2026."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Kiina määräsi Metan purkamaan Manus-kaupan (4/2026) – Manus jatkaa itsenäisenä."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "OpenAI lopetti Soran: sovellus suljettiin 26.4.2026 ja API 24.9.2026."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Salesforce osti Finin (ent. Intercom) – kauppa valmis 10.9.2026."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "SpaceX osti Cursorin (Anysphere) – kauppa valmis 14.8.2026, hinnat ennallaan."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Relay.app lopetti toimintansa syyskuussa 2026 – siirry Makeen, n8n:ään tai Zapieriin."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "EU:n AI-asetus luokittelee rekrytoinnin tekoälyn korkean riskin järjestelmäksi – ihmisen on tehtävä päätös."
   }
  ]
 }
