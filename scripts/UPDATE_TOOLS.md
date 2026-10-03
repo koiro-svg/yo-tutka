@@ -1,7 +1,9 @@
 # AI-työkalupakki: automated update instructions
 
 These are the instructions for the scheduled Claude agent that refreshes
-`data/ai-tools.json` every other day. The page `ai-tyokalut.html` renders that file.
+`data/ai-tools.json` and `data/coding-agents.json` every other day. The page
+`ai-tyokalut.html` renders the first; the "Koodausagentit" section of `ai-opas.html`
+renders the second.
 The repo is **public** and main deploys to https://koirosvg.com automatically, so
 everything you push goes live within a minute.
 
@@ -43,17 +45,46 @@ good run if nothing changed in the world.
    say so: "Korjattu …", never "nousi" / "muuttui".
 6. Set `updated` to the current UTC time (ISO 8601, e.g. `2026-09-30T04:20:00Z`),
    even if nothing else changed: it means "verified on this date".
-7. Run `python3 scripts/validate_tools.py` (it compares against the live site by itself).
+7. Update `data/coding-agents.json` as described in "Coding agents" below.
+8. Run `python3 scripts/validate_tools.py` (it checks both files and compares against the live site by itself).
    If it fails, fix the data. If you cannot make it pass, stop without committing.
    Vercel runs the same check on deploy, so invalid data would fail the deploy anyway.
-8. Commit only `data/ai-tools.json` to main and push:
-   - Changes: `Päivitä AI-työkalupakki: <lyhyt kuvaus>` (Finnish, imperative)
+9. Commit only `data/ai-tools.json` and `data/coding-agents.json` to main (one commit) and push:
+   - Changes: `Päivitä AI-työkalupakki: <lyhyt kuvaus>` (Finnish, imperative; mention
+     coding agents if they changed, e.g. `Päivitä koodausagentit: Codexin hinta`)
    - Only `updated` changed: `Päivitä AI-työkalupakin tarkistuspäivä`
    Never force-push. If the push is rejected, `git pull --rebase` once and retry;
    if it still fails, stop and report the error.
 
+## Coding agents (`data/coding-agents.json`)
+A side-by-side comparison of AI providers' coding agents (Claude Code, Codex, Cursor …).
+1. Benchmark numbers come from the Artificial Analysis Coding Agent Index. Open
+   https://artificialanalysis.ai/agents/coding-agents and the pairwise pages under
+   https://artificialanalysis.ai/agents/coding-agents/comparisons (e.g.
+   `.../comparisons/claude-code-vs-codex`); they show each agent's index, model,
+   cost per task and time per task. For each agent, `aa` is its **best-index**
+   configuration: `index`, `model` (as AA writes it, e.g. `Sonnet 5.5 (max)`),
+   `costPerTask` (USD) and `minutesPerTask` (1.5 h = 90). `aa` is `null` if AA has
+   not measured the agent. Copy numbers exactly; never estimate them.
+   Count only configurations whose model is publicly available (AA marks the others
+   "Not publicly available"); mention a better unreleased result in `why` instead.
+   If the agent's only public result is from a sibling product (e.g. Antigravity SDK
+   for Antigravity), say so in `model`.
+   If AA renames the index or changes its evals, update `indexName` / `indexEvals`.
+2. Check each agent's own product and pricing page: `surfaces` (subset of `cli`,
+   `ide`, `app` = desktop app, `web` = browser, `cloud` = runs tasks in the vendor's
+   cloud in the background), `models`, `price` (same style as tools), `openSource`
+   and `repo` (https or null).
+3. Add an agent only if AA measures it or it is clearly one of the major providers'
+   agents; remove one that shut down. At most `MAX_AGENT_SWAPS` agents added+removed
+   per run, 4–12 agents in total. Never touch `revision`.
+4. `bestFor` (one sentence) and `why` (1–2 sentences) follow the same text rules as
+   tools. The page ranks agents by `aa.index` itself, so there is no `pick` field.
+5. Set this file's `updated` too, even if nothing else changed. Do not add
+   coding-agent changes to `ai-tools.json`'s `changes`; mention them in the run report.
+
 ## Do not
-- Touch any file other than `data/ai-tools.json`.
+- Touch any file other than `data/ai-tools.json` and `data/coding-agents.json`.
 - Invent tools, prices, dates or features.
 - Add tools that require unlawful use (e.g. scraping personal data against GDPR)
   or that are clearly aimed at spam.

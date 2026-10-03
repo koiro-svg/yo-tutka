@@ -73,6 +73,21 @@ ol.rank .bar i{display:block;height:100%;background:var(--h3)}
 .tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
 .empty{color:var(--ink-3);font-size:14px}
 .notice{background:var(--warn-soft);color:var(--ink);border-radius:8px;padding:12px 14px;font-size:13px}
+.group{scroll-margin-top:16px}
+.group .intro{color:var(--ink-2);max-width:70ch}
+.group>h3{margin-top:8px}
+.card .vendor{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--surface-2);color:var(--ink-2)}
+.chip.open{background:var(--ok-soft);color:var(--ok)}
+.card .for{font-weight:700;font-size:15px}
+.card .why{color:var(--ink-2);font-size:14px}
+dl.facts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13px;border-top:1px dashed var(--line);padding-top:10px}
+dl.facts dt{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);padding-top:2px}
+dl.facts dd{margin:0;color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:4px 16px;font-family:var(--font-mono);font-size:12px}
+.links a{text-decoration:none;font-weight:600}
+.links a:hover{text-decoration:underline}
 
 /* Radar theme surfaces (keep last so they win over the base rules above). */
 html{background:var(--bg)}
@@ -94,14 +109,14 @@ h1{font-weight:800;letter-spacing:-.02em}
     <h1>Mikä malli mihinkin?</h1>
     <p class="lede">Paras tekoälymalli jokaiseen käyttötarkoitukseen – automaatiot ja bisnesworkflowt, koodaus, kirjoittaminen, kuvat, video ja puhe. Rankingit haetaan riippumattomista vertailuista ja päivittyvät automaattisesti kahden päivän välein, joten uudet mallit nousevat listoille itsestään.</p>
     <p class="status" id="status">Ladataan…</p>
-    <p class="status">Valmiit työkalut ja sovellukset yrityksen osa-alueittain: <a href="/ai-tyokalut">AI-työkalupakki →</a></p>
+    <p class="status">Claude Code, Codex ja muut rinnakkain: <a href="#koodausagentit">Koodausagentit ↓</a> · Valmiit työkalut yrityksen osa-alueittain: <a href="/ai-tyokalut">AI-työkalupakki →</a></p>
   </header>
 
   <nav class="filters" id="filters" aria-label="Suodata osa-alueen mukaan"></nav>
   <div id="content"></div>
 
   <footer>
-    <p>Data: <a href="https://artificialanalysis.ai/" rel="noopener">Artificial Analysis</a> (tekstimallien indeksit, hinnat ja nopeudet sekä kuva-, video- ja puhemallien sokkovertailujen ELO-pisteet).</p>
+    <p>Data: <a href="https://artificialanalysis.ai/" rel="noopener">Artificial Analysis</a> (tekstimallien indeksit, hinnat ja nopeudet sekä kuva-, video- ja puhemallien sokkovertailujen ELO-pisteet). Koodausagenttien tulokset: <a href="https://artificialanalysis.ai/agents/coding-agents" rel="noopener">Artificial Analysis Coding Agent Index</a>; agenttien hinnat ja ominaisuudet tarkistetaan valmistajien sivuilta.</p>
     <p>Vinkit ovat yleisohjeita; lopullinen valinta kannattaa aina testata omalla tehtävällä. “Uusi” = julkaistu viimeisen 45 päivän aikana.</p>
   </footer>
 </main>
@@ -110,6 +125,7 @@ h1{font-weight:800;letter-spacing:-.02em}
 (function(){
   const GROUPS = [
     {id:'teksti', name:'Teksti, koodi & agentit'},
+    {id:'koodausagentit', name:'Koodausagentit', render: agentSection},
     {id:'hinta', name:'Hinta & nopeus'},
     {id:'kuva', name:'Kuvat'},
     {id:'video', name:'Video'},
@@ -119,7 +135,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     {id:'automaatio', group:'teksti', title:'Automaatio & agentit', use:'Automatisoidut workflowt, bisnesprosessit, työkaluja kutsuvat agentit.',
      tip:'Rakenna työnkulku esim. n8n:llä, Makella, Zapierilla tai Claude Codella ja käytä kärkimallia vaativiin päätöksiin. Jos ajoja on tuhansia päivässä, katso “Paras hinta-laatu”.'},
     {id:'koodaus', group:'teksti', title:'Koodaus', use:'Ohjelmointi, sovellusten ja nettisivujen rakentaminen, bugien korjaus.',
-     tip:'Parhaimmillaan koodausagentissa (Claude Code, Cursor, Codex), joka lukee ja muokkaa koko projektia.'},
+     tip:'Parhaimmillaan koodausagentissa, joka lukee ja muokkaa koko projektia – vertailu alempana kohdassa “Koodausagentit”.'},
     {id:'yleis', group:'teksti', title:'Kirjoittaminen, analyysi & tutkimus', use:'Yleisäly: raportit, sisällöntuotanto, päättely, tiedonhaku, strategia.',
      tip:'Kärjen erot ovat pieniä – valitse se, jonka tyyli miellyttää ja jolla on tarvitsemasi työkalut (haku, tiedostot).'},
     {id:'asiakaspalvelu', group:'teksti', title:'Asiakaspalvelubotit', use:'Chat- ja puhelinbotit, jotka hoitavat asiakkaan asian järjestelmien kautta (varaukset, laskut, tuki).',
@@ -153,10 +169,28 @@ h1{font-weight:800;letter-spacing:-.02em}
   ];
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  let data = null, filter = 'all';
+  const safeUrl = u => /^https:\/\//.test(u || '') ? u : '';
+  const usd = v => '$' + v.toFixed(2);
+  const mins = m => m < 60 ? Math.round(m) + ' min' : (m / 60).toFixed(1).replace('.', ',').replace(',0', '') + ' h';
+  const fiDate = d => new Date(d).toLocaleDateString('fi-FI', {day:'numeric', month:'numeric', year:'numeric'});
+  // Both data files are refreshed every other day; older than 5 days means the schedule stopped.
+  const late = iso => (Date.now() - Date.parse(iso)) / 864e5 > 5;
+  const LATE = ' – automaattipäivitys on myöhässä';
+  const SURFACES = {cli:'Terminaali', ide:'Editori', app:'Työpöytäsovellus', web:'Selain', cloud:'Pilvessä taustalla'};
+  const GOOD = 0.85;  // cost and speed rankings only include agents within this share of the top index
+  const AGENT_CARDS = [
+    {id:'agent-index', title:'Paras koodausagentti', use:'Agentti ja malli yhdessä: oikeiden ohjelmistotehtävien läpäisy repossa ja terminaalissa.',
+     tip:'Sama malli voi pärjätä eri agentissa selvästi eri tavalla, joten agentin valinta vaikuttaa tulokseen mallin lisäksi.'},
+    {id:'agent-cost', title:'Edullisin hyvä agentti', use:`Halvin tehtävää kohden niistä, jotka yltävät vähintään ${Math.round(GOOD * 100)} %:iin kärjen tuloksesta.`,
+     tip:'Kustannus on laskettu API-hinnoilla. Kuukausitilauksella maksat kiinteän hinnan, mutta tehtäväkohtainen kulutus ratkaisee, kuinka nopeasti käyttöraja tulee vastaan.'},
+    {id:'agent-speed', title:'Nopein hyvä agentti', use:`Lyhin aika tehtävää kohden niistä, jotka yltävät vähintään ${Math.round(GOOD * 100)} %:iin kärjen tuloksesta.`,
+     tip:'Hidas agentti ei ole huono: pitkä ajo tarkoittaa usein perusteellisempaa testausta. Nopeus ratkaisee, kun istut itse odottamassa.'},
+  ];
+  let data = null, agents = null, filter = 'all';
 
   function fmt(v, cat){
     if (v == null) return '';
+    if (cat.fmt) return cat.fmt(v);
     if (cat.unit === 's') return v.toFixed(2).replace('.', ',') + ' s';
     if (cat.unit === '$' || cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
     return Math.round(v).toLocaleString('fi-FI');
@@ -177,8 +211,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     return bits.filter(Boolean).join(' · ');
   }
 
-  function card(meta){
-    const cat = data.categories[meta.id] || {items:[]};
+  function card(meta, cat = data.categories[meta.id] || {items:[]}){
     const its = cat.items || [];
     if (!its.length) return `<article class="card"><header><h3>${esc(meta.title)}</h3><p class="use">${esc(meta.use)}</p></header><p class="empty">Ei dataa vielä.</p></article>`;
     const w = its[0];
@@ -206,37 +239,95 @@ h1{font-weight:800;letter-spacing:-.02em}
     </article>`;
   }
 
+  // Ranking cards reuse card() with categories built from the agents' AA results.
+  function agentCats(order){
+    const measured = order.filter(a => a.aa);
+    const good = measured.filter(a => a.aa.index >= GOOD * (measured.length ? measured[0].aa.index : 0));
+    const idx = a => `indeksi ${Math.round(a.aa.index)}`;
+    const perTask = a => `${usd(a.aa.costPerTask)} / tehtävä`;
+    const rank = (list, key, line, cat) => ({...cat, items: list.map(a => ({name:a.name, creator:line(a), variant:line(a), score:a.aa[key]}))});
+    const by = key => [...good].sort((x, y) => x.aa[key] - y.aa[key]);
+    return {
+      'agent-index': rank(measured, 'index', a => `${a.aa.model} · ${perTask(a)}`, {metric:`${agents.indexName} (${agents.indexEvals})`}),
+      'agent-cost': rank(by('costPerTask'), 'costPerTask', a => `${idx(a)} · ${mins(a.aa.minutesPerTask)}`,
+        {metric:'API-kustannus tehtävää kohden ($)', lowerIsBetter:true, fmt:usd}),
+      'agent-speed': rank(by('minutesPerTask'), 'minutesPerTask', a => `${idx(a)} · ${perTask(a)}`,
+        {metric:'Aika tehtävää kohden', lowerIsBetter:true, fmt:mins}),
+    };
+  }
+
+  function agentCard(a){
+    const url = safeUrl(a.url), repo = safeUrl(a.repo);
+    const chips = a.surfaces.map(s => `<span class="chip">${esc(SURFACES[s] || s)}</span>`).join('')
+      + (a.openSource ? '<span class="chip open">Avoin lähdekoodi</span>' : '');
+    const aa = a.aa ? `${Math.round(a.aa.index)} · ${esc(a.aa.model)} · ${usd(a.aa.costPerTask)} / tehtävä · ${mins(a.aa.minutesPerTask)}` : 'Ei vielä mitattu';
+    return `<article class="card">
+      <header><h3>${esc(a.name)}</h3><span class="vendor">${esc(a.vendor)}</span></header>
+      <div class="chips">${chips}</div>
+      <p class="for">${esc(a.bestFor)}</p>
+      <p class="why">${esc(a.why)}</p>
+      <dl class="facts"><dt>Mallit</dt><dd>${esc(a.models)}</dd><dt>Hinta</dt><dd>${esc(a.price)}</dd><dt>Tulos</dt><dd>${aa}</dd></dl>
+      <p class="links">${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}${repo ? `<a href="${esc(repo)}" target="_blank" rel="noopener">Lähdekoodi ↗</a>` : ''}</p>
+    </article>`;
+  }
+
+  function agentSection(){
+    const intro = '<p class="intro">Koodausagentti antaa mallille työkalut: se lukee koko projektin, ajaa komentoja ja tekee muutokset itse. Tässä palveluntarjoajien agentit rinnakkain – tulos, hinta tehtävää kohden ja se, mihin kukin sopii.</p>';
+    if (!agents) return intro + '<p class="notice">Koodausagenttien tietoja ei saatu ladattua.</p>';
+    const order = [...agents.agents].sort((x, y) => (y.aa ? y.aa.index : -1) - (x.aa ? x.aa.index : -1) || x.name.localeCompare(y.name, 'fi'));
+    const cats = agentCats(order), stale = late(agents.updated);
+    return `${intro}
+      <p class="status${stale ? ' stale' : ''}"><b>●</b> Tarkistettu ${esc(fiDate(agents.updated))}${stale ? LATE : ' · päivittyy ~2 päivän välein'}</p>
+      <div class="cards">${AGENT_CARDS.map(m => card(m, cats[m.id])).join('')}</div>
+      <h3>Agentit rinnakkain</h3>
+      <div class="cards">${order.map(agentCard).join('')}</div>`;
+  }
+
   function render(){
     $('#filters').innerHTML = [{id:'all', name:'Kaikki'}, ...GROUPS].map(g =>
       `<button type="button" data-f="${g.id}" aria-pressed="${filter === g.id}">${esc(g.name)}</button>`).join('');
     $('#content').innerHTML = GROUPS.filter(g => filter === 'all' || filter === g.id).map(g => `
-      <section class="group"><h2>${esc(g.name)}</h2>
-        <div class="cards">${CATS.filter(c => c.group === g.id).map(card).join('')}</div>
+      <section class="group" id="${g.id}"><h2>${esc(g.name)}</h2>
+        ${g.render ? g.render() : `<div class="cards">${CATS.filter(c => c.group === g.id).map(m => card(m)).join('')}</div>`}
       </section>`).join('<div style="height:20px"></div>');
   }
 
   function status(){
     const el = $('#status');
     const t = Date.parse(data.updated);
-    const ageDays = (Date.now() - t) / 864e5;
+    const stale = late(data.updated);
     const when = new Date(t).toLocaleString('fi-FI', {day:'numeric', month:'numeric', year:'numeric', hour:'2-digit', minute:'2-digit'});
-    el.classList.toggle('stale', ageDays > 5);
-    el.innerHTML = `<b>●</b> Päivitetty ${esc(when)}` + (ageDays > 5 ? ' – automaattipäivitys on myöhässä' : ' · seuraava päivitys ~2 päivän päästä');
+    el.classList.toggle('stale', stale);
+    el.innerHTML = `<b>●</b> Päivitetty ${esc(when)}` + (stale ? LATE : ' · seuraava päivitys ~2 päivän päästä');
   }
+
+  // A #group link (e.g. /ai-opas#koodausagentit) shows that group if the filter hides it.
+  function syncHash(){
+    const g = GROUPS.find(g => '#' + g.id === location.hash);
+    if (!g || !data) return;
+    if (filter !== 'all' && filter !== g.id){ filter = g.id; render(); }
+    $('#' + g.id).scrollIntoView();
+  }
+  addEventListener('hashchange', syncHash);
 
   $('#filters').addEventListener('click', e => {
     const b = e.target.closest('button[data-f]');
     if (!b) return;
+    // Drop a stale #group so following the same link again fires hashchange.
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
     filter = b.dataset.f;
     render();
     const cur = $(`#filters button[data-f="${filter}"]`);
     if (cur) cur.focus();
   });
 
-  fetch('/data/ai-models.json', {cache:'no-cache'})
-    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(d => { data = d; status(); render(); })
-    .catch(() => {
+  const getJson = u => fetch(u, {cache:'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  Promise.all([getJson('/data/ai-models.json'), getJson('/data/coding-agents.json').catch(() => null)])
+    .then(([d, g]) => {
+      data = d; agents = g; status(); render(); syncHash();
+    })
+    .catch(e => {
+      console.error(e);
       $('#status').textContent = '';
       $('#content').innerHTML = '<p class="notice">Mallidataa ei ole vielä haettu. Ensimmäinen automaattinen päivitys tuo rankingit tähän.</p>';
     });

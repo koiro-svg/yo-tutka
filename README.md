@@ -5,7 +5,7 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
 | Polku | Tiedosto | Mikä |
 |---|---|---|
 | `/` | `index.html` | Kotivalikko |
-| `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus |
+| `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus ja koodausagenttien vertailu |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka |
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
 | `/tietosuoja` | `tietosuoja.html` | YO-harjoittelun käyttäjätilien tietosuojaseloste |
@@ -20,6 +20,9 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
   tai lokaalisti `AA_API_KEY=... python3 scripts/update_models.py`.
 - Jos jokin API-kutsu epäonnistuu, sen kategorian edellinen data säilyy.
 - Kategorioiden otsikot ja vinkit ovat `ai-opas.html`:n `CATS`-listassa, laskenta skriptissä.
+- Koodausagentit (`#koodausagentit`) tulevat tiedostosta `data/coding-agents.json`. Artificial
+  Analysisin Coding Agent Index ei ole API:ssa, joten sitä päivittää AI-työkalupakin
+  Claude-rutiini (`scripts/UPDATE_TOOLS.md`), ja `scripts/validate_tools.py` tarkistaa myös sen.
 
 ## YO-tutka
 
