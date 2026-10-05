@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-03T03:40:00Z",
+ "updated": "2026-10-05T10:00:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -237,7 +237,7 @@
      "url": "https://www.canva.com",
      "kind": "avustaa",
      "bestFor": "Kaikki somekuvat, mainosbannerit ja esitteet yhdestä paikasta.",
-     "why": "Canva AI 2.0 rakentaa muokattavan designin kirjoitetusta tai puhutusta pyynnöstä; Magic Resize tekee samasta kuvasta kaikki somekoot. Affinity-paketti on nyt ilmainen kaikille Canva-käyttäjille, ja Leonardo-kuvageneraattori sisältyy vasta Business-tasosta ylöspäin.",
+     "why": "Canva AI 2.0 rakentaa muokattavan designin kirjoitetusta tai puhutusta pyynnöstä; Magic Resize tekee samasta kuvasta kaikki somekoot. Affinity on nyt ilmainen kaikille eikä vaadi Canva-tilausta, mutta Leonardo-kuvageneraattori sisältyy vasta Business-tasosta ylöspäin.",
      "price": "Ilmainen · Pro ~15–18 $/kk",
      "fi": "hyvä",
      "pick": true
@@ -540,8 +540,8 @@
      "url": "https://www.microsoft.com/microsoft-365/business/copilot-for-microsoft-365",
      "kind": "avustaa",
      "bestFor": "Jos yritys elää jo Outlookissa, Teamsissa ja Excelissä.",
-     "why": "Business Standard + Copilot -paketista tuli pysyvä tuote 7/2026, ja samalla hinta nousi. Teams-palaverien yhteenvedot ja Outlook-luonnokset toimivat hyvin suomeksi.",
-     "price": "Business Standard + Copilot ~35 $/käyttäjä/kk (heinäkuusta 2026) · lisäosa ~21 $",
+     "why": "Business Standard + Copilot -paketista tuli pysyvä tuote 7/2026 samalla promohinnalla. Teams-palaverien yhteenvedot ja Outlook-luonnokset toimivat hyvin suomeksi.",
+     "price": "Business Standard + Copilot 23,50 $/käyttäjä/kk (pysyvä hinta 7/2026) · lisäosa ~21 $",
      "fi": "hyvä",
      "pick": false
     },
@@ -720,7 +720,7 @@
      "kind": "automatisoi",
      "bestFor": "Tiimi, jolla on yrityskortteja ja paljon kulukuitteja.",
      "why": "Kesäkuussa 2026 esiteltiin AI-agentit (Policy, AP, Accounting); Policy oli käytössä heti, muut seurasivat heinäkuusta 2026. Ne hakevat kuitit, kirjoittavat selitteet ja tiliöivät kuluja. Pleon MCP-palvelimen kautta asiointi onnistuu myös Clauden, ChatGPT:n ja Copilotin kautta.",
-     "price": "Maksulliset paketit alk. ~50 €/kk (3 käyttäjää)",
+     "price": "Start 8 €/käyttäjä/kk (ei minimiä) · Build/Optimise 14–18 €/käyttäjä/kk (3 käyttäjää)",
      "fi": "hyvä",
      "pick": false
     }
@@ -999,6 +999,18 @@
  ],
  "changes": [
   {
+   "date": "2026-10-05",
+   "text": "Korjattu Microsoft 365 Business Standard + Copilot -paketin hinta: 23,50 $/käyttäjä/kk, ei 35 $ kuten 3.10. virheellisesti merkittiin."
+  },
+  {
+   "date": "2026-10-05",
+   "text": "Pleo lisäsi edullisemman Start-tason (8 €/käyttäjä/kk, ei käyttäjäminimiä) aiempien pakettien rinnalle."
+  },
+  {
+   "date": "2026-10-05",
+   "text": "Korjattu: Canvan Affinity-paketti on ilmainen kaikille, ei vain Canva-käyttäjille – ei vaadi Canva-tilausta."
+  },
+  {
    "date": "2026-10-03",
    "text": "Korjattu Julius AI:n Plus-tason hinta: 35 $/kk, ei 20 $/kk."
   },
@@ -1065,18 +1077,6 @@
   {
    "date": "2026-09-28",
    "text": "Attio nosti Plus-hintaa ja lisäsi uuden Pro-tason (79 $/paikka/kk)."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Google nimesi Looker Studion takaisin Data Studioksi (16.4.2026)."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "NotebookLM on nyt Gemini Notebook (16.7.2026) – vanhat muistikirjat ja osoite toimivat edelleen."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Claude yhdisti chatin ja Cowork-agentin samaan sovellukseen 16.9.2026."
   }
  ]
 }
