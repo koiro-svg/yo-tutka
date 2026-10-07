@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-05T10:00:00Z",
+ "updated": "2026-10-07T03:33:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -321,7 +321,7 @@
      "url": "https://chatgpt.com",
      "kind": "avustaa",
      "bestFor": "Kuvat, joissa on paljon luettavaa tekstiä: julisteet, infografiikat ja hinnastot.",
-     "why": "Tekstin renderöinti on alan tarkinta, ja se noudattaa monimutkaisia asetteluohjeita hyvin.",
+     "why": "Tekstin renderöinti on alan tarkinta, ja se noudattaa monimutkaisia asetteluohjeita hyvin. Syyskuussa 2026 julkaistiin kaksi versiota: Flare on nopeampi, Sunburst muokkaa kuvia tarkemmin.",
      "price": "Ilmainen (rajattu) · Plus ~20 $/kk",
      "fi": "kohtalainen",
      "pick": false
@@ -383,7 +383,7 @@
      "url": "https://www.hubspot.com",
      "kind": "automatisoi",
      "bestFor": "Ilmainen CRM, jonka päälle saa valmiit AI-agentit liidien hankintaan.",
-     "why": "Prospecting Agent (ent. Breeze Prospecting Agent) tutkii liidit ja kirjoittaa henkilökohtaiset viestit; maksat vain laadukkaista liideistä (1 $/liidi). Agentti vaatii Sales- tai Service Hub Professional- tai Enterprise-tilauksen, ei pelkkää ilmaista CRM:ää. HubSpot nimesi Breeze-agenttialustan Agent Hubiksi heinäkuussa 2026.",
+     "why": "Prospecting Agent (ent. Breeze Prospecting Agent) tutkii liidit ja kirjoittaa henkilökohtaiset viestit; maksat vain laadukkaista liideistä (1 $/liidi). Agentti vaatii Sales- tai Service Hub Starter-tasoisen tai sitä ylemmän tilauksen, ei pelkkää ilmaista CRM:ää. HubSpot nimesi Breeze-agenttialustan Agent Hubiksi heinäkuussa 2026.",
      "price": "Ilmainen CRM · Starter ~15 $/paikka/kk · agentit krediiteillä",
      "fi": "kohtalainen",
      "pick": true
@@ -439,7 +439,7 @@
      "kind": "automatisoi",
      "bestFor": "Kylmäsähköpostien massalähetys hyvällä toimitettavuudella.",
      "why": "Kiinteä kuukausihinta rajattomille lähetystileille sekä lämmitys- ja AI-vastausautomaatio. Jos tarvitset myös LinkedInin ja puhelut samaan sekvenssiin, katso lemlist.",
-     "price": "alk. 37 $/kk",
+     "price": "alk. 47 $/kk",
      "fi": "kohtalainen",
      "pick": false
     }
@@ -478,8 +478,8 @@
      "url": "https://callsono.com/fi/",
      "kind": "automatisoi",
      "bestFor": "Suomenkielinen puhelinvastaaja, joka varaa ajat itse.",
-     "why": "Vastaa puheluihin 24/7 suomeksi, varaa ajat, ottaa viestit ja siirtää tarvittaessa ihmiselle. Kiinteä hinta ilman minuuttiveloitusta.",
-     "price": "alk. 49 €/kk · 14 pv kokeilu",
+     "why": "Vastaa puheluihin 24/7 suomeksi, varaa ajat, ottaa viestit ja siirtää tarvittaessa ihmiselle. Hinnoittelu on käyttöperusteista: vain aktiivinen keskusteluaika veloitetaan, ei pito- tai siirtoaikaa.",
+     "price": "Käyttöperusteinen, hinta kysyttäessä (demo)",
      "fi": "hyvä",
      "pick": false
     },
@@ -719,7 +719,7 @@
      "url": "https://www.pleo.io/fi",
      "kind": "automatisoi",
      "bestFor": "Tiimi, jolla on yrityskortteja ja paljon kulukuitteja.",
-     "why": "Kesäkuussa 2026 esiteltiin AI-agentit (Policy, AP, Accounting); Policy oli käytössä heti, muut seurasivat heinäkuusta 2026. Ne hakevat kuitit, kirjoittavat selitteet ja tiliöivät kuluja. Pleon MCP-palvelimen kautta asiointi onnistuu myös Clauden, ChatGPT:n ja Copilotin kautta.",
+     "why": "Kesäkuussa 2026 esiteltiin AI-agentit (Policy, AP, Accounting, Treasury); Policy on yleisesti käytössä, muut olivat heinäkuussa 2026 vielä beta-vaiheessa. Ne hakevat kuitit, kirjoittavat selitteet ja tiliöivät kuluja. Pleon MCP-palvelimen kautta asiointi onnistuu myös Clauden, ChatGPT:n ja Copilotin kautta.",
      "price": "Start 8 €/käyttäjä/kk (ei minimiä) · Build/Optimise 14–18 €/käyttäjä/kk (3 käyttäjää)",
      "fi": "hyvä",
      "pick": false
@@ -737,8 +737,8 @@
      "url": "https://github.com/anthropics/claude-for-legal",
      "kind": "avustaa",
      "bestFor": "Pienyrittäjän sopimuskatselmointi, NDA-triage ja vastaukset ilman erillistä legal-ohjelmistoa.",
-     "why": "Ilmainen Claude for Legal -paketti (helmikuu 2026) laajeni toukokuussa 2026 12 erikoisalan pluginiin (mm. sopimukset, työsuhteet, tietosuoja) ja yli 20 integraatioon (iManage, DocuSign, LexisNexis, Westlaw ym.) omaa playbookia vasten. Suomenkieliset sopimukset sujuvat hyvin.",
-     "price": "Claude Pro 20 $/kk (plugin ilmainen)",
+     "why": "Claude for Legal (julkaistu 12.5.2026) tuo 12 erikoisalan pluginia (mm. sopimukset, työsuhteet, tietosuoja) ja yli 20 integraatiota (iManage, DocuSign, LexisNexis, Westlaw ym.) omaa playbookia vasten. Pluginin koodi on avoin (GitHub, Apache 2.0), mutta käyttö vaatii erillisen lisämaksun Claude-tilauksen päälle. Suomenkieliset sopimukset sujuvat hyvin.",
+     "price": "Claude Pro 20 $/kk + Claude for Legal -lisä ~20 $/käyttäjä/kk",
      "fi": "hyvä",
      "pick": true
     },
@@ -821,7 +821,7 @@
      "url": "https://business.linkedin.com/hire/hiring-assistant",
      "kind": "automatisoi",
      "bestFor": "Pienyritys, joka hakee osaajia LinkedInistä ilman rekrytoijaa.",
-     "why": "Tammikuussa 2026 julkaistu agentti etsii ja lajittelee ehdokkaat ja tekee ensimmäisen seulonnan luonnollisella kielellä annettujen ohjeiden pohjalta. Käytössä englanniksi, saksaksi ja ranskaksi, lisää kieliä tulossa 2026 aikana. Syyskuussa 2026 esitelty Hiring Assistant 2 parantaa muistia ja personointia; käyttöön ilmaiseksi marraskuusta 2026 alkaen.",
+     "why": "Yleisesti saatavilla syyskuusta 2025 lähtien; etsii ja lajittelee ehdokkaat ja tekee ensimmäisen seulonnan luonnollisella kielellä annettujen ohjeiden pohjalta. Käytössä englanniksi, saksaksi ja ranskaksi, lisää kieliä tulossa 2026 aikana. Syyskuussa 2026 esitelty Hiring Assistant 2 parantaa muistia ja personointia.",
      "price": "Maksullinen lisäosa LinkedIn Recruiteriin, hinta LinkedInin mukaan",
      "fi": "heikko",
      "pick": false
@@ -999,6 +999,34 @@
  ],
  "changes": [
   {
+   "date": "2026-10-07",
+   "text": "Korjattu: Claude for Legal on maksullinen lisäosa (~20 $/käyttäjä/kk) Claude-tilauksen päälle eikä ilmainen paketti; julkaistiin 12.5.2026, ei helmikuussa."
+  },
+  {
+   "date": "2026-10-07",
+   "text": "Korjattu LinkedIn Hiring Assistantin julkaisuaika: yleisesti saatavilla syyskuusta 2025, ei tammikuusta 2026. Poistettu vahvistamaton tieto ilmaisesta käytöstä marraskuusta 2026."
+  },
+  {
+   "date": "2026-10-07",
+   "text": "Instantlyn aloitushinta nousi 37 $/kk:sta 47 $/kk:aan."
+  },
+  {
+   "date": "2026-10-07",
+   "text": "Korjattu: HubSpotin Prospecting Agent toimii jo Sales/Service Hub Starter -tasolla, ei vasta Professionalista alkaen."
+  },
+  {
+   "date": "2026-10-07",
+   "text": "Korjattu Sonon hinnoittelu käyttöperusteiseksi (vain keskusteluaika veloitetaan); sivuilla ei enää näy kiinteää 49 €/kk -hintaa."
+  },
+  {
+   "date": "2026-10-07",
+   "text": "Tarkennettu: Pleon Policy-agentti on yleisesti käytössä, AP/Accounting/Treasury-agentit olivat heinäkuussa 2026 vielä betassa."
+  },
+  {
+   "date": "2026-10-07",
+   "text": "GPT Image 2.5 julkaistiin syyskuussa 2026 kahtena versiona: nopeampi Flare ja tarkempaa kuvanmuokkausta tekevä Sunburst."
+  },
+  {
    "date": "2026-10-05",
    "text": "Korjattu Microsoft 365 Business Standard + Copilot -paketin hinta: 23,50 $/käyttäjä/kk, ei 35 $ kuten 3.10. virheellisesti merkittiin."
   },
@@ -1049,34 +1077,6 @@
   {
    "date": "2026-09-29",
    "text": "Korjattu Gensparkin hinnoittelun voimassaoloaika: 30.6.2027, ei 31.12.2026 kuten aiemmin luki."
-  },
-  {
-   "date": "2026-09-29",
-   "text": "Zapier yhdisti erillisen Agents-tuotteen osaksi AI by Zapieria heinäkuussa 2026."
-  },
-  {
-   "date": "2026-09-29",
-   "text": "Korjattu LinkedInin rekrytointiagentin nimi LinkedIn Hiring Assistantiksi; käytössä nyt myös saksaksi ja ranskaksi, ei enää vain englanniksi."
-  },
-  {
-   "date": "2026-09-29",
-   "text": "Workablen neljä rekrytointiagenttia siirtyivät yleiseen saatavuuteen krediittipohjaisella hinnoittelulla 14.9.2026."
-  },
-  {
-   "date": "2026-09-29",
-   "text": "Korjattu Pleon AI-agenttien aikataulu: vain Policy-agentti oli käytössä kesäkuussa 2026, muut seurasivat heinäkuusta."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Korjattu Procountorin Perus-paketin hinta: 82,90 €/kk (alv 0) virallisen hinnaston mukaan."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Gumloop poisti pysyvän ilmaisversion – tilalla 14 vrk kokeilu Pro-tasosta (37 $/kk)."
-  },
-  {
-   "date": "2026-09-28",
-   "text": "Attio nosti Plus-hintaa ja lisäsi uuden Pro-tason (79 $/paikka/kk)."
   }
  ]
 }
