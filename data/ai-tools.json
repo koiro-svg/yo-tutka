@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-07T03:33:00Z",
+ "updated": "2026-10-09T04:30:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -41,7 +41,7 @@
      "kind": "avustaa",
      "bestFor": "Monipuolisin yleisavustaja yrittäjän arkeen.",
      "why": "Yhdessä tilauksessa ovat keskustelu, kuvat, ääni, Deep Research ja agenttitila, joka täyttää lomakkeita ja tekee tehtäviä omalla selaimellaan. Laajin integraatio- ja sovellusvalikoima.",
-     "price": "Ilmainen · Go 8 $/kk · Plus 20 $/kk · Business 25 $/käyttäjä/kk · Pro 100–200 $/kk",
+     "price": "Ilmainen · Go 8 $/kk · Plus 20 $/kk · Business 25 $/käyttäjä/kk · Pro 100–200 $/kk · uusi Pro 500 $/kk",
      "fi": "hyvä",
      "pick": true
     },
@@ -62,7 +62,7 @@
      "url": "https://gemini.google.com",
      "kind": "avustaa",
      "bestFor": "Google-palveluita (Gmail, Drive, Kalenteri) käyttävälle yrittäjälle.",
-     "why": "Gemini 3.5 on oletusmalli toukokuusta 2026. Gemini Spark -agentti tekee taustalla tehtäviä kytketyissä sovelluksissa (beta, Ultra-tilaajille ensin).",
+     "why": "Gemini 3.5 on oletusmalli toukokuusta 2026. Gemini Spark -agentti tekee taustalla tehtäviä kytketyissä sovelluksissa (beta, Ultra-tilaajille ensin). Googlen uusi lippulaivamalli Gemini 4 Argon esiteltiin syyskuussa 2026, mutta se on toistaiseksi vain rajatussa käytössä eikä tavallisten käyttäjien saatavilla.",
      "price": "Ilmainen · AI Pro ~20 $/kk · AI Ultra 100 $/kk",
      "fi": "hyvä",
      "pick": false
@@ -209,7 +209,7 @@
      "kind": "automatisoi",
      "bestFor": "Tekoälyassistentti sähköpostiin, kalenteriin ja kokousmuistiinpanoihin.",
      "why": "Toimii kuin virtuaalinen assistentti Slackissa ja sähköpostissa: vastaa, varaa ja seuraa. Ei vaadi työnkulkujen piirtämistä.",
-     "price": "Plus 29,99 $/kk · Pro 99,99 $/kk (ei pysyvää ilmaisversiota)",
+     "price": "Tiimi alk. 29,99 $/kk, krediittiperusteinen (ei pysyvää ilmaisversiota)",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -417,7 +417,7 @@
      "kind": "avustaa",
      "bestFor": "Suomalaisten ja pohjoismaisten B2B-asiakkaiden löytäminen.",
      "why": "Data tulee suoraan pohjoismaisista kaupparekistereistä, joten kotimaisten pk-yritysten kattavuus on paljon parempi kuin amerikkalaisissa tietokannoissa. Vainu Agents vie tiedot suoraan CRM:ään.",
-     "price": "alk. ~3 500 €/v",
+     "price": "Reach-taso alk. ~250 €/kk (vuosilaskutus)",
      "fi": "hyvä",
      "pick": false
     },
@@ -456,7 +456,7 @@
      "url": "https://fin.ai",
      "kind": "automatisoi",
      "bestFor": "Paras AI-asiakaspalveluagentti chattiin, sähköpostiin ja WhatsAppiin.",
-     "why": "Ratkaisee keskimäärin 76 % keskusteluista kokonaan ja toimii myös Zendeskin tai muun helpdeskin päällä. Maksat vain onnistuneista ratkaisuista.",
+     "why": "Ratkaisee keskimäärin 76 % keskusteluista kokonaan ja toimii myös Zendeskin tai muun helpdeskin päällä. Maksat vain onnistuneista ratkaisuista. Salesforce ilmoitti 15.6.2026 ostavansa Finin noin 3,6 mrd. dollarilla; kauppa on yhä kesken eikä hinnoitteluun ole tullut muutoksia.",
      "price": "0,99 $/ratkaisu + Intercom-paikat alk. ~29 $/kk",
      "fi": "hyvä",
      "pick": true
@@ -709,7 +709,7 @@
      "kind": "avustaa",
      "bestFor": "Toiminimi, joka haluaa yritystilin, laskutuksen ja kuitit yhteen sovellukseen.",
      "why": "Kuitit skannataan mobiilissa suoraan tilitapahtumiin, ja tapahtumat luokittuvat automaattisesti. Valmistelevan kirjanpidon saa vietyä tilitoimistolle tai esim. Briox AI:hin.",
-     "price": "Flex 0 € · Lite 9 €/kk · Pro 15 €/kk (alv 0)",
+     "price": "Flex 0 € · Lite 9–12 €/kk · Pro 15–18 €/kk (alv 0, halvempi 1 v. sitoumuksella)",
      "fi": "hyvä",
      "pick": false
     },
@@ -999,6 +999,30 @@
  ],
  "changes": [
   {
+   "date": "2026-10-09",
+   "text": "Salesforce ilmoitti kesäkuussa 2026 ostavansa asiakaspalveluagentti Finin (ent. Intercom) noin 3,6 mrd. dollarilla; kauppa ei ole vielä sulkeutunut."
+  },
+  {
+   "date": "2026-10-09",
+   "text": "ChatGPT lisäsi uuden 500 $/kk Pro-tason ja pienensi samalla 200 $/kk Pro-tason käyttörajoja (voimaan 29.–30.10.2026)."
+  },
+  {
+   "date": "2026-10-09",
+   "text": "Googlen uusi lippulaivamalli Gemini 4 Argon esiteltiin syyskuussa 2026, mutta se on vielä rajatussa käytössä eikä korvannut Gemini 3.5:tä kuluttajasovelluksessa."
+  },
+  {
+   "date": "2026-10-09",
+   "text": "Lindy AI vaihtoi Plus/Pro/Max-tasot yhdeksi krediittiperusteiseksi Tiimi-tasoksi, joka alkaa 29,99 $/kk:sta."
+  },
+  {
+   "date": "2026-10-09",
+   "text": "Vainu julkaisi nimetyt hinnoittelutasot (Reach, Data Sync, Discover); halvin taso Reach alkaa noin 250 €/kk:sta."
+  },
+  {
+   "date": "2026-10-09",
+   "text": "Tarkennettu: Holvin Lite/Pro-hinnat (9/15 €) vaativat 1 vuoden sitoumuksen, kuukausihinta ilman sitoumusta on 12/18 €."
+  },
+  {
    "date": "2026-10-07",
    "text": "Korjattu: Claude for Legal on maksullinen lisäosa (~20 $/käyttäjä/kk) Claude-tilauksen päälle eikä ilmainen paketti; julkaistiin 12.5.2026, ei helmikuussa."
   },
@@ -1053,30 +1077,6 @@
   {
    "date": "2026-10-03",
    "text": "OpenAI ilmoitti katkaisevansa GPT-mallien käytön Cursorista marraskuussa 2026 sen jälkeen, kun SpaceX osti emoyhtiö Anysphere-kaupan 60 mrd. dollarilla."
-  },
-  {
-   "date": "2026-10-03",
-   "text": "Anthropic laajensi Claude for Legal -pluginin 12 erikoisalan pluginiin ja yli 20 integraatioon (mm. DocuSign, LexisNexis, Westlaw) toukokuussa 2026."
-  },
-  {
-   "date": "2026-10-03",
-   "text": "Korjattu: HubSpotin Prospecting Agent vaatii Sales- tai Service Hub Professional- tai Enterprise-tilauksen, ei pelkkää ilmaista CRM:ää."
-  },
-  {
-   "date": "2026-10-01",
-   "text": "Manus julkaisi Manus 2.0:n (Cascade-arkkitehtuuri) 28.9.2026 – kustannukset laskivat noin 32 % ja uusi Cue-sovellus tuo agenttien yhteistyön."
-  },
-  {
-   "date": "2026-10-01",
-   "text": "LinkedIn esitteli Hiring Assistant 2:n (parempi muisti ja personointi) 30.9.2026 – käyttöön ilmaiseksi marraskuusta 2026."
-  },
-  {
-   "date": "2026-10-01",
-   "text": "Korjattu: HubSpot nimesi Breeze-agenttialustan Agent Hubiksi jo heinäkuussa 2026 – Prospecting Agent ei enää käytä Breeze-etuliitettä."
-  },
-  {
-   "date": "2026-09-29",
-   "text": "Korjattu Gensparkin hinnoittelun voimassaoloaika: 30.6.2027, ei 31.12.2026 kuten aiemmin luki."
   }
  ]
 }
