@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-09T04:30:00Z",
+ "updated": "2026-10-11T10:00:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -237,7 +237,7 @@
      "url": "https://www.canva.com",
      "kind": "avustaa",
      "bestFor": "Kaikki somekuvat, mainosbannerit ja esitteet yhdestä paikasta.",
-     "why": "Canva AI 2.0 rakentaa muokattavan designin kirjoitetusta tai puhutusta pyynnöstä; Magic Resize tekee samasta kuvasta kaikki somekoot. Affinity on nyt ilmainen kaikille eikä vaadi Canva-tilausta, mutta Leonardo-kuvageneraattori sisältyy vasta Business-tasosta ylöspäin.",
+     "why": "Canva AI 2.0 rakentaa muokattavan designin kirjoitetusta tai puhutusta pyynnöstä; Magic Resize tekee samasta kuvasta kaikki somekoot. Affinity on nyt ilmainen kaikille eikä vaadi Canva-tilausta. Leonardo-kuvageneraattori ei enää sisälly Business-tilaukseen (poistui 30.9.2026), vaan on erillinen tilaus.",
      "price": "Ilmainen · Pro ~15–18 $/kk",
      "fi": "hyvä",
      "pick": true
@@ -321,7 +321,7 @@
      "url": "https://chatgpt.com",
      "kind": "avustaa",
      "bestFor": "Kuvat, joissa on paljon luettavaa tekstiä: julisteet, infografiikat ja hinnastot.",
-     "why": "Tekstin renderöinti on alan tarkinta, ja se noudattaa monimutkaisia asetteluohjeita hyvin. Syyskuussa 2026 julkaistiin kaksi versiota: Flare on nopeampi, Sunburst muokkaa kuvia tarkemmin.",
+     "why": "Tekstin renderöinti on alan tarkinta, ja se noudattaa monimutkaisia asetteluohjeita hyvin. OpenAI julkaisi ChatGPT Images 2.5:n 8.9.2026; rinnalla kaksi API-mallia, Flare (nopeampi) ja Sunburst (tarkempi muokkaus).",
      "price": "Ilmainen (rajattu) · Plus ~20 $/kk",
      "fi": "kohtalainen",
      "pick": false
@@ -384,7 +384,7 @@
      "kind": "automatisoi",
      "bestFor": "Ilmainen CRM, jonka päälle saa valmiit AI-agentit liidien hankintaan.",
      "why": "Prospecting Agent (ent. Breeze Prospecting Agent) tutkii liidit ja kirjoittaa henkilökohtaiset viestit; maksat vain laadukkaista liideistä (1 $/liidi). Agentti vaatii Sales- tai Service Hub Starter-tasoisen tai sitä ylemmän tilauksen, ei pelkkää ilmaista CRM:ää. HubSpot nimesi Breeze-agenttialustan Agent Hubiksi heinäkuussa 2026.",
-     "price": "Ilmainen CRM · Starter ~15 $/paikka/kk · agentit krediiteillä",
+     "price": "Ilmainen CRM · Starter 20 $/paikka/kk (uusille alk. 7–10 $) · agentit krediiteillä",
      "fi": "kohtalainen",
      "pick": true
     },
@@ -456,7 +456,7 @@
      "url": "https://fin.ai",
      "kind": "automatisoi",
      "bestFor": "Paras AI-asiakaspalveluagentti chattiin, sähköpostiin ja WhatsAppiin.",
-     "why": "Ratkaisee keskimäärin 76 % keskusteluista kokonaan ja toimii myös Zendeskin tai muun helpdeskin päällä. Maksat vain onnistuneista ratkaisuista. Salesforce ilmoitti 15.6.2026 ostavansa Finin noin 3,6 mrd. dollarilla; kauppa on yhä kesken eikä hinnoitteluun ole tullut muutoksia.",
+     "why": "Ratkaisee keskimäärin 76 % keskusteluista kokonaan ja toimii myös Zendeskin tai muun helpdeskin päällä. Maksat vain onnistuneista ratkaisuista. Salesforce päätti Finin (3,6 mrd. dollarin) oston 10.9.2026, aiempaa aikataulua nopeammin; hinnoitteluun ei tullut muutoksia.",
      "price": "0,99 $/ratkaisu + Intercom-paikat alk. ~29 $/kk",
      "fi": "hyvä",
      "pick": true
@@ -614,7 +614,7 @@
      "kind": "avustaa",
      "bestFor": "Analyysityökalu ei-teknisille, myös ajastetut raportit.",
      "why": "Kytkeytyy tietokantoihin ja Google Sheetsiin, ja tekee raportit ja visualisoinnit luonnollisella kielellä.",
-     "price": "Ilmainen 15 viestiä/kk · Plus 35 $/kk · Pro 45 $/kk",
+     "price": "Ilmainen (päivittäinen krediittikiintiö) · Plus 20 $/kk · Pro 45 $/kk",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -999,6 +999,22 @@
  ],
  "changes": [
   {
+   "date": "2026-10-11",
+   "text": "Salesforce päätti Finin (ent. Intercom) oston 10.9.2026, aiempaa aikataulua nopeammin; hinnoittelu pysyi samana."
+  },
+  {
+   "date": "2026-10-11",
+   "text": "Korjattu: HubSpotin Starter-tason hinta on 20 $/paikka/kk (uusille asiakkaille alk. 7–10 $), ei 15 $ kuten aiemmin merkittiin."
+  },
+  {
+   "date": "2026-10-11",
+   "text": "Korjattu: Julius AI:n Plus-taso on 20 $/kk, ei 35 $/kk kuten 3.10. virheellisesti merkittiin; ilmaistaso on nyt krediittiperusteinen."
+  },
+  {
+   "date": "2026-10-11",
+   "text": "Canva poisti Leonardo-kuvageneraattorin Business-tilauksesta 30.9.2026; se on nyt erillinen tilaus."
+  },
+  {
    "date": "2026-10-09",
    "text": "Salesforce ilmoitti kesäkuussa 2026 ostavansa asiakaspalveluagentti Finin (ent. Intercom) noin 3,6 mrd. dollarilla; kauppa ei ole vielä sulkeutunut."
   },
@@ -1061,22 +1077,6 @@
   {
    "date": "2026-10-05",
    "text": "Korjattu: Canvan Affinity-paketti on ilmainen kaikille, ei vain Canva-käyttäjille – ei vaadi Canva-tilausta."
-  },
-  {
-   "date": "2026-10-03",
-   "text": "Korjattu Julius AI:n Plus-tason hinta: 35 $/kk, ei 20 $/kk."
-  },
-  {
-   "date": "2026-10-03",
-   "text": "Microsoft 365 Copilot Businessin paketti (Business Standard + Copilot) nousi noin 35 $/käyttäjä/kk:aan heinäkuussa 2026 (oli ~23,50 $)."
-  },
-  {
-   "date": "2026-10-03",
-   "text": "Korjattu: Affinity on ilmainen kaikille Canva-käyttäjille, ja Leonardo-kuvageneraattori sisältyy vasta Business-tasoon, ei Prohon."
-  },
-  {
-   "date": "2026-10-03",
-   "text": "OpenAI ilmoitti katkaisevansa GPT-mallien käytön Cursorista marraskuussa 2026 sen jälkeen, kun SpaceX osti emoyhtiö Anysphere-kaupan 60 mrd. dollarilla."
   }
  ]
 }
