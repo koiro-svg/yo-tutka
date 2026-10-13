@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-11T10:00:00Z",
+ "updated": "2026-10-13T11:00:00Z",
  "source": "https://artificialanalysis.ai/agents/coding-agents",
  "indexName": "Coding Agent Index v1.5",
  "indexEvals": "DeepSWE v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA",
@@ -128,16 +128,16 @@
    ],
    "openSource": false,
    "repo": null,
-   "models": "Muse Spark 1.3 ja 1.2",
-   "price": "Muse Code -tilaus 5 $/kk · 15 $/kk · 50 $/kk tai Meta Model API tokenihinnoin",
+   "models": "Muse Wonder (max), Muse Wonder Full (vain Muse Coden tilaajille) ja Muse Spark 1.3/1.2",
+   "price": "Muse Code -tilaus 5 $/kk · 15 $/kk · 50 $/kk · 200 $/kk tai Meta Model API tokenihinnoin",
    "aa": {
-    "index": 54,
-    "model": "Muse Spark 1.3 (max)",
-    "costPerTask": 3.98,
-    "minutesPerTask": 18.4
+    "index": 63,
+    "model": "Muse Wonder (max)",
+    "costPerTask": 8.05,
+    "minutesPerTask": 22.4
    },
-   "bestFor": "Kun haluat halvan kuukausitilauksen terminaalissa toimivaan agenttiin tavalliseen ohjelmointityöhön.",
-   "why": "Halvin tilaus (5 $/kk) ja nopea (18 min tehtävää kohden), mutta heikko Terminal-Bench-tulos (32 %) laskee indeksin 54:ään. Julkaistiin betana 5.8.2026 ja toimii vain terminaalissa."
+   "bestFor": "Kun haluat terminaaliagentin, joka nousi lokakuun 2026 Muse Wonder -julkaisun myötä yhtäkkiä lähelle kärkeä.",
+   "why": "Meta julkaisi Muse Wonderin 12.10.2026: indeksi nousi 54:stä 63:een tällä julkisesti hinnoitellulla mallilla. Tilaajille avoin Wonder Full ylsi 68 pisteeseen, tasoihin Claude Coden kanssa, mutta Artificial Analysis ei ole vielä julkaissut sille luotettavaa hintatietoa, joten taulukossa näkyy varmistettu Wonder-tulos. Terminal-Bench parani selvästi aiemmasta heikosta lukemasta. Toimii vain terminaalissa."
   },
   {
    "name": "OpenCode",

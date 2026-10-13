@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-11T10:00:00Z",
+ "updated": "2026-10-13T11:00:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -209,7 +209,7 @@
      "kind": "automatisoi",
      "bestFor": "Tekoälyassistentti sähköpostiin, kalenteriin ja kokousmuistiinpanoihin.",
      "why": "Toimii kuin virtuaalinen assistentti Slackissa ja sähköpostissa: vastaa, varaa ja seuraa. Ei vaadi työnkulkujen piirtämistä.",
-     "price": "Tiimi alk. 29,99 $/kk, krediittiperusteinen (ei pysyvää ilmaisversiota)",
+     "price": "Tiimi alk. 49,99 $/kk, krediittiperusteinen (ei pysyvää ilmaisversiota)",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -354,7 +354,7 @@
      "url": "https://elevenlabs.io",
      "kind": "avustaa",
      "bestFor": "Luonnollinen suomenkielinen selostus ja äänikloonaus.",
-     "why": "Eleven v3 (GA 2/2026) tukee suomea ja tunnetageja, ja se on selvästi paras saatavilla oleva suomen TTS. Hinnat laskivat toukokuussa 2026.",
+     "why": "Syyskuun lopussa 2026 julkaistu Eleven v4 (ja nopeampi v4 Turbo) on uusi lippulaivamalli: yli 90 kieltä ja tarkempi tunnetagien tulkinta kuin edeltäjässä v3:ssa. Suomi oli jo v3:n tukemien kielten joukossa, ja ElevenLabs on edelleen selvästi paras saatavilla oleva suomen TTS. Hinnat laskivat toukokuussa 2026.",
      "price": "Ilmainen · Starter 6 $ · Creator 22 $/kk",
      "fi": "hyvä",
      "pick": false
@@ -999,6 +999,14 @@
  ],
  "changes": [
   {
+   "date": "2026-10-13",
+   "text": "Korjattu: Lindyn halvin maksullinen taso on 49,99 $/kk, ei 29,99 $/kk kuten aiemmin merkittiin."
+  },
+  {
+   "date": "2026-10-13",
+   "text": "ElevenLabs julkaisi Eleven v4- ja v4 Turbo -mallit syyskuun lopussa 2026; niistä tuli uusi lippulaivamalli v3:n tilalle."
+  },
+  {
    "date": "2026-10-11",
    "text": "Salesforce päätti Finin (ent. Intercom) oston 10.9.2026, aiempaa aikataulua nopeammin; hinnoittelu pysyi samana."
   },
@@ -1069,14 +1077,6 @@
   {
    "date": "2026-10-05",
    "text": "Korjattu Microsoft 365 Business Standard + Copilot -paketin hinta: 23,50 $/käyttäjä/kk, ei 35 $ kuten 3.10. virheellisesti merkittiin."
-  },
-  {
-   "date": "2026-10-05",
-   "text": "Pleo lisäsi edullisemman Start-tason (8 €/käyttäjä/kk, ei käyttäjäminimiä) aiempien pakettien rinnalle."
-  },
-  {
-   "date": "2026-10-05",
-   "text": "Korjattu: Canvan Affinity-paketti on ilmainen kaikille, ei vain Canva-käyttäjille – ei vaadi Canva-tilausta."
   }
  ]
 }
