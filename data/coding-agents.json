@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-13T11:00:00Z",
+ "updated": "2026-10-15T03:37:03Z",
  "source": "https://artificialanalysis.ai/agents/coding-agents",
  "indexName": "Coding Agent Index v1.5",
  "indexEvals": "DeepSWE v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA",
@@ -197,7 +197,7 @@
    "openSource": false,
    "repo": null,
    "models": "Grok 4.7, Composer 2.5 sekä Clauden, GPT:n, Geminin, Kimin, GLM:n ja Muse Sparkin malleja",
-   "price": "Ilmainen Hobby · Pro 20 $/kk · Pro+ 60 $/kk · Ultra 200 $/kk",
+   "price": "Ilmainen · Plus 8 $/kk (vain Grok) · Premium 30 $/kk · Super 100 $/kk · Ultra 200 $/kk",
    "aa": null,
    "bestFor": "Kun haluat kokonaisen editorin, jossa voit vaihtaa mallia vapaasti ja ajaa agentteja myös pilvessä.",
    "why": "Laaja mallivalikoima yhdessä editorissa sekä pilviagentit, CLI ja Bugbot-koodikatselmointi. SpaceX osti Cursorin 14.8.2026, ja OpenAI on ilmoittanut lopettavansa mallien tarjoamisen Cursorille ehdotetusti 12.11.2026; AA ei ole mitannut Cursoria."
