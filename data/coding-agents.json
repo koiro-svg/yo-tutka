@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-15T03:37:03Z",
+ "updated": "2026-10-17T03:29:54Z",
  "source": "https://artificialanalysis.ai/agents/coding-agents",
  "indexName": "Coding Agent Index v1.5",
  "indexEvals": "DeepSWE v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA",
@@ -40,7 +40,7 @@
    ],
    "openSource": false,
    "repo": null,
-   "models": "Gemini 3.8 Flash, 3.7 Flash, 3.6 Flash ja 3.1 Pro sekä GPT-OSS-120b; Pro- ja Ultra-tilauksella myös Claude Sonnet 5.5 ja Opus 5.5",
+   "models": "Gemini 3.8/3.7/3.6 Flash ja 3.1 Pro sekä GPT-OSS-120b; Ultra: myös Gemini 4 Argon; Pro/Ultra: myös Claude Sonnet 5.5 ja Opus 5.5",
    "price": "Ilmainen perusrajoin · Google AI Pro 22,99 €/kk · Ultra 99,99–229,99 €/kk (Suomen hinnat)",
    "aa": {
     "index": 42,
@@ -49,7 +49,7 @@
     "minutesPerTask": 11.7
    },
    "bestFor": "Kun haluat aloittaa ilmaiseksi ja käyttää samaa agenttia editorissa, työpöytäsovelluksessa ja päätteessä.",
-   "why": "Korvasi Gemini CLI:n kuluttajakäytössä 18.6.2026. AA on mitannut Antigravity CLI:lle 64 pistettä Gemini 4 Argon -mallilla, joka ei ole vielä julkisesti saatavilla – tässä näkyy julkisella mallilla mitattu tulos."
+   "why": "Korvasi Gemini CLI:n kuluttajakäytössä 18.6.2026. Gemini 4 Argon tuli Antigravityyn 13.10.2026, mutta vain AI Ultra -tilaajille, ei Prolle. AA on mitannut Antigravity CLI:lle 64 pistettä Argonilla, mutta koska se ei ole yleisesti saatavilla, taulukossa näkyy kaikille avoimella 3.8 Flash -mallilla mitattu tulos."
   },
   {
    "name": "Codex",
