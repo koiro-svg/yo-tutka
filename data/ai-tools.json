@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-15T03:37:03Z",
+ "updated": "2026-10-17T03:29:54Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -366,7 +366,7 @@
      "kind": "avustaa",
      "bestFor": "Nopea someleikkaus, automaattitekstitys ja trendipohjat puhelimella.",
      "why": "Ilmaisversio riittää pitkälle. Prossa on AI-avatarit, äänikloonaus ja teksti-videoksi. Jos editoit mieluummin tekstiä kuin aikajanaa, katso myös Descript ja sen Underlord-apuri.",
-     "price": "Ilmainen · Pro ~20 $/kk",
+     "price": "Ilmainen · Pro ~20 $/kk · Ultra 79 $/kk",
      "fi": "kohtalainen",
      "pick": false
     }
@@ -999,6 +999,14 @@
  ],
  "changes": [
   {
+   "date": "2026-10-17",
+   "text": "Googlen ilmainen Gemini siirtyi 9.10.2026 automaattiseen mallivalintaan: suurin osa kehotteista käyttää nopeaa Flash-Litea, mutta vaikeammat voivat yhä käyttää Flash- tai Pro-mallia."
+  },
+  {
+   "date": "2026-10-17",
+   "text": "CapCut lisäsi Pro-tason päälle uuden Ultra-tason (79 $/kk)."
+  },
+  {
    "date": "2026-10-15",
    "text": "Claude sai sivupalkkilisäosan suoraan Google Docsiin, Sheetsiin ja Slidesiin (julkinen beta 6.10.2026)."
   },
@@ -1068,15 +1076,7 @@
   },
   {
    "date": "2026-10-07",
-   "text": "Korjattu LinkedIn Hiring Assistantin julkaisuaika: yleisesti saatavilla syyskuusta 2025, ei tammikuusta 2026. Poistettu vahvistamaton tieto ilmaisesta käytöstä marraskuusta 2026."
-  },
-  {
-   "date": "2026-10-07",
    "text": "Instantlyn aloitushinta nousi 37 $/kk:sta 47 $/kk:aan."
-  },
-  {
-   "date": "2026-10-07",
-   "text": "Korjattu: HubSpotin Prospecting Agent toimii jo Sales/Service Hub Starter -tasolla, ei vasta Professionalista alkaen."
   }
  ]
 }
