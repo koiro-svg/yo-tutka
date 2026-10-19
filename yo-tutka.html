@@ -48,6 +48,13 @@
 .kt-flash{animation:kt-flash 1.8s ease-out}
 @keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
 @media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
+/* Site search hits (site-search.js hitsHtml): the home page and the YO bar. */
+.kt-hits{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.kt-hits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.kt-hits a:hover,.kt-hits a:focus-visible{border-color:var(--accent)}
+.kt-hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.kt-hits span,.kt-hits .none{color:var(--ink-3);font-size:13px}
+.kt-hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
 /* /koiro-tokens */
 /* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
 :root{
@@ -283,14 +290,7 @@ h1{font-weight:800;letter-spacing:-.02em}
 .yonav .find{display:inline-flex;align-items:center;gap:6px}
 .yonav .find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
 .yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
-.yosearch .kt-input{width:100%;max-width:560px}
-.yohits{list-style:none;margin:0;padding:0;display:grid;gap:6px;max-width:560px}
-.yohits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
-.yohits a:hover,.yohits a:focus-visible{border-color:var(--accent)}
-.yohits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
-.yohits span{color:var(--ink-3);font-size:13px}
-.yohits .none{color:var(--ink-3);font-size:13px}
-.yohits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+.yosearch>*{width:100%;max-width:560px}
 @media print{.yonav,.yosearch{display:none}}
 </style>
 <nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
@@ -304,7 +304,7 @@ h1{font-weight:800;letter-spacing:-.02em}
 </nav>
 <div class="yosearch" id="yo-search" role="search" hidden>
   <input class="kt-input" id="yo-q" type="search" placeholder="Hae YO-aiheista, malleista ja työkaluista" aria-label="Hae koko sivustosta" autocomplete="off">
-  <ul class="yohits" id="yo-hits" aria-live="polite" hidden></ul>
+  <ul class="kt-hits" id="yo-hits" aria-live="polite" hidden></ul>
 </div>
 <script>
 (function () {
@@ -674,10 +674,13 @@ h1{font-weight:800;letter-spacing:-.02em}
         if(on) b.setAttribute('aria-sort', state.sortDir<0?'descending':'ascending'); else b.removeAttribute('aria-sort');
         b.querySelector('.arr').textContent = on ? (state.sortDir<0?' ▾':' ▴') : '';
       }
-      // The selected topic's panel is rebuilt only when the topic or its data changed (a focused link in it stays).
-      const sel = topics.find(t=>t.id===state.topic), infoKey = sel ? [sel.id, st, ps] : null;
-      if(drawn.info && !(infoKey && drawn.infoKey.every((x,i)=>x===infoKey[i]))){ drawn.info.remove(); drawn.info = null; }
-      if(sel && !drawn.info){ const tmp = document.createElement('tbody'); tmp.innerHTML = infoRow(s,st,sel,ps); drawn.info = tmp.firstElementChild; drawn.infoKey = infoKey; }
+      // New stats or scores (weighting, filter, another tab) rebuild the heat map, the radar and the topic panel; otherwise
+      // the panel is rebuilt only for another topic (a focused link in it stays).
+      const changed = drawn.st!==st || drawn.ps!==ps;
+      drawn.st = st; drawn.ps = ps;
+      const sel = topics.find(t=>t.id===state.topic);
+      if(drawn.info && (changed || drawn.infoId!==state.topic)){ drawn.info.remove(); drawn.info = null; }
+      if(sel && !drawn.info){ const tmp = document.createElement('tbody'); tmp.innerHTML = infoRow(s,st,sel,ps); drawn.info = tmp.firstElementChild; drawn.infoId = sel.id; }
       let pos = 0;
       topics.forEach((t,i)=>{
         let tr = rows.get(t.id);
@@ -692,15 +695,15 @@ h1{font-weight:800;letter-spacing:-.02em}
       more.hidden = topics.length<=5;
       more.textContent = state.allTopics ? 'Näytä vähemmän' : `Näytä kaikki ${topics.length}`;
       const heat = $('#heatTbl'), order = topics.map(t=>t.id).join('\n');
-      if(drawn.heatSt!==st || drawn.heatOrder!==order){
+      if(changed || drawn.order!==order){
         heat.style.setProperty('--n', st.ss.length);
         heat.innerHTML = `<thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${esc(x.id.slice(-1))}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
           <tbody>${topics.map(t=>`<tr><td class="name" data-name="${esc(t.id)}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="0" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(t.cells[i].map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
-        drawn.heatSt = st; drawn.heatOrder = order;
+        drawn.order = order;
       }
       for(const td of heat.querySelectorAll('td.name')) td.classList.toggle('sel', td.dataset.name===state.topic);
       const radar = $('#radarBox');
-      if(drawn.radarSt!==st || drawn.radarPs!==ps){ radar.innerHTML = radarHtml(s, st, ps); drawn.radarSt = st; drawn.radarPs = ps; }
+      if(changed) radar.innerHTML = radarHtml(s, st, ps);
       for(const el of radar.querySelectorAll('[data-topic], [data-name]')){
         const on = (el.dataset.topic||el.dataset.name)===state.topic;
         el.classList.toggle('on', on);
@@ -807,7 +810,8 @@ h1{font-weight:800;letter-spacing:-.02em}
   document.getElementById('practiceLink').href = PRACTICE;
   window.addEventListener('pageshow', e => { if (e.persisted) rescore(); });
   addEventListener('storage', e => { if (e.key === 'yo-practice') rescore(); });
-  addEventListener('popstate', () => { if(fromHash()) renderAll(); else { paintTopics(); filterSessions(); } });
+  const applyHash = () => { if(fromHash()) renderAll(); else { paintTopics(); filterSessions(); } };
+  addEventListener('popstate', applyHash);
   // A deep link to a topic (the site search: /yo-tutka#<subject>/<topic>) scrolls its row into view.
   const showTopic = () => { const r = state.topic && rows.get(state.topic); if(r && r.isConnected) r.scrollIntoView({block:'center'}); };
   // Links to this page with a hash (the YO bar's search hits) apply in place, like the back button, then show the topic.
@@ -818,7 +822,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     if(u.origin!==location.origin || u.pathname!==location.pathname || u.search!==location.search || !u.hash) return;
     e.preventDefault();
     if(u.hash!==location.hash) history.pushState(null, '', u.hash);
-    if(fromHash()) renderAll(); else { paintTopics(); filterSessions(); }
+    applyHash();
     showTopic();
   });
   const restat = () => { cur.st = stats(cur.s); keepFocus(paintStats); };

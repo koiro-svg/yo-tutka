@@ -16,7 +16,7 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 ## Arkkitehtuuri
 - Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki sivut käyttävät samaa tarkoituksella aina tummaa
   "tutka"-teemaa. **Yhteinen tokenilohko `/* koiro-tokens v2 */`** (fontit, värit, säteet, `kt-`-komponentit: välilehti,
-  nappi, kenttä, tilarivi, huomautus, välähdys) on jokaisen sivun ensimmäisen `<style>`-lohkon alussa. Kanoninen kopio on
+  nappi, kenttä, tilarivi, huomautus, välähdys, sivustohaun osumalista `kt-hits`) on jokaisen sivun ensimmäisen `<style>`-lohkon alussa. Kanoninen kopio on
   `scripts/koiro-tokens.css`; `scripts/check_tokens.py` (buildissa, kaikki juuren `*.html`-sivut) kaataa deployn, jos kopio
   puuttuu tai eroaa (`--write` päivittää). Lohkossa ovat myös yhteiset perussäännöt (`box-sizing`, `:focus-visible`, `[hidden]`).
   Tokenit ovat `:where(:root)`issa, joten sivun oma `:root` voittaa (YO-sivut käyttävät vielä omiaan, tietosuoja ei). Fontit ovat

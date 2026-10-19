@@ -16,11 +16,15 @@ CHECKS = {"hvp", "laskettu", "hvp+laskettu", "malli", "ei"}
 MAX_PROMPT = 900  # long prompts are a sign of copied task text
 
 
-def tutka_data():
-    html = (ROOT / "yo-tutka.html").read_text(encoding="utf-8")
+def tutka_subjects(html=None):
+    """The subjects of yo-tutka.html's yo-data block (also scripts/yo_index.py)."""
+    html = html or (ROOT / "yo-tutka.html").read_text(encoding="utf-8")
     m = re.search(r'<script id="yo-data" type="application/json">(.*?)</script>', html, re.S)
-    data = json.loads(m.group(1).replace("<\\/", "</"))
-    return {s["id"]: {x["id"]: x for x in s["sessions"]} for s in data}
+    return json.loads(m.group(1).replace("<\\/", "</"))
+
+
+def tutka_data():
+    return {s["id"]: {x["id"]: x for x in s["sessions"]} for s in tutka_subjects()}
 
 
 def math_ok(s):

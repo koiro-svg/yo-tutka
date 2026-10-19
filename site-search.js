@@ -8,11 +8,6 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '
 const enc = encodeURIComponent;
 
 let index = null;
-// `models`: the home page passes its own ai-models.json fetch, so the AI card and the search share one request.
-function load(models){
-  if (!index) index = build(models || getJson('/data/ai-models.json'));
-  return index;
-}
 async function build(models){
   const [m, a, t, yo] = await Promise.all([models, getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json'), getJson('/data/yo-topics.json')].map(p => p.catch(() => null)));
   const out = [];
@@ -38,11 +33,12 @@ async function build(models){
   return out;
 }
 
-// Up to eight hits, titles that start with the query first.
+// Up to eight hits, titles that start with the query first. `models`: the home page passes its own ai-models.json fetch,
+// so the AI card and the search share one request.
 export async function search(q, models){
   const v = norm(q.trim());
   if (!v) return [];
-  const all = await load(models);
+  const all = await (index ||= build(models || getJson('/data/ai-models.json')));
   return all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
 }
 

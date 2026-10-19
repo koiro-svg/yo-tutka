@@ -48,13 +48,19 @@
 .kt-flash{animation:kt-flash 1.8s ease-out}
 @keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
 @media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
+/* Site search hits (site-search.js hitsHtml): the home page and the YO bar. */
+.kt-hits{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.kt-hits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.kt-hits a:hover,.kt-hits a:focus-visible{border-color:var(--accent)}
+.kt-hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.kt-hits span,.kt-hits .none{color:var(--ink-3);font-size:13px}
+.kt-hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
 /* /koiro-tokens */
 /* Deliberately dark-only: the radar theme is a single visual world. */
 html{background:var(--bg)}
 body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--bg-glow),var(--bg) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
 :focus-visible{outline-offset:3px}
 .muted{color:var(--ink-3)}
-.small{font-size:13px}
 .wrap{max-width:1120px;width:100%;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:32px;position:relative}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
 .eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
@@ -69,13 +75,6 @@ h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-s
 .search .kt-input{flex:1 1 260px;max-width:460px}
 .search kbd{font:600 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
 @media (pointer:coarse){.search kbd{display:none}}
-.hits{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-.hits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
-.hits a:hover,.hits a:focus-visible{border-color:var(--accent)}
-.hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
-.hits span{color:var(--ink-3);font-size:13px}
-.hits .none{color:var(--ink-3);font-size:13px}
-.hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
 .tool{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:22px;border-radius:14px;background:linear-gradient(180deg,rgba(92,225,198,.07),transparent 60%),var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
 .tool:hover,.tool.hot{border-color:var(--accent);transform:translateY(-3px)}
@@ -121,7 +120,7 @@ footer a:hover{color:var(--accent)}
     <input class="kt-input" id="q" type="search" placeholder="Hae malleista, työkaluista ja YO-aiheista" aria-label="Hae koko sivustosta" autocomplete="off">
     <kbd aria-hidden="true">/</kbd>
   </div>
-  <ul class="hits" id="hits" aria-live="polite" hidden></ul>
+  <ul class="kt-hits" id="hits" aria-live="polite" hidden></ul>
   <nav class="tools" aria-label="Työkalut">
     <a class="tool" href="/ai" data-blip="ai">
       <div class="hd"><h2>AI-opas</h2><span class="sig">● päivitys 2 pv välein</span></div>
@@ -257,8 +256,8 @@ footer a:hover{color:var(--accent)}
     kick();
   }
   // YO: the data's build date, kept in this page's markup by scripts/yo_index.py (the build checks it against yo-tutka.html).
-  const built = $('[data-yo-built]').dataset.yoBuilt;
-  if (/^\d{4}-\d\d-\d\d$/.test(built)) setAge('yo', daysSince(built), dayAgo(daysSince(built)));
+  const yoDays = daysSince($('[data-yo-built]').dataset.yoBuilt);   // NaN for a malformed date: setAge skips it
+  setAge('yo', yoDays, dayAgo(yoDays));
 
   // ---- julkinen-2/5: AI card shows today's best model and how fresh the data is (left out if the fetch fails) ----
   models.then(d => {
@@ -301,7 +300,7 @@ footer a:hover{color:var(--accent)}
     hits.innerHTML = html;
     hits.hidden = false;
   });
-  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.querySelector('a'); if (a) location.href = a.href; } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.querySelector('a'); if (a) a.click(); } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });
   addEventListener('keydown', e => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
     if ((e.key === '/' && !typing) || (e.key === 'k' && (e.metaKey || e.ctrlKey))) { e.preventDefault(); q.focus(); }

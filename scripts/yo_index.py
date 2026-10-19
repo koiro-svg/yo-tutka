@@ -11,6 +11,8 @@ import pathlib
 import re
 import sys
 
+from validate_practice import tutka_subjects   # the one yo-data parser (this script's directory is on sys.path)
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TOPICS = ROOT / 'data' / 'yo-topics.json'
 HOME = ROOT / 'index.html'
@@ -19,12 +21,11 @@ BUILT_ATTR = re.compile(r'data-yo-built="[^"]*"')
 
 def expected():
     html = (ROOT / 'yo-tutka.html').read_text(encoding='utf-8')
-    data = json.loads(re.search(r'<script id="yo-data" type="application/json">(.*?)</script>', html, re.S).group(1).replace('<\\/', '</'))
     d, m, y = re.search(r"window\.YO_BUILT \|\| '(\d{1,2})\.(\d{1,2})\.(\d{4})'", html).groups()
     built = datetime.date(int(y), int(m), int(d)).isoformat()
-    topics = {'built': built, 'subjects': [
+    topics = {'subjects': [
         {'id': s['id'], 'name': s['name'], 'topics': [{'id': t['id'], 'name': t['name'], 'description': t.get('description') or ''} for t in s.get('topics') or []]}
-        for s in data]}
+        for s in tutka_subjects(html)]}
     return built, json.dumps(topics, ensure_ascii=False, indent=1) + '\n'
 
 

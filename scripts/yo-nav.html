@@ -15,14 +15,7 @@
 .yonav .find{display:inline-flex;align-items:center;gap:6px}
 .yonav .find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
 .yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
-.yosearch .kt-input{width:100%;max-width:560px}
-.yohits{list-style:none;margin:0;padding:0;display:grid;gap:6px;max-width:560px}
-.yohits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
-.yohits a:hover,.yohits a:focus-visible{border-color:var(--accent)}
-.yohits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
-.yohits span{color:var(--ink-3);font-size:13px}
-.yohits .none{color:var(--ink-3);font-size:13px}
-.yohits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+.yosearch>*{width:100%;max-width:560px}
 @media print{.yonav,.yosearch{display:none}}
 </style>
 <nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
@@ -36,7 +29,7 @@
 </nav>
 <div class="yosearch" id="yo-search" role="search" hidden>
   <input class="kt-input" id="yo-q" type="search" placeholder="Hae YO-aiheista, malleista ja työkaluista" aria-label="Hae koko sivustosta" autocomplete="off">
-  <ul class="yohits" id="yo-hits" aria-live="polite" hidden></ul>
+  <ul class="kt-hits" id="yo-hits" aria-live="polite" hidden></ul>
 </div>
 <script>
 (function () {
