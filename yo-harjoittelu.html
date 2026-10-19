@@ -407,13 +407,14 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   try { Object.assign(S, JSON.parse(localStorage.getItem(LS) || '{}')); } catch (e) {}
   // every self-assessment ever made (progress view); older saves are seeded from their latest scores
   if (!Array.isArray(S.history)) S.history = Object.entries(S.scores).map(([k, v]) => ({ k, p: v.p, max: v.max, at: v.at })).sort((x, y) => x.at - y.at);
-  const persistLocal = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
+  let dayMemo = null;   // historyDays() cache, dropped on every save
+  const persistLocal = () => { dayMemo = null; try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
   let onPersist = null;          // set by the account module: schedules a sync when signed in
   // The YO bar shows how many reviews are due (rule: window.yoIsDue, owned by the bar).
   const publishDue = () => { let n = 0; for (const r of Object.values(S.review)) if (window.yoIsDue(r)) n++; document.documentElement.dataset.yoDue = n; };
   const persist = () => { persistLocal(); if (onPersist) onPersist(); publishDue(); };
   // another tab saved: take its state, so our next persist() does not overwrite it
-  window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); } catch (err) {} } });
+  window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); dayMemo = null; } catch (err) {} } });
 
   const idb = (() => {
     const mem = new Map();
@@ -621,22 +622,25 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     return true;
   }
 
-  // julkinen-25: "Aloita kertaus" opens today's due tasks one after another; the review rules stay. The round lives in memory
-  // for this visit only (one step per task, at its first due unit), so it never goes stale or reaches other tabs.
+  // julkinen-25: "Aloita kertaus" opens today's due units one after another (same count as the list and the YO bar); the review
+  // rules stay. The round lives in memory for this visit only, so it never goes stale or reaches other tabs.
   function dueKeys() {
     return Object.entries(S.review).filter(([key, r]) => { const x = parseKey(key); return window.yoIsDue(r) && taskOf(x.a, x.k, x.n); })
       .sort((x, y) => x[1].due - y[1].due).map(([key]) => key);
   }
-  let round = null;   // [{a, k, n, u}]
+  let round = null;   // [{a, k, n, u}], u = '' for a whole-task unit
   function startRound() {
-    const steps = new Map();
-    for (const key of dueKeys()) { const x = parseKey(key), id = [x.a, x.k, x.n].join('|'); if (!steps.has(id)) steps.set(id, x); }
-    round = steps.size ? [...steps.values()] : null;
-    if (!round) { home(S.ui.subject); alertBox('Ei kerrattavaa tänään. Hienoa!'); return; }
+    const keys = dueKeys();
+    round = keys.length ? keys.map(parseKey) : null;
+    if (!round) {   // leave #/kertaus, or the next redraw (e.g. after a sync) would start a round the user did not ask for
+      history.replaceState(null, '', '#/' + encodeURIComponent(S.ui.subject || ''));
+      document.documentElement.dataset.yoPage = 'harjoittele';
+      home(S.ui.subject); alertBox('Ei kerrattavaa tänään. Hienoa!'); return;
+    }
     const x = round[0];
     location.replace(taskHref(x.a, x.k, x.n, x.u));
   }
-  const roundIndex = (a, k, n) => round ? round.findIndex(x => x.a === a && x.k === k && x.n === n) : -1;
+  const roundIndex = (a, k, n, u) => round ? round.findIndex(x => x.a === a && x.k === k && x.n === n && x.u === (u || '')) : -1;
 
   /* ---------- answer editor (Abitti / Mafynetti style) ---------- */
   let MQ = null;   // MathQuill loads with `defer`, after this script
@@ -702,6 +706,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const placeSoon = () => { if (!placing) placing = requestAnimationFrame(() => { placing = 0; placeToolbar(); }); };
   if (window.visualViewport) { visualViewport.addEventListener('resize', placeSoon); visualViewport.addEventListener('scroll', placeSoon); }
   coarse.addEventListener('change', syncToolbarHeight);
+  if (window.ResizeObserver) new ResizeObserver(syncToolbarHeight).observe(rte);   // it wraps, so its height follows the width
   function updateToolbar() {
     const a = document.activeElement;
     const inside = !!(a && a.closest && (a.closest('.answer') || a.closest('#rte'))) || !!math;
@@ -915,11 +920,11 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     el.dataset.key = root.dataset.key;
     paintSaved(el);
   }
-  const SYNC_TXT = { ok: 'synkronoitu ✓', busy: 'synkronoidaan…', offline: 'odottaa yhteyttä', err: 'synkronointi epäonnistui' };
+  const SYNC_TXT = { offline: 'odottaa yhteyttä', err: 'synkronointi epäonnistui' };
   function paintSaved(el) {
     const at = +el.dataset.at || 0, key = el.dataset.key;
     const sync = !(at && accountOn() && acct.user) ? '' : acct.skipped.has(key) ? 'liian suuri synkronoitavaksi'
-      : dirtyAnswers.has(key) ? 'synkronoidaan pian' : SYNC_TXT[acct.status] || '';
+      : (acct.synced.get(key) || 0) >= at ? 'synkronoitu ✓' : /^(err|offline)$/.test(acct.status) ? SYNC_TXT[acct.status] : 'synkronoidaan pian';
     const text = idb.volatile ? 'Ei tallennu tähän selaimeen (yksityinen ikkuna?) – käytä Tallenna-painiketta'
       : at ? `Tallennettu tähän laitteeseen ${fmtTime(at)} ✓${sync ? ' · ' + sync : ''}` : '';
     if (el.textContent !== text) { el.textContent = text; el.className = 'saved' + (idb.volatile ? ' bad' : at ? ' ok' : ''); }
@@ -1038,7 +1043,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   function setView(html) {
     view.abort(); view = new AbortController();
     if (window.MathJax && MathJax.typesetClear) MathJax.typesetClear([app]);
-    app.innerHTML = html;
+    app.innerHTML = html; app.removeAttribute('aria-busy');
     updateToolbar();   // a focused answer was removed without a focusout event
     return view.signal;
   }
@@ -1064,19 +1069,18 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       <p>Kaavaeditori: <a href="https://github.com/digabi/mathquill" target="_blank" rel="noopener">digabi/MathQuill</a> (sama kuin Abitissa) ja <a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>.${accountOn() ? ' <a href="/tietosuoja">Tietosuojaseloste</a>.' : ''}</p>
     </footer>`;
 
-  // S.history grouped by local day (day -> entries), rebuilt only when the history array or its length changes.
-  let dayMemo = null;
+  // S.history grouped by local day (day -> entries); rebuilt after a save, since the capped history can change at a fixed length.
   function historyDays() {
-    if (dayMemo && dayMemo.h === S.history && dayMemo.n === S.history.length) return dayMemo.days;
-    const days = new Map();
-    for (const e of S.history) { const d = dayOf(e.at); if (!days.has(d)) days.set(d, []); days.get(d).push(e); }
-    dayMemo = { h: S.history, n: S.history.length, days };
-    return days;
+    if (dayMemo) return dayMemo;
+    dayMemo = new Map();
+    for (const e of S.history) { const d = dayOf(e.at); if (!dayMemo.has(d)) dayMemo.set(d, []); dayMemo.get(d).push(e); }
+    return dayMemo;
   }
+  const partsOn = (days, d) => new Set((days.get(d) || []).map(e => e.k)).size;   // a corrected score counts once
   // julkinen-26: parts self-assessed today (a corrected score counts once) against a daily goal (1/3/5, S.ui.goal), and the
   // streak of days with at least one, both from S.history (no new data, so sync and backup are unchanged).
   function goalCard() {
-    const days = historyDays(), goal = S.ui.goal || 3, done = new Set((days.get(today()) || []).map(e => e.k)).size;
+    const days = historyDays(), goal = S.ui.goal || 3, done = partsOn(days, today());
     let streak = 0;
     for (let i = done ? 0 : 1; days.has(addDays(-i)); i++) streak++;
     const pct = Math.min(1, done / goal) * 100;
@@ -1116,6 +1120,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       <p class="muted small">Todennäköinen aihe × heikko oma osaaminen, kuten <a href="${TUTKA}#${encodeURIComponent(s.id)}">YO-tutkassa</a>.</p></section>`;
   }
 
+  let listState = null;   // the task list's filters of the last drawn subject (memory only)
   function home(prefer) {
     const a = subj(prefer) ? prefer : (subj(S.ui.subject) ? S.ui.subject : DATA[0].id);
     S.ui.subject = a; persist();
@@ -1192,11 +1197,13 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     $$('[data-subj]', app).forEach(b => b.onclick = () => { location.hash = '#/' + b.dataset.subj; });
     bindGoal();
     // julkinen-27: search, topic and state filters only hide rows (sessions with hits open while filtering), so Ctrl+F still works.
+    // They survive a redraw of the same subject (a background sync, coming back from a task) via listState.
     let tf = 'all', qTimer = 0;
     const rowEls = $$('details.sess .trow', app), sessEls = $$('details.sess', app);
     const STATE = { all: () => true, new: x => !x.st, weak: x => x.st === 'bad', rev: x => x.rev };
     const filterRows = () => {
       const q = $('#tq', app).value.trim().toLowerCase(), topic = $('#ttopic', app).value, on = !!(q || topic || tf !== 'all');
+      listState = { a, q: $('#tq', app).value, topic, tf };
       rowEls.forEach((row, i) => {
         const x = rowInfo[i];
         if (q && x.text == null) x.text = [x.t.title, x.t.summary, ...(x.t.topics || []).map(id => topicName(s, id))].join(' ').toLowerCase();
@@ -1212,7 +1219,13 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     };
     $('#tq', app).addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(filterRows, 120); });
     $('#ttopic', app).addEventListener('change', filterRows);
-    $$('[data-tf]', app).forEach(b => b.onclick = () => { tf = b.dataset.tf; $$('[data-tf]', app).forEach(x => x.setAttribute('aria-pressed', String(x === b))); filterRows(); });
+    const setTf = id => { tf = id; $$('[data-tf]', app).forEach(x => x.setAttribute('aria-pressed', String(x.dataset.tf === id))); };
+    $$('[data-tf]', app).forEach(b => b.onclick = () => { setTf(b.dataset.tf); filterRows(); });
+    if (listState && listState.a === a && (listState.q || listState.topic || listState.tf !== 'all')) {
+      $('#tq', app).value = listState.q;
+      if (topicCounts.has(listState.topic)) $('#ttopic', app).value = listState.topic;
+      setTf(listState.tf); filterRows();
+    }
     $('#simGo', app).onclick = () => { location.hash = `#/koe/${encodeURIComponent(a)}/${encodeURIComponent($('#simSel', app).value)}`; };
     $('#pikaGo', app).onclick = () => startPika(a, $('#pikaTopic', app).value, $('#pikaFresh', app).checked);
   }
@@ -1239,7 +1252,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       <div class="uhead">${u.id ? `<b>${esc(u.id)}</b>` : ''}<span class="chip">${esc(u.points)} p</span>${checkChip}${scoreChip(S.scores[key], 'data-score title="oma arvio"')}</div>
       ${u.prompt ? `<div class="md">${md(u.prompt)}</div>` : ''}
       <div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
-      <div class="afoot"><span class="count"></span><span class="saved" aria-live="polite"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
+      <div class="afoot"><span class="count"></span><span class="saved"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
       ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u.points)}</div></div>` : ''}
     </section>`;
   }
@@ -1309,7 +1322,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const list = session.tasks, i = list.indexOf(task), prev = list[i - 1], next = list[i + 1];
     const part = task.part ? task.part + '-osa' : task.exam || '';
     const pika = S.ui.pika && S.ui.pika.a === a && (task.topics || []).includes(S.ui.pika.topic) ? S.ui.pika : null;
-    const ri = roundIndex(a, k, n);
+    const ri = roundIndex(a, k, n, unitId);
     setView(masthead(`<a href="#/${esc(a)}">${esc(s.name.split(',')[0])}</a>`, title) + `
       <section class="taskhead">
         <div class="row"><span class="chip ${k.slice(-1)}">${esc(shortLabel(k))}</span><span class="eyebrow">${esc(s.name)} · ${esc(session.label)}${part ? ' · ' + esc(part) : ''} · ${esc(task.points)} p${task.optional ? ' · valinnainen' : ''}</span></div>
@@ -1399,7 +1412,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     };
     const tot = totals(), idx = scoreIndex();
     // A group of a two-exam subject (äidinkieli) has no own boundary: its grade comes from both exams together.
-    const gradeHtml = x => { const gr = gradeFor(a, k, x.total);
+    const gradeHtml = x => { const gr = !g && gradeFor(a, k, x.total);
       return gr ? `<span class="grade">≈ ${gr.grade}</span> <span class="muted">${gr.next ? `${gr.next.letter}-rajaan ${gr.next.gap} p · ` : ''}arvio kerran ${esc(session.label.toLowerCase())} pisterajoista ja omista arvioistasi</span>`
         : `<span class="muted small">${g ? 'Arvosana lasketaan kummankin kokeen yhteispisteistä, joten arviota ei näytetä.' : 'Tämän kerran pisterajoja ei ole vielä taulukossa, joten arvosana-arviota ei näytetä.'}</span>`; };
     if (done) { sim.result = tot; persist(); }   // shown in the progress view
@@ -1521,8 +1534,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     for (let i = 0; i <= back; i++) {
       const ms = addDays(i - back), w = Math.floor(i / 7), d = i % 7, month = new Date(ms).getMonth();
       if (d === 0 && month !== lastMonth) { lastMonth = month; svg += `<text x="${L + w * (C + G)}" y="10">${MONTHS[month]}</text>`; }
-      const c = (days.get(ms) || []).length, cls = c === 0 ? 0 : c < 3 ? 1 : c < 6 ? 2 : c < 10 ? 3 : 4;
-      svg += `<rect class="c${cls}" x="${L + w * (C + G)}" y="${T + d * (C + G)}" width="${C}" height="${C}" data-day="${ms}" tabindex="0" role="button"><title>${fmtDay(ms)}: ${c} arviota</title></rect>`;
+      const c = partsOn(days, ms), cls = c === 0 ? 0 : c < 3 ? 1 : c < 6 ? 2 : c < 10 ? 3 : 4;
+      svg += `<rect class="c${cls}" x="${L + w * (C + G)}" y="${T + d * (C + G)}" width="${C}" height="${C}" data-day="${ms}" tabindex="0" role="button"><title>${fmtDay(ms)}: ${c} ${c === 1 ? 'kohta' : 'kohtaa'}</title></rect>`;
     }
     return `<section class="card cal" aria-labelledby="cal-h"><h2 id="cal-h">Harjoituskalenteri</h2>
       <svg viewBox="0 0 ${L + WEEKS * (C + G)} ${T + 7 * (C + G)}" role="group" aria-label="Arvioidut kohdat päivittäin ${WEEKS} viikon ajalta">${svg}</svg>
@@ -1628,6 +1641,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const tpl = document.createElement('template'); tpl.innerHTML = v.html;
     const html = clean(tpl.content).innerHTML;
     await idb.set(k, { html, at });
+    acct.synced.set(k, at);
     const root = $$('.answer', app).find(r => r.dataset.key === k);
     if (root && !root.contains(document.activeElement)) setAnswer(root, html);
     return true;
@@ -1653,7 +1667,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   const AUTH_KEY = 'yo-practice-auth';   // where supabase-js keeps the session (localStorage)
   const ANSWER_MAX = 1e6;               // bytes per synced answer; same limit as practice_answers_size in schema.sql
   const PW_MIN = 10;
-  const acct = { client: null, user: null, status: 'off', last: 0, skipped: new Set(), recovery: false, verifying: false };
+  const acct = { client: null, user: null, status: 'off', last: 0, skipped: new Set(), synced: new Map(), recovery: false, verifying: false };   // synced: key -> at on the server
   // An email link opened in a browser that did not ask for it (S.ui.pendingEmail) could be someone else's link
   // (login CSRF). Sync stays on hold until the user confirms the account shown (S.ui.holdUser = that user id).
   const held = () => !!(acct.user && S.ui.holdUser === acct.user.id);
@@ -1687,7 +1701,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
           acct.user = session ? session.user : null;
           if (event === 'PASSWORD_RECOVERY') acct.recovery = true;
           // supabase-js must not be awaited inside this callback, so the sync starts on the next tick
-          if (acct.user && acct.user.id !== before) { lastPushed = ''; acct.skipped.clear(); if (!acct.verifying) setTimeout(syncAll, 0); }
+          if (acct.user && acct.user.id !== before) { lastPushed = ''; acct.skipped.clear(); acct.synced.clear(); if (!acct.verifying) setTimeout(syncAll, 0); }
           if (!acct.user) { acct.status = 'off'; acct.last = 0; if (S.ui.holdUser) { delete S.ui.holdUser; persistLocal(); } }
           paintAcct();
         });
@@ -1722,7 +1736,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const { error } = await acct.client.from('practice_answers').upsert({ user_id: acct.user.id, key: k, html: v.html, at: v.at });
     if (error && /quota/i.test(error.message || '')) { acct.skipped.add(k); return; }
     if (error) throw error;
-    acct.skipped.delete(k);
+    acct.skipped.delete(k); acct.synced.set(k, v.at);
   }
   const failStatus = () => setStatus(navigator.onLine === false ? 'offline' : 'err');
   let syncing = null;
@@ -1744,7 +1758,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
           if (e2) throw e2;
           for (const r of data) if (await mergeAnswer(r.key, r)) got++;
         }
-        for (const [k, v] of local) if (!remote.has(k) || remote.get(k) < (num(v.at) || 0)) await pushAnswer(k);
+        for (const [k, v] of local) if (!remote.has(k) || remote.get(k) < (num(v.at) || 0)) await pushAnswer(k); else acct.synced.set(k, remote.get(k));
         await pushState();
         setStatus('ok');
         // new data from another device: redraw list-like views (task and exam views keep their editors)
@@ -1954,7 +1968,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const p = hashParts();
     // What the YO bar shows: the current page and the subject its links carry.
     const root = document.documentElement;
-    root.dataset.yoPage = /^(kertaus|edistyminen|tili)$/.test(p[0] || '') ? p[0] : p[0] === 't' && roundIndex(p[1], p[2], p[3]) >= 0 ? 'kertaus' : 'harjoittele';
+    root.dataset.yoPage = /^(kertaus|edistyminen|tili)$/.test(p[0] || '') ? p[0] : p[0] === 't' && roundIndex(p[1], p[2], p[3], p[4]) >= 0 ? 'kertaus' : 'harjoittele';
     root.dataset.yoSubject = /^(t|koe|pika)$/.test(p[0] || '') && subj(p[1]) ? p[1] : subj(p[0]) ? p[0] : S.ui.subject || '';
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);

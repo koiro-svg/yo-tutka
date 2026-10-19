@@ -189,6 +189,9 @@ def check_grades(tutka):
             b = [int(x) for x in re.findall(r"-?\d+", nums)]
             if a not in tutka or k not in tutka[a]:
                 errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: ainetta tai kertaa ei ole YO-tutkan datassa")
+            practice = ROOT / "data" / "practice" / a / f"{k}.json"
+            if practice.exists() and any(sec.get("group") for sec in (json.loads(practice.read_text(encoding="utf-8")).get("exam") or {}).get("sections") or []):
+                errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: kahden kokeen aineelle ei anneta arviota yhden kokeen pisteistä")
             if len(b) != 6 or any(x < 0 for x in b) or any(x <= y for x, y in zip(b, b[1:])):
                 errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: pitää olla kuusi laskevaa lukua (L, E, M, C, B, A), oli {b}")
     return errors
