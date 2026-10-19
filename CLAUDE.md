@@ -68,8 +68,11 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   YTL:n alustava aikataulu, **päivitä joka kausi**; `validate_practice.py` tarkistaa avaimet ja varoittaa, kun kaikki päivät ovat
   menneet), tulostettava kertauslista (`#printlist`, `@media print`). Eyebrow lasketaan datasta. Paneelin runko piirretään kerran
   aineen/painotuksen vaihtuessa (`renderAll`); aihe, lajittelu ja "Näytä kaikki" piirtävät vain aiheet, tutkan ja kartan
-  (`paintTopics`), haku vain kerrat (`paintSessions`), joten hakukenttä ei koskaan tuhoudu. Suljetun kerran tehtävät rakennetaan
-  vasta avattaessa, ja vain käyttäjän oma avaus/sulkeminen muistetaan (`state.open`, summaryn klikkaus). `stats()` laskee yhdellä
+  (`paintTopics`), haku ja aihe vain piilottavat tehtäviä ja päivittävät laskurit (`filterSessions`), joten hakukenttä ei koskaan
+  tuhoudu. Kerrat rakennetaan kokonaan kerran aineen vaihtuessa, jotta selaimen oma haku (Ctrl+F) löytää kaikki tehtävät (katselmointi
+  19.10.: laiskasti rakennetut rungot piilottivat ne). Vain käyttäjän oma avaus/sulkeminen muistetaan (`state.open`, summaryn klikkaus).
+  Toisen välilehden pistemuutos piirtää vain pisteistä riippuvat osat ja vain, jos aineen pisteet muuttuivat (`rescore`). Kertauslistan
+  tulostustyyli on voimassa vain napin kautta (`html.print-list`); Ctrl+P tulostaa sivun. `stats()` laskee yhdellä
   kierroksella molemmat todennäköisyydet (trendi = ero) ja on välimuistissa (aine | painotus | vain vahvistetut). DOM-järjestys on
   sama kaikilla leveyksillä ja puhelimelle sopiva (otsake → hallinnat → Harjoittele seuraavaksi → tutka → aiheet + kartta →
   kerrat → lähdetilanne); puhelimella 5 aihetta + "Näytä kaikki" ja ainevalikko.

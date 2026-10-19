@@ -242,9 +242,9 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
   .subj-sel select{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 10px;max-width:100%}
 }
 @media print{
-  html,body{background:#fff!important;color:#000;padding:0}
-  body>*:not(#printlist){display:none!important}
-  #printlist{display:block;color:#000;font:11pt var(--font-body)}
+  html.print-list,html.print-list body{background:#fff!important;color:#000;padding:0}
+  html.print-list body>*:not(#printlist){display:none!important}
+  html.print-list #printlist{display:block;color:#000;font:11pt var(--font-body)}
   #printlist h1{font-size:18pt;margin:0 0 4pt}
   #printlist table{width:100%;border-collapse:collapse;margin-top:10pt}
   #printlist th,#printlist td{border-bottom:1px solid #999;padding:5pt;text-align:left;color:#000}
@@ -269,7 +269,8 @@ h1{font-weight:800;letter-spacing:-.02em}
 @view-transition{navigation:auto}
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
 .yonav{view-transition-name:yonav;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;max-width:1240px;margin:0 auto 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.yonav .kt-tab{text-decoration:none;border-color:transparent}
+.yonav .kt-tab{text-decoration:none}
+.yonav .kt-tab:not(:hover):not([aria-current=page]){border-color:transparent}
 .yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding:6px 0;margin-right:auto}
 .yonav .home:hover{color:var(--accent)}
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
@@ -438,7 +439,8 @@ h1{font-weight:800;letter-spacing:-.02em}
   const heatClass = (c,max) => c===0?'h0': 'h'+Math.max(1,Math.min(5,Math.ceil(c/max*5)));
   function examText(s){
     const d = EXAMS[s.id]; if(!d) return '';
-    const days = Math.ceil((new Date(d+'T09:00')-Date.now())/864e5);
+    const today = new Date(); today.setHours(0,0,0,0);
+    const days = Math.round((new Date(d+'T00:00')-today)/864e5);   // calendar days (Math.round absorbs a DST hour)
     return days<0 ? '' : `Seuraava koe ${new Date(d+'T12:00').toLocaleDateString('fi-FI',{weekday:'short',day:'numeric',month:'numeric',year:'numeric'})} · ${days} pv`;
   }
   const examHtml = s => !EXAMS[s.id] ? '' : examText(s) ? `<span class="exam" title="YTL:n alustava koeaikataulu">${esc(examText(s))}</span>` : '<span class="exam warn">Seuraavan kokeen päivä päivittämättä</span>';
@@ -495,13 +497,10 @@ h1{font-weight:800;letter-spacing:-.02em}
       document.documentElement.dataset.yoSubject = s.id;   // the YO bar carries the subject
       const st = stats(s), ps = practiceScores(s);
       cur = {s, st, ps};
-      if(state.topic && !st.topics.some(t=>t.id===state.topic)) state.topic=null;
       const verified = s.sessions.filter(x=>x.verified && x.tasks && x.tasks.length).length;
       const missing = s.sessions.filter(x=>!x.tasks || !x.tasks.length);
       const unverified = s.sessions.filter(x=>x.tasks && x.tasks.length && !x.verified);
       const nuAny = ps.topics.size>0;
-      const next = st.ranked.map(t=>{ const mast=mastOf(ps,t.id); return {t, mast, m:ps.topics.get(t.id), prio:t.p*(1-(mast==null?0.5:mast))}; })
-        .sort((a,b)=>b.prio-a.prio).slice(0,5);
       // One DOM order for every width, the most useful first on a phone: next up, radar, topics, sessions, sources.
       $('#panel').innerHTML = `
         <div class="head">
@@ -529,7 +528,7 @@ h1{font-weight:800;letter-spacing:-.02em}
         </div>
         <section class="sec">
           <div class="sec-head"><h3>Harjoittele seuraavaksi</h3><span class="hint">${nuAny?'todennäköinen aihe × heikko oma osaaminen':location.protocol==='file:'?'todennäköisimmät aiheet':'todennäköisimmät aiheet · arvioi itsesi harjoittelussa, niin lista huomioi osaamisesi'}</span></div>
-          <ul class="next">${next.map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span><span class="go">${pracLinks(s, r.t.id, taskFor(r.t.id, ps.byTask, st))}</span></li>`).join('')}</ul>
+          <ul class="next" id="nextList"></ul>
         </section>
         <div id="radarBox"></div>
         <div class="grid2">
@@ -559,14 +558,24 @@ h1{font-weight:800;letter-spacing:-.02em}
             return `<span class="chip ${cls}" title="${esc(x.label)}: ${title}">${esc(shortLabel(x.id))}</span>`; }).join('')}</span>
           ${s.notes?`<span style="flex-basis:100%">${esc(s.notes)}</span>`:''}
         </div>`;
+      paintNext();
       paintTopics();
-      paintSessions();
+      $('#sessions').innerHTML = orderedSessions(s).slice().reverse().map(x=>sessionHtml(s,x)).join('');
+      filterSessions();
     });
+  }
+  // "Harjoittele seuraavaksi": probability x (1 - own mastery); untried topics count as 50 % mastery.
+  function paintNext(){
+    const {s, st, ps} = cur;
+    $('#nextList').innerHTML = st.ranked.map(t=>{ const mast=mastOf(ps,t.id); return {t, mast, m:ps.topics.get(t.id), prio:t.p*(1-(mast==null?0.5:mast))}; })
+      .sort((a,b)=>b.prio-a.prio).slice(0,5)
+      .map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span><span class="go">${pracLinks(s, r.t.id, taskFor(r.t.id, ps.byTask, st))}</span></li>`).join('');
   }
   // Topic table, radar, heat map and the topic chip (topic, sort and "Näytä kaikki").
   function paintTopics(){
     keepFocus(()=>{
       const {s, st, ps} = cur;
+      if(state.topic && !st.topics.some(t=>t.id===state.topic)) state.topic=null;
       const sorters = { name:(a,b)=>a.name.localeCompare(b.name,'fi'), total:(a,b)=>a.total-b.total, hits:(a,b)=>a.sessionsHit-b.sessionsHit, share:(a,b)=>a.share-b.share, p:(a,b)=>a.p-b.p||a.expected-b.expected, exp:(a,b)=>a.expected-b.expected };
       const topics = st.topics.slice().sort((a,b)=>state.sortDir*sorters[state.sort](a,b));
       const maxTotal = Math.max(1,...st.topics.map(t=>t.total));
@@ -593,44 +602,47 @@ h1{font-weight:800;letter-spacing:-.02em}
       $('#topicChip').innerHTML = state.topic ? `<button type="button" id="clearTopic" class="tag sel">Aihe: ${esc(topicName(s,state.topic))} ✕</button>` : '';
     });
   }
-  // Sessions and their tasks (topic and search). A closed session's tasks are built when it opens.
+  // Sessions and their tasks: built once per subject (find-in-page reaches every task); topic and search only hide tasks,
+  // update the counts and open the sessions with hits.
   const searchText = new WeakMap();
   const textOf = (s,t) => { if(!searchText.has(t)) searchText.set(t, [t.title,t.summary,...(t.topics||[]).map(id=>topicName(s,id)),typeName(s,t.type)].join(' ').toLowerCase()); return searchText.get(t); };
   const filtering = () => !!(state.topic || state.query.trim());
   const matches = (s,t) => { const q = state.query.trim().toLowerCase(); return (!state.topic || (t.topics||[]).includes(state.topic)) && (!q || textOf(s,t).includes(q)); };
-  function taskHtml(s, x, t){
-    return `<div class="task">
-      <div class="no">${esc(t.n)}${t.part?`<small>${esc(t.part)}-osa</small>`:''}${t.exam?`<small>${esc(t.exam)}</small>`:''}</div>
-      <div class="t">${esc(t.title)}${t.optional?' <span class="chip" style="background:var(--surface-2);color:var(--ink-3)">valinnainen</span>':''}</div>
-      <div class="pts">${t.points!=null?esc(t.points)+' p':''}</div>
-      ${t.summary?`<div class="sum">${esc(t.summary)}</div>`:''}
-      <div class="tags">${(t.topics||[]).map(id=>`<button type="button" class="tag ${state.topic===id?'sel':''}" data-topic="${esc(id)}">${esc(topicName(s,id))}</button>`).join('')}${t.type?`<span class="tag type">${esc(typeName(s,t.type))}</span>`:''}${t.format?`<span class="tag type">${esc(t.format)}</span>`:''}<a class="prac" href="${esc(practiceUrl(s.id,x.id,t.n))}">Harjoittele →</a></div>
-    </div>`;
+  function sessionHtml(s, x){
+    const has = x.tasks && x.tasks.length;
+    return `<details class="sess" id="sess-${esc(x.id)}" data-sess="${esc(x.id)}">
+      <summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}${x.verified?'<span class="chip ok">vahvistettu</span>':(has?'<span class="chip unv">ei vahvistettu</span>':'<span class="chip dim">puuttuu</span>')}<span class="meta"></span></summary>
+      <div class="sbody">
+        ${x.notes?`<div class="snote">${esc(x.notes)}</div>`:''}
+        ${(x.sources||[]).filter(u=>/^https?:\/\//i.test(u)).length?`<div class="srcs">Lähteet: ${x.sources.filter(u=>/^https?:\/\//i.test(u)).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/,'').slice(0,60))}</a>`).join('')}</div>`:''}
+        ${has ? x.tasks.map((t,i)=>`<div class="task" data-i="${i}">
+          <div class="no">${esc(t.n)}${t.part?`<small>${esc(t.part)}-osa</small>`:''}${t.exam?`<small>${esc(t.exam)}</small>`:''}</div>
+          <div class="t">${esc(t.title)}${t.optional?' <span class="chip" style="background:var(--surface-2);color:var(--ink-3)">valinnainen</span>':''}</div>
+          <div class="pts">${t.points!=null?esc(t.points)+' p':''}</div>
+          ${t.summary?`<div class="sum">${esc(t.summary)}</div>`:''}
+          <div class="tags">${(t.topics||[]).map(id=>`<button type="button" class="tag" data-topic="${esc(id)}">${esc(topicName(s,id))}</button>`).join('')}${t.type?`<span class="tag type">${esc(typeName(s,t.type))}</span>`:''}${t.format?`<span class="tag type">${esc(t.format)}</span>`:''}<a class="prac" href="${esc(practiceUrl(s.id,x.id,t.n))}">Harjoittele →</a></div>
+        </div>`).join('') + '<p class="empty" hidden>Ei suodatukseen osuvia tehtäviä.</p>' : '<p class="empty">Tehtävälistaa ei löytynyt lähteistä.</p>'}
+      </div>
+    </details>`;
   }
-  function bodyHtml(s, x){
-    const has = x.tasks && x.tasks.length, shown = has ? x.tasks.filter(t=>matches(s,t)) : [];
-    return `${x.notes?`<div class="snote">${esc(x.notes)}</div>`:''}
-      ${(x.sources||[]).filter(u=>/^https?:\/\//i.test(u)).length?`<div class="srcs">Lähteet: ${x.sources.filter(u=>/^https?:\/\//i.test(u)).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/,'').slice(0,60))}</a>`).join('')}</div>`:''}
-      ${has ? (shown.length ? shown.map(t=>taskHtml(s,x,t)).join('') : '<p class="empty">Ei suodatukseen osuvia tehtäviä.</p>') : '<p class="empty">Tehtävälistaa ei löytynyt lähteistä.</p>'}`;
-  }
-  function paintSessions(){
-    keepFocus(()=>{
-      const {s} = cur;
-      $('#sessHint').textContent = 'uusin ensin' + (filtering() ? ' · suodatettu' : '');
-      $('#sessions').innerHTML = orderedSessions(s).slice().reverse().map(x=>{
-        const has = x.tasks && x.tasks.length, shown = has ? x.tasks.filter(t=>matches(s,t)).length : 0;
-        const open = state.open.has(x.id) || filtering() && shown;
-        return `<details class="sess" id="sess-${esc(x.id)}" data-sess="${esc(x.id)}" ${open?'open':''}>
-          <summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}${x.verified?'<span class="chip ok">vahvistettu</span>':(has?'<span class="chip unv">ei vahvistettu</span>':'<span class="chip dim">puuttuu</span>')}<span class="meta">${has?`${shown}/${x.tasks.length} tehtävää`:'–'}${x.date?' · '+esc(x.date):''}</span></summary>
-          <div class="sbody">${open ? bodyHtml(s,x) : ''}</div>
-        </details>`; }).join('');
-    });
+  function filterSessions(){
+    const {s} = cur, on = filtering();
+    $('#sessHint').textContent = 'uusin ensin' + (on ? ' · suodatettu' : '');
+    for(const d of document.querySelectorAll('#sessions details.sess')){
+      const x = s.sessions.find(y=>y.id===d.dataset.sess), tasks = (x && x.tasks) || [];
+      let shown = 0;
+      d.querySelectorAll('.task').forEach(el=>{ const ok = matches(s, tasks[+el.dataset.i]); el.hidden = !ok; if(ok) shown++; });
+      const empty = d.querySelector('.task ~ .empty'); if(empty) empty.hidden = !!shown;
+      d.querySelector('.meta').textContent = (tasks.length ? `${shown}/${tasks.length} tehtävää` : '–') + (x && x.date ? ' · ' + x.date : '');
+      d.open = state.open.has(d.dataset.sess) || (on && shown > 0);
+    }
+    for(const b of document.querySelectorAll('#sessions .tag[data-topic]')) b.classList.toggle('sel', b.dataset.topic===state.topic);
   }
   // A rebuilt control gets focus back: found by tag, first class and data-* attributes (or its id), so a topic name
   // button never resolves to the radar wedge of the same topic.
   function keepFocus(fn){
     const a = document.activeElement, sel = a && a!==document.body ? (a.id ? '#'+CSS.escape(a.id)
-      : a.localName + (a.classList[0] ? '.'+CSS.escape(a.classList[0]) : '') + [...a.attributes].filter(x=>x.name.startsWith('data-')).map(x=>`[${x.name}="${CSS.escape(x.value)}"]`).join('')) : '';
+      : a.localName + (a.classList[0] ? '.'+CSS.escape(a.classList[0]) : '') + [...a.attributes].filter(x=>x.name.startsWith('data-') || x.name==='href').map(x=>`[${x.name}="${CSS.escape(x.value)}"]`).join('')) : '';
     fn();
     if(sel && !document.contains(a)){ const b = document.querySelector(sel); if(b) b.focus({preventScroll:true}); }
   }
@@ -641,6 +653,8 @@ h1{font-weight:800;letter-spacing:-.02em}
     $('#printlist').innerHTML = `<h1>Kertauslista: ${esc(s.name)}</h1><p>YO-tutka · ${new Date().toLocaleDateString('fi-FI')} · todennäköisyys ${state.weighting==='recent'?'tuoreimmat kerrat painotettuina':'kaikki kerrat tasan'}${examText(s)?' · '+esc(examText(s)):''}</p>
       <table><thead><tr><th></th><th>Aihe</th><th>Todennäköisyys</th><th>Oma osaaminen</th></tr></thead><tbody>${st.ranked.map(t=>{ const m=mastOf(ps,t.id); return `<tr><td class="box">☐</td><td>${esc(t.name)}</td><td>${fmtPct(t.p)} · ${pWord(t.p)}</td><td>${m==null?'–':fmtPct(m)}</td></tr>`; }).join('')}</tbody></table>
       <p class="small">koirosvg.com/yo-tutka#${esc(s.id)}</p>`;
+    document.documentElement.classList.add('print-list');
+    addEventListener('afterprint', () => document.documentElement.classList.remove('print-list'), {once:true});
     window.print();
   }
 
@@ -663,29 +677,35 @@ h1{font-weight:800;letter-spacing:-.02em}
   }
   const hashFor = () => '#' + encodeURIComponent(state.subject) + (state.topic ? '/' + encodeURIComponent(state.topic) : '');
   const syncUrl = (replace) => { if(location.hash !== hashFor()) history[replace ? 'replaceState' : 'pushState'](null, '', hashFor()); };
-  const go = (full) => { syncUrl(); if(full) renderAll(); else { paintTopics(); paintSessions(); } };
+  const go = (full) => { syncUrl(); if(full) renderAll(); else { paintTopics(); filterSessions(); } };
   function setTopic(id){ state.topic = (state.topic===id)? null : id; go(false); }
   function openCell(c){
     state.topic=c.dataset.topic; state.open.add(c.dataset.sess);
     go(false);
     const d=$('#sess-'+CSS.escape(c.dataset.sess)); if(d) d.scrollIntoView({behavior:'smooth',block:'start'});
   }
-  // Scores written by the practice page in another tab or before a bfcache return.
-  const rescore = () => { psCache.clear(); if(cur) renderAll(); };
+  // Scores written by the practice page in another tab or before a bfcache return: repaint only what depends on them
+  // (next up, radar, topic panel), never the search field, and only when this subject's scores changed.
+  const scoreSig = ps => JSON.stringify([...ps.byTask]);
+  function rescore(){
+    if(!cur) return;
+    const before = scoreSig(cur.ps);
+    psCache.clear();
+    cur.ps = practiceScores(cur.s);
+    if(scoreSig(cur.ps) !== before){ paintNext(); paintTopics(); }
+  }
 
   document.getElementById('practiceLink').href = PRACTICE;
   window.addEventListener('pageshow', e => { if (e.persisted) rescore(); });
   addEventListener('storage', e => { if (e.key === 'yo-practice') rescore(); });
-  addEventListener('popstate', () => { if(fromHash()) renderAll(); else { paintTopics(); paintSessions(); } });
+  addEventListener('popstate', () => { if(fromHash()) renderAll(); else { paintTopics(); filterSessions(); } });
   const panel = $('#panel');
   panel.addEventListener('change', e => {
     if(e.target.id==='weighting'){ state.weighting=e.target.value; persist(); renderAll(); }
     else if(e.target.id==='verifiedOnly'){ state.verifiedOnly=e.target.checked; persist(); renderAll(); }
   });
   let tmr;
-  panel.addEventListener('input', e => { if(e.target.id!=='query') return; clearTimeout(tmr); tmr=setTimeout(()=>{ state.query=e.target.value; paintSessions(); },180); });
-  // A session the user opens fills its body then; only the user's own opening and closing is remembered.
-  panel.addEventListener('toggle', e => { const d=e.target; if(d.matches && d.matches('details.sess') && d.open && !d.querySelector('.sbody').childElementCount) d.querySelector('.sbody').innerHTML = bodyHtml(cur.s, cur.s.sessions.find(x=>x.id===d.dataset.sess)); }, true);
+  panel.addEventListener('input', e => { if(e.target.id!=='query') return; clearTimeout(tmr); tmr=setTimeout(()=>{ state.query=e.target.value; filterSessions(); },180); });
   panel.addEventListener('click', e => {
     const t = e.target, sum = t.closest('details.sess > summary');
     if(sum){ const d = sum.parentElement; d.open ? state.open.delete(d.dataset.sess) : state.open.add(d.dataset.sess); return; }

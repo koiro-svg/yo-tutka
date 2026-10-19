@@ -256,7 +256,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 @view-transition{navigation:auto}
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
 .yonav{view-transition-name:yonav;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;max-width:1240px;margin:0 auto 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.yonav .kt-tab{text-decoration:none;border-color:transparent}
+.yonav .kt-tab{text-decoration:none}
+.yonav .kt-tab:not(:hover):not([aria-current=page]){border-color:transparent}
 .yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding:6px 0;margin-right:auto}
 .yonav .home:hover{color:var(--accent)}
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
@@ -504,7 +505,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
     const ratio = max ? p / max : 0, r = reviewOf(key);
     if (ratio < 0.7) S.review[key] = freshReview();
-    else if (r && r.due <= today()) {   // advance only a due review; re-scoring the same day must not skip intervals
+    else if (window.yoIsDue(r)) {   // advance only a due review; re-scoring the same day must not skip intervals
       const box = r.box + 1;
       if (box >= INTERVALS.length) dropReview(key);
       else S.review[key] = { box, due: addDays(INTERVALS[box]), at: Date.now() };
@@ -1455,6 +1456,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     if (error) throw error;
     const changed = data && data.state ? mergeState(data.state) : 0;
     persistLocal();
+    publishDue();   // reviews from another device may be due today
     return changed;
   }
   async function pushState() {
@@ -1704,7 +1706,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     // What the YO bar shows: the current page and the subject its links carry.
     const root = document.documentElement;
     root.dataset.yoPage = /^(kertaus|edistyminen|tili)$/.test(p[0] || '') ? p[0] : 'harjoittele';
-    root.dataset.yoSubject = /^(t|koe|pika)$/.test(p[0] || '') ? p[1] : subj(p[0]) ? p[0] : S.ui.subject || '';
+    root.dataset.yoSubject = /^(t|koe|pika)$/.test(p[0] || '') && subj(p[1]) ? p[1] : subj(p[0]) ? p[0] : S.ui.subject || '';
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
     if (p[0] === 'edistyminen') return progressView();
