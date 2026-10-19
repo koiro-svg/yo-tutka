@@ -16,11 +16,17 @@
     document.head.appendChild(b);
   }
 </script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
 <style>
   /* Stadium at night: floodlit dark, tartan-red track, lane-line white, LED-amber results board. */
   :root {
     color-scheme: dark;
     --night: #111317;
+    --night-hi: #1d2129;        /* top of the page/share-image gradient */
+    --board-bg: #070707;        /* LED results board panel */
+    --board-edge: #2a2418;
     --infield: #1a1d23;
     --infield-2: #22262e;
     --rail: #2c313b;
@@ -32,6 +38,9 @@
     --foot: #3987e5;            /* chart series 1 (validated vs --infield) */
     --hip: #d95926;             /* chart series 2 */
     --ok: #e9ecef;              /* white flag: valid */
+    --good: #3cc47c;            /* readiness zones: status only, always shown with a text label */
+    --mid: #e8b931;
+    --bad: #ef5b4c;
     --radius: 16px;
     --display: "Avenir Next Condensed", "AvenirNextCondensed-Bold", "Roboto Condensed", "Arial Narrow", "sans-serif-condensed", system-ui, sans-serif;
     --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
@@ -47,7 +56,7 @@
     padding-bottom: calc(28px + var(--tabbar) + var(--safe-b));
     -webkit-text-size-adjust: 100%;
     /* floodlight from above the stands */
-    background: radial-gradient(120% 60% at 50% -10%, #1d2129 0%, var(--night) 60%) fixed, var(--night);
+    background: radial-gradient(120% 60% at 50% -10%, var(--night-hi) 0%, var(--night) 60%) fixed, var(--night);
   }
   button, select, input { font: inherit; color: inherit; }
   button { cursor: pointer; }
@@ -169,7 +178,7 @@
   .big .s { margin-top: 8px; text-align: center; font: 600 13px var(--mono); color: var(--lane); text-shadow: 0 1px 8px #000; }
 
   /* the LED results board (signature) */
-  .board { display: inline-flex; align-items: flex-end; max-width: 100%; gap: 10px; background: #070707; border: 1px solid #2a2418; border-radius: 12px;
+  .board { display: inline-flex; align-items: flex-end; max-width: 100%; gap: 10px; background: var(--board-bg); border: 1px solid var(--board-edge); border-radius: 12px;
     padding: 12px 14px; box-shadow: 0 10px 40px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 178, 30, .05); }
   .board svg { display: block; height: var(--led-h, 48px); width: auto; max-width: 100%; }
   .board .unit { font-family: var(--display); font-weight: 800; font-stretch: condensed; color: var(--led); font-size: 20px; line-height: 1; padding-bottom: 2px;
@@ -212,7 +221,8 @@
   /* ---------- charts ---------- */
   .chart { position: relative; margin-top: 8px; }
   .chart svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
-  .chart .legend { display: flex; gap: 14px; font-size: 12px; color: var(--chalk); margin-bottom: 4px; }
+  .chart .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--chalk); margin-bottom: 4px; }
+  .chart .legend span { white-space: nowrap; }
   .chart .legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
   .chart .tip { position: absolute; pointer-events: none; background: #0b0c0e; border: 1px solid var(--rail); border-radius: 8px;
     padding: 5px 8px; font: 12px var(--mono); white-space: nowrap; transform: translate(-50%, -100%); }
@@ -262,10 +272,95 @@
   .toggle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; }
   .toggle input { width: 22px; height: 22px; accent-color: var(--tartan); }
 
-  .toast { position: fixed; left: 50%; bottom: calc(18px + var(--tabbar) + var(--safe-b)); transform: translateX(-50%); z-index: 50;
+  .toast { position: fixed; left: 50%; bottom: calc(18px + var(--tabbar) + var(--safe-b)); transform: translateX(-50%); z-index: 150;   /* above the remote display */
     background: var(--infield-2); border: 1px solid var(--rail); border-radius: 12px; padding: 10px 14px; max-width: calc(100vw - 32px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, .5); font-size: 14px; }
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .5); font-size: 14px; display: flex; align-items: center; gap: 14px; }
   .toast[hidden] { display: none; }
+  .toast button { border: 0; background: transparent; color: var(--led); font-weight: 800; padding: 6px 2px; }
+  .btn.armed { background: var(--tartan); color: #fff; border-color: var(--tartan); }
+
+  /* history rows: actions, notes and tags (erilliset-6) */
+  .hist .acts { display: flex; align-items: center; }
+  .hist .x { min-width: 40px; min-height: 44px; display: grid; place-items: center; padding: 0; }
+  .hist .x.pick { font: 800 13px var(--mono); border: 1px solid var(--rail); border-radius: 10px; min-height: 36px; margin-right: 4px; }
+  .hist .x.pick[aria-pressed="true"] { background: var(--lane); color: #111; border-color: var(--lane); }
+  .hist .note { font-size: 13px; color: var(--lane); margin-top: 4px; overflow-wrap: anywhere; }
+  .tag { display: inline-block; font: 600 11px var(--mono); padding: 1px 7px; border-radius: 999px; border: 1px solid var(--rail); color: var(--chalk); margin: 0 4px 2px 0; }
+  .note-edit { grid-column: 1 / -1; display: grid; gap: 8px; padding: 4px 0 2px; }
+  .note-edit input { width: 100%; background: var(--infield-2); border: 1px solid var(--rail); border-radius: 10px; padding: 9px 10px; color: var(--lane); }
+  .tagpick { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tagpick button { border: 1px solid var(--rail); background: transparent; color: var(--chalk); border-radius: 999px; padding: 6px 11px; font-size: 13px; }
+  .tagpick button[aria-pressed="true"] { background: var(--lane); color: #111; border-color: var(--lane); }
+
+  /* readiness (erilliset-7) */
+  .vire { margin: 4px 0 12px; }
+  .vire .vk { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+  .vire .vk b { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: 22px; font-variant-numeric: tabular-nums; }
+  .vire .vk span { font-weight: 700; font-size: 13px; }
+  .vire.go .vk span { color: var(--good); } .vire.mid .vk span { color: var(--mid); } .vire.low .vk span { color: var(--bad); }
+  .vbar { position: relative; height: 10px; border-radius: 99px; margin: 8px 0 6px; opacity: .9; }   /* zone colours inline, from VIRE */
+  .vbar i { position: absolute; top: -4px; width: 4px; height: 18px; margin-left: -2px; border-radius: 2px; background: var(--lane); box-shadow: 0 0 0 2px var(--infield); }
+  .vire .vs { font: 11.5px var(--mono); }
+
+  /* trend: ranges, goal (erilliset-3) */
+  .seg { display: inline-flex; gap: 2px; padding: 2px; background: var(--infield-2); border: 1px solid var(--rail); border-radius: 10px; flex-wrap: wrap; }
+  .seg button { border: 0; background: transparent; color: var(--chalk); border-radius: 8px; padding: 6px 10px; font-size: 13px; font-weight: 700; }
+  .seg button[aria-pressed="true"] { background: var(--lane); color: #111; }
+  .trend-head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .trend-head h2 { margin: 0; }
+  .goal-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; font-size: 13px; color: var(--chalk); }
+  .goal-row input { width: 92px; padding: 7px 8px; }
+  .goalbar { height: 5px; background: var(--infield-2); border-radius: 99px; overflow: hidden; margin: 6px 0 3px; }
+  .goalbar i { display: block; height: 100%; background: var(--led); }
+
+  /* series + rest countdown (erilliset-1) */
+  .series-tag { position: absolute; top: 58px; left: 16px; z-index: 2; background: rgba(10, 11, 13, .85); border: 1px solid var(--rail); border-radius: 12px; padding: 6px 11px; }
+  .series-tag .n { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: 30px; line-height: 1; color: var(--led); font-variant-numeric: tabular-nums; }
+  .series-tag .m { font: 11px var(--mono); color: var(--chalk); }
+  .rest { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; align-content: center; background: rgba(5, 6, 7, .6); pointer-events: none; text-align: center; }
+  .rest .c { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: clamp(72px, 24vw, 168px); line-height: 1; font-variant-numeric: tabular-nums; }
+  .rest .l { font: 700 13px var(--mono); color: var(--chalk); letter-spacing: .12em; text-transform: uppercase; }
+  label.field.inline { display: inline-grid; min-width: 120px; }
+
+  /* remote display for tripod use (erilliset-2). The stage goes full screen; --cam-r/--cam-b are the parts of it the
+     results panel takes (bottom 40 % in portrait, right 40 % in landscape), so every overlay stays on the camera area. */
+  .remote-panel, .remote-close { display: none; }
+  body.remote { overflow: hidden; }
+  body.remote #liveStage { --cam-r: 0%; --cam-b: 40%; position: fixed; inset: 0; z-index: 100; width: 100vw; height: 100dvh; max-height: none;
+    aspect-ratio: auto !important; margin: 0; border: 0; border-radius: 0; }
+  body.remote #liveStage video, body.remote #liveStage canvas, body.remote .rest, body.remote .stage-empty { inset: 0 var(--cam-r) var(--cam-b) 0; width: auto; height: auto; }
+  body.remote .pill, body.remote .tap-hint { left: calc((100% - var(--cam-r)) / 2); }
+  body.remote .tap-hint { bottom: calc(var(--cam-b) + 16px); }
+  body.remote .fps-tag { right: max(68px, calc(var(--cam-r) + 12px)); }
+  body.remote .remote-panel { position: absolute; left: 0; right: 0; bottom: 0; height: var(--cam-b); z-index: 2; display: grid; place-items: center; align-content: center; gap: 12px;
+    background: var(--board-bg); border-top: 1px solid var(--rail); padding: 12px 16px calc(12px + var(--safe-b)); text-align: center; }
+  body.remote .remote-panel .board { --led-h: min(15vh, 24vw); }
+  body.remote .remote-close { display: grid; place-items: center; position: absolute; top: calc(12px + env(safe-area-inset-top, 0px)); right: 12px; z-index: 5; width: 44px; height: 44px;
+    border-radius: 12px; border: 1px solid var(--rail); background: rgba(10, 11, 13, .85); color: var(--lane); font-size: 18px; }
+  body.remote .big, body.remote .stage::after { display: none !important; }
+  .rp-stats { font: 700 clamp(15px, 4.2vw, 24px)/1.4 var(--mono); color: var(--lane); }
+  .rp-stats .muted { font-weight: 600; }
+  @media (orientation: landscape) {
+    body.remote #liveStage { --cam-r: 40%; --cam-b: 0%; }
+    body.remote .remote-panel { top: 0; left: auto; width: var(--cam-r); height: 100%; border-top: 0; border-left: 1px solid var(--rail); }
+    body.remote .remote-panel .board { --led-h: min(20vh, 12vw); }
+  }
+
+  /* video: jump marks on the scrubber, replay, overlaid comparison (erilliset-4, -10) */
+  .marks { position: relative; height: 16px; margin: -6px 0 4px; }
+  .marks .mk { position: absolute; top: 0; width: 16px; height: 16px; margin-left: -8px; border: 0; padding: 0; background: transparent; }
+  .marks .mk::before { content: ""; position: absolute; left: 7px; top: 1px; width: 2px; height: 14px; border-radius: 1px; background: var(--tartan); }
+  .marks .mk.land::before { background: var(--led); }
+  .replay { margin-top: 10px; }
+  .swatch { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+  .ghost-cv { display: block; width: 100%; height: auto; background: #050607; border: 1px solid var(--rail); border-radius: 12px; margin: 8px 0 4px; }
+
+  /* comparison table */
+  .cmp { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .cmp th, .cmp td { text-align: left; padding: 7px 6px; border-top: 1px solid var(--rail); vertical-align: top; overflow-wrap: anywhere; }
+  .cmp th { color: var(--chalk); font-weight: 600; font-size: 12.5px; width: 28%; }
+  .cmp td.d { font-family: var(--mono); font-size: 13px; color: var(--chalk); }
+  .cmp thead th { border-top: 0; }
   .err { color: #ff8a70; }
   [hidden] { display: none !important; }
   @media (prefers-reduced-motion: reduce) {
@@ -315,6 +410,10 @@
       <div class="tap-hint" id="liveTap" hidden></div>
       <div class="fps-tag" id="liveFps" hidden></div>
       <div class="big" id="liveBig" hidden><div id="liveBoard"></div><div class="s"></div></div>
+      <div class="series-tag" id="seriesTag" hidden></div>
+      <div class="rest" id="restTag" hidden><div><div class="l">Palautus</div><div class="c" id="restCount"></div><div class="l" id="restNext"></div></div></div>
+      <div class="remote-panel" id="remotePanel"><div id="remoteBoard"></div><div class="rp-stats" id="remoteStats"></div></div>
+      <button class="remote-close" id="remoteClose" aria-label="Sulje kaukonäyttö">✕</button>
       <div class="stage-empty" id="liveEmpty">
         <div>
           <svg class="scene" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -334,12 +433,26 @@
     <div class="row" style="margin-bottom:12px">
       <button class="btn" id="stopCam" hidden>Pysäytä</button>
       <button class="btn" id="flipCam" hidden>Vaihda kamera</button>
+      <button class="btn" id="remoteBtn">Kaukonäyttö</button>
       <span class="muted small" id="liveInfo"></span>
+    </div>
+    <div class="card" id="seriesCard">
+      <h2>Sarja</h2>
+      <div class="row">
+        <label class="field inline">Hyppyjä
+          <select id="serN"><option>3</option><option>5</option><option>6</option><option>8</option><option>10</option></select></label>
+        <label class="field inline">Palautus
+          <select id="serRest"><option value="0">ei ajastinta</option><option value="30">30 s</option><option value="45">45 s</option><option value="60">60 s</option><option value="90">90 s</option><option value="120">2 min</option><option value="180">3 min</option></select></label>
+        <button class="btn primary" id="serStart">Aloita sarja</button>
+      </div>
+      <p class="muted small" id="serInfo">Iso laskuri kuvassa ja ääni laskee palautuksen – puhelimeen ei tarvitse koskea sarjan aikana.</p>
+      <div id="serSum"></div>
     </div>
     <div class="card calib" id="liveCalib" hidden></div>
     <div id="liveResult"></div>
     <div class="card" id="sessionCard" hidden>
       <h2>Tämä sessio</h2>
+      <div id="sessionVire"></div>
       <ul class="hist" id="sessionList"></ul>
     </div>
   </section>
@@ -385,6 +498,7 @@
       </div>
       <div class="card">
         <input type="range" id="vidScrub" min="0" max="1000" value="0" step="1" aria-label="Kelaa videota">
+        <div class="marks" id="vidMarks"></div>
         <div class="stepper">
           <button class="btn sm" data-step="-10">−10</button>
           <button class="btn sm" data-step="-1" aria-label="Edellinen ruutu">◀</button>
@@ -398,6 +512,11 @@
           <span class="muted small">Käsin: ensimmäinen ruutu ilmassa ja ensimmäinen ruutu maassa.</span>
         </div>
         <div id="manualOut"></div>
+        <div class="row replay" id="replayRow" hidden>
+          <span class="muted small" id="replayInfo"></span>
+          <div class="seg" id="replayRate" role="group" aria-label="Toistonopeus"><button type="button" data-rate="0.25" aria-pressed="false">0,25×</button><button type="button" data-rate="0.5" aria-pressed="true">0,5×</button><button type="button" data-rate="1" aria-pressed="false">1×</button></div>
+          <button class="btn sm" id="replayStop">Pysäytä</button>
+        </div>
       </div>
     </div>
     <div class="card calib" id="videoCalib" hidden></div>
@@ -408,13 +527,21 @@
   <section id="tab-history" hidden>
     <div class="summary" id="summary"></div>
     <div class="card" id="trendCard"></div>
+    <div class="card" id="cmpCard" hidden></div>
     <div class="card">
-      <h2 id="histTitle">Hypyt</h2>
+      <div class="trend-head"><h2 id="histTitle">Hypyt</h2><button class="btn sm" id="cmpBtn" aria-pressed="false">Vertaa kahta</button></div>
       <ul class="hist" id="histList"></ul>
     </div>
-    <div class="row">
-      <button class="btn" id="exportCsv">Vie CSV</button>
-      <button class="btn danger ghost" id="clearAll">Tyhjennä historia</button>
+    <div class="card">
+      <h2>Tiedot ja varmuuskopio</h2>
+      <p class="muted small" id="storeInfo"></p>
+      <div class="row">
+        <button class="btn" id="exportJson">Vie varmuuskopio</button>
+        <label class="btn" for="importJson">Tuo varmuuskopio</label>
+        <input type="file" id="importJson" accept="application/json,.json" hidden>
+        <button class="btn" id="exportCsv">Vie CSV</button>
+        <button class="btn danger ghost" id="clearAll">Tyhjennä historia</button>
+      </div>
     </div>
   </section>
 
@@ -462,8 +589,19 @@
         <li>Tulos mitataan ponnistuksen varpaista alastulon takimmaiseen kantapäähän, kuten tuomari mittaa. Loikat näytetään erikseen. Jos kaadut taaksepäin käsille, sitä ei huomata – tarkista alastuloruudusta.</li>
         <li>Tarkkuus kalibroituna noin ±4 cm (vauhditon pituus) – ±6 cm (viisiloikka).</li>
       </ul>
+      <h3>Sarja ja kaukonäyttö</h3>
+      <ul>
+        <li><b>Sarja:</b> valitse hyppyjen määrä ja palautus ja paina <i>Aloita sarja</i>. Kuvassa näkyy iso laskuri (esim. 3/5) ja sarjan paras, ääni laskee palautuksen ja sanoo <i>valmis</i>. Lopuksi näet parhaan, keskiarvon ja eron ennätykseen.</li>
+        <li><b>Kaukonäyttö</b> näyttää kamerakuvan ja viimeisen tuloksen niin isona, että sen lukee 3–6 m päästä. Tulos ei katoa ennen seuraavaa hyppyä.</li>
+        <li><b>Päivän vire</b> (pystyhypyt): kun tänään on vähintään kolme hyppyä, päivän parasta verrataan neljän viikon päiväparhaiden keskiarvoon. Vihreä ≥ 97 %, keltainen 93–97 %, punainen alle 93 % – selvästi tavallista heikompi tulos voi kertoa väsymyksestä.</li>
+      </ul>
+      <h3>Tulokset talteen</h3>
+      <ul>
+        <li><b>Vie varmuuskopio</b> (Historia) tallentaa kaikki tulokset JSON-tiedostoon. <i>Tuo varmuuskopio</i> yhdistää ne toisen laitteen tuloksiin ilman tuplia – esim. puhelimelta Macille.</li>
+        <li><b>Asenna</b> kotivalikkoon (Safari: Jaa → Lisää Koti-valikkoon), niin sovellus aukeaa koko ruudulle ja toimii myös ilman verkkoa, kun olet avannut sen kerran verkossa. Videoanalyysin tarkka malli tallentuu laitteelle, kun käytät videota kerran.</li>
+      </ul>
       <h3>Yksityisyys</h3>
-      <p>Kaikki laskenta tapahtuu omalla laitteellasi. Kuvaa tai videota ei lähetetä minnekään, ja historia tallentuu vain tämän selaimen muistiin.</p>
+      <p>Kaikki laskenta tapahtuu omalla laitteellasi. Kuvaa tai videota ei lähetetä minnekään, ja historia tallentuu vain tämän selaimen muistiin. Jakokuva syntyy laitteella, eikä mitään lähetetä ennen kuin itse jaat sen.</p>
     </div>
   </section>
 </main>
@@ -490,7 +628,7 @@
   </div>
 </dialog>
 
-<div class="toast" id="toast" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
 
 <script>
   // Module scripts and wasm don't load from file:// — say so instead of showing a dead page.
@@ -538,10 +676,10 @@ const kindOf = id => typeOf(id).group;
 /** A result's main value in cm, whatever was measured. */
 const valueCm = r => r[groupOf(r.kind || 'vert').key];
 /** A record's value as text in its group's unit: "38,2 cm", "312 cm", "2,48 m". */
-const fmtVal = (type, cm) => { const g = groupOf(kindOf(type)); return `${fmt(cm * g.scale, g.digits)} ${g.unit}`; };
+const fmtVal = (type, cm) => { const g = groupOf(kindOf(type)); return `${fmt(cm * g.scale, g.digits)}\u00a0${g.unit}`; };
 const flagText = (kind, f) => groupOf(kind).flags[f] || FLAG_TEXT[f] || f;
 const STORE_KEY = 'hyppymittari.v1';
-const DEFAULTS = { statureCm: null, liveModel: 'lite', camera: 'user', speech: true, beep: true, rimCm: 305 };
+const DEFAULTS = { statureCm: null, liveModel: 'lite', camera: 'user', speech: true, beep: true, rimCm: 305, seriesN: 5, seriesRest: 60 };
 
 function loadStore() {
   try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
@@ -554,6 +692,8 @@ const db = {
   // calibration points, normalised to the frame (0..1): cal[stage][kind] = {a, b, cm}
   cal: stored.cal && typeof stored.cal === 'object' ? stored.cal : {},
 };
+// goals: type → target in cm (erilliset-3); own object, never the shared DEFAULTS one
+db.settings.goals = db.settings.goals && typeof db.settings.goals === 'object' ? { ...db.settings.goals } : {};
 function save() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); }
   catch { toast('Tallennus epäonnistui – selaimen muisti ei ole käytettävissä.'); }
@@ -568,14 +708,31 @@ const css = name => getComputedStyle(document.documentElement).getPropertyValue(
 const C = {
   accent: css('--tartan'), led: css('--led'), foot: css('--foot'), hip: css('--hip'),
   line: css('--rail'), muted: css('--chalk'), text: css('--lane'), panel: css('--infield'), night: css('--night'),
+  nightHi: css('--night-hi'), boardBg: css('--board-bg'), boardEdge: css('--board-edge'),
 };
 const fmtWhen = at => new Date(at).toLocaleString('fi-FI', { dateStyle: 'short', timeStyle: 'short' });
 
 let toastTimer;
-function toast(msg, ms = 3500) {
+/** A short message; `action` = [label, fn] adds a button (e.g. Kumoa) that runs fn and closes it. */
+function toast(msg, ms = 3500, action = null) {
   const el = $('toast');
-  el.textContent = msg; el.hidden = false;
+  el.replaceChildren(document.createTextNode(msg));
+  if (action) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = action[0];
+    b.addEventListener('click', () => { clearTimeout(toastTimer); el.hidden = true; action[1](); });
+    el.appendChild(b);
+  }
+  el.hidden = false;
   clearTimeout(toastTimer); toastTimer = setTimeout(() => (el.hidden = true), ms);
+}
+/** Two-step confirm without a blocking dialog: the first click arms the button for 4 s, the second runs fn. */
+function arm(btn, armedText, fn) {
+  if (btn.classList.contains('armed')) {
+    clearTimeout(btn._armTimer); btn.classList.remove('armed'); btn.textContent = btn.dataset.label; fn(); return;
+  }
+  btn.dataset.label = btn.textContent; btn.textContent = armedText; btn.classList.add('armed');
+  btn._armTimer = setTimeout(() => { btn.classList.remove('armed'); btn.textContent = btn.dataset.label; }, 4000);
 }
 
 // ---------- audio feedback ----------
@@ -596,11 +753,14 @@ function beep(freq = 880, ms = 120) {
   g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.25, t + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, t + ms / 1000);
   o.start(t); o.stop(t + ms / 1000 + 0.02);
 }
-function speak(text) {
+/** Speaks `text`, cutting off whatever is being said — unless `queue`, which waits its turn (the series summary
+ *  after the last result). */
+function speak(text, queue = false) {
   if (!db.settings.speech || !('speechSynthesis' in window)) return;
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'fi-FI';
-  speechSynthesis.cancel(); speechSynthesis.speak(u);
+  if (!queue) speechSynthesis.cancel();
+  speechSynthesis.speak(u);
 }
 
 // ---------- MediaPipe ----------
@@ -651,15 +811,19 @@ const GLYPHS = {
   '–': ['000', '000', '000', '111', '000', '000', '000'],
 };
 /** A results board showing `value` in `unit`. Lit dots switch on column by column (CSS delay). */
-function ledBoard(value, { small = false, unit = 'cm', digits = 1 } = {}) {
-  const text = fmt(value, digits).replace('−', '–');
-  const cols = [];
+/** The board's text and its dot columns (null = the dark column between glyphs); shared by the SVG and the share image. */
+function boardCols(value, digits) {
+  const text = fmt(value, digits).replace('−', '–'), cols = [];
   for (const ch of text) {
     const g = GLYPHS[ch];
     if (!g) continue;
-    if (cols.length) cols.push(null);   // one dark column between glyphs
+    if (cols.length) cols.push(null);
     for (let c = 0; c < g[0].length; c++) cols.push(g.map(row => row[c] === '1'));
   }
+  return { text, cols };
+}
+function ledBoard(value, { small = false, unit = 'cm', digits = 1 } = {}) {
+  const { text, cols } = boardCols(value, digits);
   const p = 10, r = 3.9;
   let dim = '', lit = '';
   cols.forEach((col, x) => {
@@ -689,6 +853,15 @@ const PICTO = {
 // ---------- drawing ----------
 const LIMBS = [[11, 13], [13, 15], [12, 14], [14, 16], [23, 25], [25, 27], [24, 26], [26, 28],
   [27, 29], [29, 31], [31, 27], [28, 30], [30, 32], [32, 28]];
+/** Neck base, head centre and radius from canvas points `pt(i)` — one geometry for the live overlay and drawSkel. */
+function headOf(pt, minR) {
+  const s1 = pt(11), s2 = pt(12), h = pt(0);
+  return { nx: (s1[0] + s2[0]) / 2, ny: (s1[1] + s2[1]) / 2, hx: h[0], hy: h[1], r: Math.max(minR, Math.hypot(s1[0] - s2[0], s1[1] - s2[1]) * 0.28) };
+}
+function strokeHead(ctx, { nx, ny, hx, hy, r }) {
+  ctx.beginPath(); ctx.moveTo(nx, ny); ctx.lineTo(hx, hy + r); ctx.stroke();   // neck to the head's edge
+  ctx.beginPath(); ctx.arc(hx, hy, r, 0, Math.PI * 2); ctx.stroke();
+}
 /** Skeleton overlay. footY (the measured lowest foot point) draws the height bar while airborne. */
 function drawPose(ctx, lm, W, H, groundY = NaN, footY = NaN, tip = null) {
   ctx.clearRect(0, 0, W, H);
@@ -708,11 +881,7 @@ function drawPose(ctx, lm, W, H, groundY = NaN, footY = NaN, tip = null) {
   ctx.moveTo(X(11), Y(11)); ctx.lineTo(X(12), Y(12)); ctx.lineTo(X(24), Y(24)); ctx.lineTo(X(23), Y(23)); ctx.closePath();
   ctx.fillStyle = C.accent + '44'; ctx.fill();
   ctx.lineWidth = u * 1.6; ctx.strokeStyle = C.accent; ctx.stroke();
-  // neck + head
-  const sx = (X(11) + X(12)) / 2, sy = (Y(11) + Y(12)) / 2;
-  const headR = Math.max(u * 3, Math.hypot(X(11) - X(12), Y(11) - Y(12)) * 0.28);
-  ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(X(0), Y(0) + headR); ctx.stroke();
-  ctx.beginPath(); ctx.arc(X(0), Y(0), headR, 0, Math.PI * 2); ctx.stroke();
+  strokeHead(ctx, headOf(i => [X(i), Y(i)], u * 3));
   // limbs
   for (const [a, b] of LIMBS) {
     ctx.strokeStyle = `rgba(255,255,255,${0.9 * Math.min(V(a), V(b))})`;
@@ -831,39 +1000,62 @@ function jumpChart(result, { onPick } = {}) {
   return wrap;
 }
 
-/** One series over time (history trend) → no legend, title names it. */
+/** Results over calendar time (erilliset-3): each day's best clean result as a dot, a rolling mean of the last
+ *  5 training days as the line, flagged results hollow, the goal dashed. The record dot (bestOf) is LED amber. */
+let histRange = 90;   // days shown; 0 = everything
+const RANGES = [[30, '30 pv'], [90, '3 kk'], [365, 'vuosi'], [0, 'kaikki']];
 function trendChart(jumps, type) {
-  const W = chartWidth(), H = 200, m = { l: 40, r: 16, t: 16, b: 24 };
+  const W = chartWidth(), H = 210, m = { l: 44, r: 16, t: 16, b: 24 };
   const { scale: k, digits } = groupOf(kindOf(type));
-  const vals = jumps.map(j => j.cm * k);
+  const end = dayStart(Date.now()), since = histRange ? end - (histRange - 1) * DAY : -Infinity;
+  const byDay = new Map();
+  for (const j of jumps) {
+    const at = Date.parse(j.at);
+    if (at < since) continue;
+    const d = dayStart(at), e = byDay.get(d) || { d, best: null, n: 0, flagged: [] };
+    e.n++;
+    if (qualityFlags(j).length) e.flagged.push(j); else if (!e.best || j.cm > e.best.cm) e.best = j;
+    byDay.set(d, e);
+  }
+  const days = [...byDay.values()].sort((a, b) => a.d - b.d), clean = days.filter(e => e.best);
+  if (!days.length) return null;
+  const roll = clean.map((e, i) => { const w = clean.slice(Math.max(0, i - 4), i + 1); return w.reduce((s, x) => s + x.best.cm, 0) / w.length; });
+  const goal = db.settings.goals[type];
+  const vals = clean.map(e => e.best.cm * k).concat(days.flatMap(e => e.flagged.map(j => j.cm * k)), goal ? [goal * k] : []);
   const span = Math.max(...vals) - Math.min(...vals) || Math.max(...vals) * 0.1 || 1;
   const raw = span / 3, mag = 10 ** Math.floor(Math.log10(raw));
   const step = [1, 2, 5, 10].map(f => f * mag).find(x => x >= raw);
   const lo = Math.floor(Math.min(...vals) / step) * step - step, hi = Math.ceil(Math.max(...vals) / step) * step + step;
-  const n = jumps.length;
-  const x = i => m.l + (n === 1 ? 0.5 : i / (n - 1)) * (W - m.l - m.r);
+  const x0 = histRange ? since : days[0].d;
+  const x = d => m.l + (end === x0 ? 0.5 : (d - x0) / (end - x0)) * (W - m.l - m.r);
   const y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
-  const best = jumps.indexOf(bestOf(jumps));   // the record: best jump without quality flags (-1 = none)
-  const d = vals.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join('');
-  const date = j => new Date(j.at).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric' });
-  const wrap = chartShell(`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tulokset ajan mittaan">
+  const rec = bestOf(jumps), recDay = rec && clean.find(e => e.best.id === rec.id);   // highlighted when its day is shown
+  const date = d => new Date(d).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric' });
+  const line = roll.map((v, i) => `${i ? 'L' : 'M'}${x(clean[i].d).toFixed(1)},${y(v * k).toFixed(1)}`).join('');
+  const wrap = chartShell(`
+    <div class="legend"><span><i style="background:var(--foot);height:8px;width:8px;border-radius:50%"></i>päivän paras</span><span><i style="background:var(--foot)"></i>liukuva ka. (5 treenipv)</span>${days.some(e => e.flagged.length) ? '<span>○ huomautettu</span>' : ''}</div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(typeName(type))}: päivän parhaat tulokset ajan mittaan">
       ${yGrid(y, lo, hi, step, m, W)}
-      <path d="${d}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round"/>
-      ${vals.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === best ? 5 : 3}" fill="${i === best ? C.led : C.foot}" stroke="${C.panel}" stroke-width="2"/>`).join('')}
-      ${best >= 0 ? `<text x="${x(best)}" y="${y(vals[best]) - 10}" text-anchor="middle" fill="${C.text}" font-size="12" font-weight="700">${fmt(vals[best], digits)}</text>` : ''}
-      <text x="${m.l}" y="${H - 6}" fill="${C.muted}" font-size="11">${date(jumps[0])}</text>
-      <text x="${W - m.r}" y="${H - 6}" text-anchor="end" fill="${C.muted}" font-size="11">${date(jumps[n - 1])}</text>
+      ${goal ? `<line x1="${m.l}" x2="${W - m.r}" y1="${y(goal * k)}" y2="${y(goal * k)}" stroke="${C.text}" stroke-width="1.5" stroke-dasharray="6 5" opacity=".75"/>
+        <text x="${W - m.r}" y="${y(goal * k) - 6}" text-anchor="end" fill="${C.text}" font-size="11">tavoite ${fmt(goal * k, digits)}</text>` : ''}
+      ${clean.length > 1 ? `<path d="${line}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round" opacity=".85"/>` : ''}
+      ${days.flatMap(e => e.flagged.map(j => `<circle cx="${x(e.d)}" cy="${y(j.cm * k)}" r="3.5" fill="${C.panel}" stroke="${C.muted}" stroke-width="1.5"/>`)).join('')}
+      ${clean.map(e => `<circle cx="${x(e.d)}" cy="${y(e.best.cm * k)}" r="${e === recDay ? 6 : 4}" fill="${e === recDay ? C.led : C.foot}" stroke="${C.panel}" stroke-width="2"/>`).join('')}
+      ${recDay ? `<text x="${x(recDay.d)}" y="${y(recDay.best.cm * k) - 11}" text-anchor="middle" fill="${C.text}" font-size="12" font-weight="700">${fmt(recDay.best.cm * k, digits)}</text>` : ''}
+      <text x="${m.l}" y="${H - 6}" fill="${C.muted}" font-size="11">${date(x0)}</text>
+      <text x="${W - m.r}" y="${H - 6}" text-anchor="end" fill="${C.muted}" font-size="11">${date(end)}</text>
       <line class="hl" y1="${m.t}" y2="${H - m.b}" stroke="${C.text}" opacity=".4" visibility="hidden"/>
       <rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent"/>
     </svg>`);
   const svg = wrap.querySelector('svg'), tip = wrap.querySelector('.tip'), hl = wrap.querySelector('.hl');
   svg.addEventListener('pointermove', ev => {
     const { px, r } = pointerX(ev, svg, W);
-    const i = Math.max(0, Math.min(n - 1, Math.round((px - m.l) / (W - m.l - m.r) * (n - 1))));
-    hl.setAttribute('x1', x(i)); hl.setAttribute('x2', x(i)); hl.setAttribute('visibility', 'visible');
+    const e = days.reduce((a, b) => (Math.abs(x(b.d) - px) < Math.abs(x(a.d) - px) ? b : a));
+    const v = e.best ? e.best.cm : Math.max(...e.flagged.map(j => j.cm));
+    hl.setAttribute('x1', x(e.d)); hl.setAttribute('x2', x(e.d)); hl.setAttribute('visibility', 'visible');
     tip.hidden = false;
-    tip.style.left = `${x(i) / W * r.width}px`; tip.style.top = `${y(vals[i]) / H * r.height - 8}px`;
-    tip.textContent = `${fmtWhen(jumps[i].at)} · ${fmtVal(type, jumps[i].cm)}`;
+    tip.style.left = `${x(e.d) / W * r.width}px`; tip.style.top = `${y(v * k) / H * r.height - 8}px`;
+    tip.textContent = `${date(e.d)} · paras ${fmtVal(type, v)} · ${e.n} ${e.n === 1 ? 'tulos' : 'tulosta'}${e.flagged.length ? ` (${e.flagged.length} huom.)` : ''}`;
   });
   svg.addEventListener('pointerleave', () => { tip.hidden = true; hl.setAttribute('visibility', 'hidden'); });
   return wrap;
@@ -993,8 +1185,12 @@ function resultCardFor(r, { extra = '', onPick } = {}) {
 }
 /** "7 cm yli renkaan" / "12 cm renkaaseen" */
 const rimText = margin => `${fmt(Math.abs(margin), 0)} cm ${margin >= 0 ? 'yli renkaan' : 'renkaaseen'}`;
+/** A stored reach record's margin to the rim it was measured against (not the current setting). */
+const marginOf = rec => rec.cm - (+rec.rimCm || db.settings.rimCm);
+/** Bounds of a distance result in metres: "2,41 + 2,30 + 2,55". */
+const phasesText = phases => phases.map(p => fmt(+p * groupOf('dist').scale, groupOf('dist').digits)).join(' + ');
 const subLine = r => (r.kind === 'reach' ? rimText(r.marginCm)
-  : r.kind === 'dist' ? (r.phases.length > 1 ? r.phases.map(p => fmt(p / 100, 2)).join(' + ') + ' m' : `±${fmt(r.errCm, 0)} cm`)
+  : r.kind === 'dist' ? (r.phases.length > 1 ? phasesText(r.phases) + ' m' : `±${fmt(r.errCm, 0)} cm`)
     : `lentoaika ${Math.round(r.flightMs)} ms`);
 const speechFor = r => (r.kind === 'reach'
   ? `${Math.round(r.touchCm)} senttiä, ${Math.round(Math.abs(r.marginCm))} ${r.marginCm >= 0 ? 'yli renkaan' : 'renkaaseen'}`
@@ -1013,27 +1209,90 @@ function toRecord(r, src, type = db.type) {
   if (r.kind === 'reach') { rec.jumpCm = r1(r.jumpCm); rec.rimCm = r.targetCm; }
   return rec;
 }
-const jumpsOf = type => db.jumps.filter(j => j.type === type).sort((a, b) => a.at.localeCompare(b.at));
+const byAt = (a, b) => (a.at < b.at ? -1 : a.at > b.at ? 1 : 0);   // ISO timestamps sort as strings
+const jumpsOf = type => db.jumps.filter(j => j.type === type).sort(byAt);
 /** Quality flags only — "uncalibrated" just widens the ± and doesn't disqualify a result. */
 const qualityFlags = j => j.flags.filter(f => !INFO_FLAGS.has(f));
 const cleanOf = js => js.filter(j => !qualityFlags(j).length);
 /** A record is a jump without quality flags: flagged jumps never count as a personal best. */
 const bestOf = js => cleanOf(js).reduce((a, j) => (!a || j.cm > a.cm ? j : a), null);
-/** Save; returns true when this beats an existing record of the same type. */
+/** The record a result is compared against: the best clean result of its type other than itself. */
+const prevBest = rec => bestOf(jumpsOf(rec.type).filter(j => j.id !== rec.id));
+/** The one "new record" rule (speech, stage board, remote panel, share image): clean and above an existing record. */
+const isRecord = (rec, prev = prevBest(rec)) => !qualityFlags(rec).length && !!prev && rec.cm > prev.cm;
+/** Save — the single "result saved" point (live, video, manual); returns true for a new record. */
 function addJump(rec) {
-  const prev = bestOf(jumpsOf(rec.type));
+  const prev = prevBest(rec);
   db.jumps.push(rec); save();
-  return !qualityFlags(rec).length && !!prev && rec.cm > prev.cm;
+  askPersist();
+  if (rec.src === 'live') seriesAdd(rec);
+  return isRecord(rec, prev);
 }
-function deleteJump(id) {
-  db.jumps = db.jumps.filter(j => j.id !== id); save();
-  live.session = live.session.filter(j => j.id !== id);
+/** Remove the matching results from the history, the session and the series (erilliset-6); returns the undo. */
+function removeJumps(pred) {
+  const gone = db.jumps.filter(pred);
+  if (!gone.length) return null;
+  const inSession = live.session.filter(j => gone.includes(j)), inSeries = series.done.filter(j => gone.includes(j)), gen = series.gen;
+  db.jumps = db.jumps.filter(j => !gone.includes(j));
+  live.session = live.session.filter(j => !gone.includes(j));
+  series.done = series.done.filter(j => !gone.includes(j));
+  save();
+  return () => {
+    const back = gone.filter(j => !db.jumps.some(x => x.id === j.id));
+    db.jumps = db.jumps.concat(back).sort(byAt);
+    live.session = live.session.concat(inSession.filter(j => back.includes(j))).sort(byAt).reverse();
+    if (series.gen === gen) series.done = series.done.concat(inSeries.filter(j => back.includes(j))).sort(byAt);
+    save();
+  };
 }
-/** One delegated delete handler per list: `[data-del]` buttons delete, then `after` re-renders. */
-function onDelete(el, after) {
+/** Everything that shows saved results redraws from here (session, series, remote panel, visible history). */
+function jumpsChanged() {
+  renderSession();
+  paintSeries();
+  if (currentTab === 'history') renderHistory();
+}
+const TAGS = ['piikkarit', 'lenkkarit', 'sisähalli', 'ulkona', 'väsynyt', 'tuore'];
+function noteEditor(j) {
+  return `<div class="note-edit">
+    <input type="text" maxlength="140" value="${esc(j.note || '')}" placeholder="Muistiinpano: alusta, tuuli, tuntemukset…" aria-label="Muistiinpano">
+    <div class="tagpick">${TAGS.map(t => `<button type="button" data-tag="${t}" aria-pressed="${(j.tags || []).includes(t)}">${t}</button>`).join('')}</div>
+    <div class="row"><button type="button" class="btn sm primary" data-note-save="${esc(j.id)}">Tallenna</button><button type="button" class="btn sm ghost" data-note-cancel>Peru</button></div>
+  </div>`;
+}
+/** Delete with a Kumoa toast; `msg` names what went. */
+function removeWithUndo(pred, msg, ms = 6000) {
+  const undo = removeJumps(pred);
+  jumpsChanged();
+  if (undo) toast(msg, ms, ['Kumoa', () => { undo(); jumpsChanged(); }]);
+}
+/** Row actions of a jump list (one delegated handler per list): ✕ deletes with Kumoa, ✎ edits the note and tags,
+ *  ⤴ shares as an image, A/B picks for the comparison. `onDelete` runs after a delete (e.g. clears a result card). */
+const ROW_ACTIONS = {
+  del(t, j, onDelete) { removeWithUndo(x => x === j, 'Tulos poistettu.'); onDelete?.(); },
+  note(t, j) {
+    const li = t.closest('li'), open = li.querySelector('.note-edit');
+    if (open) open.remove();
+    else { li.insertAdjacentHTML('beforeend', noteEditor(j)); li.querySelector('.note-edit input').focus(); }
+  },
+  noteSave(t, j) {
+    const box = t.closest('.note-edit');
+    const note = box.querySelector('input').value.trim().slice(0, 140);
+    const tags = [...box.querySelectorAll('[data-tag][aria-pressed="true"]')].map(b => b.dataset.tag);
+    if (note) j.note = note; else delete j.note;
+    if (tags.length) j.tags = tags; else delete j.tags;
+    save(); jumpsChanged();
+  },
+  share(t, j) { shareImage(j); },
+  pick(t, j) { cmp = cmp.includes(j.id) ? cmp.filter(x => x !== j.id) : [...cmp, j.id].slice(-2); renderHistory(); },
+};
+function listActions(el, onDelete) {
   el.addEventListener('click', ev => {
-    const id = ev.target.closest('[data-del]')?.dataset.del;
-    if (id) { deleteJump(id); after(id); }
+    const t = ev.target.closest('button');
+    if (!t || !el.contains(t)) return;
+    if (t.dataset.tag) { t.setAttribute('aria-pressed', String(t.getAttribute('aria-pressed') !== 'true')); return; }
+    if ('noteCancel' in t.dataset) { t.closest('.note-edit').remove(); return; }
+    const act = Object.keys(ROW_ACTIONS).find(k => t.dataset[k]), j = act && db.jumps.find(x => x.id === t.dataset[act]);
+    if (j) ROW_ACTIONS[act](t, j, onDelete);
   });
 }
 
@@ -1041,7 +1300,8 @@ function onDelete(el, after) {
 let currentTab = 'live';
 function showTab(tab) {
   if (tab === currentTab) return;
-  if (currentTab === 'live') stopLive();
+  if (currentTab === 'live') { setRemote(false); stopLive(); }
+  if (currentTab === 'video') stopReplay(false);
   currentTab = tab;
   document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === tab)));
   for (const t of ['live', 'video', 'history', 'help']) $('tab-' + t).hidden = t !== tab;
@@ -1063,6 +1323,7 @@ function renderTypes() {
 }
 function setType(id) {
   if (id === db.type) return;
+  if (series.on) seriesEnd();
   db.type = id; save(); renderTypes();
   for (const st of ['live', 'video']) { calUi[st].pending = calUi[st].active = null; renderCalib(st); }
   $('manualRow').hidden = $('manualOut').hidden = kindOf(id) !== 'vert';
@@ -1222,7 +1483,7 @@ for (const stage of ['live', 'video']) {
 // ---------- LIVE ----------
 const cam = $('cam'), camOverlay = $('camOverlay'), camCtx = camOverlay.getContext('2d');
 // startSeq: bumped by stopLive, so a start still awaiting the model/camera knows it was cancelled.
-const live = { running: false, startSeq: 0, stream: null, lmk: null, det: null, timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity, wakeLock: null, bigTimer: null, session: [] };
+const live = { running: false, starting: false, startSeq: 0, stream: null, lmk: null, det: null, timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity, wakeLock: null, bigTimer: null, session: [] };
 // Camera setup advice for the empty viewfinder, per group.
 const EMPTY = {
   vert: ['Puhelin 2–3 metrin päähän', $('liveEmptyText').textContent],
@@ -1249,7 +1510,12 @@ function cameraError(e) {
   return 'Kameran käynnistys epäonnistui: ' + (e && e.message || e);
 }
 
+/** Resolves true once the camera runs, false when it failed or another start/stop cancelled it. */
 async function startLive() {
+  live.starting = true;
+  try { return await openCamera(); } finally { live.starting = false; }
+}
+async function openCamera() {
   const seq = ++live.startSeq;
   const cancelled = () => seq !== live.startSeq;
   unlockAudio();
@@ -1259,12 +1525,12 @@ async function startLive() {
     live.lmk = await getLandmarker('live', db.settings.liveModel);
   } catch (e) {
     console.error(e);
-    if (cancelled()) return;
+    if (cancelled()) return false;
     $('liveEmptyText').innerHTML = `<span class="err">Mallin lataus epäonnistui.</span> ${esc(e.message || e)}`;
     $('startCam').disabled = false;
-    return;
+    return false;
   }
-  if (cancelled()) return;
+  if (cancelled()) return false;
   let stream;
   try {
     if (!navigator.mediaDevices?.getUserMedia) throw null;
@@ -1273,12 +1539,12 @@ async function startLive() {
       video: { facingMode: db.settings.camera, width: { ideal: 1280 }, height: { ideal: 720 }, frameRate: { ideal: 60 } },
     });
   } catch (e) {
-    if (cancelled()) return;
+    if (cancelled()) return false;
     $('liveEmptyText').innerHTML = `<span class="err">${esc(cameraError(e))}</span>`;
     $('startCam').disabled = false;
-    return;
+    return false;
   }
-  if (cancelled()) { stream.getTracks().forEach(t => t.stop()); return; }
+  if (cancelled()) { stream.getTracks().forEach(t => t.stop()); return false; }
   live.stream = stream;
   cam.srcObject = stream;
   try { await cam.play(); } catch { /* autoplay attr covers it */ }
@@ -1287,7 +1553,7 @@ async function startLive() {
   }
   if (cancelled() || !cam.videoWidth) {
     if (!cancelled()) { stopLive(); $('liveEmptyText').innerHTML = '<span class="err">Kamerakuva ei käynnistynyt.</span> Yritä uudelleen.'; }
-    return;
+    return false;
   }
   sizeStage($('liveStage'), camOverlay, cam.videoWidth, cam.videoHeight);
   $('liveStage').classList.toggle('mirror', db.settings.camera === 'user');
@@ -1301,9 +1567,12 @@ async function startLive() {
   Object.assign(live, { running: true, det: newDetector(), timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity });
   requestWakeLock();
   scheduleLiveFrame();
+  return true;
 }
 
-function stopLive() {
+/** `endSeries` false: the camera restarts at once (flip, model change), so a running series carries on. */
+function stopLive(endSeries = true) {
+  if (endSeries && series.on) seriesEnd();
   live.startSeq++;          // cancels a start that is still awaiting the model or the camera
   live.running = false;
   $('startCam').disabled = false;
@@ -1407,44 +1676,209 @@ function onLiveEvent(ev) {
 function showLiveResult(r) {
   const saveable = isSaveable(r);
   const rec = toRecord(r, 'live');
-  const pr = saveable && addJump(rec);
-  if (saveable) live.session.unshift(rec);
+  // Spoken before the save: the save may end a series, whose summary is queued after this, not cut off by it.
+  const pr = saveable && isRecord(rec);
+  speak(speechFor(r) + (pr ? ', uusi ennätys' : ''));
+  if (saveable) { addJump(rec); live.session.unshift(rec); }
   const big = $('liveBig');
-  $('liveBoard').innerHTML = boardFor(r);
+  $('liveBoard').innerHTML = remoteOn() ? '' : boardFor(r);   // remote mode shows the panel instead
   big.querySelector('.s').textContent = (pr ? 'Uusi ennätys! · ' : '') + subLine(r) + (r.flags.length ? ' · tarkista huomautus' : '');
   big.hidden = false; big.style.opacity = 1;
   clearTimeout(live.bigTimer);
   live.bigTimer = setTimeout(() => { big.style.opacity = 0; setTimeout(() => (big.hidden = true), 400); }, 6000);
-  speak(speechFor(r) + (pr ? ', uusi ennätys' : ''));
-  $('liveResult').replaceChildren(resultCardFor(r, { extra: saveable ? `<button class="btn sm ghost" data-del="${rec.id}">Hylkää</button>` : '' }));
-  renderSession();
+  $('liveResult').replaceChildren(resultCardFor(r, { extra: saveable ? `<button class="btn sm" data-share="${rec.id}">Jaa</button><button class="btn sm ghost" data-del="${rec.id}">Hylkää</button>` : '' }));
+  jumpsChanged();
 }
-const showLiveJump = showLiveResult;   // name kept for the ?debug hook
-onDelete($('liveResult'), () => {
-  $('liveResult').replaceChildren();
-  renderSession();
-  toast('Hyppy poistettu historiasta.');
-});
 
-function jumpRow(j, { showType = false, best = false } = {}) {
+// ---------- series mode (erilliset-1): counter on the stage, spoken rest countdown, summary ----------
+// done: the series' saved results (kept after the end for the summary); ended: the summary is showing.
+// gen: bumped by every start, so an undo restores a result only into the series it was removed from.
+const series = { on: false, ended: false, type: null, done: [], restEnd: 0, timer: null, said: null, gen: 0 };
+const speakVal = (type, cm) => (kindOf(type) === 'dist' ? `${fmt(cm / 100, 2)} metriä` : `${Math.round(cm)} senttiä`);
+const fmtDiff = (type, d) => `${d >= 0 ? '+' : '−'}${fmtVal(type, Math.abs(d))}`;
+const mean = xs => xs.reduce((a, x) => a + x, 0) / xs.length;
+/** Best and mean of a series over its clean results (all of them while none is clean), and the record before it. */
+function seriesStats() {
+  const d = series.done, pool = cleanOf(d).length ? cleanOf(d) : d;
+  if (!pool.length) return null;
+  const before = bestOf(jumpsOf(series.type).filter(j => !d.includes(j)));
+  return { n: d.length, best: Math.max(...pool.map(j => j.cm)), avg: mean(pool.map(j => j.cm)), prev: before ? before.cm : null };
+}
+function seriesStart() {
+  unlockAudio();
+  Object.assign(series, { on: true, ended: false, type: db.type, done: [], restEnd: 0, said: null, gen: series.gen + 1 });
+  const gen = series.gen;
+  if (!live.running) startLive().then(ok => {
+    if (ok || !series.on || series.gen !== gen) return;
+    series.on = false;   // no camera, no series (the reason is already on the stage)
+    paintSeries();
+  });
+  const n = db.settings.seriesN;
+  speak(`Sarja alkaa: ${n} ${kindOf(db.type) === 'dist' ? 'suoritusta' : 'hyppyä'}.`);
+  paintSeries();
+}
+function seriesAdd(rec) {
+  if (!series.on || rec.type !== series.type) return;
+  series.done.push(rec);
+  if (series.done.length >= db.settings.seriesN) seriesEnd();
+  else if (db.settings.seriesRest > 0) startRest();
+}
+function startRest() {
+  clearInterval(series.timer);
+  series.restEnd = Date.now() + db.settings.seriesRest * 1000;
+  series.said = null;
+  series.timer = setInterval(tickRest, 250);
+  tickRest();
+}
+function tickRest() {
+  const left = Math.ceil((series.restEnd - Date.now()) / 1000);
+  if (left <= 0) {
+    clearInterval(series.timer); series.timer = null; series.restEnd = 0;
+    beep(1320, 220);
+    speak(`Valmis. ${kindOf(series.type) === 'dist' ? 'Suoritus' : 'Hyppy'} ${series.done.length + 1}.`);
+    paintSeries();
+    return;
+  }
+  if (series.said === left) return;   // the DOM changes once a second
+  series.said = left;
+  // the result was just spoken: the first call-out comes at 30 s (only when the rest is longer) or 10 s
+  if ((left === 30 && db.settings.seriesRest > 30) || left === 10) speak(`${left} sekuntia`);
+  else if (left <= 3) beep(660, 90);
+  $('restCount').textContent = `${Math.floor(left / 60)}:${String(left % 60).padStart(2, '0')}`;
+  $('restNext').textContent = `seuraava ${series.done.length + 1}/${db.settings.seriesN}`;
+  $('restTag').hidden = false;
+}
+function seriesEnd() {
+  clearInterval(series.timer); series.timer = null; series.restEnd = 0;
+  if (!series.on) return;
+  series.on = false;
+  const st = seriesStats();
+  series.ended = !!st;
+  if (st) speak(`Sarja valmis. Paras ${speakVal(series.type, st.best)}, keskiarvo ${speakVal(series.type, st.avg)}.`, true);
+  paintSeries();
+}
+function paintSeries() {
+  const on = series.on, N = db.settings.seriesN, type = series.type, st = seriesStats();
+  $('serStart').textContent = on ? 'Lopeta sarja' : 'Aloita sarja';
+  $('serStart').classList.toggle('primary', !on);
+  $('serN').disabled = $('serRest').disabled = on;
+  $('seriesTag').hidden = !on;
+  if (on) $('seriesTag').innerHTML = `<div class="n">${series.done.length}/${N}</div><div class="m">${st ? 'paras ' + esc(fmtVal(type, st.best)) : 'sarja käynnissä'}</div>`;
+  if (!series.restEnd) $('restTag').hidden = true;
+  $('serSum').innerHTML = on ? `<p class="muted small">${esc(typeName(type))}: ${series.done.length}/${N} tehty${db.settings.seriesRest ? ` · palautus ${db.settings.seriesRest} s` : ''}.</p>`
+    : series.ended && st ? `<div class="metrics">
+      <div class="metric"><div class="k">Sarja (${st.n})</div><div class="v">paras ${esc(fmtVal(type, st.best))}</div></div>
+      <div class="metric"><div class="k">Keskiarvo</div><div class="v">${esc(fmtVal(type, st.avg))}</div></div>
+      <div class="metric"><div class="k">${st.prev == null ? 'Ennätys' : st.best > st.prev ? 'Uusi ennätys' : 'Ero ennätykseen'}</div><div class="v">${st.prev == null ? 'ensimmäinen' : esc(fmtDiff(type, st.best - st.prev))}</div></div>
+    </div>` : '';
+  paintRemote(st);
+}
+$('serN').value = String(db.settings.seriesN);
+$('serRest').value = String(db.settings.seriesRest);
+$('serN').addEventListener('change', () => { db.settings.seriesN = +$('serN').value; save(); });
+$('serRest').addEventListener('change', () => { db.settings.seriesRest = +$('serRest').value; save(); });
+$('serStart').addEventListener('click', () => (series.on ? seriesEnd() : seriesStart()));
+
+// ---------- remote display (erilliset-2): the result readable from 3–6 m, until the next jump ----------
+const remoteOn = () => document.body.classList.contains('remote');
+function setRemote(on) {
+  if (on === remoteOn()) return;
+  document.body.classList.toggle('remote', on);
+  if (on) {
+    unlockAudio();
+    if (!live.running) startLive().then(() => paintRemote());
+    document.documentElement.requestFullscreen?.()
+      .then(() => { if (kindOf(db.type) !== 'vert') return screen.orientation?.lock?.('landscape'); })
+      .catch(() => { /* iPhone: no element fullscreen; the fixed layout still covers the screen */ });
+    paintRemote();
+  } else {
+    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+    try { screen.orientation?.unlock?.(); } catch { /* not locked */ }
+  }
+}
+const recBoard = rec => { const g = groupOf(kindOf(rec.type)); return ledBoard(rec.cm * g.scale, { unit: g.unit, digits: g.digits }); };
+function paintRemote(st = seriesStats()) {
+  if (!remoteOn()) return;
+  const last = live.session[0];
+  $('remoteBoard').innerHTML = last ? recBoard(last)
+    : `<p class="muted">${live.running ? 'Tulos näkyy tässä' : live.starting ? 'Käynnistetään kameraa…' : 'Kamera ei käynnistynyt – sulje näkymä ja katso syy.'}</p>`;
+  const lines = [];
+  if (st && (series.on || series.ended)) {
+    lines.push(`${series.on ? `Sarja ${st.n}/${db.settings.seriesN}` : 'Sarja valmis'} · paras ${fmtVal(series.type, st.best)} · ka. ${fmtVal(series.type, st.avg)}`);
+  } else if (series.on) lines.push(`Sarja 0/${db.settings.seriesN}`);
+  if (last) {
+    const pb = prevBest(last);
+    lines.push(pb ? `<span class="muted">ennätys ${fmtVal(last.type, pb.cm)} ·</span> ${isRecord(last, pb) ? 'uusi ennätys ' : ''}${fmtDiff(last.type, last.cm - pb.cm)}` : '<span class="muted">ensimmäinen tulos</span>');
+  }
+  $('remoteStats').innerHTML = lines.map(l => `<div>${l}</div>`).join('');
+}
+$('remoteBtn').addEventListener('click', () => setRemote(true));
+$('remoteClose').addEventListener('click', ev => { ev.stopPropagation(); setRemote(false); });
+document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && remoteOn()) setRemote(false); });
+document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && remoteOn()) setRemote(false); });
+const showLiveJump = showLiveResult;   // name kept for the ?debug hook
+listActions($('liveResult'), () => $('liveResult').replaceChildren());
+
+function jumpRow(j, { showType = false, best = false, share = false, pick = null } = {}) {   // pick: 'A' | 'B' | '' (unpicked) | null (off)
   const kind = kindOf(j.type);
   const warn = j.flags.length ? `<span class="badge w" title="${esc(j.flags.map(f => flagText(kind, f)).join(' '))}">huom.</span>` : '';
   const detail = kind === 'dist'
-    ? `${Array.isArray(j.phases) && j.phases.length > 1 ? j.phases.map(p => fmt(+p / 100, 2)).join(' + ') + ' m · ' : ''}±${fmt(j.err, 0)} cm`
+    ? `${Array.isArray(j.phases) && j.phases.length > 1 ? phasesText(j.phases) + ' m · ' : ''}±${fmt(j.err, 0)} cm`
     : kind === 'reach'
-      ? `${rimText(j.cm - (+j.rimCm || db.settings.rimCm))} · ±${fmt(j.err, 0)}${j.jumpCm != null ? ` · hyppy ${fmt(+j.jumpCm)} cm` : ''}`
+      ? `${rimText(marginOf(j))} · ±${fmt(j.err, 0)}${j.jumpCm != null ? ` · hyppy ${fmt(+j.jumpCm)} cm` : ''}`
       : `${fmt(+j.ms, 0)} ms · ±${fmt(j.err)} · ${fmt(+j.fps, 0)} fps${j.hipCm != null ? ` · lantio ${fmt(+j.hipCm)} cm` : ''}`;
+  const note = (j.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('') + (j.note ? esc(j.note) : '');
+  const id = esc(j.id);
   return `<li>
     <div><div><span class="h">${fmtVal(j.type, j.cm)}</span> ${best ? '<span class="badge pr">ennätys</span>' : ''} ${warn}</div>
-      <div class="d">${fmtWhen(j.at)}${showType ? ' · ' + esc(typeName(j.type)) : ''} · ${detail} · ${j.src === 'video' ? 'video' : 'kamera'}</div></div>
-    <button class="x" data-del="${esc(j.id)}" aria-label="Poista">✕</button>
+      <div class="d">${fmtWhen(j.at)}${showType ? ' · ' + esc(typeName(j.type)) : ''} · ${detail} · ${j.src === 'video' ? 'video' : 'kamera'}</div>
+      ${note ? `<div class="note">${note}</div>` : ''}</div>
+    <div class="acts">${pick != null ? `<button class="x pick" data-pick="${id}" aria-pressed="${!!pick}" aria-label="Valitse vertailuun">${pick || '○'}</button>` : ''}${share ? `<button class="x" data-share="${id}" aria-label="Jaa kuvana">⤴</button>` : ''}<button class="x" data-note="${id}" aria-label="Muistiinpano ja tunnisteet">✎</button><button class="x" data-del="${id}" aria-label="Poista">✕</button></div>
   </li>`;
 }
 function renderSession() {
   $('sessionCard').hidden = !live.session.length;
+  $('sessionVire').innerHTML = live.session.length ? vireHtml(db.type) : '';
   $('sessionList').innerHTML = live.session.map(j => jumpRow(j, { showType: true })).join('');
 }
-onDelete($('sessionList'), renderSession);
+listActions($('sessionList'));
+
+// ---------- readiness (erilliset-7): today's best vs the last 4 weeks ----------
+const DAY = 864e5;
+const dayStart = t => { const d = new Date(t); d.setHours(0, 0, 0, 0); return d.getTime(); };
+// Zones (% of the 4-week level), the bar's span and the minimum data — the help text repeats go/mid.
+const VIRE = { go: 97, mid: 93, lo: 85, hi: 110, minToday: 3, minDays: 3, days: 28 };
+/** Today's best clean jump of a vertical type as % of the mean daily best of the previous VIRE.days days.
+ *  null for other groups; {wait} until there is enough data. One pass, no sort (it runs after every result). */
+function readiness(type) {
+  if (kindOf(type) !== 'vert') return null;
+  const t0 = dayStart(Date.now()), todayIso = new Date(t0).toISOString(), fromIso = new Date(t0 - VIRE.days * DAY).toISOString();
+  const today = [], best = new Map();
+  for (const j of db.jumps) {
+    if (j.type !== type || j.at < fromIso || qualityFlags(j).length) continue;
+    if (j.at >= todayIso) { today.push(j.cm); continue; }
+    const d = dayStart(Date.parse(j.at));
+    best.set(d, Math.max(best.get(d) || 0, j.cm));
+  }
+  if (today.length < VIRE.minToday) return { wait: `Päivän vire näkyy, kun tänään on vähintään ${VIRE.minToday} hyppyä (nyt ${today.length}).` };
+  if (best.size < VIRE.minDays) return { wait: `Päivän vire näkyy, kun neljän viikon sisällä on vähintään ${VIRE.minDays} aiempaa treenipäivää.` };
+  const base = mean([...best.values()]), pct = Math.max(...today) / base * 100;
+  return { pct, base, days: best.size, zone: pct >= VIRE.go ? 'go' : pct >= VIRE.mid ? 'mid' : 'low' };
+}
+const ZONE_TEXT = { go: 'Hyvä vire', mid: 'Tavallista heikompi', low: 'Selvästi heikompi – kevennä?' };
+const virePos = pct => Math.max(0, Math.min(100, (pct - VIRE.lo) / (VIRE.hi - VIRE.lo) * 100));
+function vireHtml(type) {
+  const v = readiness(type);
+  if (!v) return '';
+  if (v.wait) return `<p class="muted small">${esc(v.wait)}</p>`;
+  const a = virePos(VIRE.mid).toFixed(0), b = virePos(VIRE.go).toFixed(0);
+  return `<div class="vire ${v.zone}">
+    <div class="vk"><b>Päivän vire ${fmt(v.pct, 0)}\u00a0%</b><span>${ZONE_TEXT[v.zone]}</span></div>
+    <div class="vbar" role="img" aria-label="${fmt(v.pct, 0)} % neljän viikon tasosta: ${ZONE_TEXT[v.zone]}"
+      style="background:linear-gradient(90deg, var(--bad) 0 ${a}%, var(--mid) ${a}% ${b}%, var(--good) ${b}% 100%)"><i style="left:${virePos(v.pct).toFixed(1)}%"></i></div>
+    <div class="vs muted">${esc(typeName(type))}: päivän paras vs. 4 viikon päiväparhaiden ka. ${fmtVal(type, v.base)} (${v.days} pv)</div>
+  </div>`;
+}
 
 $('startCam').addEventListener('click', startLive);
 $('stopCam').addEventListener('click', stopLive);
@@ -1452,7 +1886,7 @@ $('flipCam').addEventListener('click', async () => {
   db.settings.camera = db.settings.camera === 'user' ? 'environment' : 'user';
   db.cal.live = {};   // the other camera sees a different picture: old points would be silently wrong
   save();
-  stopLive(); await startLive();
+  stopLive(false); await startLive();
 });
 
 // ---------- VIDEO ----------
@@ -1460,7 +1894,8 @@ const vid = $('vid'), vidOverlay = $('vidOverlay'), vidCtx = vidOverlay.getConte
 const work = document.createElement('canvas'), workCtx = work.getContext('2d');
 // fpsEst: auto-detected frame rate of the loaded file (undefined = not tried yet, null = failed).
 // anaFps / anaType: frame rate the cached `frames` are indexed with, jump type the results used.
-const vs = { url: null, fpsEst: undefined, anaFps: 30, anaType: null, busy: false, token: null, frames: null, curMt: 0, manual: { t0: null, t1: null }, jumps: [] };
+// stride: the coarse pass's frame step (nearestFrame's search radius); saved: result index → its stored record.
+const vs = { url: null, fpsEst: undefined, anaFps: 30, anaType: null, busy: false, token: null, frames: null, curMt: 0, manual: { t0: null, t1: null }, jumps: [], stride: 1, saved: {}, anaSlow: 1 };
 const slowNow = () => +$('vidSlow').value;
 /** The frame rate frame stepping/labels use: the selection, else the detected one. */
 const currentFps = () => +$('vidFps').value || vs.fpsEst || 30;
@@ -1471,6 +1906,7 @@ const frameIdx = (mt, fps) => Math.floor(mt * fps + 0.25);
 /** Analysis owns the single <video> element: user seeks during it would answer the analysis'
  *  pending seek with the wrong frame, and a new file would swap the source under it. */
 function setVideoBusy(busy) {
+  if (busy) stopReplay(false);
   vs.busy = busy;
   for (const el of document.querySelectorAll('#vidFile, #vidFps, #vidSlow, #vidScrub, #markTo, #markLand, .stepper button')) el.disabled = busy;
   document.querySelector('label[for="vidFile"]').classList.toggle('disabled', busy);
@@ -1479,12 +1915,13 @@ function setVideoBusy(busy) {
 $('vidFile').addEventListener('change', async () => {
   const file = $('vidFile').files[0];
   if (!file || vs.busy) return;
+  stopReplay(false);
   if (vs.url) URL.revokeObjectURL(vs.url);
   vs.url = URL.createObjectURL(file);
   Object.assign(vs, { fpsEst: undefined, frames: null, manual: { t0: null, t1: null }, jumps: [] });
   db.cal.video = {}; save();   // another clip, another camera position: re-mark the calibration
   calUi.video.pending = calUi.video.active = null;
-  $('vidResults').replaceChildren(); $('manualOut').replaceChildren();
+  $('vidResults').replaceChildren(); $('manualOut').replaceChildren(); $('vidMarks').replaceChildren();
   $('vidName').textContent = file.name;
   $('vidPlayer').hidden = false;   // a display:none <video> may not start loading
   vid.src = vs.url;
@@ -1560,6 +1997,7 @@ function grabFrame() {
 /** Show a frame with its skeleton: from the analysis cache when that frame was analysed,
  *  otherwise detected on the spot (if the video model is loaded). seek:false redraws in place. */
 async function showFrame(mediaTime, { detect = true, seek = true } = {}) {
+  stopReplay(false);
   if (seek) vs.curMt = (await seekTo(mediaTime)) ?? vid.currentTime;
   const cached = vs.frames?.get(frameIdx(vs.curMt, vs.anaFps));
   let lm = cached ? cached.lm : null;
@@ -1579,7 +2017,7 @@ function updateVidTime() {
 }
 
 let scrubBusy = false, scrubPending = null;
-$('vidScrub').addEventListener('input', async () => {
+$('vidScrub').addEventListener('input', async () => {   // showFrame stops a replay
   scrubPending = +$('vidScrub').value / 1000 * vid.duration;
   if (scrubBusy) return;
   scrubBusy = true;
@@ -1647,7 +2085,9 @@ async function analyzeVideo() {
     // (e.g. after the slow-down suggestion) only re-times the cached frames.
     const frames = vs.frames && vs.anaFps === fps ? vs.frames : new Map();
     for (const fr of frames.values()) fr.t = fr.mt / slow;
-    Object.assign(vs, { frames, anaFps: fps, anaType: db.type });
+    // anaSlow: result times (t0/t1/tTouch) are real seconds under this slow-down; media time = t × anaSlow even
+    // if the select is changed afterwards without a new analysis (replay, ticks, share frame).
+    Object.assign(vs, { frames, anaFps: fps, anaType: db.type, stride, saved: {}, anaSlow: slow });
 
     // Seek to the next frame while MediaPipe works on the current one (it reads the pixels
     // already copied into `work`), so video decode and inference overlap.
@@ -1740,6 +2180,7 @@ function renderVideoResults(jumps, slow) {
          <button class="btn sm" data-seek="${r.t1 * slow}">${r.kind === 'dist' ? 'Alastulo' : 'Alastuloruutu'}</button>`;
     const card = resultCardFor(r, {
       extra: `<span class="badge">${esc(typeName(vs.anaType))}</span>${seekBtns}
+              <button class="btn sm" data-replay="${n}">Toista</button><button class="btn sm" data-vshare="${n}">Jaa</button>
               ${isSaveable(r) ? `<button class="btn sm primary" data-save="${n}">Tallenna</button>` : ''}`,
       onPick: idx => showFrame(r.samples[idx].t * slow),
     });
@@ -1751,15 +2192,181 @@ function renderVideoResults(jumps, slow) {
     card.appendChild(note);
     box.appendChild(card);
   });
+  const ghosts = jumps.filter(r => r.kind !== 'dist' && Number.isFinite(r.t0) && Number.isFinite(r.t1));
+  if (ghosts.length >= 2) box.appendChild(ghostCard(ghosts, slow));
+  paintMarks();
+}
+
+/** Takeoff and landing ticks of every result under the scrubber; a tick seeks there. */
+function paintMarks() {
+  const d = vid.duration, slow = vs.anaSlow;
+  $('vidMarks').innerHTML = !Number.isFinite(d) ? '' : vs.jumps.flatMap((r, n) => [[r.t0, 'irtoaminen', ''], [r.t1, 'alastulo', ' land']]
+    .filter(([t]) => Number.isFinite(t))
+    .map(([t, label, cls]) => `<button type="button" class="mk${cls}" style="left:${(Math.min(1, t * slow / d) * 100).toFixed(2)}%" data-seek="${t * slow}" title="${n + 1}. tulos: ${label}" aria-label="${n + 1}. tulos: ${label}"></button>`)).join('');
+}
+$('vidMarks').addEventListener('click', ev => {
+  const t = ev.target.closest('[data-seek]')?.dataset.seek;
+  if (t != null && !vs.busy) showFrame(+t);
+});
+
+/** The analysed frame nearest to a media time (the cache holds every frame around a jump, every `stride`-th elsewhere). */
+function nearestFrame(mt) {
+  if (!vs.frames) return null;
+  const i = frameIdx(mt, vs.anaFps), r = Math.max(4, Math.ceil(vs.stride / 2) + 1);
+  for (let d = 0; d <= r; d++) for (const k of d ? [i + d, i - d] : [i]) { const f = vs.frames.get(k); if (f && f.lm) return f; }
+  return null;
+}
+
+// ---------- replay (erilliset-4): loop takeoff → landing slowly with the cached skeleton (no new analysis) ----------
+// seq: bumped on every start/stop, so a frame callback still pending from an earlier loop ends itself (like live.startSeq).
+const rp = { on: false, seq: 0, from: 0, to: 0, rate: 0.5, raf: 0 };
+function startReplay(n) {
+  const r = vs.jumps[n];
+  if (!r || vs.busy) return;
+  stopReplay(false);
+  const slow = vs.anaSlow;
+  const a = Number.isFinite(r.t0) ? r.t0 : r.tTouch - 0.4, b = Number.isFinite(r.t1) ? r.t1 : r.tTouch + 0.4;
+  Object.assign(rp, { on: true, seq: rp.seq + 1, from: Math.max(0, (a - 0.3) * slow), to: Math.min(vid.duration, (b + 0.3) * slow) });
+  $('replayRow').hidden = false;
+  $('replayInfo').textContent = `Toistetaan ${n + 1}. tulos silmukkana`;
+  vid.currentTime = rp.from;
+  vid.playbackRate = rp.rate;
+  vid.play().catch(() => stopReplay());
+  replayNext(rp.seq, null);
+  $('vidStage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function replayNext(seq, last) {
+  const draw = mt => {
+    if (!rp.on || seq !== rp.seq) return;
+    if (mt >= rp.to - 1e-3 || vid.ended) { vid.currentTime = rp.from; if (vid.paused) vid.play().catch(() => {}); }
+    const f = nearestFrame(mt);
+    if (f !== last) {   // the cache holds the features too (f.f.tip); redraw only when the skeleton changes
+      drawPose(vidCtx, f ? f.lm : null, vid.videoWidth, vid.videoHeight, NaN, NaN, kindOf(vs.anaType || db.type) === 'reach' ? f?.f?.tip : null);
+      drawCalib(vidCtx, 'video');
+    }
+    vs.curMt = mt; updateVidTime();
+    replayNext(seq, f);
+  };
+  if (vid.requestVideoFrameCallback) vid.requestVideoFrameCallback((now, meta) => draw(meta.mediaTime));
+  else rp.raf = requestAnimationFrame(() => draw(vid.currentTime));
+}
+function stopReplay(redraw = true) {
+  if (!rp.on) return;
+  rp.on = false; rp.seq++;
+  cancelAnimationFrame(rp.raf);
+  vid.pause(); vid.playbackRate = 1;
+  $('replayRow').hidden = true;
+  if (redraw) showFrame(vid.currentTime, { seek: false });
+}
+// A loop end clamped to the clip's duration is never reached by a frame callback (the last frame's media time is
+// below it, and none fire after the end): restart from `ended` with a fresh callback chain.
+vid.addEventListener('ended', () => {
+  if (!rp.on) return;
+  rp.seq++;
+  vid.currentTime = rp.from;
+  vid.play().catch(() => stopReplay());
+  replayNext(rp.seq, null);
+});
+$('replayStop').addEventListener('click', () => stopReplay());
+$('replayRate').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-rate]');
+  if (!b) return;
+  rp.rate = +b.dataset.rate;
+  if (rp.on) vid.playbackRate = rp.rate;
+  for (const x of $('replayRate').children) x.setAttribute('aria-pressed', String(x === b));
+});
+
+// ---------- overlaid comparison (erilliset-10): two jumps of the clip as ghost skeletons from the same takeoff ----------
+const BONES = [[11, 12], [12, 24], [24, 23], [23, 11], ...LIMBS];
+/** Skeleton lines (+ head) with landmarks already mapped to canvas points `pt(i)`. */
+function drawSkel(ctx, pt, color, lw) {
+  ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  ctx.beginPath();
+  for (const [a, b] of BONES) { const p = pt(a), q = pt(b); ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); }
+  ctx.stroke();
+  strokeHead(ctx, headOf(pt, lw * 2.5));
+}
+const SKEL_POINTS = [0, 11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
+/** Scale + offset that fit points [x, y] into a w×h box (centred, `pad` px margin). */
+function fitBox(pts, w, h, pad) {
+  const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+  const sc = Math.min((w - 2 * pad) / (maxX - minX || 1), (h - 2 * pad) / (maxY - minY || 1));
+  return { sc, ox: (w - (maxX - minX) * sc) / 2 - minX * sc, oy: (h - (maxY - minY) * sc) / 2 - minY * sc };
+}
+function ghostCard(jumps, slow) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  const opts = sel => jumps.map((r, i) => `<option value="${i}"${i === sel ? ' selected' : ''}>${i + 1}. ${esc(fmtVal(vs.anaType || db.type, valueCm(r)))}</option>`).join('');
+  card.innerHTML = `<h2>Vertaa hyppyjä päällekkäin</h2>
+    <div class="row"><label class="field inline"><span><i class="swatch" style="background:var(--foot)"></i>Hyppy A</span><select data-g="a">${opts(0)}</select></label>
+      <label class="field inline"><span><i class="swatch" style="background:var(--hip)"></i>Hyppy B</span><select data-g="b">${opts(1)}</select></label>
+      <button class="btn sm" data-gplay>Toista</button></div>
+    <canvas class="ghost-cv" width="640" height="480" role="img" aria-label="Kahden hypyn luurangot päällekkäin irtoamishetkestä"></canvas>
+    <input type="range" data-gt min="0" max="1000" value="300" aria-label="Aika irtoamisesta">
+    <div class="muted small" data-gtime></div>`;
+  const cv = card.querySelector('canvas'), ctx = cv.getContext('2d'), range = card.querySelector('[data-gt]');
+  const W = vid.videoWidth, H = vid.videoHeight;
+  let A = 0, B = 1, raf = 0, fit = null;
+  const pick = () => [jumps[A], jumps[B]];
+  const span = () => { const [a, b] = pick(); return { from: -0.3, to: Math.max(a.t1 - a.t0, b.t1 - b.t0) + 0.3 }; };
+  const lmAt = (j, dt) => nearestFrame((j.t0 + dt) * slow)?.lm || null;
+  const hip = lm => [(lm[23].x + lm[24].x) / 2 * W, (lm[23].y + lm[24].y) / 2 * H];
+  // Each jump is shifted so its hips at takeoff sit on the same point; the view fits both over the whole window.
+  const refit = () => {
+    const [a, b] = pick(), { from, to } = span(), pts = [];
+    const anchors = [a, b].map(j => { const lm = lmAt(j, 0); return lm ? hip(lm) : null; });
+    for (let k = 0; k <= 24; k++) {
+      const dt = from + (to - from) * k / 24;
+      [a, b].forEach((j, n) => { const lm = lmAt(j, dt), o = anchors[n]; if (lm && o) for (const i of SKEL_POINTS) pts.push([lm[i].x * W - o[0], lm[i].y * H - o[1]]); });
+    }
+    fit = pts.length ? { anchors, ...fitBox(pts, cv.width, cv.height, 20) } : null;
+  };
+  const draw = () => {
+    const { from, to } = span(), dt = from + (to - from) * range.value / 1000;
+    ctx.fillStyle = C.night; ctx.fillRect(0, 0, cv.width, cv.height);
+    card.querySelector('[data-gtime]').textContent = `${dt >= 0 ? '+' : '−'}${fmt(Math.abs(dt), 2)} s irtoamisesta`;
+    if (!fit) { ctx.fillStyle = C.muted; ctx.font = '16px sans-serif'; ctx.fillText('Ruutuja ei ole analysoitu tältä kohdalta.', 20, 40); return; }
+    pick().forEach((j, n) => {
+      const lm = lmAt(j, dt), o = fit.anchors[n];
+      if (!lm || !o) return;
+      drawSkel(ctx, i => [fit.ox + (lm[i].x * W - o[0]) * fit.sc, fit.oy + (lm[i].y * H - o[1]) * fit.sc], n ? C.hip : C.foot, 4);
+    });
+  };
+  card.addEventListener('change', ev => {
+    const g = ev.target.dataset.g;
+    if (!g) return;
+    if (g === 'a') A = +ev.target.value; else B = +ev.target.value;
+    refit(); draw();
+  });
+  range.addEventListener('input', () => { cancelAnimationFrame(raf); draw(); });
+  card.querySelector('[data-gplay]').addEventListener('click', () => {
+    cancelAnimationFrame(raf);
+    const { from, to } = span(), t0 = performance.now(), dur = (to - from) / 0.25 * 1000;   // 0.25× real time
+    const step = now => { const u = Math.min(1, (now - t0) / dur); range.value = String(Math.round(u * 1000)); draw(); if (u < 1 && card.isConnected) raf = requestAnimationFrame(step); };
+    raf = requestAnimationFrame(step);
+  });
+  refit(); draw();
+  return card;
 }
 $('vidResults').addEventListener('click', ev => {
   const reslow = ev.target.closest('[data-reslow]')?.dataset.reslow;
   if (reslow) { $('vidSlow').value = reslow; analyzeVideo(); return; }
   const seek = ev.target.closest('[data-seek]')?.dataset.seek;
   if (seek != null) { showFrame(+seek); $('vidStage').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+  const rn = ev.target.closest('[data-replay]')?.dataset.replay;
+  if (rn != null) { startReplay(+rn); return; }
+  const sn = ev.target.closest('[data-vshare]')?.dataset.vshare;
+  if (sn != null) {
+    const r = vs.jumps[+sn], slow = vs.anaSlow;
+    const peak = r.kind === 'reach' ? r.tTouch : r.kind === 'dist' ? r.t1 : (r.t0 + r.t1) / 2;
+    shareImage(vs.saved[sn] || toRecord(r, 'video', vs.anaType), Number.isFinite(peak) ? nearestFrame(peak * slow)?.lm : null);
+    return;
+  }
   const n = ev.target.closest('[data-save]')?.dataset.save;
   if (n != null) {
-    const pr = addJump(toRecord(vs.jumps[+n], 'video', vs.anaType));
+    const rec = toRecord(vs.jumps[+n], 'video', vs.anaType), pr = addJump(rec);
+    vs.saved[n] = rec;   // Jaa then shares this record, not a copy with another id
     const b = ev.target.closest('[data-save]');
     b.disabled = true; b.textContent = pr ? 'Tallennettu – ennätys!' : 'Tallennettu';
   }
@@ -1769,54 +2376,263 @@ $('vidSlow').addEventListener('change', updateVidTime);
 
 // ---------- HISTORY ----------
 let histType = null;
+let cmp = null;   // ids picked for the comparison (null = off)
+const curHistType = () => (histType && kindOf(histType) === kindOf(db.type) ? histType : db.type);
 function renderHistory() {
-  const type = histType && kindOf(histType) === kindOf(db.type) ? histType : db.type;
+  const type = curHistType();
   const group = TYPES.filter(t => t.group === kindOf(type));
   const lists = Object.fromEntries(group.map(t => [t.id, jumpsOf(t.id)]));
   const byType = group.map(t => {
     const js = lists[t.id], clean = cleanOf(js);
     const last5 = (clean.length ? clean : js).slice(-5);
-    const avg = last5.length ? last5.reduce((s, j) => s + j.cm, 0) / last5.length : NaN;
-    return { t, n: js.length, best: bestOf(js)?.cm ?? NaN, avg };
+    const avg = last5.length ? mean(last5.map(j => j.cm)) : NaN;
+    return { t, n: js.length, best: bestOf(js)?.cm ?? NaN, avg, goal: db.settings.goals[t.id] };
   });
-  $('summary').innerHTML = byType.map(({ t, n, best, avg }) => `
+  $('summary').innerHTML = byType.map(({ t, n, best, avg, goal }) => `
     <button class="sum" data-htype="${t.id}" aria-pressed="${t.id === type}">
       <div class="t">${PICTO[t.id] || ''}${t.name}</div>
-      <div class="best">${Number.isFinite(best) ? fmtVal(t.id, best).replace(/ (cm|m)$/, '<small> $1</small>') : '–'}</div>
+      <div class="best">${Number.isFinite(best) ? fmtVal(t.id, best).replace(/\u00a0(cm|m)$/, '<small> $1</small>') : '–'}</div>
       <div class="meta">${n ? `ka. 5 viim. ${fmtVal(t.id, avg)} · ${n} ${n === 1 ? 'tulos' : 'tulosta'}` : 'ei tuloksia'}</div>
+      ${goal ? `<div class="goalbar"><i style="width:${Math.min(100, (best || 0) / goal * 100).toFixed(0)}%"></i></div>
+        <div class="meta">tavoite ${fmtVal(t.id, goal)} · ${Number.isFinite(best) ? fmt(best / goal * 100, 0) + '\u00a0%' : '–'}</div>` : ''}
     </button>`).join('');
   const js = lists[type] || jumpsOf(type);
+  const g = groupOf(kindOf(type)), goal = db.settings.goals[type];
   const trend = $('trendCard');
-  trend.innerHTML = `<h2>${esc(typeName(type))} – kehitys</h2>`;
-  if (js.length >= 2) trend.appendChild(trendChart(js.slice(-40), type));
-  else trend.insertAdjacentHTML('beforeend', '<p class="muted small">Kehityskäyrä näkyy, kun tästä hyppytyypistä on vähintään kaksi tulosta.</p>');
+  trend.innerHTML = `<div class="trend-head"><h2>${esc(typeName(type))} – kehitys</h2>
+      <div class="seg" role="group" aria-label="Aikaväli">${RANGES.map(([d, l]) => `<button type="button" data-range="${d}" aria-pressed="${d === histRange}">${l}</button>`).join('')}</div></div>
+    ${vireHtml(type)}`;
+  const chart = js.length >= 2 ? trendChart(js, type) : null;
+  if (chart) trend.appendChild(chart);
+  else trend.insertAdjacentHTML('beforeend', `<p class="muted small">${js.length >= 2 ? 'Tällä aikavälillä ei ole tuloksia – valitse pidempi väli.' : 'Kehityskäyrä näkyy, kun tästä hyppytyypistä on vähintään kaksi tulosta.'}</p>`);
+  trend.insertAdjacentHTML('beforeend', `<div class="goal-row"><label>Tavoite <input type="number" id="goalIn" inputmode="decimal" min="0" step="${g.digits ? 1 / 10 ** g.digits : 1}" value="${goal ? +(goal * g.scale).toFixed(g.digits) : ''}"> ${g.unit}</label>
+    <button class="btn sm" id="goalSet">Aseta</button>${goal ? '<button class="btn sm ghost" id="goalClear">Poista</button>' : ''}
+    ${g.id === 'reach' ? `<button class="btn sm ghost" id="goalDunk">Donkkiraja ${db.settings.rimCm + 15} cm</button>` : ''}</div>`);
   $('histTitle').textContent = `${typeName(type)} – kaikki tulokset (${js.length})`;
   const bestId = bestOf(js)?.id;
-  $('histList').innerHTML = js.length ? js.slice().reverse().map(j => jumpRow(j, { best: j.id === bestId })).join('') : '<li class="muted">Ei vielä tuloksia.</li>';
+  if (cmp) cmp = cmp.filter(id => js.some(j => j.id === id));
+  $('cmpBtn').setAttribute('aria-pressed', String(!!cmp));
+  $('cmpBtn').textContent = cmp ? 'Lopeta vertailu' : 'Vertaa kahta';
+  const pickOf = j => (!cmp ? null : cmp[0] === j.id ? 'A' : cmp[1] === j.id ? 'B' : '');
+  $('histList').innerHTML = js.length ? js.slice().reverse().map(j => jumpRow(j, { best: j.id === bestId, share: true, pick: pickOf(j) })).join('') : '<li class="muted">Ei vielä tuloksia.</li>';
+  renderCompare(type, js);
+  paintStore();
 }
+/** Two results side by side with the difference B − A (erilliset-10). */
+function renderCompare(type, js) {
+  const card = $('cmpCard');
+  card.hidden = !cmp;
+  if (!cmp) return;
+  const [a, b] = cmp.map(id => js.find(j => j.id === id));
+  if (!a || !b) { card.innerHTML = `<h2>Vertailu</h2><p class="muted small">Valitse listasta kaksi tulosta (A ja B) painamalla ○.</p>`; return; }
+  const kind = kindOf(type);
+  const num = (v, d, u) => (numOrNull(v) == null ? '–' : fmt(+v, d) + u);
+  // [label, value of a record as text, signed B − A or '' when a value is missing]
+  const numRow = (label, key, d, u) => [label, num(a[key], d, u), num(b[key], d, u),
+    numOrNull(a[key]) == null || numOrNull(b[key]) == null ? '' : `${b[key] - a[key] >= 0 ? '+' : '−'}${fmt(Math.abs(b[key] - a[key]), d)}${u}`];
+  const txtRow = (label, f) => [label, f(a), f(b), ''];
+  const rows = [
+    ['Tulos', fmtVal(type, a.cm), fmtVal(type, b.cm), fmtDiff(type, b.cm - a.cm)],
+    ...(kind === 'vert' ? [numRow('Lentoaika', 'ms', 0, ' ms'), numRow('Lantion nousu', 'hipCm', 1, ' cm')] : []),
+    ...(kind === 'reach' ? [numRow('Hypyn korkeus', 'jumpCm', 1, ' cm')] : []),
+    ...(kind === 'dist' ? [txtRow('Loikat', j => phasesText(j.phases || []) || '–')] : []),
+    txtRow('Virhemarginaali', j => '±' + num(j.err, kind === 'vert' ? 1 : 0, ' cm')),
+    txtRow('Kuvataajuus', j => num(j.fps, 0, ' fps')),
+    txtRow('Lähde', j => (j.src === 'video' ? 'video' : 'kamera')),
+    txtRow('Aika', j => fmtWhen(j.at)),
+    txtRow('Huomautukset', j => j.flags.map(f => flagText(kind, f)).join(' ') || 'ei'),
+    txtRow('Muistiinpano', j => [...(j.tags || []), j.note].filter(Boolean).join(' · ') || '–'),
+  ];
+  card.innerHTML = `<h2>Vertailu</h2><table class="cmp"><thead><tr><th></th><th>A</th><th>B</th><th>B − A</th></tr></thead><tbody>
+    ${rows.map(([k, va, vb, d]) => `<tr><th>${k}</th><td>${esc(va)}</td><td>${esc(vb)}</td><td class="d">${esc(d)}</td></tr>`).join('')}</tbody></table>`;
+}
+$('cmpBtn').addEventListener('click', () => { cmp = cmp ? null : []; renderHistory(); });
+$('trendCard').addEventListener('click', ev => {
+  const r = ev.target.closest('[data-range]')?.dataset.range;
+  if (r != null) { histRange = +r; renderHistory(); return; }
+  const type = curHistType(), g = groupOf(kindOf(type));
+  const id = ev.target.id;
+  if (id === 'goalSet') {
+    const v = parseFloat(String($('goalIn').value).replace(',', '.'));
+    if (!(v > 0)) { toast('Anna tavoite lukuna.'); return; }
+    db.settings.goals[type] = Math.round(v / g.scale * 10) / 10;
+  } else if (id === 'goalClear') delete db.settings.goals[type];
+  else if (id === 'goalDunk') db.settings.goals[type] = db.settings.rimCm + 15;
+  else return;
+  save(); renderHistory();
+});
 $('summary').addEventListener('click', ev => {
   const t = ev.target.closest('[data-htype]')?.dataset.htype;
   if (!t) return;
   histType = t; renderHistory();
 });
-onDelete($('histList'), () => { renderHistory(); toast('Hyppy poistettu.'); });
+listActions($('histList'));
+// The free-text note: a cell starting with = + - @ is a formula to a spreadsheet ("-5 °C tuuli" would show as #NAME?),
+// so it gets a leading apostrophe.
+const asText = t => (/^[=+\-@\t\r]/.test(t) ? "'" + t : t);
 $('exportCsv').addEventListener('click', () => {
   const n = x => (x == null || !Number.isFinite(x) ? '' : String(x).replace('.', ','));
-  const rows = [['aika', 'laji', 'tulos_cm', 'loikat_cm', 'lentoaika_ms', 'virhe_cm', 'lantio_cm', 'hyppy_cm', 'fps', 'lahde', 'huomiot']]
+  const rows = [['aika', 'laji', 'tulos_cm', 'loikat_cm', 'lentoaika_ms', 'virhe_cm', 'lantio_cm', 'hyppy_cm', 'fps', 'lahde', 'huomiot', 'tunnisteet', 'muistiinpano']]
     .concat(db.jumps.map(j => [j.at, typeName(j.type), n(j.cm), (j.phases || []).map(n).join(' + '), j.ms ?? '', n(j.err), n(j.hipCm),
-      n(j.jumpCm), j.fps, j.src, j.flags.join(' ')]));
+      n(j.jumpCm), j.fps, j.src, j.flags.join(' '), (j.tags || []).join(' '), asText(j.note || '')]));
   const csv = '﻿' + rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(';')).join('\n');
+  download(new Blob([csv], { type: 'text/csv;charset=utf-8' }), `hypyt-${new Date().toISOString().slice(0, 10)}.csv`);
+});
+function download(blob, name) {
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
-  a.download = `hypyt-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+$('clearAll').addEventListener('click', ev => {
+  const n = db.jumps.length;
+  if (n) arm(ev.currentTarget, `Paina uudelleen: poista ${n}`, () => removeWithUndo(() => true, `Historia tyhjennetty (${n} tulosta).`, 8000));
 });
-$('clearAll').addEventListener('click', () => {
-  if (!db.jumps.length) return;
-  if (!confirm(`Poistetaanko kaikki ${db.jumps.length} hyppyä? Tätä ei voi perua.`)) return;
-  db.jumps = []; save(); renderHistory();
+
+// ---------- backup (erilliset-5): JSON out, merge by id in; persistent storage ----------
+let persistAsked = false;
+function askPersist() {
+  if (persistAsked || !navigator.storage?.persist) return;
+  persistAsked = true;
+  navigator.storage.persist().then(() => { if (currentTab === 'history') paintStore(); }).catch(() => {});
+}
+async function paintStore() {
+  let persisted = null;
+  try { persisted = await navigator.storage?.persisted?.(); } catch { /* unsupported */ }
+  const last = db.settings.lastBackup;
+  $('storeInfo').textContent = `${db.jumps.length} ${db.jumps.length === 1 ? 'tulos' : 'tulosta'} vain tämän selaimen muistissa. `
+    + (persisted ? 'Pysyvä tallennus myönnetty ✓ ' : persisted === false ? 'Selain voi siivota tiedot (pysyvää tallennusta ei ole myönnetty). ' : '')
+    + (last ? `Viimeksi viety ${fmtWhen(last)}.` : 'Varmuuskopiota ei ole vielä viety.');
+}
+$('exportJson').addEventListener('click', () => {
+  askPersist();
+  const data = { app: 'hyppymittari', version: 1, exportedAt: new Date().toISOString(), jumps: db.jumps, goals: db.settings.goals };
+  download(new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' }), `hyppymittari-${new Date().toISOString().slice(0, 10)}.json`);
+  db.settings.lastBackup = data.exportedAt; save(); paintStore();
 });
+const numOrNull = x => (x == null || x === '' || !Number.isFinite(+x) ? null : +x);
+/** A record from a backup file, or null: every field is checked and coerced, unknown fields are dropped. */
+function cleanRecord(j) {
+  if (!j || typeof j !== 'object') return null;
+  const id = typeof j.id === 'string' && /^[a-z0-9]{4,32}$/i.test(j.id) ? j.id : null;
+  const at = typeof j.at === 'string' && Number.isFinite(Date.parse(j.at)) ? new Date(j.at).toISOString() : null;
+  const cm = numOrNull(j.cm);
+  if (!id || !at || !TYPES.some(t => t.id === j.type) || !(cm > 0 && cm < 5000)) return null;
+  const rec = { id, at, type: j.type, cm, ms: numOrNull(j.ms), err: numOrNull(j.err), hipCm: numOrNull(j.hipCm),
+    fps: Math.round(numOrNull(j.fps) || 0), src: j.src === 'video' ? 'video' : 'live',
+    flags: Array.isArray(j.flags) ? j.flags.filter(f => typeof f === 'string' && /^[a-z]{1,24}$/i.test(f)).slice(0, 12) : [] };
+  if (Array.isArray(j.phases)) rec.phases = j.phases.map(numOrNull).filter(v => v != null).slice(0, 5);
+  if (j.jumpCm != null) rec.jumpCm = numOrNull(j.jumpCm);
+  if (j.rimCm != null) rec.rimCm = numOrNull(j.rimCm);
+  if (typeof j.note === 'string' && j.note.trim()) rec.note = j.note.trim().slice(0, 140);
+  if (Array.isArray(j.tags)) { const t = j.tags.filter(x => TAGS.includes(x)); if (t.length) rec.tags = t; }
+  return rec;
+}
+$('importJson').addEventListener('change', async () => {
+  const file = $('importJson').files[0];
+  $('importJson').value = '';
+  if (!file) return;
+  try {
+    if (file.size > 5e6) throw new Error('Tiedosto on liian suuri.');
+    const data = JSON.parse(await file.text());
+    const list = Array.isArray(data) ? data : data && Array.isArray(data.jumps) ? data.jumps : null;
+    if (!list) throw new Error('Tiedostossa ei ole hyppymittarin tuloksia.');
+    const have = new Set(db.jumps.map(j => j.id));
+    let added = 0, dup = 0, bad = 0;
+    for (const raw of list) {
+      const rec = cleanRecord(raw);
+      if (!rec) bad++; else if (have.has(rec.id)) dup++; else { db.jumps.push(rec); have.add(rec.id); added++; }
+    }
+    for (const [type, v] of Object.entries(data.goals || {})) {
+      if (TYPES.some(t => t.id === type) && numOrNull(v) > 0 && !db.settings.goals[type]) db.settings.goals[type] = +v;
+    }
+    save(); renderHistory();
+    toast(`Tuotu ${added} ${added === 1 ? 'tulos' : 'tulosta'}${dup ? `, ${dup} oli jo tallessa` : ''}${bad ? `, ${bad} virheellistä ohitettiin` : ''}.`, 6000);
+  } catch (e) {
+    toast('Tuonti epäonnistui: ' + (e.message || e), 6000);
+  }
+});
+
+// ---------- share image (erilliset-9): a 9:16 PNG drawn on the device, shared or downloaded ----------
+const FONT = { display: css('--display') || 'sans-serif', body: css('--body') || 'sans-serif', mono: css('--mono') || 'monospace' };
+/** The LED results board on a canvas, centred on cx; returns its bottom y. */
+function drawBoard(ctx, value, g, cx, top, maxW) {
+  const { cols } = boardCols(value, g.digits);
+  ctx.font = `800 104px ${FONT.display}`;
+  const unitW = ctx.measureText(g.unit).width + 28, pad = 44;
+  const p = Math.min(46, (maxW - 2 * pad - unitW) / cols.length), r = p * 0.39;
+  const bw = cols.length * p + unitW + 2 * pad, bh = 7 * p + 2 * pad, x = cx - bw / 2;
+  ctx.fillStyle = C.boardBg; ctx.strokeStyle = C.boardEdge; ctx.lineWidth = 3;   // the .board panel colours
+  ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(x, top, bw, bh, 28); else ctx.rect(x, top, bw, bh); ctx.fill(); ctx.stroke();
+  // all dim dots in one path, all lit dots in one path: one glow (shadow) pass instead of one per dot
+  const dots = lit => {
+    ctx.beginPath();
+    cols.forEach((col, i) => { for (let yy = 0; yy < 7; yy++) if (!!(col && col[yy]) === lit) { const cx2 = x + pad + i * p + p / 2, cy = top + pad + yy * p + p / 2; ctx.moveTo(cx2 + r, cy); ctx.arc(cx2, cy, r, 0, Math.PI * 2); } });
+    ctx.fill();
+  };
+  ctx.fillStyle = C.led + '1a'; dots(false);                                   // --led at 10 %
+  ctx.fillStyle = C.led; ctx.shadowColor = C.led + 'b3'; ctx.shadowBlur = 14; dots(true);
+  ctx.shadowBlur = 0; ctx.textAlign = 'left';
+  ctx.fillText(g.unit, x + pad + cols.length * p + 22, top + pad + 7 * p - 4);
+  ctx.textAlign = 'center';
+  return top + bh;
+}
+/** rec: a stored or not-yet-stored record; lm: the skeleton at the peak (video results), frame size W×H. */
+async function shareImage(rec, lm = null, W = vid.videoWidth, H = vid.videoHeight) {
+  const kind = kindOf(rec.type), g = groupOf(kind), cv = document.createElement('canvas');
+  cv.width = 1080; cv.height = 1920;
+  const ctx = cv.getContext('2d');
+  const bg = ctx.createRadialGradient(540, -200, 50, 540, 300, 1700);
+  bg.addColorStop(0, C.nightHi); bg.addColorStop(1, C.night);
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, 1080, 1920);
+  ctx.font = `800 66px ${FONT.display}`;
+  const w1 = ctx.measureText('HYPPY').width, w2 = ctx.measureText('MITTARI').width, bx = 540 - (w1 + w2) / 2;
+  ctx.textAlign = 'left'; ctx.fillStyle = C.text; ctx.fillText('HYPPY', bx, 170);
+  ctx.fillStyle = C.accent; ctx.fillText('MITTARI', bx + w1, 170);
+  ctx.textAlign = 'center';
+  ctx.fillStyle = C.text; ctx.font = `700 52px ${FONT.body}`; ctx.fillText(typeName(rec.type), 540, 300);
+  ctx.fillStyle = C.muted; ctx.font = `500 36px ${FONT.mono}`;
+  ctx.fillText(new Date(rec.at).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric', year: 'numeric' }), 540, 360);
+  let y = drawBoard(ctx, rec.cm * g.scale, g, 540, 420, 980) + 80;
+  const detail = kind === 'reach' ? rimText(marginOf(rec))
+    : kind === 'dist' ? (rec.phases && rec.phases.length > 1 ? phasesText(rec.phases) + ' m' : '')
+      : rec.ms ? `lentoaika ${Math.round(rec.ms)} ms` : '';
+  ctx.fillStyle = C.text; ctx.font = `600 40px ${FONT.mono}`;
+  ctx.fillText([rec.err != null ? `±${fmt(rec.err, kind === 'vert' ? 1 : 0)} cm` : '', detail].filter(Boolean).join(' · '), 540, y);
+  const pb = prevBest(rec);
+  y += 90;
+  if (isRecord(rec, pb)) {
+    ctx.font = `800 46px ${FONT.display}`;
+    const tw = ctx.measureText('ENNÄTYS').width + 56;
+    ctx.fillStyle = C.led; ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(540 - tw / 2, y - 50, tw, 70, 35); else ctx.rect(540 - tw / 2, y - 50, tw, 70); ctx.fill();
+    ctx.fillStyle = C.night; ctx.fillText('ENNÄTYS', 540, y);
+  } else if (pb) {
+    ctx.fillStyle = C.muted; ctx.font = `500 36px ${FONT.mono}`;
+    ctx.fillText(`ennätys ${fmtVal(rec.type, pb.cm)} · ${fmtDiff(rec.type, rec.cm - pb.cm)}`, 540, y);
+  }
+  if (lm && W && H) {   // the skeleton at the peak, fitted into the lower part (x 140–940, y below the text – 1700)
+    const top = y + 80, f = fitBox(SKEL_POINTS.map(i => [lm[i].x * W, lm[i].y * H]), 800, 1700 - top, 0);
+    const pt = i => [140 + f.ox + lm[i].x * W * f.sc, top + f.oy + lm[i].y * H * f.sc];
+    drawSkel(ctx, pt, C.text, 12);
+    ctx.fillStyle = C.foot;
+    for (const i of [P.L_HEEL, P.R_HEEL, P.L_TOE, P.R_TOE]) { const q = pt(i); ctx.beginPath(); ctx.arc(q[0], q[1], 14, 0, Math.PI * 2); ctx.fill(); }
+  }
+  ctx.fillStyle = C.accent; ctx.fillRect(0, 1760, 1080, 12);
+  ctx.fillStyle = C.muted; ctx.font = `500 34px ${FONT.mono}`; ctx.fillText('koirosvg.com/hyppymittari', 540, 1860);
+  // Synchronous encode (toDataURL) so share() still runs inside the tap's user activation; JPEG: the image is opaque,
+  // and it encodes several times faster than PNG on a phone.
+  const b64 = cv.toDataURL('image/jpeg', 0.92).split(',')[1];
+  const bytes = Uint8Array.fromBase64 ? Uint8Array.fromBase64(b64) : Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  const name = `hyppy-${rec.at.slice(0, 10)}.jpg`, blob = new Blob([bytes], { type: 'image/jpeg' });
+  const file = new File([blob], name, { type: 'image/jpeg' });
+  if (navigator.canShare?.({ files: [file] })) {
+    try { await navigator.share({ files: [file], title: 'Hyppymittari' }); return; }
+    catch (e) { if (e.name === 'AbortError') return; }
+  }
+  download(blob, name);
+  toast('Kuva ladattu.');
+}
 
 // ---------- settings ----------
 $('settingsBtn').addEventListener('click', () => {
@@ -1840,7 +2656,7 @@ $('settings').addEventListener('close', () => {
   });
   save();
   if (live.running) {
-    if (modelChanged) { stopLive(); startLive(); } else live.det = newDetector();
+    if (modelChanged) { stopLive(false); startLive(); } else live.det = newDetector();
   }
 });
 
@@ -1851,10 +2667,23 @@ $('manualRow').hidden = $('manualOut').hidden = kindOf(db.type) !== 'vert';
 if (!db.settings.statureCm && !db.jumps.length) {
   setTimeout(() => toast('Vinkki: aseta pituutesi asetuksista (⚙), niin saat myös lantion nousun ja painovoimatarkistuksen.', 6000), 800);
 }
-// Warm the pose model in the background so the first camera start is quick.
-getLandmarker('live', db.settings.liveModel).catch(e => console.warn('Mallin esilataus epäonnistui', e));
+paintSeries();
+// Offline app (erilliset-8): sw.js caches the page, the analysis modules and MediaPipe. On koirosvg.com the page is
+// /hyppymittari (no trailing slash), outside sw.js's default scope /hyppymittari/, so the scope is the page path itself;
+// vercel.json allows it with a Service-Worker-Allowed header. ?nosw skips it (debugging).
+function registerSW() {
+  if (!('serviceWorker' in navigator) || !(location.protocol === 'https:' || location.hostname === 'localhost') || new URLSearchParams(location.search).has('nosw')) return;
+  navigator.serviceWorker.register(new URL('sw.js', document.baseURI), { scope: location.pathname.replace(/index\.html$/, '') })
+    .catch(e => console.warn('Verkoton tila ei käytössä', e));
+}
+// Warm the pose model in the background so the first camera start is quick; the worker registers after it, so its
+// install revalidates the same files against the HTTP cache instead of downloading ~17 MB a second time.
+getLandmarker('live', db.settings.liveModel).catch(e => console.warn('Mallin esilataus epäonnistui', e)).finally(registerSW);
 // ?debug exposes internals to the console (used to drive tests with recorded/synthetic samples).
-if (new URLSearchParams(location.search).has('debug')) window.__hyppy = { db, live, vs, findJumps, showLiveJump, renderHistory, setType, calPx };
+if (new URLSearchParams(location.search).has('debug')) {
+  window.__hyppy = { db, live, vs, findJumps, showLiveJump, renderHistory, setType, calPx, series, seriesStart, seriesEnd, setRemote,
+    readiness, renderVideoResults, nearestFrame, startReplay, stopReplay, shareImage, showTab, frameFeatures };
+}
 </script>
 </body>
 </html>

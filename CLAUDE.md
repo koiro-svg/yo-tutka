@@ -118,13 +118,20 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   `SUPABASE`-vakiossa on osoite ja julkinen avain. Käyttöönotto: `supabase/README.md`.
 
 - Hyppymittari (`/hyppymittari`): kopio `~/sovellukset/hyppymittari/`:sta (README:n rsync-komento),
-  ei muokata täällä. Oma ulkoasu (lime) tarkoituksella – kameran päälle piirretty luuranko tarvitsee
-  sen; `← koirosvg.com`-paluulinkki on mukana. MediaPipe Pose + mallit tiedostoina (~26 Mt).
+  ei muokata täällä. Oma ulkoasu tarkoituksella ("stadion yöllä": tartan-punainen toiminnoille, LED-keltainen vain tuloksille,
+  valkoinen luuranko kameran päällä); `← koirosvg.com`-paluulinkki on mukana. MediaPipe Pose + mallit tiedostoina (~26 Mt).
+  19.10.2026 lähtien myös asennettava verkoton sovellus (`sw.js`, `manifest.webmanifest`, `icons/`), sarjatila, kaukonäyttö,
+  kehityskäyrä tavoitteineen, toisto, vertailu, jakokuva ja varmuuskopio – kaikki laitteella, ei verkkokutsuja.
 
 ## Known sharp edges (don't regress these)
 - **Hyppymittari tarvitsee `vercel.json`:n CSP-otsakkeen `connect-src 'self'`.** Mukana tuleva
   MediaPipe lähettää käyttötilastoja `odml.pa.googleapis.com`:iin; otsake estää sen (sivu lupaa,
   ettei mitään lähetetä). Älä poista otsaketta äläkä laajenna sitä koko sivustolle ilman testiä.
+- **Hyppymittarin service worker tarvitsee `vercel.json`:n `Service-Worker-Allowed: /hyppymittari` -otsakkeen** (`/hyppymittari/sw.js`):
+  sivu on `/hyppymittari` ilman kauttaviivaa, eli `sw.js`:n oletusalueen `/hyppymittari/` ulkopuolella, joten se rekisteröidään
+  alueella `/hyppymittari`. Ilman otsaketta rekisteröinti epäonnistuu hiljaa (sovellus toimii verkossa, ei verkotta).
+  `Cache-Control: no-cache` pitää päivitykset tuoreina. CSP-otsake koskee myös workeria (`connect-src 'self'`), ja se hakee vain
+  omasta osoitteesta.
 - **Hyppymittari näkyy osoitteessa `/hyppymittari` ilman loppukauttaviivaa** (`trailingSlash:false`).
   Sivun `<head>`-skripti asettaa `<base href="/hyppymittari/">`, muuten suhteelliset polut
   (`jump-analysis.js`, `vendor/`, `models/`) osoittaisivat juureen. Älä vaihda `trailingSlash`ia.
