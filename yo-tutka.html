@@ -591,12 +591,12 @@ h1{font-weight:800;letter-spacing:-.02em}
           <td class="num">${fmtPct(t.share)}</td>
           <td class="num">${t.expected.toFixed(1)}</td>
           <td class="num">${trend(t)}<span class="pp ${pClass(t.p)}" title="${pWord(t.p)}">${fmtPct(t.p)}</span></td>
-          <td>${t.last?`<span class="chip ${t.last.id.slice(-1)}">${esc(shortLabel(t.last.id))}</span>`:'<span class="chip">–</span>'}</td>
+          <td>${t.last?`<span class="chip ${esc(t.last.id.slice(-1))}">${esc(shortLabel(t.last.id))}</span>`:'<span class="chip">–</span>'}</td>
         </tr>${state.topic===t.id?infoRow(s,st,t,ps):''}`).join('')}</tbody>`;
       const more = $('#moreTopics');
       more.hidden = topics.length<=5;
       more.textContent = state.allTopics ? 'Näytä vähemmän' : `Näytä kaikki ${topics.length}`;
-      $('#heatTbl').innerHTML = `<thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${x.id.slice(-1)}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
+      $('#heatTbl').innerHTML = `<thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${esc(x.id.slice(-1))}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
         <tbody>${topics.map(t=>`<tr><td class="name ${state.topic===t.id?'sel':''}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="0" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(t.cells[i].map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
       $('#radarBox').innerHTML = radarHtml(s, st, ps);
       $('#topicChip').innerHTML = state.topic ? `<button type="button" id="clearTopic" class="tag sel">Aihe: ${esc(topicName(s,state.topic))} ✕</button>` : '';
@@ -611,7 +611,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   function sessionHtml(s, x){
     const has = x.tasks && x.tasks.length;
     return `<details class="sess" id="sess-${esc(x.id)}" data-sess="${esc(x.id)}">
-      <summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}${x.verified?'<span class="chip ok">vahvistettu</span>':(has?'<span class="chip unv">ei vahvistettu</span>':'<span class="chip dim">puuttuu</span>')}<span class="meta"></span></summary>
+      <summary><span class="chip ${esc(x.id.slice(-1))}">${esc(shortLabel(x.id))}</span>${esc(x.label)}${x.verified?'<span class="chip ok">vahvistettu</span>':(has?'<span class="chip unv">ei vahvistettu</span>':'<span class="chip dim">puuttuu</span>')}<span class="meta"></span></summary>
       <div class="sbody">
         ${x.notes?`<div class="snote">${esc(x.notes)}</div>`:''}
         ${(x.sources||[]).filter(u=>/^https?:\/\//i.test(u)).length?`<div class="srcs">Lähteet: ${x.sources.filter(u=>/^https?:\/\//i.test(u)).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/,'').slice(0,60))}</a>`).join('')}</div>`:''}
