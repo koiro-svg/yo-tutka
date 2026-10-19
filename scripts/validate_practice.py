@@ -171,10 +171,33 @@ def check_exams(tutka):
     return errors
 
 
+def check_grades(tutka):
+    """yo-harjoittelu.html's GRADES table (julkinen-31): YTL's published minimum points for L, E, M, C, B, A per session and
+    subject. Keys must be real subjects and sessions, and each row six strictly descending non-negative integers."""
+    html = (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8")
+    m = re.search(r"const GRADES = \{\n(.*?)\n  \};", html, re.S)
+    if not m:
+        return ["yo-harjoittelu.html: GRADES-taulua ei löytynyt"]
+    errors = []
+    for line in m.group(1).splitlines():
+        sm = re.match(r"\s*'(\d{4}[KS])': \{(.*)\},?$", line)
+        if not sm:
+            errors.append(f"yo-harjoittelu.html GRADES: rivi ei ole muotoa 'kerta': {{ aine: [...] }}: {line.strip()[:60]}")
+            continue
+        k = sm.group(1)
+        for a, nums in re.findall(r"'?([a-z-]+)'?: \[([^\]]*)\]", sm.group(2)):
+            b = [int(x) for x in re.findall(r"-?\d+", nums)]
+            if a not in tutka or k not in tutka[a]:
+                errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: ainetta tai kertaa ei ole YO-tutkan datassa")
+            if len(b) != 6 or any(x < 0 for x in b) or any(x <= y for x, y in zip(b, b[1:])):
+                errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: pitää olla kuusi laskevaa lukua (L, E, M, C, B, A), oli {b}")
+    return errors
+
+
 def main(args):
     tutka = tutka_data()
     files = [pathlib.Path(a).resolve() for a in args] or sorted((ROOT / "data" / "practice").glob("*/*.json"))
-    errors = check_exams(tutka) + [e for f in files for e in validate(f, tutka)]
+    errors = check_exams(tutka) + check_grades(tutka) + [e for f in files for e in validate(f, tutka)]
     for e in errors:
         print(e)
     print(f"{len(files)} tiedostoa, {len(errors)} virhettä")
