@@ -83,7 +83,16 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   samaa). Palkki lukee `yo-practice`-avaimen vain latautuessa, `storage`-tapahtumassa (avain täsmää) ja bfcache-paluussa; harjoittelu
   julkaisee määrän muistista jokaisen tallennuksen jälkeen (`publishDue`). Linkit ovat `kt-tab`-tyylisiä (`aria-current=page`),
   cross-document View Transitions (`view-transition-name: yonav`, pois reduced motionilla). Harjoittelussa `#/kertaus` vie
-  kertauslistaan; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit.
+  kertauskierrokseen; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit.
+- **YO-harjoittelu (19.10.2026, julkinen-25…33):** kertauskierros `#/kertaus` (tänään erääntyneet kohdat peräkkäin, `S.ui.round =
+  {keys}`, kertauspalkki tehtävänäkymässä, palkissa "Kertaus" nykyisenä), etusivulla päivän tavoite (1/3/5, `S.ui.goal`) ja putki
+  `S.history`-aikaleimoista, "Harjoittele seuraavaksi" (sama todennäköisyys × heikkous kuin tutkassa), tehtävälistan haku, aihe- ja
+  tilasuodattimet ja tilapalkki rivin reunassa, Edistyminen-sivulla 16 viikon harjoituskalenteri (päivän napautus listaa tehtävät),
+  koesimulaation arvosana-arvio (`GRADES`: YTL:n julkaisemat pisterajat 2025S ja 2026K, pelkät luvut; äidinkielelle ei arviota, koska
+  sillä on kaksi erillistä koetta), vastauksen alla tallennustila ("Tallennettu tähän laitteeseen 12.03 ✓", kirjautuneena synkan tila,
+  yksityisen ikkunan varoitus) ja vihjeportaat (avatut askeleet merkitty, "Käytit 2 vihjettä" vain tällä käynnillä, ei tallenneta).
+  Lataus: `<link rel=preload href=/yo-tutka as=fetch crossorigin>` (attribuutit vastaavat `loadMeta`n fetchiä, muuten haku tehdään
+  kahdesti) ja luurankokortit ennen dataa.
 - YO-harjoittelu (`/yo-harjoittelu`): Abitti-tyylinen vastauseditori (digabi/MathQuill +
   MathJax CDN:stä), vihjeet ja malliratkaisut, itsearvio, kertauslista, koesimulaatio ja
   apuvälinepaneeli (Mafy-taulukot, GeoGebra, Desmos upotettuina). Tehtävälistan se hakee
@@ -216,6 +225,13 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   jQueryllä, MathQuillilla ja sen CSS:llä on SRI-tarkiste (`integrity`). Jos vaihdat version, laske
   tarkiste uudelleen, muuten selain estää kirjaston. MathJax ladataan vasta ensimmäisen kaavan kohdalla
   (`mjReady`), ja kaikki MathJax-kutsut kulkevat jonossa (`mjRun`), koska mhchem latautuu kesken ladonnan.
+- **YO-harjoittelun työkalupalkki rivittyy** (ei vaakaskrollia): 19 yleisintä merkkiä näkyy aina, loput "Lisää merkkejä" -napin
+  takana (`.rare`, `COMMON_CHARS`). Kosketusnäytöllä palkki on alhaalla näppäimistön yläpuolella (`visualViewport`, `placeToolbar`),
+  `--toolbar-h` on silloin 0 ja sivulle tulee alapehmuste; napit 40 px. Napit estävät yhä `mousedown`in oletuksen.
+- **Ainoa sallittu sisäkkäinen/kiinteäkorkuinen alue on apuvälinepaneeli** (`.aids`: GeoGebra/Desmos-kehykset tarvitsevat kiinteän
+  korkeuden; puhelimella 68vh alapaneeli, jonka "Muut"-välilehti voi vieritä). Näyttökaavat eivät enää vieri sivuttain vaan
+  kutistuvat sarakkeeseen kuten rivinsisäiset. Kelluva Apuvälineet-nappi saa sivulle alapehmusteen alle 1100 px:ssä.
+- **`GRADES` päivitetään käsin**, kun YTL julkaisee uuden kerran pisterajat (pelkät luvut, ei YTL:n tekstiä).
 - Leveät kaavat 320 px:n näytöllä: MathJax 3 ei rivitä kaavoja. Siksi `.md`, `.unit` ja `.help` ovat
   `grid-template-columns:minmax(0,1fr)` ja `.md>*{min-width:0}`, rivinsisäisen kaavan SVG:llä on `max-width:100%`
   ja näkymättömällä `mjx-assistive-mml`:llä `max-width:100%`. Jos yksikin puuttuu, sivu levenee (testattu

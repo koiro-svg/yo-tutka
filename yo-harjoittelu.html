@@ -6,6 +6,7 @@
 <title>YO-harjoittelu</title>
 <meta name="description" content="Tee ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla. Vihjeet, malliratkaisut, itsearvio, kertauslista ja koesimulaatio.">
 <link rel="canonical" href="https://koirosvg.com/yo-harjoittelu">
+<link rel="preload" href="/yo-tutka" as="fetch" crossorigin>
 <meta name="theme-color" content="#081427">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://koirosvg.com/yo-harjoittelu">
@@ -155,7 +156,9 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 .md{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;max-width:78ch;min-width:0;overflow-wrap:anywhere}
 .md>*{min-width:0}   /* grid items default to min-width:auto, which lets a wide formula widen the page */
 .md ul,.md ol{margin:0;padding-left:22px;display:grid;gap:3px}
-.md mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%}
+.md mjx-container[display="true"]{max-width:100%}
+/* No inner scrolling: a display formula wider than the column shrinks to fit, like an inline one. */
+.md mjx-container[display="true"] svg{max-width:100%;height:auto}
 /* MathJax 3 cannot line-break: a too-wide inline formula shrinks to fit instead of widening the page */
 .md mjx-container:not([display="true"]) svg{max-width:100%;height:auto}
 .md mjx-assistive-mml{max-width:100%}   /* invisible screen-reader copy: must not widen the page either */
@@ -188,7 +191,10 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 
 /* editor toolbar: fixed on top while an answer is focused, like in Abitti */
 .rte{position:fixed;left:0;right:0;top:0;z-index:50;background:#0B1A31;border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.35);padding:6px clamp(8px,2vw,24px);display:grid;gap:6px}
-.rte .bar{display:flex;gap:4px;align-items:center;overflow-x:auto;scrollbar-width:thin}
+.rte .bar{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+/* julkinen-29: rare characters behind "Lisää merkkejä"; the bar wraps instead of scrolling sideways. */
+.rte .rare{display:none}
+.rte.all-chars .rare{display:inline-block}
 .rte button{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:6px;min-width:32px;height:32px;padding:0 8px;cursor:pointer;font-size:15px;color:var(--ink)}
 .rte button:hover{border-color:var(--accent)}
 .rte button.wide{font-weight:700;font-size:13px}
@@ -198,6 +204,11 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 .rte.math .mathbar{display:flex}
 .rte .keys{font-size:12px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:4px 14px;padding:4px 2px}
 .rte .keys kbd{font-family:var(--font-mono);font-size:11px;background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+/* Phones: the bar sits right above the on-screen keyboard (visualViewport, see placeToolbar) with 40 px targets. */
+@media (pointer:coarse){
+  .rte{top:auto;bottom:0;box-shadow:0 -6px 18px rgba(0,0,0,.35);border-bottom:0;border-top:1px solid var(--line)}
+  .rte button{min-width:40px;height:40px}
+}
 
 /* exam simulation */
 .simbar{position:sticky;top:calc(var(--toolbar-h,0px));z-index:20;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:10px 14px}
@@ -243,8 +254,41 @@ details.simtask>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:
   .aids{position:fixed;left:8px;right:8px;bottom:8px;top:auto;height:68vh;z-index:40;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
 }
 .fab{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+/* The floating aids button must not cover the pager at the bottom of a task. */
+@media (max-width:1099px){ .wrap{padding-bottom:64px} }
 body.aids-open .fab{display:none}
 footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
+/* julkinen-25…33 */
+.skel{height:120px;border-radius:14px;background:linear-gradient(90deg,var(--surface) 30%,var(--surface-2) 50%,var(--surface) 70%);background-size:300% 100%;animation:skel 1.4s ease-in-out infinite}
+.skel.short{height:48px;max-width:60%}
+@keyframes skel{from{background-position:100% 0}to{background-position:0 0}}
+@media (prefers-reduced-motion:reduce){.skel{animation:none}}
+.goal{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+.goal svg{width:64px;height:64px;flex:none}
+.goal .ringbg{fill:none;stroke:var(--surface-2);stroke-width:4}
+.goal .ringv{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center}
+.goal .big{font-family:var(--font-display);font-size:20px}
+.roundbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--warn-soft);border:1px solid var(--warn);border-radius:12px;padding:10px 14px}
+.tfilters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.tfilters input[type=search],.tfilters select{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;max-width:100%}
+.trow{border-left:4px solid var(--line-2)}
+.trow.st-ok{border-left-color:var(--ok)} .trow.st-warn{border-left-color:var(--warn)} .trow.st-bad{border-left-color:var(--bad)}
+.stairs{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:0;font-size:12px;color:var(--ink-3)}
+.stairs li{display:flex;align-items:center;gap:6px}
+.stairs li+li::before{content:"";width:22px;height:2px;background:var(--line);margin:0 6px}
+.stairs i{width:10px;height:10px;border-radius:50%;border:2px solid var(--line);display:inline-block}
+.stairs li.on{color:var(--ink)} .stairs li.on i{background:var(--warn);border-color:var(--warn)} .stairs li.sol.on i{background:var(--accent);border-color:var(--accent)}
+.stairs li.on+li::before,.stairs li.on::before{background:var(--warn)}
+.saved{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
+.saved.ok{color:var(--ok)} .saved.bad{color:var(--warn)}
+.cal{display:grid;gap:8px}
+.cal svg{width:100%;max-width:560px;height:auto}
+.cal rect{rx:2px;cursor:pointer}
+.cal rect:focus{outline:2px solid var(--focus)}
+.cal .c0{fill:var(--surface-2)} .cal .c1{fill:#123A48} .cal .c2{fill:#155A63} .cal .c3{fill:#1E8580} .cal .c4{fill:#3FB9A5}
+.cal .on{stroke:var(--ink);stroke-width:1.5}
+.cal text{fill:var(--ink-3);font:10px var(--font-mono)}
+.grade{font-family:var(--font-display);font-size:22px;color:var(--accent)}
 @media print{ .rte,.fab,.aids,.help,.assess,.simbar .btn{display:none!important} body{background:#fff;color:#000} }
 </style>
 </head>
@@ -301,7 +345,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 </script>
 <!-- /yo-nav -->
 <div class="layout">
-  <main class="wrap" id="app"><p class="muted">Ladataan…</p></main>
+  <main class="wrap" id="app" aria-busy="true"><div class="skel short"></div><div class="skel"></div><div class="skel"></div><p class="muted small">Ladataan tehtäviä…</p></main>
   <aside class="aids" id="aids" hidden aria-label="Apuvälineet">
     <div class="tabs" role="toolbar" aria-label="Apuväline">
       <button type="button" data-aid="mafy" aria-pressed="true">Mafy-taulukot</button>
@@ -539,6 +583,19 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     }
     return acc;
   }
+  // julkinen-31: YTL's published grade boundaries (minimum points for L, E, M, C, B, A), only numbers; äidinkieli has two
+  // separate exams, so its combined boundary is not used. Add a session when YTL publishes it.
+  const GRADES = {
+    '2025S': { englanti: [277, 259, 241, 218, 188, 153], 'pitka-matematiikka': [85, 65, 48, 34, 22, 14], fysiikka: [86, 65, 49, 32, 20, 12], kemia: [105, 89, 73, 53, 34, 20], biologia: [101, 85, 71, 56, 42, 31] },
+    '2026K': { englanti: [267, 248, 225, 197, 160, 126], 'pitka-matematiikka': [95, 74, 59, 44, 30, 19], fysiikka: [91, 71, 54, 40, 29, 20], kemia: [101, 81, 61, 40, 24, 14], biologia: [100, 82, 67, 52, 38, 27] },
+  };
+  const LETTERS = ['L', 'E', 'M', 'C', 'B', 'A'];
+  function gradeFor(a, k, total) {
+    const b = (GRADES[k] || {})[a]; if (!b) return null;
+    const i = b.findIndex(min => total >= min);
+    const grade = i < 0 ? 'I' : LETTERS[i], up = i < 0 ? 5 : i - 1;
+    return { grade, next: up >= 0 ? { letter: LETTERS[up], gap: b[up] - total } : null };
+  }
   function simStatus(prefix) {   // exact sim key, or "aine|kerta" for every exam of the session
     const st = Object.entries(S.sims).filter(([key]) => key === prefix || key.startsWith(prefix + '|')).map(([, v]) => v);
     return !st.length ? '' : st.every(v => v.submitted) ? ' (tehty)' : ' (kesken)';
@@ -562,6 +619,20 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     return true;
   }
 
+  // julkinen-25: "Aloita kertaus" opens today's due items one after another (S.ui.round = {keys}); the review rules stay.
+  function dueKeys() {
+    return Object.entries(S.review).filter(([key, r]) => { const x = parseKey(key); return window.yoIsDue(r) && taskOf(x.a, x.k, x.n); })
+      .sort((x, y) => x[1].due - y[1].due).map(([key]) => key);
+  }
+  function startRound() {
+    const keys = dueKeys();
+    if (!keys.length) { delete S.ui.round; home(S.ui.subject); alertBox('Ei kerrattavaa tänään. Hienoa!'); return; }
+    S.ui.round = { keys }; persist();
+    const x = parseKey(keys[0]);
+    location.replace(taskHref(x.a, x.k, x.n, x.u));
+  }
+  const roundIndex = (a, k, n) => S.ui.round ? S.ui.round.keys.findIndex(key => key.startsWith([a, k, n].join('|') + '|')) : -1;
+
   /* ---------- answer editor (Abitti / Mafynetti style) ---------- */
   let MQ = null;   // MathQuill loads with `defer`, after this script
   const mq = () => MQ || (MQ = window.MathQuill ? MathQuill.getInterface(2) : null);
@@ -582,18 +653,21 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     ['v⃗', 'Vektori', m => m.cmd('\\vec')], ['AB→', 'Vektori kahden pisteen välillä', m => m.cmd('\\overrightarrow')], ['x̄', 'Yläviiva', m => m.cmd('\\overline')],
     ['{ ', 'Yhtälöpari', m => m.write('\\begin{cases} \\\\ \\end{cases}')], ['(ⁿₖ)', 'Binomikerroin', m => m.cmd('\\binom')]
   ];
+  const COMMON_CHARS = 19;   // the first characters (° · × ÷ ± ≠ ≈ ≤ ≥ ∞ √ π ∠ ⊥ ∥ → ⇌ ⇒ ⇔) are always visible, the rest on demand
   let math = null;        // currently open formula: {root, box, mf, ta, hist, redo}
   let lastSel = null;     // last caret inside an answer: {root, range}
 
   function buildToolbar() {
     const btn = (label, title, cls = '') => `<button type="button" class="${cls}" title="${esc(title)}" aria-label="${esc(title)}">${esc(label)}</button>`;
     $('#rteChars').innerHTML = btn('Σ Lisää kaava', 'Lisää kaava (Ctrl-E)', 'wide main') + btn('🖼 Kuva', 'Lisää kuva tiedostosta', 'wide') + '<span class="sep"></span>' +
-      CHARS.map(([c]) => btn(c, 'Lisää ' + c)).join('') + '<span class="sep"></span>' + btn('?', 'Näppäinoikotiet', 'wide');
+      CHARS.map(([c], i) => btn(c, 'Lisää ' + c, i >= COMMON_CHARS ? 'rare' : '')).join('') + btn('Lisää merkkejä ▾', 'Näytä kaikki merkit', 'wide') + '<span class="sep"></span>' + btn('?', 'Näppäinoikotiet', 'wide');
     $('#rteMath').innerHTML = TEMPLATES.map(([l, t]) => btn(l, t)).join('');
     const btns = $$('#rteChars button');
     btns[0].onclick = () => math ? closeMath() : (activeRoot() && openMath(activeRoot()));
     btns[1].onclick = () => { if (math) closeMath(); $('#imgPick').click(); };
     btns[btns.length - 1].onclick = () => { $('#rteKeys').hidden = !$('#rteKeys').hidden; syncToolbarHeight(); };
+    const more = btns[btns.length - 2];
+    more.onclick = () => { const on = rte.classList.toggle('all-chars'); more.textContent = on ? 'Vähemmän merkkejä ▴' : 'Lisää merkkejä ▾'; syncToolbarHeight(); };
     CHARS.forEach(([c, latex, mode], i) => {
       btns[i + 2].onclick = () => {
         if (math) { mode === 1 ? math.mf.cmd(latex) : mode === 2 ? math.mf.typedText(latex) : math.mf.write(latex); math.mf.focus(); }
@@ -605,7 +679,20 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     rte.addEventListener('mousedown', e => { if (e.target.closest('button')) e.preventDefault(); });
   }
   const activeRoot = () => { const a = document.activeElement; const r = a && a.closest ? a.closest('.answer') : null; return r || (lastSel && document.contains(lastSel.root) ? lastSel.root : null); };
-  function syncToolbarHeight() { document.documentElement.style.setProperty('--toolbar-h', rte.hidden ? '0px' : (rte.offsetHeight + 12) + 'px'); }
+  // Top bar on a computer (sticky offsets use --toolbar-h); on a touch screen it sits at the bottom, right above the on-screen
+  // keyboard (visualViewport), so the page gets bottom padding instead.
+  const coarse = matchMedia('(pointer:coarse)');
+  function syncToolbarHeight() {
+    const h = rte.hidden ? 0 : rte.offsetHeight + 12;
+    document.documentElement.style.setProperty('--toolbar-h', coarse.matches ? '0px' : h + 'px');
+    document.body.style.paddingBottom = coarse.matches && h ? h + 'px' : '';
+    placeToolbar();
+  }
+  function placeToolbar() {
+    const vv = window.visualViewport;
+    rte.style.bottom = coarse.matches && vv ? Math.max(0, innerHeight - vv.offsetTop - vv.height) + 'px' : '';
+  }
+  if (window.visualViewport) { visualViewport.addEventListener('resize', placeToolbar); visualViewport.addEventListener('scroll', placeToolbar); }
   function updateToolbar() {
     const a = document.activeElement;
     const inside = !!(a && a.closest && (a.closest('.answer') || a.closest('#rte'))) || !!math;
@@ -747,7 +834,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     clearTimeout(saveTimers.get(root));
     saveTimers.set(root, setTimeout(() => {
       const html = answerHtml(root), key = root.dataset.key;
-      (html.trim() ? idb.set(key, { html, at: Date.now() }) : idb.del(key)).then(() => { if (onAnswerSaved) onAnswerSaved(key); });
+      const at = Date.now();
+      (html.trim() ? idb.set(key, { html, at }) : idb.del(key)).then(() => { paintSaved(root, html.trim() ? at : 0); if (onAnswerSaved) onAnswerSaved(key); });
       countChars(root);
     }, 400));
   }
@@ -809,7 +897,17 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       if (document.caretRangeFromPoint) { const r = document.caretRangeFromPoint(e.clientX, e.clientY); if (r && root.contains(r.startContainer)) lastSel = { root, range: r }; }
       insertImages(root, files);
     });
-    return idb.get(root.dataset.key).then(v => { if (v && v.html) setAnswer(root, v.html); else countChars(root); });
+    return idb.get(root.dataset.key).then(v => { if (v && v.html) { setAnswer(root, v.html); paintSaved(root, v.at || 0); } else countChars(root); });
+  }
+  // "Tallennettu tähän laitteeseen 12.03 ✓", plus the sync state when signed in; a private window warns here too.
+  function paintSaved(root, at) {
+    const el = root.parentElement.querySelector('.saved'); if (!el) return;
+    if (at) el.dataset.at = at; else delete el.dataset.at;
+    at = +el.dataset.at || 0;
+    const sync = accountOn() && acct.user && at ? ({ ok: ' · synkronoitu ✓', busy: ' · synkronoidaan…', offline: ' · odottaa yhteyttä', err: ' · synkronointi epäonnistui' }[acct.status] || '') : '';
+    el.className = 'saved' + (idb.volatile ? ' bad' : at ? ' ok' : '');
+    el.textContent = idb.volatile ? 'Ei tallennu tähän selaimeen (yksityinen ikkuna?) – käytä Tallenna-painiketta'
+      : at ? `Tallennettu tähän laitteeseen ${new Date(at).toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' })} ✓${sync}` : '';
   }
 
   // Answer "paper" look, shared by the PNG export and the saved HTML file.
@@ -951,6 +1049,47 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       <p>Kaavaeditori: <a href="https://github.com/digabi/mathquill" target="_blank" rel="noopener">digabi/MathQuill</a> (sama kuin Abitissa) ja <a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>.${accountOn() ? ' <a href="/tietosuoja">Tietosuojaseloste</a>.' : ''}</p>
     </footer>`;
 
+  // julkinen-26: today's self-assessments against a daily goal (1/3/5, S.ui.goal) and the streak of days with at least one,
+  // both from S.history timestamps (no new data, so sync and backup are unchanged).
+  const dayOf = t => { const d = new Date(t); d.setHours(0, 0, 0, 0); return d.getTime(); };
+  function goalCard() {
+    const goal = S.ui.goal || 3, done = S.history.filter(e => e.at >= today()).length;
+    const days = new Set(S.history.map(e => dayOf(e.at)));
+    let streak = 0, d = days.has(today()) ? today() : addDays(-1);
+    while (days.has(d)) { streak++; const x = new Date(d); x.setDate(x.getDate() - 1); d = x.getTime(); }
+    const pct = Math.min(1, done / goal) * 100;
+    return `<section class="card" aria-labelledby="goal-h"><h2 id="goal-h">Päivän tavoite</h2>
+      <div class="goal"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ringbg" cx="18" cy="18" r="15.9155"/><circle class="ringv" cx="18" cy="18" r="15.9155" stroke-dasharray="${pct.toFixed(1)} 100"${done ? '' : ' stroke-opacity="0"'}/></svg>
+        <div><div class="big">Tänään ${Math.min(done, 99)}/${goal} kohtaa</div><div class="muted small">${streak ? `${streak} ${streak === 1 ? 'päivä' : 'päivää'} peräkkäin` : 'Arvioi yksi kohta, niin putki alkaa.'}</div></div>
+        <div class="filters" role="group" aria-label="Päivän tavoite">${[1, 3, 5].map(n => `<button type="button" data-goal="${n}" aria-pressed="${n === goal}">${n}</button>`).join('')}</div></div>
+      <p class="muted small">Kohta = yksi itsearvioitu tehtävän kohta.</p></section>`;
+  }
+  function bindGoal() { $$('[data-goal]', app).forEach(b => b.onclick = () => { S.ui.goal = +b.dataset.goal; persist(); home(S.ui.subject); }); }
+  // julkinen-28: like YO-tutka's list: probability of the topic (recent sessions weigh more) x (1 - own mastery).
+  function nextCard(s, idx) {
+    const ss = sessionsDesc(s).slice().reverse(), n = ss.length; if (!n) return '';
+    const w = ss.map((_, i) => Math.pow(0.85, n - 1 - i)), W = w.reduce((x, y) => x + y, 0), mast = mastery(s, idx);
+    const ids = new Set(ss.flatMap(x => x.tasks.flatMap(t => t.topics || [])));
+    const rows = [...ids].map(id => {
+      const hit = ss.map(x => x.tasks.some(t => (t.topics || []).includes(id)) ? 1 : 0), p = (hit.reduce((a, x, i) => a + w[i] * x, 0) + 0.5) / (W + 1);
+      const m = mast.get(id), r = m && m.max ? m.p / m.max : null;
+      return { id, p, r, prio: p * (1 - (r == null ? 0.5 : r)) };
+    }).sort((x, y) => y.prio - x.prio).slice(0, 3);
+    const taskFor = id => {
+      let fresh = null, weak = null;
+      for (const x of ss.slice().reverse()) for (const t of x.tasks) {
+        if (!(t.topics || []).includes(id)) continue;
+        const sc = idx.get([s.id, x.id, t.n].join('|'));
+        if (!sc) { if (!fresh) fresh = { x, t }; continue; }
+        if (!weak || sc.p / sc.max < weak.r) weak = { x, t, r: sc.p / sc.max };
+      }
+      return fresh || weak;
+    };
+    return `<section class="card" aria-labelledby="next-h"><h2 id="next-h">Harjoittele seuraavaksi</h2>
+      <ul class="list">${rows.map(r => { const c = taskFor(r.id); return `<li><b>${esc(topicName(s, r.id))}</b><span class="muted small">${Math.round(r.p * 100)} % kokeessa · ${r.r == null ? 'ei harjoiteltu' : 'osaat ' + Math.round(r.r * 100) + ' %'}</span>${c ? `<a class="small" href="${taskHref(s.id, c.x.id, c.t.n)}">${esc(shortLabel(c.x.id))} · ${esc(c.t.n)}. ${esc(c.t.title)} →</a>` : ''}</li>`; }).join('')}</ul>
+      <p class="muted small">Todennäköinen aihe × heikko oma osaaminen, kuten <a href="${TUTKA}#${encodeURIComponent(s.id)}">YO-tutkassa</a>.</p></section>`;
+  }
+
   function home(prefer) {
     const a = subj(prefer) ? prefer : (subj(S.ui.subject) ? S.ui.subject : DATA[0].id);
     S.ui.subject = a; persist();
@@ -971,15 +1110,23 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     for (const x of sessions) for (const t of x.tasks) for (const id of t.topics || []) topicCounts.set(id, (topicCounts.get(id) || 0) + 1);
     const topics = Array.from(topicCounts, ([id, c]) => ({ id, c, name: topicName(s, id) })).sort((x, y) => x.name.localeCompare(y.name, 'fi'));
     const lastPika = S.ui.pika && S.ui.pika.a === a ? S.ui.pika.topic : null;
+    const onReview = new Set(live.map(([key]) => key.split('|').slice(0, 3).join('|')));
     const taskRow = (x, t) => {
-      const sc = idx.get([a, x.id, t.n].join('|'));
-      return `<a class="trow" href="${taskHref(a, x.id, t.n)}"><span class="n">${esc(t.n)}</span><span class="t">${esc(t.title)}</span><span class="st">${sc ? scoreChip(sc) : `<span class="muted">${t.points != null ? esc(t.points) + ' p' : ''}</span>`}</span>${t.summary ? `<span class="s">${esc(t.summary)}</span>` : ''}</a>`;
+      const sc = idx.get([a, x.id, t.n].join('|')), r = sc && sc.max ? sc.p / sc.max : null;
+      const st = r == null ? '' : r >= 0.8 ? 'ok' : r >= 0.5 ? 'warn' : 'bad';
+      const text = [t.title, t.summary, ...(t.topics || []).map(id => topicName(s, id))].join(' ').toLowerCase();
+      return `<a class="trow${st ? ' st-' + st : ''}" href="${taskHref(a, x.id, t.n)}" data-topics="${esc((t.topics || []).join(' '))}" data-text="${esc(text)}" data-r="${r == null ? '' : r.toFixed(3)}" data-rev="${onReview.has([a, x.id, t.n].join('|')) ? 1 : ''}"><span class="n">${esc(t.n)}</span><span class="t">${esc(t.title)}</span><span class="st">${sc ? scoreChip(sc) : `<span class="muted">${t.points != null ? esc(t.points) + ' p' : ''}</span>`}</span>${t.summary ? `<span class="s">${esc(t.summary)}</span>` : ''}</a>`;
     };
     setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (<kbd>Ctrl-E</kbd> avaa kaavan, <kbd>Ctrl-V</kbd> liittää kuvan). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen (varmuuskopio <a href="#/edistyminen">Edistyminen</a>-sivulla).') + `
       <nav class="filters" aria-label="Oppiaine">${DATA.map(x => `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}">${esc(x.name.replace(/, pitkä oppimäärä/, ''))}</button>`).join('')}</nav>
       <div class="grid2">
+        ${goalCard()}
+        ${nextCard(s, idx)}
+      </div>
+      <div class="grid2">
         <section class="card" aria-labelledby="rev-h">
           <h2 id="rev-h">Kertaus tänään</h2>
+          ${due.length ? `<p><a class="btn primary" href="#/kertaus">Aloita kertaus (${due.length})</a> <span class="muted small">avaa kohdat peräkkäin</span></p>` : ''}
           ${due.length ? `<ul class="list">${due.slice(0, 12).map(reviewItem).join('')}</ul>${due.length > 12 ? `<p class="muted small">+ ${due.length - 12} muuta</p>` : ''}`
           : `<p class="muted">Ei kerrattavaa tänään.${upcoming ? ` Tulossa ${upcoming} kohtaa myöhemmin.` : ''} Kohta menee kertauslistalle, kun arvioit siitä alle 70 % pisteistä tai painat ”Kertaa myöhemmin”. Kertausväli pitenee 1 → 3 → 7 → 14 → 30 päivään aina, kun onnistut.</p>`}
         </section>
@@ -1008,11 +1155,36 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       </div>
       <section style="display:grid;gap:10px" aria-labelledby="ses-h">
         <h2 id="ses-h">Tehtävät kerroittain</h2>
-        ${sessions.map((x, i) => `<details class="sess" ${i === 0 ? 'open' : ''}><summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}<span class="sp muted small mono">${x.tasks.length} tehtävää</span></summary>
+        <div class="tfilters">
+          <input type="search" id="tq" placeholder="Hae tehtävistä" aria-label="Hae tehtävistä">
+          <select id="ttopic" aria-label="Aihe"><option value="">Kaikki aiheet</option>${topics.map(t => `<option value="${esc(t.id)}">${esc(t.name)}</option>`).join('')}</select>
+          <div class="filters" role="group" aria-label="Tila">${[['all', 'Kaikki'], ['new', 'Arvioimattomat'], ['weak', 'Heikot (alle 50 %)'], ['rev', 'Kertauslistalla']].map(([id, l]) => `<button type="button" data-tf="${id}" aria-pressed="${id === 'all'}">${l}</button>`).join('')}</div>
+        </div>
+        ${sessions.map((x, i) => `<details class="sess" data-first="${i === 0 ? 1 : ''}" ${i === 0 ? 'open' : ''}><summary><span class="chip ${x.id.slice(-1)}">${esc(shortLabel(x.id))}</span>${esc(x.label)}<span class="sp muted small mono" data-count="${x.tasks.length}">${x.tasks.length} tehtävää</span></summary>
           <div class="tasks">${x.tasks.map(t => taskRow(x, t)).join('')}</div></details>`).join('')}
       </section>
       ${footer()}`);
     $$('[data-subj]', app).forEach(b => b.onclick = () => { location.hash = '#/' + b.dataset.subj; });
+    bindGoal();
+    // julkinen-27: search, topic and state filters only hide rows (sessions with hits open while filtering).
+    let tf = 'all';
+    const filterRows = () => {
+      const q = $('#tq', app).value.trim().toLowerCase(), topic = $('#ttopic', app).value, on = !!(q || topic || tf !== 'all');
+      for (const d of $$('details.sess', app)) {
+        let shown = 0;
+        for (const row of $$('.trow', d)) {
+          const r = row.dataset.r === '' ? null : +row.dataset.r;
+          const ok = (!q || row.dataset.text.includes(q)) && (!topic || row.dataset.topics.split(' ').includes(topic))
+            && (tf === 'all' || (tf === 'new' && r == null) || (tf === 'weak' && r != null && r < 0.5) || (tf === 'rev' && row.dataset.rev));
+          row.hidden = !ok; if (ok) shown++;
+        }
+        const c = $('[data-count]', d); c.textContent = on ? `${shown}/${c.dataset.count} tehtävää` : `${c.dataset.count} tehtävää`;
+        d.open = on ? shown > 0 : !!d.dataset.first;
+      }
+    };
+    $('#tq', app).addEventListener('input', filterRows);
+    $('#ttopic', app).addEventListener('change', filterRows);
+    $$('[data-tf]', app).forEach(b => b.onclick = () => { tf = b.dataset.tf; $$('[data-tf]', app).forEach(x => x.setAttribute('aria-pressed', String(x === b))); filterRows(); });
     $('#simGo', app).onclick = () => { location.hash = `#/koe/${encodeURIComponent(a)}/${encodeURIComponent($('#simSel', app).value)}`; };
     $('#pikaGo', app).onclick = () => startPika(a, $('#pikaTopic', app).value, $('#pikaFresh', app).checked);
   }
@@ -1029,7 +1201,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const hintBtn = (_, i) => `<button type="button" class="btn" data-hint="${i}" ${i > 0 ? 'disabled' : ''} aria-expanded="false">Vihje ${i + 1}${hints.length > 1 ? (i === 0 ? ' · kevyt' : ' · vahva') : ''}</button>`;
     const help = !u.solution
       ? `<p class="muted small">Tälle tehtävälle ei ole vielä vihjeitä eikä malliratkaisua. Katso <a href="${esc(ctx.gradingUrl || ctx.examUrl || '#')}" target="_blank" rel="noopener">YTL:n hyvän vastauksen piirteet</a> ja arvioi itsesi.</p>`
-      : `<div class="row">${hints.map(hintBtn).join('')}
+      : `<ol class="stairs" aria-label="Avatut vihjeet">${hints.map((_, i) => `<li data-step="${i}"><i></i>Vihje ${i + 1}</li>`).join('')}<li class="sol" data-step="sol"><i></i>Malliratkaisu</li></ol>
+        <div class="row">${hints.map(hintBtn).join('')}
           <button type="button" class="btn" data-act="sol" aria-expanded="false">Näytä malliratkaisu</button>
           <button type="button" class="btn ghost" data-act="rev" aria-pressed="${!!reviewOf(key)}">${revLabel(!!reviewOf(key))}</button></div>
           ${hints.map((h, i) => `<div class="reveal hint md" data-hintbox="${i}" hidden><div class="rh">Vihje ${i + 1}</div>${md(h)}</div>`).join('')}
@@ -1038,7 +1211,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       <div class="uhead">${u.id ? `<b>${esc(u.id)}</b>` : ''}<span class="chip">${esc(u.points)} p</span>${checkChip}${scoreChip(S.scores[key], 'data-score title="oma arvio"')}</div>
       ${u.prompt ? `<div class="md">${md(u.prompt)}</div>` : ''}
       <div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
-      <div class="afoot"><span class="count"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
+      <div class="afoot"><span class="count"></span><span class="saved" aria-live="polite"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
       ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u.points)}</div></div>` : ''}
     </section>`;
   }
@@ -1047,8 +1220,9 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const buttons = max <= 20
       ? `<div class="pts" role="group" aria-label="Pisteet">${Array.from({ length: max + 1 }, (_, i) => `<button type="button" data-pts="${i}" aria-pressed="${v ? v.p === i : false}">${i}</button>`).join('')}</div>`
       : `<div class="pts"><input type="number" min="0" max="${max}" step="1" value="${v ? v.p : ''}" aria-label="Pisteet 0–${max}"><button type="button" data-pts="input">Tallenna</button></div>`;
-    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${buttons}<span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
+    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${buttons}<span class="muted small" data-hintnote></span><span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
   }
+  const hintsUsed = new Map();   // unit key -> hints opened on this visit (not saved: the data model stays as it is)
   // Toggle a hint/solution box; its formulas are typeset on first open only.
   function reveal(box, btn) {
     const open = box.hidden;
@@ -1059,13 +1233,18 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   function bindUnit(sec, max) {
     const key = sec.dataset.key;
     const hintBtns = $$('[data-hint]', sec);
-    hintBtns.forEach((b, i) => b.onclick = () => { if (reveal($(`[data-hintbox="${i}"]`, sec), b) && hintBtns[i + 1]) hintBtns[i + 1].disabled = false; });
+    // The stairs stay marked once a step was opened; the hint count is shown at the assessment (this visit only).
+    const step = id => { const li = $(`.stairs [data-step="${id}"]`, sec); if (li) li.classList.add('on'); };
+    hintBtns.forEach((b, i) => b.onclick = () => {
+      if (reveal($(`[data-hintbox="${i}"]`, sec), b)) { if (hintBtns[i + 1]) hintBtns[i + 1].disabled = false; step(i); hintsUsed.set(key, Math.max(hintsUsed.get(key) || 0, i + 1)); }
+    });
     const sol = $('[data-act="sol"]', sec);
     if (sol) sol.onclick = () => {
       const open = reveal($('[data-solbox]', sec), sol);
       sol.textContent = open ? 'Piilota malliratkaisu' : 'Näytä malliratkaisu';
-      if (open) $('.assess', sec).hidden = false;
+      if (open) { $('.assess', sec).hidden = false; step('sol'); hintNote(); }
     };
+    const hintNote = () => { const n = hintsUsed.get(key), el = $('[data-hintnote]', sec); if (el) el.textContent = n ? `Käytit ${n === 1 ? 'yhden vihjeen' : n + ' vihjettä'} tällä kerralla.` : ''; };
     const rev = $('[data-act="rev"]', sec);
     if (rev) rev.onclick = () => { toggleReview(key); syncRev(rev, key); };
     const assess = $('.assess', sec);
@@ -1077,6 +1256,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       setScore(key, p, max);
       sec.dispatchEvent(new CustomEvent('yo:score', { bubbles: true }));
       assess.innerHTML = assessHtml(key, max);
+      hintNote();
       $('[data-assessnote]', assess).textContent = `Tallennettu ${p}/${max} p.` + (reviewOf(key) ? ` Kohta on kertauslistalla (${fmtDate(reviewOf(key).due)}).` : '');
       syncRev(rev, key);
       const chip = scoreChip(S.scores[key], 'data-score title="oma arvio"'), old = $('[data-score]', sec);
@@ -1102,6 +1282,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const list = session.tasks, i = list.indexOf(task), prev = list[i - 1], next = list[i + 1];
     const part = task.part ? task.part + '-osa' : task.exam || '';
     const pika = S.ui.pika && S.ui.pika.a === a && (task.topics || []).includes(S.ui.pika.topic) ? S.ui.pika : null;
+    const ri = roundIndex(a, k, n);
+    if (ri >= 0) document.documentElement.dataset.yoPage = 'kertaus';   // the YO bar marks "Kertaus" during a round
     setView(masthead(`<a href="#/${esc(a)}">${esc(s.name.split(',')[0])}</a>`, title) + `
       <section class="taskhead">
         <div class="row"><span class="chip ${k.slice(-1)}">${esc(shortLabel(k))}</span><span class="eyebrow">${esc(s.name)} · ${esc(session.label)}${part ? ' · ' + esc(part) : ''} · ${esc(task.points)} p${task.optional ? ' · valinnainen' : ''}</span></div>
@@ -1115,6 +1297,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
         </div>
         <p class="muted small">Alkuperäinen tehtävä aukeaa uuteen välilehteen. Tehtävänantoa ei kopioida tänne tekijänoikeuksien vuoksi. Alla on lyhyt kuvaus jokaisesta kohdasta.</p>
       </section>
+      ${ri >= 0 ? `<div class="roundbar" role="region" aria-label="Kertaus"><b>Kertaus ${ri + 1}/${S.ui.round.keys.length}</b><span class="muted small">arvioi kohta, niin kertausväli päivittyy</span><span class="sp"></span>${ri + 1 < S.ui.round.keys.length ? '<button type="button" class="btn primary" id="roundNext">Seuraava →</button>' : '<button type="button" class="btn primary" id="roundDone">Valmis ✓</button>'}<button type="button" class="btn ghost" id="roundStop">Lopeta kertaus</button></div>` : ''}
       ${pika ? `<div class="pikabar" role="region" aria-label="Pikatesti"><span><b>Pikatesti:</b> ${esc(topicName(s, pika.topic))}</span><span class="sp"></span><button type="button" class="btn primary" id="pikaNext">Arvo uusi tehtävä</button><button type="button" class="btn ghost" id="pikaStop">Lopeta pikatesti</button></div>` : ''}
       ${intro ? `<div class="md intro">${md(intro)}</div>` : ''}
       ${content === false ? '<p class="warnbox">Vihjeiden ja malliratkaisujen lataus epäonnistui. Päivitä sivu yrittääksesi uudelleen.</p>'
@@ -1128,6 +1311,14 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     mountUnits(app, units);
     $('#saveTask', app).onclick = () => exportTask(ctx);
     $('#openTask', app).onclick = () => { importTarget = { a, k, n }; $('#filePick').click(); };
+    if (ri >= 0) {
+      const stop = () => { delete S.ui.round; persist(); };
+      const next = $('#roundNext', app);
+      if (next) next.onclick = () => { const x = parseKey(S.ui.round.keys[ri + 1]); location.hash = taskHref(x.a, x.k, x.n, x.u); };
+      const done = $('#roundDone', app);
+      if (done) done.onclick = () => { stop(); location.hash = '#/' + a; };
+      $('#roundStop', app).onclick = () => { stop(); $('.roundbar', app).remove(); };
+    }
     if (pika) {
       $('#pikaNext', app).onclick = () => startPika(a, pika.topic, pika.fresh, { k, n });
       $('#pikaStop', app).onclick = () => { delete S.ui.pika; persist(); $('.pikabar', app).remove(); };
@@ -1196,7 +1387,9 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
             <button type="button" class="btn" id="simPause">${sim.pauseAt ? 'Jatka' : 'Tauko'}</button><button type="button" class="btn primary" id="simSubmit">Palauta koe</button>`}
         <button type="button" class="btn ghost" id="simReset">${done ? 'Uusi yritys' : 'Keskeytä'}</button>
       </div>
-      ${done ? '<p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet päivittyvät jokaisen arvion jälkeen.</p>'
+      ${done ? (() => { const gr = g ? null : gradeFor(a, k, tot.total);   // a group of a two-exam subject (äidinkieli) has no own boundary
+          return (gr ? `<p><span class="grade">≈ ${gr.grade}</span> <span class="muted">${gr.next ? `${gr.next.letter}-rajaan ${gr.next.gap} p · ` : ''}arvio kerran ${esc(sessionOf(a, k).label.toLowerCase())} pisterajoista ja omista arvioistasi (arvioitu ${tot.assessed} kohtaa)</span></p>`
+            : '<p class="muted small">Tämän kerran pisterajoja ei ole vielä taulukossa, joten arvosana-arviota ei näytetä.</p>') + '<p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet päivittyvät jokaisen arvion jälkeen.</p>'; })()
         : `<p class="warnbox" id="pauseNote" ${sim.pauseAt ? '' : 'hidden'}>Tauko. Kello on pysähtynyt.</p>`}
       ${sections.map((x, si) => `<section class="section">
         <header><h2>${esc(x.title)}</h2><span class="muted">vastaa ${x.answer}/${x.tasks.length}${x.note ? ' · ' + esc(x.note) : ''}</span><span class="chip" data-count="${si}"></span></header>
@@ -1292,6 +1485,33 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     svg.addEventListener('pointermove', show); svg.addEventListener('pointerdown', show);
     svg.addEventListener('pointerleave', () => { tip.hidden = true; xh.setAttribute('hidden', ''); });
   }
+  // julkinen-30: the last 16 weeks of self-assessments as a day grid (Monday first); a day lists its tasks below.
+  const MONTHS = ['tammi', 'helmi', 'maalis', 'huhti', 'touko', 'kesä', 'heinä', 'elo', 'syys', 'loka', 'marras', 'joulu'];
+  function calendarCard() {
+    const counts = new Map();
+    for (const e of S.history) { const d = dayOf(e.at); counts.set(d, (counts.get(d) || 0) + 1); }
+    const C = 14, G = 3, L = 22, T = 14, end = today(), start = new Date(end);
+    start.setDate(start.getDate() - (start.getDay() + 6) % 7 - 15 * 7);
+    let svg = ['Ma', 'Ke', 'Pe'].map((d, i) => `<text x="0" y="${T + (i * 2) * (C + G) + 11}">${d}</text>`).join(''), lastMonth = -1;
+    for (let w = 0; w < 16; w++) for (let d = 0; d < 7; d++) {
+      const t = new Date(start); t.setDate(start.getDate() + w * 7 + d);
+      const ms = t.getTime(); if (ms > end) continue;
+      if (d === 0 && t.getMonth() !== lastMonth) { lastMonth = t.getMonth(); svg += `<text x="${L + w * (C + G)}" y="10">${MONTHS[lastMonth]}</text>`; }
+      const c = counts.get(ms) || 0, cls = c === 0 ? 0 : c < 3 ? 1 : c < 6 ? 2 : c < 10 ? 3 : 4;
+      svg += `<rect class="c${cls}" x="${L + w * (C + G)}" y="${T + d * (C + G)}" width="${C}" height="${C}" data-day="${ms}" tabindex="0" role="button" aria-label="${fmtDay(ms)}: ${c} arviota"><title>${fmtDay(ms)}: ${c} arviota</title></rect>`;
+    }
+    return `<section class="card cal" aria-labelledby="cal-h"><h2 id="cal-h">Harjoituskalenteri</h2>
+      <svg viewBox="0 0 ${L + 16 * (C + G)} ${T + 7 * (C + G)}" role="group" aria-label="Arvioidut kohdat päivittäin 16 viikon ajalta">${svg}</svg>
+      <div id="calDay" class="small muted" aria-live="polite">Napauta päivää, niin näet sen tehtävät. Tummempi = enemmän arvioituja kohtia.</div></section>`;
+  }
+  function showDay(ms) {
+    const tasks = new Map();
+    for (const e of S.history) if (dayOf(e.at) === ms) { const [a, k, n] = e.k.split('|'); tasks.set([a, k, n].join('|'), { a, k, n }); }
+    $$('.cal rect', app).forEach(r => r.classList.toggle('on', +r.dataset.day === ms));
+    const out = $('#calDay', app);
+    out.innerHTML = !tasks.size ? `${esc(fmtDay(ms))}: ei arvioita.` : `<b>${esc(fmtDay(ms))}</b><ul class="list">${[...tasks.values()].map(x => { const s = subj(x.a), t = taskOf(x.a, x.k, x.n); return s && t ? `<li><a href="${taskHref(x.a, x.k, x.n)}">${esc(s.name.split(',')[0])} ${esc(shortLabel(x.k))} · ${esc(x.n)}. ${esc(t.title)}</a></li>` : ''; }).join('')}</ul>`;
+  }
+
   function progressView() {
     const bySubj = new Map();
     for (const e of S.history) { const a = e.k.split('|')[0]; if (!subj(a) || !e.max) continue; if (!bySubj.has(a)) bySubj.set(a, []); bySubj.get(a).push(e); }
@@ -1315,6 +1535,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       return `<tr><td>${fmtDay(v.submitted)}</td><td><a href="#/koe/${encodeURIComponent(a)}/${encodeURIComponent(k)}${g ? '/' + encodeURIComponent(g) : ''}">${esc(s.name.split(',')[0])} · ${esc(x.label)}${g ? ' · ' + esc(g) : ''}</a></td><td>${Number(r.total)} / ${Number(r.totalMax)} p (${pct} %)<br><span class="muted">${Number(r.assessed)} kohtaa arvioitu</span></td></tr>`;
     }).join('');
     setView(masthead('', 'Edistyminen', 'Arvioitu osaaminen = omien arvioidesi pisteet suhteessa maksimiin, jokaisesta kohdasta viimeisin arvio. Käyrä näyttää, miten se on kehittynyt päivä päivältä.') + `
+      ${calendarCard()}
       ${cards.length ? `<div class="grid2">${cards.join('')}</div>` : '<p class="muted">Ei vielä arvioita. Kun teet tehtävän, näytät malliratkaisun ja arvioit pisteesi, edistyminen näkyy tässä.</p>'}
       <section class="card" aria-labelledby="simres-h"><h2 id="simres-h">Koesimulaatiot</h2>
         ${sims ? `<table class="ptable"><thead><tr><th>Palautettu</th><th>Koe</th><th>Arvioidut pisteet</th></tr></thead><tbody>${sims}</tbody></table>` : '<p class="muted">Ei vielä palautettuja koesimulaatioita.</p>'}</section>
@@ -1324,6 +1545,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
         ${S.ui.backupAt ? `<span class="muted small">Viimeksi ladattu ${fmtDay(S.ui.backupAt)}</span>` : ''}</div></section>
       ${footer()}`);
     for (const c of charts) bindChart(document.getElementById(c.id), c.pts);
+    $$('.cal rect', app).forEach(r => { r.onclick = () => showDay(+r.dataset.day); r.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showDay(+r.dataset.day); } }; });
     $('#bakSave', app).onclick = () => exportBackup().catch(() => alertBox('Varmuuskopion luonti epäonnistui.'));
     $('#bakLoad', app).onclick = () => $('#backupPick').click();
     window.scrollTo(0, 0);
@@ -1420,6 +1642,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const a = document.getElementById('acctLink');
     if (a) { a.textContent = acctLabel(); a.className = 'acct ' + acct.status; a.title = STATUS_TXT[acct.status] || ''; }
     const st = document.getElementById('syncStatus'); if (st) st.textContent = syncLine();
+    $$('.answer').forEach(root => paintSaved(root, 0));
   }
   const syncLine = () => (STATUS_TXT[acct.status] || '') + (acct.last ? ` · viimeksi ${new Date(acct.last).toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' })}` : '');
   function setStatus(s) { acct.status = s; if (s === 'ok') acct.last = Date.now(); paintAcct(); }
@@ -1710,7 +1933,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
     if (p[0] === 'edistyminen') return progressView();
-    if (p[0] === 'kertaus') { home(S.ui.subject); const r = document.getElementById('rev-h'); if (r) r.scrollIntoView(); return; }   // the YO bar's "Kertaus"
+    if (p[0] === 'kertaus') return startRound();
     if (p[0] === 'tili') return accountView(p[1]);
     if (p[0] === 'pika' && p.length >= 3 && startPika(p[1], p[2], true, null, true)) return;   // link from YO-tutka
     home(p[0]); window.scrollTo(0, 0);
