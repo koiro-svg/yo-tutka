@@ -1080,7 +1080,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   // julkinen-26: parts self-assessed today (a corrected score counts once) against a daily goal (1/3/5, S.ui.goal), and the
   // streak of days with at least one, both from S.history (no new data, so sync and backup are unchanged).
   function goalCard() {
-    const days = historyDays(), goal = S.ui.goal || 3, done = partsOn(days, today());
+    const days = historyDays(), goal = [1, 3, 5].includes(S.ui.goal) ? S.ui.goal : 3, done = partsOn(days, today());
     let streak = 0;
     for (let i = done ? 0 : 1; days.has(addDays(-i)); i++) streak++;
     const pct = Math.min(1, done / goal) * 100;
