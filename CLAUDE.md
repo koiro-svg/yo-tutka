@@ -60,6 +60,20 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - YO-tutkan käyttöliittymän pääversio on tämä repo (päätös 19.10.2026); datan lähde on `~/sovellukset/yo-tutka/`
   (data + koosta.py), jonka `index.html` on vain koonti- ja esikatselukopio; tänne tuodaan
   vain data README:n komennolla.
+- **YO-tutka (19.10.2026, julkinen-17…24):** oikea head (ennen kääreen jäänne: tyylit ja title bodyssa), sivun `:root` vain
+  tokenilohkosta poikkeavat (`--line-2`, kevät/syksy, `--h0…5`). Aineen yläosassa SVG-tutka (aiheet säteinä: ulompi alue
+  todennäköisyys, sisempi oma osaaminen `yo-practice`-arvioista, säde suodattaa), valitun aiheen tietopaneeli rivin alla
+  (kuvaus, esiintymiset kerroittain, perustelu, osaaminen, Harjoittele + Pikatesti), syvälinkit `#<aine>[/<aihe>]` historiaan
+  (`pushState`, `popstate`), trendinuolet (painotettu vs. tasainen ≥ 10 %-yks., `TREND`), seuraavan kokeen laskuri (`EXAMS`,
+  YTL:n alustava aikataulu, **päivitä joka kausi**; vanhentunut päivä näyttää varoituksen), avoimet kerrat, fokus ja kursori
+  säilyvät piirron yli (`state.open`), puhelimella järjestys ainevalinta (valikko) → Harjoittele seuraavaksi → tutka → aiheet (5 +
+  "Näytä kaikki") → kerrat, ja tulostettava kertauslista (`#printlist`, `@media print`). Eyebrow lasketaan datasta.
+- **YO-yläpalkki `<!-- yo-nav v1 -->`** (Tutka · Harjoittele · Kertaus (n) · Edistyminen · Tili) on identtisenä HTML+CSS+JS-lohkona
+  molemmissa YO-sivuissa (`check_tokens.py` vertaa). Se kantaa aineen linkeissä (`/yo-tutka#<aine>` ↔ `/yo-harjoittelu#/<aine>`),
+  laskee tänään erääntyneet kertaukset `yo-practice`-avaimesta (vain luku) ja käyttää cross-document View Transitionsia
+  (`view-transition-name: yonav`, pois reduced motionilla). `pushState` ei laukaise tapahtumaa, joten sivut lähettävät
+  `yo-nav`-tapahtuman (harjoittelu tallennuksen jälkeen, tutka osoitteen vaihtuessa). Harjoittelussa `#/kertaus` vie
+  kertauslistaan.
 - YO-harjoittelu (`/yo-harjoittelu`): Abitti-tyylinen vastauseditori (digabi/MathQuill +
   MathJax CDN:stä), vihjeet ja malliratkaisut, itsearvio, kertauslista, koesimulaatio ja
   apuvälinepaneeli (Mafy-taulukot, GeoGebra, Desmos upotettuina). Tehtävälistan se hakee
@@ -90,6 +104,9 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - **Hyppymittari näkyy osoitteessa `/hyppymittari` ilman loppukauttaviivaa** (`trailingSlash:false`).
   Sivun `<head>`-skripti asettaa `<base href="/hyppymittari/">`, muuten suhteelliset polut
   (`jump-analysis.js`, `vendor/`, `models/`) osoittaisivat juureen. Älä vaihda `trailingSlash`ia.
+- **YO-yläpalkki muutetaan aina molempiin YO-sivuihin samanlaisena** (`check_tokens.py` kaataa buildin, jos lohkot eroavat).
+- **YO-tutka ei koskaan kirjoita `yo-practice`-avaimeen** (yläpalkki ja tutka vain lukevat): Supabase-synkka ja `mergeState`
+  omistavat sen harjoittelussa.
 - YO-tutka on `yo-tutka.html`, ei `index.html` – README:n datansiirtokomento
   kirjoittaa siihen. Älä kopioi sovellukset-kansion `index.html`:ää tänne sokeasti.
 - Artificial Analysisin ilmainen API vaatii näkyvän attribuution

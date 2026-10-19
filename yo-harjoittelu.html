@@ -2,9 +2,16 @@
 <html lang="fi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>YO-harjoittelu</title>
 <meta name="description" content="Tee ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla. Vihjeet, malliratkaisut, itsearvio, kertauslista ja koesimulaatio.">
+<link rel="canonical" href="https://koirosvg.com/yo-harjoittelu">
+<meta name="theme-color" content="#081427">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://koirosvg.com/yo-harjoittelu">
+<meta property="og:title" content="YO-harjoittelu">
+<meta property="og:description" content="Vanhojen ylioppilaskokeiden tehtävät kaavaeditorilla, vihjeillä ja malliratkaisuilla.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@digabi/mathquill@0.10.12/build/mathquill.css" integrity="sha384-Bjv922/rg2S1nHWkK1ojuHz92gznxN3aI6bV3IRuaoGWEr5WfgDOPMm3acaTXqN3" crossorigin="anonymous">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -242,6 +249,59 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 </style>
 </head>
 <body>
+<!-- yo-nav v1: identical in yo-tutka.html and yo-harjoittelu.html (scripts/check_tokens.py compares them) -->
+<style>
+@view-transition{navigation:auto}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+.yonav{view-transition-name:yonav;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;max-width:1240px;margin:0 auto 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.yonav a{font:700 14px var(--font-body);color:var(--ink-2);text-decoration:none;border-radius:999px;padding:6px 12px;border:1px solid transparent}
+.yonav a:hover{color:var(--ink);border-color:var(--line)}
+.yonav a[aria-current=page]{background:var(--accent);color:var(--accent-ink)}
+.yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);padding-left:0;margin-right:auto}
+.yonav .n{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
+.yonav a[aria-current=page] .n{background:var(--accent-ink);color:var(--accent)}
+@media (max-width:520px){.yonav{gap:2px}.yonav a{padding:6px 8px;font-size:13px}.yonav .home{flex-basis:100%}}
+@media print{.yonav{display:none}}
+</style>
+<nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
+  <a class="home" href="/">← koirosvg.com</a>
+  <a href="/yo-tutka" data-yo="tutka">Tutka</a>
+  <a href="/yo-harjoittelu" data-yo="harjoittele">Harjoittele</a>
+  <a href="/yo-harjoittelu#/kertaus" data-yo="kertaus">Kertaus<span class="n" id="yo-due" hidden></span></a>
+  <a href="/yo-harjoittelu#/edistyminen" data-yo="edistyminen">Edistyminen</a>
+  <a href="/yo-harjoittelu#/tili" data-yo="tili">Tili</a>
+</nav>
+<script>
+// The YO bar: current page, the subject carried in both links (/yo-tutka#<aine> ↔ /yo-harjoittelu#/<aine>) and the reviews due
+// today from yo-harjoittelu's own localStorage (read only).
+(function () {
+  var nav = document.getElementById('yonav'), tutka = /\/yo-tutka(\.html)?$/.test(location.pathname);
+  var link = function (k) { return nav.querySelector('[data-yo="' + k + '"]'); };
+  function sync() {
+    var parts = location.hash.replace(/^#\/?/, '').split('/'), head = parts[0] || '';
+    var page = tutka ? 'tutka' : /^(kertaus|edistyminen|tili)$/.test(head) ? head : 'harjoittele';
+    var subj = tutka ? head : /^(t|koe|pika)$/.test(head) ? parts[1] || '' : /^(kertaus|edistyminen|tili)$/.test(head) ? '' : head;
+    try { subj = decodeURIComponent(subj); } catch (e) { subj = ''; }
+    if (!/^[a-z0-9-]{1,40}$/.test(subj)) subj = '';
+    if (subj) { link('tutka').href = '/yo-tutka#' + subj; link('harjoittele').href = '/yo-harjoittelu#/' + subj; }
+    nav.querySelectorAll('[data-yo]').forEach(function (a) { if (a.dataset.yo === page) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    var due = 0;
+    try {
+      var s = JSON.parse(localStorage.getItem('yo-practice') || 'null'), m = new Date(); m.setHours(0, 0, 0, 0);
+      if (s && s.review) for (var k in s.review) { var r = s.review[k]; if (r && !r.gone && r.due <= m.getTime()) due++; }
+    } catch (e) { /* storage blocked */ }
+    var n = document.getElementById('yo-due');
+    n.textContent = due; n.hidden = !due;
+    link('kertaus').setAttribute('aria-label', 'Kertaus' + (due ? ', ' + due + ' kohtaa tänään' : ''));
+  }
+  sync();
+  addEventListener('hashchange', sync);
+  addEventListener('popstate', sync);
+  addEventListener('storage', sync);
+  addEventListener('yo-nav', sync);   // dispatched after a page saves or changes its URL with pushState
+})();
+</script>
+<!-- /yo-nav -->
 <div class="layout">
   <main class="wrap" id="app"><p class="muted">Ladataan…</p></main>
   <aside class="aids" id="aids" hidden aria-label="Apuvälineet">
@@ -305,7 +365,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   if (!Array.isArray(S.history)) S.history = Object.entries(S.scores).map(([k, v]) => ({ k, p: v.p, max: v.max, at: v.at })).sort((x, y) => x.at - y.at);
   const persistLocal = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
   let onPersist = null;          // set by the account module: schedules a sync when signed in
-  const persist = () => { persistLocal(); if (onPersist) onPersist(); };
+  // The YO bar (yo-nav) listens for this to refresh its "Kertaus" count.
+  const persist = () => { persistLocal(); if (onPersist) onPersist(); dispatchEvent(new Event('yo-nav')); };
   // another tab saved: take its state, so our next persist() does not overwrite it
   window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); } catch (err) {} } });
 
@@ -880,7 +941,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   }
   const masthead = (crumbs, title, lede) => `
     <header class="masthead">
-      <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="${TUTKA}">YO-tutka</a>${crumbs || ''}${accountOn() ? `<a href="#/tili" id="acctLink" class="acct ${acct.status}">${esc(acctLabel())}</a>` : ''}</nav>
+      <nav class="crumb" aria-label="Murupolku">${crumbs || ''}${accountOn() ? `<a href="#/tili" id="acctLink" class="acct ${acct.status}">${esc(acctLabel())}</a>` : ''}</nav>
       <div class="eyebrow">YO-tutka · Harjoittelu</div>
       <h1>${title}</h1>
       ${lede ? `<p class="lede">${lede}</p>` : ''}
@@ -927,7 +988,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
         <section class="card" aria-labelledby="mas-h">
           <h2 id="mas-h">Oma osaaminen: ${esc(s.name.split(',')[0])}</h2>
           ${m.length ? `<div class="list">${m.slice(0, 10).map(meterRow).join('')}</div>
-            <p class="small"><a href="${TUTKA}">Katso YO-tutkasta</a>, mitkä heikot aiheet tulevat kokeeseen todennäköisimmin.</p>`
+            <p class="small"><a href="${TUTKA}#${encodeURIComponent(a)}">Katso YO-tutkasta</a>, mitkä heikot aiheet tulevat kokeeseen todennäköisimmin.</p>`
           : '<p class="muted">Ei vielä arvioituja tehtäviä tässä aineessa. Kun näytät malliratkaisun ja arvioit pisteesi, aihekohtainen osaaminen näkyy tässä ja YO-tutkassa.</p>'}
           <p class="small"><a href="#/edistyminen">Edistyminen ajan mittaan →</a></p>
         </section>
@@ -1646,6 +1707,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
     if (p[0] === 'edistyminen') return progressView();
+    if (p[0] === 'kertaus') { home(S.ui.subject); const r = document.getElementById('rev-h'); if (r) r.scrollIntoView(); return; }   // the YO bar's "Kertaus"
     if (p[0] === 'tili') return accountView(p[1]);
     if (p[0] === 'pika' && p.length >= 3 && startPika(p[1], p[2], true, null, true)) return;   // link from YO-tutka
     home(p[0]); window.scrollTo(0, 0);
