@@ -60,8 +60,10 @@ Tämä on **julkaisurepo**. Lähdedata ja koontiskripti ovat `~/sovellukset/yo-t
    ```
    Vercel julkaisee main-haaran pushin automaattisesti tuotantoon (~30 s).
 
-Jos muutat ulkoasua tai logiikkaa, tee muutos ensin sovellukset-kansion `index.html`:ään (täällä `yo-tutka.html`)
-ja tuo se tänne käsin — yllä oleva komento siirtää vain datan.
+**Käyttöliittymän pääversio on tämä repo** (`yo-tutka.html`, päätös 19.10.2026): ulkoasu ja logiikka muutetaan täällä.
+Sovellukset-kansion `index.html` on datan koonti- ja esikatselukopio, ja yllä oleva komento siirtää siitä vain
+`yo-data`-lohkon ja koontipäivän. Älä tuo sieltä ulkoasua tai logiikkaa tänne (se toisi takaisin mm. Google Fontsin ja
+pudottaisi tokenilohkon).
 
 ## YO-harjoittelu – vihjeet ja malliratkaisut
 - Sisältö: `data/practice/<aine>/<kerta>.json`, yksi tiedosto per aine ja tutkintokerta.

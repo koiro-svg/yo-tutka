@@ -15,14 +15,14 @@
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
    scripts/check_tokens.py (run by the Vercel build) fails when a page's copy differs: edit this file, then run
-   `python3 scripts/check_tokens.py --write`. Fonts come from this server (OFL, fonts/OFL.md). Tokens sit in :where()
+   `python3 scripts/check_tokens.py --write`. Fonts come from this server (OFL, fonts/OFL.md), cached for a year: changing a font file = raise its ?v=. Tokens sit in :where()
    (zero specificity), so a page's own :root still wins while it migrates. Always dark; the ink scale is one step brighter
    than oma.koirosvg.com's ui.css, because small mono text here must pass 4.5:1. */
-@font-face{font-family:"Unbounded";src:url("/fonts/Unbounded-latin-var.woff2") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
+@font-face{font-family:"Unbounded";src:url("/fonts/Unbounded-latin-var.woff2?v=1") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400.woff2?v=1") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-700.woff2?v=1") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2?v=1") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2?v=1") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
 :where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
 *{box-sizing:border-box}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}

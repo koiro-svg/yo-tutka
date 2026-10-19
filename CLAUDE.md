@@ -57,7 +57,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   päivittää ajastettu Claude-pilviagentti (routine) joka toinen päivä ohjeen
   `scripts/UPDATE_TOOLS.md` mukaan, ja `scripts/validate_tools.py` tarkistaa sen ennen
   committia. Ei API-avainta eikä GitHub Actionia.
-- YO-tutkan lähde on `~/sovellukset/yo-tutka/` (data + koosta.py); tänne tuodaan
+- YO-tutkan käyttöliittymän pääversio on tämä repo (päätös 19.10.2026); datan lähde on `~/sovellukset/yo-tutka/`
+  (data + koosta.py), jonka `index.html` on vain koonti- ja esikatselukopio; tänne tuodaan
   vain data README:n komennolla.
 - YO-harjoittelu (`/yo-harjoittelu`): Abitti-tyylinen vastauseditori (digabi/MathQuill +
   MathJax CDN:stä), vihjeet ja malliratkaisut, itsearvio, kertauslista, koesimulaatio ja

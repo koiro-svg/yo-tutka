@@ -27,7 +27,8 @@ MAX_AGENT_SWAPS = 3    # coding agents added + removed per run
 
 # ai.html's own anchors (tabs, model groups, ranking cards); an area id must not shadow them.
 RESERVED_IDS = {"mallit", "tyokalut", "muutokset", "koodausagentit", "teksti", "hinta", "kuva", "video", "aani",
-                "agent-index", "agent-cost", "agent-speed", "compare", "news", "status"}
+                "agent-index", "agent-cost", "agent-speed", "compare", "news", "status", "areas", "tasks", "budget",
+                "answer", "q", "tabs", "datastate", "cmpbar"}
 
 
 def text(v, lim=TEXT_MAX):
