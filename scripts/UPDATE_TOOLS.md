@@ -2,8 +2,8 @@
 
 These are the instructions for the scheduled Claude agent that refreshes
 `data/ai-tools.json` and `data/coding-agents.json` every other day. The page
-`ai-tyokalut.html` renders the first; the "Koodausagentit" section of `ai-opas.html`
-renders the second.
+`ai.html` (https://koirosvg.com/ai) renders both: the first on its "Työkalut" tab, the second
+on its "Koodausagentit" tab.
 The repo is **public** and main deploys to https://koirosvg.com automatically, so
 everything you push goes live within a minute.
 

@@ -1,30 +1,52 @@
 # koirosvg.com (repo koiro-svg/yo-tutka)
 
 Mikä tämä on: koirosvg.com-sivuston julkaisurepo. Kotivalikko (`index.html`) ja työkalut:
-AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
-(`yo-tutka.html`) ja sen harjoitusosio YO-harjoittelu (`yo-harjoittelu.html`). Repo on **julkinen**.
+AI-opas (`ai.html`: mallit, koodausagentit ja työkalut), YO-tutka (`yo-tutka.html`) ja sen harjoitusosio
+YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 
 ## Build & run
-- Ei buildia. `python3 -m http.server` repon juuressa ja avaa `/ai-opas.html`
-  (opas ja työkalupakki hakevat `data/*.json`:n fetchillä, joten file:// ei toimi).
-- Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee
-  `/ai-opas` ja `/yo-tutka` -polut.
+- Ei buildia. `python3 -m http.server` repon juuressa ja avaa `/ai.html`
+  (AI-opas hakee `data/*.json`:n fetchillä, joten file:// ei toimi; `/ai`-polut ja rewritet vaativat Vercelin tai
+  pienen palvelimen, joka tekee `cleanUrls`in ja `vercel.json`:n rewritet).
+- Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee `/ai` ja `/yo-tutka` -polut, ja rewritet
+  ohjaavat vanhat `/ai-opas` ja `/ai-tyokalut` osoitteeseen `/ai` (hash säilyy, koska se ei kulje palvelimelle).
+- Build ajaa vain tarkistukset: `validate_tools.py`, `validate_practice.py` ja `check_tokens.py`.
 
 ## Arkkitehtuuri
-- Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki kolme sivua käyttävät samaa
-  tarkoituksella aina tummaa "tutka"-teemaa (tokenit kopioitu jokaiseen sivuun, Unbounded-otsikot,
-  turkoosi `--accent`). Kotivalikossa lisäksi canvas-tutka-animaatio. Työkalusivuilla on
-  `← koirosvg.com`-paluulinkki (`.crumb`) mastheadissa – pidä se jokaisessa uudessa sivussa.
+- Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki sivut käyttävät samaa tarkoituksella aina tummaa
+  "tutka"-teemaa. **Yhteinen tokenilohko `/* koiro-tokens v2 */`** (fontit, värit, säteet, `kt-`-komponentit: välilehti,
+  nappi, kenttä, tilarivi, huomautus, välähdys) on jokaisen sivun ensimmäisen `<style>`-lohkon alussa. Kanoninen kopio on
+  `scripts/koiro-tokens.css`; `scripts/check_tokens.py` (buildissa) kaataa deployn, jos kopio eroaa (`--write` päivittää).
+  Tokenit ovat `:where(:root)`issa, joten sivun oma `:root` voittaa (YO-sivut käyttävät vielä omiaan). Fontit ovat
+  omalla palvelimella (`fonts/`, latin-osajoukot, OFL, `fonts/OFL.md`), ei Google Fontsia. Kotivalikossa lisäksi
+  canvas-tutka-animaatio. Työkalusivuilla on `← koirosvg.com`-paluulinkki (`.crumb`) mastheadissa – pidä se jokaisessa
+  uudessa sivussa.
+- **Kotivalikko (19.10.2026, julkinen-1…7):** kolme korttia (AI-opas `/ai`, YO-tutka, Hyppymittari) ja tutkan pisteet samoilla
+  nimillä. Pisteet ovat oikeita `<a>`-linkkejä canvasin päällä (%-sijainti samasta kulma/säde-laskusta), kortin hover/fokus
+  kääntää viivan sen pisteeseen ja pisteen hover korostaa korttia. AI-kortti hakee `data/ai-models.json`:sta yleiskategorian
+  kärjen ja päivitysajan (haun epäonnistuessa ei mitään), ja tuore AI-piste "pingaa". YO-kortti lukee vain tämän selaimen
+  `yo-practice`-avaimen (kerrattavat tänään + osaaminen) eikä koskaan kirjoita siihen. Haku (`/` tai ⌘K) lataa AI-datan vasta
+  ensimmäisellä näppäilyllä ja linkittää `/ai`-sivun korttien id:ihin. Puhelimella tutka on pieni otsikon vieressä.
+  Canvas huomioi devicePixelRatio, pysähtyy näkymättömänä (IntersectionObserver) ja reduced motionilla.
+- **AI-opas `ai.html` (19.10.2026, julkinen-8…16; korvasi `ai-opas.html` ja `ai-tyokalut.html`):** välilehdet Mallit ·
+  Koodausagentit · Työkalut, yksi haku kaikkiin (osumamäärät välilehdissä, `?q=` osoitteessa), "Mitä haluat tehdä?" -valinta
+  (`TASKS`-kytkentätaulu sivun koodissa, ei datassa: kategoria ↔ osa-alue ↔ agentti), Uutta-kortti (45 pv uudet mallit + 3
+  uusinta työkalumuutosta), hinta vs. älykkyys -hajontakaavio tehokkuusrajalla ja agenttien kuplakaavio (käsin kirjoitettu SVG,
+  viewBox = piirretty leveys), "+"-vertailu (2–3 mallia tai agenttia, alapalkki + vertailutaulukko), puhelimella kortissa
+  voittaja + sijat 2–3 ja "Näytä kaikki", osa-aluevalikko, mittarisanasto (`GLOSSARY`, ⓘ) ja Datan tila -lista (kolme lähdettä,
+  `errors`-kentän kategoriat). Osoitteet: `#mallit[/ryhmä]`, `#koodausagentit`, `#tyokalut[/osa-alue]`, `#muutokset` ja
+  korttien id:t `m-<kategoria>`, `a-<agentti>`, `t-<osa-alue>-<työkalu>`; vanhat ryhmä- (`#teksti`, `#video`…) ja osa-alue-ankkurit
+  (`#markkinointi`…) toimivat. Linkitetty kortti, jonka suodatin tai haku piilottaa, tuodaan näkyviin ja välähtää.
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
-  `ai-opas.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
+  `ai.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
-- Koodausagentit (AI-oppaan ryhmä ja ankkuri `#koodausagentit`): `data/coding-agents.json`
-  → `ai-opas.html` (`agentSection()`, kytketty ryhmän `render`-kenttään). Kolme rankingkorttia
+- Koodausagentit (AI-oppaan välilehti ja ankkuri `#koodausagentit`): `data/coding-agents.json`
+  → `ai.html` (`agentsTab()`). Kolme rankingkorttia
   (`AGENT_CARDS`) lasketaan sivulla `aa`-tuloksista ja piirretään samalla `card()`-funktiolla kuin
-  mallien kortit (`cat.fmt` muotoilee luvut). Jokaisella ryhmällä on `id`, ja `syncHash()` näyttää
+  mallien kortit (`cat.fmt` muotoilee luvut). Jokaisella ryhmällä on `id`, ja `reveal()` näyttää
   `#ryhmä`-linkin kohteen, vaikka suodatin piilottaisi sen. Dataa päivittää työkalupakin rutiini,
   koska AA:n Coding Agent Index ei ole API:ssa.
-- AI-työkalupakki: `data/ai-tools.json` → `ai-tyokalut.html` renderöi (fetch). Dataa
+- AI-työkalupakki: `data/ai-tools.json` → `ai.html`:n Työkalut-välilehti renderöi (fetch). Dataa
   päivittää ajastettu Claude-pilviagentti (routine) joka toinen päivä ohjeen
   `scripts/UPDATE_TOOLS.md` mukaan, ja `scripts/validate_tools.py` tarkistaa sen ennen
   committia. Ei API-avainta eikä GitHub Actionia.
@@ -63,7 +85,7 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
 - YO-tutka on `yo-tutka.html`, ei `index.html` – README:n datansiirtokomento
   kirjoittaa siihen. Älä kopioi sovellukset-kansion `index.html`:ää tänne sokeasti.
 - Artificial Analysisin ilmainen API vaatii näkyvän attribuution
-  (linkki artificialanalysis.ai) – älä poista sitä ai-opas.html:n footerista.
+  (linkki artificialanalysis.ai) – älä poista sitä ai.html:n footerista (näkyy kaikilla välilehdillä).
 - `update_models.py` säilyttää epäonnistuneen kategorian vanhan datan; älä muuta
   sitä kirjoittamaan tyhjää listaa virheen sattuessa.
 - Tekstikategoriat ovat `BENCH`-taulussa (update_models.py). Jos testiä ei löydy, lista jää
@@ -77,7 +99,7 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   vaaditaan samat testit. Älä keskiarvoista eri testijoukkoja eri malleille (ei vertailukelpoista),
   äläkä valitse testejä koko mallijoukon mukaan (uusimmat mallit putoavat pois).
 - AA:n Math Index jäi päivittymättä joulukuussa 2025 → matematiikka poistettu (27.9.2026).
-  `stale()` ai-opas.html:ssä varoittaa, jos listan uusin malli on yli 180 päivää vanha.
+  `stale()` ai.html:ssä varoittaa, jos listan uusin malli on yli 180 päivää vanha.
 - Kuva-/videoarenan tyyli- ja aihekategoriat (`include_categories=true`) on jätetty pois
   tarkoituksella: kärkimalleilla (GPT Image 2.5 ym.) ei ole kategoriadataa, joten alalistat
   nostivat vanhoja malleja kärkeen. Tarkista `--inspect`-ajolla ennen kuin otat käyttöön.
@@ -114,7 +136,20 @@ AI-malliopas (`ai-opas.html`), AI-työkalupakki (`ai-tyokalut.html`), YO-tutka
   päivityksissä.
 - Työkalupakin linkit renderöidään vain `https://`-alkuisina (`safeUrl`, validaattori
   vaatii saman), ja kaikki teksti menee `esc()`:n läpi. Älä ohita näitä uusissa kentissä.
-- `ai-tyokalut.html` hakee datan fetchillä, joten file:// ei toimi (sama kuin AI-oppaassa).
+- `ai.html` hakee datan fetchillä, joten file:// ei toimi.
+- **Vanhat AI-osoitteet ovat rewritejä, eivät redirectejä,** ja vanhat html-tiedostot on poistettu: Vercel tarkistaa
+  tiedostojärjestelmän ennen rewritejä, joten `ai-opas.html` estäisi rewriten. Redirect, jonka kohteessa on oma hash,
+  korvaisi saapuvan hashin (`/ai-opas#koodausagentit`). Sivu tunnistaa alkuperäisen polun (`/ai-tyokalut` → Työkalut)
+  ja vaihtaa osoitteen `history.replaceState`illa muotoon `/ai…`. `<link rel="canonical">` = `/ai`.
+- **AI-oppaan id:t ovat yhdessä hash-nimiavaruudessa:** mallien ryhmät (`teksti`, `hinta`, `kuva`, `video`, `aani`,
+  `koodausagentit`) ja työkalujen osa-alueet (data) eivät saa törmätä; kortit ovat etuliitteellisiä (`m-`, `a-`, `t-`).
+  Sivu varoittaa konsolissa törmäyksestä. Uusi osa-alue-id, joka on sama kuin ryhmä, rikkoisi vanhat ankkurit.
+- **`.bar` on rankinglistan palkki**: hakupalkki on `.searchbar`. Sama luokkanimi kahdessa paikassa teki listan riveistä
+  tahmeita taustalaatikoita (19.10.2026).
+- **Fontit omalta palvelimelta (19.10.2026):** `fonts/` + `@font-face` tokenilohkossa. Unboundedin muuttuva fontti kattaa
+  painot 600–800 ja JetBrains Monon 500–600, joten 500/400-pyynnöt piirtyvät lähimmällä painolla. Tietosuojaseloste
+  kertoo, ettei Google Fontsia ladata; jos lisäät ulkoisen latauksen, päivitä seloste samassa commitissa.
+- `*.txt` on `.gitignore`ssa (YTL-lähdetekstit), joten lisenssit ovat `.md`-tiedostoina (`fonts/OFL.md`).
 - **YO-harjoittelu, tekijänoikeus:** YTL:n tehtävätekstejä ja aineistoja ei saa julkaista, ja repo on
   julkinen. Harjoitussisällössä on vain omin sanoin kirjoitettu kuvaus, omat vihjeet ja ratkaisut sekä
   linkki alkuperäiseen. Jokainen uusi tiedosto ajetaan `check_overlap.py`:n läpi (6 sanan yhteiset

@@ -1,11 +1,12 @@
 # koirosvg.com
 
-Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
+Staattinen sivusto Vercelissä, ei riippuvuuksia. Vercelin build ajaa vain tarkistukset (`vercel.json`: `validate_tools.py`,
+`validate_practice.py`, `check_tokens.py`).
 
 | Polku | Tiedosto | Mikä |
 |---|---|---|
 | `/` | `index.html` | Kotivalikko |
-| `/ai-opas` | `ai-opas.html` | AI-malliopas: paras malli per käyttötarkoitus ja koodausagenttien vertailu |
+| `/ai` | `ai.html` | AI-opas: välilehdet Mallit, Koodausagentit ja Työkalut. Vanhat `/ai-opas` ja `/ai-tyokalut` ovat rewritejä tänne (#-ankkurit toimivat) |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka |
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
 | `/tietosuoja` | `tietosuoja.html` | YO-harjoittelun käyttäjätilien tietosuojaseloste |
@@ -19,7 +20,7 @@ Staattinen sivusto Vercelissä, ei build-vaihetta eikä riippuvuuksia.
 - Käsin ajo: GitHubissa Actions → "Päivitä AI-mallidata" → Run workflow,
   tai lokaalisti `AA_API_KEY=... python3 scripts/update_models.py`.
 - Jos jokin API-kutsu epäonnistuu, sen kategorian edellinen data säilyy.
-- Kategorioiden otsikot ja vinkit ovat `ai-opas.html`:n `CATS`-listassa, laskenta skriptissä.
+- Kategorioiden otsikot ja vinkit ovat `ai.html`:n `CATS`-listassa, laskenta skriptissä.
 - Koodausagentit (`#koodausagentit`) tulevat tiedostosta `data/coding-agents.json`. Artificial
   Analysisin Coding Agent Index ei ole API:ssa, joten sitä päivittää AI-työkalupakin
   Claude-rutiini (`scripts/UPDATE_TOOLS.md`), ja `scripts/validate_tools.py` tarkistaa myös sen.

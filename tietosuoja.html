@@ -5,9 +5,42 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tietosuojaseloste – YO-harjoittelu</title>
 <meta name="description" content="Mitä tietoja YO-harjoittelun käyttäjätili tallentaa, miksi ja miten ne poistetaan.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
+/* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
+   scripts/check_tokens.py (run by the Vercel build) fails when a page's copy differs: edit this file, then run
+   `python3 scripts/check_tokens.py --write`. Fonts come from this server (OFL, fonts/OFL.md). Tokens sit in :where()
+   (zero specificity), so a page's own :root still wins while it migrates. Always dark; the ink scale is one step brighter
+   than oma.koirosvg.com's ui.css, because small mono text here must pass 4.5:1. */
+@font-face{font-family:"Unbounded";src:url("/fonts/Unbounded-latin-var.woff2") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
+:where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
+[hidden]:not([hidden=until-found i]){display:none!important}
+/* Shared components (kt- prefix: page classes like .card or .chip stay the page's own). */
+.kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.kt-tab{font:700 14px var(--font-body);color:var(--ink-2);background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.kt-tab:hover{color:var(--ink);border-color:var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-tab .n{font:600 11px var(--font-mono);opacity:.8;margin-left:4px}
+.kt-btn{font:700 14px var(--font-body);color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.kt-btn:hover{border-color:var(--accent)}
+.kt-btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-btn.sm{padding:4px 10px;font-size:13px}
+.kt-input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:10px 14px;min-width:0}
+.kt-input::placeholder{color:var(--ink-3)}
+.kt-input:focus{outline:none;border-color:var(--accent)}
+.kt-status{font:500 12px var(--font-mono);color:var(--ink-3)}
+.kt-status b{color:var(--ok);font-weight:600}
+.kt-status.stale b{color:var(--warn)}
+.kt-status.bad b{color:var(--bad)}
+.kt-note{background:var(--warn-soft);color:var(--ink);border-radius:var(--radius-m);padding:12px 14px;font-size:13px}
+.kt-flash{animation:kt-flash 1.8s ease-out}
+@keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
+@media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
+/* /koiro-tokens */
 /* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
 :root{
   color-scheme:dark;
@@ -39,7 +72,7 @@ a{color:var(--accent)}
 <main>
   <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="/yo-harjoittelu">YO-harjoittelu</a></nav>
   <h1>Tietosuojaseloste</h1>
-  <p class="muted">YO-harjoittelun käyttäjätilit · päivitetty 1.10.2026</p>
+  <p class="muted">YO-harjoittelun käyttäjätilit · päivitetty 19.10.2026</p>
 
   <h2>Rekisterinpitäjä</h2>
   <p>koirosvg.com-sivuston ylläpitäjä. Yhteydenotot: <a href="mailto:oipopoojkoo@gmail.com">oipopoojkoo@gmail.com</a>.</p>
@@ -49,7 +82,7 @@ a{color:var(--accent)}
     <li><b>Tilin tiedot:</b> sähköpostiosoite ja salasanan tiiviste (salasanaa itseään ei tallenneta), tilin luonti- ja kirjautumisajat.</li>
     <li><b>Harjoittelun tiedot:</b> omat pistearviosi ja niiden historia, kertauslista, koesimulaatioiden tiedot sekä vastauksesi, joihin voi sisältyä itse liittämiäsi kuvia.</li>
   </ul>
-  <p>Palvelu ei kerää muuta: ei nimeä, ei analytiikkaa eikä mainosevästeitä.</p>
+  <p>Palvelu ei kerää muuta: ei nimeä, ei analytiikkaa eikä mainosevästeitä. Muut sivut (AI-opas, YO-tutka, hyppymittari) eivät tallenna sinusta mitään palvelimelle; etusivun YO-kortti lukee harjoittelun tilanteen vain omasta selaimestasi.</p>
 
   <h2>Miksi</h2>
   <p>Tiedot tallennetaan vain, jotta voit kirjautua ja jatkaa harjoittelua miltä tahansa laitteelta. Käsittelyn peruste on palvelun tarjoaminen käyttäjän pyynnöstä (EU:n tietosuoja-asetus, 6 art. 1 b). Tietoja ei myydä, luovuteta markkinointiin eikä käytetä muuhun tarkoitukseen.</p>
@@ -58,7 +91,7 @@ a{color:var(--accent)}
   <ul>
     <li><b>Supabase</b> säilyttää tilit ja harjoittelun tiedot. Palvelin sijaitsee EU:ssa (Frankfurt).</li>
     <li><b>Resend</b> lähettää vahvistus- ja salasanaviestit. Se käsittelee vain sähköpostiosoitetta viestin lähettämiseksi (Yhdysvallat, EU:n vakiosopimuslausekkeet).</li>
-    <li><b>Vercel</b> tarjoaa sivuston. Selaimesi lataa ohjelmakirjastoja jsDelivr- ja cdnjs-palveluista ja kirjasimia Google Fontsista.</li>
+    <li><b>Vercel</b> tarjoaa sivuston. Kirjasimet tulevat sivuston omalta palvelimelta. YO-harjoittelun kaavaeditori ja käyttäjätilit lataavat ohjelmakirjastoja jsDelivr- ja cdnjs-palveluista.</li>
     <li>Apuvälinepaneelin Mafy-taulukot, GeoGebra ja Desmos ovat ulkopuolisia palveluita, jotka latautuvat vasta, kun avaat ne.</li>
   </ul>
 

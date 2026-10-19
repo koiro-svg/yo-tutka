@@ -4,44 +4,100 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>koirosvg</title>
-<meta name="description" content="koirosvg.com: AI-malliopas ja YO-tutka.">
+<meta name="description" content="koirosvg.com: AI-opas (mallit, koodausagentit ja työkalut), YO-tutka ja hyppymittari.">
 <meta name="theme-color" content="#081427">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@600&display=swap">
+<link rel="canonical" href="https://koirosvg.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://koirosvg.com/">
+<meta property="og:title" content="koirosvg.com">
+<meta property="og:description" content="AI-opas, YO-tutka ja hyppymittari.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
+/* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
+   scripts/check_tokens.py (run by the Vercel build) fails when a page's copy differs: edit this file, then run
+   `python3 scripts/check_tokens.py --write`. Fonts come from this server (OFL, fonts/OFL.md). Tokens sit in :where()
+   (zero specificity), so a page's own :root still wins while it migrates. Always dark; the ink scale is one step brighter
+   than oma.koirosvg.com's ui.css, because small mono text here must pass 4.5:1. */
+@font-face{font-family:"Unbounded";src:url("/fonts/Unbounded-latin-var.woff2") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
+:where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
+[hidden]:not([hidden=until-found i]){display:none!important}
+/* Shared components (kt- prefix: page classes like .card or .chip stay the page's own). */
+.kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.kt-tab{font:700 14px var(--font-body);color:var(--ink-2);background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.kt-tab:hover{color:var(--ink);border-color:var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-tab .n{font:600 11px var(--font-mono);opacity:.8;margin-left:4px}
+.kt-btn{font:700 14px var(--font-body);color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.kt-btn:hover{border-color:var(--accent)}
+.kt-btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-btn.sm{padding:4px 10px;font-size:13px}
+.kt-input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:10px 14px;min-width:0}
+.kt-input::placeholder{color:var(--ink-3)}
+.kt-input:focus{outline:none;border-color:var(--accent)}
+.kt-status{font:500 12px var(--font-mono);color:var(--ink-3)}
+.kt-status b{color:var(--ok);font-weight:600}
+.kt-status.stale b{color:var(--warn)}
+.kt-status.bad b{color:var(--bad)}
+.kt-note{background:var(--warn-soft);color:var(--ink);border-radius:var(--radius-m);padding:12px 14px;font-size:13px}
+.kt-flash{animation:kt-flash 1.8s ease-out}
+@keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
+@media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
+/* /koiro-tokens */
 /* Deliberately dark-only: the radar theme is a single visual world. */
-:root{
-  color-scheme:dark;
-  --night:#081427; --night-2:#0E2140; --ring:#1F3B66; --glow:#5CE1C6;
-  --ink:#E6EEF8; --ink-2:#8FA3BF; --card:#0F213D;
-  --font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;
-  --font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;
-  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-}
 *{box-sizing:border-box}
-html{background:var(--night)}
-body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--night-2),var(--night) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
-:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
-.wrap{max-width:1120px;width:100%;margin:0 auto;display:grid;gap:32px}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--bg-glow),var(--bg) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;width:100%;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:32px;position:relative}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-.eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--glow)}
+.eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-spacing:-.02em;text-wrap:balance}
-.lede{color:var(--ink-2);max-width:46ch;font-size:16px;margin:0}
-canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:block}
+.lede{color:var(--ink-3);max-width:46ch;font-size:16px;margin:0}
+.radar{position:relative;width:100%;max-width:360px;aspect-ratio:1;justify-self:center}
+.radar canvas{width:100%;height:100%;display:block}
+/* julkinen-1: each blip is a real link over the canvas (keyboard and screen readers), positioned in % of the radar. */
+.blip{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:block}
+.blip:focus-visible{outline-offset:0}
+.search{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.search .kt-input{flex:1 1 260px;max-width:460px}
+.search kbd{font:600 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+@media (pointer:coarse){.search kbd{display:none}}
+.hits{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.hits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.hits a:hover,.hits a:focus-visible{border-color:var(--accent)}
+.hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.hits span{color:var(--ink-3);font-size:13px}
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
-.tool{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:22px;border-radius:14px;background:linear-gradient(180deg,rgba(92,225,198,.07),transparent 60%),var(--card);border:1px solid var(--ring);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
-.tool:hover{border-color:var(--glow);transform:translateY(-3px)}
+.tool{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:22px;border-radius:14px;background:linear-gradient(180deg,rgba(92,225,198,.07),transparent 60%),var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+.tool:hover,.tool.hot{border-color:var(--accent);transform:translateY(-3px)}
 .tool .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .tool h2{margin:0;font:800 22px var(--font-display)}
-.tool .sig{font:600 11px var(--font-mono);color:var(--glow);white-space:nowrap}
-.tool p{margin:0;color:var(--ink-2)}
-.tool .go{font-weight:700;color:var(--glow)}
-.wrap{position:relative}
+.tool .sig{font:600 11px var(--font-mono);color:var(--accent);white-space:nowrap}
+.tool p{margin:0;color:var(--ink-3)}
+.tool .live{color:var(--ink);font-size:14px}
+.tool .live b{color:var(--accent)}
+.tool .go{font-weight:700;color:var(--accent)}
 /* Discreet on purpose, but kept at 3.7:1 (WCAG non-text contrast). Absolute so it adds no grid row. */
 .lock{position:absolute;right:0;bottom:-44px;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;color:#5A7194;transition:color .15s}
-.lock:hover{color:var(--glow)}
-@media (max-width:700px){.hero{grid-template-columns:1fr}canvas{max-width:260px}}
-@media (prefers-reduced-motion:reduce){.tool,.lock{transition:none}.tool:hover{transform:none}}
+.lock:hover{color:var(--accent)}
+footer{font-size:13px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:4px 14px;padding-right:44px}
+footer a{color:var(--ink-3)}
+footer a:hover{color:var(--accent)}
+/* julkinen-4: on a phone the radar sits small beside the title, so the cards start on the first screen. */
+@media (max-width:700px){
+  body{align-content:start}
+  .wrap{gap:22px}
+  .hero{grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:start}
+  .radar{max-width:112px}
+  .blip{width:24px;height:24px;margin:-12px 0 0 -12px}
+  .tool{padding:18px}
+  .lede{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.tool,.lock{transition:none}.tool:hover,.tool.hot{transform:none}}
 </style>
 </head>
 <body>
@@ -50,61 +106,193 @@ canvas{width:100%;max-width:360px;aspect-ratio:1;justify-self:center;display:blo
     <div>
       <div class="eyebrow">koirosvg.com</div>
       <h1>Näe mikä on tulossa.</h1>
-      <p class="lede">Kolme tutkaa: tekoälymallien kärki, yrityksen parhaat AI-työkalut ja ylioppilaskokeiden aiheet.</p>
+      <p class="lede">Kolme tutkaa: tekoälymallien, -agenttien ja -työkalujen kärki, ylioppilaskokeiden aiheet ja hyppysi kameralla mitattuna.</p>
     </div>
-    <canvas id="radar" width="720" height="720" aria-hidden="true"></canvas>
+    <div class="radar" id="radar-box">
+      <canvas id="radar" aria-hidden="true"></canvas>
+    </div>
   </header>
+  <div class="search" role="search">
+    <input class="kt-input" id="q" type="search" placeholder="Hae malleista, agenteista ja työkaluista" aria-label="Hae koko sivustosta" autocomplete="off">
+    <kbd aria-hidden="true">/</kbd>
+  </div>
+  <ul class="hits" id="hits" aria-live="polite" hidden></ul>
   <nav class="tools" aria-label="Työkalut">
-    <a class="tool" href="/ai-opas">
-      <div class="hd"><h2>AI-malliopas</h2><span class="sig">● päivitys 2 pv välein</span></div>
-      <p>Mikä tekoälymalli on juuri nyt paras automaatioon, koodaukseen, kirjoittamiseen, kuviin, videoon tai puheeseen – ja mikä koodausagentti (Claude Code, Codex…) kannattaa valita.</p>
-      <span class="go">Avaa opas →</span>
+    <a class="tool" href="/ai" data-blip="ai">
+      <div class="hd"><h2>AI-opas</h2><span class="sig">● päivitys 2 pv välein</span></div>
+      <p>Mikä tekoälymalli on juuri nyt paras automaatioon, koodaukseen, kirjoittamiseen, kuviin, videoon tai puheeseen, mikä koodausagentti (Claude Code, Codex…) kannattaa valita ja mitkä työkalut hoitavat yrityksen arjen.</p>
+      <p class="live" id="ai-live" hidden></p>
+      <span class="go">Avaa AI-opas →</span>
     </a>
-    <a class="tool" href="/ai-tyokalut">
-      <div class="hd"><h2>AI-työkalupakki</h2><span class="sig">● päivitys 2 pv välein</span></div>
-      <p>Parhaat tekoälytyökalut ja -alustat yrityksen pyörittämiseen: mikä automatisoi, mikä avustaa ja mihin kukin on paras.</p>
-      <span class="go">Avaa työkalupakki →</span>
-    </a>
-    <a class="tool" href="/yo-tutka">
-      <div class="hd"><h2>YO-tutka</h2><span class="sig">● 6 ainetta · 2021S–2026S</span></div>
+    <a class="tool" href="/yo-tutka" data-blip="yo">
+      <div class="hd"><h2>YO-tutka</h2><span class="sig">● tutka + harjoittelu</span></div>
       <p>Ylioppilaskokeiden tehtävät aihealueittain ja arvio siitä, kuinka todennäköisesti aihe tulee seuraavassa kokeessa. Mukana harjoittelu Abitti-tyylisellä kaavaeditorilla, vihjeillä ja malliratkaisuilla.</p>
+      <p class="live" id="yo-live" hidden></p>
       <span class="go">Avaa YO-tutka →</span>
     </a>
-    <a class="tool" href="/hyppymittari">
+    <a class="tool" href="/hyppymittari" data-blip="hyppy">
       <div class="hd"><h2>Hyppymittari</h2><span class="sig">● kamera · video · slow-mo</span></div>
-      <p>Vertikaalihypyn korkeus puhelimen kameralla: luuranko kuvan päällä, korkeus lentoajasta, laatuvaroitukset ja oma historia. Kaikki lasketaan laitteella.</p>
+      <p>Pystyhyppy, kosketuskorkeus, vauhditon pituus, kolmiloikka ja viisiloikka puhelimen kameralla: luuranko kuvan päällä, laatuvaroitukset ja oma historia. Kaikki lasketaan laitteella.</p>
       <span class="go">Avaa hyppymittari →</span>
     </a>
   </nav>
+  <footer><a href="/tietosuoja">Tietosuoja</a><span>Ei analytiikkaa eikä evästeitä.</span></footer>
   <a class="lock" href="https://oma.koirosvg.com" aria-label="Oma alue (kirjautuminen)" title="Oma alue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></a>
 </main>
 <script>
-// Radar: one blip per tool (labelled) plus two unlabelled for atmosphere.
-const cv=document.getElementById('radar'),cx=cv.getContext('2d'),W=720,C=W/2,R=W/2-20;
-const blips=[{a:-0.9,r:.55,t:'AI-opas'},{a:2.2,r:.72,t:'YO-tutka'},{a:0.7,r:.66,t:'AI-työkalut'},{a:4.2,r:.62,t:'Hyppymittari'},{a:3.4,r:.45,t:''}];
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const TAU=Math.PI*2;
-function draw(t){
-  const sw=reduce?-0.6:(t/2400)%TAU;
-  cx.clearRect(0,0,W,W);
-  cx.strokeStyle='#1F3B66';cx.lineWidth=2;
-  for(let i=1;i<=4;i++){cx.beginPath();cx.arc(C,C,R*i/4,0,TAU);cx.stroke()}
-  cx.beginPath();cx.moveTo(C-R,C);cx.lineTo(C+R,C);cx.moveTo(C,C-R);cx.lineTo(C,C+R);cx.stroke();
-  if(cx.createConicGradient){
-    const g=cx.createConicGradient(sw-0.9,C,C);
-    g.addColorStop(0,'rgba(92,225,198,0)');g.addColorStop(0.14,'rgba(92,225,198,.35)');g.addColorStop(0.1433,'rgba(92,225,198,0)');
-    cx.fillStyle=g;cx.beginPath();cx.arc(C,C,R,0,TAU);cx.fill();
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const norm = s => String(s || '').toLowerCase();
+  const slug = s => norm(s).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+  const ago = iso => { const h = (Date.now() - Date.parse(iso)) / 36e5; return h < 1 ? 'alle tunti sitten' : h < 48 ? `${Math.round(h)} h sitten` : `${Math.round(h / 24)} pv sitten`; };
+
+  // ---- Radar: one named blip per tool card plus one unnamed for atmosphere (new tool = card + blip) ----
+  const box = $('#radar-box'), cv = $('#radar'), cx = cv.getContext('2d');
+  const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {a:3.4, r:.45, t:''}];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const TAU = Math.PI * 2;
+  let W = 720, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0, fresh = null;
+  for (const b of blips) if (b.t) {
+    const a = document.createElement('a');
+    a.className = 'blip'; a.href = b.href; a.dataset.blip = b.id; a.setAttribute('aria-label', b.t);
+    a.style.left = `${50 + Math.cos(b.a) * b.r * 47.2}%`; a.style.top = `${50 + Math.sin(b.a) * b.r * 47.2}%`;
+    box.append(a);
+    b.el = a;
   }
-  cx.strokeStyle='#5CE1C6';cx.lineWidth=3;cx.beginPath();cx.moveTo(C,C);cx.lineTo(C+Math.cos(sw)*R,C+Math.sin(sw)*R);cx.stroke();
-  for(const b of blips){
-    const d=((sw-b.a)%TAU+TAU)%TAU, k=reduce?1:Math.max(.25,1-d/4);
-    const x=C+Math.cos(b.a)*R*b.r, y=C+Math.sin(b.a)*R*b.r;
-    cx.fillStyle='rgba(92,225,198,'+k+')';cx.beginPath();cx.arc(x,y,b.t?11:6,0,TAU);cx.fill();
-    if(b.t){cx.font='600 26px "JetBrains Mono",monospace';cx.fillStyle='rgba(230,238,248,'+Math.max(.5,k)+')';cx.fillText(b.t,x+18,y+8)}
+  function size(){
+    const css = box.clientWidth || 360, dpr = Math.min(devicePixelRatio || 1, 3);
+    W = Math.round(css * dpr); cv.width = cv.height = W;
   }
-  if(!reduce) requestAnimationFrame(draw);
-}
-requestAnimationFrame(draw);
+  function draw(t){
+    const dt = last ? Math.min(t - last, 64) : 16; last = t;
+    const C = W / 2, R = W / 2 - W * 0.028, k0 = W / 720, small = box.clientWidth < 200;
+    if (!reduce) {
+      if (aim == null) sw = (sw + (dt / 2400) * speed) % TAU;
+      else { const d = ((aim - sw + Math.PI) % TAU + TAU) % TAU - Math.PI; sw += d * Math.min(1, dt / 180); }
+      speed += (1 - speed) * Math.min(1, dt / 900);
+    }
+    cx.setTransform(1, 0, 0, 1, 0, 0);
+    cx.clearRect(0, 0, W, W);
+    // julkinen-7: the beam leans a little toward the mouse.
+    cx.translate(tilt.x * W * 0.02, tilt.y * W * 0.02);
+    cx.strokeStyle = '#1F3B66'; cx.lineWidth = 2 * k0;
+    for (let i = 1; i <= 4; i++) { cx.beginPath(); cx.arc(C, C, R * i / 4, 0, TAU); cx.stroke(); }
+    cx.beginPath(); cx.moveTo(C - R, C); cx.lineTo(C + R, C); cx.moveTo(C, C - R); cx.lineTo(C, C + R); cx.stroke();
+    if (cx.createConicGradient) {
+      const g = cx.createConicGradient(sw - 0.9, C, C);
+      g.addColorStop(0, 'rgba(92,225,198,0)'); g.addColorStop(0.14, 'rgba(92,225,198,.35)'); g.addColorStop(0.1433, 'rgba(92,225,198,0)');
+      cx.fillStyle = g; cx.beginPath(); cx.arc(C, C, R, 0, TAU); cx.fill();
+    }
+    cx.strokeStyle = '#5CE1C6'; cx.lineWidth = 3 * k0; cx.beginPath(); cx.moveTo(C, C); cx.lineTo(C + Math.cos(sw) * R, C + Math.sin(sw) * R); cx.stroke();
+    for (const b of blips) {
+      const d = ((sw - b.a) % TAU + TAU) % TAU, k = reduce ? 1 : Math.max(.25, 1 - d / 4);
+      const x = C + Math.cos(b.a) * R * b.r, y = C + Math.sin(b.a) * R * b.r, hot = b.el && b.el.classList.contains('hot');
+      const rad = (b.t ? 11 : 6) * k0 * (hot ? 1.35 + 0.15 * Math.sin(t / 160) : 1);
+      cx.fillStyle = `rgba(92,225,198,${hot ? 1 : k})`; cx.beginPath(); cx.arc(x, y, rad, 0, TAU); cx.fill();
+      // julkinen-5: a freshly updated AI blip pings as the beam passes it.
+      if (b.id === 'ai' && fresh && !reduce && d < 1.2) {
+        cx.strokeStyle = `rgba(92,225,198,${(1 - d / 1.2) * 0.8})`; cx.lineWidth = 2 * k0;
+        cx.beginPath(); cx.arc(x, y, rad + d * 26 * k0, 0, TAU); cx.stroke();
+      }
+      if (b.t && !small) { cx.font = `600 ${26 * k0}px "JetBrains Mono",monospace`; cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.fillText(b.t, x + 18 * k0, y + 8 * k0); }
+    }
+    raf = !reduce && visible ? requestAnimationFrame(draw) : 0;
+  }
+  const kick = () => { if (!raf) { last = 0; raf = requestAnimationFrame(draw); } };
+  size();
+  kick();
+  addEventListener('resize', () => { size(); kick(); });
+  // Paused while scrolled out of view.
+  if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) kick(); }).observe(box);
+  if (!reduce) {
+    addEventListener('pointermove', e => {
+      if (e.pointerType !== 'mouse') return;
+      const r = box.getBoundingClientRect();
+      tilt = {x: Math.max(-1, Math.min(1, (e.clientX - r.left - r.width / 2) / innerWidth)), y: Math.max(-1, Math.min(1, (e.clientY - r.top - r.height / 2) / innerHeight))};
+    }, {passive: true});
+    // A touch on the radar speeds the sweep up for a moment.
+    box.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') speed = 6; });
+  }
+  // julkinen-1: a card and its blip light each other up; the beam turns to the card's blip.
+  function hot(id, on){
+    for (const el of document.querySelectorAll(`[data-blip="${id}"]`)) el.classList.toggle('hot', on);
+    const b = blips.find(x => x.id === id);
+    aim = on && b ? b.a : null;
+    if (reduce && on && b) sw = b.a;
+    kick();
+  }
+  for (const ev of ['pointerover', 'focusin']) document.addEventListener(ev, e => { const t = e.target.closest && e.target.closest('[data-blip]'); if (t) hot(t.dataset.blip, true); });
+  for (const ev of ['pointerout', 'focusout']) document.addEventListener(ev, e => { const t = e.target.closest && e.target.closest('[data-blip]'); if (t && !t.contains(e.relatedTarget)) hot(t.dataset.blip, false); });
+
+  // ---- julkinen-2/5: AI card shows today's best model and how fresh the data is (left out if the fetch fails) ----
+  const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  getJson('/data/ai-models.json').then(d => {
+    const w = d.categories && d.categories.yleis && d.categories.yleis.items && d.categories.yleis.items[0];
+    if (!w) return;
+    const el = $('#ai-live');
+    el.innerHTML = `Paras nyt: <b>${esc(w.name)}</b> · päivitetty ${esc(ago(d.updated))}`;
+    el.hidden = false;
+    fresh = (Date.now() - Date.parse(d.updated)) / 36e5 < 48;
+    const b = blips.find(x => x.id === 'ai');
+    b.el.title = `AI-opas · päivitetty ${ago(d.updated)}`;
+  }).catch(() => {});
+
+  // ---- julkinen-3: own YO situation from this browser only (yo-harjoittelu's localStorage, read-only) ----
+  try {
+    const s = JSON.parse(localStorage.getItem('yo-practice') || 'null');
+    if (s && (s.scores || s.review)) {
+      const midnight = new Date(); midnight.setHours(0, 0, 0, 0);
+      const due = Object.values(s.review || {}).filter(r => r && !r.gone && r.due <= midnight.getTime()).length;
+      let p = 0, max = 0;
+      for (const v of Object.values(s.scores || {})) if (v && v.max > 0) { p += +v.p || 0; max += v.max; }
+      const bits = [];
+      if (due) bits.push(`<b>${due}</b> kerrattavaa tänään`);
+      if (max) bits.push(`osaaminen ${Math.round(p / max * 100)} %`);
+      if (bits.length) { const el = $('#yo-live'); el.innerHTML = bits.join(' · ') + ' <span class="muted">(vain tällä laitteella)</span>'; el.hidden = false; }
+      // With reviews due, the card's main action becomes the review (a link cannot sit inside the card link).
+      if (due) { const c = $('.tool[data-blip="yo"]'); c.href = '/yo-harjoittelu'; c.querySelector('.go').textContent = 'Jatka kertausta →'; }
+    }
+  } catch (e) { /* storage blocked: the card stays as it is */ }
+
+  // ---- julkinen-6: search the AI data (loaded on the first keystroke); "/" or ⌘K focuses the field ----
+  let index = null;
+  async function buildIndex(){
+    const [m, a, t] = await Promise.all(['/data/ai-models.json', '/data/coding-agents.json', '/data/ai-tools.json'].map(u => getJson(u).catch(() => null)));
+    const out = [];
+    if (m) {
+      const seen = new Set();
+      for (const [cid, c] of Object.entries(m.categories || {})) for (const it of c.items || []) {
+        if (seen.has(it.name)) continue;
+        seen.add(it.name);
+        out.push({kind: 'Malli', title: it.name, sub: it.creator, href: `/ai#m-${cid}`, text: norm(`${it.name} ${it.creator}`)});
+      }
+    }
+    if (a) for (const g of a.agents || []) out.push({kind: 'Koodausagentti', title: g.name, sub: g.bestFor, href: `/ai#a-${slug(g.name)}`, text: norm(`${g.name} ${g.vendor} ${g.bestFor}`)});
+    if (t) for (const ar of t.areas || []) {
+      out.push({kind: 'Osa-alue', title: ar.title, sub: ar.intro, href: `/ai#tyokalut/${ar.id}`, text: norm(`${ar.title} ${ar.intro}`)});
+      for (const x of ar.tools || []) out.push({kind: 'Työkalu', title: x.name, sub: `${ar.title} · ${x.bestFor}`, href: `/ai#t-${ar.id}-${slug(x.name)}`, text: norm(`${x.name} ${x.vendor} ${x.bestFor} ${x.why}`)});
+    }
+    return out;
+  }
+  const q = $('#q'), hits = $('#hits');
+  q.addEventListener('input', async () => {
+    const v = norm(q.value.trim());
+    if (!v) { hits.hidden = true; hits.innerHTML = ''; return; }
+    if (!index) index = buildIndex();
+    const all = await index;
+    if (norm(q.value.trim()) !== v) return;
+    const found = all.filter(x => x.text.includes(v)).sort((x, y) => (norm(y.title).startsWith(v) ? 1 : 0) - (norm(x.title).startsWith(v) ? 1 : 0)).slice(0, 8);
+    hits.innerHTML = found.length ? found.map(x => `<li><a href="${esc(x.href)}"><small>${esc(x.kind)}</small><b>${esc(x.title)}</b><span>${esc(x.sub || '')}</span></a></li>`).join('')
+      : `<li class="muted small">Ei osumia. Kokeile toista sanaa tai avaa <a href="/ai?q=${encodeURIComponent(v)}">AI-opas</a>.</li>`;
+    hits.hidden = false;
+  });
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.querySelector('a'); if (a) location.href = a.href; } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });
+  addEventListener('keydown', e => {
+    const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+    if ((e.key === '/' && !typing) || (e.key === 'k' && (e.metaKey || e.ctrlKey))) { e.preventDefault(); q.focus(); }
+  });
+})();
 </script>
 </body>
 </html>
