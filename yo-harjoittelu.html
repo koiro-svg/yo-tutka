@@ -32,7 +32,7 @@
 .kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
 .kt-tab{font:700 14px var(--font-body);color:var(--ink-2);background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
 .kt-tab:hover{color:var(--ink);border-color:var(--accent)}
-.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .kt-tab .n{font:600 11px var(--font-mono);opacity:.8;margin-left:4px}
 .kt-btn{font:700 14px var(--font-body);color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
 .kt-btn:hover{border-color:var(--accent)}
@@ -249,56 +249,53 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 </style>
 </head>
 <body>
-<!-- yo-nav v1: identical in yo-tutka.html and yo-harjoittelu.html (scripts/check_tokens.py compares them) -->
+<!-- yo-nav v1: the YO bar. Canonical copy scripts/yo-nav.html; yo-tutka.html and yo-harjoittelu.html carry it identically
+     (scripts/check_tokens.py compares, --write copies). Pages publish what the bar shows on <html>: data-yo-page,
+     data-yo-subject and data-yo-due; the bar owns the "due today" rule (window.yoIsDue). -->
 <style>
 @view-transition{navigation:auto}
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
 .yonav{view-transition-name:yonav;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;max-width:1240px;margin:0 auto 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.yonav a{font:700 14px var(--font-body);color:var(--ink-2);text-decoration:none;border-radius:999px;padding:6px 12px;border:1px solid transparent}
-.yonav a:hover{color:var(--ink);border-color:var(--line)}
-.yonav a[aria-current=page]{background:var(--accent);color:var(--accent-ink)}
-.yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);padding-left:0;margin-right:auto}
-.yonav .n{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
-.yonav a[aria-current=page] .n{background:var(--accent-ink);color:var(--accent)}
-@media (max-width:520px){.yonav{gap:2px}.yonav a{padding:6px 8px;font-size:13px}.yonav .home{flex-basis:100%}}
+.yonav .kt-tab{text-decoration:none;border-color:transparent}
+.yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding:6px 0;margin-right:auto}
+.yonav .home:hover{color:var(--accent)}
+.yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
+@media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{flex-basis:100%}}
 @media print{.yonav{display:none}}
 </style>
 <nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
   <a class="home" href="/">← koirosvg.com</a>
-  <a href="/yo-tutka" data-yo="tutka">Tutka</a>
-  <a href="/yo-harjoittelu" data-yo="harjoittele">Harjoittele</a>
-  <a href="/yo-harjoittelu#/kertaus" data-yo="kertaus">Kertaus<span class="n" id="yo-due" hidden></span></a>
-  <a href="/yo-harjoittelu#/edistyminen" data-yo="edistyminen">Edistyminen</a>
-  <a href="/yo-harjoittelu#/tili" data-yo="tili">Tili</a>
+  <a class="kt-tab" href="/yo-tutka" data-yo="tutka">Tutka</a>
+  <a class="kt-tab" href="/yo-harjoittelu" data-yo="harjoittele">Harjoittele</a>
+  <a class="kt-tab" href="/yo-harjoittelu#/kertaus" data-yo="kertaus">Kertaus<span class="due" id="yo-due" hidden></span></a>
+  <a class="kt-tab" href="/yo-harjoittelu#/edistyminen" data-yo="edistyminen">Edistyminen</a>
+  <a class="kt-tab" href="/yo-harjoittelu#/tili" data-yo="tili">Tili</a>
 </nav>
 <script>
-// The YO bar: current page, the subject carried in both links (/yo-tutka#<aine> ↔ /yo-harjoittelu#/<aine>) and the reviews due
-// today from yo-harjoittelu's own localStorage (read only).
 (function () {
-  var nav = document.getElementById('yonav'), tutka = /\/yo-tutka(\.html)?$/.test(location.pathname);
-  var link = function (k) { return nav.querySelector('[data-yo="' + k + '"]'); };
+  var nav = document.getElementById('yonav'), root = document.documentElement;
+  // A review is due today when its day has come (local midnight); yo-harjoittelu's own list uses the same rule.
+  window.yoIsDue = function (r) { var m = new Date(); m.setHours(0, 0, 0, 0); return !!(r && !r.gone && r.due <= m.getTime()); };
+  function dueOf(json) {
+    try { var rv = (JSON.parse(json || 'null') || {}).review || {}, n = 0; for (var k in rv) if (window.yoIsDue(rv[k])) n++; return n; } catch (e) { return 0; }
+  }
+  function stored() { try { return localStorage.getItem('yo-practice'); } catch (e) { return null; } }
   function sync() {
-    var parts = location.hash.replace(/^#\/?/, '').split('/'), head = parts[0] || '';
-    var page = tutka ? 'tutka' : /^(kertaus|edistyminen|tili)$/.test(head) ? head : 'harjoittele';
-    var subj = tutka ? head : /^(t|koe|pika)$/.test(head) ? parts[1] || '' : /^(kertaus|edistyminen|tili)$/.test(head) ? '' : head;
-    try { subj = decodeURIComponent(subj); } catch (e) { subj = ''; }
-    if (!/^[a-z0-9-]{1,40}$/.test(subj)) subj = '';
-    if (subj) { link('tutka').href = '/yo-tutka#' + subj; link('harjoittele').href = '/yo-harjoittelu#/' + subj; }
+    var page = root.dataset.yoPage || '', subj = root.dataset.yoSubject || '', due = +root.dataset.yoDue || 0;
+    if (/^[a-z0-9-]{1,40}$/.test(subj)) {
+      nav.querySelector('[data-yo=tutka]').href = '/yo-tutka#' + subj;
+      nav.querySelector('[data-yo=harjoittele]').href = '/yo-harjoittelu#/' + subj;
+    }
     nav.querySelectorAll('[data-yo]').forEach(function (a) { if (a.dataset.yo === page) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    var due = 0;
-    try {
-      var s = JSON.parse(localStorage.getItem('yo-practice') || 'null'), m = new Date(); m.setHours(0, 0, 0, 0);
-      if (s && s.review) for (var k in s.review) { var r = s.review[k]; if (r && !r.gone && r.due <= m.getTime()) due++; }
-    } catch (e) { /* storage blocked */ }
     var n = document.getElementById('yo-due');
     n.textContent = due; n.hidden = !due;
-    link('kertaus').setAttribute('aria-label', 'Kertaus' + (due ? ', ' + due + ' kohtaa tänään' : ''));
+    nav.querySelector('[data-yo=kertaus]').setAttribute('aria-label', 'Kertaus' + (due ? ', ' + due + ' kohtaa tänään' : ''));
   }
+  root.dataset.yoDue = dueOf(stored());
+  new MutationObserver(sync).observe(root, {attributes: true, attributeFilter: ['data-yo-page', 'data-yo-subject', 'data-yo-due']});
+  addEventListener('storage', function (e) { if (e.key === 'yo-practice') root.dataset.yoDue = dueOf(e.newValue); });
+  addEventListener('pageshow', function (e) { if (e.persisted) root.dataset.yoDue = dueOf(stored()); });
   sync();
-  addEventListener('hashchange', sync);
-  addEventListener('popstate', sync);
-  addEventListener('storage', sync);
-  addEventListener('yo-nav', sync);   // dispatched after a page saves or changes its URL with pushState
 })();
 </script>
 <!-- /yo-nav -->
@@ -365,8 +362,9 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   if (!Array.isArray(S.history)) S.history = Object.entries(S.scores).map(([k, v]) => ({ k, p: v.p, max: v.max, at: v.at })).sort((x, y) => x.at - y.at);
   const persistLocal = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
   let onPersist = null;          // set by the account module: schedules a sync when signed in
-  // The YO bar (yo-nav) listens for this to refresh its "Kertaus" count.
-  const persist = () => { persistLocal(); if (onPersist) onPersist(); dispatchEvent(new Event('yo-nav')); };
+  // The YO bar shows how many reviews are due (rule: window.yoIsDue, owned by the bar).
+  const publishDue = () => { let n = 0; for (const r of Object.values(S.review)) if (window.yoIsDue(r)) n++; document.documentElement.dataset.yoDue = n; };
+  const persist = () => { persistLocal(); if (onPersist) onPersist(); publishDue(); };
   // another tab saved: take its state, so our next persist() does not overwrite it
   window.addEventListener('storage', e => { if (e.key === LS && e.newValue) { try { Object.assign(S, JSON.parse(e.newValue)); } catch (err) {} } });
 
@@ -941,13 +939,12 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   }
   const masthead = (crumbs, title, lede) => `
     <header class="masthead">
-      <nav class="crumb" aria-label="Murupolku">${crumbs || ''}${accountOn() ? `<a href="#/tili" id="acctLink" class="acct ${acct.status}">${esc(acctLabel())}</a>` : ''}</nav>
+      ${crumbs || accountOn() ? `<nav class="crumb" aria-label="Murupolku">${crumbs || ''}${accountOn() ? `<a href="#/tili" id="acctLink" class="acct ${acct.status}">${esc(acctLabel())}</a>` : ''}</nav>` : ''}
       <div class="eyebrow">YO-tutka · Harjoittelu</div>
       <h1>${title}</h1>
       ${lede ? `<p class="lede">${lede}</p>` : ''}
       ${idb.volatile ? '<p class="warnbox">Selaimesi ei salli tallennusta tällä sivulla (esim. yksityinen ikkuna). Vastaukset katoavat, kun suljet sivun. Käytä Tallenna-painiketta.</p>' : ''}
     </header>`;
-  const homeCrumb = a => `<a href="#/${esc(a)}">Harjoittelu</a>`;
   const footer = () => `<footer>
       <p>Tehtävänannot ovat Ylioppilastutkintolautakunnan tekijänoikeuden alaisia, joten tässä on vain lyhyt kuvaus ja linkki alkuperäiseen tehtävään. Vihjeet ja malliratkaisut ovat tämän sivuston omia. Ne on kirjoitettu tekoälyn avulla ja loppuvastaukset on tarkistettu YTL:n hyvän vastauksen piirteitä vasten tai laskemalla, kun se on ollut mahdollista (merkintä jokaisessa kohdassa). Virheitä voi silti olla.</p>
       <p>Kaavaeditori: <a href="https://github.com/digabi/mathquill" target="_blank" rel="noopener">digabi/MathQuill</a> (sama kuin Abitissa) ja <a href="https://www.mathjax.org/" target="_blank" rel="noopener">MathJax</a>.${accountOn() ? ' <a href="/tietosuoja">Tietosuojaseloste</a>.' : ''}</p>
@@ -958,7 +955,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     S.ui.subject = a; persist();
     const s = subj(a), idx = scoreIndex(), sessions = sessionsDesc(s);
     const live = Object.entries(S.review).filter(([, r]) => r && !r.gone);
-    const due = live.filter(([, r]) => r.due <= today()).map(([k]) => k);
+    const due = live.filter(([, r]) => window.yoIsDue(r)).map(([k]) => k);
     const upcoming = live.length - due.length;
     const m = Array.from(mastery(s, idx).values()).sort((x, y) => x.p / x.max - y.p / y.max);
     const reviewItem = key => {
@@ -1094,9 +1091,9 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 
   async function taskView(a, k, n, unitId) {
     const s = subj(a), session = sessionOf(a, k), task = taskOf(a, k, n);
-    if (!task) { setView(masthead(homeCrumb(''), 'Tehtävää ei löytynyt') + '<p><a href="#/">Takaisin</a></p>'); return; }
+    if (!task) { setView(masthead('', 'Tehtävää ei löytynyt') + '<p><a href="#/">Takaisin</a></p>'); return; }
     const title = esc(`${task.n}. ${task.title}`);
-    const signal = setView(masthead(homeCrumb(a), title) + '<p class="muted">Ladataan tehtävää…</p>');
+    const signal = setView(masthead('', title) + '<p class="muted">Ladataan tehtävää…</p>');
     const content = await getContent(a, k);
     if (signal.aborted) return;
     const { intro, units } = unitsFor(content, task);
@@ -1104,7 +1101,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const list = session.tasks, i = list.indexOf(task), prev = list[i - 1], next = list[i + 1];
     const part = task.part ? task.part + '-osa' : task.exam || '';
     const pika = S.ui.pika && S.ui.pika.a === a && (task.topics || []).includes(S.ui.pika.topic) ? S.ui.pika : null;
-    setView(masthead(homeCrumb(a) + `<a href="#/${esc(a)}">${esc(s.name.split(',')[0])}</a>`, title) + `
+    setView(masthead(`<a href="#/${esc(a)}">${esc(s.name.split(',')[0])}</a>`, title) + `
       <section class="taskhead">
         <div class="row"><span class="chip ${k.slice(-1)}">${esc(shortLabel(k))}</span><span class="eyebrow">${esc(s.name)} · ${esc(session.label)}${part ? ' · ' + esc(part) : ''} · ${esc(task.points)} p${task.optional ? ' · valinnainen' : ''}</span></div>
         ${task.summary ? `<p class="sum">${esc(task.summary)}</p>` : ''}
@@ -1142,7 +1139,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   async function simView(a, k, g) {
     const s = subj(a), session = sessionOf(a, k);
     if (!session) { location.hash = '#/'; return; }
-    let signal = setView(masthead(homeCrumb(a), 'Koesimulaatio') + '<p class="muted">Ladataan…</p>');
+    let signal = setView(masthead('', 'Koesimulaatio') + '<p class="muted">Ladataan…</p>');
     const content = await getContent(a, k);
     if (signal.aborted) return;
     const ex = examFor(content, session);
@@ -1150,7 +1147,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     // Some subjects (äidinkieli) have two separate exams in one session: sections carry a `group`.
     const groups = Array.from(new Set(ex.sections.map(x => x.group).filter(Boolean)));
     if (groups.length > 1 && !groups.includes(g)) {
-      setView(masthead(homeCrumb(a), 'Koesimulaatio', esc(head)) + `
+      setView(masthead('', 'Koesimulaatio', esc(head)) + `
         <section class="card"><h2>Valitse koe</h2><p class="muted">Tällä kerralla on kaksi erillistä koetta eri päivinä. Kumpikin tehdään omana simulaationaan.</p>
         <div class="row">${groups.map(x => `<a class="btn primary" href="#/koe/${encodeURIComponent(a)}/${encodeURIComponent(k)}/${encodeURIComponent(x)}">${esc(cap(x))}${simStatus(simKey(a, k, x))}</a>`).join('')}</div></section>${footer()}`);
       return;
@@ -1160,7 +1157,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     const sk = simKey(a, k, g), sim = S.sims[sk];
     const title = esc(head + (g ? ' · ' + g : ''));
     if (!sim) {
-      setView(masthead(homeCrumb(a), 'Koesimulaatio', title) + `
+      setView(masthead('', 'Koesimulaatio', title) + `
         <section class="card">
           <h2>Kokeen rakenne</h2>
           <p>Aikaa on <b>${Math.floor(minutes / 60)} h${minutes % 60 ? ' ' + minutes % 60 + ' min' : ''}</b>. Kello käy, vaikka suljet sivun. Tauon voi pitää, vaikka oikeassa kokeessa ei voi.</p>
@@ -1191,7 +1188,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       const right = done ? scoreChip(idx.get([a, k, n].join('|'))) : `<label class="sp"><input type="checkbox" data-choose="${esc(n)}" ${on ? 'checked' : ''}> Vastaan tähän</label>`;
       return `<details class="simtask" data-n="${esc(n)}" data-chosen="${on ? 1 : 0}"><summary><b>${esc(t.n)}. ${esc(t.title)}</b><span class="chip">${esc(t.points)} p</span>${right}</summary><div class="simbody" data-body></div></details>`;
     };
-    signal = setView(masthead(homeCrumb(a), 'Koesimulaatio', title) + `
+    signal = setView(masthead('', 'Koesimulaatio', title) + `
       <div class="simbar" role="region" aria-label="Kokeen tila">
         ${done ? `<span class="total" id="simTotal">${tot.total} / ${tot.totalMax} p</span><span class="muted"><span id="simAssessed">arvioitu ${tot.assessed} kohdasta</span> · koe palautettu ${fmtDate(sim.submitted)}, aikaa käytetty ${fmt(minutes * 6e4 - remaining())}</span>`
           : `<span class="clock" id="clock" aria-live="off">${fmt(remaining())}</span><span class="muted" id="chosenInfo"></span><span class="sp"></span>
@@ -1316,7 +1313,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
       const r = v.result, pct = r.totalMax ? Math.round(r.total / r.totalMax * 100) : 0;
       return `<tr><td>${fmtDay(v.submitted)}</td><td><a href="#/koe/${encodeURIComponent(a)}/${encodeURIComponent(k)}${g ? '/' + encodeURIComponent(g) : ''}">${esc(s.name.split(',')[0])} · ${esc(x.label)}${g ? ' · ' + esc(g) : ''}</a></td><td>${Number(r.total)} / ${Number(r.totalMax)} p (${pct} %)<br><span class="muted">${Number(r.assessed)} kohtaa arvioitu</span></td></tr>`;
     }).join('');
-    setView(masthead(homeCrumb(S.ui.subject || ''), 'Edistyminen', 'Arvioitu osaaminen = omien arvioidesi pisteet suhteessa maksimiin, jokaisesta kohdasta viimeisin arvio. Käyrä näyttää, miten se on kehittynyt päivä päivältä.') + `
+    setView(masthead('', 'Edistyminen', 'Arvioitu osaaminen = omien arvioidesi pisteet suhteessa maksimiin, jokaisesta kohdasta viimeisin arvio. Käyrä näyttää, miten se on kehittynyt päivä päivältä.') + `
       ${cards.length ? `<div class="grid2">${cards.join('')}</div>` : '<p class="muted">Ei vielä arvioita. Kun teet tehtävän, näytät malliratkaisun ja arvioit pisteesi, edistyminen näkyy tässä.</p>'}
       <section class="card" aria-labelledby="simres-h"><h2 id="simres-h">Koesimulaatiot</h2>
         ${sims ? `<table class="ptable"><thead><tr><th>Palautettu</th><th>Koe</th><th>Arvioidut pisteet</th></tr></thead><tbody>${sims}</tbody></table>` : '<p class="muted">Ei vielä palautettuja koesimulaatioita.</p>'}</section>
@@ -1541,7 +1538,7 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     return 'Jokin meni vikaan (' + m + ').';
   }
   const msg = (text, bad) => { const el = document.getElementById('formMsg'); if (el) { el.textContent = text; el.classList.toggle('bad', !!bad); } };
-  const accountPage = (title, body) => setView(masthead(homeCrumb(S.ui.subject || ''), title) + body + footer());
+  const accountPage = (title, body) => setView(masthead('', title) + body + footer());
   function busyForm(form, on) { $$('button,input', form).forEach(x => { x.disabled = on; }); }
 
   async function accountView(tab) {
@@ -1704,6 +1701,10 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   function route() {
     if (math) closeMath();
     const p = hashParts();
+    // What the YO bar shows: the current page and the subject its links carry.
+    const root = document.documentElement;
+    root.dataset.yoPage = /^(kertaus|edistyminen|tili)$/.test(p[0] || '') ? p[0] : 'harjoittele';
+    root.dataset.yoSubject = /^(t|koe|pika)$/.test(p[0] || '') ? p[1] : subj(p[0]) ? p[0] : S.ui.subject || '';
     if (p[0] === 't' && p.length >= 4) return taskView(p[1], p[2], p[3], p[4]);
     if (p[0] === 'koe' && p.length >= 3) return simView(p[1], p[2], p[3]);
     if (p[0] === 'edistyminen') return progressView();

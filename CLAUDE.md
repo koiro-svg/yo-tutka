@@ -20,8 +20,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   puuttuu tai eroaa (`--write` päivittää). Lohkossa ovat myös yhteiset perussäännöt (`box-sizing`, `:focus-visible`, `[hidden]`).
   Tokenit ovat `:where(:root)`issa, joten sivun oma `:root` voittaa (YO-sivut käyttävät vielä omiaan, tietosuoja ei). Fontit ovat
   omalla palvelimella (`fonts/`, latin-osajoukot, OFL, `fonts/OFL.md`), ei Google Fontsia. Kotivalikossa lisäksi
-  canvas-tutka-animaatio. Työkalusivuilla on `← koirosvg.com`-paluulinkki (`.crumb`) mastheadissa – pidä se jokaisessa
-  uudessa sivussa.
+  canvas-tutka-animaatio. Työkalusivuilla on `← koirosvg.com`-paluulinkki (AI-oppaassa ja tietosuojassa `.crumb` mastheadissa,
+  YO-sivuilla yläpalkin `.home`) – pidä se jokaisessa uudessa sivussa.
 - **Kotivalikko (19.10.2026, julkinen-1…7):** kolme korttia (AI-opas `/ai`, YO-tutka, Hyppymittari) ja tutkan pisteet samoilla
   nimillä. Pisteet ovat oikeita `<a>`-linkkejä canvasin päällä (%-sijainti samasta kulma/säde-laskusta), kortin hover/fokus
   kääntää viivan sen pisteeseen ja pisteen hover korostaa korttia. AI-kortti hakee `data/ai-models.json`:sta yleiskategorian
@@ -65,15 +65,22 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   todennäköisyys, sisempi oma osaaminen `yo-practice`-arvioista, säde suodattaa), valitun aiheen tietopaneeli rivin alla
   (kuvaus, esiintymiset kerroittain, perustelu, osaaminen, Harjoittele + Pikatesti), syvälinkit `#<aine>[/<aihe>]` historiaan
   (`pushState`, `popstate`), trendinuolet (painotettu vs. tasainen ≥ 10 %-yks., `TREND`), seuraavan kokeen laskuri (`EXAMS`,
-  YTL:n alustava aikataulu, **päivitä joka kausi**; vanhentunut päivä näyttää varoituksen), avoimet kerrat, fokus ja kursori
-  säilyvät piirron yli (`state.open`), puhelimella järjestys ainevalinta (valikko) → Harjoittele seuraavaksi → tutka → aiheet (5 +
-  "Näytä kaikki") → kerrat, ja tulostettava kertauslista (`#printlist`, `@media print`). Eyebrow lasketaan datasta.
-- **YO-yläpalkki `<!-- yo-nav v1 -->`** (Tutka · Harjoittele · Kertaus (n) · Edistyminen · Tili) on identtisenä HTML+CSS+JS-lohkona
-  molemmissa YO-sivuissa (`check_tokens.py` vertaa). Se kantaa aineen linkeissä (`/yo-tutka#<aine>` ↔ `/yo-harjoittelu#/<aine>`),
-  laskee tänään erääntyneet kertaukset `yo-practice`-avaimesta (vain luku) ja käyttää cross-document View Transitionsia
-  (`view-transition-name: yonav`, pois reduced motionilla). `pushState` ei laukaise tapahtumaa, joten sivut lähettävät
-  `yo-nav`-tapahtuman (harjoittelu tallennuksen jälkeen, tutka osoitteen vaihtuessa). Harjoittelussa `#/kertaus` vie
-  kertauslistaan.
+  YTL:n alustava aikataulu, **päivitä joka kausi**; `validate_practice.py` tarkistaa avaimet ja varoittaa, kun kaikki päivät ovat
+  menneet), tulostettava kertauslista (`#printlist`, `@media print`). Eyebrow lasketaan datasta. Paneelin runko piirretään kerran
+  aineen/painotuksen vaihtuessa (`renderAll`); aihe, lajittelu ja "Näytä kaikki" piirtävät vain aiheet, tutkan ja kartan
+  (`paintTopics`), haku vain kerrat (`paintSessions`), joten hakukenttä ei koskaan tuhoudu. Suljetun kerran tehtävät rakennetaan
+  vasta avattaessa, ja vain käyttäjän oma avaus/sulkeminen muistetaan (`state.open`, summaryn klikkaus). `stats()` laskee yhdellä
+  kierroksella molemmat todennäköisyydet (trendi = ero) ja on välimuistissa (aine | painotus | vain vahvistetut). DOM-järjestys on
+  sama kaikilla leveyksillä ja puhelimelle sopiva (otsake → hallinnat → Harjoittele seuraavaksi → tutka → aiheet + kartta →
+  kerrat → lähdetilanne); puhelimella 5 aihetta + "Näytä kaikki" ja ainevalikko.
+- **YO-yläpalkki `<!-- yo-nav v1 -->`** (Tutka · Harjoittele · Kertaus (n) · Edistyminen · Tili): kanoninen kopio
+  `scripts/yo-nav.html`, molemmissa YO-sivuissa identtisenä (`check_tokens.py` vertaa, `--write` kopioi). Sivut kertovat palkille
+  `<html>`-attribuuteilla `data-yo-page`, `data-yo-subject` ja `data-yo-due`, ja palkki seuraa niitä `MutationObserver`illa (ei URL-
+  jäsennystä eikä omaa reittitaulua). Kertausten "erääntynyt tänään" -sääntö on palkin `window.yoIsDue` (harjoittelun lista käyttää
+  samaa). Palkki lukee `yo-practice`-avaimen vain latautuessa, `storage`-tapahtumassa (avain täsmää) ja bfcache-paluussa; harjoittelu
+  julkaisee määrän muistista jokaisen tallennuksen jälkeen (`publishDue`). Linkit ovat `kt-tab`-tyylisiä (`aria-current=page`),
+  cross-document View Transitions (`view-transition-name: yonav`, pois reduced motionilla). Harjoittelussa `#/kertaus` vie
+  kertauslistaan; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit.
 - YO-harjoittelu (`/yo-harjoittelu`): Abitti-tyylinen vastauseditori (digabi/MathQuill +
   MathJax CDN:stä), vihjeet ja malliratkaisut, itsearvio, kertauslista, koesimulaatio ja
   apuvälinepaneeli (Mafy-taulukot, GeoGebra, Desmos upotettuina). Tehtävälistan se hakee
@@ -104,7 +111,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - **Hyppymittari näkyy osoitteessa `/hyppymittari` ilman loppukauttaviivaa** (`trailingSlash:false`).
   Sivun `<head>`-skripti asettaa `<base href="/hyppymittari/">`, muuten suhteelliset polut
   (`jump-analysis.js`, `vendor/`, `models/`) osoittaisivat juureen. Älä vaihda `trailingSlash`ia.
-- **YO-yläpalkki muutetaan aina molempiin YO-sivuihin samanlaisena** (`check_tokens.py` kaataa buildin, jos lohkot eroavat).
+- **YO-yläpalkkia muutetaan vain tiedostossa `scripts/yo-nav.html`**, sitten `python3 scripts/check_tokens.py --write` (build kaatuu,
+  jos kopio eroaa). Uusi reitti tai sivu ei vaadi palkkiin muutosta: sivu asettaa `data-yo-page`/`data-yo-subject`.
 - **YO-tutka ei koskaan kirjoita `yo-practice`-avaimeen** (yläpalkki ja tutka vain lukevat): Supabase-synkka ja `mergeState`
   omistavat sen harjoittelussa.
 - YO-tutka on `yo-tutka.html`, ei `index.html` – README:n datansiirtokomento

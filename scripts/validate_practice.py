@@ -6,6 +6,7 @@ Usage:
   python3 scripts/validate_practice.py FILE [...]   # given files only
 Rules are documented in scripts/PRACTICE_CONTENT.md. Standard library only.
 """
+import datetime
 import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -150,10 +151,30 @@ def validate(path, tutka):
     return errors
 
 
+def check_exams(tutka):
+    """yo-tutka.html's EXAMS table (next exam per subject, julkinen-22): keys are subject ids, values real dates.
+    Every date in the past only warns (the page then says the date is not updated): a term change must not block deploys."""
+    html = (ROOT / "yo-tutka.html").read_text(encoding="utf-8")
+    m = re.search(r"const EXAMS = (\{[^}]*\});", html)
+    if not m:
+        return ["yo-tutka.html: EXAMS-taulua ei löytynyt"]
+    exams, errors = json.loads(m.group(1)), []
+    for k, v in exams.items():
+        if k not in tutka:
+            errors.append(f"yo-tutka.html EXAMS: tuntematon aine {k!r}")
+        try:
+            datetime.date.fromisoformat(v)
+        except (TypeError, ValueError):
+            errors.append(f"yo-tutka.html EXAMS: {k}: virheellinen päivä {v!r}")
+    if not errors and all(datetime.date.fromisoformat(v) < datetime.date.today() for v in exams.values()):
+        print("varoitus: yo-tutka.html EXAMS: kaikki koepäivät ovat menneet, päivitä seuraavan kauden päivät")
+    return errors
+
+
 def main(args):
     tutka = tutka_data()
     files = [pathlib.Path(a).resolve() for a in args] or sorted((ROOT / "data" / "practice").glob("*/*.json"))
-    errors = [e for f in files for e in validate(f, tutka)]
+    errors = check_exams(tutka) + [e for f in files for e in validate(f, tutka)]
     for e in errors:
         print(e)
     print(f"{len(files)} tiedostoa, {len(errors)} virhettä")

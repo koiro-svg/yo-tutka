@@ -1,0 +1,50 @@
+<!-- yo-nav v1: the YO bar. Canonical copy scripts/yo-nav.html; yo-tutka.html and yo-harjoittelu.html carry it identically
+     (scripts/check_tokens.py compares, --write copies). Pages publish what the bar shows on <html>: data-yo-page,
+     data-yo-subject and data-yo-due; the bar owns the "due today" rule (window.yoIsDue). -->
+<style>
+@view-transition{navigation:auto}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+.yonav{view-transition-name:yonav;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;max-width:1240px;margin:0 auto 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.yonav .kt-tab{text-decoration:none;border-color:transparent}
+.yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding:6px 0;margin-right:auto}
+.yonav .home:hover{color:var(--accent)}
+.yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
+@media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{flex-basis:100%}}
+@media print{.yonav{display:none}}
+</style>
+<nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
+  <a class="home" href="/">← koirosvg.com</a>
+  <a class="kt-tab" href="/yo-tutka" data-yo="tutka">Tutka</a>
+  <a class="kt-tab" href="/yo-harjoittelu" data-yo="harjoittele">Harjoittele</a>
+  <a class="kt-tab" href="/yo-harjoittelu#/kertaus" data-yo="kertaus">Kertaus<span class="due" id="yo-due" hidden></span></a>
+  <a class="kt-tab" href="/yo-harjoittelu#/edistyminen" data-yo="edistyminen">Edistyminen</a>
+  <a class="kt-tab" href="/yo-harjoittelu#/tili" data-yo="tili">Tili</a>
+</nav>
+<script>
+(function () {
+  var nav = document.getElementById('yonav'), root = document.documentElement;
+  // A review is due today when its day has come (local midnight); yo-harjoittelu's own list uses the same rule.
+  window.yoIsDue = function (r) { var m = new Date(); m.setHours(0, 0, 0, 0); return !!(r && !r.gone && r.due <= m.getTime()); };
+  function dueOf(json) {
+    try { var rv = (JSON.parse(json || 'null') || {}).review || {}, n = 0; for (var k in rv) if (window.yoIsDue(rv[k])) n++; return n; } catch (e) { return 0; }
+  }
+  function stored() { try { return localStorage.getItem('yo-practice'); } catch (e) { return null; } }
+  function sync() {
+    var page = root.dataset.yoPage || '', subj = root.dataset.yoSubject || '', due = +root.dataset.yoDue || 0;
+    if (/^[a-z0-9-]{1,40}$/.test(subj)) {
+      nav.querySelector('[data-yo=tutka]').href = '/yo-tutka#' + subj;
+      nav.querySelector('[data-yo=harjoittele]').href = '/yo-harjoittelu#/' + subj;
+    }
+    nav.querySelectorAll('[data-yo]').forEach(function (a) { if (a.dataset.yo === page) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    var n = document.getElementById('yo-due');
+    n.textContent = due; n.hidden = !due;
+    nav.querySelector('[data-yo=kertaus]').setAttribute('aria-label', 'Kertaus' + (due ? ', ' + due + ' kohtaa tänään' : ''));
+  }
+  root.dataset.yoDue = dueOf(stored());
+  new MutationObserver(sync).observe(root, {attributes: true, attributeFilter: ['data-yo-page', 'data-yo-subject', 'data-yo-due']});
+  addEventListener('storage', function (e) { if (e.key === 'yo-practice') root.dataset.yoDue = dueOf(e.newValue); });
+  addEventListener('pageshow', function (e) { if (e.persisted) root.dataset.yoDue = dueOf(stored()); });
+  sync();
+})();
+</script>
+<!-- /yo-nav -->
