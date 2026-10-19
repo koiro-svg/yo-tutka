@@ -74,6 +74,8 @@ h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-s
 .hits a:hover,.hits a:focus-visible{border-color:var(--accent)}
 .hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
 .hits span{color:var(--ink-3);font-size:13px}
+.hits .none{color:var(--ink-3);font-size:13px}
+.hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
 .tool{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:22px;border-radius:14px;background:linear-gradient(180deg,rgba(92,225,198,.07),transparent 60%),var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
 .tool:hover,.tool.hot{border-color:var(--accent);transform:translateY(-3px)}
@@ -116,7 +118,7 @@ footer a:hover{color:var(--accent)}
     </div>
   </header>
   <div class="search" role="search">
-    <input class="kt-input" id="q" type="search" placeholder="Hae malleista, agenteista ja työkaluista" aria-label="Hae koko sivustosta" autocomplete="off">
+    <input class="kt-input" id="q" type="search" placeholder="Hae malleista, työkaluista ja YO-aiheista" aria-label="Hae koko sivustosta" autocomplete="off">
     <kbd aria-hidden="true">/</kbd>
   </div>
   <ul class="hits" id="hits" aria-live="polite" hidden></ul>
@@ -127,7 +129,7 @@ footer a:hover{color:var(--accent)}
       <p class="live" id="ai-live" hidden></p>
       <span class="go">Avaa AI-opas →</span>
     </a>
-    <a class="tool" href="/yo-tutka" data-blip="yo">
+    <a class="tool" href="/yo-tutka" data-blip="yo" data-yo-built="2026-09-27">
       <div class="hd"><h2>YO-tutka</h2><span class="sig">● tutka + harjoittelu</span></div>
       <p>Ylioppilaskokeiden tehtävät aihealueittain ja arvio siitä, kuinka todennäköisesti aihe tulee seuraavassa kokeessa. Mukana harjoittelu Abitti-tyylisellä kaavaeditorilla, vihjeillä ja malliratkaisuilla.</p>
       <p class="live" id="yo-live" hidden></p>
@@ -146,8 +148,10 @@ footer a:hover{color:var(--accent)}
 (function(){
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const norm = s => String(s || '').toLowerCase();
   const ago = iso => { const h = (Date.now() - Date.parse(iso)) / 36e5; return h < 1 ? 'alle tunti sitten' : h < 48 ? `${Math.round(h)} h sitten` : `${Math.round(h / 24)} pv sitten`; };
+  // Calendar days since a date-only value (local midnight to midnight; Math.round absorbs a DST hour).
+  const daysSince = d => { const m = new Date(); m.setHours(0, 0, 0, 0); return Math.round((m - new Date(d + 'T00:00')) / 864e5); };
+  const dayAgo = n => n <= 0 ? 'tänään' : n === 1 ? 'eilen' : `${n} pv sitten`;
   const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
   const models = getJson('/data/ai-models.json');   // the AI card and the search share one fetch
   models.catch(() => {});
@@ -157,7 +161,7 @@ footer a:hover{color:var(--accent)}
   const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {a:3.4, r:.45, t:''}];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const TAU = Math.PI * 2, R_SHARE = 0.472;   // ring radius as a share of the canvas (the blip links use the same)
-  let W = 0, small = false, bg = null, beam = null, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0, fresh = false;
+  let W = 0, small = false, bg = null, beam = null, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0;
   for (const b of blips) if (b.t) {
     const a = document.createElement('a');
     a.className = 'blip'; a.href = b.href; a.dataset.blip = b.id; a.setAttribute('aria-label', b.t);
@@ -203,12 +207,20 @@ footer a:hover{color:var(--accent)}
       const x = C + Math.cos(b.a) * R * b.r, y = C + Math.sin(b.a) * R * b.r, hot = b.el && b.el.classList.contains('hot');
       const rad = (b.t ? 11 : 6) * k0 * (hot ? 1.35 + 0.15 * Math.sin(t / 160) : 1);
       cx.fillStyle = `rgba(92,225,198,${hot ? 1 : k})`; cx.beginPath(); cx.arc(x, y, rad, 0, TAU); cx.fill();
-      // julkinen-5: a freshly updated AI blip pings as the beam passes it.
-      if (b.id === 'ai' && fresh && !reduce && d < 1.2) {
+      // julkinen-5: the ring is the content's freshness, a full circle when just updated and shrinking to nothing in about
+      // half a year (log scale: the first days count most); a blip without an honest date (Hyppymittari) has no ring.
+      if (b.f != null) {
+        const rr = 20 * k0;
+        cx.lineWidth = 3 * k0;
+        cx.strokeStyle = 'rgba(92,225,198,.2)'; cx.beginPath(); cx.arc(x, y, rr, 0, TAU); cx.stroke();
+        cx.strokeStyle = `rgba(92,225,198,${hot ? 1 : Math.max(.6, k)})`; cx.beginPath(); cx.arc(x, y, rr, -Math.PI / 2, -Math.PI / 2 + TAU * b.f); cx.stroke();
+      }
+      // A blip updated within two days pings as the beam passes it.
+      if (b.ping && !reduce && d < 1.2) {
         cx.strokeStyle = `rgba(92,225,198,${(1 - d / 1.2) * 0.8})`; cx.lineWidth = 2 * k0;
         cx.beginPath(); cx.arc(x, y, rad + d * 26 * k0, 0, TAU); cx.stroke();
       }
-      if (b.t && !small) { cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.fillText(b.t, x + 18 * k0, y + 8 * k0); }
+      if (b.t && !small) { cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.fillText(b.t, x + 30 * k0, y + 8 * k0); }
     }
   }
   const kick = () => { if (!raf) { last = 0; raf = requestAnimationFrame(draw); } };
@@ -235,6 +247,19 @@ footer a:hover{color:var(--accent)}
     for (const ev of ['pointerleave', 'blur']) el.addEventListener(ev, () => hot(el.dataset.blip, false));
   }
 
+  // julkinen-5: a blip's freshness from its content's last update (days, may be fractional) and its tooltip.
+  function setAge(id, days, when){
+    const b = blips.find(x => x.id === id);
+    if (!b || !(days >= 0)) return;
+    b.f = Math.max(0, 1 - Math.log2(1 + days) / Math.log2(181));
+    b.ping = days < 2;
+    b.el.title = `${b.t} · päivitetty ${when}`;
+    kick();
+  }
+  // YO: the data's build date, kept in this page's markup by scripts/yo_index.py (the build checks it against yo-tutka.html).
+  const built = $('[data-yo-built]').dataset.yoBuilt;
+  if (/^\d{4}-\d\d-\d\d$/.test(built)) setAge('yo', daysSince(built), dayAgo(daysSince(built)));
+
   // ---- julkinen-2/5: AI card shows today's best model and how fresh the data is (left out if the fetch fails) ----
   models.then(d => {
     const w = d.categories && d.categories.yleis && d.categories.yleis.items && d.categories.yleis.items[0];
@@ -242,8 +267,7 @@ footer a:hover{color:var(--accent)}
     const el = $('#ai-live');
     el.innerHTML = `Paras nyt: <b>${esc(w.name)}</b> · päivitetty ${esc(ago(d.updated))}`;
     el.hidden = false;
-    fresh = (Date.now() - Date.parse(d.updated)) / 36e5 < 48;
-    blips[0].el.title = `AI-opas · päivitetty ${ago(d.updated)}`;
+    setAge('ai', (Date.now() - Date.parse(d.updated)) / 864e5, ago(d.updated));
   }, () => {});
 
   // ---- julkinen-3: own YO situation from this browser only (yo-harjoittelu's localStorage, read-only) ----
@@ -258,43 +282,23 @@ footer a:hover{color:var(--accent)}
       if (due) bits.push(`<b>${due}</b> kerrattavaa tänään`);
       if (max) bits.push(`osaaminen ${Math.round(p / max * 100)} %`);
       if (bits.length) { const el = $('#yo-live'); el.innerHTML = bits.join(' · ') + ' <span class="muted">(vain tällä laitteella)</span>'; el.hidden = false; }
-      // With reviews due, the card's main action becomes the review (a link cannot sit inside the card link).
-      if (due) { const c = $('.tool[data-blip="yo"]'); c.href = '/yo-harjoittelu'; c.querySelector('.go').textContent = 'Jatka kertausta →'; }
+      // With reviews due, the card goes straight to the review round (a link cannot sit inside the card link).
+      if (due) { const c = $('.tool[data-blip="yo"]'); c.href = '/yo-harjoittelu#/kertaus'; c.querySelector('.go').textContent = 'Jatka kertausta →'; }
     }
   } catch (e) { /* storage blocked: the card stays as it is */ }
 
-  // ---- julkinen-6: search the AI data (loaded on the first keystroke); "/" or ⌘K focuses the field.
-  // Card links carry the raw name; /ai turns it into its card id (one id scheme, owned by ai.html).
-  let index = null;
-  async function buildIndex(){
-    const [m, a, t] = await Promise.all([models, getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json')].map(p => p.catch(() => null)));
-    const out = [], name = s => encodeURIComponent(s);
-    if (m) {
-      const seen = new Set();
-      for (const [cid, c] of Object.entries(m.categories || {})) for (const it of c.items || []) {
-        if (seen.has(it.name)) continue;
-        seen.add(it.name);
-        out.push({kind: 'Malli', title: it.name, sub: it.creator, href: `/ai#m-${cid}`, text: norm(`${it.name} ${it.creator}`)});
-      }
-    }
-    if (a) for (const g of a.agents || []) out.push({kind: 'Koodausagentti', title: g.name, sub: g.bestFor, href: `/ai#a-${name(g.name)}`, text: norm(`${g.name} ${g.vendor} ${g.bestFor}`)});
-    if (t) for (const ar of t.areas || []) {
-      out.push({kind: 'Osa-alue', title: ar.title, sub: ar.intro, href: `/ai#tyokalut/${ar.id}`, text: norm(`${ar.title} ${ar.intro}`)});
-      for (const x of ar.tools || []) out.push({kind: 'Työkalu', title: x.name, sub: `${ar.title} · ${x.bestFor}`, href: `/ai#t-${ar.id}-${name(x.name)}`, text: norm(`${x.name} ${x.vendor} ${x.bestFor} ${x.why}`)});
-    }
-    for (const x of out) x.key = norm(x.title);
-    return out;
-  }
+  // ---- julkinen-6: site search (AI data and YO topics), shared with the YO bar: site-search.js is loaded on the first
+  // keystroke and fetches its data on the first search. "/" or ⌘K focuses the field.
+  let mod = null;
   const q = $('#q'), hits = $('#hits');
   q.addEventListener('input', async () => {
-    const v = norm(q.value.trim());
+    const v = q.value.trim();
     if (!v) { hits.hidden = true; hits.innerHTML = ''; return; }
-    if (!index) index = buildIndex();
-    const all = await index;
-    if (norm(q.value.trim()) !== v) return;
-    const found = all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
-    hits.innerHTML = found.length ? found.map(x => `<li><a href="${esc(x.href)}"><small>${esc(x.kind)}</small><b>${esc(x.title)}</b><span>${esc(x.sub || '')}</span></a></li>`).join('')
-      : `<li class="muted small">Ei osumia. Kokeile toista sanaa tai avaa <a href="/ai?q=${encodeURIComponent(v)}">AI-opas</a>.</li>`;
+    if (!mod) mod = import('/site-search.js');
+    let html;
+    try { const s = await mod; html = s.hitsHtml(await s.search(v, models), v); } catch (e) { mod = null; return; }
+    if (q.value.trim() !== v) return;
+    hits.innerHTML = html;
     hits.hidden = false;
   });
   q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.querySelector('a'); if (a) location.href = a.href; } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });

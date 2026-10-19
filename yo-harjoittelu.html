@@ -295,7 +295,8 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 <body>
 <!-- yo-nav v1: the YO bar. Canonical copy scripts/yo-nav.html; yo-tutka.html and yo-harjoittelu.html carry it identically
      (scripts/check_tokens.py compares, --write copies). Pages publish what the bar shows on <html>: data-yo-page,
-     data-yo-subject and data-yo-due; the bar owns the "due today" rule (window.yoIsDue). -->
+     data-yo-subject and data-yo-due; the bar owns the "due today" rule (window.yoIsDue). Its search button (or ⌘K / Ctrl+K)
+     opens the home page's site search under the bar (site-search.js, loaded on the first keystroke). -->
 <style>
 @view-transition{navigation:auto}
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
@@ -305,8 +306,19 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 .yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding:6px 0;margin-right:auto}
 .yonav .home:hover{color:var(--accent)}
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
-@media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{flex-basis:100%}}
-@media print{.yonav{display:none}}
+@media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{order:-2;flex:1 0 calc(100% - 96px)}.yonav .find{order:-1}}
+.yonav .find{display:inline-flex;align-items:center;gap:6px}
+.yonav .find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
+.yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
+.yosearch .kt-input{width:100%;max-width:560px}
+.yohits{list-style:none;margin:0;padding:0;display:grid;gap:6px;max-width:560px}
+.yohits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.yohits a:hover,.yohits a:focus-visible{border-color:var(--accent)}
+.yohits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.yohits span{color:var(--ink-3);font-size:13px}
+.yohits .none{color:var(--ink-3);font-size:13px}
+.yohits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+@media print{.yonav,.yosearch{display:none}}
 </style>
 <nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
   <a class="home" href="/">← koirosvg.com</a>
@@ -315,7 +327,12 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   <a class="kt-tab" href="/yo-harjoittelu#/kertaus" data-yo="kertaus">Kertaus<span class="due" id="yo-due" hidden></span></a>
   <a class="kt-tab" href="/yo-harjoittelu#/edistyminen" data-yo="edistyminen">Edistyminen</a>
   <a class="kt-tab" href="/yo-harjoittelu#/tili" data-yo="tili">Tili</a>
+  <button type="button" class="kt-tab find" id="yo-find" aria-expanded="false" aria-controls="yo-search" title="Hae koko sivustosta (⌘K / Ctrl+K)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>Haku</button>
 </nav>
+<div class="yosearch" id="yo-search" role="search" hidden>
+  <input class="kt-input" id="yo-q" type="search" placeholder="Hae YO-aiheista, malleista ja työkaluista" aria-label="Hae koko sivustosta" autocomplete="off">
+  <ul class="yohits" id="yo-hits" aria-live="polite" hidden></ul>
+</div>
 <script>
 (function () {
   var nav = document.getElementById('yonav'), root = document.documentElement;
@@ -341,6 +358,27 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
   addEventListener('storage', function (e) { if (e.key === 'yo-practice') root.dataset.yoDue = dueOf(e.newValue); });
   addEventListener('pageshow', function (e) { if (e.persisted) root.dataset.yoDue = dueOf(stored()); });
   sync();
+  // julkinen-6: the site search, the same as on the home page (site-search.js), opens under the bar.
+  var find = document.getElementById('yo-find'), box = document.getElementById('yo-search'), q = document.getElementById('yo-q'), hits = document.getElementById('yo-hits'), mod = null;
+  function show(on) {
+    box.hidden = !on; find.setAttribute('aria-expanded', String(on));
+    if (on) { q.focus(); q.select(); }
+  }
+  find.addEventListener('click', function () { show(box.hidden); });
+  addEventListener('keydown', function (e) { if ((e.metaKey || e.ctrlKey) && !e.altKey && (e.key || '').toLowerCase() === 'k') { e.preventDefault(); show(true); } });
+  q.addEventListener('input', function () {
+    var v = q.value.trim();
+    if (!v) { hits.hidden = true; hits.innerHTML = ''; return; }
+    if (!mod) mod = import('/site-search.js');
+    mod.then(function (s) { return s.search(v).then(function (found) { if (q.value.trim() === v) { hits.innerHTML = s.hitsHtml(found, v); hits.hidden = false; } }); })
+      .catch(function () { mod = null; });
+  });
+  // Enter follows the first hit as a click, so a page's own in-page link handling (yo-tutka's #<subject>/<topic>) runs.
+  q.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { var a = hits.querySelector('a'); if (a) a.click(); }
+    else if (e.key === 'Escape') { e.preventDefault(); show(false); find.focus(); }
+  });
+  hits.addEventListener('click', function (e) { if (e.target.closest('a')) show(false); });
 })();
 </script>
 <!-- /yo-nav -->

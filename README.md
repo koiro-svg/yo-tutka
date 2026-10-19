@@ -1,13 +1,13 @@
 # koirosvg.com
 
 Staattinen sivusto Vercelissä, ei riippuvuuksia. Vercelin build ajaa vain tarkistukset (`vercel.json`: `validate_tools.py`,
-`validate_practice.py`, `check_tokens.py`).
+`validate_practice.py`, `check_tokens.py`, `yo_index.py`).
 
 | Polku | Tiedosto | Mikä |
 |---|---|---|
 | `/` | `index.html` | Kotivalikko |
-| `/ai` | `ai.html` | AI-opas: välilehdet Mallit, Koodausagentit ja Työkalut. Vanhat `/ai-opas` ja `/ai-tyokalut` ovat rewritejä tänne (#-ankkurit toimivat) |
-| `/yo-tutka` | `yo-tutka.html` | YO-tutka |
+| `/ai` | `ai.html` | AI-opas: välilehdet Mallit, Koodausagentit ja Työkalut. Vanhat `/ai-opas` ja `/ai-tyokalut` ovat 308-uudelleenohjauksia tänne (#-ankkurit toimivat) |
+| `/yo-tutka` | `yo-tutka.html` | YO-tutka (`/yo` on lyhyt osoite: 307-uudelleenohjaus tänne, ?parametrit ja #aine/aihe säilyvät) |
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
 | `/tietosuoja` | `tietosuoja.html` | YO-harjoittelun käyttäjätilien tietosuojaseloste |
 | `/hyppymittari` | `hyppymittari/index.html` | Hyppymittari: vertikaalihypyn korkeus kameralla (MediaPipe, laitteella) |
@@ -27,43 +27,27 @@ Staattinen sivusto Vercelissä, ei riippuvuuksia. Vercelin build ajaa vain tarki
 
 ## YO-tutka
 
-Tämä on **julkaisurepo**. Lähdedata ja koontiskripti ovat `~/sovellukset/yo-tutka/`
-(`data/<aine>.json` + `koosta.py`) — älä muokkaa kysymysdataa suoraan tähän tiedostoon.
+Tämä on **julkaisurepo ja käyttöliittymän pääversio** (`yo-tutka.html`, päätös 19.10.2026): ulkoasu ja logiikka
+muutetaan täällä. Lähdedata ja koontiskripti ovat `~/sovellukset/yo-tutka/` (`data/<aine>.json` + `koosta.py`), jossa
+ei enää ole omaa käyttöliittymäkopiota. Älä muokkaa kysymysdataa suoraan tähän tiedostoon.
 
 ## Datan päivitys sovellukset-kansiosta
 1. Muokkaa lähdedataa: `~/sovellukset/yo-tutka/data/<aine>.json`
    (uusi tutkintokerta lisätään aineen `sessions`-listaan).
-2. Koosta sovellukset-kansiossa:
+2. Koosta:
    ```sh
    cd ~/sovellukset/yo-tutka && python3 koosta.py
    ```
-3. Siirrä upotettu data tähän repoon. Koko tiedostoa **ei** kopioida, koska tämän
-   repon `yo-tutka.html` on kääritty täydeksi HTML-dokumentiksi (doctype, head, body)
-   ja sovellukset-versio ei. Komento vaihtaa vain `yo-data`-lohkon ja koontipäivän:
+   Skripti kirjoittaa datan suoraan tämän repon `yo-tutka.html`:n `yo-data`-lohkoon ja koontipäivän
+   (`window.YO_BUILT`, vain jos data muuttui), ja ajaa lopuksi `python3 scripts/yo_index.py --write`, joka päivittää
+   datasta johdetut tiedostot: hakuindeksin `data/yo-topics.json` ja etusivun YO-kortin `data-yo-built`-päivän
+   (tutkan tuoreusrengas). Build kaatuu, jos ne eivät vastaa `yo-tutka.html`:ää.
+3. Testaa lokaalisti pienellä palvelimella (esim. `python3 -m http.server` ja `/yo-tutka.html`).
+4. Julkaise:
    ```sh
-   cd ~/projects/yo-tutka && python3 - <<'PY'
-   import re, pathlib
-   src = pathlib.Path.home().joinpath('sovellukset/yo-tutka/index.html').read_text(encoding='utf-8')
-   dst = pathlib.Path('yo-tutka.html'); html = dst.read_text(encoding='utf-8')
-   for pat in (r'<script id="yo-data" type="application/json">.*?</script>', r"window\.YO_BUILT \|\| '[^']*'"):
-       new = re.search(pat, src, re.S).group(0)
-       html, n = re.subn(pat, lambda m: new, html, count=1, flags=re.S)
-       assert n == 1, pat
-   dst.write_text(html, encoding='utf-8')
-   print('ok')
-   PY
-   ```
-4. Testaa lokaalisti: avaa `yo-tutka.html` selaimessa (tai `npx serve .`).
-5. Julkaise:
-   ```sh
-   git add yo-tutka.html && git commit -m "Lisää <tutkintokerta> <aine>" && git push
+   git add yo-tutka.html data/yo-topics.json index.html && git commit -m "Lisää <tutkintokerta> <aine>" && git push
    ```
    Vercel julkaisee main-haaran pushin automaattisesti tuotantoon (~30 s).
-
-**Käyttöliittymän pääversio on tämä repo** (`yo-tutka.html`, päätös 19.10.2026): ulkoasu ja logiikka muutetaan täällä.
-Sovellukset-kansion `index.html` on datan koonti- ja esikatselukopio, ja yllä oleva komento siirtää siitä vain
-`yo-data`-lohkon ja koontipäivän. Älä tuo sieltä ulkoasua tai logiikkaa tänne (se toisi takaisin mm. Google Fontsin ja
-pudottaisi tokenilohkon).
 
 ## YO-harjoittelu – vihjeet ja malliratkaisut
 - Sisältö: `data/practice/<aine>/<kerta>.json`, yksi tiedosto per aine ja tutkintokerta.

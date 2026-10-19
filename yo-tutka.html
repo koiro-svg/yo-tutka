@@ -132,7 +132,8 @@ td.num,th.num{text-align:right;font-family:var(--font-mono);font-variant-numeric
   .topics,.topics tbody{display:block}
   .topics tbody tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:9px 6px;border-bottom:1px solid var(--line-2)}
   .topics td{border:0;padding:0;text-align:left}
-  .topics td.name{flex:1 1 calc(100% - 90px);order:0}
+  .topics td.name{flex:1 1 calc(100% - 130px);order:0}
+  .topics .pbar{width:28px}
   .topics td:nth-child(6){order:1;margin-left:auto}
   .topics td:nth-child(n+2):not(:nth-child(6)){order:2}
   .topics td:nth-child(n+2)::before{display:block;font-family:var(--font-mono);font-size:9px;font-weight:400;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-3)}
@@ -200,7 +201,10 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 .method code{font-family:var(--font-mono);font-size:12px;background:var(--surface-2);padding:0 4px;border-radius:3px}
 .foot{font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px;display:flex;flex-wrap:wrap;gap:6px 18px}
 .toplink{font-size:13px}
-@media (prefers-reduced-motion:no-preference){.cell,.subjects button{transition:background .15s}}
+/* julkinen-23: rows and bars are updated in place, so a filter animates the bars to their new width. */
+.pbar{display:inline-block;width:44px;height:6px;border-radius:2px;background:var(--surface-2);vertical-align:middle;margin-right:6px}
+.pbar i{display:block;height:100%;background:var(--accent);border-radius:2px}
+@media (prefers-reduced-motion:no-preference){.cell,.subjects button{transition:background .15s}.bar,.pbar i,.trow .fill{transition:width .45s ease}}
 
 /* julkinen-17 radar, -18 topic panel, -21 trend, -22 exam countdown, -24 print list */
 .tname{all:unset;cursor:pointer;font-weight:700}
@@ -264,7 +268,8 @@ h1{font-weight:800;letter-spacing:-.02em}
 <body>
 <!-- yo-nav v1: the YO bar. Canonical copy scripts/yo-nav.html; yo-tutka.html and yo-harjoittelu.html carry it identically
      (scripts/check_tokens.py compares, --write copies). Pages publish what the bar shows on <html>: data-yo-page,
-     data-yo-subject and data-yo-due; the bar owns the "due today" rule (window.yoIsDue). -->
+     data-yo-subject and data-yo-due; the bar owns the "due today" rule (window.yoIsDue). Its search button (or ⌘K / Ctrl+K)
+     opens the home page's site search under the bar (site-search.js, loaded on the first keystroke). -->
 <style>
 @view-transition{navigation:auto}
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}}
@@ -274,8 +279,19 @@ h1{font-weight:800;letter-spacing:-.02em}
 .yonav .home{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding:6px 0;margin-right:auto}
 .yonav .home:hover{color:var(--accent)}
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
-@media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{flex-basis:100%}}
-@media print{.yonav{display:none}}
+@media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{order:-2;flex:1 0 calc(100% - 96px)}.yonav .find{order:-1}}
+.yonav .find{display:inline-flex;align-items:center;gap:6px}
+.yonav .find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
+.yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
+.yosearch .kt-input{width:100%;max-width:560px}
+.yohits{list-style:none;margin:0;padding:0;display:grid;gap:6px;max-width:560px}
+.yohits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.yohits a:hover,.yohits a:focus-visible{border-color:var(--accent)}
+.yohits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.yohits span{color:var(--ink-3);font-size:13px}
+.yohits .none{color:var(--ink-3);font-size:13px}
+.yohits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+@media print{.yonav,.yosearch{display:none}}
 </style>
 <nav class="yonav" id="yonav" aria-label="YO-tutka ja harjoittelu">
   <a class="home" href="/">← koirosvg.com</a>
@@ -284,7 +300,12 @@ h1{font-weight:800;letter-spacing:-.02em}
   <a class="kt-tab" href="/yo-harjoittelu#/kertaus" data-yo="kertaus">Kertaus<span class="due" id="yo-due" hidden></span></a>
   <a class="kt-tab" href="/yo-harjoittelu#/edistyminen" data-yo="edistyminen">Edistyminen</a>
   <a class="kt-tab" href="/yo-harjoittelu#/tili" data-yo="tili">Tili</a>
+  <button type="button" class="kt-tab find" id="yo-find" aria-expanded="false" aria-controls="yo-search" title="Hae koko sivustosta (⌘K / Ctrl+K)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>Haku</button>
 </nav>
+<div class="yosearch" id="yo-search" role="search" hidden>
+  <input class="kt-input" id="yo-q" type="search" placeholder="Hae YO-aiheista, malleista ja työkaluista" aria-label="Hae koko sivustosta" autocomplete="off">
+  <ul class="yohits" id="yo-hits" aria-live="polite" hidden></ul>
+</div>
 <script>
 (function () {
   var nav = document.getElementById('yonav'), root = document.documentElement;
@@ -310,6 +331,27 @@ h1{font-weight:800;letter-spacing:-.02em}
   addEventListener('storage', function (e) { if (e.key === 'yo-practice') root.dataset.yoDue = dueOf(e.newValue); });
   addEventListener('pageshow', function (e) { if (e.persisted) root.dataset.yoDue = dueOf(stored()); });
   sync();
+  // julkinen-6: the site search, the same as on the home page (site-search.js), opens under the bar.
+  var find = document.getElementById('yo-find'), box = document.getElementById('yo-search'), q = document.getElementById('yo-q'), hits = document.getElementById('yo-hits'), mod = null;
+  function show(on) {
+    box.hidden = !on; find.setAttribute('aria-expanded', String(on));
+    if (on) { q.focus(); q.select(); }
+  }
+  find.addEventListener('click', function () { show(box.hidden); });
+  addEventListener('keydown', function (e) { if ((e.metaKey || e.ctrlKey) && !e.altKey && (e.key || '').toLowerCase() === 'k') { e.preventDefault(); show(true); } });
+  q.addEventListener('input', function () {
+    var v = q.value.trim();
+    if (!v) { hits.hidden = true; hits.innerHTML = ''; return; }
+    if (!mod) mod = import('/site-search.js');
+    mod.then(function (s) { return s.search(v).then(function (found) { if (q.value.trim() === v) { hits.innerHTML = s.hitsHtml(found, v); hits.hidden = false; } }); })
+      .catch(function () { mod = null; });
+  });
+  // Enter follows the first hit as a click, so a page's own in-page link handling (yo-tutka's #<subject>/<topic>) runs.
+  q.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { var a = hits.querySelector('a'); if (a) a.click(); }
+    else if (e.key === 'Escape') { e.preventDefault(); show(false); find.focus(); }
+  });
+  hits.addEventListener('click', function (e) { if (e.target.closest('a')) show(false); });
 })();
 </script>
 <!-- /yo-nav -->
@@ -463,7 +505,7 @@ h1{font-weight:800;letter-spacing:-.02em}
       const name = t.name.length>maxLen ? t.name.slice(0,maxLen-1)+'…' : t.name, on = state.topic===t.id;
       const [x0,y0]=at(a-Math.PI/N,R+40), [x1,y1]=at(a+Math.PI/N,R+40);
       return `<path class="hit${on?' on':''}" d="M${C},${C} L${x0},${y0} A${R+40},${R+40} 0 0 1 ${x1},${y1} Z" data-topic="${esc(t.id)}" tabindex="0" role="button" aria-pressed="${on}" aria-label="${esc(t.name)}: todennäköisyys ${fmtPct(t.p)}${ms[i]==null?'':', osaat '+fmtPct(ms[i])}"><title>${esc(t.name)}</title></path>
-        <text class="rl${on?' on':''}" style="font-size:${fs}px" x="${lx}" y="${f1(+ly + (sin>0.3?10:sin<-0.3?-2:4))}" text-anchor="${anchor}">${esc(name)}</text>`;
+        <text class="rl${on?' on':''}" data-name="${esc(t.id)}" style="font-size:${fs}px" x="${lx}" y="${f1(+ly + (sin>0.3?10:sin<-0.3?-2:4))}" text-anchor="${anchor}">${esc(name)}</text>`;
     }).join('');
     return `<figure class="radar"><svg viewBox="-60 -10 520 420" role="group" aria-label="Aiheiden tutka: todennäköisyys ja oma osaaminen">${svg}</svg>
       <figcaption class="legend"><span><span class="sw rp"></span>todennäköisyys kokeessa</span>${any?'<span><span class="sw rm"></span>oma osaaminen</span>':'<span>Arvioi itsesi harjoittelussa, niin oma osaaminen piirtyy tutkaan.</span>'}<span>Napauta aihetta.</span></figcaption></figure>`;
@@ -482,8 +524,10 @@ h1{font-weight:800;letter-spacing:-.02em}
     </div></td></tr>`;
   }
 
-  // ---- The panel: a skeleton per subject; topic, sort and search repaint only their parts ----
+  // ---- The panel: a skeleton per subject; weighting, filters, topic, sort and search update only their parts in place ----
   let cur = null;   // {s, st, ps} of the drawn subject (the print list reuses it)
+  let rows = new Map(), drawn = {};   // julkinen-23: topic id -> its <tr>, and what the heat map, radar and info row were drawn from
+  const th = (key,label,cls='') => `<th class="${cls}"><button type="button" data-sort="${key}">${label}<span class="arr"></span></button></th>`;
   function renderSubjects(){
     $('#subjects').innerHTML = DATA.map(s=>{
       const v = s.sessions.filter(x=>x.verified && x.tasks && x.tasks.length).length;
@@ -497,6 +541,7 @@ h1{font-weight:800;letter-spacing:-.02em}
       document.documentElement.dataset.yoSubject = s.id;   // the YO bar carries the subject
       const st = stats(s), ps = practiceScores(s);
       cur = {s, st, ps};
+      rows = new Map(); drawn = {};
       const verified = s.sessions.filter(x=>x.verified && x.tasks && x.tasks.length).length;
       const missing = s.sessions.filter(x=>!x.tasks || !x.tasks.length);
       const unverified = s.sessions.filter(x=>x.tasks && x.tasks.length && !x.verified);
@@ -510,9 +555,9 @@ h1{font-weight:800;letter-spacing:-.02em}
             <p class="desc">${esc(s.examStructure||'')}</p>
           </div>
           <div class="tiles" role="group" aria-label="Yhteenveto">
-            <div class="tile"><span class="v">${st.n}<span style="font-size:14px;color:var(--ink-3)">/${s.sessions.length}</span></span><span class="l">kertaa mukana</span></div>
-            <div class="tile"><span class="v">${st.totalTasks}</span><span class="l">tehtävää</span></div>
-            <div class="tile"><span class="v">${st.ranked.length}</span><span class="l">aihealuetta</span></div>
+            <div class="tile"><span class="v"><span id="tileN"></span><span style="font-size:14px;color:var(--ink-3)">/${s.sessions.length}</span></span><span class="l">kertaa mukana</span></div>
+            <div class="tile"><span class="v" id="tileTasks"></span><span class="l">tehtävää</span></div>
+            <div class="tile"><span class="v" id="tileTopics"></span><span class="l">aihealuetta</span></div>
           </div>
         </div>
         <div class="controls">
@@ -534,16 +579,16 @@ h1{font-weight:800;letter-spacing:-.02em}
         <div class="grid2">
           <section class="sec">
             <div class="sec-head"><h3>Aihealueet ja todennäköisyys</h3><span class="hint">Valitse aihe, niin näet sen tiedot ja tehtävät</span></div>
-            <table class="topics" id="topicsTbl"></table>
+            <table class="topics" id="topicsTbl"><thead><tr>${th('name','Aihealue')}${th('total','Tehtäviä','num')}${th('hits','Kerroilla','num')}${th('share','Osuus','num')}${th('exp','Odot. / koe','num')}${th('p','Tod.näk.','num')}<th>Viimeksi</th></tr></thead><tbody></tbody></table>
             <button type="button" class="kt-btn sm more-btn" id="moreTopics" hidden></button>
             <div class="legend"><span><span class="pp p4">≥ 90 %</span> lähes varma</span><span><span class="pp p3">65–89 %</span> todennäköinen</span><span><span class="pp p2">35–64 %</span> mahdollinen</span><span><span class="pp p1">&lt; 35 %</span> harvinainen</span><span><span class="trend up">↑</span><span class="trend down">↓</span> yleistynyt / harvinaistunut tuoreimmilla kerroilla (vähintään ${Math.round(TREND*100)} %-yks.)</span></div>
           </section>
           <section class="sec">
             <div class="sec-head"><h3>Esiintymiskartta</h3><span class="hint">Tehtäviä per aihe ja tutkintokerta · napauta solua</span></div>
-            <table class="heat" id="heatTbl" style="--n:${st.ss.length}"></table>
-            <div class="legend"><span><span class="chip K">K</span> kevät</span><span><span class="chip S">S</span> syksy</span><span>* ei vahvistettu</span><span><span class="sw" style="background:var(--h1)"></span><span class="sw" style="background:var(--h3)"></span><span class="sw" style="background:var(--h5)"></span> 1 → ${st.maxCell} tehtävää</span></div>
+            <table class="heat" id="heatTbl"></table>
+            <div class="legend"><span><span class="chip K">K</span> kevät</span><span><span class="chip S">S</span> syksy</span><span>* ei vahvistettu</span><span><span class="sw" style="background:var(--h1)"></span><span class="sw" style="background:var(--h3)"></span><span class="sw" style="background:var(--h5)"></span> 1 → <span id="heatMax"></span> tehtävää</span></div>
             <div class="sec-head" style="margin-top:8px"><h3>Tehtävätyypit</h3><span class="hint">osuus kaikista tehtävistä</span></div>
-            <div class="types">${st.types.map(t=>`<div class="trow"><span>${esc(t.name)}</span><div class="track"><div class="fill" style="width:${Math.round(t.share*100)}%"></div></div><span class="v">${t.count} · ${fmtPct(t.share)}</span></div>`).join('')||'<p class="empty">Ei tehtävätyyppejä.</p>'}</div>
+            <div class="types" id="types"></div>
           </section>
         </div>
         <section class="sec">
@@ -558,8 +603,7 @@ h1{font-weight:800;letter-spacing:-.02em}
             return `<span class="chip ${cls}" title="${esc(x.label)}: ${title}">${esc(shortLabel(x.id))}</span>`; }).join('')}</span>
           ${s.notes?`<span style="flex-basis:100%">${esc(s.notes)}</span>`:''}
         </div>`;
-      paintNext();
-      paintTopics();
+      paintStats();
       $('#sessions').innerHTML = orderedSessions(s).slice().reverse().map(x=>sessionHtml(s,x)).join('');
       filterSessions();
     });
@@ -571,7 +615,51 @@ h1{font-weight:800;letter-spacing:-.02em}
       .sort((a,b)=>b.prio-a.prio).slice(0,5)
       .map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span><span class="go">${pracLinks(s, r.t.id, taskFor(r.t.id, ps.byTask, st))}</span></li>`).join('');
   }
-  // Topic table, radar, heat map and the topic chip (topic, sort and "Näytä kaikki").
+  // Everything that depends on the weighting and "Vain vahvistetut" (julkinen-23): updated in place, so the sessions (and
+  // which are open), the scroll position and the focus stay, and the bars animate to their new width.
+  function paintStats(){
+    const {st} = cur;
+    $('#tileN').textContent = st.n; $('#tileTasks').textContent = st.totalTasks; $('#tileTopics').textContent = st.ranked.length;
+    $('#heatMax').textContent = st.maxCell;
+    const box = $('#types');
+    st.types.forEach((t,i)=>{
+      let r = box.querySelector(`.trow[data-type="${CSS.escape(t.id)}"]`);
+      if(!r){ r = document.createElement('div'); r.className = 'trow'; r.dataset.type = t.id; r.innerHTML = `<span>${esc(t.name)}</span><div class="track"><div class="fill"></div></div><span class="v"></span>`; }
+      r.querySelector('.fill').style.width = Math.round(t.share*100)+'%';
+      r.querySelector('.v').textContent = `${t.count} · ${fmtPct(t.share)}`;
+      if(box.children[i]!==r) moveTo(box, r, box.children[i]||null);
+    });
+    while(box.children.length>st.types.length) box.lastElementChild.remove();
+    if(!st.types.length) box.innerHTML = '<p class="empty">Ei tehtävätyyppejä.</p>';
+    paintNext();
+    paintTopics();
+  }
+  // Moves keep a row's state where the browser can (moveBefore: focus and running transitions); else a plain insert.
+  const moveTo = (parent, el, ref) => { if(parent.moveBefore && el.parentNode===parent) parent.moveBefore(el, ref); else parent.insertBefore(el, ref); };
+  const trendHtml = t => Math.abs(t.trend) >= TREND ? `<span class="trend ${t.trend>0?'up':'down'}" title="${t.trend>0?'Yleistynyt':'Harvinaistunut'} tuoreimmilla kerroilla: ${t.trend>0?'+':'−'}${Math.round(Math.abs(t.trend)*100)} %-yks. tasaiseen painotukseen verrattuna">${t.trend>0?'↑':'↓'}</span>` : '';
+  function topicRow(t){
+    const tr = document.createElement('tr');
+    tr.dataset.topic = t.id;
+    tr.innerHTML = `<td class="name"><button type="button" class="tname" data-topic="${esc(t.id)}">${esc(t.name)}</button></td><td class="num"><span class="bar"></span><span class="v"></span></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"><span class="tw"></span><span class="pbar" aria-hidden="true"><i></i></span><span class="pp"></span></td><td></td>`;
+    return tr;
+  }
+  function fillRow(tr, t, i, maxTotal){
+    const c = tr.cells, on = state.topic===t.id, pp = c[5].querySelector('.pp');
+    tr.className = (on ? 'sel' : '') + (i>=5 && !on ? ' more' : '');
+    c[0].querySelector('.tname').setAttribute('aria-expanded', on);
+    c[1].querySelector('.bar').style.width = Math.round(t.total/maxTotal*60)+'px';
+    c[1].querySelector('.v').textContent = t.total;
+    c[2].textContent = `${t.sessionsHit}/${cur.st.n}`;
+    c[3].textContent = fmtPct(t.share);
+    c[4].textContent = t.expected.toFixed(1);
+    c[5].querySelector('.tw').innerHTML = trendHtml(t);
+    c[5].querySelector('.pbar i').style.width = Math.round(t.p*100)+'%';
+    pp.className = 'pp '+pClass(t.p); pp.title = pWord(t.p); pp.textContent = fmtPct(t.p);
+    c[6].innerHTML = t.last ? `<span class="chip ${esc(t.last.id.slice(-1))}">${esc(shortLabel(t.last.id))}</span>` : '<span class="chip">–</span>';
+  }
+  // Topic table, radar, heat map and the topic chip (topic, sort, "Näytä kaikki" and the stats above). Rows are keyed by
+  // topic id and moved only when the order changes; the heat map and the radar are rebuilt only when their data or the
+  // order changed, else only their highlight follows the topic.
   function paintTopics(){
     keepFocus(()=>{
       const {s, st, ps} = cur;
@@ -579,26 +667,45 @@ h1{font-weight:800;letter-spacing:-.02em}
       const sorters = { name:(a,b)=>a.name.localeCompare(b.name,'fi'), total:(a,b)=>a.total-b.total, hits:(a,b)=>a.sessionsHit-b.sessionsHit, share:(a,b)=>a.share-b.share, p:(a,b)=>a.p-b.p||a.expected-b.expected, exp:(a,b)=>a.expected-b.expected };
       const topics = st.topics.slice().sort((a,b)=>state.sortDir*sorters[state.sort](a,b));
       const maxTotal = Math.max(1,...st.topics.map(t=>t.total));
-      const th = (key,label,cls='') => `<th class="${cls}"><button type="button" data-sort="${key}" ${state.sort===key?`aria-sort="${state.sortDir<0?'descending':'ascending'}"`:''}>${label}${state.sort===key?(state.sortDir<0?' ▾':' ▴'):''}</button></th>`;
-      const trend = t => Math.abs(t.trend) >= TREND ? `<span class="trend ${t.trend>0?'up':'down'}" title="${t.trend>0?'Yleistynyt':'Harvinaistunut'} tuoreimmilla kerroilla: ${t.trend>0?'+':'−'}${Math.round(Math.abs(t.trend)*100)} %-yks. tasaiseen painotukseen verrattuna">${t.trend>0?'↑':'↓'}</span>` : '';
-      const tbl = $('#topicsTbl');
+      const tbl = $('#topicsTbl'), body = tbl.tBodies[0];
       tbl.classList.toggle('all', state.allTopics);
-      tbl.innerHTML = `<thead><tr>${th('name','Aihealue')}${th('total','Tehtäviä','num')}${th('hits','Kerroilla','num')}${th('share','Osuus','num')}${th('exp','Odot. / koe','num')}${th('p','Tod.näk.','num')}<th>Viimeksi</th></tr></thead>
-        <tbody>${topics.map((t,i)=>`<tr data-topic="${esc(t.id)}" class="${state.topic===t.id?'sel':''}${i>=5&&state.topic!==t.id?' more':''}">
-          <td class="name"><button type="button" class="tname" data-topic="${esc(t.id)}" aria-expanded="${state.topic===t.id}">${esc(t.name)}</button></td>
-          <td class="num"><span class="bar" style="width:${Math.round(t.total/maxTotal*60)}px"></span>${t.total}</td>
-          <td class="num">${t.sessionsHit}/${st.n}</td>
-          <td class="num">${fmtPct(t.share)}</td>
-          <td class="num">${t.expected.toFixed(1)}</td>
-          <td class="num">${trend(t)}<span class="pp ${pClass(t.p)}" title="${pWord(t.p)}">${fmtPct(t.p)}</span></td>
-          <td>${t.last?`<span class="chip ${esc(t.last.id.slice(-1))}">${esc(shortLabel(t.last.id))}</span>`:'<span class="chip">–</span>'}</td>
-        </tr>${state.topic===t.id?infoRow(s,st,t,ps):''}`).join('')}</tbody>`;
+      for(const b of tbl.tHead.querySelectorAll('button[data-sort]')){
+        const on = state.sort===b.dataset.sort;
+        if(on) b.setAttribute('aria-sort', state.sortDir<0?'descending':'ascending'); else b.removeAttribute('aria-sort');
+        b.querySelector('.arr').textContent = on ? (state.sortDir<0?' ▾':' ▴') : '';
+      }
+      // The selected topic's panel is rebuilt only when the topic or its data changed (a focused link in it stays).
+      const sel = topics.find(t=>t.id===state.topic), infoKey = sel ? [sel.id, st, ps] : null;
+      if(drawn.info && !(infoKey && drawn.infoKey.every((x,i)=>x===infoKey[i]))){ drawn.info.remove(); drawn.info = null; }
+      if(sel && !drawn.info){ const tmp = document.createElement('tbody'); tmp.innerHTML = infoRow(s,st,sel,ps); drawn.info = tmp.firstElementChild; drawn.infoKey = infoKey; }
+      let pos = 0;
+      topics.forEach((t,i)=>{
+        let tr = rows.get(t.id);
+        if(!tr){ tr = topicRow(t); rows.set(t.id, tr); }
+        fillRow(tr, t, i, maxTotal);
+        if(body.children[pos]!==tr) moveTo(body, tr, body.children[pos]||null);
+        pos++;
+        if(t===sel){ if(body.children[pos]!==drawn.info) moveTo(body, drawn.info, body.children[pos]||null); pos++; }
+      });
+      while(body.children.length>pos) body.lastElementChild.remove();
       const more = $('#moreTopics');
       more.hidden = topics.length<=5;
       more.textContent = state.allTopics ? 'Näytä vähemmän' : `Näytä kaikki ${topics.length}`;
-      $('#heatTbl').innerHTML = `<thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${esc(x.id.slice(-1))}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
-        <tbody>${topics.map(t=>`<tr><td class="name ${state.topic===t.id?'sel':''}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="0" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(t.cells[i].map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
-      $('#radarBox').innerHTML = radarHtml(s, st, ps);
+      const heat = $('#heatTbl'), order = topics.map(t=>t.id).join('\n');
+      if(drawn.heatSt!==st || drawn.heatOrder!==order){
+        heat.style.setProperty('--n', st.ss.length);
+        heat.innerHTML = `<thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${esc(x.id.slice(-1))}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
+          <tbody>${topics.map(t=>`<tr><td class="name" data-name="${esc(t.id)}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="0" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(t.cells[i].map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
+        drawn.heatSt = st; drawn.heatOrder = order;
+      }
+      for(const td of heat.querySelectorAll('td.name')) td.classList.toggle('sel', td.dataset.name===state.topic);
+      const radar = $('#radarBox');
+      if(drawn.radarSt!==st || drawn.radarPs!==ps){ radar.innerHTML = radarHtml(s, st, ps); drawn.radarSt = st; drawn.radarPs = ps; }
+      for(const el of radar.querySelectorAll('[data-topic], [data-name]')){
+        const on = (el.dataset.topic||el.dataset.name)===state.topic;
+        el.classList.toggle('on', on);
+        if(el.dataset.topic) el.setAttribute('aria-pressed', on);
+      }
       $('#topicChip').innerHTML = state.topic ? `<button type="button" id="clearTopic" class="tag sel">Aihe: ${esc(topicName(s,state.topic))} ✕</button>` : '';
     });
   }
@@ -638,13 +745,15 @@ h1{font-weight:800;letter-spacing:-.02em}
     }
     for(const b of document.querySelectorAll('#sessions .tag[data-topic]')) b.classList.toggle('sel', b.dataset.topic===state.topic);
   }
-  // A rebuilt control gets focus back: found by tag, first class and data-* attributes (or its id), so a topic name
-  // button never resolves to the radar wedge of the same topic.
+  // A rebuilt or moved control gets focus back: itself when still in the page, else found by tag, first class and data-*
+  // attributes (or its id), so a topic name button never resolves to the radar wedge of the same topic.
   function keepFocus(fn){
     const a = document.activeElement, sel = a && a!==document.body ? (a.id ? '#'+CSS.escape(a.id)
       : a.localName + (a.classList[0] ? '.'+CSS.escape(a.classList[0]) : '') + [...a.attributes].filter(x=>x.name.startsWith('data-') || x.name==='href').map(x=>`[${x.name}="${CSS.escape(x.value)}"]`).join('')) : '';
     fn();
-    if(sel && !document.contains(a)){ const b = document.querySelector(sel); if(b) b.focus({preventScroll:true}); }
+    if(!sel || document.activeElement===a) return;
+    const b = document.contains(a) ? a : document.querySelector(sel);
+    if(b) b.focus({preventScroll:true});
   }
 
   // julkinen-24: a printable review list of the subject's likeliest topics with own mastery and a box to tick.
@@ -699,10 +808,24 @@ h1{font-weight:800;letter-spacing:-.02em}
   window.addEventListener('pageshow', e => { if (e.persisted) rescore(); });
   addEventListener('storage', e => { if (e.key === 'yo-practice') rescore(); });
   addEventListener('popstate', () => { if(fromHash()) renderAll(); else { paintTopics(); filterSessions(); } });
+  // A deep link to a topic (the site search: /yo-tutka#<subject>/<topic>) scrolls its row into view.
+  const showTopic = () => { const r = state.topic && rows.get(state.topic); if(r && r.isConnected) r.scrollIntoView({block:'center'}); };
+  // Links to this page with a hash (the YO bar's search hits) apply in place, like the back button, then show the topic.
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href*="#"]');
+    if(!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const u = new URL(a.href, location.href);
+    if(u.origin!==location.origin || u.pathname!==location.pathname || u.search!==location.search || !u.hash) return;
+    e.preventDefault();
+    if(u.hash!==location.hash) history.pushState(null, '', u.hash);
+    if(fromHash()) renderAll(); else { paintTopics(); filterSessions(); }
+    showTopic();
+  });
+  const restat = () => { cur.st = stats(cur.s); keepFocus(paintStats); };
   const panel = $('#panel');
   panel.addEventListener('change', e => {
-    if(e.target.id==='weighting'){ state.weighting=e.target.value; persist(); renderAll(); }
-    else if(e.target.id==='verifiedOnly'){ state.verifiedOnly=e.target.checked; persist(); renderAll(); }
+    if(e.target.id==='weighting'){ state.weighting=e.target.value; persist(); restat(); }
+    else if(e.target.id==='verifiedOnly'){ state.verifiedOnly=e.target.checked; persist(); restat(); }
   });
   let tmr;
   panel.addEventListener('input', e => { if(e.target.id!=='query') return; clearTimeout(tmr); tmr=setTimeout(()=>{ state.query=e.target.value; filterSessions(); },180); });
@@ -735,7 +858,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   document.documentElement.dataset.yoPage = 'tutka';
   setSubject(state.subject);
   fromHash();
-  if(!DATA.length){ $('#panel').innerHTML = '<p class="empty">Dataa ei ole vielä upotettu.</p>'; } else { renderAll(); syncUrl(true); }
+  if(!DATA.length){ $('#panel').innerHTML = '<p class="empty">Dataa ei ole vielä upotettu.</p>'; } else { renderAll(); syncUrl(true); showTopic(); }
 })();
 </script>
 </body>

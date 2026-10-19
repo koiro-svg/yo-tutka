@@ -697,7 +697,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     $('#answer').innerHTML = answerHtml();
   }
 
-  // ---- URL: /ai?q=…#<tab>[/<sub>] or #<card id>; /ai-tyokalut redirects to /ai?tab=tyokalut (the #hash survives) ----
+  // ---- URL: /ai?q=…&kind=…#<tab>[/<sub>] or #<card id>; /ai-tyokalut redirects to /ai?tab=tyokalut (the #hash survives) ----
   function parseHash(){
     let h = location.hash.slice(1);
     try { h = decodeURIComponent(h); } catch (e) { /* a stray % (#50%): use the raw text */ }
@@ -718,8 +718,10 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   // Applies the URL (start, back/forward, in-page #links): query, tab, filters, then scrolls to a linked card.
   function fromUrl(){
     const qs = new URLSearchParams(location.search), p = parseHash();
+    clearTimeout(qTimer); clearTimeout(commitTimer);
     ui.q = norm(qs.get('q') || '');
     $('#q').value = qs.get('q') || '';
+    ui.kind = KINDS.some(k => k.id === qs.get('kind')) ? qs.get('kind') : 'all';
     ui.tab = p.tab || (TABS.some(t => t.id === qs.get('tab')) ? qs.get('tab') : ui.tab);
     ui.group = p.group || (p.tab === 'mallit' ? ui.group : 'all');
     ui.area = p.area && (!tools || p.area === 'all' || tools.areas.some(a => a.id === p.area)) ? p.area : (p.tab === 'tyokalut' && !p.target ? ui.area : 'all');
@@ -732,8 +734,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function reveal(id){
     let el = document.getElementById(id);
     if (!el) {
-      ui.group = 'all'; ui.area = 'all'; ui.kind = 'all';
-      if (ui.q) { ui.q = ''; $('#q').value = ''; history.replaceState(null, '', urlFor(location.hash.slice(1))); }
+      const inUrl = ui.q || ui.kind !== 'all';
+      ui.group = 'all'; ui.area = 'all'; ui.kind = 'all'; ui.q = ''; $('#q').value = '';
+      if (inUrl) history.replaceState(null, '', urlFor(location.hash.slice(1)));
       render();
       el = document.getElementById(id);
     }
@@ -741,14 +744,31 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     el.scrollIntoView({block: 'start'});
     if (el.matches('.card, .notes')) { el.classList.remove('kt-flash'); void el.offsetWidth; el.classList.add('kt-flash'); }
   }
-  const urlFor = hash => `${location.pathname}${ui.q ? '?q=' + encodeURIComponent(ui.q) : ''}${hash ? '#' + hash : ''}`;
+  // julkinen-15: the search and the type filter live in the query, so a link keeps them and Back undoes them.
+  const urlFor = hash => {
+    const qs = [ui.q && 'q=' + encodeURIComponent(ui.q), ui.kind !== 'all' && 'kind=' + encodeURIComponent(ui.kind)].filter(Boolean).join('&');
+    return `${location.pathname}${qs ? '?' + qs : ''}${hash ? '#' + hash : ''}`;
+  };
   const nav = (base, sub) => history.pushState(null, '', urlFor(sub && sub !== 'all' ? `${base}/${sub}` : base));
 
   // ---- Events ----
-  let qTimer = 0;
+  // julkinen-15: typing filters after 120 ms without touching the history; the search becomes one history entry when the
+  // typing settles (1 s) or on Enter, so Back steps through searches instead of keystrokes.
+  let qTimer = 0, commitTimer = 0;
+  function commitQ(){
+    clearTimeout(commitTimer);
+    if (norm(new URLSearchParams(location.search).get('q') || '') !== ui.q) history.pushState(null, '', urlFor(location.hash.slice(1)));
+  }
   $('#q').addEventListener('input', e => {
+    clearTimeout(qTimer); clearTimeout(commitTimer);
+    qTimer = setTimeout(() => { ui.q = norm(e.target.value.trim()); render(); commitTimer = setTimeout(commitQ, 1000); }, 120);
+  });
+  $('#q').addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
     clearTimeout(qTimer);
-    qTimer = setTimeout(() => { ui.q = norm(e.target.value.trim()); history.replaceState(null, '', urlFor(location.hash.slice(1))); render(); }, 120);
+    const v = norm(e.target.value.trim());
+    if (v !== ui.q) { ui.q = v; render(); }
+    commitQ();
   });
   const setArea = v => { ui.area = v; nav('tyokalut', v); render(); };
   document.addEventListener('click', e => {
@@ -758,7 +778,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (d.tab) { ui.tab = d.tab; nav(d.tab); render(); }
     else if (d.group) { ui.group = d.group; nav('mallit', d.group); render(); }
     else if (d.area) setArea(d.area);
-    else if (d.kind) { ui.kind = d.kind; render(); }
+    else if (d.kind) { if (d.kind !== ui.kind) { ui.kind = d.kind; history.pushState(null, '', urlFor(location.hash.slice(1))); render(); } }
     else if (d.task) { ui.task = ui.task === d.task ? null : d.task; paintAsk(); }
     else if (d.budget) { ui.budget = d.budget; paintAsk(); }
     else if (d.more) {   // in place: one card opens, nothing else is rebuilt

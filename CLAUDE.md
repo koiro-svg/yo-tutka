@@ -10,7 +10,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   pienen palvelimen, joka tekee `cleanUrls`in ja `vercel.json`:n redirectit).
 - Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee `/ai` ja `/yo-tutka` -polut, ja 308-redirectit
   ohjaavat vanhat `/ai-opas` → `/ai` ja `/ai-tyokalut` → `/ai?tab=tyokalut` (selain säilyttää #hashin, koska kohteessa ei ole omaa).
-- Build ajaa vain tarkistukset: `validate_tools.py`, `validate_practice.py` ja `check_tokens.py`.
+  Lyhyt osoite `/yo` → `/yo-tutka` on 307 (ks. sharp edges).
+- Build ajaa vain tarkistukset: `validate_tools.py`, `validate_practice.py`, `check_tokens.py` ja `yo_index.py`.
 
 ## Arkkitehtuuri
 - Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki sivut käyttävät samaa tarkoituksella aina tummaa
@@ -25,10 +26,17 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - **Kotivalikko (19.10.2026, julkinen-1…7):** kolme korttia (AI-opas `/ai`, YO-tutka, Hyppymittari) ja tutkan pisteet samoilla
   nimillä. Pisteet ovat oikeita `<a>`-linkkejä canvasin päällä (%-sijainti samasta kulma/säde-laskusta), kortin hover/fokus
   kääntää viivan sen pisteeseen ja pisteen hover korostaa korttia. AI-kortti hakee `data/ai-models.json`:sta yleiskategorian
-  kärjen ja päivitysajan (haun epäonnistuessa ei mitään), ja tuore AI-piste "pingaa". YO-kortti lukee vain tämän selaimen
-  `yo-practice`-avaimen (kerrattavat tänään + osaaminen) eikä koskaan kirjoita siihen. Haku (`/` tai ⌘K) lataa AI-datan vasta
-  ensimmäisellä näppäilyllä (sama `ai-models.json`-haku kuin kortilla) ja linkittää `/ai`-sivulle raakanimellä (`#a-Cursor`,
-  `#t-<osa-alue>-<nimi>`); id-muodon omistaa `ai.html` (`parseHash` slugittaa nimen), joten etusivulla ei ole kopiota. Puhelimella tutka on pieni otsikon vieressä.
+  kärjen ja päivitysajan (haun epäonnistuessa ei mitään). Pisteen rengas kertoo sisällön tuoreuden (julkinen-5: täysi ympyrä
+  = juuri päivitetty, kutistuu log-asteikolla ~puolessa vuodessa tyhjäksi; alle 2 pv vanha piste "pingaa"; tooltip "päivitetty N
+  sitten"): AI `ai-models.json`:n `updated`, YO kortin `data-yo-built` (datan koontipäivä, `yo_index.py` pitää sen samana kuin
+  `yo-tutka.html`:n `YO_BUILT`). Hyppymittarilla ei ole rehellistä päivityspäivää (sovellus, ei päivittyvää dataa), joten sen
+  piste on neutraali (ei rengasta). YO-kortti lukee vain tämän selaimen `yo-practice`-avaimen (kerrattavat tänään + osaaminen)
+  eikä koskaan kirjoita siihen; kun kertauksia on erääntynyt, kortti vie suoraan kertauskierrokseen `/yo-harjoittelu#/kertaus`.
+  Haku (`/` tai ⌘K) on yhteinen YO-yläpalkin kanssa: `site-search.js` (ES-moduuli, ainoa sivujen yhteinen skriptitiedosto)
+  ladataan `import()`illa ensimmäisellä näppäilyllä, ja se hakee datan ensimmäisellä haulla (etusivu antaa oman
+  `ai-models.json`-hakunsa, joten pyyntö tehdään kerran): mallit, agentit, työkalut ja YO-aineet/-aiheet (`data/yo-topics.json`
+  → `/yo-tutka#<aine>/<aihe>`). AI-linkit kulkevat raakanimellä (`#a-Cursor`, `#t-<osa-alue>-<nimi>`); id-muodon omistaa
+  `ai.html` (`parseHash` slugittaa nimen), joten etusivulla ei ole kopiota. Puhelimella tutka on pieni otsikon vieressä.
   Canvas huomioi devicePixelRatio, piirtää renkaat kerran taustakanvaasille, kääntää valmiin säteen gradientin, ~30 fps,
   pysähtyy näkymättömänä (IntersectionObserver) ja reduced motionilla.
 - **AI-opas `ai.html` (19.10.2026, julkinen-8…16; korvasi `ai-opas.html` ja `ai-tyokalut.html`):** välilehdet Mallit ·
@@ -43,7 +51,9 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   Piirretään vain aktiivinen välilehti (muut tyhjennetään, joten id:t ovat dokumentissa kerran), haku odottaa 120 ms,
   "+", "Näytä kaikki" ja tehtävävalinta päivittävät vain oman kohtansa, ja rankingit/kaaviopisteet/Uutta lasketaan kerran
   datan latauksessa (`derived`). Osoite luetaan yhdessä paikassa (`fromUrl`: alku ja `popstate`, joka laukeaa myös
-  #-linkeistä; erillinen `hashchange` ajaisi kaiken kahdesti).
+  #-linkeistä; erillinen `hashchange` ajaisi kaiken kahdesti). Haku ja tyyppisuodatin ovat kyselyssä (`?q=…&kind=automatisoi`,
+  `urlFor`, julkinen-15): tyyppivalinta on oma historiamerkintänsä, ja haku kirjautuu historiaan yhtenä merkintänä, kun
+  kirjoittaminen asettuu (1 s) tai Enterillä (`commitQ`), joten Takaisin käy haut ja suodattimet läpi.
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
   `ai.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
@@ -58,8 +68,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   `scripts/UPDATE_TOOLS.md` mukaan, ja `scripts/validate_tools.py` tarkistaa sen ennen
   committia. Ei API-avainta eikä GitHub Actionia.
 - YO-tutkan käyttöliittymän pääversio on tämä repo (päätös 19.10.2026); datan lähde on `~/sovellukset/yo-tutka/`
-  (data + koosta.py), jonka `index.html` on vain koonti- ja esikatselukopio; tänne tuodaan
-  vain data README:n komennolla.
+  (vain `data/*.json` + `koosta.py`, ei käyttöliittymäkopiota). `koosta.py` kirjoittaa datan suoraan tämän repon
+  `yo-tutka.html`:n `yo-data`-lohkoon ja `YO_BUILT`-päivään ja ajaa `scripts/yo_index.py --write`:n (README).
 - **YO-tutka (19.10.2026, julkinen-17…24):** oikea head (ennen kääreen jäänne: tyylit ja title bodyssa), sivun `:root` vain
   tokenilohkosta poikkeavat (`--line-2`, kevät/syksy, `--h0…5`). Aineen yläosassa SVG-tutka (aiheet säteinä: ulompi alue
   todennäköisyys, sisempi oma osaaminen `yo-practice`-arvioista, säde suodattaa), valitun aiheen tietopaneeli rivin alla
@@ -67,9 +77,15 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   (`pushState`, `popstate`), trendinuolet (painotettu vs. tasainen ≥ 10 %-yks., `TREND`), seuraavan kokeen laskuri (`EXAMS`,
   YTL:n alustava aikataulu, **päivitä joka kausi**; `validate_practice.py` tarkistaa avaimet ja varoittaa, kun kaikki päivät ovat
   menneet), tulostettava kertauslista (`#printlist`, `@media print`). Eyebrow lasketaan datasta. Paneelin runko piirretään kerran
-  aineen/painotuksen vaihtuessa (`renderAll`); aihe, lajittelu ja "Näytä kaikki" piirtävät vain aiheet, tutkan ja kartan
+  aineen vaihtuessa (`renderAll`); aihe, lajittelu ja "Näytä kaikki" piirtävät vain aiheet, tutkan ja kartan
   (`paintTopics`), haku ja aihe vain piilottavat tehtäviä ja päivittävät laskurit (`filterSessions`), joten hakukenttä ei koskaan
-  tuhoudu. Kerrat rakennetaan kokonaan kerran aineen vaihtuessa, jotta selaimen oma haku (Ctrl+F) löytää kaikki tehtävät (katselmointi
+  tuhoudu. Painotus ja "Vain vahvistetut" eivät piirrä runkoa uudelleen (julkinen-23): `restat` laskee tilastot ja `paintStats`
+  päivittää luvut, tyyppipalkit ja taulukon paikallaan. Aiherivit ovat avaimellisia (`rows`: aihe-id → `<tr>`, `fillRow`) ja niitä
+  siirretään vain järjestyksen muuttuessa (`moveTo`: `moveBefore`, jos selain tukee), lämpökartta ja tutka rakennetaan uudelleen
+  vain datan tai järjestyksen muuttuessa (`drawn`), muuten vain korostus seuraa aihetta; tehtävämäärä- (`.bar`),
+  todennäköisyys- (`.pbar`) ja tyyppipalkit animoivat leveytensä (ei reduced motionilla), ja avatut kerrat, skrollaus ja fokus
+  säilyvät. Tämän sivun linkit `#`-osoitteeseen (yläpalkin haun osumat) käsitellään paikallaan kuten Takaisin, ja aiheen
+  syvälinkki vierittää rivin näkyviin (`showTopic`). Kerrat rakennetaan kokonaan kerran aineen vaihtuessa, jotta selaimen oma haku (Ctrl+F) löytää kaikki tehtävät (katselmointi
   19.10.: laiskasti rakennetut rungot piilottivat ne). Vain käyttäjän oma avaus/sulkeminen muistetaan (`state.open`, summaryn klikkaus).
   Toisen välilehden pistemuutos piirtää vain pisteistä riippuvat osat ja vain, jos aineen pisteet muuttuivat (`rescore`). Kertauslistan
   tulostustyyli on voimassa vain napin kautta (`html.print-list`); Ctrl+P tulostaa sivun. `stats()` laskee yhdellä
@@ -83,7 +99,9 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   samaa). Palkki lukee `yo-practice`-avaimen vain latautuessa, `storage`-tapahtumassa (avain täsmää) ja bfcache-paluussa; harjoittelu
   julkaisee määrän muistista jokaisen tallennuksen jälkeen (`publishDue`). Linkit ovat `kt-tab`-tyylisiä (`aria-current=page`),
   cross-document View Transitions (`view-transition-name: yonav`, pois reduced motionilla). Harjoittelussa `#/kertaus` vie
-  kertauskierrokseen; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit.
+  kertauskierrokseen; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit. Palkin Haku-nappi tai ⌘K / Ctrl+K
+  avaa palkin alle saman sivustohaun kuin etusivulla (`site-search.js`, julkinen-6; ei `/`-pikanäppäintä, koska sitä kirjoitetaan
+  kaavoihin); Enter "klikkaa" ensimmäistä osumaa, jotta YO-tutkan oma linkinkäsittely ehtii, Esc sulkee.
 - **YO-harjoittelu (19.10.2026, julkinen-25…33):** kertauskierros `#/kertaus` (tänään erääntyneet kohdat peräkkäin, sama määrä kuin listassa
   ja palkissa, kohta tunnistetaan yksikköä myöten; tyhjä kierros vaihtaa osoitteen pois `#/kertaus`ista, ettei synkan uudelleenpiirto
   aloita kierrosta; kierros on vain muistissa tällä käynnillä, ei `S`:ssä, joten se ei vanhene eikä siirry muihin välilehtiin; kertauspalkki
@@ -139,8 +157,21 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   jos kopio eroaa). Uusi reitti tai sivu ei vaadi palkkiin muutosta: sivu asettaa `data-yo-page`/`data-yo-subject`.
 - **YO-tutka ei koskaan kirjoita `yo-practice`-avaimeen** (yläpalkki ja tutka vain lukevat): Supabase-synkka ja `mergeState`
   omistavat sen harjoittelussa.
-- YO-tutka on `yo-tutka.html`, ei `index.html` – README:n datansiirtokomento
-  kirjoittaa siihen. Älä kopioi sovellukset-kansion `index.html`:ää tänne sokeasti.
+- **`yo-tutka.html`:n `yo-data`-lohkoa ja `YO_BUILT`-päivää kirjoittaa vain `~/sovellukset/yo-tutka/koosta.py`**, ja niistä
+  johdetaan `data/yo-topics.json` (haku) ja `index.html`:n `data-yo-built` (tutkan tuoreus). `scripts/yo_index.py` (buildissa)
+  kaataa deployn, jos ne eroavat (`--write` päivittää; koosta.py ajaa sen). Koosta.py ei vaihda päivää, jos data ei muuttunut,
+  joten tuoreusrengas kertoo datan oikean iän.
+- **Hyppymittarin tutkapiste on tarkoituksella neutraali** (ei tuoreusrengasta): sillä ei ole rehellistä päivityspäivää
+  (`sw.js`:n `VERSION` on välimuistiversio, tiedostojen mtime on checkoutin aika). Älä keksi sille päivää.
+- **`/yo` → `/yo-tutka` on 307 (`permanent:false`) tarkoituksella**: lyhyt osoite voi myöhemmin osoittaa muualle, ja selain
+  välimuistittaisi 308:n pysyvästi. Vercel välittää kyselyn kohteeseen, ja selain säilyttää #hashin, koska kohteessa ei ole omaa.
+- **`site-search.js` on ainoa sivujen yhteinen skriptitiedosto** (etusivu ja YO-palkki, `import()`, ei buildia). Sen
+  osumalinkit ovat raakoja (`/ai#a-<nimi>`, `/yo-tutka#<aine>/<aihe>`): sivut omistavat id-muotonsa.
+- **YO-tutkan aihetaulukkoa ei piirretä `innerHTML`:llä uudelleen suodattimen vaihtuessa** (julkinen-23): rivit ovat
+  avaimellisia ja `renderAll` nollaa `rows`/`drawn` vain aineen vaihtuessa (eri aineilla voi olla sama aihe-id). Siirretty rivi
+  voi menettää fokuksen, joten `keepFocus` palauttaa sen myös silloin, kun elementti on yhä sivulla.
+- **AI-oppaan haku ei kirjoita historiaan joka näppäilyllä** (julkinen-15): `commitQ` vertaa osoitteen `q`:ta `ui.q`:hon ja
+  tekee yhden `pushState`n; `fromUrl` tyhjentää odottavat ajastimet, ettei Takaisin-napin jälkeen kirjaudu vanha haku.
 - Artificial Analysisin ilmainen API vaatii näkyvän attribuution
   (linkki artificialanalysis.ai) – älä poista sitä ai.html:n footerista (näkyy kaikilla välilehdillä).
 - `update_models.py` säilyttää epäonnistuneen kategorian vanhan datan; älä muuta
@@ -215,8 +246,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - `yo-harjoittelu.html` jäsentää tehtävälistan `yo-tutka.html`:n `<script id="yo-data">`-lohkosta
   (sama kuin validaattori). Älä nimeä tai poista lohkoa. Sivu ei toimi file://-osoitteesta.
 - localStorage-avain `yo-practice` ja arvion avainmuoto `aine|kerta|n|yksikkö` ovat yhteisiä
-  `yo-harjoittelu.html`:lle ja `yo-tutka.html`:n `practiceScores()`:lle (myös sovellukset-kopiossa).
-  Muuta molempia kerralla.
+  `yo-harjoittelu.html`:lle, `yo-tutka.html`:n `practiceScores()`:lle, YO-palkille ja etusivun YO-kortille.
+  Muuta kaikkia kerralla.
 - Vastauskenttä (`.answer`) on tarkoituksella vaalea "paperi" tumman teeman keskellä, koska kaavat
   tallennetaan mustina SVG-kuvina (`<img>` ei peri `currentColor`ia). Samasta syystä MathJaxin
   `svg.fontCache` on `'none'` (kaavakuva on itsenäinen). Älä vaihda kumpaakaan.

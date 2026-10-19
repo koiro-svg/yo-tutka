@@ -1,0 +1,566 @@
+{
+ "built": "2026-09-27",
+ "subjects": [
+  {
+   "id": "englanti",
+   "name": "Englanti, pitkä oppimäärä",
+   "topics": [
+    {
+     "id": "ymparisto-ja-ilmasto",
+     "name": "Ympäristö ja ilmasto",
+     "description": "Ilmastonmuutos, luonnonsuojelu, energia, kestävä kehitys"
+    },
+    {
+     "id": "teknologia-ja-tekoaly",
+     "name": "Teknologia ja tekoäly",
+     "description": "Digitaalisuus, tekoäly, keksinnöt, teknologian vaikutukset arkeen"
+    },
+    {
+     "id": "media-ja-viestinta",
+     "name": "Media ja viestintä",
+     "description": "Journalismi, some, valeuutiset, mainonta, argumentointi ja väittely"
+    },
+    {
+     "id": "yhteiskunta-ja-politiikka",
+     "name": "Yhteiskunta ja politiikka",
+     "description": "Politiikka, EU, ihmisoikeudet, tasa-arvo, rikollisuus, yhteiskunnalliset ilmiöt"
+    },
+    {
+     "id": "tyoelama-ja-yrittajyys",
+     "name": "Työelämä ja yrittäjyys",
+     "description": "Ammatit, työhaastattelut, hakemuskirjeet, yrittäjyys, työpaikan vuorovaikutus"
+    },
+    {
+     "id": "koulutus-ja-oppiminen",
+     "name": "Koulutus ja oppiminen",
+     "description": "Koulu, opiskelu, yliopisto, oppimisstrategiat, vaihto-ohjelmat"
+    },
+    {
+     "id": "terveys-ja-hyvinvointi",
+     "name": "Terveys ja hyvinvointi",
+     "description": "Lääketiede, mielenterveys, onnellisuus, elämäntavat"
+    },
+    {
+     "id": "kulttuuri-ja-taide",
+     "name": "Kulttuuri ja taide",
+     "description": "Kirjallisuus, romaanikatkelmat, musiikki, elokuva, teatteri, muoti"
+    },
+    {
+     "id": "tiede-ja-luonto",
+     "name": "Tiede ja luonto",
+     "description": "Luonnontieteet, eläimet, avaruus, tutkimus ja tutkimustulokset"
+    },
+    {
+     "id": "matkailu-ja-kulttuurierot",
+     "name": "Matkailu ja kulttuurierot",
+     "description": "Matkakohteet, ulkomailla asuminen, kulttuurien kohtaaminen"
+    },
+    {
+     "id": "ihmissuhteet-ja-arki",
+     "name": "Ihmissuhteet ja arki",
+     "description": "Perhe, ystävyys, arjen tilanteet, kohteliaisuusdialogit, henkilökohtainen kasvu"
+    },
+    {
+     "id": "historia",
+     "name": "Historia",
+     "description": "Menneisyys, arkeologia, historialliset ilmiöt ja henkilöt"
+    },
+    {
+     "id": "talous-ja-kuluttaminen",
+     "name": "Talous ja kuluttaminen",
+     "description": "Raha, kauppa, tuotteet, markkinat, kryptovaluutat, henkilökohtainen talous"
+    },
+    {
+     "id": "urheilu-ja-vapaa-aika",
+     "name": "Urheilu ja vapaa-aika",
+     "description": "Urheilu, harrastukset, pelit, keräily"
+    },
+    {
+     "id": "kieli-ja-kielenkaytto",
+     "name": "Kieli ja kielenkäyttö",
+     "description": "Kielen rakenne, rekisteri, murteet, englanti maailmankielenä, argumentaatiovirheet"
+    }
+   ]
+  },
+  {
+   "id": "pitka-matematiikka",
+   "name": "Pitkä matematiikka",
+   "topics": [
+    {
+     "id": "polynomit-ja-yhtalot",
+     "name": "Polynomit ja yhtälöt",
+     "description": "Lausekkeiden sievennys, yhtälöt, epäyhtälöt, yhtälöryhmät ja polynomien ominaisuudet"
+    },
+    {
+     "id": "funktiot-ja-kuvaajat",
+     "name": "Funktiot ja kuvaajat",
+     "description": "Funktion käsite, kuvaajat, parillisuus, jaksollisuus, käänteisfunktio, usean muuttujan funktiot"
+    },
+    {
+     "id": "geometria-taso",
+     "name": "Tasogeometria",
+     "description": "Kulmat, kolmiot, ympyrät, pinta-alat ja yhdenmuotoisuus tasossa"
+    },
+    {
+     "id": "avaruusgeometria",
+     "name": "Avaruusgeometria",
+     "description": "Kappaleiden tilavuudet, pinta-alat ja kulmat avaruudessa"
+    },
+    {
+     "id": "trigonometria",
+     "name": "Trigonometria",
+     "description": "Trigonometriset funktiot, yhtälöt ja identiteetit"
+    },
+    {
+     "id": "vektorit",
+     "name": "Vektorit",
+     "description": "Vektorilaskenta tasossa ja avaruudessa, pistetulo ja ristitulo"
+    },
+    {
+     "id": "analyyttinen-geometria",
+     "name": "Analyyttinen geometria",
+     "description": "Suorat, ympyrät, paraabelit, ellipsit ja etäisyydet koordinaatistossa"
+    },
+    {
+     "id": "derivaatta",
+     "name": "Derivaatta",
+     "description": "Derivointi, ääriarvot, monotonisuus ja derivaatan sovellukset"
+    },
+    {
+     "id": "integraali",
+     "name": "Integraalilaskenta",
+     "description": "Integraalifunktiot, määrätyt integraalit, pinta-alat ja tilavuudet"
+    },
+    {
+     "id": "todennakoisyys-ja-tilastot",
+     "name": "Todennäköisyys ja tilastot",
+     "description": "Klassinen ja ehdollinen todennäköisyys, jakaumat, tunnusluvut ja korrelaatio"
+    },
+    {
+     "id": "lukujonot-ja-summat",
+     "name": "Lukujonot ja summat",
+     "description": "Aritmeettiset ja geometriset jonot, rekursiot ja summien arviointi"
+    },
+    {
+     "id": "lukuteoria-ja-todistus",
+     "name": "Lukuteoria ja todistaminen",
+     "description": "Jaollisuus, alkuluvut, induktio, kokonaislukuyhtälöt ja yleinen todistustekniikka"
+    },
+    {
+     "id": "logaritmi-ja-eksponentti",
+     "name": "Logaritmi- ja eksponenttifunktiot",
+     "description": "Eksponentiaalinen kasvu, logaritmit ja niiden yhtälöt"
+    },
+    {
+     "id": "raja-arvo-ja-jatkuvuus",
+     "name": "Raja-arvo ja jatkuvuus",
+     "description": "Raja-arvot, jatkuvuus, derivoituvuus ja väliarvolause"
+    },
+    {
+     "id": "numeeriset-menetelmat",
+     "name": "Numeeriset menetelmät",
+     "description": "Puolisuunnikassääntö, keskipistesääntö, likiarvot ja virhearviot"
+    },
+    {
+     "id": "algoritmit-ja-ohjelmointi",
+     "name": "Algoritmit ja ohjelmointi",
+     "description": "Pseudokoodi, ohjelmakoodin analysointi, Eukleideen algoritmi ja laskennalliset tehtävät"
+    },
+    {
+     "id": "mallintaminen-ja-sovellus",
+     "name": "Mallintaminen ja sovellukset",
+     "description": "Arkielämän ja luonnontieteiden ilmiöiden matemaattinen mallintaminen"
+    },
+    {
+     "id": "talousmatematiikka",
+     "name": "Talousmatematiikka",
+     "description": "Korkolaskut, säästäminen, odotusarvot rahoituksessa"
+    },
+    {
+     "id": "kompleksiluvut",
+     "name": "Kompleksiluvut",
+     "description": "Kompleksilukujen laskutoimitukset (ei esiintynyt tarkastelluissa kokeissa)"
+    },
+    {
+     "id": "differentiaaliyhtalot",
+     "name": "Differentiaaliyhtälöt",
+     "description": "Differentiaaliyhtälöt (ei esiintynyt tarkastelluissa kokeissa)"
+    }
+   ]
+  },
+  {
+   "id": "fysiikka",
+   "name": "Fysiikka",
+   "topics": [
+    {
+     "id": "eri-osa-alueet",
+     "name": "Eri osa-alueet (sekatehtävä)",
+     "description": "Monivalinta-, väittämä- tai täydennystehtävä, joka kattaa useita fysiikan alueita"
+    },
+    {
+     "id": "mekaniikka-kinematiikka",
+     "name": "Kinematiikka",
+     "description": "Paikka, nopeus, kiihtyvyys, heittoliike, liikkeen kuvaajat"
+    },
+    {
+     "id": "mekaniikka-dynamiikka-ja-voimat",
+     "name": "Dynamiikka ja voimat",
+     "description": "Newtonin lait, voimakuviot, kitka, kalteva taso, tasapaino"
+    },
+    {
+     "id": "energia-ja-tyo",
+     "name": "Energia ja työ",
+     "description": "Työ, teho, energian säilyminen ja muuntuminen, hyötysuhde"
+    },
+    {
+     "id": "liikemaara-ja-tormaykset",
+     "name": "Liikemäärä ja törmäykset",
+     "description": "Impulssi, liikemäärän säilyminen, kimmoisat ja kimmottomat törmäykset"
+    },
+    {
+     "id": "pyorimisliike",
+     "name": "Pyörimisliike ja momentti",
+     "description": "Vääntömomentti, tasapaino, ympyräliike, pyörivät kappaleet"
+    },
+    {
+     "id": "varahtely-ja-aallot",
+     "name": "Värähtely ja aallot",
+     "description": "Harmoninen värähtely, jouset, ääni, interferenssi, seisovat aallot, spektrit"
+    },
+    {
+     "id": "lampo-ja-termodynamiikka",
+     "name": "Lämpö ja termodynamiikka",
+     "description": "Lämpöenergia, olomuodon muutokset, ideaalikaasu, lämpöpumput, lämmönsiirto, säteily"
+    },
+    {
+     "id": "nesteet-kaasut-ja-paine",
+     "name": "Nesteet, kaasut ja paine",
+     "description": "Hydrostaattinen paine, noste, kelluminen, kaasun paine ja liukoisuus"
+    },
+    {
+     "id": "sahkooppi-tasavirta",
+     "name": "Sähköoppi ja tasavirtapiirit",
+     "description": "Ohmin laki, Kirchhoffin lait, vastukset, diodit, LED, mittarit, sähköteho"
+    },
+    {
+     "id": "sahkostatiikka-ja-kondensaattorit",
+     "name": "Sähköstatiikka ja kondensaattorit",
+     "description": "Coulombin laki, sähkökenttä, varatun hiukkasen liike kentässä, kondensaattorin energia"
+    },
+    {
+     "id": "sahkomagnetismi",
+     "name": "Magnetismi ja magneettikentät",
+     "description": "Magneettikenttä, Lorentzin voima, varatun hiukkasen liike, sähkömoottori"
+    },
+    {
+     "id": "sahkomagneettinen-induktio-ja-vaihtovirta",
+     "name": "Induktio ja vaihtovirta",
+     "description": "Faradayn laki, generaattori, pyörrevirrat, vaihtovirran tehollisarvot"
+    },
+    {
+     "id": "optiikka-ja-valo",
+     "name": "Optiikka ja valo",
+     "description": "Heijastuminen, taittuminen, dispersio, interferenssi, diffraktio"
+    },
+    {
+     "id": "moderni-fysiikka-kvantti-ja-atomi",
+     "name": "Moderni fysiikka",
+     "description": "Valosähköilmiö, dualismi, kvantittuminen, röntgen, Compton, aineaallot, suprajohtavuus"
+    },
+    {
+     "id": "ydinfysiikka-ja-sateily",
+     "name": "Ydinfysiikka ja säteily",
+     "description": "Radioaktiivinen hajoaminen, puoliintumisaika, fissio ja fuusio, säteilyn vaimeneminen ja vaikutukset"
+    },
+    {
+     "id": "gravitaatio-ja-tahtitiede",
+     "name": "Gravitaatio ja tähtitiede",
+     "description": "Painovoima, kiertoradat, satelliitit, planeetat ja eksoplaneetat, avaruusluotaimet"
+    },
+    {
+     "id": "mittaus-ja-virheanalyysi",
+     "name": "Mittaus ja virheanalyysi",
+     "description": "Mittausdatan käsittely, sovitukset, virhelähteet, työselostus, dimensioanalyysi"
+    },
+    {
+     "id": "fysiikka-yhteiskunnassa-ja-tekniikka",
+     "name": "Fysiikka yhteiskunnassa ja tekniikka",
+     "description": "Energiantuotanto, ilmasto, lääketiede, sähköturvallisuus, teknologiset sovellukset"
+    }
+   ]
+  },
+  {
+   "id": "kemia",
+   "name": "Kemia",
+   "topics": [
+    {
+     "id": "atomin-rakenne-ja-jaksollinen-jarjestelma",
+     "name": "Atomin rakenne ja jaksollinen järjestelmä",
+     "description": "Isotoopit, elektronirakenne, ionisäteet, jaksolliset trendit, alkuaineiden ominaisuudet"
+    },
+    {
+     "id": "kemiallinen-sidos-ja-rakenne",
+     "name": "Kemiallinen sidos ja rakenne",
+     "description": "Ioni-, kovalentti- ja metallisidos, molekyylien väliset voimat, hybridisaatio, kiteet ja polymeerien rakenne"
+    },
+    {
+     "id": "ainemaara-ja-stoikiometria",
+     "name": "Ainemäärä ja stoikiometria",
+     "description": "Moolilaskut, saanto, rajoittava reagenssi, empiirinen kaava, puhtaus"
+    },
+    {
+     "id": "liuokset-ja-konsentraatio",
+     "name": "Liuokset ja konsentraatio",
+     "description": "Liuosten valmistus, laimennus, liukoisuus, kolloidit, osmoosi"
+    },
+    {
+     "id": "kaasut",
+     "name": "Kaasut",
+     "description": "Ideaalikaasun tilanyhtälö, kaasujen tilavuudet ja paineet, höyrynpaine"
+    },
+    {
+     "id": "reaktioyhtalot-ja-reaktiotyypit",
+     "name": "Reaktioyhtälöt ja reaktiotyypit",
+     "description": "Yhtälöiden tasapainotus, hajoamis-, palamis-, saostus- ja synteesireaktiot"
+    },
+    {
+     "id": "hapot-emakset-ja-ph",
+     "name": "Hapot, emäkset ja pH",
+     "description": "pH-laskut, happo- ja emäsvakiot, puskurit, titraus ja ekvivalenttipiste"
+    },
+    {
+     "id": "hapetus-pelkistys-ja-sahkokemia",
+     "name": "Hapetus-pelkistys ja sähkökemia",
+     "description": "Hapetusluvut, redoksiyhtälöt, galvaaninen kenno, elektrolyysi, normaalipotentiaalit, korroosio"
+    },
+    {
+     "id": "reaktionopeus-ja-tasapaino",
+     "name": "Reaktionopeus ja tasapaino",
+     "description": "Nopeuslaki, katalyytit, aktivoitumisenergia, tasapainovakio, Le Chatelier"
+    },
+    {
+     "id": "termokemia-ja-energia",
+     "name": "Termokemia ja energia",
+     "description": "Reaktioentalpia, Hessin laki, sidosenergiat, höyrystymisentalpia, kalorimetria"
+    },
+    {
+     "id": "orgaaninen-kemia-rakenne-ja-nimeaminen",
+     "name": "Orgaaninen kemia: rakenne ja nimeäminen",
+     "description": "Funktionaaliset ryhmät, isomeria, stereokemia, konformaatiot"
+    },
+    {
+     "id": "orgaaniset-reaktiot-ja-mekanismit",
+     "name": "Orgaaniset reaktiot ja mekanismit",
+     "description": "Esteröinti, hydrolyysi, eliminaatio, hapetus, lääkeaine- ja monivaiheiset synteesit"
+    },
+    {
+     "id": "polymeerit-ja-materiaalit",
+     "name": "Polymeerit ja materiaalit",
+     "description": "Polymerointi, muovit, biopohjaiset materiaalit, kierrätys, metallit"
+    },
+    {
+     "id": "biomolekyylit",
+     "name": "Biomolekyylit",
+     "description": "Hiilihydraatit, proteiinit ja aminohapot, rasvat, entsyymit"
+    },
+    {
+     "id": "analyyttinen-kemia-ja-spektroskopia",
+     "name": "Analyyttinen kemia ja spektroskopia",
+     "description": "IR, NMR, spektrofotometria, standardisuorat, kromatografia, titrimetria"
+    },
+    {
+     "id": "kokeellinen-tyoskentely-ja-turvallisuus",
+     "name": "Kokeellinen työskentely ja turvallisuus",
+     "description": "Kokeen suunnittelu, välineet, erotusmenetelmät, havainnot, virhelähteet, työturvallisuus"
+    },
+    {
+     "id": "kemia-yhteiskunnassa-ja-ymparisto",
+     "name": "Kemia yhteiskunnassa ja ympäristö",
+     "description": "Energiantuotanto, päästöt, vetytalous, ympäristövaikutukset, kestävä kemia"
+    }
+   ]
+  },
+  {
+   "id": "biologia",
+   "name": "Biologia",
+   "topics": [
+    {
+     "id": "solubiologia-ja-solun-rakenne",
+     "name": "Solubiologia ja solun rakenne",
+     "description": "Soluelimet, solukalvo, solunjakautuminen, solutyypit"
+    },
+    {
+     "id": "solun-aineenvaihdunta-ja-energia",
+     "name": "Solun aineenvaihdunta ja energia",
+     "description": "Fotosynteesi, soluhengitys, ATP, entsyymit"
+    },
+    {
+     "id": "genetiikka-ja-perinnollisyys",
+     "name": "Genetiikka ja perinnöllisyys",
+     "description": "Risteytykset, sukupuut, alleelit, mutaatiot, periytymistavat"
+    },
+    {
+     "id": "molekyyligenetiikka-dna-ja-proteiinisynteesi",
+     "name": "Molekyyligenetiikka, DNA ja proteiinisynteesi",
+     "description": "DNA:n ja RNA:n rakenne, geenin rakenne ja säätely, proteiinisynteesi"
+    },
+    {
+     "id": "evoluutio",
+     "name": "Evoluutio",
+     "description": "Luonnonvalinta, lajiutuminen, sopeumat, ihmisen evoluutio"
+    },
+    {
+     "id": "ekologia-ja-ekosysteemit",
+     "name": "Ekologia ja ekosysteemit",
+     "description": "Ravintoverkot, aineiden kierrot, populaatiot, lajien väliset suhteet, sukkessio"
+    },
+    {
+     "id": "ymparisto-ja-biodiversiteetti",
+     "name": "Ympäristö ja biodiversiteetti",
+     "description": "Luonnonsuojelu, ilmastonmuutos, rehevöityminen, ympäristömyrkyt, kestävä kehitys"
+    },
+    {
+     "id": "ihmisen-fysiologia-elimistot",
+     "name": "Ihmisen fysiologia ja elimistöt",
+     "description": "Hermosto, hormonit, verenkierto, hengitys, aistit, lihakset, ruoansulatus"
+    },
+    {
+     "id": "ihmisen-lisaantyminen-ja-kehitys",
+     "name": "Ihmisen lisääntyminen ja kehitys",
+     "description": "Sukusolut, kuukautiskierto, alkionkehitys, sikiödiagnostiikka"
+    },
+    {
+     "id": "immuniteetti-ja-mikrobit",
+     "name": "Immuniteetti ja mikrobit",
+     "description": "Bakteerit, virukset, immuunipuolustus, allergiat, antibioottiresistenssi"
+    },
+    {
+     "id": "kasvibiologia",
+     "name": "Kasvibiologia",
+     "description": "Kasvien rakenne, ravinteet, lisääntyminen ja sopeumat"
+    },
+    {
+     "id": "elaimet-ja-eliokunnan-luokittelu",
+     "name": "Eläimet ja eliökunnan luokittelu",
+     "description": "Eläinryhmät, sienet, lajintunnistus, systematiikka"
+    },
+    {
+     "id": "bioteknologia-ja-geenitekniikka",
+     "name": "Bioteknologia ja geenitekniikka",
+     "description": "CRISPR, geeninsiirto, PCR, sekvensointi, jalostus, kloonaus"
+    },
+    {
+     "id": "tutkimusmenetelmat-ja-koeasetelmat",
+     "name": "Tutkimusmenetelmät ja koeasetelmat",
+     "description": "Tutkimuksen suunnittelu, muuttujat, luotettavuus"
+    },
+    {
+     "id": "kuvaajan-ja-datan-tulkinta",
+     "name": "Kuvaajan ja datan tulkinta",
+     "description": "Diagrammien piirtäminen ja tulkinta, taulukot, korrelaatio"
+    }
+   ]
+  },
+  {
+   "id": "aidinkieli",
+   "name": "Äidinkieli ja kirjallisuus",
+   "topics": [
+    {
+     "id": "yhteiskunta-ja-politiikka",
+     "name": "Yhteiskunta ja politiikka",
+     "description": "Politiikka, yhteiskunnalliset rakenteet, osallisuus ja yhteiskuntakritiikki"
+    },
+    {
+     "id": "media-ja-some",
+     "name": "Media ja some",
+     "description": "Journalismi, mainonta, tv-esiintyminen ja sosiaalisen median tekstit"
+    },
+    {
+     "id": "teknologia-ja-tekoaly",
+     "name": "Teknologia ja tekoäly",
+     "description": "Tekoäly, digitalisaatio ja teknologian vaikutukset"
+    },
+    {
+     "id": "ymparisto-ja-ilmasto",
+     "name": "Ympäristö ja ilmasto",
+     "description": "Luonto, luontosuhde, vesi, metsät ja ympäristöasenteet"
+    },
+    {
+     "id": "identiteetti-ja-ihmissuhteet",
+     "name": "Identiteetti ja ihmissuhteet",
+     "description": "Perhe, rakkaus, ystävyys, vuorovaikutus ja minuus"
+    },
+    {
+     "id": "koulutus-ja-nuoruus",
+     "name": "Koulutus ja nuoruus",
+     "description": "Koulu, opiskelu, lapsuus ja nuoruus"
+    },
+    {
+     "id": "kulttuuri-ja-taide",
+     "name": "Kulttuuri ja taide",
+     "description": "Taide, musiikki, elokuva, perinteet ja kulttuurielämä"
+    },
+    {
+     "id": "kieli-ja-kirjallisuus",
+     "name": "Kieli ja kirjallisuus",
+     "description": "Kieli, kielipolitiikka, lukeminen ja kirjallisuuden lajit"
+    },
+    {
+     "id": "tyoelama-ja-talous",
+     "name": "Työelämä ja talous",
+     "description": "Työ, raha, markkinat ja elinkeinot"
+    },
+    {
+     "id": "terveys-ja-hyvinvointi",
+     "name": "Terveys ja hyvinvointi",
+     "description": "Terveys, onnellisuus, hyvinvointi ja terveysväitteet"
+    },
+    {
+     "id": "historia-ja-muisti",
+     "name": "Historia ja muisti",
+     "description": "Menneisyys, perinteet ja aikakausien vertailu"
+    },
+    {
+     "id": "tasa-arvo-ja-ihmisoikeudet",
+     "name": "Tasa-arvo ja ihmisoikeudet",
+     "description": "Sukupuoli, vähemmistöt, eriarvoisuus ja etiikka"
+    },
+    {
+     "id": "tiede-ja-tutkimus",
+     "name": "Tiede ja tutkimus",
+     "description": "Tietokirjallisuus, tiedeviestintä ja tutkijoiden puheenvuorot"
+    },
+    {
+     "id": "argumentaation-erittely",
+     "name": "Argumentaation erittely",
+     "description": "Taito: väitteiden, perustelujen ja vastanäkemysten erittely"
+    },
+    {
+     "id": "kerronnan-keinojen-analyysi",
+     "name": "Kerronnan keinojen analyysi",
+     "description": "Taito: kertoja, henkilökuva, tunnelma, kuvakieli, rakenne"
+    },
+    {
+     "id": "retoriikan-ja-vaikuttamisen-analyysi",
+     "name": "Retoriikan ja vaikuttamisen analyysi",
+     "description": "Taito: eetos, paatos, logos ja vaikuttamisen keinot"
+    },
+    {
+     "id": "kuvan-tai-videon-analyysi",
+     "name": "Kuvan tai videon analyysi",
+     "description": "Taito: multimodaalisen aineiston (video, mainos, sarjakuva, elokuva) erittely"
+    },
+    {
+     "id": "tekstien-vertailu",
+     "name": "Tekstien vertailu",
+     "description": "Taito: kahden tai useamman aineiston vertaileva analyysi"
+    },
+    {
+     "id": "nakokulman-ja-aanen-erittely",
+     "name": "Näkökulman ja äänen erittely",
+     "description": "Taito: tekstilajipiirteet, näkökulma, kohderyhmä ja henkilökuvaus"
+    }
+   ]
+  }
+ ]
+}
