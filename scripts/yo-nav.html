@@ -13,7 +13,7 @@
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
 @media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{order:-2;flex:1 0 calc(100% - 96px)}.yonav .find{order:-1}}
 .yonav .find{display:inline-flex;align-items:center;gap:6px}
-.yonav .find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
+.yonav .kt-tab.find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
 .yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
 .yosearch>*{width:100%;max-width:560px}
 @media print{.yonav,.yosearch{display:none}}
@@ -63,17 +63,20 @@
     if (on) { q.focus(); q.select(); }
   }
   find.addEventListener('click', function () { show(box.hidden); });
-  addEventListener('keydown', function (e) { if ((e.metaKey || e.ctrlKey) && !e.altKey && (e.key || '').toLowerCase() === 'k') { e.preventDefault(); show(true); } });
+  // ⌘K on Apple devices, Ctrl+K elsewhere: on a Mac, Ctrl+K in a text field deletes to the end of the line.
+  var apple = /Mac|iPhone|iPad/.test(navigator.platform);
+  addEventListener('keydown', function (e) { if ((apple ? e.metaKey : e.ctrlKey) && !e.altKey && (e.key || '').toLowerCase() === 'k') { e.preventDefault(); show(true); } });
   q.addEventListener('input', function () {
     var v = q.value.trim();
     if (!v) { hits.hidden = true; hits.innerHTML = ''; return; }
     if (!mod) mod = import('/site-search.js');
-    mod.then(function (s) { return s.search(v).then(function (found) { if (q.value.trim() === v) { hits.innerHTML = s.hitsHtml(found, v); hits.hidden = false; } }); })
+    mod.then(function (s) { return s.search(v).then(function (found) { if (q.value.trim() === v) { hits.innerHTML = s.hitsHtml(found, v); hits.dataset.q = v; hits.hidden = false; } }); })
       .catch(function () { mod = null; });
   });
-  // Enter follows the first hit as a click, so a page's own in-page link handling (yo-tutka's #<subject>/<topic>) runs.
+  // Enter follows the first hit of the current query (never the "no hits" fallback links) as a click, so a page's own
+  // in-page link handling (yo-tutka's #<subject>/<topic>) runs.
   q.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') { var a = hits.querySelector('a'); if (a) a.click(); }
+    if (e.key === 'Enter') { var a = hits.dataset.q === q.value.trim() && hits.querySelector('li:not(.none) > a'); if (a) a.click(); }
     else if (e.key === 'Escape') { e.preventDefault(); show(false); find.focus(); }
   });
   hits.addEventListener('click', function (e) { if (e.target.closest('a')) show(false); });

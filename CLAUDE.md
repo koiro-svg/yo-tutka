@@ -99,7 +99,7 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   samaa). Palkki lukee `yo-practice`-avaimen vain latautuessa, `storage`-tapahtumassa (avain täsmää) ja bfcache-paluussa; harjoittelu
   julkaisee määrän muistista jokaisen tallennuksen jälkeen (`publishDue`). Linkit ovat `kt-tab`-tyylisiä (`aria-current=page`),
   cross-document View Transitions (`view-transition-name: yonav`, pois reduced motionilla). Harjoittelussa `#/kertaus` vie
-  kertauskierrokseen; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit. Palkin Haku-nappi tai ⌘K / Ctrl+K
+  kertauskierrokseen; harjoittelun murupolusta poistettiin palkin kanssa päällekkäiset linkit. Palkin Haku-nappi tai ⌘K (Apple) / Ctrl+K (muut)
   avaa palkin alle saman sivustohaun kuin etusivulla (`site-search.js`, julkinen-6; ei `/`-pikanäppäintä, koska sitä kirjoitetaan
   kaavoihin); Enter "klikkaa" ensimmäistä osumaa, jotta YO-tutkan oma linkinkäsittely ehtii, Esc sulkee.
 - **YO-harjoittelu (19.10.2026, julkinen-25…33):** kertauskierros `#/kertaus` (tänään erääntyneet kohdat peräkkäin, sama määrä kuin listassa
@@ -167,6 +167,14 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   välimuistittaisi 308:n pysyvästi. Vercel välittää kyselyn kohteeseen, ja selain säilyttää #hashin, koska kohteessa ei ole omaa.
 - **`site-search.js` on ainoa sivujen yhteinen skriptitiedosto** (etusivu ja YO-palkki, `import()`, ei buildia). Sen
   osumalinkit ovat raakoja (`/ai#a-<nimi>`, `/yo-tutka#<aine>/<aihe>`): sivut omistavat id-muotonsa.
+- **Sivustohaun katselmoinnin korjaukset (19.10.2026):** epäonnistunut datahaku nollaa indeksin, joten seuraava haku yrittää
+  uudelleen (muuten YO-aiheet puuttuivat koko sivun eliniän). Enter seuraa vain nykyisen haun (`hits.dataset.q`) ensimmäistä
+  oikeaa osumaa, ei "Ei osumia" -rivin AI-opas-linkkiä eikä edellisen haun osumaa. YO-palkin pikanäppäin on Applella vain ⌘K,
+  koska Macin Ctrl+K poistaa tekstikentässä rivin loppuun (vastauseditori). Haku-napin avoin tila tarvitsee valitsimen
+  `.yonav .kt-tab.find[aria-expanded=true]`, muuten `.kt-tab:not(:hover)…`-sääntö voittaa ja reunus katoaa.
+- **YO-tutkan `#`-linkit ja latauksen vieritys:** `applyHash` ajaa lopuksi `syncUrl(true)`, ettei tuntematon aine/aihe jää
+  osoitteeseen. Sivu vierittää aiheen riviin vain saapuvasta linkistä (`navigation.type === 'navigate'`), ei uudelleenlatauksessa
+  eikä Takaisin-napilla, jolloin selain palauttaa vierityksen.
 - **YO-tutkan aihetaulukkoa ei piirretä `innerHTML`:llä uudelleen suodattimen vaihtuessa** (julkinen-23): rivit ovat
   avaimellisia ja `renderAll` nollaa `rows`/`drawn` vain aineen vaihtuessa (eri aineilla voi olla sama aihe-id). Siirretty rivi
   voi menettää fokuksen, joten `keepFocus` palauttaa sen myös silloin, kun elementti on yhä sivulla.

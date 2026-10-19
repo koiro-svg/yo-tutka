@@ -249,7 +249,8 @@ footer a:hover{color:var(--accent)}
   // julkinen-5: a blip's freshness from its content's last update (days, may be fractional) and its tooltip.
   function setAge(id, days, when){
     const b = blips.find(x => x.id === id);
-    if (!b || !(days >= 0)) return;
+    if (!b || !Number.isFinite(days)) return;
+    days = Math.max(0, days);   // a timestamp a little ahead of this device's clock is "just now"
     b.f = Math.max(0, 1 - Math.log2(1 + days) / Math.log2(181));
     b.ping = days < 2;
     b.el.title = `${b.t} · päivitetty ${when}`;
@@ -297,10 +298,10 @@ footer a:hover{color:var(--accent)}
     let html;
     try { const s = await mod; html = s.hitsHtml(await s.search(v, models), v); } catch (e) { mod = null; return; }
     if (q.value.trim() !== v) return;
-    hits.innerHTML = html;
+    hits.innerHTML = html; hits.dataset.q = v;
     hits.hidden = false;
   });
-  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.querySelector('a'); if (a) a.click(); } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.dataset.q === q.value.trim() && hits.querySelector('li:not(.none) > a'); if (a) a.click(); } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });
   addEventListener('keydown', e => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
     if ((e.key === '/' && !typing) || (e.key === 'k' && (e.metaKey || e.ctrlKey))) { e.preventDefault(); q.focus(); }

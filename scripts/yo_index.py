@@ -21,7 +21,10 @@ BUILT_ATTR = re.compile(r'data-yo-built="[^"]*"')
 
 def expected():
     html = (ROOT / 'yo-tutka.html').read_text(encoding='utf-8')
-    d, m, y = re.search(r"window\.YO_BUILT \|\| '(\d{1,2})\.(\d{1,2})\.(\d{4})'", html).groups()
+    found = re.search(r"window\.YO_BUILT \|\| '(\d{1,2})\.(\d{1,2})\.(\d{4})'", html)
+    if not found:
+        raise SystemExit("yo_index: yo-tutka.html needs the build date window.YO_BUILT || 'd.m.yyyy' (koosta.py writes it)")
+    d, m, y = found.groups()
     built = datetime.date(int(y), int(m), int(d)).isoformat()
     topics = {'subjects': [
         {'id': s['id'], 'name': s['name'], 'topics': [{'id': t['id'], 'name': t['name'], 'description': t.get('description') or ''} for t in s.get('topics') or []]}

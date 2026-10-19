@@ -9,7 +9,10 @@ const enc = encodeURIComponent;
 
 let index = null;
 async function build(models){
-  const [m, a, t, yo] = await Promise.all([models, getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json'), getJson('/data/yo-topics.json')].map(p => p.catch(() => null)));
+  const ai = () => getJson('/data/ai-models.json');
+  const parts = await Promise.all([models ? models.catch(ai) : ai(), getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json'), getJson('/data/yo-topics.json')].map(p => p.catch(() => null)));
+  if (parts.includes(null)) index = null;   // a source that failed (network) is fetched again on the next search
+  const [m, a, t, yo] = parts;
   const out = [];
   if (m) {
     const seen = new Set();
@@ -34,11 +37,11 @@ async function build(models){
 }
 
 // Up to eight hits, titles that start with the query first. `models`: the home page passes its own ai-models.json fetch,
-// so the AI card and the search share one request.
+// so the AI card and the search share one request (fetched again here if it failed).
 export async function search(q, models){
   const v = norm(q.trim());
   if (!v) return [];
-  const all = await (index ||= build(models || getJson('/data/ai-models.json')));
+  const all = await (index ||= build(models));
   return all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
 }
 
