@@ -24,6 +24,8 @@
 @font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
 @font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
 :where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 [hidden]:not([hidden=until-found i]){display:none!important}
 /* Shared components (kt- prefix: page classes like .card or .chip stay the page's own). */
 .kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
@@ -47,7 +49,6 @@
 @keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
 @media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
 /* /koiro-tokens */
-*{box-sizing:border-box}
 html{background:var(--bg)}
 body{margin:0;background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:20px 90px}
 h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1}
@@ -56,7 +57,6 @@ h2{font-size:20px;font-weight:700}
 h3{font-size:16px;font-weight:700;overflow-wrap:anywhere}
 p{margin:0}
 a{color:var(--accent)}
-:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 .wrap{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
 .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .masthead{display:grid;gap:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
@@ -68,21 +68,21 @@ a{color:var(--accent)}
 .panel,.card{background:linear-gradient(180deg,rgba(92,225,198,.06),transparent 240px),var(--surface);border:1px solid var(--line);border-radius:var(--radius-l)}
 .panel{padding:20px;display:grid;gap:14px;min-width:0}
 
-/* Ask: "Mitä haluat tehdä?" */
+/* Ask ("Mitä haluat tehdä?") answers and the starter five share one tile. */
 .ask .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.answer{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
-.answer .pick{background:var(--surface-2);border-radius:var(--radius-m);padding:14px;display:grid;gap:4px;align-content:start}
-.answer .pick small{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-.answer .pick b{font-family:var(--font-display);font-size:18px;line-height:1.2;overflow-wrap:anywhere}
-.answer .pick span{font-size:13px;color:var(--ink-2)}
-.answer .pick a{font-family:var(--font-mono);font-size:12px;text-decoration:none;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.tile{background:var(--surface-2);border-radius:var(--radius-m);padding:14px;display:grid;gap:4px;align-content:start}
+.tile small{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.tile b{font-family:var(--font-display);font-size:17px;line-height:1.2;overflow-wrap:anywhere}
+.tile span{font-size:13px;color:var(--ink-2)}
+.tile a{font-family:var(--font-mono);font-size:12px;text-decoration:none;font-weight:600}
 
 /* What's new */
-.news ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.news li{background:var(--surface-2);border-radius:999px;padding:4px 12px;font-size:13px}
-.news li small{color:var(--ink-3);font-family:var(--font-mono);font-size:11px;margin-left:6px}
-.news .chg{display:grid;gap:4px;list-style:none;margin:0;padding:0}
-.news .chg li{background:none;border-radius:0;padding:0;color:var(--ink-2)}
+.pills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.pills li{background:var(--surface-2);border-radius:999px;padding:4px 12px;font-size:13px}
+.pills small{color:var(--ink-3);font-family:var(--font-mono);font-size:11px;margin-left:6px}
+.chg{display:grid;gap:4px;list-style:none;margin:0;padding:0;color:var(--ink-2)}
+h2.split{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 
 /* Search + tabs */
 .searchbar{display:grid;gap:12px;position:sticky;top:0;z-index:5;background:var(--bg);padding-block:10px;margin-block:-10px;border-bottom:1px solid var(--line)}
@@ -114,9 +114,8 @@ ol.rank .nm small{color:var(--ink-3)}
 ol.rank .sc{font-family:var(--font-mono);font-size:12px;color:var(--ink-2)}
 ol.rank .bar{grid-column:2/5;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
 ol.rank .bar i{display:block;height:100%;background:#1E8580}
-.cmpb{font:700 13px/1 var(--font-body);width:24px;height:24px;border-radius:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;flex:none}
-.cmpb:hover{border-color:var(--accent);color:var(--ink)}
-.cmpb[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-tab.cmpb{width:24px;height:24px;padding:0;border-radius:6px;font-size:13px;line-height:1;background:var(--surface);flex:none}
+.kt-tab.cmpb[aria-pressed=true]{background:var(--accent)}
 .more{display:none;justify-self:start}
 .metric{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 details.gl summary{cursor:pointer;font-family:var(--font-mono);font-size:11px;color:var(--ink-3);list-style:none}
@@ -128,10 +127,9 @@ details.gl p{font-size:13px;color:var(--ink-2);margin-top:6px}
 .card .vendor{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .chip{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--surface-2);color:var(--ink-2)}
-.chip.open{background:var(--ok-soft);color:var(--ok)}
+.chip.open,.chip.avustaa{background:var(--ok-soft);color:var(--ok)}
 .chip.best{background:var(--accent);color:var(--accent-ink)}
 .chip.automatisoi{background:#1E2A5A;color:#9FB4FF}
-.chip.avustaa{background:var(--ok-soft);color:var(--ok)}
 .card.pick{border-color:var(--accent);background:linear-gradient(180deg,rgba(92,225,198,.14),transparent 220px),var(--surface)}
 .card .for{font-weight:700;font-size:15px}
 .card .why{color:var(--ink-2);font-size:14px}
@@ -144,13 +142,7 @@ dl.facts dd{margin:0;color:var(--ink-2)}
 .card .meta{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:10px}
 .card .meta a{margin-left:auto;text-decoration:none;font-weight:600}
 .fi-hyvä{color:var(--ok)}.fi-kohtalainen{color:var(--warn)}.fi-heikko{color:#E58E4E}
-.starter ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px}
-.starter li{background:var(--surface-2);border-radius:10px;padding:12px 14px;display:grid;gap:4px;align-content:start}
-.starter li b{font-family:var(--font-display);font-size:15px}
-.starter li span{font-size:13px;color:var(--ink-2)}
-.starter li small{font-family:var(--font-mono);font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
-.starter li a{font-family:var(--font-mono);font-size:12px;text-decoration:none;font-weight:600}
-.notes{background:var(--warn-soft);border-radius:10px;padding:14px 16px;display:grid;gap:6px;font-size:14px;scroll-margin-top:120px}
+.notes{display:grid;gap:6px;font-size:14px;scroll-margin-top:120px}
 .notes ul{margin:0;padding-left:18px;display:grid;gap:4px;color:var(--ink-2)}
 .notes time{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);margin-right:6px}
 
@@ -163,7 +155,7 @@ dl.facts dd{margin:0;color:var(--ink-2)}
 .chart .lbl{fill:var(--ink);font:600 11px var(--font-body);pointer-events:none}
 .chart .pt{fill:var(--accent);fill-opacity:.55;stroke:var(--surface);stroke-width:2;cursor:pointer}
 .chart .pt.fr{fill-opacity:.95}
-.chart .pt:hover,.chart .pt:focus,.chart .pt.on{stroke:var(--ink);outline:none}
+.chart .pt:hover,.chart .pt:focus{stroke:var(--ink);outline:none}
 .chart .front{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:5 4}
 .chart .goodline{stroke:var(--warn);stroke-width:1.5;stroke-dasharray:5 4}
 .chart .info{font-size:13px;color:var(--ink-2);min-height:1.5em}
@@ -322,13 +314,13 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const TABS = [{id:'mallit', name:'Mallit'}, {id:'koodausagentit', name:'Koodausagentit'}, {id:'tyokalut', name:'Työkalut'}];
   const KINDS = [{id:'all', name:'Kaikki tyypit'}, {id:'automatisoi', name:'Automatisoi'}, {id:'avustaa', name:'Avustaa'}];
   const SURFACES = {cli:'Terminaali', ide:'Editori', app:'Työpöytäsovellus', web:'Selain', cloud:'Pilvessä taustalla'};
-  const GOOD = 0.85;  // cost and speed rankings only include agents within this share of the top index
+  const GOOD = 0.85, GOOD_PCT = Math.round(GOOD * 100);  // cost and speed rankings only include agents within this share of the top index
   const AGENT_CARDS = [
     {id:'agent-index', title:'Paras koodausagentti', use:'Agentti ja malli yhdessä: oikeiden ohjelmistotehtävien läpäisy repossa ja terminaalissa.',
      tip:'Sama malli voi pärjätä eri agentissa selvästi eri tavalla, joten agentin valinta vaikuttaa tulokseen mallin lisäksi.'},
-    {id:'agent-cost', title:'Edullisin hyvä agentti', use:`Halvin tehtävää kohden niistä, jotka yltävät vähintään ${Math.round(GOOD * 100)} %:iin kärjen tuloksesta.`,
+    {id:'agent-cost', title:'Edullisin hyvä agentti', use:`Halvin tehtävää kohden niistä, jotka yltävät vähintään ${GOOD_PCT} %:iin kärjen tuloksesta.`,
      tip:'Kustannus on laskettu API-hinnoilla. Kuukausitilauksella maksat kiinteän hinnan, mutta tehtäväkohtainen kulutus ratkaisee, kuinka nopeasti käyttöraja tulee vastaan.'},
-    {id:'agent-speed', title:'Nopein hyvä agentti', use:`Lyhin aika tehtävää kohden niistä, jotka yltävät vähintään ${Math.round(GOOD * 100)} %:iin kärjen tuloksesta.`,
+    {id:'agent-speed', title:'Nopein hyvä agentti', use:`Lyhin aika tehtävää kohden niistä, jotka yltävät vähintään ${GOOD_PCT} %:iin kärjen tuloksesta.`,
      tip:'Hidas agentti ei ole huono: pitkä ajo tarkoittaa usein perusteellisempaa testausta. Nopeus ratkaisee, kun istut itse odottamassa.'},
   ];
 
@@ -336,54 +328,64 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safeUrl = u => /^https:\/\//.test(u || '') ? u : '';
   const norm = s => String(s || '').toLowerCase();
+  // Card ids. Other pages link with the raw name (#a-Cursor, #t-rakentaminen-Claude Code): parseHash slugs it the same way.
   const slug = s => norm(s).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+  const comma = (v, d) => v.toFixed(d).replace('.', ',');
   const usd = v => '$' + v.toFixed(2);
-  const mins = m => m < 60 ? Math.round(m) + ' min' : (m / 60).toFixed(1).replace('.', ',').replace(',0', '') + ' h';
+  const mins = m => m < 60 ? Math.round(m) + ' min' : comma(m / 60, 1).replace(',0', '') + ' h';
   // Date-only strings would parse as UTC midnight and show a day early west of UTC.
   const dt = d => new Date(d.length === 10 ? d + 'T12:00' : d);
   const fiDate = d => dt(d).toLocaleDateString('fi-FI', {day:'numeric', month:'numeric', year:'numeric'});
   const fiTime = d => dt(d).toLocaleString('fi-FI', {day:'numeric', month:'numeric', year:'numeric', hour:'2-digit', minute:'2-digit'});
+  const DAY = 864e5;
   // The data files are refreshed every other day; older than 5 days means the schedule stopped.
-  const late = iso => (Date.now() - Date.parse(iso)) / 864e5 > 5;
-  const LATE = ' – automaattipäivitys on myöhässä';
+  const late = iso => (Date.now() - Date.parse(iso)) / DAY > 5;
+  const updated = iso => `päivitetty ${esc(fiTime(iso))}${late(iso) ? ' – automaattipäivitys on myöhässä' : ''}`;
+  const hit = (q, ...fields) => !q || fields.some(s => norm(s).includes(q));
 
   let data = null, agents = null, tools = null;
+  let derived = {};   // per data load: scatter points, agent rankings, news (the data never changes after loading)
   const failed = {models:false, agents:false, tools:false};
   const ui = {tab:'mallit', group:'all', area:'all', kind:'all', q:'', open:new Set(), cmp:[], showCmp:false, task:null, budget:'best'};
+  const catOf = id => (data && data.categories[id]) || {items: []};
 
   function fmt(v, cat){
     if (v == null) return '';
     if (cat.fmt) return cat.fmt(v);
-    if (cat.unit === 's') return v.toFixed(2).replace('.', ',') + ' s';
+    if (cat.unit === 's') return comma(v, 2) + ' s';
     if (cat.unit === '$' || cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
     return Math.round(v).toLocaleString('fi-FI');
   }
   function isNew(d){
     if (!d) return false;
     const t = Date.parse(d);
-    return !isNaN(t) && Date.now() - t < 45 * 864e5;
+    return !isNaN(t) && Date.now() - t < 45 * DAY;
   }
   function stale(its){
     const newest = Math.max(...its.map(i => Date.parse(i.released)).filter(t => !isNaN(t)));
-    return isFinite(newest) && Date.parse(data.updated) - newest > 180 * 864e5;
+    return isFinite(newest) && Date.parse(data.updated) - newest > 180 * DAY;
   }
   function sub(it, cat){
     const bits = [esc(it.creator)];
     if (cat.lowerIsBetter && it.intelligence != null && cat.unit !== 's') bits.push('älykkyys ' + Math.round(it.intelligence));
-    else if (!cat.lowerIsBetter && it.price) bits.push('$' + it.price.toFixed(2) + ' / 1M');
+    else if (!cat.lowerIsBetter && it.price) bits.push(usd(it.price) + ' / 1M');
     return bits.filter(Boolean).join(' · ');
   }
   const linkBtn = id => `<button type="button" class="lk" data-link="${esc(id)}" aria-label="Kopioi linkki tähän" title="Kopioi linkki">#</button>`;
   const inCmp = (kind, name) => ui.cmp.some(c => c.kind === kind && c.name === name);
-  const cmpBtn = (kind, name) => `<button type="button" class="cmpb" data-cmp="${kind}" data-name="${esc(name)}" aria-pressed="${inCmp(kind, name)}" aria-label="Vertaa: ${esc(name)}" title="Vertaa">+</button>`;
+  const cmpBtn = (kind, name) => `<button type="button" class="kt-tab cmpb" data-cmp="${kind}" data-name="${esc(name)}" aria-pressed="${inCmp(kind, name)}" aria-label="Vertaa: ${esc(name)}" title="Vertaa">+</button>`;
+  const pressBtn = (attr, id, on, label) => `<button type="button" class="kt-tab" data-${attr}="${esc(id)}" aria-pressed="${on}">${esc(label)}</button>`;
+  const pending = (key, msg) => `<p class="${failed[key] ? 'kt-note' : 'muted'}">${failed[key] ? msg : 'Ladataan…'}</p>`;
+  const tile = (label, title, text, href, linkText) => `<div class="tile"><small>${label}</small><b>${esc(title)}</b><span>${text}</span>${href ? `<a href="${esc(href)}">${linkText}</a>` : ''}</div>`;
+  const perTask = a => `${usd(a.aa.costPerTask)} / tehtävä`;
+  const aaLine = a => `indeksi ${Math.round(a.aa.index)} · ${perTask(a)} · ${mins(a.aa.minutesPerTask)} · ${a.aa.model}`;
   function gloss(metric){
     const g = GLOSSARY.find(([re]) => re.test(metric || ''));
     return g ? `<details class="gl"><summary>Mittari: ${esc(metric)}</summary><p>${esc(g[1])}</p></details>` : `<p class="metric">Mittari: ${esc(metric)}</p>`;
   }
 
   // One ranking card: the winner, places 2–8 (2–3 on a phone until "Näytä kaikki"), the metric and a tip.
-  function card(meta, cat, {id = 'm-' + meta.id, kind = 'model'} = {}){
-    cat = cat || data.categories[meta.id] || {items:[]};
+  function card(meta, cat = catOf(meta.id), {id = 'm-' + meta.id, kind = 'model'} = {}){
     const its = cat.items || [];
     const head = `<header><h3>${esc(meta.title)}${linkBtn(id)}</h3><p class="use">${esc(meta.use)}</p></header>`;
     if (!its.length) return `<article class="card" id="${esc(id)}">${head}<p class="empty">Ei dataa vielä.</p>${gloss(cat.metric)}</article>`;
@@ -408,14 +410,15 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
         ${cmpBtn(kind, w.name)}
       </div>
       <ol class="rank">${rest}</ol>
-      ${its.length > 3 ? `<button type="button" class="kt-btn sm more" data-more="${esc(id)}" aria-expanded="${open}">${open ? 'Näytä vähemmän' : `Näytä kaikki ${its.length}`}</button>` : ''}
+      ${its.length > 3 ? `<button type="button" class="kt-btn sm more" data-more="${esc(id)}" aria-expanded="${open}">${moreLabel(open, its.length)}</button>` : ''}
       ${gloss(cat.metric)}${kind === 'model' && stale(its) ? '<p class="kt-note">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>'
         : cat.coverage != null && cat.coverage < 0.5 ? `<p class="kt-note">Vain ${Math.round(cat.coverage * 20)}/20 tämän hetken kärkimallista on ajanut tämän testin – osa uusimmista malleista puuttuu listalta.</p>` : ''}
       <p class="tip">${esc(meta.tip)}</p>
     </article>`;
   }
+  const moreLabel = (open, n) => open ? 'Näytä vähemmän' : `Näytä kaikki ${n}`;
 
-  // ---- Chart helpers ----
+  // ---- Charts: hand-written SVG, the viewBox is the drawn width so 11 px text stays 11 px ----
   const chartW = () => Math.max(260, $('.wrap').clientWidth - 42);
   const f1 = v => v.toFixed(1);
   const logTicks = (lo, hi) => [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100].filter(v => v >= lo * 0.999 && v <= hi * 1.001);
@@ -423,107 +426,98 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function spread(labels){
     labels.sort((a, b) => a.y - b.y);
     for (let i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 13 && Math.abs(labels[i].x - labels[i - 1].x) < 120) labels[i].y = labels[i - 1].y + 13;
-    return labels.map(l => `<text class="lbl" x="${f1(l.x)}" y="${f1(l.y + 4)}"${l.end ? ' text-anchor="end"' : ''}>${esc(l.t)}</text>`).join('');
+    return labels.map(l => `<text class="lbl" x="${f1(l.x)}" y="${f1(l.y + 4)}">${esc(l.t)}</text>`).join('');
+  }
+  /* One scatter: x on a log scale, y linear, r from `r` (0–1). Each point carries its details (data-info, shown under the
+     chart on hover, tap or focus). `labelled` points get direct labels on wide screens; `extra(X, Y, W, L, R)` adds lines. */
+  function plotHtml({title, aria, pts, x, y, r, info, labelled = () => false, xTitle, yTitle, note, extra = () => ''}){
+    const W = chartW(), small = W < 500, H = small ? 280 : 340, L = 40, R = small ? 16 : 130, T = 12, B = 40;
+    const lx = pts.map(p => Math.log10(x(p))), x0 = Math.floor(Math.min(...lx) * 2) / 2, x1 = Math.ceil(Math.max(...lx) * 2) / 2;
+    const ys = pts.map(y), y0 = Math.floor((Math.min(...ys) - 3) / 5) * 5, y1 = Math.ceil((Math.max(...ys) + 3) / 5) * 5;
+    const X = v => L + ((Math.log10(v) - x0) / (x1 - x0 || 1)) * (W - L - R), Y = v => T + ((y1 - v) / (y1 - y0 || 1)) * (H - T - B);
+    let svg = '';
+    for (let v = y0; v <= y1; v += y1 - y0 > 30 ? 10 : 5) svg += `<line class="grid" x1="${L}" x2="${W - R}" y1="${f1(Y(v))}" y2="${f1(Y(v))}"/><text class="tick" x="${L - 6}" y="${f1(Y(v) + 4)}" text-anchor="end">${v}</text>`;
+    for (const v of logTicks(10 ** x0, 10 ** x1)) svg += `<text class="tick" x="${f1(X(v))}" y="${H - 22}" text-anchor="middle">$${String(v).replace('.', ',')}</text>`;
+    svg += `<text class="axis" x="${f1((L + W - R) / 2)}" y="${H - 4}" text-anchor="middle">${esc(xTitle)}</text><text class="axis" x="${L}" y="${T - 2}">${esc(yTitle)}</text>`;
+    svg += extra(X, Y, W, L, R);
+    svg += pts.map(p => `<circle class="pt${labelled(p) ? ' fr' : ''}" tabindex="0" data-info="${esc(info(p))}" cx="${f1(X(x(p)))}" cy="${f1(Y(y(p)))}" r="${f1(4 + 8 * r(p))}"><title>${esc(p.name)}</title></circle>`).join('');
+    if (!small) svg += spread(pts.filter(labelled).map(p => ({x: X(x(p)) + 12, y: Y(y(p)), t: p.name})));
+    return `<div class="panel chart"><h3>${esc(title)}</h3><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(aria)}">${svg}</svg><p class="info">${esc(note)}</p></div>`;
+  }
+  // julkinen-10: text models by price and intelligence, size = speed; the efficiency frontier is dashed.
+  function scatterHtml(){
+    const {pts, front} = derived.scatter;
+    if (pts.length < 3) return '';
+    const maxS = Math.max(...pts.map(p => p.speed || 0)) || 1;
+    return plotHtml({title: 'Hinta vs. älykkyys', aria: 'Tekstimallit hinnan ja älykkyyden mukaan', pts, x: p => p.price, y: p => p.intelligence,
+      r: p => Math.sqrt((p.speed || 0) / maxS), labelled: p => front.has(p.name),
+      info: p => `${p.name} (${p.creator}): älykkyys ${Math.round(p.intelligence)} · ${usd(p.price)} / 1M tokenia${p.speed ? ` · ${Math.round(p.speed)} tokenia/s` : ''}`,
+      xTitle: 'Hinta $ / 1M tokenia (logaritminen) →', yTitle: '↑ Älykkyys',
+      note: 'Napauta pistettä. Pisteen koko = nopeus, katkoviiva = tehokkuusraja (ei halvempaa ja älykkäämpää mallia).',
+      extra: (X, Y) => `<polyline class="front" points="${pts.filter(p => front.has(p.name)).map(p => `${f1(X(p.price))},${f1(Y(p.intelligence))}`).join(' ')}"/>`});
+  }
+  // julkinen-11: agents by cost per task and index, bubble size = minutes per task; the "good" line is dashed.
+  function bubbleHtml(){
+    const {measured, top} = derived.agents, pts = measured;
+    if (pts.length < 3) return '';
+    const maxM = Math.max(...pts.map(a => a.aa.minutesPerTask)) || 1, g = GOOD * top.aa.index;
+    return plotHtml({title: 'Tulos, hinta ja aika', aria: 'Koodausagentit kustannuksen ja indeksin mukaan', pts, x: a => a.aa.costPerTask, y: a => a.aa.index,
+      r: a => Math.sqrt(a.aa.minutesPerTask / maxM), labelled: () => true, info: a => `${a.name}: ${aaLine(a)}`,
+      xTitle: 'API-kustannus tehtävää kohden (logaritminen) →', yTitle: '↑ Indeksi',
+      note: `Napauta kuplaa. Kuplan koko = minuuttia tehtävää kohden. Katkoviivan yläpuolella olevat ovat ”hyviä” (vähintään ${GOOD_PCT} % kärjen tuloksesta).`,
+      extra: (X, Y, W, L, R) => `<line class="goodline" x1="${L}" x2="${W - R}" y1="${f1(Y(g))}" y2="${f1(Y(g))}"/><text class="tick" x="${W - R}" y="${f1(Y(g) - 5)}" text-anchor="end">${GOOD_PCT} % kärjestä</text>`});
   }
 
-  // julkinen-10: price (log) vs intelligence, size = speed; the efficiency frontier is dashed.
-  let scPts = [];
-  function scatterHtml(){
+  // ---- Derived once per data load ----
+  function deriveModels(){
     const best = new Map();
-    for (const c of CATS) if (c.group === 'teksti' || c.group === 'hinta') for (const it of (data.categories[c.id] || {}).items || []) {
+    for (const c of CATS) if (c.group === 'teksti' || c.group === 'hinta') for (const it of catOf(c.id).items) {
       if (!(it.price > 0) || it.intelligence == null) continue;
       const cur = best.get(it.name);
       if (!cur || it.intelligence > cur.intelligence) best.set(it.name, it);
     }
-    scPts = [...best.values()].sort((a, b) => a.price - b.price);
-    if (scPts.length < 3) return '';
-    let top = -Infinity;
-    const fr = new Set(scPts.filter(p => p.intelligence > top && (top = p.intelligence, true)).map(p => p.name));
-    const W = chartW(), small = W < 500, H = small ? 280 : 340, L = 40, R = small ? 16 : 120, T = 12, B = 40;
-    const lx = scPts.map(p => Math.log10(p.price)), x0 = Math.floor(Math.min(...lx) * 2) / 2, x1 = Math.ceil(Math.max(...lx) * 2) / 2;
-    const iy = scPts.map(p => p.intelligence), y0 = Math.floor((Math.min(...iy) - 2) / 5) * 5, y1 = Math.ceil((Math.max(...iy) + 2) / 5) * 5;
-    const X = v => L + ((Math.log10(v) - x0) / (x1 - x0 || 1)) * (W - L - R), Y = v => T + ((y1 - v) / (y1 - y0 || 1)) * (H - T - B);
-    const maxS = Math.max(...scPts.map(p => p.speed || 0)) || 1;
-    let svg = '';
-    for (let v = y0; v <= y1; v += (y1 - y0 > 30 ? 10 : 5)) svg += `<line class="grid" x1="${L}" x2="${W - R}" y1="${f1(Y(v))}" y2="${f1(Y(v))}"/><text class="tick" x="${L - 6}" y="${f1(Y(v) + 4)}" text-anchor="end">${v}</text>`;
-    for (const v of logTicks(10 ** x0, 10 ** x1)) svg += `<text class="tick" x="${f1(X(v))}" y="${H - 22}" text-anchor="middle">$${v < 1 ? String(v).replace('.', ',') : v}</text>`;
-    svg += `<text class="axis" x="${f1((L + W - R) / 2)}" y="${H - 4}" text-anchor="middle">Hinta $ / 1M tokenia (logaritminen) →</text>`;
-    svg += `<text class="axis" x="${L}" y="${T - 2}" text-anchor="start">↑ Älykkyys</text>`;
-    const front = scPts.filter(p => fr.has(p.name));
-    svg += `<polyline class="front" points="${front.map(p => `${f1(X(p.price))},${f1(Y(p.intelligence))}`).join(' ')}"/>`;
-    svg += scPts.map((p, i) => `<circle class="pt${fr.has(p.name) ? ' fr' : ''}" data-sc="${i}" tabindex="0" cx="${f1(X(p.price))}" cy="${f1(Y(p.intelligence))}" r="${f1(3 + 7 * Math.sqrt((p.speed || 0) / maxS))}"><title>${esc(p.name)}</title></circle>`).join('');
-    if (!small) svg += spread(front.map(p => ({x: X(p.price) + 10, y: Y(p.intelligence), t: p.name})));
-    return `<div class="panel chart"><h3>Hinta vs. älykkyys</h3>
-      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Tekstimallit hinnan ja älykkyyden mukaan">${svg}</svg>
-      <p class="info" id="sc-info">Napauta pistettä. Pisteen koko = nopeus, katkoviiva = tehokkuusraja (ei halvempaa ja älykkäämpää mallia).</p></div>`;
+    const pts = [...best.values()].sort((a, b) => a.price - b.price);
+    let topI = -Infinity;
+    derived.scatter = {pts, front: new Set(pts.filter(p => p.intelligence > topI && (topI = p.intelligence, true)).map(p => p.name))};
   }
-
-  // julkinen-11: agents by cost per task (log) and index, bubble size = minutes per task.
-  let bubPts = [];
-  function bubbleHtml(order){
-    bubPts = order.filter(a => a.aa && a.aa.costPerTask > 0);
-    if (bubPts.length < 3) return '';
-    const W = chartW(), small = W < 500, H = small ? 280 : 340, L = 40, R = small ? 16 : 130, T = 12, B = 40;
-    const lx = bubPts.map(a => Math.log10(a.aa.costPerTask)), x0 = Math.floor(Math.min(...lx) * 2) / 2, x1 = Math.ceil(Math.max(...lx) * 2) / 2;
-    const iy = bubPts.map(a => a.aa.index), top = Math.max(...iy), y0 = Math.floor((Math.min(...iy) - 3) / 5) * 5, y1 = Math.ceil((top + 3) / 5) * 5;
-    const X = v => L + ((Math.log10(v) - x0) / (x1 - x0 || 1)) * (W - L - R), Y = v => T + ((y1 - v) / (y1 - y0 || 1)) * (H - T - B);
-    const maxM = Math.max(...bubPts.map(a => a.aa.minutesPerTask)) || 1;
-    let svg = '';
-    for (let v = y0; v <= y1; v += 5) svg += `<line class="grid" x1="${L}" x2="${W - R}" y1="${f1(Y(v))}" y2="${f1(Y(v))}"/><text class="tick" x="${L - 6}" y="${f1(Y(v) + 4)}" text-anchor="end">${v}</text>`;
-    for (const v of logTicks(10 ** x0, 10 ** x1)) svg += `<text class="tick" x="${f1(X(v))}" y="${H - 22}" text-anchor="middle">$${String(v).replace('.', ',')}</text>`;
-    svg += `<text class="axis" x="${f1((L + W - R) / 2)}" y="${H - 4}" text-anchor="middle">API-kustannus tehtävää kohden (logaritminen) →</text>`;
-    svg += `<text class="axis" x="${L}" y="${T - 2}">↑ Indeksi</text>`;
-    const g = GOOD * top;
-    svg += `<line class="goodline" x1="${L}" x2="${W - R}" y1="${f1(Y(g))}" y2="${f1(Y(g))}"/><text class="tick" x="${W - R}" y="${f1(Y(g) - 5)}" text-anchor="end">${Math.round(GOOD * 100)} % kärjestä</text>`;
-    svg += bubPts.map((a, i) => `<circle class="pt" data-bub="${i}" tabindex="0" cx="${f1(X(a.aa.costPerTask))}" cy="${f1(Y(a.aa.index))}" r="${f1(4 + 10 * Math.sqrt(a.aa.minutesPerTask / maxM))}"><title>${esc(a.name)}</title></circle>`).join('');
-    if (!small) svg += spread(bubPts.map(a => ({x: X(a.aa.costPerTask) + 14, y: Y(a.aa.index), t: a.name})));
-    return `<div class="panel chart"><h3>Tulos, hinta ja aika</h3>
-      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Koodausagentit kustannuksen ja indeksin mukaan">${svg}</svg>
-      <p class="info" id="bub-info">Napauta kuplaa. Kuplan koko = minuuttia tehtävää kohden. Katkoviivan yläpuolella olevat ovat ”hyviä” (vähintään ${Math.round(GOOD * 100)} % kärjen tuloksesta).</p></div>`;
+  // Ranking cards reuse card() with categories built from the agents' AA results; the Ask card and the bubble chart
+  // read the same lists, so "good" (within GOOD of the top index) is decided once.
+  function deriveAgents(){
+    const order = [...agents.agents].sort((x, y) => (y.aa ? y.aa.index : -1) - (x.aa ? x.aa.index : -1) || x.name.localeCompare(y.name, 'fi'));
+    const measured = order.filter(a => a.aa), top = measured[0];
+    const good = measured.filter(a => a.aa.index >= GOOD * (top ? top.aa.index : 0));
+    const by = key => [...good].sort((x, y) => x.aa[key] - y.aa[key]);
+    const idx = a => `indeksi ${Math.round(a.aa.index)}`;
+    const rank = (list, key, line, cat) => ({...cat, items: list.map(a => ({name:a.name, creator:line(a), variant:line(a), score:a.aa[key]}))});
+    const cheapest = by('costPerTask');
+    derived.agents = {order, measured, top, cheapest, cats: {
+      'agent-index': rank(measured, 'index', a => `${a.aa.model} · ${perTask(a)}`, {metric:`${agents.indexName} (${agents.indexEvals})`}),
+      'agent-cost': rank(cheapest, 'costPerTask', a => `${idx(a)} · ${mins(a.aa.minutesPerTask)}`, {metric:'API-kustannus tehtävää kohden ($)', lowerIsBetter:true, fmt:usd}),
+      'agent-speed': rank(by('minutesPerTask'), 'minutesPerTask', a => `${idx(a)} · ${perTask(a)}`, {metric:'Aika tehtävää kohden', lowerIsBetter:true, fmt:mins}),
+    }};
   }
 
   // ---- Models tab ----
-  const catMatch = (c, q) => !q || [c.title, c.use, (data.categories[c.id] || {}).metric].some(s => norm(s).includes(q))
-    || ((data.categories[c.id] || {}).items || []).some(it => norm(it.name).includes(q) || norm(it.creator).includes(q));
+  const catMatch = c => { const cat = catOf(c.id); return hit(ui.q, c.title, c.use, cat.metric) || cat.items.some(it => hit(ui.q, it.name, it.creator)); };
+  const visibleCats = () => CATS.filter(c => c.group !== 'koodausagentit' && (ui.group === 'all' || ui.group === c.group) && catMatch(c));
   function modelsTab(){
-    if (!data) return {n: 0, html: `<p class="${failed.models ? 'kt-note' : 'muted'}">${failed.models ? 'Mallidataa ei saatu ladattua. Yritä hetken päästä uudelleen.' : 'Ladataan…'}</p>`};
-    let n = 0;
-    const groups = MODEL_GROUPS.filter(g => ui.group === 'all' || ui.group === g.id).map(g => {
-      const cats = CATS.filter(c => c.group === g.id && catMatch(c, ui.q));
-      n += cats.length;
-      return cats.length ? `<section class="group" id="${g.id}"><h2>${esc(g.name)}${linkBtn(g.id)}</h2><div class="cards">${cats.map(m => card(m)).join('')}</div></section>` : '';
-    }).join('');
-    const filters = `<nav class="filters" aria-label="Suodata mallien ryhmä">${[{id:'all', name:'Kaikki'}, ...MODEL_GROUPS].map(g =>
-      `<button type="button" class="kt-tab" data-group="${g.id}" aria-pressed="${ui.group === g.id}">${esc(g.name)}</button>`).join('')}</nav>`;
+    if (!data) return pending('models', 'Mallidataa ei saatu ladattua. Yritä hetken päästä uudelleen.');
+    const cats = visibleCats();
+    const groups = MODEL_GROUPS.map(g => { const cs = cats.filter(c => c.group === g.id);
+      return cs.length ? `<section class="group" id="${g.id}"><h2>${esc(g.name)}${linkBtn(g.id)}</h2><div class="cards">${cs.map(m => card(m)).join('')}</div></section>` : ''; }).join('');
+    const filters = `<nav class="filters" aria-label="Suodata mallien ryhmä">${[{id:'all', name:'Kaikki'}, ...MODEL_GROUPS].map(g => pressBtn('group', g.id, ui.group === g.id, g.name)).join('')}</nav>`;
     const chart = !ui.q && ['all', 'teksti', 'hinta'].includes(ui.group) ? scatterHtml() : '';
-    return {n, html: `<div class="group">${filters}${chart}${groups || '<p class="empty">Ei osumia malleista.</p>'}</div>`};
+    return `<div class="group">${filters}${chart}${groups || '<p class="empty">Ei osumia malleista.</p>'}</div>`;
   }
 
   // ---- Coding agents tab ----
   const agentId = a => 'a-' + slug(a.name);
-  const agentMatch = (a, q) => !q || [a.name, a.vendor, a.bestFor, a.why, a.models].some(s => norm(s).includes(q));
-  const agentOrder = () => [...agents.agents].sort((x, y) => (y.aa ? y.aa.index : -1) - (x.aa ? x.aa.index : -1) || x.name.localeCompare(y.name, 'fi'));
-  // Ranking cards reuse card() with categories built from the agents' AA results.
-  function agentCats(order){
-    const measured = order.filter(a => a.aa);
-    const good = measured.filter(a => a.aa.index >= GOOD * (measured.length ? measured[0].aa.index : 0));
-    const idx = a => `indeksi ${Math.round(a.aa.index)}`;
-    const perTask = a => `${usd(a.aa.costPerTask)} / tehtävä`;
-    const rank = (list, key, line, cat) => ({...cat, items: list.map(a => ({name:a.name, creator:line(a), variant:line(a), score:a.aa[key]}))});
-    const by = key => [...good].sort((x, y) => x.aa[key] - y.aa[key]);
-    return {
-      'agent-index': rank(measured, 'index', a => `${a.aa.model} · ${perTask(a)}`, {metric:`${agents.indexName} (${agents.indexEvals})`}),
-      'agent-cost': rank(by('costPerTask'), 'costPerTask', a => `${idx(a)} · ${mins(a.aa.minutesPerTask)}`,
-        {metric:'API-kustannus tehtävää kohden ($)', lowerIsBetter:true, fmt:usd}),
-      'agent-speed': rank(by('minutesPerTask'), 'minutesPerTask', a => `${idx(a)} · ${perTask(a)}`,
-        {metric:'Aika tehtävää kohden', lowerIsBetter:true, fmt:mins}),
-    };
-  }
+  const agentMatch = a => hit(ui.q, a.name, a.vendor, a.bestFor, a.why, a.models);
   function agentCard(a){
     const url = safeUrl(a.url), repo = safeUrl(a.repo);
     const chips = a.surfaces.map(s => `<span class="chip">${esc(SURFACES[s] || s)}</span>`).join('')
       + (a.openSource ? '<span class="chip open">Avoin lähdekoodi</span>' : '');
-    const aa = a.aa ? `${Math.round(a.aa.index)} · ${esc(a.aa.model)} · ${usd(a.aa.costPerTask)} / tehtävä · ${mins(a.aa.minutesPerTask)}` : 'Ei vielä mitattu';
+    const aa = a.aa ? `${Math.round(a.aa.index)} · ${esc(a.aa.model)} · ${perTask(a)} · ${mins(a.aa.minutesPerTask)}` : 'Ei vielä mitattu';
     return `<article class="card" id="${esc(agentId(a))}">
       <header><h3>${esc(a.name)}${linkBtn(agentId(a))}</h3><span class="vendor">${esc(a.vendor)}</span></header>
       <div class="chips">${chips}</div>
@@ -535,18 +529,18 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   }
   function agentsTab(){
     const intro = '<p class="intro">Koodausagentti antaa mallille työkalut: se lukee koko projektin, ajaa komentoja ja tekee muutokset itse. Tässä palveluntarjoajien agentit rinnakkain – tulos, hinta tehtävää kohden ja se, mihin kukin sopii.</p>';
-    if (!agents) return {n: 0, html: `<div class="group" id="koodausagentit">${intro}<p class="${failed.agents ? 'kt-note' : 'muted'}">${failed.agents ? 'Koodausagenttien tietoja ei saatu ladattua.' : 'Ladataan…'}</p></div>`};
-    const order = agentOrder(), list = order.filter(a => agentMatch(a, ui.q)), cats = agentCats(order);
-    return {n: list.length, html: `<div class="group" id="koodausagentit">${intro}
-      ${ui.q ? '' : bubbleHtml(order)}
-      ${ui.q ? '' : `<div class="cards">${AGENT_CARDS.map(m => card(m, cats[m.id], {id: m.id, kind: 'agent'})).join('')}</div>`}
+    if (!agents) return `<div class="group" id="koodausagentit">${intro}${pending('agents', 'Koodausagenttien tietoja ei saatu ladattua.')}</div>`;
+    const list = derived.agents.order.filter(agentMatch);
+    return `<div class="group" id="koodausagentit">${intro}
+      ${ui.q ? '' : bubbleHtml() + `<div class="cards">${AGENT_CARDS.map(m => card(m, derived.agents.cats[m.id], {id: m.id, kind: 'agent'})).join('')}</div>`}
       <h2>Agentit rinnakkain</h2>
-      ${list.length ? `<div class="cards">${list.map(agentCard).join('')}</div>` : '<p class="empty">Ei osumia agenteista.</p>'}</div>`};
+      ${list.length ? `<div class="cards">${list.map(agentCard).join('')}</div>` : '<p class="empty">Ei osumia agenteista.</p>'}</div>`;
   }
 
   // ---- Tools tab ----
   const toolId = (a, t) => `t-${a.id}-${slug(t.name)}`;
-  const toolMatch = (t, a, q) => (ui.kind === 'all' || t.kind === ui.kind) && (!q || [t.name, t.vendor, t.bestFor, t.why, a.title, a.intro].some(s => norm(s).includes(q)));
+  const toolMatch = (t, a) => (ui.kind === 'all' || t.kind === ui.kind) && hit(ui.q, t.name, t.vendor, t.bestFor, t.why, a.title, a.intro);
+  const areaTools = a => a.tools.filter(t => toolMatch(t, a)).sort((x, y) => (y.pick ? 1 : 0) - (x.pick ? 1 : 0));
   function toolCard(t, a){
     const url = safeUrl(t.url), id = toolId(a, t);
     const fi = t.fi && t.fi !== '?' ? `<span>suomi: <span class="fi-${esc(t.fi)}">${esc(t.fi)}</span></span>` : '';
@@ -558,177 +552,185 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       <div class="meta"><span>${esc(t.price)}</span>${fi}${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}</div>
     </article>`;
   }
-  // A starter row names one or two tools ("ChatGPT tai Claude"): link to the first card that exists.
+  // A starter row names one or two tools in text ("ChatGPT tai Claude"): link the first card whose name matches,
+  // an exact name before a prefix.
   function findTool(name){
-    for (const part of String(name).split(/\s+tai\s+|,\s*|\s+\/\s+/)) {
-      const p = norm(part.trim());
-      for (const a of tools.areas) for (const t of a.tools) if (p && (norm(t.name) === p || norm(t.name).startsWith(p))) return toolId(a, t);
-    }
+    const parts = String(name).split(/\s+tai\s+|,\s*|\s+\/\s+/).map(p => norm(p.trim())).filter(Boolean);
+    for (const exact of [true, false]) for (const p of parts) for (const a of tools.areas) for (const t of a.tools)
+      if (exact ? norm(t.name) === p : norm(t.name).startsWith(p)) return toolId(a, t);
     return null;
   }
   function toolsTab(){
-    if (!tools) return {n: 0, html: `<p class="${failed.tools ? 'kt-note' : 'muted'}">${failed.tools ? 'Työkalujen tietoja ei saatu ladattua.' : 'Ladataan…'}</p>`};
-    let n = 0;
+    if (!tools) return pending('tools', 'Työkalujen tietoja ei saatu ladattua.');
     const areas = tools.areas.filter(a => ui.area === 'all' || ui.area === a.id).map(a => {
-      const list = a.tools.filter(t => toolMatch(t, a, ui.q)).sort((x, y) => (y.pick ? 1 : 0) - (x.pick ? 1 : 0));
-      n += list.length;
+      const list = areaTools(a);
       if (!list.length) return '';
       const more = a.id === 'rakentaminen' ? '<p class="intro">Koodausagentit rinnakkain (tulos, hinta ja aika tehtävää kohden): <a href="#koodausagentit">Koodausagentit-välilehti →</a></p>' : '';
       return `<section class="group" id="${esc(a.id)}"><header><h2>${esc(a.title)}${linkBtn(a.id)}</h2><p class="intro">${esc(a.intro)}</p>${more}</header>
         <div class="cards">${list.map(t => toolCard(t, a)).join('')}</div></section>`;
     }).join('');
-    const starter = ui.q ? '' : `<section class="panel starter" aria-labelledby="starter-h"><header><h2 id="starter-h">Jos otat vain viisi</h2><p class="intro">Pienyrittäjän aloituspaketti: näillä katat suurimman osan arjesta.</p></header>
-      <ol>${tools.starter.map(s => { const id = findTool(s.name); return `<li><small>${esc(s.role)}</small><b>${esc(s.name)}</b><span>${esc(s.why)}</span>${id ? `<a href="#${esc(id)}">Kortti →</a>` : ''}</li>`; }).join('')}</ol></section>`;
+    const starter = ui.q ? '' : `<section class="panel" aria-labelledby="starter-h"><header><h2 id="starter-h">Jos otat vain viisi</h2><p class="intro">Pienyrittäjän aloituspaketti: näillä katat suurimman osan arjesta.</p></header>
+      <div class="tiles">${tools.starter.map(s => { const id = findTool(s.name); return tile(esc(s.role), s.name, esc(s.why), id && '#' + id, 'Kortti →'); }).join('')}</div></section>`;
     const allAreas = [{id:'all', title:'Kaikki osa-alueet'}, ...tools.areas];
-    const filters = `<nav class="filters" id="areas" aria-label="Suodata osa-alueen mukaan">${allAreas.map(a =>
-      `<button type="button" class="kt-tab" data-area="${esc(a.id)}" aria-pressed="${ui.area === a.id}">${esc(a.title)}</button>`).join('')}</nav>
+    const filters = `<nav class="filters" id="areas" aria-label="Suodata osa-alueen mukaan">${allAreas.map(a => pressBtn('area', a.id, ui.area === a.id, a.title)).join('')}</nav>
       <label class="area-select"><span class="small muted">Osa-alue</span> <select class="kt-input" id="area-sel">${allAreas.map(a => `<option value="${esc(a.id)}"${ui.area === a.id ? ' selected' : ''}>${esc(a.title)}</option>`).join('')}</select></label>
-      <nav class="filters" aria-label="Suodata tyypin mukaan">${KINDS.map(k => `<button type="button" class="kt-tab" data-kind="${k.id}" aria-pressed="${ui.kind === k.id}">${esc(k.name)}</button>`).join('')}</nav>`;
-    const notes = tools.changes.length ? `<aside class="notes" id="muutokset"><b>Viimeisimmät muutokset</b><ul>${tools.changes.map(c => `<li><time datetime="${esc(c.date)}">${esc(fiDate(c.date))}</time>${esc(c.text)}</li>`).join('')}</ul></aside>` : '';
-    return {n, html: `<div class="group">${starter}${filters}${areas || '<p class="empty">Ei osumia. Kokeile toista hakusanaa tai poista suodattimet.</p>'}${notes}</div>`};
+      <nav class="filters" aria-label="Suodata tyypin mukaan">${KINDS.map(k => pressBtn('kind', k.id, ui.kind === k.id, k.name)).join('')}</nav>`;
+    const notes = tools.changes.length ? `<aside class="kt-note notes" id="muutokset"><b>Viimeisimmät muutokset</b><ul>${tools.changes.map(c => `<li><time datetime="${esc(c.date)}">${esc(fiDate(c.date))}</time>${esc(c.text)}</li>`).join('')}</ul></aside>` : '';
+    return `<div class="group">${starter}${filters}${areas || '<p class="empty">Ei osumia. Kokeile toista hakusanaa tai poista suodattimet.</p>'}${notes}</div>`;
   }
 
+  // Search hit counts per tab, without building any HTML.
+  const counts = () => ({
+    mallit: data ? visibleCats().length : 0,
+    koodausagentit: agents ? agents.agents.filter(agentMatch).length : 0,
+    tyokalut: tools ? tools.areas.filter(a => ui.area === 'all' || ui.area === a.id).reduce((n, a) => n + areaTools(a).length, 0) : 0,
+  });
+
   // ---- Ask (julkinen-9) ----
-  const textCat = id => (CATS.find(c => c.id === id) || {}).group === 'teksti';
   function answerHtml(){
     const t = TASKS.find(x => x.id === ui.task);
     if (!t) return '<p class="small muted">Valitse tehtävä, niin saat yhden suosituksen kustakin: malli, työkalu ja tarvittaessa koodausagentti.</p>';
     const cheap = ui.budget === 'cheap', picks = [];
+    // [main, alternative] in the chosen order, with the alternative's label.
+    const order = (best, value, bestLabel, valueLabel) => cheap && value ? [value, best, bestLabel] : [best, value, valueLabel];
+    const alt = (a, main, label) => a && a !== main ? ` · ${label}: ${esc(a.name)}` : '';
     if (data) {
-      const its = (data.categories[t.cat] || {}).items || [], value = ((data.categories['hinta-laatu'] || {}).items || [])[0];
-      const [main, alt, altLabel] = textCat(t.cat) && value
-        ? (cheap ? [value, its[0], 'Paras tulos'] : [its[0], value, 'Edullisempi'])
-        : [its[0], its[1], 'Toiseksi paras'];
-      if (main) picks.push(`<div class="pick"><small>Malli</small><b>${esc(main.name)}</b><span>${esc(main.creator)}${alt ? ` · ${altLabel}: ${esc(alt.name)}` : ''}</span><a href="#m-${t.cat}">Koko lista →</a></div>`);
+      const its = catOf(t.cat).items, value = catOf('hinta-laatu').items[0], text = (CATS.find(c => c.id === t.cat) || {}).group === 'teksti';
+      const [main, other, label] = text ? order(its[0], value, 'Paras tulos', 'Edullisempi') : [its[0], its[1], 'Toiseksi paras'];
+      if (main) picks.push(tile('Malli', main.name, esc(main.creator) + alt(other, main, label), `#m-${t.cat}`, 'Koko lista →'));
     }
     if (t.agent && agents) {
-      const order = agentOrder().filter(a => a.aa), top = order[0];
-      const good = order.filter(a => a.aa.index >= GOOD * (top ? top.aa.index : 0)).sort((x, y) => x.aa.costPerTask - y.aa.costPerTask);
-      const [main, alt] = cheap ? [good[0], top] : [top, good[0]];
-      if (main) picks.push(`<div class="pick"><small>Koodausagentti</small><b>${esc(main.name)}</b><span>indeksi ${Math.round(main.aa.index)} · ${usd(main.aa.costPerTask)} / tehtävä${alt && alt !== main ? ` · ${cheap ? 'Paras tulos' : 'Edullisempi'}: ${esc(alt.name)}` : ''}</span><a href="#${esc(agentId(main))}">Agentin kortti →</a></div>`);
+      const {top, cheapest} = derived.agents, [main, other, label] = order(top, cheapest[0], 'Paras tulos', 'Edullisempi');
+      if (main) picks.push(tile('Koodausagentti', main.name, `indeksi ${Math.round(main.aa.index)} · ${perTask(main)}` + alt(other, main, label), '#' + agentId(main), 'Agentin kortti →'));
     }
     if (tools) {
       const area = tools.areas.find(a => a.id === t.area);
       if (area && area.tools.length) {
         const best = area.tools.find(x => x.pick) || area.tools[0], free = area.tools.find(x => /ilmai/i.test(x.price));
-        const [main, alt] = cheap && free ? [free, best] : [best, free];
-        picks.push(`<div class="pick"><small>Työkalu · ${esc(area.title)}</small><b>${esc(main.name)}</b><span>${esc(main.price)}${alt && alt !== main ? ` · ${cheap ? 'Paras' : 'Ilmainen vaihtoehto'}: ${esc(alt.name)}` : ''}</span><a href="#${esc(toolId(area, main))}">Työkalun kortti →</a></div>`);
+        const [main, other, label] = order(best, free, 'Paras', 'Ilmainen vaihtoehto');
+        picks.push(tile(`Työkalu · ${esc(area.title)}`, main.name, esc(main.price) + alt(other, main, label), '#' + toolId(area, main), 'Työkalun kortti →'));
       }
     }
-    return picks.length ? `<div class="answer">${picks.join('')}</div>` : '<p class="small muted">Ladataan…</p>';
+    return picks.length ? `<div class="tiles">${picks.join('')}</div>` : '<p class="small muted">Ladataan…</p>';
   }
 
   // ---- What's new (julkinen-14) ----
   function newsHtml(){
+    if (derived.news != null) return derived.news;
     const fresh = new Map();
     if (data) for (const c of Object.values(data.categories)) for (const it of c.items || []) if (isNew(it.released) && !fresh.has(it.name)) fresh.set(it.name, it);
     const models = [...fresh.values()].sort((a, b) => Date.parse(b.released) - Date.parse(a.released)).slice(0, 6);
     const changes = tools ? tools.changes.slice(0, 3) : [];
-    if (!models.length && !changes.length) return '';
-    return `<h2>Uutta</h2>
-      ${models.length ? `<ul>${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${esc(fiDate(m.released))}</small></li>`).join('')}</ul>` : ''}
+    return derived.news = !models.length && !changes.length ? '' : `<h2>Uutta</h2>
+      ${models.length ? `<ul class="pills">${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${esc(fiDate(m.released))}</small></li>`).join('')}</ul>` : ''}
       ${changes.length ? `<ul class="chg">${changes.map(c => `<li><span class="muted small">${esc(fiDate(c.date))}</span> ${esc(c.text)}</li>`).join('')}</ul><p><a href="#muutokset">Kaikki muutokset →</a></p>` : ''}`;
   }
 
   // ---- Compare (julkinen-12) ----
   function compareHtml(){
     const models = ui.cmp.filter(c => c.kind === 'model').map(c => c.name), ags = ui.cmp.filter(c => c.kind === 'agent').map(c => c.name);
-    let html = `<div class="group"><h2 id="cmp-h" style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap">Vertailu<button type="button" class="kt-btn sm" data-act="cmp-close">Sulje</button></h2>`;
+    const table = (first, cols, rows) => `<table class="cmpt"><thead><tr><th>${first}</th>${cols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, ...cells]) =>
+      `<tr><td>${esc(label)}</td>${cells.map((x, i) => `<td data-label="${esc(cols[i])}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+    let html = `<div class="group"><h2 id="cmp-h" class="split">Vertailu<button type="button" class="kt-btn sm" data-act="cmp-close">Sulje</button></h2>`;
     if (models.length && data) {
-      const rows = [];
-      for (const c of CATS) {
-        const cat = data.categories[c.id] || {}, its = cat.items || [];
-        const cells = models.map(n => { const i = its.findIndex(it => it.name === n); return i < 0 ? '–' : `${i + 1}. · ${fmt(its[i].score, cat)}`; });
-        if (cells.some(x => x !== '–')) rows.push([c.title, ...cells]);
-      }
-      html += `<table class="cmpt"><thead><tr><th>Käyttötarkoitus</th>${models.map(n => `<th>${esc(n)}</th>`).join('')}</tr></thead><tbody>${rows.map(r =>
-        `<tr>${r.map((x, i) => `<td${i ? ` data-label="${esc(models[i - 1])}"` : ''}>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>
-        <p class="small muted">Sijoitus ja luku jokaisessa listassa, jossa malli on kahdeksan parhaan joukossa.</p>`;
+      const rows = CATS.map(c => { const cat = catOf(c.id), its = cat.items;
+        return [c.title, ...models.map(n => { const i = its.findIndex(it => it.name === n); return i < 0 ? '–' : `${i + 1}. · ${fmt(its[i].score, cat)}`; })]; })
+        .filter(r => r.slice(1).some(x => x !== '–'));
+      html += table('Käyttötarkoitus', models, rows) + '<p class="small muted">Sijoitus ja luku jokaisessa listassa, jossa malli on kahdeksan parhaan joukossa.</p>';
     }
     if (ags.length && agents) {
-      const list = ags.map(n => agents.agents.find(a => a.name === n)).filter(Boolean);
-      const rows = [['Indeksi', a => a.aa ? String(Math.round(a.aa.index)) : '–'], ['Malli', a => a.aa ? a.aa.model : '–'], ['$ / tehtävä', a => a.aa ? usd(a.aa.costPerTask) : '–'], ['Aika / tehtävä', a => a.aa ? mins(a.aa.minutesPerTask) : '–'], ['Hinta', a => a.price]];
-      html += `<table class="cmpt"><thead><tr><th>Agentti</th>${list.map(a => `<th>${esc(a.name)}</th>`).join('')}</tr></thead><tbody>${rows.map(([l, f]) =>
-        `<tr><td>${esc(l)}</td>${list.map(a => `<td data-label="${esc(a.name)}">${esc(f(a))}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+      const list = ags.map(n => agents.agents.find(a => a.name === n)).filter(Boolean), m = f => list.map(a => a.aa ? f(a) : '–');
+      html += table('Agentti', list.map(a => a.name), [['Indeksi', ...m(a => String(Math.round(a.aa.index)))], ['Malli', ...m(a => a.aa.model)],
+        ['$ / tehtävä', ...m(a => usd(a.aa.costPerTask))], ['Aika / tehtävä', ...m(a => mins(a.aa.minutesPerTask))], ['Hinta', ...list.map(a => a.price)]]);
     }
     return html + '</div>';
   }
-  function cmpBarHtml(){
-    return `${ui.cmp.map((c, i) => `<span class="it">${esc(c.name)}<button type="button" data-uncmp="${i}" aria-label="Poista vertailusta: ${esc(c.name)}">✕</button></span>`).join('')}
+  function paintCompare(){
+    for (const b of document.querySelectorAll('[data-cmp]')) b.setAttribute('aria-pressed', String(inCmp(b.dataset.cmp, b.dataset.name)));
+    $('#cmpbar').hidden = !ui.cmp.length;
+    $('#cmpbar').innerHTML = `${ui.cmp.map((c, i) => `<span class="it">${esc(c.name)}<button type="button" data-uncmp="${i}" aria-label="Poista vertailusta: ${esc(c.name)}">✕</button></span>`).join('')}
       <button type="button" class="kt-btn sm primary" data-act="cmp-open"${ui.cmp.length < 2 ? ' disabled' : ''}>Vertaa (${ui.cmp.length})</button>
       <button type="button" class="kt-btn sm" data-act="cmp-clear">Tyhjennä</button>`;
+    const show = ui.showCmp && ui.cmp.length >= 2;
+    $('#compare').hidden = !show;
+    $('#compare').innerHTML = show ? compareHtml() : '';
   }
 
-  // ---- Status (julkinen-16) ----
-  function dataState(){
-    const row = (name, upd, fail, extra = '') => fail ? `<li class="kt-status bad"><b>●</b> ${name}: lataus epäonnistui</li>`
-      : upd ? `<li class="kt-status${late(upd) ? ' stale' : ''}"><b>●</b> ${name}: päivitetty ${esc(fiTime(upd))}${late(upd) ? LATE : ''}${extra}</li>`
-        : `<li class="kt-status">${name}: ladataan…</li>`;
+  // ---- Data state (julkinen-16) ----
+  function paintStatus(){
+    const row = (name, src, key, extra = '') => failed[key] ? `<li class="kt-status bad"><b>●</b> ${name}: lataus epäonnistui</li>`
+      : src ? `<li class="kt-status${late(src.updated) ? ' stale' : ''}"><b>●</b> ${name}: ${updated(src.updated)}${extra}</li>` : `<li class="kt-status">${name}: ladataan…</li>`;
     const errs = data && data.errors && data.errors.length ? ` · ei päivittynyt: ${esc(data.errors.map(e => String(e).split(':')[0]).join(', '))}` : '';
-    return row('Mallit', data && data.updated, failed.models, errs) + row('Koodausagentit', agents && agents.updated, failed.agents) + row('Työkalut', tools && tools.updated, failed.tools);
-  }
-  function headStatus(){
-    const src = ui.tab === 'tyokalut' ? tools : ui.tab === 'koodausagentit' ? agents : data;
-    const el = $('#status');
+    $('#datastate').innerHTML = row('Mallit', data, 'models', errs) + row('Koodausagentit', agents, 'agents') + row('Työkalut', tools, 'tools');
+    const src = ui.tab === 'tyokalut' ? tools : ui.tab === 'koodausagentit' ? agents : data, el = $('#status');
     if (!src) { el.textContent = failed.models && failed.agents && failed.tools ? 'Tietojen lataus epäonnistui – yritä hetken päästä uudelleen.' : 'Ladataan…'; return; }
     el.classList.toggle('stale', late(src.updated));
-    el.innerHTML = `<b>●</b> Päivitetty ${esc(fiTime(src.updated))}${late(src.updated) ? LATE : ' · seuraava päivitys ~2 päivän päästä'}`;
+    el.innerHTML = `<b>●</b> ${updated(src.updated).replace(/^p/, 'P')}${late(src.updated) ? '' : ' · seuraava päivitys ~2 päivän päästä'}`;
   }
 
-  // ---- Render ----
+  // ---- Render: the active tab only (the others are emptied, so ids exist once) plus the small parts ----
+  const PANELS = {mallit: modelsTab, koodausagentit: agentsTab, tyokalut: toolsTab};
   function render(){
-    const panels = {mallit: modelsTab(), koodausagentit: agentsTab(), tyokalut: toolsTab()};
-    $('#tabs').innerHTML = TABS.map(t => `<button type="button" role="tab" class="kt-tab" id="tb-${t.id}" data-tab="${t.id}" aria-controls="tab-${t.id}" aria-selected="${ui.tab === t.id}" tabindex="${ui.tab === t.id ? 0 : -1}">${t.name}${ui.q ? `<span class="n">${panels[t.id].n}</span>` : ''}</button>`).join('');
-    for (const t of TABS) { const el = $(`#tab-${t.id}`); el.hidden = ui.tab !== t.id; el.innerHTML = panels[t.id].html; }
-    $('#tasks').innerHTML = TASKS.map(t => `<button type="button" class="kt-tab" data-task="${t.id}" aria-pressed="${ui.task === t.id}">${esc(t.label)}</button>`).join('');
-    for (const b of document.querySelectorAll('[data-budget]')) b.setAttribute('aria-pressed', String(ui.budget === b.dataset.budget));
-    $('#answer').innerHTML = answerHtml();
+    // Keyboard focus survives the rebuild: find the same control again by its data-* attributes (or id).
+    const a = document.activeElement, again = a && a !== document.body && (a.id ? '#' + CSS.escape(a.id)
+      : [...a.attributes].filter(x => x.name.startsWith('data-')).map(x => `[${x.name}="${CSS.escape(x.value)}"]`).join(''));
+    const n = ui.q ? counts() : null;
+    for (const t of TABS) {
+      const b = $(`#tb-${t.id}`), el = $(`#tab-${t.id}`), on = ui.tab === t.id;
+      b.setAttribute('aria-selected', String(on));
+      b.tabIndex = on ? 0 : -1;
+      b.querySelector('.n').textContent = n ? n[t.id] : '';
+      el.hidden = !on;
+      if (on) el.innerHTML = PANELS[t.id](); else if (el.firstChild) el.textContent = '';
+    }
+    paintAsk();
     const news = newsHtml();
     $('#news').hidden = !news;
-    $('#news').innerHTML = news;
-    $('#cmpbar').hidden = !ui.cmp.length;
-    $('#cmpbar').innerHTML = cmpBarHtml();
-    $('#compare').hidden = !(ui.showCmp && ui.cmp.length >= 2);
-    if (!$('#compare').hidden) $('#compare').innerHTML = compareHtml();
-    $('#datastate').innerHTML = dataState();
-    headStatus();
+    if ($('#news').innerHTML !== news) $('#news').innerHTML = news;
+    paintCompare();
+    paintStatus();
+    if (again) { const b = document.querySelector(again); if (b && b !== a) b.focus({preventScroll: true}); }
   }
-  // Re-render keeping keyboard focus on the same control (buttons are rebuilt).
-  function rerender(){
-    const a = document.activeElement, key = a && ['data-tab', 'data-group', 'data-area', 'data-kind', 'data-task', 'data-more', 'data-cmp'].find(k => a.hasAttribute && a.hasAttribute(k));
-    const sel = key && `[${key}="${CSS.escape(a.getAttribute(key))}"]${key === 'data-cmp' ? `[data-name="${CSS.escape(a.dataset.name)}"]` : ''}`;
-    render();
-    if (sel) { const b = document.querySelector(sel); if (b) b.focus({preventScroll: true}); }
+  function paintAsk(){
+    for (const b of document.querySelectorAll('[data-task]')) b.setAttribute('aria-pressed', String(ui.task === b.dataset.task));
+    for (const b of document.querySelectorAll('[data-budget]')) b.setAttribute('aria-pressed', String(ui.budget === b.dataset.budget));
+    $('#answer').innerHTML = answerHtml();
   }
 
-  // ---- URL: /ai?q=…#<tab>[/<sub>] or #<card id>; /ai-opas and /ai-tyokalut start on their tab ----
+  // ---- URL: /ai?q=…#<tab>[/<sub>] or #<card id>; /ai-tyokalut redirects to /ai?tab=tyokalut (the #hash survives) ----
   function parseHash(){
     const h = decodeURIComponent(location.hash.slice(1));
     const [head, sub] = h.split('/');
     if (!head) return {};
     if (head === 'mallit') return {tab:'mallit', group: MODEL_GROUPS.some(g => g.id === sub) ? sub : 'all'};
-    if (head === 'koodausagentit') return {tab:'koodausagentit', target: sub ? 'a-' + sub : null};
+    if (head === 'koodausagentit') return {tab:'koodausagentit'};
     if (head === 'tyokalut') return {tab:'tyokalut', area: sub || 'all'};
     if (head === 'muutokset') return {tab:'tyokalut', target:'muutokset'};
-    if (MODEL_GROUPS.some(g => g.id === head)) return {tab:'mallit', target: head};
-    if (head.startsWith('m-')) return {tab:'mallit', target: head};
-    if (head.startsWith('a-') || AGENT_CARDS.some(c => c.id === head)) return {tab:'koodausagentit', target: head};
-    if (head.startsWith('t-') || (tools && tools.areas.some(a => a.id === head))) return {tab:'tyokalut', target: head};
-    return {target: head};
+    if (MODEL_GROUPS.some(g => g.id === head) || head.startsWith('m-')) return {tab:'mallit', target: head};
+    if (AGENT_CARDS.some(c => c.id === head)) return {tab:'koodausagentit', target: head};
+    // Agent and tool cards: the part after the prefix may be a raw name (links from other pages).
+    if (head.startsWith('a-')) return {tab:'koodausagentit', target: 'a-' + slug(h.slice(2))};
+    if (head.startsWith('t-')) { const rest = h.slice(2), i = rest.indexOf('-'); return {tab:'tyokalut', target: i > 0 ? `t-${rest.slice(0, i)}-${slug(rest.slice(i + 1))}` : head}; }
+    if (tools && tools.areas.some(a => a.id === head)) return {tab:'tyokalut', target: head};   // legacy /ai-tyokalut#<area>
+    return {};
   }
-  function apply(p){
-    if (p.tab) ui.tab = p.tab;
-    if (p.group) ui.group = p.group;
-    if (p.area) ui.area = tools && p.area !== 'all' && !tools.areas.some(a => a.id === p.area) ? 'all' : p.area;
+  // Applies the URL (start, back/forward, in-page #links): query, tab, filters, then scrolls to a linked card.
+  function fromUrl(){
+    const qs = new URLSearchParams(location.search), p = parseHash();
+    ui.q = norm(qs.get('q') || '');
+    $('#q').value = qs.get('q') || '';
+    ui.tab = p.tab || (qs.get('tab') && PANELS[qs.get('tab')] ? qs.get('tab') : ui.tab);
+    ui.group = p.group || (p.tab === 'mallit' ? ui.group : 'all');
+    ui.area = p.area && (!tools || p.area === 'all' || tools.areas.some(a => a.id === p.area)) ? p.area : (p.tab === 'tyokalut' && !p.target ? ui.area : 'all');
     render();
     if (p.target) reveal(p.target);
   }
   // A linked card hidden by a filter or a search: clear them, then scroll to it and flash it.
   function reveal(id){
     let el = document.getElementById(id);
-    if (!el || el.closest('[hidden]')) {
+    if (!el) {
       ui.group = 'all'; ui.area = 'all'; ui.kind = 'all';
-      if (ui.q) { ui.q = ''; $('#q').value = ''; syncSearch(); }
+      if (ui.q) { ui.q = ''; $('#q').value = ''; history.replaceState(null, '', urlFor(location.hash.slice(1))); }
       render();
       el = document.getElementById(id);
     }
@@ -737,83 +739,78 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (el.matches('.card, .notes')) { el.classList.remove('kt-flash'); void el.offsetWidth; el.classList.add('kt-flash'); }
   }
   const urlFor = hash => `/ai${ui.q ? '?q=' + encodeURIComponent(ui.q) : ''}${hash ? '#' + hash : ''}`;
-  function nav(hash){ history.pushState(null, '', urlFor(hash)); }
-  function syncSearch(){ history.replaceState(null, '', urlFor(location.hash.slice(1))); }
+  const nav = (base, sub) => history.pushState(null, '', urlFor(sub && sub !== 'all' ? `${base}/${sub}` : base));
 
   // ---- Events ----
-  $('#q').addEventListener('input', e => { ui.q = norm(e.target.value.trim()); syncSearch(); render(); });
+  let qTimer = 0;
+  $('#q').addEventListener('input', e => {
+    clearTimeout(qTimer);
+    qTimer = setTimeout(() => { ui.q = norm(e.target.value.trim()); history.replaceState(null, '', urlFor(location.hash.slice(1))); render(); }, 120);
+  });
+  const setArea = v => { ui.area = v; nav('tyokalut', v); render(); };
   document.addEventListener('click', e => {
     const b = e.target.closest('button');
     if (!b) return;
     const d = b.dataset;
-    if (d.tab) { ui.tab = d.tab; nav(d.tab); rerender(); }
-    else if (d.group) { ui.group = d.group; nav(d.group === 'all' ? 'mallit' : 'mallit/' + d.group); rerender(); }
-    else if (d.area) { ui.area = d.area; nav(d.area === 'all' ? 'tyokalut' : 'tyokalut/' + d.area); rerender(); }
-    else if (d.kind) { ui.kind = d.kind; rerender(); }
-    else if (d.task) { ui.task = ui.task === d.task ? null : d.task; rerender(); }
-    else if (d.budget) { ui.budget = d.budget; rerender(); }
-    else if (d.more) { ui.open.has(d.more) ? ui.open.delete(d.more) : ui.open.add(d.more); rerender(); }
+    if (d.tab) { ui.tab = d.tab; nav(d.tab); render(); }
+    else if (d.group) { ui.group = d.group; nav('mallit', d.group); render(); }
+    else if (d.area) setArea(d.area);
+    else if (d.kind) { ui.kind = d.kind; render(); }
+    else if (d.task) { ui.task = ui.task === d.task ? null : d.task; paintAsk(); }
+    else if (d.budget) { ui.budget = d.budget; paintAsk(); }
+    else if (d.more) {   // in place: one card opens, nothing else is rebuilt
+      const open = !ui.open.has(d.more), c = document.getElementById(d.more);
+      open ? ui.open.add(d.more) : ui.open.delete(d.more);
+      if (c) c.classList.toggle('open', open);
+      b.setAttribute('aria-expanded', String(open));
+      b.textContent = moreLabel(open, c ? c.querySelectorAll('ol.rank li').length + 1 : 0);
+    }
     else if (d.cmp) {
       const i = ui.cmp.findIndex(c => c.kind === d.cmp && c.name === d.name);
       if (i >= 0) ui.cmp.splice(i, 1); else { ui.cmp.push({kind: d.cmp, name: d.name}); if (ui.cmp.length > 3) ui.cmp.shift(); }
-      rerender();
+      paintCompare();
     }
-    else if (d.uncmp) { ui.cmp.splice(+d.uncmp, 1); rerender(); }
-    else if (d.act === 'cmp-open') { ui.showCmp = true; render(); $('#compare').scrollIntoView({block: 'start'}); }
-    else if (d.act === 'cmp-close') { ui.showCmp = false; render(); }
-    else if (d.act === 'cmp-clear') { ui.cmp = []; ui.showCmp = false; render(); }
+    else if (d.uncmp) { ui.cmp.splice(+d.uncmp, 1); paintCompare(); }
+    else if (d.act === 'cmp-open') { ui.showCmp = true; paintCompare(); $('#compare').scrollIntoView({block: 'start'}); }
+    else if (d.act === 'cmp-close') { ui.showCmp = false; paintCompare(); }
+    else if (d.act === 'cmp-clear') { ui.cmp = []; ui.showCmp = false; paintCompare(); }
     else if (d.link) {
       const url = `${location.origin}/ai#${d.link}`;
       (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(() => { b.textContent = '✓'; setTimeout(() => { b.textContent = '#'; }, 1500); },
-        () => { history.replaceState(null, '', urlFor(d.link)); });
+        () => history.replaceState(null, '', urlFor(d.link)));
     }
   });
-  document.addEventListener('change', e => { if (e.target.id === 'area-sel') { ui.area = e.target.value; nav(ui.area === 'all' ? 'tyokalut' : 'tyokalut/' + ui.area); render(); } });
+  document.addEventListener('change', e => { if (e.target.id === 'area-sel') setArea(e.target.value); });
   // Tabs: arrow keys move between them (roving tabindex).
   $('#tabs').addEventListener('keydown', e => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
     const i = TABS.findIndex(t => t.id === ui.tab), next = TABS[(i + (e.key === 'ArrowRight' ? 1 : TABS.length - 1)) % TABS.length];
     ui.tab = next.id; nav(next.id); render(); $(`#tb-${next.id}`).focus();
   });
-  // Chart points: hover, tap or keyboard focus writes the details under the chart (textContent only).
-  function pointInfo(t){
-    const sc = t.closest && t.closest('[data-sc]'), bub = t.closest && t.closest('[data-bub]');
-    if (sc) { const p = scPts[+sc.dataset.sc]; if (p) $('#sc-info').textContent = `${p.name} (${p.creator}): älykkyys ${Math.round(p.intelligence)} · $${p.price.toFixed(2)} / 1M tokenia${p.speed ? ` · ${Math.round(p.speed)} tokenia/s` : ''}`; }
-    if (bub) { const a = bubPts[+bub.dataset.bub]; if (a) $('#bub-info').textContent = `${a.name}: indeksi ${Math.round(a.aa.index)} · ${usd(a.aa.costPerTask)} / tehtävä · ${mins(a.aa.minutesPerTask)} · ${a.aa.model}`; }
-  }
-  for (const ev of ['pointerover', 'focusin', 'click']) document.addEventListener(ev, e => pointInfo(e.target));
-  addEventListener('hashchange', () => apply(parseHash()));
-  addEventListener('popstate', () => {
-    ui.q = norm(new URLSearchParams(location.search).get('q') || ''); $('#q').value = ui.q;
-    const p = parseHash();
-    if (!p.tab) { ui.group = 'all'; ui.area = 'all'; }
-    apply(p.tab ? p : {...p, tab: ui.tab});
+  // Chart points: hover, tap or focus writes the point's details under its chart (textContent only).
+  for (const ev of ['pointerover', 'focusin', 'click']) document.addEventListener(ev, e => {
+    if (e.target.tagName !== 'circle' || !e.target.dataset.info) return;
+    e.target.closest('.chart').querySelector('.info').textContent = e.target.dataset.info;
   });
-  let lastW = 0;
-  addEventListener('resize', () => { const w = chartW(); if (Math.abs(w - lastW) > 40) { lastW = w; render(); } });
+  // Fragment links and back/forward both fire popstate (hashchange would run everything a second time).
+  addEventListener('popstate', fromUrl);
+  let resizeTimer = 0, lastW = 0;
+  addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { const w = chartW(); if (Math.abs(w - lastW) > 40) { lastW = w; render(); } }, 150); });
 
   // ---- Start ----
-  const path = location.pathname.replace(/\.html$/, '');
-  if (path === '/ai-tyokalut') ui.tab = 'tyokalut';
-  ui.q = norm(new URLSearchParams(location.search).get('q') || '');
-  $('#q').value = ui.q;
-  const first = parseHash();
-  if (first.tab) ui.tab = first.tab;
-  if (path !== '/ai') history.replaceState(null, '', urlFor(location.hash.slice(1) || (ui.tab === 'mallit' ? '' : ui.tab)));
+  $('#tabs').innerHTML = TABS.map(t => `<button type="button" role="tab" class="kt-tab" id="tb-${t.id}" data-tab="${t.id}" aria-controls="tab-${t.id}">${t.name}<span class="n"></span></button>`).join('');
+  $('#tasks').innerHTML = TASKS.map(t => pressBtn('task', t.id, false, t.label)).join('');
   lastW = chartW();
-  render();
+  fromUrl();
+  // The old ?tab= from the /ai-tyokalut redirect is folded into the hash.
+  if (new URLSearchParams(location.search).has('tab')) history.replaceState(null, '', urlFor(location.hash.slice(1) || (ui.tab === 'mallit' ? '' : ui.tab)));
   const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
-  const load = (u, set, key) => getJson(u).then(set, e => { console.error(u, e); failed[key] = true; }).finally(render);
+  const load = (u, set, key) => getJson(u).then(d => { set(d); derived.news = null; }, e => { console.error(u, e); failed[key] = true; }).finally(render);
   Promise.all([
-    load('/data/ai-models.json', d => { data = d; }, 'models'),
-    load('/data/coding-agents.json', d => { agents = d; }, 'agents'),
+    load('/data/ai-models.json', d => { data = d; deriveModels(); }, 'models'),
+    load('/data/coding-agents.json', d => { agents = d; deriveAgents(); }, 'agents'),
     load('/data/ai-tools.json', d => { tools = d; }, 'tools'),
-  ]).then(() => {
-    // Ids live in one hash namespace: model groups, agent and tool cards are prefixed; areas must not shadow groups.
-    if (tools) for (const a of tools.areas) if (GROUPS.some(g => g.id === a.id)) console.warn('ai: area id collides with a model group:', a.id);
-    const p = parseHash();
-    if (p.target || p.tab) apply(p);
-  });
+  ]).then(() => { if (location.hash) fromUrl(); });
 })();
 </script>
 </body>

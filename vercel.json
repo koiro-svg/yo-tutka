@@ -21,16 +21,27 @@
           "value": "connect-src 'self'"
         }
       ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
       "source": "/ai-opas",
-      "destination": "/ai"
+      "destination": "/ai",
+      "permanent": true
     },
     {
       "source": "/ai-tyokalut",
-      "destination": "/ai"
+      "destination": "/ai?tab=tyokalut",
+      "permanent": true
     }
   ]
 }

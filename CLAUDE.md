@@ -6,18 +6,19 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 
 ## Build & run
 - Ei buildia. `python3 -m http.server` repon juuressa ja avaa `/ai.html`
-  (AI-opas hakee `data/*.json`:n fetchillä, joten file:// ei toimi; `/ai`-polut ja rewritet vaativat Vercelin tai
-  pienen palvelimen, joka tekee `cleanUrls`in ja `vercel.json`:n rewritet).
-- Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee `/ai` ja `/yo-tutka` -polut, ja rewritet
-  ohjaavat vanhat `/ai-opas` ja `/ai-tyokalut` osoitteeseen `/ai` (hash säilyy, koska se ei kulje palvelimelle).
+  (AI-opas hakee `data/*.json`:n fetchillä, joten file:// ei toimi; `/ai`-polut ja redirectit vaativat Vercelin tai
+  pienen palvelimen, joka tekee `cleanUrls`in ja `vercel.json`:n redirectit).
+- Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee `/ai` ja `/yo-tutka` -polut, ja 308-redirectit
+  ohjaavat vanhat `/ai-opas` → `/ai` ja `/ai-tyokalut` → `/ai?tab=tyokalut` (selain säilyttää #hashin, koska kohteessa ei ole omaa).
 - Build ajaa vain tarkistukset: `validate_tools.py`, `validate_practice.py` ja `check_tokens.py`.
 
 ## Arkkitehtuuri
 - Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki sivut käyttävät samaa tarkoituksella aina tummaa
   "tutka"-teemaa. **Yhteinen tokenilohko `/* koiro-tokens v2 */`** (fontit, värit, säteet, `kt-`-komponentit: välilehti,
   nappi, kenttä, tilarivi, huomautus, välähdys) on jokaisen sivun ensimmäisen `<style>`-lohkon alussa. Kanoninen kopio on
-  `scripts/koiro-tokens.css`; `scripts/check_tokens.py` (buildissa) kaataa deployn, jos kopio eroaa (`--write` päivittää).
-  Tokenit ovat `:where(:root)`issa, joten sivun oma `:root` voittaa (YO-sivut käyttävät vielä omiaan). Fontit ovat
+  `scripts/koiro-tokens.css`; `scripts/check_tokens.py` (buildissa, kaikki juuren `*.html`-sivut) kaataa deployn, jos kopio
+  puuttuu tai eroaa (`--write` päivittää). Lohkossa ovat myös yhteiset perussäännöt (`box-sizing`, `:focus-visible`, `[hidden]`).
+  Tokenit ovat `:where(:root)`issa, joten sivun oma `:root` voittaa (YO-sivut käyttävät vielä omiaan, tietosuoja ei). Fontit ovat
   omalla palvelimella (`fonts/`, latin-osajoukot, OFL, `fonts/OFL.md`), ei Google Fontsia. Kotivalikossa lisäksi
   canvas-tutka-animaatio. Työkalusivuilla on `← koirosvg.com`-paluulinkki (`.crumb`) mastheadissa – pidä se jokaisessa
   uudessa sivussa.
@@ -26,8 +27,10 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   kääntää viivan sen pisteeseen ja pisteen hover korostaa korttia. AI-kortti hakee `data/ai-models.json`:sta yleiskategorian
   kärjen ja päivitysajan (haun epäonnistuessa ei mitään), ja tuore AI-piste "pingaa". YO-kortti lukee vain tämän selaimen
   `yo-practice`-avaimen (kerrattavat tänään + osaaminen) eikä koskaan kirjoita siihen. Haku (`/` tai ⌘K) lataa AI-datan vasta
-  ensimmäisellä näppäilyllä ja linkittää `/ai`-sivun korttien id:ihin. Puhelimella tutka on pieni otsikon vieressä.
-  Canvas huomioi devicePixelRatio, pysähtyy näkymättömänä (IntersectionObserver) ja reduced motionilla.
+  ensimmäisellä näppäilyllä (sama `ai-models.json`-haku kuin kortilla) ja linkittää `/ai`-sivulle raakanimellä (`#a-Cursor`,
+  `#t-<osa-alue>-<nimi>`); id-muodon omistaa `ai.html` (`parseHash` slugittaa nimen), joten etusivulla ei ole kopiota. Puhelimella tutka on pieni otsikon vieressä.
+  Canvas huomioi devicePixelRatio, piirtää renkaat kerran taustakanvaasille, kääntää valmiin säteen gradientin, ~30 fps,
+  pysähtyy näkymättömänä (IntersectionObserver) ja reduced motionilla.
 - **AI-opas `ai.html` (19.10.2026, julkinen-8…16; korvasi `ai-opas.html` ja `ai-tyokalut.html`):** välilehdet Mallit ·
   Koodausagentit · Työkalut, yksi haku kaikkiin (osumamäärät välilehdissä, `?q=` osoitteessa), "Mitä haluat tehdä?" -valinta
   (`TASKS`-kytkentätaulu sivun koodissa, ei datassa: kategoria ↔ osa-alue ↔ agentti), Uutta-kortti (45 pv uudet mallit + 3
@@ -37,6 +40,10 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   `errors`-kentän kategoriat). Osoitteet: `#mallit[/ryhmä]`, `#koodausagentit`, `#tyokalut[/osa-alue]`, `#muutokset` ja
   korttien id:t `m-<kategoria>`, `a-<agentti>`, `t-<osa-alue>-<työkalu>`; vanhat ryhmä- (`#teksti`, `#video`…) ja osa-alue-ankkurit
   (`#markkinointi`…) toimivat. Linkitetty kortti, jonka suodatin tai haku piilottaa, tuodaan näkyviin ja välähtää.
+  Piirretään vain aktiivinen välilehti (muut tyhjennetään, joten id:t ovat dokumentissa kerran), haku odottaa 120 ms,
+  "+", "Näytä kaikki" ja tehtävävalinta päivittävät vain oman kohtansa, ja rankingit/kaaviopisteet/Uutta lasketaan kerran
+  datan latauksessa (`derived`). Osoite luetaan yhdessä paikassa (`fromUrl`: alku ja `popstate`, joka laukeaa myös
+  #-linkeistä; erillinen `hashchange` ajaisi kaiken kahdesti).
 - AI-opas: `scripts/update_models.py` (stdlib) → `data/ai-models.json` →
   `ai.html` renderöi. GitHub Action `update-models.yml` joka toinen päivä,
   secret `AA_API_KEY`. Ks. README.
@@ -137,13 +144,14 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - Työkalupakin linkit renderöidään vain `https://`-alkuisina (`safeUrl`, validaattori
   vaatii saman), ja kaikki teksti menee `esc()`:n läpi. Älä ohita näitä uusissa kentissä.
 - `ai.html` hakee datan fetchillä, joten file:// ei toimi.
-- **Vanhat AI-osoitteet ovat rewritejä, eivät redirectejä,** ja vanhat html-tiedostot on poistettu: Vercel tarkistaa
-  tiedostojärjestelmän ennen rewritejä, joten `ai-opas.html` estäisi rewriten. Redirect, jonka kohteessa on oma hash,
-  korvaisi saapuvan hashin (`/ai-opas#koodausagentit`). Sivu tunnistaa alkuperäisen polun (`/ai-tyokalut` → Työkalut)
-  ja vaihtaa osoitteen `history.replaceState`illa muotoon `/ai…`. `<link rel="canonical">` = `/ai`.
-- **AI-oppaan id:t ovat yhdessä hash-nimiavaruudessa:** mallien ryhmät (`teksti`, `hinta`, `kuva`, `video`, `aani`,
-  `koodausagentit`) ja työkalujen osa-alueet (data) eivät saa törmätä; kortit ovat etuliitteellisiä (`m-`, `a-`, `t-`).
-  Sivu varoittaa konsolissa törmäyksestä. Uusi osa-alue-id, joka on sama kuin ryhmä, rikkoisi vanhat ankkurit.
+- **Vanhat AI-osoitteet ovat 308-redirectejä ilman kohteen hashia:** selain säilyttää saapuvan #hashin, kun Locationissa ei
+  ole omaa (`/ai-opas#koodausagentit` → `/ai#koodausagentit`). Älä lisää kohteeseen hashia (`/ai#tyokalut` korvaisi saapuvan);
+  välilehti kulkee siksi `?tab=tyokalut`-parametrina, jonka sivu siirtää hashiin. Redirectit ajetaan ennen tiedostojärjestelmää.
+  `<link rel="canonical">` = `/ai`.
+- **AI-oppaan id:t ovat yhdessä hash-nimiavaruudessa:** mallien ryhmät, välilehdet, rankingkortit ja työkalujen osa-alueet
+  (data) eivät saa törmätä, ja kortit ovat etuliitteellisiä (`m-`, `a-`, `t-`). `validate_tools.py` (buildissa) hylkää osa-alue-id:n,
+  joka on `RESERVED_IDS`issa tai sisältää väliviivan (työkalukortti `t-<osa-alue>-<nimi>` jäsennetään ensimmäisestä viivasta).
+  Uusi sivun ankkuri = lisää se `RESERVED_IDS`iin.
 - **`.bar` on rankinglistan palkki**: hakupalkki on `.searchbar`. Sama luokkanimi kahdessa paikassa teki listan riveistä
   tahmeita taustalaatikoita (19.10.2026).
 - **Fontit omalta palvelimelta (19.10.2026):** `fonts/` + `@font-face` tokenilohkossa. Unboundedin muuttuva fontti kattaa

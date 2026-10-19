@@ -24,6 +24,8 @@
 @font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
 @font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
 :where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 [hidden]:not([hidden=until-found i]){display:none!important}
 /* Shared components (kt- prefix: page classes like .card or .chip stay the page's own). */
 .kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
@@ -48,10 +50,11 @@
 @media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
 /* /koiro-tokens */
 /* Deliberately dark-only: the radar theme is a single visual world. */
-*{box-sizing:border-box}
 html{background:var(--bg)}
 body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--bg-glow),var(--bg) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+:focus-visible{outline-offset:3px}
+.muted{color:var(--ink-3)}
+.small{font-size:13px}
 .wrap{max-width:1120px;width:100%;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:32px;position:relative}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
 .eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
@@ -144,29 +147,45 @@ footer a:hover{color:var(--accent)}
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm = s => String(s || '').toLowerCase();
-  const slug = s => norm(s).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
   const ago = iso => { const h = (Date.now() - Date.parse(iso)) / 36e5; return h < 1 ? 'alle tunti sitten' : h < 48 ? `${Math.round(h)} h sitten` : `${Math.round(h / 24)} pv sitten`; };
+  const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  const models = getJson('/data/ai-models.json');   // the AI card and the search share one fetch
+  models.catch(() => {});
 
   // ---- Radar: one named blip per tool card plus one unnamed for atmosphere (new tool = card + blip) ----
   const box = $('#radar-box'), cv = $('#radar'), cx = cv.getContext('2d');
   const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {a:3.4, r:.45, t:''}];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const TAU = Math.PI * 2;
-  let W = 720, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0, fresh = null;
+  const TAU = Math.PI * 2, R_SHARE = 0.472;   // ring radius as a share of the canvas (the blip links use the same)
+  let W = 0, small = false, bg = null, beam = null, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0, fresh = false;
   for (const b of blips) if (b.t) {
     const a = document.createElement('a');
     a.className = 'blip'; a.href = b.href; a.dataset.blip = b.id; a.setAttribute('aria-label', b.t);
-    a.style.left = `${50 + Math.cos(b.a) * b.r * 47.2}%`; a.style.top = `${50 + Math.sin(b.a) * b.r * 47.2}%`;
+    a.style.left = `${50 + Math.cos(b.a) * b.r * R_SHARE * 100}%`; a.style.top = `${50 + Math.sin(b.a) * b.r * R_SHARE * 100}%`;
     box.append(a);
     b.el = a;
   }
+  // Rings and crosshair are drawn once per size into an offscreen canvas; the beam gradient is built once and rotated.
   function size(){
-    const css = box.clientWidth || 360, dpr = Math.min(devicePixelRatio || 1, 3);
-    W = Math.round(css * dpr); cv.width = cv.height = W;
+    const css = box.clientWidth || 360, w = Math.round(css * Math.min(devicePixelRatio || 1, 3));
+    small = css < 200;
+    if (w === W) return;
+    W = cv.width = cv.height = w;
+    const C = W / 2, R = W * R_SHARE, k0 = W / 720;
+    bg = document.createElement('canvas'); bg.width = bg.height = W;
+    const g = bg.getContext('2d');
+    g.strokeStyle = '#1F3B66'; g.lineWidth = 2 * k0;
+    for (let i = 1; i <= 4; i++) { g.beginPath(); g.arc(C, C, R * i / 4, 0, TAU); g.stroke(); }
+    g.beginPath(); g.moveTo(C - R, C); g.lineTo(C + R, C); g.moveTo(C, C - R); g.lineTo(C, C + R); g.stroke();
+    beam = cx.createConicGradient ? cx.createConicGradient(-0.9, C, C) : null;
+    if (beam) { beam.addColorStop(0, 'rgba(92,225,198,0)'); beam.addColorStop(0.14, 'rgba(92,225,198,.35)'); beam.addColorStop(0.1433, 'rgba(92,225,198,0)'); }
   }
   function draw(t){
+    raf = 0;
+    if (!reduce && visible) raf = requestAnimationFrame(draw);
+    if (last && t - last < 33 && !reduce) return;   // ~30 fps is plenty for a slow sweep
     const dt = last ? Math.min(t - last, 64) : 16; last = t;
-    const C = W / 2, R = W / 2 - W * 0.028, k0 = W / 720, small = box.clientWidth < 200;
+    const C = W / 2, R = W * R_SHARE, k0 = W / 720;
     if (!reduce) {
       if (aim == null) sw = (sw + (dt / 2400) * speed) % TAU;
       else { const d = ((aim - sw + Math.PI) % TAU + TAU) % TAU - Math.PI; sw += d * Math.min(1, dt / 180); }
@@ -174,17 +193,11 @@ footer a:hover{color:var(--accent)}
     }
     cx.setTransform(1, 0, 0, 1, 0, 0);
     cx.clearRect(0, 0, W, W);
-    // julkinen-7: the beam leans a little toward the mouse.
-    cx.translate(tilt.x * W * 0.02, tilt.y * W * 0.02);
-    cx.strokeStyle = '#1F3B66'; cx.lineWidth = 2 * k0;
-    for (let i = 1; i <= 4; i++) { cx.beginPath(); cx.arc(C, C, R * i / 4, 0, TAU); cx.stroke(); }
-    cx.beginPath(); cx.moveTo(C - R, C); cx.lineTo(C + R, C); cx.moveTo(C, C - R); cx.lineTo(C, C + R); cx.stroke();
-    if (cx.createConicGradient) {
-      const g = cx.createConicGradient(sw - 0.9, C, C);
-      g.addColorStop(0, 'rgba(92,225,198,0)'); g.addColorStop(0.14, 'rgba(92,225,198,.35)'); g.addColorStop(0.1433, 'rgba(92,225,198,0)');
-      cx.fillStyle = g; cx.beginPath(); cx.arc(C, C, R, 0, TAU); cx.fill();
-    }
+    cx.translate(tilt.x * W * 0.02, tilt.y * W * 0.02);   // julkinen-7: the radar leans a little toward the mouse
+    cx.drawImage(bg, 0, 0);
+    if (beam) { cx.save(); cx.translate(C, C); cx.rotate(sw); cx.translate(-C, -C); cx.fillStyle = beam; cx.beginPath(); cx.arc(C, C, R, 0, TAU); cx.fill(); cx.restore(); }
     cx.strokeStyle = '#5CE1C6'; cx.lineWidth = 3 * k0; cx.beginPath(); cx.moveTo(C, C); cx.lineTo(C + Math.cos(sw) * R, C + Math.sin(sw) * R); cx.stroke();
+    cx.font = `600 ${26 * k0}px "JetBrains Mono",monospace`;
     for (const b of blips) {
       const d = ((sw - b.a) % TAU + TAU) % TAU, k = reduce ? 1 : Math.max(.25, 1 - d / 4);
       const x = C + Math.cos(b.a) * R * b.r, y = C + Math.sin(b.a) * R * b.r, hot = b.el && b.el.classList.contains('hot');
@@ -195,9 +208,8 @@ footer a:hover{color:var(--accent)}
         cx.strokeStyle = `rgba(92,225,198,${(1 - d / 1.2) * 0.8})`; cx.lineWidth = 2 * k0;
         cx.beginPath(); cx.arc(x, y, rad + d * 26 * k0, 0, TAU); cx.stroke();
       }
-      if (b.t && !small) { cx.font = `600 ${26 * k0}px "JetBrains Mono",monospace`; cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.fillText(b.t, x + 18 * k0, y + 8 * k0); }
+      if (b.t && !small) { cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.fillText(b.t, x + 18 * k0, y + 8 * k0); }
     }
-    raf = !reduce && visible ? requestAnimationFrame(draw) : 0;
   }
   const kick = () => { if (!raf) { last = 0; raf = requestAnimationFrame(draw); } };
   size();
@@ -206,11 +218,7 @@ footer a:hover{color:var(--accent)}
   // Paused while scrolled out of view.
   if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) kick(); }).observe(box);
   if (!reduce) {
-    addEventListener('pointermove', e => {
-      if (e.pointerType !== 'mouse') return;
-      const r = box.getBoundingClientRect();
-      tilt = {x: Math.max(-1, Math.min(1, (e.clientX - r.left - r.width / 2) / innerWidth)), y: Math.max(-1, Math.min(1, (e.clientY - r.top - r.height / 2) / innerHeight))};
-    }, {passive: true});
+    addEventListener('pointermove', e => { if (e.pointerType === 'mouse') tilt = {x: e.clientX / innerWidth * 2 - 1, y: e.clientY / innerHeight * 2 - 1}; }, {passive: true});
     // A touch on the radar speeds the sweep up for a moment.
     box.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') speed = 6; });
   }
@@ -222,21 +230,21 @@ footer a:hover{color:var(--accent)}
     if (reduce && on && b) sw = b.a;
     kick();
   }
-  for (const ev of ['pointerover', 'focusin']) document.addEventListener(ev, e => { const t = e.target.closest && e.target.closest('[data-blip]'); if (t) hot(t.dataset.blip, true); });
-  for (const ev of ['pointerout', 'focusout']) document.addEventListener(ev, e => { const t = e.target.closest && e.target.closest('[data-blip]'); if (t && !t.contains(e.relatedTarget)) hot(t.dataset.blip, false); });
+  for (const el of document.querySelectorAll('[data-blip]')) {
+    for (const ev of ['pointerenter', 'focus']) el.addEventListener(ev, () => hot(el.dataset.blip, true));
+    for (const ev of ['pointerleave', 'blur']) el.addEventListener(ev, () => hot(el.dataset.blip, false));
+  }
 
   // ---- julkinen-2/5: AI card shows today's best model and how fresh the data is (left out if the fetch fails) ----
-  const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
-  getJson('/data/ai-models.json').then(d => {
+  models.then(d => {
     const w = d.categories && d.categories.yleis && d.categories.yleis.items && d.categories.yleis.items[0];
     if (!w) return;
     const el = $('#ai-live');
     el.innerHTML = `Paras nyt: <b>${esc(w.name)}</b> · päivitetty ${esc(ago(d.updated))}`;
     el.hidden = false;
     fresh = (Date.now() - Date.parse(d.updated)) / 36e5 < 48;
-    const b = blips.find(x => x.id === 'ai');
-    b.el.title = `AI-opas · päivitetty ${ago(d.updated)}`;
-  }).catch(() => {});
+    blips[0].el.title = `AI-opas · päivitetty ${ago(d.updated)}`;
+  }, () => {});
 
   // ---- julkinen-3: own YO situation from this browser only (yo-harjoittelu's localStorage, read-only) ----
   try {
@@ -255,11 +263,12 @@ footer a:hover{color:var(--accent)}
     }
   } catch (e) { /* storage blocked: the card stays as it is */ }
 
-  // ---- julkinen-6: search the AI data (loaded on the first keystroke); "/" or ⌘K focuses the field ----
+  // ---- julkinen-6: search the AI data (loaded on the first keystroke); "/" or ⌘K focuses the field.
+  // Card links carry the raw name; /ai turns it into its card id (one id scheme, owned by ai.html).
   let index = null;
   async function buildIndex(){
-    const [m, a, t] = await Promise.all(['/data/ai-models.json', '/data/coding-agents.json', '/data/ai-tools.json'].map(u => getJson(u).catch(() => null)));
-    const out = [];
+    const [m, a, t] = await Promise.all([models, getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json')].map(p => p.catch(() => null)));
+    const out = [], name = s => encodeURIComponent(s);
     if (m) {
       const seen = new Set();
       for (const [cid, c] of Object.entries(m.categories || {})) for (const it of c.items || []) {
@@ -268,11 +277,12 @@ footer a:hover{color:var(--accent)}
         out.push({kind: 'Malli', title: it.name, sub: it.creator, href: `/ai#m-${cid}`, text: norm(`${it.name} ${it.creator}`)});
       }
     }
-    if (a) for (const g of a.agents || []) out.push({kind: 'Koodausagentti', title: g.name, sub: g.bestFor, href: `/ai#a-${slug(g.name)}`, text: norm(`${g.name} ${g.vendor} ${g.bestFor}`)});
+    if (a) for (const g of a.agents || []) out.push({kind: 'Koodausagentti', title: g.name, sub: g.bestFor, href: `/ai#a-${name(g.name)}`, text: norm(`${g.name} ${g.vendor} ${g.bestFor}`)});
     if (t) for (const ar of t.areas || []) {
       out.push({kind: 'Osa-alue', title: ar.title, sub: ar.intro, href: `/ai#tyokalut/${ar.id}`, text: norm(`${ar.title} ${ar.intro}`)});
-      for (const x of ar.tools || []) out.push({kind: 'Työkalu', title: x.name, sub: `${ar.title} · ${x.bestFor}`, href: `/ai#t-${ar.id}-${slug(x.name)}`, text: norm(`${x.name} ${x.vendor} ${x.bestFor} ${x.why}`)});
+      for (const x of ar.tools || []) out.push({kind: 'Työkalu', title: x.name, sub: `${ar.title} · ${x.bestFor}`, href: `/ai#t-${ar.id}-${name(x.name)}`, text: norm(`${x.name} ${x.vendor} ${x.bestFor} ${x.why}`)});
     }
+    for (const x of out) x.key = norm(x.title);
     return out;
   }
   const q = $('#q'), hits = $('#hits');
@@ -282,7 +292,7 @@ footer a:hover{color:var(--accent)}
     if (!index) index = buildIndex();
     const all = await index;
     if (norm(q.value.trim()) !== v) return;
-    const found = all.filter(x => x.text.includes(v)).sort((x, y) => (norm(y.title).startsWith(v) ? 1 : 0) - (norm(x.title).startsWith(v) ? 1 : 0)).slice(0, 8);
+    const found = all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
     hits.innerHTML = found.length ? found.map(x => `<li><a href="${esc(x.href)}"><small>${esc(x.kind)}</small><b>${esc(x.title)}</b><span>${esc(x.sub || '')}</span></a></li>`).join('')
       : `<li class="muted small">Ei osumia. Kokeile toista sanaa tai avaa <a href="/ai?q=${encodeURIComponent(v)}">AI-opas</a>.</li>`;
     hits.hidden = false;

@@ -8,7 +8,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CANON = (ROOT / 'scripts' / 'koiro-tokens.css').read_text(encoding='utf-8').strip()
-PAGES = ['index.html', 'ai.html', 'tietosuoja.html', 'yo-tutka.html', 'yo-harjoittelu.html']
+PAGES = sorted(p.name for p in ROOT.glob('*.html'))   # every page at the root (hyppymittari/ is a copied app)
 BLOCK = re.compile(r'/\* koiro-tokens v2.*?/\* /koiro-tokens \*/', re.S)
 
 

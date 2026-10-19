@@ -25,6 +25,11 @@ AGENT_LIMITS = {"name": 40, "vendor": 60, "models": 160, "price": 150, "bestFor"
 MAX_AGENT_SWAPS = 3    # coding agents added + removed per run
 
 
+# ai.html's own anchors (tabs, model groups, ranking cards); an area id must not shadow them.
+RESERVED_IDS = {"mallit", "tyokalut", "muutokset", "koodausagentit", "teksti", "hinta", "kuva", "video", "aani",
+                "agent-index", "agent-cost", "agent-speed", "compare", "news", "status"}
+
+
 def text(v, lim=TEXT_MAX):
     """Non-empty plain string within the length limit and without HTML brackets."""
     return isinstance(v, str) and bool(v.strip()) and len(v) <= lim and not re.search(r"[<>]", v)
@@ -89,8 +94,9 @@ def validate(d, errors):
     ids = set()
     for a in areas:
         aid = a.get("id", "")
-        if not re.fullmatch(r"[a-z0-9-]+", aid) or aid in ids:
-            err(f"bad or duplicate area id: {aid!r}")
+        # ai.html shares one #hash namespace: no hyphen (tool cards are t-<area>-<name>) and no page id.
+        if not re.fullmatch(r"[a-z0-9]+", aid) or aid in ids or aid in RESERVED_IDS:
+            err(f"bad, duplicate or reserved area id: {aid!r}")
         ids.add(aid)
         for k in ("title", "intro"):
             if not text(a.get(k)):
