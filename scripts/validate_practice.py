@@ -175,29 +175,50 @@ def check_exams(tutka):
     return errors
 
 
+def exam_max(data, session):
+    """Maximum points of the simulated exam, as the page counts it (unitsFor): the best `answer` tasks of each section,
+    a task's points being the sum of its content units, or YO-tutka's task points without units."""
+    tasks = {t["n"]: t for t in session.get("tasks") or []}
+    pts = {t["n"]: sum(u.get("points") or 0 for u in t.get("units") or []) for t in data.get("tasks") or [] if t.get("units")}
+    return sum(sum(sorted((pts.get(n, (tasks.get(n) or {}).get("points") or 0) for n in sec.get("tasks") or []), reverse=True)[:sec.get("answer") or 0])
+               for sec in (data.get("exam") or {}).get("sections") or [])
+
+
+GRADES_SOURCE = "https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/"
+
+
 def check_grades(tutka):
     """yo-harjoittelu.html's GRADES table (julkinen-31): YTL's published minimum points for L, E, M, C, B, A per session and
-    subject. Keys must be real subjects and sessions, and each row six strictly descending non-negative integers."""
+    subject. Keys must be real subjects and sessions, each row six strictly descending non-negative integers no higher than
+    the exam's maximum, and every session line ends with its YTL source page as a comment."""
     html = (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8")
     m = re.search(r"const GRADES = \{\n(.*?)\n  \};", html, re.S)
     if not m:
         return ["yo-harjoittelu.html: GRADES-taulua ei löytynyt"]
     errors = []
     for line in m.group(1).splitlines():
-        sm = re.match(r"\s*'(\d{4}[KS])': \{(.*)\},?$", line)
+        sm = re.match(r"\s*'(\d{4}[KS])': \{(.*)\},\s*// (\S+)$", line)
         if not sm:
-            errors.append(f"yo-harjoittelu.html GRADES: rivi ei ole muotoa 'kerta': {{ aine: [...] }}: {line.strip()[:60]}")
+            errors.append(f"yo-harjoittelu.html GRADES: rivi ei ole muotoa 'kerta': {{ aine: [...] }},  // YTL:n lähdesivu: {line.strip()[:60]}")
             continue
-        k = sm.group(1)
+        k, src = sm.group(1), sm.group(3)
+        if not src.startswith(GRADES_SOURCE):
+            errors.append(f"yo-harjoittelu.html GRADES: {k}: lähteen pitää olla YTL:n pisterajasivu ({GRADES_SOURCE}…), oli {src}")
         for a, nums in re.findall(r"'?([a-z-]+)'?: \[([^\]]*)\]", sm.group(2)):
             b = [int(x) for x in re.findall(r"-?\d+", nums)]
             if a not in tutka or k not in tutka[a]:
                 errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: ainetta tai kertaa ei ole YO-tutkan datassa")
-            practice = ROOT / "data" / "practice" / a / f"{k}.json"
-            if practice.exists() and any(sec.get("group") for sec in (json.loads(practice.read_text(encoding="utf-8")).get("exam") or {}).get("sections") or []):
-                errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: kahden kokeen aineelle ei anneta arviota yhden kokeen pisteistä")
+                continue
             if len(b) != 6 or any(x < 0 for x in b) or any(x <= y for x, y in zip(b, b[1:])):
                 errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: pitää olla kuusi laskevaa lukua (L, E, M, C, B, A), oli {b}")
+            practice = ROOT / "data" / "practice" / a / f"{k}.json"
+            if not practice.exists():
+                continue
+            data = json.loads(practice.read_text(encoding="utf-8"))
+            if any(sec.get("group") for sec in (data.get("exam") or {}).get("sections") or []):
+                errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: kahden kokeen aineelle ei anneta arviota yhden kokeen pisteistä")
+            elif b and b[0] > exam_max(data, tutka[a][k]):
+                errors.append(f"yo-harjoittelu.html GRADES: {k}/{a}: L-raja {b[0]} on yli kokeen maksimin {exam_max(data, tutka[a][k])}")
     return errors
 
 

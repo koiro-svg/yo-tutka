@@ -627,11 +627,20 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
     }
     return acc;
   }
-  // julkinen-31: YTL's published grade boundaries (minimum points for L, E, M, C, B, A), only numbers; äidinkieli has two
-  // separate exams, so its combined boundary is not used. Add a session when YTL publishes it.
+  // julkinen-31: YTL's published grade boundaries (minimum points for L, E, M, C, B, A), only numbers, each line's source
+  // page in its comment (englanti = pitkä oppimäärä, max 299 p; the others max 120 p). äidinkieli has two separate exams, so
+  // its combined boundary is not used. Add a session when YTL publishes it (autumn boundaries come out in November).
   const GRADES = {
-    '2025S': { englanti: [277, 259, 241, 218, 188, 153], 'pitka-matematiikka': [85, 65, 48, 34, 22, 14], fysiikka: [86, 65, 49, 32, 20, 12], kemia: [105, 89, 73, 53, 34, 20], biologia: [101, 85, 71, 56, 42, 31] },
-    '2026K': { englanti: [267, 248, 225, 197, 160, 126], 'pitka-matematiikka': [95, 74, 59, 44, 30, 19], fysiikka: [91, 71, 54, 40, 29, 20], kemia: [101, 81, 61, 40, 24, 14], biologia: [100, 82, 67, 52, 38, 27] },
+    '2021S': { englanti: [270, 250, 231, 206, 173, 136], 'pitka-matematiikka': [99, 74, 59, 41, 27, 14], fysiikka: [85, 65, 48, 33, 22, 13], kemia: [98, 76, 56, 37, 23, 13], biologia: [97, 81, 67, 52, 39, 28] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2021
+    '2022K': { englanti: [268, 248, 228, 199, 165, 126], 'pitka-matematiikka': [93, 70, 53, 37, 25, 16], fysiikka: [85, 62, 44, 28, 18, 12], kemia: [93, 70, 51, 29, 18, 13], biologia: [97, 81, 66, 51, 40, 27] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2022
+    '2022S': { englanti: [271, 252, 234, 210, 181, 148], 'pitka-matematiikka': [95, 71, 54, 37, 26, 16], fysiikka: [83, 58, 42, 29, 23, 15], kemia: [96, 72, 53, 36, 23, 13], biologia: [100, 84, 69, 53, 40, 27] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2022
+    '2023K': { englanti: [267, 248, 227, 201, 167, 131], 'pitka-matematiikka': [81, 63, 50, 37, 24, 15], fysiikka: [81, 61, 47, 35, 26, 19], kemia: [99, 77, 54, 34, 22, 15], biologia: [94, 77, 64, 50, 37, 26] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2023
+    '2023S': { englanti: [277, 257, 238, 213, 182, 147], 'pitka-matematiikka': [90, 73, 56, 40, 30, 20], fysiikka: [86, 64, 45, 30, 20, 15], kemia: [99, 76, 57, 39, 27, 18], biologia: [103, 88, 73, 57, 45, 34] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2023
+    '2024K': { englanti: [278, 259, 239, 212, 172, 132], 'pitka-matematiikka': [89, 71, 57, 43, 31, 20], fysiikka: [89, 69, 52, 37, 26, 17], kemia: [101, 81, 65, 45, 30, 20], biologia: [93, 76, 61, 46, 35, 24] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2024
+    '2024S': { englanti: [278, 258, 238, 212, 181, 151], 'pitka-matematiikka': [93, 67, 46, 30, 17, 12], fysiikka: [85, 63, 44, 28, 18, 13], kemia: [103, 82, 63, 47, 31, 22], biologia: [102, 85, 67, 50, 36, 24] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2024
+    '2025K': { englanti: [274, 255, 236, 212, 175, 146], 'pitka-matematiikka': [102, 82, 63, 46, 33, 23], fysiikka: [93, 72, 53, 38, 25, 16], kemia: [96, 77, 61, 46, 29, 20], biologia: [96, 81, 66, 52, 38, 28] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2025
+    '2025S': { englanti: [277, 259, 241, 218, 188, 153], 'pitka-matematiikka': [85, 65, 48, 34, 22, 14], fysiikka: [86, 65, 49, 32, 20, 12], kemia: [105, 89, 73, 53, 34, 20], biologia: [101, 85, 71, 56, 42, 31] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2025-0
+    '2026K': { englanti: [267, 248, 225, 197, 160, 126], 'pitka-matematiikka': [95, 74, 59, 44, 30, 19], fysiikka: [91, 71, 54, 40, 29, 20], kemia: [101, 81, 61, 40, 24, 14], biologia: [100, 82, 67, 52, 38, 27] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2026
   };
   const LETTERS = ['L', 'E', 'M', 'C', 'B', 'A'];
   function gradeFor(a, k, total) {

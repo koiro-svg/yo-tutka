@@ -110,8 +110,8 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   tallennuksessa, koska 5 000 rivin rajalla historia muuttuu pituuden pysyessä samana; kalenterikin laskee eri kohdat), "Harjoittele seuraavaksi" (sama todennäköisyys × heikkous kuin tutkassa), tehtävälistan haku (120 ms viive), aihe- ja
   tilasuodattimet (rivien tiedot JS-taulukossa `rowInfo`, ei data-attribuuteissa; suodattimet säilyvät saman aineen
   uudelleenpiirrossa `listState`issa, esim. taustasynkan jälkeen) ja tilapalkki rivin reunassa (`scoreCls`), Edistyminen-sivulla 16 viikon harjoituskalenteri (päivän napautus listaa tehtävät),
-  koesimulaation arvosana-arvio (`GRADES`: YTL:n julkaisemat pisterajat 2025S ja 2026K, pelkät luvut; äidinkielelle ei arviota, koska
-  sillä on kaksi erillistä koetta), vastauksen alla tallennustila ("Tallennettu tähän laitteeseen 12.03 ✓", kirjautuneena synkan tila,
+  koesimulaation arvosana-arvio (`GRADES`: YTL:n julkaisemat pisterajat 2021S–2026K kaikille yhden kokeen aineille, pelkät luvut;
+  2026S puuttuu, kunnes YTL julkaisee sen marraskuussa; äidinkielelle ei arviota, koska sillä on kaksi erillistä koetta), vastauksen alla tallennustila ("Tallennettu tähän laitteeseen 12.03 ✓", kirjautuneena synkan tila,
   yksityisen ikkunan varoitus; synkan tila on vastauskohtainen: `acct.synced` = palvelimella olevan kopion aika (`pushAnswer`, `mergeAnswer`,
   `syncAll`), muuten "synkronoidaan pian" tai virhetila; `markSaved` asettaa ajan, `paintSaved` vain piirtää; rivi ei ole aria-live) ja vihjeportaat (avatut askeleet merkitty, "Käytit 2 vihjettä" lasketaan portaista, ei tallenneta).
   Lataus: `<link rel=preload href=/yo-tutka as=fetch crossorigin>` (attribuutit vastaavat `loadMeta`n fetchiä, muuten haku tehdään
@@ -283,9 +283,14 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - **Ainoa sallittu sisäkkäinen/kiinteäkorkuinen alue on apuvälinepaneeli** (`.aids`: GeoGebra/Desmos-kehykset tarvitsevat kiinteän
   korkeuden; puhelimella 68vh alapaneeli, jonka "Muut"-välilehti voi vieritä). Näyttökaavat eivät enää vieri sivuttain vaan
   kutistuvat sarakkeeseen kuten rivinsisäiset. Kelluva Apuvälineet-nappi saa sivulle alapehmusteen alle 1100 px:ssä.
-- **`GRADES` päivitetään käsin**, kun YTL julkaisee uuden kerran pisterajat (pelkät luvut, ei YTL:n tekstiä). Yksi kerta per rivi
-  (`'2026K': { aine: [L, E, M, C, B, A], … },`): `validate_practice.py` (buildissa) jäsentää rivit ja vaatii oikeat aine- ja kerta-id:t
-  sekä kuusi laskevaa lukua, ja hylkää kahden kokeen aineen (osioilla `group`); sivukin ohittaa arvion ryhmäsimulaatiossa.
+- **`GRADES` päivitetään käsin**, kun YTL julkaisee uuden kerran pisterajat (pelkät luvut, ei YTL:n tekstiä), ja vain YTL:n omalta
+  pisterajasivulta (ylioppilastutkinto.fi/…/pisterajat/pisterajat-<kausi>-<vuosi>; syksyn sivun osoitteessa voi olla pääte, esim.
+  `-syksy-2025-0`). Englanti = pitkä oppimäärä (max 299), muut 120. Älä arvioi tai interpoloi puuttuvaa kertaa: rivi puuttuu, kunnes YTL
+  julkaisee sen, ja sivu sanoo "pisterajoja ei ole vielä taulukossa". Yksi kerta per rivi, lähdesivu rivin lopussa
+  (`'2026K': { aine: [L, E, M, C, B, A], … },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/…`):
+  `validate_practice.py` (buildissa) jäsentää rivit ja vaatii oikeat aine- ja kerta-id:t, kuusi laskevaa lukua, L-rajan ≤ kokeen maksimi
+  (harjoitussisällön osioista laskettuna kuten sivu) ja YTL:n lähdeosoitteen, ja hylkää kahden kokeen aineen (osioilla `group`);
+  sivukin ohittaa arvion ryhmäsimulaatiossa.
 - Leveät kaavat 320 px:n näytöllä: MathJax 3 ei rivitä kaavoja. Siksi `.md`, `.unit` ja `.help` ovat
   `grid-template-columns:minmax(0,1fr)` ja `.md>*{min-width:0}`, rivinsisäisen kaavan SVG:llä on `max-width:100%`
   ja näkymättömällä `mjx-assistive-mml`:llä `max-width:100%`. Jos yksikin puuttuu, sivu levenee (testattu
