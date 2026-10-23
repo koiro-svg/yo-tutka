@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-21T03:27:35Z",
+ "updated": "2026-10-23T05:00:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -457,7 +457,7 @@
      "kind": "automatisoi",
      "bestFor": "Paras AI-asiakaspalveluagentti chattiin, sähköpostiin ja WhatsAppiin.",
      "why": "Ratkaisee keskimäärin 76 % keskusteluista kokonaan ja toimii myös Zendeskin tai muun helpdeskin päällä. Maksat vain onnistuneista ratkaisuista. Salesforce päätti Finin (3,6 mrd. dollarin) oston 10.9.2026, aiempaa aikataulua nopeammin; hinnoitteluun ei tullut muutoksia.",
-     "price": "0,99 $/ratkaisu + Intercom-paikat alk. ~29 $/kk",
+     "price": "0,99 $/ratkaisu + Intercom-paikka 19 $/kk",
      "fi": "hyvä",
      "pick": true
     },
@@ -999,6 +999,10 @@
  ],
  "changes": [
   {
+   "date": "2026-10-23",
+   "text": "Korjattu: Fin+Intercom-paketin paikkahinta on 19 $/kk, ei noin 29 $/kk kuten aiemmin merkittiin (fin.ai/pricing)."
+  },
+  {
    "date": "2026-10-17",
    "text": "Googlen ilmainen Gemini siirtyi 9.10.2026 automaattiseen mallivalintaan: suurin osa kehotteista käyttää nopeaa Flash-Litea, mutta vaikeammat voivat yhä käyttää Flash- tai Pro-mallia."
   },
@@ -1073,10 +1077,6 @@
   {
    "date": "2026-10-07",
    "text": "Korjattu: Claude for Legal on maksullinen lisäosa (~20 $/käyttäjä/kk) Claude-tilauksen päälle eikä ilmainen paketti; julkaistiin 12.5.2026, ei helmikuussa."
-  },
-  {
-   "date": "2026-10-07",
-   "text": "Instantlyn aloitushinta nousi 37 $/kk:sta 47 $/kk:aan."
   }
  ]
 }
