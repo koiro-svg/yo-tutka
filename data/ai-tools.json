@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-25T03:31:00Z",
+ "updated": "2026-10-27T03:28:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -62,7 +62,7 @@
      "url": "https://gemini.google.com",
      "kind": "avustaa",
      "bestFor": "Google-palveluita (Gmail, Drive, Kalenteri) käyttävälle yrittäjälle.",
-     "why": "Gemini 3.5 on oletusmalli toukokuusta 2026. Gemini Spark -agentti tekee taustalla tehtäviä kytketyissä sovelluksissa (beta, Ultra-tilaajille ensin). Googlen uusi lippulaivamalli Gemini 4 Argon esiteltiin syyskuussa 2026, mutta se on toistaiseksi vain rajatussa käytössä eikä tavallisten käyttäjien saatavilla.",
+     "why": "Gemini 3.5 on oletusmalli toukokuusta 2026. Gemini Spark -agentti tekee taustalla tehtäviä kytketyissä sovelluksissa (beta, Ultra-tilaajille ensin). Googlen uusi lippulaivamalli Gemini 4 Argon tuli 13.10.2026 Gemini-sovellukseen AI Pro- ja AI Ultra -tilaajille (Antigravityyn vain Ultralle).",
      "price": "Ilmainen · AI Pro ~20 $/kk · AI Ultra 100 $/kk",
      "fi": "hyvä",
      "pick": false
@@ -999,6 +999,10 @@
  ],
  "changes": [
   {
+   "date": "2026-10-27",
+   "text": "Googlen uusi lippulaivamalli Gemini 4 Argon tuli 13.10.2026 Gemini-sovellukseen myös AI Pro -tilaajille (ei vain Ultralle, kuten aiemmin merkittiin); Antigravityyn se tuli vain Ultra-tilaajille."
+  },
+  {
    "date": "2026-10-23",
    "text": "Korjattu: Fin+Intercom-paketin paikkahinta on 19 $/kk, ei noin 29 $/kk kuten aiemmin merkittiin (fin.ai/pricing)."
   },
@@ -1073,10 +1077,6 @@
   {
    "date": "2026-10-09",
    "text": "Tarkennettu: Holvin Lite/Pro-hinnat (9/15 €) vaativat 1 vuoden sitoumuksen, kuukausihinta ilman sitoumusta on 12/18 €."
-  },
-  {
-   "date": "2026-10-07",
-   "text": "Korjattu: Claude for Legal on maksullinen lisäosa (~20 $/käyttäjä/kk) Claude-tilauksen päälle eikä ilmainen paketti; julkaistiin 12.5.2026, ei helmikuussa."
   }
  ]
 }
