@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-10-27T03:28:00Z",
+ "updated": "2026-10-29T03:27:00Z",
  "source": "https://artificialanalysis.ai/agents/coding-agents",
  "indexName": "Coding Agent Index v2.0",
  "indexEvals": "FrontierCode v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA-AA",
@@ -217,9 +217,14 @@
    "repo": null,
    "models": "Valinta Anthropicin, OpenAI:n, Googlen, xAI:n ja Kimin malleista, esim. Opus 5.5, GPT-6.1 Sol, Gemini 3.8 Flash, Grok 4.7 ja Kimi K3",
    "price": "Ilmainen (rajattu) · Pro 10 $/kk · Pro+ 39 $/kk · Max 100 $/kk",
-   "aa": null,
+   "aa": {
+    "index": 60,
+    "model": "Copilot Fusion (max)",
+    "costPerTask": 5.59,
+    "minutesPerTask": 36.1
+   },
    "bestFor": "Kun koodisi on GitHubissa ja haluat antaa issueita agentille, joka palauttaa pull requestin.",
-   "why": "Halvin maksullinen taso (10 $/kk) ja tiivis GitHub-integraatio: pilviagentti, CLI, editorit ja koodikatselmointi Pro-tasosta alkaen. Käyttö kuluttaa GitHub AI Credits -krediittejä; AA ei ole mitannut Copilotia."
+   "why": "AA mittasi Copilotin ensi kertaa uudessa Coding Agent Index v2.0:ssa: Copilot Fusion (max) saa 60 pistettä noin 5,59 dollarilla ja 36 minuutissa tehtävää kohden – lähes Claude Coden tasolla ja halvempi kuin Codex. Halvin maksullinen taso (10 $/kk) ja tiivis GitHub-integraatio: pilviagentti, CLI, editorit ja koodikatselmointi Pro-tasosta alkaen. Käyttö kuluttaa GitHub AI Credits -krediittejä."
   }
  ]
 }
