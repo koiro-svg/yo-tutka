@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T10:53Z",
+ "updated": "2026-10-31T10:23Z",
  "source": "https://artificialanalysis.ai/",
  "errors": [],
  "categories": {
@@ -13,7 +13,7 @@
      "released": "2026-10-28",
      "variant": "High",
      "price": 8,
-     "speed": 88.92,
+     "speed": 87.41,
      "intelligence": 59.4
     },
     {
@@ -23,7 +23,7 @@
      "released": "2026-09-22",
      "variant": "Max, Default Fallback",
      "price": 8,
-     "speed": 96.57,
+     "speed": 96.94,
      "intelligence": 58.4
     },
     {
@@ -33,7 +33,7 @@
      "released": "2026-09-03",
      "variant": "Max",
      "price": 20,
-     "speed": 73.23,
+     "speed": 76.62,
      "intelligence": 56.9
     },
     {
@@ -43,7 +43,7 @@
      "released": "2026-09-29",
      "variant": "Max",
      "price": 4,
-     "speed": 83.54,
+     "speed": 73.55,
      "intelligence": 54.5
     },
     {
@@ -53,7 +53,7 @@
      "released": "2026-09-28",
      "variant": "Max, Default Fallback",
      "price": 4,
-     "speed": 138.39,
+     "speed": 134.7,
      "intelligence": 54.2
     },
     {
@@ -63,7 +63,7 @@
      "released": "2026-10-26",
      "variant": "Max",
      "price": 2,
-     "speed": 90.94,
+     "speed": 94.43,
      "intelligence": 51
     },
     {
@@ -73,7 +73,7 @@
      "released": "2026-09-30",
      "variant": "High",
      "price": 8,
-     "speed": 80.56,
+     "speed": 76.96,
      "intelligence": 50.4
     },
     {
@@ -104,7 +104,7 @@
      "released": "2026-09-01",
      "variant": "Max, Default Fallback",
      "price": 20,
-     "speed": 66.44,
+     "speed": 71.94,
      "intelligence": 49
     },
     {
@@ -114,7 +114,7 @@
      "released": "2026-09-03",
      "variant": "High",
      "price": 20,
-     "speed": 56.84,
+     "speed": 67.7,
      "intelligence": 54.8
     },
     {
@@ -142,7 +142,7 @@
      "released": "2026-09-02",
      "variant": "0902",
      "price": 3,
-     "speed": 38.45,
+     "speed": 38.11,
      "intelligence": 33.6
     },
     {
@@ -161,7 +161,7 @@
      "released": "2026-07-09",
      "variant": "Max",
      "price": 4.5,
-     "speed": 121.82
+     "speed": 0
     },
     {
      "name": "Gemini 3.8 Flash",
@@ -170,7 +170,7 @@
      "released": "2026-09-02",
      "variant": "High",
      "price": 1.5,
-     "speed": 133.86,
+     "speed": 120.22,
      "intelligence": 30.5
     }
    ],
@@ -186,7 +186,7 @@
      "released": "2026-10-26",
      "variant": "Max",
      "price": 2,
-     "speed": 90.94,
+     "speed": 94.43,
      "intelligence": 51
     },
     {
@@ -196,7 +196,7 @@
      "released": "2026-09-29",
      "variant": "Max",
      "price": 4,
-     "speed": 83.54,
+     "speed": 73.55,
      "intelligence": 54.5
     },
     {
@@ -206,7 +206,7 @@
      "released": "2026-09-28",
      "variant": "Max, Default Fallback",
      "price": 4,
-     "speed": 138.39,
+     "speed": 134.7,
      "intelligence": 54.2
     },
     {
@@ -216,7 +216,7 @@
      "released": "2026-10-28",
      "variant": "High",
      "price": 8,
-     "speed": 88.92,
+     "speed": 87.41,
      "intelligence": 59.4
     },
     {
@@ -226,7 +226,7 @@
      "released": "2026-09-22",
      "variant": "Max, Default Fallback",
      "price": 8,
-     "speed": 96.57,
+     "speed": 96.94,
      "intelligence": 58.4
     },
     {
@@ -236,7 +236,7 @@
      "released": "2026-09-30",
      "variant": "High",
      "price": 8,
-     "speed": 80.56,
+     "speed": 76.96,
      "intelligence": 50.4
     },
     {
@@ -246,7 +246,7 @@
      "released": "2026-09-03",
      "variant": "Max",
      "price": 20,
-     "speed": 73.23,
+     "speed": 76.62,
      "intelligence": 56.9
     },
     {
@@ -256,7 +256,7 @@
      "released": "2026-09-01",
      "variant": "Xhigh, Default Fallback",
      "price": 20,
-     "speed": 63.55,
+     "speed": 56.23,
      "intelligence": 49.7
     }
    ],
@@ -269,82 +269,82 @@
     {
      "name": "Muse Wonder",
      "creator": "Meta",
-     "score": 180.48,
+     "score": 139.49,
      "released": "2026-10-12",
      "variant": "Max",
      "price": 8,
-     "speed": 180.48,
+     "speed": 139.49,
      "intelligence": 43.3
     },
     {
      "name": "Claude Sonnet 5.5",
      "creator": "Anthropic",
-     "score": 138.39,
+     "score": 134.7,
      "released": "2026-09-28",
      "variant": "Max, Default Fallback",
      "price": 4,
-     "speed": 138.39,
+     "speed": 134.7,
      "intelligence": 54.2
     },
     {
      "name": "Claude Opus 5.5",
      "creator": "Anthropic",
-     "score": 96.57,
+     "score": 96.94,
      "released": "2026-09-22",
      "variant": "Max, Default Fallback",
      "price": 8,
-     "speed": 96.57,
+     "speed": 96.94,
      "intelligence": 58.4
     },
     {
      "name": "GPT-6.1 Terra",
      "creator": "OpenAI",
-     "score": 91.03,
+     "score": 96.6,
      "released": "2026-10-26",
-     "variant": "High",
+     "variant": "Xhigh",
      "price": 2,
-     "speed": 91.03,
-     "intelligence": 42.3
+     "speed": 96.6,
+     "intelligence": 45
     },
     {
      "name": "Gemini 4 Carbon",
      "creator": "Google",
-     "score": 88.92,
+     "score": 87.41,
      "released": "2026-10-28",
      "variant": "High",
      "price": 8,
-     "speed": 88.92,
+     "speed": 87.41,
      "intelligence": 59.4
-    },
-    {
-     "name": "GPT-6.1 Sol",
-     "creator": "OpenAI",
-     "score": 83.54,
-     "released": "2026-09-29",
-     "variant": "Max",
-     "price": 4,
-     "speed": 83.54,
-     "intelligence": 54.5
     },
     {
      "name": "Gemini 4 Argon",
      "creator": "Google",
-     "score": 80.56,
+     "score": 76.96,
      "released": "2026-09-30",
      "variant": "High",
      "price": 8,
-     "speed": 80.56,
+     "speed": 76.96,
      "intelligence": 50.4
     },
     {
      "name": "GPT-6 Astra",
      "creator": "OpenAI",
-     "score": 73.23,
+     "score": 76.62,
      "released": "2026-09-03",
      "variant": "Max",
      "price": 20,
-     "speed": 73.23,
+     "speed": 76.62,
      "intelligence": 56.9
+    },
+    {
+     "name": "GPT-6.1 Sol",
+     "creator": "OpenAI",
+     "score": 73.55,
+     "released": "2026-09-29",
+     "variant": "Max",
+     "price": 4,
+     "speed": 73.55,
+     "intelligence": 54.5
     }
    ]
   },
@@ -480,7 +480,7 @@
     {
      "name": "FLUX 3 Max",
      "creator": "Fal",
-     "score": 1138,
+     "score": 1135,
      "released": "2026-10"
     },
     {
@@ -490,6 +490,12 @@
      "released": "2026-08"
     },
     {
+     "name": "Utopai X",
+     "creator": "Utopai Studios",
+     "score": 1130,
+     "released": "2026-09"
+    },
+    {
      "name": "MiniMax H3",
      "creator": "MiniMax",
      "score": 1120,
@@ -497,22 +503,16 @@
      "variant": "768p"
     },
     {
-     "name": "Dreamina Seedance 2.5",
-     "creator": "ByteDance Seed",
-     "score": 1104,
-     "released": "2026-07"
+     "name": "Bach 1.0 Pro",
+     "creator": "Video Rebirth",
+     "score": 1109,
+     "released": "2026-09"
     },
     {
-     "name": "FLUX 3",
-     "creator": "Black Forest Labs",
-     "score": 1091,
-     "released": "2026-07"
-    },
-    {
-     "name": "Dreamina Seedance 2.0",
-     "creator": "ByteDance Seed",
-     "score": 1082,
-     "released": "2026-03"
+     "name": "P-Video-2-Pro",
+     "creator": "Pruna AI",
+     "score": 1103,
+     "released": "2026-09"
     }
    ]
   },
@@ -520,53 +520,53 @@
    "metric": "Arena ELO",
    "items": [
     {
-     "name": "MiniMax H3 Max",
-     "creator": "Fal",
-     "score": 1130,
-     "released": "2026-08"
+     "name": "Utopai X",
+     "creator": "Utopai Studios",
+     "score": 1155,
+     "released": "2026-09"
     },
     {
      "name": "Dreamina Seedance 2.5",
      "creator": "ByteDance Seed",
-     "score": 1126,
+     "score": 1128,
      "released": "2026-07"
     },
     {
+     "name": "MiniMax H3 Max",
+     "creator": "Fal",
+     "score": 1122,
+     "released": "2026-08"
+    },
+    {
      "name": "Bach 1.0 Pro",
+     "creator": "Video Rebirth",
+     "score": 1120,
+     "released": "2026-09"
+    },
+    {
+     "name": "Hyperflow H3",
      "creator": "Video Rebirth",
      "score": 1118,
      "released": "2026-09"
     },
     {
+     "name": "Agnes-Video-2.5",
+     "creator": "Sapiens AI",
+     "score": 1114,
+     "released": "2026-08"
+    },
+    {
      "name": "MiniMax H3",
      "creator": "MiniMax",
-     "score": 1113,
+     "score": 1111,
      "released": "2026-07",
      "variant": "768p"
     },
     {
-     "name": "Dreamina Seedance 2.0",
-     "creator": "ByteDance Seed",
-     "score": 1089,
-     "released": "2026-03"
-    },
-    {
-     "name": "Wan 3.0",
-     "creator": "Alibaba",
-     "score": 1086,
-     "released": "2026-08"
-    },
-    {
-     "name": "FLUX 3 Max",
-     "creator": "Fal",
-     "score": 1058,
+     "name": "HeyGen Video 1",
+     "creator": "HeyGen",
+     "score": 1103,
      "released": "2026-10"
-    },
-    {
-     "name": "Grok Imagine Video 1.5",
-     "creator": "SpaceXAI",
-     "score": 1054,
-     "released": "2026-05"
     }
    ]
   },
@@ -604,6 +604,12 @@
      "released": null
     },
     {
+     "name": "Fish Audio Drama 3",
+     "creator": "Fish Audio",
+     "score": 1278,
+     "released": null
+    },
+    {
      "name": "Qwen-Audio-3.0-TTS-Plus",
      "creator": "Alibaba",
      "score": 1269,
@@ -614,13 +620,6 @@
      "creator": "Inworld",
      "score": 1267,
      "released": null
-    },
-    {
-     "name": "Lightning V3.1 Pro",
-     "creator": "Smallest.ai",
-     "score": 1266,
-     "released": null,
-     "variant": "Oct 2026"
     }
    ]
   },
@@ -661,7 +660,7 @@
      "released": "2026-08-18",
      "variant": "Max",
      "price": 2.15,
-     "speed": 77.17,
+     "speed": 75.22,
      "intelligence": 31.7
     },
     {
@@ -670,7 +669,7 @@
      "score": 49.07,
      "released": "2026-08-12",
      "price": 3,
-     "speed": 39.32
+     "speed": 38.4
     },
     {
      "name": "Qwen3.8 27B",
@@ -679,7 +678,7 @@
      "released": "2026-08-14",
      "variant": "Xhigh",
      "price": 1.12,
-     "speed": 37.45,
+     "speed": 39.74,
      "intelligence": 20.1
     },
     {
@@ -689,7 +688,7 @@
      "released": "2026-09-01",
      "variant": "Max, Default Fallback",
      "price": 20,
-     "speed": 66.44,
+     "speed": 71.94,
      "intelligence": 49
     },
     {
@@ -698,7 +697,8 @@
      "score": 47.22,
      "released": "2026-08-26",
      "price": 0.24,
-     "speed": 66.59
+     "speed": 65.75,
+     "intelligence": 27.8
     }
    ],
    "coverage": 0.35
@@ -726,7 +726,7 @@
      "score": 88.33,
      "released": "2026-09-18",
      "price": 1.43,
-     "speed": 182.13,
+     "speed": 138.44,
      "intelligence": 28.5
     },
     {
@@ -735,7 +735,7 @@
      "score": 86.33,
      "released": "2026-10-23",
      "price": 4,
-     "speed": 33.3,
+     "speed": 28.07,
      "intelligence": 46
     },
     {
@@ -744,7 +744,7 @@
      "score": 86.33,
      "released": "2026-09-21",
      "price": 0.54,
-     "speed": 47.65,
+     "speed": 41.25,
      "intelligence": 29.9
     },
     {
@@ -754,7 +754,7 @@
      "released": "2026-09-01",
      "variant": "Max, Default Fallback",
      "price": 20,
-     "speed": 66.44,
+     "speed": 71.94,
      "intelligence": 49
     },
     {
@@ -764,7 +764,7 @@
      "released": "2026-09-22",
      "variant": "Max, Default Fallback",
      "price": 8,
-     "speed": 96.57,
+     "speed": 96.94,
      "intelligence": 58.4
     },
     {
@@ -783,7 +783,7 @@
      "released": "2026-09-29",
      "variant": "Low",
      "price": 4,
-     "speed": 56.99,
+     "speed": 53.01,
      "intelligence": 34.5
     }
    ],
@@ -799,7 +799,7 @@
      "released": "2026-09-03",
      "variant": "Xhigh",
      "price": 20,
-     "speed": 69.09,
+     "speed": 61.27,
      "intelligence": 55.3
     },
     {
@@ -809,7 +809,7 @@
      "released": "2026-09-02",
      "variant": "High",
      "price": 1.5,
-     "speed": 133.86,
+     "speed": 120.22,
      "intelligence": 30.5
     },
     {
@@ -836,7 +836,7 @@
      "score": 94.1,
      "released": "2026-02-19",
      "price": 4.5,
-     "speed": 141.48
+     "speed": 131.1
     },
     {
      "name": "GPT-5.6 Sol",
@@ -863,7 +863,7 @@
      "released": "2026-09-01",
      "variant": "Max, Default Fallback",
      "price": 20,
-     "speed": 66.44,
+     "speed": 71.94,
      "intelligence": 49
     }
    ],
@@ -879,18 +879,8 @@
      "released": "2026-09-22",
      "variant": "Max, Default Fallback",
      "price": 8,
-     "speed": 96.57,
+     "speed": 96.94,
      "intelligence": 58.4
-    },
-    {
-     "name": "Gemini 4 Carbon",
-     "creator": "Google",
-     "score": 60.4,
-     "released": "2026-10-28",
-     "variant": "High",
-     "price": 8,
-     "speed": 88.92,
-     "intelligence": 59.4
     },
     {
      "name": "Claude Fable 5.1",
@@ -899,7 +889,7 @@
      "released": "2026-09-01",
      "variant": "Max, Default Fallback",
      "price": 20,
-     "speed": 66.44,
+     "speed": 71.94,
      "intelligence": 49
     },
     {
@@ -909,7 +899,7 @@
      "released": "2026-09-30",
      "variant": "High",
      "price": 8,
-     "speed": 80.56,
+     "speed": 76.96,
      "intelligence": 50.4
     },
     {
@@ -928,7 +918,7 @@
      "released": "2026-09-28",
      "variant": "Max, Default Fallback",
      "price": 4,
-     "speed": 138.39,
+     "speed": 134.7,
      "intelligence": 54.2
     },
     {
@@ -947,11 +937,21 @@
      "released": "2026-09-03",
      "variant": "Max",
      "price": 20,
-     "speed": 73.23,
+     "speed": 76.62,
      "intelligence": 56.9
+    },
+    {
+     "name": "Muse Wonder Full",
+     "creator": "Meta",
+     "score": 53.6,
+     "released": "2026-10-12",
+     "variant": "Max",
+     "price": 0,
+     "speed": 0,
+     "intelligence": 49.7
     }
    ],
-   "coverage": 1.0
+   "coverage": 0.95
   },
   "budjetti": {
    "metric": "$ / 1M tokenia (vähintään 60 % kärjen älykkyydestä)",
@@ -963,7 +963,7 @@
      "released": "2026-10-07",
      "variant": "Max",
      "price": 0.2,
-     "speed": 235.47,
+     "speed": 235.34,
      "intelligence": 36.2
     },
     {
@@ -973,7 +973,7 @@
      "released": "2026-10-26",
      "variant": "Max",
      "price": 2,
-     "speed": 90.94,
+     "speed": 94.43,
      "intelligence": 51
     },
     {
@@ -993,7 +993,7 @@
      "released": "2026-09-29",
      "variant": "Max",
      "price": 4,
-     "speed": 83.54,
+     "speed": 73.55,
      "intelligence": 54.5
     },
     {
@@ -1003,7 +1003,7 @@
      "released": "2026-09-28",
      "variant": "Max, Default Fallback",
      "price": 4,
-     "speed": 138.39,
+     "speed": 134.7,
      "intelligence": 54.2
     },
     {
@@ -1012,7 +1012,7 @@
      "score": 4,
      "released": "2026-10-23",
      "price": 4,
-     "speed": 33.3,
+     "speed": 28.07,
      "intelligence": 46
     },
     {
@@ -1022,7 +1022,7 @@
      "released": "2026-10-28",
      "variant": "High",
      "price": 8,
-     "speed": 88.92,
+     "speed": 87.41,
      "intelligence": 59.4
     },
     {
@@ -1032,7 +1032,7 @@
      "released": "2026-09-22",
      "variant": "Max, Default Fallback",
      "price": 8,
-     "speed": 96.57,
+     "speed": 96.94,
      "intelligence": 58.4
     }
    ],
@@ -1045,31 +1045,31 @@
     {
      "name": "Claude Fable 5.1",
      "creator": "Anthropic",
-     "score": 0.68,
+     "score": 1.54,
      "released": "2026-09-01",
      "variant": "Low, Default Fallback",
      "price": 20,
-     "speed": 53.47,
+     "speed": 49.42,
      "intelligence": 38.5
     },
     {
      "name": "GPT-6 Astra",
      "creator": "OpenAI",
-     "score": 1.89,
+     "score": 1.62,
      "released": "2026-09-03",
      "variant": "Low",
      "price": 20,
-     "speed": 54.47,
+     "speed": 59.74,
      "intelligence": 43
     },
     {
      "name": "GPT-6.1 Terra",
      "creator": "OpenAI",
-     "score": 2.34,
+     "score": 2.41,
      "released": "2026-10-26",
      "variant": "Medium",
      "price": 2,
-     "speed": 90.96,
+     "speed": 91.0,
      "intelligence": 38.1
     },
     {
@@ -1079,47 +1079,47 @@
      "released": "2026-09-29",
      "variant": "Medium",
      "price": 4,
-     "speed": 57.05,
+     "speed": 53.58,
      "intelligence": 46.1
     },
     {
      "name": "Claude Sonnet 5.5",
      "creator": "Anthropic",
-     "score": 7.98,
+     "score": 6.55,
      "released": "2026-09-28",
      "variant": "High, Default Fallback",
      "price": 4,
-     "speed": 104.81,
+     "speed": 94.62,
      "intelligence": 41.1
     },
     {
      "name": "Claude Opus 5.5",
      "creator": "Anthropic",
-     "score": 10.27,
+     "score": 10.5,
      "released": "2026-09-22",
      "variant": "Medium, Default Fallback",
      "price": 8,
-     "speed": 77.85,
+     "speed": 72.01,
      "intelligence": 48.1
     },
     {
      "name": "Gemini 4 Argon",
      "creator": "Google",
-     "score": 27.2,
+     "score": 29.84,
      "released": "2026-09-30",
      "variant": "High",
      "price": 8,
-     "speed": 80.56,
+     "speed": 76.96,
      "intelligence": 50.4
     },
     {
      "name": "Muse Wonder",
      "creator": "Meta",
-     "score": 34.15,
+     "score": 42.66,
      "released": "2026-10-12",
      "variant": "Max",
      "price": 8,
-     "speed": 180.48,
+     "speed": 139.49,
      "intelligence": 43.3
     }
    ],
