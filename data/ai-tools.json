@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-11-03T03:30:11Z",
+ "updated": "2026-11-05T03:28:50Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -209,7 +209,7 @@
      "kind": "automatisoi",
      "bestFor": "Tekoälyassistentti sähköpostiin, kalenteriin ja kokousmuistiinpanoihin.",
      "why": "Toimii kuin virtuaalinen assistentti Slackissa ja sähköpostissa: vastaa, varaa ja seuraa. Ei vaadi työnkulkujen piirtämistä.",
-     "price": "Tiimi alk. 49,99 $/kk, krediittiperusteinen (ei pysyvää ilmaisversiota)",
+     "price": "Tiimi alk. 29,99 $/kk, krediittiperusteinen (7 vrk ilmaiskokeilu, ei pysyvää ilmaisversiota)",
      "fi": "kohtalainen",
      "pick": false
     },
@@ -468,7 +468,7 @@
      "kind": "automatisoi",
      "bestFor": "Nopein tapa saada omalla sisällöllä koulutettu chatbot kotisivuille.",
      "why": "Opettelee sivustosi, PDF:t ja UKK:t ilman koodia, kerää liidejä ja toimii myös WhatsAppissa ja somen yksityisviesteissä.",
-     "price": "Ilmainen · Hobby 40 $/kk",
+     "price": "7 vrk ilmainen kokeilu · Hobby 40 $/kk (32 $/kk vuosilaskutuksella)",
      "fi": "hyvä",
      "pick": false
     },
@@ -574,7 +574,7 @@
      "kind": "avustaa",
      "bestFor": "Sanelu mihin tahansa sovellukseen, 3–4 kertaa kirjoittamista nopeampaa.",
      "why": "Siistii puheen valmiiksi tekstiksi sähköpostiin, Slackiin ja dokumentteihin. Tukee 100+ kieltä.",
-     "price": "Ilmainen 2 000 sanaa/vk · Pro 12–15 $/kk",
+     "price": "Ilmainen (rajattu) · Pro 12–15 $/kk",
      "fi": "kohtalainen",
      "pick": false
     }
@@ -665,7 +665,7 @@
      "kind": "automatisoi",
      "bestFor": "Suomalainen pienyritys, joka haluaa tilitoimistojen yleisimmän järjestelmän ja siihen valmiit AI-toiminnot.",
      "why": "Junior tekee ostolaskuille tiliöintiehdotukset (tili, alv, vähennys-%) koneoppimisella, ja se käsitteli viime vuonna 4,6 miljoonaa laskua. Uusi Ask AI vastaa luonnollisella kielellä kysymyksiin myynnistä ja ostoista myös mobiilissa.",
-     "price": "Kevyt 25,90 €/kk · Perus 82,90 €/kk (alv 0) · uusille yrityksille 0 € loppuvuoden 2026",
+     "price": "Kevyt 25,90 €/kk · Perus 82,90 €/kk (alv 0)",
      "fi": "hyvä",
      "pick": true
     },
@@ -999,6 +999,18 @@
  ],
  "changes": [
   {
+   "date": "2026-11-05",
+   "text": "Chatbase poisti ilmaisversion kokonaan: tarjolla on nyt 7 vrk:n ilmainen kokeilu, ja halvin maksullinen taso on Hobby 40 $/kk (32 $/kk vuosilaskutuksella)."
+  },
+  {
+   "date": "2026-11-05",
+   "text": "Korjattu: Procountorin hintakenttään oli merkitty virheellisesti pysyvä 0 €:n kampanja; oikea tarjous on kuukausimaksuton 3 kk uusille asiakkaille 30.11.2026 asti, eikä aikarajoitettuja kampanjahintoja merkitä hintakenttään."
+  },
+  {
+   "date": "2026-11-05",
+   "text": "Korjattu: Lindyn halvin maksullinen taso on 29,99 $/kk (3 000 krediittiä), ei 49,99 $/kk kuten lokakuussa merkittiin; 49,99 $/kk on 5 000 krediitin taso, ja uusille käyttäjille on nyt 7 vrk:n ilmaiskokeilu."
+  },
+  {
    "date": "2026-11-01",
    "text": "Kuaishou julkaisi Kling 4.0 -videomallin 15.10.2026 Kling 3.0:n tilalle: tasaisempi liike, yhtäjaksoinen 30 sekunnin video ja uusi Omni Reference -ominaisuus."
   },
@@ -1065,18 +1077,6 @@
   {
    "date": "2026-10-09",
    "text": "ChatGPT lisäsi uuden 500 $/kk Pro-tason ja pienensi samalla 200 $/kk Pro-tason käyttörajoja (voimaan 29.–30.10.2026)."
-  },
-  {
-   "date": "2026-10-09",
-   "text": "Googlen uusi lippulaivamalli Gemini 4 Argon esiteltiin syyskuussa 2026, mutta se on vielä rajatussa käytössä eikä korvannut Gemini 3.5:tä kuluttajasovelluksessa."
-  },
-  {
-   "date": "2026-10-09",
-   "text": "Lindy AI vaihtoi Plus/Pro/Max-tasot yhdeksi krediittiperusteiseksi Tiimi-tasoksi, joka alkaa 29,99 $/kk:sta."
-  },
-  {
-   "date": "2026-10-09",
-   "text": "Vainu julkaisi nimetyt hinnoittelutasot (Reach, Data Sync, Discover); halvin taso Reach alkaa noin 250 €/kk:sta."
   }
  ]
 }
