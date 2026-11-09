@@ -1,7 +1,16 @@
 {
- "updated": "2026-11-09T17:07Z",
+ "updated": "2026-11-09T17:12Z",
  "source": "https://artificialanalysis.ai/",
- "errors": [],
+ "errors": [
+  "kuvasta-video: HTTP Error 429: Too Many Requests",
+  "video-aani: HTTP Error 429: Too Many Requests",
+  "kuvasta-video-aani: HTTP Error 429: Too Many Requests",
+  "puhe: HTTP Error 429: Too Many Requests",
+  "musiikki: HTTP Error 429: Too Many Requests",
+  "musiikki-instrumentaali: HTTP Error 429: Too Many Requests",
+  "puheentunnistus: HTTP Error 429: Too Many Requests",
+  "puheagentti: HTTP Error 429: Too Many Requests"
+ ],
  "categories": {
   "yleis": {
    "metric": "Intelligence Index",
