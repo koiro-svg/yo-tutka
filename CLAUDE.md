@@ -208,6 +208,7 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
   ovat aina null, joten koodausmallien listaa ei ole (koodaukseen: Koodausagentit-välilehti). `data/media-seen.json` muistaa kategorioittain, milloin mediamalli
   nähtiin ensi kerran (`seen`, UUSI-merkki); kategorian ensimmäinen haku kirjoittaa tyhjät päivät, ettei kaikkia sen malleja merkitä uusiksi.
   Tyhjä vastaus ei saa korvata listaa, jossa on dataa (`fresh`-silmukka).
+  Yksi päivitysajo kuluttaa noin 13 pyyntöä ja ilmaiskiintiö on 100 / 24 h: älä aja workflow'ta testiksi montaa kertaa päivässä (429 → osa listoista jää vanhaan).
 - API-avain vain GitHub-secretissä. Repo on julkinen.
 - Samasta mallista tulee API:sta monta versiota ("Claude Opus 5.5 (Adaptive Reasoning, Max
   Effort…)"). `item()` pilkkoo sulkeiden edestä ja `top()` pitää vain parhaan version –

@@ -1,16 +1,7 @@
 {
- "updated": "2026-11-09T17:12Z",
+ "updated": "2026-11-09T16:56Z",
  "source": "https://artificialanalysis.ai/",
- "errors": [
-  "kuvasta-video: HTTP Error 429: Too Many Requests",
-  "video-aani: HTTP Error 429: Too Many Requests",
-  "kuvasta-video-aani: HTTP Error 429: Too Many Requests",
-  "puhe: HTTP Error 429: Too Many Requests",
-  "musiikki: HTTP Error 429: Too Many Requests",
-  "musiikki-instrumentaali: HTTP Error 429: Too Many Requests",
-  "puheentunnistus: HTTP Error 429: Too Many Requests",
-  "puheagentti: HTTP Error 429: Too Many Requests"
- ],
+ "errors": [],
  "categories": {
   "yleis": {
    "metric": "Intelligence Index",
@@ -275,46 +266,54 @@
      "name": "GPT Image 2.6 Sunburst",
      "creator": "OpenAI",
      "score": 1259,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "GPT Image 2.6 Flare",
      "creator": "OpenAI",
      "score": 1228,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "GPT Image 2.5 Sunburst",
      "creator": "OpenAI",
      "score": 1227,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "GPT Image 2.5 Flare",
      "creator": "OpenAI",
      "score": 1208,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "GPT Image 2",
      "creator": "OpenAI",
      "score": 1188,
+     "released": null,
      "variant": "high"
     },
     {
      "name": "Nano Banana 2.1",
      "creator": "Google",
-     "score": 1176
+     "score": 1176,
+     "released": null
     },
     {
      "name": "MAI-Image-2.6",
      "creator": "Microsoft AI",
-     "score": 1168
+     "score": 1168,
+     "released": null
     },
     {
      "name": "Grok Imagine Image 2.0",
      "creator": "SpaceXAI",
-     "score": 1166
+     "score": 1166,
+     "released": null
     }
    ]
   },
@@ -325,46 +324,54 @@
      "name": "GPT Image 2.6 Sunburst",
      "creator": "OpenAI",
      "score": 1209,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "GPT Image 2.6 Flare",
      "creator": "OpenAI",
      "score": 1206,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "GPT Image 2.5 Sunburst",
      "creator": "OpenAI",
      "score": 1199,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "MAI-Image-2.7-Preview",
      "creator": "Microsoft AI",
-     "score": 1195
+     "score": 1195,
+     "released": null
     },
     {
      "name": "GPT Image 2.5 Flare",
      "creator": "OpenAI",
      "score": 1182,
+     "released": null,
      "variant": "max"
     },
     {
      "name": "Krea 3",
      "creator": "Krea",
      "score": 1152,
+     "released": null,
      "variant": "Ultra"
     },
     {
      "name": "Nano Banana 2.1",
      "creator": "Google",
-     "score": 1152
+     "score": 1152,
+     "released": null
     },
     {
      "name": "MAI-Image-2.6",
      "creator": "Microsoft AI",
-     "score": 1149
+     "score": 1149,
+     "released": null
     }
    ]
   },
@@ -374,43 +381,51 @@
     {
      "name": "HeyGen Video 1",
      "creator": "HeyGen",
-     "score": 1146
+     "score": 1146,
+     "released": null
     },
     {
      "name": "MiniMax H3 Max",
      "creator": "Fal",
-     "score": 1139
+     "score": 1139,
+     "released": null
     },
     {
      "name": "FLUX 3 Max",
      "creator": "Fal",
-     "score": 1138
+     "score": 1138,
+     "released": null
     },
     {
      "name": "Wan 3.0",
      "creator": "Alibaba",
-     "score": 1137
+     "score": 1137,
+     "released": null
     },
     {
      "name": "Utopai X",
      "creator": "Utopai Studios",
-     "score": 1135
+     "score": 1135,
+     "released": null
     },
     {
      "name": "MiniMax H3",
      "creator": "MiniMax",
      "score": 1123,
+     "released": null,
      "variant": "768p"
     },
     {
      "name": "Bach 1.0 Pro",
      "creator": "Video Rebirth",
-     "score": 1113
+     "score": 1113,
+     "released": null
     },
     {
      "name": "Dreamina Seedance 2.5",
      "creator": "ByteDance Seed",
-     "score": 1106
+     "score": 1106,
+     "released": null
     }
    ]
   },
@@ -420,42 +435,50 @@
     {
      "name": "Utopai X",
      "creator": "Utopai Studios",
-     "score": 1155
+     "score": 1155,
+     "released": null
     },
     {
      "name": "Dreamina Seedance 2.5",
      "creator": "ByteDance Seed",
-     "score": 1127
+     "score": 1127,
+     "released": null
     },
     {
      "name": "Bach 1.0 Pro",
      "creator": "Video Rebirth",
-     "score": 1125
+     "score": 1125,
+     "released": null
     },
     {
      "name": "Hyperflow H3",
      "creator": "Video Rebirth",
-     "score": 1123
+     "score": 1123,
+     "released": null
     },
     {
      "name": "MiniMax H3 Max",
      "creator": "Fal",
-     "score": 1123
+     "score": 1123,
+     "released": null
     },
     {
      "name": "SkyReels V4",
      "creator": "Skywork AI",
-     "score": 1120
+     "score": 1120,
+     "released": null
     },
     {
      "name": "Agnes-Video-2.5",
      "creator": "Sapiens AI",
-     "score": 1118
+     "score": 1118,
+     "released": null
     },
     {
      "name": "MiniMax H3",
      "creator": "MiniMax",
      "score": 1115,
+     "released": null,
      "variant": "768p"
     }
    ]
@@ -466,42 +489,50 @@
     {
      "name": "Eleven v4",
      "creator": "ElevenLabs",
-     "score": 1339
+     "score": 1339,
+     "released": null
     },
     {
      "name": "Eleven v4 Turbo",
      "creator": "ElevenLabs",
-     "score": 1335
+     "score": 1335,
+     "released": null
     },
     {
      "name": "Qwen-Audio-3.1-TTS-Plus",
      "creator": "Alibaba",
-     "score": 1303
+     "score": 1303,
+     "released": null
     },
     {
      "name": "Sonic 3.6",
      "creator": "Cartesia",
-     "score": 1297
+     "score": 1297,
+     "released": null
     },
     {
      "name": "Simba 3.5",
      "creator": "SpeechifyAI",
-     "score": 1286
+     "score": 1286,
+     "released": null
     },
     {
      "name": "Gemini 3.8 Flash TTS",
      "creator": "Google",
-     "score": 1283
+     "score": 1283,
+     "released": null
     },
     {
      "name": "Fish Audio Drama 3",
      "creator": "Fish Audio",
-     "score": 1275
+     "score": 1275,
+     "released": null
     },
     {
      "name": "Lightning V3.1 Pro",
      "creator": "Smallest.ai",
      "score": 1273,
+     "released": null,
      "variant": "Oct 2026"
     }
    ]
@@ -1189,43 +1220,51 @@
     {
      "name": "Wan 3.0",
      "creator": "Alibaba",
-     "score": 1175
+     "score": 1175,
+     "released": null
     },
     {
      "name": "Utopai X",
      "creator": "Utopai Studios",
-     "score": 1168
+     "score": 1168,
+     "released": null
     },
     {
      "name": "MiniMax H3",
      "creator": "MiniMax",
      "score": 1161,
+     "released": null,
      "variant": "768p"
     },
     {
      "name": "Dreamina Seedance 2.5",
      "creator": "ByteDance Seed",
-     "score": 1155
+     "score": 1155,
+     "released": null
     },
     {
      "name": "FLUX 3 Max",
      "creator": "Fal",
-     "score": 1154
+     "score": 1154,
+     "released": null
     },
     {
      "name": "HeyGen Video 1",
      "creator": "HeyGen",
-     "score": 1153
+     "score": 1153,
+     "released": null
     },
     {
      "name": "MiniMax H3 Max",
      "creator": "Fal",
-     "score": 1147
+     "score": 1147,
+     "released": null
     },
     {
      "name": "SkyReels V4",
      "creator": "Skywork AI",
-     "score": 1138
+     "score": 1138,
+     "released": null
     }
    ]
   },
@@ -1235,43 +1274,51 @@
     {
      "name": "Dreamina Seedance 2.5",
      "creator": "ByteDance Seed",
-     "score": 1161
+     "score": 1161,
+     "released": null
     },
     {
      "name": "Utopai X",
      "creator": "Utopai Studios",
-     "score": 1151
+     "score": 1151,
+     "released": null
     },
     {
      "name": "Dreamina Seedance 2.0",
      "creator": "ByteDance Seed",
-     "score": 1140
+     "score": 1140,
+     "released": null
     },
     {
      "name": "MiniMax H3",
      "creator": "MiniMax",
      "score": 1133,
+     "released": null,
      "variant": "768p"
     },
     {
      "name": "SkyReels V4",
      "creator": "Skywork AI",
-     "score": 1125
+     "score": 1125,
+     "released": null
     },
     {
      "name": "HeyGen Video 1",
      "creator": "HeyGen",
-     "score": 1124
+     "score": 1124,
+     "released": null
     },
     {
      "name": "Hyperflow H3",
      "creator": "Video Rebirth",
-     "score": 1120
+     "score": 1120,
+     "released": null
     },
     {
      "name": "P-Video-2-Pro",
      "creator": "Pruna AI",
-     "score": 1116
+     "score": 1116,
+     "released": null
     }
    ]
   },
@@ -1281,42 +1328,50 @@
     {
      "name": "Suno v6",
      "creator": "Suno",
-     "score": 1144
+     "score": 1144,
+     "released": null
     },
     {
      "name": "Suno v6-mini",
      "creator": "Suno",
-     "score": 1132
+     "score": 1132,
+     "released": null
     },
     {
      "name": "Mureka V9.5",
      "creator": "Mureka",
-     "score": 1101
+     "score": 1101,
+     "released": null
     },
     {
      "name": "Mureka V9",
      "creator": "Mureka",
-     "score": 1063
+     "score": 1063,
+     "released": null
     },
     {
      "name": "Lyria 3.5",
      "creator": "Google",
-     "score": 1050
+     "score": 1050,
+     "released": null
     },
     {
      "name": "Lyria 3 Pro",
      "creator": "Google",
-     "score": 1048
+     "score": 1048,
+     "released": null
     },
     {
      "name": "Eleven Music v2.5",
      "creator": "ElevenLabs",
-     "score": 1016
+     "score": 1016,
+     "released": null
     },
     {
      "name": "Eleven Music v2",
      "creator": "ElevenLabs",
-     "score": 1002
+     "score": 1002,
+     "released": null
     }
    ]
   },
@@ -1326,42 +1381,50 @@
     {
      "name": "Suno v6",
      "creator": "Suno",
-     "score": 1148
+     "score": 1148,
+     "released": null
     },
     {
      "name": "Suno v6-mini",
      "creator": "Suno",
-     "score": 1114
+     "score": 1114,
+     "released": null
     },
     {
      "name": "Mureka V9.5",
      "creator": "Mureka",
-     "score": 1084
+     "score": 1084,
+     "released": null
     },
     {
      "name": "Mureka V9",
      "creator": "Mureka",
-     "score": 1083
+     "score": 1083,
+     "released": null
     },
     {
      "name": "Lyria 3 Pro",
      "creator": "Google",
-     "score": 1080
+     "score": 1080,
+     "released": null
     },
     {
      "name": "Lyria 3.5",
      "creator": "Google",
-     "score": 1078
+     "score": 1078,
+     "released": null
     },
     {
      "name": "Eleven Music",
      "creator": "ElevenLabs",
-     "score": 1021
+     "score": 1021,
+     "released": null
     },
     {
      "name": "Stable Audio 3 Large",
      "creator": "Stability.ai",
-     "score": 1014
+     "score": 1014,
+     "released": null
     }
    ]
   },
@@ -1373,42 +1436,50 @@
     {
      "name": "Fun-Realtime-ASR-preview",
      "creator": "Alibaba",
-     "score": 1.7
+     "score": 1.7,
+     "released": null
     },
     {
      "name": "MAI-Transcribe-2",
      "creator": "Microsoft AI",
-     "score": 2.0
+     "score": 2.0,
+     "released": null
     },
     {
      "name": "Voxtral Small Transcribe 3",
      "creator": "Mistral",
-     "score": 2.1
+     "score": 2.1,
+     "released": null
     },
     {
      "name": "Scribe v2, ElevenLabs",
      "creator": "ElevenLabs",
-     "score": 2.2
+     "score": 2.2,
+     "released": null
     },
     {
      "name": "Voxtral Mini Transcribe 3",
      "creator": "Mistral",
-     "score": 2.2
+     "score": 2.2,
+     "released": null
     },
     {
      "name": "Grok Voice Transcribe 2.0",
      "creator": "SpaceXAI",
-     "score": 2.3
+     "score": 2.3,
+     "released": null
     },
     {
      "name": "MAI-Transcribe-1.5",
      "creator": "Microsoft AI",
-     "score": 2.4
+     "score": 2.4,
+     "released": null
     },
     {
      "name": "StepAudio 3 ASR",
      "creator": "StepFun",
-     "score": 2.5
+     "score": 2.5,
+     "released": null
     }
    ]
   },
@@ -1419,44 +1490,52 @@
      "name": "Phonic 1",
      "creator": "Phonic",
      "score": 80.0,
+     "released": null,
      "variant": "High"
     },
     {
      "name": "GPT-Live-1",
      "creator": "OpenAI",
      "score": 74.0,
+     "released": null,
      "variant": "Astra, medium"
     },
     {
      "name": "Grok Voice 3.0",
      "creator": "SpaceXAI",
-     "score": 72.0
+     "score": 72.0,
+     "released": null
     },
     {
      "name": "Gemini 3.8 Live Extended Thinking",
      "creator": "Google",
      "score": 69.0,
+     "released": null,
      "variant": "High"
     },
     {
      "name": "Grok Voice 2.0",
      "creator": "SpaceXAI",
-     "score": 56.0
+     "score": 56.0,
+     "released": null
     },
     {
      "name": "Qwen Audio 3.0 Realtime Plus",
      "creator": "Alibaba",
-     "score": 55.0
+     "score": 55.0,
+     "released": null
     },
     {
      "name": "Grok Voice 1.0",
      "creator": "SpaceXAI",
-     "score": 52.0
+     "score": 52.0,
+     "released": null
     },
     {
      "name": "Eleven Realtime v1 Max",
      "creator": "ElevenLabs",
-     "score": 48.0
+     "score": 48.0,
+     "released": null
     }
    ]
   }
