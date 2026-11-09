@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>koirosvg</title>
-<meta name="description" content="koirosvg.com: AI-opas (mallit, koodausagentit ja työkalut), YO-tutka ja hyppymittari.">
+<meta name="description" content="koirosvg.com: AI-opas (mallit, koodausagentit ja työkalut), YO-tutka, hyppymittari ja visakaksintaisto.">
 <meta name="theme-color" content="#081427">
 <link rel="canonical" href="https://koirosvg.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://koirosvg.com/">
 <meta property="og:title" content="koirosvg.com">
-<meta property="og:description" content="AI-opas, YO-tutka ja hyppymittari.">
+<meta property="og:description" content="AI-opas, YO-tutka, hyppymittari ja visakaksintaisto.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -110,7 +110,7 @@ footer a:hover{color:var(--accent)}
     <div>
       <div class="eyebrow">koirosvg.com</div>
       <h1>Näe mikä on tulossa.</h1>
-      <p class="lede">Kolme tutkaa: tekoälymallien, -agenttien ja -työkalujen kärki, ylioppilaskokeiden aiheet ja hyppysi kameralla mitattuna.</p>
+      <p class="lede">Tekoälymallien, -agenttien ja -työkalujen kärki, ylioppilaskokeiden aiheet, hyppysi kameralla mitattuna ja tietovisat kaveria vastaan.</p>
     </div>
     <div class="radar" id="radar-box">
       <canvas id="radar" aria-hidden="true"></canvas>
@@ -139,6 +139,11 @@ footer a:hover{color:var(--accent)}
       <p>Pystyhyppy, kosketuskorkeus, vauhditon pituus, kolmiloikka ja viisiloikka puhelimen kameralla: luuranko kuvan päällä, laatuvaroitukset ja oma historia. Kaikki lasketaan laitteella.</p>
       <span class="go">Avaa hyppymittari →</span>
     </a>
+    <a class="tool" href="/visa" data-blip="visa">
+      <div class="hd"><h2>Visakaksintaisto</h2><span class="sig">● 1v1 · reaaliaika</span></div>
+      <p>Tietovisoja kaveria vastaan samaan aikaan: kirjoita maat, pääkaupungit ja muut listat ennen kuin aika loppuu tai kaveri ehtii ensin. Huone linkillä, ei tiliä.</p>
+      <span class="go">Avaa visa →</span>
+    </a>
   </nav>
   <footer><a href="/tietosuoja">Tietosuoja</a><span>Ei analytiikkaa eikä evästeitä.</span></footer>
   <a class="lock" href="https://oma.koirosvg.com" aria-label="Oma alue (kirjautuminen)" title="Oma alue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></a>
@@ -157,7 +162,7 @@ footer a:hover{color:var(--accent)}
 
   // ---- Radar: one named blip per tool card plus one unnamed for atmosphere (new tool = card + blip) ----
   const box = $('#radar-box'), cv = $('#radar'), cx = cv.getContext('2d');
-  const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {a:3.4, r:.45, t:''}];
+  const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {id:'visa', a:0.75, r:.66, t:'Visakaksintaisto', href:'/visa'}, {a:3.4, r:.45, t:''}];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const TAU = Math.PI * 2, R_SHARE = 0.472;   // ring radius as a share of the canvas (the blip links use the same)
   let W = 0, small = false, bg = null, beam = null, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0;

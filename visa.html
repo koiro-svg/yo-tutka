@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visakaksintaisto · koirosvg.com</title>
+<meta name="description" content="Tietovisoja kaveria vastaan reaaliajassa: kirjoita maat, pääkaupungit ja muut listat ennen kuin aika loppuu tai kaveri ehtii ensin.">
+<link rel="canonical" href="https://koirosvg.com/visa">
+<style>
+/* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
+   scripts/check_tokens.py (run by the Vercel build) fails when a page's copy differs: edit this file, then run
+   `python3 scripts/check_tokens.py --write`. Fonts come from this server (OFL, fonts/OFL.md), cached for a year: changing a font file = raise its ?v=. Tokens sit in :where()
+   (zero specificity), so a page's own :root still wins while it migrates. Always dark; the ink scale is one step brighter
+   than oma.koirosvg.com's ui.css, because small mono text here must pass 4.5:1. */
+@font-face{font-family:"Unbounded";src:url("/fonts/Unbounded-latin-var.woff2?v=1") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400.woff2?v=1") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-700.woff2?v=1") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2?v=1") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2?v=1") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
+:where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+[hidden]:not([hidden=until-found i]){display:none!important}
+/* Shared components (kt- prefix: page classes like .card or .chip stay the page's own). */
+.kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.kt-tab{font:700 14px var(--font-body);color:var(--ink-2);background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.kt-tab:hover{color:var(--ink);border-color:var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-tab .n{font:600 11px var(--font-mono);opacity:.8;margin-left:4px}
+.kt-btn{font:700 14px var(--font-body);color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.kt-btn:hover{border-color:var(--accent)}
+.kt-btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-btn.sm{padding:4px 10px;font-size:13px}
+.kt-input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:10px 14px;min-width:0}
+.kt-input::placeholder{color:var(--ink-3)}
+.kt-input:focus{outline:none;border-color:var(--accent)}
+.kt-status{font:500 12px var(--font-mono);color:var(--ink-3)}
+.kt-status b{color:var(--ok);font-weight:600}
+.kt-status.stale b{color:var(--warn)}
+.kt-status.bad b{color:var(--bad)}
+.kt-note{background:var(--warn-soft);color:var(--ink);border-radius:var(--radius-m);padding:12px 14px;font-size:13px}
+.kt-flash{animation:kt-flash 1.8s ease-out}
+@keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
+@media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
+/* Site search hits (site-search.js hitsHtml): the home page and the YO bar. */
+.kt-hits{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.kt-hits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.kt-hits a:hover,.kt-hits a:focus-visible{border-color:var(--accent)}
+.kt-hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.kt-hits span,.kt-hits .none{color:var(--ink-3);font-size:13px}
+.kt-hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+/* /koiro-tokens */
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-body)}
+main{max-width:1120px;margin:0 auto;padding:18px 16px 64px;overflow-wrap:anywhere}
+h1{font:700 clamp(24px,5vw,38px)/1.15 var(--font-display);margin:10px 0 6px}
+h2{font:600 15px/1.3 var(--font-display);margin:0 0 12px}
+h3{font:600 12px var(--font-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 8px;display:flex;justify-content:space-between;gap:8px}
+p{margin:0}
+a{color:var(--accent)}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.crumb{font:500 13px var(--font-mono);color:var(--ink-3);text-decoration:none;padding-block:8px}
+.crumb:hover{color:var(--accent)}
+.lead{color:var(--ink-2);max-width:62ch;margin-bottom:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);padding:16px;min-width:0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin-top:14px}
+.wide{grid-column:1/-1}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row .kt-input{flex:1 1 170px}
+.stack{display:grid;gap:12px}
+.code{flex:0 1 110px!important;text-transform:uppercase;font-family:var(--font-mono);letter-spacing:.14em;text-align:center}
+.bigcode{font:600 34px/1 var(--font-mono);letter-spacing:.16em;color:var(--accent)}
+.muted{color:var(--ink-3);font-size:14px}
+.err{color:var(--bad);font-size:14px}
+.kt-note{margin-top:10px}
+.lbl{font:600 12px var(--font-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px}
+.players{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.players li{display:flex;gap:8px;align-items:center}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--c,var(--ink-3));flex:none}
+.tag{font:500 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:1px 7px}
+.quizzes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:6px}
+.quiz{all:unset;box-sizing:border-box;cursor:pointer;border:1px solid var(--line);border-radius:var(--radius-m);padding:9px 12px;background:var(--surface-2);display:grid;gap:1px}
+.quiz:hover{border-color:var(--accent)}
+.quiz:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.quiz[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft)}
+.quiz b{font-size:14px;line-height:1.3}
+.quiz small{font:500 11px var(--font-mono);color:var(--ink-3)}
+.start{margin-top:16px;font-size:16px;padding:11px 22px}
+.chat{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:4px;font-size:14px}
+.chat b{color:var(--c,var(--ink))}
+.gamebar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 12px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.gametitle{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;justify-content:space-between}
+.gametitle b{font:600 15px var(--font-display)}
+.play{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.timer{font:600 26px/1 var(--font-mono);min-width:82px;text-align:center}
+.timer.low{color:var(--bad)}
+.answer{flex:1 1 130px;font-size:18px;padding:11px 14px}
+.flash{min-height:20px;font-size:13px;color:var(--warn)}
+.scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:6px}
+.score{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:5px 9px;display:grid;gap:3px;min-width:0}
+.score.gone{opacity:.5}
+.score div{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.score b{color:var(--c);overflow-wrap:anywhere}
+.score span{font:600 13px var(--font-mono);white-space:nowrap}
+.meter{height:4px;background:var(--line);border-radius:2px}
+.meter i{display:block;height:100%;width:0;background:var(--c);border-radius:2px;transition:width .2s}
+.count{font:700 clamp(70px,16vw,130px)/1 var(--font-display);color:var(--accent);text-align:center;padding:40px 0}
+.cells{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:4px}
+.cell{min-height:32px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:5px 8px;font-size:14px;line-height:1.25;display:grid;align-content:center;position:relative}
+.hint{font-size:12px;color:var(--ink-3)}
+.ans{min-height:17px;font-weight:700}
+.cell.on{background:color-mix(in srgb,var(--c) 16%,var(--surface));border-color:color-mix(in srgb,var(--c) 55%,var(--line))}
+.cell.on .ans{color:var(--c)}
+.cell.pend{opacity:.55}
+.cell.miss{border-style:dashed}
+.cell.miss .ans{color:var(--bad);font-weight:400}
+.who{position:absolute;top:3px;right:6px;font:600 10px var(--font-mono);color:var(--c)}
+.rank{width:100%;border-collapse:collapse;font-size:15px;margin-top:6px}
+.rank td{padding:7px 4px;border-top:1px solid var(--line)}
+.rank td:nth-child(n+3){text-align:right;font-family:var(--font-mono);font-size:14px;white-space:nowrap}
+.rank b{color:var(--c)}
+.winner{font:700 clamp(20px,4vw,30px)/1.2 var(--font-display);color:var(--accent);margin:8px 0}
+.stats{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:14px}
+.stats li{display:flex;justify-content:space-between;gap:12px}
+.stats span:last-child{font:500 13px var(--font-mono);color:var(--ink-2);white-space:nowrap}
+footer{margin-top:28px;color:var(--ink-3);font-size:13px}
+@media (prefers-reduced-motion:reduce){.meter i{transition:none}}
+</style>
+</head>
+<body>
+<main id="app"><p class="muted">Ladataan…</p></main>
+<script>
+(() => {
+'use strict';
+
+// Public by design: the publishable key only opens Realtime channels here, no tables are used.
+const SUPABASE = { url: 'https://mybfsckcywtiqttlbfav.supabase.co', key: 'sb_publishable_eB5DMKPnvtQXmI1qDRtQwQ_2c7TmI_i' };
+const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js';
+const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
+
+const STORE_KEY = 'visa-v1';
+const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
+const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000;
+const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
+const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
+const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
+
+const T = {
+  fi: {
+    back: '← koirosvg.com', title: 'Visakaksintaisto',
+    lead: 'Kirjoita maat, pääkaupungit ja muut listat kaveria vastaan samaan aikaan. Ei tiliä: luo huone ja lähetä linkki.',
+    nick: 'Nimimerkki', nickPh: 'Nimimerkkisi', nickNeeded: 'Kirjoita ensin nimimerkki.',
+    create: 'Luo huone', or: 'tai liity koodilla', join: 'Liity', joinRoom: c => `Liity huoneeseen ${c}`, badCode: 'Koodissa on neljä merkkiä.',
+    mine: 'Oma tilanne', vs: 'Kaveria vastaan', best: 'Ennätykset', none: 'Ei vielä pelattuja pelejä. Tulokset säilyvät vain tässä selaimessa.',
+    room: 'Huone', copy: 'Kopioi linkki', copied: 'Kopioitu', leave: 'Poistu', conn: 'Yhdistetään…', online: 'Yhdistetty', lost: 'Yhteys katkesi, yritetään uudelleen…',
+    host: 'vetäjä', you: 'sinä', alone: 'Tässä huoneessa ei ollut ketään muuta. Tarkista koodi tai odota kaveria.',
+    full: 'Huone on täynnä.', noConn: 'Yhteyskirjaston lataus epäonnistui. Yritä uudelleen.', noData: 'Visojen lataus epäonnistui. Lataa sivu uudelleen.',
+    chat: 'Chat', chatPh: 'Kirjoita viesti', send: 'Lähetä', chatNone: 'Viestit näkyvät vain huoneessa olijoille eivätkä tallennu.',
+    settings: 'Peli', mode: 'Pelitapa', parallel: 'Rinnakkain', race: 'Kilpajako',
+    parallelInfo: 'Jokaisella on oma lista. Eniten oikein voittaa, tasatilanteessa se, joka sai viimeisen vastauksensa aiemmin.',
+    raceInfo: 'Yhteinen lista: kun joku ehtii ensin, vastaus on hänen eikä kelpaa enää muille.',
+    time: 'Aika', mul: { 0.5: 'Lyhyt', 1: 'Normaali', 2: 'Pitkä' }, quiz: 'Visa',
+    start: 'Aloita peli', solo: 'Harjoittele yksin', waitHost: n => `Odotetaan, että ${n} aloittaa pelin.`,
+    typeHere: 'Kirjoita vastaus', giveUp: 'Luovuta', sure: 'Varmasti?', out: 'Luovutit. Odotetaan muita.', spectate: 'Peli on kesken, seuraat sivusta.',
+    taken: n => `${n} ehti ensin`, already: 'Tämä on jo listalla',
+    timeup: 'Aika loppui, lasketaan tuloksia…',
+    win: n => `${n} voitti!`, youWin: 'Voitit!', draw: 'Tasapeli', noScore: 'Kukaan ei saanut pisteitä',
+    rematch: 'Uusintaottelu', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen', left: 'poistui',
+    h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
+    privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
+  },
+  en: {
+    back: '← koirosvg.com', title: 'Quiz Duel',
+    lead: 'Type countries, capitals and other lists against a friend at the same time. No account: create a room and send the link.',
+    nick: 'Nickname', nickPh: 'Your nickname', nickNeeded: 'Enter a nickname first.',
+    create: 'Create room', or: 'or join with a code', join: 'Join', joinRoom: c => `Join room ${c}`, badCode: 'The code has four characters.',
+    mine: 'Your record', vs: 'Against friends', best: 'Best results', none: 'No games yet. Results stay in this browser only.',
+    room: 'Room', copy: 'Copy link', copied: 'Copied', leave: 'Leave', conn: 'Connecting…', online: 'Connected', lost: 'Connection lost, retrying…',
+    host: 'host', you: 'you', alone: 'Nobody else was in this room. Check the code or wait for your friend.',
+    full: 'The room is full.', noConn: 'Could not load the connection library. Try again.', noData: 'Could not load the quizzes. Reload the page.',
+    chat: 'Chat', chatPh: 'Write a message', send: 'Send', chatNone: 'Messages are only visible to people in the room and are not saved.',
+    settings: 'Game', mode: 'Mode', parallel: 'Side by side', race: 'Race',
+    parallelInfo: 'Everyone has their own list. Most correct wins; on a tie, whoever got their last answer earlier.',
+    raceInfo: 'One shared list: whoever gets an answer first owns it and nobody else can use it.',
+    time: 'Time', mul: { 0.5: 'Short', 1: 'Normal', 2: 'Long' }, quiz: 'Quiz',
+    start: 'Start game', solo: 'Practice alone', waitHost: n => `Waiting for ${n} to start the game.`,
+    typeHere: 'Type an answer', giveUp: 'Give up', sure: 'Sure?', out: 'You gave up. Waiting for the others.', spectate: 'A game is running, you are watching.',
+    taken: n => `${n} got there first`, already: 'Already on the list',
+    timeup: 'Time is up, counting results…',
+    win: n => `${n} won!`, youWin: 'You won!', draw: 'Draw', noScore: 'Nobody scored',
+    rematch: 'Rematch', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last', left: 'left',
+    h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
+    privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
+  },
+};
+
+const app = document.getElementById('app');
+let DATA = null;               // data/visa.json
+const QUIZ = new Map();        // quiz id → quiz
+let sb = null, sbLoad = null;  // supabase client, its pending load
+let R = null;                  // current room
+let G = null;                  // current game
+let V = {};                    // DOM refs of the current view
+let pendingCode = null, createdCode = null, homeError = null;
+
+// ---- storage (conveniences only: every access may throw in a private window) ----
+function readJson(storage, key) { try { return JSON.parse(storage.getItem(key)) || null; } catch { return null; } }
+function writeStr(storage, key, v) { try { storage.setItem(key, v); } catch { /* stays in memory */ } }
+const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [] }, readJson(localStorage, STORE_KEY));
+if (!T[P.lang]) P.lang = 'fi';
+const save = () => writeStr(localStorage, STORE_KEY, JSON.stringify(P));
+
+function randomId(len, alphabet) {
+  const bytes = crypto.getRandomValues(new Uint8Array(len));
+  return Array.from(bytes, b => alphabet[b % alphabet.length]).join('');
+}
+const ME = { id: (() => {
+  let id = null;
+  try { id = sessionStorage.getItem('visa-id'); } catch { /* new id below */ }
+  if (!id) { id = randomId(16, 'abcdefghijklmnopqrstuvwxyz0123456789'); writeStr(sessionStorage, 'visa-id', id); }
+  return id;
+})() };
+
+// ---- helpers ----
+const t = (key, ...args) => { const v = T[P.lang][key]; return typeof v === 'function' ? v(...args) : v; };
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === false || v == null) continue;
+    if (k === 'class') el.className = v;
+    else if (k === 'text') el.textContent = v;
+    else if (k === 'value') el.value = v;
+    else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? '' : v);
+  }
+  for (const c of kids.flat()) if (c != null && c !== false) el.append(c);
+  return el;
+}
+// Must stay identical to norm() in scripts/validate_visa.py.
+const norm = s => s.normalize('NFD').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+const cleanName = x => String(x ?? '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, NAME_MAX);
+const clock = ms => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
+const minutes = sec => sec < 120 ? `${sec} s` : `${Math.round(sec / 60)} min`;
+const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, Number(x) || 0));
+const parseCode = s => { const c = String(s || '').replace(/^#/, '').toUpperCase(); return /^[A-HJ-NP-Z2-9]{4}$/.test(c) ? c : null; };
+const quizName = q => q.title[P.lang];
+
+function buildItems(q) {
+  if (q.items) return q.items.map(it => ({ fi: it.fi, en: it.en, group: null, hint: it.h == null ? null : (typeof it.h === 'string' ? { fi: it.h, en: it.h } : it.h) }));
+  let pool = DATA.countries;
+  if (q.cont) pool = pool.filter(c => q.cont.includes(c.c));
+  if (q.ids) pool = pool.filter(c => q.ids.includes(c.id));
+  const group = c => q.groups ? c.c : null;
+  return q.ans === 'name'
+    ? pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c) }))
+    : pool.map(c => ({ fi: c.capFi, en: c.capEn, hint: { fi: c.fi[0], en: c.en[0] }, group: group(c) }));
+}
+
+function getClient() {
+  if (sb) return Promise.resolve(sb);
+  if (!sbLoad) sbLoad = new Promise((resolve, reject) => {
+    const el = document.createElement('script');
+    el.src = SB_JS; el.integrity = SB_SRI; el.crossOrigin = 'anonymous';
+    el.onload = () => {
+      sb = window.supabase.createClient(SUPABASE.url, SUPABASE.key, {
+        auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
+        realtime: { params: { eventsPerSecond: 40 } },
+      });
+      resolve(sb);
+    };
+    el.onerror = () => { sbLoad = null; reject(new Error('supabase-js')); };
+    document.head.append(el);
+  });
+  return sbLoad;
+}
+
+// ---- room ----
+const hostId = () => R?.players[0]?.id ?? null;
+const isHost = () => hostId() === ME.id;
+const fromHost = m => !R.players.length || hostId() === m.from;
+const nameOf = id => G?.players.find(p => p.id === id)?.name ?? R?.players.find(p => p.id === id)?.name ?? '?';
+function colorOf(id) {
+  const list = G?.players.some(p => p.id === id) ? G.players : (R?.players ?? []);
+  const i = list.findIndex(p => p.id === id);
+  return COLORS[Math.max(0, i) % COLORS.length];
+}
+function send(type, payload) {
+  if (R?.ch && R.connected) R.ch.send({ type: 'broadcast', event: 'm', payload: { t: type, from: ME.id, ...payload } });
+}
+
+async function joinRoom(code, created) {
+  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, viaLink: !created, alone: false, showResults: false, cat: DATA.quizzes[0].cat, lastEnd: null };
+  G = null;
+  render();
+  let client;
+  try { client = await getClient(); } catch {
+    R = null; homeError = 'noConn'; history.replaceState(null, '', location.pathname); render(); return;
+  }
+  if (R?.code !== code) return;
+  const ch = client.channel(`visa:${code}`, { config: { broadcast: { self: false }, presence: { key: ME.id } } });
+  R.ch = ch;
+  ch.on('broadcast', { event: 'm' }, ({ payload }) => onMessage(payload));
+  ch.on('presence', { event: 'sync' }, onPresence);
+  ch.subscribe(status => {
+    if (R?.ch !== ch) return;
+    if (status === 'SUBSCRIBED') {
+      R.connected = true;
+      clearTimeout(R.trackT);
+      R.trackT = setTimeout(() => track(ch), 350);   // lets presence_state arrive first, see track()
+      send('hello', {});
+    } else {
+      R.connected = false;
+    }
+    paintStatus();
+  });
+  if (R.viaLink) R.aloneT = setTimeout(() => { if (R && R.players.length <= 1 && !G) { R.alone = true; paintPlayers(); } }, 3000);
+}
+
+// The host is the earliest `joined`. A newcomer always ranks after everyone present, so a device with a wrong clock can't
+// take over the room; the value is kept for the tab so that a reload keeps the rank.
+function track(ch) {
+  if (R?.ch !== ch) return;
+  const key = `visa-joined-${R.code}`;
+  let joined = 0;
+  try { joined = Number(sessionStorage.getItem(key)) || 0; } catch { /* new value below */ }
+  if (!joined) {
+    const others = Object.values(ch.presenceState()).flat().map(m => Number(m.joined) || 0);
+    joined = Math.max(Date.now(), ...others.map(x => x + 1));
+    writeStr(sessionStorage, key, String(joined));
+  }
+  ch.track({ name: cleanName(P.nick), joined });
+}
+
+function leaveRoom() {
+  if (!R) return;
+  clearTimeout(R.trackT); clearTimeout(R.aloneT);
+  if (R.ch && sb) sb.removeChannel(R.ch);
+  R = null; G = null; V = {};
+}
+
+function onPresence() {
+  if (!R?.ch) return;
+  const list = Object.entries(R.ch.presenceState()).map(([id, metas]) => {
+    const m = metas[metas.length - 1] || {};
+    return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0 };
+  }).sort((a, b) => a.joined - b.joined || (a.id < b.id ? -1 : 1));
+  R.players = list;
+  if (list.findIndex(p => p.id === ME.id) >= MAX_PLAYERS) {
+    leaveRoom(); homeError = 'full'; location.hash = ''; return;
+  }
+  if (list.length > 1) R.alone = false;
+  paintPlayers();
+  paintSettings();
+  if (G && !G.over) { paintScores(); maybeFinish(); }
+}
+
+function route() {
+  const code = parseCode(location.hash);
+  if (R && R.code === code) return;
+  if (R) leaveRoom();
+  if (!code) { pendingCode = null; render(); return; }
+  if (!cleanName(P.nick)) { pendingCode = code; render(); return; }
+  pendingCode = null;
+  const created = createdCode === code;
+  createdCode = null;
+  joinRoom(code, created);
+}
+
+// ---- incoming messages: everything here is untrusted input from other browsers ----
+function onMessage(m) {
+  if (!R || !m || typeof m.from !== 'string' || m.from === ME.id) return;
+  const same = G && m.seq === G.seq;
+  switch (m.t) {
+    case 'hello': if (isHost()) send('snap', snapshot()); break;
+    case 'settings': if (fromHost(m)) applySettings(m.s); break;
+    case 'snap': if (fromHost(m)) applySnapshot(m); break;
+    case 'start': if (fromHost(m)) beginGame(m); break;
+    case 'chat': addChat(m.from, m.text); break;
+    case 'found': if (same && !G.over && G.mode === 'parallel') addFound(m.from, [m.i], m.t2); break;
+    case 'have': if (same && !G.over && G.mode === 'parallel' && Array.isArray(m.l)) addFound(m.from, m.l, m.t2); break;
+    case 'claim': if (same && !G.over && G.mode === 'race' && isHost()) grant(m.i, m.from, m.t2); break;
+    case 'claimed': if (same && !G.over && G.mode === 'race' && fromHost(m)) applyClaim(m.i, m.by, m.t2); break;
+    case 'claims': if (same && !G.over && G.mode === 'race' && fromHost(m) && Array.isArray(m.c)) m.c.forEach(c => applyClaim(c[0], c[1], c[2])); break;
+    case 'done': if (same && !G.over) { G.done.add(m.from); maybeFinish(); } break;
+    case 'end': if (same && !G.over && fromHost(m)) applyEnd(m); break;
+  }
+}
+
+function applySettings(s) {
+  if (!s || !QUIZ.has(s.quiz) || !MODES.includes(s.mode) || !MULS.includes(s.mul)) return;
+  R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul };
+  R.cat = QUIZ.get(s.quiz).cat;
+  paintSettings();
+}
+
+function snapshot() {
+  const s = { s: R.settings };
+  if (G && !G.over) s.game = {
+    seq: G.seq, quiz: G.quizId, mode: G.mode, mul: G.mul, players: G.players, elapsed: Math.round(performance.now() - G.startAt),
+    found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done],
+  };
+  return s;
+}
+const claimList = () => [...G.claims].map(([i, c]) => [i, c.by, c.t]);
+
+function applySnapshot(m) {
+  applySettings(m.s);
+  const g = m.game;
+  if (!g) return;
+  if (!G || G.seq !== g.seq) beginGame(g);
+  if (!G || G.seq !== g.seq || G.over) return;
+  if (Array.isArray(g.found)) for (const f of g.found) if (Array.isArray(f) && Array.isArray(f[1])) addFound(f[0], f[1], f[2]);
+  if (Array.isArray(g.claims)) for (const c of g.claims) if (Array.isArray(c)) applyClaim(c[0], c[1], c[2]);
+  if (Array.isArray(g.done)) for (const id of g.done) if (typeof id === 'string') G.done.add(id);
+  if (G.done.has(ME.id)) G.out = true;
+  syncInput();
+}
+
+function addChat(from, text) {
+  const clean = String(text ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, CHAT_MAX);
+  if (!clean) return;
+  R.chat.push({ from, name: nameOf(from), text: clean });
+  R.chat = R.chat.slice(-CHAT_KEEP);
+  paintChat();
+}
+
+// ---- game ----
+function beginGame(m) {
+  if (!QUIZ.has(m.quiz) || !MODES.includes(m.mode) || !MULS.includes(m.mul) || !Number.isFinite(m.seq) || !Array.isArray(m.players)) return;
+  if (G && G.seq === m.seq) return;
+  const players = m.players.slice(0, MAX_PLAYERS).filter(p => p && typeof p.id === 'string').map(p => ({ id: p.id.slice(0, 40), name: cleanName(p.name) || '?' }));
+  if (!players.length) return;
+  const quiz = QUIZ.get(m.quiz);
+  const items = buildItems(quiz);
+  const answers = new Map();
+  items.forEach((it, i) => { for (const a of [...it.fi, ...it.en]) answers.set(norm(a), i); });
+  const durMs = quiz.t * 1000 * m.mul;
+  const now = performance.now();
+  const elapsed = clamp(m.elapsed, -COUNTDOWN_MS, durMs + LOCAL_WATCHDOG_MS);
+  G = {
+    seq: m.seq, quizId: m.quiz, quiz, items, answers, mode: m.mode, mul: m.mul, durMs, players,
+    startAt: now - elapsed, endAt: now - elapsed + durMs,
+    found: new Map(players.map(p => [p.id, { set: new Set(), t: 0 }])), claims: new Map(), pending: new Map(), done: new Set(),
+    state: 'count', over: false, finishing: false, out: !players.some(p => p.id === ME.id), spectator: !players.some(p => p.id === ME.id),
+    results: null, cells: [], lastRepair: now, holdT: 0, flashT: 0, confirmT: 0,
+  };
+  R.showResults = false;
+  render();
+}
+
+const available = i => G.mode === 'race' ? !G.claims.has(i) && !G.pending.has(i) : !G.found.get(ME.id).set.has(i);
+const elapsedNow = () => Math.round(clamp(performance.now() - G.startAt, 0, G.durMs));
+const validIndex = i => Number.isInteger(i) && i >= 0 && i < G.items.length;
+
+// "Niger" is complete but also starts "Nigeria", and "Saturn" starts the same item's "Saturnus": accepting at once would
+// leave the rest of the word in the field, so such an answer waits for a pause or Enter.
+function longerAvailable(n) {
+  for (const [a, j] of G.answers) if (a.length > n.length && a.startsWith(n) && available(j)) return true;
+  return false;
+}
+
+function onAnswerInput() {
+  if (G?.state !== 'play' || G.out) return;
+  clearTimeout(G.holdT);
+  const n = norm(V.input.value);
+  if (!n || !G.answers.has(n)) return;
+  const i = G.answers.get(n);
+  if (longerAvailable(n)) {
+    if (available(i)) G.holdT = setTimeout(() => { if (G?.state === 'play' && norm(V.input.value) === n && available(i)) accept(i); }, HOLD_MS);
+    return;
+  }
+  if (available(i)) accept(i); else rejectTaken(i);
+}
+
+function onAnswerKey(e) {
+  if (e.key !== 'Enter' || G?.state !== 'play' || G.out) return;
+  e.preventDefault();
+  clearTimeout(G.holdT);
+  const n = norm(V.input.value);
+  if (G.answers.has(n)) {
+    const i = G.answers.get(n);
+    if (available(i)) accept(i); else rejectTaken(i);
+  } else {
+    V.input.value = '';
+  }
+}
+
+function rejectTaken(i) {
+  V.input.value = '';
+  const owner = G.mode === 'race' ? G.claims.get(i)?.by : null;
+  flash(owner && owner !== ME.id ? t('taken', nameOf(owner)) : t('already'));
+}
+
+function flash(text) {
+  if (!V.flash) return;
+  V.flash.textContent = text;
+  clearTimeout(G.flashT);
+  G.flashT = setTimeout(() => { if (V.flash) V.flash.textContent = ''; }, 1600);
+}
+
+function accept(i) {
+  V.input.value = '';
+  const at = elapsedNow();
+  if (G.mode === 'parallel') {
+    addFound(ME.id, [i], at);
+    send('found', { seq: G.seq, i, t2: at });
+    if (G.found.get(ME.id).set.size === G.items.length) maybeFinish();
+  } else if (isHost()) {
+    grant(i, ME.id, at);
+  } else {
+    G.pending.set(i, { at, sent: performance.now() });
+    paintCell(i);
+    send('claim', { seq: G.seq, i, t2: at });
+  }
+}
+
+function addFound(id, list, at) {
+  const rec = G.found.get(id);
+  if (!rec || list.length > G.items.length) return;
+  let changed = false;
+  for (const i of list) if (validIndex(i) && !rec.set.has(i)) { rec.set.add(i); changed = true; if (id === ME.id) paintCell(i); }
+  if (!changed) return;
+  rec.t = Math.max(rec.t, clamp(at, 0, G.durMs));
+  paintScores();
+  if (rec.set.size === G.items.length) maybeFinish();
+}
+
+// Host only: the first claim that reaches the host owns the answer.
+function grant(i, by, at) {
+  if (!validIndex(i) || G.claims.has(i) || !G.players.some(p => p.id === by)) return;
+  const when = clamp(at, 0, G.durMs);
+  applyClaim(i, by, when);
+  send('claimed', { seq: G.seq, i, by, t2: when });
+  maybeFinish();
+}
+
+function applyClaim(i, by, at) {
+  if (!validIndex(i) || G.claims.has(i) || typeof by !== 'string' || !G.players.some(p => p.id === by)) return;
+  G.claims.set(i, { by, t: clamp(at, 0, G.durMs) });
+  if (G.pending.delete(i) && by !== ME.id) flash(t('taken', nameOf(by)));
+  paintCell(i);
+  paintScores();
+  maybeFinish();
+}
+
+function giveUp() {
+  if (!G || G.out || G.state !== 'play') return;
+  if (!G.confirming) {
+    G.confirming = true;
+    V.giveUp.textContent = t('sure');
+    G.confirmT = setTimeout(() => { if (G) { G.confirming = false; if (V.giveUp) V.giveUp.textContent = t('giveUp'); } }, 3000);
+    return;
+  }
+  clearTimeout(G.confirmT);
+  G.out = true;
+  G.done.add(ME.id);
+  send('done', { seq: G.seq });
+  syncInput();
+  maybeFinish();
+}
+
+// Host only. Ends early when someone has everything, every answer is claimed, or nobody present is still playing.
+function maybeFinish() {
+  if (!G || G.over || G.finishing || G.state === 'count' || !isHost()) return;
+  const total = G.items.length;
+  const complete = G.mode === 'race' ? G.claims.size === total : [...G.found.values()].some(r => r.set.size === total);
+  const here = new Set(R.players.map(p => p.id));
+  const active = G.players.filter(p => here.has(p.id) && !G.done.has(p.id));
+  if (complete || !active.length) finish(300);
+}
+
+function finish(delay) {
+  if (G.over || G.finishing) return;
+  G.finishing = true;
+  const game = G;
+  setTimeout(() => {
+    if (G !== game || G.over) return;
+    const msg = { seq: G.seq, res: tally(), c: G.mode === 'race' ? claimList() : null };
+    send('end', msg);
+    applyEnd(msg);
+    for (const wait of [1000, 3000]) setTimeout(() => { if (R) send('end', msg); }, wait);   // broadcasts can get lost
+  }, delay);
+}
+
+function tally() {
+  return G.players.map(p => {
+    if (G.mode === 'parallel') { const r = G.found.get(p.id); return { id: p.id, n: r.set.size, t: r.t }; }
+    let n = 0, last = 0;
+    for (const c of G.claims.values()) if (c.by === p.id) { n++; last = Math.max(last, c.t); }
+    return { id: p.id, n, t: last };
+  });
+}
+
+function applyEnd(m) {
+  clearTimeout(G.holdT);
+  if (G.mode === 'race' && Array.isArray(m.c)) { G.claims.clear(); for (const c of m.c) if (Array.isArray(c)) applyClaim(c[0], c[1], c[2]); }
+  const byId = new Map((Array.isArray(m.res) ? m.res : []).filter(r => r && typeof r.id === 'string').map(r => [r.id, r]));
+  G.results = G.players.map(p => {
+    const r = byId.get(p.id) || {};
+    return { id: p.id, name: p.name, n: Math.round(clamp(r.n, 0, G.items.length)), t: clamp(r.t, 0, G.durMs) };
+  }).sort((a, b) => b.n - a.n || a.t - b.t);
+  G.over = true; G.state = 'over'; G.pending.clear();
+  R.showResults = true;
+  record();
+  render();
+}
+
+function record() {
+  if (G.spectator || P.seen.includes(G.seq)) return;
+  P.seen = [...P.seen, G.seq].slice(-SEEN_KEEP);
+  const me = G.results.find(r => r.id === ME.id);
+  for (const r of G.results) {
+    if (r.id === ME.id) continue;
+    const key = r.name.toLowerCase();
+    const rec = P.h2h[key] || (P.h2h[key] = { name: r.name, w: 0, l: 0, d: 0 });
+    rec.name = r.name;
+    if (me.n === r.n && me.t === r.t) rec.d++;
+    else if (me.n > r.n || (me.n === r.n && me.t < r.t)) rec.w++;
+    else rec.l++;
+  }
+  if (G.mul === 1 && me.n > 0) {
+    const b = P.best[G.quizId];
+    if (!b || me.n > b.n || (me.n === b.n && me.t < b.t)) P.best[G.quizId] = { n: me.n, t: me.t, total: G.items.length };
+  }
+  save();
+}
+
+function tick() {
+  if (!G || G.over || !R) return;
+  const now = performance.now();
+  if (G.state === 'count') {
+    if (now >= G.startAt) { G.state = 'play'; render(); }
+    else if (V.count) V.count.textContent = String(Math.ceil((G.startAt - now) / 1000));
+    return;
+  }
+  if (V.timer) { const left = G.endAt - now; V.timer.textContent = clock(left); V.timer.classList.toggle('low', left < 10000); }
+  if (G.state === 'play') {
+    for (const [i, p] of G.pending) if (now - p.sent > RETRY_MS) { p.sent = now; send('claim', { seq: G.seq, i, t2: p.at }); }
+    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(); }
+    if (now >= G.endAt) {
+      G.state = 'wait';
+      repair();
+      syncInput();
+      if (isHost()) finish(END_GRACE_MS);
+    }
+  } else if (G.state === 'wait') {
+    if (now > G.endAt + HOST_WATCHDOG_MS && isHost()) finish(0);
+    if (now > G.endAt + LOCAL_WATCHDOG_MS) applyEnd({ seq: G.seq, res: tally(), c: null });
+  }
+}
+
+// Broadcasts are not guaranteed: the absolute state goes out every few seconds so a lost message heals itself.
+function repair() {
+  if (G.mode === 'parallel') {
+    if (!G.spectator) { const r = G.found.get(ME.id); send('have', { seq: G.seq, l: [...r.set], t2: r.t }); }
+  } else if (isHost()) {
+    send('claims', { seq: G.seq, c: claimList() });
+  }
+}
+
+function startGame() {
+  if (!isHost()) return;
+  const s = R.settings;
+  const msg = { seq: Date.now(), quiz: s.quiz, mode: s.mode, mul: s.mul, players: R.players.map(p => ({ id: p.id, name: p.name })), elapsed: -COUNTDOWN_MS };
+  send('start', msg);
+  beginGame(msg);
+}
+
+function setSettings(patch) {
+  if (!isHost()) return;
+  R.settings = { ...R.settings, ...patch };
+  send('settings', { s: R.settings });
+  paintSettings();
+}
+
+// ---- views ----
+function render() {
+  V = {};
+  document.documentElement.lang = P.lang;
+  if (!DATA) return;
+  if (!R) renderHome();
+  else if (G && !G.over) renderGame();
+  else if (G && G.over && R.showResults) renderResults();
+  else renderLobby();
+}
+
+function langTabs() {
+  return h('div', { class: 'kt-tabs', role: 'group', 'aria-label': 'Kieli / Language' }, ['fi', 'en'].map(l =>
+    h('button', { class: 'kt-tab', 'aria-pressed': String(P.lang === l), text: l.toUpperCase(), onclick: () => { P.lang = l; save(); render(); } })));
+}
+const topBar = () => h('div', { class: 'top' }, h('a', { class: 'crumb', href: '/', text: t('back') }), langTabs());
+const foot = () => h('footer', {}, t('privacy') + ' ', h('a', { href: '/tietosuoja', text: t('privacyLink') }));
+
+function renderHome() {
+  const err = h('p', { class: 'err', role: 'alert', text: homeError ? t(homeError) : '' });
+  homeError = null;
+  const nick = h('input', { class: 'kt-input', maxlength: NAME_MAX, placeholder: t('nickPh'), 'aria-label': t('nick'), autocomplete: 'off', value: P.nick, oninput: e => { P.nick = e.target.value; save(); } });
+  const needNick = () => { if (cleanName(P.nick)) return true; err.textContent = t('nickNeeded'); nick.focus(); return false; };
+  const create = () => { if (!needNick()) return; createdCode = randomId(4, CODE_ALPHABET); location.hash = createdCode; };
+  const join = () => {
+    if (!needNick()) return;
+    const c = parseCode(code.value);
+    if (!c) { err.textContent = t('badCode'); code.focus(); return; }
+    if (parseCode(location.hash) === c) route(); else location.hash = c;
+  };
+  const code = h('input', { class: 'kt-input code', maxlength: 4, placeholder: 'ABCD', 'aria-label': 'Koodi / Code', autocomplete: 'off', value: pendingCode || '', onkeydown: e => { if (e.key === 'Enter') join(); } });
+  const startRow = pendingCode
+    ? h('div', { class: 'row' }, h('button', { class: 'kt-btn primary', text: t('joinRoom', pendingCode), onclick: join }))
+    : h('div', { class: 'stack' },
+        h('div', { class: 'row' }, h('button', { class: 'kt-btn primary', text: t('create'), onclick: create })),
+        h('p', { class: 'muted', text: t('or') }),
+        h('div', { class: 'row' }, code, h('button', { class: 'kt-btn', text: t('join'), onclick: join })));
+  const rivals = Object.values(P.h2h);
+  const bests = DATA.quizzes.filter(q => P.best[q.id]);
+  app.replaceChildren(
+    topBar(),
+    h('h1', { text: t('title') }),
+    h('p', { class: 'lead', text: t('lead') }),
+    h('div', { class: 'cols' },
+      h('section', { class: 'card stack' }, h('div', {}, h('div', { class: 'lbl', text: t('nick') }), h('div', { class: 'row' }, nick)), startRow, err),
+      h('section', { class: 'card' }, h('h2', { text: t('mine') }),
+        !rivals.length && !bests.length && h('p', { class: 'muted', text: t('none') }),
+        rivals.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('vs') }), h('ul', { class: 'stats' }, rivals.map(r =>
+          h('li', {}, h('span', { text: r.name }), h('span', { text: `${r.w}–${r.l}` + (r.d ? ` (${r.d})` : '') }))))),
+        bests.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('best') }), h('ul', { class: 'stats' }, bests.map(q =>
+          h('li', {}, h('span', { text: quizName(q) }), h('span', { text: `${P.best[q.id].n}/${P.best[q.id].total}` }))))))),
+    foot());
+}
+
+function renderLobby() {
+  const link = `${location.origin}${location.pathname}#${R.code}`;
+  const copy = h('button', { class: 'kt-btn sm', text: t('copy'), onclick: async () => {
+    try { await navigator.clipboard.writeText(link); copy.textContent = t('copied'); setTimeout(() => { copy.textContent = t('copy'); }, 1500); }
+    catch { V.linkField.hidden = false; V.linkField.select(); }
+  } });
+  V.linkField = h('input', { class: 'kt-input', readonly: true, value: link, hidden: true, 'aria-label': t('copy') });
+  V.status = h('p', { class: 'kt-status' });
+  V.players = h('div', {});
+  V.settings = h('section', { class: 'card wide' });
+  V.chat = chatBox();
+  app.replaceChildren(
+    topBar(),
+    h('h1', { text: t('title') }),
+    h('div', { class: 'cols' },
+      h('section', { class: 'card' },
+        h('h2', { text: t('room') }),
+        h('div', { class: 'row' }, h('span', { class: 'bigcode', text: R.code }), copy, h('button', { class: 'kt-btn sm', text: t('leave'), onclick: () => { location.hash = ''; } })),
+        V.linkField, V.status, V.players),
+      V.chat,
+      V.settings),
+    foot());
+  paintStatus(); paintPlayers(); paintSettings(); paintChat();
+}
+
+function paintStatus() {
+  if (!V.status) return;
+  V.status.replaceChildren(R.connected ? h('b', { text: `● ${t('online')}` }) : (R.ch ? t('lost') : t('conn')));
+  V.status.classList.toggle('stale', !R.connected);
+}
+
+function paintPlayers() {
+  if (!V.players) return;
+  V.players.replaceChildren(
+    h('ul', { class: 'players' }, R.players.map((p, i) => h('li', { style: `--c:${COLORS[i % COLORS.length]}` },
+      h('span', { class: 'dot' }), h('span', { text: p.name }),
+      i === 0 && h('span', { class: 'tag', text: t('host') }), p.id === ME.id && h('span', { class: 'tag', text: t('you') })))),
+    R.alone && h('p', { class: 'kt-note', text: t('alone') }));
+}
+
+function keepFocus(root, paint) {
+  const key = document.activeElement?.dataset?.k;
+  paint();
+  if (key) root.querySelector(`[data-k="${key}"]`)?.focus();
+}
+
+function paintSettings() {
+  if (!V.settings) return;
+  keepFocus(V.settings, () => {
+    const s = R.settings, q = QUIZ.get(s.quiz);
+    const info = h('p', { class: 'muted', text: t(s.mode + 'Info') });
+    if (!isHost()) {
+      V.settings.replaceChildren(h('h2', { text: t('settings') }),
+        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}`), info,
+        h('p', { class: 'muted', style: 'margin-top:12px', text: t('waitHost', R.players[0]?.name ?? '…') }));
+      return;
+    }
+    const tab = (key, label, on, fn) => h('button', { class: 'kt-tab', 'data-k': key, 'aria-pressed': String(on), text: label, onclick: fn });
+    V.settings.replaceChildren(
+      h('h2', { text: t('settings') }),
+      h('div', { class: 'lbl', text: t('mode') }),
+      h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
+      h('p', { class: 'muted', style: 'margin-top:6px' }, info.textContent),
+      h('div', { class: 'lbl', text: t('time') }),
+      h('div', { class: 'kt-tabs' }, MULS.map(x => tab(`x-${x}`, `${T[P.lang].mul[x]} · ${minutes(q.t * x)}`, s.mul === x, () => setSettings({ mul: x })))),
+      h('div', { class: 'lbl', text: t('quiz') }),
+      h('div', { class: 'kt-tabs', style: 'margin-bottom:8px' }, Object.entries(DATA.cats).map(([c, n]) => tab(`c-${c}`, n[P.lang], R.cat === c, () => { R.cat = c; paintSettings(); }))),
+      h('div', { class: 'quizzes' }, DATA.quizzes.filter(x => x.cat === R.cat).map(x =>
+        h('button', { class: 'quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === s.quiz), onclick: () => setSettings({ quiz: x.id }) },
+          h('b', { text: quizName(x) }), h('small', { text: `${buildItems(x).length} · ${minutes(x.t)}` })))),
+      h('button', { class: 'kt-btn primary start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame }));
+  });
+}
+
+function chatBox() {
+  V.chatList = h('ul', { class: 'chat' });
+  const field = h('input', { class: 'kt-input', maxlength: CHAT_MAX, placeholder: t('chatPh'), 'aria-label': t('chatPh'), autocomplete: 'off' });
+  const post = e => {
+    e.preventDefault();
+    const text = field.value.trim();
+    if (!text) return;
+    field.value = '';
+    addChat(ME.id, text);
+    send('chat', { text: text.slice(0, CHAT_MAX) });
+  };
+  return h('section', { class: 'card' }, h('h2', { text: t('chat') }), V.chatList,
+    h('form', { class: 'row', onsubmit: post }, field, h('button', { class: 'kt-btn', text: t('send') })));
+}
+
+function paintChat() {
+  if (!V.chatList) return;
+  V.chatList.replaceChildren(...(R.chat.length
+    ? R.chat.map(m => h('li', { style: `--c:${colorOf(m.from)}` }, h('b', { text: m.name }), ` ${m.text}`))
+    : [h('li', { class: 'muted', text: t('chatNone') })]));
+}
+
+function buildGrid() {
+  const lang = P.lang;
+  G.cells = [];
+  const groups = new Map();
+  G.items.forEach((it, i) => { const g = it.group || ''; if (!groups.has(g)) groups.set(g, []); groups.get(g).push(i); });
+  const sortText = i => (G.items[i].hint ? G.items[i].hint[lang] : G.items[i][lang][0]);
+  const sections = [...groups].map(([g, list]) => {
+    if (!G.quiz.ordered) list.sort((a, b) => sortText(a).localeCompare(sortText(b), lang));
+    return h('section', {},
+      g && h('h3', { text: DATA.continents[g][lang] }),
+      h('div', { class: 'cells', style: g ? '' : 'margin-top:14px' }, list.map(i => {
+        const ans = h('span', { class: 'ans' });
+        const cell = h('div', { class: 'cell' }, G.items[i].hint && h('span', { class: 'hint', text: G.items[i].hint[lang] }), ans);
+        cell.ans = ans;
+        G.cells[i] = cell;
+        return cell;
+      })));
+  });
+  return h('div', {}, sections);
+}
+
+function paintCell(i) {
+  const c = G.cells[i];
+  if (!c) return;
+  let owner = null, pending = false;
+  if (G.mode === 'race') {
+    const cl = G.claims.get(i);
+    if (cl) owner = cl.by;
+    else if (G.pending.has(i)) { owner = ME.id; pending = true; }
+  } else if (G.found.get(ME.id)?.set.has(i)) owner = ME.id;
+  c.ans.textContent = owner || G.over ? G.items[i][P.lang][0] : '';
+  c.classList.toggle('on', !!owner);
+  c.classList.toggle('pend', pending);
+  c.classList.toggle('miss', G.over && !owner);
+  c.querySelector('.who')?.remove();
+  if (owner) {
+    c.style.setProperty('--c', colorOf(owner));
+    if (G.mode === 'race' && !pending) c.append(h('span', { class: 'who', title: nameOf(owner), text: nameOf(owner).slice(0, 1).toUpperCase() }));
+  }
+}
+
+function scoreOf(id) {
+  if (G.mode === 'parallel') return G.found.get(id)?.set.size ?? 0;
+  let n = 0;
+  for (const c of G.claims.values()) if (c.by === id) n++;
+  return n;
+}
+
+function paintScores() {
+  if (!V.scores) return;
+  const here = new Set(R.players.map(p => p.id));
+  V.scores.replaceChildren(...G.players.map(p => {
+    const n = scoreOf(p.id);
+    return h('div', { class: 'score' + (here.has(p.id) ? '' : ' gone'), style: `--c:${colorOf(p.id)}` },
+      h('div', {}, h('b', { text: p.name }), h('span', { text: `${n}/${G.items.length}` })),
+      h('div', { class: 'meter', style: 'display:block' }, h('i', { style: `width:${100 * n / G.items.length}%` })));
+  }));
+}
+
+function syncInput() {
+  if (!V.input) return;
+  const open = G.state === 'play' && !G.out;
+  V.input.disabled = !open;
+  V.giveUp.disabled = !open;
+  V.giveUp.hidden = G.spectator;
+  V.input.hidden = G.spectator;
+  if (G.state === 'wait') V.flash.textContent = t('timeup');
+  else if (G.spectator) V.flash.textContent = t('spectate');
+  else if (G.out) V.flash.textContent = t('out');
+}
+
+function renderGame() {
+  if (G.state === 'count') {
+    V.count = h('div', { class: 'count', 'aria-live': 'polite', text: '3' });
+    app.replaceChildren(h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: t(G.mode) })), V.count);
+    return;
+  }
+  V.timer = h('div', { class: 'timer', role: 'timer', text: clock(G.endAt - performance.now()) });
+  V.input = h('input', { class: 'kt-input answer', placeholder: t('typeHere'), 'aria-label': t('typeHere'), autocomplete: 'off', autocapitalize: 'off', autocorrect: 'off', spellcheck: 'false', enterkeyhint: 'done', oninput: onAnswerInput, onkeydown: onAnswerKey });
+  V.giveUp = h('button', { class: 'kt-btn', text: t('giveUp'), onclick: giveUp });
+  V.flash = h('div', { class: 'flash', 'aria-live': 'polite' });
+  V.scores = h('div', { class: 'scores' });
+  const grid = buildGrid();
+  app.replaceChildren(
+    h('div', { class: 'gamebar' },
+      h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: t(G.mode) })),
+      h('div', { class: 'play' }, V.timer, V.input, V.giveUp),
+      V.scores, V.flash),
+    grid);
+  G.items.forEach((_, i) => paintCell(i));
+  paintScores();
+  syncInput();
+  if (!V.input.disabled) V.input.focus();
+}
+
+function headline() {
+  const [a, b] = G.results;
+  if (a.n === 0) return t('noScore');
+  if (b && a.n === b.n && a.t === b.t) return t('draw');
+  return a.id === ME.id ? t('youWin') : t('win', a.name);
+}
+
+function renderResults() {
+  const others = G.results.filter(r => r.id !== ME.id);
+  const single = others.length === 1 && !G.spectator ? P.h2h[others[0].name.toLowerCase()] : null;
+  const grid = buildGrid();
+  V.chat = chatBox();
+  app.replaceChildren(
+    topBar(),
+    h('h1', { text: quizName(G.quiz) }),
+    h('p', { class: 'winner', text: headline() }),
+    h('div', { class: 'cols' },
+      h('section', { class: 'card' },
+        h('h2', { text: t('results') }),
+        h('table', { class: 'rank' }, h('tbody', {}, G.results.map((r, i) => h('tr', { style: `--c:${colorOf(r.id)}` },
+          h('td', { text: `${i + 1}.` }), h('td', {}, h('b', { text: r.name })),
+          h('td', { text: `${r.n}/${G.items.length}` }), h('td', { text: `${t('lastAt')} ${clock(r.t)}` }))))),
+        single && h('p', { class: 'muted', style: 'margin-top:10px', text: t('h2h', single.name, single.w, single.l, single.d) }),
+        h('div', { class: 'row', style: 'margin-top:14px' },
+          isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
+          h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { R.showResults = false; render(); } }))),
+      V.chat),
+    h('h2', { style: 'margin-top:22px', text: t('answers') }),
+    grid,
+    foot());
+  G.items.forEach((_, i) => paintCell(i));
+  paintChat();
+}
+
+// ---- start ----
+fetch('/data/visa.json').then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then(d => {
+  DATA = d;
+  for (const q of d.quizzes) QUIZ.set(q.id, q);
+  setInterval(tick, 100);
+  addEventListener('hashchange', route);
+  if (parseCode(location.hash)) route(); else render();
+}).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });
+})();
+</script>
+</body>
+</html>

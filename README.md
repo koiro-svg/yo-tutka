@@ -11,6 +11,7 @@ Staattinen sivusto Vercelissä, ei riippuvuuksia. Vercelin build ajaa vain tarki
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
 | `/tietosuoja` | `tietosuoja.html` | YO-harjoittelun käyttäjätilien tietosuojaseloste |
 | `/hyppymittari` | `hyppymittari/index.html` | Hyppymittari: vertikaalihypyn korkeus kameralla (MediaPipe, laitteella) |
+| `/visa` | `visa.html` + `data/visa.json` | Visakaksintaisto: reaaliaikaiset tietovisat kaveria vastaan (Supabase Realtime, ei tilejä) |
 
 ## AI-malliopas – automaattinen päivitys
 - `.github/workflows/update-models.yml` ajaa joka toinen päivä (04:17 UTC) skriptin

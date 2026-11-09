@@ -2,7 +2,7 @@
 
 Mikä tämä on: koirosvg.com-sivuston julkaisurepo. Kotivalikko (`index.html`) ja työkalut:
 AI-opas (`ai.html`: mallit, koodausagentit ja työkalut), YO-tutka (`yo-tutka.html`) ja sen harjoitusosio
-YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
+YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.html`). Repo on **julkinen**.
 
 ## Build & run
 - Ei buildia. `python3 -m http.server` repon juuressa ja avaa `/ai.html`
@@ -11,7 +11,7 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - Vercel julkaisee mainin automaattisesti; `vercel.json`:n `cleanUrls` tekee `/ai` ja `/yo-tutka` -polut, ja 308-redirectit
   ohjaavat vanhat `/ai-opas` → `/ai` ja `/ai-tyokalut` → `/ai?tab=tyokalut` (selain säilyttää #hashin, koska kohteessa ei ole omaa).
   Lyhyt osoite `/yo` → `/yo-tutka` on 307 (ks. sharp edges).
-- Build ajaa vain tarkistukset: `validate_tools.py`, `validate_practice.py`, `check_tokens.py` ja `yo_index.py`.
+- Build ajaa vain tarkistukset: `validate_tools.py`, `validate_practice.py`, `check_tokens.py`, `yo_index.py` ja `validate_visa.py`.
 
 ## Arkkitehtuuri
 - Jokainen sivu on itsenäinen tiedosto (CSS/JS sisällä). Kaikki sivut käyttävät samaa tarkoituksella aina tummaa
@@ -23,7 +23,7 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   omalla palvelimella (`fonts/`, latin-osajoukot, OFL, `fonts/OFL.md`), ei Google Fontsia. Kotivalikossa lisäksi
   canvas-tutka-animaatio. Työkalusivuilla on `← koirosvg.com`-paluulinkki (AI-oppaassa ja tietosuojassa `.crumb` mastheadissa,
   YO-sivuilla yläpalkin `.home`) – pidä se jokaisessa uudessa sivussa.
-- **Kotivalikko (19.10.2026, julkinen-1…7):** kolme korttia (AI-opas `/ai`, YO-tutka, Hyppymittari) ja tutkan pisteet samoilla
+- **Kotivalikko (19.10.2026, julkinen-1…7):** neljä korttia (AI-opas `/ai`, YO-tutka, Hyppymittari, Visakaksintaisto) ja tutkan pisteet samoilla
   nimillä. Pisteet ovat oikeita `<a>`-linkkejä canvasin päällä (%-sijainti samasta kulma/säde-laskusta), kortin hover/fokus
   kääntää viivan sen pisteeseen ja pisteen hover korostaa korttia. AI-kortti hakee `data/ai-models.json`:sta yleiskategorian
   kärjen ja päivitysajan (haun epäonnistuessa ei mitään). Pisteen rengas kertoo sisällön tuoreuden (julkinen-5: täysi ympyrä
@@ -140,8 +140,20 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
   valkoinen luuranko kameran päällä); `← koirosvg.com`-paluulinkki on mukana. MediaPipe Pose + mallit tiedostoina (~26 Mt).
   19.10.2026 lähtien myös asennettava verkoton sovellus (`sw.js`, `manifest.webmanifest`, `icons/`), sarjatila, kaukonäyttö,
   kehityskäyrä tavoitteineen, toisto, vertailu, jakokuva ja varmuuskopio – kaikki laitteella, ei verkkokutsuja.
+- **Visakaksintaisto (`/visa`, 9.11.2026):** 1v1-tietovisat ("kirjoita kaikki" aikarajalla), huone linkillä tai 4 merkin koodilla (`#ABCD`), ei tiliä, enintään 8
+  pelaajaa, chat. Pelitavat `parallel` (omat listat) ja `race` (yhteinen lista, ensimmäinen saa). Yksi tiedosto + `data/visa.json` (maat pääkaupunkeineen ja visat; maavisat johdetaan
+  `countries`-taulusta, `buildItems`), `scripts/validate_visa.py` buildissa. Reaaliaika: Supabase Realtime Broadcast + Presence kanavalla `visa:<koodi>` samassa projektissa kuin
+  tilit, ei tauluja eikä mitään pysyvää palvelimella. Vetäjä = aikaisin `joined`, ja rooli siirtyy automaattisesti seuraavalle. Vetäjä ratkaisee kilpajaon ja lähettää lopputuloksen;
+  voitot ja ennätykset vain selaimessa (`visa-v1`). Sisältö on omaa: faktoja omin nimin, ei JetPunkin visatekstejä, nimeä tai ulkoasua.
 
 ## Known sharp edges (don't regress these)
+- **Visan vastaushyväksyntä (`longerAvailable`):** vastaus, joka on toisen vielä löytämättömän vastauksen alku, odottaa 700 ms tai Enteriä ("Niger"/"Nigeria"), myös saman kohteen pidemmän nimen
+  kohdalla ("Saturn"/"Saturnus"). Muuten sanan loppu jää kenttään ja seuraavat vastaukset eivät enää täsmää.
+- **`norm()` on kahdessa paikassa:** `visa.html` ja `scripts/validate_visa.py` (yhden visan kahdella kohteella ei saa olla samaa normalisoitua vastausta). Muuta molempia kerralla.
+- **Visan viestit ovat toisten selainten syötettä:** `onMessage`-polku tarkistaa indeksit, ajat ja nimet, ja kaikki teksti menee `textContent`in kautta (`h()`), ei `innerHTML`:llä. Pelin tulokset
+  perustuvat pelaajien luottamukseen (kaverien kesken), joten rankingia ei saa rakentaa niiden päälle.
+- **Broadcast ei takaa toimitusta:** visa korjaa itsensä (`repair` 3 s välein absoluuttinen tila, odottavat claimit uudelleen, `end` kolmesti, vahtiajastimet ajan loppuessa). Älä poista näitä, vaikka testissä kaikki viestit menisivät perille.
+- **Uusi pelaaja sijoittuu aina muiden jälkeen (`track`):** ilman tätä väärässä ajassa oleva laite veisi vetäjän roolin ja nollaisi huoneen asetukset.
 - **Hyppymittari tarvitsee `vercel.json`:n CSP-otsakkeen `connect-src 'self'`.** Mukana tuleva
   MediaPipe lähettää käyttötilastoja `odml.pa.googleapis.com`:iin; otsake estää sen (sivu lupaa,
   ettei mitään lähetetä). Älä poista otsaketta äläkä laajenna sitä koko sivustolle ilman testiä.
