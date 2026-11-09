@@ -1,5 +1,5 @@
 {"cats":{"maat":{"fi":"Maat","en":"Countries"},"pk":{"fi":"Pääkaupungit","en":"Capitals"},"alueet":{"fi":"Alueet","en":"Regions"},"yleis":{"fi":"Yleistieto","en":"General"},"liput":{"fi":"Liput","en":"Flags"},"kartat":{"fi":"Kartat","en":"Maps"},"maantieto":{"fi":"Maantieto","en":"Geography"},"suomi":{"fi":"Suomi","en":"Finland"},"historia":{"fi":"Historia","en":"History"},"tiede":{"fi":"Tiede ja luonto","en":"Science and nature"},"urheilu":{"fi":"Urheilu","en":"Sports"},"viihde":{"fi":"Viihde ja kulttuuri","en":"Culture"}},
-"packs":["maantieto-1","maantieto-2","suomi-1","suomi-2","historia-1","historia-2","tiede-1"],
+"packs":["maantieto-1","maantieto-2","suomi-1","suomi-2","historia-1","historia-2","tiede-1","tiede-2","urheilu-1","urheilu-2","viihde-1","viihde-2","valinta-1","valinta-2"],
 "continents":{"EU":{"fi":"Eurooppa","en":"Europe"},"AS":{"fi":"Aasia","en":"Asia"},"AF":{"fi":"Afrikka","en":"Africa"},"NA":{"fi":"Pohjois-Amerikka","en":"North America"},"SA":{"fi":"Etelä-Amerikka","en":"South America"},"OC":{"fi":"Oseania","en":"Oceania"}},
 "countries":[
 {"id":"AL","c":"EU","fi":["Albania"],"en":["Albania"],"capFi":["Tirana"],"capEn":["Tirana"]},

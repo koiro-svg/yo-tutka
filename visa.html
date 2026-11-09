@@ -147,7 +147,7 @@ footer{margin-top:28px;color:var(--ink-3);font-size:13px}
 (() => {
 'use strict';
 
-// Public by design: the publishable key only opens Realtime channels here, no tables are used.
+// Public by design: the publishable key only opens Realtime channels and the two visa_ functions in supabase/schema.sql.
 const SUPABASE = { url: 'https://mybfsckcywtiqttlbfav.supabase.co', key: 'sb_publishable_eB5DMKPnvtQXmI1qDRtQwQ_2c7TmI_i' };
 const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js';
 const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
