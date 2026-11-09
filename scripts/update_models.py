@@ -163,7 +163,7 @@ def media_category(rows, field, meta, seen):
         score = num(m.get(field))
         if score is None:
             continue
-        it = item(m, score)
+        it = item(m, pct(score))  # WER and τ-Voice are fractions; rounding would hide their differences
         if seen.get(m["id"]):
             it["seen"] = seen[m["id"]]
         its.append(it)
