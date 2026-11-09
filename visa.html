@@ -124,7 +124,7 @@ a{color:var(--accent)}
 .filters{margin-bottom:8px}
 .flag{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;margin-bottom:4px}
 .cells.flags{grid-template-columns:repeat(auto-fill,minmax(min(100%,110px),1fr))}
-.cells.wide{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.cells.choice{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .prompt{flex:1 1 130px;font:600 18px/1.25 var(--font-display);text-align:center}
 .map svg{display:block;width:100%;height:auto;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
 .map g path,.map g circle{fill:var(--line);stroke:var(--ink-3);stroke-width:.7;vector-effect:non-scaling-stroke}
@@ -157,7 +157,6 @@ const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP 
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
 const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60;
-const FORMATS = ['list', 'flags', 'map', 'choice'];
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
@@ -223,6 +222,7 @@ let R = null;                  // current room
 let G = null;                  // current game
 let V = {};                    // DOM refs of the current view
 let pendingCode = null, createdCode = null, homeError = null;
+let packsReady = Promise.resolve();   // the home screen needs no packs, joining a room waits for them
 let MAP = null, mapLoad = null;   // data/visa-map.json, only fetched for map quizzes
 let TOP = [];                     // quiz ids of Suosituimmat, empty until the Supabase functions exist
 
@@ -270,6 +270,7 @@ function h(tag, attrs, ...kids) {
 }
 // Must stay identical to norm() in scripts/validate_visa.py.
 const norm = s => s.normalize('NFD').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+const fill = (el, ...kids) => el.replaceChildren(...kids.filter(c => c != null && c !== false));   // replaceChildren would print "false"
 const cleanName = x => String(x ?? '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, NAME_MAX);
 const clock = ms => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
 const minutes = sec => sec < 120 ? `${Math.round(sec)} s` : `${Math.round(sec / 60)} min`;
@@ -298,20 +299,13 @@ function buildItems(q) {
   if (q.cont) pool = pool.filter(c => q.cont.includes(c.c));
   if (q.ids) pool = pool.filter(c => q.ids.includes(c.id));
   const group = c => q.groups ? c.c : null;
-  if (fmt === 'flags') return pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c), flag: c.id.toLowerCase() }));
-  if (fmt === 'map') return pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: null, iso: c.id }));
   return q.ans === 'name'
-    ? pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c) }))
+    ? pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c), iso: c.id }))
     : pool.map(c => ({ fi: c.capFi, en: c.capEn, hint: { fi: c.fi[0], en: c.en[0] }, group: group(c) }));
 }
-const countCache = new Map();
-function itemCount(q) {
-  if (!countCache.has(q.id)) countCache.set(q.id, buildItems(q).length);
-  return countCache.get(q.id);
-}
+const getJson = url => fetch(url).then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
 function loadMap() {
-  if (!mapLoad) mapLoad = fetch('/data/visa-map.json').then(r => r.json()).then(d => { MAP = d; if (G && G.fmt === 'map') render(); }).catch(() => { mapLoad = null; });
-  return mapLoad;
+  if (!mapLoad) mapLoad = getJson('/data/visa-map.json').then(d => { MAP = d; if (G && G.fmt === 'map') render(); }).catch(() => { mapLoad = null; });
 }
 
 function getClient() {
@@ -349,6 +343,9 @@ async function joinRoom(code, created) {
   R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
+  await packsReady;
+  if (R?.code !== code) return;
+  paintSettings();
   let client;
   try { client = await getClient(); } catch {
     R = null; homeError = 'noConn'; history.replaceState(null, '', location.pathname); render(); return;
@@ -618,23 +615,25 @@ function applyClaim(i, by, at) {
 
 // ---- map and multiple choice: one target at a time ----
 function target() {
-  const openQuestion = i => available(i) && !(G.fmt === 'choice' && G.mode === 'parallel' && G.seen.has(i));
-  return G.order.find(openQuestion) ?? -1;
+  return G.order.find(i => available(i) && !G.seen.has(i)) ?? -1;
 }
 
 function paintTarget() {
   if (!G || G.over || G.state !== 'play' || !V.prompt) return;
   const i = target();
   if (G.fmt === 'map') { V.prompt.textContent = i < 0 ? '' : t('clickFind', G.items[i][P.lang][0]); return; }
-  if (i < 0) { if (G.mode === 'parallel') markDone(); return; }
+  if (i < 0) return;
   V.prompt.textContent = t('question', Math.min(G.items.length, G.seen.size + G.claims.size + 1), G.items.length);
   if (i !== G.shown) { G.shown = i; paintChoice(i); }
 }
 
+const canAct = () => G?.state === 'play' && !G.out && performance.now() >= G.lockUntil;
+const lockAnswers = () => { G.lockUntil = performance.now() + WRONG_LOCK_MS; };
+
 function mapClick(i) {
-  if (G?.state !== 'play' || G.out || performance.now() < G.lockUntil) return;
+  if (!canAct()) return;
   if (i === target()) { accept(i); return; }
-  G.lockUntil = performance.now() + WRONG_LOCK_MS;
+  lockAnswers();
   flash(G.items[i][P.lang][0]);
 }
 
@@ -652,15 +651,16 @@ function paintChoice(i) {
 }
 
 function choose(i, k, options) {
-  if (G?.state !== 'play' || G.out || performance.now() < G.lockUntil) return;
+  if (!canAct()) return;
   if (G.mode === 'parallel') G.seen.add(i);
-  if (options[k].ok) { accept(i); return; }
-  if (G.mode === 'race') {   // the shared question stays open for the others, this option is gone for me
+  if (options[k].ok) accept(i);
+  else if (G.mode === 'race') {   // the shared question stays open for the others, this option is gone for me
     if (!G.tried.has(i)) G.tried.set(i, new Set());
     G.tried.get(i).add(k);
-    G.lockUntil = performance.now() + WRONG_LOCK_MS;
-    G.shown = -1;
+    V.opts[k].disabled = true;
+    lockAnswers();
   }
+  if (G.mode === 'parallel' && target() < 0) markDone();
   paintTarget();
 }
 
@@ -890,7 +890,7 @@ function paintStatus() {
 
 function paintPlayers() {
   if (!V.players) return;
-  V.players.replaceChildren(
+  fill(V.players,
     h('ul', { class: 'players' }, R.players.map((p, i) => h('li', { style: `--c:${COLORS[i % COLORS.length]}` },
       h('span', { class: 'dot' }), h('span', { text: p.name }),
       i === 0 && h('span', { class: 'tag', text: t('host') }), p.id === MY_ID && h('span', { class: 'tag', text: t('you') })))),
@@ -915,6 +915,7 @@ function paintSettings() {
         h('p', { class: 'muted', style: 'margin-top:12px', text: t('waitHost', R.players[0]?.name ?? '…') }));
       return;
     }
+    const setFilter = patch => { Object.assign(R, patch, { showAll: false }); paintSettings(); };
     const tab = (key, label, on, fn) => h('button', { class: 'kt-tab', 'data-k': key, 'aria-pressed': String(on), text: label, onclick: fn });
     V.settings.replaceChildren(
       h('h2', { text: t('settings') }),
@@ -929,8 +930,8 @@ function paintSettings() {
         h('input', { class: 'kt-input', 'data-k': 'search', placeholder: t('search'), 'aria-label': t('search'), autocomplete: 'off', value: R.search, oninput: e => { R.search = e.target.value; R.showAll = false; paintQuizList(); } }),
         h('button', { class: 'kt-btn', 'data-k': 'random', text: t('random'), onclick: () => { const list = quizMatches(); if (list.length) setSettings({ quiz: list[Math.floor(Math.random() * list.length)].id }); } })),
       h('div', { class: 'kt-tabs filters' }, [['', t('all')], ...(TOP.length ? [['top', t('top')]] : []), ...Object.entries(DATA.cats).map(([c, n]) => [c, n[P.lang]])]
-        .map(([c, label]) => tab(`c-${c}`, label, R.cat === c, () => { R.cat = c; R.showAll = false; paintSettings(); }))),
-      h('div', { class: 'kt-tabs filters' }, ['', ...FORMATS].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => { R.fmtFilter = f; R.showAll = false; paintSettings(); }))),
+        .map(([c, label]) => tab(`c-${c}`, label, R.cat === c, () => setFilter({ cat: c })))),
+      h('div', { class: 'kt-tabs filters' }, ['', ...Object.keys(T[P.lang].fmt)].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => setFilter({ fmtFilter: f })))),
       V.quizList = h('div', {}),
       h('button', { class: 'kt-btn primary start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame }));
     paintQuizList();
@@ -948,10 +949,10 @@ function quizMatches() {
 function paintQuizList() {
   if (!V.quizList) return;
   const list = quizMatches(), shown = R.showAll ? list : list.slice(0, LIST_LIMIT), selected = R.settings.quiz;
-  V.quizList.replaceChildren(
+  fill(V.quizList,
     list.length ? h('div', { class: 'quizzes' }, shown.map(x =>
       h('button', { class: 'kt-btn quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === selected), onclick: () => setSettings({ quiz: x.id }) },
-        h('b', { text: quizName(x) }), h('small', { text: `${T[P.lang].fmt[fmtOf(x)]} · ${itemCount(x)} · ${minutes(x.t)}` }))))
+        h('b', { text: quizName(x) }), h('small', { text: `${T[P.lang].fmt[fmtOf(x)]} · ${buildItems(x).length} · ${minutes(x.t)}` }))))
       : h('p', { class: 'muted', text: t('noResults') }),
     list.length > shown.length && h('button', { class: 'kt-btn', style: 'margin-top:8px', text: t('showAll', list.length), onclick: () => { R.showAll = true; paintQuizList(); } }));
 }
@@ -994,7 +995,7 @@ function buildMap() {
   const edges = pick => [...index.keys()].map(iso => MAP.shapes[iso].b[pick]).sort((a, b) => a - b);
   const at = (list, share) => list[Math.floor((list.length - 1) * share)];
   const whole = G.items.length > 150;
-  const x0 = whole ? 0 : at(edges(0), .06), y0 = whole ? 0 : at(edges(1), .06), x1 = whole ? MAP.w : at(edges(2), .94), y1 = whole ? MAP.h : at(edges(3), .94);
+  const [x0, y0, x1, y1] = whole ? [0, 0, MAP.w, MAP.h] : [0, 1, 2, 3].map(k => at(edges(k), k < 2 ? .06 : .94));
   const pad = whole ? 0 : Math.max(x1 - x0, y1 - y0) * .05;
   const box = [x0 - pad, y0 - pad, x1 - x0 + 2 * pad, y1 - y0 + 2 * pad];
   const svg = svgEl('svg', { viewBox: box.map(Math.round).join(' '), role: 'img', 'aria-label': t('fmt').map });
@@ -1019,9 +1020,9 @@ function buildCells() {
     else if (G.fmt === 'list' && !G.quiz.ordered) list.sort((a, b) => sortText(a).localeCompare(sortText(b), lang));
     return h('section', {},
       g && h('h3', { text: DATA.continents[g][lang] }),
-      h('div', { class: 'cells' + (G.fmt === 'flags' ? ' flags' : G.fmt === 'choice' ? ' wide' : ''), style: g ? '' : 'margin-top:14px' }, list.map(i => {
+      h('div', { class: `cells ${G.fmt}`, style: g ? '' : 'margin-top:14px' }, list.map(i => {
         const ans = h('span', { class: 'ans' });
-        const cell = h('div', { class: 'cell' }, G.items[i].flag && h('img', { class: 'flag', src: `/flags/${G.items[i].flag}.svg`, alt: '', loading: 'lazy' }), G.items[i].hint && h('span', { class: 'hint', text: G.items[i].hint[lang] }), ans);
+        const cell = h('div', { class: 'cell' }, G.fmt === 'flags' && h('img', { class: 'flag', src: `/flags/${G.items[i].iso.toLowerCase()}.svg`, alt: '', loading: 'lazy' }), G.items[i].hint && h('span', { class: 'hint', text: G.items[i].hint[lang] }), ans);
         cell.ans = ans;
         G.cells[i] = cell;
         return cell;
@@ -1064,11 +1065,8 @@ function paintScores() {
 function syncInput() {
   if (!V.giveUp) return;
   const open = G.state === 'play' && !G.out;
-  if (V.input) { V.input.disabled = !open; V.input.hidden = G.spectator; }
-  if (V.skip) { V.skip.disabled = !open; V.skip.hidden = G.spectator; }
+  for (const el of [V.input, V.skip, V.giveUp]) if (el) { el.disabled = !open; el.hidden = G.spectator; }
   if (V.choice) V.choice.hidden = G.spectator || !open;
-  V.giveUp.disabled = !open;
-  V.giveUp.hidden = G.spectator;
   if (G.state === 'wait') V.flash.textContent = t('timeup');
   else if (G.spectator) V.flash.textContent = t('spectate');
   else if (G.out) V.flash.textContent = t('out');
@@ -1081,15 +1079,15 @@ function renderGame() {
     return;
   }
   V.timer = h('div', { class: 'timer', role: 'timer', text: clock(G.endAt - performance.now()) });
-  V.input = (G.fmt === 'list' || G.fmt === 'flags') && h('input', { class: 'kt-input answer', placeholder: t('typeHere'), 'aria-label': t('typeHere'), autocomplete: 'off', autocapitalize: 'off', autocorrect: 'off', spellcheck: 'false', enterkeyhint: 'done', oninput: onAnswerInput, onkeydown: onAnswerKey });
+  const typed = G.fmt === 'list' || G.fmt === 'flags';
+  V.input = typed && h('input', { class: 'kt-input answer', placeholder: t('typeHere'), 'aria-label': t('typeHere'), autocomplete: 'off', autocapitalize: 'off', autocorrect: 'off', spellcheck: 'false', enterkeyhint: 'done', oninput: onAnswerInput, onkeydown: onAnswerKey });
   V.giveUp = h('button', { class: 'kt-btn', text: t('giveUp'), onclick: giveUp });
   V.flash = h('div', { class: 'flash', 'aria-live': 'polite' });
   V.scores = h('div', { class: 'scores' });
-  if (!V.input) V.input = null;
-  if (G.fmt === 'map' || G.fmt === 'choice') V.prompt = h('div', { class: 'prompt', 'aria-live': 'polite' });
-  if (G.fmt === 'map') V.skip = h('button', { class: 'kt-btn', text: t('skip'), onclick: skipTarget });
-  if (G.fmt === 'choice') V.choice = h('div', {});
-  const grid = G.fmt === 'choice' ? V.choice : buildGrid();
+  V.prompt = !typed && h('div', { class: 'prompt', 'aria-live': 'polite' });
+  V.skip = G.fmt === 'map' && h('button', { class: 'kt-btn', text: t('skip'), onclick: skipTarget });
+  V.choice = G.fmt === 'choice' && h('div', {});
+  const grid = V.choice || buildGrid();
   G.shown = -1;
   app.replaceChildren(
     h('div', { class: 'gamebar' },
@@ -1144,17 +1142,13 @@ function paintActions() {
 }
 
 // ---- start ----
-Promise.all([
-  fetch('/data/visa.json').then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then(async d => {
-    const packs = await Promise.all((d.packs || []).map(name => fetch(`/data/visa/${name}.json`).then(r => r.json())));
-    d.quizzes = [...d.quizzes, ...packs.flatMap(x => x.quizzes)];
-    return d;
-  }),
-  new Promise(done => setTimeout(done, TAB_CHECK_MS)),
-]).then(([d]) => {
+Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TAB_CHECK_MS))]).then(([d]) => {
   tabCheck = false;
   DATA = d;
   for (const q of d.quizzes) QUIZ.set(q.id, q);
+  packsReady = Promise.all((d.packs || []).map(name => getJson(`/data/visa/${name}.json`).catch(() => ({ quizzes: [] })))).then(packs => {
+    for (const q of packs.flatMap(x => x.quizzes)) { d.quizzes.push(q); QUIZ.set(q.id, q); }
+  });
   setInterval(tick, 100);
   addEventListener('hashchange', route);
   addEventListener('keydown', e => { if (V.opts && /^[1-4]$/.test(e.key) && !e.metaKey && !e.ctrlKey) V.opts[Number(e.key) - 1]?.click(); });
