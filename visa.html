@@ -54,7 +54,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-bod
 main{max-width:1120px;margin:0 auto;padding:18px 16px 64px;overflow-wrap:anywhere}
 h1{font:700 clamp(24px,5vw,38px)/1.15 var(--font-display);margin:10px 0 6px}
 h2{font:600 15px/1.3 var(--font-display);margin:0 0 12px}
-h3{font:600 12px var(--font-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 8px;display:flex;justify-content:space-between;gap:8px}
+h3,.lbl{font:600 12px var(--font-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+h3{margin:18px 0 8px}
 p{margin:0}
 a{color:var(--accent)}
 .top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
@@ -64,23 +65,22 @@ a{color:var(--accent)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);padding:16px;min-width:0}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;margin-top:14px}
 .wide{grid-column:1/-1}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row,.play{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .row .kt-input{flex:1 1 170px}
 .stack{display:grid;gap:12px}
-.code{flex:0 1 110px!important;text-transform:uppercase;font-family:var(--font-mono);letter-spacing:.14em;text-align:center}
+.row .code{flex:0 1 110px}
+.code{text-transform:uppercase;font-family:var(--font-mono);letter-spacing:.14em;text-align:center}
 .bigcode{font:600 34px/1 var(--font-mono);letter-spacing:.16em;color:var(--accent)}
 .muted{color:var(--ink-3);font-size:14px}
 .err{color:var(--bad);font-size:14px}
 .kt-note{margin-top:10px}
-.lbl{font:600 12px var(--font-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px}
+.lbl{margin:14px 0 6px}
 .players{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
 .players li{display:flex;gap:8px;align-items:center}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--c,var(--ink-3));flex:none}
 .tag{font:500 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:1px 7px}
 .quizzes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:6px}
-.quiz{all:unset;box-sizing:border-box;cursor:pointer;border:1px solid var(--line);border-radius:var(--radius-m);padding:9px 12px;background:var(--surface-2);display:grid;gap:1px}
-.quiz:hover{border-color:var(--accent)}
-.quiz:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.quiz{display:grid;gap:1px;padding:9px 12px;text-align:left}
 .quiz[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft)}
 .quiz b{font-size:14px;line-height:1.3}
 .quiz small{font:500 11px var(--font-mono);color:var(--ink-3)}
@@ -90,7 +90,6 @@ a{color:var(--accent)}
 .gamebar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 12px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
 .gametitle{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;justify-content:space-between}
 .gametitle b{font:600 15px var(--font-display)}
-.play{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .timer{font:600 26px/1 var(--font-mono);min-width:82px;text-align:center}
 .timer.low{color:var(--bad)}
 .answer{flex:1 1 130px;font-size:18px;padding:11px 14px}
@@ -98,11 +97,11 @@ a{color:var(--accent)}
 .scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:6px}
 .score{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:5px 9px;display:grid;gap:3px;min-width:0}
 .score.gone{opacity:.5}
-.score div{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.score>div:first-child{display:flex;justify-content:space-between;gap:8px;font-size:13px}
 .score b{color:var(--c);overflow-wrap:anywhere}
 .score span{font:600 13px var(--font-mono);white-space:nowrap}
 .meter{height:4px;background:var(--line);border-radius:2px}
-.meter i{display:block;height:100%;width:0;background:var(--c);border-radius:2px;transition:width .2s}
+.meter i{display:block;height:100%;background:var(--c);border-radius:2px}
 .count{font:700 clamp(70px,16vw,130px)/1 var(--font-display);color:var(--accent);text-align:center;padding:40px 0}
 .cells{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:4px}
 .cell{min-height:32px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);padding:5px 8px;font-size:14px;line-height:1.25;display:grid;align-content:center;position:relative}
@@ -123,7 +122,6 @@ a{color:var(--accent)}
 .stats li{display:flex;justify-content:space-between;gap:12px}
 .stats span:last-child{font:500 13px var(--font-mono);color:var(--ink-2);white-space:nowrap}
 footer{margin-top:28px;color:var(--ink-3);font-size:13px}
-@media (prefers-reduced-motion:reduce){.meter i{transition:none}}
 </style>
 </head>
 <body>
@@ -140,7 +138,7 @@ const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb
 const STORE_KEY = 'visa-v1';
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000;
+const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
@@ -165,7 +163,7 @@ const T = {
     taken: n => `${n} ehti ensin`, already: 'Tämä on jo listalla',
     timeup: 'Aika loppui, lasketaan tuloksia…',
     win: n => `${n} voitti!`, youWin: 'Voitit!', draw: 'Tasapeli', noScore: 'Kukaan ei saanut pisteitä',
-    rematch: 'Uusintaottelu', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen', left: 'poistui',
+    rematch: 'Uusintaottelu', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
     privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
   },
@@ -188,7 +186,7 @@ const T = {
     taken: n => `${n} got there first`, already: 'Already on the list',
     timeup: 'Time is up, counting results…',
     win: n => `${n} won!`, youWin: 'You won!', draw: 'Draw', noScore: 'Nobody scored',
-    rematch: 'Rematch', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last', left: 'left',
+    rematch: 'Rematch', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
     privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
   },
@@ -204,22 +202,19 @@ let V = {};                    // DOM refs of the current view
 let pendingCode = null, createdCode = null, homeError = null;
 
 // ---- storage (conveniences only: every access may throw in a private window) ----
-function readJson(storage, key) { try { return JSON.parse(storage.getItem(key)) || null; } catch { return null; } }
-function writeStr(storage, key, v) { try { storage.setItem(key, v); } catch { /* stays in memory */ } }
-const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [] }, readJson(localStorage, STORE_KEY));
+function readStr(area, key) { try { return window[area].getItem(key); } catch { return null; } }
+function writeStr(area, key, v) { try { window[area].setItem(key, v); } catch { /* stays in memory */ } }
+function readJson(area, key) { try { return JSON.parse(readStr(area, key)); } catch { return null; } }
+const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [] }, readJson('localStorage', STORE_KEY));
 if (!T[P.lang]) P.lang = 'fi';
-const save = () => writeStr(localStorage, STORE_KEY, JSON.stringify(P));
+const save = () => writeStr('localStorage', STORE_KEY, JSON.stringify(P));
 
 function randomId(len, alphabet) {
   const bytes = crypto.getRandomValues(new Uint8Array(len));
   return Array.from(bytes, b => alphabet[b % alphabet.length]).join('');
 }
-const ME = { id: (() => {
-  let id = null;
-  try { id = sessionStorage.getItem('visa-id'); } catch { /* new id below */ }
-  if (!id) { id = randomId(16, 'abcdefghijklmnopqrstuvwxyz0123456789'); writeStr(sessionStorage, 'visa-id', id); }
-  return id;
-})() };
+const MY_ID = readStr('sessionStorage', 'visa-id') || randomId(16, 'abcdefghijklmnopqrstuvwxyz0123456789');
+writeStr('sessionStorage', 'visa-id', MY_ID);
 
 // ---- helpers ----
 const t = (key, ...args) => { const v = T[P.lang][key]; return typeof v === 'function' ? v(...args) : v; };
@@ -244,6 +239,8 @@ const minutes = sec => sec < 120 ? `${sec} s` : `${Math.round(sec / 60)} min`;
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, Number(x) || 0));
 const parseCode = s => { const c = String(s || '').replace(/^#/, '').toUpperCase(); return /^[A-HJ-NP-Z2-9]{4}$/.test(c) ? c : null; };
 const quizName = q => q.title[P.lang];
+const rank = (a, b) => b.n - a.n || a.t - b.t;   // more correct first, then the earlier last answer
+const validSettings = s => s && QUIZ.has(s.quiz) && MODES.includes(s.mode) && MULS.includes(s.mul);
 
 function buildItems(q) {
   if (q.items) return q.items.map(it => ({ fi: it.fi, en: it.en, group: null, hint: it.h == null ? null : (typeof it.h === 'string' ? { fi: it.h, en: it.h } : it.h) }));
@@ -257,7 +254,6 @@ function buildItems(q) {
 }
 
 function getClient() {
-  if (sb) return Promise.resolve(sb);
   if (!sbLoad) sbLoad = new Promise((resolve, reject) => {
     const el = document.createElement('script');
     el.src = SB_JS; el.integrity = SB_SRI; el.crossOrigin = 'anonymous';
@@ -276,7 +272,7 @@ function getClient() {
 
 // ---- room ----
 const hostId = () => R?.players[0]?.id ?? null;
-const isHost = () => hostId() === ME.id;
+const isHost = () => hostId() === MY_ID;
 const fromHost = m => !R.players.length || hostId() === m.from;
 const nameOf = id => G?.players.find(p => p.id === id)?.name ?? R?.players.find(p => p.id === id)?.name ?? '?';
 function colorOf(id) {
@@ -285,11 +281,11 @@ function colorOf(id) {
   return COLORS[Math.max(0, i) % COLORS.length];
 }
 function send(type, payload) {
-  if (R?.ch && R.connected) R.ch.send({ type: 'broadcast', event: 'm', payload: { t: type, from: ME.id, ...payload } });
+  if (R?.ch && R.connected) R.ch.send({ type: 'broadcast', event: 'm', payload: { t: type, from: MY_ID, ...payload } });
 }
 
 async function joinRoom(code, created) {
-  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, viaLink: !created, alone: false, showResults: false, cat: DATA.quizzes[0].cat, lastEnd: null };
+  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: DATA.quizzes[0].cat };
   G = null;
   render();
   let client;
@@ -297,7 +293,7 @@ async function joinRoom(code, created) {
     R = null; homeError = 'noConn'; history.replaceState(null, '', location.pathname); render(); return;
   }
   if (R?.code !== code) return;
-  const ch = client.channel(`visa:${code}`, { config: { broadcast: { self: false }, presence: { key: ME.id } } });
+  const ch = client.channel(`visa:${code}`, { config: { broadcast: { self: false }, presence: { key: MY_ID } } });
   R.ch = ch;
   ch.on('broadcast', { event: 'm' }, ({ payload }) => onMessage(payload));
   ch.on('presence', { event: 'sync' }, onPresence);
@@ -313,7 +309,7 @@ async function joinRoom(code, created) {
     }
     paintStatus();
   });
-  if (R.viaLink) R.aloneT = setTimeout(() => { if (R && R.players.length <= 1 && !G) { R.alone = true; paintPlayers(); } }, 3000);
+  if (!created) R.aloneT = setTimeout(() => { if (R && R.players.length <= 1 && !G) { R.alone = true; paintPlayers(); } }, 3000);
 }
 
 // The host is the earliest `joined`. A newcomer always ranks after everyone present, so a device with a wrong clock can't
@@ -321,12 +317,11 @@ async function joinRoom(code, created) {
 function track(ch) {
   if (R?.ch !== ch) return;
   const key = `visa-joined-${R.code}`;
-  let joined = 0;
-  try { joined = Number(sessionStorage.getItem(key)) || 0; } catch { /* new value below */ }
+  let joined = Number(readStr('sessionStorage', key)) || 0;
   if (!joined) {
     const others = Object.values(ch.presenceState()).flat().map(m => Number(m.joined) || 0);
     joined = Math.max(Date.now(), ...others.map(x => x + 1));
-    writeStr(sessionStorage, key, String(joined));
+    writeStr('sessionStorage', key, String(joined));
   }
   ch.track({ name: cleanName(P.nick), joined });
 }
@@ -334,7 +329,7 @@ function track(ch) {
 function leaveRoom() {
   if (!R) return;
   clearTimeout(R.trackT); clearTimeout(R.aloneT);
-  if (R.ch && sb) sb.removeChannel(R.ch);
+  if (R.ch) sb.removeChannel(R.ch);
   R = null; G = null; V = {};
 }
 
@@ -345,7 +340,7 @@ function onPresence() {
     return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0 };
   }).sort((a, b) => a.joined - b.joined || (a.id < b.id ? -1 : 1));
   R.players = list;
-  if (list.findIndex(p => p.id === ME.id) >= MAX_PLAYERS) {
+  if (list.findIndex(p => p.id === MY_ID) >= MAX_PLAYERS) {
     leaveRoom(); homeError = 'full'; location.hash = ''; return;
   }
   if (list.length > 1) R.alone = false;
@@ -368,26 +363,27 @@ function route() {
 
 // ---- incoming messages: everything here is untrusted input from other browsers ----
 function onMessage(m) {
-  if (!R || !m || typeof m.from !== 'string' || m.from === ME.id) return;
-  const same = G && m.seq === G.seq;
+  if (!R || !m || typeof m.from !== 'string' || m.from === MY_ID) return;
   switch (m.t) {
-    case 'hello': if (isHost()) send('snap', snapshot()); break;
-    case 'settings': if (fromHost(m)) applySettings(m.s); break;
-    case 'snap': if (fromHost(m)) applySnapshot(m); break;
-    case 'start': if (fromHost(m)) beginGame(m); break;
-    case 'chat': addChat(m.from, m.text); break;
-    case 'found': if (same && !G.over && G.mode === 'parallel') addFound(m.from, [m.i], m.t2); break;
-    case 'have': if (same && !G.over && G.mode === 'parallel' && Array.isArray(m.l)) addFound(m.from, m.l, m.t2); break;
-    case 'claim': if (same && !G.over && G.mode === 'race' && isHost()) grant(m.i, m.from, m.t2); break;
-    case 'claimed': if (same && !G.over && G.mode === 'race' && fromHost(m)) applyClaim(m.i, m.by, m.t2); break;
-    case 'claims': if (same && !G.over && G.mode === 'race' && fromHost(m) && Array.isArray(m.c)) m.c.forEach(c => applyClaim(c[0], c[1], c[2])); break;
-    case 'done': if (same && !G.over) { G.done.add(m.from); maybeFinish(); } break;
-    case 'end': if (same && !G.over && fromHost(m)) applyEnd(m); break;
+    case 'hello': if (isHost()) send('snap', snapshot()); return;
+    case 'settings': if (fromHost(m)) applySettings(m.s); return;
+    case 'snap': if (fromHost(m)) applySnapshot(m); return;
+    case 'start': if (fromHost(m)) beginGame(m); return;
+    case 'chat': addChat(m.from, m.text); return;
+  }
+  if (!G || m.seq !== G.seq || G.over) return;   // everything below concerns the running game
+  const race = G.mode === 'race';
+  switch (m.t) {
+    case 'have': if (!race && Array.isArray(m.l)) addFound(m.from, m.l, m.t2); break;
+    case 'claim': if (race && isHost()) grant(m.i, m.from, m.t2); break;
+    case 'claims': if (race && fromHost(m)) applyClaims(m.c); break;
+    case 'done': G.done.add(m.from); maybeFinish(); break;
+    case 'end': if (fromHost(m)) applyEnd(m); break;
   }
 }
 
 function applySettings(s) {
-  if (!s || !QUIZ.has(s.quiz) || !MODES.includes(s.mode) || !MULS.includes(s.mul)) return;
+  if (!validSettings(s)) return;
   R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul };
   R.cat = QUIZ.get(s.quiz).cat;
   paintSettings();
@@ -396,23 +392,24 @@ function applySettings(s) {
 function snapshot() {
   const s = { s: R.settings };
   if (G && !G.over) s.game = {
-    seq: G.seq, quiz: G.quizId, mode: G.mode, mul: G.mul, players: G.players, elapsed: Math.round(performance.now() - G.startAt),
+    seq: G.seq, quiz: G.quiz.id, mode: G.mode, mul: G.mul, players: G.players, elapsed: Math.round(performance.now() - G.startAt),
     found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done],
   };
   return s;
 }
+const presentIds = () => new Set(R.players.map(p => p.id));
 const claimList = () => [...G.claims].map(([i, c]) => [i, c.by, c.t]);
 
 function applySnapshot(m) {
   applySettings(m.s);
   const g = m.game;
   if (!g) return;
-  if (!G || G.seq !== g.seq) beginGame(g);
+  beginGame(g);
   if (!G || G.seq !== g.seq || G.over) return;
   if (Array.isArray(g.found)) for (const f of g.found) if (Array.isArray(f) && Array.isArray(f[1])) addFound(f[0], f[1], f[2]);
-  if (Array.isArray(g.claims)) for (const c of g.claims) if (Array.isArray(c)) applyClaim(c[0], c[1], c[2]);
+  applyClaims(g.claims);
   if (Array.isArray(g.done)) for (const id of g.done) if (typeof id === 'string') G.done.add(id);
-  if (G.done.has(ME.id)) G.out = true;
+  if (G.done.has(MY_ID)) G.out = true;
   syncInput();
 }
 
@@ -426,7 +423,7 @@ function addChat(from, text) {
 
 // ---- game ----
 function beginGame(m) {
-  if (!QUIZ.has(m.quiz) || !MODES.includes(m.mode) || !MULS.includes(m.mul) || !Number.isFinite(m.seq) || !Array.isArray(m.players)) return;
+  if (!validSettings(m) || !Number.isFinite(m.seq) || !Array.isArray(m.players)) return;
   if (G && G.seq === m.seq) return;
   const players = m.players.slice(0, MAX_PLAYERS).filter(p => p && typeof p.id === 'string').map(p => ({ id: p.id.slice(0, 40), name: cleanName(p.name) || '?' }));
   if (!players.length) return;
@@ -438,17 +435,16 @@ function beginGame(m) {
   const now = performance.now();
   const elapsed = clamp(m.elapsed, -COUNTDOWN_MS, durMs + LOCAL_WATCHDOG_MS);
   G = {
-    seq: m.seq, quizId: m.quiz, quiz, items, answers, mode: m.mode, mul: m.mul, durMs, players,
+    seq: m.seq, quiz, items, answers, mode: m.mode, mul: m.mul, durMs, players,
     startAt: now - elapsed, endAt: now - elapsed + durMs,
     found: new Map(players.map(p => [p.id, { set: new Set(), t: 0 }])), claims: new Map(), pending: new Map(), done: new Set(),
-    state: 'count', over: false, finishing: false, out: !players.some(p => p.id === ME.id), spectator: !players.some(p => p.id === ME.id),
-    results: null, cells: [], lastRepair: now, holdT: 0, flashT: 0, confirmT: 0,
+    state: 'count', over: false, finishing: false, out: !players.some(p => p.id === MY_ID), spectator: !players.some(p => p.id === MY_ID),
+    results: null, cells: [], lastRepair: now, sentSize: 0, sentAt: now, holdT: 0, flashT: 0, confirmT: 0,
   };
-  R.showResults = false;
   render();
 }
 
-const available = i => G.mode === 'race' ? !G.claims.has(i) && !G.pending.has(i) : !G.found.get(ME.id).set.has(i);
+const available = i => G.mode === 'race' ? !G.claims.has(i) && !G.pending.has(i) : !G.found.get(MY_ID).set.has(i);
 const elapsedNow = () => Math.round(clamp(performance.now() - G.startAt, 0, G.durMs));
 const validIndex = i => Number.isInteger(i) && i >= 0 && i < G.items.length;
 
@@ -469,7 +465,7 @@ function onAnswerInput() {
     if (available(i)) G.holdT = setTimeout(() => { if (G?.state === 'play' && norm(V.input.value) === n && available(i)) accept(i); }, HOLD_MS);
     return;
   }
-  if (available(i)) accept(i); else rejectTaken(i);
+  submit(i);
 }
 
 function onAnswerKey(e) {
@@ -477,18 +473,17 @@ function onAnswerKey(e) {
   e.preventDefault();
   clearTimeout(G.holdT);
   const n = norm(V.input.value);
-  if (G.answers.has(n)) {
-    const i = G.answers.get(n);
-    if (available(i)) accept(i); else rejectTaken(i);
-  } else {
-    V.input.value = '';
-  }
+  if (G.answers.has(n)) submit(G.answers.get(n)); else V.input.value = '';
+}
+
+function submit(i) {
+  if (available(i)) accept(i); else rejectTaken(i);
 }
 
 function rejectTaken(i) {
   V.input.value = '';
   const owner = G.mode === 'race' ? G.claims.get(i)?.by : null;
-  flash(owner && owner !== ME.id ? t('taken', nameOf(owner)) : t('already'));
+  flash(owner && owner !== MY_ID ? t('taken', nameOf(owner)) : t('already'));
 }
 
 function flash(text) {
@@ -502,11 +497,10 @@ function accept(i) {
   V.input.value = '';
   const at = elapsedNow();
   if (G.mode === 'parallel') {
-    addFound(ME.id, [i], at);
-    send('found', { seq: G.seq, i, t2: at });
-    if (G.found.get(ME.id).set.size === G.items.length) maybeFinish();
+    addFound(MY_ID, [i], at);
+    send('have', { seq: G.seq, l: [i], t2: at });
   } else if (isHost()) {
-    grant(i, ME.id, at);
+    grant(i, MY_ID, at);
   } else {
     G.pending.set(i, { at, sent: performance.now() });
     paintCell(i);
@@ -518,7 +512,7 @@ function addFound(id, list, at) {
   const rec = G.found.get(id);
   if (!rec || list.length > G.items.length) return;
   let changed = false;
-  for (const i of list) if (validIndex(i) && !rec.set.has(i)) { rec.set.add(i); changed = true; if (id === ME.id) paintCell(i); }
+  for (const i of list) if (validIndex(i) && !rec.set.has(i)) { rec.set.add(i); changed = true; if (id === MY_ID) paintCell(i); }
   if (!changed) return;
   rec.t = Math.max(rec.t, clamp(at, 0, G.durMs));
   paintScores();
@@ -527,20 +521,21 @@ function addFound(id, list, at) {
 
 // Host only: the first claim that reaches the host owns the answer.
 function grant(i, by, at) {
-  if (!validIndex(i) || G.claims.has(i) || !G.players.some(p => p.id === by)) return;
-  const when = clamp(at, 0, G.durMs);
-  applyClaim(i, by, when);
-  send('claimed', { seq: G.seq, i, by, t2: when });
-  maybeFinish();
+  if (applyClaim(i, by, at)) send('claims', { seq: G.seq, c: [[i, by, G.claims.get(i).t]] });
+}
+
+function applyClaims(list) {
+  if (Array.isArray(list)) for (const c of list) if (Array.isArray(c)) applyClaim(c[0], c[1], c[2]);
 }
 
 function applyClaim(i, by, at) {
-  if (!validIndex(i) || G.claims.has(i) || typeof by !== 'string' || !G.players.some(p => p.id === by)) return;
+  if (!validIndex(i) || G.claims.has(i) || !G.players.some(p => p.id === by)) return false;
   G.claims.set(i, { by, t: clamp(at, 0, G.durMs) });
-  if (G.pending.delete(i) && by !== ME.id) flash(t('taken', nameOf(by)));
+  if (G.pending.delete(i) && by !== MY_ID) flash(t('taken', nameOf(by)));
   paintCell(i);
   paintScores();
   maybeFinish();
+  return true;
 }
 
 function giveUp() {
@@ -553,7 +548,7 @@ function giveUp() {
   }
   clearTimeout(G.confirmT);
   G.out = true;
-  G.done.add(ME.id);
+  G.done.add(MY_ID);
   send('done', { seq: G.seq });
   syncInput();
   maybeFinish();
@@ -564,7 +559,7 @@ function maybeFinish() {
   if (!G || G.over || G.finishing || G.state === 'count' || !isHost()) return;
   const total = G.items.length;
   const complete = G.mode === 'race' ? G.claims.size === total : [...G.found.values()].some(r => r.set.size === total);
-  const here = new Set(R.players.map(p => p.id));
+  const here = presentIds();
   const active = G.players.filter(p => here.has(p.id) && !G.done.has(p.id));
   if (complete || !active.length) finish(300);
 }
@@ -578,29 +573,27 @@ function finish(delay) {
     const msg = { seq: G.seq, res: tally(), c: G.mode === 'race' ? claimList() : null };
     send('end', msg);
     applyEnd(msg);
-    for (const wait of [1000, 3000]) setTimeout(() => { if (R) send('end', msg); }, wait);   // broadcasts can get lost
+    for (const wait of [1000, 3000]) setTimeout(() => send('end', msg), wait);   // broadcasts can get lost
   }, delay);
 }
 
-function tally() {
-  return G.players.map(p => {
-    if (G.mode === 'parallel') { const r = G.found.get(p.id); return { id: p.id, n: r.set.size, t: r.t }; }
-    let n = 0, last = 0;
-    for (const c of G.claims.values()) if (c.by === p.id) { n++; last = Math.max(last, c.t); }
-    return { id: p.id, n, t: last };
-  });
+function standing(id) {
+  if (G.mode === 'parallel') { const r = G.found.get(id); return { n: r.set.size, t: r.t }; }
+  let n = 0, last = 0;
+  for (const c of G.claims.values()) if (c.by === id) { n++; last = Math.max(last, c.t); }
+  return { n, t: last };
 }
+const tally = () => G.players.map(p => ({ id: p.id, ...standing(p.id) }));
 
 function applyEnd(m) {
   clearTimeout(G.holdT);
-  if (G.mode === 'race' && Array.isArray(m.c)) { G.claims.clear(); for (const c of m.c) if (Array.isArray(c)) applyClaim(c[0], c[1], c[2]); }
+  if (G.mode === 'race' && Array.isArray(m.c)) { G.claims.clear(); applyClaims(m.c); }
   const byId = new Map((Array.isArray(m.res) ? m.res : []).filter(r => r && typeof r.id === 'string').map(r => [r.id, r]));
   G.results = G.players.map(p => {
     const r = byId.get(p.id) || {};
     return { id: p.id, name: p.name, n: Math.round(clamp(r.n, 0, G.items.length)), t: clamp(r.t, 0, G.durMs) };
-  }).sort((a, b) => b.n - a.n || a.t - b.t);
-  G.over = true; G.state = 'over'; G.pending.clear();
-  R.showResults = true;
+  }).sort(rank);
+  G.over = true; G.pending.clear();
   record();
   render();
 }
@@ -608,25 +601,24 @@ function applyEnd(m) {
 function record() {
   if (G.spectator || P.seen.includes(G.seq)) return;
   P.seen = [...P.seen, G.seq].slice(-SEEN_KEEP);
-  const me = G.results.find(r => r.id === ME.id);
+  const me = G.results.find(r => r.id === MY_ID);
   for (const r of G.results) {
-    if (r.id === ME.id) continue;
+    if (r.id === MY_ID) continue;
     const key = r.name.toLowerCase();
     const rec = P.h2h[key] || (P.h2h[key] = { name: r.name, w: 0, l: 0, d: 0 });
     rec.name = r.name;
-    if (me.n === r.n && me.t === r.t) rec.d++;
-    else if (me.n > r.n || (me.n === r.n && me.t < r.t)) rec.w++;
-    else rec.l++;
+    const order = rank(me, r);
+    if (order === 0) rec.d++; else if (order < 0) rec.w++; else rec.l++;
   }
   if (G.mul === 1 && me.n > 0) {
-    const b = P.best[G.quizId];
-    if (!b || me.n > b.n || (me.n === b.n && me.t < b.t)) P.best[G.quizId] = { n: me.n, t: me.t, total: G.items.length };
+    const b = P.best[G.quiz.id];
+    if (!b || rank(me, b) < 0) P.best[G.quiz.id] = { n: me.n, t: me.t, total: G.items.length };
   }
   save();
 }
 
 function tick() {
-  if (!G || G.over || !R) return;
+  if (!G || G.over) return;
   const now = performance.now();
   if (G.state === 'count') {
     if (now >= G.startAt) { G.state = 'play'; render(); }
@@ -636,26 +628,29 @@ function tick() {
   if (V.timer) { const left = G.endAt - now; V.timer.textContent = clock(left); V.timer.classList.toggle('low', left < 10000); }
   if (G.state === 'play') {
     for (const [i, p] of G.pending) if (now - p.sent > RETRY_MS) { p.sent = now; send('claim', { seq: G.seq, i, t2: p.at }); }
-    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(); }
+    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(false); }
     if (now >= G.endAt) {
       G.state = 'wait';
-      repair();
+      repair(true);
       syncInput();
       if (isHost()) finish(END_GRACE_MS);
     }
   } else if (G.state === 'wait') {
     if (now > G.endAt + HOST_WATCHDOG_MS && isHost()) finish(0);
-    if (now > G.endAt + LOCAL_WATCHDOG_MS) applyEnd({ seq: G.seq, res: tally(), c: null });
+    if (now > G.endAt + LOCAL_WATCHDOG_MS) applyEnd({ res: tally() });
   }
 }
 
-// Broadcasts are not guaranteed: the absolute state goes out every few seconds so a lost message heals itself.
-function repair() {
-  if (G.mode === 'parallel') {
-    if (!G.spectator) { const r = G.found.get(ME.id); send('have', { seq: G.seq, l: [...r.set], t2: r.t }); }
-  } else if (isHost()) {
-    send('claims', { seq: G.seq, c: claimList() });
-  }
+// Broadcasts are not guaranteed: the absolute state goes out again so a lost message heals itself, every few seconds while
+// it changes and at IDLE_REPAIR_MS otherwise (every broadcast counts against the Realtime quota once per receiver).
+function repair(force) {
+  const parallel = G.mode === 'parallel';
+  if (parallel ? G.spectator : !isHost()) return;
+  const mine = G.found.get(MY_ID), size = parallel ? mine.set.size : G.claims.size, now = performance.now();
+  if (!force && size === G.sentSize && now - G.sentAt < IDLE_REPAIR_MS) return;
+  G.sentSize = size; G.sentAt = now;
+  if (parallel) send('have', { seq: G.seq, l: [...mine.set], t2: mine.t });
+  else send('claims', { seq: G.seq, c: claimList() });
 }
 
 function startGame() {
@@ -679,9 +674,9 @@ function render() {
   document.documentElement.lang = P.lang;
   if (!DATA) return;
   if (!R) renderHome();
-  else if (G && !G.over) renderGame();
-  else if (G && G.over && R.showResults) renderResults();
-  else renderLobby();
+  else if (!G) renderLobby();
+  else if (G.over) renderResults();
+  else renderGame();
 }
 
 function langTabs() {
@@ -689,6 +684,7 @@ function langTabs() {
     h('button', { class: 'kt-tab', 'aria-pressed': String(P.lang === l), text: l.toUpperCase(), onclick: () => { P.lang = l; save(); render(); } })));
 }
 const topBar = () => h('div', { class: 'top' }, h('a', { class: 'crumb', href: '/', text: t('back') }), langTabs());
+const gameTitle = () => h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: t(G.mode) }));
 const foot = () => h('footer', {}, t('privacy') + ' ', h('a', { href: '/tietosuoja', text: t('privacyLink') }));
 
 function renderHome() {
@@ -737,7 +733,6 @@ function renderLobby() {
   V.status = h('p', { class: 'kt-status' });
   V.players = h('div', {});
   V.settings = h('section', { class: 'card wide' });
-  V.chat = chatBox();
   app.replaceChildren(
     topBar(),
     h('h1', { text: t('title') }),
@@ -746,7 +741,7 @@ function renderLobby() {
         h('h2', { text: t('room') }),
         h('div', { class: 'row' }, h('span', { class: 'bigcode', text: R.code }), copy, h('button', { class: 'kt-btn sm', text: t('leave'), onclick: () => { location.hash = ''; } })),
         V.linkField, V.status, V.players),
-      V.chat,
+      chatBox(),
       V.settings),
     foot());
   paintStatus(); paintPlayers(); paintSettings(); paintChat();
@@ -763,7 +758,7 @@ function paintPlayers() {
   V.players.replaceChildren(
     h('ul', { class: 'players' }, R.players.map((p, i) => h('li', { style: `--c:${COLORS[i % COLORS.length]}` },
       h('span', { class: 'dot' }), h('span', { text: p.name }),
-      i === 0 && h('span', { class: 'tag', text: t('host') }), p.id === ME.id && h('span', { class: 'tag', text: t('you') })))),
+      i === 0 && h('span', { class: 'tag', text: t('host') }), p.id === MY_ID && h('span', { class: 'tag', text: t('you') })))),
     R.alone && h('p', { class: 'kt-note', text: t('alone') }));
 }
 
@@ -776,11 +771,11 @@ function keepFocus(root, paint) {
 function paintSettings() {
   if (!V.settings) return;
   keepFocus(V.settings, () => {
-    const s = R.settings, q = QUIZ.get(s.quiz);
-    const info = h('p', { class: 'muted', text: t(s.mode + 'Info') });
+    const s = R.settings, q = QUIZ.get(s.quiz), info = t(s.mode + 'Info');
     if (!isHost()) {
       V.settings.replaceChildren(h('h2', { text: t('settings') }),
-        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}`), info,
+        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}`),
+        h('p', { class: 'muted', text: info }),
         h('p', { class: 'muted', style: 'margin-top:12px', text: t('waitHost', R.players[0]?.name ?? '…') }));
       return;
     }
@@ -789,13 +784,13 @@ function paintSettings() {
       h('h2', { text: t('settings') }),
       h('div', { class: 'lbl', text: t('mode') }),
       h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
-      h('p', { class: 'muted', style: 'margin-top:6px' }, info.textContent),
+      h('p', { class: 'muted', style: 'margin-top:6px', text: info }),
       h('div', { class: 'lbl', text: t('time') }),
       h('div', { class: 'kt-tabs' }, MULS.map(x => tab(`x-${x}`, `${T[P.lang].mul[x]} · ${minutes(q.t * x)}`, s.mul === x, () => setSettings({ mul: x })))),
       h('div', { class: 'lbl', text: t('quiz') }),
       h('div', { class: 'kt-tabs', style: 'margin-bottom:8px' }, Object.entries(DATA.cats).map(([c, n]) => tab(`c-${c}`, n[P.lang], R.cat === c, () => { R.cat = c; paintSettings(); }))),
       h('div', { class: 'quizzes' }, DATA.quizzes.filter(x => x.cat === R.cat).map(x =>
-        h('button', { class: 'quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === s.quiz), onclick: () => setSettings({ quiz: x.id }) },
+        h('button', { class: 'kt-btn quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === s.quiz), onclick: () => setSettings({ quiz: x.id }) },
           h('b', { text: quizName(x) }), h('small', { text: `${buildItems(x).length} · ${minutes(x.t)}` })))),
       h('button', { class: 'kt-btn primary start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame }));
   });
@@ -809,7 +804,7 @@ function chatBox() {
     const text = field.value.trim();
     if (!text) return;
     field.value = '';
-    addChat(ME.id, text);
+    addChat(MY_ID, text);
     send('chat', { text: text.slice(0, CHAT_MAX) });
   };
   return h('section', { class: 'card' }, h('h2', { text: t('chat') }), V.chatList,
@@ -841,6 +836,7 @@ function buildGrid() {
         return cell;
       })));
   });
+  G.items.forEach((_, i) => paintCell(i));
   return h('div', {}, sections);
 }
 
@@ -851,8 +847,8 @@ function paintCell(i) {
   if (G.mode === 'race') {
     const cl = G.claims.get(i);
     if (cl) owner = cl.by;
-    else if (G.pending.has(i)) { owner = ME.id; pending = true; }
-  } else if (G.found.get(ME.id)?.set.has(i)) owner = ME.id;
+    else if (G.pending.has(i)) { owner = MY_ID; pending = true; }
+  } else if (G.found.get(MY_ID)?.set.has(i)) owner = MY_ID;
   c.ans.textContent = owner || G.over ? G.items[i][P.lang][0] : '';
   c.classList.toggle('on', !!owner);
   c.classList.toggle('pend', pending);
@@ -864,21 +860,14 @@ function paintCell(i) {
   }
 }
 
-function scoreOf(id) {
-  if (G.mode === 'parallel') return G.found.get(id)?.set.size ?? 0;
-  let n = 0;
-  for (const c of G.claims.values()) if (c.by === id) n++;
-  return n;
-}
-
 function paintScores() {
   if (!V.scores) return;
-  const here = new Set(R.players.map(p => p.id));
+  const here = presentIds();
   V.scores.replaceChildren(...G.players.map(p => {
-    const n = scoreOf(p.id);
+    const { n } = standing(p.id);
     return h('div', { class: 'score' + (here.has(p.id) ? '' : ' gone'), style: `--c:${colorOf(p.id)}` },
       h('div', {}, h('b', { text: p.name }), h('span', { text: `${n}/${G.items.length}` })),
-      h('div', { class: 'meter', style: 'display:block' }, h('i', { style: `width:${100 * n / G.items.length}%` })));
+      h('div', { class: 'meter' }, h('i', { style: `width:${100 * n / G.items.length}%` })));
   }));
 }
 
@@ -897,7 +886,7 @@ function syncInput() {
 function renderGame() {
   if (G.state === 'count') {
     V.count = h('div', { class: 'count', 'aria-live': 'polite', text: '3' });
-    app.replaceChildren(h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: t(G.mode) })), V.count);
+    app.replaceChildren(gameTitle(), V.count);
     return;
   }
   V.timer = h('div', { class: 'timer', role: 'timer', text: clock(G.endAt - performance.now()) });
@@ -908,11 +897,10 @@ function renderGame() {
   const grid = buildGrid();
   app.replaceChildren(
     h('div', { class: 'gamebar' },
-      h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: t(G.mode) })),
+      gameTitle(),
       h('div', { class: 'play' }, V.timer, V.input, V.giveUp),
       V.scores, V.flash),
     grid);
-  G.items.forEach((_, i) => paintCell(i));
   paintScores();
   syncInput();
   if (!V.input.disabled) V.input.focus();
@@ -922,14 +910,13 @@ function headline() {
   const [a, b] = G.results;
   if (a.n === 0) return t('noScore');
   if (b && a.n === b.n && a.t === b.t) return t('draw');
-  return a.id === ME.id ? t('youWin') : t('win', a.name);
+  return a.id === MY_ID ? t('youWin') : t('win', a.name);
 }
 
 function renderResults() {
-  const others = G.results.filter(r => r.id !== ME.id);
+  const others = G.results.filter(r => r.id !== MY_ID);
   const single = others.length === 1 && !G.spectator ? P.h2h[others[0].name.toLowerCase()] : null;
   const grid = buildGrid();
-  V.chat = chatBox();
   app.replaceChildren(
     topBar(),
     h('h1', { text: quizName(G.quiz) }),
@@ -943,12 +930,11 @@ function renderResults() {
         single && h('p', { class: 'muted', style: 'margin-top:10px', text: t('h2h', single.name, single.w, single.l, single.d) }),
         h('div', { class: 'row', style: 'margin-top:14px' },
           isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
-          h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { R.showResults = false; render(); } }))),
-      V.chat),
+          h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { G = null; render(); } }))),
+      chatBox()),
     h('h2', { style: 'margin-top:22px', text: t('answers') }),
     grid,
     foot());
-  G.items.forEach((_, i) => paintCell(i));
   paintChat();
 }
 

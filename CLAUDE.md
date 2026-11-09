@@ -152,7 +152,7 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
 - **`norm()` on kahdessa paikassa:** `visa.html` ja `scripts/validate_visa.py` (yhden visan kahdella kohteella ei saa olla samaa normalisoitua vastausta). Muuta molempia kerralla.
 - **Visan viestit ovat toisten selainten syötettä:** `onMessage`-polku tarkistaa indeksit, ajat ja nimet, ja kaikki teksti menee `textContent`in kautta (`h()`), ei `innerHTML`:llä. Pelin tulokset
   perustuvat pelaajien luottamukseen (kaverien kesken), joten rankingia ei saa rakentaa niiden päälle.
-- **Broadcast ei takaa toimitusta:** visa korjaa itsensä (`repair` 3 s välein absoluuttinen tila, odottavat claimit uudelleen, `end` kolmesti, vahtiajastimet ajan loppuessa). Älä poista näitä, vaikka testissä kaikki viestit menisivät perille.
+- **Broadcast ei takaa toimitusta:** visa korjaa itsensä (`repair`: absoluuttinen tila 3 s välein tilan muuttuessa ja 15 s välein muuten, koska jokainen broadcast kuluttaa Realtime-kiintiötä kerran per vastaanottaja; odottavat claimit uudelleen, `end` kolmesti, vahtiajastimet ajan loppuessa). Älä poista näitä, vaikka testissä kaikki viestit menisivät perille.
 - **Uusi pelaaja sijoittuu aina muiden jälkeen (`track`):** ilman tätä väärässä ajassa oleva laite veisi vetäjän roolin ja nollaisi huoneen asetukset.
 - **Hyppymittari tarvitsee `vercel.json`:n CSP-otsakkeen `connect-src 'self'`.** Mukana tuleva
   MediaPipe lähettää käyttötilastoja `odml.pa.googleapis.com`:iin; otsake estää sen (sivu lupaa,
