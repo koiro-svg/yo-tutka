@@ -206,7 +206,7 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
 - AA poisti `/api/v2/data/*`:n 4.11.2026 (410 Gone). Ilmaiset osoitteet ovat `…/models/free`: niissä ei ole yksittäisiä testejä,
   sekoitettua hintaa eikä mediamallien julkaisupäiviä. Sekoitettu hinta lasketaan itse (`blended`, 3:1). Coding- ja Agentic-indeksit
   ovat aina null, joten koodausmallien listaa ei ole (koodaukseen: Koodausagentit-välilehti). `data/media-seen.json` muistaa, milloin mediamalli
-  nähtiin ensi kerran (`seen`, UUSI-merkki); ensimmäinen ajo kirjoittaa tyhjät päivät, ettei kaikkia merkitä uusiksi.
+  nähtiin ensi kerran (`seen`, UUSI-merkki); uuden rajapinnan ensimmäinen haku kirjoittaa tyhjät päivät, ettei kaikkia sen malleja merkitä uusiksi.
 - API-avain vain GitHub-secretissä. Repo on julkinen.
 - Samasta mallista tulee API:sta monta versiota ("Claude Opus 5.5 (Adaptive Reasoning, Max
   Effort…)"). `item()` pilkkoo sulkeiden edestä ja `top()` pitää vain parhaan version –

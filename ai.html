@@ -375,7 +375,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (cat.fmt) return cat.fmt(v);
     if (cat.unit === 's') return comma(v, 2) + ' s';
     if (cat.unit === '%') return comma(v, 1) + ' %';
-    if (cat.unit === '$' || cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
+    if (cat.unit === '$') return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
     return Math.round(v).toLocaleString('fi-FI');
   }
   // Free-API media models have no release date, only the day this site first saw them.
@@ -385,6 +385,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const t = Date.parse(d);
     return !isNaN(t) && Date.now() - t < 45 * DAY;
   }
+  // Real release dates only: a first-seen date says nothing about whether the metric is still being run.
   function stale(its){
     const newest = Math.max(...its.map(i => Date.parse(i.released)).filter(t => !isNaN(t)));
     return isFinite(newest) && Date.parse(data.updated) - newest > 180 * DAY;

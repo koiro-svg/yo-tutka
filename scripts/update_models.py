@@ -5,7 +5,7 @@ Usage: AA_API_KEY=... python3 scripts/update_models.py
 Standard library only. A category whose fetch fails keeps its previous data,
 so a flaky API never blanks the live page.
 """
-import json, os, pathlib, sys, urllib.request, datetime
+import collections, json, os, pathlib, sys, urllib.request, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "ai-models.json"
@@ -14,28 +14,37 @@ BASE = "https://artificialanalysis.ai/api/v2"
 LLM_PATH = "language/models/free"
 TOP_N = 8
 
-ARENA = {"metric": "Arena ELO"}
-# Category id -> (path, score field, category metadata written to the data file).
+# Category id -> endpoint. Scored by Arena ELO unless listed in SCORING.
 MEDIA = {
-    "kuva": ("media/text-to-image/models/free", "elo", ARENA),
-    "kuvanmuokkaus": ("media/image-editing/models/free", "elo", ARENA),
-    "video": ("media/text-to-video/models/free", "elo", ARENA),
-    "kuvasta-video": ("media/image-to-video/models/free", "elo", ARENA),
-    "video-aani": ("media/text-to-video-audio/models/free", "elo", ARENA),
-    "kuvasta-video-aani": ("media/image-to-video-audio/models/free", "elo", ARENA),
-    "puhe": ("media/text-to-speech/models/free", "elo", ARENA),
-    "musiikki": ("media/music/with-vocals/models/free", "elo", ARENA),
-    "musiikki-instrumentaali": ("media/music/instrumental/models/free", "elo", ARENA),
-    "puheentunnistus": ("media/speech-to-text/models/free", "aa_wer_index",
-                        {"metric": "AA-WER (sanavirheet)", "lowerIsBetter": True, "unit": "%"}),
-    "puheagentti": ("media/speech-to-speech/models/free", "tau_voice_score", {"metric": "τ-Voice"}),
+    "kuva": "text-to-image",
+    "kuvanmuokkaus": "image-editing",
+    "video": "text-to-video",
+    "kuvasta-video": "image-to-video",
+    "video-aani": "text-to-video-audio",
+    "kuvasta-video-aani": "image-to-video-audio",
+    "puhe": "text-to-speech",
+    "musiikki": "music/with-vocals",
+    "musiikki-instrumentaali": "music/instrumental",
+    "puheentunnistus": "speech-to-text",
+    "puheagentti": "speech-to-speech",
 }
+ELO = ("elo", 1, {"metric": "Arena ELO"})
+# Category id -> (score field, multiplier, category metadata). WER and τ-Voice are 0–1 fractions.
+SCORING = {
+    "puheentunnistus": ("aa_wer_index", 100, {"metric": "AA-WER (sanavirheet)", "lowerIsBetter": True, "unit": "%"}),
+    "puheagentti": ("tau_voice_score", 100, {"metric": "τ-Voice"}),
+}
+MAX_PAGES = 60  # the quota is 100 requests per 24 h; a stuck has_more must not use it all
+
+
+def media_path(cid):
+    return f"media/{MEDIA[cid]}/models/free"
 
 
 def fetch(path, key):
     """All rows of a list endpoint; the language endpoint is paginated, the media ones are not."""
-    rows, page = [], 1
-    while True:
+    rows = []
+    for page in range(1, MAX_PAGES + 1):
         url = f"{BASE}/{path}" + (f"?page={page}" if page > 1 else "")
         req = urllib.request.Request(url, headers={"x-api-key": key, "User-Agent": "koirosvg-ai-opas"})
         with urllib.request.urlopen(req, timeout=60) as r:
@@ -45,7 +54,7 @@ def fetch(path, key):
         rows += body["data"]
         if not (body.get("pagination") or {}).get("has_more"):
             return rows
-        page += 1
+    raise ValueError(f"{path}: yli {MAX_PAGES} sivua")
 
 
 def num(v):
@@ -60,8 +69,9 @@ def creator(m):
 def item(m, score, **extra):
     full = m.get("name") or m.get("slug") or "?"
     base, _, variant = full.partition(" (")
-    d = {"name": base, "creator": creator(m),
-         "score": round(score, 2), "released": m.get("release_date")}
+    d = {"name": base, "creator": creator(m), "score": round(score, 2)}
+    if m.get("release_date"):  # media models have none on the free API
+        d["released"] = m["release_date"]
     if variant:  # e.g. "Adaptive Reasoning, Max Effort)" -> shown as a hint, not part of the name
         d["variant"] = variant.rstrip(")")
     d.update({k: round(v, 2) for k, v in extra.items() if v is not None})
@@ -94,19 +104,6 @@ BENCH = {
 }
 
 
-def coverage(rows, key, frontier=20):
-    """Share of the top models (by intelligence) that have this score."""
-    def ev(m):
-        return m.get("evaluations") or {}
-    ranked = sorted((m for m in rows if num(ev(m).get("artificial_analysis_intelligence_index")) is not None),
-                    key=lambda m: -ev(m)["artificial_analysis_intelligence_index"])[:frontier]
-    return round(sum(num(ev(m).get(key)) is not None for m in ranked) / len(ranked), 2) if ranked else 0
-
-
-def pct(v):
-    return v * 100 if v <= 1 else v
-
-
 def blended(pr):
     """AA's 3:1 input:output blend; the free API only returns the two prices separately."""
     i, o = num(pr.get("price_1m_input_tokens")), num(pr.get("price_1m_output_tokens"))
@@ -122,11 +119,14 @@ def llm_categories(rows):
                          blended(m.get("pricing") or {}),
                          num((m.get("performance") or {}).get("median_output_tokens_per_second"))))
 
+    ranked = sorted((e for e in enriched if e[2] is not None), key=lambda e: -e[2])[:20]
+    frontier = [ev for _, ev, *_ in ranked]  # coverage = share of these top models with the score
     for cid, (label, key) in BENCH.items():
-        its = [item(m, pct(num(ev.get(key))), price=price, speed=speed, intelligence=intel)
-               for m, ev, intel, price, speed in enriched if num(ev.get(key)) is not None]
+        its = [item(m, v, price=price, speed=speed, intelligence=intel)
+               for m, ev, intel, price, speed in enriched if (v := num(ev.get(key))) is not None]
         its.sort(key=lambda x: -x["score"])
-        cats[cid] = {"metric": label, "items": top(its), "coverage": coverage(rows, key)}
+        has = sum(num(ev.get(key)) is not None for ev in frontier)
+        cats[cid] = {"metric": label, "items": top(its), "coverage": round(has / len(frontier), 2) if frontier else 0}
 
     best = max((i for _, _, i, _, _ in enriched if i is not None), default=0)
 
@@ -157,13 +157,14 @@ def llm_categories(rows):
     return cats
 
 
-def media_category(rows, field, meta, seen):
+def media_category(rows, cid, seen):
+    field, scale, meta = SCORING.get(cid, ELO)
     its = []
     for m in rows:
         score = num(m.get(field))
         if score is None:
             continue
-        it = item(m, pct(score))  # WER and τ-Voice are fractions; rounding would hide their differences
+        it = item(m, score * scale)
         if seen.get(m["id"]):
             it["seen"] = seen[m["id"]]
         its.append(it)
@@ -185,10 +186,10 @@ def inspect(key):
                 cov[f"{group}.{k}"] = cov.get(f"{group}.{k}", 0) + (num(v) is not None)
     for k, c in sorted(cov.items()):
         print(f"  {k}: {c}")
-    for cid, (path, _, _) in MEDIA.items():
-        rows = fetch(path, key)
-        numeric = {k: sum(num(m.get(k)) is not None for m in rows) for m0 in rows[:1] for k in m0}
-        print(f"{cid}: {len(rows)} mallia, numeeriset {({k: c for k, c in numeric.items() if c})}")
+    for cid in MEDIA:
+        rows = fetch(media_path(cid), key)
+        numeric = collections.Counter(k for m in rows for k, v in m.items() if num(v) is not None)
+        print(f"{cid}: {len(rows)} mallia, numeeriset {dict(numeric)}")
 
 
 KNOWN = set(BENCH) | set(MEDIA) | {"hinta-laatu", "budjetti", "nopeus", "viive"}
@@ -204,27 +205,27 @@ def main():
     cats = {k: v for k, v in prev.get("categories", {}).items() if k in KNOWN}
     errors = []
     seen = json.loads(SEEN.read_text(encoding="utf-8")) if SEEN.exists() else {}
-    baseline = not seen  # the first run must not mark every existing model as new
-    today = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+    now = datetime.datetime.now(datetime.timezone.utc)
+    today = now.strftime("%Y-%m-%d")
 
     try:
         cats.update(llm_categories(fetch(LLM_PATH, key)))
     except Exception as e:  # keep previous LLM data
         errors.append(f"llms: {e}")
-    for cid, (path, field, meta) in MEDIA.items():
+    for cid in MEDIA:
         try:
-            rows = fetch(path, key)
+            rows = fetch(media_path(cid), key)
+            first_fetch = not any(m["id"] in seen for m in rows)  # a new endpoint's models aren't all new
             for m in rows:
-                seen.setdefault(m["id"], "" if baseline else today)
-            cats[cid] = media_category(rows, field, meta, seen)
+                seen.setdefault(m["id"], "" if first_fetch else today)
+            cats[cid] = media_category(rows, cid, seen)
         except Exception as e:
             errors.append(f"{cid}: {e}")
 
     if len(errors) == 1 + len(MEDIA):
         sys.exit("Kaikki haut epäonnistuivat:\n" + "\n".join(errors))
 
-    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
-    out = {"updated": now, "source": "https://artificialanalysis.ai/", "errors": errors, "categories": cats}
+    out = {"updated": now.strftime("%Y-%m-%dT%H:%MZ"), "source": "https://artificialanalysis.ai/", "errors": errors, "categories": cats}
     OUT.parent.mkdir(exist_ok=True)
     SEEN.write_text(json.dumps(seen, ensure_ascii=False, indent=0, sort_keys=True) + "\n", encoding="utf-8")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
