@@ -9,28 +9,35 @@ import json, os, pathlib, sys, urllib.request, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "ai-models.json"
-BASE = "https://artificialanalysis.ai/api/v2/data"
+BASE = "https://artificialanalysis.ai/api/v2"
+LLM_PATH = "language/models/free"
 TOP_N = 8
 
 PRETTY = {"tau2": "τ²-Bench", "tau_banking": "τ-Banking", "terminalbench_hard": "Terminal-Bench Hard", "terminalbench_v2_1": "Terminal-Bench 2.1"}
 
 MEDIA = {
-    "kuva": "media/text-to-image",
-    "kuvanmuokkaus": "media/image-editing",
-    "video": "media/text-to-video",
-    "kuvasta-video": "media/image-to-video",
-    "puhe": "media/text-to-speech",
+    "kuva": "media/text-to-image/models/free",
+    "kuvanmuokkaus": "media/image-editing/models/free",
+    "video": "media/text-to-video/models/free",
+    "kuvasta-video": "media/image-to-video/models/free",
+    "puhe": "media/text-to-speech/models/free",
 }
 
 
 def fetch(path, key):
-    req = urllib.request.Request(f"{BASE}/{path}", headers={"x-api-key": key, "User-Agent": "koirosvg-ai-opas"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        body = json.load(r)
-    rows = body.get("data", body) if isinstance(body, dict) else body
-    if not isinstance(rows, list):
-        raise ValueError(f"{path}: unexpected response shape")
-    return rows
+    """All rows of a list endpoint; the language endpoint is paginated, the media ones are not."""
+    rows, page = [], 1
+    while True:
+        url = f"{BASE}/{path}" + (f"?page={page}" if page > 1 else "")
+        req = urllib.request.Request(url, headers={"x-api-key": key, "User-Agent": "koirosvg-ai-opas"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            body = json.load(r)
+        if not isinstance(body, dict) or not isinstance(body.get("data"), list):
+            raise ValueError(f"{path}: unexpected response shape")
+        rows += body["data"]
+        if not (body.get("pagination") or {}).get("has_more"):
+            return rows
+        page += 1
 
 
 def num(v):
@@ -81,6 +88,13 @@ BENCH = {
 }
 
 
+# Per-test scores are Pro-only since AA retired /api/v2/data/* (2026-11-04). These lists keep
+# their last free data and ai.html marks them frozen. With a Pro key: use the non-/free paths
+# (blended price and per-test scores return) and empty FROZEN.
+FROZEN_SINCE = "2026-11-03"
+FROZEN = {"automaatio", "asiakaspalvelu", "ohjeet", "pitkat-dokumentit", "tiede", "vaikeimmat"}
+
+
 def shared_keys(rows, candidates, frontier=20):
     """Of the candidate keys, those that >= 80 % of the top models (by intelligence) have.
     Measured on the top models so new releases aren't excluded by a retired test.
@@ -101,17 +115,24 @@ def pct(v):
     return v * 100 if v <= 1 else v
 
 
+def blended(pr):
+    """AA's 3:1 input:output blend; the free API only returns the two prices separately."""
+    i, o = num(pr.get("price_1m_input_tokens")), num(pr.get("price_1m_output_tokens"))
+    return (3 * i + o) / 4 if i is not None and o is not None else None
+
+
 def llm_categories(rows):
     cats = {}
     enriched = []
     for m in rows:
         ev = m.get("evaluations") or {}
-        pr = m.get("pricing") or {}
         enriched.append((m, ev, num(ev.get("artificial_analysis_intelligence_index")),
-                         num(pr.get("price_1m_blended_3_to_1")),
-                         num(m.get("median_output_tokens_per_second"))))
+                         blended(m.get("pricing") or {}),
+                         num((m.get("performance") or {}).get("median_output_tokens_per_second"))))
 
     for cid, (label, candidates) in BENCH.items():
+        if cid in FROZEN:
+            continue
         keys, coverage = shared_keys(rows, candidates)
         its = []
         for m, ev, intel, price, speed in enriched:
@@ -143,7 +164,7 @@ def llm_categories(rows):
 
     lat = []
     for m, _, intel, price, speed in enriched:
-        t = num(m.get("median_time_to_first_answer_token"))
+        t = num((m.get("performance") or {}).get("median_time_to_first_answer_token_seconds"))
         if intel is not None and t and intel >= 0.6 * best:
             lat.append(item(m, t, price=price, speed=speed, intelligence=intel))
     lat.sort(key=lambda x: x["score"])
@@ -162,28 +183,21 @@ def media_category(rows):
 
 def inspect(key):
     """Print field names and coverage only (no values) to plan new categories."""
-    rows = fetch("llms/models", key)
+    rows = fetch(LLM_PATH, key)
     print("LLM-malleja:", len(rows))
     cov = {}
     for m in rows:
         for k, v in m.items():
             if not isinstance(v, dict):
                 cov[k] = cov.get(k, 0) + (v is not None)
-        for group in ("evaluations", "pricing"):
+        for group in ("evaluations", "pricing", "performance"):
             for k, v in (m.get(group) or {}).items():
                 cov[f"{group}.{k}"] = cov.get(f"{group}.{k}", 0) + (num(v) is not None)
     for k, c in sorted(cov.items()):
         print(f"  {k}: {c}")
     for cid, path in MEDIA.items():
-        rows = fetch(path + "?include_categories=true", key)
+        rows = fetch(path, key)
         print(f"{cid}: {len(rows)} mallia, kentät {sorted(rows[0]) if rows else []}")
-        cats = {}
-        for m in rows:
-            for c in m.get("categories") or []:
-                label = " / ".join(f"{k}={v}" for k, v in c.items() if k.endswith("_category") and v)
-                cats[label] = cats.get(label, 0) + 1
-        for label, c in sorted(cats.items()):
-            print(f"    {label}: {c}")
 
 
 KNOWN = set(BENCH) | set(MEDIA) | {"hinta-laatu", "budjetti", "nopeus", "viive"}
@@ -200,7 +214,7 @@ def main():
     errors = []
 
     try:
-        cats.update(llm_categories(fetch("llms/models", key)))
+        cats.update(llm_categories(fetch(LLM_PATH, key)))
     except Exception as e:  # keep previous LLM data
         errors.append(f"llms: {e}")
     for cid, path in MEDIA.items():
@@ -211,6 +225,8 @@ def main():
 
     if len(errors) == 1 + len(MEDIA):
         sys.exit("Kaikki haut epäonnistuivat:\n" + "\n".join(errors))
+    for cid in FROZEN & set(cats):
+        cats[cid]["frozen"] = FROZEN_SINCE
 
     now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     out = {"updated": now, "source": "https://artificialanalysis.ai/", "errors": errors, "categories": cats}

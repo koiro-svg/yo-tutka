@@ -418,7 +418,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       </div>
       <ol class="rank">${rest}</ol>
       ${its.length > 3 ? `<button type="button" class="kt-btn sm more" data-more="${esc(id)}" aria-expanded="${open}">${moreLabel(open, its.length)}</button>` : ''}
-      ${gloss(cat.metric)}${kind === 'model' && stale(its) ? '<p class="kt-note">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>'
+      ${gloss(cat.metric)}${cat.frozen ? `<p class="kt-note">Lista ei enää päivity: tilanne ${esc(fiDate(cat.frozen))}. Artificial Analysis siirsi tämän testin maksulliseen rajapintaan, joten uudet mallit puuttuvat.</p>`
+        : kind === 'model' && stale(its) ? '<p class="kt-note">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>'
         : cat.coverage != null && cat.coverage < 0.5 ? `<p class="kt-note">Vain ${Math.round(cat.coverage * 20)}/20 tämän hetken kärkimallista on ajanut tämän testin – osa uusimmista malleista puuttuu listalta.</p>` : ''}
       <p class="tip">${esc(meta.tip)}</p>
     </article>`;

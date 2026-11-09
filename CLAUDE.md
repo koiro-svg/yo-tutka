@@ -187,6 +187,9 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - Tekstikategoriat ovat `BENCH`-taulussa (update_models.py). Jos testiä ei löydy, lista jää
   tyhjäksi ("Ei dataa vielä") – älä korvaa sitä toisella mittarilla hiljaa.
 - `coverage` = osuus top 20 -malleista, joilla on testin tulos. Alle 0,5 → sivulla varoitus.
+- AA poisti `/api/v2/data/*`:n 4.11.2026 (410 Gone). Ilmaiset osoitteet ovat `…/models/free`: niissä ei ole yksittäisiä testejä
+  eikä mediamallien julkaisupäiviä, ja sekoitettu hinta lasketaan itse (`blended`, 3:1). `FROZEN`-listat säilyttävät viimeisen
+  ilmaisen datansa ja `ai.html` merkitsee ne jäädytetyiksi – älä esitä niitä tuoreina äläkä tyhjennä niitä.
 - API-avain vain GitHub-secretissä. Repo on julkinen.
 - Samasta mallista tulee API:sta monta versiota ("Claude Opus 5.5 (Adaptive Reasoning, Max
   Effort…)"). `item()` pilkkoo sulkeiden edestä ja `top()` pitää vain parhaan version –
