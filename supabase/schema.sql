@@ -77,7 +77,12 @@ revoke all on public.visa_plays from anon, authenticated;
 create or replace function public.visa_count_play(q text) returns void
 language sql security definer set search_path = ''
 as $$
-  insert into public.visa_plays (quiz_id, day, plays) values (q, current_date, 1)
+  -- The key is public: at most 2000 different ids per day and 30 days of history keep the table small.
+  delete from public.visa_plays where day < current_date - 30;
+  insert into public.visa_plays (quiz_id, day, plays)
+  select q, current_date, 1
+  where exists (select 1 from public.visa_plays where quiz_id = q and day = current_date)
+     or (select count(*) from public.visa_plays where day = current_date) < 2000
   on conflict (quiz_id, day) do update set plays = public.visa_plays.plays + 1;
 $$;
 
@@ -89,7 +94,7 @@ as $$
   where p.day >= current_date - 14
   group by p.quiz_id
   order by plays desc
-  limit 20;
+  limit 200;   -- the page keeps the first 20 ids it knows, so made-up ids can't crowd out real quizzes
 $$;
 
 revoke all on function public.visa_count_play(text) from public;

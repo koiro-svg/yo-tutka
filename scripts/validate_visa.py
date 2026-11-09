@@ -90,6 +90,11 @@ def main():
             if not c[k]:
                 bad.append(f"{c['id']}: empty {k}")
 
+    shapes = json.loads((ROOT / 'data' / 'visa-map.json').read_text(encoding='utf-8'))['shapes']
+    for c in ids:
+        if c not in shapes:
+            bad.append(f'{c}: missing from visa-map.json')
+
     listed = data.get('packs', [])
     on_disk = sorted(p.stem for p in PACKS.glob('*.json'))
     for name in set(listed) ^ set(on_disk):
@@ -121,7 +126,13 @@ def main():
         if fmt not in ('list', 'choice', 'flags', 'map'):
             bad.append(f'{qid}: unknown format {fmt}')
             continue
+        if fmt in ('flags', 'map') and ('items' in q or q.get('ans') != 'name'):
+            bad.append(f'{qid}: {fmt} quizzes are built from the country table (ans: name, no items)')
+            continue
         items = items_of(q, data)
+        if not items:
+            bad.append(f'{qid}: no items')
+            continue
         if not MIN_ITEMS <= len(items) <= MAX_ITEMS and 'items' in q:
             bad.append(f'{qid}: {len(items)} items, allowed {MIN_ITEMS}-{MAX_ITEMS}')
         if fmt == 'choice':

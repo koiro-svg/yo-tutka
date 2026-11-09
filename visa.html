@@ -156,7 +156,7 @@ const STORE_KEY = 'visa-v1';
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
-const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60;
+const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60, TOP_SHOWN = 20, MAP_RETRY_MS = 2000;
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
@@ -222,7 +222,7 @@ let R = null;                  // current room
 let G = null;                  // current game
 let V = {};                    // DOM refs of the current view
 let pendingCode = null, createdCode = null, homeError = null;
-let packsReady = Promise.resolve();   // the home screen needs no packs, joining a room waits for them
+let packsReady = Promise.resolve();   // the home screen does not wait for the packs, joining a room does
 let MAP = null, mapLoad = null;   // data/visa-map.json, only fetched for map quizzes
 let TOP = [];                     // quiz ids of Suosituimmat, empty until the Supabase functions exist
 
@@ -305,7 +305,7 @@ function buildItems(q) {
 }
 const getJson = url => fetch(url).then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
 function loadMap() {
-  if (!mapLoad) mapLoad = getJson('/data/visa-map.json').then(d => { MAP = d; if (G && G.fmt === 'map') render(); }).catch(() => { mapLoad = null; });
+  if (!mapLoad) mapLoad = getJson('/data/visa-map.json').then(d => { MAP = d; if (G && G.fmt === 'map') render(); }).catch(() => { mapLoad = null; if (G?.fmt === 'map' && !G.over) setTimeout(loadMap, MAP_RETRY_MS); });
 }
 
 function getClient() {
@@ -343,7 +343,9 @@ async function joinRoom(code, created) {
   R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
-  await packsReady;
+  try { await packsReady; } catch {
+    R = null; homeError = 'noData'; history.replaceState(null, '', location.pathname); render(); return;
+  }
   if (R?.code !== code) return;
   paintSettings();
   let client;
@@ -352,7 +354,7 @@ async function joinRoom(code, created) {
   }
   if (R?.code !== code) return;
   client.rpc('visa_trending').then(({ data }) => {
-    if (Array.isArray(data)) { TOP = data.map(x => x.quiz_id).filter(id => QUIZ.has(id)); paintSettings(); }
+    if (Array.isArray(data)) { TOP = data.map(x => x.quiz_id).filter(id => QUIZ.has(id)).slice(0, TOP_SHOWN); paintSettings(); }
   }, () => {});
   const ch = client.channel(`visa:${code}`, { config: { broadcast: { self: false }, presence: { key: MY_ID } } });
   R.ch = ch;
@@ -448,7 +450,7 @@ function onMessage(m) {
   switch (m.t) {
     case 'have': if (!race && Array.isArray(m.l)) addFound(m.from, m.l, m.t2); break;
     case 'claim': if (race && isHost()) grant(m.i, m.from, m.t2); break;
-    case 'claims': if (race) applyClaims(m.c); break;   // also from a stand-in host: while a reloading host is away someone else grants
+    case 'claims': if (race && Array.isArray(m.c)) applyClaims(fromHost(m) ? m.c : m.c.filter(c => Array.isArray(c) && c[1] === m.from)); break;   // a stand-in host counts only for its own answers
     case 'done': G.done.add(m.from); maybeFinish(); break;
     case 'end': if (fromHost(m)) applyEnd(m); break;
   }
@@ -507,7 +509,7 @@ function beginGame(m) {
   const now = performance.now();
   const elapsed = clamp(m.elapsed, -COUNTDOWN_MS, durMs + LOCAL_WATCHDOG_MS);
   G = {
-    seq: m.seq, quiz, fmt: fmtOf(quiz), order: shuffled(items.map((_, i) => i), m.seq), seen: new Set(), tried: new Map(), lockUntil: 0, shown: -1, items, answers, mode: m.mode, mul: m.mul, durMs, players,
+    seq: m.seq, quiz, fmt: fmtOf(quiz), order: shuffled(items.map((_, i) => i), m.seq), seen: new Set((readStr('sessionStorage', `visa-seen-${m.seq}`) || '').split(',').filter(Boolean).map(Number)), tried: new Map(), lockUntil: 0, shown: -1, items, answers, mode: m.mode, mul: m.mul, durMs, players,
     startAt: now - elapsed, endAt: now - elapsed + durMs,
     found: new Map(players.map(p => [p.id, { set: new Set(), t: 0 }])), claims: new Map(), pending: new Map(), done: new Set(),
     state: 'count', over: false, finishing: false, out: !players.some(p => p.id === MY_ID), spectator: !players.some(p => p.id === MY_ID),
@@ -619,7 +621,7 @@ function target() {
 }
 
 function paintTarget() {
-  if (!G || G.over || G.state !== 'play' || !V.prompt) return;
+  if (!G || G.over || G.state !== 'play' || G.spectator || !V.prompt) return;
   const i = target();
   if (G.fmt === 'map') { V.prompt.textContent = i < 0 ? '' : t('clickFind', G.items[i][P.lang][0]); return; }
   if (i < 0) return;
@@ -652,7 +654,7 @@ function paintChoice(i) {
 
 function choose(i, k, options) {
   if (!canAct()) return;
-  if (G.mode === 'parallel') G.seen.add(i);
+  if (G.mode === 'parallel') { G.seen.add(i); writeStr('sessionStorage', `visa-seen-${G.seq}`, [...G.seen].join()); }
   if (options[k].ok) accept(i);
   else if (G.mode === 'race') {   // the shared question stays open for the others, this option is gone for me
     if (!G.tried.has(i)) G.tried.set(i, new Set());
@@ -995,7 +997,11 @@ function buildMap() {
   const edges = pick => [...index.keys()].map(iso => MAP.shapes[iso].b[pick]).sort((a, b) => a - b);
   const at = (list, share) => list[Math.floor((list.length - 1) * share)];
   const whole = G.items.length > 150;
-  const [x0, y0, x1, y1] = whole ? [0, 0, MAP.w, MAP.h] : [0, 1, 2, 3].map(k => at(edges(k), k < 2 ? .06 : .94));
+  let [x0, y0, x1, y1] = whole ? [0, 0, MAP.w, MAP.h] : [0, 1, 2, 3].map(k => at(edges(k), k < 2 ? .06 : .94));
+  for (const iso of index.keys()) {   // ... but a target that fell outside (an island state) must stay clickable
+    const b = MAP.shapes[iso].b;
+    if (b[2] < x0 || b[0] > x1 || b[3] < y0 || b[1] > y1) { x0 = Math.min(x0, b[0]); y0 = Math.min(y0, b[1]); x1 = Math.max(x1, b[2]); y1 = Math.max(y1, b[3]); }
+  }
   const pad = whole ? 0 : Math.max(x1 - x0, y1 - y0) * .05;
   const box = [x0 - pad, y0 - pad, x1 - x0 + 2 * pad, y1 - y0 + 2 * pad];
   const svg = svgEl('svg', { viewBox: box.map(Math.round).join(' '), role: 'img', 'aria-label': t('fmt').map });
@@ -1146,9 +1152,12 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
   tabCheck = false;
   DATA = d;
   for (const q of d.quizzes) QUIZ.set(q.id, q);
-  packsReady = Promise.all((d.packs || []).map(name => getJson(`/data/visa/${name}.json`).catch(() => ({ quizzes: [] })))).then(packs => {
+  const pack = url => getJson(url).catch(() => getJson(url));
+  packsReady = Promise.all((d.packs || []).map(name => pack(`/data/visa/${name}.json`))).then(packs => {
     for (const q of packs.flatMap(x => x.quizzes)) { d.quizzes.push(q); QUIZ.set(q.id, q); }
+    if (!R && Object.keys(P.best).length) render();   // best scores can be for pack quizzes
   });
+  packsReady.catch(() => {});   // reported by joinRoom
   setInterval(tick, 100);
   addEventListener('hashchange', route);
   addEventListener('keydown', e => { if (V.opts && /^[1-4]$/.test(e.key) && !e.metaKey && !e.ctrlKey) V.opts[Number(e.key) - 1]?.click(); });

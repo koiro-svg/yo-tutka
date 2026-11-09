@@ -153,7 +153,8 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
 - **Visan vastaushyväksyntä (`longerAvailable`):** vastaus, joka on toisen vielä löytämättömän vastauksen alku, odottaa 700 ms tai Enteriä ("Niger"/"Nigeria"), myös saman kohteen pidemmän nimen
   kohdalla ("Saturn"/"Saturnus"). Muuten sanan loppu jää kenttään ja seuraavat vastaukset eivät enää täsmää.
 - **Karttavisan zoom käyttää persentiilejä (`buildMap`):** Venäjä ja merentakaiset alueet zoomaisivat muuten maanosan koko maailmaksi.
-- **Vastausmerkinnät (`claims`) hyväksytään keneltä tahansa:** vetäjän uudelleenlatauksen aikana sijainen myöntää vastauksia, ja `applyClaim` on ensimmäinen voittaa. Lopullisen tilan kertoo vetäjän `end`.
+- **Vastausmerkinnät (`claims`) vetäjältä tai pelaajalta itseltään:** vetäjän uudelleenlatauksen aikana sijainen myöntää vastauksia, joten muulta kuin vetäjältä kelpaavat vain lähettäjän omat. `applyClaim` on ensimmäinen voittaa, ja lopullisen tilan kertoo vetäjän `end`.
+- **Karttakohde ei saa jäädä rajauksen ulkopuolelle:** `buildMap` laajentaa näkymää, jos saarivaltio jäisi persentiilien ulkopuolelle. Muuten täyttä tulosta ei voisi saada.
 - **Lippujen järjestys on sekoitettu (`G.order`), ei aakkosissa:** aakkosjärjestys antaisi vastaukset vihjeenä.
 - **`replaceChildren` on natiivi eikä suodata arvoja:** ehdolliset lapset menevät `fill()`in kautta, muuten sivulle tulostuu sana "false".
 - **`norm()` on kahdessa paikassa:** `visa.html` ja `scripts/validate_visa.py` (yhden visan kahdella kohteella ei saa olla samaa normalisoitua vastausta). Muuta molempia kerralla.
