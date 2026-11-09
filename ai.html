@@ -233,7 +233,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   <section id="tab-tyokalut" class="tabpanel" role="tabpanel" aria-labelledby="tb-tyokalut" hidden></section>
 
   <footer>
-    <p>Data: <a href="https://artificialanalysis.ai/" rel="noopener">Artificial Analysis</a> (tekstimallien indeksit, hinnat ja nopeudet sekä kuva-, video- ja puhemallien sokkovertailujen ELO-pisteet). Koodausagenttien tulokset: <a href="https://artificialanalysis.ai/agents/coding-agents" rel="noopener">Artificial Analysis Coding Agent Index</a>; agenttien hinnat ja ominaisuudet tarkistetaan valmistajien sivuilta.</p>
+    <p>Data: <a href="https://artificialanalysis.ai/" rel="noopener">Artificial Analysis</a> (tekstimallien indeksit, hinnat ja nopeudet sekä kuva-, video-, puhe- ja musiikkimallien sokkovertailujen ELO-pisteet). Koodausagenttien tulokset: <a href="https://artificialanalysis.ai/agents/coding-agents" rel="noopener">Artificial Analysis Coding Agent Index</a>; agenttien hinnat ja ominaisuudet tarkistetaan valmistajien sivuilta.</p>
     <p><b>Automatisoi</b> = hoitaa tehtävän itsenäisesti, kun se on kerran asetettu. <b>Avustaa</b> = nopeuttaa työtä, jonka teet itse. Työkalujen tiedot tarkistetaan verkosta automaattisesti kahden päivän välein tekoälyagentilla (Claude). Valinnat ovat toimituksellisia, eivät maksettuja.</p>
     <p>Vinkit ovat yleisohjeita; lopullinen valinta kannattaa aina testata omalla tehtävällä. Hinnat ovat suuntaa antavia ja muuttuvat usein. ”Uusi” = julkaistu viimeisen 45 päivän aikana.</p>
     <div><b>Datan tila</b><ul id="datastate"></ul></div>
@@ -258,7 +258,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     {id:'yleis', group:'teksti', title:'Kirjoittaminen, analyysi & tutkimus', use:'Yleisäly: raportit, sisällöntuotanto, päättely, tiedonhaku.',
      tip:'Kärjen erot ovat pieniä – valitse se, jonka tyyli miellyttää ja jolla on tarvitsemasi työkalut (haku, tiedostot).'},
     {id:'strategia', group:'teksti', title:'Automaatio & operatiivinen työ', use:'Työnkulut sovellusten välillä: myynti, markkinointi, HR, asiakastuki ja monivaiheiset toimistotehtävät.',
-     tip:'Rakenna työnkulku esim. n8n:llä, Makella, Zapierilla tai Claude Codella. Jos ajoja on tuhansia päivässä, katso “Paras hinta-laatu”.'},
+     tip:'Rakenna työnkulku esim. n8n:llä, Makella, Zapierilla tai Claude Codella. Jos ajoja on tuhansia päivässä, katso “Paras hinta-laatu”. Puhelinbotteihin on oma listansa “Puhebotit”.'},
     {id:'rahoitus', group:'teksti', title:'Talous & kirjanpito', use:'Laskelmat, talousanalyysit, taulukot ja pitkät tilinpäätösaineistot.',
      tip:'Tarkista luvut aina itse. Indeksi mittaa myös sitä, keksiikö malli lukuja tai lähteitä.'},
     {id:'juridiikka', group:'teksti', title:'Sopimukset & juridiikka', use:'Sopimusten läpikäynti, lakitekstien tulkinta ja pitkien asiakirjojen tiivistys.',
@@ -310,6 +310,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     [/Engineering/, 'Artificial Analysisin kykyindeksi: tekniikan alojen tieto, tutkimustason fysiikka ja laskennallinen päättely. Ohjelmoinnin osuus on 15 %. Mitä suurempi, sitä parempi.'],
     [/Economics/, 'Artificial Analysisin kykyindeksi: taloustieteen tieto, analyyttiset työt, mallinnus ja pitkät raportit. Mitä suurempi, sitä parempi.'],
     [/AA-WER/, 'Sanavirheiden osuus litteroinnissa kolmen englanninkielisen testiaineiston painotettuna keskiarvona. Pienempi on parempi.'],
+    [/Terminal-Bench/, 'Agentti tekee oikeita tehtäviä terminaalissa: asentaa, ajaa skriptejä ja korjaa virheitä. Mittaa työkalujen käyttöä monessa vaiheessa.'],
     [/τ-Voice/, 'Puheagentti palvelee simuloitua asiakasta yrityksen säännöillä ja järjestelmillä. Mitä suurempi, sitä parempi.'],
     [/Arena ELO/, 'Sokkovertailujen ELO-luku: ihmiset valitsevat kahdesta tuloksesta paremman tietämättä, mikä malli teki kumman.'],
     [/\$ \/ 1M/, 'Sekahinta dollareina miljoonaa tokenia kohden (syöte ja tuotos suhteessa 3:1). Pienempi on parempi.'],
@@ -332,6 +333,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     {id:'litterointi', label:'Litteroin puhetta', cat:'puheentunnistus', area:'tuottavuus'},
     {id:'musiikki', label:'Teen musiikkia', cat:'musiikki', area:'visuaalit'},
   ];
+  // Cards removed when AA's free API dropped their tests: old links land on the closest replacement.
+  const MOVED = {'m-automaatio':'m-strategia', 'm-asiakaspalvelu':'m-strategia', 'm-koodaus':'koodausagentit'};
   const TABS = [{id:'mallit', name:'Mallit'}, {id:'koodausagentit', name:'Koodausagentit'}, {id:'tyokalut', name:'Työkalut'}];
   const KINDS = [{id:'all', name:'Kaikki tyypit'}, {id:'automatisoi', name:'Automatisoi'}, {id:'avustaa', name:'Avustaa'}];
   const SURFACES = {cli:'Terminaali', ide:'Editori', app:'Työpöytäsovellus', web:'Selain', cloud:'Pilvessä taustalla'};
@@ -647,7 +650,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const models = [...fresh.values()].sort((a, b) => Date.parse(born(b)) - Date.parse(born(a))).slice(0, 6);
     const changes = tools ? tools.changes.slice(0, 3) : [];
     return derived.news = !models.length && !changes.length ? '' : `<h2>Uutta</h2>
-      ${models.length ? `<ul class="pills">${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${esc(fiDate(born(m)))}</small></li>`).join('')}</ul>` : ''}
+      ${models.length ? `<ul class="pills">${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${m.released ? '' : 'listalla '}${esc(fiDate(born(m)))}</small></li>`).join('')}</ul>` : ''}
       ${changes.length ? `<ul class="chg">${changes.map(c => `<li><span class="muted small">${esc(fiDate(c.date))}</span> ${esc(c.text)}</li>`).join('')}</ul><p><a href="#muutokset">Kaikki muutokset →</a></p>` : ''}`;
   }
 
@@ -726,7 +729,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function parseHash(){
     let h = location.hash.slice(1);
     try { h = decodeURIComponent(h); } catch (e) { /* a stray % (#50%): use the raw text */ }
-    const [head, sub] = h.split('/');
+    const [first, sub] = h.split('/');
+    const head = MOVED[first] || first;
     if (!head) return {};
     if (head === 'mallit') return {tab:'mallit', group: MODEL_GROUPS.some(g => g.id === sub) ? sub : 'all'};
     if (head === 'koodausagentit') return {tab:'koodausagentit'};

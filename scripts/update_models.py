@@ -9,7 +9,7 @@ import collections, json, os, pathlib, sys, urllib.request, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "ai-models.json"
-SEEN = ROOT / "data" / "media-seen.json"  # media model id -> first day seen; the free API has no media release dates
+SEEN = ROOT / "data" / "media-seen.json"  # category -> media model id -> first day seen; the free API has no media release dates
 BASE = "https://artificialanalysis.ai/api/v2"
 LLM_PATH = "language/models/free"
 TOP_N = 8
@@ -208,22 +208,29 @@ def main():
     now = datetime.datetime.now(datetime.timezone.utc)
     today = now.strftime("%Y-%m-%d")
 
+    fresh = {}
     try:
-        cats.update(llm_categories(fetch(LLM_PATH, key)))
+        fresh.update(llm_categories(fetch(LLM_PATH, key)))
     except Exception as e:  # keep previous LLM data
         errors.append(f"llms: {e}")
     for cid in MEDIA:
         try:
             rows = fetch(media_path(cid), key)
-            first_fetch = not any(m["id"] in seen for m in rows)  # a new endpoint's models aren't all new
+            known = seen.setdefault(cid, {})
+            first_fetch = not known  # a new endpoint's existing models aren't all new
             for m in rows:
-                seen.setdefault(m["id"], "" if first_fetch else today)
-            cats[cid] = media_category(rows, cid, seen)
+                known.setdefault(m["id"], "" if first_fetch else today)
+            fresh[cid] = media_category(rows, cid, known)
         except Exception as e:
             errors.append(f"{cid}: {e}")
 
-    if len(errors) == 1 + len(MEDIA):
+    if not any(c["items"] for c in fresh.values()):
         sys.exit("Kaikki haut epäonnistuivat:\n" + "\n".join(errors))
+    for cid, cat in fresh.items():  # an empty result must not blank a list that has data
+        if cat["items"] or cid not in cats:
+            cats[cid] = cat
+        else:
+            errors.append(f"{cid}: ei tuloksia")
 
     out = {"updated": now.strftime("%Y-%m-%dT%H:%MZ"), "source": "https://artificialanalysis.ai/", "errors": errors, "categories": cats}
     OUT.parent.mkdir(exist_ok=True)
