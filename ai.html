@@ -246,7 +246,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
 (function(){
   // Model groups (ids are also the legacy /ai-opas#<id> anchors) and the categories inside them.
   const GROUPS = [
-    {id:'teksti', name:'Teksti, koodi & agentit'},
+    {id:'teksti', name:'Teksti & asiantuntijatyö'},
     {id:'koodausagentit', name:'Koodausagentit'},
     {id:'hinta', name:'Hinta & nopeus'},
     {id:'kuva', name:'Kuvat'},
@@ -255,22 +255,20 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   ];
   const MODEL_GROUPS = GROUPS.filter(g => g.id !== 'koodausagentit');
   const CATS = [
-    {id:'automaatio', group:'teksti', title:'Automaatio & agentit', use:'Automatisoidut workflowt, bisnesprosessit, työkaluja kutsuvat agentit.',
-     tip:'Rakenna työnkulku esim. n8n:llä, Makella, Zapierilla tai Claude Codella ja käytä kärkimallia vaativiin päätöksiin. Jos ajoja on tuhansia päivässä, katso “Paras hinta-laatu”.'},
-    {id:'koodaus', group:'teksti', title:'Koodaus', use:'Ohjelmointi, sovellusten ja nettisivujen rakentaminen, bugien korjaus.',
-     tip:'Parhaimmillaan koodausagentissa, joka lukee ja muokkaa koko projektia – vertailu välilehdellä “Koodausagentit”.'},
-    {id:'yleis', group:'teksti', title:'Kirjoittaminen, analyysi & tutkimus', use:'Yleisäly: raportit, sisällöntuotanto, päättely, tiedonhaku, strategia.',
+    {id:'yleis', group:'teksti', title:'Kirjoittaminen, analyysi & tutkimus', use:'Yleisäly: raportit, sisällöntuotanto, päättely, tiedonhaku.',
      tip:'Kärjen erot ovat pieniä – valitse se, jonka tyyli miellyttää ja jolla on tarvitsemasi työkalut (haku, tiedostot).'},
-    {id:'asiakaspalvelu', group:'teksti', title:'Asiakaspalvelubotit', use:'Chat- ja puhelinbotit, jotka hoitavat asiakkaan asian järjestelmien kautta (varaukset, laskut, tuki).',
-     tip:'Testit simuloivat oikeaa asiakasta ja yrityksen sääntöjä – hyvä mittari kaikille botteille, jotka tekevät muutoksia asiakkaan puolesta.'},
-    {id:'ohjeet', group:'teksti', title:'Ohjeiden tarkka noudattaminen', use:'Tarkat muotovaatimukset: JSON, pituusrajat, tietty rakenne – tärkeää automaatioissa.',
-     tip:'Jos automaatio hajoaa, koska malli ei noudata muotoa, valitse tältä listalta.'},
-    {id:'pitkat-dokumentit', group:'teksti', title:'Pitkät dokumentit', use:'Satojen sivujen sopimukset, raportit ja aineistot: päättely koko tekstin yli.',
-     tip:'Mittaa ymmärrystä, ei pelkkää hakua – antaa hyvän kuvan siitä, kuka oikeasti lukee koko dokumentin.'},
-    {id:'tiede', group:'teksti', title:'Tiede & asiantuntijatieto', use:'Biologia, fysiikka, kemia tohtoritasolla – vaikea faktatieto ja päättely.',
-     tip:'Hyvä valinta opiskeluun ja faktojen tarkistamiseen, mutta tarkista silti lähteet.'},
-    {id:'vaikeimmat', group:'teksti', title:'Vaikeimmat kysymykset', use:'Humanity’s Last Exam: tuhansia asiantuntijoiden laatimia kysymyksiä, joihin netistä ei löydy vastausta.',
-     tip:'Kertoo, kuka pärjää aidosti uusissa ongelmissa – pisteet ovat vielä kaikilla matalia.'},
+    {id:'strategia', group:'teksti', title:'Automaatio & operatiivinen työ', use:'Työnkulut sovellusten välillä: myynti, markkinointi, HR, asiakastuki ja monivaiheiset toimistotehtävät.',
+     tip:'Rakenna työnkulku esim. n8n:llä, Makella, Zapierilla tai Claude Codella. Jos ajoja on tuhansia päivässä, katso “Paras hinta-laatu”.'},
+    {id:'rahoitus', group:'teksti', title:'Talous & kirjanpito', use:'Laskelmat, talousanalyysit, taulukot ja pitkät tilinpäätösaineistot.',
+     tip:'Tarkista luvut aina itse. Indeksi mittaa myös sitä, keksiikö malli lukuja tai lähteitä.'},
+    {id:'juridiikka', group:'teksti', title:'Sopimukset & juridiikka', use:'Sopimusten läpikäynti, lakitekstien tulkinta ja pitkien asiakirjojen tiivistys.',
+     tip:'Suomen lakia koskevissa asioissa tarkista lähteet – malli voi sekoittaa eri maiden lainsäädäntöä.'},
+    {id:'terveys', group:'teksti', title:'Terveys & lääketiede', use:'Lääketieteellinen tieto, pitkät potilasaineistot ja terveysalan työnkulut.',
+     tip:'Tukee ammattilaisen työtä tai asiaan perehtymistä, mutta ei korvaa lääkäriä.'},
+    {id:'insinoori', group:'teksti', title:'Insinöörityö & tiede', use:'Tekniikan alat, fysiikka ja laskennallinen päättely: mitoitukset, johtaminen ja suunnitteluvalinnat.',
+     tip:'Ohjelmointi on tästä vain pieni osa. Koodaukseen katso välilehti “Koodausagentit”.'},
+    {id:'taloustiede', group:'teksti', title:'Taloustiede & markkinat', use:'Mikro- ja makrotalous, mallinnus, arviot ja tutkimusraportit.',
+     tip:'Hyvä päättelyyn ja aineiston jäsentelyyn. Tuoreet markkinatiedot pitää silti hakea erikseen.'},
     {id:'hinta-laatu', group:'hinta', title:'Paras hinta-laatu', use:'Isot volyymit: luokittelu, tiivistäminen, massa-automaatio.',
      tip:'Halvimmat mallit, jotka ovat silti lähellä kärkeä. Hinta = sekahinta ($ / miljoona tokenia, 3:1 syöte:tuotos).'},
     {id:'budjetti', group:'hinta', title:'Halvin kelvollinen', use:'Yksinkertaiset massatehtävät: luokittelu, poiminta, käännökset, tiivistelmät.',
@@ -287,19 +285,32 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
      tip:'Hinnat ja pituusrajat vaihtelevat paljon – tarkista ennen isoa ajoa.'},
     {id:'kuvasta-video', group:'video', title:'Kuvasta videoksi', use:'Liikettä valmiiseen kuvaan: tuote- ja hahmoanimaatiot.',
      tip:'Tee ensin hyvä kuva kuvagenerointimallilla ja animoi se tällä – johdonmukaisin lopputulos.'},
+    {id:'video-aani', group:'video', title:'Video äänellä', use:'Video tekstistä niin, että puhe, tehosteet tai musiikki syntyvät samalla.',
+     tip:'Säästää erillisen äänityövaiheen, mutta tarkista huulisynkka ennen julkaisua.'},
+    {id:'kuvasta-video-aani', group:'video', title:'Kuvasta video äänellä', use:'Valmis kuva liikkeeseen ja ääni samassa ajossa.',
+     tip:'Hyvä hahmo- ja tuotevideoihin, joissa ulkonäön pitää pysyä samana.'},
     {id:'puhe', group:'aani', title:'Puhe (tekstistä puheeksi)', use:'Selostukset, podcastit, puhelinbotit, videoiden äänet.',
      tip:'Tarkista suomen kielen tuki – ranking perustuu pääosin englantiin.'},
+    {id:'puheentunnistus', group:'aani', title:'Puheentunnistus', use:'Litteroinnit: kokoukset, haastattelut, puhelut ja videoiden tekstitys.',
+     tip:'Testit ovat englanninkielisiä – kokeile omalla suomenkielisellä näytteellä ennen valintaa.'},
+    {id:'puheagentti', group:'aani', title:'Puhebotit', use:'Reaaliaikaiset puhelin- ja ääniagentit, jotka hoitavat asiakkaan asian keskustelussa.',
+     tip:'Testi simuloi asiakasta ja yrityksen sääntöjä. Tarkista suomen kielen tuki erikseen.'},
+    {id:'musiikki', group:'aani', title:'Musiikki laululla', use:'Kappaleet tekstistä: mainosmusiikki, jinglet ja somesisältö.',
+     tip:'Tarkista käyttöoikeudet ennen kaupallista julkaisua.'},
+    {id:'musiikki-instrumentaali', group:'aani', title:'Instrumentaalimusiikki', use:'Taustamusiikki videoihin, mainoksiin ja podcasteihin.',
+     tip:'Tarkista käyttöoikeudet ennen kaupallista julkaisua.'},
   ];
   // julkinen-16: what each metric measures, matched against the data's metric name.
   const GLOSSARY = [
     [/Intelligence Index/, 'Artificial Analysisin yhdistelmäindeksi: joukko vaativia testejä (päättely, tieto, matematiikka, koodaus) yhtenä lukuna. Mitä suurempi, sitä parempi.'],
-    [/Coding Index/, 'Artificial Analysisin koodausindeksi: ohjelmointitestien yhdistelmä (mm. Terminal-Bench ja SciCode).'],
-    [/Terminal-Bench/, 'Agentti tekee oikeita tehtäviä terminaalissa: asentaa, ajaa skriptejä ja korjaa virheitä. Mittaa työkalujen käyttöä monessa vaiheessa.'],
-    [/τ/, 'τ²-Bench-perheen testi: agentti palvelee simuloitua asiakasta yrityksen säännöillä ja järjestelmillä (tässä pankki). Mittaa, tekeekö botti oikeat muutokset oikeassa järjestyksessä.'],
-    [/IFBench/, 'Tarkkojen muoto-ohjeiden noudattaminen: sanamäärät, rakenne, pakolliset ja kielletyt sanat.'],
-    [/AA-LCR|Long Context/, 'Päättely pitkien asiakirjojen yli (noin 100 000 tokenia): vastaus vaatii tiedon yhdistämistä tekstin eri kohdista.'],
-    [/GPQA/, 'Tohtoritason biologian, fysiikan ja kemian monivalintakysymykset, joihin ei löydä vastausta hakukoneella.'],
-    [/Humanity/, 'Tuhansia eri alojen asiantuntijoiden laatimia kysymyksiä, joihin netistä ei löydy valmista vastausta.'],
+    [/Strategy & Ops/, 'Artificial Analysisin kykyindeksi: painottuu sovellusten väliseen automaatioon (mm. myynti, HR, asiakastuki) ja monivaiheisiin toimistotehtäviin. Mitä suurempi, sitä parempi.'],
+    [/Finance & Accounting/, 'Artificial Analysisin kykyindeksi: monivaiheiset taloustehtävät, laskentatoimen ja rahoituksen tieto, päättely sekä se, keksiikö malli lukuja. Mitä suurempi, sitä parempi.'],
+    [/Legal/, 'Artificial Analysisin kykyindeksi: oikeudellinen tieto, asiakirjatyö, tulkinta sekä se, keksiikö malli lähteitä. Mitä suurempi, sitä parempi.'],
+    [/Healthcare/, 'Artificial Analysisin kykyindeksi: lääketieteellinen tieto, terveysalan työnkulut, pitkät potilasaineistot ja päättely. Mitä suurempi, sitä parempi.'],
+    [/Engineering/, 'Artificial Analysisin kykyindeksi: tekniikan alojen tieto, tutkimustason fysiikka ja laskennallinen päättely. Ohjelmoinnin osuus on 15 %. Mitä suurempi, sitä parempi.'],
+    [/Economics/, 'Artificial Analysisin kykyindeksi: taloustieteen tieto, analyyttiset työt, mallinnus ja pitkät raportit. Mitä suurempi, sitä parempi.'],
+    [/AA-WER/, 'Sanavirheiden osuus litteroinnissa kolmen englanninkielisen testiaineiston painotettuna keskiarvona. Pienempi on parempi.'],
+    [/τ-Voice/, 'Puheagentti palvelee simuloitua asiakasta yrityksen säännöillä ja järjestelmillä. Mitä suurempi, sitä parempi.'],
     [/Arena ELO/, 'Sokkovertailujen ELO-luku: ihmiset valitsevat kahdesta tuloksesta paremman tietämättä, mikä malli teki kumman.'],
     [/\$ \/ 1M/, 'Sekahinta dollareina miljoonaa tokenia kohden (syöte ja tuotos suhteessa 3:1). Pienempi on parempi.'],
     [/tokenia \/ s/, 'Tuotosnopeus API:sta mitattuna: montako tokenia sekunnissa vastaus etenee.'],
@@ -308,15 +319,18 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   // julkinen-9: task → model category, tool area (ids from the data), coding agent. Written here, not in the data,
   // because the tools routine may change only the data files' content.
   const TASKS = [
-    {id:'koodi', label:'Koodaan sovellusta', cat:'koodaus', area:'rakentaminen', agent:true},
+    {id:'koodi', label:'Koodaan sovellusta', area:'rakentaminen', agent:true},
     {id:'somevideo', label:'Teen somevideoita', cat:'video', area:'visuaalit'},
     {id:'kuvat', label:'Teen mainoskuvia', cat:'kuva', area:'visuaalit'},
-    {id:'automaatio', label:'Automatisoin työnkulkuja', cat:'automaatio', area:'automaatio'},
-    {id:'laskutus', label:'Hoidan laskut ja kirjanpidon', cat:'automaatio', area:'talous'},
-    {id:'botti', label:'Asiakaspalvelubotti', cat:'asiakaspalvelu', area:'asiakaspalvelu'},
+    {id:'automaatio', label:'Automatisoin työnkulkuja', cat:'strategia', area:'automaatio'},
+    {id:'laskutus', label:'Hoidan laskut ja kirjanpidon', cat:'rahoitus', area:'talous'},
+    {id:'botti', label:'Asiakaspalvelubotti', cat:'strategia', area:'asiakaspalvelu'},
     {id:'tutkimus', label:'Kirjoitan ja tutkin', cat:'yleis', area:'tutkimus'},
     {id:'markkinointi', label:'Markkinoin ja myyn', cat:'yleis', area:'markkinointi'},
     {id:'puhe', label:'Teen selostuksia', cat:'puhe', area:'visuaalit'},
+    {id:'sopimukset', label:'Luen sopimuksia', cat:'juridiikka', area:'juridiikka'},
+    {id:'litterointi', label:'Litteroin puhetta', cat:'puheentunnistus', area:'tuottavuus'},
+    {id:'musiikki', label:'Teen musiikkia', cat:'musiikki', area:'visuaalit'},
   ];
   const TABS = [{id:'mallit', name:'Mallit'}, {id:'koodausagentit', name:'Koodausagentit'}, {id:'tyokalut', name:'Työkalut'}];
   const KINDS = [{id:'all', name:'Kaikki tyypit'}, {id:'automatisoi', name:'Automatisoi'}, {id:'avustaa', name:'Avustaa'}];
@@ -360,9 +374,12 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (v == null) return '';
     if (cat.fmt) return cat.fmt(v);
     if (cat.unit === 's') return comma(v, 2) + ' s';
+    if (cat.unit === '%') return comma(v, 1) + ' %';
     if (cat.unit === '$' || cat.lowerIsBetter) return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
     return Math.round(v).toLocaleString('fi-FI');
   }
+  // Free-API media models have no release date, only the day this site first saw them.
+  const born = it => it.released || it.seen;
   function isNew(d){
     if (!d) return false;
     const t = Date.parse(d);
@@ -405,21 +422,20 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       return Math.round(35 + 65 * r);
     };
     const rest = its.slice(1).map((it, i) => `
-      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(it.released) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>${cmpBtn(kind, it.name)}
+      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(born(it)) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>${cmpBtn(kind, it.name)}
       <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
     const open = ui.open.has(id);
     return `<article class="card${open ? ' open' : ''}" id="${esc(id)}">
       ${head}
       <div class="winner" title="${esc(w.variant || '')}">
         <span class="label">Paras nyt</span>
-        <span class="name">${esc(w.name)}${isNew(w.released) ? '<span class="new">UUSI</span>' : ''}</span>
+        <span class="name">${esc(w.name)}${isNew(born(w)) ? '<span class="new">UUSI</span>' : ''}</span>
         <span class="sub">${sub(w, cat)} · ${fmt(w.score, cat)}${kind === 'model' && w.variant ? ` · <span class="muted">${esc(w.variant)}</span>` : ''}</span>
         ${cmpBtn(kind, w.name)}
       </div>
       <ol class="rank">${rest}</ol>
       ${its.length > 3 ? `<button type="button" class="kt-btn sm more" data-more="${esc(id)}" aria-expanded="${open}">${moreLabel(open, its.length)}</button>` : ''}
-      ${gloss(cat.metric)}${cat.frozen ? `<p class="kt-note">Lista ei enää päivity: tilanne ${esc(fiDate(cat.frozen))}. Artificial Analysis siirsi tämän testin maksulliseen rajapintaan, joten uudet mallit puuttuvat.</p>`
-        : kind === 'model' && stale(its) ? '<p class="kt-note">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>'
+      ${gloss(cat.metric)}${kind === 'model' && stale(its) ? '<p class="kt-note">Tätä mittaria ei ole ajettu uusille malleille yli puoleen vuoteen – lista koskee vanhempia malleja. Katso uusimmat kärkimallit kohdasta “Kirjoittaminen, analyysi &amp; tutkimus”.</p>'
         : cat.coverage != null && cat.coverage < 0.5 ? `<p class="kt-note">Vain ${Math.round(cat.coverage * 20)}/20 tämän hetken kärkimallista on ajanut tämän testin – osa uusimmista malleista puuttuu listalta.</p>` : ''}
       <p class="tip">${esc(meta.tip)}</p>
     </article>`;
@@ -626,11 +642,11 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function newsHtml(){
     if (derived.news != null) return derived.news;
     const fresh = new Map();
-    if (data) for (const c of Object.values(data.categories)) for (const it of c.items || []) if (isNew(it.released) && !fresh.has(it.name)) fresh.set(it.name, it);
-    const models = [...fresh.values()].sort((a, b) => Date.parse(b.released) - Date.parse(a.released)).slice(0, 6);
+    if (data) for (const c of Object.values(data.categories)) for (const it of c.items || []) if (isNew(born(it)) && !fresh.has(it.name)) fresh.set(it.name, it);
+    const models = [...fresh.values()].sort((a, b) => Date.parse(born(b)) - Date.parse(born(a))).slice(0, 6);
     const changes = tools ? tools.changes.slice(0, 3) : [];
     return derived.news = !models.length && !changes.length ? '' : `<h2>Uutta</h2>
-      ${models.length ? `<ul class="pills">${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${esc(fiDate(m.released))}</small></li>`).join('')}</ul>` : ''}
+      ${models.length ? `<ul class="pills">${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${esc(fiDate(born(m)))}</small></li>`).join('')}</ul>` : ''}
       ${changes.length ? `<ul class="chg">${changes.map(c => `<li><span class="muted small">${esc(fiDate(c.date))}</span> ${esc(c.text)}</li>`).join('')}</ul><p><a href="#muutokset">Kaikki muutokset →</a></p>` : ''}`;
   }
 

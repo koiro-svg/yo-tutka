@@ -187,16 +187,14 @@ YO-harjoittelu (`yo-harjoittelu.html`) sekä Hyppymittari. Repo on **julkinen**.
 - Tekstikategoriat ovat `BENCH`-taulussa (update_models.py). Jos testiä ei löydy, lista jää
   tyhjäksi ("Ei dataa vielä") – älä korvaa sitä toisella mittarilla hiljaa.
 - `coverage` = osuus top 20 -malleista, joilla on testin tulos. Alle 0,5 → sivulla varoitus.
-- AA poisti `/api/v2/data/*`:n 4.11.2026 (410 Gone). Ilmaiset osoitteet ovat `…/models/free`: niissä ei ole yksittäisiä testejä
-  eikä mediamallien julkaisupäiviä, ja sekoitettu hinta lasketaan itse (`blended`, 3:1). `FROZEN`-listat säilyttävät viimeisen
-  ilmaisen datansa ja `ai.html` merkitsee ne jäädytetyiksi – älä esitä niitä tuoreina äläkä tyhjennä niitä.
+- AA poisti `/api/v2/data/*`:n 4.11.2026 (410 Gone). Ilmaiset osoitteet ovat `…/models/free`: niissä ei ole yksittäisiä testejä,
+  sekoitettua hintaa eikä mediamallien julkaisupäiviä. Sekoitettu hinta lasketaan itse (`blended`, 3:1). Coding- ja Agentic-indeksit
+  ovat aina null, joten koodausmallien listaa ei ole (koodaukseen: Koodausagentit-välilehti). `data/media-seen.json` muistaa, milloin mediamalli
+  nähtiin ensi kerran (`seen`, UUSI-merkki); ensimmäinen ajo kirjoittaa tyhjät päivät, ettei kaikkia merkitä uusiksi.
 - API-avain vain GitHub-secretissä. Repo on julkinen.
 - Samasta mallista tulee API:sta monta versiota ("Claude Opus 5.5 (Adaptive Reasoning, Max
   Effort…)"). `item()` pilkkoo sulkeiden edestä ja `top()` pitää vain parhaan version –
   muuten yksi malli täyttää koko listan.
-- Monen testin kategorioissa (automaatio, asiakaspalvelu) testit valitaan kärkimallien (top 20 älykkyydellä) kattavuuden mukaan ja kaikilta
-  vaaditaan samat testit. Älä keskiarvoista eri testijoukkoja eri malleille (ei vertailukelpoista),
-  äläkä valitse testejä koko mallijoukon mukaan (uusimmat mallit putoavat pois).
 - AA:n Math Index jäi päivittymättä joulukuussa 2025 → matematiikka poistettu (27.9.2026).
   `stale()` ai.html:ssä varoittaa, jos listan uusin malli on yli 180 päivää vanha.
 - Kuva-/videoarenan tyyli- ja aihekategoriat (`include_categories=true`) on jätetty pois
