@@ -1,4 +1,5 @@
-{"cats":{"maat":{"fi":"Maat","en":"Countries"},"pk":{"fi":"Pääkaupungit","en":"Capitals"},"alueet":{"fi":"Alueet","en":"Regions"},"yleis":{"fi":"Yleistieto","en":"General"}},
+{"cats":{"maat":{"fi":"Maat","en":"Countries"},"pk":{"fi":"Pääkaupungit","en":"Capitals"},"alueet":{"fi":"Alueet","en":"Regions"},"yleis":{"fi":"Yleistieto","en":"General"},"liput":{"fi":"Liput","en":"Flags"},"kartat":{"fi":"Kartat","en":"Maps"},"maantieto":{"fi":"Maantieto","en":"Geography"},"suomi":{"fi":"Suomi","en":"Finland"},"historia":{"fi":"Historia","en":"History"},"tiede":{"fi":"Tiede ja luonto","en":"Science and nature"},"urheilu":{"fi":"Urheilu","en":"Sports"},"viihde":{"fi":"Viihde ja kulttuuri","en":"Culture"}},
+"packs":["maantieto-1","maantieto-2","suomi-1","suomi-2","historia-1","historia-2","tiede-1"],
 "continents":{"EU":{"fi":"Eurooppa","en":"Europe"},"AS":{"fi":"Aasia","en":"Asia"},"AF":{"fi":"Afrikka","en":"Africa"},"NA":{"fi":"Pohjois-Amerikka","en":"North America"},"SA":{"fi":"Etelä-Amerikka","en":"South America"},"OC":{"fi":"Oseania","en":"Oceania"}},
 "countries":[
 {"id":"AL","c":"EU","fi":["Albania"],"en":["Albania"],"capFi":["Tirana"],"capEn":["Tirana"]},
@@ -229,4 +230,19 @@
 {"id":"mm-kisat","cat":"yleis","t":60,"title":{"fi":"Jalkapallon MM-voittajat 1930–2022","en":"Football World Cup winners 1930–2022"},"items":[{"fi":["Uruguay"],"en":["Uruguay"]},{"fi":["Italia"],"en":["Italy"]},{"fi":["Saksa","Länsi-Saksa"],"en":["Germany","West Germany"]},{"fi":["Brasilia"],"en":["Brazil"]},{"fi":["Englanti"],"en":["England"]},{"fi":["Argentiina"],"en":["Argentina"]},{"fi":["Ranska"],"en":["France"]},{"fi":["Espanja"],"en":["Spain"]}]},
 {"id":"olympiakaupungit","cat":"yleis","t":90,"title":{"fi":"Kesäolympiakaupungit 1980–2024","en":"Summer Olympic hosts 1980–2024"},"ordered":true,"hintLabel":{"fi":"Vuosi","en":"Year"},"items":[{"fi":["Moskova"],"en":["Moscow"],"h":"1980"},{"fi":["Los Angeles"],"en":["Los Angeles"],"h":"1984"},{"fi":["Soul","Seoul"],"en":["Seoul"],"h":"1988"},{"fi":["Barcelona"],"en":["Barcelona"],"h":"1992"},{"fi":["Atlanta"],"en":["Atlanta"],"h":"1996"},{"fi":["Sydney"],"en":["Sydney"],"h":"2000"},{"fi":["Ateena"],"en":["Athens"],"h":"2004"},{"fi":["Peking","Beijing"],"en":["Beijing","Peking"],"h":"2008"},{"fi":["Lontoo"],"en":["London"],"h":"2012"},{"fi":["Rio de Janeiro","Rio"],"en":["Rio de Janeiro","Rio"],"h":"2016"},{"fi":["Tokio"],"en":["Tokyo"],"h":"2020"},{"fi":["Pariisi"],"en":["Paris"],"h":"2024"}]},
 {"id":"horoskoopit","cat":"yleis","t":75,"title":{"fi":"Horoskooppimerkit","en":"Zodiac signs"},"items":[{"fi":["Oinas"],"en":["Aries"]},{"fi":["Härkä"],"en":["Taurus"]},{"fi":["Kaksoset"],"en":["Gemini"]},{"fi":["Rapu"],"en":["Cancer"]},{"fi":["Leijona"],"en":["Leo"]},{"fi":["Neitsyt"],"en":["Virgo"]},{"fi":["Vaaka"],"en":["Libra"]},{"fi":["Skorpioni"],"en":["Scorpio"]},{"fi":["Jousimies","Jousiampuja"],"en":["Sagittarius"]},{"fi":["Kauris"],"en":["Capricorn"]},{"fi":["Vesimies"],"en":["Aquarius"]},{"fi":["Kalat"],"en":["Pisces"]}]}
+,
+{"id":"liput","cat":"liput","format":"flags","ans":"name","t":1080,"groups":true,"title":{"fi":"Maailman liput","en":"Flags of the world"}},
+{"id":"kartta","cat":"kartat","format":"map","ans":"name","t":1200,"title":{"fi":"Maailmankartta","en":"World map"}},
+{"id":"liput-eu","cat":"liput","format":"flags","ans":"name","t":420,"cont":["EU"],"title":{"fi":"Euroopan liput","en":"Flags of Europe"}},
+{"id":"kartta-eu","cat":"kartat","format":"map","ans":"name","t":480,"cont":["EU"],"title":{"fi":"Euroopan maat kartalla","en":"Map of Europe"}},
+{"id":"liput-as","cat":"liput","format":"flags","ans":"name","t":420,"cont":["AS"],"title":{"fi":"Aasian liput","en":"Flags of Asia"}},
+{"id":"kartta-as","cat":"kartat","format":"map","ans":"name","t":480,"cont":["AS"],"title":{"fi":"Aasian maat kartalla","en":"Map of Asia"}},
+{"id":"liput-af","cat":"liput","format":"flags","ans":"name","t":480,"cont":["AF"],"title":{"fi":"Afrikan liput","en":"Flags of Africa"}},
+{"id":"kartta-af","cat":"kartat","format":"map","ans":"name","t":540,"cont":["AF"],"title":{"fi":"Afrikan maat kartalla","en":"Map of Africa"}},
+{"id":"liput-na","cat":"liput","format":"flags","ans":"name","t":240,"cont":["NA"],"title":{"fi":"Pohjois-Amerikan liput","en":"Flags of North America"}},
+{"id":"kartta-na","cat":"kartat","format":"map","ans":"name","t":300,"cont":["NA"],"title":{"fi":"Pohjois-Amerikan maat kartalla","en":"Map of North America"}},
+{"id":"liput-sa","cat":"liput","format":"flags","ans":"name","t":120,"cont":["SA"],"title":{"fi":"Etelä-Amerikan liput","en":"Flags of South America"}},
+{"id":"kartta-sa","cat":"kartat","format":"map","ans":"name","t":180,"cont":["SA"],"title":{"fi":"Etelä-Amerikan maat kartalla","en":"Map of South America"}},
+{"id":"liput-oc","cat":"liput","format":"flags","ans":"name","t":150,"cont":["OC"],"title":{"fi":"Oseanian liput","en":"Flags of Oceania"}},
+{"id":"kartta-oc","cat":"kartat","format":"map","ans":"name","t":210,"cont":["OC"],"title":{"fi":"Oseanian maat kartalla","en":"Map of Oceania"}}
 ]}

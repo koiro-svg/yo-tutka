@@ -1,0 +1,4449 @@
+{
+ "quizzes": [
+  {
+   "id": "historia-2-usa-presidentit",
+   "cat": "historia",
+   "t": 300,
+   "title": {
+    "fi": "Yhdysvaltain presidentit numerojärjestyksessä 1.–47. (45 eri henkilöä, tilanne 2026)",
+    "en": "US presidents in numerical order, 1st to 47th (45 different people, as of 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Järjestysnumero",
+    "en": "Number"
+   },
+   "items": [
+    {
+     "fi": [
+      "George Washington",
+      "Washington"
+     ],
+     "en": [
+      "George Washington",
+      "Washington"
+     ],
+     "h": "1"
+    },
+    {
+     "fi": [
+      "John Adams"
+     ],
+     "en": [
+      "John Adams"
+     ],
+     "h": "2"
+    },
+    {
+     "fi": [
+      "Thomas Jefferson",
+      "Jefferson"
+     ],
+     "en": [
+      "Thomas Jefferson",
+      "Jefferson"
+     ],
+     "h": "3"
+    },
+    {
+     "fi": [
+      "James Madison",
+      "Madison"
+     ],
+     "en": [
+      "James Madison",
+      "Madison"
+     ],
+     "h": "4"
+    },
+    {
+     "fi": [
+      "James Monroe",
+      "Monroe"
+     ],
+     "en": [
+      "James Monroe",
+      "Monroe"
+     ],
+     "h": "5"
+    },
+    {
+     "fi": [
+      "John Quincy Adams"
+     ],
+     "en": [
+      "John Quincy Adams"
+     ],
+     "h": "6"
+    },
+    {
+     "fi": [
+      "Andrew Jackson",
+      "Jackson"
+     ],
+     "en": [
+      "Andrew Jackson",
+      "Jackson"
+     ],
+     "h": "7"
+    },
+    {
+     "fi": [
+      "Martin Van Buren",
+      "Van Buren"
+     ],
+     "en": [
+      "Martin Van Buren",
+      "Van Buren"
+     ],
+     "h": "8"
+    },
+    {
+     "fi": [
+      "William Henry Harrison"
+     ],
+     "en": [
+      "William Henry Harrison"
+     ],
+     "h": "9"
+    },
+    {
+     "fi": [
+      "John Tyler",
+      "Tyler"
+     ],
+     "en": [
+      "John Tyler",
+      "Tyler"
+     ],
+     "h": "10"
+    },
+    {
+     "fi": [
+      "James K. Polk",
+      "James Polk",
+      "Polk"
+     ],
+     "en": [
+      "James K. Polk",
+      "James Polk",
+      "Polk"
+     ],
+     "h": "11"
+    },
+    {
+     "fi": [
+      "Zachary Taylor",
+      "Taylor"
+     ],
+     "en": [
+      "Zachary Taylor",
+      "Taylor"
+     ],
+     "h": "12"
+    },
+    {
+     "fi": [
+      "Millard Fillmore",
+      "Fillmore"
+     ],
+     "en": [
+      "Millard Fillmore",
+      "Fillmore"
+     ],
+     "h": "13"
+    },
+    {
+     "fi": [
+      "Franklin Pierce",
+      "Pierce"
+     ],
+     "en": [
+      "Franklin Pierce",
+      "Pierce"
+     ],
+     "h": "14"
+    },
+    {
+     "fi": [
+      "James Buchanan",
+      "Buchanan"
+     ],
+     "en": [
+      "James Buchanan",
+      "Buchanan"
+     ],
+     "h": "15"
+    },
+    {
+     "fi": [
+      "Abraham Lincoln",
+      "Lincoln"
+     ],
+     "en": [
+      "Abraham Lincoln",
+      "Lincoln"
+     ],
+     "h": "16"
+    },
+    {
+     "fi": [
+      "Andrew Johnson"
+     ],
+     "en": [
+      "Andrew Johnson"
+     ],
+     "h": "17"
+    },
+    {
+     "fi": [
+      "Ulysses S. Grant",
+      "Ulysses Grant",
+      "Grant"
+     ],
+     "en": [
+      "Ulysses S. Grant",
+      "Ulysses Grant",
+      "Grant"
+     ],
+     "h": "18"
+    },
+    {
+     "fi": [
+      "Rutherford B. Hayes",
+      "Rutherford Hayes",
+      "Hayes"
+     ],
+     "en": [
+      "Rutherford B. Hayes",
+      "Rutherford Hayes",
+      "Hayes"
+     ],
+     "h": "19"
+    },
+    {
+     "fi": [
+      "James A. Garfield",
+      "James Garfield",
+      "Garfield"
+     ],
+     "en": [
+      "James A. Garfield",
+      "James Garfield",
+      "Garfield"
+     ],
+     "h": "20"
+    },
+    {
+     "fi": [
+      "Chester A. Arthur",
+      "Chester Arthur",
+      "Arthur"
+     ],
+     "en": [
+      "Chester A. Arthur",
+      "Chester Arthur",
+      "Arthur"
+     ],
+     "h": "21"
+    },
+    {
+     "fi": [
+      "Grover Cleveland",
+      "Cleveland"
+     ],
+     "en": [
+      "Grover Cleveland",
+      "Cleveland"
+     ],
+     "h": "22, 24"
+    },
+    {
+     "fi": [
+      "Benjamin Harrison"
+     ],
+     "en": [
+      "Benjamin Harrison"
+     ],
+     "h": "23"
+    },
+    {
+     "fi": [
+      "William McKinley",
+      "McKinley"
+     ],
+     "en": [
+      "William McKinley",
+      "McKinley"
+     ],
+     "h": "25"
+    },
+    {
+     "fi": [
+      "Theodore Roosevelt",
+      "Teddy Roosevelt"
+     ],
+     "en": [
+      "Theodore Roosevelt",
+      "Teddy Roosevelt"
+     ],
+     "h": "26"
+    },
+    {
+     "fi": [
+      "William Howard Taft",
+      "William Taft",
+      "Taft"
+     ],
+     "en": [
+      "William Howard Taft",
+      "William Taft",
+      "Taft"
+     ],
+     "h": "27"
+    },
+    {
+     "fi": [
+      "Woodrow Wilson",
+      "Wilson"
+     ],
+     "en": [
+      "Woodrow Wilson",
+      "Wilson"
+     ],
+     "h": "28"
+    },
+    {
+     "fi": [
+      "Warren G. Harding",
+      "Warren Harding",
+      "Harding"
+     ],
+     "en": [
+      "Warren G. Harding",
+      "Warren Harding",
+      "Harding"
+     ],
+     "h": "29"
+    },
+    {
+     "fi": [
+      "Calvin Coolidge",
+      "Coolidge"
+     ],
+     "en": [
+      "Calvin Coolidge",
+      "Coolidge"
+     ],
+     "h": "30"
+    },
+    {
+     "fi": [
+      "Herbert Hoover",
+      "Hoover"
+     ],
+     "en": [
+      "Herbert Hoover",
+      "Hoover"
+     ],
+     "h": "31"
+    },
+    {
+     "fi": [
+      "Franklin D. Roosevelt",
+      "Franklin Roosevelt",
+      "FDR"
+     ],
+     "en": [
+      "Franklin D. Roosevelt",
+      "Franklin Roosevelt",
+      "FDR"
+     ],
+     "h": "32"
+    },
+    {
+     "fi": [
+      "Harry S. Truman",
+      "Harry Truman",
+      "Truman"
+     ],
+     "en": [
+      "Harry S. Truman",
+      "Harry Truman",
+      "Truman"
+     ],
+     "h": "33"
+    },
+    {
+     "fi": [
+      "Dwight D. Eisenhower",
+      "Dwight Eisenhower",
+      "Eisenhower"
+     ],
+     "en": [
+      "Dwight D. Eisenhower",
+      "Dwight Eisenhower",
+      "Eisenhower"
+     ],
+     "h": "34"
+    },
+    {
+     "fi": [
+      "John F. Kennedy",
+      "John Kennedy",
+      "JFK",
+      "Kennedy"
+     ],
+     "en": [
+      "John F. Kennedy",
+      "John Kennedy",
+      "JFK",
+      "Kennedy"
+     ],
+     "h": "35"
+    },
+    {
+     "fi": [
+      "Lyndon B. Johnson",
+      "Lyndon Johnson",
+      "LBJ"
+     ],
+     "en": [
+      "Lyndon B. Johnson",
+      "Lyndon Johnson",
+      "LBJ"
+     ],
+     "h": "36"
+    },
+    {
+     "fi": [
+      "Richard Nixon",
+      "Nixon"
+     ],
+     "en": [
+      "Richard Nixon",
+      "Nixon"
+     ],
+     "h": "37"
+    },
+    {
+     "fi": [
+      "Gerald Ford",
+      "Ford"
+     ],
+     "en": [
+      "Gerald Ford",
+      "Ford"
+     ],
+     "h": "38"
+    },
+    {
+     "fi": [
+      "Jimmy Carter",
+      "James Carter",
+      "Carter"
+     ],
+     "en": [
+      "Jimmy Carter",
+      "James Carter",
+      "Carter"
+     ],
+     "h": "39"
+    },
+    {
+     "fi": [
+      "Ronald Reagan",
+      "Reagan"
+     ],
+     "en": [
+      "Ronald Reagan",
+      "Reagan"
+     ],
+     "h": "40"
+    },
+    {
+     "fi": [
+      "George H. W. Bush",
+      "GHW Bush"
+     ],
+     "en": [
+      "George H. W. Bush",
+      "GHW Bush"
+     ],
+     "h": "41"
+    },
+    {
+     "fi": [
+      "Bill Clinton",
+      "William Clinton",
+      "Clinton"
+     ],
+     "en": [
+      "Bill Clinton",
+      "William Clinton",
+      "Clinton"
+     ],
+     "h": "42"
+    },
+    {
+     "fi": [
+      "George W. Bush",
+      "GW Bush"
+     ],
+     "en": [
+      "George W. Bush",
+      "GW Bush"
+     ],
+     "h": "43"
+    },
+    {
+     "fi": [
+      "Barack Obama",
+      "Obama"
+     ],
+     "en": [
+      "Barack Obama",
+      "Obama"
+     ],
+     "h": "44"
+    },
+    {
+     "fi": [
+      "Donald Trump",
+      "Trump"
+     ],
+     "en": [
+      "Donald Trump",
+      "Trump"
+     ],
+     "h": "45, 47"
+    },
+    {
+     "fi": [
+      "Joe Biden",
+      "Joseph Biden",
+      "Biden"
+     ],
+     "en": [
+      "Joe Biden",
+      "Joseph Biden",
+      "Biden"
+     ],
+     "h": "46"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-britannian-paaministerit",
+   "cat": "historia",
+   "t": 135,
+   "title": {
+    "fi": "Yhdistyneen kuningaskunnan pääministerit, jotka astuivat virkaan 1945–2026 (tilanne marraskuu 2026)",
+    "en": "UK prime ministers who took office 1945–2026 (as of November 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Virkaanastumisvuosi",
+    "en": "Year took office"
+   },
+   "items": [
+    {
+     "fi": [
+      "Clement Attlee",
+      "Attlee"
+     ],
+     "en": [
+      "Clement Attlee",
+      "Attlee"
+     ],
+     "h": "1945"
+    },
+    {
+     "fi": [
+      "Winston Churchill",
+      "Churchill"
+     ],
+     "en": [
+      "Winston Churchill",
+      "Churchill"
+     ],
+     "h": "1951"
+    },
+    {
+     "fi": [
+      "Anthony Eden",
+      "Eden"
+     ],
+     "en": [
+      "Anthony Eden",
+      "Eden"
+     ],
+     "h": "1955"
+    },
+    {
+     "fi": [
+      "Harold Macmillan",
+      "Macmillan"
+     ],
+     "en": [
+      "Harold Macmillan",
+      "Macmillan"
+     ],
+     "h": "1957"
+    },
+    {
+     "fi": [
+      "Alec Douglas-Home",
+      "Douglas-Home"
+     ],
+     "en": [
+      "Alec Douglas-Home",
+      "Douglas-Home"
+     ],
+     "h": "1963"
+    },
+    {
+     "fi": [
+      "Harold Wilson",
+      "Wilson"
+     ],
+     "en": [
+      "Harold Wilson",
+      "Wilson"
+     ],
+     "h": "1964, 1974"
+    },
+    {
+     "fi": [
+      "Edward Heath",
+      "Ted Heath",
+      "Heath"
+     ],
+     "en": [
+      "Edward Heath",
+      "Ted Heath",
+      "Heath"
+     ],
+     "h": "1970"
+    },
+    {
+     "fi": [
+      "James Callaghan",
+      "Jim Callaghan",
+      "Callaghan"
+     ],
+     "en": [
+      "James Callaghan",
+      "Jim Callaghan",
+      "Callaghan"
+     ],
+     "h": "1976"
+    },
+    {
+     "fi": [
+      "Margaret Thatcher",
+      "Thatcher"
+     ],
+     "en": [
+      "Margaret Thatcher",
+      "Thatcher"
+     ],
+     "h": "1979"
+    },
+    {
+     "fi": [
+      "John Major",
+      "Major"
+     ],
+     "en": [
+      "John Major",
+      "Major"
+     ],
+     "h": "1990"
+    },
+    {
+     "fi": [
+      "Tony Blair",
+      "Blair"
+     ],
+     "en": [
+      "Tony Blair",
+      "Blair"
+     ],
+     "h": "1997"
+    },
+    {
+     "fi": [
+      "Gordon Brown",
+      "Brown"
+     ],
+     "en": [
+      "Gordon Brown",
+      "Brown"
+     ],
+     "h": "2007"
+    },
+    {
+     "fi": [
+      "David Cameron",
+      "Cameron"
+     ],
+     "en": [
+      "David Cameron",
+      "Cameron"
+     ],
+     "h": "2010"
+    },
+    {
+     "fi": [
+      "Theresa May",
+      "May"
+     ],
+     "en": [
+      "Theresa May",
+      "May"
+     ],
+     "h": "2016"
+    },
+    {
+     "fi": [
+      "Boris Johnson",
+      "Johnson"
+     ],
+     "en": [
+      "Boris Johnson",
+      "Johnson"
+     ],
+     "h": "2019"
+    },
+    {
+     "fi": [
+      "Liz Truss",
+      "Truss"
+     ],
+     "en": [
+      "Liz Truss",
+      "Truss"
+     ],
+     "h": "2022"
+    },
+    {
+     "fi": [
+      "Rishi Sunak",
+      "Sunak"
+     ],
+     "en": [
+      "Rishi Sunak",
+      "Sunak"
+     ],
+     "h": "2022"
+    },
+    {
+     "fi": [
+      "Keir Starmer",
+      "Starmer"
+     ],
+     "en": [
+      "Keir Starmer",
+      "Starmer"
+     ],
+     "h": "2024"
+    },
+    {
+     "fi": [
+      "Andy Burnham",
+      "Burnham"
+     ],
+     "en": [
+      "Andy Burnham",
+      "Burnham"
+     ],
+     "h": "2026"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-saksan-liittokanslerit",
+   "cat": "historia",
+   "t": 70,
+   "title": {
+    "fi": "Saksan liittotasavallan liittokanslerit 1949–2026 (virkaatekeviä ei lasketa; tilanne marraskuu 2026)",
+    "en": "Chancellors of the Federal Republic of Germany, 1949–2026 (acting holders excluded; as of November 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Virkaanastumisvuosi",
+    "en": "Year took office"
+   },
+   "items": [
+    {
+     "fi": [
+      "Konrad Adenauer",
+      "Adenauer"
+     ],
+     "en": [
+      "Konrad Adenauer",
+      "Adenauer"
+     ],
+     "h": "1949"
+    },
+    {
+     "fi": [
+      "Ludwig Erhard",
+      "Erhard"
+     ],
+     "en": [
+      "Ludwig Erhard",
+      "Erhard"
+     ],
+     "h": "1963"
+    },
+    {
+     "fi": [
+      "Kurt Georg Kiesinger",
+      "Kurt Kiesinger",
+      "Kiesinger"
+     ],
+     "en": [
+      "Kurt Georg Kiesinger",
+      "Kurt Kiesinger",
+      "Kiesinger"
+     ],
+     "h": "1966"
+    },
+    {
+     "fi": [
+      "Willy Brandt",
+      "Brandt"
+     ],
+     "en": [
+      "Willy Brandt",
+      "Brandt"
+     ],
+     "h": "1969"
+    },
+    {
+     "fi": [
+      "Helmut Schmidt",
+      "Schmidt"
+     ],
+     "en": [
+      "Helmut Schmidt",
+      "Schmidt"
+     ],
+     "h": "1974"
+    },
+    {
+     "fi": [
+      "Helmut Kohl",
+      "Kohl"
+     ],
+     "en": [
+      "Helmut Kohl",
+      "Kohl"
+     ],
+     "h": "1982"
+    },
+    {
+     "fi": [
+      "Gerhard Schröder",
+      "Gerhard Schroeder",
+      "Schröder",
+      "Schroeder"
+     ],
+     "en": [
+      "Gerhard Schröder",
+      "Gerhard Schroeder",
+      "Schröder",
+      "Schroeder"
+     ],
+     "h": "1998"
+    },
+    {
+     "fi": [
+      "Angela Merkel",
+      "Merkel"
+     ],
+     "en": [
+      "Angela Merkel",
+      "Merkel"
+     ],
+     "h": "2005"
+    },
+    {
+     "fi": [
+      "Olaf Scholz",
+      "Scholz"
+     ],
+     "en": [
+      "Olaf Scholz",
+      "Scholz"
+     ],
+     "h": "2021"
+    },
+    {
+     "fi": [
+      "Friedrich Merz",
+      "Merz"
+     ],
+     "en": [
+      "Friedrich Merz",
+      "Merz"
+     ],
+     "h": "2025"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-neuvostoliiton-ja-venajan-johtajat",
+   "cat": "historia",
+   "t": 70,
+   "title": {
+    "fi": "Neuvostoliiton kommunistisen puolueen pääsihteerit ja ensimmäiset sihteerit (1922–1991, ei virkaatekeviä) sekä Venäjän presidentit (1991–2026, tilanne marraskuu 2026)",
+    "en": "General and First Secretaries of the Soviet Communist Party (1922–1991, no acting holders) and Presidents of Russia (1991–2026, as of November 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Virkaanastumisvuosi",
+    "en": "Year took office"
+   },
+   "items": [
+    {
+     "fi": [
+      "Josif Stalin",
+      "Stalin",
+      "Iosif Stalin"
+     ],
+     "en": [
+      "Joseph Stalin",
+      "Stalin",
+      "Iosif Stalin"
+     ],
+     "h": "1922"
+    },
+    {
+     "fi": [
+      "Nikita Hruštšov",
+      "Hruštšov",
+      "Khrushchev",
+      "Hrustsov"
+     ],
+     "en": [
+      "Nikita Khrushchev",
+      "Hruštšov",
+      "Khrushchev",
+      "Hrustsov"
+     ],
+     "h": "1953"
+    },
+    {
+     "fi": [
+      "Leonid Brežnev",
+      "Brežnev",
+      "Brezhnev"
+     ],
+     "en": [
+      "Leonid Brezhnev",
+      "Brežnev",
+      "Brezhnev"
+     ],
+     "h": "1964"
+    },
+    {
+     "fi": [
+      "Juri Andropov",
+      "Andropov"
+     ],
+     "en": [
+      "Yuri Andropov",
+      "Andropov"
+     ],
+     "h": "1982"
+    },
+    {
+     "fi": [
+      "Konstantin Tšernenko",
+      "Tšernenko",
+      "Chernenko"
+     ],
+     "en": [
+      "Konstantin Chernenko",
+      "Tšernenko",
+      "Chernenko"
+     ],
+     "h": "1984"
+    },
+    {
+     "fi": [
+      "Mihail Gorbatšov",
+      "Gorbatšov",
+      "Gorbachev",
+      "Mihail Gorbachev"
+     ],
+     "en": [
+      "Mikhail Gorbachev",
+      "Gorbatšov",
+      "Gorbachev",
+      "Mihail Gorbachev"
+     ],
+     "h": "1985"
+    },
+    {
+     "fi": [
+      "Boris Jeltsin",
+      "Jeltsin",
+      "Yeltsin"
+     ],
+     "en": [
+      "Boris Yeltsin",
+      "Jeltsin",
+      "Yeltsin"
+     ],
+     "h": "1991"
+    },
+    {
+     "fi": [
+      "Vladimir Putin",
+      "Putin"
+     ],
+     "en": [
+      "Vladimir Putin",
+      "Putin"
+     ],
+     "h": "2000, 2012"
+    },
+    {
+     "fi": [
+      "Dmitri Medvedev",
+      "Medvedev"
+     ],
+     "en": [
+      "Dmitry Medvedev",
+      "Medvedev"
+     ],
+     "h": "2008"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-napoleonin-marsalkat",
+   "cat": "historia",
+   "t": 185,
+   "title": {
+    "fi": "Napoleonin nimittämät 26 keisarikunnan marsalkkaa 1804–1815",
+    "en": "The 26 Marshals of the Empire appointed by Napoleon, 1804–1815"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Nimitysvuosi",
+    "en": "Year appointed"
+   },
+   "items": [
+    {
+     "fi": [
+      "Pierre Augereau",
+      "Augereau"
+     ],
+     "en": [
+      "Pierre Augereau",
+      "Augereau"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Jean-Baptiste Bernadotte",
+      "Bernadotte"
+     ],
+     "en": [
+      "Jean-Baptiste Bernadotte",
+      "Bernadotte"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Louis-Alexandre Berthier",
+      "Berthier"
+     ],
+     "en": [
+      "Louis-Alexandre Berthier",
+      "Berthier"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Jean-Baptiste Bessières",
+      "Bessières"
+     ],
+     "en": [
+      "Jean-Baptiste Bessières",
+      "Bessières"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Guillaume Brune",
+      "Brune"
+     ],
+     "en": [
+      "Guillaume Brune",
+      "Brune"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Louis-Nicolas Davout",
+      "Davout"
+     ],
+     "en": [
+      "Louis-Nicolas Davout",
+      "Davout"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Jean-Baptiste Jourdan",
+      "Jourdan"
+     ],
+     "en": [
+      "Jean-Baptiste Jourdan",
+      "Jourdan"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "François Christophe de Kellermann",
+      "Kellermann"
+     ],
+     "en": [
+      "François Christophe de Kellermann",
+      "Kellermann"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Jean Lannes",
+      "Lannes"
+     ],
+     "en": [
+      "Jean Lannes",
+      "Lannes"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "François Joseph Lefebvre",
+      "Lefebvre"
+     ],
+     "en": [
+      "François Joseph Lefebvre",
+      "Lefebvre"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "André Masséna",
+      "Masséna"
+     ],
+     "en": [
+      "André Masséna",
+      "Masséna"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Bon-Adrien Jeannot de Moncey",
+      "Moncey"
+     ],
+     "en": [
+      "Bon-Adrien Jeannot de Moncey",
+      "Moncey"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Édouard Mortier",
+      "Mortier"
+     ],
+     "en": [
+      "Édouard Mortier",
+      "Mortier"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Joachim Murat",
+      "Murat"
+     ],
+     "en": [
+      "Joachim Murat",
+      "Murat"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Michel Ney",
+      "Ney"
+     ],
+     "en": [
+      "Michel Ney",
+      "Ney"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Catherine-Dominique de Pérignon",
+      "Pérignon"
+     ],
+     "en": [
+      "Catherine-Dominique de Pérignon",
+      "Pérignon"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Jean-Mathieu-Philibert Sérurier",
+      "Sérurier"
+     ],
+     "en": [
+      "Jean-Mathieu-Philibert Sérurier",
+      "Sérurier"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Jean-de-Dieu Soult",
+      "Soult"
+     ],
+     "en": [
+      "Jean-de-Dieu Soult",
+      "Soult"
+     ],
+     "h": "1804"
+    },
+    {
+     "fi": [
+      "Claude Victor-Perrin",
+      "Victor-Perrin",
+      "Victor",
+      "Claude Victor"
+     ],
+     "en": [
+      "Claude Victor-Perrin",
+      "Victor-Perrin",
+      "Victor",
+      "Claude Victor"
+     ],
+     "h": "1807"
+    },
+    {
+     "fi": [
+      "Étienne Macdonald",
+      "Macdonald"
+     ],
+     "en": [
+      "Étienne Macdonald",
+      "Macdonald"
+     ],
+     "h": "1809"
+    },
+    {
+     "fi": [
+      "Nicolas Oudinot",
+      "Oudinot"
+     ],
+     "en": [
+      "Nicolas Oudinot",
+      "Oudinot"
+     ],
+     "h": "1809"
+    },
+    {
+     "fi": [
+      "Auguste de Marmont",
+      "Marmont",
+      "Auguste Marmont"
+     ],
+     "en": [
+      "Auguste de Marmont",
+      "Marmont",
+      "Auguste Marmont"
+     ],
+     "h": "1809"
+    },
+    {
+     "fi": [
+      "Louis-Gabriel Suchet",
+      "Suchet"
+     ],
+     "en": [
+      "Louis-Gabriel Suchet",
+      "Suchet"
+     ],
+     "h": "1811"
+    },
+    {
+     "fi": [
+      "Laurent de Gouvion Saint-Cyr",
+      "Gouvion Saint-Cyr",
+      "Saint-Cyr"
+     ],
+     "en": [
+      "Laurent de Gouvion Saint-Cyr",
+      "Gouvion Saint-Cyr",
+      "Saint-Cyr"
+     ],
+     "h": "1812"
+    },
+    {
+     "fi": [
+      "Józef Poniatowski",
+      "Poniatowski",
+      "Jozef Antoni Poniatowski"
+     ],
+     "en": [
+      "Józef Poniatowski",
+      "Poniatowski",
+      "Jozef Antoni Poniatowski"
+     ],
+     "h": "1813"
+    },
+    {
+     "fi": [
+      "Emmanuel de Grouchy",
+      "Grouchy"
+     ],
+     "en": [
+      "Emmanuel de Grouchy",
+      "Grouchy"
+     ],
+     "h": "1815"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-napoleonin-sodat",
+   "cat": "historia",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Napoleonin aika ja Napoleonin sodat 1804–1815",
+    "en": "The Napoleonic era and the Napoleonic Wars, 1804–1815"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minä vuonna Napoleonista tuli Ranskan keisari?",
+      "en": "In which year did Napoleon become Emperor of the French?"
+     },
+     "ok": {
+      "fi": "1804",
+      "en": "1804"
+     },
+     "no": [
+      {
+       "fi": "1799",
+       "en": "1799"
+      },
+      {
+       "fi": "1802",
+       "en": "1802"
+      },
+      {
+       "fi": "1806",
+       "en": "1806"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka komensi brittilaivastoa Trafalgarin taistelussa vuonna 1805?",
+      "en": "Who commanded the British fleet at the Battle of Trafalgar in 1805?"
+     },
+     "ok": {
+      "fi": "Horatio Nelson",
+      "en": "Horatio Nelson"
+     },
+     "no": [
+      {
+       "fi": "Cuthbert Collingwood",
+       "en": "Cuthbert Collingwood"
+      },
+      {
+       "fi": "Pierre-Charles Villeneuve",
+       "en": "Pierre-Charles Villeneuve"
+      },
+      {
+       "fi": "Wellingtonin herttua",
+       "en": "Duke of Wellington"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maiden armeijat Napoleon voitti Austerlitzin taistelussa vuonna 1805?",
+      "en": "Whose armies did Napoleon defeat at the Battle of Austerlitz in 1805?"
+     },
+     "ok": {
+      "fi": "Venäjän ja Itävallan",
+      "en": "Russia and Austria"
+     },
+     "no": [
+      {
+       "fi": "Preussin ja Saksin",
+       "en": "Prussia and Saxony"
+      },
+      {
+       "fi": "Britannian ja Espanjan",
+       "en": "Britain and Spain"
+      },
+      {
+       "fi": "Preussin ja Ruotsin",
+       "en": "Prussia and Sweden"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä armeijat Napoleon joukkoineen voitti Jenan ja Auerstedtin taisteluissa vuonna 1806?",
+      "en": "Whose armies did Napoleon's forces defeat at Jena–Auerstedt in 1806?"
+     },
+     "ok": {
+      "fi": "Preussin ja Saksin",
+      "en": "Prussia and Saxony"
+     },
+     "no": [
+      {
+       "fi": "Venäjän ja Itävallan",
+       "en": "Russia and Austria"
+      },
+      {
+       "fi": "Britannian ja Portugalin",
+       "en": "Britain and Portugal"
+      },
+      {
+       "fi": "Ruotsin ja Tanskan",
+       "en": "Sweden and Denmark"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen kanssa Napoleon solmi rauhan lautalla Nemanjoella Tilsitissä vuonna 1807?",
+      "en": "With whom did Napoleon make peace on a raft on the Neman at Tilsit in 1807?"
+     },
+     "ok": {
+      "fi": "Venäjän keisari Aleksanteri I",
+      "en": "Emperor Alexander I of Russia"
+     },
+     "no": [
+      {
+       "fi": "Venäjän keisari Nikolai I",
+       "en": "Emperor Nicholas I of Russia"
+      },
+      {
+       "fi": "Itävallan keisari Frans I",
+       "en": "Emperor Francis I of Austria"
+      },
+      {
+       "fi": "Preussin kuningas Fredrik Vilhelm II",
+       "en": "King Frederick William II of Prussia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä rauhansopimus päätti Suomen sodan vuonna 1809?",
+      "en": "Which peace treaty ended the Finnish War in 1809?"
+     },
+     "ok": {
+      "fi": "Haminan rauha",
+      "en": "Treaty of Fredrikshamn (Hamina)"
+     },
+     "no": [
+      {
+       "fi": "Turun rauha",
+       "en": "Treaty of Åbo"
+      },
+      {
+       "fi": "Uudenkaupungin rauha",
+       "en": "Treaty of Nystad"
+      },
+      {
+       "fi": "Tilsitin rauha",
+       "en": "Treaties of Tilsit"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Napoleon hyökkäsi Venäjälle?",
+      "en": "In which year did Napoleon invade Russia?"
+     },
+     "ok": {
+      "fi": "1812",
+      "en": "1812"
+     },
+     "no": [
+      {
+       "fi": "1807",
+       "en": "1807"
+      },
+      {
+       "fi": "1810",
+       "en": "1810"
+      },
+      {
+       "fi": "1813",
+       "en": "1813"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin lähellä Borodinon taistelu käytiin?",
+      "en": "Near which city was the Battle of Borodino fought?"
+     },
+     "ok": {
+      "fi": "Moskovan",
+      "en": "Moscow"
+     },
+     "no": [
+      {
+       "fi": "Smolenskin",
+       "en": "Smolensk"
+      },
+      {
+       "fi": "Pietarin",
+       "en": "Saint Petersburg"
+      },
+      {
+       "fi": "Kiovan",
+       "en": "Kiev"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä taistelu tunnetaan myös kansojen taisteluna?",
+      "en": "Which battle is also known as the Battle of the Nations?"
+     },
+     "ok": {
+      "fi": "Leipzigin taistelu (1813)",
+      "en": "Battle of Leipzig (1813)"
+     },
+     "no": [
+      {
+       "fi": "Waterloon taistelu (1815)",
+       "en": "Battle of Waterloo (1815)"
+      },
+      {
+       "fi": "Austerlitzin taistelu (1805)",
+       "en": "Battle of Austerlitz (1805)"
+      },
+      {
+       "fi": "Wagramin taistelu (1809)",
+       "en": "Battle of Wagram (1809)"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mille saarelle Napoleon karkotettiin vuonna 1814?",
+      "en": "To which island was Napoleon exiled in 1814?"
+     },
+     "ok": {
+      "fi": "Elba",
+      "en": "Elba"
+     },
+     "no": [
+      {
+       "fi": "Korsika",
+       "en": "Corsica"
+      },
+      {
+       "fi": "Malta",
+       "en": "Malta"
+      },
+      {
+       "fi": "Sisilia",
+       "en": "Sicily"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka johti brittijohtoista armeijaa Waterloon taistelussa vuonna 1815?",
+      "en": "Who commanded the British-led army at the Battle of Waterloo in 1815?"
+     },
+     "ok": {
+      "fi": "Wellingtonin herttua Arthur Wellesley",
+      "en": "Arthur Wellesley, Duke of Wellington"
+     },
+     "no": [
+      {
+       "fi": "Gebhard von Blücher",
+       "en": "Gebhard von Blücher"
+      },
+      {
+       "fi": "Horatio Nelson",
+       "en": "Horatio Nelson"
+      },
+      {
+       "fi": "Mihail Kutuzov",
+       "en": "Mikhail Kutuzov"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mille saarelle Napoleon karkotettiin Waterloon jälkeen, ja jossa hän kuoli vuonna 1821?",
+      "en": "To which island was Napoleon exiled after Waterloo, where he died in 1821?"
+     },
+     "ok": {
+      "fi": "Saint Helena",
+      "en": "Saint Helena"
+     },
+     "no": [
+      {
+       "fi": "Elba",
+       "en": "Elba"
+      },
+      {
+       "fi": "Madeira",
+       "en": "Madeira"
+      },
+      {
+       "fi": "Martinique",
+       "en": "Martinique"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kongressi järjesti Euroopan rajat uudelleen Napoleonin sotien jälkeen?",
+      "en": "Which congress redrew Europe's borders after the Napoleonic Wars?"
+     },
+     "ok": {
+      "fi": "Wienin kongressi",
+      "en": "Congress of Vienna"
+     },
+     "no": [
+      {
+       "fi": "Berliinin kongressi",
+       "en": "Congress of Berlin"
+      },
+      {
+       "fi": "Pariisin rauhankonferenssi",
+       "en": "Paris Peace Conference"
+      },
+      {
+       "fi": "Westfalenin rauhankongressi",
+       "en": "Congress of Westphalia"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-ensimmaisen-maailmansodan-rauhansopimukset",
+   "cat": "historia",
+   "t": 45,
+   "title": {
+    "fi": "Pariisin rauhankonferenssin viisi rauhansopimusta 1919–1920 keskusvaltojen kanssa",
+    "en": "The five peace treaties of the Paris Peace Conference with the Central Powers, 1919–1920"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Osapuoli ja päivä",
+    "en": "Signed with, date"
+   },
+   "items": [
+    {
+     "fi": [
+      "Versailles",
+      "Versaillesin rauha",
+      "Treaty of Versailles",
+      "Versaillesin rauhansopimus"
+     ],
+     "en": [
+      "Versailles",
+      "Versaillesin rauha",
+      "Treaty of Versailles",
+      "Versaillesin rauhansopimus"
+     ],
+     "h": {
+      "fi": "Saksa, 28.6.1919",
+      "en": "Germany, 28 June 1919"
+     }
+    },
+    {
+     "fi": [
+      "Saint-Germain",
+      "Saint-Germain-en-Laye",
+      "Saint-Germainin rauha",
+      "Treaty of Saint-Germain"
+     ],
+     "en": [
+      "Saint-Germain",
+      "Saint-Germain-en-Laye",
+      "Saint-Germainin rauha",
+      "Treaty of Saint-Germain"
+     ],
+     "h": {
+      "fi": "Itävalta, 10.9.1919",
+      "en": "Austria, 10 September 1919"
+     }
+    },
+    {
+     "fi": [
+      "Neuilly",
+      "Neuilly-sur-Seine",
+      "Neuillyn rauha",
+      "Treaty of Neuilly"
+     ],
+     "en": [
+      "Neuilly",
+      "Neuilly-sur-Seine",
+      "Neuillyn rauha",
+      "Treaty of Neuilly"
+     ],
+     "h": {
+      "fi": "Bulgaria, 27.11.1919",
+      "en": "Bulgaria, 27 November 1919"
+     }
+    },
+    {
+     "fi": [
+      "Trianon",
+      "Trianonin rauha",
+      "Treaty of Trianon"
+     ],
+     "en": [
+      "Trianon",
+      "Trianonin rauha",
+      "Treaty of Trianon"
+     ],
+     "h": {
+      "fi": "Unkari, 4.6.1920",
+      "en": "Hungary, 4 June 1920"
+     }
+    },
+    {
+     "fi": [
+      "Sèvres",
+      "Sèvresin rauha",
+      "Treaty of Sèvres"
+     ],
+     "en": [
+      "Sèvres",
+      "Sèvresin rauha",
+      "Treaty of Sèvres"
+     ],
+     "h": {
+      "fi": "Osmanien valtakunta, 10.8.1920",
+      "en": "Ottoman Empire, 10 August 1920"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-2-kolmen-vallan-sopimus",
+   "cat": "historia",
+   "t": 63,
+   "title": {
+    "fi": "Kolmen vallan sopimuksen yhdeksän allekirjoittajavaltiota 1940–1941 (mukana myös kahden päivän ajan jäsenenä ollut Jugoslavia)",
+    "en": "The nine states that signed the Tripartite Pact, 1940–1941 (including Yugoslavia, a member for two days)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Allekirjoituspäivä",
+    "en": "Date signed"
+   },
+   "items": [
+    {
+     "fi": [
+      "Saksa",
+      "Natsi-Saksa",
+      "Nazi Germany",
+      "Saksan valtakunta"
+     ],
+     "en": [
+      "Germany",
+      "Natsi-Saksa",
+      "Nazi Germany",
+      "Saksan valtakunta"
+     ],
+     "h": "27.9.1940"
+    },
+    {
+     "fi": [
+      "Italia",
+      "Italian kuningaskunta"
+     ],
+     "en": [
+      "Italy",
+      "Italian kuningaskunta"
+     ],
+     "h": "27.9.1940"
+    },
+    {
+     "fi": [
+      "Japani",
+      "Japanin keisarikunta"
+     ],
+     "en": [
+      "Japan",
+      "Japanin keisarikunta"
+     ],
+     "h": "27.9.1940"
+    },
+    {
+     "fi": [
+      "Unkari",
+      "Unkarin kuningaskunta"
+     ],
+     "en": [
+      "Hungary",
+      "Unkarin kuningaskunta"
+     ],
+     "h": "20.11.1940"
+    },
+    {
+     "fi": [
+      "Romania",
+      "Romanian kuningaskunta"
+     ],
+     "en": [
+      "Romania",
+      "Romanian kuningaskunta"
+     ],
+     "h": "23.11.1940"
+    },
+    {
+     "fi": [
+      "Slovakia",
+      "Slovakian tasavalta",
+      "Slovak Republic"
+     ],
+     "en": [
+      "Slovakia",
+      "Slovakian tasavalta",
+      "Slovak Republic"
+     ],
+     "h": "24.11.1940"
+    },
+    {
+     "fi": [
+      "Bulgaria",
+      "Bulgarian tsaarikunta"
+     ],
+     "en": [
+      "Bulgaria",
+      "Bulgarian tsaarikunta"
+     ],
+     "h": "1.3.1941"
+    },
+    {
+     "fi": [
+      "Jugoslavia",
+      "Jugoslavian kuningaskunta"
+     ],
+     "en": [
+      "Yugoslavia",
+      "Jugoslavian kuningaskunta"
+     ],
+     "h": "25.3.1941"
+    },
+    {
+     "fi": [
+      "Kroatian itsenäinen valtio",
+      "Kroatia",
+      "Croatia",
+      "NDH"
+     ],
+     "en": [
+      "Independent State of Croatia",
+      "Kroatia",
+      "Croatia",
+      "NDH"
+     ],
+     "h": "15.6.1941"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-yk-julistus-1942",
+   "cat": "historia",
+   "t": 180,
+   "title": {
+    "fi": "Yhdistyneiden kansakuntien julistuksen 26 alkuperäistä allekirjoittajaa (1.–2.1.1942)",
+    "en": "The 26 original signatories of the Declaration by United Nations (1–2 January 1942)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "Yhdysvallat (USA)",
+      "United States of America",
+      "US"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "Yhdysvallat (USA)",
+      "United States of America",
+      "US"
+     ]
+    },
+    {
+     "fi": [
+      "Iso-Britannia",
+      "Britannia",
+      "Yhdistynyt kuningaskunta",
+      "UK",
+      "Great Britain"
+     ],
+     "en": [
+      "United Kingdom",
+      "Britannia",
+      "Yhdistynyt kuningaskunta",
+      "UK",
+      "Great Britain"
+     ]
+    },
+    {
+     "fi": [
+      "Neuvostoliitto",
+      "USSR",
+      "NL"
+     ],
+     "en": [
+      "Soviet Union",
+      "USSR",
+      "NL"
+     ]
+    },
+    {
+     "fi": [
+      "Kiina"
+     ],
+     "en": [
+      "China"
+     ]
+    },
+    {
+     "fi": [
+      "Australia"
+     ],
+     "en": [
+      "Australia"
+     ]
+    },
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ]
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ]
+    },
+    {
+     "fi": [
+      "Costa Rica"
+     ],
+     "en": [
+      "Costa Rica"
+     ]
+    },
+    {
+     "fi": [
+      "Kuuba"
+     ],
+     "en": [
+      "Cuba"
+     ]
+    },
+    {
+     "fi": [
+      "Tšekkoslovakia",
+      "Tsekkoslovakia"
+     ],
+     "en": [
+      "Czechoslovakia",
+      "Tsekkoslovakia"
+     ]
+    },
+    {
+     "fi": [
+      "Dominikaaninen tasavalta"
+     ],
+     "en": [
+      "Dominican Republic"
+     ]
+    },
+    {
+     "fi": [
+      "El Salvador"
+     ],
+     "en": [
+      "El Salvador"
+     ]
+    },
+    {
+     "fi": [
+      "Kreikka"
+     ],
+     "en": [
+      "Greece"
+     ]
+    },
+    {
+     "fi": [
+      "Guatemala"
+     ],
+     "en": [
+      "Guatemala"
+     ]
+    },
+    {
+     "fi": [
+      "Haiti"
+     ],
+     "en": [
+      "Haiti"
+     ]
+    },
+    {
+     "fi": [
+      "Honduras"
+     ],
+     "en": [
+      "Honduras"
+     ]
+    },
+    {
+     "fi": [
+      "Intia"
+     ],
+     "en": [
+      "India"
+     ]
+    },
+    {
+     "fi": [
+      "Luxemburg"
+     ],
+     "en": [
+      "Luxembourg"
+     ]
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti",
+      "Holland"
+     ],
+     "en": [
+      "Netherlands",
+      "Hollanti",
+      "Holland"
+     ]
+    },
+    {
+     "fi": [
+      "Uusi-Seelanti"
+     ],
+     "en": [
+      "New Zealand"
+     ]
+    },
+    {
+     "fi": [
+      "Nicaragua"
+     ],
+     "en": [
+      "Nicaragua"
+     ]
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ]
+    },
+    {
+     "fi": [
+      "Panama"
+     ],
+     "en": [
+      "Panama"
+     ]
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Afrikka",
+      "Etelä-Afrikan unioni",
+      "Union of South Africa"
+     ],
+     "en": [
+      "South Africa",
+      "Etelä-Afrikan unioni",
+      "Union of South Africa"
+     ]
+    },
+    {
+     "fi": [
+      "Jugoslavia"
+     ],
+     "en": [
+      "Yugoslavia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-normandian-rannat",
+   "cat": "historia",
+   "t": 45,
+   "title": {
+    "fi": "Normandian maihinnousun viisi rannikkolohkoa (6.6.1944) lännestä itään",
+    "en": "The five Normandy landing beaches (6 June 1944), west to east"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Maihinnousijat",
+    "en": "Landing force"
+   },
+   "items": [
+    {
+     "fi": [
+      "Utah",
+      "Utah Beach"
+     ],
+     "en": [
+      "Utah",
+      "Utah Beach"
+     ],
+     "h": {
+      "fi": "Yhdysvallat",
+      "en": "United States"
+     }
+    },
+    {
+     "fi": [
+      "Omaha",
+      "Omaha Beach"
+     ],
+     "en": [
+      "Omaha",
+      "Omaha Beach"
+     ],
+     "h": {
+      "fi": "Yhdysvallat",
+      "en": "United States"
+     }
+    },
+    {
+     "fi": [
+      "Gold",
+      "Gold Beach"
+     ],
+     "en": [
+      "Gold",
+      "Gold Beach"
+     ],
+     "h": {
+      "fi": "Britannia",
+      "en": "United Kingdom"
+     }
+    },
+    {
+     "fi": [
+      "Juno",
+      "Juno Beach"
+     ],
+     "en": [
+      "Juno",
+      "Juno Beach"
+     ],
+     "h": {
+      "fi": "Kanada",
+      "en": "Canada"
+     }
+    },
+    {
+     "fi": [
+      "Sword",
+      "Sword Beach"
+     ],
+     "en": [
+      "Sword",
+      "Sword Beach"
+     ],
+     "h": {
+      "fi": "Britannia",
+      "en": "United Kingdom"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-2-nato-perustajat",
+   "cat": "historia",
+   "t": 85,
+   "title": {
+    "fi": "NATO:n 12 perustajajäsentä (Pohjois-Atlantin sopimus 4.4.1949)",
+    "en": "The 12 founding members of NATO (North Atlantic Treaty, 4 April 1949)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ]
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ]
+    },
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ]
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ]
+    },
+    {
+     "fi": [
+      "Islanti"
+     ],
+     "en": [
+      "Iceland"
+     ]
+    },
+    {
+     "fi": [
+      "Italia"
+     ],
+     "en": [
+      "Italy"
+     ]
+    },
+    {
+     "fi": [
+      "Luxemburg"
+     ],
+     "en": [
+      "Luxembourg"
+     ]
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti",
+      "Holland"
+     ],
+     "en": [
+      "Netherlands",
+      "Hollanti",
+      "Holland"
+     ]
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ]
+    },
+    {
+     "fi": [
+      "Portugali"
+     ],
+     "en": [
+      "Portugal"
+     ]
+    },
+    {
+     "fi": [
+      "Iso-Britannia",
+      "Britannia",
+      "Yhdistynyt kuningaskunta",
+      "UK",
+      "Great Britain"
+     ],
+     "en": [
+      "United Kingdom",
+      "Britannia",
+      "Yhdistynyt kuningaskunta",
+      "UK",
+      "Great Britain"
+     ]
+    },
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "United States of America",
+      "US"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "United States of America",
+      "US"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-varsovan-liitto",
+   "cat": "historia",
+   "t": 56,
+   "title": {
+    "fi": "Varsovan liiton kahdeksan jäsenvaltiota (perustettu 1955)",
+    "en": "The eight member states of the Warsaw Pact (founded 1955)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Albania"
+     ],
+     "en": [
+      "Albania"
+     ]
+    },
+    {
+     "fi": [
+      "Bulgaria"
+     ],
+     "en": [
+      "Bulgaria"
+     ]
+    },
+    {
+     "fi": [
+      "Tšekkoslovakia",
+      "Tsekkoslovakia"
+     ],
+     "en": [
+      "Czechoslovakia",
+      "Tsekkoslovakia"
+     ]
+    },
+    {
+     "fi": [
+      "Itä-Saksa",
+      "DDR",
+      "Saksan demokraattinen tasavalta",
+      "German Democratic Republic",
+      "GDR"
+     ],
+     "en": [
+      "East Germany",
+      "DDR",
+      "Saksan demokraattinen tasavalta",
+      "German Democratic Republic",
+      "GDR"
+     ]
+    },
+    {
+     "fi": [
+      "Unkari"
+     ],
+     "en": [
+      "Hungary"
+     ]
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ]
+    },
+    {
+     "fi": [
+      "Romania"
+     ],
+     "en": [
+      "Romania"
+     ]
+    },
+    {
+     "fi": [
+      "Neuvostoliitto",
+      "USSR",
+      "NL"
+     ],
+     "en": [
+      "Soviet Union",
+      "USSR",
+      "NL"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-maailmansodat",
+   "cat": "historia",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Maailmansodat 1914–1945",
+    "en": "The World Wars, 1914–1945"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuka murhattiin Sarajevossa 28.6.1914?",
+      "en": "Who was assassinated in Sarajevo on 28 June 1914?"
+     },
+     "ok": {
+      "fi": "Itävalta-Unkarin kruununperillinen Franz Ferdinand",
+      "en": "Archduke Franz Ferdinand, heir to the Austro-Hungarian throne"
+     },
+     "no": [
+      {
+       "fi": "Saksan keisari Vilhelm II",
+       "en": "German Emperor Wilhelm II"
+      },
+      {
+       "fi": "Venäjän keisari Nikolai II",
+       "en": "Russian Emperor Nicholas II"
+      },
+      {
+       "fi": "Itävallan keisari Frans Joosef I",
+       "en": "Austrian Emperor Franz Joseph I"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka ampui Franz Ferdinandin ja hänen puolisonsa Sofian?",
+      "en": "Who shot Franz Ferdinand and his wife Sophie?"
+     },
+     "ok": {
+      "fi": "Gavrilo Princip",
+      "en": "Gavrilo Princip"
+     },
+     "no": [
+      {
+       "fi": "Nedeljko Čabrinović",
+       "en": "Nedeljko Čabrinović"
+      },
+      {
+       "fi": "Dragutin Dimitrijević",
+       "en": "Dragutin Dimitrijević"
+      },
+      {
+       "fi": "Lev Trotski",
+       "en": "Leon Trotsky"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Saksan ja ympärysvaltojen välinen aselepo solmittiin ensimmäisen maailmansodan lopussa?",
+      "en": "On which date was the armistice between Germany and the Entente concluded at the end of World War I?"
+     },
+     "ok": {
+      "fi": "11.11.1918",
+      "en": "11 November 1918"
+     },
+     "no": [
+      {
+       "fi": "28.6.1919",
+       "en": "28 June 1919"
+      },
+      {
+       "fi": "9.11.1918",
+       "en": "9 November 1918"
+      },
+      {
+       "fi": "3.3.1918",
+       "en": "3 March 1918"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä ensimmäisen maailmansodan päättänyt aselepo allekirjoitettiin marraskuussa 1918?",
+      "en": "Where was the armistice ending World War I signed in November 1918?"
+     },
+     "ok": {
+      "fi": "Junavaunussa Compiègnen metsässä",
+      "en": "In a railroad car in the Forest of Compiègne"
+     },
+     "no": [
+      {
+       "fi": "Versailles’n peilisalissa",
+       "en": "In the Hall of Mirrors at Versailles"
+      },
+      {
+       "fi": "Brest-Litovskissa",
+       "en": "At Brest-Litovsk"
+      },
+      {
+       "fi": "Wienissä",
+       "en": "In Vienna"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin maahan Saksa hyökkäsi 1.9.1939 toisen maailmansodan alkaessa?",
+      "en": "Which country did Germany invade on 1 September 1939 at the start of World War II?"
+     },
+     "ok": {
+      "fi": "Puolaan",
+      "en": "Poland"
+     },
+     "no": [
+      {
+       "fi": "Tšekkoslovakiaan",
+       "en": "Czechoslovakia"
+      },
+      {
+       "fi": "Ranskaan",
+       "en": "France"
+      },
+      {
+       "fi": "Belgiaan",
+       "en": "Belgium"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä talvisota alkoi?",
+      "en": "On which date did the Winter War begin?"
+     },
+     "ok": {
+      "fi": "30.11.1939",
+      "en": "30 November 1939"
+     },
+     "no": [
+      {
+       "fi": "13.3.1940",
+       "en": "13 March 1940"
+      },
+      {
+       "fi": "1.9.1939",
+       "en": "1 September 1939"
+      },
+      {
+       "fi": "25.6.1941",
+       "en": "25 June 1941"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin rauhansopimukseen talvisota päättyi?",
+      "en": "Which peace treaty ended the Winter War?"
+     },
+     "ok": {
+      "fi": "Moskovan rauhaan",
+      "en": "Moscow Peace Treaty"
+     },
+     "no": [
+      {
+       "fi": "Pariisin rauhaan",
+       "en": "Treaty of Paris"
+      },
+      {
+       "fi": "Tarton rauhaan",
+       "en": "Treaty of Tartu"
+      },
+      {
+       "fi": "Brest-Litovskin rauhaan",
+       "en": "Treaty of Brest-Litovsk"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Saksan 22.6.1941 alkaneen Neuvostoliittoon hyökkäyksen koodinimi?",
+      "en": "What was the code name of Germany's invasion of the Soviet Union, begun on 22 June 1941?"
+     },
+     "ok": {
+      "fi": "Barbarossa",
+      "en": "Barbarossa"
+     },
+     "no": [
+      {
+       "fi": "Overlord",
+       "en": "Overlord"
+      },
+      {
+       "fi": "Market Garden",
+       "en": "Market Garden"
+      },
+      {
+       "fi": "Merileijona",
+       "en": "Sea Lion"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio hyökkäsi Pearl Harboriin 7.12.1941?",
+      "en": "Which country attacked Pearl Harbor on 7 December 1941?"
+     },
+     "ok": {
+      "fi": "Japani",
+      "en": "Japan"
+     },
+     "no": [
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Italia",
+       "en": "Italy"
+      },
+      {
+       "fi": "Neuvostoliitto",
+       "en": "Soviet Union"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Normandian maihinnousu tapahtui?",
+      "en": "On which date did the Normandy landings take place?"
+     },
+     "ok": {
+      "fi": "6.6.1944",
+      "en": "6 June 1944"
+     },
+     "no": [
+      {
+       "fi": "8.5.1945",
+       "en": "8 May 1945"
+      },
+      {
+       "fi": "22.6.1941",
+       "en": "22 June 1941"
+      },
+      {
+       "fi": "25.7.1943",
+       "en": "25 July 1943"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä alueella Jaltan konferenssi pidettiin helmikuussa 1945?",
+      "en": "In which region was the Yalta Conference held in February 1945?"
+     },
+     "ok": {
+      "fi": "Krimillä",
+      "en": "Crimea"
+     },
+     "no": [
+      {
+       "fi": "Itä-Preussissa",
+       "en": "East Prussia"
+      },
+      {
+       "fi": "Puolassa",
+       "en": "Poland"
+      },
+      {
+       "fi": "Pohjois-Italiassa",
+       "en": "Northern Italy"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä liittoutuneet hyväksyivät Saksan ehdottoman antautumisen (VE-päivä)?",
+      "en": "On which date did the Allies formally accept Germany's unconditional surrender (VE Day)?"
+     },
+     "ok": {
+      "fi": "8.5.1945",
+      "en": "8 May 1945"
+     },
+     "no": [
+      {
+       "fi": "30.4.1945",
+       "en": "30 April 1945"
+      },
+      {
+       "fi": "9.8.1945",
+       "en": "9 August 1945"
+      },
+      {
+       "fi": "2.9.1945",
+       "en": "2 September 1945"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin kaupunkiin Yhdysvallat pudotti toisen atomipommin 9.8.1945?",
+      "en": "On which city did the United States drop the second atomic bomb on 9 August 1945?"
+     },
+     "ok": {
+      "fi": "Nagasakiin",
+      "en": "Nagasaki"
+     },
+     "no": [
+      {
+       "fi": "Tokioon",
+       "en": "Tokyo"
+      },
+      {
+       "fi": "Kiotoon",
+       "en": "Kyoto"
+      },
+      {
+       "fi": "Osakaan",
+       "en": "Osaka"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Japani allekirjoitti antautumisensa?",
+      "en": "On which date did Japan formally sign its surrender?"
+     },
+     "ok": {
+      "fi": "2.9.1945",
+      "en": "2 September 1945"
+     },
+     "no": [
+      {
+       "fi": "6.8.1945",
+       "en": "6 August 1945"
+      },
+      {
+       "fi": "15.8.1945",
+       "en": "15 August 1945"
+      },
+      {
+       "fi": "8.5.1945",
+       "en": "8 May 1945"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-kylma-sota",
+   "cat": "historia",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "Kylmä sota 1947–1991",
+    "en": "The Cold War, 1947–1991"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minä vuonna Trumanin oppi julistettiin?",
+      "en": "In which year was the Truman Doctrine announced?"
+     },
+     "ok": {
+      "fi": "1947",
+      "en": "1947"
+     },
+     "no": [
+      {
+       "fi": "1945",
+       "en": "1945"
+      },
+      {
+       "fi": "1949",
+       "en": "1949"
+      },
+      {
+       "fi": "1950",
+       "en": "1950"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Marshall-suunnitelma hyväksyttiin?",
+      "en": "In which year was the Marshall Plan enacted?"
+     },
+     "ok": {
+      "fi": "1948",
+      "en": "1948"
+     },
+     "no": [
+      {
+       "fi": "1946",
+       "en": "1946"
+      },
+      {
+       "fi": "1950",
+       "en": "1950"
+      },
+      {
+       "fi": "1952",
+       "en": "1952"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä alueen Neuvostoliitto saartoi kesäkuusta 1948 toukokuuhun 1949?",
+      "en": "Which enclave did the Soviet Union blockade from June 1948 to May 1949?"
+     },
+     "ok": {
+      "fi": "Länsi-Berliinin",
+      "en": "West Berlin"
+     },
+     "no": [
+      {
+       "fi": "Wienin",
+       "en": "Vienna"
+      },
+      {
+       "fi": "Varsovan",
+       "en": "Warsaw"
+      },
+      {
+       "fi": "Triesten",
+       "en": "Trieste"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Korean sodan aselepo allekirjoitettiin?",
+      "en": "In which year was the Korean Armistice Agreement signed?"
+     },
+     "ok": {
+      "fi": "1953",
+      "en": "1953"
+     },
+     "no": [
+      {
+       "fi": "1950",
+       "en": "1950"
+      },
+      {
+       "fi": "1951",
+       "en": "1951"
+      },
+      {
+       "fi": "1955",
+       "en": "1955"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Varsovan liitto perustettiin?",
+      "en": "In which year was the Warsaw Pact founded?"
+     },
+     "ok": {
+      "fi": "1955",
+      "en": "1955"
+     },
+     "no": [
+      {
+       "fi": "1949",
+       "en": "1949"
+      },
+      {
+       "fi": "1953",
+       "en": "1953"
+      },
+      {
+       "fi": "1961",
+       "en": "1961"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna neuvostojoukot tukahduttivat Unkarin kansannousun?",
+      "en": "In which year did Soviet troops crush the Hungarian uprising?"
+     },
+     "ok": {
+      "fi": "1956",
+      "en": "1956"
+     },
+     "no": [
+      {
+       "fi": "1953",
+       "en": "1953"
+      },
+      {
+       "fi": "1961",
+       "en": "1961"
+      },
+      {
+       "fi": "1968",
+       "en": "1968"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Berliinin muurin rakentaminen alkoi?",
+      "en": "In which year did construction of the Berlin Wall begin?"
+     },
+     "ok": {
+      "fi": "1961",
+      "en": "1961"
+     },
+     "no": [
+      {
+       "fi": "1953",
+       "en": "1953"
+      },
+      {
+       "fi": "1958",
+       "en": "1958"
+      },
+      {
+       "fi": "1968",
+       "en": "1968"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Kuuban ohjuskriisi puhkesi?",
+      "en": "In which year did the Cuban Missile Crisis break out?"
+     },
+     "ok": {
+      "fi": "1962",
+      "en": "1962"
+     },
+     "no": [
+      {
+       "fi": "1959",
+       "en": "1959"
+      },
+      {
+       "fi": "1961",
+       "en": "1961"
+      },
+      {
+       "fi": "1964",
+       "en": "1964"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan vapautumiskautta vuonna 1968 kutsutaan Prahan kevääksi?",
+      "en": "Which country is associated with the 1968 liberalisation known as the Prague Spring?"
+     },
+     "ok": {
+      "fi": "Tšekkoslovakian",
+      "en": "Czechoslovakia"
+     },
+     "no": [
+      {
+       "fi": "Puolan",
+       "en": "Poland"
+      },
+      {
+       "fi": "Unkarin",
+       "en": "Hungary"
+      },
+      {
+       "fi": "Itä-Saksan",
+       "en": "East Germany"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä Varsovan liiton maista EI osallistunut Tšekkoslovakian miehitykseen elokuussa 1968?",
+      "en": "Which of these Warsaw Pact states did NOT take part in the invasion of Czechoslovakia in August 1968?"
+     },
+     "ok": {
+      "fi": "Romania",
+      "en": "Romania"
+     },
+     "no": [
+      {
+       "fi": "Neuvostoliitto",
+       "en": "Soviet Union"
+      },
+      {
+       "fi": "Puola",
+       "en": "Poland"
+      },
+      {
+       "fi": "Bulgaria",
+       "en": "Bulgaria"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa ETYKin päätösasiakirja allekirjoitettiin vuonna 1975?",
+      "en": "In which city was the CSCE Final Act signed in 1975?"
+     },
+     "ok": {
+      "fi": "Helsingissä",
+      "en": "Helsinki"
+     },
+     "no": [
+      {
+       "fi": "Wienissä",
+       "en": "Vienna"
+      },
+      {
+       "fi": "Genevessä",
+       "en": "Geneva"
+      },
+      {
+       "fi": "Madridissa",
+       "en": "Madrid"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin valtaukseen Vietnamin sota päättyi vuonna 1975?",
+      "en": "The capture of which city ended the Vietnam War in 1975?"
+     },
+     "ok": {
+      "fi": "Saigonin",
+      "en": "Saigon"
+     },
+     "no": [
+      {
+       "fi": "Hanoin",
+       "en": "Hanoi"
+      },
+      {
+       "fi": "Da Nangin",
+       "en": "Da Nang"
+      },
+      {
+       "fi": "Phnom Penhin",
+       "en": "Phnom Penh"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Neuvostoliiton sota Afganistanissa alkoi?",
+      "en": "In which year did the Soviet–Afghan War begin?"
+     },
+     "ok": {
+      "fi": "1979",
+      "en": "1979"
+     },
+     "no": [
+      {
+       "fi": "1975",
+       "en": "1975"
+      },
+      {
+       "fi": "1981",
+       "en": "1981"
+      },
+      {
+       "fi": "1985",
+       "en": "1985"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa Reagan ja Gorbatšov tapasivat toisessa huippukokouksessaan lokakuussa 1986?",
+      "en": "In which city did Reagan and Gorbachev hold their second summit in October 1986?"
+     },
+     "ok": {
+      "fi": "Reykjavíkissa",
+      "en": "Reykjavík"
+     },
+     "no": [
+      {
+       "fi": "Genevessä",
+       "en": "Geneva"
+      },
+      {
+       "fi": "Washingtonissa",
+       "en": "Washington"
+      },
+      {
+       "fi": "Moskovassa",
+       "en": "Moscow"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen kanssa Ronald Reagan allekirjoitti INF-sopimuksen 8.12.1987?",
+      "en": "With whom did Ronald Reagan sign the INF Treaty on 8 December 1987?"
+     },
+     "ok": {
+      "fi": "Mihail Gorbatšovin",
+      "en": "Mikhail Gorbachev"
+     },
+     "no": [
+      {
+       "fi": "Leonid Brežnevin",
+       "en": "Leonid Brezhnev"
+      },
+      {
+       "fi": "Juri Andropovin",
+       "en": "Yuri Andropov"
+      },
+      {
+       "fi": "Boris Jeltsinin",
+       "en": "Boris Yeltsin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Saksojen yhdistyminen toteutui?",
+      "en": "On which date was German reunification completed?"
+     },
+     "ok": {
+      "fi": "3.10.1990",
+      "en": "3 October 1990"
+     },
+     "no": [
+      {
+       "fi": "9.11.1989",
+       "en": "9 November 1989"
+      },
+      {
+       "fi": "1.7.1990",
+       "en": "1 July 1990"
+      },
+      {
+       "fi": "26.12.1991",
+       "en": "26 December 1991"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Neuvostoliitto lakkasi virallisesti olemasta?",
+      "en": "On which date was the Soviet Union formally dissolved?"
+     },
+     "ok": {
+      "fi": "26.12.1991",
+      "en": "26 December 1991"
+     },
+     "no": [
+      {
+       "fi": "19.8.1991",
+       "en": "19 August 1991"
+      },
+      {
+       "fi": "8.12.1991",
+       "en": "8 December 1991"
+      },
+      {
+       "fi": "3.10.1990",
+       "en": "3 October 1990"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-afrikan-vuosi-1960",
+   "cat": "historia",
+   "t": 120,
+   "title": {
+    "fi": "Vuonna 1960 itsenäistyneet 17 Afrikan valtiota (nykyisillä nimillä)",
+    "en": "The 17 African countries that became independent in 1960 (present-day names)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Benin",
+      "Dahomey"
+     ],
+     "en": [
+      "Benin",
+      "Dahomey"
+     ]
+    },
+    {
+     "fi": [
+      "Burkina Faso",
+      "Ylä-Volta",
+      "Upper Volta"
+     ],
+     "en": [
+      "Burkina Faso",
+      "Ylä-Volta",
+      "Upper Volta"
+     ]
+    },
+    {
+     "fi": [
+      "Gabon"
+     ],
+     "en": [
+      "Gabon"
+     ]
+    },
+    {
+     "fi": [
+      "Kamerun"
+     ],
+     "en": [
+      "Cameroon"
+     ]
+    },
+    {
+     "fi": [
+      "Keski-Afrikan tasavalta",
+      "CAR",
+      "Keski-Afrikka"
+     ],
+     "en": [
+      "Central African Republic",
+      "CAR",
+      "Keski-Afrikka"
+     ]
+    },
+    {
+     "fi": [
+      "Kongon demokraattinen tasavalta",
+      "Kongo-Kinshasa",
+      "KDT",
+      "DR Kongo",
+      "DR Congo",
+      "Congo-Kinshasa"
+     ],
+     "en": [
+      "Democratic Republic of the Congo",
+      "Kongo-Kinshasa",
+      "KDT",
+      "DR Kongo",
+      "DR Congo",
+      "Congo-Kinshasa"
+     ]
+    },
+    {
+     "fi": [
+      "Kongon tasavalta",
+      "Kongo",
+      "Kongo-Brazzaville",
+      "Congo-Brazzaville",
+      "Congo"
+     ],
+     "en": [
+      "Republic of the Congo",
+      "Kongo",
+      "Kongo-Brazzaville",
+      "Congo-Brazzaville",
+      "Congo"
+     ]
+    },
+    {
+     "fi": [
+      "Madagaskar"
+     ],
+     "en": [
+      "Madagascar"
+     ]
+    },
+    {
+     "fi": [
+      "Mali"
+     ],
+     "en": [
+      "Mali"
+     ]
+    },
+    {
+     "fi": [
+      "Mauritania"
+     ],
+     "en": [
+      "Mauritania"
+     ]
+    },
+    {
+     "fi": [
+      "Niger"
+     ],
+     "en": [
+      "Niger"
+     ]
+    },
+    {
+     "fi": [
+      "Nigeria"
+     ],
+     "en": [
+      "Nigeria"
+     ]
+    },
+    {
+     "fi": [
+      "Norsunluurannikko",
+      "Côte d’Ivoire",
+      "Cote d'Ivoire"
+     ],
+     "en": [
+      "Ivory Coast",
+      "Côte d’Ivoire",
+      "Cote d'Ivoire"
+     ]
+    },
+    {
+     "fi": [
+      "Senegal"
+     ],
+     "en": [
+      "Senegal"
+     ]
+    },
+    {
+     "fi": [
+      "Somalia"
+     ],
+     "en": [
+      "Somalia"
+     ]
+    },
+    {
+     "fi": [
+      "Togo"
+     ],
+     "en": [
+      "Togo"
+     ]
+    },
+    {
+     "fi": [
+      "Tšad",
+      "Tsad"
+     ],
+     "en": [
+      "Chad",
+      "Tsad"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-neuvostoliiton-seuraajavaltiot",
+   "cat": "historia",
+   "t": 105,
+   "title": {
+    "fi": "Neuvostoliiton hajoamisessa 1991 itsenäisiksi tulleet 15 entistä neuvostotasavaltaa (nykyiset valtiot)",
+    "en": "The 15 former Soviet republics that became independent states with the dissolution of the USSR in 1991"
+   },
+   "items": [
+    {
+     "fi": [
+      "Armenia"
+     ],
+     "en": [
+      "Armenia"
+     ]
+    },
+    {
+     "fi": [
+      "Azerbaidžan",
+      "Azerbaidzan",
+      "Azerbaidsan"
+     ],
+     "en": [
+      "Azerbaijan",
+      "Azerbaidzan",
+      "Azerbaidsan"
+     ]
+    },
+    {
+     "fi": [
+      "Georgia"
+     ],
+     "en": [
+      "Georgia"
+     ]
+    },
+    {
+     "fi": [
+      "Kazakstan"
+     ],
+     "en": [
+      "Kazakhstan"
+     ]
+    },
+    {
+     "fi": [
+      "Kirgisia",
+      "Kirgisistan"
+     ],
+     "en": [
+      "Kyrgyzstan",
+      "Kirgisistan"
+     ]
+    },
+    {
+     "fi": [
+      "Latvia"
+     ],
+     "en": [
+      "Latvia"
+     ]
+    },
+    {
+     "fi": [
+      "Liettua"
+     ],
+     "en": [
+      "Lithuania"
+     ]
+    },
+    {
+     "fi": [
+      "Moldova"
+     ],
+     "en": [
+      "Moldova"
+     ]
+    },
+    {
+     "fi": [
+      "Tadžikistan",
+      "Tadzikistan",
+      "Tadsikistan"
+     ],
+     "en": [
+      "Tajikistan",
+      "Tadzikistan",
+      "Tadsikistan"
+     ]
+    },
+    {
+     "fi": [
+      "Turkmenistan"
+     ],
+     "en": [
+      "Turkmenistan"
+     ]
+    },
+    {
+     "fi": [
+      "Ukraina"
+     ],
+     "en": [
+      "Ukraine"
+     ]
+    },
+    {
+     "fi": [
+      "Uzbekistan"
+     ],
+     "en": [
+      "Uzbekistan"
+     ]
+    },
+    {
+     "fi": [
+      "Valko-Venäjä",
+      "Valkovenäjä"
+     ],
+     "en": [
+      "Belarus",
+      "Valkovenäjä"
+     ]
+    },
+    {
+     "fi": [
+      "Venäjä"
+     ],
+     "en": [
+      "Russia"
+     ]
+    },
+    {
+     "fi": [
+      "Viro",
+      "Eesti"
+     ],
+     "en": [
+      "Estonia",
+      "Eesti"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-2-yk-paasihteerit",
+   "cat": "historia",
+   "t": 65,
+   "title": {
+    "fi": "YK:n pääsihteerit 1946–2026 (virkaatekeviä ei lasketa; tilanne marraskuu 2026)",
+    "en": "UN Secretaries-General, 1946–2026 (acting holders excluded; as of November 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Toimikausi",
+    "en": "Term"
+   },
+   "items": [
+    {
+     "fi": [
+      "Trygve Lie",
+      "Lie"
+     ],
+     "en": [
+      "Trygve Lie",
+      "Lie"
+     ],
+     "h": "1946–1952"
+    },
+    {
+     "fi": [
+      "Dag Hammarskjöld",
+      "Hammarskjöld"
+     ],
+     "en": [
+      "Dag Hammarskjöld",
+      "Hammarskjöld"
+     ],
+     "h": "1953–1961"
+    },
+    {
+     "fi": [
+      "U Thant",
+      "Thant"
+     ],
+     "en": [
+      "U Thant",
+      "Thant"
+     ],
+     "h": "1961–1971"
+    },
+    {
+     "fi": [
+      "Kurt Waldheim",
+      "Waldheim"
+     ],
+     "en": [
+      "Kurt Waldheim",
+      "Waldheim"
+     ],
+     "h": "1972–1981"
+    },
+    {
+     "fi": [
+      "Javier Pérez de Cuéllar",
+      "Pérez de Cuéllar"
+     ],
+     "en": [
+      "Javier Pérez de Cuéllar",
+      "Pérez de Cuéllar"
+     ],
+     "h": "1982–1991"
+    },
+    {
+     "fi": [
+      "Boutros Boutros-Ghali",
+      "Boutros-Ghali"
+     ],
+     "en": [
+      "Boutros Boutros-Ghali",
+      "Boutros-Ghali"
+     ],
+     "h": "1992–1996"
+    },
+    {
+     "fi": [
+      "Kofi Annan",
+      "Annan"
+     ],
+     "en": [
+      "Kofi Annan",
+      "Annan"
+     ],
+     "h": "1997–2006"
+    },
+    {
+     "fi": [
+      "Ban Ki-moon",
+      "Ban"
+     ],
+     "en": [
+      "Ban Ki-moon",
+      "Ban"
+     ],
+     "h": "2007–2016"
+    },
+    {
+     "fi": [
+      "António Guterres",
+      "Guterres"
+     ],
+     "en": [
+      "António Guterres",
+      "Guterres"
+     ],
+     "h": "2017–"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-nobelin-rauhanpalkinto-2010-2025",
+   "cat": "historia",
+   "t": 160,
+   "title": {
+    "fi": "Nobelin rauhanpalkinnon saajat 2010–2025",
+    "en": "Nobel Peace Prize laureates, 2010–2025"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vuosi",
+    "en": "Year"
+   },
+   "items": [
+    {
+     "fi": [
+      "Liu Xiaobo",
+      "Xiaobo"
+     ],
+     "en": [
+      "Liu Xiaobo",
+      "Xiaobo"
+     ],
+     "h": "2010"
+    },
+    {
+     "fi": [
+      "Ellen Johnson Sirleaf",
+      "Johnson Sirleaf",
+      "Sirleaf"
+     ],
+     "en": [
+      "Ellen Johnson Sirleaf",
+      "Johnson Sirleaf",
+      "Sirleaf"
+     ],
+     "h": "2011"
+    },
+    {
+     "fi": [
+      "Leymah Gbowee",
+      "Gbowee"
+     ],
+     "en": [
+      "Leymah Gbowee",
+      "Gbowee"
+     ],
+     "h": "2011"
+    },
+    {
+     "fi": [
+      "Tawakkul Karman",
+      "Tawakkol Karman",
+      "Karman"
+     ],
+     "en": [
+      "Tawakkol Karman",
+      "Tawakkul Karman",
+      "Karman"
+     ],
+     "h": "2011"
+    },
+    {
+     "fi": [
+      "Euroopan unioni",
+      "EU"
+     ],
+     "en": [
+      "European Union",
+      "EU"
+     ],
+     "h": "2012"
+    },
+    {
+     "fi": [
+      "Kemiallisten aseiden kieltojärjestö",
+      "OPCW",
+      "Organization for the Prohibition of Chemical Weapons"
+     ],
+     "en": [
+      "Organisation for the Prohibition of Chemical Weapons",
+      "OPCW",
+      "Organization for the Prohibition of Chemical Weapons"
+     ],
+     "h": "2013"
+    },
+    {
+     "fi": [
+      "Kailash Satyarthi",
+      "Satyarthi"
+     ],
+     "en": [
+      "Kailash Satyarthi",
+      "Satyarthi"
+     ],
+     "h": "2014"
+    },
+    {
+     "fi": [
+      "Malala Yousafzai",
+      "Malala",
+      "Yousafzai"
+     ],
+     "en": [
+      "Malala Yousafzai",
+      "Malala",
+      "Yousafzai"
+     ],
+     "h": "2014"
+    },
+    {
+     "fi": [
+      "Tunisian kansallisen vuoropuhelun kvartetti",
+      "Tunisian kvartetti",
+      "National Dialogue Quartet"
+     ],
+     "en": [
+      "Tunisian National Dialogue Quartet",
+      "Tunisian kvartetti",
+      "National Dialogue Quartet"
+     ],
+     "h": "2015"
+    },
+    {
+     "fi": [
+      "Juan Manuel Santos",
+      "Santos"
+     ],
+     "en": [
+      "Juan Manuel Santos",
+      "Santos"
+     ],
+     "h": "2016"
+    },
+    {
+     "fi": [
+      "ICAN",
+      "Kansainvälinen kampanja ydinaseiden hävittämiseksi"
+     ],
+     "en": [
+      "International Campaign to Abolish Nuclear Weapons",
+      "ICAN",
+      "Kansainvälinen kampanja ydinaseiden hävittämiseksi"
+     ],
+     "h": "2017"
+    },
+    {
+     "fi": [
+      "Denis Mukwege",
+      "Mukwege"
+     ],
+     "en": [
+      "Denis Mukwege",
+      "Mukwege"
+     ],
+     "h": "2018"
+    },
+    {
+     "fi": [
+      "Nadia Murad",
+      "Murad"
+     ],
+     "en": [
+      "Nadia Murad",
+      "Murad"
+     ],
+     "h": "2018"
+    },
+    {
+     "fi": [
+      "Abiy Ahmed",
+      "Abiy",
+      "Ahmed"
+     ],
+     "en": [
+      "Abiy Ahmed",
+      "Abiy",
+      "Ahmed"
+     ],
+     "h": "2019"
+    },
+    {
+     "fi": [
+      "Maailman ruokaohjelma",
+      "WFP",
+      "World Food Program"
+     ],
+     "en": [
+      "World Food Programme",
+      "WFP",
+      "World Food Program"
+     ],
+     "h": "2020"
+    },
+    {
+     "fi": [
+      "Maria Ressa",
+      "Ressa"
+     ],
+     "en": [
+      "Maria Ressa",
+      "Ressa"
+     ],
+     "h": "2021"
+    },
+    {
+     "fi": [
+      "Dmitri Muratov",
+      "Dmitry Muratov",
+      "Muratov"
+     ],
+     "en": [
+      "Dmitry Muratov",
+      "Dmitri Muratov",
+      "Muratov"
+     ],
+     "h": "2021"
+    },
+    {
+     "fi": [
+      "Ales Bjaljatski",
+      "Ales Bialiatski",
+      "Bialiatski",
+      "Bjaljatski"
+     ],
+     "en": [
+      "Ales Bialiatski",
+      "Ales Bjaljatski",
+      "Bialiatski",
+      "Bjaljatski"
+     ],
+     "h": "2022"
+    },
+    {
+     "fi": [
+      "Memorial"
+     ],
+     "en": [
+      "Memorial"
+     ],
+     "h": "2022"
+    },
+    {
+     "fi": [
+      "Kansalaisvapauksien keskus",
+      "Centre for Civil Liberties",
+      "Center for Civil Liberties",
+      "CCL"
+     ],
+     "en": [
+      "Center for Civil Liberties",
+      "Centre for Civil Liberties",
+      "CCL"
+     ],
+     "h": "2022"
+    },
+    {
+     "fi": [
+      "Narges Mohammadi",
+      "Mohammadi"
+     ],
+     "en": [
+      "Narges Mohammadi",
+      "Mohammadi"
+     ],
+     "h": "2023"
+    },
+    {
+     "fi": [
+      "Nihon Hidankyo",
+      "Hidankyo"
+     ],
+     "en": [
+      "Nihon Hidankyo",
+      "Hidankyo"
+     ],
+     "h": "2024"
+    },
+    {
+     "fi": [
+      "María Corina Machado",
+      "Machado"
+     ],
+     "en": [
+      "María Corina Machado",
+      "Machado"
+     ],
+     "h": "2025"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-apollo-kuukavelijat",
+   "cat": "historia",
+   "t": 90,
+   "title": {
+    "fi": "Apollo-ohjelman 12 astronauttia, jotka kävelivät Kuussa (1969–1972)",
+    "en": "The 12 Apollo astronauts who walked on the Moon (1969–1972)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Lento",
+    "en": "Mission"
+   },
+   "items": [
+    {
+     "fi": [
+      "Neil Armstrong",
+      "Armstrong"
+     ],
+     "en": [
+      "Neil Armstrong",
+      "Armstrong"
+     ],
+     "h": "Apollo 11"
+    },
+    {
+     "fi": [
+      "Buzz Aldrin",
+      "Edwin Aldrin",
+      "Aldrin"
+     ],
+     "en": [
+      "Buzz Aldrin",
+      "Edwin Aldrin",
+      "Aldrin"
+     ],
+     "h": "Apollo 11"
+    },
+    {
+     "fi": [
+      "Pete Conrad",
+      "Charles Conrad",
+      "Conrad"
+     ],
+     "en": [
+      "Pete Conrad",
+      "Charles Conrad",
+      "Conrad"
+     ],
+     "h": "Apollo 12"
+    },
+    {
+     "fi": [
+      "Alan Bean",
+      "Bean"
+     ],
+     "en": [
+      "Alan Bean",
+      "Bean"
+     ],
+     "h": "Apollo 12"
+    },
+    {
+     "fi": [
+      "Alan Shepard",
+      "Shepard"
+     ],
+     "en": [
+      "Alan Shepard",
+      "Shepard"
+     ],
+     "h": "Apollo 14"
+    },
+    {
+     "fi": [
+      "Edgar Mitchell",
+      "Mitchell"
+     ],
+     "en": [
+      "Edgar Mitchell",
+      "Mitchell"
+     ],
+     "h": "Apollo 14"
+    },
+    {
+     "fi": [
+      "David Scott",
+      "Scott"
+     ],
+     "en": [
+      "David Scott",
+      "Scott"
+     ],
+     "h": "Apollo 15"
+    },
+    {
+     "fi": [
+      "James Irwin",
+      "Jim Irwin",
+      "Irwin"
+     ],
+     "en": [
+      "James Irwin",
+      "Jim Irwin",
+      "Irwin"
+     ],
+     "h": "Apollo 15"
+    },
+    {
+     "fi": [
+      "John Young",
+      "Young"
+     ],
+     "en": [
+      "John Young",
+      "Young"
+     ],
+     "h": "Apollo 16"
+    },
+    {
+     "fi": [
+      "Charles Duke",
+      "Charlie Duke",
+      "Duke"
+     ],
+     "en": [
+      "Charles Duke",
+      "Charlie Duke",
+      "Duke"
+     ],
+     "h": "Apollo 16"
+    },
+    {
+     "fi": [
+      "Eugene Cernan",
+      "Gene Cernan",
+      "Cernan"
+     ],
+     "en": [
+      "Eugene Cernan",
+      "Gene Cernan",
+      "Cernan"
+     ],
+     "h": "Apollo 17"
+    },
+    {
+     "fi": [
+      "Harrison Schmitt",
+      "Jack Schmitt",
+      "Schmitt"
+     ],
+     "en": [
+      "Harrison Schmitt",
+      "Jack Schmitt",
+      "Schmitt"
+     ],
+     "h": "Apollo 17"
+    }
+   ]
+  },
+  {
+   "id": "historia-2-avaruuskilpa",
+   "cat": "historia",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Avaruuskilpa 1957–1975",
+    "en": "The Space Race, 1957–1975"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä oli ensimmäinen ihmisen tekemä Maan satelliitti (1957)?",
+      "en": "What was the first artificial Earth satellite (1957)?"
+     },
+     "ok": {
+      "fi": "Sputnik 1",
+      "en": "Sputnik 1"
+     },
+     "no": [
+      {
+       "fi": "Explorer 1",
+       "en": "Explorer 1"
+      },
+      {
+       "fi": "Vostok 1",
+       "en": "Vostok 1"
+      },
+      {
+       "fi": "Luna 2",
+       "en": "Luna 2"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä aluksella koira Laika lensi Maan kiertoradalle vuonna 1957?",
+      "en": "Aboard which spacecraft did the dog Laika reach Earth orbit in 1957?"
+     },
+     "ok": {
+      "fi": "Sputnik 2",
+      "en": "Sputnik 2"
+     },
+     "no": [
+      {
+       "fi": "Sputnik 1",
+       "en": "Sputnik 1"
+      },
+      {
+       "fi": "Vostok 1",
+       "en": "Vostok 1"
+      },
+      {
+       "fi": "Explorer 1",
+       "en": "Explorer 1"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Yhdysvaltain ensimmäinen satelliitti (1958)?",
+      "en": "What was the first satellite launched by the United States (1958)?"
+     },
+     "ok": {
+      "fi": "Explorer 1",
+      "en": "Explorer 1"
+     },
+     "no": [
+      {
+       "fi": "Sputnik 1",
+       "en": "Sputnik 1"
+      },
+      {
+       "fi": "Vanguard 1",
+       "en": "Vanguard 1"
+      },
+      {
+       "fi": "Telstar 1",
+       "en": "Telstar 1"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli ensimmäinen Kuun pintaan osunut avaruusalus?",
+      "en": "What was the first spacecraft to touch the surface of the Moon?"
+     },
+     "ok": {
+      "fi": "Luna 2",
+      "en": "Luna 2"
+     },
+     "no": [
+      {
+       "fi": "Luna 9",
+       "en": "Luna 9"
+      },
+      {
+       "fi": "Ranger 7",
+       "en": "Ranger 7"
+      },
+      {
+       "fi": "Apollo 8",
+       "en": "Apollo 8"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli ensimmäinen ihminen avaruudessa (1961)?",
+      "en": "Who was the first human in space (1961)?"
+     },
+     "ok": {
+      "fi": "Juri Gagarin",
+      "en": "Yuri Gagarin"
+     },
+     "no": [
+      {
+       "fi": "German Titov",
+       "en": "Gherman Titov"
+      },
+      {
+       "fi": "Alan Shepard",
+       "en": "Alan Shepard"
+      },
+      {
+       "fi": "Aleksei Leonov",
+       "en": "Alexei Leonov"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli ensimmäinen amerikkalainen avaruudessa (5.5.1961)?",
+      "en": "Who was the first American in space (5 May 1961)?"
+     },
+     "ok": {
+      "fi": "Alan Shepard",
+      "en": "Alan Shepard"
+     },
+     "no": [
+      {
+       "fi": "John Glenn",
+       "en": "John Glenn"
+      },
+      {
+       "fi": "Gus Grissom",
+       "en": "Gus Grissom"
+      },
+      {
+       "fi": "Neil Armstrong",
+       "en": "Neil Armstrong"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli ensimmäinen Maata kiertänyt amerikkalainen (1962)?",
+      "en": "Who was the first American to orbit the Earth (1962)?"
+     },
+     "ok": {
+      "fi": "John Glenn",
+      "en": "John Glenn"
+     },
+     "no": [
+      {
+       "fi": "Alan Shepard",
+       "en": "Alan Shepard"
+      },
+      {
+       "fi": "Gus Grissom",
+       "en": "Gus Grissom"
+      },
+      {
+       "fi": "Scott Carpenter",
+       "en": "Scott Carpenter"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli ensimmäinen nainen avaruudessa (1963)?",
+      "en": "Who was the first woman in space (1963)?"
+     },
+     "ok": {
+      "fi": "Valentina Tereškova",
+      "en": "Valentina Tereshkova"
+     },
+     "no": [
+      {
+       "fi": "Svetlana Savitskaja",
+       "en": "Svetlana Savitskaya"
+      },
+      {
+       "fi": "Sally Ride",
+       "en": "Sally Ride"
+      },
+      {
+       "fi": "Valentina Ponomarjova",
+       "en": "Valentina Ponomaryova"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka teki ensimmäisen avaruuskävelyn (18.3.1965)?",
+      "en": "Who performed the first spacewalk (18 March 1965)?"
+     },
+     "ok": {
+      "fi": "Aleksei Leonov",
+      "en": "Alexei Leonov"
+     },
+     "no": [
+      {
+       "fi": "Edward White",
+       "en": "Edward White"
+      },
+      {
+       "fi": "Juri Gagarin",
+       "en": "Yuri Gagarin"
+      },
+      {
+       "fi": "Pavel Beljajev",
+       "en": "Pavel Belyayev"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä alus teki ensimmäisen pehmeän laskeutumisen Kuuhun (1966)?",
+      "en": "Which spacecraft made the first soft landing on the Moon (1966)?"
+     },
+     "ok": {
+      "fi": "Luna 9",
+      "en": "Luna 9"
+     },
+     "no": [
+      {
+       "fi": "Luna 2",
+       "en": "Luna 2"
+      },
+      {
+       "fi": "Surveyor 1",
+       "en": "Surveyor 1"
+      },
+      {
+       "fi": "Apollo 11",
+       "en": "Apollo 11"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli ensimmäinen miehitetty lento Kuun kiertoradalle (1968)?",
+      "en": "Which was the first crewed flight to orbit the Moon (1968)?"
+     },
+     "ok": {
+      "fi": "Apollo 8",
+      "en": "Apollo 8"
+     },
+     "no": [
+      {
+       "fi": "Apollo 7",
+       "en": "Apollo 7"
+      },
+      {
+       "fi": "Apollo 10",
+       "en": "Apollo 10"
+      },
+      {
+       "fi": "Apollo 11",
+       "en": "Apollo 11"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Apollo 11:n miehistöstä ei laskeutunut Kuuhun vaan oli komentomoduulin ohjaaja?",
+      "en": "Which Apollo 11 crew member was the Command Module Pilot and did not land on the Moon?"
+     },
+     "ok": {
+      "fi": "Michael Collins",
+      "en": "Michael Collins"
+     },
+     "no": [
+      {
+       "fi": "Buzz Aldrin",
+       "en": "Buzz Aldrin"
+      },
+      {
+       "fi": "Neil Armstrong",
+       "en": "Neil Armstrong"
+      },
+      {
+       "fi": "Jim Lovell",
+       "en": "Jim Lovell"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli maailman ensimmäinen avaruusasema (1971)?",
+      "en": "What was the world's first space station (1971)?"
+     },
+     "ok": {
+      "fi": "Saljut 1",
+      "en": "Salyut 1"
+     },
+     "no": [
+      {
+       "fi": "Skylab",
+       "en": "Skylab"
+      },
+      {
+       "fi": "Mir",
+       "en": "Mir"
+      },
+      {
+       "fi": "Kansainvälinen avaruusasema",
+       "en": "International Space Station"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna toteutui Apollon ja Sojuzin yhteinen avaruuslento?",
+      "en": "In which year did the joint Apollo–Soyuz mission take place?"
+     },
+     "ok": {
+      "fi": "1975",
+      "en": "1975"
+     },
+     "no": [
+      {
+       "fi": "1969",
+       "en": "1969"
+      },
+      {
+       "fi": "1972",
+       "en": "1972"
+      },
+      {
+       "fi": "1981",
+       "en": "1981"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -63,3 +63,36 @@ grant execute on function public.delete_my_account() to authenticated;
 create or replace function public.ping() returns integer language sql stable as $$ select 1 $$;
 revoke all on function public.ping() from public;
 grant execute on function public.ping() to anon, authenticated;
+
+-- Visakaksintaisto: anonymous play counts for the Suosituimmat list (/visa). No nickname or player id is stored.
+create table if not exists public.visa_plays (
+  quiz_id text not null check (quiz_id ~ '^[a-z0-9_-]{1,80}$'),
+  day date not null default current_date,
+  plays integer not null default 0,
+  primary key (quiz_id, day)
+);
+alter table public.visa_plays enable row level security;
+revoke all on public.visa_plays from anon, authenticated;
+
+create or replace function public.visa_count_play(q text) returns void
+language sql security definer set search_path = ''
+as $$
+  insert into public.visa_plays (quiz_id, day, plays) values (q, current_date, 1)
+  on conflict (quiz_id, day) do update set plays = public.visa_plays.plays + 1;
+$$;
+
+create or replace function public.visa_trending() returns table (quiz_id text, plays bigint)
+language sql stable security definer set search_path = ''
+as $$
+  select p.quiz_id, sum(p.plays)::bigint as plays
+  from public.visa_plays p
+  where p.day >= current_date - 14
+  group by p.quiz_id
+  order by plays desc
+  limit 20;
+$$;
+
+revoke all on function public.visa_count_play(text) from public;
+revoke all on function public.visa_trending() from public;
+grant execute on function public.visa_count_play(text) to anon, authenticated;
+grant execute on function public.visa_trending() to anon, authenticated;

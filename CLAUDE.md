@@ -145,10 +145,16 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
   `countries`-taulusta, `buildItems`), `scripts/validate_visa.py` buildissa. Reaaliaika: Supabase Realtime Broadcast + Presence kanavalla `visa:<koodi>` samassa projektissa kuin
   tilit, ei tauluja eikä mitään pysyvää palvelimella. Vetäjä = aikaisin `joined`, ja rooli siirtyy automaattisesti seuraavalle. Vetäjä ratkaisee kilpajaon ja lähettää lopputuloksen;
   voitot ja ennätykset vain selaimessa (`visa-v1`). Sisältö on omaa: faktoja omin nimin, ei JetPunkin visatekstejä, nimeä tai ulkoasua.
+  Muodot (`format`): `list` (kirjoita kaikki), `flags` (sama moottori, vihjeenä lippukuva `flags/<iso>.svg`), `map` ja `choice` (yksi kohde kerrallaan, `target()`, järjestys `seq`:stä siemennetty). Visat ovat `data/visa.json`:ssa ja
+  paketeissa `data/visa/<paketti>.json` (kirjoitusohje `scripts/VISA_CONTENT.md`; paketti pitää lisätä `packs`-listaan). Lobbyssa haku, aihe- ja muotosuodatin, arvonta ja Suosituimmat (`visa_trending`, näkyy vasta kun `supabase/schema.sql`:n visa-osa on ajettu).
+  Lippukuvat: flag-icons (MIT, `flags/LICENSE.md`). Kartta `data/visa-map.json`: Natural Earth 50m (public domain), projisoitu ja yksinkertaistettu kertaluonteisella skriptillä; `b` = rajat, `c` = merkkipallo liian pienelle maalle.
 
 ## Known sharp edges (don't regress these)
 - **Visan vastaushyväksyntä (`longerAvailable`):** vastaus, joka on toisen vielä löytämättömän vastauksen alku, odottaa 700 ms tai Enteriä ("Niger"/"Nigeria"), myös saman kohteen pidemmän nimen
   kohdalla ("Saturn"/"Saturnus"). Muuten sanan loppu jää kenttään ja seuraavat vastaukset eivät enää täsmää.
+- **Karttavisan zoom käyttää persentiilejä (`buildMap`):** Venäjä ja merentakaiset alueet zoomaisivat muuten maanosan koko maailmaksi.
+- **Vastausmerkinnät (`claims`) hyväksytään keneltä tahansa:** vetäjän uudelleenlatauksen aikana sijainen myöntää vastauksia, ja `applyClaim` on ensimmäinen voittaa. Lopullisen tilan kertoo vetäjän `end`.
+- **Lippujen järjestys on sekoitettu (`G.order`), ei aakkosissa:** aakkosjärjestys antaisi vastaukset vihjeenä.
 - **`norm()` on kahdessa paikassa:** `visa.html` ja `scripts/validate_visa.py` (yhden visan kahdella kohteella ei saa olla samaa normalisoitua vastausta). Muuta molempia kerralla.
 - **Visan viestit ovat toisten selainten syötettä:** `onMessage`-polku tarkistaa indeksit, ajat ja nimet, ja kaikki teksti menee `textContent`in kautta (`h()`), ei `innerHTML`:llä. Pelin tulokset
   perustuvat pelaajien luottamukseen (kaverien kesken), joten rankingia ei saa rakentaa niiden päälle.

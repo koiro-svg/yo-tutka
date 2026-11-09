@@ -1,0 +1,3349 @@
+{
+ "quizzes": [
+  {
+   "id": "historia-1-julius-claudius",
+   "cat": "historia",
+   "t": 45,
+   "title": {
+    "fi": "Julius-Claudiusten suvun Rooman keisarit (27 eaa.–68 jaa.)",
+    "en": "Roman emperors of the Julio-Claudian dynasty (27 BC–AD 68)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Augustus",
+      "Octavianus"
+     ],
+     "en": [
+      "Augustus",
+      "Octavian"
+     ],
+     "h": {
+      "fi": "27 eaa.–14 jaa.",
+      "en": "27 BC–AD 14"
+     }
+    },
+    {
+     "fi": [
+      "Tiberius"
+     ],
+     "en": [
+      "Tiberius"
+     ],
+     "h": "14–37"
+    },
+    {
+     "fi": [
+      "Caligula"
+     ],
+     "en": [
+      "Caligula",
+      "Gaius"
+     ],
+     "h": "37–41"
+    },
+    {
+     "fi": [
+      "Claudius",
+      "Klaudius"
+     ],
+     "en": [
+      "Claudius"
+     ],
+     "h": "41–54"
+    },
+    {
+     "fi": [
+      "Nero",
+      "Neron"
+     ],
+     "en": [
+      "Nero"
+     ],
+     "h": "54–68"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-nerva-antoninus",
+   "cat": "historia",
+   "t": 50,
+   "title": {
+    "fi": "Nerva–Antoninusten dynastian keisarit (96–192)",
+    "en": "Emperors of the Nerva–Antonine dynasty (96–192)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Nerva"
+     ],
+     "en": [
+      "Nerva"
+     ],
+     "h": "96–98"
+    },
+    {
+     "fi": [
+      "Trajanus",
+      "Traianus"
+     ],
+     "en": [
+      "Trajan",
+      "Traianus"
+     ],
+     "h": "98–117"
+    },
+    {
+     "fi": [
+      "Hadrianus"
+     ],
+     "en": [
+      "Hadrian",
+      "Hadrianus"
+     ],
+     "h": "117–138"
+    },
+    {
+     "fi": [
+      "Antoninus Pius",
+      "Antoninus"
+     ],
+     "en": [
+      "Antoninus Pius",
+      "Antoninus"
+     ],
+     "h": "138–161"
+    },
+    {
+     "fi": [
+      "Marcus Aurelius",
+      "Aurelius",
+      "Marcus"
+     ],
+     "en": [
+      "Marcus Aurelius",
+      "Aurelius",
+      "Marcus"
+     ],
+     "h": "161–180"
+    },
+    {
+     "fi": [
+      "Lucius Verus",
+      "Verus"
+     ],
+     "en": [
+      "Lucius Verus",
+      "Verus"
+     ],
+     "h": "161–169"
+    },
+    {
+     "fi": [
+      "Commodus"
+     ],
+     "en": [
+      "Commodus"
+     ],
+     "h": "177–192"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-rooman-kuninkaat",
+   "cat": "historia",
+   "t": 50,
+   "title": {
+    "fi": "Rooman seitsemän kuningasta (perimätiedon mukaan)",
+    "en": "The seven kings of Rome (according to tradition)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Perinteinen valtakausi",
+    "en": "Traditional reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Romulus"
+     ],
+     "en": [
+      "Romulus"
+     ],
+     "h": {
+      "fi": "753–716 eaa.",
+      "en": "753–716 BC"
+     }
+    },
+    {
+     "fi": [
+      "Numa Pompilius",
+      "Numa"
+     ],
+     "en": [
+      "Numa Pompilius",
+      "Numa"
+     ],
+     "h": {
+      "fi": "715–672 eaa.",
+      "en": "715–672 BC"
+     }
+    },
+    {
+     "fi": [
+      "Tullus Hostilius",
+      "Tullus",
+      "Hostilius"
+     ],
+     "en": [
+      "Tullus Hostilius",
+      "Tullus",
+      "Hostilius"
+     ],
+     "h": {
+      "fi": "672–640 eaa.",
+      "en": "672–640 BC"
+     }
+    },
+    {
+     "fi": [
+      "Ancus Marcius",
+      "Ancus",
+      "Marcius"
+     ],
+     "en": [
+      "Ancus Marcius",
+      "Ancus",
+      "Marcius"
+     ],
+     "h": {
+      "fi": "640–616 eaa.",
+      "en": "640–616 BC"
+     }
+    },
+    {
+     "fi": [
+      "Tarquinius Priscus",
+      "Priscus",
+      "Lucius Tarquinius Priscus"
+     ],
+     "en": [
+      "Tarquinius Priscus",
+      "Priscus",
+      "Lucius Tarquinius Priscus"
+     ],
+     "h": {
+      "fi": "616–578 eaa.",
+      "en": "616–578 BC"
+     }
+    },
+    {
+     "fi": [
+      "Servius Tullius",
+      "Servius",
+      "Tullius"
+     ],
+     "en": [
+      "Servius Tullius",
+      "Servius",
+      "Tullius"
+     ],
+     "h": {
+      "fi": "578–534 eaa.",
+      "en": "578–534 BC"
+     }
+    },
+    {
+     "fi": [
+      "Tarquinius Superbus",
+      "Superbus",
+      "Lucius Tarquinius Superbus"
+     ],
+     "en": [
+      "Tarquinius Superbus",
+      "Superbus",
+      "Lucius Tarquinius Superbus"
+     ],
+     "h": {
+      "fi": "534–509 eaa.",
+      "en": "534–509 BC"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-olympolaiset",
+   "cat": "historia",
+   "t": 90,
+   "title": {
+    "fi": "Olympolaiset jumalat ja heidän alansa (13 nimeä: myös sekä Hestia että Dionysos)",
+    "en": "The Olympian gods and their domains (13 names: both Hestia and Dionysus included)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ala",
+    "en": "Domain"
+   },
+   "items": [
+    {
+     "fi": [
+      "Zeus"
+     ],
+     "en": [
+      "Zeus"
+     ],
+     "h": {
+      "fi": "taivas, ukkonen, jumalten kuningas",
+      "en": "sky, thunder, king of the gods"
+     }
+    },
+    {
+     "fi": [
+      "Hera"
+     ],
+     "en": [
+      "Hera"
+     ],
+     "h": {
+      "fi": "avioliitto, naiset, perhe",
+      "en": "marriage, women, family"
+     }
+    },
+    {
+     "fi": [
+      "Poseidon"
+     ],
+     "en": [
+      "Poseidon"
+     ],
+     "h": {
+      "fi": "meri, maanjäristykset, hevoset",
+      "en": "sea, earthquakes, horses"
+     }
+    },
+    {
+     "fi": [
+      "Demeter"
+     ],
+     "en": [
+      "Demeter"
+     ],
+     "h": {
+      "fi": "sato, maanviljely",
+      "en": "harvest, agriculture"
+     }
+    },
+    {
+     "fi": [
+      "Athene",
+      "Athena",
+      "Pallas Athene"
+     ],
+     "en": [
+      "Athena",
+      "Athene",
+      "Pallas Athena"
+     ],
+     "h": {
+      "fi": "viisaus, käsityöt, sodankäynti",
+      "en": "wisdom, handicraft, warfare"
+     }
+    },
+    {
+     "fi": [
+      "Apollon",
+      "Apollo"
+     ],
+     "en": [
+      "Apollo",
+      "Apollon"
+     ],
+     "h": {
+      "fi": "valo, ennustaminen, musiikki",
+      "en": "light, prophecy, music"
+     }
+    },
+    {
+     "fi": [
+      "Artemis"
+     ],
+     "en": [
+      "Artemis"
+     ],
+     "h": {
+      "fi": "metsästys, erämaa, kuu",
+      "en": "hunt, wilderness, the Moon"
+     }
+    },
+    {
+     "fi": [
+      "Ares"
+     ],
+     "en": [
+      "Ares"
+     ],
+     "h": {
+      "fi": "sota, väkivalta",
+      "en": "war, violence"
+     }
+    },
+    {
+     "fi": [
+      "Hefaistos",
+      "Hephaistos"
+     ],
+     "en": [
+      "Hephaestus",
+      "Hephaistos"
+     ],
+     "h": {
+      "fi": "ahjo, sepäntyö, tuli",
+      "en": "forge, craftsmanship, fire"
+     }
+    },
+    {
+     "fi": [
+      "Afrodite",
+      "Aphrodite"
+     ],
+     "en": [
+      "Aphrodite",
+      "Afrodite"
+     ],
+     "h": {
+      "fi": "rakkaus, kauneus",
+      "en": "love, beauty"
+     }
+    },
+    {
+     "fi": [
+      "Hermes"
+     ],
+     "en": [
+      "Hermes"
+     ],
+     "h": {
+      "fi": "sananviejä, matkanteko, kauppa",
+      "en": "messenger, travel, commerce"
+     }
+    },
+    {
+     "fi": [
+      "Hestia"
+     ],
+     "en": [
+      "Hestia"
+     ],
+     "h": {
+      "fi": "kotiliesi",
+      "en": "hearth, home"
+     }
+    },
+    {
+     "fi": [
+      "Dionysos",
+      "Dionysus"
+     ],
+     "en": [
+      "Dionysus",
+      "Dionysos"
+     ],
+     "h": {
+      "fi": "viini, juhla, teatteri",
+      "en": "wine, festivity, theatre"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-rooman-vastineet",
+   "cat": "historia",
+   "t": 85,
+   "title": {
+    "fi": "12 kreikkalaisen jumalan roomalainen vastine",
+    "en": "The Roman counterpart of 12 Greek gods"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kreikkalainen jumala",
+    "en": "Greek god"
+   },
+   "items": [
+    {
+     "fi": [
+      "Jupiter"
+     ],
+     "en": [
+      "Jupiter",
+      "Jove"
+     ],
+     "h": "Zeus"
+    },
+    {
+     "fi": [
+      "Juno"
+     ],
+     "en": [
+      "Juno"
+     ],
+     "h": "Hera"
+    },
+    {
+     "fi": [
+      "Neptunus",
+      "Neptun"
+     ],
+     "en": [
+      "Neptune",
+      "Neptunus"
+     ],
+     "h": "Poseidon"
+    },
+    {
+     "fi": [
+      "Ceres"
+     ],
+     "en": [
+      "Ceres"
+     ],
+     "h": "Demeter"
+    },
+    {
+     "fi": [
+      "Minerva"
+     ],
+     "en": [
+      "Minerva"
+     ],
+     "h": {
+      "fi": "Athene",
+      "en": "Athena"
+     }
+    },
+    {
+     "fi": [
+      "Diana"
+     ],
+     "en": [
+      "Diana"
+     ],
+     "h": "Artemis"
+    },
+    {
+     "fi": [
+      "Mars"
+     ],
+     "en": [
+      "Mars"
+     ],
+     "h": "Ares"
+    },
+    {
+     "fi": [
+      "Vulcanus",
+      "Vulkanus",
+      "Vulkaani"
+     ],
+     "en": [
+      "Vulcan",
+      "Vulcanus"
+     ],
+     "h": {
+      "fi": "Hefaistos",
+      "en": "Hephaestus"
+     }
+    },
+    {
+     "fi": [
+      "Venus"
+     ],
+     "en": [
+      "Venus"
+     ],
+     "h": {
+      "fi": "Afrodite",
+      "en": "Aphrodite"
+     }
+    },
+    {
+     "fi": [
+      "Merkurius",
+      "Mercurius"
+     ],
+     "en": [
+      "Mercury",
+      "Mercurius"
+     ],
+     "h": "Hermes"
+    },
+    {
+     "fi": [
+      "Vesta"
+     ],
+     "en": [
+      "Vesta"
+     ],
+     "h": "Hestia"
+    },
+    {
+     "fi": [
+      "Bacchus",
+      "Bakkus",
+      "Liber"
+     ],
+     "en": [
+      "Bacchus",
+      "Liber"
+     ],
+     "h": {
+      "fi": "Dionysos",
+      "en": "Dionysus"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-faaraot-18",
+   "cat": "historia",
+   "t": 95,
+   "title": {
+    "fi": "Egyptin 18. dynastian faaraot (ilman Smenkhkarea ja Neferneferuatenia, 13 nimeä)",
+    "en": "Pharaohs of the 18th Dynasty of Egypt (excluding Smenkhkare and Neferneferuaten, 13 names)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Ahmose I",
+      "Ahmose",
+      "Ahmosis I",
+      "Ahmosis",
+      "Ahmose 1"
+     ],
+     "en": [
+      "Ahmose I",
+      "Ahmose",
+      "Ahmosis I",
+      "Ahmosis",
+      "Ahmose 1"
+     ],
+     "h": {
+      "fi": "n. 1549–1524 eaa.",
+      "en": "c. 1549–1524 BC"
+     }
+    },
+    {
+     "fi": [
+      "Amenhotep I",
+      "Amenofis I",
+      "Amenhotep 1",
+      "Amenofis 1"
+     ],
+     "en": [
+      "Amenhotep I",
+      "Amenophis I",
+      "Amenhotep 1"
+     ],
+     "h": {
+      "fi": "n. 1524–1503 eaa.",
+      "en": "c. 1524–1503 BC"
+     }
+    },
+    {
+     "fi": [
+      "Thutmosis I",
+      "Tuthmosis I",
+      "Tutmosis I",
+      "Thutmose I",
+      "Thutmosis 1",
+      "Thutmose 1"
+     ],
+     "en": [
+      "Thutmose I",
+      "Tuthmosis I",
+      "Thutmosis I",
+      "Thutmose 1"
+     ],
+     "h": {
+      "fi": "n. 1503–1493 eaa.",
+      "en": "c. 1503–1493 BC"
+     }
+    },
+    {
+     "fi": [
+      "Thutmosis II",
+      "Tuthmosis II",
+      "Tutmosis II",
+      "Thutmose II",
+      "Thutmosis 2",
+      "Thutmose 2"
+     ],
+     "en": [
+      "Thutmose II",
+      "Tuthmosis II",
+      "Thutmosis II",
+      "Thutmose 2"
+     ],
+     "h": {
+      "fi": "n. 1493–1479 eaa.",
+      "en": "c. 1493–1479 BC"
+     }
+    },
+    {
+     "fi": [
+      "Hatshepsut",
+      "Hatšepsut"
+     ],
+     "en": [
+      "Hatshepsut",
+      "Hatchepsut"
+     ],
+     "h": {
+      "fi": "n. 1479–1458 eaa.",
+      "en": "c. 1479–1458 BC"
+     }
+    },
+    {
+     "fi": [
+      "Thutmosis III",
+      "Tuthmosis III",
+      "Tutmosis III",
+      "Thutmose III",
+      "Thutmosis 3",
+      "Thutmose 3"
+     ],
+     "en": [
+      "Thutmose III",
+      "Tuthmosis III",
+      "Thutmosis III",
+      "Thutmose 3"
+     ],
+     "h": {
+      "fi": "n. 1479–1425 eaa.",
+      "en": "c. 1479–1425 BC"
+     }
+    },
+    {
+     "fi": [
+      "Amenhotep II",
+      "Amenofis II",
+      "Amenhotep 2",
+      "Amenofis 2"
+     ],
+     "en": [
+      "Amenhotep II",
+      "Amenophis II",
+      "Amenhotep 2"
+     ],
+     "h": {
+      "fi": "n. 1427–1397 eaa.",
+      "en": "c. 1427–1397 BC"
+     }
+    },
+    {
+     "fi": [
+      "Thutmosis IV",
+      "Tuthmosis IV",
+      "Tutmosis IV",
+      "Thutmose IV",
+      "Thutmosis 4",
+      "Thutmose 4"
+     ],
+     "en": [
+      "Thutmose IV",
+      "Tuthmosis IV",
+      "Thutmosis IV",
+      "Thutmose 4"
+     ],
+     "h": {
+      "fi": "n. 1397–1388 eaa.",
+      "en": "c. 1397–1388 BC"
+     }
+    },
+    {
+     "fi": [
+      "Amenhotep III",
+      "Amenofis III",
+      "Amenhotep 3",
+      "Amenofis 3"
+     ],
+     "en": [
+      "Amenhotep III",
+      "Amenophis III",
+      "Amenhotep 3"
+     ],
+     "h": {
+      "fi": "n. 1388–1351 eaa.",
+      "en": "c. 1388–1351 BC"
+     }
+    },
+    {
+     "fi": [
+      "Ehnaton",
+      "Akhenaten",
+      "Akhnaton",
+      "Amenhotep IV",
+      "Amenofis IV",
+      "Amenhotep 4"
+     ],
+     "en": [
+      "Akhenaten",
+      "Akhnaton",
+      "Ikhnaton",
+      "Amenhotep IV",
+      "Amenhotep 4"
+     ],
+     "h": {
+      "fi": "n. 1351–1334 eaa.",
+      "en": "c. 1351–1334 BC"
+     }
+    },
+    {
+     "fi": [
+      "Tutankhamon",
+      "Tutankamon",
+      "Tutankhamun"
+     ],
+     "en": [
+      "Tutankhamun",
+      "Tutankhamen",
+      "Tutankhamon"
+     ],
+     "h": {
+      "fi": "n. 1332–1323 eaa.",
+      "en": "c. 1332–1323 BC"
+     }
+    },
+    {
+     "fi": [
+      "Ay",
+      "Eje",
+      "Aye"
+     ],
+     "en": [
+      "Ay",
+      "Aye",
+      "Eje"
+     ],
+     "h": {
+      "fi": "n. 1323–1319 eaa.",
+      "en": "c. 1323–1319 BC"
+     }
+    },
+    {
+     "fi": [
+      "Horemheb",
+      "Haremhab",
+      "Horemhab"
+     ],
+     "en": [
+      "Horemheb",
+      "Haremhab",
+      "Horemhab"
+     ],
+     "h": {
+      "fi": "n. 1319–1292 eaa.",
+      "en": "c. 1319–1292 BC"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-kiinan-dynastiat",
+   "cat": "historia",
+   "t": 85,
+   "title": {
+    "fi": "Kiinan 12 suurta dynastiaa järjestyksessä Xiasta Qingiin",
+    "en": "The 12 great dynasties of China in order, from Xia to Qing"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vuodet",
+    "en": "Years"
+   },
+   "items": [
+    {
+     "fi": [
+      "Xia"
+     ],
+     "en": [
+      "Xia"
+     ],
+     "h": {
+      "fi": "n. 2070–1600 eaa.",
+      "en": "c. 2070–1600 BC"
+     }
+    },
+    {
+     "fi": [
+      "Shang"
+     ],
+     "en": [
+      "Shang"
+     ],
+     "h": {
+      "fi": "n. 1600–1046 eaa.",
+      "en": "c. 1600–1046 BC"
+     }
+    },
+    {
+     "fi": [
+      "Zhou",
+      "Chou"
+     ],
+     "en": [
+      "Zhou",
+      "Chou"
+     ],
+     "h": {
+      "fi": "n. 1046–256 eaa.",
+      "en": "c. 1046–256 BC"
+     }
+    },
+    {
+     "fi": [
+      "Qin"
+     ],
+     "en": [
+      "Qin"
+     ],
+     "h": {
+      "fi": "221–207 eaa.",
+      "en": "221–207 BC"
+     }
+    },
+    {
+     "fi": [
+      "Han"
+     ],
+     "en": [
+      "Han"
+     ],
+     "h": {
+      "fi": "202 eaa.–220 jaa.",
+      "en": "202 BC–AD 220"
+     }
+    },
+    {
+     "fi": [
+      "Jin"
+     ],
+     "en": [
+      "Jin"
+     ],
+     "h": "266–420"
+    },
+    {
+     "fi": [
+      "Sui"
+     ],
+     "en": [
+      "Sui"
+     ],
+     "h": "581–618"
+    },
+    {
+     "fi": [
+      "Tang"
+     ],
+     "en": [
+      "Tang"
+     ],
+     "h": "618–907"
+    },
+    {
+     "fi": [
+      "Song",
+      "Sung"
+     ],
+     "en": [
+      "Song",
+      "Sung"
+     ],
+     "h": "960–1279"
+    },
+    {
+     "fi": [
+      "Yuan"
+     ],
+     "en": [
+      "Yuan"
+     ],
+     "h": "1271–1368"
+    },
+    {
+     "fi": [
+      "Ming"
+     ],
+     "en": [
+      "Ming"
+     ],
+     "h": "1368–1644"
+    },
+    {
+     "fi": [
+      "Qing",
+      "Ch'ing"
+     ],
+     "en": [
+      "Qing",
+      "Ch'ing"
+     ],
+     "h": "1644–1912"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-tudor-stuart",
+   "cat": "historia",
+   "t": 85,
+   "title": {
+    "fi": "Englannin ja Ison-Britannian hallitsijat 1485–1714 (ilman Jane Greytä ja Espanjan Filipiä, 12 nimeä)",
+    "en": "Monarchs of England and Great Britain, 1485–1714 (without Lady Jane Grey or Philip of Spain, 12 names)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Henrik VII",
+      "Henrik 7"
+     ],
+     "en": [
+      "Henry VII",
+      "Henry 7"
+     ],
+     "h": "1485–1509"
+    },
+    {
+     "fi": [
+      "Henrik VIII",
+      "Henrik 8"
+     ],
+     "en": [
+      "Henry VIII",
+      "Henry 8"
+     ],
+     "h": "1509–1547"
+    },
+    {
+     "fi": [
+      "Edvard VI",
+      "Edvard 6"
+     ],
+     "en": [
+      "Edward VI",
+      "Edward 6"
+     ],
+     "h": "1547–1553"
+    },
+    {
+     "fi": [
+      "Maria I",
+      "Maria 1",
+      "Verinen Maria"
+     ],
+     "en": [
+      "Mary I",
+      "Mary 1",
+      "Bloody Mary"
+     ],
+     "h": "1553–1558"
+    },
+    {
+     "fi": [
+      "Elisabet I",
+      "Elisabet 1",
+      "Elizabeth I"
+     ],
+     "en": [
+      "Elizabeth I",
+      "Elizabeth 1"
+     ],
+     "h": "1558–1603"
+    },
+    {
+     "fi": [
+      "Jaakko I",
+      "Jaakko 1"
+     ],
+     "en": [
+      "James I",
+      "James 1"
+     ],
+     "h": "1603–1625"
+    },
+    {
+     "fi": [
+      "Kaarle I",
+      "Kaarle 1"
+     ],
+     "en": [
+      "Charles I",
+      "Charles 1"
+     ],
+     "h": "1625–1649"
+    },
+    {
+     "fi": [
+      "Kaarle II",
+      "Kaarle 2"
+     ],
+     "en": [
+      "Charles II",
+      "Charles 2"
+     ],
+     "h": "1660–1685"
+    },
+    {
+     "fi": [
+      "Jaakko II",
+      "Jaakko 2"
+     ],
+     "en": [
+      "James II",
+      "James 2"
+     ],
+     "h": "1685–1688"
+    },
+    {
+     "fi": [
+      "Vilhelm III",
+      "Vilhelm 3",
+      "Vilhelm Oranialainen"
+     ],
+     "en": [
+      "William III",
+      "William 3",
+      "William of Orange"
+     ],
+     "h": "1689–1702"
+    },
+    {
+     "fi": [
+      "Maria II",
+      "Maria 2"
+     ],
+     "en": [
+      "Mary II",
+      "Mary 2"
+     ],
+     "h": "1689–1694"
+    },
+    {
+     "fi": [
+      "Anna",
+      "Anne"
+     ],
+     "en": [
+      "Anne",
+      "Anna"
+     ],
+     "h": "1702–1714"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-habsburg-keisarit",
+   "cat": "historia",
+   "t": 85,
+   "title": {
+    "fi": "Pyhän saksalais-roomalaisen keisarikunnan Habsburg-keisarit 1452–1740",
+    "en": "Habsburg Holy Roman Emperors, 1452–1740"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Järjestys",
+    "en": "Order"
+   },
+   "items": [
+    {
+     "fi": [
+      "Fredrik III",
+      "Fredrik 3",
+      "Friedrich III"
+     ],
+     "en": [
+      "Frederick III",
+      "Frederick 3",
+      "Friedrich III"
+     ],
+     "h": "1"
+    },
+    {
+     "fi": [
+      "Maksimilian I",
+      "Maximilian I",
+      "Maksimilian 1"
+     ],
+     "en": [
+      "Maximilian I",
+      "Maximilian 1"
+     ],
+     "h": "2"
+    },
+    {
+     "fi": [
+      "Kaarle V",
+      "Kaarle 5",
+      "Karl V"
+     ],
+     "en": [
+      "Charles V",
+      "Charles 5",
+      "Karl V"
+     ],
+     "h": "3"
+    },
+    {
+     "fi": [
+      "Ferdinand I",
+      "Ferdinand 1"
+     ],
+     "en": [
+      "Ferdinand I",
+      "Ferdinand 1"
+     ],
+     "h": "4"
+    },
+    {
+     "fi": [
+      "Maksimilian II",
+      "Maximilian II",
+      "Maksimilian 2"
+     ],
+     "en": [
+      "Maximilian II",
+      "Maximilian 2"
+     ],
+     "h": "5"
+    },
+    {
+     "fi": [
+      "Rudolf II",
+      "Rudolf 2"
+     ],
+     "en": [
+      "Rudolf II",
+      "Rudolf 2"
+     ],
+     "h": "6"
+    },
+    {
+     "fi": [
+      "Matias",
+      "Matthias"
+     ],
+     "en": [
+      "Matthias",
+      "Matias"
+     ],
+     "h": "7"
+    },
+    {
+     "fi": [
+      "Ferdinand II",
+      "Ferdinand 2"
+     ],
+     "en": [
+      "Ferdinand II",
+      "Ferdinand 2"
+     ],
+     "h": "8"
+    },
+    {
+     "fi": [
+      "Ferdinand III",
+      "Ferdinand 3"
+     ],
+     "en": [
+      "Ferdinand III",
+      "Ferdinand 3"
+     ],
+     "h": "9"
+    },
+    {
+     "fi": [
+      "Leopold I",
+      "Leopold 1"
+     ],
+     "en": [
+      "Leopold I",
+      "Leopold 1"
+     ],
+     "h": "10"
+    },
+    {
+     "fi": [
+      "Joosef I",
+      "Josef I",
+      "Joosef 1"
+     ],
+     "en": [
+      "Joseph I",
+      "Joseph 1",
+      "Josef I"
+     ],
+     "h": "11"
+    },
+    {
+     "fi": [
+      "Kaarle VI",
+      "Kaarle 6",
+      "Karl VI"
+     ],
+     "en": [
+      "Charles VI",
+      "Charles 6",
+      "Karl VI"
+     ],
+     "h": "12"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-ruotsin-hallitsijat",
+   "cat": "historia",
+   "t": 105,
+   "title": {
+    "fi": "Ruotsin hallitsijat Kustaa Vaasasta Kustaa IV Aadolfiin (1523–1809)",
+    "en": "Monarchs of Sweden from Gustav Vasa to Gustav IV Adolf (1523–1809)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kustaa Vaasa",
+      "Kustaa I",
+      "Kustaa I Vaasa",
+      "Kustaa 1"
+     ],
+     "en": [
+      "Gustav Vasa",
+      "Gustav I",
+      "Gustav I Vasa",
+      "Gustav 1"
+     ],
+     "h": "1523–1560"
+    },
+    {
+     "fi": [
+      "Eerik XIV",
+      "Erik XIV",
+      "Eerik 14"
+     ],
+     "en": [
+      "Eric XIV",
+      "Erik XIV",
+      "Eric 14"
+     ],
+     "h": "1560–1569"
+    },
+    {
+     "fi": [
+      "Juhana III",
+      "Juhana 3",
+      "Johan III"
+     ],
+     "en": [
+      "John III",
+      "Johan III",
+      "John 3"
+     ],
+     "h": "1569–1592"
+    },
+    {
+     "fi": [
+      "Sigismund",
+      "Sigismund Vaasa"
+     ],
+     "en": [
+      "Sigismund",
+      "Sigismund Vasa"
+     ],
+     "h": "1592–1599"
+    },
+    {
+     "fi": [
+      "Kaarle IX",
+      "Kaarle 9"
+     ],
+     "en": [
+      "Charles IX",
+      "Karl IX",
+      "Charles 9"
+     ],
+     "h": "1604–1611"
+    },
+    {
+     "fi": [
+      "Kustaa II Aadolf",
+      "Kustaa Aadolf",
+      "Kustaa 2 Aadolf"
+     ],
+     "en": [
+      "Gustav II Adolf",
+      "Gustavus Adolphus",
+      "Gustav Adolf"
+     ],
+     "h": "1611–1632"
+    },
+    {
+     "fi": [
+      "Kristiina"
+     ],
+     "en": [
+      "Christina",
+      "Kristina"
+     ],
+     "h": "1632–1654"
+    },
+    {
+     "fi": [
+      "Kaarle X Kustaa",
+      "Kaarle X",
+      "Kaarle 10"
+     ],
+     "en": [
+      "Charles X Gustav",
+      "Charles X",
+      "Karl X Gustav"
+     ],
+     "h": "1654–1660"
+    },
+    {
+     "fi": [
+      "Kaarle XI",
+      "Kaarle 11"
+     ],
+     "en": [
+      "Charles XI",
+      "Karl XI",
+      "Charles 11"
+     ],
+     "h": "1660–1697"
+    },
+    {
+     "fi": [
+      "Kaarle XII",
+      "Kaarle 12"
+     ],
+     "en": [
+      "Charles XII",
+      "Karl XII",
+      "Charles 12"
+     ],
+     "h": "1697–1718"
+    },
+    {
+     "fi": [
+      "Ulrika Eleonora",
+      "Ulrika Eleonoora",
+      "Ulrika"
+     ],
+     "en": [
+      "Ulrika Eleonora",
+      "Ulrika"
+     ],
+     "h": "1719–1720"
+    },
+    {
+     "fi": [
+      "Fredrik I",
+      "Fredrik 1"
+     ],
+     "en": [
+      "Frederick I",
+      "Fredrik I",
+      "Frederick 1"
+     ],
+     "h": "1720–1751"
+    },
+    {
+     "fi": [
+      "Aadolf Fredrik",
+      "Adolf Fredrik"
+     ],
+     "en": [
+      "Adolf Frederick",
+      "Adolf Fredrik"
+     ],
+     "h": "1751–1771"
+    },
+    {
+     "fi": [
+      "Kustaa III",
+      "Kustaa 3"
+     ],
+     "en": [
+      "Gustav III",
+      "Gustavus III",
+      "Gustav 3"
+     ],
+     "h": "1771–1792"
+    },
+    {
+     "fi": [
+      "Kustaa IV Aadolf",
+      "Kustaa IV",
+      "Kustaa 4 Aadolf"
+     ],
+     "en": [
+      "Gustav IV Adolf",
+      "Gustav IV"
+     ],
+     "h": "1792–1809"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-romanovit",
+   "cat": "historia",
+   "t": 95,
+   "title": {
+    "fi": "Venäjän Romanov-hallitsijat 1613–1801 (13 nimeä)",
+    "en": "Romanov rulers of Russia, 1613–1801 (13 names)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Mikael",
+      "Mihail",
+      "Mikael I"
+     ],
+     "en": [
+      "Michael",
+      "Mikhail",
+      "Michael I"
+     ],
+     "h": "1613–1645"
+    },
+    {
+     "fi": [
+      "Aleksei",
+      "Aleksei Mihailovitš",
+      "Alexei"
+     ],
+     "en": [
+      "Alexis",
+      "Alexei",
+      "Aleksei"
+     ],
+     "h": "1645–1676"
+    },
+    {
+     "fi": [
+      "Fjodor III",
+      "Fedor III",
+      "Fjodor 3"
+     ],
+     "en": [
+      "Feodor III",
+      "Fyodor III",
+      "Fedor III"
+     ],
+     "h": "1676–1682"
+    },
+    {
+     "fi": [
+      "Ivan V",
+      "Ivan 5"
+     ],
+     "en": [
+      "Ivan V",
+      "Ivan 5"
+     ],
+     "h": "1682–1696"
+    },
+    {
+     "fi": [
+      "Pietari I",
+      "Pietari Suuri",
+      "Pietari 1"
+     ],
+     "en": [
+      "Peter I",
+      "Peter the Great",
+      "Peter 1"
+     ],
+     "h": "1682–1725"
+    },
+    {
+     "fi": [
+      "Katariina I",
+      "Katariina 1"
+     ],
+     "en": [
+      "Catherine I",
+      "Catherine 1"
+     ],
+     "h": "1725–1727"
+    },
+    {
+     "fi": [
+      "Pietari II",
+      "Pietari 2"
+     ],
+     "en": [
+      "Peter II",
+      "Peter 2"
+     ],
+     "h": "1727–1730"
+    },
+    {
+     "fi": [
+      "Anna",
+      "Anna Ivanovna"
+     ],
+     "en": [
+      "Anna",
+      "Anna Ivanovna"
+     ],
+     "h": "1730–1740"
+    },
+    {
+     "fi": [
+      "Ivan VI",
+      "Ivan 6"
+     ],
+     "en": [
+      "Ivan VI",
+      "Ivan 6"
+     ],
+     "h": "1740–1741"
+    },
+    {
+     "fi": [
+      "Elisabet",
+      "Elisabet Petrovna",
+      "Jelizaveta"
+     ],
+     "en": [
+      "Elizabeth",
+      "Elizaveta",
+      "Elizabeth Petrovna"
+     ],
+     "h": "1741–1762"
+    },
+    {
+     "fi": [
+      "Pietari III",
+      "Pietari 3"
+     ],
+     "en": [
+      "Peter III",
+      "Peter 3"
+     ],
+     "h": "1762"
+    },
+    {
+     "fi": [
+      "Katariina II",
+      "Katariina Suuri",
+      "Katariina 2"
+     ],
+     "en": [
+      "Catherine II",
+      "Catherine the Great",
+      "Catherine 2"
+     ],
+     "h": "1762–1796"
+    },
+    {
+     "fi": [
+      "Paavali I",
+      "Paavali",
+      "Paavali 1"
+     ],
+     "en": [
+      "Paul I",
+      "Paul",
+      "Paul 1"
+     ],
+     "h": "1796–1801"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-mongolit",
+   "cat": "historia",
+   "t": 45,
+   "title": {
+    "fi": "Mongolivaltakunnan suurkaanit 1206–1294 (ilman kilpailijaa Ariq Bökeä ja sijaishallitsijoita)",
+    "en": "Great Khans of the Mongol Empire, 1206–1294 (excluding the rival Ariq Böke and regents)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hallitusaika",
+    "en": "Reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tšingis-kaani",
+      "Tsingis-kaani",
+      "Tšingis",
+      "Tsingis",
+      "Temüdžin",
+      "Temujin"
+     ],
+     "en": [
+      "Genghis Khan",
+      "Chinggis Khan",
+      "Genghis",
+      "Chinggis",
+      "Temujin"
+     ],
+     "h": "1206–1227"
+    },
+    {
+     "fi": [
+      "Ögedei",
+      "Ögödei",
+      "Ögedei-kaani",
+      "Ogedei"
+     ],
+     "en": [
+      "Ögedei",
+      "Ogedei",
+      "Ögödei",
+      "Ögedei Khan"
+     ],
+     "h": "1229–1241"
+    },
+    {
+     "fi": [
+      "Güyük",
+      "Guyuk",
+      "Güyük-kaani"
+     ],
+     "en": [
+      "Güyük",
+      "Guyuk",
+      "Güyük Khan"
+     ],
+     "h": "1246–1248"
+    },
+    {
+     "fi": [
+      "Möngke",
+      "Monke",
+      "Möngke-kaani"
+     ],
+     "en": [
+      "Möngke",
+      "Mongke",
+      "Möngke Khan"
+     ],
+     "h": "1251–1259"
+    },
+    {
+     "fi": [
+      "Kublai",
+      "Kublai-kaani",
+      "Khubilai"
+     ],
+     "en": [
+      "Kublai",
+      "Kublai Khan",
+      "Khubilai"
+     ],
+     "h": "1260–1294"
+    }
+   ]
+  },
+  {
+   "id": "historia-1-viikingit-ristiretket",
+   "cat": "historia",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Viikinkiaika ja ristiretket",
+    "en": "The Viking Age and the Crusades"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minkä luostarin ryöstöä vuonna 793 pidetään viikinkiajan alkuna?",
+      "en": "The raid on which monastery in 793 is regarded as the start of the Viking Age?"
+     },
+     "ok": {
+      "fi": "Lindisfarne",
+      "en": "Lindisfarne"
+     },
+     "no": [
+      {
+       "fi": "Canterbury",
+       "en": "Canterbury"
+      },
+      {
+       "fi": "Whitby",
+       "en": "Whitby"
+      },
+      {
+       "fi": "Iona",
+       "en": "Iona"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka viikinkipäällikkö sai Normandian Kaarle Yksinkertaiselta vuonna 911?",
+      "en": "Which Viking leader received Normandy from Charles the Simple in 911?"
+     },
+     "ok": {
+      "fi": "Rollo",
+      "en": "Rollo"
+     },
+     "no": [
+      {
+       "fi": "Ragnar Lodbrok",
+       "en": "Ragnar Lodbrok"
+      },
+      {
+       "fi": "Sven Haaraparta",
+       "en": "Sweyn Forkbeard"
+      },
+      {
+       "fi": "Harald Kaunotukka",
+       "en": "Harald Fairhair"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka perusti ensimmäisen viikinkiasutuksen Grönlantiin?",
+      "en": "Who founded the first Norse settlement in Greenland?"
+     },
+     "ok": {
+      "fi": "Eerik Punainen",
+      "en": "Erik the Red"
+     },
+     "no": [
+      {
+       "fi": "Leif Erikinpoika",
+       "en": "Leif Erikson"
+      },
+      {
+       "fi": "Olavi Tryggvenpoika",
+       "en": "Olaf Tryggvason"
+      },
+      {
+       "fi": "Harald Kaunotukka",
+       "en": "Harald Fairhair"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä nimen Leif Erikinpoika antoi Pohjois-Amerikan rannikon alueelle?",
+      "en": "What name did Leif Erikson give to a region on the coast of North America?"
+     },
+     "ok": {
+      "fi": "Vinland",
+      "en": "Vinland"
+     },
+     "no": [
+      {
+       "fi": "Grönlanti",
+       "en": "Greenland"
+      },
+      {
+       "fi": "Thule",
+       "en": "Thule"
+      },
+      {
+       "fi": "Islanti",
+       "en": "Iceland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä taistelussa Norjan kuningas Harald Hardråde kaatui vuonna 1066?",
+      "en": "At which battle did King Harald Hardrada of Norway die in 1066?"
+     },
+     "ok": {
+      "fi": "Stamford Bridgen taistelu",
+      "en": "Battle of Stamford Bridge"
+     },
+     "no": [
+      {
+       "fi": "Hastingsin taistelu",
+       "en": "Battle of Hastings"
+      },
+      {
+       "fi": "Maldonin taistelu",
+       "en": "Battle of Maldon"
+      },
+      {
+       "fi": "Clontarfin taistelu",
+       "en": "Battle of Clontarf"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen mukaan Venäjää hallinnut ruhtinassuku on nimetty? Perimätiedon mukaan hänet kutsuttiin hallitsemaan Novgorodia vuonna 862.",
+      "en": "Who is the Russian ruling dynasty named after? According to tradition he was invited to rule Novgorod in 862."
+     },
+     "ok": {
+      "fi": "Rurik",
+      "en": "Rurik"
+     },
+     "no": [
+      {
+       "fi": "Oleg",
+       "en": "Oleg"
+      },
+      {
+       "fi": "Igor",
+       "en": "Igor"
+      },
+      {
+       "fi": "Svjatoslav",
+       "en": "Sviatoslav"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka paavi kutsui ensimmäiselle ristiretkelle Clermontin kirkolliskokouksessa vuonna 1095?",
+      "en": "Which pope called the First Crusade at the Council of Clermont in 1095?"
+     },
+     "ok": {
+      "fi": "Urbanus II",
+      "en": "Urban II"
+     },
+     "no": [
+      {
+       "fi": "Gregorius VII",
+       "en": "Gregory VII"
+      },
+      {
+       "fi": "Innocentius III",
+       "en": "Innocent III"
+      },
+      {
+       "fi": "Bonifatius VIII",
+       "en": "Boniface VIII"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna ristiretkeläiset valloittivat Jerusalemin ensimmäisellä ristiretkellä?",
+      "en": "In which year did crusaders capture Jerusalem during the First Crusade?"
+     },
+     "ok": {
+      "fi": "1099",
+      "en": "1099"
+     },
+     "no": [
+      {
+       "fi": "1095",
+       "en": "1095"
+      },
+      {
+       "fi": "1187",
+       "en": "1187"
+      },
+      {
+       "fi": "1204",
+       "en": "1204"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä taistelu edelsi Saladinin Jerusalemin valtausta vuonna 1187?",
+      "en": "Which battle preceded Saladin's capture of Jerusalem in 1187?"
+     },
+     "ok": {
+      "fi": "Hattinin taistelu",
+      "en": "Battle of Hattin"
+     },
+     "no": [
+      {
+       "fi": "Manzikertin taistelu",
+       "en": "Battle of Manzikert"
+      },
+      {
+       "fi": "Arsufin taistelu",
+       "en": "Battle of Arsuf"
+      },
+      {
+       "fi": "Ascalonin taistelu",
+       "en": "Battle of Ascalon"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka näistä hallitsijoista EI johtanut kolmatta ristiretkeä?",
+      "en": "Which of these rulers did NOT lead the Third Crusade?"
+     },
+     "ok": {
+      "fi": "Ludvig IX",
+      "en": "Louis IX"
+     },
+     "no": [
+      {
+       "fi": "Rikhard Leijonamieli",
+       "en": "Richard the Lionheart"
+      },
+      {
+       "fi": "Filip II August",
+       "en": "Philip II Augustus"
+      },
+      {
+       "fi": "Fredrik Barbarossa",
+       "en": "Frederick Barbarossa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Miten keisari Fredrik Barbarossa kuoli kolmannella ristiretkellä?",
+      "en": "How did Emperor Frederick Barbarossa die on the Third Crusade?"
+     },
+     "ok": {
+      "fi": "Hukkui jokeen",
+      "en": "He drowned in a river"
+     },
+     "no": [
+      {
+       "fi": "Kaatui Akkon piirityksessä",
+       "en": "He fell at the siege of Acre"
+      },
+      {
+       "fi": "Kuoli ruttoon Jerusalemissa",
+       "en": "He died of plague in Jerusalem"
+      },
+      {
+       "fi": "Murhattiin Antiokiassa",
+       "en": "He was murdered in Antioch"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin neljäs ristiretki ryösti vuonna 1204?",
+      "en": "Which city did the Fourth Crusade sack in 1204?"
+     },
+     "ok": {
+      "fi": "Konstantinopoli",
+      "en": "Constantinople"
+     },
+     "no": [
+      {
+       "fi": "Jerusalem",
+       "en": "Jerusalem"
+      },
+      {
+       "fi": "Kairo",
+       "en": "Cairo"
+      },
+      {
+       "fi": "Antiokia",
+       "en": "Antioch"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna ristiretkeläisten viimeinen suuri tukikohta Akko kaatui?",
+      "en": "In which year did Acre, the crusaders' last major stronghold, fall?"
+     },
+     "ok": {
+      "fi": "1291",
+      "en": "1291"
+     },
+     "no": [
+      {
+       "fi": "1187",
+       "en": "1187"
+      },
+      {
+       "fi": "1204",
+       "en": "1204"
+      },
+      {
+       "fi": "1453",
+       "en": "1453"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä Ranskan kuninkaan painostuksesta temppeliherrojen ritarikunta hajotettiin?",
+      "en": "Pressure from which French king led to the dissolution of the Knights Templar?"
+     },
+     "ok": {
+      "fi": "Filip IV",
+      "en": "Philip IV"
+     },
+     "no": [
+      {
+       "fi": "Filip II",
+       "en": "Philip II"
+      },
+      {
+       "fi": "Ludvig IX",
+       "en": "Louis IX"
+      },
+      {
+       "fi": "Kaarle VII",
+       "en": "Charles VII"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä ritarikunta valloitti Preussin 1200-luvulla?",
+      "en": "Which military order conquered Prussia in the 13th century?"
+     },
+     "ok": {
+      "fi": "Saksalainen ritarikunta",
+      "en": "The Teutonic Order"
+     },
+     "no": [
+      {
+       "fi": "Temppeliherrat",
+       "en": "The Knights Templar"
+      },
+      {
+       "fi": "Johanniitat",
+       "en": "The Knights Hospitaller"
+      },
+      {
+       "fi": "Calatravan ritarikunta",
+       "en": "The Order of Calatrava"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-1-loytoretket",
+   "cat": "historia",
+   "t": 125,
+   "title": {
+    "fi": "Löytöretkeilijät: kuka saavutti mitä? (17 kohdetta)",
+    "en": "Explorers: who reached what? (17 feats)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Saavutus",
+    "en": "Feat"
+   },
+   "items": [
+    {
+     "fi": [
+      "Leif Erikinpoika",
+      "Leif Eerikinpoika",
+      "Leif Erikson",
+      "Leif Eriksson",
+      "Leif"
+     ],
+     "en": [
+      "Leif Erikson",
+      "Leif Eriksson",
+      "Leif"
+     ],
+     "h": {
+      "fi": "Vinland, n. vuosi 1000",
+      "en": "Vinland, c. 1000"
+     }
+    },
+    {
+     "fi": [
+      "Marco Polo",
+      "Polo"
+     ],
+     "en": [
+      "Marco Polo",
+      "Polo"
+     ],
+     "h": {
+      "fi": "Kublai-kaanin hovi Kiinassa, 1271–1295",
+      "en": "Kublai Khan's court in China, 1271–1295"
+     }
+    },
+    {
+     "fi": [
+      "Ibn Battuta",
+      "Battuta",
+      "Ibn Batuta"
+     ],
+     "en": [
+      "Ibn Battuta",
+      "Battuta",
+      "Ibn Batuta"
+     ],
+     "h": {
+      "fi": "Tangerista Afrikkaan ja Aasiaan, 1325–1354",
+      "en": "From Tangier across Africa and Asia, 1325–1354"
+     }
+    },
+    {
+     "fi": [
+      "Zheng He",
+      "Cheng Ho"
+     ],
+     "en": [
+      "Zheng He",
+      "Cheng Ho"
+     ],
+     "h": {
+      "fi": "Ming-Kiinan laivastot Itä-Afrikkaan, 1405–1433",
+      "en": "Ming China's fleets to East Africa, 1405–1433"
+     }
+    },
+    {
+     "fi": [
+      "Bartolomeu Dias",
+      "Dias",
+      "Diaz"
+     ],
+     "en": [
+      "Bartolomeu Dias",
+      "Dias",
+      "Diaz"
+     ],
+     "h": {
+      "fi": "Hyväntoivonniemi, 1488",
+      "en": "Cape of Good Hope, 1488"
+     }
+    },
+    {
+     "fi": [
+      "Kristoffer Kolumbus",
+      "Kolumbus",
+      "Columbus"
+     ],
+     "en": [
+      "Christopher Columbus",
+      "Columbus"
+     ],
+     "h": {
+      "fi": "Amerikka Espanjan lipun alla, 1492",
+      "en": "The Americas under the Spanish flag, 1492"
+     }
+    },
+    {
+     "fi": [
+      "John Cabot",
+      "Giovanni Caboto",
+      "Cabot",
+      "Caboto"
+     ],
+     "en": [
+      "John Cabot",
+      "Giovanni Caboto",
+      "Cabot",
+      "Caboto"
+     ],
+     "h": {
+      "fi": "Pohjois-Amerikan rannikko Englannin lipun alla, 1497",
+      "en": "The North American coast under the English flag, 1497"
+     }
+    },
+    {
+     "fi": [
+      "Vasco da Gama",
+      "da Gama",
+      "Gama"
+     ],
+     "en": [
+      "Vasco da Gama",
+      "da Gama",
+      "Gama"
+     ],
+     "h": {
+      "fi": "Meritie Intiaan, 1498",
+      "en": "The sea route to India, 1498"
+     }
+    },
+    {
+     "fi": [
+      "Pedro Álvares Cabral",
+      "Cabral"
+     ],
+     "en": [
+      "Pedro Álvares Cabral",
+      "Cabral"
+     ],
+     "h": {
+      "fi": "Brasilia, 1500",
+      "en": "Brazil, 1500"
+     }
+    },
+    {
+     "fi": [
+      "Vasco Núñez de Balboa",
+      "Balboa",
+      "Núñez de Balboa"
+     ],
+     "en": [
+      "Vasco Núñez de Balboa",
+      "Balboa",
+      "Núñez de Balboa"
+     ],
+     "h": {
+      "fi": "Tyyni valtameri Panaman kannaksen yli, 1513",
+      "en": "The Pacific across the Isthmus of Panama, 1513"
+     }
+    },
+    {
+     "fi": [
+      "Ferdinand Magellan",
+      "Magellan",
+      "Fernão de Magalhães"
+     ],
+     "en": [
+      "Ferdinand Magellan",
+      "Magellan",
+      "Fernão de Magalhães"
+     ],
+     "h": {
+      "fi": "Etelä-Amerikan eteläkärjen salmi, 1520",
+      "en": "The strait at the southern tip of South America, 1520"
+     }
+    },
+    {
+     "fi": [
+      "Juan Sebastián Elcano",
+      "Elcano",
+      "del Cano"
+     ],
+     "en": [
+      "Juan Sebastián Elcano",
+      "Elcano",
+      "del Cano"
+     ],
+     "h": {
+      "fi": "Ensimmäisen maailmanympäripurjehduksen loppuunvienti, 1522",
+      "en": "Completing the first circumnavigation, 1522"
+     }
+    },
+    {
+     "fi": [
+      "Jacques Cartier",
+      "Cartier"
+     ],
+     "en": [
+      "Jacques Cartier",
+      "Cartier"
+     ],
+     "h": {
+      "fi": "Saint Lawrencenlahti Ranskan lipun alla, 1534",
+      "en": "The Gulf of St. Lawrence under the French flag, 1534"
+     }
+    },
+    {
+     "fi": [
+      "Willem Janszoon",
+      "Janszoon",
+      "Jansz"
+     ],
+     "en": [
+      "Willem Janszoon",
+      "Janszoon",
+      "Jansz"
+     ],
+     "h": {
+      "fi": "Ensimmäinen eurooppalaisten maihinnousu Australiaan, 1606",
+      "en": "First recorded European landfall in Australia, 1606"
+     }
+    },
+    {
+     "fi": [
+      "Abel Tasman",
+      "Tasman"
+     ],
+     "en": [
+      "Abel Tasman",
+      "Tasman"
+     ],
+     "h": {
+      "fi": "Tasmania ja Uusi-Seelanti, 1642",
+      "en": "Tasmania and New Zealand, 1642"
+     }
+    },
+    {
+     "fi": [
+      "Vitus Bering",
+      "Bering"
+     ],
+     "en": [
+      "Vitus Bering",
+      "Bering"
+     ],
+     "h": {
+      "fi": "Aasian ja Pohjois-Amerikan välinen salmi nimettiin hänen mukaansa",
+      "en": "The strait between Asia and North America is named after him"
+     }
+    },
+    {
+     "fi": [
+      "James Cook",
+      "Cook",
+      "Kapteeni Cook"
+     ],
+     "en": [
+      "James Cook",
+      "Cook",
+      "Captain Cook"
+     ],
+     "h": {
+      "fi": "Australian itärannikko, 1770",
+      "en": "The east coast of Australia, 1770"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-muinaiskaupungit",
+   "cat": "historia",
+   "t": 95,
+   "title": {
+    "fi": "13 muinaiskaupunkia: minkä kulttuurin tai valtakunnan keskus?",
+    "en": "13 ancient cities: the centre of which civilisation or empire?"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kaupunki",
+    "en": "City"
+   },
+   "items": [
+    {
+     "fi": [
+      "Sumer",
+      "Sumerilaiset"
+     ],
+     "en": [
+      "Sumer",
+      "Sumerians"
+     ],
+     "h": "Ur"
+    },
+    {
+     "fi": [
+      "Heettiläiset",
+      "Heetit",
+      "Heettiläisten valtakunta"
+     ],
+     "en": [
+      "Hittites",
+      "Hittite Empire"
+     ],
+     "h": "Hattusa"
+    },
+    {
+     "fi": [
+      "Assyria",
+      "Assyrialaiset",
+      "Uusassyria"
+     ],
+     "en": [
+      "Assyria",
+      "Assyrians",
+      "Neo-Assyrian Empire"
+     ],
+     "h": {
+      "fi": "Niinive",
+      "en": "Nineveh"
+     }
+    },
+    {
+     "fi": [
+      "Persia",
+      "Persialaiset",
+      "Akhemenidit",
+      "Akhemenidien valtakunta"
+     ],
+     "en": [
+      "Persia",
+      "Persians",
+      "Achaemenid Empire",
+      "Achaemenids"
+     ],
+     "h": "Persepolis"
+    },
+    {
+     "fi": [
+      "Minolaiset",
+      "Minolainen kulttuuri",
+      "Minolainen"
+     ],
+     "en": [
+      "Minoans",
+      "Minoan civilisation",
+      "Minoan"
+     ],
+     "h": "Knossos"
+    },
+    {
+     "fi": [
+      "Foinikialaiset",
+      "Foinikia"
+     ],
+     "en": [
+      "Phoenicia",
+      "Phoenicians"
+     ],
+     "h": {
+      "fi": "Tyros",
+      "en": "Tyre"
+     }
+    },
+    {
+     "fi": [
+      "Lyydia",
+      "Lyydialaiset",
+      "Lydia"
+     ],
+     "en": [
+      "Lydia",
+      "Lydians"
+     ],
+     "h": {
+      "fi": "Sardes",
+      "en": "Sardis"
+     }
+    },
+    {
+     "fi": [
+      "Kush",
+      "Kuš",
+      "Kušin valtakunta",
+      "Nubia"
+     ],
+     "en": [
+      "Kush",
+      "Kingdom of Kush",
+      "Nubia"
+     ],
+     "h": {
+      "fi": "Meroe",
+      "en": "Meroë"
+     }
+    },
+    {
+     "fi": [
+      "Indus-kulttuuri",
+      "Indus",
+      "Harappa",
+      "Induskulttuuri"
+     ],
+     "en": [
+      "Indus Valley civilisation",
+      "Indus",
+      "Harappan",
+      "Harappa",
+      "Indus Valley civilization"
+     ],
+     "h": "Mohenjo-daro"
+    },
+    {
+     "fi": [
+      "Khmerit",
+      "Khmer",
+      "Khmerien valtakunta"
+     ],
+     "en": [
+      "Khmer Empire",
+      "Khmer",
+      "Khmers"
+     ],
+     "h": "Angkor"
+    },
+    {
+     "fi": [
+      "Mayat",
+      "Maya",
+      "Mayakulttuuri"
+     ],
+     "en": [
+      "Maya",
+      "Mayans",
+      "Maya civilisation"
+     ],
+     "h": "Tikal"
+    },
+    {
+     "fi": [
+      "Atsteekit",
+      "Asteekit",
+      "Atsteekki"
+     ],
+     "en": [
+      "Aztecs",
+      "Aztec Empire",
+      "Aztec",
+      "Mexica"
+     ],
+     "h": "Tenochtitlan"
+    },
+    {
+     "fi": [
+      "Inkat",
+      "Inka",
+      "Inkavaltakunta"
+     ],
+     "en": [
+      "Inca",
+      "Incas",
+      "Inca Empire"
+     ],
+     "h": {
+      "fi": "Cuzco",
+      "en": "Cusco"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-yliopistot",
+   "cat": "historia",
+   "t": 105,
+   "title": {
+    "fi": "15 keskiaikaista yliopistokaupunkia maan ja perustamisvuoden mukaan",
+    "en": "15 medieval university cities by country and founding year"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Maa ja vuosi",
+    "en": "Country and year"
+   },
+   "items": [
+    {
+     "fi": [
+      "Bologna"
+     ],
+     "en": [
+      "Bologna"
+     ],
+     "h": {
+      "fi": "Italia, n. 1088",
+      "en": "Italy, c. 1088"
+     }
+    },
+    {
+     "fi": [
+      "Oxford"
+     ],
+     "en": [
+      "Oxford"
+     ],
+     "h": {
+      "fi": "Englanti, n. 1096",
+      "en": "England, c. 1096"
+     }
+    },
+    {
+     "fi": [
+      "Cambridge"
+     ],
+     "en": [
+      "Cambridge"
+     ],
+     "h": {
+      "fi": "Englanti, 1209",
+      "en": "England, 1209"
+     }
+    },
+    {
+     "fi": [
+      "Salamanca"
+     ],
+     "en": [
+      "Salamanca"
+     ],
+     "h": {
+      "fi": "Espanja, 1218",
+      "en": "Spain, 1218"
+     }
+    },
+    {
+     "fi": [
+      "Padova",
+      "Padua"
+     ],
+     "en": [
+      "Padua",
+      "Padova"
+     ],
+     "h": {
+      "fi": "Italia, 1222",
+      "en": "Italy, 1222"
+     }
+    },
+    {
+     "fi": [
+      "Napoli",
+      "Neapel"
+     ],
+     "en": [
+      "Naples",
+      "Napoli"
+     ],
+     "h": {
+      "fi": "Italia, 1224",
+      "en": "Italy, 1224"
+     }
+    },
+    {
+     "fi": [
+      "Coimbra"
+     ],
+     "en": [
+      "Coimbra"
+     ],
+     "h": {
+      "fi": "Portugali, 1290 (aluksi Lissabonissa)",
+      "en": "Portugal, 1290 (first in Lisbon)"
+     }
+    },
+    {
+     "fi": [
+      "Praha",
+      "Prague"
+     ],
+     "en": [
+      "Prague",
+      "Praha"
+     ],
+     "h": {
+      "fi": "Tšekki, 1348",
+      "en": "Czech Republic, 1348"
+     }
+    },
+    {
+     "fi": [
+      "Krakova",
+      "Kraków",
+      "Krakow"
+     ],
+     "en": [
+      "Kraków",
+      "Krakow",
+      "Cracow"
+     ],
+     "h": {
+      "fi": "Puola, 1364",
+      "en": "Poland, 1364"
+     }
+    },
+    {
+     "fi": [
+      "Wien",
+      "Vienna"
+     ],
+     "en": [
+      "Vienna",
+      "Wien"
+     ],
+     "h": {
+      "fi": "Itävalta, 1365",
+      "en": "Austria, 1365"
+     }
+    },
+    {
+     "fi": [
+      "Heidelberg"
+     ],
+     "en": [
+      "Heidelberg"
+     ],
+     "h": {
+      "fi": "Saksa, 1386",
+      "en": "Germany, 1386"
+     }
+    },
+    {
+     "fi": [
+      "St Andrews",
+      "Saint Andrews"
+     ],
+     "en": [
+      "St Andrews",
+      "Saint Andrews"
+     ],
+     "h": {
+      "fi": "Skotlanti, 1413",
+      "en": "Scotland, 1413"
+     }
+    },
+    {
+     "fi": [
+      "Basel",
+      "Baseli",
+      "Basle"
+     ],
+     "en": [
+      "Basel",
+      "Basle"
+     ],
+     "h": {
+      "fi": "Sveitsi, 1460",
+      "en": "Switzerland, 1460"
+     }
+    },
+    {
+     "fi": [
+      "Uppsala"
+     ],
+     "en": [
+      "Uppsala"
+     ],
+     "h": {
+      "fi": "Ruotsi, 1477",
+      "en": "Sweden, 1477"
+     }
+    },
+    {
+     "fi": [
+      "Kööpenhamina",
+      "Kobenhavn",
+      "København"
+     ],
+     "en": [
+      "Copenhagen",
+      "København"
+     ],
+     "h": {
+      "fi": "Tanska, 1479",
+      "en": "Denmark, 1479"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-renessanssi",
+   "cat": "historia",
+   "t": 105,
+   "title": {
+    "fi": "Renessanssiajan taiteilijat: kuka teki? (15 teosta)",
+    "en": "Renaissance-era artists: who made it? (15 works)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Teos",
+    "en": "Work"
+   },
+   "items": [
+    {
+     "fi": [
+      "Jan van Eyck",
+      "van Eyck",
+      "Eyck"
+     ],
+     "en": [
+      "Jan van Eyck",
+      "van Eyck",
+      "Eyck"
+     ],
+     "h": {
+      "fi": "Arnolfinin muotokuva, 1434",
+      "en": "Arnolfini Portrait, 1434"
+     }
+    },
+    {
+     "fi": [
+      "Masaccio"
+     ],
+     "en": [
+      "Masaccio"
+     ],
+     "h": {
+      "fi": "Pyhä kolminaisuus, Firenze",
+      "en": "Holy Trinity fresco, Florence"
+     }
+    },
+    {
+     "fi": [
+      "Filippo Brunelleschi",
+      "Brunelleschi"
+     ],
+     "en": [
+      "Filippo Brunelleschi",
+      "Brunelleschi"
+     ],
+     "h": {
+      "fi": "Firenzen tuomiokirkon kupoli",
+      "en": "Dome of Florence Cathedral"
+     }
+    },
+    {
+     "fi": [
+      "Lorenzo Ghiberti",
+      "Ghiberti"
+     ],
+     "en": [
+      "Lorenzo Ghiberti",
+      "Ghiberti"
+     ],
+     "h": {
+      "fi": "Paratiisin portit, Firenzen kastekappeli",
+      "en": "Gates of Paradise, Florence Baptistery"
+     }
+    },
+    {
+     "fi": [
+      "Donatello"
+     ],
+     "en": [
+      "Donatello"
+     ],
+     "h": {
+      "fi": "David, pronssiveistos 1440-luvulla",
+      "en": "David, bronze statue, 1440s"
+     }
+    },
+    {
+     "fi": [
+      "Sandro Botticelli",
+      "Botticelli"
+     ],
+     "en": [
+      "Sandro Botticelli",
+      "Botticelli"
+     ],
+     "h": {
+      "fi": "Venuksen syntymä",
+      "en": "The Birth of Venus"
+     }
+    },
+    {
+     "fi": [
+      "Leonardo da Vinci",
+      "Leonardo",
+      "da Vinci"
+     ],
+     "en": [
+      "Leonardo da Vinci",
+      "Leonardo",
+      "da Vinci"
+     ],
+     "h": {
+      "fi": "Viimeinen ehtoollinen, 1495–1498",
+      "en": "The Last Supper, 1495–1498"
+     }
+    },
+    {
+     "fi": [
+      "Hieronymus Bosch",
+      "Bosch"
+     ],
+     "en": [
+      "Hieronymus Bosch",
+      "Bosch"
+     ],
+     "h": {
+      "fi": "Maallisten ilojen puutarha",
+      "en": "The Garden of Earthly Delights"
+     }
+    },
+    {
+     "fi": [
+      "Michelangelo",
+      "Michelangelo Buonarroti"
+     ],
+     "en": [
+      "Michelangelo",
+      "Michelangelo Buonarroti"
+     ],
+     "h": {
+      "fi": "Sikstuksen kappelin katto, 1508–1512",
+      "en": "Sistine Chapel ceiling, 1508–1512"
+     }
+    },
+    {
+     "fi": [
+      "Rafael",
+      "Raffaello",
+      "Raphael"
+     ],
+     "en": [
+      "Raphael",
+      "Raffaello",
+      "Rafael"
+     ],
+     "h": {
+      "fi": "Ateenan koulu, 1509–1511",
+      "en": "The School of Athens, 1509–1511"
+     }
+    },
+    {
+     "fi": [
+      "Albrecht Dürer",
+      "Dürer",
+      "Durer"
+     ],
+     "en": [
+      "Albrecht Dürer",
+      "Dürer",
+      "Durer"
+     ],
+     "h": {
+      "fi": "Melencolia I, 1514",
+      "en": "Melencolia I, 1514"
+     }
+    },
+    {
+     "fi": [
+      "Tizian",
+      "Titian",
+      "Tiziano Vecellio",
+      "Tiziano"
+     ],
+     "en": [
+      "Titian",
+      "Tiziano Vecellio",
+      "Tiziano"
+     ],
+     "h": {
+      "fi": "Neitsyt Marian taivaaseenotto, Venetsia, 1515–1518",
+      "en": "Assumption of the Virgin, Venice, 1515–1518"
+     }
+    },
+    {
+     "fi": [
+      "Hans Holbein",
+      "Holbein",
+      "Hans Holbein nuorempi"
+     ],
+     "en": [
+      "Hans Holbein the Younger",
+      "Hans Holbein",
+      "Holbein"
+     ],
+     "h": {
+      "fi": "Lähettiläät, 1533",
+      "en": "The Ambassadors, 1533"
+     }
+    },
+    {
+     "fi": [
+      "Benvenuto Cellini",
+      "Cellini"
+     ],
+     "en": [
+      "Benvenuto Cellini",
+      "Cellini"
+     ],
+     "h": {
+      "fi": "Perseus ja Medusan pää, 1545–1554",
+      "en": "Perseus with the Head of Medusa, 1545–1554"
+     }
+    },
+    {
+     "fi": [
+      "Pieter Bruegel",
+      "Bruegel",
+      "Brueghel",
+      "Pieter Bruegel vanhempi"
+     ],
+     "en": [
+      "Pieter Bruegel the Elder",
+      "Pieter Bruegel",
+      "Bruegel",
+      "Brueghel"
+     ],
+     "h": {
+      "fi": "Metsästäjät lumessa, 1565",
+      "en": "The Hunters in the Snow, 1565"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-1-keksinnot",
+   "cat": "historia",
+   "t": 120,
+   "title": {
+    "fi": "17 keksintöä 1440–1800: kuka keksi?",
+    "en": "17 inventions, 1440–1800: who invented it?"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Keksintö",
+    "en": "Invention"
+   },
+   "items": [
+    {
+     "fi": [
+      "Johannes Gutenberg",
+      "Gutenberg"
+     ],
+     "en": [
+      "Johannes Gutenberg",
+      "Gutenberg"
+     ],
+     "h": {
+      "fi": "Irtokirjasimiin perustuva kirjapaino Euroopassa, n. 1440",
+      "en": "Movable-type printing press in Europe, c. 1440"
+     }
+    },
+    {
+     "fi": [
+      "Hans Lippershey",
+      "Lippershey",
+      "Lipperhey"
+     ],
+     "en": [
+      "Hans Lippershey",
+      "Lippershey",
+      "Lipperhey"
+     ],
+     "h": {
+      "fi": "Kaukoputken patenttihakemus, 1608",
+      "en": "Patent application for a telescope, 1608"
+     }
+    },
+    {
+     "fi": [
+      "Blaise Pascal",
+      "Pascal"
+     ],
+     "en": [
+      "Blaise Pascal",
+      "Pascal"
+     ],
+     "h": {
+      "fi": "Pascaline-laskukone, 1642",
+      "en": "The Pascaline calculator, 1642"
+     }
+    },
+    {
+     "fi": [
+      "Evangelista Torricelli",
+      "Torricelli"
+     ],
+     "en": [
+      "Evangelista Torricelli",
+      "Torricelli"
+     ],
+     "h": {
+      "fi": "Elohopeabarometri, 1643",
+      "en": "Mercury barometer, 1643"
+     }
+    },
+    {
+     "fi": [
+      "Christiaan Huygens",
+      "Huygens"
+     ],
+     "en": [
+      "Christiaan Huygens",
+      "Huygens"
+     ],
+     "h": {
+      "fi": "Heilurikello, 1656",
+      "en": "Pendulum clock, 1656"
+     }
+    },
+    {
+     "fi": [
+      "Thomas Newcomen",
+      "Newcomen"
+     ],
+     "en": [
+      "Thomas Newcomen",
+      "Newcomen"
+     ],
+     "h": {
+      "fi": "Ilmanpainehöyrykone, 1712",
+      "en": "Atmospheric steam engine, 1712"
+     }
+    },
+    {
+     "fi": [
+      "Daniel Gabriel Fahrenheit",
+      "Fahrenheit"
+     ],
+     "en": [
+      "Daniel Gabriel Fahrenheit",
+      "Fahrenheit"
+     ],
+     "h": {
+      "fi": "Elohopealämpömittari, 1710-luku",
+      "en": "Mercury thermometer, 1710s"
+     }
+    },
+    {
+     "fi": [
+      "John Kay",
+      "Kay"
+     ],
+     "en": [
+      "John Kay",
+      "Kay"
+     ],
+     "h": {
+      "fi": "Lentävä sukkula, 1733",
+      "en": "Flying shuttle, 1733"
+     }
+    },
+    {
+     "fi": [
+      "John Harrison",
+      "Harrison"
+     ],
+     "en": [
+      "John Harrison",
+      "Harrison"
+     ],
+     "h": {
+      "fi": "Merikronometri H4, n. 1761",
+      "en": "Marine chronometer H4, c. 1761"
+     }
+    },
+    {
+     "fi": [
+      "James Hargreaves",
+      "Hargreaves"
+     ],
+     "en": [
+      "James Hargreaves",
+      "Hargreaves"
+     ],
+     "h": {
+      "fi": "Spinning jenny -kehruukone, 1764–1765",
+      "en": "Spinning jenny, 1764–1765"
+     }
+    },
+    {
+     "fi": [
+      "James Watt",
+      "Watt"
+     ],
+     "en": [
+      "James Watt",
+      "Watt"
+     ],
+     "h": {
+      "fi": "Erillinen lauhdutin, patentti 1769",
+      "en": "Separate condenser, patented 1769"
+     }
+    },
+    {
+     "fi": [
+      "Richard Arkwright",
+      "Arkwright"
+     ],
+     "en": [
+      "Richard Arkwright",
+      "Arkwright"
+     ],
+     "h": {
+      "fi": "Vesikehruukone, patentti 1769",
+      "en": "Water frame, patented 1769"
+     }
+    },
+    {
+     "fi": [
+      "Montgolfierin veljekset",
+      "Montgolfier",
+      "Joseph Montgolfier",
+      "Etienne Montgolfier"
+     ],
+     "en": [
+      "Montgolfier brothers",
+      "Montgolfier",
+      "Joseph Montgolfier",
+      "Etienne Montgolfier"
+     ],
+     "h": {
+      "fi": "Kuumailmapallo, 1783",
+      "en": "Hot air balloon, 1783"
+     }
+    },
+    {
+     "fi": [
+      "Edmund Cartwright",
+      "Cartwright"
+     ],
+     "en": [
+      "Edmund Cartwright",
+      "Cartwright"
+     ],
+     "h": {
+      "fi": "Mekaaninen kangaspuu, patentti 1785",
+      "en": "Power loom, patented 1785"
+     }
+    },
+    {
+     "fi": [
+      "Eli Whitney",
+      "Whitney"
+     ],
+     "en": [
+      "Eli Whitney",
+      "Whitney"
+     ],
+     "h": {
+      "fi": "Mekaaninen puuvillan puhdistuskone, patentti 1794",
+      "en": "Cotton gin, patented 1794"
+     }
+    },
+    {
+     "fi": [
+      "Edward Jenner",
+      "Jenner"
+     ],
+     "en": [
+      "Edward Jenner",
+      "Jenner"
+     ],
+     "h": {
+      "fi": "Isorokkorokote, 1796",
+      "en": "Smallpox vaccine, 1796"
+     }
+    },
+    {
+     "fi": [
+      "Alessandro Volta",
+      "Volta"
+     ],
+     "en": [
+      "Alessandro Volta",
+      "Volta"
+     ],
+     "h": {
+      "fi": "Voltan patsas (sähköparisto), 1799–1800",
+      "en": "Voltaic pile (electric battery), 1799–1800"
+     }
+    }
+   ]
+  }
+ ]
+}

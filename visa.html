@@ -121,6 +121,23 @@ a{color:var(--accent)}
 .stats{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:14px}
 .stats li{display:flex;justify-content:space-between;gap:12px}
 .stats span:last-child{font:500 13px var(--font-mono);color:var(--ink-2);white-space:nowrap}
+.filters{margin-bottom:8px}
+.flag{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;margin-bottom:4px}
+.cells.flags{grid-template-columns:repeat(auto-fill,minmax(min(100%,110px),1fr))}
+.cells.wide{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.prompt{flex:1 1 130px;font:600 18px/1.25 var(--font-display);text-align:center}
+.map svg{display:block;width:100%;height:auto;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
+.map g path,.map g circle{fill:var(--line);stroke:var(--ink-3);stroke-width:.7;vector-effect:non-scaling-stroke}
+.map g.bg path,.map g.bg circle{fill:var(--surface);stroke:var(--line)}
+.map g.t{cursor:pointer}
+.map g.t:hover path,.map g.t:hover circle{fill:var(--line-2)}
+.map g.on path,.map g.on circle{fill:var(--c)}
+.map g.pend{opacity:.55}
+.map g.miss path,.map g.miss circle{fill:var(--bad-soft);stroke:var(--bad)}
+.q{font:600 clamp(18px,3vw,24px)/1.3 var(--font-display);margin:18px 0 0;text-align:center}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:8px;margin-top:16px}
+.opt{justify-content:center;padding:14px;font-size:16px}
+.opt:disabled{opacity:.4;cursor:default}
 footer{margin-top:28px;color:var(--ink-3);font-size:13px}
 </style>
 </head>
@@ -139,7 +156,8 @@ const STORE_KEY = 'visa-v1';
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
-const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100;
+const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60;
+const FORMATS = ['list', 'flags', 'map', 'choice'];
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
@@ -164,6 +182,8 @@ const T = {
     taken: n => `${n} ehti ensin`, already: 'Tämä on jo listalla',
     timeup: 'Aika loppui, lasketaan tuloksia…',
     win: n => `${n} voitti!`, youWin: 'Voitit!', draw: 'Tasapeli', noScore: 'Kukaan ei saanut pisteitä',
+    search: 'Hae visoja', all: 'Kaikki', random: 'Arvo visa', top: 'Suosituimmat', noResults: 'Ei osumia.', showAll: n => `Näytä kaikki (${n})`, chosen: n => `Valittu: ${n}`,
+    fmt: { list: 'Lista', flags: 'Liput', map: 'Kartta', choice: 'Monivalinta' }, skip: 'Ohita', clickFind: n => `Klikkaa: ${n}`, loadingMap: 'Ladataan karttaa…', question: (a, b) => `Kysymys ${a}/${b}`,
     rematch: 'Uusintaottelu', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
     privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
@@ -187,6 +207,8 @@ const T = {
     taken: n => `${n} got there first`, already: 'Already on the list',
     timeup: 'Time is up, counting results…',
     win: n => `${n} won!`, youWin: 'You won!', draw: 'Draw', noScore: 'Nobody scored',
+    search: 'Search quizzes', all: 'All', random: 'Random quiz', top: 'Trending', noResults: 'No matches.', showAll: n => `Show all (${n})`, chosen: n => `Selected: ${n}`,
+    fmt: { list: 'List', flags: 'Flags', map: 'Map', choice: 'Multiple choice' }, skip: 'Skip', clickFind: n => `Click: ${n}`, loadingMap: 'Loading map…', question: (a, b) => `Question ${a}/${b}`,
     rematch: 'Rematch', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
     privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
@@ -201,6 +223,8 @@ let R = null;                  // current room
 let G = null;                  // current game
 let V = {};                    // DOM refs of the current view
 let pendingCode = null, createdCode = null, homeError = null;
+let MAP = null, mapLoad = null;   // data/visa-map.json, only fetched for map quizzes
+let TOP = [];                     // quiz ids of Suosituimmat, empty until the Supabase functions exist
 
 // ---- storage (conveniences only: every access may throw in a private window) ----
 function readStr(area, key) { try { return window[area].getItem(key); } catch { return null; } }
@@ -254,17 +278,40 @@ const parseCode = s => { const c = String(s || '').replace(/^#/, '').toUpperCase
 const quizName = q => q.title[P.lang];
 const rank = (a, b) => b.n - a.n || a.t - b.t;   // more correct first, then the earlier last answer
 const h2hKey = name => `n:${name.toLowerCase()}`;   // the prefix keeps nicknames like __proto__ off Object.prototype
+const fmtOf = q => q.format || 'list';
+function seeded(seed) {   // mulberry32: every client derives the same order from the game's seq
+  let a = seed >>> 0;
+  return () => { a = (a + 0x6D2B79F5) >>> 0; let x = Math.imul(a ^ (a >>> 15), 1 | a); x = (x + Math.imul(x ^ (x >>> 7), 61 | x)) ^ x; return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
+}
+function shuffled(list, seed) {
+  const out = [...list], rnd = seeded(seed);
+  for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; }
+  return out;
+}
 const validSettings = s => s && QUIZ.has(s.quiz) && MODES.includes(s.mode) && MULS.includes(s.mul);
 
 function buildItems(q) {
+  const fmt = fmtOf(q);
+  if (fmt === 'choice') return q.items.map(it => ({ fi: [it.ok.fi], en: [it.ok.en], hint: it.q, group: null, opts: [{ ...it.ok, ok: true }, ...it.no] }));
   if (q.items) return q.items.map(it => ({ fi: it.fi, en: it.en, group: null, hint: it.h == null ? null : (typeof it.h === 'string' ? { fi: it.h, en: it.h } : it.h) }));
   let pool = DATA.countries;
   if (q.cont) pool = pool.filter(c => q.cont.includes(c.c));
   if (q.ids) pool = pool.filter(c => q.ids.includes(c.id));
   const group = c => q.groups ? c.c : null;
+  if (fmt === 'flags') return pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c), flag: c.id.toLowerCase() }));
+  if (fmt === 'map') return pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: null, iso: c.id }));
   return q.ans === 'name'
     ? pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c) }))
     : pool.map(c => ({ fi: c.capFi, en: c.capEn, hint: { fi: c.fi[0], en: c.en[0] }, group: group(c) }));
+}
+const countCache = new Map();
+function itemCount(q) {
+  if (!countCache.has(q.id)) countCache.set(q.id, buildItems(q).length);
+  return countCache.get(q.id);
+}
+function loadMap() {
+  if (!mapLoad) mapLoad = fetch('/data/visa-map.json').then(r => r.json()).then(d => { MAP = d; if (G && G.fmt === 'map') render(); }).catch(() => { mapLoad = null; });
+  return mapLoad;
 }
 
 function getClient() {
@@ -299,7 +346,7 @@ function send(type, payload) {
 }
 
 async function joinRoom(code, created) {
-  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: DATA.quizzes[0].cat };
+  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
   let client;
@@ -307,6 +354,9 @@ async function joinRoom(code, created) {
     R = null; homeError = 'noConn'; history.replaceState(null, '', location.pathname); render(); return;
   }
   if (R?.code !== code) return;
+  client.rpc('visa_trending').then(({ data }) => {
+    if (Array.isArray(data)) { TOP = data.map(x => x.quiz_id).filter(id => QUIZ.has(id)); paintSettings(); }
+  }, () => {});
   const ch = client.channel(`visa:${code}`, { config: { broadcast: { self: false }, presence: { key: MY_ID } } });
   R.ch = ch;
   ch.on('broadcast', { event: 'm' }, ({ payload }) => onMessage(payload));
@@ -401,7 +451,7 @@ function onMessage(m) {
   switch (m.t) {
     case 'have': if (!race && Array.isArray(m.l)) addFound(m.from, m.l, m.t2); break;
     case 'claim': if (race && isHost()) grant(m.i, m.from, m.t2); break;
-    case 'claims': if (race && fromHost(m)) applyClaims(m.c); break;
+    case 'claims': if (race) applyClaims(m.c); break;   // also from a stand-in host: while a reloading host is away someone else grants
     case 'done': G.done.add(m.from); maybeFinish(); break;
     case 'end': if (fromHost(m)) applyEnd(m); break;
   }
@@ -410,7 +460,6 @@ function onMessage(m) {
 function applySettings(s) {
   if (!validSettings(s)) return;
   R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul };
-  R.cat = QUIZ.get(s.quiz).cat;
   paintSettings();
 }
 
@@ -461,12 +510,13 @@ function beginGame(m) {
   const now = performance.now();
   const elapsed = clamp(m.elapsed, -COUNTDOWN_MS, durMs + LOCAL_WATCHDOG_MS);
   G = {
-    seq: m.seq, quiz, items, answers, mode: m.mode, mul: m.mul, durMs, players,
+    seq: m.seq, quiz, fmt: fmtOf(quiz), order: shuffled(items.map((_, i) => i), m.seq), seen: new Set(), tried: new Map(), lockUntil: 0, shown: -1, items, answers, mode: m.mode, mul: m.mul, durMs, players,
     startAt: now - elapsed, endAt: now - elapsed + durMs,
     found: new Map(players.map(p => [p.id, { set: new Set(), t: 0 }])), claims: new Map(), pending: new Map(), done: new Set(),
     state: 'count', over: false, finishing: false, out: !players.some(p => p.id === MY_ID), spectator: !players.some(p => p.id === MY_ID),
     results: null, cells: [], absent: new Map(), lastRepair: now, sentSize: 0, sentAt: now, holdT: 0, flashT: 0, confirmT: 0,
   };
+  if (G.fmt === 'map') loadMap();
   render();
 }
 
@@ -520,7 +570,7 @@ function flash(text) {
 }
 
 function accept(i) {
-  V.input.value = '';
+  if (V.input) V.input.value = '';
   const at = elapsedNow();
   if (G.mode === 'parallel') {
     addFound(MY_ID, [i], at);
@@ -532,6 +582,7 @@ function accept(i) {
     paintCell(i);
     send('claim', { seq: G.seq, i, t2: at });
   }
+  paintTarget();
 }
 
 function addFound(id, list, at) {
@@ -560,8 +611,57 @@ function applyClaim(i, by, at) {
   if (G.pending.delete(i) && by !== MY_ID) flash(t('taken', nameOf(by)));
   paintCell(i);
   paintScores();
+  paintTarget();
   maybeFinish();
   return true;
+}
+
+// ---- map and multiple choice: one target at a time ----
+function target() {
+  const openQuestion = i => available(i) && !(G.fmt === 'choice' && G.mode === 'parallel' && G.seen.has(i));
+  return G.order.find(openQuestion) ?? -1;
+}
+
+function paintTarget() {
+  if (!G || G.over || G.state !== 'play' || !V.prompt) return;
+  const i = target();
+  if (G.fmt === 'map') { V.prompt.textContent = i < 0 ? '' : t('clickFind', G.items[i][P.lang][0]); return; }
+  if (i < 0) { if (G.mode === 'parallel') markDone(); return; }
+  V.prompt.textContent = t('question', Math.min(G.items.length, G.seen.size + G.claims.size + 1), G.items.length);
+  if (i !== G.shown) { G.shown = i; paintChoice(i); }
+}
+
+function mapClick(i) {
+  if (G?.state !== 'play' || G.out || performance.now() < G.lockUntil) return;
+  if (i === target()) { accept(i); return; }
+  G.lockUntil = performance.now() + WRONG_LOCK_MS;
+  flash(G.items[i][P.lang][0]);
+}
+
+function skipTarget() {
+  const i = target();
+  if (i < 0 || G.out) return;
+  G.order = [...G.order.filter(x => x !== i), i];
+  paintTarget();
+}
+
+function paintChoice(i) {
+  const options = shuffled(G.items[i].opts, G.seq + i), tried = G.tried.get(i);
+  V.opts = options.map((o, k) => h('button', { class: 'kt-btn opt', text: `${k + 1}. ${o[P.lang]}`, disabled: G.out || tried?.has(k), onclick: () => choose(i, k, options) }));
+  V.choice.replaceChildren(h('p', { class: 'q', text: G.items[i].hint[P.lang] }), h('div', { class: 'opts' }, V.opts));
+}
+
+function choose(i, k, options) {
+  if (G?.state !== 'play' || G.out || performance.now() < G.lockUntil) return;
+  if (G.mode === 'parallel') G.seen.add(i);
+  if (options[k].ok) { accept(i); return; }
+  if (G.mode === 'race') {   // the shared question stays open for the others, this option is gone for me
+    if (!G.tried.has(i)) G.tried.set(i, new Set());
+    G.tried.get(i).add(k);
+    G.lockUntil = performance.now() + WRONG_LOCK_MS;
+    G.shown = -1;
+  }
+  paintTarget();
 }
 
 function giveUp() {
@@ -574,6 +674,11 @@ function giveUp() {
   }
   clearTimeout(G.confirmT);
   clearTimeout(G.holdT);
+  markDone();
+}
+
+function markDone() {
+  if (G.out) return;
   G.out = true;
   G.done.add(MY_ID);
   send('done', { seq: G.seq });
@@ -685,6 +790,7 @@ function startGame() {
   const s = R.settings;
   const msg = { seq: Date.now(), quiz: s.quiz, mode: s.mode, mul: s.mul, players: R.players.map(p => ({ id: p.id, name: p.name })), elapsed: -COUNTDOWN_MS };
   send('start', msg);
+  sb.rpc('visa_count_play', { q: s.quiz }).then(() => {}, () => {});   // anonymous play count for Suosituimmat
   beginGame(msg);
   // Nothing else repairs a lost start: a guest without G would ignore the whole game.
   for (const wait of [800, 2000]) setTimeout(() => { if (G?.seq === msg.seq && !G.over) send('snap', snapshot()); }, wait);
@@ -794,7 +900,8 @@ function paintPlayers() {
 function keepFocus(root, paint) {
   const key = document.activeElement?.dataset?.k;
   paint();
-  if (key) root.querySelector(`[data-k="${key}"]`)?.focus();
+  const el = key && root.querySelector(`[data-k="${key}"]`);
+  if (el) { el.focus(); if (el.setSelectionRange) el.setSelectionRange(el.value.length, el.value.length); }
 }
 
 function paintSettings() {
@@ -817,12 +924,36 @@ function paintSettings() {
       h('div', { class: 'lbl', text: t('time') }),
       h('div', { class: 'kt-tabs' }, MULS.map(x => tab(`x-${x}`, `${T[P.lang].mul[x]} · ${minutes(q.t * x)}`, s.mul === x, () => setSettings({ mul: x })))),
       h('div', { class: 'lbl', text: t('quiz') }),
-      h('div', { class: 'kt-tabs', style: 'margin-bottom:8px' }, Object.entries(DATA.cats).map(([c, n]) => tab(`c-${c}`, n[P.lang], R.cat === c, () => { R.cat = c; paintSettings(); }))),
-      h('div', { class: 'quizzes' }, DATA.quizzes.filter(x => x.cat === R.cat).map(x =>
-        h('button', { class: 'kt-btn quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === s.quiz), onclick: () => setSettings({ quiz: x.id }) },
-          h('b', { text: quizName(x) }), h('small', { text: `${buildItems(x).length} · ${minutes(x.t)}` })))),
+      h('p', { style: 'margin-bottom:8px', text: t('chosen', quizName(q)) }),
+      h('div', { class: 'row filters' },
+        h('input', { class: 'kt-input', 'data-k': 'search', placeholder: t('search'), 'aria-label': t('search'), autocomplete: 'off', value: R.search, oninput: e => { R.search = e.target.value; R.showAll = false; paintQuizList(); } }),
+        h('button', { class: 'kt-btn', 'data-k': 'random', text: t('random'), onclick: () => { const list = quizMatches(); if (list.length) setSettings({ quiz: list[Math.floor(Math.random() * list.length)].id }); } })),
+      h('div', { class: 'kt-tabs filters' }, [['', t('all')], ...(TOP.length ? [['top', t('top')]] : []), ...Object.entries(DATA.cats).map(([c, n]) => [c, n[P.lang]])]
+        .map(([c, label]) => tab(`c-${c}`, label, R.cat === c, () => { R.cat = c; R.showAll = false; paintSettings(); }))),
+      h('div', { class: 'kt-tabs filters' }, ['', ...FORMATS].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => { R.fmtFilter = f; R.showAll = false; paintSettings(); }))),
+      V.quizList = h('div', {}),
       h('button', { class: 'kt-btn primary start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame }));
+    paintQuizList();
   });
+}
+
+function quizMatches() {
+  const q = norm(R.search);
+  let list = R.cat === 'top' ? TOP.map(id => QUIZ.get(id)) : DATA.quizzes.filter(x => !R.cat || x.cat === R.cat);
+  if (R.fmtFilter) list = list.filter(x => fmtOf(x) === R.fmtFilter);
+  if (q) list = list.filter(x => norm(x.title.fi).includes(q) || norm(x.title.en).includes(q));
+  return list;
+}
+
+function paintQuizList() {
+  if (!V.quizList) return;
+  const list = quizMatches(), shown = R.showAll ? list : list.slice(0, LIST_LIMIT), selected = R.settings.quiz;
+  V.quizList.replaceChildren(
+    list.length ? h('div', { class: 'quizzes' }, shown.map(x =>
+      h('button', { class: 'kt-btn quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === selected), onclick: () => setSettings({ quiz: x.id }) },
+        h('b', { text: quizName(x) }), h('small', { text: `${T[P.lang].fmt[fmtOf(x)]} · ${itemCount(x)} · ${minutes(x.t)}` }))))
+      : h('p', { class: 'muted', text: t('noResults') }),
+    list.length > shown.length && h('button', { class: 'kt-btn', style: 'margin-top:8px', text: t('showAll', list.length), onclick: () => { R.showAll = true; paintQuizList(); } }));
 }
 
 function chatBox() {
@@ -848,24 +979,54 @@ function paintChat() {
 }
 
 function buildGrid() {
-  const lang = P.lang;
   G.cells = [];
+  const view = G.fmt === 'map' ? buildMap() : buildCells();
+  G.items.forEach((_, i) => paintCell(i));
+  return view;
+}
+
+function buildMap() {
+  if (!MAP) { loadMap(); return h('p', { class: 'muted', style: 'margin-top:14px', text: t('loadingMap') }); }
+  const NS = 'http://www.w3.org/2000/svg';
+  const svgEl = (tag, attrs) => { const el = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v); return el; };
+  const index = new Map(G.items.map((it, i) => [it.iso, i]));
+  // Percentiles keep far-off territories and Russia from zooming a continent out to the whole world.
+  const edges = pick => [...index.keys()].map(iso => MAP.shapes[iso].b[pick]).sort((a, b) => a - b);
+  const at = (list, share) => list[Math.floor((list.length - 1) * share)];
+  const whole = G.items.length > 150;
+  const x0 = whole ? 0 : at(edges(0), .06), y0 = whole ? 0 : at(edges(1), .06), x1 = whole ? MAP.w : at(edges(2), .94), y1 = whole ? MAP.h : at(edges(3), .94);
+  const pad = whole ? 0 : Math.max(x1 - x0, y1 - y0) * .05;
+  const box = [x0 - pad, y0 - pad, x1 - x0 + 2 * pad, y1 - y0 + 2 * pad];
+  const svg = svgEl('svg', { viewBox: box.map(Math.round).join(' '), role: 'img', 'aria-label': t('fmt').map });
+  const radius = Math.max(box[2] / 170, 2);
+  for (const [iso, shape] of Object.entries(MAP.shapes)) {
+    const i = index.get(iso), g = svgEl('g', { class: i == null ? 'bg' : 't' });
+    if (shape.d) g.append(svgEl('path', { d: shape.d }));
+    if (shape.c && i != null) g.append(svgEl('circle', { cx: shape.c[0], cy: shape.c[1], r: radius }));
+    if (i != null) { G.cells[i] = g; g.addEventListener('click', () => mapClick(i)); }
+    svg.append(g);
+  }
+  return h('div', { class: 'map' }, svg);
+}
+
+function buildCells() {
+  const lang = P.lang;
   const groups = new Map();
   G.items.forEach((it, i) => { const g = it.group || ''; if (!groups.has(g)) groups.set(g, []); groups.get(g).push(i); });
   const sortText = i => (G.items[i].hint ? G.items[i].hint[lang] : G.items[i][lang][0]);
   const sections = [...groups].map(([g, list]) => {
-    if (!G.quiz.ordered) list.sort((a, b) => sortText(a).localeCompare(sortText(b), lang));
+    if (G.fmt === 'flags') list.sort((a, b) => G.order.indexOf(a) - G.order.indexOf(b));   // alphabetical would give flags away
+    else if (G.fmt === 'list' && !G.quiz.ordered) list.sort((a, b) => sortText(a).localeCompare(sortText(b), lang));
     return h('section', {},
       g && h('h3', { text: DATA.continents[g][lang] }),
-      h('div', { class: 'cells', style: g ? '' : 'margin-top:14px' }, list.map(i => {
+      h('div', { class: 'cells' + (G.fmt === 'flags' ? ' flags' : G.fmt === 'choice' ? ' wide' : ''), style: g ? '' : 'margin-top:14px' }, list.map(i => {
         const ans = h('span', { class: 'ans' });
-        const cell = h('div', { class: 'cell' }, G.items[i].hint && h('span', { class: 'hint', text: G.items[i].hint[lang] }), ans);
+        const cell = h('div', { class: 'cell' }, G.items[i].flag && h('img', { class: 'flag', src: `/flags/${G.items[i].flag}.svg`, alt: '', loading: 'lazy' }), G.items[i].hint && h('span', { class: 'hint', text: G.items[i].hint[lang] }), ans);
         cell.ans = ans;
         G.cells[i] = cell;
         return cell;
       })));
   });
-  G.items.forEach((_, i) => paintCell(i));
   return h('div', {}, sections);
 }
 
@@ -878,14 +1039,14 @@ function paintCell(i) {
     if (cl) owner = cl.by;
     else if (G.pending.has(i)) { owner = MY_ID; pending = true; }
   } else if (G.found.get(MY_ID)?.set.has(i)) owner = MY_ID;
-  c.ans.textContent = owner || G.over ? G.items[i][P.lang][0] : '';
+  if (c.ans) c.ans.textContent = owner || G.over ? G.items[i][P.lang][0] : '';
   c.classList.toggle('on', !!owner);
   c.classList.toggle('pend', pending);
   c.classList.toggle('miss', G.over && !owner);
   c.querySelector('.who')?.remove();
   if (owner) {
     c.style.setProperty('--c', colorOf(owner));
-    if (G.mode === 'race' && !pending) c.append(h('span', { class: 'who', title: nameOf(owner), text: nameOf(owner).slice(0, 1).toUpperCase() }));
+    if (c.ans && G.mode === 'race' && !pending) c.append(h('span', { class: 'who', title: nameOf(owner), text: nameOf(owner).slice(0, 1).toUpperCase() }));
   }
 }
 
@@ -901,12 +1062,13 @@ function paintScores() {
 }
 
 function syncInput() {
-  if (!V.input) return;
+  if (!V.giveUp) return;
   const open = G.state === 'play' && !G.out;
-  V.input.disabled = !open;
+  if (V.input) { V.input.disabled = !open; V.input.hidden = G.spectator; }
+  if (V.skip) { V.skip.disabled = !open; V.skip.hidden = G.spectator; }
+  if (V.choice) V.choice.hidden = G.spectator || !open;
   V.giveUp.disabled = !open;
   V.giveUp.hidden = G.spectator;
-  V.input.hidden = G.spectator;
   if (G.state === 'wait') V.flash.textContent = t('timeup');
   else if (G.spectator) V.flash.textContent = t('spectate');
   else if (G.out) V.flash.textContent = t('out');
@@ -919,20 +1081,26 @@ function renderGame() {
     return;
   }
   V.timer = h('div', { class: 'timer', role: 'timer', text: clock(G.endAt - performance.now()) });
-  V.input = h('input', { class: 'kt-input answer', placeholder: t('typeHere'), 'aria-label': t('typeHere'), autocomplete: 'off', autocapitalize: 'off', autocorrect: 'off', spellcheck: 'false', enterkeyhint: 'done', oninput: onAnswerInput, onkeydown: onAnswerKey });
+  V.input = (G.fmt === 'list' || G.fmt === 'flags') && h('input', { class: 'kt-input answer', placeholder: t('typeHere'), 'aria-label': t('typeHere'), autocomplete: 'off', autocapitalize: 'off', autocorrect: 'off', spellcheck: 'false', enterkeyhint: 'done', oninput: onAnswerInput, onkeydown: onAnswerKey });
   V.giveUp = h('button', { class: 'kt-btn', text: t('giveUp'), onclick: giveUp });
   V.flash = h('div', { class: 'flash', 'aria-live': 'polite' });
   V.scores = h('div', { class: 'scores' });
-  const grid = buildGrid();
+  if (!V.input) V.input = null;
+  if (G.fmt === 'map' || G.fmt === 'choice') V.prompt = h('div', { class: 'prompt', 'aria-live': 'polite' });
+  if (G.fmt === 'map') V.skip = h('button', { class: 'kt-btn', text: t('skip'), onclick: skipTarget });
+  if (G.fmt === 'choice') V.choice = h('div', {});
+  const grid = G.fmt === 'choice' ? V.choice : buildGrid();
+  G.shown = -1;
   app.replaceChildren(
     h('div', { class: 'gamebar' },
       gameTitle(),
-      h('div', { class: 'play' }, V.timer, V.input, V.giveUp),
+      h('div', { class: 'play' }, V.timer, V.input, V.prompt, V.skip, V.giveUp),
       V.scores, V.flash),
     grid);
   paintScores();
   syncInput();
-  if (!V.input.disabled) V.input.focus();
+  paintTarget();
+  if (V.input && !V.input.disabled) V.input.focus();
 }
 
 function headline() {
@@ -977,7 +1145,11 @@ function paintActions() {
 
 // ---- start ----
 Promise.all([
-  fetch('/data/visa.json').then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }),
+  fetch('/data/visa.json').then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then(async d => {
+    const packs = await Promise.all((d.packs || []).map(name => fetch(`/data/visa/${name}.json`).then(r => r.json())));
+    d.quizzes = [...d.quizzes, ...packs.flatMap(x => x.quizzes)];
+    return d;
+  }),
   new Promise(done => setTimeout(done, TAB_CHECK_MS)),
 ]).then(([d]) => {
   tabCheck = false;
@@ -985,6 +1157,7 @@ Promise.all([
   for (const q of d.quizzes) QUIZ.set(q.id, q);
   setInterval(tick, 100);
   addEventListener('hashchange', route);
+  addEventListener('keydown', e => { if (V.opts && /^[1-4]$/.test(e.key) && !e.metaKey && !e.ctrlKey) V.opts[Number(e.key) - 1]?.click(); });
   if (parseCode(location.hash)) route(); else render();
 }).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });
 })();
