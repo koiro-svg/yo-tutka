@@ -153,7 +153,11 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
 - **Visan viestit ovat toisten selainten syötettä:** `onMessage`-polku tarkistaa indeksit, ajat ja nimet, ja kaikki teksti menee `textContent`in kautta (`h()`), ei `innerHTML`:llä. Pelin tulokset
   perustuvat pelaajien luottamukseen (kaverien kesken), joten rankingia ei saa rakentaa niiden päälle.
 - **Broadcast ei takaa toimitusta:** visa korjaa itsensä (`repair`: absoluuttinen tila 3 s välein tilan muuttuessa ja 15 s välein muuten, koska jokainen broadcast kuluttaa Realtime-kiintiötä kerran per vastaanottaja; odottavat claimit uudelleen, `end` kolmesti, vahtiajastimet ajan loppuessa). Älä poista näitä, vaikka testissä kaikki viestit menisivät perille.
-- **Uusi pelaaja sijoittuu aina muiden jälkeen (`track`):** ilman tätä väärässä ajassa oleva laite veisi vetäjän roolin ja nollaisi huoneen asetukset.
+- **Uusi pelaaja sijoittuu aina muiden jälkeen (`track`):** `track` odottaa ensimmäistä presence-synkkaa (varalla `TRACK_WAIT_MS`), muuten väärässä ajassa oleva laite veisi vetäjän roolin. `joined`-arvo säilyy vain uudelleenlatauksen yli, ja `leaveRoom` tyhjentää sen.
+- **Vetäjän uudelleenlataus:** ladattu vetäjä on ilman peliä, joten sen `hello`on vastaa myös se, joka pitää lähettäjää vetäjänä, ja ensimmäinen snapshot kelpaa keneltä tahansa (`R.synced`). Vetäjä lähettää aloituksen jälkeen snapshotin kahdesti, koska muuten `start`in hävittänyt pelaaja jäisi koko pelin ulkopuolelle.
+- **Poissaolo ei ole poistuminen:** `maybeFinish` odottaa `GONE_GRACE_MS`, ennen kuin presencestä kadonnut pelaaja lakkaa estämästä pelin loppua; muuten uudelleenlataus päättäisi pelin.
+- **Nimimerkit ovat avaimia vain `h2hKey`-etuliitteellä:** `constructor` tai `__proto__` kaatoi muuten `applyEnd`in ja jäädytti tulosnäkymän.
+- **Monistettu välilehti perii `sessionStorage`n:** `BroadcastChannel`-tarkistus (`TAB_CHECK_MS`) antaa sille uuden pelaaja-id:n, ja uudelleenlataus säilyttää vanhan.
 - **Hyppymittari tarvitsee `vercel.json`:n CSP-otsakkeen `connect-src 'self'`.** Mukana tuleva
   MediaPipe lähettää käyttötilastoja `odml.pa.googleapis.com`:iin; otsake estää sen (sivu lupaa,
   ettei mitään lähetetä). Älä poista otsaketta äläkä laajenna sitä koko sivustolle ilman testiä.

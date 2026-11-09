@@ -139,6 +139,7 @@ const STORE_KEY = 'visa-v1';
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
+const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100;
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
@@ -213,8 +214,20 @@ function randomId(len, alphabet) {
   const bytes = crypto.getRandomValues(new Uint8Array(len));
   return Array.from(bytes, b => alphabet[b % alphabet.length]).join('');
 }
-const MY_ID = readStr('sessionStorage', 'visa-id') || randomId(16, 'abcdefghijklmnopqrstuvwxyz0123456789');
+const newId = () => randomId(16, 'abcdefghijklmnopqrstuvwxyz0123456789');
+let MY_ID = readStr('sessionStorage', 'visa-id') || newId();
 writeStr('sessionStorage', 'visa-id', MY_ID);
+// A duplicated tab inherits sessionStorage, and two tabs with one id would be one player: a tab that gets an answer during
+// the first TAB_CHECK_MS takes a new id. A reload gets no answer, so it keeps its place in the game.
+let tabCheck = true;
+const tabs = window.BroadcastChannel ? new BroadcastChannel('visa-tabs') : null;
+if (tabs) {
+  tabs.onmessage = e => {
+    if (e.data === `who:${MY_ID}`) tabs.postMessage(`mine:${MY_ID}`);
+    else if (e.data === `mine:${MY_ID}` && tabCheck) { MY_ID = newId(); writeStr('sessionStorage', 'visa-id', MY_ID); }
+  };
+  tabs.postMessage(`who:${MY_ID}`);
+}
 
 // ---- helpers ----
 const t = (key, ...args) => { const v = T[P.lang][key]; return typeof v === 'function' ? v(...args) : v; };
@@ -235,11 +248,12 @@ function h(tag, attrs, ...kids) {
 const norm = s => s.normalize('NFD').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
 const cleanName = x => String(x ?? '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, NAME_MAX);
 const clock = ms => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; };
-const minutes = sec => sec < 120 ? `${sec} s` : `${Math.round(sec / 60)} min`;
+const minutes = sec => sec < 120 ? `${Math.round(sec)} s` : `${Math.round(sec / 60)} min`;
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, Number(x) || 0));
 const parseCode = s => { const c = String(s || '').replace(/^#/, '').toUpperCase(); return /^[A-HJ-NP-Z2-9]{4}$/.test(c) ? c : null; };
 const quizName = q => q.title[P.lang];
 const rank = (a, b) => b.n - a.n || a.t - b.t;   // more correct first, then the earlier last answer
+const h2hKey = name => `n:${name.toLowerCase()}`;   // the prefix keeps nicknames like __proto__ off Object.prototype
 const validSettings = s => s && QUIZ.has(s.quiz) && MODES.includes(s.mode) && MULS.includes(s.mul);
 
 function buildItems(q) {
@@ -301,8 +315,9 @@ async function joinRoom(code, created) {
     if (R?.ch !== ch) return;
     if (status === 'SUBSCRIBED') {
       R.connected = true;
+      R.tracked = false;
       clearTimeout(R.trackT);
-      R.trackT = setTimeout(() => track(ch), 350);   // lets presence_state arrive first, see track()
+      R.trackT = setTimeout(() => track(ch), TRACK_WAIT_MS);   // onPresence normally gets there first, see track()
       send('hello', {});
     } else {
       R.connected = false;
@@ -315,7 +330,9 @@ async function joinRoom(code, created) {
 // The host is the earliest `joined`. A newcomer always ranks after everyone present, so a device with a wrong clock can't
 // take over the room; the value is kept for the tab so that a reload keeps the rank.
 function track(ch) {
-  if (R?.ch !== ch) return;
+  if (R?.ch !== ch || R.tracked) return;
+  R.tracked = true;
+  clearTimeout(R.trackT);
   const key = `visa-joined-${R.code}`;
   let joined = Number(readStr('sessionStorage', key)) || 0;
   if (!joined) {
@@ -329,12 +346,14 @@ function track(ch) {
 function leaveRoom() {
   if (!R) return;
   clearTimeout(R.trackT); clearTimeout(R.aloneT);
+  writeStr('sessionStorage', `visa-joined-${R.code}`, '');   // only a reload keeps the rank, leaving gives it up
   if (R.ch) sb.removeChannel(R.ch);
   R = null; G = null; V = {};
 }
 
 function onPresence() {
   if (!R?.ch) return;
+  if (R.connected && !R.tracked) track(R.ch);
   const list = Object.entries(R.ch.presenceState()).map(([id, metas]) => {
     const m = metas[metas.length - 1] || {};
     return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0 };
@@ -346,7 +365,13 @@ function onPresence() {
   if (list.length > 1) R.alone = false;
   paintPlayers();
   paintSettings();
-  if (G && !G.over) { paintScores(); maybeFinish(); }
+  paintActions();
+  if (G && !G.over) {
+    const here = presentIds(), now = performance.now();
+    for (const p of G.players) { if (here.has(p.id)) G.absent.delete(p.id); else if (!G.absent.has(p.id)) G.absent.set(p.id, now); }
+    paintScores();
+    maybeFinish();
+  }
 }
 
 function route() {
@@ -365,9 +390,9 @@ function route() {
 function onMessage(m) {
   if (!R || !m || typeof m.from !== 'string' || m.from === MY_ID) return;
   switch (m.t) {
-    case 'hello': if (isHost()) send('snap', snapshot()); return;
+    case 'hello': if (isHost() || m.from === hostId()) send('snap', snapshot()); return;
     case 'settings': if (fromHost(m)) applySettings(m.s); return;
-    case 'snap': if (fromHost(m)) applySnapshot(m); return;
+    case 'snap': if (fromHost(m) || !R.synced) applySnapshot(m); return;
     case 'start': if (fromHost(m)) beginGame(m); return;
     case 'chat': addChat(m.from, m.text); return;
   }
@@ -401,6 +426,7 @@ const presentIds = () => new Set(R.players.map(p => p.id));
 const claimList = () => [...G.claims].map(([i, c]) => [i, c.by, c.t]);
 
 function applySnapshot(m) {
+  R.synced = true;
   applySettings(m.s);
   const g = m.game;
   if (!g) return;
@@ -439,7 +465,7 @@ function beginGame(m) {
     startAt: now - elapsed, endAt: now - elapsed + durMs,
     found: new Map(players.map(p => [p.id, { set: new Set(), t: 0 }])), claims: new Map(), pending: new Map(), done: new Set(),
     state: 'count', over: false, finishing: false, out: !players.some(p => p.id === MY_ID), spectator: !players.some(p => p.id === MY_ID),
-    results: null, cells: [], lastRepair: now, sentSize: 0, sentAt: now, holdT: 0, flashT: 0, confirmT: 0,
+    results: null, cells: [], absent: new Map(), lastRepair: now, sentSize: 0, sentAt: now, holdT: 0, flashT: 0, confirmT: 0,
   };
   render();
 }
@@ -547,6 +573,7 @@ function giveUp() {
     return;
   }
   clearTimeout(G.confirmT);
+  clearTimeout(G.holdT);
   G.out = true;
   G.done.add(MY_ID);
   send('done', { seq: G.seq });
@@ -554,13 +581,13 @@ function giveUp() {
   maybeFinish();
 }
 
-// Host only. Ends early when someone has everything, every answer is claimed, or nobody present is still playing.
+// Host only. Ends early when someone has everything, every answer is claimed, or nobody is still playing.
 function maybeFinish() {
   if (!G || G.over || G.finishing || G.state === 'count' || !isHost()) return;
   const total = G.items.length;
   const complete = G.mode === 'race' ? G.claims.size === total : [...G.found.values()].some(r => r.set.size === total);
-  const here = presentIds();
-  const active = G.players.filter(p => here.has(p.id) && !G.done.has(p.id));
+  const now = performance.now();   // a reload or a network blip is not leaving: GONE_GRACE_MS before someone stops counting
+  const active = G.players.filter(p => !G.done.has(p.id) && now - (G.absent.get(p.id) ?? now) < GONE_GRACE_MS);
   if (complete || !active.length) finish(300);
 }
 
@@ -604,7 +631,7 @@ function record() {
   const me = G.results.find(r => r.id === MY_ID);
   for (const r of G.results) {
     if (r.id === MY_ID) continue;
-    const key = r.name.toLowerCase();
+    const key = h2hKey(r.name);
     const rec = P.h2h[key] || (P.h2h[key] = { name: r.name, w: 0, l: 0, d: 0 });
     rec.name = r.name;
     const order = rank(me, r);
@@ -628,7 +655,7 @@ function tick() {
   if (V.timer) { const left = G.endAt - now; V.timer.textContent = clock(left); V.timer.classList.toggle('low', left < 10000); }
   if (G.state === 'play') {
     for (const [i, p] of G.pending) if (now - p.sent > RETRY_MS) { p.sent = now; send('claim', { seq: G.seq, i, t2: p.at }); }
-    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(false); }
+    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(false); maybeFinish(); }
     if (now >= G.endAt) {
       G.state = 'wait';
       repair(true);
@@ -659,6 +686,8 @@ function startGame() {
   const msg = { seq: Date.now(), quiz: s.quiz, mode: s.mode, mul: s.mul, players: R.players.map(p => ({ id: p.id, name: p.name })), elapsed: -COUNTDOWN_MS };
   send('start', msg);
   beginGame(msg);
+  // Nothing else repairs a lost start: a guest without G would ignore the whole game.
+  for (const wait of [800, 2000]) setTimeout(() => { if (G?.seq === msg.seq && !G.over) send('snap', snapshot()); }, wait);
 }
 
 function setSettings(patch) {
@@ -915,7 +944,7 @@ function headline() {
 
 function renderResults() {
   const others = G.results.filter(r => r.id !== MY_ID);
-  const single = others.length === 1 && !G.spectator ? P.h2h[others[0].name.toLowerCase()] : null;
+  const single = others.length === 1 && !G.spectator ? P.h2h[h2hKey(others[0].name)] : null;
   const grid = buildGrid();
   app.replaceChildren(
     topBar(),
@@ -928,18 +957,30 @@ function renderResults() {
           h('td', { text: `${i + 1}.` }), h('td', {}, h('b', { text: r.name })),
           h('td', { text: `${r.n}/${G.items.length}` }), h('td', { text: `${t('lastAt')} ${clock(r.t)}` }))))),
         single && h('p', { class: 'muted', style: 'margin-top:10px', text: t('h2h', single.name, single.w, single.l, single.d) }),
-        h('div', { class: 'row', style: 'margin-top:14px' },
-          isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
-          h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { G = null; render(); } }))),
+        V.actions = h('div', { class: 'row', style: 'margin-top:14px' })),
       chatBox()),
     h('h2', { style: 'margin-top:22px', text: t('answers') }),
     grid,
     foot());
+  paintActions();
   paintChat();
 }
 
+// Its own paint: the host can change while the results are on screen.
+function paintActions() {
+  if (!V.actions) return;
+  V.actions.replaceChildren(...[
+    isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
+    h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { G = null; render(); } }),
+  ].filter(Boolean));
+}
+
 // ---- start ----
-fetch('/data/visa.json').then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then(d => {
+Promise.all([
+  fetch('/data/visa.json').then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }),
+  new Promise(done => setTimeout(done, TAB_CHECK_MS)),
+]).then(([d]) => {
+  tabCheck = false;
   DATA = d;
   for (const q of d.quizzes) QUIZ.set(q.id, q);
   setInterval(tick, 100);
