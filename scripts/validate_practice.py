@@ -222,10 +222,83 @@ def check_grades(tutka):
     return errors
 
 
+PAGE_LOGIC_TESTS = r"""
+const assert = require('node:assert/strict');
+// normalizeSave: a damaged save never leaves a wrong-typed part behind, unknown fields survive
+for (const bad of [{ scores: null }, { review: null }, { sims: 7 }, { ui: [] }, { history: [null, 3, { k: 1, at: 2 }, { k: 'a|b|1|_', at: NaN }] }]) {
+  const s = normalizeSave(Object.assign({ v: 1, scores: {}, review: {}, sims: {}, history: null, ui: {} }, bad));
+  for (const f of ['scores', 'review', 'sims', 'ui']) assert.ok(plainObj(s[f]), f);
+  assert.deepEqual(s.history, []);
+}
+let s = normalizeSave({ scores: { 'a|b|1|_': { p: 2, max: 6, at: 5 }, 'x': null, 'c|d|2|a': { p: 1, max: 2, at: 3 } }, review: { r: 'x' }, sims: {}, ui: { holdUser: 'u' }, extra: 1 });
+assert.deepEqual(Object.keys(s.scores), ['a|b|1|_', 'c|d|2|a']);
+assert.deepEqual(s.history.map(e => e.at), [3, 5]);          // seeded from scores, oldest first
+assert.deepEqual(s.review, {});
+assert.equal(s.ui.holdUser, 'u'); assert.equal(s.extra, 1);
+s = normalizeSave({ scores: {}, review: {}, sims: {}, ui: {}, history: [{ k: 'a|b|1|_', p: 1, max: 2, at: 9 }] });
+assert.equal(s.history.length, 1);
+// monthLabels: a name needs three week columns; 10.11.2026 began 27.7. (heinä, 1 column) and ran into elo
+const months = [6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10];
+assert.deepEqual(monthLabels(months), [{ w: 1, month: 7 }, { w: 6, month: 8 }, { w: 10, month: 9 }, { w: 14, month: 10 }]);
+assert.deepEqual(monthLabels([6, 6, 6, 7, 7]).map(m => m.w), [0, 3]);
+assert.deepEqual(monthLabels([6, 6, 7, 7, 7]).map(m => m.w), [2]);
+assert.deepEqual(monthLabels([3, 3, 3]), [{ w: 0, month: 3 }]);
+// countedTasks: at most `answer` tasks per section, the first picked ones in exam order
+const sections = [{ answer: 4, tasks: ['1', '2', '3', '4'] }, { answer: 3, tasks: ['5', '6', '7', '8', '9'] }, { answer: 3, tasks: ['10', '11', '12', '13'] }];
+assert.deepEqual([...countedTasks(sections, new Set(['1', '9', '8', '7', '6', '5', '13']))], ['1', '5', '6', '7', '13']);
+assert.deepEqual([...countedTasks(sections, new Set())], []);
+assert.deepEqual([...countedTasks(sections, new Set(['2', '3']))], ['2', '3']);
+// pikaLive: the quick test lasts one sitting (2 h); saves without a timestamp are over
+assert.equal(pikaLive({ at: 1000 }, 1000 + 2 * 36e5 - 1), true);
+assert.equal(pikaLive({ at: 1000 }, 1000 + 2 * 36e5), false);
+assert.equal(pikaLive({ a: 'x' }, Date.now()), false);
+assert.equal(pikaLive(undefined, 0), false);
+"""
+
+
+def check_page_logic():
+    """Runs the pure helpers of yo-harjoittelu.html (between the pure:start and pure:end comments) in node against the
+    cases above. Without node (not needed for the content checks) the test is skipped with a note."""
+    import shutil, subprocess
+    html = (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8")
+    m = re.search(r"/\* pure:start.*?\*/(.*?)/\* pure:end \*/", html, re.S)
+    if not m:
+        return ["yo-harjoittelu.html: pure:start … pure:end -lohkoa ei löytynyt (check_page_logic)"]
+    node = shutil.which("node")
+    if not node:
+        print("check_page_logic: node puuttuu, sivun logiikkatestit ohitettiin")
+        return []
+    r = subprocess.run([node, "-e", m.group(1) + PAGE_LOGIC_TESTS], capture_output=True, text=True, timeout=60)
+    if r.returncode:
+        lines = [x for x in r.stderr.splitlines() if x.strip()]
+        detail = next((x for x in lines if "Error" in x), lines[0] if lines else "tuntematon virhe")
+        return [f"yo-harjoittelu.html: logiikkatesti epäonnistui: {detail.strip()[:300]}"]
+    return []
+
+
+def check_page_wipe():
+    """"Tyhjennä tämä selain" must cover every storage the page writes: a new localStorage/sessionStorage key or a new
+    IndexedDB database has to be added to wipeBrowser() (and to this list) in the same change."""
+    html = (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8")
+    errors = []
+    known = {"LS", "AUTH_KEY", "k"}
+    for m in re.finditer(r"(?:localStorage|sessionStorage)\.(?:setItem|getItem|removeItem)\(\s*([^,)]+)", html):
+        arg = m.group(1).strip()
+        if arg not in known and arg != "'yo-practice'":
+            errors.append(f"yo-harjoittelu.html: tuntematon tallennusavain {arg}: lisää se wipeBrowser()-funktioon ja check_page_wipe-listaan")
+    dbs = set(re.findall(r"indexedDB\.(?:open|deleteDatabase)\('([^']+)'", html))
+    if dbs != {"yo-practice"}:
+        errors.append(f"yo-harjoittelu.html: IndexedDB-kannat {sorted(dbs)}: wipeBrowser() tyhjentää vain kannan yo-practice")
+    for needle in ("if (wiped) return; dayMemo = null;", "const run = (mode, fn) => wiped ? Promise.resolve()", "await idb.wipe();"):
+        if needle not in html:
+            errors.append(f"yo-harjoittelu.html: tyhjennyksen suoja puuttuu: {needle}")
+    return errors
+
+
 def main(args):
     tutka = tutka_data()
     files = [pathlib.Path(a).resolve() for a in args] or sorted((ROOT / "data" / "practice").glob("*/*.json"))
-    errors = check_exams(tutka) + check_grades(tutka) + [e for f in files for e in validate(f, tutka)]
+    errors = check_exams(tutka) + check_grades(tutka) + check_page_logic() + check_page_wipe() + [e for f in files for e in validate(f, tutka)]
     for e in errors:
         print(e)
     print(f"{len(files)} tiedostoa, {len(errors)} virhettä")
