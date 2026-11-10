@@ -98,6 +98,7 @@
   .calib .cal-cm input { width: 82px; padding: 7px 8px; }
   .calib .cal-status { margin: 8px 0 0; font: 12px var(--mono); color: var(--chalk); }
   .calib .cal-status.ok { color: var(--lane); }
+  .calib .cal-status.bad { color: #ff8a70; }
   .loupe { display: flex; gap: 12px; align-items: center; margin-top: 10px; }
   .loupe canvas { width: 140px; height: 140px; border-radius: 12px; border: 1px solid var(--rail); background: #000; image-rendering: pixelated; flex: none; }
   .nudge { display: grid; grid-template-columns: repeat(3, 40px); gap: 4px; }
@@ -269,7 +270,7 @@
   dialog::backdrop { background: rgba(0, 0, 0, .65); }
   dialog h2 { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .04em; margin: 0 0 14px; font-size: 22px; }
   dialog .field { margin-bottom: 12px; }
-  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; }
+  .toggle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; min-height: 44px; cursor: pointer; }
   .toggle input { width: 22px; height: 22px; accent-color: var(--tartan); }
 
   .toast { position: fixed; left: 50%; bottom: calc(18px + var(--tabbar) + var(--safe-b)); transform: translateX(-50%); z-index: 150;   /* above the remote display */
@@ -362,6 +363,20 @@
   .cmp td.d { font-family: var(--mono); font-size: 13px; color: var(--chalk); }
   .cmp thead th { border-top: 0; }
   .err { color: #ff8a70; }
+  /* first-use tip: a row in the page instead of a toast over the main button */
+  .tip-row { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; padding: 4px 4px 4px 12px; border: 1px solid var(--rail); border-radius: 12px;
+    background: var(--infield); color: var(--chalk); font-size: 13px; }
+  .tip-row .tip-open { flex: 1; min-height: 44px; border: 0; background: transparent; text-align: left; padding: 6px 0; color: var(--chalk); }
+  .tip-row .tip-open b { color: var(--lane); }
+  .tip-row .tip-x { width: 44px; height: 44px; flex: none; border: 0; background: transparent; color: var(--chalk); font-size: 18px; }
+  .hist li.more { display: block; text-align: center; }
+  /* depth: a faint light from above on every card, a glow on the record row */
+  .card { background: linear-gradient(180deg, rgba(255, 255, 255, .035), rgba(255, 255, 255, 0) 64px), var(--infield);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 10px 24px -18px rgba(0, 0, 0, .7); }
+  /* phone: iOS Safari zooms the page on focus when a field is under 16 px */
+  @media (pointer: coarse) {
+    select, input[type="number"], input[type="text"], .note-edit input, .calib .cal-cm input, .goal-row input { font-size: 16px; }
+  }
   [hidden] { display: none !important; }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -403,6 +418,10 @@
 <main class="wrap">
   <!-- LIVE -->
   <section id="tab-live">
+    <div class="tip-row" id="statureTip" hidden>
+      <button type="button" class="tip-open" id="statureTipOpen"><b>Aseta pituutesi</b> – saat myös lantion nousun ja painovoimatarkistuksen.</button>
+      <button type="button" class="tip-x" id="statureTipClose" aria-label="Sulje vinkki">×</button>
+    </div>
     <div class="stage" id="liveStage">
       <video id="cam" playsinline muted autoplay></video>
       <canvas id="camOverlay"></canvas>
@@ -576,7 +595,7 @@
         <li><b>Kyykkyhyppy</b> (SJ): pysähdy kyykkyyn noin 2 sekunniksi ja hyppää ilman vastaliikettä.</li>
         <li><b>Vauhdilla</b>: vauhdinotto ja hyppy. Kuvaa sivulta niin, että juokset kameran editse – ei kohti kameraa.</li>
       </ul>
-      <h3>Kosketuskorkeus – ylttyykö donkkiin?</h3>
+      <h3>Kosketuskorkeus – yltääkö käsi donkkiin?</h3>
       <ul>
         <li><b>Kuvaa sivulta</b>, puhelin vaakatasossa jalustalla noin 4–6 m päässä. Koko hyppy ja kurotus pitää näkyä.</li>
         <li><b>Kalibroi:</b> paina <i>Lattia</i> ja napauta lattiaa hyppypaikan kohdalla, paina <i>Viite</i> ja napauta kohtaa, jonka korkeuden tiedät – esimerkiksi renkaan yläreuna (305 cm). Hienosäädä suurennoksella. Viitteen pitää olla samassa tasossa kuin hyppy: kun hyppäät renkaalle, rengas on.</li>
@@ -617,8 +636,8 @@
       <option value="full">Tarkka (vaatii tehokkaamman laitteen)</option>
     </select>
   </label>
-  <div class="toggle"><span>Lue tulos ääneen</span><input type="checkbox" id="setSpeech"></div>
-  <div class="toggle"><span>Äänimerkki kun valmis</span><input type="checkbox" id="setBeep"></div>
+  <label class="toggle"><span>Lue tulos ääneen</span><input type="checkbox" id="setSpeech"></label>
+  <label class="toggle"><span>Äänimerkki kun valmis</span><input type="checkbox" id="setBeep"></label>
   <label class="field">Korin korkeus (cm) – kosketuskorkeuden vertailu
     <input type="number" id="setRim" min="150" max="400" step="1" inputmode="numeric">
   </label>
@@ -647,7 +666,7 @@ import {
   JumpDetector, findJumps, frameFeatures, quantile, FLAG_TEXT, P, DEFAULT_STATURE_CM, MIN_FLIGHT_S, MAX_FLIGHT_S,
   heightFromFlight, flightErrCm, slowdownFactor, isSaveable, INFO_FLAGS,
 } from './jump-analysis.js';
-import { measureReach, findReaches, measureDistances, DistanceTracker, REACH_FLAG_TEXT, DIST_FLAG_TEXT } from './reach-distance.js';
+import { measureReach, findReaches, measureDistances, DistanceTracker, REACH_FLAG_TEXT, DIST_FLAG_TEXT, verticalScale, floorScale } from './reach-distance.js';
 
 // ---------- state & storage ----------
 // Per-type behaviour lives here, so nothing else branches on type ids:
@@ -685,9 +704,21 @@ function loadStore() {
   try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
 }
 const stored = loadStore();
+/** A stored result the page can draw, or null. Lenient on purpose (unlike cleanRecord for imports): a real result is
+ *  never dropped for an odd field, only entries that would throw in the lists (null, no type, no value, no time). */
+function storedRecord(j) {
+  if (!j || typeof j !== 'object' || typeof j.id !== 'string' || !j.id) return null;
+  if (!TYPES.some(t => t.id === j.type) || typeof j.at !== 'string' || !Number.isFinite(Date.parse(j.at))) return null;
+  if (typeof j.cm !== 'number' || !Number.isFinite(j.cm)) return null;
+  if (!Array.isArray(j.flags)) j.flags = [];
+  if (j.tags != null && !Array.isArray(j.tags)) delete j.tags;
+  if (j.phases != null && !Array.isArray(j.phases)) delete j.phases;
+  if (j.note != null && typeof j.note !== 'string') delete j.note;
+  return j;
+}
 const db = {
   settings: { ...DEFAULTS, ...(stored.settings || {}) },
-  jumps: Array.isArray(stored.jumps) ? stored.jumps : [],
+  jumps: Array.isArray(stored.jumps) ? stored.jumps.map(storedRecord).filter(Boolean) : [],
   type: TYPES.some(t => t.id === stored.type) ? stored.type : 'cmj',
   // calibration points, normalised to the frame (0..1): cal[stage][kind] = {a, b, cm}
   cal: stored.cal && typeof stored.cal === 'object' ? stored.cal : {},
@@ -712,6 +743,8 @@ const C = {
 };
 const fmtWhen = at => new Date(at).toLocaleString('fi-FI', { dateStyle: 'short', timeStyle: 'short' });
 
+/** YYYY-MM-DD of the local day (file names): toISOString would give yesterday between midnight and 02–03 in Finland. */
+const localDay = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 let toastTimer;
 /** A short message; `action` = [label, fn] adds a button (e.g. Kumoa) that runs fn and closes it. */
 function toast(msg, ms = 3500, action = null) {
@@ -1245,8 +1278,22 @@ function removeJumps(pred) {
     save();
   };
 }
+// First-use tip (stature unlocks hip rise and the gravity check): a row in the page, gone once it is set, a result
+// is saved or it is closed. The dismissal is a per-browser convenience, so it lives outside the exported data.
+const TIP_KEY = 'hyppymittari.tip';
+function paintStatureTip() {
+  let closed = false;
+  try { closed = localStorage.getItem(TIP_KEY) === '1'; } catch { /* private mode */ }
+  $('statureTip').hidden = closed || !!db.settings.statureCm || db.jumps.length > 0;
+}
+$('statureTipOpen').addEventListener('click', () => $('settingsBtn').click());
+$('statureTipClose').addEventListener('click', () => {
+  try { localStorage.setItem(TIP_KEY, '1'); } catch { /* private mode */ }
+  $('statureTip').hidden = true;
+});
 /** Everything that shows saved results redraws from here (session, series, remote panel, visible history). */
 function jumpsChanged() {
+  paintStatureTip();
   renderSession();
   paintSeries();
   if (currentTab === 'history') renderHistory();
@@ -1303,12 +1350,25 @@ function showTab(tab) {
   if (currentTab === 'live') { setRemote(false); stopLive(); }
   if (currentTab === 'video') stopReplay(false);
   currentTab = tab;
-  document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === tab)));
+  tabBtns.forEach(b => { b.setAttribute('aria-selected', String(b.dataset.tab === tab)); b.tabIndex = b.dataset.tab === tab ? 0 : -1; });
   for (const t of ['live', 'video', 'history', 'help']) $('tab-' + t).hidden = t !== tab;
   $('typeBar').hidden = tab === 'help';
   if (tab === 'history') renderHistory();
 }
-document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => showTab(b.dataset.tab)));
+// real tabs for the keyboard: panels are labelled by their tab, one tab stop, arrows / Home / End move and select
+const tabBtns = [...document.querySelectorAll('.tabs button')];
+tabBtns.forEach((b, i) => {
+  const panel = $('tab-' + b.dataset.tab);
+  b.id = 'tabbtn-' + b.dataset.tab; b.setAttribute('aria-controls', panel.id); b.tabIndex = b.dataset.tab === currentTab ? 0 : -1;
+  panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', b.id);
+  b.addEventListener('click', () => showTab(b.dataset.tab));
+  b.addEventListener('keydown', ev => {
+    const n = tabBtns.length, to = { ArrowRight: (i + 1) % n, ArrowLeft: (i + n - 1) % n, Home: 0, End: n - 1 }[ev.key];
+    if (to == null) return;
+    ev.preventDefault();
+    showTab(tabBtns[to].dataset.tab); tabBtns[to].focus();
+  });
+});
 
 // Last chosen type per group, so switching groups back and forth keeps the variant.
 const lastOfGroup = {};
@@ -1357,6 +1417,13 @@ function calPx(stage, kind) {
   return c.a && c.b && c.cm > 0 && W ? { a: [c.a[0] * W, c.a[1] * H], b: [c.b[0] * W, c.b[1] * H], cm: c.cm } : null;
 }
 const mirrored = stage => stage === 'live' && $('liveStage').classList.contains('mirror');
+/** Why the analysis would reject a complete calibration (see verticalScale / floorScale). */
+function calProblem(kind, px) {
+  if (kind !== 'reach') return 'pisteet ovat liian lähellä toisiaan – merkitse ne kauemmas.';
+  return px.a[1] - px.b[1] <= 0
+    ? 'viite on lattiapisteen alapuolella – merkitse Lattia ja Viite uudelleen (viite ylemmäs).'
+    : 'viite on liian lähellä lattiapistettä – merkitse se korkeammalle.';
+}
 
 function renderCalib(stage) {
   const kind = kindOf(db.type), box = $(stage + 'Calib');
@@ -1369,6 +1436,8 @@ function renderCalib(stage) {
   const names = kind === 'reach' ? ['Lattia', 'Viite'] : ['Piste A', 'Piste B'];
   hint.textContent = ui.pending ? `Napauta kuvasta: ${names[ui.pending === 'a' ? 0 : 1].toLowerCase()}` : '';
   const px = calPx(stage, kind);
+  // the same scale the analysis uses: it rejects points the wrong way round or too close, so the status must too
+  const scale = px && (kind === 'reach' ? verticalScale(px) : floorScale(px));
   box.innerHTML = `
     <h2>Kalibrointi</h2>
     <p class="small muted">${kind === 'reach'
@@ -1384,8 +1453,9 @@ function renderCalib(stage) {
       <span></span><button data-nudge="0,-1" aria-label="Ylös">↑</button><span></span>
       <button data-nudge="-1,0" aria-label="Vasemmalle">←</button><button data-nudge="0,1" aria-label="Alas">↓</button><button data-nudge="1,0" aria-label="Oikealle">→</button>
       <button class="done" data-nudge="done">Valmis</button></div></div>` : ''}
-    <p class="cal-status${px ? ' ok' : ''}">${px
-      ? `✓ Kalibroitu: ${fmt(+c.cm, 0)} cm = ${Math.round(Math.hypot(px.b[0] - px.a[0], px.b[1] - px.a[1]))} px`
+    <p class="cal-status${scale ? ' ok' : px ? ' bad' : ''}">${scale
+      ? `✓ Kalibroitu: ${fmt(+c.cm, 0)} cm = ${Math.round(scale.refPx)} px${kind === 'reach' ? ' pystysuunnassa' : ''}`
+      : px ? `Kalibrointi ei kelpaa: ${calProblem(kind, px)} Siihen asti tulos arvioidaan pituudestasi (±5 %).`
       : 'Ei kalibroitu – tulos arvioidaan pituudestasi (±5 %).'}</p>`;
   drawLoupe(stage);
 }
@@ -1546,6 +1616,8 @@ async function openCamera() {
   }
   if (cancelled()) { stream.getTracks().forEach(t => t.stop()); return false; }
   live.stream = stream;
+  // the track ends when the camera is taken away (unplugged, another app, iOS interruption): say so instead of a frozen picture
+  stream.getVideoTracks()[0]?.addEventListener('ended', () => { if (live.stream === stream) cameraLost(); });
   cam.srcObject = stream;
   try { await cam.play(); } catch { /* autoplay attr covers it */ }
   if (!cam.videoWidth) {
@@ -1591,8 +1663,19 @@ function stopLive(endSeries = true) {
 async function requestWakeLock() {
   try { live.wakeLock = await navigator.wakeLock?.request('screen'); } catch { /* not supported / denied */ }
 }
+/** The camera stopped on its own: back to the start screen with the reason (ends a running series like Pysäytä does). */
+function cameraLost() {
+  if (!live.running) return;
+  stopLive();
+  $('liveEmptyText').innerHTML = '<span class="err">Kamerayhteys katkesi.</span> Käynnistä kamera uudelleen.';
+}
 document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible' && live.running) requestWakeLock();
+  if (document.visibilityState !== 'visible' || !live.running) return;
+  requestWakeLock();
+  const stream = live.stream, track = stream?.getVideoTracks()[0];
+  if (!track || track.readyState === 'ended') { cameraLost(); return; }
+  // a track that stays muted after the page is back (iOS: call, another camera app) will not deliver frames again
+  if (track.muted) setTimeout(() => { if (live.stream === stream && track.muted && document.visibilityState === 'visible') cameraLost(); }, 2000);
 });
 
 function sizeStage(stage, canvas, w, h) {
@@ -1685,7 +1768,7 @@ function showLiveResult(r) {
   big.querySelector('.s').textContent = (pr ? 'Uusi ennätys! · ' : '') + subLine(r) + (r.flags.length ? ' · tarkista huomautus' : '');
   big.hidden = false; big.style.opacity = 1;
   clearTimeout(live.bigTimer);
-  live.bigTimer = setTimeout(() => { big.style.opacity = 0; setTimeout(() => (big.hidden = true), 400); }, 6000);
+  live.bigTimer = setTimeout(() => { big.style.opacity = 0; live.bigTimer = setTimeout(() => (big.hidden = true), 400); }, 6000);
   $('liveResult').replaceChildren(resultCardFor(r, { extra: saveable ? `<button class="btn sm" data-share="${rec.id}">Jaa</button><button class="btn sm ghost" data-del="${rec.id}">Hylkää</button>` : '' }));
   jumpsChanged();
 }
@@ -1929,6 +2012,9 @@ $('vidFile').addEventListener('change', async () => {
     await new Promise((res, rej) => { vid.onloadeddata = res; vid.onerror = () => rej(vid.error); });
   } catch {
     $('vidStatus').innerHTML = '<span class="err">Videota ei voitu avata tässä selaimessa.</span>';
+    // nothing to analyse: the button of an earlier clip must not stay live, and no empty player
+    $('vidAnalyze').disabled = true; $('vidPlayer').hidden = true;
+    vid.removeAttribute('src'); URL.revokeObjectURL(vs.url); vs.url = null;
     return;
   }
   sizeStage($('vidStage'), vidOverlay, vid.videoWidth, vid.videoHeight);
@@ -2414,7 +2500,13 @@ function renderHistory() {
   $('cmpBtn').setAttribute('aria-pressed', String(!!cmp));
   $('cmpBtn').textContent = cmp ? 'Lopeta vertailu' : 'Vertaa kahta';
   const pickOf = j => (!cmp ? null : cmp[0] === j.id ? 'A' : cmp[1] === j.id ? 'B' : '');
-  $('histList').innerHTML = js.length ? js.slice().reverse().map(j => jumpRow(j, { best: j.id === bestId, share: true, pick: pickOf(j) })).join('') : '<li class="muted">Ei vielä tuloksia.</li>';
+  // newest first; a long list starts with the newest HIST_FIRST rows (plus any picked for the comparison)
+  const all = js.slice().reverse(), cut = !histAll && all.length > HIST_FIRST + 5;
+  const shown = cut ? all.filter((j, i) => i < HIST_FIRST || (cmp && cmp.includes(j.id))) : all;
+  $('histList').innerHTML = js.length
+    ? shown.map(j => jumpRow(j, { best: j.id === bestId, share: true, pick: pickOf(j) })).join('')
+      + (cut ? `<li class="more"><button type="button" class="btn sm" id="histMore">Näytä kaikki (${all.length})</button></li>` : '')
+    : '<li class="muted">Ei vielä tuloksia.</li>';
   renderCompare(type, js);
   paintStore();
 }
@@ -2447,6 +2539,12 @@ function renderCompare(type, js) {
     ${rows.map(([k, va, vb, d]) => `<tr><th>${k}</th><td>${esc(va)}</td><td>${esc(vb)}</td><td class="d">${esc(d)}</td></tr>`).join('')}</tbody></table>`;
 }
 $('cmpBtn').addEventListener('click', () => { cmp = cmp ? null : []; renderHistory(); });
+// sane goals per group, in cm: a typo or the wrong unit (248 in a metre field) would flatten the trend chart
+const GOAL_CM = { vert: [5, 150], reach: [150, 400], dist: [50, 2500] };
+const goalOk = (type, cm) => { const [lo, hi] = GOAL_CM[kindOf(type)] || [0, Infinity]; return cm >= lo && cm <= hi; };
+const HIST_FIRST = 20;
+let histAll = false;
+$('histList').addEventListener('click', ev => { if (ev.target.id === 'histMore') { histAll = true; renderHistory(); } });
 $('trendCard').addEventListener('click', ev => {
   const r = ev.target.closest('[data-range]')?.dataset.range;
   if (r != null) { histRange = +r; renderHistory(); return; }
@@ -2455,7 +2553,12 @@ $('trendCard').addEventListener('click', ev => {
   if (id === 'goalSet') {
     const v = parseFloat(String($('goalIn').value).replace(',', '.'));
     if (!(v > 0)) { toast('Anna tavoite lukuna.'); return; }
-    db.settings.goals[type] = Math.round(v / g.scale * 10) / 10;
+    const cm = Math.round(v / g.scale * 10) / 10, [lo, hi] = GOAL_CM[g.id] || [0, Infinity];
+    if (cm < lo || cm > hi) {
+      toast(`Tavoite ${fmt(lo * g.scale, Number.isInteger(lo * g.scale) ? 0 : 1)}–${fmt(hi * g.scale, 0)} ${g.unit} – tarkista yksikkö (${g.unit}).`, 5000);
+      return;
+    }
+    db.settings.goals[type] = cm;
   } else if (id === 'goalClear') delete db.settings.goals[type];
   else if (id === 'goalDunk') db.settings.goals[type] = db.settings.rimCm + 15;
   else return;
@@ -2476,7 +2579,7 @@ $('exportCsv').addEventListener('click', () => {
     .concat(db.jumps.map(j => [j.at, typeName(j.type), n(j.cm), (j.phases || []).map(n).join(' + '), j.ms ?? '', n(j.err), n(j.hipCm),
       n(j.jumpCm), j.fps, j.src, j.flags.join(' '), (j.tags || []).join(' '), asText(j.note || '')]));
   const csv = '﻿' + rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(';')).join('\n');
-  download(new Blob([csv], { type: 'text/csv;charset=utf-8' }), `hypyt-${new Date().toISOString().slice(0, 10)}.csv`);
+  download(new Blob([csv], { type: 'text/csv;charset=utf-8' }), `hypyt-${localDay(new Date())}.csv`);
 });
 function download(blob, name) {
   const a = document.createElement('a');
@@ -2508,7 +2611,7 @@ async function paintStore() {
 $('exportJson').addEventListener('click', () => {
   askPersist();
   const data = { app: 'hyppymittari', version: 1, exportedAt: new Date().toISOString(), jumps: db.jumps, goals: db.settings.goals };
-  download(new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' }), `hyppymittari-${new Date().toISOString().slice(0, 10)}.json`);
+  download(new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' }), `hyppymittari-${localDay(new Date())}.json`);
   db.settings.lastBackup = data.exportedAt; save(); paintStore();
 });
 const numOrNull = x => (x == null || x === '' || !Number.isFinite(+x) ? null : +x);
@@ -2545,7 +2648,7 @@ $('importJson').addEventListener('change', async () => {
       if (!rec) bad++; else if (have.has(rec.id)) dup++; else { db.jumps.push(rec); have.add(rec.id); added++; }
     }
     for (const [type, v] of Object.entries(data.goals || {})) {
-      if (TYPES.some(t => t.id === type) && numOrNull(v) > 0 && !db.settings.goals[type]) db.settings.goals[type] = +v;
+      if (TYPES.some(t => t.id === type) && numOrNull(v) > 0 && goalOk(type, +v) && !db.settings.goals[type]) db.settings.goals[type] = +v;
     }
     save(); renderHistory();
     toast(`Tuotu ${added} ${added === 1 ? 'tulos' : 'tulosta'}${dup ? `, ${dup} oli jo tallessa` : ''}${bad ? `, ${bad} virheellistä ohitettiin` : ''}.`, 6000);
@@ -2624,7 +2727,7 @@ async function shareImage(rec, lm = null, W = vid.videoWidth, H = vid.videoHeigh
   // and it encodes several times faster than PNG on a phone.
   const b64 = cv.toDataURL('image/jpeg', 0.92).split(',')[1];
   const bytes = Uint8Array.fromBase64 ? Uint8Array.fromBase64(b64) : Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-  const name = `hyppy-${rec.at.slice(0, 10)}.jpg`, blob = new Blob([bytes], { type: 'image/jpeg' });
+  const name = `hyppy-${localDay(new Date(rec.at))}.jpg`, blob = new Blob([bytes], { type: 'image/jpeg' });
   const file = new File([blob], name, { type: 'image/jpeg' });
   if (navigator.canShare?.({ files: [file] })) {
     try { await navigator.share({ files: [file], title: 'Hyppymittari' }); return; }
@@ -2645,16 +2748,21 @@ $('settingsBtn').addEventListener('click', () => {
 });
 $('settingsClose').addEventListener('click', () => $('settings').close());
 $('settings').addEventListener('close', () => {
-  const s = parseInt($('setStature').value, 10);
+  // an empty field clears the stature on purpose; a typo (95, 1.82) keeps the old value and says so
+  const sRaw = $('setStature').value.trim(), s = Math.round(parseFloat(sRaw.replace(',', '.')));
+  const sOk = s >= 100 && s <= 230, rimRaw = $('setRim').value.trim(), rimOk = +rimRaw >= 150 && +rimRaw <= 400;
+  const bad = [sRaw && !sOk ? 'pituus 100–230 cm' : '', rimRaw && !rimOk ? 'korin korkeus 150–400 cm' : ''].filter(Boolean);
+  if (bad.length) toast(`Ei tallennettu: ${bad.join(', ')}. Aiempi arvo säilyi.`, 5000);
   const modelChanged = $('setModel').value !== db.settings.liveModel;
   Object.assign(db.settings, {
-    statureCm: s >= 100 && s <= 230 ? s : null,
+    statureCm: !sRaw ? null : sOk ? s : db.settings.statureCm,
     liveModel: $('setModel').value,
     speech: $('setSpeech').checked,
     beep: $('setBeep').checked,
-    rimCm: +$('setRim').value >= 150 && +$('setRim').value <= 400 ? +$('setRim').value : db.settings.rimCm,
+    rimCm: rimOk ? +rimRaw : db.settings.rimCm,
   });
   save();
+  paintStatureTip();
   if (live.running) {
     if (modelChanged) { stopLive(false); startLive(); } else live.det = newDetector();
   }
@@ -2664,9 +2772,7 @@ $('settings').addEventListener('close', () => {
 renderTypes();
 renderCalib('live'); renderCalib('video'); renderEmpty();
 $('manualRow').hidden = $('manualOut').hidden = kindOf(db.type) !== 'vert';
-if (!db.settings.statureCm && !db.jumps.length) {
-  setTimeout(() => toast('Vinkki: aseta pituutesi asetuksista (⚙), niin saat myös lantion nousun ja painovoimatarkistuksen.', 6000), 800);
-}
+paintStatureTip();
 paintSeries();
 // Offline app (erilliset-8): sw.js caches the page, the analysis modules and MediaPipe. On koirosvg.com the page is
 // /hyppymittari (no trailing slash), outside sw.js's default scope /hyppymittari/, so the scope is the page path itself;

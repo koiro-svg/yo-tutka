@@ -19,6 +19,9 @@ const NET_WAIT = 3000;   // a weak signal at the track: after this the cached ap
 // A cached copy must not carry redirect info: a navigation can't be answered with a "redirected" response.
 const plain = res => new Response(res.body, { status: res.status, statusText: res.statusText, headers: res.headers });
 const genuine = (res, type) => res.ok && !res.redirected && res.type === 'basic' && (res.headers.get('content-type') || '').includes(type);
+// vendor/, models/, manifest, icon: stored for good, so never a captive portal's login page (HTML, 200) or a redirect.
+// Only text/html is refused: the host's content type for .task / .wasm is not ours to rely on.
+const storable = res => res.ok && !res.redirected && res.type === 'basic' && !(res.headers.get('content-type') || '').toLowerCase().startsWith('text/html');
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // Which app generation each page (client) was served from. In memory only: if the worker restarts between a page
@@ -47,7 +50,11 @@ async function fetchApp(pageUrl) {
 }
 
 self.addEventListener('install', e => e.waitUntil((async () => {
-  await (await caches.open(CORE)).addAll(CORE_FILES);
+  // like addAll (default HTTP cache, all or nothing), but every answer is checked: a bad one fails the install
+  const core = await Promise.all(CORE_FILES.map(u => fetch(u)));
+  if (!core.every(storable)) throw new Error('core file is not a genuine answer');
+  const cache = await caches.open(CORE);
+  await Promise.all(core.map((res, i) => cache.put(CORE_FILES[i], res)));
   await fetchApp(self.registration.scope);   // best effort: the first navigation tries again
   await self.skipWaiting();
 })()));
@@ -91,6 +98,6 @@ async function cacheFirst(req) {
   const cache = await caches.open(CORE), hit = await cache.match(req);
   if (hit) return hit;
   const res = await fetch(req);
-  if (res.ok) cache.put(req, res.clone());
+  if (storable(res)) cache.put(req, res.clone());
   return res;
 }
