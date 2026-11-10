@@ -2,6 +2,7 @@
 
 Jokainen visapaketti on tiedosto `data/visa/<paketti>.json`, muodossa `{"quizzes":[…]}`. Tarkistus: `python3 scripts/validate_visa.py --draft`
 (`--draft` sallii paketin, jota ei vielä ole `data/visa.json`:n `packs`-listassa).
+Sama sisältö ei saa olla kahdessa visassa: validaattori hylkää visan, jonka kohteet (ensimmäiset suomenkieliset vastaukset, monivalinnassa kysymykset) ja muoto ovat samat kuin jollain toisella, vaikka otsikko tai paketti olisi eri. Tarkista ennen uutta visaa, ettei aihe ole jo toisessa paketissa.
 
 ## Alkuperäisyys (ehdoton)
 - Aiheet ja listat tehdään omasta päästä ja yleisistä faktoista. **Älä avaa äläkä käytä mallina muita visasivustoja** (JetPunk, Sporcle ym.), älä kopioi

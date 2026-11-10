@@ -6,6 +6,17 @@
 <title>Visakaksintaisto · koirosvg.com</title>
 <meta name="description" content="Tietovisoja kaveria vastaan reaaliajassa: kirjoita maat, pääkaupungit ja muut listat ennen kuin aika loppuu tai kaveri ehtii ensin.">
 <link rel="canonical" href="https://koirosvg.com/visa">
+<meta name="theme-color" content="#081427">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://koirosvg.com/visa">
+<meta property="og:title" content="Visakaksintaisto">
+<meta property="og:description" content="Kirjoita maat, pääkaupungit ja muut listat kaveria vastaan samaan aikaan. Ei tiliä: luo huone ja lähetä linkki.">
+<meta property="og:image" content="https://koirosvg.com/img/og-visa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://koirosvg.com/img/og-visa.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
    scripts/check_tokens.py (run by the Vercel build) fails when a page's copy differs: edit this file, then run
@@ -63,7 +74,8 @@
 [data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
 [data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
 [data-page="tietosuoja"]{--kt-tone:#5CE1C6}
-@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
 html[data-page] body{background:
     linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
     linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
@@ -75,6 +87,9 @@ html[data-page] body{background:
 .kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
 .kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
 .kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
 /* /koiro-tokens */
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-body)}
 main{max-width:1120px;margin:0 auto;padding:18px 16px 64px;overflow-wrap:anywhere}
@@ -164,6 +179,43 @@ a{color:var(--accent)}
 .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:8px;margin-top:16px}
 .opt{justify-content:center;padding:14px;font-size:16px}
 .opt:disabled{opacity:.4;cursor:default}
+.opt.right:disabled{opacity:1;background:var(--ok-soft);border-color:var(--ok);color:var(--ink)}
+.opt.wrong:disabled{opacity:1;background:var(--bad-soft);border-color:var(--bad);color:var(--ink)}
+/* Depth from the Tutka v2 tokens */
+.card{box-shadow:var(--kt-elev-1);background-image:var(--kt-sheen)}
+.bigcode{text-shadow:0 0 22px color-mix(in srgb,var(--accent) 45%,transparent)}
+.quiz[aria-pressed=true]{box-shadow:inset 3px 0 0 var(--accent)}
+.meter{height:6px;border-radius:3px}
+.meter i{border-radius:3px;box-shadow:0 0 8px color-mix(in srgb,var(--c) 60%,transparent)}
+.map svg{box-shadow:var(--kt-elev-1),inset 0 0 46px rgba(0,0,0,.4)}
+.map svg.zoom{border-color:var(--accent)}
+.mapname{margin-top:8px;min-height:21px}
+.winner.me{color:var(--c);text-shadow:0 0 26px color-mix(in srgb,var(--c) 40%,transparent)}
+.rank tr.first td{font-size:17px;padding-block:10px}
+.rank tr.first td:first-child{color:var(--warn);font-weight:700}
+/* The chosen quiz and the start button stay in reach under a long quiz list (the only sticky part of the lobby). */
+.startbar{position:sticky;bottom:0;z-index:4;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;margin:16px -16px -16px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--surface-2);border-top:1px solid var(--line-2);border-radius:0 0 var(--radius-l) var(--radius-l);box-shadow:0 -14px 24px -16px rgba(0,0,0,.8)}
+.pick{display:grid;gap:1px;min-width:0;flex:1 1 160px}
+.pick b{font-size:15px;line-height:1.3}
+.pick small{font:500 11px var(--font-mono);color:var(--ink-3)}
+.startbar .start{margin-top:0}
+@media (pointer:coarse){
+  .kt-btn,.kt-tab{min-height:44px}
+  .kt-btn.sm{padding-inline:14px}
+  .kt-input{font-size:16px;min-height:44px}
+  .crumb{padding-block:13px}
+  footer a{display:inline-block;padding-block:12px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .cell.hit{animation:hit .32s ease-out}
+  .map g.hit path,.map g.hit circle{animation:maphit .5s ease-out}
+  .timer.low{animation:low 1s ease-in-out infinite}
+  .winner{animation:rise .4s ease-out both}
+  @keyframes hit{0%{transform:scale(.94);box-shadow:0 0 0 0 var(--c)}60%{transform:scale(1.03);box-shadow:0 0 14px 0 color-mix(in srgb,var(--c) 55%,transparent)}100%{transform:none;box-shadow:none}}
+  @keyframes maphit{0%{fill:var(--ink)}100%{fill:var(--c)}}
+  @keyframes low{50%{opacity:.55}}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}}
+}
 footer{margin-top:28px;color:var(--ink-3);font-size:13px}
 </style>
 </head>
@@ -183,6 +235,7 @@ const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP 
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
 const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60, TOP_SHOWN = 20, MAP_RETRY_MS = 2000;
+const REVEAL_OK_MS = 700, REVEAL_WRONG_MS = 1500, REVEAL_SKIP_MS = 250, MAP_REACH_TOUCH = 22, MAP_REACH_MOUSE = 10, MAP_SMALL_PX = 28, MAP_DOT_PX = 5, MAP_ZOOM = 4, LIST_LIMIT_PHONE = 20;
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
@@ -209,6 +262,8 @@ const T = {
     win: n => `${n} voitti!`, youWin: 'Voitit!', draw: 'Tasapeli', noScore: 'Kukaan ei saanut pisteitä',
     search: 'Hae visoja', all: 'Kaikki', random: 'Arvo visa', top: 'Suosituimmat', noResults: 'Ei osumia.', showAll: n => `Näytä kaikki (${n})`, chosen: n => `Valittu: ${n}`,
     fmt: { list: 'Lista', flags: 'Liput', map: 'Kartta', choice: 'Monivalinta' }, skip: 'Ohita', clickFind: n => `Klikkaa: ${n}`, loadingMap: 'Ladataan karttaa…', question: (a, b) => `Kysymys ${a}/${b}`,
+    correct: 'Oikein', correctIs: a => `Oikea vastaus: ${a}`, share: 'Jaa linkki', shareText: 'Haastan sinut visaan', newBest: 'uusi ennätys', bestIs: (n, total) => `ennätys ${n}/${total}`,
+    provisional: 'Vetäjän lopputulos ei tullut perille. Tämä on oma laskusi, eikä sitä kirjata tilastoon.', tapMap: 'Napauta maata nähdäksesi sen nimen.', zoomed: 'Lähennetty: napauta maata.', missed: 'Puuttuvat', found: 'Löydetyt',
     rematch: 'Uusintaottelu', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
     privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
@@ -234,6 +289,8 @@ const T = {
     win: n => `${n} won!`, youWin: 'You won!', draw: 'Draw', noScore: 'Nobody scored',
     search: 'Search quizzes', all: 'All', random: 'Random quiz', top: 'Trending', noResults: 'No matches.', showAll: n => `Show all (${n})`, chosen: n => `Selected: ${n}`,
     fmt: { list: 'List', flags: 'Flags', map: 'Map', choice: 'Multiple choice' }, skip: 'Skip', clickFind: n => `Click: ${n}`, loadingMap: 'Loading map…', question: (a, b) => `Question ${a}/${b}`,
+    correct: 'Correct', correctIs: a => `Correct answer: ${a}`, share: 'Share link', shareText: 'I challenge you to a quiz', newBest: 'new best', bestIs: (n, total) => `best ${n}/${total}`,
+    provisional: 'The host\'s final result did not arrive. This is your own count and it is not saved to your record.', tapMap: 'Tap a country to see its name.', zoomed: 'Zoomed in: tap the country.', missed: 'Missed', found: 'Found',
     rematch: 'Rematch', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
     privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
@@ -257,7 +314,15 @@ function readStr(area, key) { try { return window[area].getItem(key); } catch { 
 function writeStr(area, key, v) { try { window[area].setItem(key, v); } catch { /* stays in memory */ } }
 function readJson(area, key) { try { return JSON.parse(readStr(area, key)); } catch { return null; } }
 const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [] }, readJson('localStorage', STORE_KEY));
-if (!T[P.lang]) P.lang = 'fi';
+if (!Object.hasOwn(T, P.lang)) P.lang = 'fi';
+// The stored copy may be damaged or hand-edited: wrong types would throw in renderHome and look like a failed download.
+const plainObj = x => x && typeof x === 'object' && !Array.isArray(x);
+const count = x => Number.isFinite(x) && x >= 0;
+P.nick = typeof P.nick === 'string' ? P.nick.slice(0, 20) : '';
+P.seen = Array.isArray(P.seen) ? P.seen.filter(Number.isFinite) : [];
+P.best = Object.fromEntries(Object.entries(plainObj(P.best) ? P.best : {}).filter(([, b]) => plainObj(b) && count(b.n) && count(b.t) && count(b.total)));
+P.h2h = Object.fromEntries(Object.entries(plainObj(P.h2h) ? P.h2h : {}).filter(([k, r]) => k.startsWith('n:') && plainObj(r) && typeof r.name === 'string' && count(r.w) && count(r.l))
+  .map(([k, r]) => [k, { name: r.name.slice(0, 20), w: r.w, l: r.l, d: count(r.d) ? r.d : 0 }]));
 const save = () => writeStr('localStorage', STORE_KEY, JSON.stringify(P));
 
 function randomId(len, alphabet) {
@@ -399,6 +464,7 @@ async function joinRoom(code, created) {
     }
     paintStatus();
   });
+  if (!created) R.restoreT = setTimeout(restoreGame, TRACK_WAIT_MS + 1000);
   if (!created) R.aloneT = setTimeout(() => { if (R && R.players.length <= 1 && !G) { R.alone = true; paintPlayers(); } }, 3000);
 }
 
@@ -418,9 +484,28 @@ function track(ch) {
   ch.track({ name: cleanName(P.nick), joined });
 }
 
+// ---- own copy of the running game: a reload restores it when nobody else is there to send a snapshot ----
+const gameKey = () => `visa-game-${R.code}`;
+function storeGame() {
+  if (!R || !G || G.over || G.spectator) return;
+  const s = snapshot();
+  if (s.game) writeStr('sessionStorage', gameKey(), JSON.stringify({ at: Date.now(), s: s.s, game: s.game }));
+}
+const dropGame = () => { if (R) writeStr('sessionStorage', gameKey(), ''); };
+function restoreGame() {
+  if (!R || G || R.synced || R.players.length > 1) return;   // anyone else's snapshot wins
+  const saved = readJson('sessionStorage', gameKey());
+  if (!saved || !saved.game || !Number.isFinite(saved.at) || !Number.isFinite(saved.game.elapsed)) return;
+  const away = Date.now() - saved.at;
+  if (away < 0 || away > 3600000) { dropGame(); return; }
+  applySnapshot({ s: saved.s, game: { ...saved.game, elapsed: saved.game.elapsed + away } });
+  if (G) onPresence();   // players who are not here start their absence clock
+}
+
 function leaveRoom() {
   if (!R) return;
-  clearTimeout(R.trackT); clearTimeout(R.aloneT);
+  clearTimeout(R.trackT); clearTimeout(R.aloneT); clearTimeout(R.restoreT);
+  dropGame();
   writeStr('sessionStorage', `visa-joined-${R.code}`, '');   // only a reload keeps the rank, leaving gives it up
   if (R.ch) sb.removeChannel(R.ch);
   R = null; G = null; V = {};
@@ -471,6 +556,7 @@ function onMessage(m) {
     case 'start': if (fromHost(m)) beginGame(m); return;
     case 'chat': addChat(m.from, m.text); return;
   }
+  if (m.t === 'end' && G?.provisional && m.seq === G.seq && fromHost(m)) { applyEnd(m); return; }   // the host's result replaces my own count
   if (!G || m.seq !== G.seq || G.over) return;   // everything below concerns the running game
   const race = G.mode === 'race';
   switch (m.t) {
@@ -494,6 +580,7 @@ function snapshot() {
     seq: G.seq, quiz: G.quiz.id, mode: G.mode, mul: G.mul, players: G.players, elapsed: Math.round(performance.now() - G.startAt),
     found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done],
   };
+  if (R.last) s.last = R.last;   // someone who missed all three `end`s still gets the real result
   return s;
 }
 const presentIds = () => new Set(R.players.map(p => p.id));
@@ -502,10 +589,18 @@ const claimList = () => [...G.claims].map(([i, c]) => [i, c.by, c.t]);
 function applySnapshot(m) {
   R.synced = true;
   applySettings(m.s);
-  const g = m.game;
+  const g = m.game, byHost = typeof m.from === 'string' && fromHost(m);
+  if (byHost && m.last && G && m.last.seq === G.seq && (!G.over || G.provisional)) { applyEnd(m.last); return; }
   if (!g) return;
+  const running = G && G.seq === g.seq && !G.over;
   beginGame(g);
   if (!G || G.seq !== g.seq || G.over) return;
+  // A phone that slept has a clock that fell behind. The host's elapsed time can only look too small (network delay),
+  // so a clearly larger one is the truth.
+  if (running && byHost && Number.isFinite(g.elapsed)) {
+    const start = performance.now() - clamp(g.elapsed, -COUNTDOWN_MS, G.durMs + LOCAL_WATCHDOG_MS);
+    if (G.startAt - start > 1500) { G.startAt = start; G.endAt = start + G.durMs; }
+  }
   if (Array.isArray(g.found)) for (const f of g.found) if (Array.isArray(f) && Array.isArray(f[1])) addFound(f[0], f[1], f[2]);
   applyClaims(g.claims);
   if (Array.isArray(g.done)) for (const id of g.done) if (typeof id === 'string') G.done.add(id);
@@ -650,7 +745,7 @@ function paintTarget() {
   if (!G || G.over || G.state !== 'play' || G.spectator || !V.prompt) return;
   const i = target();
   if (G.fmt === 'map') { V.prompt.textContent = i < 0 ? '' : t('clickFind', G.items[i][P.lang][0]); return; }
-  if (i < 0) return;
+  if (i < 0 || G.revealing) return;
   V.prompt.textContent = t('question', Math.min(G.items.length, G.seen.size + G.claims.size + 1), G.items.length);
   if (i !== G.shown) { G.shown = i; paintChoice(i); }
 }
@@ -661,8 +756,18 @@ const lockAnswers = () => { G.lockUntil = performance.now() + WRONG_LOCK_MS; };
 function mapClick(i) {
   if (!canAct()) return;
   if (i === target()) { accept(i); return; }
-  lockAnswers();
+  if (available(i)) lockAnswers();   // a country that is already found costs nothing
   flash(G.items[i][P.lang][0]);
+}
+
+// Which target a tap at (x, y) means, in viewBox units. A small country (`small`: [index, cx, cy]) is a few pixels wide on a
+// phone, so a tap that did not land exactly on one goes to the nearest small centre within `reach`, and only then to the
+// shape that was hit. An exact hit on a small country always wins: neighbours' reach must not swallow it.
+function pickMapTarget(direct, x, y, small, reach) {
+  if (direct != null && small.some(s => s[0] === direct)) return direct;
+  let best = null, bestD = reach * reach;
+  for (const [i, cx, cy] of small) { const d = (cx - x) ** 2 + (cy - y) ** 2; if (d <= bestD) { best = i; bestD = d; } }
+  return best ?? direct;
 }
 
 function skipTarget() {
@@ -675,20 +780,42 @@ function skipTarget() {
 function paintChoice(i) {
   const options = shuffled(G.items[i].opts, G.seq + i), tried = G.tried.get(i);
   V.opts = options.map((o, k) => h('button', { class: 'kt-btn opt', text: `${k + 1}. ${o[P.lang]}`, disabled: G.out || tried?.has(k), onclick: () => choose(i, k, options) }));
+  V.choice.onclick = () => { if (G?.revealing && performance.now() - G.revealAt > REVEAL_SKIP_MS) nextChoice(); };
   V.choice.replaceChildren(h('p', { class: 'q', text: G.items[i].hint[P.lang] }), h('div', { class: 'opts' }, V.opts));
 }
 
 function choose(i, k, options) {
-  if (!canAct()) return;
-  if (G.mode === 'parallel') { G.seen.add(i); writeStr('sessionStorage', `visa-seen-${G.seq}`, [...G.seen].join()); }
-  if (options[k].ok) accept(i);
-  else if (G.mode === 'race') {   // the shared question stays open for the others, this option is gone for me
+  if (!canAct() || G.revealing) return;
+  const ok = options[k].ok;
+  if (G.mode === 'parallel') {
+    // Side by side every question is answered once: show what was right before moving on (tap or Enter skips the wait).
+    G.seen.add(i); writeStr('sessionStorage', `visa-seen-${G.seq}`, [...G.seen].join());
+    V.opts.forEach((b, j) => { b.disabled = true; if (options[j].ok) b.classList.add('right'); });
+    if (!ok) V.opts[k].classList.add('wrong');
+    flash(ok ? t('correct') : t('correctIs', G.items[i][P.lang][0]));
+    G.revealing = true; G.revealAt = performance.now();
+    G.revealT = setTimeout(nextChoice, ok ? REVEAL_OK_MS : REVEAL_WRONG_MS);
+    if (ok) accept(i);
+    return;
+  }
+  if (ok) accept(i);
+  else {   // the shared question stays open for the others, this option is gone for me
     if (!G.tried.has(i)) G.tried.set(i, new Set());
     G.tried.get(i).add(k);
     V.opts[k].disabled = true;
+    V.opts[k].classList.add('wrong');
     lockAnswers();
   }
-  if (G.mode === 'parallel' && target() < 0) markDone();
+  paintTarget();
+}
+
+function nextChoice() {
+  if (!G || !G.revealing) return;
+  clearTimeout(G.revealT);
+  G.revealing = false;
+  if (G.over || G.state !== 'play') return;
+  if (V.flash && !G.out) V.flash.textContent = '';
+  if (target() < 0) markDone();
   paintTarget();
 }
 
@@ -745,8 +872,14 @@ function standing(id) {
 }
 const tally = () => G.players.map(p => ({ id: p.id, ...standing(p.id) }));
 
-function applyEnd(m) {
-  clearTimeout(G.holdT);
+// `provisional`: my own count after the host's result never arrived. It is shown but not written into the head-to-head
+// record, and the host's `end` or snapshot replaces it when it gets through.
+function applyEnd(m, provisional) {
+  clearTimeout(G.holdT); clearTimeout(G.revealT);
+  G.revealing = false;
+  G.over = false;   // applyClaims below must work when a provisional result is replaced
+  G.provisional = !!provisional;
+  if (G.prevBest === undefined) G.prevBest = P.best[G.quiz.id] || null;
   if (G.mode === 'race' && Array.isArray(m.c)) { G.claims.clear(); applyClaims(m.c); }
   const byId = new Map((Array.isArray(m.res) ? m.res : []).filter(r => r && typeof r.id === 'string').map(r => [r.id, r]));
   G.results = G.players.map(p => {
@@ -754,15 +887,18 @@ function applyEnd(m) {
     return { id: p.id, name: p.name, n: Math.round(clamp(r.n, 0, G.items.length)), t: clamp(r.t, 0, G.durMs) };
   }).sort(rank);
   G.over = true; G.pending.clear();
+  if (!provisional) R.last = { seq: G.seq, res: G.results.map(r => ({ id: r.id, n: r.n, t: r.t })), c: G.mode === 'race' ? claimList() : null };
+  dropGame();
   record();
   render();
 }
 
 function record() {
   if (G.spectator || P.seen.includes(G.seq)) return;
-  P.seen = [...P.seen, G.seq].slice(-SEEN_KEEP);
   const me = G.results.find(r => r.id === MY_ID);
-  for (const r of G.results) {
+  if (!me) return;
+  if (!G.provisional) P.seen = [...P.seen, G.seq].slice(-SEEN_KEEP);
+  for (const r of G.provisional ? [] : G.results) {
     if (r.id === MY_ID) continue;
     const key = h2hKey(r.name);
     const rec = P.h2h[key] || (P.h2h[key] = { name: r.name, w: 0, l: 0, d: 0 });
@@ -788,7 +924,7 @@ function tick() {
   if (V.timer) { const left = G.endAt - now; V.timer.textContent = clock(left); V.timer.classList.toggle('low', left < 10000); }
   if (G.state === 'play') {
     for (const [i, p] of G.pending) if (now - p.sent > RETRY_MS) { p.sent = now; send('claim', { seq: G.seq, i, t2: p.at }); }
-    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(false); maybeFinish(); }
+    if (now - G.lastRepair > REPAIR_MS) { G.lastRepair = now; repair(false); storeGame(); maybeFinish(); }
     if (now >= G.endAt) {
       G.state = 'wait';
       repair(true);
@@ -797,7 +933,7 @@ function tick() {
     }
   } else if (G.state === 'wait') {
     if (now > G.endAt + HOST_WATCHDOG_MS && isHost()) finish(0);
-    if (now > G.endAt + LOCAL_WATCHDOG_MS) applyEnd({ res: tally() });
+    if (now > G.endAt + LOCAL_WATCHDOG_MS) applyEnd({ res: tally() }, G.players.length > 1);
   }
 }
 
@@ -892,6 +1028,7 @@ function renderLobby() {
     try { await navigator.clipboard.writeText(link); copy.textContent = t('copied'); setTimeout(() => { copy.textContent = t('copy'); }, 1500); }
     catch { V.linkField.hidden = false; V.linkField.select(); }
   } });
+  const share = navigator.share && h('button', { class: 'kt-btn sm primary', text: t('share'), onclick: () => { navigator.share({ title: t('title'), text: t('shareText'), url: link }).catch(() => {}); } });
   V.linkField = h('input', { class: 'kt-input', readonly: true, value: link, hidden: true, 'aria-label': t('copy') });
   V.status = h('p', { class: 'kt-status' });
   V.players = h('div', {});
@@ -902,7 +1039,7 @@ function renderLobby() {
     h('div', { class: 'cols' },
       h('section', { class: 'card' },
         h('h2', { text: t('room') }),
-        h('div', { class: 'row' }, h('span', { class: 'bigcode', text: R.code }), copy, h('button', { class: 'kt-btn sm', text: t('leave'), onclick: () => { location.hash = ''; } })),
+        h('div', { class: 'row' }, h('span', { class: 'bigcode', text: R.code }), share, copy, h('button', { class: 'kt-btn sm', text: t('leave'), onclick: () => { location.hash = ''; } })),
         V.linkField, V.status, V.players),
       chatBox(),
       V.settings),
@@ -961,22 +1098,31 @@ function paintSettings() {
         .map(([c, label]) => tab(`c-${c}`, label, R.cat === c, () => setFilter({ cat: c })))),
       h('div', { class: 'kt-tabs filters' }, ['', ...Object.keys(T[P.lang].fmt)].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => setFilter({ fmtFilter: f })))),
       V.quizList = h('div', {}),
-      h('button', { class: 'kt-btn primary start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame }));
+      h('div', { class: 'startbar' },
+        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: `${T[P.lang].fmt[fmtOf(q)]} · ${t(s.mode)} · ${minutes(q.t * s.mul)}` })),
+        h('button', { class: 'kt-btn primary start', 'data-k': 'start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame })));
     paintQuizList();
   });
+}
+
+// Title, format and topic in both languages: "kartta", "flags" and "urheilu" find their quizzes.
+const searchCache = new Map();
+function searchText(x) {
+  if (!searchCache.has(x.id)) searchCache.set(x.id, norm(['fi', 'en'].map(l => `${x.title[l]} ${T[l].fmt[fmtOf(x)]} ${DATA.cats[x.cat]?.[l] ?? ''}`).join(' ')));
+  return searchCache.get(x.id);
 }
 
 function quizMatches() {
   const q = norm(R.search);
   let list = R.cat === 'top' ? TOP.map(id => QUIZ.get(id)) : DATA.quizzes.filter(x => !R.cat || x.cat === R.cat);
   if (R.fmtFilter) list = list.filter(x => fmtOf(x) === R.fmtFilter);
-  if (q) list = list.filter(x => norm(x.title.fi).includes(q) || norm(x.title.en).includes(q));
+  if (q) list = list.filter(x => searchText(x).includes(q));
   return list;
 }
 
 function paintQuizList() {
   if (!V.quizList) return;
-  const list = quizMatches(), shown = R.showAll ? list : list.slice(0, LIST_LIMIT), selected = R.settings.quiz;
+  const list = quizMatches(), shown = R.showAll ? list : list.slice(0, matchMedia('(max-width:600px)').matches ? LIST_LIMIT_PHONE : LIST_LIMIT), selected = R.settings.quiz;
   fill(V.quizList,
     list.length ? h('div', { class: 'quizzes' }, shown.map(x =>
       h('button', { class: 'kt-btn quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === selected), onclick: () => setSettings({ quiz: x.id }) },
@@ -1030,16 +1176,56 @@ function buildMap() {
   }
   const pad = whole ? 0 : Math.max(x1 - x0, y1 - y0) * .05;
   const box = [x0 - pad, y0 - pad, x1 - x0 + 2 * pad, y1 - y0 + 2 * pad];
-  const svg = svgEl('svg', { viewBox: box.map(Math.round).join(' '), role: 'img', 'aria-label': t('fmt').map });
-  const radius = Math.max(box[2] / 170, 2);
+  const view = box.map(Math.round);
+  const svg = svgEl('svg', { viewBox: view.join(' '), role: 'img', 'aria-label': t('fmt').map });
+  // The svg is not in the page yet, so its width is estimated from the layout (main: 1120 px wide, 16 px gutters).
+  const scale = Math.max(200, Math.min(innerWidth, 1120) - 32) / view[2];   // screen px per viewBox unit
+  const radius = Math.max(box[2] / 170, 2, MAP_DOT_PX / scale);
+  const small = [], byEl = new Map();
   for (const [iso, shape] of Object.entries(MAP.shapes)) {
     const i = index.get(iso), g = svgEl('g', { class: i == null ? 'bg' : 't' });
     if (shape.d) g.append(svgEl('path', { d: shape.d }));
     if (shape.c && i != null) g.append(svgEl('circle', { cx: shape.c[0], cy: shape.c[1], r: radius }));
-    if (i != null) { G.cells[i] = g; g.addEventListener('click', () => mapClick(i)); }
+    if (i != null) {
+      G.cells[i] = g; byEl.set(g, i);
+      const b = shape.b;
+      if (shape.c) small.push([i, shape.c[0], shape.c[1]]);
+      else if (Math.max(b[2] - b[0], b[3] - b[1]) * scale < MAP_SMALL_PX) small.push([i, (b[0] + b[2]) / 2, (b[1] + b[3]) / 2]);
+      if (G.over) { const title = svgEl('title', {}); title.textContent = G.items[i][P.lang][0]; g.append(title); }   // never during play: hover would give the answer
+    }
     svg.append(g);
   }
-  return h('div', { class: 'map' }, svg);
+  const caption = G.over && h('p', { class: 'muted mapname', 'aria-live': 'polite', text: t('tapMap') });
+  // A crowded spot (the Balkans on a phone: centres 4 px apart) cannot be told apart by any hit rule, so the first tap there
+  // zooms in and the second one answers. Markers keep their size on screen.
+  let zoom = null;
+  const setZoom = z => {
+    zoom = z;
+    svg.setAttribute('viewBox', (z || view).join(' '));
+    svg.classList.toggle('zoom', !!z);
+    const r = radius * (z ? z[2] / view[2] : 1);
+    for (const c of svg.querySelectorAll('g.t circle')) c.setAttribute('r', r);
+  };
+  svg.addEventListener('click', e => {
+    const rect = svg.getBoundingClientRect();
+    if (!rect.width || !G) return;
+    const cur = zoom || view, k = cur[2] / rect.width;
+    const x = cur[0] + (e.clientX - rect.left) * k, y = cur[1] + (e.clientY - rect.top) * k;
+    const reach = (matchMedia('(pointer:coarse)').matches ? MAP_REACH_TOUCH : MAP_REACH_MOUSE) * k;
+    if (!zoom && (G.over || canAct()) && small.filter(s => (s[1] - x) ** 2 + (s[2] - y) ** 2 <= reach * reach).length > 1) {
+      const zw = view[2] / MAP_ZOOM, zh = view[3] / MAP_ZOOM;
+      setZoom([clamp(x - zw / 2, view[0], view[0] + view[2] - zw), clamp(y - zh / 2, view[1], view[1] + view[3] - zh), zw, zh].map(v => Math.round(v * 10) / 10));
+      if (G.over) caption.textContent = t('zoomed'); else flash(t('zoomed'));
+      return;
+    }
+    const el = e.target.closest ? e.target.closest('g.t') : null, direct = el ? byEl.get(el) ?? null : null;
+    const i = pickMapTarget(direct, x, y, small, reach);
+    if (zoom && (G.over || canAct())) setZoom(null);
+    if (i == null) return;
+    if (G.over) { caption.textContent = G.items[i][P.lang][0]; return; }
+    mapClick(i);
+  });
+  return h('div', { class: 'map' }, svg, caption);
 }
 
 function buildCells() {
@@ -1049,7 +1235,7 @@ function buildCells() {
   const sortText = i => (G.items[i].hint ? G.items[i].hint[lang] : G.items[i][lang][0]);
   const sections = [...groups].map(([g, list]) => {
     if (G.fmt === 'flags') list.sort((a, b) => G.order.indexOf(a) - G.order.indexOf(b));   // alphabetical would give flags away
-    else if (G.fmt === 'list' && !G.quiz.ordered) list.sort((a, b) => sortText(a).localeCompare(sortText(b), lang));
+    else if ((G.fmt === 'list' || G.fmt === 'map') && !G.quiz.ordered) list.sort((a, b) => sortText(a).localeCompare(sortText(b), lang));
     return h('section', {},
       g && h('h3', { text: DATA.continents[g][lang] }),
       h('div', { class: `cells ${G.fmt}`, style: g ? '' : 'margin-top:14px' }, list.map(i => {
@@ -1073,6 +1259,7 @@ function paintCell(i) {
     else if (G.pending.has(i)) { owner = MY_ID; pending = true; }
   } else if (G.found.get(MY_ID)?.set.has(i)) owner = MY_ID;
   if (c.ans) c.ans.textContent = owner || G.over ? G.items[i][P.lang][0] : '';
+  if (owner && !pending && !G.over && G.state === 'play' && !c.classList.contains('on')) { c.classList.remove('hit'); void c.getBoundingClientRect(); c.classList.add('hit'); }
   c.classList.toggle('on', !!owner);
   c.classList.toggle('pend', pending);
   c.classList.toggle('miss', G.over && !owner);
@@ -1135,6 +1322,12 @@ function renderGame() {
 
 function headline() {
   const [a, b] = G.results;
+  if (!b && !G.spectator) {   // practice alone: the score against my own best, not "You won!"
+    const prev = G.prevBest, score = `${a.n}/${G.items.length}`;
+    if (G.mul !== 1) return score;
+    if (a.n > 0 && (!prev || rank(a, prev) < 0)) return `${score} · ${t('newBest')}`;
+    return prev ? `${score} · ${t('bestIs', prev.n, prev.total)}` : score;
+  }
   if (a.n === 0) return t('noScore');
   if (b && a.n === b.n && a.t === b.t) return t('draw');
   return a.id === MY_ID ? t('youWin') : t('win', a.name);
@@ -1143,15 +1336,24 @@ function headline() {
 function renderResults() {
   const others = G.results.filter(r => r.id !== MY_ID);
   const single = others.length === 1 && !G.spectator ? P.h2h[h2hKey(others[0].name)] : null;
-  const grid = buildGrid();
-  app.replaceChildren(
+  let grid = buildGrid();
+  if (G.fmt === 'map' && MAP) {   // the map alone names nothing: the same answers as a list under it
+    const map = grid;
+    G.cells = [];
+    const list = buildCells();
+    G.items.forEach((_, i) => paintCell(i));
+    grid = h('div', {}, map, list);
+  }
+  const won = G.results[0].id === MY_ID && G.results[0].n > 0;
+  fill(app,
     topBar(),
     h('h1', { text: quizName(G.quiz) }),
-    h('p', { class: 'winner', text: headline() }),
+    h('p', { class: 'winner' + (won ? ' me' : ''), style: `--c:${colorOf(G.results[0].id)}`, text: headline() }),
+    G.provisional && h('p', { class: 'kt-note', role: 'status', text: t('provisional') }),
     h('div', { class: 'cols' },
       h('section', { class: 'card' },
         h('h2', { text: t('results') }),
-        h('table', { class: 'rank' }, h('tbody', {}, G.results.map((r, i) => h('tr', { style: `--c:${colorOf(r.id)}` },
+        h('table', { class: 'rank' }, h('tbody', {}, G.results.map((r, i) => h('tr', { class: i === 0 && r.n > 0 ? 'first' : '', style: `--c:${colorOf(r.id)}` },
           h('td', { text: `${i + 1}.` }), h('td', {}, h('b', { text: r.name })),
           h('td', { text: `${r.n}/${G.items.length}` }), h('td', { text: `${t('lastAt')} ${clock(r.t)}` }))))),
         single && h('p', { class: 'muted', style: 'margin-top:10px', text: t('h2h', single.name, single.w, single.l, single.d) }),
@@ -1186,7 +1388,11 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
   packsReady.catch(() => {});   // reported by joinRoom
   setInterval(tick, 100);
   addEventListener('hashchange', route);
-  addEventListener('keydown', e => { if (V.opts && /^[1-4]$/.test(e.key) && !e.metaKey && !e.ctrlKey) V.opts[Number(e.key) - 1]?.click(); });
+  addEventListener('pagehide', storeGame);
+  addEventListener('keydown', e => {
+    if (G?.revealing && !e.repeat && (e.key === 'Enter' || e.key === ' ' || /^[1-4]$/.test(e.key))) { e.preventDefault(); nextChoice(); return; }
+    if (V.opts && /^[1-4]$/.test(e.key) && !e.metaKey && !e.ctrlKey) V.opts[Number(e.key) - 1]?.click();
+  });
   if (parseCode(location.hash)) route(); else render();
 }).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });
 })();

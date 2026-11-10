@@ -75,6 +75,17 @@ def check_choice(qid, items, bad):
                 bad.append(f'{qid}[{i}]: duplicate option ({lang})')
 
 
+def content_key(fmt, items):
+    """What a quiz asks, without its title: two quizzes with one key are the same quiz twice (suomi-1/suomi-2 world heritage,
+    11/2026). The format is part of it, because a list, a flag and a map quiz of the same countries are different games."""
+    try:
+        if fmt == 'choice':
+            return fmt, frozenset(norm(it['q']['fi']) for it in items)
+        return fmt, frozenset(norm(it['fi'][0]) for it in items)
+    except (KeyError, IndexError, TypeError, AttributeError):
+        return None
+
+
 def main():
     data = json.loads(MAIN.read_text(encoding='utf-8'))
     bad = []
@@ -94,6 +105,13 @@ def main():
     for c in ids:
         if c not in shapes:
             bad.append(f'{c}: missing from visa-map.json')
+            continue
+        # buildMap needs the bounding box of every target (zoom and the tap area of small countries) and something to draw
+        b = shapes[c].get('b')
+        if not (isinstance(b, list) and len(b) == 4 and all(isinstance(x, (int, float)) for x in b) and b[0] <= b[2] and b[1] <= b[3]):
+            bad.append(f'{c}: visa-map.json needs b = [x0, y0, x1, y1]')
+        if not shapes[c].get('d') and not shapes[c].get('c'):
+            bad.append(f'{c}: visa-map.json has neither an outline (d) nor a marker (c)')
 
     listed = data.get('packs', [])
     on_disk = sorted(p.stem for p in PACKS.glob('*.json'))
@@ -108,6 +126,7 @@ def main():
             bad.append(f'pack {name}: {e}')
 
     seen = set()
+    contents = {}
     for q in quizzes:
         qid = q.get('id', '?')
         if qid in seen:
@@ -139,6 +158,11 @@ def main():
             check_choice(qid, items, bad)
         else:
             check_list(qid, items, bad)
+        key = content_key(fmt, items)
+        if key is not None:
+            if key in contents:
+                bad.append(f'{qid}: same content as {contents[key]} (one quiz twice)')
+            contents.setdefault(key, qid)
     for line in bad:
         print('validate_visa:', line, file=sys.stderr)
     if not bad:
