@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fi" data-page="404">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sivua ei löytynyt – koirosvg.com</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#081427">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
+<style>
+/* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
+   scripts/check_tokens.py (run by the Vercel build) fails when a page's copy differs: edit this file, then run
+   `python3 scripts/check_tokens.py --write`. Fonts come from this server (OFL, fonts/OFL.md), cached for a year: changing a font file = raise its ?v=. Tokens sit in :where()
+   (zero specificity), so a page's own :root still wins while it migrates. Always dark; the ink scale is one step brighter
+   than oma.koirosvg.com's ui.css, because small mono text here must pass 4.5:1. */
+@font-face{font-family:"Unbounded";src:url("/fonts/Unbounded-latin-var.woff2?v=1") format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400.woff2?v=1") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-700.woff2?v=1") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url("/fonts/AtkinsonHyperlegible-latin-400italic.woff2?v=1") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("/fonts/JetBrainsMono-latin-var.woff2?v=1") format("woff2");font-weight:500 600;font-style:normal;font-display:swap}
+:where(:root){color-scheme:dark;--bg:#081427;--bg-glow:#0E2140;--surface:#0F213D;--surface-2:#16294A;--line:#1F3B66;--line-2:#2B4C7E;--ink:#E6EEF8;--ink-2:#B4C3D8;--ink-3:#8FA3BF;--accent:#5CE1C6;--accent-ink:#06221C;--accent-soft:#123D45;--ok:#6FC48F;--ok-soft:#173A2E;--warn:#E8B45C;--warn-soft:#3A3222;--bad:#FF8A7A;--bad-soft:#3D2226;--focus:#5CE1C6;--font-display:"Unbounded","Helvetica Neue",Arial,sans-serif;--font-body:"Atkinson Hyperlegible","Helvetica Neue",Arial,sans-serif;--font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--radius-s:6px;--radius-m:10px;--radius-l:14px;--shadow-pop:0 10px 30px rgba(0,0,0,.45)}
+*{box-sizing:border-box}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+[hidden]:not([hidden=until-found i]){display:none!important}
+/* Shared components (kt- prefix: page classes like .card or .chip stay the page's own). */
+.kt-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.kt-tab{font:700 14px var(--font-body);color:var(--ink-2);background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.kt-tab:hover{color:var(--ink);border-color:var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-tab .n{font:600 11px var(--font-mono);opacity:.8;margin-left:4px}
+.kt-btn{font:700 14px var(--font-body);color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.kt-btn:hover{border-color:var(--accent)}
+.kt-btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.kt-btn.sm{padding:4px 10px;font-size:13px}
+.kt-input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);padding:10px 14px;min-width:0}
+.kt-input::placeholder{color:var(--ink-3)}
+.kt-input:focus{outline:none;border-color:var(--accent)}
+.kt-status{font:500 12px var(--font-mono);color:var(--ink-3)}
+.kt-status b{color:var(--ok);font-weight:600}
+.kt-status.stale b{color:var(--warn)}
+.kt-status.bad b{color:var(--bad)}
+.kt-note{background:var(--warn-soft);color:var(--ink);border-radius:var(--radius-m);padding:12px 14px;font-size:13px}
+.kt-flash{animation:kt-flash 1.8s ease-out}
+@keyframes kt-flash{from{box-shadow:0 0 0 3px var(--accent)}to{box-shadow:0 0 0 3px transparent}}
+@media (prefers-reduced-motion:reduce){.kt-flash{animation:none;outline:2px solid var(--accent)}}
+/* Site search hits (site-search.js hitsHtml): the home page and the YO bar. */
+.kt-hits{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.kt-hits a{display:grid;gap:2px;padding:10px 14px;border-radius:var(--radius-m);background:var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none}
+.kt-hits a:hover,.kt-hits a:focus-visible{border-color:var(--accent)}
+.kt-hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.kt-hits span,.kt-hits .none{color:var(--ink-3);font-size:13px}
+.kt-hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+/* Tutka v2 (10.11.2026): every page gets its own picture and depth from this block. <html data-page="…"> names the page.
+   --kt-tone = the page's decorative hue (never replaces --accent), --kt-hero = its illustration (img/hero/<page>[-s].webp,
+   built by derive.sh, see CLAUDE.md), painted into the body background at the top and faded into --bg; --kt-veil = how much
+   of --bg lies over the right side of the picture (the left, where text sits, is veiled more). Changed image = raise ?v=. */
+:where(:root){--kt-tone:#5CE1C6;--kt-hero:none;--kt-hero-h:clamp(320px,calc(max(100vw,1100px)*.4286),760px);--kt-hero-x:right;--kt-veil:22%;
+  --kt-sheen:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,0) 42%);
+  --kt-elev-1:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.28),0 16px 32px -20px rgba(0,0,0,.8);
+  --kt-elev-2:inset 0 1px 0 rgba(255,255,255,.1),0 2px 4px rgba(0,0,0,.3),0 26px 46px -20px rgba(0,0,0,.9)}
+[data-page="koti"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+[data-page="ai"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/ai.webp?v=1")}
+[data-page="yo-tutka"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/yo-tutka.webp?v=1")}
+[data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
+[data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
+[data-page="tietosuoja"]{--kt-tone:#5CE1C6}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+html[data-page] body{background:
+    linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
+    linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
+    var(--kt-hero) top var(--kt-hero-x)/auto var(--kt-hero-h) no-repeat,
+    radial-gradient(ellipse 60% 70% at 82% 0,color-mix(in srgb,var(--kt-tone) 15%,transparent),transparent 72%) top center/100% var(--kt-hero-h) no-repeat,
+    radial-gradient(ellipse 70% 100% at 12% 0,var(--bg-glow),transparent 70%) top center/100% 900px no-repeat,
+    var(--bg)}
+@media print{html[data-page] body{background:#fff}}
+.kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
+.kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
+/* /koiro-tokens */
+/* 404: served by Vercel at any unknown path, so every URL here is absolute. Same dark radar theme as the home page. */
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;display:grid;align-content:center;color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.5;padding-inline:max(clamp(16px,5vw,56px),env(safe-area-inset-left),env(safe-area-inset-right));padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
+main{max-width:720px;width:100%;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font:800 clamp(28px,5vw,46px)/1.05 var(--font-display);margin:0;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0;color:var(--ink-2);max-width:52ch}
+.ways{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+@media (min-width:520px){.ways{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ways li{display:grid}
+.ways a{display:grid;gap:2px;align-content:start;min-height:44px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius-l);background:var(--kt-sheen),var(--surface);box-shadow:var(--kt-elev-1);color:var(--ink-3);font-size:14px;text-decoration:none;transition:border-color .15s,transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .18s}
+.ways a:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--kt-elev-2)}
+.ways b{font:800 16px var(--font-display);color:var(--ink)}
+.home{justify-self:start}
+@media (pointer:coarse){.home{min-height:44px}}
+@media (prefers-reduced-motion:reduce){.ways a{transition:none}.ways a:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">404 · koirosvg.com</div>
+  <h1>Tätä ei näy tutkassa.</h1>
+  <p>Osoite on väärä tai sivu on siirtynyt. Nämä löytyvät:</p>
+  <ul class="ways">
+    <li><a href="/ai"><b>AI-opas</b>Parhaat mallit, koodausagentit ja työkalut</a></li>
+    <li><a href="/yo-tutka"><b>YO-tutka</b>Ylioppilaskokeiden aiheet ja harjoittelu</a></li>
+    <li><a href="/hyppymittari"><b>Hyppymittari</b>Hypyt puhelimen kameralla</a></li>
+    <li><a href="/visa"><b>Visakaksintaisto</b>Tietovisat kaveria vastaan</a></li>
+  </ul>
+  <a class="kt-btn primary home" href="/">← koirosvg.com</a>
+</main>
+</body>
+</html>

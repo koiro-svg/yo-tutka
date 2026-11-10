@@ -9,7 +9,8 @@ Staattinen sivusto Vercelissä, ei riippuvuuksia. Vercelin build ajaa vain tarki
 | `/ai` | `ai.html` | AI-opas: välilehdet Mallit, Koodausagentit ja Työkalut. Vanhat `/ai-opas` ja `/ai-tyokalut` ovat 308-uudelleenohjauksia tänne (#-ankkurit toimivat) |
 | `/yo-tutka` | `yo-tutka.html` | YO-tutka (`/yo` on lyhyt osoite: 307-uudelleenohjaus tänne, ?parametrit ja #aine/aihe säilyvät) |
 | `/yo-harjoittelu` | `yo-harjoittelu.html` | YO-tehtävien harjoittelu: kaavaeditori, vihjeet, malliratkaisut, pikatesti, koesimulaatio, edistyminen |
-| `/tietosuoja` | `tietosuoja.html` | YO-harjoittelun käyttäjätilien tietosuojaseloste |
+| `/tietosuoja` | `tietosuoja.html` | Tietosuojaseloste (YO-harjoittelun käyttäjätilit, Visakaksintaisto) |
+| tuntematon polku | `404.html` | Oma 404-sivu (Vercel tarjoaa sen automaattisesti); lisäksi `robots.txt`, `sitemap.xml` ja `favicon.svg` (`/favicon.ico` on rewrite siihen). Uusi juurisivu = rivi `sitemap.xml`:ään ja `site-search.js`:n `PAGES`-listaan |
 | `/hyppymittari` | `hyppymittari/index.html` | Hyppymittari: vertikaalihypyn korkeus kameralla (MediaPipe, laitteella) |
 | `/visa` | `visa.html` + `data/visa.json`, `data/visa/*.json`, `data/visa-map.json`, `flags/` | Visakaksintaisto: reaaliaikaiset tietovisat kaveria vastaan (Supabase Realtime, ei tilejä) |
 

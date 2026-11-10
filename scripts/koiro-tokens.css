@@ -54,7 +54,8 @@
 [data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
 [data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
 [data-page="tietosuoja"]{--kt-tone:#5CE1C6}
-@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
 html[data-page] body{background:
     linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
     linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
@@ -66,4 +67,7 @@ html[data-page] body{background:
 .kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
 .kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
 .kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
 /* /koiro-tokens */

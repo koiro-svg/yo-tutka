@@ -2,9 +2,20 @@
 <html lang="fi" data-page="tietosuoja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tietosuojaseloste – YO-harjoittelu</title>
-<meta name="description" content="Mitä tietoja YO-harjoittelun käyttäjätili tallentaa, miksi ja miten ne poistetaan.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tietosuojaseloste – koirosvg.com</title>
+<meta name="description" content="Mitä koirosvg.com tallentaa (YO-harjoittelun käyttäjätilit, Visakaksintaisto), miksi ja miten tiedot poistetaan.">
+<meta name="theme-color" content="#081427">
+<link rel="canonical" href="https://koirosvg.com/tietosuoja">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://koirosvg.com/tietosuoja">
+<meta property="og:title" content="Tietosuojaseloste – koirosvg.com">
+<meta property="og:description" content="Mitä koirosvg.com tallentaa, miksi ja miten tiedot poistetaan.">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:image" content="https://koirosvg.com/img/og-koti.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -63,7 +74,8 @@
 [data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
 [data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
 [data-page="tietosuoja"]{--kt-tone:#5CE1C6}
-@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
 html[data-page] body{background:
     linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
     linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
@@ -75,22 +87,31 @@ html[data-page] body{background:
 .kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
 .kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
 .kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
 /* /koiro-tokens */
 /* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
 html{background:var(--bg)}
-body{margin:0;background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;padding-inline:clamp(16px,3vw,40px);padding-block:20px 60px}
+body{margin:0;background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;padding-inline:max(clamp(16px,3vw,40px),env(safe-area-inset-left),env(safe-area-inset-right));padding-block:max(20px,env(safe-area-inset-top)) max(60px,env(safe-area-inset-bottom))}
 main{max-width:760px;margin:0 auto;display:grid;gap:18px;overflow-wrap:anywhere}
 h1,h2{font-family:var(--font-display);margin:0;line-height:1.15;text-wrap:balance}
 h1{font-size:clamp(26px,4vw,38px);font-weight:800}
-h2{font-size:18px;margin-top:10px}
+h2{font-size:18px;margin-top:10px;padding-top:20px;border-top:1px solid var(--line)}
 p,ul{margin:0}
 ul{padding-left:22px;display:grid;gap:4px}
 a{color:var(--accent)}
 .crumb{font-family:var(--font-mono);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 14px}
 .crumb a{color:var(--ink-3);text-decoration:none;padding-block:8px}
+@media (pointer:coarse){.crumb a{padding-block:12px}}
 .crumb a:hover{color:var(--accent)}
 .muted{color:var(--ink-3);font-size:14px}
 .note{background:var(--warn-soft);border-radius:10px;padding:12px 14px}
+/* The three things most readers came for, before the full text. */
+.gist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
+.gist li{display:grid;gap:2px;align-content:start;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius-l);background:var(--kt-sheen),var(--surface);box-shadow:var(--kt-elev-1);font-size:14px;color:var(--ink-2)}
+.gist b{font:700 13px var(--font-display);color:var(--ink)}
+@media print{h2{border-color:#ccc}.gist li{background:none;box-shadow:none}}
 </style>
 </head>
 <body>
@@ -98,6 +119,11 @@ a{color:var(--accent)}
   <nav class="crumb" aria-label="Murupolku"><a href="/">← koirosvg.com</a><a href="/yo-harjoittelu">YO-harjoittelu</a></nav>
   <h1>Tietosuojaseloste</h1>
   <p class="muted">YO-harjoittelun käyttäjätilit ja Visakaksintaisto · päivitetty 9.11.2026</p>
+  <ul class="gist" aria-label="Lyhyesti">
+    <li><b>Ei analytiikkaa</b>Sivusto ei seuraa kävijöitä eikä näytä mainoksia.</li>
+    <li><b>Ei evästeitä</b>Omat tietosi pysyvät selaimessasi, ellet luo tiliä.</li>
+    <li><b>Tili vain YO-harjoittelussa</b>Vapaaehtoinen, ja sen voi poistaa heti itse.</li>
+  </ul>
 
   <h2>Rekisterinpitäjä</h2>
   <p>koirosvg.com-sivuston ylläpitäjä. Yhteydenotot: <a href="mailto:oipopoojkoo@gmail.com">oipopoojkoo@gmail.com</a>.</p>

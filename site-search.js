@@ -1,4 +1,4 @@
-// Site search (julkinen-6), shared by the home page and the YO bar (scripts/yo-nav.html). Both load this module with
+// Site search (julkinen-6; own pages and the no-data state 10.11.2026), shared by the home page and the YO bar (scripts/yo-nav.html). Both load this module with
 // import() on first use, and the data is fetched on the first search: AI models, coding agents, tools and the YO subjects
 // and topics (data/yo-topics.json, generated from yo-tutka.html's yo-data block by scripts/yo_index.py).
 // AI card links carry the raw name; /ai turns it into its card id (one id scheme, owned by ai.html's parseHash).
@@ -7,13 +7,24 @@ const norm = s => String(s || '').toLowerCase();
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const enc = encodeURIComponent;
 
+// The site's own pages: always in the index, also when every data fetch fails (new root page = a row here).
+const PAGES = [
+  {kind: 'Sivu', title: 'AI-opas', sub: 'Parhaat tekoälymallit, koodausagentit ja työkalut', href: '/ai', text: 'ai-opas tekoäly mallit koodausagentit työkalut'},
+  {kind: 'Sivu', title: 'YO-tutka', sub: 'Ylioppilaskokeiden aiheet ja todennäköisyydet', href: '/yo-tutka', text: 'yo-tutka ylioppilaskoe ylioppilaskirjoitukset aiheet todennäköisyys'},
+  {kind: 'Sivu', title: 'YO-harjoittelu', sub: 'Tehtävät kaavaeditorilla, vihjeet, malliratkaisut ja koesimulaatio', href: '/yo-harjoittelu', text: 'yo-harjoittelu harjoittelu harjoittele kertaus koesimulaatio kaavaeditori abitti vihjeet malliratkaisut'},
+  {kind: 'Sivu', title: 'Hyppymittari', sub: 'Pystyhyppy, kosketuskorkeus ja loikat puhelimen kameralla', href: '/hyppymittari', text: 'hyppymittari hyppy pystyhyppy kosketuskorkeus vauhditon pituus kolmiloikka viisiloikka kamera'},
+  {kind: 'Sivu', title: 'Visakaksintaisto', sub: 'Tietovisat kaveria vastaan: listat, liput, kartat ja monivalinnat', href: '/visa', text: 'visakaksintaisto visa tietovisa kaksintaisto liput kartta maat pääkaupungit 1v1'},
+  {kind: 'Sivu', title: 'Tietosuoja', sub: 'Mitä sivusto tallentaa ja miten tiedot poistetaan', href: '/tietosuoja', text: 'tietosuoja tietosuojaseloste evästeet yksityisyys tili poisto'},
+];
+
 let index = null;
 async function build(models){
   const ai = () => getJson('/data/ai-models.json');
   const parts = await Promise.all([models ? models.catch(ai) : ai(), getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json'), getJson('/data/yo-topics.json')].map(p => p.catch(() => null)));
   if (parts.includes(null)) index = null;   // a source that failed (network) is fetched again on the next search
   const [m, a, t, yo] = parts;
-  const out = [];
+  const out = PAGES.map(x => ({...x}));
+  out.partial = parts.includes(null);   // hitsHtml: "no data" is not "no hits"
   if (m) {
     const seen = new Set();
     for (const [cid, c] of Object.entries(m.categories || {})) for (const it of c.items || []) {
@@ -42,9 +53,14 @@ export async function search(q, models){
   const v = norm(q.trim());
   if (!v) return [];
   const all = await (index ||= build(models));
-  return all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
+  const found = all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
+  found.partial = all.partial;
+  return found;
 }
 
+// (found, q) is the whole contract (the YO bar calls it the same way); `found.partial` comes from search().
+export const NO_DATA = '<li class="none" role="status">Haku ei saanut kaikkea dataa. Tarkista yhteys ja yritä uudelleen.</li>';
 export const hitsHtml = (found, q) => found.length
   ? found.map(x => `<li><a href="${esc(x.href)}"><small>${esc(x.kind)}</small><b>${esc(x.title)}</b><span>${esc(x.sub || '')}</span></a></li>`).join('')
+  : found.partial ? NO_DATA
   : `<li class="none">Ei osumia. Kokeile toista sanaa tai avaa <a href="/ai?q=${enc(norm(q.trim()))}">AI-opas</a> tai <a href="/yo-tutka">YO-tutka</a>.</li>`;

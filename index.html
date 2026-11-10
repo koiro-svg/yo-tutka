@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>koirosvg</title>
+<title>koirosvg.com – AI-opas, YO-tutka, hyppymittari ja visat</title>
 <meta name="description" content="koirosvg.com: AI-opas (mallit, koodausagentit ja työkalut), YO-tutka, hyppymittari ja visakaksintaisto.">
 <meta name="theme-color" content="#081427">
 <link rel="canonical" href="https://koirosvg.com/">
@@ -11,6 +11,12 @@
 <meta property="og:url" content="https://koirosvg.com/">
 <meta property="og:title" content="koirosvg.com">
 <meta property="og:description" content="AI-opas, YO-tutka, hyppymittari ja visakaksintaisto.">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:image" content="https://koirosvg.com/img/og-koti.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://koirosvg.com/img/og-koti.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -69,7 +75,8 @@
 [data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
 [data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
 [data-page="tietosuoja"]{--kt-tone:#5CE1C6}
-@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
 html[data-page] body{background:
     linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
     linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
@@ -81,10 +88,13 @@ html[data-page] body{background:
 .kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
 .kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
 .kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
 /* /koiro-tokens */
 /* Deliberately dark-only: the radar theme is a single visual world. */
 html{background:var(--bg)}
-body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--bg-glow),var(--bg) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(48px,env(safe-area-inset-bottom))}
+body{margin:0;min-height:100vh;display:grid;align-content:center;background:radial-gradient(ellipse at 70% 30%,var(--bg-glow),var(--bg) 70%) fixed;color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,5vw,56px);padding-block:max(32px,env(safe-area-inset-top)) max(56px,env(safe-area-inset-bottom))}
 :focus-visible{outline-offset:3px}
 .muted{color:var(--ink-3)}
 .wrap{max-width:1120px;width:100%;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:32px;position:relative}
@@ -92,7 +102,7 @@ body{margin:0;min-height:100vh;display:grid;align-content:center;background:radi
 .eyebrow{font:600 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-spacing:-.02em;text-wrap:balance}
 .lede{color:var(--ink-3);max-width:46ch;font-size:16px;margin:0}
-.radar{position:relative;width:100%;max-width:360px;aspect-ratio:1;justify-self:center}
+.radar{position:relative;width:100%;max-width:360px;aspect-ratio:1;justify-self:center;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--kt-tone) 10%,transparent) 0,transparent 68%)}
 .radar canvas{width:100%;height:100%;display:block}
 /* julkinen-1: each blip is a real link over the canvas (keyboard and screen readers), positioned in % of the radar. */
 .blip{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:block}
@@ -101,7 +111,9 @@ h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-s
 .search .kt-input{flex:1 1 260px;max-width:460px}
 .search kbd{font:600 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
 @media (pointer:coarse){.search kbd{display:none}}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+/* One column on a phone, 2 × 2 from 700 px up (auto-fit left the fourth card alone on a row of three). */
+.tools{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (min-width:700px){.tools{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Each card opens with its tool's picture (the phone-size hero, cropped to the subject) faded into the card. */
 .tool{--tone:var(--accent);display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:124px 22px 22px;border-radius:16px;
   background:linear-gradient(180deg,transparent 0,color-mix(in srgb,var(--surface) 50%,transparent) 62px,var(--surface) 124px),var(--art,none) right -30px top -22px/auto 196px no-repeat,var(--surface);
@@ -120,11 +132,12 @@ html[data-page="koti"]{--kt-hero-x:right -150px;--kt-veil:34%}
 .tool .live{color:var(--ink);font-size:14px}
 .tool .live b{color:var(--accent)}
 .tool .go{font-weight:700;color:var(--tone)}
-/* Discreet on purpose, but kept at 3.7:1 (WCAG non-text contrast). Absolute so it adds no grid row. */
-.lock{position:absolute;right:0;bottom:-44px;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;color:#5A7194;transition:color .15s}
+/* Discreet on purpose, but kept at 3.7:1 (WCAG non-text contrast). Absolute so it adds no grid row. The box is 44 px
+   for a finger; the icon sits where it always did (body's bottom padding covers the 50 px). */
+.lock{position:absolute;right:-6px;bottom:-50px;display:grid;place-items:center;width:44px;height:44px;border-radius:8px;color:#5A7194;transition:color .15s}
 .lock:hover{color:var(--accent)}
 footer{font-size:13px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:4px 14px;padding-right:44px}
-footer a{color:var(--ink-3)}
+footer a{color:var(--ink-3);display:inline-block;padding-block:12px;margin-block:-12px}
 footer a:hover{color:var(--accent)}
 /* julkinen-4: on a phone the radar sits small beside the title, so the cards start on the first screen. */
 @media (max-width:700px){
@@ -145,15 +158,15 @@ footer a:hover{color:var(--accent)}
   <header class="hero">
     <div>
       <div class="eyebrow">koirosvg.com</div>
-      <h1>Näe mikä on tulossa.</h1>
-      <p class="lede">Tekoälymallien, -agenttien ja -työkalujen kärki, ylioppilaskokeiden aiheet, hyppysi kameralla mitattuna ja tietovisat kaveria vastaan.</p>
+      <h1>Näe, mikä on tulossa.</h1>
+      <p class="lede">Tekoälymallien, ‑agenttien ja ‑työkalujen kärki, ylioppilaskokeiden aiheet, hyppysi kameralla mitattuna ja tietovisat kaveria vastaan.</p>
     </div>
     <div class="radar" id="radar-box">
       <canvas id="radar" aria-hidden="true"></canvas>
     </div>
   </header>
   <div class="search" role="search">
-    <input class="kt-input" id="q" type="search" placeholder="Hae malleista, työkaluista ja YO-aiheista" aria-label="Hae koko sivustosta" autocomplete="off">
+    <input class="kt-input" id="q" type="search" placeholder="Hae työkaluista, malleista ja YO-aiheista" aria-label="Hae koko sivustosta" autocomplete="off">
     <kbd aria-hidden="true">/</kbd>
   </div>
   <ul class="kt-hits" id="hits" aria-live="polite" hidden></ul>
@@ -260,7 +273,12 @@ footer a:hover{color:var(--accent)}
         cx.strokeStyle = `rgba(92,225,198,${(1 - d / 1.2) * 0.8})`; cx.lineWidth = 2 * k0;
         cx.beginPath(); cx.arc(x, y, rad + d * 26 * k0, 0, TAU); cx.stroke();
       }
-      if (b.t && !small) { cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.fillText(b.t, x + 30 * k0, y + 8 * k0); }
+      // The name sits right of its blip, or left of it when it would run past the canvas edge (the 3 % is the tilt's reach).
+      if (b.t && !small) {
+        const flip = x + 30 * k0 + cx.measureText(b.t).width > W * 0.97;
+        cx.fillStyle = `rgba(230,238,248,${Math.max(.5, k)})`; cx.textAlign = flip ? 'right' : 'left';
+        cx.fillText(b.t, flip ? x - 30 * k0 : x + 30 * k0, y + 8 * k0);
+      }
     }
   }
   const kick = () => { if (!raf) { last = 0; raf = requestAnimationFrame(draw); } };
@@ -337,12 +355,26 @@ footer a:hover{color:var(--accent)}
     if (!v) { hits.hidden = true; hits.innerHTML = ''; return; }
     if (!mod) mod = import('/site-search.js');
     let html;
-    try { const s = await mod; html = s.hitsHtml(await s.search(v, models), v); } catch (e) { mod = null; return; }
+    // A module or search that failed (offline) says so instead of leaving the field dead; the next keystroke tries again.
+    try { const s = await mod; html = s.hitsHtml(await s.search(v, models), v); } catch (e) { mod = null; html = '<li class="none" role="status">Haku ei latautunut. Tarkista yhteys ja yritä uudelleen.</li>'; }
     if (q.value.trim() !== v) return;
     hits.innerHTML = html; hits.dataset.q = v;
     hits.hidden = false;
   });
-  q.addEventListener('keydown', e => { if (e.key === 'Enter') { const a = hits.dataset.q === q.value.trim() && hits.querySelector('li:not(.none) > a'); if (a) a.click(); } else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); } });
+  const links = () => [...hits.querySelectorAll('li:not(.none) > a')];
+  q.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { const a = hits.dataset.q === q.value.trim() && links()[0]; if (a) a.click(); }
+    else if (e.key === 'Escape') { q.value = ''; q.dispatchEvent(new Event('input')); }
+    else if (e.key === 'ArrowDown' && !hits.hidden && links()[0]) { e.preventDefault(); links()[0].focus(); }
+  });
+  // Arrow keys walk the hits (focus moves, so Enter opens the focused one); up from the first returns to the field.
+  hits.addEventListener('keydown', e => {
+    const l = links(), i = l.indexOf(document.activeElement);
+    if (i < 0) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); (l[i + 1] || l[i]).focus(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); (l[i - 1] || q).focus(); }
+    else if (e.key === 'Escape') { q.focus(); q.value = ''; q.dispatchEvent(new Event('input')); }
+  });
   addEventListener('keydown', e => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
     if ((e.key === '/' && !typing) || (e.key === 'k' && (e.metaKey || e.ctrlKey))) { e.preventDefault(); q.focus(); }
