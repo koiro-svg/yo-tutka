@@ -13,6 +13,8 @@
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
 @media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{order:-2;flex:1 0 calc(100% - 96px)}.yonav .find{order:-1}}
 .yonav .find{display:inline-flex;align-items:center;gap:6px}
+/* A phone: 44 px touch targets (the tabs were 30 px high); desktop density stays. */
+@media (pointer:coarse){.yonav .kt-tab,.yonav .home{display:inline-flex;align-items:center;min-height:44px}}
 .yonav .kt-tab.find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
 .yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
 .yosearch>*{width:100%;max-width:560px}

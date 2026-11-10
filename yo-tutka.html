@@ -11,6 +11,8 @@
 <meta property="og:url" content="https://koirosvg.com/yo-tutka">
 <meta property="og:title" content="YO-tutka">
 <meta property="og:description" content="Ylioppilaskokeiden aiheet ja niiden todennäköisyys seuraavassa kokeessa.">
+<meta property="og:image" content="https://koirosvg.com/img/og-yo-tutka.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -69,7 +71,8 @@
 [data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
 [data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
 [data-page="tietosuoja"]{--kt-tone:#5CE1C6}
-@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
 html[data-page] body{background:
     linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
     linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
@@ -81,6 +84,9 @@ html[data-page] body{background:
 .kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
 .kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
 .kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
 /* /koiro-tokens */
 /* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
 :root{
@@ -237,6 +243,7 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 /* julkinen-23: rows and bars are updated in place, so a filter animates the bars to their new width. */
 .pbar{display:inline-block;width:44px;height:6px;border-radius:2px;background:var(--surface-2);vertical-align:middle;margin-right:6px}
 .pbar i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.pbar i.p4{background:var(--h5)}.pbar i.p3{background:var(--h4)}.pbar i.p2{background:var(--h3)}.pbar i.p1{background:var(--h2)}
 @media (prefers-reduced-motion:no-preference){.cell,.subjects button{transition:background .15s}.bar,.pbar i,.trow .fill{transition:width .45s ease}}
 
 /* julkinen-17 radar, -18 topic panel, -21 trend, -22 exam countdown, -24 print list */
@@ -247,10 +254,10 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 .exam{display:inline-block;vertical-align:middle;font:600 12px var(--font-mono);letter-spacing:0;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 10px;margin-left:6px}
 .exam.warn{color:var(--warn);background:var(--warn-soft)}
 .radar{margin:0;display:grid;gap:6px;justify-items:center}
-.radar svg{width:100%;max-width:480px;height:auto;overflow:visible}
+.radar svg{width:100%;max-width:560px;height:auto;overflow:visible}
 .radar .ring{fill:none;stroke:var(--line)}
 .radar .spk{stroke:var(--line)}
-.radar .rp{fill:rgba(92,225,198,.22);stroke:var(--accent);stroke-width:2}
+.radar .rp{fill:url(#rpFill);stroke:var(--accent);stroke-width:2;filter:drop-shadow(0 0 7px rgba(92,225,198,.45))}
 .radar .rm{fill:rgba(229,142,78,.38);stroke:var(--autumn);stroke-width:2}
 .radar .hit{fill:transparent;cursor:pointer}
 .radar .hit:hover,.radar .hit:focus,.radar .hit.on{fill:rgba(92,225,198,.1);outline:none}
@@ -288,6 +295,69 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
   #printlist .box{font-size:15pt;width:2em}
 }
 
+/* 10.11.2026 audit fixes. Search feedback next to the field, the collapsed exam structure, the radar's depth and its
+   numbered key on a phone, and the depth of the Tutka v2 layer (--kt-sheen, --kt-elev-*). */
+.qhits{font:600 12px var(--font-mono);color:var(--accent);text-decoration:none;border-radius:999px;padding:2px 10px;background:var(--accent-soft)}
+.qhits.none{color:var(--warn);background:var(--warn-soft)}
+.no-hits{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;border:1px dashed var(--line);border-radius:10px;padding:14px 16px;color:var(--ink-2)}
+.no-hits::before{content:"";width:26px;height:26px;border-radius:50%;flex:none;border:1px solid var(--line);background:radial-gradient(circle,transparent 30%,var(--line) 31%,var(--line) 36%,transparent 37%),conic-gradient(from 20deg,color-mix(in srgb,var(--kt-tone) 55%,transparent),transparent 90deg)}
+details.desc>summary{cursor:pointer;list-style:none}
+details.desc>summary::-webkit-details-marker{display:none}
+details.desc>summary .mo{color:var(--accent);font-weight:700;font-size:13px;white-space:nowrap}
+details.desc[open]>summary .mo{display:none}
+details.desc>p{margin-top:6px}
+.radar .rbg{fill:url(#rBg)}
+.radar .rk{fill:var(--ink-3);font:9px var(--font-mono);pointer-events:none}
+.radar .dot{stroke:var(--bg);stroke-width:1.5;pointer-events:none}
+.radar .dot.p4{fill:var(--h5)}.radar .dot.p3{fill:var(--h4)}.radar .dot.p2{fill:var(--h3)}.radar .dot.p1{fill:var(--h2)}
+.radar .rl.num{font-family:var(--font-mono);font-weight:600}
+.rkey{list-style:none;margin:4px 0 0;padding:0;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px}
+.rkey button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;min-height:40px;padding:4px 6px;border-radius:8px;font-size:13px;line-height:1.25}
+.rkey button:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+.rkey button.on{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.rkey .k{font:600 12px var(--font-mono);color:var(--ink-3);min-width:1.6em;text-align:right}
+.next{counter-reset:nx}
+.next li{counter-increment:nx}
+.next li::before{content:counter(nx);font:600 12px var(--font-mono);color:var(--ink-3);min-width:1.2em}
+.next li:first-child .nm{font-size:16px}
+.next li:first-child::before{color:var(--accent)}
+.tiles{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+.subjects button[aria-pressed="true"]{box-shadow:0 0 0 1px var(--ink),0 8px 22px -10px var(--kt-tone)}
+.subjects button:not([aria-pressed="true"]),details.sess{background-image:var(--kt-sheen)}
+details.sess{border-left:3px solid var(--line)}
+details.sess[data-season="K"]{border-left-color:var(--spring)}
+details.sess[data-season="S"]{border-left-color:var(--autumn)}
+details.sess[open]{box-shadow:var(--kt-elev-1)}
+.task .pts:not(:empty){background:var(--surface-2);border-radius:4px;padding:1px 6px;color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){
+  .radar .rp,.radar .dot{animation:radar-in .5s ease-out both}
+  @keyframes radar-in{from{opacity:0}to{opacity:1}}
+}
+@media (max-width:560px){
+  .next li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:4px 10px;padding:10px 0}
+  .next .ms{grid-column:2/-1}
+  .next .go{grid-column:2/-1;margin-left:0;justify-content:flex-start;gap:6px}
+  .next .go .prac{display:inline-flex;align-items:center;min-height:40px;padding:4px 10px}
+}
+/* A phone: iOS zooms into a field under 16 px, and a finger needs a bigger target; desktop density stays. */
+@media (pointer:coarse){
+  .controls select,.controls input[type=search],.subj-sel select{font-size:16px;min-height:44px}
+  .controls label{min-height:44px}
+  .controls input[type=checkbox]{width:20px;height:20px}
+  .controls .kt-btn.sm,.more-btn,.qhits,.no-hits .kt-btn{min-height:44px;padding-inline:14px}
+  .qhits{display:inline-flex;align-items:center}
+  .tname{display:block;padding:10px 0}
+  th button[data-sort]{padding:12px 0}
+  .tag,.prac{display:inline-flex;align-items:center;min-height:40px;padding-inline:10px}
+  .task .tags{gap:6px}
+  .cell{height:34px}
+  details.sess>summary{min-height:44px}
+  details.desc>summary{padding:6px 0}
+}
+@container (max-width:520px){
+  @media (pointer:coarse){.heat .cell{height:34px}}
+}
+
 /* Radar theme surfaces (keep last so they win over the base rules above). */
 html{background:var(--bg)}
 body{background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg)}
@@ -314,6 +384,8 @@ h1{font-weight:800;letter-spacing:-.02em}
 .yonav .due{font:600 11px var(--font-mono);background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 6px;margin-left:4px}
 @media (max-width:520px){.yonav{gap:2px}.yonav .kt-tab{padding:6px 8px;font-size:13px}.yonav .home{order:-2;flex:1 0 calc(100% - 96px)}.yonav .find{order:-1}}
 .yonav .find{display:inline-flex;align-items:center;gap:6px}
+/* A phone: 44 px touch targets (the tabs were 30 px high); desktop density stays. */
+@media (pointer:coarse){.yonav .kt-tab,.yonav .home{display:inline-flex;align-items:center;min-height:44px}}
 .yonav .kt-tab.find[aria-expanded=true]{border-color:var(--accent);color:var(--ink)}
 .yosearch{max-width:1240px;margin:0 auto 16px;display:grid;gap:8px}
 .yosearch>*{width:100%;max-width:560px}
@@ -430,9 +502,11 @@ h1{font-weight:800;letter-spacing:-.02em}
   // julkinen-22: the next exam per subject (YTL's preliminary spring 2027 schedule, checked 19.10.2026). Update each term;
   // scripts/validate_practice.py checks the keys against the data and warns when every date has passed.
   const EXAMS = {"aidinkieli":"2027-03-16", "englanti":"2027-03-22", "pitka-matematiikka":"2027-03-24", "fysiikka":"2027-03-30", "biologia":"2027-03-30", "kemia":"2027-04-02"};
+  const NARROW = matchMedia('(max-width:560px)');   // the radar's phone layout (numbered spokes + name list)
+  const WIDE = matchMedia('(min-width:900px)');     // room for longer names around the radar
   const TREND = 0.10;   // julkinen-21: recent-weighted vs even probability gap that earns an arrow
 
-  const state = { subject: (DATA[0]||{}).id, weighting:'recent', verifiedOnly:false, topic:null, query:'', sort:'p', sortDir:-1, allTopics:false, open:new Set() };
+  const state = { subject: (DATA[0]||{}).id, weighting:'recent', verifiedOnly:false, topic:null, query:'', sort:'p', sortDir:-1, allTopics:false, open:new Set(), closed:new Set() };
   try{ const saved = JSON.parse(localStorage.getItem('yo-tutka')||'{}'); if(saved.subject && DATA.some(s=>s.id===saved.subject)) state.subject=saved.subject; if(saved.weighting) state.weighting=saved.weighting; if(typeof saved.verifiedOnly==='boolean') state.verifiedOnly=saved.verifiedOnly; }catch(e){}
   const persist = ()=>{ try{ localStorage.setItem('yo-tutka', JSON.stringify({subject:state.subject, weighting:state.weighting, verifiedOnly:state.verifiedOnly})); }catch(e){} };
 
@@ -447,7 +521,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   function typeName(s,id){ const t=(s.taskTypes||[]).find(t=>t.id===id); return t? t.name : (id||'–'); }
 
   /* One pass over the active sessions: per topic the counts and task lists per session, the recent-weighted and even
-     probabilities (the trend is their gap) and the ranking. Cached per subject, weighting and verifiedOnly. */
+     probabilities, the trend (the gap of the raw weighted and even rates) and the ranking. Cached per subject, weighting and verifiedOnly. */
   const statsCache = new Map();
   function stats(s){
     const key = `${s.id}|${state.weighting}|${state.verifiedOnly}`;
@@ -466,7 +540,9 @@ h1{font-weight:800;letter-spacing:-.02em}
       let last=null, streak=0;
       for(let i=n-1;i>=0;i--) if(e.counts[i]>0){ last=ss[i]; break; }
       for(let i=n-1;i>=0&&e.counts[i]>0;i--) streak++;
-      return { id, name: topicName(s,id), counts:e.counts, cells:e.cells, total, sessionsHit, p: recent?pR:pE, trend: pR-pE, expected, last, streak, share: totalTasks? total/totalTasks : 0 };
+      // The arrow compares the raw rates: the two smoothed estimates carry priors of different strength (Σw ≈ 5.5 vs n).
+      const trend = n ? appeared.reduce((a,x,i)=>a+wR[i]*x,0)/WR - sessionsHit/n : 0;
+      return { id, name: topicName(s,id), counts:e.counts, cells:e.cells, total, sessionsHit, p: recent?pR:pE, trend, expected, last, streak, share: totalTasks? total/totalTasks : 0 };
     });
     const types = [...typeCount].map(([id,c])=>({ id, name:typeName(s,id), count:c, share: totalTasks? c/totalTasks:0 })).filter(t=>t.count>0).sort((a,b)=>b.count-a.count);
     const ranked = topics.filter(t=>t.total>0).sort((a,b)=>b.p-a.p);
@@ -487,7 +563,8 @@ h1{font-weight:800;letter-spacing:-.02em}
     if(psCache.has(s.id)) return psCache.get(s.id);
     let all={}; try{ all=(JSON.parse(localStorage.getItem('yo-practice')||'{}').scores)||{}; }catch(e){}
     const byTask=new Map();
-    for(const [k,v] of Object.entries(all)){ const [a,session,n]=k.split('|'); if(a!==s.id||!v||!v.max) continue; const key=session+'|'+n; const x=byTask.get(key)||{p:0,max:0}; x.p+=v.p; x.max+=v.max; byTask.set(key,x); }
+    for(const [k,v] of Object.entries(all)){ const [a,session,n]=k.split('|'); const max=v?+v.max:0, p=v?+v.p:NaN; if(a!==s.id||!(max>0)||!Number.isFinite(max)||!Number.isFinite(p)) continue;   // a broken row (old backup, edited data) never reaches the radar
+      const key=session+'|'+n; const x=byTask.get(key)||{p:0,max:0}; x.p+=Math.min(Math.max(p,0),max); x.max+=max; byTask.set(key,x); }
     const topics=new Map();
     for(const x of s.sessions) for(const t of x.tasks||[]){ const sc=byTask.get(x.id+'|'+t.n); if(!sc) continue; for(const id of t.topics||[]){ const m=topics.get(id)||{p:0,max:0,tasks:0}; m.p+=sc.p; m.max+=sc.max; m.tasks++; topics.set(id,m); } }
     const out = {byTask, topics};
@@ -508,10 +585,14 @@ h1{font-weight:800;letter-spacing:-.02em}
   }
   const pracLinks = (s, id, task) => `${task?`<a class="prac" href="${esc(practiceUrl(s.id,task.x.id,task.t.n))}">${esc(shortLabel(task.x.id))} · ${esc(task.t.n)}. ${esc(task.t.title)} →</a>`:''}<a class="prac" href="${esc(pikaUrl(s.id,id))}" title="Satunnainen tehtävä tästä aiheesta">Pikatesti →</a>`;
   const heatClass = (c,max) => c===0?'h0': 'h'+Math.max(1,Math.min(5,Math.ceil(c/max*5)));
-  function examText(s){
-    const d = EXAMS[s.id]; if(!d) return '';
+  function examDays(s){
+    const d = EXAMS[s.id]; if(!d) return null;
     const today = new Date(); today.setHours(0,0,0,0);
-    const days = Math.round((new Date(d+'T00:00')-today)/864e5);   // calendar days (Math.round absorbs a DST hour)
+    return Math.round((new Date(d+'T00:00')-today)/864e5);   // calendar days (Math.round absorbs a DST hour)
+  }
+  const examDate = s => new Date(EXAMS[s.id]+'T12:00').toLocaleDateString('fi-FI',{weekday:'short',day:'numeric',month:'numeric',year:'numeric'});
+  function examText(s){
+    const d = EXAMS[s.id], days = examDays(s); if(!d) return '';
     return days<0 ? '' : `Seuraava koe ${new Date(d+'T12:00').toLocaleDateString('fi-FI',{weekday:'short',day:'numeric',month:'numeric',year:'numeric'})} · ${days} pv`;
   }
   const examHtml = s => !EXAMS[s.id] ? '' : examText(s) ? `<span class="exam" title="YTL:n alustava koeaikataulu">${esc(examText(s))}</span>` : '<span class="exam warn">Seuraavan kokeen päivä päivittämättä</span>';
@@ -520,35 +601,43 @@ h1{font-weight:800;letter-spacing:-.02em}
   function radarHtml(s, st, ps){
     const ts = st.ranked.slice(0,16), N = ts.length; if(N<3) return '';
     // A phone scales the SVG down, so labels get a bigger font and fewer characters there.
-    const narrow = matchMedia('(max-width:560px)').matches, maxLen = narrow ? 12 : 18, fs = narrow ? 17 : 11;
+    // A phone has no room for names around the circle: spokes are numbered and the names are a list under the radar.
+    const narrow = NARROW.matches, maxLen = WIDE.matches ? 30 : 18, fs = narrow ? 17 : 11;
     const C=200, R=118, f1 = v=>v.toFixed(1), ang = i => -Math.PI/2 + i*2*Math.PI/N;
     const at = (a,r) => [f1(C+Math.cos(a)*r), f1(C+Math.sin(a)*r)];
     const ms = ts.map(t=>mastOf(ps,t.id)), any = ms.some(m=>m!=null);
     const poly = f => ts.map((t,i)=>at(ang(i),R*f(t,i)).join(',')).join(' ');
-    let svg = [0.25,0.5,0.75,1].map(k=>`<circle class="ring" cx="${C}" cy="${C}" r="${f1(R*k)}"/>`).join('');
+    let svg = `<defs><radialGradient id="rBg"><stop offset="0" stop-color="rgba(92,225,198,.10)"/><stop offset="1" stop-color="rgba(92,225,198,0)"/></radialGradient><radialGradient id="rpFill" gradientUnits="userSpaceOnUse" cx="${C}" cy="${C}" r="${R}"><stop offset="0" stop-color="rgba(92,225,198,.08)"/><stop offset="1" stop-color="rgba(92,225,198,.36)"/></radialGradient></defs><circle class="rbg" cx="${C}" cy="${C}" r="${R}"/>`;
+    svg += [0.25,0.5,0.75,1].map(k=>`<circle class="ring" cx="${C}" cy="${C}" r="${f1(R*k)}"/>`).join('');
     svg += ts.map((t,i)=>{ const [x,y]=at(ang(i),R); return `<line class="spk" x1="${C}" y1="${C}" x2="${x}" y2="${y}"/>`; }).join('');
     svg += `<polygon class="rp" points="${poly(t=>t.p)}"/>`;
     if(any) svg += `<polygon class="rm" points="${poly((t,i)=>ms[i]||0)}"/>`;
+    svg += ts.map((t,i)=>{ const [x,y]=at(ang(i),R*t.p); return `<circle class="dot ${pClass(t.p)}" cx="${x}" cy="${y}" r="${narrow?4.5:3.5}"/>`; }).join('');
+    if(!narrow) svg += [0.5,1].map(k=>{ const [x,y]=at(ang(0)+Math.PI/N,R*k-4); return `<text class="rk" x="${x}" y="${y}" text-anchor="middle">${k*100} %</text>`; }).join('');
     svg += ts.map((t,i)=>{
       const a=ang(i), [lx,ly]=at(a,R+10), cos=Math.cos(a), sin=Math.sin(a), anchor = Math.abs(cos)<0.2?'middle':cos>0?'start':'end';
-      const name = t.name.length>maxLen ? t.name.slice(0,maxLen-1)+'…' : t.name, on = state.topic===t.id;
+      const name = narrow ? String(i+1) : t.name.length>maxLen ? t.name.slice(0,maxLen-1)+'…' : t.name, on = state.topic===t.id;
       const [x0,y0]=at(a-Math.PI/N,R+40), [x1,y1]=at(a+Math.PI/N,R+40);
       return `<path class="hit${on?' on':''}" d="M${C},${C} L${x0},${y0} A${R+40},${R+40} 0 0 1 ${x1},${y1} Z" data-topic="${esc(t.id)}" tabindex="0" role="button" aria-pressed="${on}" aria-label="${esc(t.name)}: todennäköisyys ${fmtPct(t.p)}${ms[i]==null?'':', osaat '+fmtPct(ms[i])}"><title>${esc(t.name)}</title></path>
-        <text class="rl${on?' on':''}" data-name="${esc(t.id)}" style="font-size:${fs}px" x="${lx}" y="${f1(+ly + (sin>0.3?10:sin<-0.3?-2:4))}" text-anchor="${anchor}">${esc(name)}</text>`;
+        <text class="rl${narrow?' num':''}${on?' on':''}" data-name="${esc(t.id)}" style="font-size:${fs}px" x="${lx}" y="${f1(+ly + (sin>0.3?10:sin<-0.3?-2:4))}" text-anchor="${anchor}">${esc(name)}</text>`;
     }).join('');
-    return `<figure class="radar"><svg viewBox="-60 -10 520 420" role="group" aria-label="Aiheiden tutka: todennäköisyys ja oma osaaminen">${svg}</svg>
-      <figcaption class="legend"><span><span class="sw rp"></span>todennäköisyys kokeessa</span>${any?'<span><span class="sw rm"></span>oma osaaminen</span>':'<span>Arvioi itsesi harjoittelussa, niin oma osaaminen piirtyy tutkaan.</span>'}<span>Napauta aihetta.</span></figcaption></figure>`;
+    return `<figure class="radar"><svg viewBox="${narrow?'30 30 340 340':'-60 -10 520 420'}" role="group" aria-label="Aiheiden tutka: todennäköisyys ja oma osaaminen">${svg}</svg>
+      <figcaption class="legend"><span><span class="sw rp"></span>todennäköisyys kokeessa</span>${any?'<span><span class="sw rm"></span>oma osaaminen</span>':'<span>Arvioi itsesi harjoittelussa, niin oma osaaminen piirtyy tutkaan.</span>'}<span>Napauta aihetta.</span></figcaption>${narrow?`<ol class="rkey">${ts.map((t,i)=>`<li><button type="button" data-topic="${esc(t.id)}" aria-pressed="${state.topic===t.id}"><span class="k">${i+1}</span><span>${esc(t.name)}</span></button></li>`).join('')}</ol>`:''}</figure>`;
   }
 
   // julkinen-18: the selected topic's panel under its row.
   function infoRow(s, st, t, ps){
     const desc = (topicOf(s,t.id)||{}).description, m = ps.topics.get(t.id), max = Math.max(1,...t.counts);
     const bars = t.counts.map((c,i)=>`<span class="ib" title="${esc(st.ss[i].label)}: ${c} tehtävää"><i style="height:${Math.round(c/max*100)}%"></i><small>${esc(shortLabel(st.ss[i].id))}</small></span>`).join('');
+    // Spring and autumn exams can differ: said when the appearance rates are at least 50 points apart.
+    const sea = k => { const ix = st.ss.map((x,i)=>x.id.slice(-1)===k?i:-1).filter(i=>i>=0); return {n:ix.length, hit:ix.filter(i=>t.counts[i]>0).length}; };
+    const spr = sea('K'), aut = sea('S');
+    const season = spr.n>=2 && aut.n>=2 && Math.abs(spr.hit/spr.n - aut.hit/aut.n) >= 0.5 ? ` Keväisin ${spr.hit}/${spr.n}, syksyisin ${aut.hit}/${aut.n} kerralla.` : '';
     const why = `Esiintyi ${t.sessionsHit}/${st.n} kerralla${t.streak>=2?`, ${t.streak} viimeisintä peräkkäin`:''}${t.last?`, viimeksi ${esc(t.last.label.toLowerCase())}`:''}.`;
     return `<tr class="info"><td colspan="7"><div class="infop">
       ${desc?`<p>${esc(desc)}</p>`:''}
       <div class="ibars" aria-hidden="true">${bars}</div>
-      <p class="small">${why} Todennäköisyys seuraavassa kokeessa ${fmtPct(t.p)} (${pWord(t.p)}). ${m?`Osaat ${fmtPct(mastOf(ps,t.id))} (${m.tasks} tehtävää arvioitu).`:'Et ole vielä arvioinut tämän aiheen tehtäviä.'}</p>
+      <p class="small">${why}${season} Todennäköisyys seuraavassa kokeessa ${fmtPct(t.p)} (${pWord(t.p)}). ${m?`Osaat ${fmtPct(mastOf(ps,t.id))} (${m.tasks} tehtävää arvioitu).`:'Et ole vielä arvioinut tämän aiheen tehtäviä.'}</p>
       <p class="go">${pracLinks(s, t.id, taskFor(t.id, ps.byTask, st))}</p>
     </div></td></tr>`;
   }
@@ -559,9 +648,16 @@ h1{font-weight:800;letter-spacing:-.02em}
   const th = (key,label,cls='') => `<th class="${cls}"><button type="button" data-sort="${key}">${label}<span class="arr"></span></button></th>`;
   function renderSubjects(){
     $('#subjects').innerHTML = DATA.map(s=>{
-      const v = s.sessions.filter(x=>x.verified && x.tasks && x.tasks.length).length;
-      return `<button type="button" data-id="${esc(s.id)}" aria-pressed="${s.id===state.subject}">${esc(s.name)}<span class="n">${v}/${s.sessions.length}</span></button>`;
+      // Days to the exam tell which subject is most urgent; the verified count shows only when a session is unverified.
+      const v = s.sessions.filter(x=>x.verified && x.tasks && x.tasks.length).length, days = examDays(s);
+      const n = days!=null && days>=0 ? `<span class="n" title="Seuraava koe ${esc(examDate(s))}">${days} pv</span>` : v<s.sessions.length ? `<span class="n" title="vahvistettuja kertoja">${v}/${s.sessions.length}</span>` : '';
+      return `<button type="button" data-id="${esc(s.id)}" aria-pressed="${s.id===state.subject}">${esc(s.name)}${n}</button>`;
     }).join('') + `<label class="subj-sel">Oppiaine <select id="subjSel">${DATA.map(s=>`<option value="${esc(s.id)}"${s.id===state.subject?' selected':''}>${esc(s.name)}</option>`).join('')}</select></label>`;
+  }
+  // The exam structure is read once and skipped on every later visit: the first sentence shows, the rest opens.
+  function descHtml(text){
+    const m = /^(.{40,}?[.!?])\s+(\S[\s\S]{80,})$/.exec(text);
+    return m ? `<details class="desc"><summary>${esc(m[1])} <span class="mo">Näytä kokeen rakenne ▾</span></summary><p>${esc(m[2])}</p></details>` : `<p class="desc">${esc(text)}</p>`;
   }
   function renderAll(){
     keepFocus(()=>{
@@ -581,7 +677,7 @@ h1{font-weight:800;letter-spacing:-.02em}
           <div>
             <div class="eyebrow">Oppiaine</div>
             <h2 style="font-size:28px;margin:2px 0 8px">${esc(s.name)} ${examHtml(s)}</h2>
-            <p class="desc">${esc(s.examStructure||'')}</p>
+            ${descHtml(s.examStructure||'')}
           </div>
           <div class="tiles" role="group" aria-label="Yhteenveto">
             <div class="tile"><span class="v"><span id="tileN"></span><span style="font-size:14px;color:var(--ink-3)">/${s.sessions.length}</span></span><span class="l">kertaa mukana</span></div>
@@ -595,8 +691,9 @@ h1{font-weight:800;letter-spacing:-.02em}
               <option value="recent" ${state.weighting==='recent'?'selected':''}>tuoreimmat kerrat painotettuina</option>
               <option value="even" ${state.weighting==='even'?'selected':''}>kaikki kerrat tasan</option>
             </select></label>
-          <label><input type="checkbox" id="verifiedOnly" ${state.verifiedOnly?'checked':''}> Vain vahvistetut kerrat</label>
+          ${unverified.length?`<label><input type="checkbox" id="verifiedOnly" ${state.verifiedOnly?'checked':''}> Vain vahvistetut kerrat</label>`:''}
           <label>Hae tehtävistä <input type="search" id="query" value="${esc(state.query)}" placeholder="esim. derivaatta, ilmasto…"></label>
+          <a class="qhits" id="queryHits" href="#sessions" aria-live="polite" hidden></a>
           <span id="topicChip"></span>
           <button type="button" class="kt-btn sm" id="printList">Tee kertauslista</button>
         </div>
@@ -615,13 +712,14 @@ h1{font-weight:800;letter-spacing:-.02em}
           <section class="sec">
             <div class="sec-head"><h3>Esiintymiskartta</h3><span class="hint">Tehtäviä per aihe ja tutkintokerta · napauta solua</span></div>
             <table class="heat" id="heatTbl"></table>
-            <div class="legend"><span><span class="chip K">K</span> kevät</span><span><span class="chip S">S</span> syksy</span><span>* ei vahvistettu</span><span><span class="sw" style="background:var(--h1)"></span><span class="sw" style="background:var(--h3)"></span><span class="sw" style="background:var(--h5)"></span> 1 → <span id="heatMax"></span> tehtävää</span></div>
+            <div class="legend"><span><span class="chip K">K</span> kevät</span><span><span class="chip S">S</span> syksy</span>${unverified.length?'<span>* ei vahvistettu</span>':''}<span><span class="sw" style="background:var(--h1)"></span><span class="sw" style="background:var(--h3)"></span><span class="sw" style="background:var(--h5)"></span> 1 → <span id="heatMax"></span> tehtävää</span></div>
             <div class="sec-head" style="margin-top:8px"><h3>Tehtävätyypit</h3><span class="hint">osuus kaikista tehtävistä</span></div>
             <div class="types" id="types"></div>
           </section>
         </div>
         <section class="sec">
           <div class="sec-head"><h3>Tehtävät kerroittain</h3><span class="hint" id="sessHint"></span></div>
+          <div class="no-hits" id="noHits" hidden><span id="noHitsText"></span><button type="button" class="kt-btn sm" id="clearFilter">Tyhjennä suodatus</button></div>
           <div class="sessions" id="sessions"></div>
         </section>
         <div class="quality">
@@ -682,7 +780,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     c[3].textContent = fmtPct(t.share);
     c[4].textContent = t.expected.toFixed(1);
     c[5].querySelector('.tw').innerHTML = trendHtml(t);
-    c[5].querySelector('.pbar i').style.width = Math.round(t.p*100)+'%';
+    { const b = c[5].querySelector('.pbar i'); b.style.width = Math.round(t.p*100)+'%'; b.className = pClass(t.p); }
     pp.className = 'pp '+pClass(t.p); pp.title = pWord(t.p); pp.textContent = fmtPct(t.p);
     c[6].innerHTML = t.last ? `<span class="chip ${esc(t.last.id.slice(-1))}">${esc(shortLabel(t.last.id))}</span>` : '<span class="chip">–</span>';
   }
@@ -727,8 +825,10 @@ h1{font-weight:800;letter-spacing:-.02em}
       if(changed || drawn.order!==order){
         heat.style.setProperty('--n', st.ss.length);
         heat.innerHTML = `<thead><tr><th></th>${st.ss.map(x=>`<th class="sess"><span class="chip ${esc(x.id.slice(-1))}" title="${esc(x.label)}${x.verified?'':' (ei vahvistettu)'}">${esc(shortLabel(x.id))}${x.verified?'':'*'}</span></th>`).join('')}</tr></thead>
-          <tbody>${topics.map(t=>`<tr><td class="name" data-name="${esc(t.id)}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="0" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(t.cells[i].map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
+          <tbody>${topics.map(t=>`<tr><td class="name" data-name="${esc(t.id)}">${esc(t.name)}</td>${t.counts.map((c,i)=>`<td><div class="cell ${heatClass(c,st.maxCell)}" role="button" tabindex="-1" data-sess="${esc(st.ss[i].id)}" data-topic="${esc(t.id)}" title="${esc(st.ss[i].label)} · ${esc(t.name)}: ${c} tehtävää${c?'\n'+esc(t.cells[i].map(k=>k.n+'. '+k.title).join('\n')):''}">${c||'·'}</div></td>`).join('')}</tr>`).join('')}</tbody>`;
         drawn.order = order;
+        // One tab stop for the whole map (arrow keys move inside it): 200 cells were 200 tab stops.
+        const first = heat.querySelector('.cell'); if(first) first.tabIndex = 0;
       }
       for(const td of heat.querySelectorAll('td.name')) td.classList.toggle('sel', td.dataset.name===state.topic);
       const radar = $('#radarBox');
@@ -749,7 +849,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   const matches = (s,t) => { const q = state.query.trim().toLowerCase(); return (!state.topic || (t.topics||[]).includes(state.topic)) && (!q || textOf(s,t).includes(q)); };
   function sessionHtml(s, x){
     const has = x.tasks && x.tasks.length;
-    return `<details class="sess" id="sess-${esc(x.id)}" data-sess="${esc(x.id)}">
+    return `<details class="sess" id="sess-${esc(x.id)}" data-sess="${esc(x.id)}" data-season="${esc(x.id.slice(-1))}">
       <summary><span class="chip ${esc(x.id.slice(-1))}">${esc(shortLabel(x.id))}</span>${esc(x.label)}${x.verified?'<span class="chip ok">vahvistettu</span>':(has?'<span class="chip unv">ei vahvistettu</span>':'<span class="chip dim">puuttuu</span>')}<span class="meta"></span></summary>
       <div class="sbody">
         ${x.notes?`<div class="snote">${esc(x.notes)}</div>`:''}
@@ -760,22 +860,32 @@ h1{font-weight:800;letter-spacing:-.02em}
           <div class="pts">${t.points!=null?esc(t.points)+' p':''}</div>
           ${t.summary?`<div class="sum">${esc(t.summary)}</div>`:''}
           <div class="tags">${(t.topics||[]).map(id=>`<button type="button" class="tag" data-topic="${esc(id)}">${esc(topicName(s,id))}</button>`).join('')}${t.type?`<span class="tag type">${esc(typeName(s,t.type))}</span>`:''}${t.format?`<span class="tag type">${esc(t.format)}</span>`:''}<a class="prac" href="${esc(practiceUrl(s.id,x.id,t.n))}">Harjoittele →</a></div>
-        </div>`).join('') + '<p class="empty" hidden>Ei suodatukseen osuvia tehtäviä.</p>' : '<p class="empty">Tehtävälistaa ei löytynyt lähteistä.</p>'}
+        </div>`).join('') : '<p class="empty">Tehtävälistaa ei löytynyt lähteistä.</p>'}
       </div>
     </details>`;
   }
   function filterSessions(){
-    const {s} = cur, on = filtering();
+    const {s} = cur, on = filtering(), q = state.query.trim();
     $('#sessHint').textContent = 'uusin ensin' + (on ? ' · suodatettu' : '');
+    let hits = 0, hitSessions = 0;
     for(const d of document.querySelectorAll('#sessions details.sess')){
       const x = s.sessions.find(y=>y.id===d.dataset.sess), tasks = (x && x.tasks) || [];
       let shown = 0;
       d.querySelectorAll('.task').forEach(el=>{ const ok = matches(s, tasks[+el.dataset.i]); el.hidden = !ok; if(ok) shown++; });
-      const empty = d.querySelector('.task ~ .empty'); if(empty) empty.hidden = !!shown;
+      hits += shown; if(shown) hitSessions++;
       d.querySelector('.meta').textContent = (tasks.length ? `${shown}/${tasks.length} tehtävää` : '–') + (x && x.date ? ' · ' + x.date : '');
-      d.open = state.open.has(d.dataset.sess) || (on && shown > 0);
+      // While filtering, a session without hits steps aside (one empty state for the whole list instead of one per session).
+      d.hidden = on && tasks.length>0 && !shown;
+      // The user's own closing wins over the automatic opening of sessions with hits.
+      d.open = !state.closed.has(d.dataset.sess) && (state.open.has(d.dataset.sess) || (on && shown > 0));
     }
     for(const b of document.querySelectorAll('#sessions .tag[data-topic]')) b.classList.toggle('sel', b.dataset.topic===state.topic);
+    // Feedback next to the search field (the list is far below it): only the text changes, the field is never redrawn.
+    const out = $('#queryHits');
+    out.hidden = !q; out.classList.toggle('none', !hits);
+    out.textContent = !q ? '' : hits ? `${hits} ${hits===1?'tehtävä':'tehtävää'} ${hitSessions} kerralla ↓` : 'Ei osumia';
+    $('#noHits').hidden = !(on && !hits);
+    $('#noHitsText').textContent = q ? `Ei osumia haulle "${q}"${state.topic?` aiheessa ${topicName(s,state.topic)}`:''}.` : 'Aiheella ei ole tehtäviä mukana olevilla kerroilla.';
   }
   // A rebuilt or moved control gets focus back: itself when still in the page, else found by tag, first class and data-*
   // attributes (or its id), so a topic name button never resolves to the radar wedge of the same topic.
@@ -804,7 +914,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     const s = DATA.find(x=>x.id===id); if(!s) return;
     state.subject=id; state.topic=null; state.query=''; state.allTopics=false;
     const newest = orderedSessions(s).pop();
-    state.open = new Set(newest ? [newest.id] : []);
+    state.open = new Set(newest ? [newest.id] : []); state.closed = new Set();
     persist();
   }
   function fromHash(){
@@ -819,9 +929,9 @@ h1{font-weight:800;letter-spacing:-.02em}
   const hashFor = () => '#' + encodeURIComponent(state.subject) + (state.topic ? '/' + encodeURIComponent(state.topic) : '');
   const syncUrl = (replace) => { if(location.hash !== hashFor()) history[replace ? 'replaceState' : 'pushState'](null, '', hashFor()); };
   const go = (full) => { syncUrl(); if(full) renderAll(); else { paintTopics(); filterSessions(); } };
-  function setTopic(id){ state.topic = (state.topic===id)? null : id; go(false); }
+  function setTopic(id){ state.topic = (state.topic===id)? null : id; state.closed.clear(); go(false); }
   function openCell(c){
-    state.topic=c.dataset.topic; state.open.add(c.dataset.sess);
+    state.topic=c.dataset.topic; state.open.add(c.dataset.sess); state.closed.delete(c.dataset.sess);
     go(false);
     const d=$('#sess-'+CSS.escape(c.dataset.sess)); if(d) d.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -837,6 +947,8 @@ h1{font-weight:800;letter-spacing:-.02em}
   }
 
   document.getElementById('practiceLink').href = PRACTICE;
+  // A rotated phone or a narrowed window redraws the radar in the other layout (it is otherwise drawn only on new data).
+  for(const mq of [NARROW, WIDE]) mq.addEventListener('change', () => { if(cur){ drawn.st = null; paintTopics(); } });
   window.addEventListener('pageshow', e => { if (e.persisted) rescore(); });
   addEventListener('storage', e => { if (e.key === 'yo-practice') rescore(); });
   // An unknown subject or topic is dropped by fromHash/paintTopics, so the address is set back to what is shown.
@@ -865,7 +977,9 @@ h1{font-weight:800;letter-spacing:-.02em}
   panel.addEventListener('input', e => { if(e.target.id!=='query') return; clearTimeout(tmr); tmr=setTimeout(()=>{ state.query=e.target.value; filterSessions(); },180); });
   panel.addEventListener('click', e => {
     const t = e.target, sum = t.closest('details.sess > summary');
-    if(sum){ const d = sum.parentElement; d.open ? state.open.delete(d.dataset.sess) : state.open.add(d.dataset.sess); return; }
+    if(sum){ const d = sum.parentElement, id = d.dataset.sess; if(d.open){ state.open.delete(id); state.closed.add(id); } else { state.open.add(id); state.closed.delete(id); } return; }
+    if(t.closest('#queryHits')){ e.preventDefault(); toSessions(); return; }
+    if(t.closest('#clearFilter')){ clearTimeout(tmr); state.query=''; state.topic=null; $('#query').value=''; go(false); $('#query').focus({preventScroll:true}); return; }
     if(t.closest('#clearTopic')){ state.topic=null; go(false); return; }
     if(t.closest('#printList')){ printList(); return; }
     if(t.closest('#moreTopics')){ state.allTopics=!state.allTopics; paintTopics(); return; }
@@ -876,7 +990,17 @@ h1{font-weight:800;letter-spacing:-.02em}
     const tp = t.closest('[data-topic]');
     if(tp) setTopic(tp.dataset.topic);
   });
+  const toSessions = () => { const el = $('#noHits').hidden ? $('#sessions') : $('#noHits'); el.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth', block:'start'}); };
   panel.addEventListener('keydown', e => {
+    if(e.target.id==='query'){ if(e.key==='Enter'){ clearTimeout(tmr); state.query=e.target.value; filterSessions(); if(state.query.trim()) toSessions(); } return; }
+    const from = e.key.startsWith('Arrow') && e.target.closest('#heatTbl .cell');
+    if(from){
+      const td = from.parentElement, tr = td.parentElement, col = td.cellIndex;
+      const to = e.key==='ArrowLeft' ? td.previousElementSibling : e.key==='ArrowRight' ? td.nextElementSibling : ((e.key==='ArrowUp' ? tr.previousElementSibling : tr.nextElementSibling)||{cells:[]}).cells[col];
+      const cell = to && to.querySelector('.cell'); if(!cell) return;
+      e.preventDefault(); from.tabIndex = -1; cell.tabIndex = 0; cell.focus();
+      return;
+    }
     if(e.key!=='Enter' && e.key!==' ') return;
     const el = e.target.closest('.cell[data-sess], path.hit'); if(!el) return;
     e.preventDefault();
