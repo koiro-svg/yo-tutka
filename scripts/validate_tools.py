@@ -222,6 +222,47 @@ def check_agents(ref, old, d, errors):
         errors.append(f"{swaps} coding agents added/removed vs {ref} (max {MAX_AGENT_SWAPS})")
 
 
+PAGE = ROOT / "ai.html"
+TASK_RE = re.compile(r"\{id:'([\w-]+)', label:'[^']*'(?:, cat:'[\w-]+')?, area:'(\w+)'(?:, agent:true)?(?:, tool:'([^']+)')?\},")
+# ai.html's isFree(): a price that starts with "Ilmainen" is a free tier, "Ilmainen kokeilu" is a trial.
+FREE_JS = r"/^ilmainen(?!\s+kokeilu)/i"
+FREE_RE = re.compile(r"^ilmainen(?!\s+kokeilu)", re.I)
+
+
+def is_free(price):
+    return bool(FREE_RE.match(str(price or "").strip()))
+
+
+def check_page(d, errors):
+    """ai.html's "Mitä haluat tehdä?" wiring against the data, and guards for logic fixed on 10.11.2026.
+
+    Returns warnings (printed, never fail the build: the page falls back to the area's pick)."""
+    page, warnings = PAGE.read_text(encoding="utf-8"), []
+    block = page.split("const TASKS = [", 1)[-1].split("];", 1)[0]
+    rows = [ln.strip() for ln in block.splitlines() if ln.strip().startswith("{id:")]
+    tasks = [TASK_RE.fullmatch(r) for r in rows]
+    if not rows or not all(tasks):
+        errors.append("ai.html: TASKS rows are not in the shape validate_tools.py reads (id, label, cat, area, agent, tool)")
+        return warnings
+    areas = {a["id"]: a for a in d["areas"]}
+    for tid, area, tool in (m.groups() for m in tasks):
+        if area not in areas:
+            errors.append(f"ai.html: task {tid!r} points to area {area!r}, which is not in ai-tools.json")
+        elif tool and not any(t["name"].lower().startswith(tool.lower()) for t in areas[area]["tools"]):
+            warnings.append(f"ai.html: task {tid!r} names tool {tool!r}, not found in area {area!r} (the page shows the area's pick)")
+    if FREE_JS not in page:
+        errors.append("ai.html: isFree() must stay " + FREE_JS + " (a free trial is not a free alternative)")
+    if "location.hash.length > 1 ? ui.tab : 'mallit'" not in page:
+        errors.append("ai.html: fromUrl() must fall back to the first tab when the URL has no #hash (Back to /ai)")
+    cases = {"Ilmainen · Pro 20 $/kk": True, "Ilmainen (rajattu)": True, "ilmainen 1 000 krediittiä": True,
+             "Ilmainen kokeilu · Creator ~29 $/kk": False, "7 vrk ilmainen kokeilu · Hobby 40 $/kk": False,
+             "Rajattu ilmaisversiossa": False, "299 $/kk, 3 000 ilmaista": False, "": False}
+    for price, want in cases.items():
+        if is_free(price) != want:
+            errors.append(f"is_free({price!r}) should be {want}")
+    return warnings
+
+
 def main():
     errors, loaded = [], []
     for path, check, structure in ((DATA, validate, check_tools), (AGENTS, validate_agents, check_agents)):
@@ -232,12 +273,17 @@ def main():
         errors += [f"{path.name}: {e}" for e in errs]
         loaded.append(d)
     d, g = loaded
+    warnings = check_page(d, errors) if not errors else []
+    for w in warnings:
+        print("warning: " + w)
     if errors:
         print("INVALID:\n- " + "\n- ".join(errors))
         sys.exit(1)
     n = sum(len(a["tools"]) for a in d["areas"])
     print(f"OK: {len(d['areas'])} areas, {n} tools, {len(d['changes'])} changes, updated {d['updated']}")
     print(f"OK: {len(g['agents'])} coding agents, updated {g['updated']}")
+    free = sum(1 for a in d["areas"] if any(is_free(t["price"]) for t in a["tools"]))
+    print(f"OK: ai.html tasks match the data ({free}/{len(d['areas'])} areas have a free tool)")
 
 
 if __name__ == "__main__":

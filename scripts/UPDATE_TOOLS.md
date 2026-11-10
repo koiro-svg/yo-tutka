@@ -34,6 +34,11 @@ good run if nothing changed in the world.
    - `fi`: `hyvä` | `kohtalainen` | `heikko` | `?` (Finnish-language quality; `?` if unknown).
    - Prices: current list price, short, e.g. `Ilmainen · Pro 20 $/kk`. No time-limited
      campaign prices. If sources disagree, give a range with `~`.
+     Start the price with `Ilmainen` only when the tool has a real free tier: the page's
+     "Ilmainen vaihtoehto" reads exactly that (`isFree` in `ai.html`). A trial is written
+     `Ilmainen kokeilu · …` or `7 vrk ilmainen kokeilu · …`, never plain `Ilmainen · …`.
+     The page also names a tool for some tasks (`TASKS` … `tool:'ElevenLabs'`); if you rename
+     or remove such a tool the validator prints a warning and the page falls back to the pick.
    - `url`: the tool's official https page. No affiliate or tracking parameters.
    - All text in Finnish, plain and concrete, no hype, no `<` or `>` characters.
      Do not claim anything you could not verify; leave the old text if unsure.

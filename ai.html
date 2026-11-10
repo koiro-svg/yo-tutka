@@ -11,6 +11,9 @@
 <meta property="og:url" content="https://koirosvg.com/ai">
 <meta property="og:title" content="AI-opas: mallit, koodausagentit ja työkalut">
 <meta property="og:description" content="Mikä tekoälymalli, koodausagentti tai työkalu mihinkin – päivittyy automaattisesti kahden päivän välein.">
+<meta property="og:image" content="https://koirosvg.com/img/og-ai.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://koirosvg.com/img/og-ai.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -69,7 +72,8 @@
 [data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
 [data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
 [data-page="tietosuoja"]{--kt-tone:#5CE1C6}
-@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+[data-page="404"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"],[data-page="404"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
 html[data-page] body{background:
     linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
     linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
@@ -81,6 +85,9 @@ html[data-page] body{background:
 .kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
 .kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
 .kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
+/* Touch (10.11.2026): iOS Safari zooms the page into a field under 16 px, and a finger needs 44 px (40 px for dense
+   chips). Only under pointer:coarse, so desktop density stays as it is. A page rule with a class still wins. */
+@media (pointer:coarse){.kt-input,select,textarea{font-size:16px}.kt-tab{display:inline-flex;align-items:center;min-height:44px}.kt-btn.sm{min-height:40px}}
 /* /koiro-tokens */
 html{background:var(--bg)}
 body{margin:0;background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;padding-inline:clamp(16px,3vw,40px);padding-block:20px 90px}
@@ -99,16 +106,19 @@ a{color:var(--accent)}
 .muted{color:var(--ink-3)}
 .small{font-size:13px}
 .panel,.card{background:linear-gradient(180deg,rgba(92,225,198,.06),transparent 240px),var(--surface);border:1px solid var(--line);border-radius:var(--radius-l)}
+.panel,.card{box-shadow:var(--kt-elev-1)}
 .panel{padding:20px;display:grid;gap:14px;min-width:0}
 
 /* Ask ("Mitä haluat tehdä?") answers and the starter five share one tile. */
 .ask .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
-.tile{background:var(--surface-2);border-radius:var(--radius-m);padding:14px;display:grid;gap:4px;align-content:start}
+.tile{background:var(--kt-sheen),var(--surface-2);box-shadow:var(--kt-elev-1);border-radius:var(--radius-m);padding:14px;display:grid;gap:4px;align-content:start}
 .tile small{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .tile b{font-family:var(--font-display);font-size:17px;line-height:1.2;overflow-wrap:anywhere}
 .tile span{font-size:13px;color:var(--ink-2)}
 .tile a{font-family:var(--font-mono);font-size:12px;text-decoration:none;font-weight:600}
+#answer .tile{border-left:3px solid var(--accent)}
+.starter .tiles{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
 
 /* What's new */
 .pills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
@@ -119,21 +129,31 @@ h2.split{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 
 /* Search + tabs */
 .searchbar{display:grid;gap:12px;position:sticky;top:0;z-index:5;background:var(--bg);padding-block:10px;margin-block:-10px;border-bottom:1px solid var(--line)}
-.searchbar .kt-input{width:100%;max-width:460px}
+.searchbar .kt-input{width:100%;max-width:560px}
+#areas .kt-tab{font-size:13px;padding:5px 11px}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
 .area-select{display:none}
 .group{display:grid;gap:12px;scroll-margin-top:120px}
 .group>header{display:grid;gap:4px}
 .group .intro{color:var(--ink-2);max-width:70ch}
 .group>h2,.group>header h2{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+section.group>h2::before,section.group>header h2::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;border:2px solid var(--kt-tone);box-shadow:0 0 10px -2px var(--kt-tone)}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px}
 .card{padding:18px;display:grid;gap:12px;align-content:start;scroll-margin-top:120px}
+@media (hover:hover){.card:hover{border-color:var(--line-2);box-shadow:var(--kt-elev-2);transform:translateY(-2px)}}
+@media (prefers-reduced-motion:no-preference){
+  .card{transition:transform .15s,border-color .15s,box-shadow .15s}
+  #answer .tile{animation:tile-in .25s ease-out both}
+  #answer .tile:nth-child(2){animation-delay:.05s}
+  #answer .tile:nth-child(3){animation-delay:.1s}
+}
+@keyframes tile-in{from{opacity:0;transform:translateY(6px)}}
 .card header{display:grid;gap:4px}
 .card header h3{display:flex;align-items:baseline;gap:8px;justify-content:space-between}
 .card .use{color:var(--ink-2);font-size:14px}
 .lk{font:600 12px var(--font-mono);color:var(--ink-3);background:none;border:0;cursor:pointer;padding:2px 4px;border-radius:4px;flex:none}
 .lk:hover{color:var(--accent)}
-.winner{background:var(--accent-soft);border-radius:8px;padding:12px 14px;display:grid;gap:2px;position:relative}
+.winner{background:radial-gradient(160px 90px at 100% 0,color-mix(in srgb,var(--kt-tone) 24%,transparent),transparent 72%),var(--accent-soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 32%,transparent);border-radius:8px;padding:12px 14px;display:grid;gap:2px;position:relative}
 .winner .label{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .winner .name{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1.15;overflow-wrap:anywhere;padding-right:30px}
 .winner .sub{font-size:13px;color:var(--ink-2)}
@@ -146,7 +166,9 @@ ol.rank .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 ol.rank .nm small{color:var(--ink-3)}
 ol.rank .sc{font-family:var(--font-mono);font-size:12px;color:var(--ink-2)}
 ol.rank .bar{grid-column:2/5;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
-ol.rank .bar i{display:block;height:100%;background:#1E8580}
+ol.rank .bar i{display:block;height:100%;background:linear-gradient(90deg,#1E8580,var(--accent))}
+ol.rank li:nth-child(1) .n{color:#D5DEEA;font-weight:600}
+ol.rank li:nth-child(2) .n{color:#DDA36C;font-weight:600}
 .kt-tab.cmpb{width:24px;height:24px;padding:0;border-radius:6px;font-size:13px;line-height:1;background:var(--surface);flex:none}
 .kt-tab.cmpb[aria-pressed=true]{background:var(--accent)}
 .more{display:none;justify-self:start}
@@ -157,6 +179,7 @@ details.gl summary::after{content:" ⓘ";color:var(--accent)}
 details.gl p{font-size:13px;color:var(--ink-2);margin-top:6px}
 .tip{font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:10px}
 .empty{color:var(--ink-3);font-size:14px}
+.group>.empty{border:1px dashed var(--line-2);border-radius:var(--radius-m);padding:16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .card .vendor{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .chip{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:2px 6px;background:var(--surface-2);color:var(--ink-2)}
@@ -195,7 +218,8 @@ dl.facts dd{margin:0;color:var(--ink-2)}
 
 /* Compare */
 .cmpbar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:calc(100vw - 24px);padding:10px 14px;border-radius:var(--radius-l);background:var(--surface-2);border:1px solid var(--accent);box-shadow:var(--shadow-pop)}
-.cmpbar .it{display:inline-flex;align-items:center;gap:4px;font-size:13px;background:var(--surface);border-radius:999px;padding:3px 4px 3px 10px}
+.cmpbar .it{display:inline-flex;align-items:center;gap:4px;font-size:13px;background:var(--surface);border-radius:999px;padding:3px 4px 3px 10px;min-width:0}
+.cmpbar .it .nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cmpbar .it button{background:none;border:0;color:var(--ink-3);cursor:pointer;font-size:14px;padding:0 6px}
 .cmpt{border-collapse:collapse;width:100%;font-size:14px}
 .cmpt th,.cmpt td{padding:8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
@@ -221,6 +245,29 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   #areas{display:none}
   .area-select{display:block;max-width:100%}
   .searchbar{position:static;margin-block:0;padding-block:0;border:0}
+  /* The compare bar: chips share one row, the buttons the next (it used to wrap into a 180 px box over the content). */
+  .cmpbar{left:12px;right:12px;transform:none;max-width:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:8px 10px}
+  .cmpbar .it{justify-content:space-between}
+  .cmpbar [data-act=cmp-open]{grid-column:span 2;justify-content:center}
+  .cmpbar [data-act=cmp-clear]{justify-content:center}
+}
+/* Touch: 16 px fields (iOS zooms into smaller ones) and 44 px targets (40 px for dense chips); desktop density is unchanged. */
+@media (pointer:coarse){
+  .searchbar .kt-input,.area-select .kt-input{font-size:16px}
+  #tabs .kt-tab,.kt-btn.sm,.more{min-height:44px}
+  .filters .kt-tab,.ask .kt-tab{min-height:40px}
+  .kt-tab.cmpb{width:36px;height:36px}
+  ol.rank .cmpb,.links .cmpb,.lk{position:relative}
+  .kt-tab.cmpb::after{content:"";position:absolute;inset:-4px}
+  .lk::after{content:"";position:absolute;inset:-12px -15px}
+  .winner .name{padding-right:44px}
+  .cmpbar .it{font-size:12px;padding-left:8px}
+  .cmpbar .it button{position:relative;min-width:30px;min-height:40px;padding:0}
+  .cmpbar .it button::after{content:"";position:absolute;inset:0 -5px}
+  details.gl summary{padding-block:14px}
+  .card .meta a,.links a,.tile a{padding-block:12px}
+  .news a{display:inline-block;padding-block:12px}
+  .crumb{padding-block:13px}
 }
 </style>
 </head>
@@ -241,6 +288,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       <span class="small muted">Painotus:</span>
       <button type="button" class="kt-tab" data-budget="best">Paras tulos</button>
       <button type="button" class="kt-tab" data-budget="cheap">Edullinen</button>
+      <span class="small muted" id="budget-note" hidden>ei muuta tämän tehtävän suositusta</span>
     </div>
     <div id="answer" aria-live="polite"></div>
   </section>
@@ -248,7 +296,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   <section class="panel news" id="news" hidden></section>
 
   <div class="searchbar">
-    <input class="kt-input" id="q" type="search" placeholder="Hae malleista, agenteista ja työkaluista, esim. ”video” tai ”Cursor”" aria-label="Hae">
+    <input class="kt-input" id="q" type="search" placeholder="Hae: malli, agentti tai työkalu" aria-label="Hae">
     <nav class="kt-tabs" id="tabs" role="tablist" aria-label="Näkymät"></nav>
   </div>
 
@@ -344,7 +392,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     [/sekuntia/, 'Aika ensimmäiseen vastaussanaan. Sisältää mahdollisen ”ajatteluajan” ennen vastausta.'],
   ];
   // julkinen-9: task → model category, tool area (ids from the data), coding agent. Written here, not in the data,
-  // because the tools routine may change only the data files' content.
+  // because the tools routine may change only the data files' content. `tool` names the area's tool for a task the
+  // area's pick does not fit (name prefix; falls back to the pick if the routine renames it; validate_tools.py warns).
   const TASKS = [
     {id:'koodi', label:'Koodaan sovellusta', area:'rakentaminen', agent:true},
     {id:'somevideo', label:'Teen somevideoita', cat:'video', area:'visuaalit'},
@@ -354,10 +403,10 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     {id:'botti', label:'Asiakaspalvelubotti', cat:'strategia', area:'asiakaspalvelu'},
     {id:'tutkimus', label:'Kirjoitan ja tutkin', cat:'yleis', area:'tutkimus'},
     {id:'markkinointi', label:'Markkinoin ja myyn', cat:'yleis', area:'markkinointi'},
-    {id:'puhe', label:'Teen selostuksia', cat:'puhe', area:'visuaalit'},
+    {id:'puhe', label:'Teen selostuksia', cat:'puhe', area:'visuaalit', tool:'ElevenLabs'},
     {id:'sopimukset', label:'Luen sopimuksia', cat:'juridiikka', area:'juridiikka'},
     {id:'litterointi', label:'Litteroin puhetta', cat:'puheentunnistus', area:'tuottavuus'},
-    {id:'musiikki', label:'Teen musiikkia', cat:'musiikki', area:'visuaalit'},
+    {id:'musiikki', label:'Teen musiikkia', cat:'musiikki', area:'visuaalit', tool:'ElevenLabs'},
   ];
   // Cards removed when AA's free API dropped their tests: old links land on the closest replacement.
   const MOVED = {'m-automaatio':'m-strategia', 'm-asiakaspalvelu':'m-strategia', 'm-koodaus':'koodausagentit'};
@@ -381,7 +430,14 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   // Card ids. Other pages link with the raw name (#a-Cursor, #t-rakentaminen-Claude Code): parseHash slugs it the same way.
   const slug = s => norm(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').slice(0, 40).replace(/^-+|-+$/g, '');
   const comma = (v, d) => v.toFixed(d).replace('.', ',');
-  const usd = v => '$' + v.toFixed(2);
+  const usd = v => comma(v, 2) + ' $';
+  // A price text that starts with "Ilmainen" is a free tier; "Ilmainen kokeilu" and "7 vrk ilmainen kokeilu" are trials.
+  const isFree = p => /^ilmainen(?!\s+kokeilu)/i.test(String(p || '').trim());
+  // Per-tab conveniences that survive a reload (the phone drops background tabs): compare picks, task, budget.
+  const store = {
+    get(){ try { return JSON.parse(sessionStorage.getItem('ai-ui')) || {}; } catch (e) { return {}; } },
+    set(){ try { sessionStorage.setItem('ai-ui', JSON.stringify({cmp: ui.cmp, task: ui.task, budget: ui.budget})); } catch (e) { /* private mode */ } },
+  };
   const mins = m => m < 60 ? Math.round(m) + ' min' : comma(m / 60, 1).replace(',0', '') + ' h';
   // Date-only strings would parse as UTC midnight and show a day early west of UTC.
   const dt = d => new Date(d.length === 10 ? d + 'T12:00' : d);
@@ -404,8 +460,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (cat.fmt) return cat.fmt(v);
     if (cat.unit === 's') return comma(v, 2) + ' s';
     if (cat.unit === '%') return comma(v, 1) + ' %';
-    if (cat.unit === '$') return '$' + (v < 1 ? v.toFixed(2) : v.toFixed(1));
-    return Math.round(v).toLocaleString('fi-FI');
+    if (cat.unit === '$') return comma(v, v < 1 ? 2 : 1) + ' $';
+    // Indexes keep one decimal (61,4 vs 60,9 both rounded to 61 on different places); ELO and speeds stay whole.
+    return v < 100 ? comma(v, 1) : Math.round(v).toLocaleString('fi-FI');
   }
   // Free-API media models have no release date, only the day this site first saw them.
   const born = it => it.released || it.seen;
@@ -421,7 +478,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   }
   function sub(it, cat){
     const bits = [esc(it.creator)];
-    if (cat.lowerIsBetter && it.intelligence != null && cat.unit !== 's') bits.push('älykkyys ' + Math.round(it.intelligence));
+    if (cat.lowerIsBetter && it.intelligence != null && cat.unit !== 's') bits.push('älykkyys ' + comma(it.intelligence, 1));
     else if (!cat.lowerIsBetter && it.price) bits.push(usd(it.price) + ' / 1M');
     return bits.filter(Boolean).join(' · ');
   }
@@ -429,7 +486,10 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const inCmp = (kind, name) => ui.cmp.some(c => c.kind === kind && c.name === name);
   const cmpBtn = (kind, name) => `<button type="button" class="kt-tab cmpb" data-cmp="${kind}" data-name="${esc(name)}" aria-pressed="${inCmp(kind, name)}" aria-label="Vertaa: ${esc(name)}" title="Vertaa">+</button>`;
   const pressBtn = (attr, id, on, label) => `<button type="button" class="kt-tab" data-${attr}="${esc(id)}" aria-pressed="${on}">${esc(label)}</button>`;
-  const pending = (key, msg) => `<p class="${failed[key] ? 'kt-note' : 'muted'}">${failed[key] ? msg : 'Ladataan…'}</p>`;
+  const RETRY = '<button type="button" class="kt-btn sm" data-act="retry">Yritä uudelleen</button>';
+  const pending = (key, msg) => `<p class="${failed[key] ? 'kt-note' : 'muted'}">${failed[key] ? `${msg} ${RETRY}` : 'Ladataan…'}</p>`;
+  // What the bare number on a winner row is ("indeksi 60", "ELO 1259"); units ($, s, %) explain themselves.
+  const scoreName = m => /ELO/.test(m || '') ? 'ELO ' : /index|indeksi/i.test(m || '') ? 'indeksi ' : '';
   const tile = (label, title, text, href, linkText) => `<div class="tile"><small>${label}</small><b>${esc(title)}</b><span>${text}</span>${href ? `<a href="${esc(href)}">${linkText}</a>` : ''}</div>`;
   const perTask = a => `${usd(a.aa.costPerTask)} / tehtävä`;
   const aaLine = a => `indeksi ${Math.round(a.aa.index)} · ${perTask(a)} · ${mins(a.aa.minutesPerTask)} · ${a.aa.model}`;
@@ -458,9 +518,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     return `<article class="card${open ? ' open' : ''}" id="${esc(id)}">
       ${head}
       <div class="winner" title="${esc(w.variant || '')}">
-        <span class="label">Paras nyt</span>
-        <span class="name">${esc(w.name)}${isNew(born(w)) ? '<span class="new">UUSI</span>' : ''}</span>
-        <span class="sub">${sub(w, cat)} · ${fmt(w.score, cat)}${kind === 'model' && w.variant ? ` · <span class="muted">${esc(w.variant)}</span>` : ''}</span>
+        <span class="label">Paras nyt${isNew(born(w)) ? ' · uusi' : ''}</span>
+        <span class="name">${esc(w.name)}</span>
+        <span class="sub">${sub(w, cat)} · ${scoreName(cat.metric)}${fmt(w.score, cat)}${kind === 'model' && w.variant ? ` · <span class="muted">${esc(w.variant)}</span>` : ''}</span>
         ${cmpBtn(kind, w.name)}
       </div>
       <ol class="rank">${rest}</ol>
@@ -475,7 +535,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   // ---- Charts: hand-written SVG, the viewBox is the drawn width so 11 px text stays 11 px ----
   const chartW = () => Math.max(260, $('.wrap').clientWidth - 42);
   const f1 = v => v.toFixed(1);
-  const logTicks = (lo, hi) => [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100].filter(v => v >= lo * 0.999 && v <= hi * 1.001);
+  // `dense` (a range of about a decade) uses 1-2-5 steps, otherwise 1-3.
+  const logTicks = (lo, hi, dense) => (dense ? [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100] : [0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100]).filter(v => v >= lo * 0.999 && v <= hi * 1.001);
   // Direct labels pushed apart vertically so they never overlap.
   function spread(labels){
     labels.sort((a, b) => a.y - b.y);
@@ -486,12 +547,13 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
      chart on hover, tap or focus). `labelled` points get direct labels on wide screens; `extra(X, Y, W, L, R)` adds lines. */
   function plotHtml({title, aria, pts, x, y, r, info, labelled = () => false, xTitle, yTitle, note, extra = () => ''}){
     const W = chartW(), small = W < 500, H = small ? 280 : 340, L = 40, R = small ? 16 : 130, T = 12, B = 40;
-    const lx = pts.map(p => Math.log10(x(p))), x0 = Math.floor(Math.min(...lx) * 2) / 2, x1 = Math.ceil(Math.max(...lx) * 2) / 2;
+    // Quarter decades around the data, so the points use the whole width.
+    const lx = pts.map(p => Math.log10(x(p))), x0 = Math.floor((Math.min(...lx) - .05) * 4) / 4, x1 = Math.ceil((Math.max(...lx) + .05) * 4) / 4;
     const ys = pts.map(y), y0 = Math.floor((Math.min(...ys) - 3) / 5) * 5, y1 = Math.ceil((Math.max(...ys) + 3) / 5) * 5;
     const X = v => L + ((Math.log10(v) - x0) / (x1 - x0 || 1)) * (W - L - R), Y = v => T + ((y1 - v) / (y1 - y0 || 1)) * (H - T - B);
     let svg = '';
     for (let v = y0; v <= y1; v += y1 - y0 > 30 ? 10 : 5) svg += `<line class="grid" x1="${L}" x2="${W - R}" y1="${f1(Y(v))}" y2="${f1(Y(v))}"/><text class="tick" x="${L - 6}" y="${f1(Y(v) + 4)}" text-anchor="end">${v}</text>`;
-    for (const v of logTicks(10 ** x0, 10 ** x1)) svg += `<text class="tick" x="${f1(X(v))}" y="${H - 22}" text-anchor="middle">$${String(v).replace('.', ',')}</text>`;
+    for (const v of logTicks(10 ** x0, 10 ** x1, x1 - x0 <= 1.25)) svg += `<text class="tick" x="${f1(X(v))}" y="${H - 22}" text-anchor="middle">${String(v).replace('.', ',')} $</text>`;
     svg += `<text class="axis" x="${f1((L + W - R) / 2)}" y="${H - 4}" text-anchor="middle">${esc(xTitle)}</text><text class="axis" x="${L}" y="${T - 2}">${esc(yTitle)}</text>`;
     svg += extra(X, Y, W, L, R);
     svg += pts.map(p => `<circle class="pt${labelled(p) ? ' fr' : ''}" tabindex="0" data-info="${esc(info(p))}" cx="${f1(X(x(p)))}" cy="${f1(Y(y(p)))}" r="${f1(4 + 8 * r(p))}"><title>${esc(p.name)}</title></circle>`).join('');
@@ -505,7 +567,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const maxS = Math.max(...pts.map(p => p.speed || 0)) || 1;
     return plotHtml({title: 'Hinta vs. älykkyys', aria: 'Tekstimallit hinnan ja älykkyyden mukaan', pts, x: p => p.price, y: p => p.intelligence,
       r: p => Math.sqrt((p.speed || 0) / maxS), labelled: p => front.has(p.name),
-      info: p => `${p.name} (${p.creator}): älykkyys ${Math.round(p.intelligence)} · ${usd(p.price)} / 1M tokenia${p.speed ? ` · ${Math.round(p.speed)} tokenia/s` : ''}`,
+      info: p => `${p.name} (${p.creator}): älykkyys ${comma(p.intelligence, 1)} · ${usd(p.price)} / 1M tokenia${p.speed ? ` · ${Math.round(p.speed)} tokenia/s` : ''}`,
       xTitle: 'Hinta $ / 1M tokenia (logaritminen) →', yTitle: '↑ Älykkyys',
       note: 'Napauta pistettä. Pisteen koko = nopeus, katkoviiva = tehokkuusraja (ei halvempaa ja älykkäämpää mallia).',
       extra: (X, Y) => `<polyline class="front" points="${pts.filter(p => front.has(p.name)).map(p => `${f1(X(p.price))},${f1(Y(p.intelligence))}`).join(' ')}"/>`});
@@ -545,10 +607,18 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const rank = (list, key, line, cat) => ({...cat, items: list.map(a => ({name:a.name, creator:line(a), variant:line(a), score:a.aa[key]}))});
     const cheapest = by('costPerTask');
     derived.agents = {order, measured, top, cheapest, cats: {
-      'agent-index': rank(measured, 'index', a => `${a.aa.model} · ${perTask(a)}`, {metric:`${agents.indexName} (${agents.indexEvals})`}),
+      'agent-index': rank(measured, 'index', a => `${a.aa.model} · ${perTask(a)}`, {metric:`${agents.indexName} (${agents.indexEvals})`, fmt: v => Number.isInteger(v) ? String(v) : comma(v, 1)}),
       'agent-cost': rank(cheapest, 'costPerTask', a => `${idx(a)} · ${mins(a.aa.minutesPerTask)}`, {metric:'API-kustannus tehtävää kohden ($)', lowerIsBetter:true, fmt:usd}),
       'agent-speed': rank(by('minutesPerTask'), 'minutesPerTask', a => `${idx(a)} · ${perTask(a)}`, {metric:'Aika tehtävää kohden', lowerIsBetter:true, fmt:mins}),
     }};
+  }
+
+  // An empty search result names the tabs that do have hits (the counts are also in the tabs, but easy to miss).
+  function elsewhere(){
+    if (!ui.q) return '';
+    const n = counts();
+    const bs = TABS.filter(t => t.id !== ui.tab && n[t.id]).map(t => `<button type="button" class="kt-btn sm" data-tab="${t.id}">${t.name}: ${n[t.id]} →</button>`).join('');
+    return bs ? `<span>Osumia muualla:</span>${bs}` : '';
   }
 
   // ---- Models tab ----
@@ -561,7 +631,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       return cs.length ? `<section class="group" id="${g.id}"><h2>${esc(g.name)}${linkBtn(g.id)}</h2><div class="cards">${cs.map(m => card(m)).join('')}</div></section>` : ''; }).join('');
     const filters = `<nav class="filters" aria-label="Suodata mallien ryhmä">${[{id:'all', name:'Kaikki'}, ...MODEL_GROUPS].map(g => pressBtn('group', g.id, ui.group === g.id, g.name)).join('')}</nav>`;
     const chart = !ui.q && ['all', 'teksti', 'hinta'].includes(ui.group) ? scatterHtml() : '';
-    return `<div class="group">${filters}${chart}${groups || '<p class="empty">Ei osumia malleista.</p>'}</div>`;
+    return `<div class="group">${filters}${chart}${groups || `<p class="empty"><span>Ei osumia malleista.</span>${elsewhere()}</p>`}</div>`;
   }
 
   // ---- Coding agents tab ----
@@ -588,7 +658,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     return `<div class="group" id="koodausagentit">${intro}
       ${ui.q ? '' : bubbleHtml() + `<div class="cards">${AGENT_CARDS.map(m => card(m, derived.agents.cats[m.id], {id: m.id, kind: 'agent'})).join('')}</div>`}
       <h2>Agentit rinnakkain</h2>
-      ${list.length ? `<div class="cards">${list.map(agentCard).join('')}</div>` : '<p class="empty">Ei osumia agenteista.</p>'}</div>`;
+      ${list.length ? `<div class="cards">${list.map(agentCard).join('')}</div>` : `<p class="empty"><span>Ei osumia agenteista.</span>${elsewhere()}</p>`}</div>`;
   }
 
   // ---- Tools tab ----
@@ -623,14 +693,14 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       return `<section class="group" id="${esc(a.id)}"><header><h2>${esc(a.title)}${linkBtn(a.id)}</h2><p class="intro">${esc(a.intro)}</p>${more}</header>
         <div class="cards">${list.map(t => toolCard(t, a)).join('')}</div></section>`;
     }).join('');
-    const starter = ui.q ? '' : `<section class="panel" aria-labelledby="starter-h"><header><h2 id="starter-h">Jos otat vain viisi</h2><p class="intro">Pienyrittäjän aloituspaketti: näillä katat suurimman osan arjesta.</p></header>
+    const starter = ui.q ? '' : `<section class="panel starter" aria-labelledby="starter-h"><header><h2 id="starter-h">Jos otat vain viisi</h2><p class="intro">Pienyrittäjän aloituspaketti: näillä katat suurimman osan arjesta.</p></header>
       <div class="tiles">${tools.starter.map(s => { const id = findTool(s.name); return tile(esc(s.role), s.name, esc(s.why), id && '#' + id, 'Kortti →'); }).join('')}</div></section>`;
     const allAreas = [{id:'all', title:'Kaikki osa-alueet'}, ...tools.areas];
     const filters = `<nav class="filters" id="areas" aria-label="Suodata osa-alueen mukaan">${allAreas.map(a => pressBtn('area', a.id, ui.area === a.id, a.title)).join('')}</nav>
       <label class="area-select"><span class="small muted">Osa-alue</span> <select class="kt-input" id="area-sel">${allAreas.map(a => `<option value="${esc(a.id)}"${ui.area === a.id ? ' selected' : ''}>${esc(a.title)}</option>`).join('')}</select></label>
       <nav class="filters" aria-label="Suodata tyypin mukaan">${KINDS.map(k => pressBtn('kind', k.id, ui.kind === k.id, k.name)).join('')}</nav>`;
     const notes = tools.changes.length ? `<aside class="kt-note notes" id="muutokset"><b>Viimeisimmät muutokset</b><ul>${tools.changes.map(c => `<li><time datetime="${esc(c.date)}">${esc(fiDate(c.date))}</time>${esc(c.text)}</li>`).join('')}</ul></aside>` : '';
-    return `<div class="group">${starter}${filters}${areas || '<p class="empty">Ei osumia. Kokeile toista hakusanaa tai poista suodattimet.</p>'}${notes}</div>`;
+    return `<div class="group">${starter}${filters}${areas || `<p class="empty"><span>Ei osumia. Kokeile toista hakusanaa tai poista suodattimet.</span>${elsewhere()}</p>`}${notes}</div>`;
   }
 
   // Search hit counts per tab, without building any HTML.
@@ -660,12 +730,15 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (tools) {
       const area = tools.areas.find(a => a.id === t.area);
       if (area && area.tools.length) {
-        const best = area.tools.find(x => x.pick) || area.tools[0], free = area.tools.find(x => /ilmai/i.test(x.price));
+        // A task's own tool wins over the area's pick; the area's free tool is then of another kind, so no alternative.
+        const named = t.tool && area.tools.find(x => norm(x.name).startsWith(norm(t.tool)));
+        const best = named || area.tools.find(x => x.pick) || area.tools[0], free = named ? null : area.tools.find(x => isFree(x.price));
         const [main, other, label] = order(best, free, 'Paras', 'Ilmainen vaihtoehto');
         picks.push(tile(`Työkalu · ${esc(area.title)}`, main.name, esc(main.price) + alt(other, main, label), '#' + toolId(area, main), 'Työkalun kortti →'));
       }
     }
-    return picks.length ? `<div class="tiles">${picks.join('')}</div>` : '<p class="small muted">Ladataan…</p>';
+    if (picks.length) return `<div class="tiles">${picks.join('')}</div>`;
+    return failed.models && failed.agents && failed.tools ? `<p class="kt-note">Tietojen lataus epäonnistui. ${RETRY}</p>` : '<p class="small muted">Ladataan…</p>';
   }
 
   // ---- What's new (julkinen-14) ----
@@ -702,12 +775,15 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function paintCompare(){
     for (const b of document.querySelectorAll('[data-cmp]')) b.setAttribute('aria-pressed', String(inCmp(b.dataset.cmp, b.dataset.name)));
     $('#cmpbar').hidden = !ui.cmp.length;
-    $('#cmpbar').innerHTML = `${ui.cmp.map((c, i) => `<span class="it">${esc(c.name)}<button type="button" data-uncmp="${i}" aria-label="Poista vertailusta: ${esc(c.name)}">✕</button></span>`).join('')}
+    $('#cmpbar').innerHTML = `${ui.cmp.map((c, i) => `<span class="it"><span class="nm">${esc(c.name)}</span><button type="button" data-uncmp="${i}" aria-label="Poista vertailusta: ${esc(c.name)}">✕</button></span>`).join('')}
       <button type="button" class="kt-btn sm primary" data-act="cmp-open"${ui.cmp.length < 2 ? ' disabled' : ''}>Vertaa (${ui.cmp.length})</button>
       <button type="button" class="kt-btn sm" data-act="cmp-clear">Tyhjennä</button>`;
     const show = ui.showCmp && ui.cmp.length >= 2;
     $('#compare').hidden = !show;
     $('#compare').innerHTML = show ? compareHtml() : '';
+    // The fixed bar must never hide the page's last rows: the bottom padding follows its height.
+    document.body.style.paddingBottom = ui.cmp.length ? Math.max(90, $('#cmpbar').offsetHeight + 40) + 'px' : '';
+    store.set();
   }
 
   // ---- Data state (julkinen-16) ----
@@ -717,9 +793,25 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const errs = data && data.errors && data.errors.length ? ` · ei päivittynyt: ${esc(data.errors.map(e => String(e).split(':')[0]).join(', '))}` : '';
     $('#datastate').innerHTML = row('Mallit', data, 'models', errs) + row('Koodausagentit', agents, 'agents') + row('Työkalut', tools, 'tools');
     const src = ui.tab === 'tyokalut' ? tools : ui.tab === 'koodausagentit' ? agents : data, el = $('#status');
-    if (!src) { el.textContent = failed.models && failed.agents && failed.tools ? 'Tietojen lataus epäonnistui – yritä hetken päästä uudelleen.' : 'Ladataan…'; return; }
-    el.classList.toggle('stale', late(src.updated));
-    el.innerHTML = `<b>●</b> ${updated(src.updated).replace(/^p/, 'P')}${late(src.updated) ? '' : ' · seuraava päivitys ~2 päivän päästä'}`;
+    const key = ui.tab === 'tyokalut' ? 'tools' : ui.tab === 'koodausagentit' ? 'agents' : 'models';
+    el.classList.toggle('bad', !src && failed[key]);
+    el.classList.toggle('stale', !!src && late(src.updated));
+    if (!src) { el.innerHTML = failed[key] ? `<b>●</b> Tietojen lataus epäonnistui. ${RETRY}` : 'Ladataan…'; return; }
+    el.innerHTML = `<b>●</b> ${updated(src.updated).replace(/^p/, 'P')}${late(src.updated) ? '' : nextRun(key, src.updated)}`;
+  }
+  // The models workflow runs on odd days of the month at 04:17 UTC (update-models.yml); the tools routine two days after its last run.
+  function nextRun(key, iso){
+    const now = Date.now();
+    let t = Date.parse(iso) + 2 * DAY;
+    if (key === 'models') {
+      const d = new Date(now);
+      d.setUTCHours(4, 17, 0, 0);
+      while (d.getTime() <= now || d.getUTCDate() % 2 === 0) d.setUTCDate(d.getUTCDate() + 1);
+      t = d.getTime();
+    }
+    if (!(t > now)) return '';
+    const days = Math.round((new Date(t).setHours(12, 0, 0, 0) - new Date(now).setHours(12, 0, 0, 0)) / DAY);
+    return ' · seuraava päivitys ' + (days <= 0 ? 'tänään' : days === 1 ? 'huomenna' : days === 2 ? 'ylihuomenna' : `${days} päivän päästä`);
   }
 
   // ---- Render: the active tab only (the others are emptied, so ids exist once) plus the small parts ----
@@ -748,7 +840,13 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function paintAsk(){
     for (const b of document.querySelectorAll('[data-task]')) b.setAttribute('aria-pressed', String(ui.task === b.dataset.task));
     for (const b of document.querySelectorAll('[data-budget]')) b.setAttribute('aria-pressed', String(ui.budget === b.dataset.budget));
-    $('#answer').innerHTML = answerHtml();
+    const html = answerHtml();
+    $('#answer').innerHTML = html;
+    // "Edullinen" changes nothing for some tasks (media models have no price ranking): say so instead of looking broken.
+    let same = false;
+    if (html.includes('class="tiles"')) { const b = ui.budget; ui.budget = b === 'cheap' ? 'best' : 'cheap'; same = answerHtml() === html; ui.budget = b; }
+    $('#budget-note').hidden = !same;
+    store.set();
   }
 
   // ---- URL: /ai?q=…&kind=…#<tab>[/<sub>] or #<card id>; /ai-tyokalut redirects to /ai?tab=tyokalut (the #hash survives) ----
@@ -777,7 +875,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     ui.q = norm(qs.get('q') || '');
     $('#q').value = qs.get('q') || '';
     ui.kind = KINDS.some(k => k.id === qs.get('kind')) ? qs.get('kind') : 'all';
-    ui.tab = p.tab || (TABS.some(t => t.id === qs.get('tab')) ? qs.get('tab') : ui.tab);
+    // No #hash means the first tab (Back to /ai); an unknown #hash keeps the tab that is open.
+    ui.tab = p.tab || (TABS.some(t => t.id === qs.get('tab')) ? qs.get('tab') : location.hash.length > 1 ? ui.tab : 'mallit');
     ui.group = p.group || (p.tab === 'mallit' ? ui.group : 'all');
     ui.area = p.area && (!tools || p.area === 'all' || tools.areas.some(a => a.id === p.area)) ? p.area : (p.tab === 'tyokalut' && !p.target ? ui.area : 'all');
     render();
@@ -847,6 +946,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     else if (d.act === 'cmp-open') { ui.showCmp = true; paintCompare(); $('#compare').scrollIntoView({block: 'start'}); }
     else if (d.act === 'cmp-close') { ui.showCmp = false; paintCompare(); }
     else if (d.act === 'cmp-clear') { ui.cmp = []; ui.showCmp = false; paintCompare(); }
+    else if (d.act === 'retry') { loadAll(Object.keys(failed).filter(k => failed[k])); render(); }
     else if (d.link) {
       const url = `${location.origin}/ai#${d.link}`;
       (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(() => { b.textContent = '✓'; setTimeout(() => { b.textContent = '#'; }, 1500); },
@@ -883,16 +983,32 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   $('#tabs').innerHTML = TABS.map(t => `<button type="button" role="tab" class="kt-tab" id="tb-${t.id}" data-tab="${t.id}" aria-controls="tab-${t.id}">${t.name}<span class="n"></span></button>`).join('');
   $('#tasks').innerHTML = TASKS.map(t => pressBtn('task', t.id, false, t.label)).join('');
   lastW = chartW();
+  {
+    const s = store.get();
+    if (TASKS.some(t => t.id === s.task)) ui.task = s.task;
+    if (s.budget === 'cheap') ui.budget = 'cheap';
+    if (Array.isArray(s.cmp)) ui.cmp = s.cmp.filter(c => c && (c.kind === 'model' || c.kind === 'agent') && typeof c.name === 'string' && c.name.length <= 80).slice(0, 3).map(c => ({kind: c.kind, name: c.name}));
+  }
   fromUrl();
   // The old ?tab= from the /ai-tyokalut redirect is folded into the hash.
   if (new URLSearchParams(location.search).has('tab')) history.replaceState(null, '', urlFor(location.hash.slice(1) || (ui.tab === 'mallit' ? '' : ui.tab)));
   const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
-  const load = (u, set, key) => getJson(u).then(d => { set(d); derived.news = null; }, e => { console.error(u, e); failed[key] = true; }).finally(render);
-  Promise.all([
-    load('/data/ai-models.json', d => { data = d; deriveModels(); }, 'models'),
-    load('/data/coding-agents.json', d => { agents = d; deriveAgents(); }, 'agents'),
-    load('/data/ai-tools.json', d => { tools = d; }, 'tools'),
-  ]).then(() => { if (location.hash) fromUrl(); });
+  const SOURCES = {
+    models: ['/data/ai-models.json', d => { data = d; deriveModels(); }],
+    agents: ['/data/coding-agents.json', d => { agents = d; deriveAgents(); }],
+    tools: ['/data/ai-tools.json', d => { tools = d; }],
+  };
+  const load = key => { const [u, set] = SOURCES[key]; failed[key] = false; return getJson(u).then(d => { set(d); derived.news = null; }, e => { console.error(u, e); failed[key] = true; }).finally(render); };
+  // Also the retry button's path (only the failed sources). Restored compare picks that the data no longer has are dropped.
+  function loadAll(keys){
+    return Promise.all(keys.map(load)).then(() => {
+      const n = ui.cmp.length;
+      ui.cmp = ui.cmp.filter(c => c.kind === 'model' ? !data || Object.values(data.categories).some(cat => (cat.items || []).some(it => it.name === c.name))
+        : !agents || agents.agents.some(a => a.name === c.name));
+      if (ui.cmp.length !== n) paintCompare();
+    });
+  }
+  loadAll(Object.keys(SOURCES)).then(() => { if (location.hash) fromUrl(); });
 })();
 </script>
 </body>
