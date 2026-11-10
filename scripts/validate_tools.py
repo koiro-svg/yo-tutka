@@ -254,6 +254,11 @@ def check_page(d, errors):
         errors.append("ai.html: isFree() must stay " + FREE_JS + " (a free trial is not a free alternative)")
     if "location.hash.length > 1 ? ui.tab : 'mallit'" not in page:
         errors.append("ai.html: fromUrl() must fall back to the first tab when the URL has no #hash (Back to /ai)")
+    # The page forecasts the next models update from a copy of the workflow's cron: the two must be the same line.
+    flow = ROOT / ".github" / "workflows" / "update-models.yml"
+    cron = re.search(r'cron:\s*"([^"]+)"', flow.read_text(encoding="utf-8")) if flow.exists() else None
+    if cron and f"const MODELS_CRON = '{cron.group(1)}';" not in page:
+        errors.append(f"ai.html: MODELS_CRON must equal the cron in update-models.yml ({cron.group(1)!r})")
     cases = {"Ilmainen · Pro 20 $/kk": True, "Ilmainen (rajattu)": True, "ilmainen 1 000 krediittiä": True,
              "Ilmainen kokeilu · Creator ~29 $/kk": False, "7 vrk ilmainen kokeilu · Hobby 40 $/kk": False,
              "Rajattu ilmaisversiossa": False, "299 $/kk, 3 000 ilmaista": False, "": False}

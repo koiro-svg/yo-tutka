@@ -11,11 +11,11 @@
 <meta property="og:url" content="https://koirosvg.com/visa">
 <meta property="og:title" content="Visakaksintaisto">
 <meta property="og:description" content="Kirjoita maat, pääkaupungit ja muut listat kaveria vastaan samaan aikaan. Ei tiliä: luo huone ja lähetä linkki.">
-<meta property="og:image" content="https://koirosvg.com/img/og-visa.jpg">
+<meta property="og:image" content="https://koirosvg.com/img/og-visa.jpg?v=1">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://koirosvg.com/img/og-visa.jpg">
+<meta name="twitter:image" content="https://koirosvg.com/img/og-visa.jpg?v=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -906,7 +906,8 @@ function record() {
     const order = rank(me, r);
     if (order === 0) rec.d++; else if (order < 0) rec.w++; else rec.l++;
   }
-  if (G.mul === 1 && me.n > 0) {
+  // Not from a provisional (own-tally) result either: the host's real result may be lower, and a best is never lowered.
+  if (!G.provisional && G.mul === 1 && me.n > 0) {
     const b = P.best[G.quiz.id];
     if (!b || rank(me, b) < 0) P.best[G.quiz.id] = { n: me.n, t: me.t, total: G.items.length };
   }
@@ -1212,13 +1213,17 @@ function buildMap() {
     const cur = zoom || view, k = cur[2] / rect.width;
     const x = cur[0] + (e.clientX - rect.left) * k, y = cur[1] + (e.clientY - rect.top) * k;
     const reach = (matchMedia('(pointer:coarse)').matches ? MAP_REACH_TOUCH : MAP_REACH_MOUSE) * k;
-    if (!zoom && (G.over || canAct()) && small.filter(s => (s[1] - x) ** 2 + (s[2] - y) ** 2 <= reach * reach).length > 1) {
+    const el = e.target.closest ? e.target.closest('g.t') : null, direct = el ? byEl.get(el) ?? null : null;
+    // An exact hit on a small country answers at once, and only countries still to be found make a spot crowded
+    // (with one left in the Balkans every answer used to cost two taps).
+    const exact = direct != null && small.some(s => s[0] === direct);
+    const crowd = small.filter(s => (G.over || available(s[0])) && (s[1] - x) ** 2 + (s[2] - y) ** 2 <= reach * reach).length;
+    if (!zoom && !exact && (G.over || canAct()) && crowd > 1) {
       const zw = view[2] / MAP_ZOOM, zh = view[3] / MAP_ZOOM;
       setZoom([clamp(x - zw / 2, view[0], view[0] + view[2] - zw), clamp(y - zh / 2, view[1], view[1] + view[3] - zh), zw, zh].map(v => Math.round(v * 10) / 10));
       if (G.over) caption.textContent = t('zoomed'); else flash(t('zoomed'));
       return;
     }
-    const el = e.target.closest ? e.target.closest('g.t') : null, direct = el ? byEl.get(el) ?? null : null;
     const i = pickMapTarget(direct, x, y, small, reach);
     if (zoom && (G.over || canAct())) setZoom(null);
     if (i == null) return;
@@ -1390,8 +1395,16 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
   addEventListener('hashchange', route);
   addEventListener('pagehide', storeGame);
   addEventListener('keydown', e => {
-    if (G?.revealing && !e.repeat && (e.key === 'Enter' || e.key === ' ' || /^[1-4]$/.test(e.key))) { e.preventDefault(); nextChoice(); return; }
-    if (V.opts && /^[1-4]$/.test(e.key) && !e.metaKey && !e.ctrlKey) V.opts[Number(e.key) - 1]?.click();
+    // Never a browser shortcut (Cmd+1 switches tabs) and never a key typed into a field (the nickname, the chat).
+    if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest?.('input, textarea, select')) return;
+    const digit = /^[1-4]$/.test(e.key);
+    if (G?.revealing && !e.repeat && (e.key === 'Enter' || e.key === ' ' || digit)) {
+      if (!digit && e.target.closest?.('button, a')) return;   // a focused button keeps its own Enter and Space
+      e.preventDefault();
+      if (performance.now() - G.revealAt > REVEAL_SKIP_MS) nextChoice();   // same wait as a click: a fast second digit is not a skip
+      return;
+    }
+    if (V.opts && digit) V.opts[Number(e.key) - 1]?.click();
   });
   if (parseCode(location.hash)) route(); else render();
 }).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });

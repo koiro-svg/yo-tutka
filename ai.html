@@ -11,9 +11,9 @@
 <meta property="og:url" content="https://koirosvg.com/ai">
 <meta property="og:title" content="AI-opas: mallit, koodausagentit ja työkalut">
 <meta property="og:description" content="Mikä tekoälymalli, koodausagentti tai työkalu mihinkin – päivittyy automaattisesti kahden päivän välein.">
-<meta property="og:image" content="https://koirosvg.com/img/og-ai.jpg">
+<meta property="og:image" content="https://koirosvg.com/img/og-ai.jpg?v=1">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://koirosvg.com/img/og-ai.jpg">
+<meta name="twitter:image" content="https://koirosvg.com/img/og-ai.jpg?v=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
 /* koiro-tokens v2 — shared by every page of koirosvg.com. The canonical copy is scripts/koiro-tokens.css;
@@ -256,7 +256,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   .searchbar .kt-input,.area-select .kt-input{font-size:16px}
   #tabs .kt-tab,.kt-btn.sm,.more{min-height:44px}
   .filters .kt-tab,.ask .kt-tab{min-height:40px}
-  .kt-tab.cmpb{width:36px;height:36px}
+  .kt-tab.cmpb{width:36px;height:36px;min-height:36px} /* the shared 44 px tab rule would make it 36 × 44; ::after already extends the hit area */
   ol.rank .cmpb,.links .cmpb,.lk{position:relative}
   .kt-tab.cmpb::after{content:"";position:absolute;inset:-4px}
   .lk::after{content:"";position:absolute;inset:-12px -15px}
@@ -462,7 +462,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (cat.unit === '%') return comma(v, 1) + ' %';
     if (cat.unit === '$') return comma(v, v < 1 ? 2 : 1) + ' $';
     // Indexes keep one decimal (61,4 vs 60,9 both rounded to 61 on different places); ELO and speeds stay whole.
-    return v < 100 ? comma(v, 1) : Math.round(v).toLocaleString('fi-FI');
+    // One precision per list: a ranking that reaches 100 (speeds, ELO) is whole all the way down, not "107" then "98,7".
+    const whole = v >= 100 || (cat.items || []).some(it => it.score >= 100); // cat = the data category (it carries its items)
+    return whole ? Math.round(v).toLocaleString('fi-FI') : comma(v, 1);
   }
   // Free-API media models have no release date, only the day this site first saw them.
   const born = it => it.released || it.seen;
@@ -711,10 +713,10 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   });
 
   // ---- Ask (julkinen-9) ----
-  function answerHtml(){
+  function answerHtml(budget = ui.budget){
     const t = TASKS.find(x => x.id === ui.task);
     if (!t) return '<p class="small muted">Valitse tehtävä, niin saat yhden suosituksen kustakin: malli, työkalu ja tarvittaessa koodausagentti.</p>';
-    const cheap = ui.budget === 'cheap', picks = [];
+    const cheap = budget === 'cheap', picks = [];
     // [main, alternative] in the chosen order, with the alternative's label.
     const order = (best, value, bestLabel, valueLabel) => cheap && value ? [value, best, bestLabel] : [best, value, valueLabel];
     const alt = (a, main, label) => a && a !== main ? ` · ${label}: ${esc(a.name)}` : '';
@@ -799,13 +801,16 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (!src) { el.innerHTML = failed[key] ? `<b>●</b> Tietojen lataus epäonnistui. ${RETRY}` : 'Ladataan…'; return; }
     el.innerHTML = `<b>●</b> ${updated(src.updated).replace(/^p/, 'P')}${late(src.updated) ? '' : nextRun(key, src.updated)}`;
   }
-  // The models workflow runs on odd days of the month at 04:17 UTC (update-models.yml); the tools routine two days after its last run.
+  // The models workflow's schedule, copied from .github/workflows/update-models.yml (validate_tools.py fails the build when
+  // the two differ); the tools routine runs two days after its last run.
+  const MODELS_CRON = '17 4 */2 * *';
   function nextRun(key, iso){
     const now = Date.now();
     let t = Date.parse(iso) + 2 * DAY;
     if (key === 'models') {
       const d = new Date(now);
-      d.setUTCHours(4, 17, 0, 0);
+      const [min, hour] = MODELS_CRON.split(' ').map(Number);
+      d.setUTCHours(hour, min, 0, 0);
       while (d.getTime() <= now || d.getUTCDate() % 2 === 0) d.setUTCDate(d.getUTCDate() + 1);
       t = d.getTime();
     }
@@ -844,7 +849,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     $('#answer').innerHTML = html;
     // "Edullinen" changes nothing for some tasks (media models have no price ranking): say so instead of looking broken.
     let same = false;
-    if (html.includes('class="tiles"')) { const b = ui.budget; ui.budget = b === 'cheap' ? 'best' : 'cheap'; same = answerHtml() === html; ui.budget = b; }
+    if (html.includes('class="tiles"')) same = answerHtml(ui.budget === 'cheap' ? 'best' : 'cheap') === html;
     $('#budget-note').hidden = !same;
     store.set();
   }

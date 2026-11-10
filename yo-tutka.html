@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://koirosvg.com/yo-tutka">
 <meta property="og:title" content="YO-tutka">
 <meta property="og:description" content="Ylioppilaskokeiden aiheet ja niiden todennäköisyys seuraavassa kokeessa.">
-<meta property="og:image" content="https://koirosvg.com/img/og-yo-tutka.jpg">
+<meta property="og:image" content="https://koirosvg.com/img/og-yo-tutka.jpg?v=1">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23081427'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%231F3B66' stroke-width='2'/%3E%3Cpath d='M16 16 L25 9' stroke='%235CE1C6' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='21' cy='20' r='2.5' fill='%235CE1C6'/%3E%3C/svg%3E">
 <style>
@@ -931,9 +931,11 @@ h1{font-weight:800;letter-spacing:-.02em}
   const go = (full) => { syncUrl(); if(full) renderAll(); else { paintTopics(); filterSessions(); } };
   function setTopic(id){ state.topic = (state.topic===id)? null : id; state.closed.clear(); go(false); }
   function openCell(c){
-    state.topic=c.dataset.topic; state.open.add(c.dataset.sess); state.closed.delete(c.dataset.sess);
+    // A "·" cell: the topic was not in that session, which the filter hides, so the list of sessions that have it is shown instead.
+    const empty = c.textContent.trim()==='·';
+    state.topic=c.dataset.topic; if(!empty){ state.open.add(c.dataset.sess); state.closed.delete(c.dataset.sess); }
     go(false);
-    const d=$('#sess-'+CSS.escape(c.dataset.sess)); if(d) d.scrollIntoView({behavior:'smooth',block:'start'});
+    const d=empty ? $('#sessions') : $('#sess-'+CSS.escape(c.dataset.sess)); if(d) d.scrollIntoView({behavior:'smooth',block:'start'});
   }
   // Scores written by the practice page in another tab or before a bfcache return: repaint only what depends on them
   // (next up, radar, topic panel), never the search field, and only when this subject's scores changed.

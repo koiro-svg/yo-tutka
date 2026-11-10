@@ -1217,11 +1217,14 @@ details.how>p{margin-top:6px}
   // Two-click confirmation instead of a modal dialog.
   function armConfirm(btn, confirmText, action) {
     const label = btn.textContent;
+    let timer = 0;
+    const disarm = () => { clearTimeout(timer); delete btn.dataset.confirm; btn.textContent = label; };
     btn.onclick = () => {
-      if (btn.dataset.confirm) return action();
+      if (btn.dataset.confirm) { clearTimeout(timer); return action(); }
       btn.dataset.confirm = 1; btn.textContent = typeof confirmText === 'function' ? confirmText() : confirmText;
-      setTimeout(() => { delete btn.dataset.confirm; btn.textContent = label; }, 4000);
+      timer = setTimeout(disarm, 4000);
     };
+    return disarm; // for a caller whose confirm text depends on something the user can still change
   }
   const masthead = (crumbs, title, lede) => `
     <header class="masthead">
@@ -1618,7 +1621,9 @@ details.how>p{margin-top:6px}
         ${x.tasks.map(simTask).join('')}
       </section>`).join('')}
       ${footer()}`);
+    let disarmSubmit = () => {};
     const updateCounts = () => {
+      disarmSubmit(); // a changed selection needs a fresh look at the warning: the second click must not hand in on the old one
       sections.forEach((x, si) => { const c = x.tasks.filter(n => chosen.has(n)).length; const el = $(`[data-count="${si}"]`, app); el.textContent = `valittu ${c}/${x.answer}`; el.className = 'chip ' + (c === x.answer ? 'ok' : c > x.answer ? 'bad' : ''); });
       const info = $('#chosenInfo'); if (info) info.textContent = `${chosen.size} tehtävää valittu`;
       const warn = $('#simWarn'); if (warn) warn.hidden = true;
@@ -1649,7 +1654,7 @@ details.how>p{margin-top:6px}
     const unpause = t => { if (sim.pauseAt) { sim.paused += t - sim.pauseAt; sim.pauseAt = null; } };
     const submit = (at = Date.now()) => { sim.submitted = at; unpause(at); persist(); simView(a, k, g); window.scrollTo(0, 0); };
     // Too many or too few picks: say so before the second click (the hand-in still goes through, as on paper).
-    armConfirm($('#simSubmit'), () => {
+    disarmSubmit = armConfirm($('#simSubmit'), () => {
       const off = sections.map(x => ({ x, c: x.tasks.filter(n => chosen.has(n)).length })).filter(o => o.c !== o.x.answer);
       const warn = $('#simWarn');
       warn.hidden = !off.length;
