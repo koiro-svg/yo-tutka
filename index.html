@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fi">
+<html lang="fi" data-page="koti">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -55,6 +55,32 @@
 .kt-hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
 .kt-hits span,.kt-hits .none{color:var(--ink-3);font-size:13px}
 .kt-hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+/* Tutka v2 (10.11.2026): every page gets its own picture and depth from this block. <html data-page="…"> names the page.
+   --kt-tone = the page's decorative hue (never replaces --accent), --kt-hero = its illustration (img/hero/<page>[-s].webp,
+   built by derive.sh, see CLAUDE.md), painted into the body background at the top and faded into --bg; --kt-veil = how much
+   of --bg lies over the right side of the picture (the left, where text sits, is veiled more). Changed image = raise ?v=. */
+:where(:root){--kt-tone:#5CE1C6;--kt-hero:none;--kt-hero-h:clamp(320px,calc(max(100vw,1100px)*.4286),760px);--kt-hero-x:right;--kt-veil:22%;
+  --kt-sheen:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,0) 42%);
+  --kt-elev-1:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.28),0 16px 32px -20px rgba(0,0,0,.8);
+  --kt-elev-2:inset 0 1px 0 rgba(255,255,255,.1),0 2px 4px rgba(0,0,0,.3),0 26px 46px -20px rgba(0,0,0,.9)}
+[data-page="koti"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+[data-page="ai"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/ai.webp?v=1")}
+[data-page="yo-tutka"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/yo-tutka.webp?v=1")}
+[data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
+[data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
+[data-page="tietosuoja"]{--kt-tone:#5CE1C6}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+html[data-page] body{background:
+    linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
+    linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
+    var(--kt-hero) top var(--kt-hero-x)/auto var(--kt-hero-h) no-repeat,
+    radial-gradient(ellipse 60% 70% at 82% 0,color-mix(in srgb,var(--kt-tone) 15%,transparent),transparent 72%) top center/100% var(--kt-hero-h) no-repeat,
+    radial-gradient(ellipse 70% 100% at 12% 0,var(--bg-glow),transparent 70%) top center/100% 900px no-repeat,
+    var(--bg)}
+@media print{html[data-page] body{background:#fff}}
+.kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
+.kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
 /* /koiro-tokens */
 /* Deliberately dark-only: the radar theme is a single visual world. */
 html{background:var(--bg)}
@@ -76,15 +102,24 @@ h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-s
 .search kbd{font:600 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
 @media (pointer:coarse){.search kbd{display:none}}
 .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
-.tool{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:22px;border-radius:14px;background:linear-gradient(180deg,rgba(92,225,198,.07),transparent 60%),var(--surface);border:1px solid var(--line);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
-.tool:hover,.tool.hot{border-color:var(--accent);transform:translateY(-3px)}
+/* Each card opens with its tool's picture (the phone-size hero, cropped to the subject) faded into the card. */
+.tool{--tone:var(--accent);display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:124px 22px 22px;border-radius:16px;
+  background:linear-gradient(180deg,transparent 0,color-mix(in srgb,var(--surface) 50%,transparent) 62px,var(--surface) 124px),var(--art,none) right -30px top -22px/auto 196px no-repeat,var(--surface);
+  border:1px solid var(--line);box-shadow:var(--kt-elev-1);color:inherit;text-decoration:none;transition:border-color .15s,transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .18s}
+.tool:hover,.tool.hot{border-color:var(--tone);transform:translateY(-4px);box-shadow:var(--kt-elev-2),0 20px 48px -26px var(--tone)}
+.tool[data-blip="ai"]{--art:url("/img/hero/ai-s.webp?v=1")}
+.tool[data-blip="yo"]{--art:url("/img/hero/yo-tutka-s.webp?v=1")}
+.tool[data-blip="hyppy"]{--art:url("/img/hero/hyppymittari-s.webp?v=1");--tone:#FF8A5C}
+.tool[data-blip="visa"]{--art:url("/img/hero/visa-s.webp?v=1");--tone:#9F8CFF}
+/* The dish sits right of the live radar, the aurora rings behind it. */
+html[data-page="koti"]{--kt-hero-x:right -150px;--kt-veil:34%}
 .tool .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .tool h2{margin:0;font:800 22px var(--font-display)}
-.tool .sig{font:600 11px var(--font-mono);color:var(--accent);white-space:nowrap}
+.tool .sig{font:600 11px var(--font-mono);color:var(--tone);white-space:nowrap}
 .tool p{margin:0;color:var(--ink-3)}
 .tool .live{color:var(--ink);font-size:14px}
 .tool .live b{color:var(--accent)}
-.tool .go{font-weight:700;color:var(--accent)}
+.tool .go{font-weight:700;color:var(--tone)}
 /* Discreet on purpose, but kept at 3.7:1 (WCAG non-text contrast). Absolute so it adds no grid row. */
 .lock{position:absolute;right:0;bottom:-44px;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;color:#5A7194;transition:color .15s}
 .lock:hover{color:var(--accent)}
@@ -98,7 +133,8 @@ footer a:hover{color:var(--accent)}
   .hero{grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:start}
   .radar{max-width:112px}
   .blip{width:24px;height:24px;margin:-12px 0 0 -12px}
-  .tool{padding:18px}
+  .tool{padding:104px 18px 18px;background-size:auto,auto 168px,auto}
+  html[data-page="koti"]{--kt-hero-x:right -60px}
   .lede{font-size:15px}
 }
 @media (prefers-reduced-motion:reduce){.tool,.lock{transition:none}.tool:hover,.tool.hot{transform:none}}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fi">
+<html lang="fi" data-page="tietosuoja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -49,6 +49,32 @@
 .kt-hits small{font:600 11px var(--font-mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
 .kt-hits span,.kt-hits .none{color:var(--ink-3);font-size:13px}
 .kt-hits .none a{display:inline;padding:0;border:0;background:none;color:var(--accent)}
+/* Tutka v2 (10.11.2026): every page gets its own picture and depth from this block. <html data-page="…"> names the page.
+   --kt-tone = the page's decorative hue (never replaces --accent), --kt-hero = its illustration (img/hero/<page>[-s].webp,
+   built by derive.sh, see CLAUDE.md), painted into the body background at the top and faded into --bg; --kt-veil = how much
+   of --bg lies over the right side of the picture (the left, where text sits, is veiled more). Changed image = raise ?v=. */
+:where(:root){--kt-tone:#5CE1C6;--kt-hero:none;--kt-hero-h:clamp(320px,calc(max(100vw,1100px)*.4286),760px);--kt-hero-x:right;--kt-veil:22%;
+  --kt-sheen:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,0) 42%);
+  --kt-elev-1:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.28),0 16px 32px -20px rgba(0,0,0,.8);
+  --kt-elev-2:inset 0 1px 0 rgba(255,255,255,.1),0 2px 4px rgba(0,0,0,.3),0 26px 46px -20px rgba(0,0,0,.9)}
+[data-page="koti"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/koti.webp?v=1")}
+[data-page="ai"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/ai.webp?v=1")}
+[data-page="yo-tutka"]{--kt-tone:#5CE1C6;--kt-hero:url("/img/hero/yo-tutka.webp?v=1")}
+[data-page="yo-harjoittelu"]{--kt-tone:#4FC3E8;--kt-hero:url("/img/hero/yo-harjoittelu.webp?v=1")}
+[data-page="visa"]{--kt-tone:#9F8CFF;--kt-hero:url("/img/hero/visa.webp?v=1")}
+[data-page="tietosuoja"]{--kt-tone:#5CE1C6}
+@media (max-width:700px){:where(:root){--kt-hero-h:340px;--kt-veil:50%}[data-page="koti"]{--kt-hero:url("/img/hero/koti-s.webp?v=1")}[data-page="ai"]{--kt-hero:url("/img/hero/ai-s.webp?v=1")}[data-page="yo-tutka"]{--kt-hero:url("/img/hero/yo-tutka-s.webp?v=1")}[data-page="yo-harjoittelu"]{--kt-hero:url("/img/hero/yo-harjoittelu-s.webp?v=1")}[data-page="visa"]{--kt-hero:url("/img/hero/visa-s.webp?v=1")}}
+html[data-page] body{background:
+    linear-gradient(180deg,transparent 0,transparent 28%,var(--bg) 100%) top center/100% var(--kt-hero-h) no-repeat,
+    linear-gradient(90deg,color-mix(in srgb,var(--bg) 80%,transparent) 0,color-mix(in srgb,var(--bg) 52%,transparent) 42%,color-mix(in srgb,var(--bg) var(--kt-veil),transparent) 78%) top center/100% var(--kt-hero-h) no-repeat,
+    var(--kt-hero) top var(--kt-hero-x)/auto var(--kt-hero-h) no-repeat,
+    radial-gradient(ellipse 60% 70% at 82% 0,color-mix(in srgb,var(--kt-tone) 15%,transparent),transparent 72%) top center/100% var(--kt-hero-h) no-repeat,
+    radial-gradient(ellipse 70% 100% at 12% 0,var(--bg-glow),transparent 70%) top center/100% 900px no-repeat,
+    var(--bg)}
+@media print{html[data-page] body{background:#fff}}
+.kt-btn.primary{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 16px -8px var(--accent)}
+.kt-tab[aria-selected=true],.kt-tab[aria-pressed=true],.kt-tab[aria-current=page]{background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 60%);box-shadow:0 6px 16px -8px var(--accent)}
+.kt-hits a{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
 /* /koiro-tokens */
 /* koirosvg radar theme: deliberately dark-only, same palette as index.html. */
 html{background:var(--bg)}

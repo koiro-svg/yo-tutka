@@ -150,6 +150,15 @@ YO-harjoittelu (`yo-harjoittelu.html`), Hyppymittari ja Visakaksintaisto (`visa.
   Lippukuvat: flag-icons (MIT, `flags/LICENSE.md`). Kartta `data/visa-map.json`: Natural Earth 50m (public domain), projisoitu ja yksinkertaistettu kertaluonteisella skriptillä; `b` = rajat, `c` = merkkipallo liian pienelle maalle.
 
 ## Known sharp edges (don't regress these)
+- **Ilme v2 (10.11.2026): sivun kuva, sävy ja syvyys tulevat tokenilohkosta.** Jokaisen juurisivun `<html data-page="…">`
+  (koti, ai, yo-tutka, yo-harjoittelu, visa, tietosuoja) valitsee `--kt-tone`n ja `--kt-hero`n (`img/hero/<sivu>[-s].webp?v=1`,
+  ≤ 700 px = `-s`), ja `html[data-page] body{background:…}` maalaa kuvan sivun yläosaan ja häivyttää sen `--bg`:hen; sivun oma
+  `body{background}` häviää spesifisyydellä. Kuva on taustassa, ei elementissä (ei asettelua, ei tekstin päällä). Teksti voittaa
+  kuvan: kirkas kuva = nosta sivun `--kt-veil`iä. Kotivalikon kortit käyttävät samoja `-s`-kuvia (`.tool[data-blip]{--art}`) ja
+  kortin sävyä `--tone`. Kuvat: Higgsfield (GPT Image 2.6), kehotteet ja `derive.sh` ovat `~/projects/koirosvg-uudistus/ilme-2026-11/art/`
+  (ei tässä repossa); kuvissa ei ole tekstiä, kasvoja eikä henkilötietoja. `img/` on välimuistissa vuoden (`vercel.json`), joten
+  muutettu kuva = nosta `?v=` tokenilohkossa ja `index.html`:n korteissa. Uusi juurisivu = `data-page` + rivi tokenilohkoon +
+  `python3 scripts/check_tokens.py --write`. Hyppymittari on kopioitu sovellus omalla ilmeellään: sitä tämä ei koske.
 - **Visan vastaushyväksyntä (`longerAvailable`):** vastaus, joka on toisen vielä löytämättömän vastauksen alku, odottaa 700 ms tai Enteriä ("Niger"/"Nigeria"), myös saman kohteen pidemmän nimen
   kohdalla ("Saturn"/"Saturnus"). Muuten sanan loppu jää kenttään ja seuraavat vastaukset eivät enää täsmää.
 - **Karttavisan zoom käyttää persentiilejä (`buildMap`):** Venäjä ja merentakaiset alueet zoomaisivat muuten maanosan koko maailmaksi.
