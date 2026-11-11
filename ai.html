@@ -465,6 +465,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const usd = v => comma(v, 2) + ' $';
   // A price text that starts with "Ilmainen" is a free tier; "Ilmainen kokeilu" and "7 vrk ilmainen kokeilu" are trials.
   const isFree = p => /^ilmainen(?!\s+kokeilu)/i.test(String(p || '').trim());
+  // ai-F6: a tool's own `free` (true/false, kept by the update routine) wins; the price text is only the fallback.
+  const toolFree = t => typeof t.free === 'boolean' ? t.free : isFree(t.price);
   // Per-tab conveniences that survive a reload (the phone drops background tabs): compare picks, task, budget.
   const store = {
     get(){ try { return JSON.parse(sessionStorage.getItem('ai-ui')) || {}; } catch (e) { return {}; } },
@@ -834,7 +836,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       if (area && area.tools.length) {
         // A task's own tool wins over the area's pick; the area's free tool is then of another kind, so no alternative.
         const named = t.tool && area.tools.find(x => norm(x.name).startsWith(norm(t.tool)));
-        const best = named || area.tools.find(x => x.pick) || area.tools[0], free = named ? null : area.tools.find(x => isFree(x.price));
+        const best = named || area.tools.find(x => x.pick) || area.tools[0], free = named ? null : area.tools.find(toolFree);
         const [main, other, label] = order(best, free, 'Paras', 'Ilmainen vaihtoehto');
         picks.push(tile(`Työkalu · ${esc(area.title)}`, main.name, esc(main.price) + alt(other, main, label), '#' + toolId(area, main), 'Työkalun kortti →'));
       }
