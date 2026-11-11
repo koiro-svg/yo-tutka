@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-11-09T03:26:25Z",
+ "updated": "2026-11-11T04:29:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -52,7 +52,7 @@
      "kind": "automatisoi",
      "bestFor": "Oikeiden tiedostojen käsittely: raportit, Excelit ja kalvot alusta loppuun.",
      "why": "Cowork yhdistettiin 16.9.2026 samaan Claude-sovellukseen: agentti työstää koneesi tiedostoja ja kytkettyjä palveluita itsenäisesti. Microsoft lisensoi saman Cowork-tekniikan Copilotiin. Lokakuussa 2026 Claude sai myös sivupalkkilisäosan suoraan Google Docsiin, Sheetsiin ja Slidesiin.",
-     "price": "Pro 20 $/kk · Max 100–200 $/kk · Team 25 $/käyttäjä/kk",
+     "price": "Pro 20 $/kk · Max 100 $/kk · Ultra 200 $/kk · Team 25 $/käyttäjä/kk",
      "fi": "hyvä",
      "pick": false
     },
@@ -147,7 +147,7 @@
      "kind": "automatisoi",
      "bestFor": "Selvitykset, joissa yhdistetään verkko ja omat Drive-, Gmail- tai kalenteritiedot.",
      "why": "Hakee verkosta ja kytketyistä palveluista samassa ajossa ja kirjoittaa tuloksen suoraan dokumentiksi tai kalvoiksi (Claude Docs ja Slides, 9/2026).",
-     "price": "Pro 20 $/kk · Max 100–200 $/kk",
+     "price": "Pro 20 $/kk · Max 100 $/kk · Ultra 200 $/kk",
      "fi": "hyvä",
      "pick": false
     },
@@ -861,7 +861,7 @@
      "url": "https://www.notion.com",
      "kind": "automatisoi",
      "bestFor": "Pienyritys, joka haluaa dokumentit, projektit, wikin ja tekoälyn yhteen työtilaan.",
-     "why": "Vuodesta 2026 täysi Notion AI sisältyy Business-pakettiin. Siihen kuuluvat monivaiheisia tehtäviä hoitava Notion Agent, AI-palaverimuistiinpanot ja haku yhdistettyihin sovelluksiin. Custom Agents ajavat toistuvia töitä itsenäisesti.",
+     "why": "Vuodesta 2026 täysi Notion AI sisältyy Business-pakettiin. Siihen kuuluvat monivaiheisia tehtäviä hoitava Notion Agent, AI-palaverimuistiinpanot ja haku yhdistettyihin sovelluksiin. Custom Agents ajavat toistuvia töitä itsenäisesti. Käyttö on krediittipohjaista: jäsentä kohti 1 500 Standard- ja 500 Select-krediittiä kuukaudessa, vanhoilla työtiloilla voimaan 2.11.2026.",
      "price": "Ilmainen · Business 20 $/käyttäjä/kk · Custom Agents 10 $/1 000 krediittiä",
      "fi": "kohtalainen",
      "pick": true
@@ -968,7 +968,7 @@
      "kind": "avustaa",
      "bestFor": "Oman koodin tai repon ylläpito ja laajentaminen agentin avulla.",
      "why": "Terminaalissa, IDE:ssä tai työpöytäsovelluksessa toimiva agentti, joka lukee koko projektin, ajaa komentoja ja tekee muutokset itse. Se kuuluu tavalliseen Claude-tilaukseen.",
-     "price": "Sis. Claude Pro 20 $/kk · Max 100–200 $/kk",
+     "price": "Sis. Claude Pro 20 $/kk · Max 100 $/kk · Ultra 200 $/kk",
      "fi": "hyvä",
      "pick": false
     },
@@ -998,6 +998,14 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-11-11",
+   "text": "Anthropic nimesi Claude Max -tasot uudelleen 30.10.2026: entinen Max 20x on nyt Ultra (200 $/kk) ja entinen Max 5x on nyt Max (100 $/kk); hinnat pysyivät samoina."
+  },
+  {
+   "date": "2026-11-11",
+   "text": "Notion siirsi Business- ja Enterprise-työtilojen tekoälyn kuukausittaisiin krediitteihin (1 500 Standard + 500 Select / jäsen); vanhoille työtiloille muutos tuli voimaan 2.11.2026."
+  },
   {
    "date": "2026-11-05",
    "text": "Chatbase poisti ilmaisversion kokonaan: tarjolla on nyt 7 vrk:n ilmainen kokeilu, ja halvin maksullinen taso on Hobby 40 $/kk (32 $/kk vuosilaskutuksella)."
@@ -1069,14 +1077,6 @@
   {
    "date": "2026-10-11",
    "text": "Canva poisti Leonardo-kuvageneraattorin Business-tilauksesta 30.9.2026; se on nyt erillinen tilaus."
-  },
-  {
-   "date": "2026-10-09",
-   "text": "Salesforce ilmoitti kesäkuussa 2026 ostavansa asiakaspalveluagentti Finin (ent. Intercom) noin 3,6 mrd. dollarilla; kauppa ei ole vielä sulkeutunut."
-  },
-  {
-   "date": "2026-10-09",
-   "text": "ChatGPT lisäsi uuden 500 $/kk Pro-tason ja pienensi samalla 200 $/kk Pro-tason käyttörajoja (voimaan 29.–30.10.2026)."
   }
  ]
 }
