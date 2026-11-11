@@ -326,6 +326,12 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 .goal .ringbg{fill:none;stroke:var(--surface-2);stroke-width:4}
 .goal .ringv{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center}
 .goal .big{font-family:var(--font-display);font-size:20px}
+.filters button .xd{font-weight:400;opacity:.75}
+.wkh{margin:16px 0 4px}
+.wk{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px 14px;font-size:14px}
+.wk li{display:contents}
+.wk li>span:nth-child(n+2){text-align:right;color:var(--ink-3)}
+.wk li.cur>span:first-child{font-weight:700}
 .pikabar.round{background:var(--warn-soft);border-color:var(--warn)}
 .tfilters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 .tfilters .kt-input{padding:7px 10px;max-width:100%}
@@ -543,6 +549,25 @@ details.how>p{margin-top:6px}
   }
   // The quick test belongs to one sitting: 2 h since the last drawn task.
   const pikaLive = (pika, now) => !!pika && now - (+pika.at || 0) < 2 * 36e5;
+  // Calendar days from the local midnight `todayMs` to an ISO date (YYYY-MM-DD); null without a valid date or once it has passed.
+  function daysUntil(iso, todayMs) {
+    if (typeof iso !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return null;
+    const t = new Date(iso + 'T00:00').getTime(); if (!Number.isFinite(t)) return null;
+    const d = Math.round((t - todayMs) / 864e5);   // Math.round absorbs a DST hour
+    return d < 0 ? null : d;
+  }
+  // Parts self-assessed per subject since `fromMs`: distinct keys (subject|session|task|unit) per local day, summed over the
+  // days, as the daily goal counts them (a corrected score counts once a day).
+  function partsBySubject(history, fromMs) {
+    const seen = new Set(), out = new Map();
+    for (const e of history) {
+      if (!(e.at >= fromMs)) continue;
+      const d = new Date(e.at); d.setHours(0, 0, 0, 0);
+      const id = d.getTime() + '#' + e.k; if (seen.has(id)) continue;
+      seen.add(id); const a = e.k.split('|')[0]; out.set(a, (out.get(a) || 0) + 1);
+    }
+    return out;
+  }
   /* pure:end */
   const loadState = raw => { try { const o = JSON.parse(raw || '{}'); if (plainObj(o)) Object.assign(S, o); } catch (e) {} normalizeSave(S); dayMemo = null; };
   loadState((() => { try { return localStorage.getItem(LS); } catch (e) { return null; } })());
@@ -756,6 +781,12 @@ details.how>p{margin-top:6px}
     '2025S': { englanti: [277, 259, 241, 218, 188, 153], 'pitka-matematiikka': [85, 65, 48, 34, 22, 14], fysiikka: [86, 65, 49, 32, 20, 12], kemia: [105, 89, 73, 53, 34, 20], biologia: [101, 85, 71, 56, 42, 31] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2025-0
     '2026K': { englanti: [267, 248, 225, 197, 160, 126], 'pitka-matematiikka': [95, 74, 59, 44, 30, 19], fysiikka: [91, 71, 54, 40, 29, 20], kemia: [101, 81, 61, 40, 24, 14], biologia: [100, 82, 67, 52, 38, 27] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2026
   };
+  // Next exam day per subject: a copy of yo-tutka.html's EXAMS (YTL's preliminary timetable), updated each term like GRADES;
+  // validate_practice.py checks that the two tables are identical. A missing or passed date shows no countdown.
+  const EXAMS = {"aidinkieli":"2027-03-16", "englanti":"2027-03-22", "pitka-matematiikka":"2027-03-24", "fysiikka":"2027-03-30", "biologia":"2027-03-30", "kemia":"2027-04-02"};
+  const examIn = a => daysUntil(EXAMS[a], today());
+  const examLabel = d => d === 0 ? 'koe tänään' : d + ' pv';
+  const examTitle = a => 'Koe ' + new Date(EXAMS[a] + 'T12:00').toLocaleDateString('fi-FI', { weekday: 'short', day: 'numeric', month: 'numeric', year: 'numeric' }) + ' (YTL:n alustava koeaikataulu)';
   const LETTERS = ['L', 'E', 'M', 'C', 'B', 'A'];
   function gradeFor(a, k, total) {
     const b = (GRADES[k] || {})[a]; if (!b) return null;
@@ -1267,11 +1298,20 @@ details.how>p{margin-top:6px}
     let streak = 0;
     for (let i = done ? 0 : 1; days.has(addDays(-i)); i++) streak++;
     const pct = Math.min(1, done / goal) * 100;
+    // F2: this week (Mon-Sun) against the daily goal x 7, paced by the days gone so far, and per subject with its exam countdown
+    const dow = (new Date().getDay() + 6) % 7, bySubj = partsBySubject(S.history, addDays(-dow));
+    const wk = Array.from(bySubj.values()).reduce((x, y) => x + y, 0), wkGoal = goal * 7, due = goal * (dow + 1);
+    const pace = !S.history.length ? 'arvioi kohtia, niin näet tahtisi' : wk >= wkGoal ? 'viikon tavoite täynnä' : wk >= due ? 'tahdissa' : `${due - wk} ${due - wk === 1 ? 'kohta' : 'kohtaa'} jäljessä tahdista`;
+    const wkRow = x => { const n = bySubj.get(x.id) || 0, d = examIn(x.id);
+      return `<li${x.id === S.ui.subject ? ' class="cur"' : ''}><span>${esc(x.name.split(',')[0])}</span><span>${n} ${n === 1 ? 'kohta' : 'kohtaa'}</span><span${d == null ? '' : ` title="${esc(examTitle(x.id))}"`}>${d == null ? '' : esc(examLabel(d))}</span></li>`; };
     return `<section class="card" aria-labelledby="goal-h"><h2 id="goal-h">Päivän tavoite</h2>
       <div class="goal"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ringbg" cx="18" cy="18" r="15.9155"/><circle class="ringv" cx="18" cy="18" r="15.9155" stroke-dasharray="${pct.toFixed(1)} 100"${done ? '' : ' stroke-opacity="0"'}/></svg>
         <div><div class="big">Tänään ${Math.min(done, 99)}/${goal} kohtaa</div><div class="muted small">${streak ? `${streak} ${streak === 1 ? 'päivä' : 'päivää'} peräkkäin` : 'Arvioi yksi kohta, niin putki alkaa.'}</div></div>
         <div class="filters" role="group" aria-label="Päivän tavoite">${[1, 3, 5].map(n => `<button type="button" data-goal="${n}" aria-pressed="${n === goal}">${n}</button>`).join('')}</div></div>
-      <p class="muted small">Kohta = yksi itsearvioitu tehtävän kohta.</p></section>`;
+      <h3 class="wkh">Tämä viikko</h3>
+      <p class="small"><b>${wk}/${wkGoal} kohtaa</b> <span class="muted">· ${pace}</span></p>
+      <ul class="wk" aria-label="Viikon kohdat ja päivät kokeeseen aineittain">${DATA.map(wkRow).join('')}</ul>
+      <p class="muted small">Kohta = yksi itsearvioitu tehtävän kohta. Viikko ma–su, tavoite ${goal} × 7.</p></section>`;
   }
   function bindGoal() {
     $$('[data-goal]', app).forEach(b => b.onclick = () => {
@@ -1378,7 +1418,7 @@ details.how>p{margin-top:6px}
     };
     const signal = setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (' + (coarse.matches ? '<b>Σ Lisää kaava</b> avaa kaavan' : `<kbd>${MOD}E</kbd> avaa kaavan, <kbd>${MOD}V</kbd> liittää kuvan`) + '). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen (varmuuskopio <a href="#/edistyminen">Edistyminen</a>-sivulla).') + `
       <div id="resume" hidden></div>
-      <nav class="filters" aria-label="Oppiaine">${DATA.map(x => `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}">${esc(x.name.replace(/, pitkä oppimäärä/, ''))}</button>`).join('')}</nav>
+      <nav class="filters" aria-label="Oppiaine">${DATA.map(x => { const d = examIn(x.id); return `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}"${d == null ? '' : ` title="${esc(examTitle(x.id))}"`}>${esc(x.name.replace(/, pitkä oppimäärä/, ''))}${d == null ? '' : ` <span class="xd">${esc(examLabel(d))}</span>`}</button>`; }).join('')}</nav>
       <div class="grid2">
         ${goalCard()}
         ${nextCard(s, idx, sessions, mast, topicCounts.keys())}

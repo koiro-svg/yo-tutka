@@ -170,6 +170,9 @@ def check_exams(tutka):
             datetime.date.fromisoformat(v)
         except (TypeError, ValueError):
             errors.append(f"yo-tutka.html EXAMS: {k}: virheellinen päivä {v!r}")
+    page = re.search(r"const EXAMS = (\{[^}]*\});", (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8"))
+    if not page or json.loads(page.group(1)) != exams:
+        errors.append("yo-harjoittelu.html EXAMS ei vastaa yo-tutka.html:n EXAMS-taulua: päivitä molemmat samalla kertaa")
     if not errors and all(datetime.date.fromisoformat(v) < datetime.date.today() for v in exams.values()):
         print("varoitus: yo-tutka.html EXAMS: kaikki koepäivät ovat menneet, päivitä seuraavan kauden päivät")
     return errors
@@ -253,6 +256,20 @@ assert.equal(pikaLive({ at: 1000 }, 1000 + 2 * 36e5 - 1), true);
 assert.equal(pikaLive({ at: 1000 }, 1000 + 2 * 36e5), false);
 assert.equal(pikaLive({ a: 'x' }, Date.now()), false);
 assert.equal(pikaLive(undefined, 0), false);
+// daysUntil: calendar days to an ISO date from a local midnight; past or invalid dates give null
+const mid = new Date('2026-11-11T00:00').getTime();
+assert.equal(daysUntil('2026-11-11', mid), 0);
+assert.equal(daysUntil('2026-11-12', mid), 1);
+assert.equal(daysUntil('2027-03-22', mid), 131);
+assert.equal(daysUntil('2026-11-10', mid), null);
+assert.equal(daysUntil(undefined, mid), null);
+assert.equal(daysUntil('2027-13-45', mid), null);
+// partsBySubject: distinct parts per day since the start, summed per subject
+const h0 = new Date('2026-11-09T10:00').getTime(), h1 = new Date('2026-11-10T10:00').getTime();
+const hist = [{ k: 'kemia|2025S|1|a', at: h0 - 864e5 }, { k: 'kemia|2025S|1|a', at: h0 }, { k: 'kemia|2025S|1|a', at: h0 + 60e3 },
+  { k: 'kemia|2025S|1|a', at: h1 }, { k: 'englanti|2025S|2|_', at: h1 }];
+assert.deepEqual([...partsBySubject(hist, new Date('2026-11-09T00:00').getTime())], [['kemia', 2], ['englanti', 1]]);
+assert.equal(partsBySubject([], 0).size, 0);
 """
 
 
