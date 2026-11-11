@@ -204,11 +204,13 @@ footer a:hover{color:var(--accent)}
     <a class="tool" href="/hyppymittari" data-blip="hyppy">
       <div class="hd"><h2>Hyppymittari</h2><span class="sig">● kamera · video · slow-mo</span></div>
       <p>Pystyhyppy, kosketuskorkeus, vauhditon pituus, kolmiloikka ja viisiloikka puhelimen kameralla: luuranko kuvan päällä, laatuvaroitukset ja oma historia. Kaikki lasketaan laitteella.</p>
+      <p class="live" id="hyppy-live" hidden></p>
       <span class="go">Avaa hyppymittari →</span>
     </a>
     <a class="tool" href="/visa" data-blip="visa">
       <div class="hd"><h2>Visakaksintaisto</h2><span class="sig">● 1v1 · reaaliaika</span></div>
       <p>Satoja tietovisoja kaveria vastaan samaan aikaan: listat, liput, kartat ja monivalinnat maantiedosta urheiluun ja viihteeseen. Huone linkillä, ei tiliä.</p>
+      <p class="live" id="visa-live" hidden></p>
       <span class="go">Avaa visa →</span>
     </a>
   </nav>
@@ -404,6 +406,47 @@ footer a:hover{color:var(--accent)}
       if (due) { const c = $('.tool[data-blip="yo"]'); c.href = '/yo-harjoittelu#/kertaus'; c.querySelector('.go').textContent = 'Jatka kertausta →'; }
     }
   } catch (e) { /* storage blocked: the card stays as it is */ }
+
+  // ---- koti-F1: own situation in Hyppymittari and Visa, from this browser only (their localStorage, read-only) ----
+  const readOwn = key => { try { return JSON.parse(localStorage.getItem(key)); } catch (e) { return null; } };
+  const plain = x => x && typeof x === 'object' && !Array.isArray(x);
+  const count = x => Number.isFinite(x) && x >= 0;
+  const showLive = (id, html) => { const el = $(id); el.innerHTML = html + ' <span class="muted">(vain tällä laitteella)</span>'; el.hidden = false; };
+  const fiNum = (x, d) => x.toLocaleString('fi-FI', {minimumFractionDigits: d, maximumFractionDigits: d});
+  // Hyppymittari ('hyppymittari.v1', owned by hyppymittari/index.html): the record of the type jumped last.
+  // Copies of its TYPES/GROUPS units and of its record rule (bestOf: no quality flags; 'uncalibrated' is info only).
+  {
+    const HYPPY = {
+      cmj: ['kädet lanteilla', 'cm', 1], cmja: ['käsien kanssa', 'cm', 1], sj: ['kyykkyhyppy', 'cm', 1], run: ['vauhdilla', 'cm', 1],
+      reach: ['kosketuskorkeus', 'cm', 0], slj: ['vauhditon pituus', 'm', 2], s3: ['kolmiloikka', 'm', 2], s5: ['viisiloikka', 'm', 2],
+    };
+    const s = readOwn('hyppymittari.v1');
+    const jumps = (plain(s) && Array.isArray(s.jumps) ? s.jumps : []).filter(j => plain(j) && Object.hasOwn(HYPPY, j.type) &&
+      typeof j.cm === 'number' && Number.isFinite(j.cm) && j.cm > 0 && typeof j.at === 'string' && Number.isFinite(Date.parse(j.at)));
+    if (jumps.length) {
+      const last = jumps.reduce((a, j) => Date.parse(j.at) > Date.parse(a.at) ? j : a);
+      const [name, unit, digits] = HYPPY[last.type];
+      const clean = j => !(Array.isArray(j.flags) ? j.flags : []).some(f => f !== 'uncalibrated');
+      const best = jumps.filter(j => j.type === last.type && clean(j)).reduce((a, j) => !a || j.cm > a.cm ? j : a, null);
+      const n = jumps.length;
+      showLive('#hyppy-live', (best ? `Ennätys <b>${fiNum(unit === 'm' ? best.cm / 100 : best.cm, digits)} ${unit}</b> (${name}) · ` : '') +
+        `${n} ${n === 1 ? 'tulos' : 'tulosta'}`);
+    }
+  }
+  // Visa ('visa-v1', owned by visa.html): games against friends and quizzes with an own best. Same validation as visa.html.
+  {
+    const s = readOwn('visa-v1');
+    let w = 0, l = 0, d = 0, quizzes = 0;
+    if (plain(s)) {
+      for (const [k, r] of Object.entries(plain(s.h2h) ? s.h2h : {}))
+        if (k.startsWith('n:') && plain(r) && count(r.w) && count(r.l)) { w += r.w; l += r.l; d += count(r.d) ? r.d : 0; }
+      quizzes = Object.values(plain(s.best) ? s.best : {}).filter(b => plain(b) && count(b.n) && count(b.t) && count(b.total)).length;
+    }
+    const bits = [];
+    if (w + l + d) bits.push(`Kavereita vastaan <b>${w}–${l}</b>` + (d ? ` (${d} tasan)` : ''));
+    if (quizzes) bits.push(`${bits.length ? 'oma' : 'Oma'} ennätys <b>${quizzes}</b> visassa`);
+    if (bits.length) showLive('#visa-live', bits.join(' · '));
+  }
 
   // ---- julkinen-6: site search (AI data, YO topics and practice, Visa quizzes: koti-F3), shared with the YO bar: site-search.js is loaded on the first
   // keystroke and fetches its data on the first search. "/" or ⌘K focuses the field.
