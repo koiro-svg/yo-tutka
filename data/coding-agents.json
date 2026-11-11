@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-11-09T03:26:25Z",
+ "updated": "2026-11-11T04:29:00Z",
  "source": "https://artificialanalysis.ai/agents/coding-agents",
  "indexName": "Coding Agent Index v2.0",
  "indexEvals": "FrontierCode v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA-AA",
@@ -19,7 +19,7 @@
    "openSource": false,
    "repo": null,
    "models": "Claude Opus 5.5 (oletus), Sonnet 5.5, Fable 5.1 ja Haiku",
-   "price": "Sis. Claude Pro 20 $/kk · Max 100–200 $/kk · tai API-käyttö tokenihinnoin",
+   "price": "Sis. Claude Pro 20 $/kk · Max 100 $/kk · Ultra 200 $/kk · tai API-käyttö tokenihinnoin",
    "aa": {
     "index": 62,
     "model": "Opus 5.5 (max)",
@@ -109,7 +109,7 @@
    "openSource": true,
    "repo": "https://github.com/xai-org/grok-build",
    "models": "Grok 4.7; asetuksilla myös mikä tahansa oma malli",
-   "price": "Sis. Grok-tileihin ilmaisesta alkaen · SuperGrok 30 $/kk · SuperGrok Plus 100 $/kk · tai xAI API",
+   "price": "Sis. X Subscriptioniin ilmaisesta alkaen · Premium 30 $/kk · Super 100 $/kk · Ultra 200 $/kk · tai xAI API",
    "aa": {
     "index": 47,
     "model": "Grok 4.7 (xhigh)",
@@ -117,7 +117,7 @@
     "minutesPerTask": 35.8
    },
    "bestFor": "Kun käytät jo Grokia tai haluat avoimen lähdekoodin terminaaliagentin xAI:n malleille.",
-   "why": "AA uudisti Coding Agent Indexin versioon v2.0 23.10.2026 (DeepSWE korvautui FrontierCodella); Grok Buildin tulos uudessa testisarjassa on 47. Apache-2.0-lisensoitu terminaaliagentti, jota voi ajaa myös skripteissä ilman käyttöliittymää."
+   "why": "AA uudisti Coding Agent Indexin versioon v2.0 23.10.2026 (DeepSWE korvautui FrontierCodella); Grok Buildin tulos uudessa testisarjassa on 47. Apache-2.0-lisensoitu terminaaliagentti, jota voi ajaa myös skripteissä ilman käyttöliittymää. xAI yhdisti 13.10.2026 Grok-, Cursor- ja X Premium -tilaukset: SuperGrok-nimet poistuivat, uudet tasot ovat Plus/Premium/Super/Ultra samoin hinnoin."
   },
   {
    "name": "Muse Code",
