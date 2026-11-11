@@ -809,7 +809,7 @@ details.how>p{margin-top:6px}
   };
   // Next exam day per subject: a copy of yo-tutka.html's EXAMS (YTL's preliminary timetable), updated each term like GRADES;
   // validate_practice.py checks that the two tables are identical. A missing or passed date shows no countdown.
-  const EXAMS = {"aidinkieli":"2027-03-16", "englanti":"2027-03-22", "pitka-matematiikka":"2027-03-24", "fysiikka":"2027-03-30", "biologia":"2027-03-30", "kemia":"2027-04-02"};
+  const EXAMS = {"aidinkieli":"2027-03-16", "englanti":"2027-03-22", "pitka-matematiikka":"2027-03-24", "fysiikka":"2027-03-30", "biologia":"2027-03-30", "kemia":"2027-04-02", "saksa":"2027-03-22"};
   const examIn = a => daysUntil(EXAMS[a], today());
   const examLabel = d => d === 0 ? 'koe tänään' : d + ' pv';
   const examTitle = a => 'Koe ' + new Date(EXAMS[a] + 'T12:00').toLocaleDateString('fi-FI', { weekday: 'short', day: 'numeric', month: 'numeric', year: 'numeric' }) + ' (YTL:n alustava koeaikataulu)';

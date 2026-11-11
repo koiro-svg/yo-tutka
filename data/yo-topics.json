@@ -560,6 +560,102 @@
      "description": "Taito: tekstilajipiirteet, näkökulma, kohderyhmä ja henkilökuvaus"
     }
    ]
+  },
+  {
+   "id": "saksa",
+   "name": "Saksa, pitkä oppimäärä",
+   "topics": [
+    {
+     "id": "ymparisto-ja-ilmasto",
+     "name": "Ympäristö ja ilmasto",
+     "description": "Luonnonsuojelu, kestävä arki, energia, kaupunkiluonto"
+    },
+    {
+     "id": "teknologia-ja-tekoaly",
+     "name": "Teknologia ja tekoäly",
+     "description": "Älypuhelimet, sovellukset, tekoäly, keksinnöt"
+    },
+    {
+     "id": "media-ja-viestinta",
+     "name": "Media ja viestintä",
+     "description": "Some, vaikuttajat, podcastit, uutiset ja tiedon luotettavuus"
+    },
+    {
+     "id": "yhteiskunta-ja-politiikka",
+     "name": "Yhteiskunta ja politiikka",
+     "description": "Nuorten vaikuttaminen, vapaaehtoistyö, tasa-arvo, lait ja rikokset"
+    },
+    {
+     "id": "tyoelama-ja-yrittajyys",
+     "name": "Työelämä ja yrittäjyys",
+     "description": "Kesätyöt, työhaastattelut, hakemukset, ammatit ja yritykset"
+    },
+    {
+     "id": "koulutus-ja-oppiminen",
+     "name": "Koulutus ja oppiminen",
+     "description": "Koulu, opiskelu, vaihto ja harjoittelu ulkomailla"
+    },
+    {
+     "id": "terveys-ja-hyvinvointi",
+     "name": "Terveys ja hyvinvointi",
+     "description": "Lääkkeet, elintavat, jaksaminen, onnellisuus"
+    },
+    {
+     "id": "kulttuuri-ja-taide",
+     "name": "Kulttuuri ja taide",
+     "description": "Musiikki, kirjallisuus, teatteri, kuvataide, taiteilijat"
+    },
+    {
+     "id": "tiede-ja-luonto",
+     "name": "Tiede ja luonto",
+     "description": "Eläimet, kasvit, aistit, tutkimus"
+    },
+    {
+     "id": "matkailu-ja-liikenne",
+     "name": "Matkailu ja liikenne",
+     "description": "Junat, lentoasemat, kuulutukset, pyöräily, matkakohteet"
+    },
+    {
+     "id": "ihmissuhteet-ja-arki",
+     "name": "Ihmissuhteet ja arki",
+     "description": "Perhe, ystävät, asuminen, arjen kommellukset"
+    },
+    {
+     "id": "historia",
+     "name": "Historia",
+     "description": "Keksintöjen ja henkilöiden historia, Saksojen yhdistyminen, löydöt"
+    },
+    {
+     "id": "talous-ja-kuluttaminen",
+     "name": "Talous ja kuluttaminen",
+     "description": "Raha, hinnat, kaupat ja asiakaspalvelu, kuluttajan valinnat"
+    },
+    {
+     "id": "urheilu-ja-vapaa-aika",
+     "name": "Urheilu ja vapaa-aika",
+     "description": "Urheilijat, harrastukset, pelit, ulkoilu"
+    },
+    {
+     "id": "kieli-ja-kielenkaytto",
+     "name": "Kieli ja kielenkäyttö",
+     "description": "Murteet, sanonnat, sinuttelu, kohteliaisuus, arjen repliikit"
+    },
+    {
+     "id": "ruoka-ja-juoma",
+     "name": "Ruoka ja juoma",
+     "description": "Ruoka-aineet, ravintolat ja kahvilat, ruoan tuotanto"
+    },
+    {
+     "id": "juhlat-ja-perinteet",
+     "name": "Juhlat ja perinteet",
+     "description": "Joulu, pääsiäinen, äitienpäivä, ystävänpäivä, martinpäivä, juhlien järjestäminen"
+    },
+    {
+     "id": "saksankieliset-maat",
+     "name": "Saksankieliset maat",
+     "description": "Saksan, Itävallan, Sveitsin ja Liechtensteinin kaupungit, alueet ja saaret"
+    }
+   ]
   }
  ]
 }
