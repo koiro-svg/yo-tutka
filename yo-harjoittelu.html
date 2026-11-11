@@ -202,6 +202,13 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 .md mjx-assistive-mml{max-width:100%}   /* invisible screen-reader copy: must not widen the page either */
 .intro{border-left:3px solid var(--accent);padding:4px 0 4px 14px;color:var(--ink-2)}
 .help{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0}
+.work{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}   /* answer + its footer: the left column of .solopen */
+/* An opened model solution sits beside the answer on a wide screen (paper left; hints, model and points right) so
+   self-grading needs no scrolling back and forth. Phones, and the narrower column next to the aids panel, keep one column. */
+@media (min-width:1100px){
+  body:not(.aids-open) .unit.solopen{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:20px;align-items:start}
+  body:not(.aids-open) .unit.solopen>:not(.work,.help){grid-column:1/-1}
+}
 .reveal{min-width:0;border-radius:10px;padding:12px 14px;background:var(--surface-2);border:1px solid var(--line-2)}
 .reveal.hint{border-left:3px solid var(--warn)}
 .reveal.sol{border-left:3px solid var(--accent)}
@@ -1476,8 +1483,8 @@ details.how>p{margin-top:6px}
     return `<section class="unit" id="u-${esc(u.id || '_')}" data-key="${esc(key)}">
       <div class="uhead">${u.id ? `<b>${esc(u.id)}</b>` : ''}<span class="chip">${esc(u.points)} p</span>${checkChip}${scoreChip(S.scores[key], 'data-score title="oma arvio"')}</div>
       ${u.prompt ? `<div class="md">${md(u.prompt)}</div>` : ''}
-      <div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
-      <div class="afoot"><span class="count"></span><span class="saved"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
+      <div class="work"><div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
+      <div class="afoot"><span class="count"></span><span class="saved"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div></div>
       ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u.points)}</div></div>` : ''}
     </section>`;
   }
@@ -1507,6 +1514,7 @@ details.how>p{margin-top:6px}
     if (sol) sol.onclick = () => {
       const open = reveal($('[data-solbox]', sec), sol);
       sol.textContent = open ? 'Piilota malliratkaisu' : 'Näytä malliratkaisu';
+      sec.classList.toggle('solopen', open);   // wide screens: answer and model side by side (CSS)
       if (open) { $('.assess', sec).hidden = false; step('sol'); hintNote(); }
     };
     const hintNote = () => { const n = $$('.stairs li.on:not(.sol)', sec).length, el = $('[data-hintnote]', sec); if (el) el.textContent = n ? `Käytit ${n === 1 ? 'yhden vihjeen' : n + ' vihjettä'} tällä kerralla.` : ''; };
