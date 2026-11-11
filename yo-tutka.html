@@ -379,6 +379,35 @@ details.sess[open]{box-shadow:var(--kt-elev-1)}
   @media (pointer:coarse){.heat .cell{height:34px}}
 }
 
+/* yo-tutka-F5: the review schedule (own subjects, weeks up to each exam). */
+.plan{margin-top:18px}
+.plan h2{font-size:20px;margin:0}
+.plan-pick{display:flex;flex-wrap:wrap;gap:8px}
+.plan-pick button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 13px;cursor:pointer;font:inherit;font-weight:700;font-size:14px}
+.plan-pick button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.plan-pick button[aria-pressed="true"]::before{content:"✓ "}
+.plan-pick .n{font-family:var(--font-mono);font-weight:400;font-size:11px;opacity:.75;margin-left:6px}
+#planBody{display:grid;gap:14px}
+.plan-top{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;font-size:14px;color:var(--ink-2)}
+.plan-top p{margin:0;max-width:78ch}
+.weeks{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.wk h3{font:600 13px var(--font-mono);color:var(--ink-2);margin:0 0 2px}
+.wk .now{color:var(--accent);margin-left:6px}
+.plist{list-style:none;margin:0;padding:0;display:grid}
+.plist li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;padding:6px 0;border-top:1px solid var(--line-2);min-width:0}
+.plist .sj{font:600 11px var(--font-mono);color:var(--ink-3);min-width:10ch}
+.plist .nm{font-weight:700;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+.plist .nm:hover{text-decoration:underline}
+.plist .ms{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);overflow-wrap:anywhere}
+.plist .go{margin-left:auto}
+.plist .ex b{color:var(--autumn)}
+.plan details.later>summary{cursor:pointer;font-weight:700;color:var(--accent);padding:6px 0}
+.plan details.later>.weeks{margin-top:10px}
+@media (pointer:coarse){
+  .plan-pick button,.plan .kt-btn.sm,.plan details.later>summary{min-height:44px}
+  .plist .nm,.plan .prac{display:inline-flex;align-items:center;min-height:44px}
+}
+
 /* Radar theme surfaces (keep last so they win over the base rules above). */
 html{background:var(--bg)}
 body{background:radial-gradient(ellipse 900px 520px at 75% 0%,var(--bg-glow),transparent 70%) no-repeat,var(--bg)}
@@ -490,6 +519,12 @@ h1{font-weight:800;letter-spacing:-.02em}
 
   <main id="panel" class="panel"></main>
 
+  <section class="panel plan" id="plan" aria-labelledby="planH">
+    <div class="sec-head"><h2 id="planH">Kertausaikataulu koepäivään</h2><span class="hint">Valitse omat aineesi</span></div>
+    <div class="plan-pick" id="planPick" role="group" aria-label="Omat aineet"></div>
+    <div id="planBody"></div>
+  </section>
+
   <details class="method" id="method">
     <summary>Miten luvut lasketaan</summary>
     <ul>
@@ -536,9 +571,11 @@ h1{font-weight:800;letter-spacing:-.02em}
   const LATE_RATE = 0.6, LATE_MIN_N = 5, LATE_GAP = 2;
   const missedWord = g => g===1 ? 'puuttui viimeisimmästä kokeesta' : `puuttui ${g} viimeisimmästä kokeesta`;
 
-  const state = { subject: (DATA[0]||{}).id, weighting:'recent', verifiedOnly:false, topic:null, query:'', sort:'p', sortDir:-1, allTopics:false, open:new Set(), closed:new Set() };
-  try{ const saved = JSON.parse(localStorage.getItem('yo-tutka')||'{}'); if(saved.subject && DATA.some(s=>s.id===saved.subject)) state.subject=saved.subject; if(WEIGHTINGS.includes(saved.weighting)) state.weighting=saved.weighting; if(typeof saved.verifiedOnly==='boolean') state.verifiedOnly=saved.verifiedOnly; }catch(e){}
-  const persist = ()=>{ try{ localStorage.setItem('yo-tutka', JSON.stringify({subject:state.subject, weighting:state.weighting, verifiedOnly:state.verifiedOnly})); }catch(e){} };
+  const state = { subject: (DATA[0]||{}).id, weighting:'recent', verifiedOnly:false, topic:null, query:'', sort:'p', sortDir:-1, allTopics:false, open:new Set(), closed:new Set(), plan:[] };
+  try{ const saved = JSON.parse(localStorage.getItem('yo-tutka')||'{}'); if(saved.subject && DATA.some(s=>s.id===saved.subject)) state.subject=saved.subject; if(WEIGHTINGS.includes(saved.weighting)) state.weighting=saved.weighting; if(typeof saved.verifiedOnly==='boolean') state.verifiedOnly=saved.verifiedOnly;
+    // yo-tutka-F5: the visitor's own subjects (a version without the field, or an unknown/removed subject, gives none of it)
+    if(Array.isArray(saved.plan)) state.plan = DATA.map(s=>s.id).filter(id=>saved.plan.includes(id)); }catch(e){}
+  const persist = ()=>{ try{ localStorage.setItem('yo-tutka', JSON.stringify({subject:state.subject, weighting:state.weighting, verifiedOnly:state.verifiedOnly, plan:state.plan})); }catch(e){} };
 
   const subj = () => DATA.find(s=>s.id===state.subject) || DATA[0];
   function orderedSessions(s){ return s.sessions.slice().sort((a,b)=>sessKey(a.id)-sessKey(b.id)); }
@@ -843,10 +880,13 @@ h1{font-weight:800;letter-spacing:-.02em}
   }
   // "Harjoittele seuraavaksi" (yo-tutka-F3): probability x points when asked x (1 - own mastery); untried topics count as
   // 50 % mastery. Without points in the data the points factor is 1 (probability x weakness, as in yo-harjoittelu).
+  function byPriority(st, ps){
+    return st.ranked.map(t=>{ const mast=mastOf(ps,t.id); return {t, mast, m:ps.topics.get(t.id), prio:t.p*(st.hasPts?t.ptsAsked:1)*(1-(mast==null?0.5:mast))}; })
+      .sort((a,b)=>b.prio-a.prio||b.t.p-a.t.p);
+  }
   function paintNext(){
     const {s, st, ps} = cur;
-    $('#nextList').innerHTML = st.ranked.map(t=>{ const mast=mastOf(ps,t.id); return {t, mast, m:ps.topics.get(t.id), prio:t.p*(st.hasPts?t.ptsAsked:1)*(1-(mast==null?0.5:mast))}; })
-      .sort((a,b)=>b.prio-a.prio||b.t.p-a.t.p).slice(0,5)
+    $('#nextList').innerHTML = byPriority(st, ps).slice(0,5)
       .map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${st.hasPts?`<span title="pisteitä kokeessa, kun aihe on mukana">${Math.round(r.t.ptsAsked)} p</span> · `:''}${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span><span class="go">${pracLinks(s, r.t.id, taskFor(r.t.id, ps.byTask, st))}</span></li>`).join('');
     paintLate();
   }
@@ -1017,15 +1057,64 @@ h1{font-weight:800;letter-spacing:-.02em}
     if(b) b.focus({preventScroll:true});
   }
 
-  // julkinen-24: a printable review list of the subject's likeliest topics with own mastery and a box to tick.
-  function printList(){
-    const {s, st, ps} = cur;
-    $('#printlist').innerHTML = `<h1>Kertauslista: ${esc(s.name)}</h1><p>YO-tutka · ${new Date().toLocaleDateString('fi-FI')} · todennäköisyys ${esc(weightingLabel(s,state.weighting))}${examText(s)?' · '+esc(examText(s)):''}</p>
-      <table><thead><tr><th></th><th>Aihe</th><th>Todennäköisyys</th><th>Oma osaaminen</th></tr></thead><tbody>${st.ranked.map(t=>{ const m=mastOf(ps,t.id); return `<tr><td class="box">☐</td><td>${esc(t.name)}</td><td>${fmtPct(t.p)} · ${pWord(t.p)}</td><td>${m==null?'–':fmtPct(m)}</td></tr>`; }).join('')}</tbody></table>
-      <p class="small">koirosvg.com/yo-tutka#${esc(s.id)}</p>`;
+  /* yo-tutka-F5: a review schedule up to each chosen subject's exam (EXAMS). Its topics (probability >= PLAN_MIN, in the
+     "Harjoittele seuraavaksi" order: likeliest, most points, weakest first) are spread over the weeks (Mon-Sun) from this one
+     to the week before the exam, and the exam week repeats the top PLAN_TOP. Recomputed on every paint from the current
+     weighting and own scores, so a topic assessed strong moves later. Only the chosen subject ids are stored ('yo-tutka'.plan). */
+  const PLAN_MIN = 0.35, PLAN_TOP = 3, PLAN_SHOW = 4;
+  const monday = d => { const x = new Date(d); x.setHours(12,0,0,0); x.setDate(x.getDate()-((x.getDay()+6)%7)); return x; };
+  const dm = d => d.toLocaleDateString('fi-FI',{day:'numeric',month:'numeric'});
+  const subjShort = s => s.name.split(',')[0];
+  function planWeeks(){
+    const now = monday(new Date()), weeks = new Map(), skipped = [];
+    const wk = i => { if(!weeks.has(i)){ const a = new Date(now); a.setDate(a.getDate()+7*i); const b = new Date(a); b.setDate(b.getDate()+6); weeks.set(i,{i, from:a, to:b, items:[], exams:[]}); } return weeks.get(i); };
+    let topics = 0, dropped = 0;
+    for(const id of state.plan){
+      const s = DATA.find(x=>x.id===id), days = s ? examDays(s) : null; if(!s) continue;
+      if(days==null || days<0){ skipped.push(s); continue; }
+      const all = byPriority(stats(s), practiceScores(s)), list = all.filter(r=>r.t.p>=PLAN_MIN);
+      const W = Math.max(0, Math.round((monday(EXAMS[s.id]+'T12:00') - now)/(7*864e5)));   // study weeks before the exam week
+      list.forEach((r,j)=>wk(W ? Math.floor(j*W/list.length) : 0).items.push({s, ...r}));
+      wk(W).exams.push({s, top:list.slice(0,PLAN_TOP)});
+      topics += list.length; dropped += all.length - list.length;
+    }
+    return { weeks:[...weeks.values()].sort((a,b)=>a.i-b.i), skipped, topics, dropped };
+  }
+  function paintPlan(){
+    const box = $('#planBody'); if(!box) return;
+    keepFocus(()=>{ $('#planPick').innerHTML = DATA.map(s=>{ const on = state.plan.includes(s.id), d = examDays(s);
+      return `<button type="button" data-plan="${esc(s.id)}" aria-pressed="${on}">${esc(s.name)}${d!=null&&d>=0?`<span class="n">koe ${esc(examDate(s))}</span>`:''}</button>`; }).join(''); });
+    if(!state.plan.length){ box.innerHTML = '<p class="empty">Valitse aineet, jotka kirjoitat. Tutka jakaa niiden todennäköisimmät ja sinulle heikoimmat aiheet viikoille ennen koetta. Valinta tallentuu vain tähän selaimeen.</p>'; return; }
+    const {weeks, skipped, topics, dropped} = planWeeks();
+    const row = it => `<li><span class="sj">${esc(subjShort(it.s))}</span><a class="nm" href="#${esc(encodeURIComponent(it.s.id)+'/'+encodeURIComponent(it.t.id))}">${esc(it.t.name)}</a><span class="pp ${pClass(it.t.p)}" title="${pWord(it.t.p)}">${fmtPct(it.t.p)}</span><span class="ms">${it.mast==null?'ei harjoiteltu':'osaat '+fmtPct(it.mast)}</span><span class="go"><a class="prac" href="${esc(pikaUrl(it.s.id,it.t.id))}" title="Satunnainen tehtävä tästä aiheesta">Pikatesti →</a></span></li>`;
+    const exam = e => `<li class="ex"><span class="sj">${esc(subjShort(e.s))}</span><b>Koe ${esc(examDate(e.s))}</b>${e.top.length?`<span class="ms">kertaa vielä: ${esc(e.top.map(r=>r.t.name).join(', '))}</span>`:''}</li>`;
+    const week = w => `<li class="wk"><h3>${esc(dm(w.from))}–${esc(dm(w.to))}${w.i===0?'<span class="now">tämä viikko</span>':''}</h3><ul class="plist">${w.items.map(row).join('')}${w.exams.map(exam).join('')}</ul></li>`;
+    const head = weeks.slice(0,PLAN_SHOW), rest = weeks.slice(PLAN_SHOW);
+    box.innerHTML = `<div class="plan-top"><p>${topics} aihetta ${weeks.length} viikolle, tärkein ensin samassa järjestyksessä kuin Harjoittele seuraavaksi -listassa (todennäköisyys, pisteet ja heikko oma osaaminen; painotus kuten yllä).${dropped?` Harvinaiset aiheet (alle ${PLAN_MIN*100} %, ${dropped} kpl) jätetty pois.`:''} Kun arvioit itsesi harjoittelussa, hallitut aiheet siirtyvät myöhemmäksi.${skipped.length?` Seuraavan kokeen päivä puuttuu: ${esc(skipped.map(subjShort).join(', '))}.`:''}</p><button type="button" class="kt-btn sm" id="printPlan"${weeks.length?'':' disabled'}>Tulosta aikataulu</button></div>
+      ${weeks.length?`<ol class="weeks">${head.map(week).join('')}</ol>`:''}
+      ${rest.length?`<details class="later"><summary>Myöhemmät viikot (${rest.length})</summary><ol class="weeks">${rest.map(week).join('')}</ol></details>`:''}`;
+  }
+  function printOut(html){
+    $('#printlist').innerHTML = html;
     document.documentElement.classList.add('print-list');
     addEventListener('afterprint', () => document.documentElement.classList.remove('print-list'), {once:true});
     window.print();
+  }
+  function printPlan(){
+    const {weeks} = planWeeks();
+    printOut(`<h1>Kertausaikataulu</h1><p>YO-tutka · ${esc(new Date().toLocaleDateString('fi-FI'))} · ${esc(state.plan.map(id=>subjShort(DATA.find(s=>s.id===id))).join(', '))}</p>
+      <table><thead><tr><th></th><th>Viikko</th><th>Aine</th><th>Aihe</th><th>Todennäköisyys</th><th>Oma osaaminen</th></tr></thead><tbody>${weeks.map(w=>
+        w.items.map(it=>`<tr><td class="box">☐</td><td>${esc(dm(w.from))}–${esc(dm(w.to))}</td><td>${esc(subjShort(it.s))}</td><td>${esc(it.t.name)}</td><td>${fmtPct(it.t.p)}</td><td>${it.mast==null?'–':fmtPct(it.mast)}</td></tr>`).join('')
+        + w.exams.map(e=>`<tr><td></td><td>${esc(dm(w.from))}–${esc(dm(w.to))}</td><td>${esc(subjShort(e.s))}</td><td colspan="3"><b>Koe ${esc(examDate(e.s))}</b>${e.top.length?' · kertaa vielä: '+esc(e.top.map(r=>r.t.name).join(', ')):''}</td></tr>`).join('')).join('')}</tbody></table>
+      <p class="small">koirosvg.com/yo-tutka</p>`);
+  }
+
+  // julkinen-24: a printable review list of the subject's likeliest topics with own mastery and a box to tick.
+  function printList(){
+    const {s, st, ps} = cur;
+    printOut(`<h1>Kertauslista: ${esc(s.name)}</h1><p>YO-tutka · ${new Date().toLocaleDateString('fi-FI')} · todennäköisyys ${esc(weightingLabel(s,state.weighting))}${examText(s)?' · '+esc(examText(s)):''}</p>
+      <table><thead><tr><th></th><th>Aihe</th><th>Todennäköisyys</th><th>Oma osaaminen</th></tr></thead><tbody>${st.ranked.map(t=>{ const m=mastOf(ps,t.id); return `<tr><td class="box">☐</td><td>${esc(t.name)}</td><td>${fmtPct(t.p)} · ${pWord(t.p)}</td><td>${m==null?'–':fmtPct(m)}</td></tr>`; }).join('')}</tbody></table>
+      <p class="small">koirosvg.com/yo-tutka#${esc(s.id)}</p>`);
   }
 
   // julkinen-19: /yo-tutka#<subject>[/<topic>]; changes go to the history, so back undoes a filter.
@@ -1065,6 +1154,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     psCache.clear();
     cur.ps = practiceScores(cur.s);
     if(scoreSig(cur.ps) !== before){ paintNext(); paintTopics(); }
+    paintPlan();   // other subjects' scores may have changed too
   }
 
   document.getElementById('practiceLink').href = PRACTICE;
@@ -1088,7 +1178,12 @@ h1{font-weight:800;letter-spacing:-.02em}
     applyHash();
     showTopic();
   });
-  const restat = () => { cur.st = stats(cur.s); keepFocus(paintStats); };
+  const restat = () => { cur.st = stats(cur.s); keepFocus(paintStats); paintPlan(); };
+  $('#plan').addEventListener('click', e => {
+    const b = e.target.closest('button[data-plan]');
+    if(b){ const id = b.dataset.plan; state.plan = state.plan.includes(id) ? state.plan.filter(x=>x!==id) : DATA.map(s=>s.id).filter(x=>x===id || state.plan.includes(x)); persist(); paintPlan(); return; }
+    if(e.target.closest('#printPlan')) printPlan();
+  });
   const panel = $('#panel');
   panel.addEventListener('change', e => {
     if(e.target.id==='weighting'){ state.weighting=e.target.value; persist(); restat(); }
@@ -1139,7 +1234,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   fromHash();
   // Only an arriving link scrolls to its topic: a reload or Back keeps the scroll position the browser restores.
   const arrived = (performance.getEntriesByType('navigation')[0] || {}).type === 'navigate';
-  if(!DATA.length){ $('#panel').innerHTML = '<p class="empty">Dataa ei ole vielä upotettu.</p>'; } else { renderAll(); syncUrl(true); if(arrived) showTopic(); }
+  if(!DATA.length){ $('#panel').innerHTML = '<p class="empty">Dataa ei ole vielä upotettu.</p>'; $('#plan').hidden = true; } else { renderAll(); paintPlan(); syncUrl(true); if(arrived) showTopic(); }
 })();
 </script>
 </body>
