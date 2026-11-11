@@ -200,7 +200,21 @@
      ],
      "solution": "1. Kerrotaan auki: $(ac+bd)^2-(a^2+b^2)(c^2+d^2)=a^2c^2+2abcd+b^2d^2-(a^2c^2+a^2d^2+b^2c^2+b^2d^2)$.\n2. Termit $a^2c^2$ ja $b^2d^2$ kumoutuvat: $=-(a^2d^2-2abcd+b^2c^2)=-(ad-bc)^2$.\n3. Ehdon $ad-bc=1$ nojalla lauseke on $-1^2=-1$.\n\n**Vastaus: $-1$**\n\n**Sudenkuoppa:** vastaus $-(ad-bc)^2$ jättää ehdon käyttämättä, joten sievennys jää kesken.",
      "answer": "$-1$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Lauseke kerrottu auki oikein, molemmat tulot",
+       "points": 2
+      },
+      {
+       "text": "Termit kumoutuvat ja jäljelle jäävä on kirjoitettu muotoon $-(ad-bc)^2$",
+       "points": 2
+      },
+      {
+       "text": "Ehto $ad-bc=1$ käytetty, vastaus $-1$",
+       "points": 2
+      }
+     ]
     }
    ]
   },
@@ -217,7 +231,33 @@
      ],
      "solution": "1. Pizzan säde on $16\\ \\text{cm}$ ja ala $\\pi\\cdot 16^2=256\\pi\\ \\text{cm}^2$.\n2. Yhden sektorin ala on $\\frac{256\\pi}{8}=32\\pi\\ \\text{cm}^2$ ja keskuskulma $\\frac{360^\\circ}{8}=45^\\circ$.\n3. Kolmion alan on oltava puolet sektorista, eli $16\\pi\\ \\text{cm}^2$ (siis $\\frac{1}{16}$ koko pizzasta).\n4. Olkoon kyljen pituus $r$. Kyljet ovat sektorin reunasäteillä, ja niiden välinen kulma on $45^\\circ$, joten kolmion ala on $\\frac12 r^2\\sin 45^\\circ=\\frac{r^2}{2\\sqrt2}$.\n5. Yhtälöstä $\\frac{r^2}{2\\sqrt2}=16\\pi$ saadaan $r^2=32\\sqrt2\\,\\pi$, joten $r=\\sqrt{32\\sqrt2\\,\\pi}=4\\sqrt{2\\sqrt2\\,\\pi}\\approx 11{,}9\\ \\text{cm}$.\n6. Koska $r<16\\ \\text{cm}$, viilto mahtuu sektorin sisään.\n\n**Vastaus: $r=4\\sqrt{2\\sqrt2\\,\\pi}\\ \\text{cm}\\approx 12\\ \\text{cm}$**\n\n**Sudenkuoppa:** halkaisijan käyttäminen säteenä tai kolmion alan laskeminen suorakulmaisen kolmion kaavalla, vaikka kärkikulma on $45^\\circ$.",
      "answer": "$r=4\\sqrt{2\\sqrt2\\,\\pi}\\ \\text{cm}\\approx 12\\ \\text{cm}$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Säde 16 cm ja koko pizzan ala $256\\pi\\ \\text{cm}^2$",
+       "points": 2
+      },
+      {
+       "text": "Sektorin ala $32\\pi\\ \\text{cm}^2$ ja keskuskulma $45^\\circ$",
+       "points": 2
+      },
+      {
+       "text": "Kolmion alaksi asetettu puolet sektorista eli $16\\pi\\ \\text{cm}^2$",
+       "points": 2
+      },
+      {
+       "text": "Kolmion ala kyljen avulla: $\\frac12 r^2\\sin 45^\\circ$",
+       "points": 3
+      },
+      {
+       "text": "Yhtälö ratkaistu: $r=\\sqrt{32\\sqrt2\\,\\pi}$",
+       "points": 2
+      },
+      {
+       "text": "Loppuvastaus noin 12 cm yksikön kanssa",
+       "points": 1
+      }
+     ]
     }
    ]
   },
@@ -234,7 +274,37 @@
      ],
      "solution": "**Jatkuvuus**\n\n1. Osaväleillä $f$ on jatkuva (neliöjuuri- ja polynomifunktio), joten tutkitaan paloittelukohta $x=1$.\n2. $f(1)=\\sqrt1=1$, ja vasemmanpuoleinen raja-arvo on myös $1$. Oikeanpuoleinen raja-arvo on kuitenkin $\\lim_{x\\to1^+}\\frac{x}{2}=\\frac12\\neq 1$.\n3. Raja-arvoa $\\lim_{x\\to1}f(x)$ ei ole, joten $f$ ei ole jatkuva kohdassa $x=1$. Siis $f$ ei ole jatkuva funktio.\n\n**Derivoituvuus**\n\n4. Derivoituva funktio on aina jatkuva. Koska $f$ ei ole jatkuva kohdassa $x=1$, se ei ole siinä derivoituva, joten $f$ ei ole derivoituva funktio.\n\n**Pinta-ala**\n\n5. $f(x)\\ge 0$ koko välillä, joten ala on $\\int_0^2 f(x)\\,dx=\\int_0^1\\sqrt{x}\\,dx+\\int_1^2\\frac{x}{2}\\,dx$. Hyppy kohdassa $x=1$ ei haittaa, koska yksittäinen piste ei vaikuta integraaliin.\n6. $\\int_0^1 x^{1/2}\\,dx=\\left[\\frac23 x^{3/2}\\right]_0^1=\\frac23$.\n7. $\\int_1^2\\frac{x}{2}\\,dx=\\left[\\frac{x^2}{4}\\right]_1^2=1-\\frac14=\\frac34$.\n8. Yhteensä $\\frac23+\\frac34=\\frac{17}{12}\\approx 1{,}42$.\n\n**Vastaus: $f$ ei ole jatkuva eikä derivoituva (kohdassa $x=1$ on hyppy). Pinta-ala on $\\frac{17}{12}$.**\n\n**Sudenkuoppa:** paloja erikseen derivoimalla saadaan kohdassa $x=1$ molemmilta puolilta kulmakerroin $\\frac12$. Se ei todista derivoituvuutta, koska funktio ei ole edes jatkuva.",
      "answer": "Ei jatkuva, ei derivoituva; ala $\\frac{17}{12}$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Kohta $x=1$ tunnistettu ainoaksi tutkittavaksi kohdaksi",
+       "points": 1
+      },
+      {
+       "text": "Toispuoleiset raja-arvot $1$ ja $\\frac12$ laskettu",
+       "points": 2
+      },
+      {
+       "text": "Johtopäätös: $f$ ei ole jatkuva, koska raja-arvoa ei ole",
+       "points": 2
+      },
+      {
+       "text": "Ei derivoituva, perusteltu sillä, että derivoituva funktio on jatkuva",
+       "points": 2
+      },
+      {
+       "text": "Ala kirjoitettu kahden integraalin summaksi välien $[0,1]$ ja $[1,2]$ yli",
+       "points": 2
+      },
+      {
+       "text": "Integraalit $\\frac23$ ja $\\frac34$ laskettu oikein",
+       "points": 2
+      },
+      {
+       "text": "Pinta-ala $\\frac{17}{12}$",
+       "points": 1
+      }
+     ]
     }
    ]
   },
@@ -252,7 +322,21 @@
      ],
      "solution": "**Tapa 1: vastatapahtuma**\n\n1. Kolmen kortin nosto kerralla voidaan ajatella kolmeksi peräkkäiseksi nostoksi ilman takaisinpanoa; todennäköisyydet ovat samat.\n2. Vastatapahtuma on, että yksikään nostetuista korteista ei ole hertta.\n3. Ensimmäinen kortti ei ole hertta todennäköisyydellä $\\frac78$ (7 pataa 8 kortista).\n4. Toinen ei ole hertta, kun ensimmäinen ei ollut, todennäköisyydellä $\\frac67$ (6 pataa jäljellä 7 kortista).\n5. Kolmas ei ole hertta, kun kaksi ensimmäistä eivät olleet, todennäköisyydellä $\\frac56$.\n6. Kertolaskusäännöllä $P(\\text{ei herttaa})=\\frac78\\cdot\\frac67\\cdot\\frac56=\\frac58$.\n7. $P(\\text{hertta mukana})=1-\\frac58=\\frac38$.\n\n**Tapa 2: kombinaatiot**\n\n1. Kaikki kolmen kortin joukot ovat yhtä todennäköisiä, ja niitä on $\\binom83=56$.\n2. Suotuisissa joukoissa hertta on mukana (1 tapa) ja kaksi muuta korttia valitaan seitsemästä padasta: $\\binom72=21$ tapaa.\n3. $P=\\frac{1\\cdot 21}{56}=\\frac38$.\n\n**Vastaus: $\\frac38$**\n\n**Sudenkuoppa:** tehtävä vaatii eri periaatteen. Alisan laskun toistaminen selitysten kanssa ei riitä.",
      "answer": "$\\frac38$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Valittu eri periaate kuin Alisalla (vastatapahtuma tai kombinaatiot) ja nimetty se",
+       "points": 2
+      },
+      {
+       "text": "Laskulauseke oikein, esim. $\\frac78\\cdot\\frac67\\cdot\\frac56$ tai $\\binom72/\\binom83$",
+       "points": 2
+      },
+      {
+       "text": "Välivaiheet selitetty ja tulos $\\frac38$",
+       "points": 2
+      }
+     ]
     },
     {
      "id": "b",
@@ -264,7 +348,25 @@
      ],
      "solution": "**Muokattu tehtävä:** Kahdeksan kortin pakassa on yksi hertta ja seitsemän pataa. Pakasta vedetään yksi kortti, se katsotaan ja palautetaan pakkaan, ja pakka sekoitetaan. Tämä tehdään kolme kertaa. Millä todennäköisyydellä hertta nostetaan ainakin kerran?\n\n**Perustelu**\n\n1. Koska kortti palautetaan, pakassa on joka nostolla samat 8 korttia, ja nostot ovat toisistaan riippumattomia.\n2. Yhdellä nostolla hertta jää saamatta todennäköisyydellä $1-\\frac18=\\frac78$.\n3. Riippumattomien tapahtumien kertolaskusäännöllä kolmella nostolla ei tule yhtään herttaa todennäköisyydellä $\\left(1-\\frac18\\right)^3=\\frac{343}{512}$.\n4. ”Ainakin yksi hertta” on tämän vastatapahtuma: $1-\\left(1-\\frac18\\right)^3=\\frac{169}{512}$, eli juuri Benin lasku.\n5. Alkuperäisessä tehtävässä nostot eivät ole riippumattomia: kun pata on nostettu, seuraava kortti on pata todennäköisyydellä $\\frac67$ eikä $\\frac78$. Siksi Benin kaava ei sovi siihen.\n\n**Vastaus: kolme nostoa takaisinpanolla, ja kysytään todennäköisyyttä saada hertta ainakin kerran. Silloin $P=1-\\left(1-\\frac18\\right)^3=\\frac{169}{512}$.**",
      "answer": "Kolme nostoa takaisinpanolla, hertta ainakin kerran: $1-\\left(1-\\frac18\\right)^3=\\frac{169}{512}$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Muokatussa tehtävässä nostetaan kolmesti ja kortti palautetaan joka kerta",
+       "points": 2
+      },
+      {
+       "text": "Kysytään hertan saamista ainakin kerran",
+       "points": 1
+      },
+      {
+       "text": "Perusteltu riippumattomuus ja vastatapahtuma $\\left(\\frac78\\right)^3$",
+       "points": 2
+      },
+      {
+       "text": "Selitetty, miksi lasku ei sovi alkuperäiseen (ei palautusta, nostot riippuvat toisistaan)",
+       "points": 1
+      }
+     ]
     }
    ]
   },
@@ -281,7 +383,33 @@
      ],
      "solution": "**Graafinen esitys**\n\n1. Piirretään pistekaavio (tai viivadiagrammi): vaaka-akselilla paistoaika $t$ minuutteina ja pystyakselilla sisälämpötila celsiusasteina. Mittaukset kattavat noin 100–300 minuutin paistoajat, ja lämpötila nousee 36 asteesta 85 asteeseen. Nousu hidastuu loppua kohti, eli pisteet kaartuvat hieman alaspäin.\n\n**Regressiomalli**\n\n2. Ohjelmistolla (pienimmän neliösumman menetelmä) sovitettu suora on $T(t)\\approx 0{,}2456\\,t+15{,}28$, missä $T$ on lämpötila ($^\\circ\\text{C}$) ja $t$ paistoaika (min). Selitysaste on $R^2\\approx 0{,}97$.\n3. Kello 14.58 paistoa on kulunut 2 h 58 min eli $178$ min: $T(178)\\approx 0{,}2456\\cdot 178+15{,}28\\approx 59\\ ^\\circ\\text{C}$.\n4. Kello 20.30 paistoa on kulunut 8 h 30 min eli $510$ min: $T(510)\\approx 0{,}2456\\cdot 510+15{,}28\\approx 141\\ ^\\circ\\text{C}$.\n\n**Mielekkyys**\n\n5. Mittausvälillä malli sopii kohtuullisesti: $R^2\\approx 0{,}97$, ja kello 14.58 saatu 59 °C on lähellä samanaikaisia mittauksia.\n6. Poikkeamat ovat kuitenkin järjestelmällisiä: alussa ja lopussa mitatut arvot ovat suoran alapuolella ja keskellä yläpuolella. Lämpeneminen hidastuu, kun kinkun lämpötila lähestyy uunin lämpötilaa, joten ilmiö ei ole lineaarinen.\n7. Kauas mittausvälin ulkopuolelle malli ei sovi. Sen mukaan kinkku olisi kello 20.30 noin 141-asteinen, vaikka kinkku ei voi lämmetä noin 130-asteista uunia kuumemmaksi. Malli ylittää uunin lämpötilan jo noin 470 minuutin kohdalla.\n8. Malli on siis käyttökelpoinen vain mittausvälillä, eikä sillä voi ennustaa lämpötilaa kello 20.30.\n\n**Vastaus: $T\\approx 0{,}2456\\,t+15{,}28$. Kello 14.58 noin 59 °C ja kello 20.30 noin 141 °C. Mittausvälillä malli toimii, mutta kauas ekstrapoloituna se on mieletön, koska kinkku ei voi olla uunia kuumempi.**\n\n**Sudenkuoppa:** kellonajan sijoittaminen malliin sellaisenaan tai tuntien ja minuuttien sekoittaminen: 2 h 58 min on 178 min, ei 2,58 h.",
      "answer": "$T\\approx 0{,}2456\\,t+15{,}28$; klo 14.58 noin 59 °C, klo 20.30 noin 141 °C (ei mielekäs, kinkku ei voi olla uunia kuumempi)",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Pistekaavio, jossa akselit on nimetty ja yksiköt merkitty",
+       "points": 2
+      },
+      {
+       "text": "Lineaarinen malli ohjelmalla: $T(t)\\approx 0{,}25\\,t+15$",
+       "points": 2
+      },
+      {
+       "text": "Kellonajat muutettu paistominuuteiksi: 178 ja 510",
+       "points": 2
+      },
+      {
+       "text": "Mallin lämpötilat noin 59 °C ja noin 141 °C",
+       "points": 2
+      },
+      {
+       "text": "Sopivuus mittausvälillä arvioitu (selitysaste tai poikkeamien suunta)",
+       "points": 2
+      },
+      {
+       "text": "Todettu, ettei malli toimi kauas ekstrapoloituna: kinkku ei voi olla uunia kuumempi",
+       "points": 2
+      }
+     ]
     }
    ]
   },
@@ -309,7 +437,29 @@
      ],
      "solution": "1. Tililtä maksetaan vain 2 000 € puolen vuoden kuluttua ja 22 000 € vuoden kuluttua. Käsiraha maksetaan muualta.\n2. Korkojakso on puoli vuotta, joten jakson korkokanta on $\\frac{2{,}4\\,\\%}{2}=1{,}2\\,\\%$ ja korkotekijä $1{,}012$.\n3. Olkoon talletus $x$ euroa. Puolen vuoden kuluttua koron jälkeen tilillä on $1{,}012x$ ja maksun jälkeen $1{,}012x-2000$.\n4. Vuoden kuluttua koron jälkeen tilillä on $1{,}012(1{,}012x-2000)$, ja sen on riitettävä 22 000 euron maksuun: $1{,}012(1{,}012x-2000)=22\\,000$.\n5. Ratkaistaan: $1{,}012x-2000=\\frac{22\\,000}{1{,}012}\\approx 21\\,739{,}13$, joten $x\\approx\\frac{23\\,739{,}13}{1{,}012}\\approx 23\\,457{,}64$.\n6. Tarkistus diskonttaamalla: $\\frac{2000}{1{,}012}+\\frac{22\\,000}{1{,}012^2}\\approx 23\\,457{,}64$.\n\n**Vastaus: vähintään 23 457,64 €**\n\n**Sudenkuoppa:** vuosikoron käyttäminen sellaisenaan kerran vuodessa tai käsirahan lisääminen talletukseen.",
      "answer": "$23\\,457{,}64$ €",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Tililtä maksetaan vain puolen vuoden ja vuoden erät, ei käsirahaa",
+       "points": 1
+      },
+      {
+       "text": "Jakson korkotekijä $1{,}012$",
+       "points": 2
+      },
+      {
+       "text": "Saldo ensimmäisen erän jälkeen: $1{,}012x-2000$",
+       "points": 2
+      },
+      {
+       "text": "Yhtälö $1{,}012(1{,}012x-2000)=22\\,000$ tai sama diskonttaamalla",
+       "points": 2
+      },
+      {
+       "text": "Vastaus vähintään 23 457,64 €",
+       "points": 2
+      }
+     ]
     }
    ]
   },
@@ -338,7 +488,25 @@
      ],
      "solution": "1. Yhteiset pisteet: $2x^3-1=-1 \\iff x^3=0 \\iff x=0$. Ainoa yhteinen piste on $(0,f(0))=(0,-1)$.\n2. $f$ on polynomina derivoituva, ja $f'(x)=6x^2$, joten $f'(0)=0$.\n3. Määritelmän mukainen tangentti pisteessä $x_0=0$ on $y-(-1)=0\\cdot(x-0)$, eli $y=-1$.\n4. Suora $y=-1$ on siis kuvaajan tangentti, ja B on väärässä.\n5. B:n havainto pitää sinänsä paikkansa: $f(x)-(-1)=2x^3$ on negatiivinen, kun $x<0$, ja positiivinen, kun $x>0$, joten kuvaaja siirtyy suoran alapuolelta yläpuolelle. Kohta $(0,-1)$ on käännepiste. Määritelmä ei kuitenkaan kiellä tangenttia leikkaamasta kuvaajaa, ja käännepisteessä kuvaaja nimenomaan vaihtaa tangentin puolta.\n\n**Vastaus: B ei ole oikeassa. Suora $y=-1$ on kuvaajan tangentti pisteessä $(0,-1)$, koska $f(0)=-1$ ja $f'(0)=0$.**\n\n**Sudenkuoppa:** arkikäsitys ”tangentti sivuaa eikä leikkaa” ei ole määritelmä. Perustelun on nojattava määritelmään.",
      "answer": "B on väärässä: $y=-1$ on tangentti pisteessä $(0,-1)$, koska $f(0)=-1$ ja $f'(0)=0$.",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Yhteinen piste ratkaistu: vain $(0,-1)$",
+       "points": 2
+      },
+      {
+       "text": "Derivaatta $f'(x)=6x^2$ ja $f'(0)=0$",
+       "points": 2
+      },
+      {
+       "text": "Tangentti pisteessä on $y=-1$, joten B on väärässä",
+       "points": 2
+      },
+      {
+       "text": "Selitetty, ettei määritelmä kiellä tangenttia leikkaamasta kuvaajaa (käännepiste)",
+       "points": 2
+      }
+     ]
     }
    ]
   },
@@ -355,7 +523,29 @@
      ],
      "solution": "1. Pisteet sijoittamalla: $(1-x_0)^2+y_0^2+z_0^2=R^2$, $x_0^2+(1-y_0)^2+z_0^2=R^2$ ja $x_0^2+y_0^2+(1-z_0)^2=R^2$.\n2. Kahdesta ensimmäisestä: $(1-x_0)^2-x_0^2=(1-y_0)^2-y_0^2$, eli $1-2x_0=1-2y_0$, joten $x_0=y_0$.\n3. Samoin ensimmäisestä ja kolmannesta saadaan $x_0=z_0$.\n4. Keskipiste on siis $(c,c,c)$ jollakin reaaliluvulla $c$, ja ensimmäisestä yhtälöstä $R^2=(1-c)^2+c^2+c^2=3c^2-2c+1$. Kääntäen jokainen tällainen pallo kulkee kaikkien kolmen pisteen kautta, koska yhtälöt ovat symmetriset.\n5. Pallot ovat siis $(x-c)^2+(y-c)^2+(z-c)^2=3c^2-2c+1$, $c\\in\\mathbb{R}$. Oikea puoli on aina positiivinen, koska yhtälön $3c^2-2c+1=0$ diskriminantti $4-12$ on negatiivinen.\n6. Olkoon $g(c)=3c^2-2c+1$. Nyt $g'(c)=6c-2=0 \\iff c=\\frac13$. Koska $g$ on ylöspäin aukeava paraabeli, tämä on pienin arvo: $g\\left(\\frac13\\right)=\\frac13-\\frac23+1=\\frac23$.\n7. Pienin säde on $R=\\sqrt{\\frac23}=\\frac{\\sqrt6}{3}\\approx 0{,}82$.\n\nGeometrinen tarkistus: pienimmän pallon keskipiste $\\left(\\frac13,\\frac13,\\frac13\\right)$ on pisteiden muodostaman tasasivuisen kolmion (sivu $\\sqrt2$) painopiste, ja säde on kolmion ympäri piirretyn ympyrän säde $\\frac{\\sqrt2}{\\sqrt3}$.\n\n**Vastaus: $(x-c)^2+(y-c)^2+(z-c)^2=3c^2-2c+1$, missä $c\\in\\mathbb{R}$. Pienin säde on $\\sqrt{\\frac23}=\\frac{\\sqrt6}{3}\\approx 0{,}82$.**\n\n**Sudenkuoppa:** kolme pistettä ei määrää palloa yksikäsitteisesti. Palloja on äärettömän monta, ja tehtävä pyytää ne kaikki.",
      "answer": "$(x-c)^2+(y-c)^2+(z-c)^2=3c^2-2c+1$, $c\\in\\mathbb{R}$; pienin säde $\\sqrt{\\frac23}\\approx 0{,}82$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Kaikki kolme pistettä sijoitettu pallon yhtälöön",
+       "points": 2
+      },
+      {
+       "text": "Yhtälöiden erotuksista $x_0=y_0=z_0$",
+       "points": 3
+      },
+      {
+       "text": "$R^2=3c^2-2c+1$ ja kaikki pallot ilmoitettu parametrin $c$ avulla",
+       "points": 3
+      },
+      {
+       "text": "Pienin arvo haettu (derivaatta tai paraabelin huippu): $c=\\frac13$",
+       "points": 2
+      },
+      {
+       "text": "Pienin säde $\\sqrt{\\frac23}\\approx 0{,}82$",
+       "points": 2
+      }
+     ]
     }
    ]
   },
@@ -372,7 +562,33 @@
      ],
      "solution": "**Mallinnus**\n\n1. Olkoon $t$ kello 12.00:sta kulunut aika minuutteina ($0\\le t<720$), ja mitataan kulmat kello 12:n suunnasta myötäpäivään. Tuntiviisarin kulma on $\\alpha=\\frac{2\\pi t}{720}$ (kierros 12 tunnissa) ja minuuttiviisarin $\\beta=\\frac{2\\pi t}{60}$ (kierros tunnissa).\n2. Kulmassa $\\varphi$ olevan pituuden $L$ viisarin kärki on $(L\\sin\\varphi,\\ L\\cos\\varphi)$ kiinnityskohdasta katsottuna (kello 12 suunta on $(0,L)$ ja kello 3 suunta $(L,0)$).\n3. Minuuttiviisari on kiinni tuntiviisarin kärjessä, joten kärjen paikka on $P(t)=\\left(4\\sin\\alpha+\\sin\\beta,\\ 4\\cos\\alpha+\\cos\\beta\\right)$. Tarkistus: $P(0)=(0,5)$.\n\n**Kohta 1: kauimpana origosta**\n\n4. Kolmioepäyhtälön mukaan $|P|\\le 4+1=5$, ja yhtäsuuruus pätee, kun viisarit osoittavat samaan suuntaan. (Kosinilauseella $|P|^2=17+8\\cos(\\beta-\\alpha)$.)\n5. Kello $8.m$ (8 h ja $m$ min) minuuttiviisarin kulma on $6m$ astetta ja tuntiviisarin $240+0{,}5m$ astetta.\n6. $6m=240+0{,}5m \\iff 5{,}5m=240 \\iff m=\\frac{480}{11}\\approx 43{,}6$.\n7. Kaiho lähtee kello 8.44.\n\n**Kohta 2: leikkauskohdat $y$-akselin kanssa**\n\n8. Leikkauskohdissa $x$-koordinaatti on nolla: $4\\sin\\frac{2\\pi t}{720}+\\sin\\frac{2\\pi t}{60}=0$.\n9. Suoraan nähdään ratkaisut $t=0$ (kello 12.00, kärki $(0,5)$) ja $t=360$ (kello 6.00: tuntiviisari osoittaa alas ja minuuttiviisari ylös, kärki $(0,-3)$).\n10. Koska $|\\sin\\beta|\\le 1$, ratkaisuja voi olla vain, kun $|4\\sin\\alpha|\\le 1$, eli alle puolen tunnin päässä kello 12:sta tai 6:sta. Kuvaajan piirtämällä nähdään, että ratkaisuja on tasan neljä. Numeerisella ratkaisijalla saadaan loput kaksi: $t\\approx 338{,}2$ ja $t\\approx 381{,}8$.\n11. $338{,}2\\ \\text{min}\\approx 5\\ \\text{h}\\ 38\\ \\text{min}$ ja $381{,}8\\ \\text{min}\\approx 6\\ \\text{h}\\ 22\\ \\text{min}$. Molemmat vastaavat samaa $y$-akselin pistettä ($y\\approx -4{,}58$), joka on kuvan alimman silmukan risteyskohta.\n\n**Vastaus: Kaiho lähtee kello 8.44. Käyrä leikkaa $y$-akselin kello 12.00, 5.38, 6.00 ja 6.22.**\n\n**Sudenkuoppa:** jos tuntiviisarin liike unohdetaan (tuntiviisari pidetään tasan kahdeksassa), kohdan 1 vastaukseksi tulee väärin 8.40. Kohdassa 2 unohtuvat helposti ilmeiset ratkaisut 12.00 ja 6.00.",
      "answer": "Kello 8.44; $y$-akselin leikkaukset kello 12.00, 5.38, 6.00 ja 6.22",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Viisarien kulmat ajan funktiona (tuntiviisari 720 min, minuuttiviisari 60 min kierros)",
+       "points": 2
+      },
+      {
+       "text": "Kärjen paikka kahden viisarin summana ja tarkistus $(0,5)$",
+       "points": 2
+      },
+      {
+       "text": "Perusteltu, että kärki on kauimpana, kun viisarit osoittavat samaan suuntaan",
+       "points": 2
+      },
+      {
+       "text": "Kello kahdeksan jälkeinen yhtälö ratkaistu: noin 8.44",
+       "points": 2
+      },
+      {
+       "text": "Ehto $x=0$ kirjoitettu yhtälöksi ja ratkaisut 12.00 ja 6.00 löydetty",
+       "points": 2
+      },
+      {
+       "text": "Numeeriset ratkaisut 5.38 ja 6.22 ja perustelu, ettei muita ole",
+       "points": 2
+      }
+     ]
     }
    ]
   },
@@ -389,7 +605,33 @@
      ],
      "solution": "1. $2^4=16\\equiv -1 \\pmod{17}$, joten $2^8=(2^4)^2\\equiv 1 \\pmod{17}$.\n2. Jos $k=8q+s$, niin $2^k=(2^8)^q\\cdot 2^s\\equiv 2^s \\pmod{17}$. Riittää siis tuntea $10^n$:n jakojäännös modulo 8.\n3. $n=1$: $2^{10}+1=1025=17\\cdot 60+5$, joten luku ei ole jaollinen luvulla 17.\n4. $n=2$: $10^2=100=8\\cdot 12+4$, joten $2^{100}\\equiv 2^4\\equiv -1$ ja $2^{100}+1\\equiv 0 \\pmod{17}$. Luku on jaollinen.\n5. $n\\ge 3$: $10^n=2^n\\cdot 5^n$ on jaollinen luvulla $2^3=8$, eli $10^n=8q$. Silloin $2^{10^n}=(2^8)^q\\equiv 1$ ja $2^{10^n}+1\\equiv 2 \\pmod{17}$, joten luku ei ole jaollinen.\n\n**Vastaus: vain $n=2$.**\n\n**Sudenkuoppa:** muutaman arvon kokeileminen laskimella ei riitä, koska kysytään kaikkia $n$. Tapaus $n\\ge 3$ on perusteltava yleisesti.",
      "answer": "$n=2$",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "$2^4\\equiv -1$ ja $2^8\\equiv 1 \\pmod{17}$",
+       "points": 3
+      },
+      {
+       "text": "Havaittu, että riittää tuntea eksponentin jakojäännös luvulla 8",
+       "points": 2
+      },
+      {
+       "text": "$n=1$ tutkittu: ei jaollinen",
+       "points": 1
+      },
+      {
+       "text": "$n=2$: $2^{100}+1$ on jaollinen",
+       "points": 2
+      },
+      {
+       "text": "$n\\ge 3$ perusteltu yleisesti: $8$ jakaa luvun $10^n$, joten jäännös on 2",
+       "points": 3
+      },
+      {
+       "text": "Vastaus: vain $n=2$",
+       "points": 1
+      }
+     ]
     }
    ]
   },
@@ -406,7 +648,37 @@
      ],
      "solution": "**1. Esimerkkiratkaisu**\n\n1. Kun $y=1$, $x^2=1+3=4$, joten $x=2$. Tarkistus: $2^2-3\\cdot 1^2=1$. Ratkaisu on $(2,1)$.\n\n**2. Brahmaguptan yhtälö**\n\n2. Vasen puoli: $(x^2-3y^2)(z^2-3w^2)=x^2z^2-3x^2w^2-3y^2z^2+9y^2w^2$.\n3. Oikea puoli: $(xz+3yw)^2-3(xw+yz)^2=x^2z^2+6xyzw+9y^2w^2-3x^2w^2-6xyzw-3y^2z^2$.\n4. Termit $6xyzw$ ja $-6xyzw$ kumoutuvat, ja jäljelle jää $x^2z^2-3x^2w^2-3y^2z^2+9y^2w^2$, eli sama kuin vasemmalla puolella. $\\square$\n\n**3. Toinen ratkaisu**\n\n5. Jos $(x,y)$ ja $(z,w)$ toteuttavat yhtälön $(\\star)$, Brahmaguptan yhtälön vasen puoli on $1\\cdot 1=1$. Siis $(xz+3yw)^2-3(xw+yz)^2=1$, eli $(xz+3yw,\\ xw+yz)$ on myös ratkaisu.\n6. Valitaan $x=z=2$ ja $y=w=1$: $xz+3yw=4+3=7$ ja $xw+yz=2+2=4$. Tarkistus: $7^2-3\\cdot 4^2=49-48=1$. Uusi ratkaisu on $(7,4)$.\n\n**4. Äärettömän monta ratkaisua**\n\n7. Olkoon $(a,b)$ mikä tahansa ratkaisu, jossa $a,b\\ge 1$. Kohdan 5 perusteella (valinnalla $x=z=a$ ja $y=w=b$) myös $(a^2+3b^2,\\ 2ab)$ on ratkaisu, ja sen luvut ovat positiivisia kokonaislukuja.\n8. Uuden ratkaisun $x$-arvo on aidosti suurempi: $a^2+3b^2>a^2\\ge a$.\n9. Aloittamalla ratkaisusta $(2,1)$ ja toistamalla saadaan jono $(2,1)$, $(7,4)$, $(97,56)$, …, jonka $x$-arvot kasvavat aidosti. Ratkaisut ovat siis kaikki eri ratkaisuja, joten niitä on äärettömän monta. $\\square$\n\n**Vastaus: esimerkiksi $(2,1)$. Brahmaguptan yhtälöllä saadaan toinen ratkaisu $(7,4)$, ja toistamalla saadaan aidosti kasvava jono ratkaisuja, joten ratkaisuja on äärettömän monta.**\n\n**Sudenkuoppa:** kohdassa 4 on perusteltava, että uudet ratkaisut todella ovat eri ratkaisuja (esim. $x$ kasvaa aidosti). Pelkkä toteamus, että kaavaa voi soveltaa uudelleen, ei riitä.",
      "answer": "Esim. $(2,1)$; toinen ratkaisu $(7,4)$; ratkaisuja äärettömän monta",
-     "check": "hvp+laskettu"
+     "check": "hvp+laskettu",
+     "rubric": [
+      {
+       "text": "Ratkaisu $(2,1)$ tarkistuksineen",
+       "points": 2
+      },
+      {
+       "text": "Brahmaguptan yhtälön molemmat puolet kerrottu auki",
+       "points": 2
+      },
+      {
+       "text": "Puolet osoitettu samoiksi (ristitermit kumoutuvat)",
+       "points": 1
+      },
+      {
+       "text": "Perusteltu, että $(xz+3yw,\\ xw+yz)$ on myös ratkaisu",
+       "points": 2
+      },
+      {
+       "text": "Uusi ratkaisu, esim. $(7,4)$, tarkistettuna",
+       "points": 1
+      },
+      {
+       "text": "Uusi ratkaisu on aina positiivinen ja sen $x$ kasvaa aidosti",
+       "points": 2
+      },
+      {
+       "text": "Johtopäätös: toistamalla saadaan äärettömän monta eri ratkaisua",
+       "points": 2
+      }
+     ]
     }
    ]
   }

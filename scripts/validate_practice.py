@@ -14,6 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MATH_RE = re.compile(r"\$\$[\s\S]+?\$\$|(?<!\\)\$[^$\n]+?(?<!\\)\$")
 CHECKS = {"hvp", "laskettu", "hvp+laskettu", "malli", "ei"}
 MAX_PROMPT = 900  # long prompts are a sign of copied task text
+MAX_RUBRIC_ROWS, MAX_RUBRIC_TEXT = 12, 200  # optional per-unit grading rows (rubric), the site's own wording
 
 
 def tutka_subjects(html=None):
@@ -51,6 +52,9 @@ def iter_texts(task):
                 yield f"{w} {k}", u[k]
         for i, h in enumerate(u.get("hints") or []):
             yield f"{w} vihje {i + 1}", h
+        rubric = u.get("rubric")
+        for i, r in enumerate(rubric if isinstance(rubric, list) else []):
+            yield f"{w} rubric[{i}]", r.get("text") if isinstance(r, dict) else None
 
 
 def check_text(err, where, s):
@@ -63,6 +67,33 @@ def check_text(err, where, s):
         err(f"{where}: pariton $-merkki")
     if re.search(r"\\(href|url|class|style|cssId|data|require)\b", s):   # TeX commands that emit links/attributes
         err(f"{where}: kielletty TeX-komento (\\href, \\class, \\style …)")
+
+
+def check_rubric(err, w, u):
+    """Optional `rubric`: 2..MAX_RUBRIC_ROWS rows {text, points}, whole points that add up to the unit's points.
+    The page sums the ticked rows into the self-assessment; the texts go through check_text via iter_texts."""
+    if "rubric" not in u:
+        return
+    r = u["rubric"]
+    if not isinstance(r, list) or not 2 <= len(r) <= MAX_RUBRIC_ROWS:
+        err(f"{w}: rubric pitää olla lista, jossa on 2–{MAX_RUBRIC_ROWS} riviä")
+        return
+    if not u.get("solution"):
+        err(f"{w}: rubric ilman malliratkaisua (arviointi aukeaa vasta ratkaisun kanssa)")
+    total = 0
+    for i, row in enumerate(r):
+        if not isinstance(row, dict) or set(row) - {"text", "points"}:
+            err(f"{w} rubric[{i}]: rivi on muotoa {{text, points}}")
+            continue
+        p = row.get("points")
+        if not isinstance(p, int) or isinstance(p, bool) or p <= 0:
+            err(f"{w} rubric[{i}]: points pitää olla positiivinen kokonaisluku")
+            continue
+        total += p
+        if isinstance(row.get("text"), str) and len(row["text"]) > MAX_RUBRIC_TEXT:
+            err(f"{w} rubric[{i}]: text yli {MAX_RUBRIC_TEXT} merkkiä")
+    if total != u.get("points"):
+        err(f"{w}: rubric-rivien pisteet {total} ≠ yksikön pisteet {u.get('points')}")
 
 
 def check_urls(err, obj, where):
@@ -148,6 +179,7 @@ def validate(path, tutka):
                 err(f"{w}: prompt yli {MAX_PROMPT} merkkiä – kirjoita lyhyemmin omin sanoin")
             if u.get("check") not in CHECKS:
                 err(f"{w}: check pitää olla jokin {sorted(CHECKS)}")
+            check_rubric(err, w, u)
         if meta and meta.get("points") is not None and abs(total - meta["points"]) > 1e-9:
             err(f"tehtävä {n}: yksiköiden pisteet {total} ≠ tehtävän pisteet {meta['points']}")
         for where, text in iter_texts(t):

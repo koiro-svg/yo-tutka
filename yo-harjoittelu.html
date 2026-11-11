@@ -220,6 +220,16 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 .pts input{width:5.5em;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
 .pts input[aria-invalid="true"]{border-color:var(--bad)}
 .assess [data-assessnote].err{color:var(--bad)}
+/* Grading rows (unit.rubric): tick the steps the answer has; the sum is saved like a points button. */
+.rubric{display:grid;gap:4px;margin:0;padding:0;border:0;min-width:0}
+.rubric legend{padding:0;margin-bottom:4px}
+.rrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:start;padding:6px 8px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface-2);cursor:pointer}
+.rrow input{margin:3px 0 0;width:16px;height:16px;accent-color:var(--accent)}
+.rrow:has(input:checked){border-color:var(--accent)}
+.rrow .rp{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.rrow .rt{min-width:0}
+.rrow .rt mjx-container svg{max-width:100%}
+.rubric .row{margin-top:4px}
 .pager{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
 /* answer editor ("paper") */
@@ -256,6 +266,7 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
   /* touch: 44 px targets and 16 px fields (iOS zooms the page into anything smaller); desktop density is unchanged */
   .btn,.filters button,.pts button,.pts input,.wrap select,.wrap input.kt-input{min-height:44px}
   .pts button,.filters button{min-width:44px} .pts{gap:8px}
+  .rrow{min-height:44px;align-items:center} .rrow input{width:22px;height:22px;margin:0}
   .wrap input,.wrap select,.wrap textarea,.wrap .kt-input{font-size:16px}
   .rte{top:auto;bottom:0;box-shadow:0 -6px 18px rgba(0,0,0,.35);border-bottom:0;border-top:1px solid var(--line)}
   .rte button{min-width:40px;height:40px}
@@ -741,8 +752,8 @@ details.how>p{margin-top:6px}
   const freshReview = () => ({ box: 0, due: addDays(1), at: Date.now() });
   const reviewOf = key => { const r = S.review[key]; return r && !r.gone ? r : null; };
   const dropReview = key => { S.review[key] = { gone: true, at: Date.now() }; };
-  function setScore(key, p, max) {
-    S.scores[key] = { p, max, at: Date.now() };
+  function setScore(key, p, max, c) {   // c: ticked rubric row indices, only when the score came from the rubric
+    S.scores[key] = c ? { p, max, at: Date.now(), c } : { p, max, at: Date.now() };
     S.history.push({ k: key, p, max, at: S.scores[key].at });
     if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
     const ratio = max ? p / max : 0, r = reviewOf(key);
@@ -1540,15 +1551,25 @@ details.how>p{margin-top:6px}
       ${u.prompt ? `<div class="md">${md(u.prompt)}</div>` : ''}
       <div class="work"><div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
       <div class="afoot"><span class="count"></span><span class="saved"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div></div>
-      ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u.points)}</div></div>` : ''}
+      ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u)}</div></div>` : ''}
     </section>`;
   }
-  function assessHtml(key, max) {
-    const v = S.scores[key];
+  // Rubric rows are the site's own split of the unit's points (PRACTICE_CONTENT.md), not YTL's scoring guideline.
+  const rubricOf = u => Array.isArray(u.rubric) && u.rubric.length && u.solution ? u.rubric : null;
+  function rubricHtml(u, v) {
+    const r = rubricOf(u); if (!r) return '';
+    const on = new Set(v && Array.isArray(v.c) ? v.c : []), sum = r.reduce((t, x, i) => t + (on.has(i) ? +x.points || 0 : 0), 0);
+    return `<fieldset class="rubric"><legend class="muted small">Rastita vaiheet, jotka vastauksessasi on (sivuston oma pistejako, ei YTL:n arviointiohje):</legend>
+      ${r.map((x, i) => `<label class="rrow"><input type="checkbox" data-ri="${i}" ${on.has(i) ? 'checked' : ''}><span class="rt">${md(String(x.text || '')).replace(/^<p>|<\/p>$/g, '')}</span><span class="rp">+${esc(x.points)} p</span></label>`).join('')}
+      <div class="row"><button type="button" class="btn" data-pts="rubric">Tallenna rastien summa: <b data-rsum>${sum}</b>/${esc(u.points)} p</button></div>
+    </fieldset><span class="muted small">Tai anna pisteet suoraan:</span>`;
+  }
+  function assessHtml(key, u) {
+    const v = S.scores[key], max = u.points;
     const buttons = max <= 20
       ? `<div class="pts" role="group" aria-label="Pisteet">${Array.from({ length: max + 1 }, (_, i) => `<button type="button" data-pts="${i}" aria-pressed="${v ? v.p === i : false}">${i}</button>`).join('')}</div>`
       : `<div class="pts"><input type="number" min="0" max="${max}" step="1" value="${v ? v.p : ''}" aria-label="Pisteet 0–${max}"><button type="button" data-pts="input">Tallenna</button></div>`;
-    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${buttons}<span class="muted small" data-hintnote></span><span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
+    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${rubricHtml(u, v)}${buttons}<span class="muted small" data-hintnote></span><span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
   }
   // Toggle a hint/solution box; its formulas are typeset on first open only.
   function reveal(box, btn) {
@@ -1557,8 +1578,8 @@ details.how>p{margin-top:6px}
     if (open && !box.dataset.ts) { box.dataset.ts = 1; typeset(box); }
     return open;
   }
-  function bindUnit(sec, max) {
-    const key = sec.dataset.key;
+  function bindUnit(sec, u) {
+    const key = sec.dataset.key, max = u.points, rubric = rubricOf(u);
     const hintBtns = $$('[data-hint]', sec);
     // The stairs stay marked once a step was opened; the assessment shows how many hints this view opened (not saved).
     const step = id => { const li = $(`.stairs [data-step="${id}"]`, sec); if (li) li.classList.add('on'); };
@@ -1570,14 +1591,20 @@ details.how>p{margin-top:6px}
       const open = reveal($('[data-solbox]', sec), sol);
       sol.textContent = open ? 'Piilota malliratkaisu' : 'Näytä malliratkaisu';
       sec.classList.toggle('solopen', open);   // wide screens: answer and model side by side (CSS)
-      if (open) { $('.assess', sec).hidden = false; step('sol'); hintNote(); }
+      if (open) { const as = $('.assess', sec); if (as.hidden) { as.hidden = false; typeset($$('.rt', as)); } step('sol'); hintNote(); }
     };
     const hintNote = () => { const n = $$('.stairs li.on:not(.sol)', sec).length, el = $('[data-hintnote]', sec); if (el) el.textContent = n ? `Käytit ${n === 1 ? 'yhden vihjeen' : n + ' vihjettä'} tällä kerralla.` : ''; };
     const rev = $('[data-act="rev"]', sec);
     if (rev) rev.onclick = () => { toggleReview(key); syncRev(rev, key); };
     const assess = $('.assess', sec);
+    const rubricSum = c => c.reduce((t, i) => t + (+rubric[i].points || 0), 0);
+    const tickedRows = () => $$('[data-ri]', assess).filter(x => x.checked).map(x => +x.dataset.ri);
+    if (assess && rubric) assess.addEventListener('change', e => {
+      if (e.target.matches('[data-ri]')) $('[data-rsum]', assess).textContent = rubricSum(tickedRows());
+    });
     if (assess) assess.addEventListener('click', e => {
       const b = e.target.closest('[data-pts]'); if (!b) return;
+      if (b.dataset.pts === 'rubric') { const c = tickedRows(); scored(Math.min(max, rubricSum(c)), c); return; }
       const raw = b.dataset.pts === 'input' ? $('input', assess).value.trim() : b.dataset.pts;
       const p = Math.round(+raw);
       if (raw === '' || !(p >= 0 && p <= max)) {
@@ -1586,21 +1613,25 @@ details.how>p{margin-top:6px}
         if (note) { note.textContent = `Anna pisteet väliltä 0–${max}.`; note.classList.add('err'); }
         return;
       }
-      setScore(key, p, max);
+      scored(p);
+    });
+    function scored(p, c) {
+      setScore(key, p, max, c);
       sec.dispatchEvent(new CustomEvent('yo:score', { bubbles: true }));
-      assess.innerHTML = assessHtml(key, max);
+      assess.innerHTML = assessHtml(key, u);
+      typeset($$('.rt', assess));
       hintNote();
       $('[data-assessnote]', assess).textContent = `Tallennettu ${p}/${max} p.` + (reviewOf(key) ? ` Kohta on kertauslistalla (${fmtDate(reviewOf(key).due)}).` : '');
       syncRev(rev, key);
       const chip = scoreChip(S.scores[key], 'data-score title="oma arvio"'), old = $('[data-score]', sec);
       if (old) old.outerHTML = chip; else $('.uhead', sec).insertAdjacentHTML('beforeend', chip);
-    });
+    }
     $('[data-act="png"]', sec).onclick = () => answerPng($('.answer', sec), 'vastaus-' + key.replace(/\|/g, '-')).catch(() => alertBox('Kuvan tallennus epäonnistui. Käytä tulostusta (' + MOD + 'P).'));
   }
   // Typeset the visible text, wire up the unit controls and load saved answers.
   function mountUnits(container, units) {
     typeset($$('.md:not(.reveal)', container));
-    $$('.unit', container).forEach((sec, j) => { bindUnit(sec, units[j].points); mountEditor($('.answer', sec)); });
+    $$('.unit', container).forEach((sec, j) => { bindUnit(sec, units[j]); mountEditor($('.answer', sec)); });
   }
 
   async function taskView(a, k, n, unitId) {
@@ -1984,7 +2015,8 @@ details.how>p{margin-top:6px}
     for (const [k, v] of Object.entries(st.scores || {})) {
       if (!UNIT_KEY.test(k) || !v || num(v.p) == null || num(v.max) == null || num(v.at) == null) continue;
       const at = capAt(+v.at);
-      if (!S.scores[k] || S.scores[k].at < at) { S.scores[k] = { p: +v.p, max: +v.max, at }; scores++; }
+      const c = Array.isArray(v.c) ? [...new Set(v.c.filter(i => Number.isInteger(i) && i >= 0 && i < 50))] : null;
+      if (!S.scores[k] || S.scores[k].at < at) { S.scores[k] = c ? { p: +v.p, max: +v.max, at, c } : { p: +v.p, max: +v.max, at }; scores++; }
     }
     const seen = new Set(S.history.map(e => e.k + '@' + e.at));
     for (const e of Array.isArray(st.history) ? st.history : []) {

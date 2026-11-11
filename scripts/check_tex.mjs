@@ -19,7 +19,10 @@ const doc = mathjax.document('', { InputJax: tex, OutputJax: new SVG({ fontCache
 const FIELDS = ['intro', 'prompt', 'hints', 'solution', 'answer'];
 function* strings(task) {
   for (const k of FIELDS) if (task[k] != null) yield* [].concat(task[k]).map(v => [k, v]);
-  for (const u of task.units || []) for (const k of FIELDS) if (u[k] != null) yield* [].concat(u[k]).map(v => [`${u.id || '-'}.${k}`, v]);
+  for (const u of task.units || []) {
+    for (const k of FIELDS) if (u[k] != null) yield* [].concat(u[k]).map(v => [`${u.id || '-'}.${k}`, v]);
+    for (const [i, r] of (u.rubric || []).entries()) if (r && r.text != null) yield [`${u.id || '-'}.rubric${i}`, r.text];
+  }
 }
 // Same delimiters as md() in yo-harjoittelu.html and MATH_RE in validate_practice.py.
 function formulas(s) {

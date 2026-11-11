@@ -102,6 +102,24 @@ Yksikkö on kohta, jolle annetaan omat vihjeet ja oma ratkaisu.
   - Vihje 2 on vahvempi ja antaa avainaskeleen tai välituloksen, mutta ei loppuvastausta.
   - Jos vihjeitä on vain yksi, sen taso on näiden välissä.
 
+## Arviointirivit (`rubric`, valinnainen)
+Yksikölle voi antaa listan vaiheita, jotka käyttäjä rastittaa itsearviossa; arvio on rastittujen rivien summa
+(pistenapit jäävät varalle). Sivu näyttää rivit vasta malliratkaisun kanssa.
+
+```json
+"rubric": [
+  { "text": "Sektorin ala $32\\pi\\ \\text{cm}^2$ ja keskuskulma $45^\\circ$", "points": 2 },
+  { "text": "Loppuvastaus noin 12 cm yksikön kanssa", "points": 1 }
+]
+```
+
+- **Omat sanat ja oma pistejako.** Rivit kuvaavat *oman malliratkaisun* vaiheita. YTL:n pisteitysohjetta tai
+  HVP:n pisteitystä ei kopioida eikä mukailla rivi riviltä; sivu kertoo käyttäjälle, että jako on sivuston oma.
+- 2–12 riviä, jokaisen `points` on positiivinen kokonaisluku, ja rivien summa = yksikön `points`.
+- `text` enintään 200 merkkiä, kevyttä Markdownia kuten muutkin kentät (kaavat `$…$`), yksi rivi ilman listoja.
+- Rivi on tarkistettava asia ("Yhtälö ratkaistu: $r=…$"), ei ohje. Viimeinen rivi on yleensä loppuvastaus.
+- Käytössä toistaiseksi pitkän matematiikan 2026S:n vähintään 6 pisteen yksiköissä; pienet kohdat arvioidaan napeilla.
+
 ## Tekstimuoto
 Kentät `intro`, `prompt`, `hints[]`, `solution` ja `answer` ovat kevyttä Markdownia:
 - tyhjä rivi = uusi kappale, `**lihava**`, `*kursiivi*`
