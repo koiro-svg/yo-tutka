@@ -172,7 +172,7 @@ a{color:var(--accent)}
 .cells.flags{grid-template-columns:repeat(auto-fill,minmax(min(100%,110px),1fr))}
 .cells.choice{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .prompt{flex:1 1 130px;font:600 18px/1.25 var(--font-display);text-align:center}
-.map svg{display:block;width:100%;height:auto;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
+.map svg{display:block;width:100%;height:auto;max-height:min(70vh,760px);touch-action:none;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
 .map g path,.map g circle{fill:var(--line);stroke:var(--ink-3);stroke-width:.7;vector-effect:non-scaling-stroke}
 .map g.bg path,.map g.bg circle{fill:var(--surface);stroke:var(--line)}
 .map g.t{cursor:pointer}
@@ -195,6 +195,10 @@ a{color:var(--accent)}
 .map svg{box-shadow:var(--kt-elev-1),inset 0 0 46px rgba(0,0,0,.4)}
 .map svg.zoom{border-color:var(--accent)}
 .mapname{margin-top:8px;min-height:21px}
+.maptools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin-top:8px;font-size:13px}
+.mapbtns{display:flex;gap:6px}
+.mapbtns .kt-btn{min-width:36px;justify-content:center}
+.mapbtns .kt-btn:disabled{opacity:.4;cursor:default}
 .winner.me{color:var(--c);text-shadow:0 0 26px color-mix(in srgb,var(--c) 40%,transparent)}
 .rank tr.first td{font-size:17px;padding-block:10px}
 .rank tr.first td:first-child{color:var(--warn);font-weight:700}
@@ -232,6 +236,7 @@ a{color:var(--accent)}
   .kt-btn.sm{padding-inline:14px}
   .kt-input{font-size:16px;min-height:44px}
   .crumb{padding-block:13px}
+  .mapbtns .kt-btn{min-width:44px}
   footer a{display:inline-block;padding-block:12px}
 }
 @media (prefers-reduced-motion:no-preference){
@@ -264,7 +269,8 @@ const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP 
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
 const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60, TOP_SHOWN = 20, MAP_RETRY_MS = 2000;
-const REVEAL_OK_MS = 700, REVEAL_WRONG_MS = 1500, REVEAL_SKIP_MS = 250, MAP_REACH_TOUCH = 22, MAP_REACH_MOUSE = 10, MAP_SMALL_PX = 28, MAP_DOT_PX = 5, MAP_ZOOM = 4, LIST_LIMIT_PHONE = 20;
+const REVEAL_OK_MS = 700, REVEAL_WRONG_MS = 1500, REVEAL_SKIP_MS = 250, MAP_REACH_TOUCH = 22, MAP_REACH_MOUSE = 10, MAP_SMALL_PX = 28, MAP_DOT_PX = 5, MAP_ZOOM = 4, MAP_MAX_ZOOM = 12, MAP_DRAG_PX = 8, LIST_LIMIT_PHONE = 20;
+const mapMaxHeight = () => Math.min(innerHeight * .7, 760);   // keep in step with .map svg max-height
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
 const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'], BOS = [1, 3, 5];
@@ -295,7 +301,7 @@ const T = {
     search: 'Hae visoja', all: 'Kaikki', random: 'Arvo visa', top: 'Suosituimmat', noResults: 'Ei osumia.', showAll: n => `Näytä kaikki (${n})`, chosen: n => `Valittu: ${n}`,
     fmt: { list: 'Lista', flags: 'Liput', map: 'Kartta', choice: 'Monivalinta' }, skip: 'Ohita', clickFind: n => `Klikkaa: ${n}`, loadingMap: 'Ladataan karttaa…', question: (a, b) => `Kysymys ${a}/${b}`,
     correct: 'Oikein', correctIs: a => `Oikea vastaus: ${a}`, share: 'Jaa linkki', shareText: 'Haastan sinut visaan', newBest: 'uusi ennätys', bestIs: (n, total) => `ennätys ${n}/${total}`,
-    provisional: 'Vetäjän lopputulos ei tullut perille. Tämä on oma laskusi, eikä sitä kirjata tilastoon.', tapMap: 'Napauta maata nähdäksesi sen nimen.', zoomed: 'Lähennetty: napauta maata.', missed: 'Puuttuvat', found: 'Löydetyt',
+    provisional: 'Vetäjän lopputulos ei tullut perille. Tämä on oma laskusi, eikä sitä kirjata tilastoon.', tapMap: 'Napauta maata nähdäksesi sen nimen.', zoomed: 'Lähennetty: napauta maata.', mapHelp: 'Lähennä nipistämällä, rullalla tai napeilla. Lähennettyä karttaa voi vetää.', mapKeys: 'Plus ja miinus lähentävät, nuolet siirtävät, nolla näyttää koko kartan.', zoomIn: 'Lähennä', zoomOut: 'Loitonna', zoomAll: 'Koko kartta', zoomGroup: 'Kartan lähennys', missed: 'Puuttuvat', found: 'Löydetyt',
     rematch: 'Uusintaottelu', review: 'Kertaus', reviewBtn: n => `Harjoittele puuttuneet (${n})`, reviewAll: 'kaikki puuttuneet osattu', reviewInfo: 'Vain viime kerralla puuttuneet kohteet tästä visasta, yksin ja lyhyemmällä ajalla.', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
     match: 'Ottelu', bo: { 1: 'Yksi peli', 3: 'Paras kolmesta', 5: 'Paras viidestä' },
@@ -339,7 +345,7 @@ const T = {
     search: 'Search quizzes', all: 'All', random: 'Random quiz', top: 'Trending', noResults: 'No matches.', showAll: n => `Show all (${n})`, chosen: n => `Selected: ${n}`,
     fmt: { list: 'List', flags: 'Flags', map: 'Map', choice: 'Multiple choice' }, skip: 'Skip', clickFind: n => `Click: ${n}`, loadingMap: 'Loading map…', question: (a, b) => `Question ${a}/${b}`,
     correct: 'Correct', correctIs: a => `Correct answer: ${a}`, share: 'Share link', shareText: 'I challenge you to a quiz', newBest: 'new best', bestIs: (n, total) => `best ${n}/${total}`,
-    provisional: 'The host\'s final result did not arrive. This is your own count and it is not saved to your record.', tapMap: 'Tap a country to see its name.', zoomed: 'Zoomed in: tap the country.', missed: 'Missed', found: 'Found',
+    provisional: 'The host\'s final result did not arrive. This is your own count and it is not saved to your record.', tapMap: 'Tap a country to see its name.', zoomed: 'Zoomed in: tap the country.', mapHelp: 'Zoom with a pinch, the wheel or the buttons. Drag a zoomed map to move it.', mapKeys: 'Plus and minus zoom, arrows move, zero shows the whole map.', zoomIn: 'Zoom in', zoomOut: 'Zoom out', zoomAll: 'Whole map', zoomGroup: 'Map zoom', missed: 'Missed', found: 'Found',
     rematch: 'Rematch', review: 'Review', reviewBtn: n => `Practise the missed ones (${n})`, reviewAll: 'all the missed ones found', reviewInfo: 'Only the items you missed last time in this quiz, alone and with less time.', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
     match: 'Match', bo: { 1: 'Single game', 3: 'Best of three', 5: 'Best of five' },
@@ -1566,9 +1572,10 @@ function buildMap() {
   const pad = whole ? 0 : Math.max(x1 - x0, y1 - y0) * .05;
   const box = [x0 - pad, y0 - pad, x1 - x0 + 2 * pad, y1 - y0 + 2 * pad];
   const view = box.map(Math.round);
-  const svg = svgEl('svg', { viewBox: view.join(' '), role: 'img', 'aria-label': t('fmt').map });
-  // The svg is not in the page yet, so its width is estimated from the layout (main: 1120 px wide, 16 px gutters).
-  const scale = Math.max(200, Math.min(innerWidth, 1120) - 32) / view[2];   // screen px per viewBox unit
+  const svg = svgEl('svg', { viewBox: view.join(' '), role: 'img', tabindex: 0, 'aria-label': `${t('fmt').map}. ${t('mapKeys')}` });
+  // The svg is not in the page yet, so its size is estimated from the layout (main: 1120 px wide, 16 px gutters) and
+  // from its height cap (.map svg max-height): a tall map is letterboxed and drawn smaller than the width alone says.
+  const scale = Math.min(Math.max(200, Math.min(innerWidth, 1120) - 32) / view[2], mapMaxHeight() / view[3]);   // screen px per viewBox unit
   const radius = Math.max(box[2] / 170, 2, MAP_DOT_PX / scale);
   const small = [], byEl = new Map();
   for (const [iso, shape] of Object.entries(MAP.shapes)) {
@@ -1585,40 +1592,149 @@ function buildMap() {
     svg.append(g);
   }
   const caption = G.over && h('p', { class: 'muted mapname', 'aria-live': 'polite', text: t('tapMap') });
-  // A crowded spot (the Balkans on a phone: centres 4 px apart) cannot be told apart by any hit rule, so the first tap there
-  // zooms in and the second one answers. Markers keep their size on screen.
-  let zoom = null;
+  // Zoom and pan move the viewBox (the svg keeps its size, so the page never grows or scrolls sideways). `zoom` is the
+  // current box or null for the whole map, and `auto` says the box came from a crowded tap: that one closes after the
+  // answer, a zoom the player made stays. Markers keep their size on screen.
+  let zoom = null, auto = false;
+  const minW = view[2] / MAP_MAX_ZOOM;
+  const zin = h('button', { class: 'kt-btn sm', type: 'button', text: '+', 'aria-label': t('zoomIn'), onclick: () => { auto = false; zoomAt(2); } });
+  const zout = h('button', { class: 'kt-btn sm', type: 'button', text: '−', 'aria-label': t('zoomOut'), onclick: () => { auto = false; zoomAt(.5); } });
+  const zreset = h('button', { class: 'kt-btn sm', type: 'button', text: t('zoomAll'), onclick: () => { auto = false; setZoom(null); } });
   const setZoom = z => {
+    if (z && z[2] >= view[2] - .01) z = null;
     zoom = z;
-    svg.setAttribute('viewBox', (z || view).join(' '));
+    svg.setAttribute('viewBox', (z || view).map(v => Math.round(v * 10) / 10).join(' '));
     svg.classList.toggle('zoom', !!z);
     const r = radius * (z ? z[2] / view[2] : 1);
     for (const c of svg.querySelectorAll('g.t circle')) c.setAttribute('r', r);
+    zout.disabled = zreset.disabled = !z;
+    zin.disabled = !!z && z[2] <= minW + .01;
   };
+  // A box `w` wide (aspect of the whole map) whose point (x, y) stays where (fx, fy) of it is, kept inside the map.
+  const place = (w, x, y, fx, fy) => {
+    w = clamp(w, minW, view[2]);
+    const hh = w * view[3] / view[2];
+    return [clamp(x - fx * w, view[0], view[0] + view[2] - w), clamp(y - fy * hh, view[1], view[1] + view[3] - hh), w, hh];
+  };
+  // Zoom by `f` (> 1 = in) keeping viewBox point (x, y) still; the default is the centre. Returns whether anything moved.
+  function zoomAt(f, x, y) {
+    const cur = zoom || view;
+    if (x == null) { x = cur[0] + cur[2] / 2; y = cur[1] + cur[3] / 2; }
+    const next = place(cur[2] / f, x, y, (x - cur[0]) / cur[2], (y - cur[1]) / cur[3]);
+    if (Math.abs(next[2] - cur[2]) < .01) return false;
+    setZoom(next);
+    return true;
+  }
+  const panBy = (dx, dy) => { if (zoom) setZoom(place(zoom[2], zoom[0] + dx, zoom[1] + dy, 0, 0)); };
+  // Screen point → viewBox units, and viewBox units per screen px. The CTM is right also when the map is letterboxed.
+  const toView = (cx, cy) => {
+    const m = svg.getScreenCTM();
+    if (!m || !m.a) return null;
+    const p = new DOMPoint(cx, cy).matrixTransform(m.inverse());
+    return [p.x, p.y, 1 / m.a];
+  };
+  setZoom(null);
+
+  // Pointer gestures on the map only (touch-action:none): one finger or the mouse drags a zoomed map, two fingers pinch.
+  // On the whole map one finger scrolls the page instead, so a swipe over the map still moves the page. A gesture that
+  // moved never ends in a tap: the click right after it is ignored.
+  const pts = new Map();
+  let moved = false, quietUntil = 0, pinch = null;
+  const spread = () => { const [a, b] = [...pts.values()]; return [Math.hypot(a.x - b.x, a.y - b.y), (a.x + b.x) / 2, (a.y + b.y) / 2]; };
+  svg.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (!pts.size) moved = false;
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY, sx: e.clientX, sy: e.clientY, type: e.pointerType });
+    if (pts.size === 2) {
+      moved = true;
+      for (const id of pts.keys()) try { svg.setPointerCapture(id); } catch {}
+      pinch = spread();
+    }
+  });
+  svg.addEventListener('pointermove', e => {
+    const p = pts.get(e.pointerId);
+    if (!p) return;
+    const dx = e.clientX - p.x, dy = e.clientY - p.y;
+    p.x = e.clientX; p.y = e.clientY;
+    if (pts.size >= 2) {
+      const [d, mx, my] = spread(), at = toView(mx, my);
+      if (!at || !pinch) return;
+      auto = false;
+      if (pinch[0] > 0 && d > 0) zoomAt(d / pinch[0], at[0], at[1]);
+      const k = toView(mx, my)?.[2] || at[2];
+      panBy(-(mx - pinch[1]) * k, -(my - pinch[2]) * k);
+      pinch = [d, mx, my];
+      return;
+    }
+    if (!moved && Math.hypot(e.clientX - p.sx, e.clientY - p.sy) < MAP_DRAG_PX) return;
+    if (!zoom) {
+      if (p.type !== 'touch') return;   // a mouse drag over the whole map is still a click
+      moved = true;
+      scrollBy(0, -dy);
+      return;
+    }
+    if (!moved) { moved = true; try { svg.setPointerCapture(e.pointerId); } catch {} }
+    const at = toView(e.clientX, e.clientY);
+    if (at) { auto = false; panBy(-dx * at[2], -dy * at[2]); }
+  });
+  const lift = e => {
+    if (!pts.delete(e.pointerId)) return;
+    if (pts.size === 1) { const p = [...pts.values()][0]; p.sx = p.x; p.sy = p.y; }   // pinch → one finger: pan from here
+    pinch = null;
+    if (!pts.size && moved) quietUntil = performance.now() + 400;
+  };
+  svg.addEventListener('pointerup', lift);
+  svg.addEventListener('pointercancel', lift);
+  // The wheel (and a trackpad pinch, which arrives as Ctrl+wheel) zooms at the cursor. When the map cannot zoom further
+  // that way the plain wheel is left to the page, so scrolling down past an unzoomed map still scrolls.
+  svg.addEventListener('wheel', e => {
+    const at = toView(e.clientX, e.clientY);
+    if (!at) return;
+    const step = e.deltaY * (e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 400 : 1);
+    const f = clamp(Math.exp(-step * (e.ctrlKey ? .01 : .002)), .5, 2);
+    auto = false;
+    if (zoomAt(f, at[0], at[1]) || e.ctrlKey) e.preventDefault();
+  }, { passive: false });
+  // Keyboard: the map is one tab stop; + and − zoom, arrows move a zoomed map, 0 shows the whole map.
+  svg.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const cur = zoom || view, step = cur[2] / 6;
+    const keys = { '+': () => zoomAt(2), '=': () => zoomAt(2), '-': () => zoomAt(.5), '0': () => setZoom(null),
+      ArrowLeft: () => panBy(-step, 0), ArrowRight: () => panBy(step, 0), ArrowUp: () => panBy(0, -step), ArrowDown: () => panBy(0, step) };
+    if (!keys[e.key] || (!zoom && e.key.startsWith('Arrow'))) return;   // arrows on the whole map scroll the page as before
+    e.preventDefault();
+    auto = false;
+    keys[e.key]();
+  });
+  // A crowded spot (the Balkans on a phone: centres 4 px apart) cannot be told apart by any hit rule, so the first tap there
+  // zooms in and the second one answers.
   svg.addEventListener('click', e => {
-    const rect = svg.getBoundingClientRect();
-    if (!rect.width || !G) return;
-    const cur = zoom || view, k = cur[2] / rect.width;
-    const x = cur[0] + (e.clientX - rect.left) * k, y = cur[1] + (e.clientY - rect.top) * k;
+    if (performance.now() < quietUntil || !G) return;
+    const at = toView(e.clientX, e.clientY);
+    if (!at) return;
+    const [x, y, k] = at, cur = zoom || view;
     const reach = (matchMedia('(pointer:coarse)').matches ? MAP_REACH_TOUCH : MAP_REACH_MOUSE) * k;
     const el = e.target.closest ? e.target.closest('g.t') : null, direct = el ? byEl.get(el) ?? null : null;
     // An exact hit on a small country answers at once, and only countries still to be found make a spot crowded
     // (with one left in the Balkans every answer used to cost two taps).
     const exact = direct != null && small.some(s => s[0] === direct);
     const crowd = small.filter(s => (G.over || available(s[0])) && (s[1] - x) ** 2 + (s[2] - y) ** 2 <= reach * reach).length;
-    if (!zoom && !exact && (G.over || canAct()) && crowd > 1) {
-      const zw = view[2] / MAP_ZOOM, zh = view[3] / MAP_ZOOM;
-      setZoom([clamp(x - zw / 2, view[0], view[0] + view[2] - zw), clamp(y - zh / 2, view[1], view[1] + view[3] - zh), zw, zh].map(v => Math.round(v * 10) / 10));
+    if (!exact && (G.over || canAct()) && crowd > 1 && cur[2] > minW + .01) {
+      if (!zoom) auto = true;
+      setZoom(place(zoom ? cur[2] / 2 : view[2] / MAP_ZOOM, x, y, .5, .5));
       if (G.over) caption.textContent = t('zoomed'); else flash(t('zoomed'));
       return;
     }
     const i = pickMapTarget(direct, x, y, small, reach);
-    if (zoom && (G.over || canAct())) setZoom(null);
+    if (auto && zoom && (G.over || canAct())) { auto = false; setZoom(null); }
     if (i == null) return;
     if (G.over) { caption.textContent = G.items[i][P.lang][0]; return; }
     mapClick(i);
   });
-  return h('div', { class: 'map' }, svg, caption);
+  const tools = h('div', { class: 'maptools' },
+    h('span', { class: 'muted', text: t('mapHelp') }),
+    h('span', { class: 'mapbtns', role: 'group', 'aria-label': t('zoomGroup') }, zin, zout, zreset));
+  return h('div', { class: 'map' }, svg, tools, caption);
 }
 
 function buildCells() {
