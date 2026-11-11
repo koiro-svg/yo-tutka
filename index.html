@@ -6,6 +6,9 @@
 <title>koirosvg.com – AI-opas, YO-tutka, hyppymittari ja visat</title>
 <meta name="description" content="koirosvg.com: AI-opas (mallit, koodausagentit ja työkalut), YO-tutka, hyppymittari ja visakaksintaisto.">
 <meta name="theme-color" content="#081427">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=1">
+<meta name="apple-mobile-web-app-title" content="koirosvg">
 <link rel="canonical" href="https://koirosvg.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://koirosvg.com/">
@@ -107,6 +110,12 @@ h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-s
 /* julkinen-1: each blip is a real link over the canvas (keyboard and screen readers), positioned in % of the radar. */
 .blip{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:block}
 .blip:focus-visible{outline-offset:0}
+/* koti-F5: recent changes as small amber blips; mouse hover shows .rtip (the "Uutta tutkassa" row carries the same news for
+   keyboard, screen readers and phones, so these links are aria-hidden, out of the tab order and hidden on a phone). */
+.blip.ev{width:22px;height:22px;margin:-11px 0 0 -11px}
+.rtip{position:absolute;z-index:2;width:max-content;max-width:min(240px,100%);padding:7px 10px;border:1px solid var(--line-2);border-radius:10px;background:var(--surface-2);box-shadow:var(--kt-elev-2);font-size:13px;line-height:1.4;color:var(--ink-2);pointer-events:none;overflow-wrap:anywhere}
+.rtip .k{display:block;font:600 11px var(--font-mono);letter-spacing:.06em;color:var(--warn)}
+.rtip b{color:var(--ink)}
 .search{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .search .kt-input{flex:1 1 260px;max-width:460px}
 .search kbd{font:600 11px var(--font-mono);color:var(--ink-3);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
@@ -125,6 +134,17 @@ h1{font:800 clamp(30px,5vw,54px)/1.02 var(--font-display);margin:12px 0;letter-s
 .tool[data-blip="visa"]{--art:url("/img/hero/visa-s.webp?v=1");--tone:#9F8CFF}
 /* The dish sits right of the live radar, the aurora rings behind it. */
 html[data-page="koti"]{--kt-hero-x:right -150px;--kt-veil:34%}
+/* koti-F2: "Uutta tutkassa", the newest model, tool change and YO data update (one each), newest first. */
+.news{display:grid;gap:8px}
+.news h2{margin:0}
+.news ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:10px}
+.news a{display:grid;align-content:start;gap:2px;height:100%;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--surface) 72%,transparent);color:inherit;text-decoration:none;transition:border-color .15s}
+.news a:hover,.news a.hot{border-color:var(--accent)}
+.news .k{font:600 11px var(--font-mono);letter-spacing:.06em;color:var(--accent)}
+.news .k time{color:var(--ink-3)}
+.news .t{font-size:14px;color:var(--ink-2,var(--ink));overflow-wrap:anywhere}
+.news .t b{color:var(--ink)}
+@media (pointer:coarse){.news a{min-height:44px}}
 .tool .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 .tool h2{margin:0;font:800 22px var(--font-display)}
 .tool .sig{font:600 11px var(--font-mono);color:var(--tone);white-space:nowrap}
@@ -146,11 +166,12 @@ footer a:hover{color:var(--accent)}
   .hero{grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:start}
   .radar{max-width:112px}
   .blip{width:24px;height:24px;margin:-12px 0 0 -12px}
+  .blip.ev,.rtip{display:none}
   .tool{padding:104px 18px 18px;background-size:auto,auto 168px,auto}
   html[data-page="koti"]{--kt-hero-x:right -60px}
   .lede{font-size:15px}
 }
-@media (prefers-reduced-motion:reduce){.tool,.lock{transition:none}.tool:hover,.tool.hot{transform:none}}
+@media (prefers-reduced-motion:reduce){.tool,.lock,.news a{transition:none}.tool:hover,.tool.hot{transform:none}}
 </style>
 </head>
 <body>
@@ -163,13 +184,18 @@ footer a:hover{color:var(--accent)}
     </div>
     <div class="radar" id="radar-box">
       <canvas id="radar" aria-hidden="true"></canvas>
+      <div class="rtip" id="rtip" aria-hidden="true" hidden></div>
     </div>
   </header>
   <div class="search" role="search">
-    <input class="kt-input" id="q" type="search" placeholder="Hae työkaluista, malleista ja YO-aiheista" aria-label="Hae koko sivustosta" autocomplete="off">
+    <input class="kt-input" id="q" type="search" placeholder="Hae työkaluista, malleista, YO-aiheista ja visoista" aria-label="Hae koko sivustosta" autocomplete="off">
     <kbd aria-hidden="true">/</kbd>
   </div>
   <ul class="kt-hits" id="hits" aria-live="polite" hidden></ul>
+  <section class="news" id="news" aria-labelledby="news-h" hidden>
+    <h2 class="eyebrow" id="news-h">Uutta tutkassa</h2>
+    <ul id="news-list"></ul>
+  </section>
   <nav class="tools" aria-label="Työkalut">
     <a class="tool" href="/ai" data-blip="ai">
       <div class="hd"><h2>AI-opas</h2><span class="sig">● päivitys 2 pv välein</span></div>
@@ -186,11 +212,13 @@ footer a:hover{color:var(--accent)}
     <a class="tool" href="/hyppymittari" data-blip="hyppy">
       <div class="hd"><h2>Hyppymittari</h2><span class="sig">● kamera · video · slow-mo</span></div>
       <p>Pystyhyppy, kosketuskorkeus, vauhditon pituus, kolmiloikka ja viisiloikka puhelimen kameralla: luuranko kuvan päällä, laatuvaroitukset ja oma historia. Kaikki lasketaan laitteella.</p>
+      <p class="live" id="hyppy-live" hidden></p>
       <span class="go">Avaa hyppymittari →</span>
     </a>
     <a class="tool" href="/visa" data-blip="visa">
       <div class="hd"><h2>Visakaksintaisto</h2><span class="sig">● 1v1 · reaaliaika</span></div>
       <p>Satoja tietovisoja kaveria vastaan samaan aikaan: listat, liput, kartat ja monivalinnat maantiedosta urheiluun ja viihteeseen. Huone linkillä, ei tiliä.</p>
+      <p class="live" id="visa-live" hidden></p>
       <span class="go">Avaa visa →</span>
     </a>
   </nav>
@@ -206,22 +234,25 @@ footer a:hover{color:var(--accent)}
   const daysSince = d => { const m = new Date(); m.setHours(0, 0, 0, 0); return Math.round((m - new Date(d + 'T00:00')) / 864e5); };
   const dayAgo = n => n <= 0 ? 'tänään' : n === 1 ? 'eilen' : `${n} pv sitten`;
   const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
-  const models = getJson('/data/ai-models.json');   // the AI card and the search share one fetch
-  models.catch(() => {});
+  const models = getJson('/data/ai-models.json');   // the AI card, "Uutta tutkassa" and the search share one fetch
+  const tools = getJson('/data/ai-tools.json');     // "Uutta tutkassa" and the search share one fetch
+  models.catch(() => {}); tools.catch(() => {});
 
-  // ---- Radar: one named blip per tool card plus one unnamed for atmosphere (new tool = card + blip) ----
+  // ---- Radar: one named blip per tool card (new tool = card + blip) and, koti-F5, one small unnamed blip per recent change ----
   const box = $('#radar-box'), cv = $('#radar'), cx = cv.getContext('2d');
-  const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {id:'visa', a:0.75, r:.66, t:'Visakaksintaisto', href:'/visa'}, {a:3.4, r:.45, t:''}];
+  const blips = [{id:'ai', a:-0.9, r:.55, t:'AI-opas', href:'/ai'}, {id:'yo', a:2.2, r:.72, t:'YO-tutka', href:'/yo-tutka'}, {id:'hyppy', a:4.2, r:.62, t:'Hyppymittari', href:'/hyppymittari'}, {id:'visa', a:0.75, r:.66, t:'Visakaksintaisto', href:'/visa'}];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const TAU = Math.PI * 2, R_SHARE = 0.472;   // ring radius as a share of the canvas (the blip links use the same)
+  const EV_DAYS = 14;   // koti-F5: changes this many days old or newer get a blip
   let W = 0, small = false, bg = null, beam = null, sw = -0.6, speed = 1, last = 0, aim = null, tilt = {x: 0, y: 0}, visible = true, raf = 0;
-  for (const b of blips) if (b.t) {
+  function blipLink(b, label){
     const a = document.createElement('a');
-    a.className = 'blip'; a.href = b.href; a.dataset.blip = b.id; a.setAttribute('aria-label', b.t);
+    a.className = 'blip'; a.href = b.href; a.dataset.blip = b.id; a.setAttribute('aria-label', label);
     a.style.left = `${50 + Math.cos(b.a) * b.r * R_SHARE * 100}%`; a.style.top = `${50 + Math.sin(b.a) * b.r * R_SHARE * 100}%`;
     box.append(a);
-    b.el = a;
+    return b.el = a;
   }
+  for (const b of blips) blipLink(b, b.t);
   // Rings and crosshair are drawn once per size into an offscreen canvas; the beam gradient is built once and rotated.
   function size(){
     const css = box.clientWidth || 360, w = Math.round(css * Math.min(devicePixelRatio || 1, 3));
@@ -258,8 +289,10 @@ footer a:hover{color:var(--accent)}
     for (const b of blips) {
       const d = ((sw - b.a) % TAU + TAU) % TAU, k = reduce ? 1 : Math.max(.25, 1 - d / 4);
       const x = C + Math.cos(b.a) * R * b.r, y = C + Math.sin(b.a) * R * b.r, hot = b.el && b.el.classList.contains('hot');
-      const rad = (b.t ? 11 : 6) * k0 * (hot ? 1.35 + 0.15 * Math.sin(t / 160) : 1);
-      cx.fillStyle = `rgba(92,225,198,${hot ? 1 : k})`; cx.beginPath(); cx.arc(x, y, rad, 0, TAU); cx.fill();
+      const rad = (b.ev ? 7 : 11) * k0 * (hot ? 1.35 + 0.15 * Math.sin(t / 160) : 1);
+      // koti-F5: a change blip is amber (--warn) and dims with age, never below .35 so it stays visible between sweeps.
+      cx.fillStyle = b.ev ? `rgba(232,180,92,${hot ? 1 : Math.max(.35, k * (1 - b.age / EV_DAYS * 0.5))})` : `rgba(92,225,198,${hot ? 1 : k})`;
+      cx.beginPath(); cx.arc(x, y, rad, 0, TAU); cx.fill();
       // julkinen-5: the ring is the content's freshness, a full circle when just updated and shrinking to nothing in about
       // half a year (log scale: the first days count most); a blip without an honest date (Hyppymittari) has no ring.
       if (b.f != null) {
@@ -270,7 +303,7 @@ footer a:hover{color:var(--accent)}
       }
       // A blip updated within two days pings as the beam passes it.
       if (b.ping && !reduce && d < 1.2) {
-        cx.strokeStyle = `rgba(92,225,198,${(1 - d / 1.2) * 0.8})`; cx.lineWidth = 2 * k0;
+        cx.strokeStyle = b.ev ? `rgba(232,180,92,${(1 - d / 1.2) * 0.8})` : `rgba(92,225,198,${(1 - d / 1.2) * 0.8})`; cx.lineWidth = 2 * k0;
         cx.beginPath(); cx.arc(x, y, rad + d * 26 * k0, 0, TAU); cx.stroke();
       }
       // The name sits right of its blip, or left of it when it would run past the canvas edge (the 3 % is the tilt's reach).
@@ -300,10 +333,11 @@ footer a:hover{color:var(--accent)}
     if (reduce && on && b) sw = b.a;
     kick();
   }
-  for (const el of document.querySelectorAll('[data-blip]')) {
+  function bindHot(el){
     for (const ev of ['pointerenter', 'focus']) el.addEventListener(ev, () => hot(el.dataset.blip, true));
     for (const ev of ['pointerleave', 'blur']) el.addEventListener(ev, () => hot(el.dataset.blip, false));
   }
+  document.querySelectorAll('[data-blip]').forEach(bindHot);
 
   // julkinen-5: a blip's freshness from its content's last update (days, may be fractional) and its tooltip.
   function setAge(id, days, when){
@@ -329,6 +363,90 @@ footer a:hover{color:var(--accent)}
     setAge('ai', (Date.now() - Date.parse(d.updated)) / 864e5, ago(d.updated));
   }, () => {});
 
+  // ---- koti-F2: "Uutta tutkassa", derived from data already in the repo (no news file): the newest model release, the newest
+  // AI-tool change and the YO data's build date, at most one of each and only if it is under NEWS_DAYS old, newest first.
+  // Visa quizzes carry no dates, so they are not part of it. A failed or malformed source just leaves its item out.
+  const NEWS_DAYS = 120;
+  const day = d => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}/.test(d) ? d.slice(0, 10) : null;
+  const short = (t, n = 110) => t.length <= n ? t : t.slice(0, t.lastIndexOf(' ', n - 1) > 60 ? t.lastIndexOf(' ', n - 1) : n - 1) + '…';
+  function newestModel(d){
+    // The newest release across all lists (media models without a release date use the day the site first saw them);
+    // the link goes to the list where it ranks highest.
+    let best = null;
+    for (const [cat, c] of Object.entries((d && d.categories) || {})) (Array.isArray(c && c.items) ? c.items : []).forEach((it, i) => {
+      const at = it && typeof it.name === 'string' && day(it.released || it.seen);
+      if (!at) return;
+      if (!best || at > best.at || (at === best.at && i < best.i)) best = {it, at, cat, i};
+    });
+    return best && {at: best.at, blip: 'ai', href: `/ai#m-${encodeURIComponent(best.cat)}`, k: 'Uusi malli',
+      t: `<b>${esc(best.it.name)}</b>${best.it.creator ? ' · ' + esc(best.it.creator) : ''}`};
+  }
+  function newestChange(d){
+    const c = (Array.isArray(d && d.changes) ? d.changes : []).filter(x => x && day(x.date) && typeof x.text === 'string' && x.text.trim())
+      .reduce((a, x) => !a || day(x.date) > day(a.date) ? x : a, null);   // first of the newest day wins (the list is newest first)
+    return c && {at: day(c.date), blip: 'ai', href: '/ai#muutokset', k: 'AI-työkalut', t: esc(short(c.text.trim())), title: c.text.trim()};
+  }
+  function paintNews(items){
+    items = items.filter(x => x && daysSince(x.at) <= NEWS_DAYS).sort((a, b) => a.at < b.at ? 1 : a.at > b.at ? -1 : 0);
+    if (!items.length) return;   // nothing recent: the row stays hidden
+    const list = $('#news-list');
+    list.innerHTML = items.map(x => `<li><a href="${esc(x.href)}" data-blip="${esc(x.blip)}"${x.title ? ` title="${esc(x.title)}"` : ''}>` +
+      `<span class="k">${esc(x.k)} · <time datetime="${esc(x.at)}">${esc(dayAgo(daysSince(x.at)))}</time></span><span class="t">${x.t}</span></a></li>`).join('');
+    list.querySelectorAll('[data-blip]').forEach(bindHot);
+    $('#news').hidden = false;
+  }
+  {
+    const built = day($('[data-yo-built]').dataset.yoBuilt);
+    const yo = built && {at: built, blip: 'yo', href: '/yo-tutka', k: 'YO-tutka', t: 'Koetehtävien data ja aiheiden todennäköisyydet päivitetty'};
+    const safe = (p, f) => p.then(d => { try { return f(d); } catch (e) { return null; } }, () => null);
+    Promise.all([safe(models, newestModel), safe(tools, newestChange)]).then(([m, c]) => paintNews([m, c, yo]));
+    Promise.all([safe(models, recentModels), safe(tools, recentChanges)]).then(([m, c]) =>
+      paintEvents([...(m || []), ...(c || []), yo && {...yo, tip: 'Koetehtävien data ja aiheiden todennäköisyydet päivitetty'}]));
+  }
+
+  // ---- koti-F5: the radar reacts to real data. Every change of the last EV_DAYS days (a model released or first seen, an
+  // AI-tool change, the YO data's build) is a small amber blip, newest in the first free slot, at most EV_SLOTS.length of them;
+  // nothing recent = no extra blips. Visa quizzes carry no dates, so they cannot appear. Mouse hover shows what it is.
+  // Slots sit clear of the named blips and their labels (checked at 360 px; the first is where the old atmosphere blip was).
+  const EV_SLOTS = [[3.4, .45], [-0.07, .8], [1.45, .86], [-1.57, .88], [2.84, .84], [0.6, .24]];
+  const recentDay = at => { const n = daysSince(at); return n >= -1 && n <= EV_DAYS; };   // a day ahead of this clock is "today"
+  function recentModels(d){
+    const best = new Map();   // one blip per model, linked to the list where it ranks highest
+    for (const [cat, c] of Object.entries((d && d.categories) || {})) (Array.isArray(c && c.items) ? c.items : []).forEach((it, i) => {
+      const at = it && typeof it.name === 'string' && day(it.released || it.seen);
+      if (at && recentDay(at) && !(best.get(it.name) && best.get(it.name).i <= i)) best.set(it.name, {it, at, cat, i});
+    });
+    return [...best.values()].map(({it, at, cat}) => ({at, href: `/ai#m-${encodeURIComponent(cat)}`, k: 'Uusi malli',
+      tip: `<b>${esc(it.name)}</b>${typeof it.creator === 'string' && it.creator ? ' · ' + esc(it.creator) : ''}`}));
+  }
+  function recentChanges(d){
+    return (Array.isArray(d && d.changes) ? d.changes : []).filter(x => x && day(x.date) && recentDay(day(x.date)) && typeof x.text === 'string' && x.text.trim())
+      .map(x => ({at: day(x.date), href: '/ai#muutokset', k: 'AI-työkalut', tip: esc(short(x.text.trim(), 120))}));
+  }
+  const tip = $('#rtip');
+  function showTip(b, on){
+    if (!on) { tip.hidden = true; return; }
+    tip.innerHTML = `<span class="k">${esc(b.ev.k)} · ${esc(dayAgo(Math.max(0, b.age)))}</span>${b.ev.tip}`;
+    tip.hidden = false;
+    // Beside the blip, inside the radar box (so it never widens the page): above it in the lower half, below it in the upper.
+    const bw = box.clientWidth, x = (0.5 + Math.cos(b.a) * b.r * R_SHARE) * bw, y = (0.5 + Math.sin(b.a) * b.r * R_SHARE) * bw;
+    tip.style.left = `${Math.max(0, Math.min(bw - tip.offsetWidth, x - tip.offsetWidth / 2))}px`;
+    tip.style.top = `${y > bw / 2 ? y - 16 - tip.offsetHeight : y + 16}px`;
+  }
+  function paintEvents(evs){
+    evs.filter(e => e && recentDay(e.at)).sort((a, b) => a.at < b.at ? 1 : a.at > b.at ? -1 : 0).slice(0, EV_SLOTS.length).forEach((e, i) => {
+      const [a, r] = EV_SLOTS[i], age = daysSince(e.at);
+      const b = {id: `ev${i}`, a, r, href: e.href, ev: e, age: Math.max(0, age), ping: age < 2};
+      blips.push(b);
+      const el = blipLink(b, '');
+      el.classList.add('ev'); el.tabIndex = -1; el.setAttribute('aria-hidden', 'true'); el.removeAttribute('aria-label');
+      bindHot(el);
+      el.addEventListener('pointerenter', () => showTip(b, true));
+      el.addEventListener('pointerleave', () => showTip(b, false));
+    });
+    kick();
+  }
+
   // ---- julkinen-3: own YO situation from this browser only (yo-harjoittelu's localStorage, read-only) ----
   try {
     const s = JSON.parse(localStorage.getItem('yo-practice') || 'null');
@@ -346,7 +464,48 @@ footer a:hover{color:var(--accent)}
     }
   } catch (e) { /* storage blocked: the card stays as it is */ }
 
-  // ---- julkinen-6: site search (AI data and YO topics), shared with the YO bar: site-search.js is loaded on the first
+  // ---- koti-F1: own situation in Hyppymittari and Visa, from this browser only (their localStorage, read-only) ----
+  const readOwn = key => { try { return JSON.parse(localStorage.getItem(key)); } catch (e) { return null; } };
+  const plain = x => x && typeof x === 'object' && !Array.isArray(x);
+  const count = x => Number.isFinite(x) && x >= 0;
+  const showLive = (id, html) => { const el = $(id); el.innerHTML = html + ' <span class="muted">(vain tällä laitteella)</span>'; el.hidden = false; };
+  const fiNum = (x, d) => x.toLocaleString('fi-FI', {minimumFractionDigits: d, maximumFractionDigits: d});
+  // Hyppymittari ('hyppymittari.v1', owned by hyppymittari/index.html): the record of the type jumped last.
+  // Copies of its TYPES/GROUPS units and of its record rule (bestOf: no quality flags; 'uncalibrated' is info only).
+  {
+    const HYPPY = {
+      cmj: ['kädet lanteilla', 'cm', 1], cmja: ['käsien kanssa', 'cm', 1], sj: ['kyykkyhyppy', 'cm', 1], run: ['vauhdilla', 'cm', 1],
+      reach: ['kosketuskorkeus', 'cm', 0], slj: ['vauhditon pituus', 'm', 2], s3: ['kolmiloikka', 'm', 2], s5: ['viisiloikka', 'm', 2],
+    };
+    const s = readOwn('hyppymittari.v1');
+    const jumps = (plain(s) && Array.isArray(s.jumps) ? s.jumps : []).filter(j => plain(j) && Object.hasOwn(HYPPY, j.type) &&
+      typeof j.cm === 'number' && Number.isFinite(j.cm) && j.cm > 0 && typeof j.at === 'string' && Number.isFinite(Date.parse(j.at)));
+    if (jumps.length) {
+      const last = jumps.reduce((a, j) => Date.parse(j.at) > Date.parse(a.at) ? j : a);
+      const [name, unit, digits] = HYPPY[last.type];
+      const clean = j => !(Array.isArray(j.flags) ? j.flags : []).some(f => f !== 'uncalibrated');
+      const best = jumps.filter(j => j.type === last.type && clean(j)).reduce((a, j) => !a || j.cm > a.cm ? j : a, null);
+      const n = jumps.length;
+      showLive('#hyppy-live', (best ? `Ennätys <b>${fiNum(unit === 'm' ? best.cm / 100 : best.cm, digits)} ${unit}</b> (${name}) · ` : '') +
+        `${n} ${n === 1 ? 'tulos' : 'tulosta'}`);
+    }
+  }
+  // Visa ('visa-v1', owned by visa.html): games against friends and quizzes with an own best. Same validation as visa.html.
+  {
+    const s = readOwn('visa-v1');
+    let w = 0, l = 0, d = 0, quizzes = 0;
+    if (plain(s)) {
+      for (const [k, r] of Object.entries(plain(s.h2h) ? s.h2h : {}))
+        if (k.startsWith('n:') && plain(r) && count(r.w) && count(r.l)) { w += r.w; l += r.l; d += count(r.d) ? r.d : 0; }
+      quizzes = Object.values(plain(s.best) ? s.best : {}).filter(b => plain(b) && count(b.n) && count(b.t) && count(b.total)).length;
+    }
+    const bits = [];
+    if (w + l + d) bits.push(`Kavereita vastaan <b>${w}–${l}</b>` + (d ? ` (${d} tasan)` : ''));
+    if (quizzes) bits.push(`${bits.length ? 'oma' : 'Oma'} ennätys <b>${quizzes}</b> visassa`);
+    if (bits.length) showLive('#visa-live', bits.join(' · '));
+  }
+
+  // ---- julkinen-6: site search (AI data, YO topics and practice, Visa quizzes: koti-F3), shared with the YO bar: site-search.js is loaded on the first
   // keystroke and fetches its data on the first search. "/" or ⌘K focuses the field.
   let mod = null;
   const q = $('#q'), hits = $('#hits');
@@ -356,7 +515,7 @@ footer a:hover{color:var(--accent)}
     if (!mod) mod = import('/site-search.js');
     let html;
     // A module or search that failed (offline) says so instead of leaving the field dead; the next keystroke tries again.
-    try { const s = await mod; html = s.hitsHtml(await s.search(v, models), v); } catch (e) { mod = null; html = '<li class="none" role="status">Haku ei latautunut. Tarkista yhteys ja yritä uudelleen.</li>'; }
+    try { const s = await mod; html = s.hitsHtml(await s.search(v, models, tools), v); } catch (e) { mod = null; html = '<li class="none" role="status">Haku ei latautunut. Tarkista yhteys ja yritä uudelleen.</li>'; }
     if (q.value.trim() !== v) return;
     hits.innerHTML = html; hits.dataset.q = v;
     hits.hidden = false;
