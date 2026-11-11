@@ -198,7 +198,11 @@ dl.facts dd{margin:0;color:var(--ink-2)}
 .links a:hover{text-decoration:underline}
 .card .meta{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;font-family:var(--font-mono);font-size:12px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:10px}
 .card .meta a{margin-left:auto;text-decoration:none;font-weight:600}
+/* ai-F5: Finnish-support badge, outlined so it does not read as the filled kind chip next to it */
+.chip.fi{background:none;box-shadow:inset 0 0 0 1px currentColor}
 .fi-hyvä{color:var(--ok)}.fi-kohtalainen{color:var(--warn)}.fi-heikko{color:#E58E4E}
+.filters .sep{width:1px;align-self:stretch;background:var(--line)}
+@media (max-width:480px){.filters .sep{display:none}}  /* the row wraps there: a lone divider at a line end */
 .notes{display:grid;gap:6px;font-size:14px;scroll-margin-top:120px}
 #compare{scroll-margin-top:120px}  /* below the sticky search bar (Vertaa, shared ?open=1 links) */
 .notes ul{margin:0;padding-left:18px;display:grid;gap:4px;color:var(--ink-2)}
@@ -454,7 +458,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   let data = null, agents = null, tools = null;
   let derived = {};   // per data load: scatter points, agent rankings, news (the data never changes after loading)
   const failed = {models:false, agents:false, tools:false};
-  const ui = {tab:'mallit', group:'all', area:'all', kind:'all', q:'', open:new Set(), cmp:[], showCmp:false, task:null, budget:'best'};
+  const ui = {tab:'mallit', group:'all', area:'all', kind:'all', fi:false, q:'', open:new Set(), cmp:[], showCmp:false, task:null, budget:'best'};
   const catOf = id => (data && data.categories[id]) || {items: []};
 
   function fmt(v, cat){
@@ -667,17 +671,18 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
 
   // ---- Tools tab ----
   const toolId = (a, t) => `t-${a.id}-${slug(t.name)}`;
-  const toolMatch = (t, a) => (ui.kind === 'all' || t.kind === ui.kind) && hit(ui.q, t.name, t.vendor, t.bestFor, t.why, a.title, a.intro);
+  // ai-F5: ?fi=hyva keeps the tools whose Finnish is good (data field fi).
+  const toolMatch = (t, a) => (ui.kind === 'all' || t.kind === ui.kind) && (!ui.fi || t.fi === 'hyvä') && hit(ui.q, t.name, t.vendor, t.bestFor, t.why, a.title, a.intro);
   const areaTools = a => a.tools.filter(t => toolMatch(t, a)).sort((x, y) => (y.pick ? 1 : 0) - (x.pick ? 1 : 0));
   function toolCard(t, a){
     const url = safeUrl(t.url), id = toolId(a, t);
-    const fi = t.fi && t.fi !== '?' ? `<span>suomi: <span class="fi-${esc(t.fi)}">${esc(t.fi)}</span></span>` : '';
+    const fi = t.fi && t.fi !== '?' ? `<span class="chip fi fi-${esc(t.fi)}" title="Suomen kielen tuki">Suomi: ${esc(t.fi)}</span>` : '';
     return `<article class="card${t.pick ? ' pick' : ''}" id="${esc(id)}">
-      <div class="chips">${t.pick ? '<span class="chip best">Paras nyt</span>' : ''}<span class="chip ${esc(t.kind)}">${esc(t.kind)}</span></div>
+      <div class="chips">${t.pick ? '<span class="chip best">Paras nyt</span>' : ''}<span class="chip ${esc(t.kind)}">${esc(t.kind)}</span>${fi}</div>
       <header><h3>${esc(t.name)}${linkBtn(id)}</h3><span class="vendor">${esc(t.vendor)}</span></header>
       <p class="for">${esc(t.bestFor)}</p>
       <p class="why">${esc(t.why)}</p>
-      <div class="meta"><span>${esc(t.price)}</span>${fi}${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}</div>
+      <div class="meta"><span>${esc(t.price)}</span>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}</div>
     </article>`;
   }
   // A starter row names one or two tools in text ("ChatGPT tai Claude"): link the first card whose name matches,
@@ -702,7 +707,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const allAreas = [{id:'all', title:'Kaikki osa-alueet'}, ...tools.areas];
     const filters = `<nav class="filters" id="areas" aria-label="Suodata osa-alueen mukaan">${allAreas.map(a => pressBtn('area', a.id, ui.area === a.id, a.title)).join('')}</nav>
       <label class="area-select"><span class="small muted">Osa-alue</span> <select class="kt-input" id="area-sel">${allAreas.map(a => `<option value="${esc(a.id)}"${ui.area === a.id ? ' selected' : ''}>${esc(a.title)}</option>`).join('')}</select></label>
-      <nav class="filters" aria-label="Suodata tyypin mukaan">${KINDS.map(k => pressBtn('kind', k.id, ui.kind === k.id, k.name)).join('')}</nav>`;
+      <nav class="filters" aria-label="Suodata tyypin ja kielen mukaan">${KINDS.map(k => pressBtn('kind', k.id, ui.kind === k.id, k.name)).join('')}<span class="sep" aria-hidden="true"></span><button type="button" class="kt-tab" data-fi="hyva" aria-pressed="${ui.fi}" title="Näytä vain työkalut, jotka toimivat hyvin suomeksi">Suomi: hyvä</button></nav>`;
     const notes = tools.changes.length ? `<aside class="kt-note notes" id="muutokset"><b>Viimeisimmät muutokset</b><ul>${tools.changes.map(c => `<li><time datetime="${esc(c.date)}">${esc(fiDate(c.date))}</time>${esc(c.text)}</li>`).join('')}</ul></aside>` : '';
     return `<div class="group">${starter}${filters}${areas || `<p class="empty"><span>Ei osumia. Kokeile toista hakusanaa tai poista suodattimet.</span>${elsewhere()}</p>`}${notes}</div>`;
   }
@@ -884,6 +889,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     ui.q = norm(qs.get('q') || '');
     $('#q').value = qs.get('q') || '';
     ui.kind = KINDS.some(k => k.id === qs.get('kind')) ? qs.get('kind') : 'all';
+    ui.fi = qs.get('fi') === 'hyva';
     // No #hash means the first tab (Back to /ai); an unknown #hash keeps the tab that is open.
     ui.tab = p.tab || (TABS.some(t => t.id === qs.get('tab')) ? qs.get('tab') : location.hash.length > 1 ? ui.tab : 'mallit');
     ui.group = p.group || (p.tab === 'mallit' ? ui.group : 'all');
@@ -897,8 +903,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function reveal(id){
     let el = document.getElementById(id);
     if (!el) {
-      const inUrl = ui.q || ui.kind !== 'all';
-      ui.group = 'all'; ui.area = 'all'; ui.kind = 'all'; ui.q = ''; $('#q').value = '';
+      const inUrl = ui.q || ui.kind !== 'all' || ui.fi;
+      ui.group = 'all'; ui.area = 'all'; ui.kind = 'all'; ui.fi = false; ui.q = ''; $('#q').value = '';
       if (inUrl) history.replaceState(null, '', urlFor(location.hash.slice(1)));
       render();
       el = document.getElementById(id);
@@ -920,10 +926,10 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const SHARE_KEYS = /^(cmp|open|task|budget)=/;
   const cmpFromQs = s => s.split('|').map(t => t.startsWith('a:') ? {kind: 'agent', name: t.slice(2)} : {kind: 'model', name: t});
   const urlFor = hash => {
-    const qs = [ui.q && 'q=' + encodeURIComponent(ui.q), ui.kind !== 'all' && 'kind=' + encodeURIComponent(ui.kind), ...shareQs()].filter(Boolean).join('&');
+    const qs = [ui.q && 'q=' + encodeURIComponent(ui.q), ui.kind !== 'all' && 'kind=' + encodeURIComponent(ui.kind), ui.fi && 'fi=hyva', ...shareQs()].filter(Boolean).join('&');
     return `${location.pathname}${qs ? '?' + qs : ''}${hash ? '#' + hash : ''}`;
   };
-  // Rewrites only the share keys: q and kind stay as the history has them (a search being typed is not committed yet).
+  // Rewrites only the share keys: q, kind and fi stay as the history has them (a search being typed is not committed yet).
   let urlReady = false;
   function syncUrl(){
     if (!urlReady) return;
@@ -955,6 +961,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (d.tab) { ui.tab = d.tab; nav(d.tab); render(); }
     else if (d.group) { ui.group = d.group; nav('mallit', d.group); render(); }
     else if (d.area) setArea(d.area);
+    else if (d.fi) { ui.fi = !ui.fi; history.pushState(null, '', urlFor(location.hash.slice(1))); render(); }
     else if (d.kind) { if (d.kind !== ui.kind) { ui.kind = d.kind; history.pushState(null, '', urlFor(location.hash.slice(1))); render(); } }
     else if (d.task) { ui.task = ui.task === d.task ? null : d.task; paintAsk(); }
     else if (d.budget) { ui.budget = d.budget; paintAsk(); }

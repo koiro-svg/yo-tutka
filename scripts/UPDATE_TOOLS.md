@@ -32,6 +32,8 @@ good run if nothing changed in the world.
    - Exactly one `pick: true` per area. Change the pick only with strong evidence.
    - `kind`: `automatisoi` = runs work by itself once set up, `avustaa` = helps you do it.
    - `fi`: `hyvä` | `kohtalainen` | `heikko` | `?` (Finnish-language quality; `?` if unknown).
+     The page's "Suomi: hyvä" filter (`?fi=hyva`) shows only `hyvä` tools, so give `hyvä` only when
+     the interface and the output both work well in Finnish; when unsure, use `kohtalainen` or `?`.
    - Prices: current list price, short, e.g. `Ilmainen · Pro 20 $/kk`. No time-limited
      campaign prices. If sources disagree, give a range with `~`.
      Start the price with `Ilmainen` only when the tool has a real free tier: the page's
