@@ -140,6 +140,11 @@ a{color:var(--accent)}
 .score.gone{opacity:.5}
 .score>div:first-child{display:flex;justify-content:space-between;gap:8px;font-size:13px}
 .score b{color:var(--c);overflow-wrap:anywhere}
+.score .pips{color:var(--c);font:600 11px var(--font-mono);letter-spacing:2px;margin-left:6px}
+.matchline{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:6px 0 10px;font:600 14px var(--font-mono)}
+.matchline .lbl2{color:var(--ink-2);font:500 13px var(--font-body)}
+.matchline b{color:var(--c)}
+.matchline.over{font-size:16px}
 .score span{font:600 13px var(--font-mono);white-space:nowrap}
 .meter{height:4px;background:var(--line);border-radius:2px}
 .meter i{display:block;height:100%;background:var(--c);border-radius:2px}
@@ -167,7 +172,7 @@ a{color:var(--accent)}
 .cells.flags{grid-template-columns:repeat(auto-fill,minmax(min(100%,110px),1fr))}
 .cells.choice{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .prompt{flex:1 1 130px;font:600 18px/1.25 var(--font-display);text-align:center}
-.map svg{display:block;width:100%;height:auto;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
+.map svg{display:block;width:100%;height:auto;max-height:min(70vh,760px);touch-action:none;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
 .map g path,.map g circle{fill:var(--line);stroke:var(--ink-3);stroke-width:.7;vector-effect:non-scaling-stroke}
 .map g.bg path,.map g.bg circle{fill:var(--surface);stroke:var(--line)}
 .map g.t{cursor:pointer}
@@ -190,6 +195,10 @@ a{color:var(--accent)}
 .map svg{box-shadow:var(--kt-elev-1),inset 0 0 46px rgba(0,0,0,.4)}
 .map svg.zoom{border-color:var(--accent)}
 .mapname{margin-top:8px;min-height:21px}
+.maptools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin-top:8px;font-size:13px}
+.mapbtns{display:flex;gap:6px}
+.mapbtns .kt-btn{min-width:36px;justify-content:center}
+.mapbtns .kt-btn:disabled{opacity:.4;cursor:default}
 .winner.me{color:var(--c);text-shadow:0 0 26px color-mix(in srgb,var(--c) 40%,transparent)}
 .rank tr.first td{font-size:17px;padding-block:10px}
 .rank tr.first td:first-child{color:var(--warn);font-weight:700}
@@ -199,11 +208,35 @@ a{color:var(--accent)}
 .pick b{font-size:15px;line-height:1.3}
 .pick small{font:500 11px var(--font-mono);color:var(--ink-3)}
 .startbar .start{margin-top:0}
+.solo{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.daily{display:grid;gap:10px}
+.dayhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.dayhead h2{margin:0}
+.dayquiz{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;overflow-wrap:anywhere}
+.dayquiz b{font-size:18px}
+.daymine{font-weight:600}
+.dayfield,.row .dayfield{width:100%;flex-basis:100%}
+.daynote{margin-top:6px;color:var(--ink-2)}
+.solo .muted{margin-top:6px}
+.browse h3{margin:18px 0 8px}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:6px}
+.topic{display:grid;gap:1px;padding:8px 12px;text-align:left;align-content:center}
+.topic b{font-size:14px;line-height:1.3}
+.topic small,.qtext small{font:500 11px var(--font-mono);color:var(--ink-3)}
+.topic[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.qrows{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:8px}
+.qrow{display:grid;gap:8px;align-content:space-between;min-width:0;padding:10px 12px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m)}
+.qtext{display:grid;gap:1px}
+.qtext b{font-size:15px;line-height:1.3}
+.qbest{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;font:500 12px var(--font-mono);color:var(--ink-2)}
+.qbest .meter{--c:var(--accent)}
+.qbest.none{color:var(--ink-3)}
 @media (pointer:coarse){
   .kt-btn,.kt-tab{min-height:44px}
   .kt-btn.sm{padding-inline:14px}
   .kt-input{font-size:16px;min-height:44px}
   .crumb{padding-block:13px}
+  .mapbtns .kt-btn{min-width:44px}
   footer a{display:inline-block;padding-block:12px}
 }
 @media (prefers-reduced-motion:no-preference){
@@ -231,14 +264,17 @@ const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/u
 const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
 
 const STORE_KEY = 'visa-v1';
+const LAST_KEEP = 8, BROWSE_LIMIT = 24, BROWSE_LIMIT_PHONE = 10, DAY_KEEP = 120, MISS_KEEP = 250, MISS_QUIZZES = 30, REVIEW_MIN_S = 30;   // missed items per quiz, quizzes remembered, shortest review
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
 const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOCK_MS = 900, LIST_LIMIT = 60, TOP_SHOWN = 20, MAP_RETRY_MS = 2000;
-const REVEAL_OK_MS = 700, REVEAL_WRONG_MS = 1500, REVEAL_SKIP_MS = 250, MAP_REACH_TOUCH = 22, MAP_REACH_MOUSE = 10, MAP_SMALL_PX = 28, MAP_DOT_PX = 5, MAP_ZOOM = 4, LIST_LIMIT_PHONE = 20;
+const REVEAL_OK_MS = 700, REVEAL_WRONG_MS = 1500, REVEAL_SKIP_MS = 250, MAP_REACH_TOUCH = 22, MAP_REACH_MOUSE = 10, MAP_SMALL_PX = 28, MAP_DOT_PX = 5, MAP_ZOOM = 4, MAP_MAX_ZOOM = 12, MAP_DRAG_PX = 8, LIST_LIMIT_PHONE = 20;
+const mapMaxHeight = () => Math.min(innerHeight * .7, 760);   // keep in step with .map svg max-height
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
-const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
+const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'], BOS = [1, 3, 5];
+const PAGE_V = 2;   // presence `v`: 2 = this page knows matches (best of three / five); an older page sends none
 
 const T = {
   fi: {
@@ -255,6 +291,8 @@ const T = {
     parallelInfo: 'Jokaisella on oma lista. Eniten oikein voittaa, tasatilanteessa se, joka sai viimeisen vastauksensa aiemmin.',
     raceInfo: 'Yhteinen lista: kun joku ehtii ensin, vastaus on hänen eikä kelpaa enää muille.',
     time: 'Aika', mul: { 0.5: 'Lyhyt', 1: 'Normaali', 2: 'Pitkä' }, quiz: 'Visa',
+    practice: 'Harjoittele yksin', practiceInfo: 'Ilman huonetta ja nimimerkkiä. Toimii ilman verkkoa, kun sivu on ladattu.',
+    soloTitle: 'Harjoittelu', soloInfo: 'Pelaat yksin tässä selaimessa: mitään ei lähetetä, ja ennätykset tallentuvat vain tänne.', pickQuiz: 'Vaihda visa',
     start: 'Aloita peli', solo: 'Harjoittele yksin', waitHost: n => `Odotetaan, että ${n} aloittaa pelin.`,
     typeHere: 'Kirjoita vastaus', giveUp: 'Luovuta', sure: 'Varmasti?', out: 'Luovutit. Odotetaan muita.', spectate: 'Peli on kesken, seuraat sivusta.',
     taken: n => `${n} ehti ensin`, already: 'Tämä on jo listalla',
@@ -263,10 +301,25 @@ const T = {
     search: 'Hae visoja', all: 'Kaikki', random: 'Arvo visa', top: 'Suosituimmat', noResults: 'Ei osumia.', showAll: n => `Näytä kaikki (${n})`, chosen: n => `Valittu: ${n}`,
     fmt: { list: 'Lista', flags: 'Liput', map: 'Kartta', choice: 'Monivalinta' }, skip: 'Ohita', clickFind: n => `Klikkaa: ${n}`, loadingMap: 'Ladataan karttaa…', question: (a, b) => `Kysymys ${a}/${b}`,
     correct: 'Oikein', correctIs: a => `Oikea vastaus: ${a}`, share: 'Jaa linkki', shareText: 'Haastan sinut visaan', newBest: 'uusi ennätys', bestIs: (n, total) => `ennätys ${n}/${total}`,
-    provisional: 'Vetäjän lopputulos ei tullut perille. Tämä on oma laskusi, eikä sitä kirjata tilastoon.', tapMap: 'Napauta maata nähdäksesi sen nimen.', zoomed: 'Lähennetty: napauta maata.', missed: 'Puuttuvat', found: 'Löydetyt',
-    rematch: 'Uusintaottelu', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
+    provisional: 'Vetäjän lopputulos ei tullut perille. Tämä on oma laskusi, eikä sitä kirjata tilastoon.', tapMap: 'Napauta maata nähdäksesi sen nimen.', zoomed: 'Lähennetty: napauta maata.', mapHelp: 'Lähennä nipistämällä, rullalla tai napeilla. Lähennettyä karttaa voi vetää.', mapKeys: 'Plus ja miinus lähentävät, nuolet siirtävät, nolla näyttää koko kartan.', zoomIn: 'Lähennä', zoomOut: 'Loitonna', zoomAll: 'Koko kartta', zoomGroup: 'Kartan lähennys', missed: 'Puuttuvat', found: 'Löydetyt',
+    rematch: 'Uusintaottelu', review: 'Kertaus', reviewBtn: n => `Harjoittele puuttuneet (${n})`, reviewAll: 'kaikki puuttuneet osattu', reviewInfo: 'Vain viime kerralla puuttuneet kohteet tästä visasta, yksin ja lyhyemmällä ajalla.', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
+    match: 'Ottelu', bo: { 1: 'Yksi peli', 3: 'Paras kolmesta', 5: 'Paras viidestä' },
+    boInfo: 'Erät pelataan peräkkäin tässä huoneessa, ja vetäjä valitsee tai arpoo jokaisen erän visan. Tasapeli ei anna kenellekään erävoittoa.',
+    boOld: 'Kaikilla huoneessa ei ole sivun uusinta versiota, joten ottelua ei voi valita. Pyydä heitä lataamaan sivu uudelleen.',
+    round: k => `Erä ${k}`, afterRound: k => `${k} erää pelattu`, wins: n => `${n} erävoittoa`, roundBtn: k => `Aloita erä ${k}`,
+    nextRound: 'Seuraava erä: arvo visa', nextRoundInfo: 'Arpoo visan aulan suodattimilla, ei jo tässä ottelussa pelattua.', newMatch: 'Uusi ottelu',
+    youMatch: s => `Voitit ottelun ${s}!`, matchWin: (n, s) => `${n} voitti ottelun ${s}`,
     privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
+    daily: 'Päivän visa', dailyInfo: 'Sama visa kaikille tänään. Ensimmäinen peli normaalilla ajalla jää päivän tulokseksi tähän selaimeen.',
+    dailyMeta: (n, s) => `${n} vastausta · ${s}`, dailyPlay: 'Pelaa', dailyAgain: 'Pelaa uudelleen', dailyChallenge: 'Haasta kaveri',
+    dailyMine: (n, total, c) => `Tuloksesi: ${n}/${total} · viimeinen ${c}`, dailyStreak: n => `Putki: ${n} päivää peräkkäin`,
+    dailyLoading: 'Ladataan päivän visaa…', dailyFail: 'Päivän visaa ei saatu ladattua. Lataa sivu uudelleen.',
+    dailySaved: (n, total) => `Päivän visan tulos tallennettu: ${n}/${total}.`, dailyKept: (n, total) => `Päivän visan tuloksesi on jo tallessa (${n}/${total}); uusinta ei muuta sitä.`,
+    dailyShare: (d, q, n, total) => `Päivän visa ${d}: ${q} – sain ${n}/${total}. Pystytkö parempaan?`, dailyShareNew: (d, q) => `Päivän visa ${d}: ${q}. Pelataanko?`,
+    browse: 'Kaikki visat', browseCount: n => `${n} visaa`, browseLoading: 'Ladataan loput visat…', browseFail: 'Osa visoista ei latautunut. Lataa sivu uudelleen.',
+    topics: 'Aiheet', formats: 'Muoto', recent: 'Viimeksi pelatut', played: n => `pelattu ${n}`, noBest: 'ei ennätystä',
+    playSolo: 'Pelaa', challenge: 'Haasta', playSoloFor: n => `Pelaa yksin: ${n}`, challengeFor: n => `Haasta: luo huone visalla ${n}`,
   },
   en: {
     back: '← koirosvg.com', title: 'Quiz Duel',
@@ -282,6 +335,8 @@ const T = {
     parallelInfo: 'Everyone has their own list. Most correct wins; on a tie, whoever got their last answer earlier.',
     raceInfo: 'One shared list: whoever gets an answer first owns it and nobody else can use it.',
     time: 'Time', mul: { 0.5: 'Short', 1: 'Normal', 2: 'Long' }, quiz: 'Quiz',
+    practice: 'Practice alone', practiceInfo: 'No room and no nickname. Works offline once the page has loaded.',
+    soloTitle: 'Practice', soloInfo: 'You play alone in this browser: nothing is sent, and best results are saved only here.', pickQuiz: 'Pick another quiz',
     start: 'Start game', solo: 'Practice alone', waitHost: n => `Waiting for ${n} to start the game.`,
     typeHere: 'Type an answer', giveUp: 'Give up', sure: 'Sure?', out: 'You gave up. Waiting for the others.', spectate: 'A game is running, you are watching.',
     taken: n => `${n} got there first`, already: 'Already on the list',
@@ -290,10 +345,25 @@ const T = {
     search: 'Search quizzes', all: 'All', random: 'Random quiz', top: 'Trending', noResults: 'No matches.', showAll: n => `Show all (${n})`, chosen: n => `Selected: ${n}`,
     fmt: { list: 'List', flags: 'Flags', map: 'Map', choice: 'Multiple choice' }, skip: 'Skip', clickFind: n => `Click: ${n}`, loadingMap: 'Loading map…', question: (a, b) => `Question ${a}/${b}`,
     correct: 'Correct', correctIs: a => `Correct answer: ${a}`, share: 'Share link', shareText: 'I challenge you to a quiz', newBest: 'new best', bestIs: (n, total) => `best ${n}/${total}`,
-    provisional: 'The host\'s final result did not arrive. This is your own count and it is not saved to your record.', tapMap: 'Tap a country to see its name.', zoomed: 'Zoomed in: tap the country.', missed: 'Missed', found: 'Found',
-    rematch: 'Rematch', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
+    provisional: 'The host\'s final result did not arrive. This is your own count and it is not saved to your record.', tapMap: 'Tap a country to see its name.', zoomed: 'Zoomed in: tap the country.', mapHelp: 'Zoom with a pinch, the wheel or the buttons. Drag a zoomed map to move it.', mapKeys: 'Plus and minus zoom, arrows move, zero shows the whole map.', zoomIn: 'Zoom in', zoomOut: 'Zoom out', zoomAll: 'Whole map', zoomGroup: 'Map zoom', missed: 'Missed', found: 'Found',
+    rematch: 'Rematch', review: 'Review', reviewBtn: n => `Practise the missed ones (${n})`, reviewAll: 'all the missed ones found', reviewInfo: 'Only the items you missed last time in this quiz, alone and with less time.', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
+    match: 'Match', bo: { 1: 'Single game', 3: 'Best of three', 5: 'Best of five' },
+    boInfo: 'The games are played one after another in this room, and the host picks or draws the quiz of each game. A draw gives nobody a game win.',
+    boOld: 'Someone in the room does not have the latest version of the page, so a match cannot be chosen. Ask them to reload the page.',
+    round: k => `Game ${k}`, afterRound: k => `${k} games played`, wins: n => `${n} game wins`, roundBtn: k => `Start game ${k}`,
+    nextRound: 'Next game: draw a quiz', nextRoundInfo: 'Draws a quiz with the lobby filters, never one already played in this match.', newMatch: 'New match',
+    youMatch: s => `You won the match ${s}!`, matchWin: (n, s) => `${n} won the match ${s}`,
     privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
+    daily: 'Quiz of the day', dailyInfo: 'The same quiz for everyone today. Your first game at normal time is kept as the day\'s result in this browser.',
+    dailyMeta: (n, s) => `${n} answers · ${s}`, dailyPlay: 'Play', dailyAgain: 'Play again', dailyChallenge: 'Challenge a friend',
+    dailyMine: (n, total, c) => `Your result: ${n}/${total} · last ${c}`, dailyStreak: n => `Streak: ${n} days in a row`,
+    dailyLoading: 'Loading the quiz of the day…', dailyFail: 'The quiz of the day did not load. Reload the page.',
+    dailySaved: (n, total) => `Quiz of the day result saved: ${n}/${total}.`, dailyKept: (n, total) => `Your quiz of the day result is already saved (${n}/${total}); a replay does not change it.`,
+    dailyShare: (d, q, n, total) => `Quiz of the day ${d}: ${q} – I got ${n}/${total}. Can you beat it?`, dailyShareNew: (d, q) => `Quiz of the day ${d}: ${q}. Want to play?`,
+    browse: 'All quizzes', browseCount: n => `${n} quizzes`, browseLoading: 'Loading the rest of the quizzes…', browseFail: 'Some quizzes did not load. Reload the page.',
+    topics: 'Topics', formats: 'Format', recent: 'Recently played', played: n => `played ${n}`, noBest: 'no best yet',
+    playSolo: 'Play', challenge: 'Challenge', playSoloFor: n => `Play alone: ${n}`, challengeFor: n => `Challenge: create a room with ${n}`,
   },
 };
 
@@ -313,7 +383,7 @@ let TOP = [];                     // quiz ids of Suosituimmat, empty until the S
 function readStr(area, key) { try { return window[area].getItem(key); } catch { return null; } }
 function writeStr(area, key, v) { try { window[area].setItem(key, v); } catch { /* stays in memory */ } }
 function readJson(area, key) { try { return JSON.parse(readStr(area, key)); } catch { return null; } }
-const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [] }, readJson('localStorage', STORE_KEY));
+const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [], miss: {}, day: {} }, readJson('localStorage', STORE_KEY));
 if (!Object.hasOwn(T, P.lang)) P.lang = 'fi';
 // The stored copy may be damaged or hand-edited: wrong types would throw in renderHome and look like a failed download.
 const plainObj = x => x && typeof x === 'object' && !Array.isArray(x);
@@ -323,6 +393,14 @@ P.seen = Array.isArray(P.seen) ? P.seen.filter(Number.isFinite) : [];
 P.best = Object.fromEntries(Object.entries(plainObj(P.best) ? P.best : {}).filter(([, b]) => plainObj(b) && count(b.n) && count(b.t) && count(b.total)));
 P.h2h = Object.fromEntries(Object.entries(plainObj(P.h2h) ? P.h2h : {}).filter(([k, r]) => k.startsWith('n:') && plainObj(r) && typeof r.name === 'string' && count(r.w) && count(r.l))
   .map(([k, r]) => [k, { name: r.name.slice(0, 20), w: r.w, l: r.l, d: count(r.d) ? r.d : 0 }]));
+// miss: quiz id → { i: missed item indices of the full quiz, n: its item count then (a changed quiz drops the list), at }
+P.miss = Object.fromEntries(Object.entries(plainObj(P.miss) ? P.miss : {}).filter(([, m]) => plainObj(m) && Array.isArray(m.i) && count(m.n) && count(m.at))
+  .map(([k, m]) => [k, { i: [...new Set(m.i.filter(i => Number.isInteger(i) && i >= 0 && i < m.n))].slice(0, MISS_KEEP), n: m.n, at: m.at }]).filter(([, m]) => m.i.length));
+// day: Helsinki date 'YYYY-MM-DD' → { q: quiz id, n, t, total } of the first counted game of that day's quiz (F6)
+P.day = Object.fromEntries(Object.entries(plainObj(P.day) ? P.day : {}).filter(([k, d]) => /^\d{4}-\d{2}-\d{2}$/.test(k) && plainObj(d) && typeof d.q === 'string' && count(d.n) && count(d.t) && count(d.total))
+  .map(([k, d]) => [k, { q: d.q, n: d.n, t: d.t, total: d.total }]).sort(([a], [b]) => a < b ? 1 : -1).slice(0, DAY_KEEP));
+// last: quiz ids of my latest games, newest first (F2). An older page keeps the field as it is and never reads it.
+P.last = Array.isArray(P.last) ? [...new Set(P.last.filter(x => typeof x === 'string' && x.length <= 80))].slice(0, LAST_KEEP) : [];
 const save = () => writeStr('localStorage', STORE_KEY, JSON.stringify(P));
 
 function randomId(len, alphabet) {
@@ -382,6 +460,35 @@ function shuffled(list, seed) {
 }
 const validSettings = s => s && QUIZ.has(s.quiz) && MODES.includes(s.mode) && MULS.includes(s.mul);
 
+// ---- quiz of the day (F6): no server, every browser derives the same quiz from the Helsinki date ----
+// The pool is every `list` quiz, packs included, sorted by id so that load order does not matter. Days walk through a
+// shuffle of the pool (one shuffle per cycle), so no quiz repeats before all have come up. Adding quizzes reshuffles the
+// pool for everyone at once on deploy; a cached old page can show another quiz until it reloads.
+const DAY_FMT = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Helsinki', year: 'numeric', month: '2-digit', day: '2-digit' });
+function dayKey(ms) {
+  const p = Object.fromEntries(DAY_FMT.formatToParts(new Date(ms)).map(x => [x.type, x.value]));
+  return `${p.year}-${p.month}-${p.day}`;
+}
+const dayNum = key => Math.round(Date.UTC(+key.slice(0, 4), +key.slice(5, 7) - 1, +key.slice(8, 10)) / 864e5);
+const keyOfNum = n => new Date(n * 864e5).toISOString().slice(0, 10);
+const dayLabel = key => `${+key.slice(8, 10)}.${+key.slice(5, 7)}.`;
+let packsState = 'loading';   // the daily pick needs the pack quizzes: 'loading' | 'ok' | 'fail'
+function dailyId(key) {
+  if (packsState !== 'ok') return null;
+  const pool = [...QUIZ.values()].filter(q => fmtOf(q) === 'list').map(q => q.id).sort();
+  if (!pool.length) return null;
+  const n = dayNum(key);
+  return shuffled(pool, 0x7155 + Math.floor(n / pool.length))[n % pool.length];
+}
+// Days in a row with a result, counted back from today (or from yesterday while today is still unplayed).
+function dailyStreak() {
+  let n = dayNum(dayKey(Date.now()));
+  if (!P.day[keyOfNum(n)]) n--;
+  let k = 0;
+  while (P.day[keyOfNum(n - k)]) k++;
+  return k;
+}
+
 function buildItems(q) {
   const fmt = fmtOf(q);
   if (fmt === 'choice') return q.items.map(it => ({ fi: [it.ok.fi], en: [it.ok.en], hint: it.q, group: null, opts: [{ ...it.ok, ok: true }, ...it.no] }));
@@ -419,6 +526,57 @@ function getClient() {
 // ---- room ----
 const hostId = () => R?.players[0]?.id ?? null;
 const isHost = () => hostId() === MY_ID;
+
+// ---- match, best of three or five (F4) ----
+// The host keeps R.match and sends it with `start`, `end` and the snapshot; the others take the host's copy. An older page
+// ignores those fields and the `bo` setting, so a match can be chosen only when every player's presence says v >= 2.
+// R.match = { id: seq of its first game, n: 3|5, p: [{id, name}], w: game wins per p, g: games played, last: seq of the
+// last scored game, q: quiz ids played }
+const matchable = () => !R.solo && R.players.every(p => p.v >= PAGE_V);
+const boOf = () => (R && !R.solo && matchable() && BOS.includes(R.settings.bo)) ? R.settings.bo : 1;
+// Index of the match winner in M.p, or -1. A majority of n wins it; after n games (draws give nobody a win) a sole leader does.
+function matchWinner(M) {
+  const top = Math.max(...M.w), sole = M.w.filter(x => x === top).length === 1;
+  return top > 0 && (top >= (M.n + 1) / 2 || (M.g >= M.n && sole)) ? M.w.indexOf(top) : -1;
+}
+function cleanMatch(m) {   // from another browser: untrusted
+  if (!m || typeof m !== 'object' || !BOS.includes(m.n) || m.n === 1 || !Number.isFinite(m.id) || !Array.isArray(m.p) || !Array.isArray(m.w)) return null;
+  if (m.p.length < 2 || m.p.length > MAX_PLAYERS || m.p.length !== m.w.length || !m.p.every(p => p && typeof p.id === 'string')) return null;
+  return {
+    id: m.id, n: m.n, p: m.p.map(p => ({ id: p.id.slice(0, 40), name: cleanName(p.name) || '?' })), w: m.w.map(x => Math.round(clamp(x, 0, 99))),
+    g: Math.round(clamp(m.g, 0, 99)), last: Number.isFinite(m.last) ? m.last : 0, q: Array.isArray(m.q) ? m.q.filter(id => QUIZ.has(id)).slice(0, 20) : [],
+  };
+}
+// Host only, once per game: a sole winner with at least one answer gets the game.
+function scoreMatch() {
+  const M = R.match;
+  if (!M || M.id !== G.mt || M.last === G.seq || matchWinner(M) >= 0) return;
+  const [a, b] = G.results;
+  M.g++; M.last = G.seq; M.q = [...M.q, G.quiz.id].slice(-20);
+  if (a.n > 0 && (!b || rank(a, b) < 0)) { const i = M.p.findIndex(p => p.id === a.id); if (i >= 0) M.w[i]++; }
+}
+const matchScore = M => [...M.w].sort((a, b) => b - a).join('–');
+// "Paras kolmesta · 1 erää pelattu  Aapo 1  Bea 0", or the winner once the match is decided.
+function matchLine() {
+  const M = R?.match;
+  if (!M) return null;
+  const win = matchWinner(M);
+  if (win >= 0) {
+    const p = M.p[win];
+    return h('p', { class: 'matchline over', role: 'status', style: `--c:${colorOf(p.id)}` }, h('b', { text: p.id === MY_ID ? t('youMatch', matchScore(M)) : t('matchWin', p.name, matchScore(M)) }));
+  }
+  return h('p', { class: 'matchline' }, h('span', { class: 'lbl2', text: `${T[P.lang].bo[M.n]} · ${t('afterRound', M.g)}` }),
+    ...M.p.map((p, i) => h('span', { style: `--c:${colorOf(p.id)}` }, h('b', { text: p.name }), ` ${M.w[i]}`)));
+}
+// The host's "next game": a random quiz with the lobby filters, never one this match has had, then straight to the start.
+function nextRound() {
+  if (!isHost()) return;
+  const played = new Set([...(R.match?.q ?? []), R.settings.quiz]);
+  const pool = quizMatches().filter(Boolean), fresh = pool.filter(x => !played.has(x.id));
+  const list = fresh.length ? fresh : DATA.quizzes.filter(x => !played.has(x.id));
+  if (list.length) setSettings({ quiz: list[Math.floor(Math.random() * list.length)].id });
+  startGame();
+}
 const fromHost = m => !R.players.length || hostId() === m.from;
 const nameOf = id => G?.players.find(p => p.id === id)?.name ?? R?.players.find(p => p.id === id)?.name ?? '?';
 function colorOf(id) {
@@ -431,13 +589,16 @@ function send(type, payload) {
 }
 
 async function joinRoom(code, created) {
-  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
+  const preset = created ? pendingRoomQuiz : null;   // the home browser's Challenge: my new room starts with that quiz
+  pendingRoomQuiz = null;
+  R = { code, ch: null, players: [], settings: { quiz: QUIZ.has(preset) ? preset : DATA.quizzes[0].id, mode: 'parallel', mul: 1, bo: 1 }, match: null, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
   try { await packsReady; } catch {
     R = null; homeError = 'noData'; history.replaceState(null, '', location.pathname); render(); return;
   }
   if (R?.code !== code) return;
+  if (preset && QUIZ.has(preset)) R.settings = { ...R.settings, quiz: preset };
   paintSettings();
   let client;
   try { client = await getClient(); } catch {
@@ -468,6 +629,52 @@ async function joinRoom(code, created) {
   if (!created) R.aloneT = setTimeout(() => { if (R && R.players.length <= 1 && !G) { R.alone = true; paintPlayers(); } }, 3000);
 }
 
+// Practice alone: a room with no channel. send() is a no-op without R.ch and I am the host, so the game runs the same
+// code as a room but needs no network, no nickname and no Realtime quota. The chosen settings survive a reload of the tab.
+const SOLO_HASH = 'harjoittele', SOLO_KEY = 'visa-solo';
+async function startSolo() {
+  const saved = readJson('sessionStorage', SOLO_KEY), play = pendingPlay;
+  pendingPlay = null;
+  R = { code: SOLO_HASH, solo: true, ch: null, players: [{ id: MY_ID, name: cleanName(P.nick) || t('you'), joined: 0 }], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
+  G = null;
+  render();
+  try { await packsReady; } catch {
+    R = null; homeError = 'noData'; history.replaceState(null, '', location.pathname); render(); return;
+  }
+  if (!R?.solo) return;
+  if (saved && validSettings({ ...saved, mode: 'parallel' })) R.settings = { quiz: saved.quiz, mode: 'parallel', mul: saved.mul };
+  if (pendingDaily && applyDaily()) return;
+  if (play && QUIZ.has(play)) { setSettings({ quiz: play, mul: 1 }); startGame(); return; }   // the home browser's Play
+  const review = pendingReview;
+  pendingReview = null;
+  if (review && QUIZ.has(review) && missFor(review).length) { setSettings({ quiz: review }); startGame(missFor(review)); return; }
+  paintSettings();
+  restoreGame();
+}
+
+// The quiz of the day into the solo settings at normal time; 'start' (the card's Play) also starts it. True when started.
+const DAILY_HASH = 'paiva';
+let pendingDaily = null;   // null | 'pick' | 'start'
+function applyDaily() {
+  const how = pendingDaily, id = dailyId(dayKey(Date.now()));
+  pendingDaily = null;
+  if (!id || !R?.solo) return false;
+  setSettings({ quiz: id, mul: 1 });
+  if (how !== 'start') return false;
+  startGame();
+  return true;
+}
+
+// "Practise the missed ones": straight into a review game alone. From a room's results it leaves the room first (the
+// review is never played in a room), and startSolo picks it up once the packs are in.
+let pendingReview = null;
+function startReview(id) {
+  if (!missFor(id).length) return;
+  if (R?.solo) { setSettings({ quiz: id }); startGame(missFor(id)); return; }
+  pendingReview = id;
+  location.hash = SOLO_HASH;
+}
+
 // The host is the earliest `joined`. A newcomer always ranks after everyone present, so a device with a wrong clock can't
 // take over the room; the value is kept for the tab so that a reload keeps the rank.
 function track(ch) {
@@ -481,7 +688,7 @@ function track(ch) {
     joined = Math.max(Date.now(), ...others.map(x => x + 1));
     writeStr('sessionStorage', key, String(joined));
   }
-  ch.track({ name: cleanName(P.nick), joined });
+  ch.track({ name: cleanName(P.nick), joined, v: PAGE_V });
 }
 
 // ---- own copy of the running game: a reload restores it when nobody else is there to send a snapshot ----
@@ -516,7 +723,7 @@ function onPresence() {
   if (R.connected && !R.tracked) track(R.ch);
   const list = Object.entries(R.ch.presenceState()).map(([id, metas]) => {
     const m = metas[metas.length - 1] || {};
-    return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0 };
+    return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0, v: Number(m.v) || 1 };
   }).sort((a, b) => a.joined - b.joined || (a.id < b.id ? -1 : 1));
   R.players = list;
   if (list.findIndex(p => p.id === MY_ID) >= MAX_PLAYERS) {
@@ -535,9 +742,14 @@ function onPresence() {
 }
 
 function route() {
-  const code = parseCode(location.hash);
-  if (R && R.code === code) return;
+  // #paiva (the quiz of the day's link) is practice alone with the day's quiz chosen; the address becomes #harjoittele
+  // so that a reload keeps the solo settings. An older page reads #paiva as no code and shows its home.
+  if (location.hash.slice(1) === DAILY_HASH) { pendingDaily = pendingDaily || 'pick'; history.replaceState(null, '', `#${SOLO_HASH}`); }
+  const solo = location.hash.slice(1) === SOLO_HASH;
+  const code = solo ? SOLO_HASH : parseCode(location.hash);
+  if (R && R.code === code) { if (R.solo && pendingDaily && !G && packsState === 'ok') applyDaily(); return; }
   if (R) leaveRoom();
+  if (solo) { pendingCode = null; startSolo(); return; }
   if (!code) { pendingCode = null; render(); return; }
   if (!cleanName(P.nick)) { pendingCode = code; render(); return; }
   pendingCode = null;
@@ -553,7 +765,7 @@ function onMessage(m) {
     case 'hello': if (isHost() || m.from === hostId()) send('snap', snapshot()); return;
     case 'settings': if (fromHost(m)) applySettings(m.s); return;
     case 'snap': if (fromHost(m) || !R.synced) applySnapshot(m); return;
-    case 'start': if (fromHost(m)) beginGame(m); return;
+    case 'start': if (fromHost(m)) { if (G?.seq !== m.seq) R.match = cleanMatch(m.mt); beginGame(m); } return;
     case 'chat': addChat(m.from, m.text); return;
   }
   if (m.t === 'end' && G?.provisional && m.seq === G.seq && fromHost(m)) { applyEnd(m); return; }   // the host's result replaces my own count
@@ -570,7 +782,7 @@ function onMessage(m) {
 
 function applySettings(s) {
   if (!validSettings(s)) return;
-  R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul };
+  R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul, bo: BOS.includes(s.bo) ? s.bo : 1 };   // an older host sends no `bo`
   paintSettings();
 }
 
@@ -578,8 +790,10 @@ function snapshot() {
   const s = { s: R.settings };
   if (G && !G.over) s.game = {
     seq: G.seq, quiz: G.quiz.id, mode: G.mode, mul: G.mul, players: G.players, elapsed: Math.round(performance.now() - G.startAt),
-    found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done],
+    found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done], mt: G.mt,
   };
+  if (R.match) s.match = R.match;   // an older page ignores both
+  if (s.game && G.only) s.game.only = G.only;   // practice alone only: never sent to a room
   if (R.last) s.last = R.last;   // someone who missed all three `end`s still gets the real result
   return s;
 }
@@ -589,6 +803,7 @@ const claimList = () => [...G.claims].map(([i, c]) => [i, c.by, c.t]);
 function applySnapshot(m) {
   R.synced = true;
   applySettings(m.s);
+  if (typeof m.from === 'string' && !R.solo) R.match = cleanMatch(m.match);   // not from restoreGame's own copy
   const g = m.game, byHost = typeof m.from === 'string' && fromHost(m);
   if (byHost && m.last && G && m.last.seq === G.seq && (!G.over || G.provisional)) { applyEnd(m.last); return; }
   if (!g) return;
@@ -623,19 +838,24 @@ function beginGame(m) {
   const players = m.players.slice(0, MAX_PLAYERS).filter(p => p && typeof p.id === 'string').map(p => ({ id: p.id.slice(0, 40), name: cleanName(p.name) || '?' }));
   if (!players.length) return;
   const quiz = QUIZ.get(m.quiz);
-  const items = buildItems(quiz);
+  const all = buildItems(quiz);
+  // Review of the missed items (practice alone only): `only` holds indices of the full quiz, the game indexes the subset.
+  const only = R?.solo && Array.isArray(m.only) ? [...new Set(m.only.filter(i => Number.isInteger(i) && i >= 0 && i < all.length))] : null;
+  if (only && !only.length) return;
+  const items = only ? only.map(i => all[i]) : all;
   const answers = new Map();
   items.forEach((it, i) => { for (const a of [...it.fi, ...it.en]) answers.set(norm(a), i); });
-  const durMs = quiz.t * 1000 * m.mul;
+  const durMs = only ? reviewSeconds(quiz, m.mul, only.length, all.length) * 1000 : quiz.t * 1000 * m.mul;
   const now = performance.now();
   const elapsed = clamp(m.elapsed, -COUNTDOWN_MS, durMs + LOCAL_WATCHDOG_MS);
   G = {
-    seq: m.seq, quiz, fmt: fmtOf(quiz), order: shuffled(items.map((_, i) => i), m.seq), seen: new Set((readStr('sessionStorage', `visa-seen-${m.seq}`) || '').split(',').filter(Boolean).map(Number)), tried: new Map(), lockUntil: 0, shown: -1, items, answers, mode: m.mode, mul: m.mul, durMs, players,
+    seq: m.seq, quiz, only, fullN: all.length, fmt: fmtOf(quiz), order: shuffled(items.map((_, i) => i), m.seq), seen: new Set((readStr('sessionStorage', `visa-seen-${m.seq}`) || '').split(',').filter(Boolean).map(Number)), tried: new Map(), lockUntil: 0, shown: -1, items, answers, mode: m.mode, mul: m.mul, durMs, players,
     startAt: now - elapsed, endAt: now - elapsed + durMs,
     found: new Map(players.map(p => [p.id, { set: new Set(), t: 0 }])), claims: new Map(), pending: new Map(), done: new Set(),
     state: 'count', over: false, finishing: false, out: !players.some(p => p.id === MY_ID), spectator: !players.some(p => p.id === MY_ID),
     results: null, cells: [], absent: new Map(), lastRepair: now, sentSize: 0, sentAt: now, holdT: 0, flashT: 0, confirmT: 0,
   };
+  G.mt = R?.solo ? null : Number.isFinite(m.mt) ? m.mt : Number.isFinite(m.mt?.id) ? m.mt.id : null;   // the match this game counts for
   if (G.fmt === 'map') loadMap();
   render();
 }
@@ -858,8 +1078,9 @@ function finish(delay) {
   setTimeout(() => {
     if (G !== game || G.over) return;
     const msg = { seq: G.seq, res: tally(), c: G.mode === 'race' ? claimList() : null };
+    applyEnd(msg);   // first: it scores the match, which then travels with the result
+    if (R.last?.mt) msg.mt = R.last.mt;
     send('end', msg);
-    applyEnd(msg);
     for (const wait of [1000, 3000]) setTimeout(() => send('end', msg), wait);   // broadcasts can get lost
   }, delay);
 }
@@ -887,7 +1108,11 @@ function applyEnd(m, provisional) {
     return { id: p.id, name: p.name, n: Math.round(clamp(r.n, 0, G.items.length)), t: clamp(r.t, 0, G.durMs) };
   }).sort(rank);
   G.over = true; G.pending.clear();
-  if (!provisional) R.last = { seq: G.seq, res: G.results.map(r => ({ id: r.id, n: r.n, t: r.t })), c: G.mode === 'race' ? claimList() : null };
+  if (!provisional) {
+    if (G.mt) { const mt = cleanMatch(m.mt); if (mt && mt.id === G.mt) R.match = mt; else if (isHost() && !m.mt) scoreMatch(); }
+    R.last = { seq: G.seq, res: G.results.map(r => ({ id: r.id, n: r.n, t: r.t })), c: G.mode === 'race' ? claimList() : null };
+    if (G.mt && R.match?.id === G.mt) R.last.mt = R.match;
+  }
   dropGame();
   record();
   render();
@@ -897,6 +1122,7 @@ function record() {
   if (G.spectator || P.seen.includes(G.seq)) return;
   const me = G.results.find(r => r.id === MY_ID);
   if (!me) return;
+  P.last = [G.quiz.id, ...P.last.filter(id => id !== G.quiz.id)].slice(0, LAST_KEEP);
   if (!G.provisional) P.seen = [...P.seen, G.seq].slice(-SEEN_KEEP);
   for (const r of G.provisional ? [] : G.results) {
     if (r.id === MY_ID) continue;
@@ -907,12 +1133,41 @@ function record() {
     if (order === 0) rec.d++; else if (order < 0) rec.w++; else rec.l++;
   }
   // Not from a provisional (own-tally) result either: the host's real result may be lower, and a best is never lowered.
-  if (!G.provisional && G.mul === 1 && me.n > 0) {
+  rememberMissed(me);
+  if (!G.provisional && !G.only && G.mul === 1 && me.n > 0) {
     const b = P.best[G.quiz.id];
     if (!b || rank(me, b) < 0) P.best[G.quiz.id] = { n: me.n, t: me.t, total: G.items.length };
   }
+  // Quiz of the day: the first game of that day's quiz at normal time with an own list (alone or in a room) is the result.
+  // The day is the game's start (seq), so a game over midnight belongs to the day it began.
+  const day = dayKey(G.seq);
+  if (!G.provisional && !G.only && G.mul === 1 && G.mode === 'parallel' && !P.day[day] && dailyId(day) === G.quiz.id) {
+    P.day[day] = { q: G.quiz.id, n: me.n, t: me.t, total: G.items.length };
+    G.dailyNew = true;
+    const days = Object.keys(P.day).sort();
+    for (const k of days.slice(0, Math.max(0, days.length - DAY_KEEP))) delete P.day[k];
+  }
   save();
 }
+
+// What I did not get stays as this quiz's review list. A review keeps only what is still missing (and an empty one clears
+// the list); a game where I found nothing leaves the earlier list alone, since "everything" is no review.
+function rememberMissed(me) {
+  if (!G.only && me.n === 0) return;
+  const mine = G.mode === 'race' ? new Set([...G.claims].filter(([, c]) => c.by === MY_ID).map(([i]) => i)) : G.found.get(MY_ID).set;
+  const missed = G.items.map((_, k) => k).filter(k => !mine.has(k)).map(k => G.only ? G.only[k] : k).slice(0, MISS_KEEP);
+  if (!missed.length) { delete P.miss[G.quiz.id]; return; }
+  P.miss[G.quiz.id] = { i: missed, n: G.fullN, at: Date.now() };
+  const ids = Object.keys(P.miss);
+  if (ids.length > MISS_QUIZZES) for (const id of ids.sort((a, b) => P.miss[a].at - P.miss[b].at).slice(0, ids.length - MISS_QUIZZES)) delete P.miss[id];
+}
+// The stored review list of a quiz, or [] when there is none or the quiz has changed since.
+function missFor(id) {
+  const m = P.miss[id], q = QUIZ.get(id);
+  return m && q && buildItems(q).length === m.n ? m.i : [];
+}
+// The quiz's time shared out per item, rounded up to 5 s, never below REVIEW_MIN_S or above the full time.
+const reviewSeconds = (q, mul, k, n) => Math.min(q.t * mul, Math.max(REVIEW_MIN_S, Math.ceil(q.t * mul * k / n / 5) * 5));
 
 function tick() {
   if (!G || G.over) return;
@@ -950,12 +1205,23 @@ function repair(force) {
   else send('claims', { seq: G.seq, c: claimList() });
 }
 
-function startGame() {
+// `only` (practice alone): the missed items to review, as indices of the full quiz. A click handler passes an event instead.
+function startGame(only) {
   if (!isHost()) return;
   const s = R.settings;
   const msg = { seq: Date.now(), quiz: s.quiz, mode: s.mode, mul: s.mul, players: R.players.map(p => ({ id: p.id, name: p.name })), elapsed: -COUNTDOWN_MS };
+  if (Array.isArray(only)) { if (!R.solo || !only.length) return; msg.only = only; }
+  // A match goes on while its players are the same and nobody has won it; otherwise this game starts a new one.
+  const bo = boOf(), ids = msg.players.map(p => p.id).sort().join();
+  if (bo > 1 && msg.players.length > 1 && !msg.only) {
+    const M = R.match;
+    if (!M || M.n !== bo || matchWinner(M) >= 0 || M.p.map(p => p.id).sort().join() !== ids) {
+      R.match = { id: msg.seq, n: bo, p: msg.players.map(p => ({ ...p })), w: msg.players.map(() => 0), g: 0, last: 0, q: [] };
+    }
+    msg.mt = R.match;
+  } else if (!R.solo) R.match = null;
   send('start', msg);
-  sb.rpc('visa_count_play', { q: s.quiz }).then(() => {}, () => {});   // anonymous play count for Suosituimmat
+  if (!R.solo) sb.rpc('visa_count_play', { q: s.quiz }).then(() => {}, () => {});   // anonymous play count for Suosituimmat
   beginGame(msg);
   // Nothing else repairs a lost start: a guest without G would ignore the whole game.
   for (const wait of [800, 2000]) setTimeout(() => { if (G?.seq === msg.seq && !G.over) send('snap', snapshot()); }, wait);
@@ -964,6 +1230,7 @@ function startGame() {
 function setSettings(patch) {
   if (!isHost()) return;
   R.settings = { ...R.settings, ...patch };
+  if (R.solo) writeStr('sessionStorage', SOLO_KEY, JSON.stringify(R.settings));
   send('settings', { s: R.settings });
   paintSettings();
 }
@@ -984,14 +1251,16 @@ function langTabs() {
     h('button', { class: 'kt-tab', 'aria-pressed': String(P.lang === l), text: l.toUpperCase(), onclick: () => { P.lang = l; save(); render(); } })));
 }
 const topBar = () => h('div', { class: 'top' }, h('a', { class: 'crumb', href: '/', text: t('back') }), langTabs());
-const gameTitle = () => h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: t(G.mode) }));
+const gameTitle = () => h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: G.only ? t('review') : G.mt && R.match?.id === G.mt ? `${t(G.mode)} · ${T[P.lang].bo[R.match.n]} · ${t('round', R.match.g + 1)}` : t(G.mode) }));
+// The room's match is still open for the next game: same players, same setting, nobody has won it yet.
+const matchGoesOn = () => { const M = R?.match; return !!M && boOf() === M.n && matchWinner(M) < 0 && M.g > 0; };
 const foot = () => h('footer', {}, t('privacy') + ' ', h('a', { href: '/tietosuoja', text: t('privacyLink') }));
 
 function renderHome() {
   const err = h('p', { class: 'err', role: 'alert', text: homeError ? t(homeError) : '' });
   homeError = null;
   const nick = h('input', { class: 'kt-input', maxlength: NAME_MAX, placeholder: t('nickPh'), 'aria-label': t('nick'), autocomplete: 'off', value: P.nick, oninput: e => { P.nick = e.target.value; save(); } });
-  const needNick = () => { if (cleanName(P.nick)) return true; err.textContent = t('nickNeeded'); nick.focus(); return false; };
+  const needNick = V.needNick = () => { if (cleanName(P.nick)) return true; err.textContent = t('nickNeeded'); nick.focus(); return false; };
   const create = () => { if (!needNick()) return; createdCode = randomId(4, CODE_ALPHABET); location.hash = createdCode; };
   const join = () => {
     if (!needNick()) return;
@@ -1005,13 +1274,15 @@ function renderHome() {
     : h('div', { class: 'stack' },
         h('div', { class: 'row' }, h('button', { class: 'kt-btn primary', text: t('create'), onclick: create })),
         h('p', { class: 'muted', text: t('or') }),
-        h('div', { class: 'row' }, code, h('button', { class: 'kt-btn', text: t('join'), onclick: join })));
+        h('div', { class: 'row' }, code, h('button', { class: 'kt-btn', text: t('join'), onclick: join })),
+        h('div', { class: 'solo' }, h('a', { class: 'kt-btn', href: `#${SOLO_HASH}`, text: t('practice') }), h('p', { class: 'muted', text: t('practiceInfo') })));
   const rivals = Object.values(P.h2h);
   const bests = DATA.quizzes.filter(q => P.best[q.id]);
   app.replaceChildren(
     topBar(),
     h('h1', { text: t('title') }),
     h('p', { class: 'lead', text: t('lead') }),
+    V.daily = h('section', { class: 'card daily', 'aria-labelledby': 'daily-h' }),
     h('div', { class: 'cols' },
       h('section', { class: 'card stack' }, h('div', {}, h('div', { class: 'lbl', text: t('nick') }), h('div', { class: 'row' }, nick)), startRow, err),
       h('section', { class: 'card' }, h('h2', { text: t('mine') }),
@@ -1019,11 +1290,124 @@ function renderHome() {
         rivals.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('vs') }), h('ul', { class: 'stats' }, rivals.map(r =>
           h('li', {}, h('span', { text: r.name }), h('span', { text: `${r.w}–${r.l}` + (r.d ? ` (${r.d})` : '') }))))),
         bests.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('best') }), h('ul', { class: 'stats' }, bests.map(q =>
-          h('li', {}, h('span', { text: quizName(q) }), h('span', { text: `${P.best[q.id].n}/${P.best[q.id].total}` }))))))),
+          h('li', {}, h('span', { text: quizName(q) }), h('span', { text: `${P.best[q.id].n}/${P.best[q.id].total}` })))))),
+      V.browse = h('section', { class: 'card wide browse', 'aria-labelledby': 'browse-h' })),
     foot());
+  paintDaily();
+  paintBrowse();
+}
+
+// ---- home quiz browser (F2): every quiz by topic and format with my best, played alone at once or as a new room ----
+const B = { cat: '', fmt: '', q: '', all: false };   // the browser's filters, kept for the visit
+let pendingPlay = null;       // quiz id: startSolo starts it straight away
+let pendingRoomQuiz = null;   // quiz id: the room I create next starts with it chosen
+function paintBrowse() {
+  if (!V.browse) return;
+  keepFocus(V.browse, () => {
+    const set = patch => { Object.assign(B, patch, { all: false }); paintBrowse(); };
+    const fmtNames = T[P.lang].fmt, mine = new Set([...Object.keys(P.best), ...P.last]);
+    const meta = (list, played) => [t('browseCount', list.length), played > 0 && t('played', played)].filter(Boolean).join(' · ');
+    const topic = (c, label) => {
+      const list = DATA.quizzes.filter(x => !c || x.cat === c);
+      return h('button', { class: 'kt-btn topic', 'data-k': `bc-${c}`, 'aria-pressed': String(B.cat === c), onclick: () => set({ cat: c }) },
+        h('b', { text: label }), h('small', { text: meta(list, list.filter(x => mine.has(x.id)).length) }));
+    };
+    const inCat = DATA.quizzes.filter(x => !B.cat || x.cat === B.cat);
+    const fmts = Object.keys(fmtNames).filter(f => f === B.fmt || inCat.some(x => fmtOf(x) === f));
+    const q = norm(B.q), list = inCat.filter(x => (!B.fmt || fmtOf(x) === B.fmt) && (!q || searchText(x).includes(q)));
+    const limit = matchMedia('(max-width:600px)').matches ? BROWSE_LIMIT_PHONE : BROWSE_LIMIT, shown = B.all ? list : list.slice(0, limit);
+    const recent = !B.cat && !B.fmt && !q ? P.last.map(id => QUIZ.get(id)).filter(Boolean) : [];
+    fill(V.browse,
+      h('div', { class: 'dayhead' }, h('h2', { id: 'browse-h', text: t('browse') }), h('span', { class: 'kt-status', text: t('browseCount', DATA.quizzes.length) })),
+      packsState !== 'ok' && h('p', { class: packsState === 'fail' ? 'err' : 'muted', role: packsState === 'fail' ? 'alert' : null, text: t(packsState === 'fail' ? 'browseFail' : 'browseLoading') }),
+      h('div', { class: 'row filters' }, h('input', { class: 'kt-input', type: 'search', 'data-k': 'bsearch', placeholder: t('search'), 'aria-label': t('search'), autocomplete: 'off', value: B.q,
+        oninput: e => { B.q = e.target.value; B.all = false; paintBrowse(); } })),
+      h('div', { class: 'lbl', text: t('topics') }),
+      h('div', { class: 'topics', role: 'group', 'aria-label': t('topics') }, topic('', t('all')), Object.entries(DATA.cats).map(([c, n]) => topic(c, n[P.lang]))),
+      h('div', { class: 'lbl', text: t('formats') }),
+      h('div', { class: 'kt-tabs filters', role: 'group', 'aria-label': t('formats') }, ['', ...fmts].map(f => h('button', { class: 'kt-tab', 'data-k': `bf-${f}`, 'aria-pressed': String(B.fmt === f), onclick: () => set({ fmt: f }) },
+        f ? fmtNames[f] : t('all'), h('span', { class: 'n', text: String(f ? inCat.filter(x => fmtOf(x) === f).length : inCat.length) })))),
+      recent.length > 0 && h('h3', { text: t('recent') }),
+      recent.length > 0 && h('ul', { class: 'qrows' }, recent.map(x => quizRow(x, 'r'))),
+      recent.length > 0 && h('h3', { text: B.cat ? DATA.cats[B.cat][P.lang] : t('all') }),
+      list.length ? h('ul', { class: 'qrows' }, shown.map(x => quizRow(x, 'l'))) : h('p', { class: 'muted', text: t('noResults') }),
+      list.length > shown.length && h('button', { class: 'kt-btn', 'data-k': 'ball', style: 'margin-top:10px', text: t('showAll', list.length), onclick: () => { B.all = true; paintBrowse(); } }));
+  });
+}
+// One quiz of the browser: name, topic and format, my best as a bar, Play alone and Challenge (a new room with it chosen).
+function quizRow(x, where) {
+  const b = P.best[x.id], name = quizName(x), pct = b && b.total ? Math.min(100, Math.round(b.n / b.total * 100)) : 0;
+  const play = () => { pendingPlay = x.id; location.hash = SOLO_HASH; };
+  const challenge = () => { if (!V.needNick()) return; pendingRoomQuiz = x.id; createdCode = randomId(4, CODE_ALPHABET); location.hash = createdCode; };
+  return h('li', { class: 'qrow' },
+    h('div', { class: 'qtext' }, h('b', { text: name }),
+      h('small', { text: [DATA.cats[x.cat]?.[P.lang], T[P.lang].fmt[fmtOf(x)], buildItems(x).length, minutes(x.t)].filter(v => v != null && v !== '').join(' · ') })),
+    h('div', { class: 'qbest' + (b ? '' : ' none') }, h('div', { class: 'meter', 'aria-hidden': 'true' }, h('i', { style: `width:${pct}%` })),
+      h('span', { text: b ? t('bestIs', b.n, b.total) : t('noBest') })),
+    h('div', { class: 'row' },
+      h('button', { class: 'kt-btn sm primary', 'data-k': `p${where}-${x.id}`, 'aria-label': t('playSoloFor', name), text: t('playSolo'), onclick: play }),
+      h('button', { class: 'kt-btn sm', 'data-k': `c${where}-${x.id}`, 'aria-label': t('challengeFor', name), text: t('challenge'), onclick: challenge })));
+}
+
+// The home card of the quiz of the day. Its own paint: the packs (and so the day's pick) arrive after the home screen.
+function paintDaily() {
+  if (!V.daily) return;
+  const key = dayKey(Date.now()), id = dailyId(key), rec = P.day[key];
+  const head = h('div', { class: 'dayhead' }, h('h2', { id: 'daily-h', text: t('daily') }), h('span', { class: 'kt-status', text: dayLabel(key) }));
+  const q = id && (QUIZ.get(rec?.q) || QUIZ.get(id));
+  if (!q) {
+    fill(V.daily, head, h('p', { class: packsState === 'fail' ? 'err' : 'muted', role: packsState === 'fail' ? 'alert' : null, text: t(packsState === 'fail' ? 'dailyFail' : 'dailyLoading') }));
+    return;
+  }
+  const streak = dailyStreak(), share = dailyShare(key, q, !!rec);
+  const play = h('button', { class: 'kt-btn' + (rec ? '' : ' primary'), text: t(rec ? 'dailyAgain' : 'dailyPlay'), onclick: () => { pendingDaily = 'start'; location.hash = DAILY_HASH; } });
+  fill(V.daily, head,
+    h('p', { class: 'dayquiz' }, h('b', { text: quizName(q) }), h('span', { class: 'muted', text: t('dailyMeta', buildItems(q).length, minutes(q.t)) })),
+    rec && h('p', { class: 'daymine', text: t('dailyMine', rec.n, rec.total, clock(rec.t)) }),
+    streak > 1 && h('p', { class: 'muted', text: t('dailyStreak', streak) }),
+    h('div', { class: 'row' }, rec ? [share.btn, play] : [play, share.btn]),
+    share.field,
+    h('p', { class: 'muted', text: t('dailyInfo') }));
+}
+
+// "Challenge a friend": the system share sheet where there is one, else the clipboard, else a field to copy by hand.
+function dailyShare(key, q, primary) {
+  const rec = P.day[key];
+  const url = `${location.origin}${location.pathname}#${DAILY_HASH}`;
+  const text = rec ? t('dailyShare', dayLabel(key), quizName(q), rec.n, rec.total) : t('dailyShareNew', dayLabel(key), quizName(q));
+  const field = h('input', { class: 'kt-input dayfield', readonly: true, value: `${text} ${url}`, hidden: true, 'aria-label': t('dailyChallenge') });
+  const btn = h('button', { class: 'kt-btn' + (primary ? ' primary' : ''), text: t('dailyChallenge'), onclick: async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: t('daily'), text, url }); return; } catch (e) { if (e?.name === 'AbortError') return; }
+    }
+    try { await navigator.clipboard.writeText(`${text} ${url}`); btn.textContent = t('copied'); setTimeout(() => { btn.textContent = t('dailyChallenge'); }, 1500); }
+    catch { field.hidden = false; field.select(); }
+  } });
+  return { btn, field };
+}
+// The day's result of a finished game, when this game is that day's quiz played the counted way.
+function dailyOf(game) {
+  if (game.spectator || game.provisional || game.only || game.mul !== 1 || game.mode !== 'parallel') return null;
+  const key = dayKey(game.seq), rec = P.day[key];
+  return rec && rec.q === game.quiz.id ? { key, rec } : null;
 }
 
 function renderLobby() {
+  if (R.solo) {
+    V.settings = h('section', { class: 'card wide' });
+    app.replaceChildren(
+      topBar(),
+      h('h1', { text: t('title') }),
+      h('div', { class: 'cols' },
+        h('section', { class: 'card' },
+          h('h2', { text: t('soloTitle') }),
+          h('p', { class: 'muted', text: t('soloInfo') }),
+          h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'kt-btn sm', text: t('leave'), onclick: () => { location.hash = ''; } }))),
+        V.settings),
+      foot());
+    paintSettings();
+    return;
+  }
   const link = `${location.origin}${location.pathname}#${R.code}`;
   const copy = h('button', { class: 'kt-btn sm', text: t('copy'), onclick: async () => {
     try { await navigator.clipboard.writeText(link); copy.textContent = t('copied'); setTimeout(() => { copy.textContent = t('copy'); }, 1500); }
@@ -1076,18 +1460,27 @@ function paintSettings() {
     const s = R.settings, q = QUIZ.get(s.quiz), info = t(s.mode + 'Info');
     if (!isHost()) {
       V.settings.replaceChildren(h('h2', { text: t('settings') }),
-        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}`),
+        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}` + (boOf() > 1 ? ` · ${T[P.lang].bo[boOf()]}` : '')),
+        matchLine() || '',
         h('p', { class: 'muted', text: info }),
         h('p', { class: 'muted', style: 'margin-top:12px', text: t('waitHost', R.players[0]?.name ?? '…') }));
       return;
     }
     const setFilter = patch => { Object.assign(R, patch, { showAll: false }); paintSettings(); };
     const tab = (key, label, on, fn) => h('button', { class: 'kt-tab', 'data-k': key, 'aria-pressed': String(on), text: label, onclick: fn });
-    V.settings.replaceChildren(
+    fill(V.settings,
       h('h2', { text: t('settings') }),
-      h('div', { class: 'lbl', text: t('mode') }),
-      h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
-      h('p', { class: 'muted', style: 'margin-top:6px', text: info }),
+      !R.solo && h('div', { class: 'lbl', text: t('mode') }),
+      !R.solo && h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
+      !R.solo && h('p', { class: 'muted', style: 'margin-top:6px', text: info }),
+      !R.solo && h('div', { class: 'lbl', text: t('match') }),
+      !R.solo && h('div', { class: 'kt-tabs' }, BOS.map(n => {
+        const b = tab(`b-${n}`, T[P.lang].bo[n], boOf() === n, () => setSettings({ bo: n }));
+        b.disabled = n > 1 && !matchable();
+        return b;
+      })),
+      !R.solo && h('p', { class: 'muted', style: 'margin-top:6px', text: matchable() ? t('boInfo') : t('boOld') }),
+      !R.solo && matchLine(),
       h('div', { class: 'lbl', text: t('time') }),
       h('div', { class: 'kt-tabs' }, MULS.map(x => tab(`x-${x}`, `${T[P.lang].mul[x]} · ${minutes(q.t * x)}`, s.mul === x, () => setSettings({ mul: x })))),
       h('div', { class: 'lbl', text: t('quiz') }),
@@ -1100,8 +1493,9 @@ function paintSettings() {
       h('div', { class: 'kt-tabs filters' }, ['', ...Object.keys(T[P.lang].fmt)].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => setFilter({ fmtFilter: f })))),
       V.quizList = h('div', {}),
       h('div', { class: 'startbar' },
-        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: `${T[P.lang].fmt[fmtOf(q)]} · ${t(s.mode)} · ${minutes(q.t * s.mul)}` })),
-        h('button', { class: 'kt-btn primary start', 'data-k': 'start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame })));
+        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: [T[P.lang].fmt[fmtOf(q)], !R.solo && t(s.mode), minutes(q.t * s.mul), boOf() > 1 && T[P.lang].bo[boOf()]].filter(Boolean).join(' · ') })),
+        R.solo && missFor(q.id).length > 0 && h('button', { class: 'kt-btn start', 'data-k': 'review', title: t('reviewInfo'), text: t('reviewBtn', missFor(q.id).length), onclick: () => startReview(q.id) }),
+        h('button', { class: 'kt-btn primary start', 'data-k': 'start', text: R.players.length > 1 ? (matchGoesOn() ? t('roundBtn', R.match.g + 1) : t('start')) : t('solo'), onclick: startGame })));
     paintQuizList();
   });
 }
@@ -1178,9 +1572,10 @@ function buildMap() {
   const pad = whole ? 0 : Math.max(x1 - x0, y1 - y0) * .05;
   const box = [x0 - pad, y0 - pad, x1 - x0 + 2 * pad, y1 - y0 + 2 * pad];
   const view = box.map(Math.round);
-  const svg = svgEl('svg', { viewBox: view.join(' '), role: 'img', 'aria-label': t('fmt').map });
-  // The svg is not in the page yet, so its width is estimated from the layout (main: 1120 px wide, 16 px gutters).
-  const scale = Math.max(200, Math.min(innerWidth, 1120) - 32) / view[2];   // screen px per viewBox unit
+  const svg = svgEl('svg', { viewBox: view.join(' '), role: 'img', tabindex: 0, 'aria-label': `${t('fmt').map}. ${t('mapKeys')}` });
+  // The svg is not in the page yet, so its size is estimated from the layout (main: 1120 px wide, 16 px gutters) and
+  // from its height cap (.map svg max-height): a tall map is letterboxed and drawn smaller than the width alone says.
+  const scale = Math.min(Math.max(200, Math.min(innerWidth, 1120) - 32) / view[2], mapMaxHeight() / view[3]);   // screen px per viewBox unit
   const radius = Math.max(box[2] / 170, 2, MAP_DOT_PX / scale);
   const small = [], byEl = new Map();
   for (const [iso, shape] of Object.entries(MAP.shapes)) {
@@ -1197,40 +1592,149 @@ function buildMap() {
     svg.append(g);
   }
   const caption = G.over && h('p', { class: 'muted mapname', 'aria-live': 'polite', text: t('tapMap') });
-  // A crowded spot (the Balkans on a phone: centres 4 px apart) cannot be told apart by any hit rule, so the first tap there
-  // zooms in and the second one answers. Markers keep their size on screen.
-  let zoom = null;
+  // Zoom and pan move the viewBox (the svg keeps its size, so the page never grows or scrolls sideways). `zoom` is the
+  // current box or null for the whole map, and `auto` says the box came from a crowded tap: that one closes after the
+  // answer, a zoom the player made stays. Markers keep their size on screen.
+  let zoom = null, auto = false;
+  const minW = view[2] / MAP_MAX_ZOOM;
+  const zin = h('button', { class: 'kt-btn sm', type: 'button', text: '+', 'aria-label': t('zoomIn'), onclick: () => { auto = false; zoomAt(2); } });
+  const zout = h('button', { class: 'kt-btn sm', type: 'button', text: '−', 'aria-label': t('zoomOut'), onclick: () => { auto = false; zoomAt(.5); } });
+  const zreset = h('button', { class: 'kt-btn sm', type: 'button', text: t('zoomAll'), onclick: () => { auto = false; setZoom(null); } });
   const setZoom = z => {
+    if (z && z[2] >= view[2] - .01) z = null;
     zoom = z;
-    svg.setAttribute('viewBox', (z || view).join(' '));
+    svg.setAttribute('viewBox', (z || view).map(v => Math.round(v * 10) / 10).join(' '));
     svg.classList.toggle('zoom', !!z);
     const r = radius * (z ? z[2] / view[2] : 1);
     for (const c of svg.querySelectorAll('g.t circle')) c.setAttribute('r', r);
+    zout.disabled = zreset.disabled = !z;
+    zin.disabled = !!z && z[2] <= minW + .01;
   };
+  // A box `w` wide (aspect of the whole map) whose point (x, y) stays where (fx, fy) of it is, kept inside the map.
+  const place = (w, x, y, fx, fy) => {
+    w = clamp(w, minW, view[2]);
+    const hh = w * view[3] / view[2];
+    return [clamp(x - fx * w, view[0], view[0] + view[2] - w), clamp(y - fy * hh, view[1], view[1] + view[3] - hh), w, hh];
+  };
+  // Zoom by `f` (> 1 = in) keeping viewBox point (x, y) still; the default is the centre. Returns whether anything moved.
+  function zoomAt(f, x, y) {
+    const cur = zoom || view;
+    if (x == null) { x = cur[0] + cur[2] / 2; y = cur[1] + cur[3] / 2; }
+    const next = place(cur[2] / f, x, y, (x - cur[0]) / cur[2], (y - cur[1]) / cur[3]);
+    if (Math.abs(next[2] - cur[2]) < .01) return false;
+    setZoom(next);
+    return true;
+  }
+  const panBy = (dx, dy) => { if (zoom) setZoom(place(zoom[2], zoom[0] + dx, zoom[1] + dy, 0, 0)); };
+  // Screen point → viewBox units, and viewBox units per screen px. The CTM is right also when the map is letterboxed.
+  const toView = (cx, cy) => {
+    const m = svg.getScreenCTM();
+    if (!m || !m.a) return null;
+    const p = new DOMPoint(cx, cy).matrixTransform(m.inverse());
+    return [p.x, p.y, 1 / m.a];
+  };
+  setZoom(null);
+
+  // Pointer gestures on the map only (touch-action:none): one finger or the mouse drags a zoomed map, two fingers pinch.
+  // On the whole map one finger scrolls the page instead, so a swipe over the map still moves the page. A gesture that
+  // moved never ends in a tap: the click right after it is ignored.
+  const pts = new Map();
+  let moved = false, quietUntil = 0, pinch = null;
+  const spread = () => { const [a, b] = [...pts.values()]; return [Math.hypot(a.x - b.x, a.y - b.y), (a.x + b.x) / 2, (a.y + b.y) / 2]; };
+  svg.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (!pts.size) moved = false;
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY, sx: e.clientX, sy: e.clientY, type: e.pointerType });
+    if (pts.size === 2) {
+      moved = true;
+      for (const id of pts.keys()) try { svg.setPointerCapture(id); } catch {}
+      pinch = spread();
+    }
+  });
+  svg.addEventListener('pointermove', e => {
+    const p = pts.get(e.pointerId);
+    if (!p) return;
+    const dx = e.clientX - p.x, dy = e.clientY - p.y;
+    p.x = e.clientX; p.y = e.clientY;
+    if (pts.size >= 2) {
+      const [d, mx, my] = spread(), at = toView(mx, my);
+      if (!at || !pinch) return;
+      auto = false;
+      if (pinch[0] > 0 && d > 0) zoomAt(d / pinch[0], at[0], at[1]);
+      const k = toView(mx, my)?.[2] || at[2];
+      panBy(-(mx - pinch[1]) * k, -(my - pinch[2]) * k);
+      pinch = [d, mx, my];
+      return;
+    }
+    if (!moved && Math.hypot(e.clientX - p.sx, e.clientY - p.sy) < MAP_DRAG_PX) return;
+    if (!zoom) {
+      if (p.type !== 'touch') return;   // a mouse drag over the whole map is still a click
+      moved = true;
+      scrollBy(0, -dy);
+      return;
+    }
+    if (!moved) { moved = true; try { svg.setPointerCapture(e.pointerId); } catch {} }
+    const at = toView(e.clientX, e.clientY);
+    if (at) { auto = false; panBy(-dx * at[2], -dy * at[2]); }
+  });
+  const lift = e => {
+    if (!pts.delete(e.pointerId)) return;
+    if (pts.size === 1) { const p = [...pts.values()][0]; p.sx = p.x; p.sy = p.y; }   // pinch → one finger: pan from here
+    pinch = null;
+    if (!pts.size && moved) quietUntil = performance.now() + 400;
+  };
+  svg.addEventListener('pointerup', lift);
+  svg.addEventListener('pointercancel', lift);
+  // The wheel (and a trackpad pinch, which arrives as Ctrl+wheel) zooms at the cursor. When the map cannot zoom further
+  // that way the plain wheel is left to the page, so scrolling down past an unzoomed map still scrolls.
+  svg.addEventListener('wheel', e => {
+    const at = toView(e.clientX, e.clientY);
+    if (!at) return;
+    const step = e.deltaY * (e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 400 : 1);
+    const f = clamp(Math.exp(-step * (e.ctrlKey ? .01 : .002)), .5, 2);
+    auto = false;
+    if (zoomAt(f, at[0], at[1]) || e.ctrlKey) e.preventDefault();
+  }, { passive: false });
+  // Keyboard: the map is one tab stop; + and − zoom, arrows move a zoomed map, 0 shows the whole map.
+  svg.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const cur = zoom || view, step = cur[2] / 6;
+    const keys = { '+': () => zoomAt(2), '=': () => zoomAt(2), '-': () => zoomAt(.5), '0': () => setZoom(null),
+      ArrowLeft: () => panBy(-step, 0), ArrowRight: () => panBy(step, 0), ArrowUp: () => panBy(0, -step), ArrowDown: () => panBy(0, step) };
+    if (!keys[e.key] || (!zoom && e.key.startsWith('Arrow'))) return;   // arrows on the whole map scroll the page as before
+    e.preventDefault();
+    auto = false;
+    keys[e.key]();
+  });
+  // A crowded spot (the Balkans on a phone: centres 4 px apart) cannot be told apart by any hit rule, so the first tap there
+  // zooms in and the second one answers.
   svg.addEventListener('click', e => {
-    const rect = svg.getBoundingClientRect();
-    if (!rect.width || !G) return;
-    const cur = zoom || view, k = cur[2] / rect.width;
-    const x = cur[0] + (e.clientX - rect.left) * k, y = cur[1] + (e.clientY - rect.top) * k;
+    if (performance.now() < quietUntil || !G) return;
+    const at = toView(e.clientX, e.clientY);
+    if (!at) return;
+    const [x, y, k] = at, cur = zoom || view;
     const reach = (matchMedia('(pointer:coarse)').matches ? MAP_REACH_TOUCH : MAP_REACH_MOUSE) * k;
     const el = e.target.closest ? e.target.closest('g.t') : null, direct = el ? byEl.get(el) ?? null : null;
     // An exact hit on a small country answers at once, and only countries still to be found make a spot crowded
     // (with one left in the Balkans every answer used to cost two taps).
     const exact = direct != null && small.some(s => s[0] === direct);
     const crowd = small.filter(s => (G.over || available(s[0])) && (s[1] - x) ** 2 + (s[2] - y) ** 2 <= reach * reach).length;
-    if (!zoom && !exact && (G.over || canAct()) && crowd > 1) {
-      const zw = view[2] / MAP_ZOOM, zh = view[3] / MAP_ZOOM;
-      setZoom([clamp(x - zw / 2, view[0], view[0] + view[2] - zw), clamp(y - zh / 2, view[1], view[1] + view[3] - zh), zw, zh].map(v => Math.round(v * 10) / 10));
+    if (!exact && (G.over || canAct()) && crowd > 1 && cur[2] > minW + .01) {
+      if (!zoom) auto = true;
+      setZoom(place(zoom ? cur[2] / 2 : view[2] / MAP_ZOOM, x, y, .5, .5));
       if (G.over) caption.textContent = t('zoomed'); else flash(t('zoomed'));
       return;
     }
     const i = pickMapTarget(direct, x, y, small, reach);
-    if (zoom && (G.over || canAct())) setZoom(null);
+    if (auto && zoom && (G.over || canAct())) { auto = false; setZoom(null); }
     if (i == null) return;
     if (G.over) { caption.textContent = G.items[i][P.lang][0]; return; }
     mapClick(i);
   });
-  return h('div', { class: 'map' }, svg, caption);
+  const tools = h('div', { class: 'maptools' },
+    h('span', { class: 'muted', text: t('mapHelp') }),
+    h('span', { class: 'mapbtns', role: 'group', 'aria-label': t('zoomGroup') }, zin, zout, zreset));
+  return h('div', { class: 'map' }, svg, tools, caption);
 }
 
 function buildCells() {
@@ -1279,9 +1783,10 @@ function paintScores() {
   if (!V.scores) return;
   const here = presentIds();
   V.scores.replaceChildren(...G.players.map(p => {
-    const { n } = standing(p.id);
+    const { n } = standing(p.id), M = G.mt && R.match?.id === G.mt ? R.match : null, k = M ? M.p.findIndex(x => x.id === p.id) : -1;
+    const pips = k >= 0 && h('span', { class: 'pips', title: t('wins', M.w[k]), 'aria-label': t('wins', M.w[k]), text: '●'.repeat(M.w[k]) + '○'.repeat(Math.max(0, (M.n + 1) / 2 - M.w[k])) });
     return h('div', { class: 'score' + (here.has(p.id) ? '' : ' gone'), style: `--c:${colorOf(p.id)}` },
-      h('div', {}, h('b', { text: p.name }), h('span', { text: `${n}/${G.items.length}` })),
+      h('div', {}, h('b', {}, p.name, pips), h('span', { text: `${n}/${G.items.length}` })),
       h('div', { class: 'meter' }, h('i', { style: `width:${100 * n / G.items.length}%` })));
   }));
 }
@@ -1329,6 +1834,7 @@ function headline() {
   const [a, b] = G.results;
   if (!b && !G.spectator) {   // practice alone: the score against my own best, not "You won!"
     const prev = G.prevBest, score = `${a.n}/${G.items.length}`;
+    if (G.only) return `${score} · ${a.n === G.items.length ? t('reviewAll') : t('review')}`;
     if (G.mul !== 1) return score;
     if (a.n > 0 && (!prev || rank(a, prev) < 0)) return `${score} · ${t('newBest')}`;
     return prev ? `${score} · ${t('bestIs', prev.n, prev.total)}` : score;
@@ -1350,11 +1856,14 @@ function renderResults() {
     grid = h('div', {}, map, list);
   }
   const won = G.results[0].id === MY_ID && G.results[0].n > 0;
+  const daily = dailyOf(G);
   fill(app,
     topBar(),
     h('h1', { text: quizName(G.quiz) }),
     h('p', { class: 'winner' + (won ? ' me' : ''), style: `--c:${colorOf(G.results[0].id)}`, text: headline() }),
     G.provisional && h('p', { class: 'kt-note', role: 'status', text: t('provisional') }),
+    G.mt && R.match?.id === G.mt && matchLine(),
+    daily && h('p', { class: 'daynote', role: 'status', text: t(G.dailyNew ? 'dailySaved' : 'dailyKept', daily.rec.n, daily.rec.total) }),
     h('div', { class: 'cols' },
       h('section', { class: 'card' },
         h('h2', { text: t('results') }),
@@ -1363,7 +1872,7 @@ function renderResults() {
           h('td', { text: `${r.n}/${G.items.length}` }), h('td', { text: `${t('lastAt')} ${clock(r.t)}` }))))),
         single && h('p', { class: 'muted', style: 'margin-top:10px', text: t('h2h', single.name, single.w, single.l, single.d) }),
         V.actions = h('div', { class: 'row', style: 'margin-top:14px' })),
-      chatBox()),
+      !R.solo && chatBox()),
     h('h2', { style: 'margin-top:22px', text: t('answers') }),
     grid,
     foot());
@@ -1374,9 +1883,16 @@ function renderResults() {
 // Its own paint: the host can change while the results are on screen.
 function paintActions() {
   if (!V.actions) return;
+  const daily = dailyOf(G), share = daily && dailyShare(daily.key, G.quiz, false);
+  const inMatch = !!G.mt && R.match?.id === G.mt, over = inMatch && matchWinner(R.match) >= 0;
   V.actions.replaceChildren(...[
-    isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
-    h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { G = null; render(); } }),
+    isHost() && (inMatch && !over
+      ? h('button', { class: 'kt-btn primary', title: t('nextRoundInfo'), text: t('nextRound'), onclick: nextRound })
+      : h('button', { class: 'kt-btn primary', text: inMatch ? t('newMatch') : t('rematch'), onclick: startGame })),
+    !G.spectator && missFor(G.quiz.id).length > 0 && h('button', { class: 'kt-btn', text: t('reviewBtn', missFor(G.quiz.id).length), onclick: () => startReview(G.quiz.id) }),
+    share && share.btn,
+    h('button', { class: 'kt-btn', text: R.solo ? t('pickQuiz') : t('lobby'), onclick: () => { G = null; render(); } }),
+    share && share.field,
   ].filter(Boolean));
 }
 
@@ -1388,9 +1904,11 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
   const pack = url => getJson(url).catch(() => getJson(url));
   packsReady = Promise.all((d.packs || []).map(name => pack(`/data/visa/${name}.json`))).then(packs => {
     for (const q of packs.flatMap(x => x.quizzes)) { d.quizzes.push(q); QUIZ.set(q.id, q); }
+    packsState = 'ok';
     if (!R && Object.keys(P.best).length) render();   // best scores can be for pack quizzes
+    else { paintDaily(); paintBrowse(); }
   });
-  packsReady.catch(() => {});   // reported by joinRoom
+  packsReady.catch(() => { packsState = 'fail'; paintDaily(); paintBrowse(); });   // a room reports it in joinRoom
   setInterval(tick, 100);
   addEventListener('hashchange', route);
   addEventListener('pagehide', storeGame);
@@ -1406,7 +1924,7 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
     }
     if (V.opts && digit) V.opts[Number(e.key) - 1]?.click();
   });
-  if (parseCode(location.hash)) route(); else render();
+  if (parseCode(location.hash) || [SOLO_HASH, DAILY_HASH].includes(location.hash.slice(1))) route(); else render();
 }).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });
 })();
 </script>
