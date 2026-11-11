@@ -140,6 +140,11 @@ a{color:var(--accent)}
 .score.gone{opacity:.5}
 .score>div:first-child{display:flex;justify-content:space-between;gap:8px;font-size:13px}
 .score b{color:var(--c);overflow-wrap:anywhere}
+.score .pips{color:var(--c);font:600 11px var(--font-mono);letter-spacing:2px;margin-left:6px}
+.matchline{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:6px 0 10px;font:600 14px var(--font-mono)}
+.matchline .lbl2{color:var(--ink-2);font:500 13px var(--font-body)}
+.matchline b{color:var(--c)}
+.matchline.over{font-size:16px}
 .score span{font:600 13px var(--font-mono);white-space:nowrap}
 .meter{height:4px;background:var(--line);border-radius:2px}
 .meter i{display:block;height:100%;background:var(--c);border-radius:2px}
@@ -262,7 +267,8 @@ const TRACK_WAIT_MS = 1200, GONE_GRACE_MS = 15000, TAB_CHECK_MS = 100, WRONG_LOC
 const REVEAL_OK_MS = 700, REVEAL_WRONG_MS = 1500, REVEAL_SKIP_MS = 250, MAP_REACH_TOUCH = 22, MAP_REACH_MOUSE = 10, MAP_SMALL_PX = 28, MAP_DOT_PX = 5, MAP_ZOOM = 4, LIST_LIMIT_PHONE = 20;
 const END_GRACE_MS = 1200, HOST_WATCHDOG_MS = 2500, LOCAL_WATCHDOG_MS = 6000;
 const COLORS = ['#5CE1C6', '#E8B45C', '#FF8A7A', '#9DB8FF', '#F2A2E8', '#8BE36F', '#FFE08A', '#7FD4FF'];
-const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'];
+const MULS = [0.5, 1, 2], MODES = ['parallel', 'race'], BOS = [1, 3, 5];
+const PAGE_V = 2;   // presence `v`: 2 = this page knows matches (best of three / five); an older page sends none
 
 const T = {
   fi: {
@@ -292,6 +298,12 @@ const T = {
     provisional: 'Vetäjän lopputulos ei tullut perille. Tämä on oma laskusi, eikä sitä kirjata tilastoon.', tapMap: 'Napauta maata nähdäksesi sen nimen.', zoomed: 'Lähennetty: napauta maata.', missed: 'Puuttuvat', found: 'Löydetyt',
     rematch: 'Uusintaottelu', review: 'Kertaus', reviewBtn: n => `Harjoittele puuttuneet (${n})`, reviewAll: 'kaikki puuttuneet osattu', reviewInfo: 'Vain viime kerralla puuttuneet kohteet tästä visasta, yksin ja lyhyemmällä ajalla.', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
+    match: 'Ottelu', bo: { 1: 'Yksi peli', 3: 'Paras kolmesta', 5: 'Paras viidestä' },
+    boInfo: 'Erät pelataan peräkkäin tässä huoneessa, ja vetäjä valitsee tai arpoo jokaisen erän visan. Tasapeli ei anna kenellekään erävoittoa.',
+    boOld: 'Kaikilla huoneessa ei ole sivun uusinta versiota, joten ottelua ei voi valita. Pyydä heitä lataamaan sivu uudelleen.',
+    round: k => `Erä ${k}`, afterRound: k => `${k} erää pelattu`, wins: n => `${n} erävoittoa`, roundBtn: k => `Aloita erä ${k}`,
+    nextRound: 'Seuraava erä: arvo visa', nextRoundInfo: 'Arpoo visan aulan suodattimilla, ei jo tässä ottelussa pelattua.', newMatch: 'Uusi ottelu',
+    youMatch: s => `Voitit ottelun ${s}!`, matchWin: (n, s) => `${n} voitti ottelun ${s}`,
     privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
     daily: 'Päivän visa', dailyInfo: 'Sama visa kaikille tänään. Ensimmäinen peli normaalilla ajalla jää päivän tulokseksi tähän selaimeen.',
     dailyMeta: (n, s) => `${n} vastausta · ${s}`, dailyPlay: 'Pelaa', dailyAgain: 'Pelaa uudelleen', dailyChallenge: 'Haasta kaveri',
@@ -330,6 +342,12 @@ const T = {
     provisional: 'The host\'s final result did not arrive. This is your own count and it is not saved to your record.', tapMap: 'Tap a country to see its name.', zoomed: 'Zoomed in: tap the country.', missed: 'Missed', found: 'Found',
     rematch: 'Rematch', review: 'Review', reviewBtn: n => `Practise the missed ones (${n})`, reviewAll: 'all the missed ones found', reviewInfo: 'Only the items you missed last time in this quiz, alone and with less time.', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
+    match: 'Match', bo: { 1: 'Single game', 3: 'Best of three', 5: 'Best of five' },
+    boInfo: 'The games are played one after another in this room, and the host picks or draws the quiz of each game. A draw gives nobody a game win.',
+    boOld: 'Someone in the room does not have the latest version of the page, so a match cannot be chosen. Ask them to reload the page.',
+    round: k => `Game ${k}`, afterRound: k => `${k} games played`, wins: n => `${n} game wins`, roundBtn: k => `Start game ${k}`,
+    nextRound: 'Next game: draw a quiz', nextRoundInfo: 'Draws a quiz with the lobby filters, never one already played in this match.', newMatch: 'New match',
+    youMatch: s => `You won the match ${s}!`, matchWin: (n, s) => `${n} won the match ${s}`,
     privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
     daily: 'Quiz of the day', dailyInfo: 'The same quiz for everyone today. Your first game at normal time is kept as the day\'s result in this browser.',
     dailyMeta: (n, s) => `${n} answers · ${s}`, dailyPlay: 'Play', dailyAgain: 'Play again', dailyChallenge: 'Challenge a friend',
@@ -502,6 +520,57 @@ function getClient() {
 // ---- room ----
 const hostId = () => R?.players[0]?.id ?? null;
 const isHost = () => hostId() === MY_ID;
+
+// ---- match, best of three or five (F4) ----
+// The host keeps R.match and sends it with `start`, `end` and the snapshot; the others take the host's copy. An older page
+// ignores those fields and the `bo` setting, so a match can be chosen only when every player's presence says v >= 2.
+// R.match = { id: seq of its first game, n: 3|5, p: [{id, name}], w: game wins per p, g: games played, last: seq of the
+// last scored game, q: quiz ids played }
+const matchable = () => !R.solo && R.players.every(p => p.v >= PAGE_V);
+const boOf = () => (R && !R.solo && matchable() && BOS.includes(R.settings.bo)) ? R.settings.bo : 1;
+// Index of the match winner in M.p, or -1. A majority of n wins it; after n games (draws give nobody a win) a sole leader does.
+function matchWinner(M) {
+  const top = Math.max(...M.w), sole = M.w.filter(x => x === top).length === 1;
+  return top > 0 && (top >= (M.n + 1) / 2 || (M.g >= M.n && sole)) ? M.w.indexOf(top) : -1;
+}
+function cleanMatch(m) {   // from another browser: untrusted
+  if (!m || typeof m !== 'object' || !BOS.includes(m.n) || m.n === 1 || !Number.isFinite(m.id) || !Array.isArray(m.p) || !Array.isArray(m.w)) return null;
+  if (m.p.length < 2 || m.p.length > MAX_PLAYERS || m.p.length !== m.w.length || !m.p.every(p => p && typeof p.id === 'string')) return null;
+  return {
+    id: m.id, n: m.n, p: m.p.map(p => ({ id: p.id.slice(0, 40), name: cleanName(p.name) || '?' })), w: m.w.map(x => Math.round(clamp(x, 0, 99))),
+    g: Math.round(clamp(m.g, 0, 99)), last: Number.isFinite(m.last) ? m.last : 0, q: Array.isArray(m.q) ? m.q.filter(id => QUIZ.has(id)).slice(0, 20) : [],
+  };
+}
+// Host only, once per game: a sole winner with at least one answer gets the game.
+function scoreMatch() {
+  const M = R.match;
+  if (!M || M.id !== G.mt || M.last === G.seq || matchWinner(M) >= 0) return;
+  const [a, b] = G.results;
+  M.g++; M.last = G.seq; M.q = [...M.q, G.quiz.id].slice(-20);
+  if (a.n > 0 && (!b || rank(a, b) < 0)) { const i = M.p.findIndex(p => p.id === a.id); if (i >= 0) M.w[i]++; }
+}
+const matchScore = M => [...M.w].sort((a, b) => b - a).join('–');
+// "Paras kolmesta · 1 erää pelattu  Aapo 1  Bea 0", or the winner once the match is decided.
+function matchLine() {
+  const M = R?.match;
+  if (!M) return null;
+  const win = matchWinner(M);
+  if (win >= 0) {
+    const p = M.p[win];
+    return h('p', { class: 'matchline over', role: 'status', style: `--c:${colorOf(p.id)}` }, h('b', { text: p.id === MY_ID ? t('youMatch', matchScore(M)) : t('matchWin', p.name, matchScore(M)) }));
+  }
+  return h('p', { class: 'matchline' }, h('span', { class: 'lbl2', text: `${T[P.lang].bo[M.n]} · ${t('afterRound', M.g)}` }),
+    ...M.p.map((p, i) => h('span', { style: `--c:${colorOf(p.id)}` }, h('b', { text: p.name }), ` ${M.w[i]}`)));
+}
+// The host's "next game": a random quiz with the lobby filters, never one this match has had, then straight to the start.
+function nextRound() {
+  if (!isHost()) return;
+  const played = new Set([...(R.match?.q ?? []), R.settings.quiz]);
+  const pool = quizMatches().filter(Boolean), fresh = pool.filter(x => !played.has(x.id));
+  const list = fresh.length ? fresh : DATA.quizzes.filter(x => !played.has(x.id));
+  if (list.length) setSettings({ quiz: list[Math.floor(Math.random() * list.length)].id });
+  startGame();
+}
 const fromHost = m => !R.players.length || hostId() === m.from;
 const nameOf = id => G?.players.find(p => p.id === id)?.name ?? R?.players.find(p => p.id === id)?.name ?? '?';
 function colorOf(id) {
@@ -516,7 +585,7 @@ function send(type, payload) {
 async function joinRoom(code, created) {
   const preset = created ? pendingRoomQuiz : null;   // the home browser's Challenge: my new room starts with that quiz
   pendingRoomQuiz = null;
-  R = { code, ch: null, players: [], settings: { quiz: QUIZ.has(preset) ? preset : DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
+  R = { code, ch: null, players: [], settings: { quiz: QUIZ.has(preset) ? preset : DATA.quizzes[0].id, mode: 'parallel', mul: 1, bo: 1 }, match: null, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
   try { await packsReady; } catch {
@@ -613,7 +682,7 @@ function track(ch) {
     joined = Math.max(Date.now(), ...others.map(x => x + 1));
     writeStr('sessionStorage', key, String(joined));
   }
-  ch.track({ name: cleanName(P.nick), joined });
+  ch.track({ name: cleanName(P.nick), joined, v: PAGE_V });
 }
 
 // ---- own copy of the running game: a reload restores it when nobody else is there to send a snapshot ----
@@ -648,7 +717,7 @@ function onPresence() {
   if (R.connected && !R.tracked) track(R.ch);
   const list = Object.entries(R.ch.presenceState()).map(([id, metas]) => {
     const m = metas[metas.length - 1] || {};
-    return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0 };
+    return { id: id.slice(0, 40), name: cleanName(m.name) || '?', joined: Number(m.joined) || 0, v: Number(m.v) || 1 };
   }).sort((a, b) => a.joined - b.joined || (a.id < b.id ? -1 : 1));
   R.players = list;
   if (list.findIndex(p => p.id === MY_ID) >= MAX_PLAYERS) {
@@ -690,7 +759,7 @@ function onMessage(m) {
     case 'hello': if (isHost() || m.from === hostId()) send('snap', snapshot()); return;
     case 'settings': if (fromHost(m)) applySettings(m.s); return;
     case 'snap': if (fromHost(m) || !R.synced) applySnapshot(m); return;
-    case 'start': if (fromHost(m)) beginGame(m); return;
+    case 'start': if (fromHost(m)) { if (G?.seq !== m.seq) R.match = cleanMatch(m.mt); beginGame(m); } return;
     case 'chat': addChat(m.from, m.text); return;
   }
   if (m.t === 'end' && G?.provisional && m.seq === G.seq && fromHost(m)) { applyEnd(m); return; }   // the host's result replaces my own count
@@ -707,7 +776,7 @@ function onMessage(m) {
 
 function applySettings(s) {
   if (!validSettings(s)) return;
-  R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul };
+  R.settings = { quiz: s.quiz, mode: s.mode, mul: s.mul, bo: BOS.includes(s.bo) ? s.bo : 1 };   // an older host sends no `bo`
   paintSettings();
 }
 
@@ -715,8 +784,9 @@ function snapshot() {
   const s = { s: R.settings };
   if (G && !G.over) s.game = {
     seq: G.seq, quiz: G.quiz.id, mode: G.mode, mul: G.mul, players: G.players, elapsed: Math.round(performance.now() - G.startAt),
-    found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done],
+    found: [...G.found].map(([id, r]) => [id, [...r.set], r.t]), claims: claimList(), done: [...G.done], mt: G.mt,
   };
+  if (R.match) s.match = R.match;   // an older page ignores both
   if (s.game && G.only) s.game.only = G.only;   // practice alone only: never sent to a room
   if (R.last) s.last = R.last;   // someone who missed all three `end`s still gets the real result
   return s;
@@ -727,6 +797,7 @@ const claimList = () => [...G.claims].map(([i, c]) => [i, c.by, c.t]);
 function applySnapshot(m) {
   R.synced = true;
   applySettings(m.s);
+  if (typeof m.from === 'string' && !R.solo) R.match = cleanMatch(m.match);   // not from restoreGame's own copy
   const g = m.game, byHost = typeof m.from === 'string' && fromHost(m);
   if (byHost && m.last && G && m.last.seq === G.seq && (!G.over || G.provisional)) { applyEnd(m.last); return; }
   if (!g) return;
@@ -778,6 +849,7 @@ function beginGame(m) {
     state: 'count', over: false, finishing: false, out: !players.some(p => p.id === MY_ID), spectator: !players.some(p => p.id === MY_ID),
     results: null, cells: [], absent: new Map(), lastRepair: now, sentSize: 0, sentAt: now, holdT: 0, flashT: 0, confirmT: 0,
   };
+  G.mt = R?.solo ? null : Number.isFinite(m.mt) ? m.mt : Number.isFinite(m.mt?.id) ? m.mt.id : null;   // the match this game counts for
   if (G.fmt === 'map') loadMap();
   render();
 }
@@ -1000,8 +1072,9 @@ function finish(delay) {
   setTimeout(() => {
     if (G !== game || G.over) return;
     const msg = { seq: G.seq, res: tally(), c: G.mode === 'race' ? claimList() : null };
+    applyEnd(msg);   // first: it scores the match, which then travels with the result
+    if (R.last?.mt) msg.mt = R.last.mt;
     send('end', msg);
-    applyEnd(msg);
     for (const wait of [1000, 3000]) setTimeout(() => send('end', msg), wait);   // broadcasts can get lost
   }, delay);
 }
@@ -1029,7 +1102,11 @@ function applyEnd(m, provisional) {
     return { id: p.id, name: p.name, n: Math.round(clamp(r.n, 0, G.items.length)), t: clamp(r.t, 0, G.durMs) };
   }).sort(rank);
   G.over = true; G.pending.clear();
-  if (!provisional) R.last = { seq: G.seq, res: G.results.map(r => ({ id: r.id, n: r.n, t: r.t })), c: G.mode === 'race' ? claimList() : null };
+  if (!provisional) {
+    if (G.mt) { const mt = cleanMatch(m.mt); if (mt && mt.id === G.mt) R.match = mt; else if (isHost() && !m.mt) scoreMatch(); }
+    R.last = { seq: G.seq, res: G.results.map(r => ({ id: r.id, n: r.n, t: r.t })), c: G.mode === 'race' ? claimList() : null };
+    if (G.mt && R.match?.id === G.mt) R.last.mt = R.match;
+  }
   dropGame();
   record();
   render();
@@ -1128,6 +1205,15 @@ function startGame(only) {
   const s = R.settings;
   const msg = { seq: Date.now(), quiz: s.quiz, mode: s.mode, mul: s.mul, players: R.players.map(p => ({ id: p.id, name: p.name })), elapsed: -COUNTDOWN_MS };
   if (Array.isArray(only)) { if (!R.solo || !only.length) return; msg.only = only; }
+  // A match goes on while its players are the same and nobody has won it; otherwise this game starts a new one.
+  const bo = boOf(), ids = msg.players.map(p => p.id).sort().join();
+  if (bo > 1 && msg.players.length > 1 && !msg.only) {
+    const M = R.match;
+    if (!M || M.n !== bo || matchWinner(M) >= 0 || M.p.map(p => p.id).sort().join() !== ids) {
+      R.match = { id: msg.seq, n: bo, p: msg.players.map(p => ({ ...p })), w: msg.players.map(() => 0), g: 0, last: 0, q: [] };
+    }
+    msg.mt = R.match;
+  } else if (!R.solo) R.match = null;
   send('start', msg);
   if (!R.solo) sb.rpc('visa_count_play', { q: s.quiz }).then(() => {}, () => {});   // anonymous play count for Suosituimmat
   beginGame(msg);
@@ -1159,7 +1245,9 @@ function langTabs() {
     h('button', { class: 'kt-tab', 'aria-pressed': String(P.lang === l), text: l.toUpperCase(), onclick: () => { P.lang = l; save(); render(); } })));
 }
 const topBar = () => h('div', { class: 'top' }, h('a', { class: 'crumb', href: '/', text: t('back') }), langTabs());
-const gameTitle = () => h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: G.only ? t('review') : t(G.mode) }));
+const gameTitle = () => h('div', { class: 'gametitle' }, h('b', { text: quizName(G.quiz) }), h('span', { class: 'kt-status', text: G.only ? t('review') : G.mt && R.match?.id === G.mt ? `${t(G.mode)} · ${T[P.lang].bo[R.match.n]} · ${t('round', R.match.g + 1)}` : t(G.mode) }));
+// The room's match is still open for the next game: same players, same setting, nobody has won it yet.
+const matchGoesOn = () => { const M = R?.match; return !!M && boOf() === M.n && matchWinner(M) < 0 && M.g > 0; };
 const foot = () => h('footer', {}, t('privacy') + ' ', h('a', { href: '/tietosuoja', text: t('privacyLink') }));
 
 function renderHome() {
@@ -1366,7 +1454,8 @@ function paintSettings() {
     const s = R.settings, q = QUIZ.get(s.quiz), info = t(s.mode + 'Info');
     if (!isHost()) {
       V.settings.replaceChildren(h('h2', { text: t('settings') }),
-        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}`),
+        h('p', {}, h('b', { text: quizName(q) }), ` · ${t(s.mode)} · ${minutes(q.t * s.mul)}` + (boOf() > 1 ? ` · ${T[P.lang].bo[boOf()]}` : '')),
+        matchLine() || '',
         h('p', { class: 'muted', text: info }),
         h('p', { class: 'muted', style: 'margin-top:12px', text: t('waitHost', R.players[0]?.name ?? '…') }));
       return;
@@ -1378,6 +1467,14 @@ function paintSettings() {
       !R.solo && h('div', { class: 'lbl', text: t('mode') }),
       !R.solo && h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
       !R.solo && h('p', { class: 'muted', style: 'margin-top:6px', text: info }),
+      !R.solo && h('div', { class: 'lbl', text: t('match') }),
+      !R.solo && h('div', { class: 'kt-tabs' }, BOS.map(n => {
+        const b = tab(`b-${n}`, T[P.lang].bo[n], boOf() === n, () => setSettings({ bo: n }));
+        b.disabled = n > 1 && !matchable();
+        return b;
+      })),
+      !R.solo && h('p', { class: 'muted', style: 'margin-top:6px', text: matchable() ? t('boInfo') : t('boOld') }),
+      !R.solo && matchLine(),
       h('div', { class: 'lbl', text: t('time') }),
       h('div', { class: 'kt-tabs' }, MULS.map(x => tab(`x-${x}`, `${T[P.lang].mul[x]} · ${minutes(q.t * x)}`, s.mul === x, () => setSettings({ mul: x })))),
       h('div', { class: 'lbl', text: t('quiz') }),
@@ -1390,9 +1487,9 @@ function paintSettings() {
       h('div', { class: 'kt-tabs filters' }, ['', ...Object.keys(T[P.lang].fmt)].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => setFilter({ fmtFilter: f })))),
       V.quizList = h('div', {}),
       h('div', { class: 'startbar' },
-        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: [T[P.lang].fmt[fmtOf(q)], !R.solo && t(s.mode), minutes(q.t * s.mul)].filter(Boolean).join(' · ') })),
+        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: [T[P.lang].fmt[fmtOf(q)], !R.solo && t(s.mode), minutes(q.t * s.mul), boOf() > 1 && T[P.lang].bo[boOf()]].filter(Boolean).join(' · ') })),
         R.solo && missFor(q.id).length > 0 && h('button', { class: 'kt-btn start', 'data-k': 'review', title: t('reviewInfo'), text: t('reviewBtn', missFor(q.id).length), onclick: () => startReview(q.id) }),
-        h('button', { class: 'kt-btn primary start', 'data-k': 'start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame })));
+        h('button', { class: 'kt-btn primary start', 'data-k': 'start', text: R.players.length > 1 ? (matchGoesOn() ? t('roundBtn', R.match.g + 1) : t('start')) : t('solo'), onclick: startGame })));
     paintQuizList();
   });
 }
@@ -1570,9 +1667,10 @@ function paintScores() {
   if (!V.scores) return;
   const here = presentIds();
   V.scores.replaceChildren(...G.players.map(p => {
-    const { n } = standing(p.id);
+    const { n } = standing(p.id), M = G.mt && R.match?.id === G.mt ? R.match : null, k = M ? M.p.findIndex(x => x.id === p.id) : -1;
+    const pips = k >= 0 && h('span', { class: 'pips', title: t('wins', M.w[k]), 'aria-label': t('wins', M.w[k]), text: '●'.repeat(M.w[k]) + '○'.repeat(Math.max(0, (M.n + 1) / 2 - M.w[k])) });
     return h('div', { class: 'score' + (here.has(p.id) ? '' : ' gone'), style: `--c:${colorOf(p.id)}` },
-      h('div', {}, h('b', { text: p.name }), h('span', { text: `${n}/${G.items.length}` })),
+      h('div', {}, h('b', {}, p.name, pips), h('span', { text: `${n}/${G.items.length}` })),
       h('div', { class: 'meter' }, h('i', { style: `width:${100 * n / G.items.length}%` })));
   }));
 }
@@ -1648,6 +1746,7 @@ function renderResults() {
     h('h1', { text: quizName(G.quiz) }),
     h('p', { class: 'winner' + (won ? ' me' : ''), style: `--c:${colorOf(G.results[0].id)}`, text: headline() }),
     G.provisional && h('p', { class: 'kt-note', role: 'status', text: t('provisional') }),
+    G.mt && R.match?.id === G.mt && matchLine(),
     daily && h('p', { class: 'daynote', role: 'status', text: t(G.dailyNew ? 'dailySaved' : 'dailyKept', daily.rec.n, daily.rec.total) }),
     h('div', { class: 'cols' },
       h('section', { class: 'card' },
@@ -1669,8 +1768,11 @@ function renderResults() {
 function paintActions() {
   if (!V.actions) return;
   const daily = dailyOf(G), share = daily && dailyShare(daily.key, G.quiz, false);
+  const inMatch = !!G.mt && R.match?.id === G.mt, over = inMatch && matchWinner(R.match) >= 0;
   V.actions.replaceChildren(...[
-    isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
+    isHost() && (inMatch && !over
+      ? h('button', { class: 'kt-btn primary', title: t('nextRoundInfo'), text: t('nextRound'), onclick: nextRound })
+      : h('button', { class: 'kt-btn primary', text: inMatch ? t('newMatch') : t('rematch'), onclick: startGame })),
     !G.spectator && missFor(G.quiz.id).length > 0 && h('button', { class: 'kt-btn', text: t('reviewBtn', missFor(G.quiz.id).length), onclick: () => startReview(G.quiz.id) }),
     share && share.btn,
     h('button', { class: 'kt-btn', text: R.solo ? t('pickQuiz') : t('lobby'), onclick: () => { G = null; render(); } }),
