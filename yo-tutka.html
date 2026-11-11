@@ -245,6 +245,18 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 .method summary{cursor:pointer;font-weight:700;color:var(--ink)}
 .method ul{margin:8px 0 0;padding-left:20px;display:grid;gap:4px}
 .method code{font-family:var(--font-mono);font-size:12px;background:var(--surface-2);padding:0 4px;border-radius:3px}
+/* yo-tutka-F4: the backtest block (calibration chart + per-class table) inside the method section */
+.bt{margin-top:14px;padding-top:12px;border-top:1px solid var(--line-2);display:grid;gap:8px}
+.bt h3{margin:0;font-size:15px;color:var(--ink)}
+.bt p{margin:0}
+.bt-body{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-start}
+.bt svg{flex:0 0 auto;width:200px;max-width:100%;height:auto}
+.bt table{flex:1 1 260px;width:auto;min-width:0}
+.bt .ax{stroke:var(--line);stroke-width:1;fill:none}
+.bt .diag{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:3 3}
+.bt .tk{fill:var(--ink-3);font:9px var(--font-mono)}
+.bt .dot{stroke:var(--bg);stroke-width:1.5}
+.bt .dot.p4{fill:var(--h5)}.bt .dot.p3{fill:var(--h4)}.bt .dot.p2{fill:var(--h3)}.bt .dot.p1{fill:var(--h2)}
 .foot{font-size:12px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px;display:flex;flex-wrap:wrap;gap:6px 18px}
 .toplink{font-size:13px}
 /* julkinen-23: rows and bars are updated in place, so a filter animates the bars to their new width. */
@@ -490,7 +502,9 @@ h1{font-weight:800;letter-spacing:-.02em}
       <li><b>Pisteitä / koe</b> = samalla painotuksella laskettu keskiarvo siitä, montako pistettä aiheen tehtävistä on kokeessa tarjolla. Kahden aiheen tehtävän pisteet jaetaan aiheille tasan, joten 20 pisteen esseetehtävä painaa enemmän kuin 2 pisteen monivalinta. Valinnaisten tehtävien pisteet lasketaan mukaan, vaikka vastaat vain osaan. <i>Harjoittele seuraavaksi</i> -lista järjestää aiheet näin: <code>todennäköisyys × pisteet kokeessa, kun aihe on mukana × (1 − oma osaaminen)</code>.</li>
       <li>Tutkintokerrat, joiden tehtävälistaa ei löytynyt, jätetään laskuista pois. "Ei vahvistettu" tarkoittaa, että lista on koottu toissijaisista lähteistä tai muistinvaraisesti. Valinnalla <i>Vain vahvistetut kerrat</i> nekin voi jättää pois.</li>
       <li>Arvio on tilastollinen: se ei tiedä, mitä YTL:n tehtävänlaatijat ajattelevat, eikä opetussuunnitelman (LOPS2021) painotusmuutoksia. Käytä sitä kertauksen priorisointiin, ei poissulkemiseen.</li>
+      <li><b>Osuvuus</b> = takautuva testi: jokaiselle kerralle lasketaan todennäköisyydet pelkästään sitä edeltävistä kerroista (vähintään 3) samalla painotuksella ja verrataan, tuliko aihe kokeeseen. Jos luvut pitävät, 90 %:n aiheista noin 9/10 tulee kokeeseen. Kausipainotuksessa testattavan kerran oma kausi saa lisäpainon.</li>
     </ul>
+    <div class="bt" id="backtest"></div>
   </details>
 
   <footer class="foot">
@@ -592,6 +606,55 @@ h1{font-weight:800;letter-spacing:-.02em}
 
   const pClass = p => p>=0.9?'p4':p>=0.65?'p3':p>=0.35?'p2':'p1';
   const pWord = p => p>=0.9?'lähes varma':p>=0.65?'todennäköinen':p>=0.35?'mahdollinen':'harvinainen';
+
+  /* yo-tutka-F4: a backtest. For every active session with >= BT_MIN active sessions before it, the probability the radar
+     would have shown for each topic from those earlier sessions only (stats' formula and weighting; 'season' weights the
+     tested session's own season), against whether the session asked the topic. Summed per class p1..p4. */
+  const BT_MIN = 3, BT_CLASSES = ['p4','p3','p2','p1'], btCache = new Map();
+  const BT_NAME = {p4:'lähes varma', p3:'todennäköinen', p2:'mahdollinen', p1:'harvinainen'};
+  const BT_FROM = {p4:'lähes varmoista aiheista', p3:'todennäköisistä', p2:'mahdollisista', p1:'harvinaisista'};
+  function backtest(s){
+    const key = `${s.id}|${state.weighting}|${state.verifiedOnly}`;
+    if(btCache.has(key)) return btCache.get(key);
+    const ss = activeSessions(s), asked = ss.map(x=>new Set(x.tasks.flatMap(t=>t.topics||[])));
+    const ids = [...new Set([...(s.topics||[]).map(t=>t.id), ...asked.flatMap(a=>[...a])])];
+    const blank = () => Object.fromEntries(BT_CLASSES.map(c=>[c,{n:0,hit:0,sumP:0}]));
+    const all = blank(), rounds = [];
+    for(let i=BT_MIN;i<ss.length;i++){
+      const season = state.weighting==='season' ? ss[i].id.slice(-1) : null;
+      const w = ss.slice(0,i).map((x,j)=> state.weighting==='even' ? 1 : Math.pow(0.85,i-1-j)*(season && x.id.slice(-1)===season ? SEASON_W : 1)), W = sum(w);
+      const by = blank();
+      ids.forEach(id=>{
+        const p = (w.reduce((a,x,j)=>a+(asked[j].has(id)?x:0),0)+0.5)/(W+1), y = asked[i].has(id)?1:0;
+        for(const b of [by[pClass(p)], all[pClass(p)]]){ b.n++; b.hit+=y; b.sumP+=p; }
+      });
+      rounds.push({id:ss[i].id, by});
+    }
+    const out = {rounds, all};
+    btCache.set(key, out);
+    return out;
+  }
+  function paintBacktest(s){
+    const box = $('#backtest'); if(!box) return;
+    const bt = backtest(s), last = bt.rounds[bt.rounds.length-1];
+    const head = `<h3>Osuvuus: ${esc(s.name)}</h3>`;
+    if(!last){ box.innerHTML = `${head}<p class="empty">Liian vähän tutkintokertoja takautuvaan testiin: tarvitaan vähintään ${BT_MIN+1}${state.verifiedOnly?' (vain vahvistetut kerrat on valittuna)':''}.</p>`; return; }
+    const frac = b => `${b.hit}/${b.n}`;
+    const lastLine = BT_CLASSES.filter(c=>last.by[c].n).map(c=>`${BT_FROM[c]} ${frac(last.by[c])}`);
+    const first = bt.rounds[0].id;
+    // Calibration chart: x = mean predicted probability of the class, y = how often its topics were asked; on the diagonal = honest.
+    const S=200, P=24, X=v=>P+v*(S-P-8), Y=v=>S-P-v*(S-P-8), maxN = Math.max(1,...BT_CLASSES.map(c=>bt.all[c].n));
+    const dots = BT_CLASSES.filter(c=>bt.all[c].n).map(c=>{ const b=bt.all[c]; return `<circle class="dot ${c}" cx="${X(b.sumP/b.n).toFixed(1)}" cy="${Y(b.hit/b.n).toFixed(1)}" r="${(3+7*Math.sqrt(b.n/maxN)).toFixed(1)}"/>`; }).join('');
+    const ticks = [0,0.5,1].map(v=>`<text class="tk" x="${X(v)}" y="${S-P+12}" text-anchor="middle">${v*100}</text><text class="tk" x="${P-4}" y="${Y(v)+3}" text-anchor="end">${v*100}</text>`).join('');
+    const label = 'Kalibrointikaavio: ' + BT_CLASSES.filter(c=>bt.all[c].n).map(c=>{ const b=bt.all[c]; return `${BT_NAME[c]}: arvio ${fmtPct(b.sumP/b.n)}, toteutui ${fmtPct(b.hit/b.n)}`; }).join('; ');
+    box.innerHTML = `${head}
+      <p>Ennen kertaa <b>${esc(shortLabel(last.id))}</b> laskettu tutka (${esc(state.weighting==='season' ? `tuoreimmat ja ${seasonWord(last.id.slice(-1))} kerrat painotettuina` : weightingLabel(s,state.weighting))}) olisi osunut näin: ${esc(lastLine.join(', '))} tuli kokeeseen.</p>
+      <div class="bt-body">
+        <svg viewBox="0 0 ${S} ${S}" role="img" aria-label="${esc(label)}"><path class="ax" d="M${X(0)} ${Y(1)}V${Y(0)}H${X(1)}"/><path class="diag" d="M${X(0)} ${Y(0)}L${X(1)} ${Y(1)}"/>${ticks}<text class="tk" x="${X(.5)}" y="${S-2}" text-anchor="middle">arvio %</text><text class="tk" transform="rotate(-90)" x="${-Y(.25)}" y="8" text-anchor="middle">toteutui %</text>${dots}</svg>
+        <table><thead><tr><th>Luokka</th><th class="num">Arvio</th><th class="num">Toteutui</th><th class="num">Aiheita</th></tr></thead><tbody>${BT_CLASSES.map(c=>{ const b=bt.all[c]; return `<tr><td><span class="pp ${c}">${BT_NAME[c]}</span></td><td class="num">${b.n?fmtPct(b.sumP/b.n):'–'}</td><td class="num">${b.n?fmtPct(b.hit/b.n):'–'}</td><td class="num">${b.n}</td></tr>`; }).join('')}</tbody></table>
+      </div>
+      <p>${bt.rounds.length} testattua kertaa (${esc(shortLabel(first))}–${esc(shortLabel(last.id))}), jokainen aihe kerran per koe. Kun pallo on lävistäjällä, arvio piti; lävistäjän alapuolella tutka lupasi liikaa, yläpuolella liian vähän. Pieni otos heiluu paljon.</p>`;
+  }
   const PRACTICE = location.protocol==='file:' ? 'https://koirosvg.com/yo-harjoittelu' : '/yo-harjoittelu';
   const practiceUrl = (a,k,n) => `${PRACTICE}#/t/${encodeURIComponent(a)}/${encodeURIComponent(k)}/${encodeURIComponent(n)}`;
   const pikaUrl = (a,id) => `${PRACTICE}#/pika/${encodeURIComponent(a)}/${encodeURIComponent(id)}`;
@@ -798,6 +861,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   // which are open), the scroll position and the focus stay, and the bars animate to their new width.
   function paintStats(){
     const {st} = cur;
+    paintBacktest(cur.s);
     $('#tileN').textContent = st.n; $('#tileTasks').textContent = st.totalTasks; $('#tileTopics').textContent = st.ranked.length;
     $('#heatMax').textContent = st.maxCell;
     const box = $('#types');
