@@ -936,7 +936,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     c[2].textContent = `${t.sessionsHit}/${cur.st.n}`;
     c[3].textContent = fmtPct(t.share);
     c[4].textContent = t.expected.toFixed(1);
-    c[5].textContent = cur.st.hasPts ? t.pts.toFixed(1) : '';
+    c[5].textContent = cur.st.hasPts ? t.pts.toFixed(1).replace('.', ',') : '';   // a decimal comma, like the info row
     c[5].title = cur.st.hasPts && t.sessionsHit ? `${Math.round(t.ptsAsked)} p kokeessa, kun aihe on mukana` : '';
     c[6].querySelector('.tw').innerHTML = trendHtml(t);
     { const b = c[6].querySelector('.pbar i'); b.style.width = Math.round(t.p*100)+'%'; b.className = pClass(t.p); }

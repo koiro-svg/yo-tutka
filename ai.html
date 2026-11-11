@@ -610,7 +610,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const all = (h && Array.isArray(h.days) ? h.days : []).filter(d => d && typeof d.date === 'string' && /^\d{4}-\d\d-\d\d$/.test(d.date) && d.top && typeof d.top === 'object')
       .sort((a, b) => a.date < b.date ? -1 : 1);
     if (!all.length || !data) return null;
-    const day = String(data.updated).slice(0, 10), days = all.filter(d => d.date < day);
+    const day = String(data.updated).slice(0, 10);
+    if (!/^\d{4}-\d\d-\d\d$/.test(day) || !isFinite(Date.parse(day))) return null;   // no usable date: no arrows, the list still loads
+    const days = all.filter(d => d.date < day);
     if (!days.length) return {first: all[0].date, ref: null, cats: {}};
     const weekAgo = new Date(Date.parse(day) - 7 * DAY).toISOString().slice(0, 10);
     const ref = days.filter(d => d.date <= weekAgo).pop() || days[0];
@@ -1285,7 +1287,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   // Names are only shape-checked here; loadAll drops the ones the data does not have.
   {
     const s = store.get(), qs = new URLSearchParams(location.search);
-    const task = qs.has('task') ? qs.get('task') : s.task, budget = qs.has('task') ? qs.get('budget') : s.budget;
+    // A link's task wins only when it is a task this page knows; an old or broken one keeps this tab's own task and budget.
+    const linked = qs.has('task') && TASKS.some(t => t.id === qs.get('task'));
+    const task = linked ? qs.get('task') : s.task, budget = linked ? qs.get('budget') : s.budget;
     if (TASKS.some(t => t.id === task)) ui.task = task;
     if (budget === 'cheap') ui.budget = 'cheap';
     // ai-F4: a tab stored by an older page has no calc; out-of-range steps fall back to the defaults.

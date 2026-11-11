@@ -249,7 +249,8 @@ def check_free(d):
                 continue
             if not isinstance(f, bool):
                 warnings.append(f"{a['id']}/{n}: free must be true/false (ignored, the page reads the price text)")
-            elif f and not re.search(r"ilmai|(?<![\d,.])0 [€$]", price, re.I):
+            # A free tier, not a trial (UPDATE_TOOLS.md): "Ilmainen kokeilu" or "7 vrk ilmainen kokeilu" alone is no free tier.
+            elif f and not re.search(r"ilmai(?!\w*\s+kokeilu)|(?<![\d,.])0 [€$]", price, re.I):
                 warnings.append(f"{a['id']}/{n}: free=true but the price text names no free tier ({price!r})")
             elif not f and is_free(price):
                 warnings.append(f"{a['id']}/{n}: free=false but the price starts with a free tier ({price!r})")
@@ -297,9 +298,14 @@ def check_versions(d, models):
 def load_models():
     """ai-models.json for the version check, or None (the check is advisory, so a broken file only warns)."""
     try:
-        return json.loads(MODELS.read_text(encoding="utf-8"))
+        m = json.loads(MODELS.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return None
+    # Only the shape the check reads: a dict of categories whose items are dicts (anything else: no version check).
+    cats = m.get("categories") if isinstance(m, dict) else None
+    if not isinstance(cats, dict) or not all(isinstance(c, dict) and isinstance(c.get("items", []), list) and all(isinstance(i, dict) for i in c.get("items", [])) for c in cats.values()):
+        return None
+    return m
 
 
 def check_history():
@@ -311,6 +317,8 @@ def check_history():
         days = json.loads(path.read_text(encoding="utf-8"))["days"]
     except (OSError, ValueError, KeyError, TypeError):
         return ["data/ai-history.json unreadable: the models tab shows no rank changes"]
+    if not isinstance(days, list):   # e.g. {"days": null}: a warning, never a crash of the build
+        return ["data/ai-history.json: days is not a list (the models tab shows no rank changes)"]
     bad = [d for d in days if not (isinstance(d, dict) and isinstance(d.get("date"), str)
                                    and re.fullmatch(r"\d{4}-\d\d-\d\d", d["date"]) and isinstance(d.get("top"), dict))]
     dates = [d["date"] for d in days if d not in bad]

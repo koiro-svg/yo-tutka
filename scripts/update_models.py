@@ -6,7 +6,7 @@ Standard library only. A category whose fetch fails keeps its previous data,
 so a flaky API never blanks the live page. Each run also records the day's top names per category in
 data/ai-history.json (the page's trend arrows and "kärjessä N pv").
 """
-import collections, json, os, pathlib, sys, urllib.request, datetime
+import collections, json, os, pathlib, re, sys, urllib.request, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "ai-models.json"
@@ -195,12 +195,22 @@ def inspect(key):
         print(f"{cid}: {len(rows)} mallia, numeeriset {dict(numeric)}")
 
 
+ISO_DAY = re.compile(r"\d{4}-\d\d-\d\d")
+
+
 def history_add(hist, day, cats, keep=HIST_DAYS):
     """The history with `day`'s top names per category: one entry per day (a rerun replaces it), oldest first,
     entries older than `keep` days dropped. Categories with an empty list are left out of the day."""
-    days = [d for d in (hist.get("days") if isinstance(hist, dict) else None) or []
-            if isinstance(d, dict) and isinstance(d.get("date"), str) and isinstance(d.get("top"), dict) and d["date"] != day]
-    days.append({"date": day, "top": {cid: [it["name"] for it in c["items"]] for cid, c in sorted(cats.items()) if c.get("items")}})
+    stored = hist.get("days") if isinstance(hist, dict) else None
+    # Only ISO days (YYYY-MM-DD): the cutoff compares strings, and '2026-1-5' would sort after every real day and stay.
+    days = [d for d in (stored if isinstance(stored, list) else [])
+            if isinstance(d, dict) and isinstance(d.get("date"), str) and ISO_DAY.fullmatch(d["date"]) and isinstance(d.get("top"), dict) and d["date"] != day]
+    top = {}
+    for cid, c in sorted(cats.items()):
+        names = [it["name"] for it in (c.get("items") or []) if isinstance(it, dict) and isinstance(it.get("name"), str)]
+        if names:
+            top[cid] = names
+    days.append({"date": day, "top": top})
     cutoff = (datetime.date.fromisoformat(day) - datetime.timedelta(days=keep - 1)).isoformat()
     return {"days": sorted((d for d in days if d["date"] >= cutoff), key=lambda d: d["date"])}
 
@@ -215,7 +225,7 @@ def read_history():
     """A broken history file must not stop the rankings update: it starts over (and says so in the log)."""
     try:
         return json.loads(HIST.read_text(encoding="utf-8")) if HIST.exists() else {}
-    except ValueError as e:
+    except (ValueError, OSError) as e:
         print(f"   {HIST.name} ei kelpaa ({e}), aloitetaan alusta")
         return {}
 
@@ -264,7 +274,14 @@ def main():
     OUT.parent.mkdir(exist_ok=True)
     SEEN.write_text(json.dumps(seen, ensure_ascii=False, indent=0, sort_keys=True) + "\n", encoding="utf-8")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    HIST.write_text(history_json(history_add(read_history(), today, cats)), encoding="utf-8")
+    # History: only the categories measured in THIS run (a failed or empty fetch keeps yesterday's list in `cats`,
+    # and recording it under today would show a streak that was never measured). It runs after the rankings are
+    # written and can never fail the job: an error here is logged and the rankings update still gets committed.
+    try:
+        measured = {cid: cat for cid, cat in fresh.items() if cat.get("items")}
+        HIST.write_text(history_json(history_add(read_history(), today, measured)), encoding="utf-8")
+    except Exception as e:  # noqa: BLE001 - the history is an extra, never a reason to lose the run
+        errors.append(f"historia: {e}")
     print(f"ok: {len(cats)} kategoriaa, {len(errors)} virhettä")
     for e in errors:
         print("  ", e)
