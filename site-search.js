@@ -25,9 +25,9 @@ const visa = () => getJson('/data/visa.json').then(d =>
   Promise.all((d.packs || []).map(n => getJson(`/data/visa/${enc(n)}.json`))).then(ps => ({cats: d.cats || {}, quizzes: [...(d.quizzes || []), ...ps.flatMap(p => p.quizzes || [])]})));
 
 let index = null;
-async function build(models){
-  const ai = () => getJson('/data/ai-models.json');
-  const parts = await Promise.all([models ? models.catch(ai) : ai(), getJson('/data/coding-agents.json'), getJson('/data/ai-tools.json'), getJson('/data/yo-topics.json'), visa()].map(p => p.catch(() => null)));
+async function build(models, tools){
+  const ai = () => getJson('/data/ai-models.json'), tl = () => getJson('/data/ai-tools.json');
+  const parts = await Promise.all([models ? models.catch(ai) : ai(), getJson('/data/coding-agents.json'), tools ? tools.catch(tl) : tl(), getJson('/data/yo-topics.json'), visa()].map(p => p.catch(() => null)));
   if (parts.includes(null)) index = null;   // a source that failed (network) is fetched again on the next search
   const [m, a, t, yo, vz] = parts;
   const out = PAGES.map(x => ({...x}));
@@ -62,11 +62,11 @@ async function build(models){
 }
 
 // Up to eight hits, titles that start with the query first. `models`: the home page passes its own ai-models.json fetch,
-// so the AI card and the search share one request (fetched again here if it failed).
-export async function search(q, models){
+// so the AI card and the search share one request (fetched again here if it failed); `tools` likewise for ai-tools.json.
+export async function search(q, models, tools){
   const v = norm(q.trim());
   if (!v) return [];
-  const all = await (index ||= build(models));
+  const all = await (index ||= build(models, tools));
   const found = all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
   found.partial = all.partial;
   return found;
