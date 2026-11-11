@@ -302,6 +302,24 @@ def load_models():
         return None
 
 
+def check_history():
+    """data/ai-history.json (update_models.py, ai-F3): warnings only, the page skips bad rows and works without the file."""
+    path = MODELS.parent / "ai-history.json"
+    if not path.exists():
+        return ["data/ai-history.json missing: the models tab shows no rank changes"]
+    try:
+        days = json.loads(path.read_text(encoding="utf-8"))["days"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return ["data/ai-history.json unreadable: the models tab shows no rank changes"]
+    bad = [d for d in days if not (isinstance(d, dict) and isinstance(d.get("date"), str)
+                                   and re.fullmatch(r"\d{4}-\d\d-\d\d", d["date"]) and isinstance(d.get("top"), dict))]
+    dates = [d["date"] for d in days if d not in bad]
+    out = [f"data/ai-history.json: {len(bad)} malformed day(s) (the page skips them)"] if bad else []
+    if dates != sorted(set(dates)):
+        out.append("data/ai-history.json: days must be unique and oldest first")
+    return out
+
+
 def check_page(d, errors):
     """ai.html's "Mitä haluat tehdä?" wiring against the data, and guards for logic fixed on 10.11.2026.
 
@@ -348,7 +366,7 @@ def check_page(d, errors):
         warnings.append("data/ai-models.json unreadable: tool names were not checked against the rankings")
     else:
         warnings += check_versions(d, models)
-    return warnings + check_free(d)
+    return warnings + check_free(d) + check_history()
 
 
 def main():

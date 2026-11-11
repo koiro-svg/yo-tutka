@@ -3,12 +3,15 @@
 
 Usage: AA_API_KEY=... python3 scripts/update_models.py
 Standard library only. A category whose fetch fails keeps its previous data,
-so a flaky API never blanks the live page.
+so a flaky API never blanks the live page. Each run also records the day's top names per category in
+data/ai-history.json (the page's trend arrows and "kärjessä N pv").
 """
 import collections, json, os, pathlib, sys, urllib.request, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "ai-models.json"
+HIST = ROOT / "data" / "ai-history.json"  # {"days": [{"date", "top": {category: [names best-first]}}]}
+HIST_DAYS = 90
 SEEN = ROOT / "data" / "media-seen.json"  # category -> media model id -> first day seen; the free API has no media release dates
 BASE = "https://artificialanalysis.ai/api/v2"
 LLM_PATH = "language/models/free"
@@ -192,6 +195,31 @@ def inspect(key):
         print(f"{cid}: {len(rows)} mallia, numeeriset {dict(numeric)}")
 
 
+def history_add(hist, day, cats, keep=HIST_DAYS):
+    """The history with `day`'s top names per category: one entry per day (a rerun replaces it), oldest first,
+    entries older than `keep` days dropped. Categories with an empty list are left out of the day."""
+    days = [d for d in (hist.get("days") if isinstance(hist, dict) else None) or []
+            if isinstance(d, dict) and isinstance(d.get("date"), str) and isinstance(d.get("top"), dict) and d["date"] != day]
+    days.append({"date": day, "top": {cid: [it["name"] for it in c["items"]] for cid, c in sorted(cats.items()) if c.get("items")}})
+    cutoff = (datetime.date.fromisoformat(day) - datetime.timedelta(days=keep - 1)).isoformat()
+    return {"days": sorted((d for d in days if d["date"] >= cutoff), key=lambda d: d["date"])}
+
+
+def history_json(hist):
+    """One line per day, so a run's diff is one added (and maybe one dropped) line."""
+    rows = ",\n".join(json.dumps(d, ensure_ascii=False, separators=(",", ":")) for d in hist["days"])
+    return '{"days": [\n' + rows + "\n]}\n"
+
+
+def read_history():
+    """A broken history file must not stop the rankings update: it starts over (and says so in the log)."""
+    try:
+        return json.loads(HIST.read_text(encoding="utf-8")) if HIST.exists() else {}
+    except ValueError as e:
+        print(f"   {HIST.name} ei kelpaa ({e}), aloitetaan alusta")
+        return {}
+
+
 KNOWN = set(BENCH) | set(MEDIA) | {"hinta-laatu", "budjetti", "nopeus", "viive"}
 
 
@@ -236,6 +264,7 @@ def main():
     OUT.parent.mkdir(exist_ok=True)
     SEEN.write_text(json.dumps(seen, ensure_ascii=False, indent=0, sort_keys=True) + "\n", encoding="utf-8")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    HIST.write_text(history_json(history_add(read_history(), today, cats)), encoding="utf-8")
     print(f"ok: {len(cats)} kategoriaa, {len(errors)} virhettä")
     for e in errors:
         print("  ", e)

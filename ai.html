@@ -155,10 +155,15 @@ section.group>h2::before,section.group>header h2::before{content:"";flex:none;wi
 .lk{font:600 12px var(--font-mono);color:var(--ink-3);background:none;border:0;cursor:pointer;padding:2px 4px;border-radius:4px;flex:none}
 .lk:hover{color:var(--accent)}
 .winner{background:radial-gradient(160px 90px at 100% 0,color-mix(in srgb,var(--kt-tone) 24%,transparent),transparent 72%),var(--accent-soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 32%,transparent);border-radius:8px;padding:12px 14px;display:grid;gap:2px;position:relative}
-.winner .label{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.winner .label{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);padding-right:80px}
+/* the streak may wrap; it must not run under the ☆/+ buttons (ai-F3) */
 .winner .name{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1.15;overflow-wrap:anywhere;padding-right:60px}
 .winner .sub{font-size:13px;color:var(--ink-2)}
 .winner .wb{position:absolute;top:10px;right:10px;display:flex;gap:6px}
+.tr{font-family:var(--font-mono);font-size:11px;font-weight:600;margin-right:6px}
+.tr.up{color:var(--ok)}
+.tr.down{color:var(--bad)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .new{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;background:var(--ok-soft);color:var(--ok);border-radius:4px;padding:1px 5px;vertical-align:middle;margin-left:6px}
 ol.rank{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 ol.rank li{display:grid;grid-template-columns:22px minmax(0,1fr) auto auto auto;gap:8px;align-items:center;font-size:14px}
@@ -502,7 +507,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const updated = iso => `päivitetty ${esc(fiTime(iso))}${late(iso) ? ' – automaattipäivitys on myöhässä' : ''}`;
   const hit = (q, ...fields) => !q || fields.some(s => norm(s).includes(q));
 
-  let data = null, agents = null, tools = null;
+  let data = null, agents = null, tools = null, hist = null;   // hist: data/ai-history.json, optional (no arrows without it)
   let derived = {};   // per data load: scatter points, agent rankings, news (the data never changes after loading)
   const failed = {models:false, agents:false, tools:false};
   const ui = {tab:'mallit', group:'all', area:'all', kind:'all', fi:false, q:'', open:new Set(), cmp:[], showCmp:false, task:null, budget:'best', calc:{mode:'tok', tok:4, task:4}};
@@ -561,6 +566,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const head = `<header><h3>${esc(meta.title)}${linkBtn(id)}</h3><p class="use">${esc(meta.use)}</p></header>`;
     if (!its.length) return `<article class="card" id="${esc(id)}">${head}<p class="empty">Ei dataa vielä.</p>${gloss(cat.metric)}</article>`;
     const w = its[0];
+    const tr = kind === 'model' && derived.trend ? derived.trend.cats[meta.id] : null;
+    const lead = !tr ? '' : tr.before && tr.before[0] && tr.before[0] !== w.name ? ' · nousi kärkeen'
+      : tr.streak >= 1 ? ` · kärjessä ${tr.atLeast ? 'ainakin ' : ''}${tr.streak} pv` : '';
     const scores = its.map(i => i.score);
     const hi = Math.max(...scores), lo = Math.min(...scores);
     const pct = s => {
@@ -569,13 +577,13 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       return Math.round(35 + 65 * r);
     };
     const rest = its.slice(1).map((it, i) => `
-      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(born(it)) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>${starBtn(kind, it.name)}${cmpBtn(kind, it.name)}
+      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${move(tr, it.name, i + 1)}${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(born(it)) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>${starBtn(kind, it.name)}${cmpBtn(kind, it.name)}
       <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
     const open = ui.open.has(id);
     return `<article class="card${open ? ' open' : ''}" id="${esc(id)}">
       ${head}
       <div class="winner" title="${esc(w.variant || '')}">
-        <span class="label">Paras nyt${isNew(born(w)) ? ' · uusi' : ''}</span>
+        <span class="label">Paras nyt${isNew(born(w)) ? ' · uusi' : ''}${lead}</span>
         <span class="name">${esc(w.name)}</span>
         <span class="sub">${sub(w, cat)} · ${scoreName(cat.metric)}${fmt(w.score, cat)}${kind === 'model' && w.variant ? ` · <span class="muted">${esc(w.variant)}</span>` : ''}</span>
         <span class="wb">${starBtn(kind, w.name)}${cmpBtn(kind, w.name)}</span>
@@ -586,6 +594,36 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
         : cat.coverage != null && cat.coverage < 0.5 ? `<p class="kt-note">Vain ${Math.round(cat.coverage * 20)}/20 tämän hetken kärkimallista on ajanut tämän testin – osa uusimmista malleista puuttuu listalta.</p>` : ''}
       <p class="tip">${esc(meta.tip)}</p>
     </article>`;
+  }
+  // ai-F3: a row's place against the trend's reference day: ▲2 / ▼1, ▲ for a newcomer to the list, nothing when unchanged.
+  function move(tr, name, i){
+    if (!tr || !tr.before) return '';
+    const p = tr.before.indexOf(name), d = p - i, when = `${fiDate(derived.trend.ref)} jälkeen`;
+    const mark = (cls, glyph, text) => `<span class="tr ${cls}" title="${text} ${when}"><span aria-hidden="true">${glyph}</span><span class="vh">${text}.</span></span>`;
+    return p < 0 ? mark('up', '▲', 'Uusi listalla') : d > 0 ? mark('up', '▲' + d, `Nousi ${d} ${d === 1 ? 'sijan' : 'sijaa'}`)
+      : d < 0 ? mark('down', '▼' + -d, `Laski ${-d} ${d === -1 ? 'sijan' : 'sijaa'}`) : '';
+  }
+  /* ai-F3: rank history from data/ai-history.json (update_models.py records each run's top 8 per category, 90 days).
+     Only days before the rankings' own day count. Reference = the newest of them at least a week older, else the oldest
+     (so arrows show the change over about a week); the winner's streak walks back while it led. Bad rows are skipped. */
+  function deriveTrend(h){
+    const all = (h && Array.isArray(h.days) ? h.days : []).filter(d => d && typeof d.date === 'string' && /^\d{4}-\d\d-\d\d$/.test(d.date) && d.top && typeof d.top === 'object')
+      .sort((a, b) => a.date < b.date ? -1 : 1);
+    if (!all.length || !data) return null;
+    const day = String(data.updated).slice(0, 10), days = all.filter(d => d.date < day);
+    if (!days.length) return {first: all[0].date, ref: null, cats: {}};
+    const weekAgo = new Date(Date.parse(day) - 7 * DAY).toISOString().slice(0, 10);
+    const ref = days.filter(d => d.date <= weekAgo).pop() || days[0];
+    const list = (d, cid) => Array.isArray(d.top[cid]) ? d.top[cid].filter(n => typeof n === 'string') : null;
+    const cats = {};
+    for (const c of CATS) {
+      const its = catOf(c.id).items || [];
+      if (!its.length) continue;
+      let since = day, i = days.length - 1;
+      while (i >= 0 && (list(days[i], c.id) || [])[0] === its[0].name) since = days[i--].date;
+      cats[c.id] = {before: list(ref, c.id), streak: Math.round((Date.parse(day) - Date.parse(since)) / DAY), atLeast: i < 0};
+    }
+    return {first: all[0].date, ref: ref.date, cats};
   }
   const moreLabel = (open, n) => open ? 'Näytä vähemmän' : `Näytä kaikki ${n}`;
 
@@ -697,6 +735,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     }
     const pts = [...best.values()].sort((a, b) => a.price - b.price);
     let topI = -Infinity;
+    derived.trend = deriveTrend(hist);
     derived.scatter = {pts, front: new Set(pts.filter(p => p.intelligence > topI && (topI = p.intelligence, true)).map(p => p.name))};
   }
   // Ranking cards reuse card() with categories built from the agents' AA results; the Ask card and the bubble chart
@@ -996,7 +1035,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   function paintStatus(){
     const row = (name, src, key, extra = '') => failed[key] ? `<li class="kt-status bad"><b>●</b> ${name}: lataus epäonnistui</li>`
       : src ? `<li class="kt-status${late(src.updated) ? ' stale' : ''}"><b>●</b> ${name}: ${updated(src.updated)}${extra}</li>` : `<li class="kt-status">${name}: ladataan…</li>`;
-    const errs = data && data.errors && data.errors.length ? ` · ei päivittynyt: ${esc(data.errors.map(e => String(e).split(':')[0]).join(', '))}` : '';
+    const t = derived.trend, errs = (data && data.errors && data.errors.length ? ` · ei päivittynyt: ${esc(data.errors.map(e => String(e).split(':')[0]).join(', '))}` : '')
+      + (!data || !t ? '' : t.ref ? ` · ▲▼ = sijan muutos ${esc(fiDate(t.ref))} jälkeen` : ` · sijoitushistoria alkoi ${esc(fiDate(t.first))}`);
     $('#datastate').innerHTML = row('Mallit', data, 'models', errs) + row('Koodausagentit', agents, 'agents') + row('Työkalut', tools, 'tools');
     const src = ui.tab === 'tyokalut' ? tools : ui.tab === 'koodausagentit' ? agents : data, el = $('#status');
     const key = ui.tab === 'tyokalut' ? 'tools' : ui.tab === 'koodausagentit' ? 'agents' : 'models';
@@ -1267,11 +1307,13 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   syncUrl();
   const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
   const SOURCES = {
-    models: ['/data/ai-models.json', d => { data = d; deriveModels(); }],
+    models: ['/data/ai-models.json', ([d, h]) => { data = d; hist = h; deriveModels(); }],
     agents: ['/data/coding-agents.json', d => { agents = d; deriveAgents(); }],
     tools: ['/data/ai-tools.json', d => { tools = d; }],
   };
-  const load = key => { const [u, set] = SOURCES[key]; failed[key] = false; return getJson(u).then(d => { set(d); derived.news = null; }, e => { console.error(u, e); failed[key] = true; }).finally(render); };
+  // The rank history comes with the models (one render); its failure only drops the arrows.
+  const fetchSrc = (key, u) => key === 'models' ? Promise.all([getJson(u), getJson('/data/ai-history.json').catch(e => (console.warn('ai-history', e), null))]) : getJson(u);
+  const load = key => { const [u, set] = SOURCES[key]; failed[key] = false; return fetchSrc(key, u).then(d => { set(d); derived.news = null; }, e => { console.error(u, e); failed[key] = true; }).finally(render); };
   // Also the retry button's path (only the failed sources). Restored compare picks that the data no longer has are dropped.
   function loadAll(keys){
     return Promise.all(keys.map(load)).then(() => {
