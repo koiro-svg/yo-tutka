@@ -200,6 +200,14 @@ a{color:var(--accent)}
 .pick small{font:500 11px var(--font-mono);color:var(--ink-3)}
 .startbar .start{margin-top:0}
 .solo{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.daily{display:grid;gap:10px}
+.dayhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.dayhead h2{margin:0}
+.dayquiz{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;overflow-wrap:anywhere}
+.dayquiz b{font-size:18px}
+.daymine{font-weight:600}
+.dayfield,.row .dayfield{width:100%;flex-basis:100%}
+.daynote{margin-top:6px;color:var(--ink-2)}
 .solo .muted{margin-top:6px}
 @media (pointer:coarse){
   .kt-btn,.kt-tab{min-height:44px}
@@ -233,7 +241,7 @@ const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/u
 const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
 
 const STORE_KEY = 'visa-v1';
-const MISS_KEEP = 250, MISS_QUIZZES = 30, REVIEW_MIN_S = 30;   // missed items per quiz, quizzes remembered, shortest review
+const DAY_KEEP = 120, MISS_KEEP = 250, MISS_QUIZZES = 30, REVIEW_MIN_S = 30;   // missed items per quiz, quizzes remembered, shortest review
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
@@ -272,6 +280,12 @@ const T = {
     rematch: 'Uusintaottelu', review: 'Kertaus', reviewBtn: n => `Harjoittele puuttuneet (${n})`, reviewAll: 'kaikki puuttuneet osattu', reviewInfo: 'Vain viime kerralla puuttuneet kohteet tästä visasta, yksin ja lyhyemmällä ajalla.', lobby: 'Takaisin huoneeseen', answers: 'Vastaukset', results: 'Tulokset', lastAt: 'viimeinen',
     h2h: (n, w, l, d) => `Sinä vastaan ${n}: ${w}–${l}` + (d ? `, ${d} tasan` : ''),
     privacy: 'Nimimerkit ja viestit kulkevat vain pelin ajan.', privacyLink: 'Tietosuoja',
+    daily: 'Päivän visa', dailyInfo: 'Sama visa kaikille tänään. Ensimmäinen peli normaalilla ajalla jää päivän tulokseksi tähän selaimeen.',
+    dailyMeta: (n, s) => `${n} vastausta · ${s}`, dailyPlay: 'Pelaa', dailyAgain: 'Pelaa uudelleen', dailyChallenge: 'Haasta kaveri',
+    dailyMine: (n, total, c) => `Tuloksesi: ${n}/${total} · viimeinen ${c}`, dailyStreak: n => `Putki: ${n} päivää peräkkäin`,
+    dailyLoading: 'Ladataan päivän visaa…', dailyFail: 'Päivän visaa ei saatu ladattua. Lataa sivu uudelleen.',
+    dailySaved: (n, total) => `Päivän visan tulos tallennettu: ${n}/${total}.`, dailyKept: (n, total) => `Päivän visan tuloksesi on jo tallessa (${n}/${total}); uusinta ei muuta sitä.`,
+    dailyShare: (d, q, n, total) => `Päivän visa ${d}: ${q} – sain ${n}/${total}. Pystytkö parempaan?`, dailyShareNew: (d, q) => `Päivän visa ${d}: ${q}. Pelataanko?`,
   },
   en: {
     back: '← koirosvg.com', title: 'Quiz Duel',
@@ -301,6 +315,12 @@ const T = {
     rematch: 'Rematch', review: 'Review', reviewBtn: n => `Practise the missed ones (${n})`, reviewAll: 'all the missed ones found', reviewInfo: 'Only the items you missed last time in this quiz, alone and with less time.', lobby: 'Back to the room', answers: 'Answers', results: 'Results', lastAt: 'last',
     h2h: (n, w, l, d) => `You vs ${n}: ${w}–${l}` + (d ? `, ${d} drawn` : ''),
     privacy: 'Nicknames and messages only travel during the game.', privacyLink: 'Privacy',
+    daily: 'Quiz of the day', dailyInfo: 'The same quiz for everyone today. Your first game at normal time is kept as the day\'s result in this browser.',
+    dailyMeta: (n, s) => `${n} answers · ${s}`, dailyPlay: 'Play', dailyAgain: 'Play again', dailyChallenge: 'Challenge a friend',
+    dailyMine: (n, total, c) => `Your result: ${n}/${total} · last ${c}`, dailyStreak: n => `Streak: ${n} days in a row`,
+    dailyLoading: 'Loading the quiz of the day…', dailyFail: 'The quiz of the day did not load. Reload the page.',
+    dailySaved: (n, total) => `Quiz of the day result saved: ${n}/${total}.`, dailyKept: (n, total) => `Your quiz of the day result is already saved (${n}/${total}); a replay does not change it.`,
+    dailyShare: (d, q, n, total) => `Quiz of the day ${d}: ${q} – I got ${n}/${total}. Can you beat it?`, dailyShareNew: (d, q) => `Quiz of the day ${d}: ${q}. Want to play?`,
   },
 };
 
@@ -320,7 +340,7 @@ let TOP = [];                     // quiz ids of Suosituimmat, empty until the S
 function readStr(area, key) { try { return window[area].getItem(key); } catch { return null; } }
 function writeStr(area, key, v) { try { window[area].setItem(key, v); } catch { /* stays in memory */ } }
 function readJson(area, key) { try { return JSON.parse(readStr(area, key)); } catch { return null; } }
-const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [], miss: {} }, readJson('localStorage', STORE_KEY));
+const P = Object.assign({ nick: '', lang: (navigator.language || 'fi').startsWith('fi') ? 'fi' : 'en', best: {}, h2h: {}, seen: [], miss: {}, day: {} }, readJson('localStorage', STORE_KEY));
 if (!Object.hasOwn(T, P.lang)) P.lang = 'fi';
 // The stored copy may be damaged or hand-edited: wrong types would throw in renderHome and look like a failed download.
 const plainObj = x => x && typeof x === 'object' && !Array.isArray(x);
@@ -333,6 +353,9 @@ P.h2h = Object.fromEntries(Object.entries(plainObj(P.h2h) ? P.h2h : {}).filter((
 // miss: quiz id → { i: missed item indices of the full quiz, n: its item count then (a changed quiz drops the list), at }
 P.miss = Object.fromEntries(Object.entries(plainObj(P.miss) ? P.miss : {}).filter(([, m]) => plainObj(m) && Array.isArray(m.i) && count(m.n) && count(m.at))
   .map(([k, m]) => [k, { i: [...new Set(m.i.filter(i => Number.isInteger(i) && i >= 0 && i < m.n))].slice(0, MISS_KEEP), n: m.n, at: m.at }]).filter(([, m]) => m.i.length));
+// day: Helsinki date 'YYYY-MM-DD' → { q: quiz id, n, t, total } of the first counted game of that day's quiz (F6)
+P.day = Object.fromEntries(Object.entries(plainObj(P.day) ? P.day : {}).filter(([k, d]) => /^\d{4}-\d{2}-\d{2}$/.test(k) && plainObj(d) && typeof d.q === 'string' && count(d.n) && count(d.t) && count(d.total))
+  .map(([k, d]) => [k, { q: d.q, n: d.n, t: d.t, total: d.total }]).sort(([a], [b]) => a < b ? 1 : -1).slice(0, DAY_KEEP));
 const save = () => writeStr('localStorage', STORE_KEY, JSON.stringify(P));
 
 function randomId(len, alphabet) {
@@ -391,6 +414,35 @@ function shuffled(list, seed) {
   return out;
 }
 const validSettings = s => s && QUIZ.has(s.quiz) && MODES.includes(s.mode) && MULS.includes(s.mul);
+
+// ---- quiz of the day (F6): no server, every browser derives the same quiz from the Helsinki date ----
+// The pool is every `list` quiz, packs included, sorted by id so that load order does not matter. Days walk through a
+// shuffle of the pool (one shuffle per cycle), so no quiz repeats before all have come up. Adding quizzes reshuffles the
+// pool for everyone at once on deploy; a cached old page can show another quiz until it reloads.
+const DAY_FMT = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Helsinki', year: 'numeric', month: '2-digit', day: '2-digit' });
+function dayKey(ms) {
+  const p = Object.fromEntries(DAY_FMT.formatToParts(new Date(ms)).map(x => [x.type, x.value]));
+  return `${p.year}-${p.month}-${p.day}`;
+}
+const dayNum = key => Math.round(Date.UTC(+key.slice(0, 4), +key.slice(5, 7) - 1, +key.slice(8, 10)) / 864e5);
+const keyOfNum = n => new Date(n * 864e5).toISOString().slice(0, 10);
+const dayLabel = key => `${+key.slice(8, 10)}.${+key.slice(5, 7)}.`;
+let packsState = 'loading';   // the daily pick needs the pack quizzes: 'loading' | 'ok' | 'fail'
+function dailyId(key) {
+  if (packsState !== 'ok') return null;
+  const pool = [...QUIZ.values()].filter(q => fmtOf(q) === 'list').map(q => q.id).sort();
+  if (!pool.length) return null;
+  const n = dayNum(key);
+  return shuffled(pool, 0x7155 + Math.floor(n / pool.length))[n % pool.length];
+}
+// Days in a row with a result, counted back from today (or from yesterday while today is still unplayed).
+function dailyStreak() {
+  let n = dayNum(dayKey(Date.now()));
+  if (!P.day[keyOfNum(n)]) n--;
+  let k = 0;
+  while (P.day[keyOfNum(n - k)]) k++;
+  return k;
+}
 
 function buildItems(q) {
   const fmt = fmtOf(q);
@@ -491,11 +543,25 @@ async function startSolo() {
   }
   if (!R?.solo) return;
   if (saved && validSettings({ ...saved, mode: 'parallel' })) R.settings = { quiz: saved.quiz, mode: 'parallel', mul: saved.mul };
+  if (pendingDaily && applyDaily()) return;
   const review = pendingReview;
   pendingReview = null;
   if (review && QUIZ.has(review) && missFor(review).length) { setSettings({ quiz: review }); startGame(missFor(review)); return; }
   paintSettings();
   restoreGame();
+}
+
+// The quiz of the day into the solo settings at normal time; 'start' (the card's Play) also starts it. True when started.
+const DAILY_HASH = 'paiva';
+let pendingDaily = null;   // null | 'pick' | 'start'
+function applyDaily() {
+  const how = pendingDaily, id = dailyId(dayKey(Date.now()));
+  pendingDaily = null;
+  if (!id || !R?.solo) return false;
+  setSettings({ quiz: id, mul: 1 });
+  if (how !== 'start') return false;
+  startGame();
+  return true;
 }
 
 // "Practise the missed ones": straight into a review game alone. From a room's results it leaves the room first (the
@@ -575,9 +641,12 @@ function onPresence() {
 }
 
 function route() {
+  // #paiva (the quiz of the day's link) is practice alone with the day's quiz chosen; the address becomes #harjoittele
+  // so that a reload keeps the solo settings. An older page reads #paiva as no code and shows its home.
+  if (location.hash.slice(1) === DAILY_HASH) { pendingDaily = pendingDaily || 'pick'; history.replaceState(null, '', `#${SOLO_HASH}`); }
   const solo = location.hash.slice(1) === SOLO_HASH;
   const code = solo ? SOLO_HASH : parseCode(location.hash);
-  if (R && R.code === code) return;
+  if (R && R.code === code) { if (R.solo && pendingDaily && !G && packsState === 'ok') applyDaily(); return; }
   if (R) leaveRoom();
   if (solo) { pendingCode = null; startSolo(); return; }
   if (!code) { pendingCode = null; render(); return; }
@@ -959,6 +1028,15 @@ function record() {
     const b = P.best[G.quiz.id];
     if (!b || rank(me, b) < 0) P.best[G.quiz.id] = { n: me.n, t: me.t, total: G.items.length };
   }
+  // Quiz of the day: the first game of that day's quiz at normal time with an own list (alone or in a room) is the result.
+  // The day is the game's start (seq), so a game over midnight belongs to the day it began.
+  const day = dayKey(G.seq);
+  if (!G.provisional && !G.only && G.mul === 1 && G.mode === 'parallel' && !P.day[day] && dailyId(day) === G.quiz.id) {
+    P.day[day] = { q: G.quiz.id, n: me.n, t: me.t, total: G.items.length };
+    G.dailyNew = true;
+    const days = Object.keys(P.day).sort();
+    for (const k of days.slice(0, Math.max(0, days.length - DAY_KEEP))) delete P.day[k];
+  }
   save();
 }
 
@@ -1083,6 +1161,7 @@ function renderHome() {
     topBar(),
     h('h1', { text: t('title') }),
     h('p', { class: 'lead', text: t('lead') }),
+    V.daily = h('section', { class: 'card daily', 'aria-labelledby': 'daily-h' }),
     h('div', { class: 'cols' },
       h('section', { class: 'card stack' }, h('div', {}, h('div', { class: 'lbl', text: t('nick') }), h('div', { class: 'row' }, nick)), startRow, err),
       h('section', { class: 'card' }, h('h2', { text: t('mine') }),
@@ -1092,6 +1171,50 @@ function renderHome() {
         bests.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('best') }), h('ul', { class: 'stats' }, bests.map(q =>
           h('li', {}, h('span', { text: quizName(q) }), h('span', { text: `${P.best[q.id].n}/${P.best[q.id].total}` }))))))),
     foot());
+  paintDaily();
+}
+
+// The home card of the quiz of the day. Its own paint: the packs (and so the day's pick) arrive after the home screen.
+function paintDaily() {
+  if (!V.daily) return;
+  const key = dayKey(Date.now()), id = dailyId(key), rec = P.day[key];
+  const head = h('div', { class: 'dayhead' }, h('h2', { id: 'daily-h', text: t('daily') }), h('span', { class: 'kt-status', text: dayLabel(key) }));
+  const q = id && (QUIZ.get(rec?.q) || QUIZ.get(id));
+  if (!q) {
+    fill(V.daily, head, h('p', { class: packsState === 'fail' ? 'err' : 'muted', role: packsState === 'fail' ? 'alert' : null, text: t(packsState === 'fail' ? 'dailyFail' : 'dailyLoading') }));
+    return;
+  }
+  const streak = dailyStreak(), share = dailyShare(key, q, !!rec);
+  const play = h('button', { class: 'kt-btn' + (rec ? '' : ' primary'), text: t(rec ? 'dailyAgain' : 'dailyPlay'), onclick: () => { pendingDaily = 'start'; location.hash = DAILY_HASH; } });
+  fill(V.daily, head,
+    h('p', { class: 'dayquiz' }, h('b', { text: quizName(q) }), h('span', { class: 'muted', text: t('dailyMeta', buildItems(q).length, minutes(q.t)) })),
+    rec && h('p', { class: 'daymine', text: t('dailyMine', rec.n, rec.total, clock(rec.t)) }),
+    streak > 1 && h('p', { class: 'muted', text: t('dailyStreak', streak) }),
+    h('div', { class: 'row' }, rec ? [share.btn, play] : [play, share.btn]),
+    share.field,
+    h('p', { class: 'muted', text: t('dailyInfo') }));
+}
+
+// "Challenge a friend": the system share sheet where there is one, else the clipboard, else a field to copy by hand.
+function dailyShare(key, q, primary) {
+  const rec = P.day[key];
+  const url = `${location.origin}${location.pathname}#${DAILY_HASH}`;
+  const text = rec ? t('dailyShare', dayLabel(key), quizName(q), rec.n, rec.total) : t('dailyShareNew', dayLabel(key), quizName(q));
+  const field = h('input', { class: 'kt-input dayfield', readonly: true, value: `${text} ${url}`, hidden: true, 'aria-label': t('dailyChallenge') });
+  const btn = h('button', { class: 'kt-btn' + (primary ? ' primary' : ''), text: t('dailyChallenge'), onclick: async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: t('daily'), text, url }); return; } catch (e) { if (e?.name === 'AbortError') return; }
+    }
+    try { await navigator.clipboard.writeText(`${text} ${url}`); btn.textContent = t('copied'); setTimeout(() => { btn.textContent = t('dailyChallenge'); }, 1500); }
+    catch { field.hidden = false; field.select(); }
+  } });
+  return { btn, field };
+}
+// The day's result of a finished game, when this game is that day's quiz played the counted way.
+function dailyOf(game) {
+  if (game.spectator || game.provisional || game.only || game.mul !== 1 || game.mode !== 'parallel') return null;
+  const key = dayKey(game.seq), rec = P.day[key];
+  return rec && rec.q === game.quiz.id ? { key, rec } : null;
 }
 
 function renderLobby() {
@@ -1438,11 +1561,13 @@ function renderResults() {
     grid = h('div', {}, map, list);
   }
   const won = G.results[0].id === MY_ID && G.results[0].n > 0;
+  const daily = dailyOf(G);
   fill(app,
     topBar(),
     h('h1', { text: quizName(G.quiz) }),
     h('p', { class: 'winner' + (won ? ' me' : ''), style: `--c:${colorOf(G.results[0].id)}`, text: headline() }),
     G.provisional && h('p', { class: 'kt-note', role: 'status', text: t('provisional') }),
+    daily && h('p', { class: 'daynote', role: 'status', text: t(G.dailyNew ? 'dailySaved' : 'dailyKept', daily.rec.n, daily.rec.total) }),
     h('div', { class: 'cols' },
       h('section', { class: 'card' },
         h('h2', { text: t('results') }),
@@ -1462,10 +1587,13 @@ function renderResults() {
 // Its own paint: the host can change while the results are on screen.
 function paintActions() {
   if (!V.actions) return;
+  const daily = dailyOf(G), share = daily && dailyShare(daily.key, G.quiz, false);
   V.actions.replaceChildren(...[
     isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
     !G.spectator && missFor(G.quiz.id).length > 0 && h('button', { class: 'kt-btn', text: t('reviewBtn', missFor(G.quiz.id).length), onclick: () => startReview(G.quiz.id) }),
+    share && share.btn,
     h('button', { class: 'kt-btn', text: R.solo ? t('pickQuiz') : t('lobby'), onclick: () => { G = null; render(); } }),
+    share && share.field,
   ].filter(Boolean));
 }
 
@@ -1477,9 +1605,11 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
   const pack = url => getJson(url).catch(() => getJson(url));
   packsReady = Promise.all((d.packs || []).map(name => pack(`/data/visa/${name}.json`))).then(packs => {
     for (const q of packs.flatMap(x => x.quizzes)) { d.quizzes.push(q); QUIZ.set(q.id, q); }
+    packsState = 'ok';
     if (!R && Object.keys(P.best).length) render();   // best scores can be for pack quizzes
+    else paintDaily();
   });
-  packsReady.catch(() => {});   // reported by joinRoom
+  packsReady.catch(() => { packsState = 'fail'; paintDaily(); });   // a room reports it in joinRoom
   setInterval(tick, 100);
   addEventListener('hashchange', route);
   addEventListener('pagehide', storeGame);
@@ -1495,7 +1625,7 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
     }
     if (V.opts && digit) V.opts[Number(e.key) - 1]?.click();
   });
-  if (parseCode(location.hash) || location.hash.slice(1) === SOLO_HASH) route(); else render();
+  if (parseCode(location.hash) || [SOLO_HASH, DAILY_HASH].includes(location.hash.slice(1))) route(); else render();
 }).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });
 })();
 </script>
