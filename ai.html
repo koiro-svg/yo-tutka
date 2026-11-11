@@ -156,22 +156,35 @@ section.group>h2::before,section.group>header h2::before{content:"";flex:none;wi
 .lk:hover{color:var(--accent)}
 .winner{background:radial-gradient(160px 90px at 100% 0,color-mix(in srgb,var(--kt-tone) 24%,transparent),transparent 72%),var(--accent-soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 32%,transparent);border-radius:8px;padding:12px 14px;display:grid;gap:2px;position:relative}
 .winner .label{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
-.winner .name{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1.15;overflow-wrap:anywhere;padding-right:30px}
+.winner .name{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1.15;overflow-wrap:anywhere;padding-right:60px}
 .winner .sub{font-size:13px;color:var(--ink-2)}
-.winner .cmpb{position:absolute;top:10px;right:10px}
+.winner .wb{position:absolute;top:10px;right:10px;display:flex;gap:6px}
 .new{display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;background:var(--ok-soft);color:var(--ok);border-radius:4px;padding:1px 5px;vertical-align:middle;margin-left:6px}
 ol.rank{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-ol.rank li{display:grid;grid-template-columns:22px minmax(0,1fr) auto auto;gap:8px;align-items:center;font-size:14px}
+ol.rank li{display:grid;grid-template-columns:22px minmax(0,1fr) auto auto auto;gap:8px;align-items:center;font-size:14px}
 ol.rank .n{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
 ol.rank .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 ol.rank .nm small{color:var(--ink-3)}
 ol.rank .sc{font-family:var(--font-mono);font-size:12px;color:var(--ink-2)}
-ol.rank .bar{grid-column:2/5;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
+ol.rank .bar{grid-column:2/6;height:4px;border-radius:2px;background:var(--surface-2);overflow:hidden}
 ol.rank .bar i{display:block;height:100%;background:linear-gradient(90deg,#1E8580,var(--accent))}
 ol.rank li:nth-child(1) .n{color:#D5DEEA;font-weight:600}
 ol.rank li:nth-child(2) .n{color:#DDA36C;font-weight:600}
 .kt-tab.cmpb{width:24px;height:24px;padding:0;border-radius:6px;font-size:13px;line-height:1;background:var(--surface);flex:none}
 .kt-tab.cmpb[aria-pressed=true]{background:var(--accent)}
+/* ai-F2: own stack. The star is a cmpb-sized toggle; pressed it is a filled gold star, not a filled box. */
+.kt-tab.cmpb.star{color:var(--ink-3);font-size:14px}
+.kt-tab.cmpb.star[aria-pressed=true]{background:var(--surface);color:var(--warn)}
+.card .meta .star{margin-left:4px}
+.mine{display:grid;gap:10px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.mine h2:focus{outline:none}
+.mine-chg li{font-size:14px}
+.mine-chg a{font-weight:600;text-decoration:none}
+.mine-chg .up{color:var(--ok)}.mine-chg .down{color:#E58E4E}
+.pills.mine-list li{display:inline-flex;align-items:center;gap:2px;padding:3px 4px 3px 12px;min-width:0;max-width:100%}
+.mine-list a{text-decoration:none;overflow-wrap:anywhere}
+.mine-list button{background:none;border:0;color:var(--ink-3);cursor:pointer;font-size:14px;padding:0 6px}
+.mine-list button:hover{color:var(--ink)}
 .more{display:none;justify-self:start}
 .metric{font-family:var(--font-mono);font-size:11px;color:var(--ink-3)}
 details.gl summary{cursor:pointer;font-family:var(--font-mono);font-size:11px;color:var(--ink-3);list-style:none}
@@ -273,10 +286,12 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   #tabs .kt-tab,.kt-btn.sm,.more{min-height:44px}
   .filters .kt-tab,.ask .kt-tab{min-height:40px}
   .kt-tab.cmpb{width:36px;height:36px;min-height:36px} /* the shared 44 px tab rule would make it 36 × 44; ::after already extends the hit area */
-  ol.rank .cmpb,.links .cmpb,.lk{position:relative}
+  ol.rank .cmpb,.links .cmpb,.meta .cmpb,.wb .cmpb,.lk{position:relative}
+  .mine-list button{position:relative;min-width:30px;min-height:44px;padding:0}
+  .mine-list button::after{content:"";position:absolute;inset:0 -5px}
   .kt-tab.cmpb::after{content:"";position:absolute;inset:-4px}
   .lk::after{content:"";position:absolute;inset:-12px -15px}
-  .winner .name{padding-right:44px}
+  .winner .name{padding-right:84px}
   .cmpbar .it{font-size:12px;padding-left:8px}
   .cmpbar .it button{position:relative;min-width:30px;min-height:40px;padding:0}
   .cmpbar .it button::after{content:"";position:absolute;inset:0 -5px}
@@ -455,6 +470,25 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     get(){ try { return JSON.parse(sessionStorage.getItem('ai-ui')) || {}; } catch (e) { return {}; } },
     set(){ try { sessionStorage.setItem('ai-ui', JSON.stringify({cmp: ui.cmp, task: ui.task, budget: ui.budget, calc: ui.calc})); } catch (e) { /* private mode */ } },
   };
+  // ai-F2: the visitor's own stack, starred models, agents and tools, each with a snapshot of its price and places when it was
+  // last seen. localStorage 'ai-stack' = {v:1, items:[{kind, name, at, snap}]}; only this browser has it, nothing is sent.
+  const STAR_KINDS = {model: 'malli', agent: 'agentti', tool: 'työkalu'}, STACK_MAX = 60;
+  const stack = {
+    items: [],
+    load(){
+      let s = null;
+      try { s = JSON.parse(localStorage.getItem('ai-stack')); } catch (e) { /* blocked or broken: an empty stack */ }
+      this.items = [];
+      for (const it of s && Array.isArray(s.items) ? s.items : []) {
+        if (!it || !Object.hasOwn(STAR_KINDS, it.kind) || typeof it.name !== 'string' || !it.name || it.name.length > 120
+          || this.has(it.kind, it.name) || this.items.length >= STACK_MAX) continue;
+        this.items.push({kind: it.kind, name: it.name, at: /^\d{4}-\d\d-\d\d$/.test(it.at) ? it.at : '',
+          snap: it.snap && typeof it.snap === 'object' && !Array.isArray(it.snap) ? it.snap : null});
+      }
+    },
+    save(){ try { localStorage.setItem('ai-stack', JSON.stringify({v: 1, items: this.items})); } catch (e) { /* private mode: the stars last this visit */ } },
+    has(kind, name){ return this.items.some(x => x.kind === kind && x.name === name); },
+  };
   const mins = m => m < 60 ? Math.round(m) + ' min' : comma(m / 60, 1).replace(',0', '') + ' h';
   // Date-only strings would parse as UTC midnight and show a day early west of UTC.
   const dt = d => new Date(d.length === 10 ? d + 'T12:00' : d);
@@ -504,6 +538,8 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   const linkBtn = id => `<button type="button" class="lk" data-link="${esc(id)}" aria-label="Kopioi linkki tähän" title="Kopioi linkki">#</button>`;
   const inCmp = (kind, name) => ui.cmp.some(c => c.kind === kind && c.name === name);
   const cmpBtn = (kind, name) => `<button type="button" class="kt-tab cmpb" data-cmp="${kind}" data-name="${esc(name)}" aria-pressed="${inCmp(kind, name)}" aria-label="Vertaa: ${esc(name)}" title="Vertaa">+</button>`;
+  const starBtn = (kind, name) => { const on = stack.has(kind, name);
+    return `<button type="button" class="kt-tab cmpb star" data-star="${kind}" data-name="${esc(name)}" aria-pressed="${on}" aria-label="Oma pino: ${esc(name)}" title="${on ? 'Poista omasta pinosta' : 'Lisää omaan pinoon'}">${on ? '★' : '☆'}</button>`; };
   const pressBtn = (attr, id, on, label) => `<button type="button" class="kt-tab" data-${attr}="${esc(id)}" aria-pressed="${on}">${esc(label)}</button>`;
   const RETRY = '<button type="button" class="kt-btn sm" data-act="retry">Yritä uudelleen</button>';
   const pending = (key, msg) => `<p class="${failed[key] ? 'kt-note' : 'muted'}">${failed[key] ? `${msg} ${RETRY}` : 'Ladataan…'}</p>`;
@@ -531,7 +567,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       return Math.round(35 + 65 * r);
     };
     const rest = its.slice(1).map((it, i) => `
-      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(born(it)) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>${cmpBtn(kind, it.name)}
+      <li title="${esc(it.variant || '')}"><span class="n">${i + 2}</span><span class="nm">${esc(it.name)} <small>${esc(it.creator)}</small>${isNew(born(it)) ? '<span class="new">UUSI</span>' : ''}</span><span class="sc">${fmt(it.score, cat)}</span>${starBtn(kind, it.name)}${cmpBtn(kind, it.name)}
       <span class="bar"><i style="width:${pct(it.score)}%"></i></span></li>`).join('');
     const open = ui.open.has(id);
     return `<article class="card${open ? ' open' : ''}" id="${esc(id)}">
@@ -540,7 +576,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
         <span class="label">Paras nyt${isNew(born(w)) ? ' · uusi' : ''}</span>
         <span class="name">${esc(w.name)}</span>
         <span class="sub">${sub(w, cat)} · ${scoreName(cat.metric)}${fmt(w.score, cat)}${kind === 'model' && w.variant ? ` · <span class="muted">${esc(w.variant)}</span>` : ''}</span>
-        ${cmpBtn(kind, w.name)}
+        <span class="wb">${starBtn(kind, w.name)}${cmpBtn(kind, w.name)}</span>
       </div>
       <ol class="rank">${rest}</ol>
       ${its.length > 3 ? `<button type="button" class="kt-btn sm more" data-more="${esc(id)}" aria-expanded="${open}">${moreLabel(open, its.length)}</button>` : ''}
@@ -713,7 +749,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       <p class="for">${esc(a.bestFor)}</p>
       <p class="why">${esc(a.why)}</p>
       <dl class="facts"><dt>Mallit</dt><dd>${esc(a.models)}</dd><dt>Hinta</dt><dd>${esc(a.price)}</dd><dt>Tulos</dt><dd>${aa}</dd></dl>
-      <p class="links">${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}${repo ? `<a href="${esc(repo)}" target="_blank" rel="noopener">Lähdekoodi ↗</a>` : ''}${cmpBtn('agent', a.name)}</p>
+      <p class="links">${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}${repo ? `<a href="${esc(repo)}" target="_blank" rel="noopener">Lähdekoodi ↗</a>` : ''}${starBtn('agent', a.name)}${cmpBtn('agent', a.name)}</p>
     </article>`;
   }
   function agentsTab(){
@@ -739,7 +775,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       <header><h3>${esc(t.name)}${linkBtn(id)}</h3><span class="vendor">${esc(t.vendor)}</span></header>
       <p class="for">${esc(t.bestFor)}</p>
       <p class="why">${esc(t.why)}</p>
-      <div class="meta"><span>${esc(t.price)}</span>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}</div>
+      <div class="meta"><span>${esc(t.price)}</span>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Avaa ↗</a>` : ''}${starBtn('tool', t.name)}</div>
     </article>`;
   }
   // A starter row names one or two tools in text ("ChatGPT tai Claude"): link the first card whose name matches,
@@ -817,6 +853,107 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     return derived.news = !models.length && !changes.length ? '' : `<h2>Uutta</h2>
       ${models.length ? `<ul class="pills">${models.map(m => `<li>${esc(m.name)}<small>${esc(m.creator)} · ${m.released ? '' : 'listalla '}${esc(fiDate(born(m)))}</small></li>`).join('')}</ul>` : ''}
       ${changes.length ? `<ul class="chg">${changes.map(c => `<li><span class="muted small">${esc(fiDate(c.date))}</span> ${esc(c.text)}</li>`).join('')}</ul><p><a href="#muutokset">Kaikki muutokset →</a></p>` : ''}`;
+  }
+
+  // ---- Own stack (ai-F2): what changed in the starred items since the visitor last marked them seen ----
+  const STAR_SRC = {model: () => data, agent: () => agents, tool: () => tools};
+  const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+  const num = v => typeof v === 'number' && isFinite(v) ? v : null;
+  const str = v => typeof v === 'string' ? v : null;
+  // The item now: a model's blended price and its place in every list (top 8), an agent's place by index and its cost per
+  // task, a tool's price text and "Paras nyt". {gone:true} = the loaded data no longer has it. Only call when its source is loaded.
+  function snapOf(kind, name){
+    if (kind === 'model') {
+      const ranks = {};
+      for (const c of CATS) { const i = catOf(c.id).items.findIndex(it => it.name === name); if (i >= 0) ranks[c.id] = i + 1; }
+      const p = derived.scatter.pts.find(x => x.name === name);
+      return Object.keys(ranks).length ? {price: p ? p.price : null, ranks} : {gone: true};
+    }
+    if (kind === 'agent') {
+      const a = agents.agents.find(x => x.name === name), i = derived.agents.measured.indexOf(a);
+      return a ? {rank: i >= 0 ? i + 1 : null, cost: a.aa ? a.aa.costPerTask : null, price: a.price} : {gone: true};
+    }
+    const all = tools.areas.flatMap(ar => ar.tools.filter(t => t.name === name));
+    return all.length ? {price: all[0].price, pick: all.some(t => t.pick)} : {gone: true};
+  }
+  // Change lines, plain text with a direction (up = better for the visitor). The stored snapshot is untrusted: every field is type-checked.
+  function changesOf(it){
+    if (!STAR_SRC[it.kind]() || !it.snap) return [];
+    const was = it.snap, now = snapOf(it.kind, it.name), out = [], add = (text, dir = '') => out.push({text, dir});
+    const move = (label, a, b) => { if (a === b) return;
+      if (a == null) add(`${label}: uutena ${b}.`, 'up');
+      else if (b == null) add(`${label}: putosi listalta (oli ${a}.)`, 'down');
+      else add(`${label} ${a}. → ${b}.`, b < a ? 'up' : 'down'); };
+    const cost = (a, b, unit) => { if (a != null && b != null && Math.abs(a - b) > 1e-9) add(`${usd(a)} → ${usd(b)}${unit}`, b < a ? 'up' : 'down'); };
+    if (now.gone) { if (!was.gone) add(it.kind === 'model' ? 'ei enää millään listalla' : 'poistui oppaasta', 'down'); return out; }
+    if (was.gone) { add('palasi oppaaseen', 'up'); return out; }
+    if (it.kind === 'model') {
+      cost(num(was.price), now.price, ' / 1M');
+      const ranks = was.ranks && typeof was.ranks === 'object' ? was.ranks : {};
+      for (const c of CATS) move(c.title, num(ranks[c.id]), now.ranks[c.id] ?? null);
+    } else if (it.kind === 'agent') {
+      move('Sija', num(was.rank), now.rank);
+      cost(num(was.cost), now.cost, ' / tehtävä');
+      if (str(was.price) != null && was.price !== now.price) add(`hinta nyt: ${now.price}`);
+    } else {
+      if (str(was.price) != null && was.price !== now.price) add(`hinta nyt: ${now.price}`);
+      if (typeof was.pick === 'boolean' && was.pick !== now.pick) add(now.pick ? 'nousi Paras nyt -valinnaksi' : 'ei enää Paras nyt', now.pick ? 'up' : 'down');
+    }
+    return out;
+  }
+  // The card a stack item links to: a model's first list, the agent card, the tool's first area.
+  function starTarget(it){
+    if (!STAR_SRC[it.kind]()) return null;
+    if (it.kind === 'model') { const c = CATS.find(c => catOf(c.id).items.some(x => x.name === it.name)); return c ? 'm-' + c.id : null; }
+    if (it.kind === 'agent') return agents.agents.some(a => a.name === it.name) ? agentId(it) : null;
+    for (const a of tools.areas) for (const t of a.tools) if (t.name === it.name) return toolId(a, t);
+    return null;
+  }
+  // A snapshot is taken when a star is added; an item without one (written before its data loaded) gets it on the first load.
+  function stackBaseline(){
+    let dirty = false;
+    for (const it of stack.items) if (!it.snap && STAR_SRC[it.kind]()) { it.snap = snapOf(it.kind, it.name); it.at = today(); dirty = true; }
+    if (dirty) stack.save();
+  }
+  function stackHtml(){
+    if (!stack.items.length) return '';
+    stackBaseline();
+    const MAX = 3, rows = [], since = stack.items.filter(it => it.snap && it.at && STAR_SRC[it.kind]()).map(it => it.at).sort()[0];
+    for (const it of stack.items) {
+      const ch = changesOf(it);
+      if (!ch.length) continue;
+      const id = starTarget(it), name = id ? `<a href="#${esc(id)}">${esc(it.name)}</a>` : `<b>${esc(it.name)}</b>`;
+      rows.push(`<li>${name}: ${ch.slice(0, MAX).map(c => `<span class="${c.dir}">${esc(c.text)}</span>`).join(' · ')}${ch.length > MAX ? ` <span class="muted">+${ch.length - MAX} muuta</span>` : ''}</li>`);
+    }
+    const when = since ? ` sitten ${esc(fiDate(since))}` : '';
+    const pills = stack.items.map((it, i) => { const id = starTarget(it), gone = STAR_SRC[it.kind]() && !id;
+      return `<li>${id ? `<a href="#${esc(id)}">${esc(it.name)}</a>` : `<span>${esc(it.name)}</span>`}<small>${STAR_KINDS[it.kind]}${gone ? ' · ei listoilla' : ''}</small><button type="button" data-unstar="${i}" aria-label="Poista omasta pinosta: ${esc(it.name)}">✕</button></li>`; }).join('');
+    return `<div class="mine"><h2 id="stack-h" class="split" tabindex="-1">Oma pino${rows.length ? '<span class="acts"><button type="button" class="kt-btn sm" data-act="stack-seen">Merkitse nähdyksi</button></span>' : ''}</h2>
+      ${rows.length ? `<p><b>Omissasi muuttui</b><span class="small muted">${when}</span></p><ul class="chg mine-chg">${rows.join('')}</ul>`
+        : `<p class="small muted">Ei muutoksia hinnoissa tai sijoissa${when}.</p>`}
+      <ul class="pills mine-list" aria-label="Oma pino">${pills}</ul></div>`;
+  }
+  const STAR_HINT = '<p class="small muted">☆ Merkitse käyttämäsi mallit, agentit ja työkalut tähdellä, niin näet tässä heti, jos niiden hinta tai sijoitus muuttuu.</p>';
+  function paintNews(){
+    const mine = stackHtml(), news = newsHtml(), any = data || agents || tools;
+    const html = mine + news + (!mine && news && any ? STAR_HINT : '');
+    $('#news').hidden = !html;
+    if ($('#news').innerHTML !== html) $('#news').innerHTML = html;
+  }
+  function paintStars(){
+    for (const b of document.querySelectorAll('[data-star]')) { const on = stack.has(b.dataset.star, b.dataset.name);
+      b.setAttribute('aria-pressed', String(on)); b.textContent = on ? '★' : '☆'; b.title = on ? 'Poista omasta pinosta' : 'Lisää omaan pinoon'; }
+    paintNews();
+  }
+  function toggleStar(kind, name){
+    const i = stack.items.findIndex(x => x.kind === kind && x.name === name);
+    if (i >= 0) stack.items.splice(i, 1);
+    else {
+      stack.items.push({kind, name, at: today(), snap: STAR_SRC[kind]() ? snapOf(kind, name) : null});
+      if (stack.items.length > STACK_MAX) stack.items.shift();
+    }
+    stack.save();
+    paintStars();
   }
 
   // ---- Compare (julkinen-12) ----
@@ -900,9 +1037,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       if (on) el.innerHTML = PANELS[t.id](); else if (el.firstChild) el.textContent = '';
     }
     paintAsk();
-    const news = newsHtml();
-    $('#news').hidden = !news;
-    if ($('#news').innerHTML !== news) $('#news').innerHTML = news;
+    paintNews();
     paintCompare();
     paintStatus();
     if (again) { const b = document.querySelector(again); if (b && b !== a) b.focus({preventScroll: true}); }
@@ -1010,6 +1145,10 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     qTimer = setTimeout(applyQ, 120); commitTimer = setTimeout(commitQ, 1000);
   });
   $('#q').addEventListener('keydown', e => { if (e.key === 'Enter') commitQ(); });
+  // A stack button that removed itself hands the focus to the stack heading (or the next pill's ✕), not to <body>.
+  const refocusStack = b => { if (b.isConnected) return;
+    const next = document.querySelector(`[data-unstar="${CSS.escape(b.dataset.unstar || '')}"]`) || $('#stack-h');
+    if (next) next.focus({preventScroll: true}); };
   const setArea = v => { ui.area = v; nav('tyokalut', v); render(); };
   document.addEventListener('click', e => {
     const b = e.target.closest('button');
@@ -1034,6 +1173,12 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       const i = ui.cmp.findIndex(c => c.kind === d.cmp && c.name === d.name);
       if (i >= 0) ui.cmp.splice(i, 1); else { ui.cmp.push({kind: d.cmp, name: d.name}); if (ui.cmp.length > 3) ui.cmp.shift(); }
       paintCompare();
+    }
+    else if (d.star) toggleStar(d.star, d.name);
+    else if (d.unstar) { const it = stack.items[+d.unstar]; if (it) toggleStar(it.kind, it.name); refocusStack(b); }
+    else if (d.act === 'stack-seen') {   // the current state becomes the new baseline (only for sources that loaded)
+      for (const it of stack.items) if (STAR_SRC[it.kind]()) { it.snap = snapOf(it.kind, it.name); it.at = today(); }
+      stack.save(); paintNews(); refocusStack(b);
     }
     else if (d.uncmp) { ui.cmp.splice(+d.uncmp, 1); paintCompare(); }
     else if (d.act === 'cmp-open') { ui.showCmp = true; paintCompare(); $('#compare').scrollIntoView({block: 'start'}); }
@@ -1091,6 +1236,9 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   $('#tabs').innerHTML = TABS.map(t => `<button type="button" role="tab" class="kt-tab" id="tb-${t.id}" data-tab="${t.id}" aria-controls="tab-${t.id}">${t.name}<span class="n"></span></button>`).join('');
   $('#tasks').innerHTML = TASKS.map(t => pressBtn('task', t.id, false, t.label)).join('');
   lastW = chartW();
+  stack.load();
+  // Another tab starring or marking seen: follow it (the storage event only fires in the other tabs).
+  addEventListener('storage', e => { if (e.key === 'ai-stack' || e.key === null) { stack.load(); paintStars(); } });
   // A shared link (ai-F1) wins over this tab's own picks, key by key: ?cmp= sets the compare, ?task= the task and its budget.
   // Names are only shape-checked here; loadAll drops the ones the data does not have.
   {
