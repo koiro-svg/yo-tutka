@@ -202,6 +202,13 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 .md mjx-assistive-mml{max-width:100%}   /* invisible screen-reader copy: must not widen the page either */
 .intro{border-left:3px solid var(--accent);padding:4px 0 4px 14px;color:var(--ink-2)}
 .help{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0}
+.work{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}   /* answer + its footer: the left column of .solopen */
+/* An opened model solution sits beside the answer on a wide screen (paper left; hints, model and points right) so
+   self-grading needs no scrolling back and forth. Phones, and the narrower column next to the aids panel, keep one column. */
+@media (min-width:1100px){
+  body:not(.aids-open) .unit.solopen{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:20px;align-items:start}
+  body:not(.aids-open) .unit.solopen>:not(.work,.help){grid-column:1/-1}
+}
 .reveal{min-width:0;border-radius:10px;padding:12px 14px;background:var(--surface-2);border:1px solid var(--line-2)}
 .reveal.hint{border-left:3px solid var(--warn)}
 .reveal.sol{border-left:3px solid var(--accent)}
@@ -213,6 +220,16 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 .pts input{width:5.5em;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
 .pts input[aria-invalid="true"]{border-color:var(--bad)}
 .assess [data-assessnote].err{color:var(--bad)}
+/* Grading rows (unit.rubric): tick the steps the answer has; the sum is saved like a points button. */
+.rubric{display:grid;gap:4px;margin:0;padding:0;border:0;min-width:0}
+.rubric legend{padding:0;margin-bottom:4px}
+.rrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:start;padding:6px 8px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface-2);cursor:pointer}
+.rrow input{margin:3px 0 0;width:16px;height:16px;accent-color:var(--accent)}
+.rrow:has(input:checked){border-color:var(--accent)}
+.rrow .rp{font-family:var(--font-mono);font-size:12px;color:var(--ink-2);white-space:nowrap}
+.rrow .rt{min-width:0}
+.rrow .rt mjx-container svg{max-width:100%}
+.rubric .row{margin-top:4px}
 .pager{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
 /* answer editor ("paper") */
@@ -249,6 +266,7 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
   /* touch: 44 px targets and 16 px fields (iOS zooms the page into anything smaller); desktop density is unchanged */
   .btn,.filters button,.pts button,.pts input,.wrap select,.wrap input.kt-input{min-height:44px}
   .pts button,.filters button{min-width:44px} .pts{gap:8px}
+  .rrow{min-height:44px;align-items:center} .rrow input{width:22px;height:22px;margin:0}
   .wrap input,.wrap select,.wrap textarea,.wrap .kt-input{font-size:16px}
   .rte{top:auto;bottom:0;box-shadow:0 -6px 18px rgba(0,0,0,.35);border-bottom:0;border-top:1px solid var(--line)}
   .rte button{min-width:40px;height:40px}
@@ -259,9 +277,20 @@ details.sess>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wra
 body.tools-on .simbar{top:calc(var(--toolbar-h,0px) + 4px)}
 .clock{font-family:var(--font-mono);font-size:22px;font-weight:600;color:var(--accent)}
 .clock.low{color:var(--warn)}
+.resume .list{gap:10px}
+.resume .list li{display:grid;gap:2px}
+.resume .eyebrow{font-size:12px}
+.rclock{font-family:var(--font-mono);font-weight:600;color:var(--accent)}
+.rclock.low{color:var(--warn)}
+@media (pointer:coarse){.resume .list a{display:flex;align-items:center;min-height:44px}}
 .simwarn{flex-basis:100%;font-size:14px;color:var(--warn)}
 .section{display:grid;gap:10px}
 .section>header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.simrep{margin:12px 0}
+.simrep .srow{display:grid;gap:4px;padding:8px 0;border-top:1px solid var(--line-2)}
+.simrep .srow .meter{grid-template-columns:56px minmax(0,1fr) 64px}
+@media (min-width:760px){.simrep .srow{grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));align-items:center;gap:6px 18px}}
+.simrep h3{margin-top:12px}
 details.simtask{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 details.simtask[data-chosen="1"]{border-color:var(--accent)}
 details.simtask>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
@@ -313,6 +342,12 @@ footer{color:var(--ink-3);font-size:13px;border-top:1px solid var(--line);paddin
 .goal .ringbg{fill:none;stroke:var(--surface-2);stroke-width:4}
 .goal .ringv{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center}
 .goal .big{font-family:var(--font-display);font-size:20px}
+.filters button .xd{font-weight:400;opacity:.75}
+.wkh{margin:16px 0 4px}
+.wk{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px 14px;font-size:14px}
+.wk li{display:contents}
+.wk li>span:nth-child(n+2){text-align:right;color:var(--ink-3)}
+.wk li.cur>span:first-child{font-weight:700}
 .pikabar.round{background:var(--warn-soft);border-color:var(--warn)}
 .tfilters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 .tfilters .kt-input{padding:7px 10px;max-width:100%}
@@ -530,6 +565,35 @@ details.how>p{margin-top:6px}
   }
   // The quick test belongs to one sitting: 2 h since the last drawn task.
   const pikaLive = (pika, now) => !!pika && now - (+pika.at || 0) < 2 * 36e5;
+  // Calendar days from the local midnight `todayMs` to an ISO date (YYYY-MM-DD); null without a valid date or once it has passed.
+  function daysUntil(iso, todayMs) {
+    if (typeof iso !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return null;
+    const t = new Date(iso + 'T00:00').getTime(); if (!Number.isFinite(t)) return null;
+    const d = Math.round((t - todayMs) / 864e5);   // Math.round absorbs a DST hour
+    return d < 0 ? null : d;
+  }
+  // Parts self-assessed per subject since `fromMs`: distinct keys (subject|session|task|unit) per local day, summed over the
+  // days, as the daily goal counts them (a corrected score counts once a day).
+  function partsBySubject(history, fromMs) {
+    const seen = new Set(), out = new Map();
+    for (const e of history) {
+      if (!(e.at >= fromMs)) continue;
+      const d = new Date(e.at); d.setHours(0, 0, 0, 0);
+      const id = d.getTime() + '#' + e.k; if (seen.has(id)) continue;
+      seen.add(id); const a = e.k.split('|')[0]; out.set(a, (out.get(a) || 0) + 1);
+    }
+    return out;
+  }
+  // Exam report: topics of the assessed tasks, weakest first (share of points, then points lost); only topics that lost points.
+  // rows: [{ topics: [id], p, max }] where max counts assessed parts only.
+  function weakTopics(rows) {
+    const acc = new Map();
+    for (const r of rows) {
+      if (!(r.max > 0)) continue;
+      for (const id of r.topics || []) { const x = acc.get(id) || { id, p: 0, max: 0 }; x.p += r.p; x.max += r.max; acc.set(id, x); }
+    }
+    return Array.from(acc.values()).filter(x => x.p < x.max).sort((x, y) => x.p / x.max - y.p / y.max || (y.max - y.p) - (x.max - x.p) || (x.id < y.id ? -1 : 1));
+  }
   /* pure:end */
   const loadState = raw => { try { const o = JSON.parse(raw || '{}'); if (plainObj(o)) Object.assign(S, o); } catch (e) {} normalizeSave(S); dayMemo = null; };
   loadState((() => { try { return localStorage.getItem(LS); } catch (e) { return null; } })());
@@ -688,8 +752,8 @@ details.how>p{margin-top:6px}
   const freshReview = () => ({ box: 0, due: addDays(1), at: Date.now() });
   const reviewOf = key => { const r = S.review[key]; return r && !r.gone ? r : null; };
   const dropReview = key => { S.review[key] = { gone: true, at: Date.now() }; };
-  function setScore(key, p, max) {
-    S.scores[key] = { p, max, at: Date.now() };
+  function setScore(key, p, max, c) {   // c: ticked rubric row indices, only when the score came from the rubric
+    S.scores[key] = c ? { p, max, at: Date.now(), c } : { p, max, at: Date.now() };
     S.history.push({ k: key, p, max, at: S.scores[key].at });
     if (S.history.length > 5000) S.history.splice(0, S.history.length - 5000);
     const ratio = max ? p / max : 0, r = reviewOf(key);
@@ -743,6 +807,12 @@ details.how>p{margin-top:6px}
     '2025S': { englanti: [277, 259, 241, 218, 188, 153], 'pitka-matematiikka': [85, 65, 48, 34, 22, 14], fysiikka: [86, 65, 49, 32, 20, 12], kemia: [105, 89, 73, 53, 34, 20], biologia: [101, 85, 71, 56, 42, 31] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-syksy-2025-0
     '2026K': { englanti: [267, 248, 225, 197, 160, 126], 'pitka-matematiikka': [95, 74, 59, 44, 30, 19], fysiikka: [91, 71, 54, 40, 29, 20], kemia: [101, 81, 61, 40, 24, 14], biologia: [100, 82, 67, 52, 38, 27] },  // https://www.ylioppilastutkinto.fi/fi/tutkinnon-suorittaminen/pisterajat/pisterajat-kevat-2026
   };
+  // Next exam day per subject: a copy of yo-tutka.html's EXAMS (YTL's preliminary timetable), updated each term like GRADES;
+  // validate_practice.py checks that the two tables are identical. A missing or passed date shows no countdown.
+  const EXAMS = {"aidinkieli":"2027-03-16", "englanti":"2027-03-22", "pitka-matematiikka":"2027-03-24", "fysiikka":"2027-03-30", "biologia":"2027-03-30", "kemia":"2027-04-02"};
+  const examIn = a => daysUntil(EXAMS[a], today());
+  const examLabel = d => d === 0 ? 'koe tänään' : d + ' pv';
+  const examTitle = a => 'Koe ' + new Date(EXAMS[a] + 'T12:00').toLocaleDateString('fi-FI', { weekday: 'short', day: 'numeric', month: 'numeric', year: 'numeric' }) + ' (YTL:n alustava koeaikataulu)';
   const LETTERS = ['L', 'E', 'M', 'C', 'B', 'A'];
   function gradeFor(a, k, total) {
     const b = (GRADES[k] || {})[a]; if (!b) return null;
@@ -1254,11 +1324,20 @@ details.how>p{margin-top:6px}
     let streak = 0;
     for (let i = done ? 0 : 1; days.has(addDays(-i)); i++) streak++;
     const pct = Math.min(1, done / goal) * 100;
+    // F2: this week (Mon-Sun) against the daily goal x 7, paced by the days gone so far, and per subject with its exam countdown
+    const dow = (new Date().getDay() + 6) % 7, bySubj = partsBySubject(S.history, addDays(-dow));
+    const wk = Array.from(bySubj.values()).reduce((x, y) => x + y, 0), wkGoal = goal * 7, due = goal * (dow + 1);
+    const pace = !S.history.length ? 'arvioi kohtia, niin näet tahtisi' : wk >= wkGoal ? 'viikon tavoite täynnä' : wk >= due ? 'tahdissa' : `${due - wk} ${due - wk === 1 ? 'kohta' : 'kohtaa'} jäljessä tahdista`;
+    const wkRow = x => { const n = bySubj.get(x.id) || 0, d = examIn(x.id);
+      return `<li${x.id === S.ui.subject ? ' class="cur"' : ''}><span>${esc(x.name.split(',')[0])}</span><span>${n} ${n === 1 ? 'kohta' : 'kohtaa'}</span><span${d == null ? '' : ` title="${esc(examTitle(x.id))}"`}>${d == null ? '' : esc(examLabel(d))}</span></li>`; };
     return `<section class="card" aria-labelledby="goal-h"><h2 id="goal-h">Päivän tavoite</h2>
       <div class="goal"><svg viewBox="0 0 36 36" aria-hidden="true"><circle class="ringbg" cx="18" cy="18" r="15.9155"/><circle class="ringv" cx="18" cy="18" r="15.9155" stroke-dasharray="${pct.toFixed(1)} 100"${done ? '' : ' stroke-opacity="0"'}/></svg>
         <div><div class="big">Tänään ${Math.min(done, 99)}/${goal} kohtaa</div><div class="muted small">${streak ? `${streak} ${streak === 1 ? 'päivä' : 'päivää'} peräkkäin` : 'Arvioi yksi kohta, niin putki alkaa.'}</div></div>
         <div class="filters" role="group" aria-label="Päivän tavoite">${[1, 3, 5].map(n => `<button type="button" data-goal="${n}" aria-pressed="${n === goal}">${n}</button>`).join('')}</div></div>
-      <p class="muted small">Kohta = yksi itsearvioitu tehtävän kohta.</p></section>`;
+      <h3 class="wkh">Tämä viikko</h3>
+      <p class="small"><b>${wk}/${wkGoal} kohtaa</b> <span class="muted">· ${pace}</span></p>
+      <ul class="wk" aria-label="Viikon kohdat ja päivät kokeeseen aineittain">${DATA.map(wkRow).join('')}</ul>
+      <p class="muted small">Kohta = yksi itsearvioitu tehtävän kohta. Viikko ma–su, tavoite ${goal} × 7.</p></section>`;
   }
   function bindGoal() {
     $$('[data-goal]', app).forEach(b => b.onclick = () => {
@@ -1290,6 +1369,52 @@ details.how>p{margin-top:6px}
       <p class="muted small">Todennäköinen aihe × heikko oma osaaminen, kuten <a href="${TUTKA}#${encodeURIComponent(s.id)}">YO-tutkassa</a>.</p></section>`;
   }
 
+  // yo-harjoittelu-F1: "Jatka siitä mihin jäit" at the top of the home page: unfinished exam simulations (live clock), the
+  // last opened task (S.ui.last, this device only) and the task of the newest practice answer in IndexedDB, with the
+  // answer's length. Drawn after the IndexedDB read; a first-time visitor (none of these) gets no card.
+  async function resumeCard(signal) {
+    const answers = (await idb.entries()).filter(([key, v]) => typeof key === 'string' && !key.startsWith('koe|') && v && typeof v.html === 'string' && Number.isFinite(v.at));
+    const box = $('#resume', app); if (signal.aborted || !box) return;
+    const tpl = document.createElement('template');   // inert: stored HTML is only measured, never shown
+    const chars = html => { tpl.innerHTML = html; return tpl.content.textContent.replace(/\s/g, '').length; };
+    const when = at => new Date(at).toDateString() === new Date().toDateString() ? 'tänään ' + fmtTime(at) : fmtDay(at);
+    const name = a => esc(subj(a).name.split(',')[0]);
+    const rows = [], clocks = [];
+    // unfinished simulations, newest first
+    Object.entries(S.sims).filter(([, m]) => m && !m.submitted && Number.isFinite(m.start)).sort((x, y) => y[1].start - x[1].start).slice(0, 3).forEach(([sk, sim]) => {
+      const [a, k, g] = sk.split('|'), session = sessionOf(a, k); if (!session) return;
+      rows.push(`<li><span class="eyebrow">Koesimulaatio kesken</span><a href="#/koe/${[a, k, g].filter(Boolean).map(encodeURIComponent).join('/')}">${name(a)} · ${esc(session.label)}${g ? ' · ' + esc(g) : ''}</a>
+        <span class="muted small">${sim.pauseAt ? 'Tauolla · ' : ''}<span class="rclock" data-clock="${clocks.length}">kello käy</span></span></li>`);
+      clocks.push({ sim, a, k, g, session, minutes: null });
+    });
+    // the last opened task and the task of the newest answer (newer first, the same task once)
+    const newest = answers.reduce((b, e) => !b || e[1].at > b[1].at ? e : b, null);
+    const last = S.ui.last, cand = [];
+    if (plainObj(last) && typeof last.a === 'string' && typeof last.k === 'string' && typeof last.n === 'string' && Number.isFinite(last.at))
+      cand.push({ a: last.a, k: last.k, n: last.n, u: typeof last.u === 'string' ? last.u : '', at: last.at, label: 'Viimeksi avattu' });
+    if (newest) cand.push({ ...parseKey(newest[0]), at: newest[1].at, label: 'Viimeksi kirjoitettu' });
+    const seen = new Set();
+    cand.sort((x, y) => y.at - x.at).forEach(c => {
+      const id = [c.a, c.k, c.n].join('|'), t = taskOf(c.a, c.k, c.n); if (!t || seen.has(id)) return; seen.add(id);
+      const n = answers.filter(([key]) => key.startsWith(id + '|')).reduce((sum, [, v]) => sum + chars(v.html), 0);
+      rows.push(`<li><span class="eyebrow">${c.label} ${esc(when(c.at))}</span><a href="${taskHref(c.a, c.k, c.n, c.u)}">${name(c.a)} ${esc(shortLabel(c.k))} · ${esc(c.n)}. ${esc(t.title)}</a>
+        <span class="muted small">${n ? `Vastauksessa ${n} merkkiä` : 'Ei vielä vastausta'}</span></li>`);
+    });
+    if (!rows.length) return;
+    box.outerHTML = `<section class="card resume" id="resume" aria-labelledby="resume-h"><h2 id="resume-h">Jatka siitä mihin jäit</h2><ul class="list">${rows.join('')}</ul></section>`;
+    if (!clocks.length) return;
+    const tick = () => clocks.forEach((c, i) => {
+      const el = $(`[data-clock="${i}"]`, app); if (!el || c.minutes == null) return;
+      const r = simLeft(c.sim, c.minutes);
+      el.textContent = r > 0 ? fmtClock(r) + ' jäljellä' : 'aika loppui, avaa ja palauta';
+      el.classList.toggle('low', r < 15 * 6e4);
+    });
+    // the exam length is in the content file (cached); without it the row only says the clock is running
+    clocks.forEach(c => getContent(c.a, c.k).then(content => { if (content !== false && !signal.aborted) { c.minutes = simMinutes(content, c.session, c.g); tick(); } }));
+    const timer = setInterval(tick, 1000);
+    signal.addEventListener('abort', () => clearInterval(timer));
+  }
+
   let listState = null;   // the task list's filters of the last drawn subject (memory only)
   function home(prefer) {
     const a = subj(prefer) ? prefer : (subj(S.ui.subject) ? S.ui.subject : DATA[0].id);
@@ -1317,8 +1442,9 @@ details.how>p{margin-top:6px}
       rowInfo.push({ t, st, rev: onReview.has(id) });
       return `<a class="trow${st ? ' st-' + st : ''}" href="${taskHref(a, x.id, t.n)}"><span class="n">${esc(t.n)}</span><span class="t">${esc(t.title)}</span><span class="st">${sc ? scoreChip(sc) : `<span class="muted">${t.points != null ? esc(t.points) + ' p' : ''}</span>`}</span>${t.summary ? `<span class="s">${esc(t.summary)}</span>` : ''}</a>`;
     };
-    setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (' + (coarse.matches ? '<b>Σ Lisää kaava</b> avaa kaavan' : `<kbd>${MOD}E</kbd> avaa kaavan, <kbd>${MOD}V</kbd> liittää kuvan`) + '). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen (varmuuskopio <a href="#/edistyminen">Edistyminen</a>-sivulla).') + `
-      <nav class="filters" aria-label="Oppiaine">${DATA.map(x => `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}">${esc(x.name.replace(/, pitkä oppimäärä/, ''))}</button>`).join('')}</nav>
+    const signal = setView(masthead('', 'Harjoittele YO-tehtäviä', 'Tee vanhojen ylioppilaskokeiden tehtäviä Abitti-tyylisellä kaavaeditorilla (' + (coarse.matches ? '<b>Σ Lisää kaava</b> avaa kaavan' : `<kbd>${MOD}E</kbd> avaa kaavan, <kbd>${MOD}V</kbd> liittää kuvan`) + '). Jokaisessa kohdassa on vihjeet ja vaiheittainen malliratkaisu. Arvioi pisteesi, niin heikot aiheet ja kertauslista päivittyvät. Vastaukset tallentuvat vain tähän selaimeen (varmuuskopio <a href="#/edistyminen">Edistyminen</a>-sivulla).') + `
+      <div id="resume" hidden></div>
+      <nav class="filters" aria-label="Oppiaine">${DATA.map(x => { const d = examIn(x.id); return `<button type="button" data-subj="${esc(x.id)}" aria-pressed="${x.id === a}"${d == null ? '' : ` title="${esc(examTitle(x.id))}"`}>${esc(x.name.replace(/, pitkä oppimäärä/, ''))}${d == null ? '' : ` <span class="xd">${esc(examLabel(d))}</span>`}</button>`; }).join('')}</nav>
       <div class="grid2">
         ${goalCard()}
         ${nextCard(s, idx, sessions, mast, topicCounts.keys())}
@@ -1366,6 +1492,7 @@ details.how>p{margin-top:6px}
       </section>
       ${footer()}`);
     $$('[data-subj]', app).forEach(b => b.onclick = () => { location.hash = '#/' + b.dataset.subj; });
+    resumeCard(signal);
     bindGoal();
     // julkinen-27: search, topic and state filters only hide rows (sessions with hits open while filtering), so Ctrl+F still works.
     // They survive a redraw of the same subject (a background sync, coming back from a task) via listState.
@@ -1422,17 +1549,27 @@ details.how>p{margin-top:6px}
     return `<section class="unit" id="u-${esc(u.id || '_')}" data-key="${esc(key)}">
       <div class="uhead">${u.id ? `<b>${esc(u.id)}</b>` : ''}<span class="chip">${esc(u.points)} p</span>${checkChip}${scoreChip(S.scores[key], 'data-score title="oma arvio"')}</div>
       ${u.prompt ? `<div class="md">${md(u.prompt)}</div>` : ''}
-      <div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
-      <div class="afoot"><span class="count"></span><span class="saved"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div>
-      ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u.points)}</div></div>` : ''}
+      <div class="work"><div class="answer" data-key="${esc(prefix + key)}" data-unit="${esc(u.id || '')}"></div>
+      <div class="afoot"><span class="count"></span><span class="saved"></span><span class="sp"></span><button type="button" class="btn ghost" data-act="png">Tallenna kuvana</button></div></div>
+      ${showHelp ? `<div class="help">${help}<div class="assess" ${u.solution ? 'hidden' : ''}>${assessHtml(key, u)}</div></div>` : ''}
     </section>`;
   }
-  function assessHtml(key, max) {
-    const v = S.scores[key];
+  // Rubric rows are the site's own split of the unit's points (PRACTICE_CONTENT.md), not YTL's scoring guideline.
+  const rubricOf = u => Array.isArray(u.rubric) && u.rubric.length && u.solution ? u.rubric : null;
+  function rubricHtml(u, v) {
+    const r = rubricOf(u); if (!r) return '';
+    const on = new Set(v && Array.isArray(v.c) ? v.c : []), sum = r.reduce((t, x, i) => t + (on.has(i) ? +x.points || 0 : 0), 0);
+    return `<fieldset class="rubric"><legend class="muted small">Rastita vaiheet, jotka vastauksessasi on (sivuston oma pistejako, ei YTL:n arviointiohje):</legend>
+      ${r.map((x, i) => `<label class="rrow"><input type="checkbox" data-ri="${i}" ${on.has(i) ? 'checked' : ''}><span class="rt">${md(String(x.text || '')).replace(/^<p>|<\/p>$/g, '')}</span><span class="rp">+${esc(x.points)} p</span></label>`).join('')}
+      <div class="row"><button type="button" class="btn" data-pts="rubric">Tallenna rastien summa: <b data-rsum>${sum}</b>/${esc(u.points)} p</button></div>
+    </fieldset><span class="muted small">Tai anna pisteet suoraan:</span>`;
+  }
+  function assessHtml(key, u) {
+    const v = S.scores[key], max = u.points;
     const buttons = max <= 20
       ? `<div class="pts" role="group" aria-label="Pisteet">${Array.from({ length: max + 1 }, (_, i) => `<button type="button" data-pts="${i}" aria-pressed="${v ? v.p === i : false}">${i}</button>`).join('')}</div>`
       : `<div class="pts"><input type="number" min="0" max="${max}" step="1" value="${v ? v.p : ''}" aria-label="Pisteet 0–${max}"><button type="button" data-pts="input">Tallenna</button></div>`;
-    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${buttons}<span class="muted small" data-hintnote></span><span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
+    return `<b>Arvioi pisteesi mallia vasten (0–${max} p)</b>${rubricHtml(u, v)}${buttons}<span class="muted small" data-hintnote></span><span class="muted small" data-assessnote>${v ? `Viimeksi ${v.p}/${v.max} p (${fmtDate(v.at)}).` : 'Arvio päivittää oman osaamisen, heikot aiheet ja kertauslistan.'}</span>`;
   }
   // Toggle a hint/solution box; its formulas are typeset on first open only.
   function reveal(box, btn) {
@@ -1441,8 +1578,8 @@ details.how>p{margin-top:6px}
     if (open && !box.dataset.ts) { box.dataset.ts = 1; typeset(box); }
     return open;
   }
-  function bindUnit(sec, max) {
-    const key = sec.dataset.key;
+  function bindUnit(sec, u) {
+    const key = sec.dataset.key, max = u.points, rubric = rubricOf(u);
     const hintBtns = $$('[data-hint]', sec);
     // The stairs stay marked once a step was opened; the assessment shows how many hints this view opened (not saved).
     const step = id => { const li = $(`.stairs [data-step="${id}"]`, sec); if (li) li.classList.add('on'); };
@@ -1453,14 +1590,21 @@ details.how>p{margin-top:6px}
     if (sol) sol.onclick = () => {
       const open = reveal($('[data-solbox]', sec), sol);
       sol.textContent = open ? 'Piilota malliratkaisu' : 'Näytä malliratkaisu';
-      if (open) { $('.assess', sec).hidden = false; step('sol'); hintNote(); }
+      sec.classList.toggle('solopen', open);   // wide screens: answer and model side by side (CSS)
+      if (open) { const as = $('.assess', sec); if (as.hidden) { as.hidden = false; typeset($$('.rt', as)); } step('sol'); hintNote(); }
     };
     const hintNote = () => { const n = $$('.stairs li.on:not(.sol)', sec).length, el = $('[data-hintnote]', sec); if (el) el.textContent = n ? `Käytit ${n === 1 ? 'yhden vihjeen' : n + ' vihjettä'} tällä kerralla.` : ''; };
     const rev = $('[data-act="rev"]', sec);
     if (rev) rev.onclick = () => { toggleReview(key); syncRev(rev, key); };
     const assess = $('.assess', sec);
+    const rubricSum = c => c.reduce((t, i) => t + (+rubric[i].points || 0), 0);
+    const tickedRows = () => $$('[data-ri]', assess).filter(x => x.checked).map(x => +x.dataset.ri);
+    if (assess && rubric) assess.addEventListener('change', e => {
+      if (e.target.matches('[data-ri]')) $('[data-rsum]', assess).textContent = rubricSum(tickedRows());
+    });
     if (assess) assess.addEventListener('click', e => {
       const b = e.target.closest('[data-pts]'); if (!b) return;
+      if (b.dataset.pts === 'rubric') { const c = tickedRows(); scored(Math.min(max, rubricSum(c)), c); return; }
       const raw = b.dataset.pts === 'input' ? $('input', assess).value.trim() : b.dataset.pts;
       const p = Math.round(+raw);
       if (raw === '' || !(p >= 0 && p <= max)) {
@@ -1469,26 +1613,31 @@ details.how>p{margin-top:6px}
         if (note) { note.textContent = `Anna pisteet väliltä 0–${max}.`; note.classList.add('err'); }
         return;
       }
-      setScore(key, p, max);
+      scored(p);
+    });
+    function scored(p, c) {
+      setScore(key, p, max, c);
       sec.dispatchEvent(new CustomEvent('yo:score', { bubbles: true }));
-      assess.innerHTML = assessHtml(key, max);
+      assess.innerHTML = assessHtml(key, u);
+      typeset($$('.rt', assess));
       hintNote();
       $('[data-assessnote]', assess).textContent = `Tallennettu ${p}/${max} p.` + (reviewOf(key) ? ` Kohta on kertauslistalla (${fmtDate(reviewOf(key).due)}).` : '');
       syncRev(rev, key);
       const chip = scoreChip(S.scores[key], 'data-score title="oma arvio"'), old = $('[data-score]', sec);
       if (old) old.outerHTML = chip; else $('.uhead', sec).insertAdjacentHTML('beforeend', chip);
-    });
+    }
     $('[data-act="png"]', sec).onclick = () => answerPng($('.answer', sec), 'vastaus-' + key.replace(/\|/g, '-')).catch(() => alertBox('Kuvan tallennus epäonnistui. Käytä tulostusta (' + MOD + 'P).'));
   }
   // Typeset the visible text, wire up the unit controls and load saved answers.
   function mountUnits(container, units) {
     typeset($$('.md:not(.reveal)', container));
-    $$('.unit', container).forEach((sec, j) => { bindUnit(sec, units[j].points); mountEditor($('.answer', sec)); });
+    $$('.unit', container).forEach((sec, j) => { bindUnit(sec, units[j]); mountEditor($('.answer', sec)); });
   }
 
   async function taskView(a, k, n, unitId) {
     const s = subj(a), session = sessionOf(a, k), task = taskOf(a, k, n);
     if (!task) { setView(masthead('', 'Tehtävää ei löytynyt') + '<p><a href="#/">Takaisin</a></p>'); return; }
+    S.ui.last = { a, k, n, u: unitId || '', at: Date.now() }; persistLocal();   // "Jatka siitä mihin jäit" (this device only)
     const title = esc(`${task.n}. ${task.title}`);
     const signal = setView(masthead('', title) + '<p class="muted">Ladataan tehtävää…</p>');
     const content = await getContent(a, k);
@@ -1544,6 +1693,10 @@ details.how>p{margin-top:6px}
   }
 
   /* ---------- exam simulation ---------- */
+  // Time left in a simulation (a paused or handed-in one stands still); the home page's resume card uses the same clock.
+  const simLeft = (sim, minutes) => minutes * 6e4 - ((sim.submitted || sim.pauseAt || Date.now()) - sim.start - sim.paused);
+  const fmtClock = ms => { ms = Math.max(0, ms); const h = Math.floor(ms / 36e5), m = Math.floor(ms / 6e4) % 60, x = Math.floor(ms / 1e3) % 60; return `${h}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')}`; };
+  const simMinutes = (content, session, g) => { const xs = examFor(content, session).sections.filter(x => !g || x.group === g); return xs.length ? xs[0].minutes : 360; };
   async function simView(a, k, g) {
     const s = subj(a), session = sessionOf(a, k);
     if (!session) { location.hash = '#/'; return; }
@@ -1561,7 +1714,7 @@ details.how>p{margin-top:6px}
       return;
     }
     const sections = g ? ex.sections.filter(x => x.group === g) : ex.sections;
-    const minutes = sections.length ? sections[0].minutes : 360;
+    const minutes = simMinutes(content, session, g);
     const sk = simKey(a, k, g), sim = S.sims[sk];
     const title = esc(head + (g ? ' · ' + g : ''));
     if (!sim) {
@@ -1576,8 +1729,7 @@ details.how>p{margin-top:6px}
       $('#simStart').onclick = () => { S.sims[sk] = { start: Date.now(), paused: 0, pauseAt: null, chosen: [], submitted: null }; persist(); simView(a, k, g); };
       return;
     }
-    const remaining = () => minutes * 6e4 - ((sim.submitted || sim.pauseAt || Date.now()) - sim.start - sim.paused);
-    const fmt = ms => { ms = Math.max(0, ms); const h = Math.floor(ms / 36e5), m = Math.floor(ms / 6e4) % 60, x = Math.floor(ms / 1e3) % 60; return `${h}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')}`; };
+    const remaining = () => simLeft(sim, minutes), fmt = fmtClock;
     const done = !!sim.submitted;
     const chosen = new Set(sim.chosen);
     let countedUnits = 0;   // parts of the counted tasks: the grade estimate waits until all of them are assessed
@@ -1600,6 +1752,33 @@ details.how>p{margin-top:6px}
         : `<span class="muted small">${g ? 'Arvosana lasketaan kummankin kokeen yhteispisteistä, joten arviota ei näytetä.' : 'Tämän kerran pisterajoja ei ole vielä taulukossa, joten arvosana-arviota ei näytetä.'}</span>`; };
     const countedNow = countedTasks(sections, chosen);
     if (done) { sim.result = tot; persist(); }   // shown in the progress view
+    // Report after hand-in: minutes and points per task (chosen ones, plus others that were open ≥ 1 min) and the weakest topics.
+    const fmtMin = ms => ms < 6e4 ? (ms > 0 ? '< 1 min' : '0 min') : `${Math.round(ms / 6e4)} min`;
+    const reportHtml = () => {
+      const spent = plainObj(sim.spent) ? sim.spent : null, time = n => spent ? Math.max(0, +spent[n] || 0) : 0;
+      const rows = sections.flatMap(x => x.tasks).filter(n => chosen.has(n) || time(n) >= 6e4).map(n => {
+        const t = taskOf(a, k, n); if (!t) return null;
+        let p = 0, max = 0, amax = 0, assessed = 0, units = 0;
+        for (const u of unitsFor(content, t).units) { units++; max += u.points; const v = S.scores[ukey(a, k, t.n, u.id)]; if (v && v.at >= sim.start) { p += v.p; amax += u.points; assessed++; } }
+        return { n, t, ms: time(n), p, max, amax, assessed, units };
+      }).filter(Boolean);
+      if (!rows.length) return '';
+      const maxMs = Math.max(...rows.map(r => r.ms), 1), onTasks = rows.reduce((s, r) => s + r.ms, 0) + Object.keys(spent || {}).filter(n => !rows.some(r => r.n === n)).reduce((s, n) => s + time(n), 0);
+      const used = minutes * 6e4 - remaining();
+      const meter = (label, frac, cls, v) => `<div class="meter"><span class="muted small">${label}</span><div class="track"><div class="fill ${cls}" style="width:${Math.round(Math.min(1, Math.max(0, frac)) * 100)}%"></div></div><span class="v">${v}</span></div>`;
+      const weak = weakTopics(rows.filter(r => chosen.has(r.n)).map(r => ({ topics: r.t.topics, p: r.p, max: r.amax }))).slice(0, 3);
+      const anyAssessed = rows.some(r => r.assessed);
+      return `<section class="card simrep" aria-labelledby="simrep-h"><h2 id="simrep-h">Loppuraportti</h2>
+        <p class="muted small">${spent ? `Aika kirjattiin sille tehtävälle, jonka avasit viimeksi ja joka oli auki kellon käydessä. Tehtävissä ${fmtMin(onTasks)}, muu aika (ei tehtävää auki, tauko pois lukien) ${fmtMin(Math.max(0, used - onTasks))}.`
+          : 'Tässä yrityksessä ajankäyttöä ei kirjattu, joten näet vain pisteet.'}</p>
+        <div class="srows">${rows.map(r => `<div class="srow"><div class="sname"><b>${esc(r.t.n)}. ${esc(r.t.title)}</b>${chosen.has(r.n) ? (countedNow.has(r.n) ? '' : ' <span class="chip bad">ei lasketa</span>') : ' <span class="chip">ei valittu</span>'}${chosen.has(r.n) && r.assessed < r.units ? ` <span class="muted small">· ${r.assessed ? `arvioitu ${r.assessed}/${r.units} kohtaa` : 'arvioimatta'}</span>` : ''}</div>
+          ${spent ? meter('Aika', r.ms / maxMs, '', fmtMin(r.ms)) : ''}
+          ${chosen.has(r.n) ? meter('Pisteet', r.max ? r.p / r.max : 0, r.assessed ? scoreCls(r.amax ? r.p / r.amax : 0) : '', r.assessed ? `${r.p}/${r.max}` : '–') : ''}</div>`).join('')}</div>
+        <h3>Kerrattavat aiheet</h3>
+        ${weak.length ? `<ul class="list">${weak.map(w => `<li><b>${esc(topicName(s, w.id))}</b><span class="muted small">${w.p}/${w.max} p (${Math.round(w.p / w.max * 100)} %)</span><a class="btn" href="#/pika/${encodeURIComponent(a)}/${encodeURIComponent(w.id)}">Pikatesti</a></li>`).join('')}</ul>`
+          : `<p class="muted small">${anyAssessed ? 'Arvioiduissa tehtävissä ei menetetty pisteitä yhdessäkään aiheessa.' : 'Arvioi tehtäviä, niin näet aiheet, joissa pisteitä jäi saamatta.'}</p>`}
+      </section>`;
+    };
     const simTask = n => {
       const t = taskOf(a, k, n), on = chosen.has(n);
       if (!t || (done && !on)) return '';
@@ -1614,7 +1793,7 @@ details.how>p{margin-top:6px}
         <button type="button" class="btn ghost" id="simReset">${done ? 'Uusi yritys' : 'Keskeytä'}</button>
         ${done ? '' : '<span class="simwarn" id="simWarn" role="status" hidden></span>'}
       </div>
-      ${done ? `<p id="simGrade">${gradeHtml(tot)}</p><p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet ja arvosana-arvio päivittyvät jokaisen arvion jälkeen.</p>`
+      ${done ? `<p id="simGrade">${gradeHtml(tot)}</p><p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet ja arvosana-arvio päivittyvät jokaisen arvion jälkeen.</p><div id="simReport">${reportHtml()}</div>`
         : `<p class="warnbox" id="pauseNote" ${sim.pauseAt ? '' : 'hidden'}>Tauko. Kello on pysähtynyt.</p>`}
       ${sections.map((x, si) => `<section class="section">
         <header><h2>${esc(x.title)}</h2><span class="muted">vastaa ${x.answer}/${x.tasks.length}${x.note ? ' · ' + esc(x.note) : ''}</span><span class="chip" data-count="${si}"></span></header>
@@ -1648,11 +1827,30 @@ details.how>p{margin-top:6px}
       simView(a, k, g);
     });
     if (done) {
-      app.addEventListener('yo:score', () => { const x = totals(); sim.result = x; persist(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; $('#simGrade').innerHTML = gradeHtml(x); }, { signal });
+      app.addEventListener('yo:score', () => { const x = totals(); sim.result = x; persist(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; $('#simGrade').innerHTML = gradeHtml(x); $('#simReport').innerHTML = reportHtml(); }, { signal });
       return;
     }
     const unpause = t => { if (sim.pauseAt) { sim.paused += t - sim.pauseAt; sim.pauseAt = null; } };
-    const submit = (at = Date.now()) => { sim.submitted = at; unpause(at); persist(); simView(a, k, g); window.scrollTo(0, 0); };
+    // Time per task for the report: running seconds go to the task opened last that is still open, while the page is visible.
+    // One step is capped at 5 s (a sleeping laptop or a throttled tab does not credit its gap); saved locally every 15 s.
+    const openOrder = [];
+    let lastTick = Date.now(), unsaved = 0, visible = !document.hidden;
+    const credit = (now = Date.now()) => {
+      const dt = Math.min(now - lastTick, 5e3), n = openOrder[openOrder.length - 1]; lastTick = now;
+      if (sim !== S.sims[sk] || sim.pauseAt || sim.submitted || n == null || !visible || !(dt > 0)) return;
+      if (!plainObj(sim.spent)) sim.spent = {};
+      sim.spent[n] = (+sim.spent[n] || 0) + dt; unsaved += dt;
+      if (unsaved >= 15e3) { unsaved = 0; persistLocal(); }
+    };
+    $$('details.simtask', app).forEach(d => d.addEventListener('toggle', () => {
+      credit(); const i = openOrder.indexOf(d.dataset.n); if (i >= 0) openOrder.splice(i, 1);
+      if (d.open) openOrder.push(d.dataset.n);
+    }));
+    const flush = () => { credit(); unsaved = 0; persistLocal(); };
+    document.addEventListener('visibilitychange', () => { credit(); visible = !document.hidden; if (!visible) flush(); }, { signal });
+    window.addEventListener('pagehide', flush, { signal });
+    signal.addEventListener('abort', flush);
+    const submit = (at = Date.now()) => { credit(); sim.submitted = at; unpause(at); persist(); simView(a, k, g); window.scrollTo(0, 0); };
     // Too many or too few picks: say so before the second click (the hand-in still goes through, as on paper).
     disarmSubmit = armConfirm($('#simSubmit'), () => {
       const off = sections.map(x => ({ x, c: x.tasks.filter(n => chosen.has(n)).length })).filter(o => o.c !== o.x.answer);
@@ -1663,8 +1861,9 @@ details.how>p{margin-top:6px}
       return off.length ? 'Palauta silti' : 'Varmasti? Palauta';
     }, () => submit());
     const clock = $('#clock'), pauseBtn = $('#simPause');
-    const tick = () => { const r = remaining(); clock.textContent = fmt(r); clock.classList.toggle('low', r < 15 * 6e4); if (r <= 0 && !sim.pauseAt) submit(sim.start + sim.paused + minutes * 6e4); };
+    const tick = () => { credit(); const r = remaining(); clock.textContent = fmt(r); clock.classList.toggle('low', r < 15 * 6e4); if (r <= 0 && !sim.pauseAt) submit(sim.start + sim.paused + minutes * 6e4); };
     pauseBtn.onclick = () => {
+      credit();
       if (sim.pauseAt) unpause(Date.now()); else sim.pauseAt = Date.now();
       persist(); pauseBtn.textContent = sim.pauseAt ? 'Jatka' : 'Tauko'; $('#pauseNote').hidden = !sim.pauseAt; tick();
     };
@@ -1816,7 +2015,8 @@ details.how>p{margin-top:6px}
     for (const [k, v] of Object.entries(st.scores || {})) {
       if (!UNIT_KEY.test(k) || !v || num(v.p) == null || num(v.max) == null || num(v.at) == null) continue;
       const at = capAt(+v.at);
-      if (!S.scores[k] || S.scores[k].at < at) { S.scores[k] = { p: +v.p, max: +v.max, at }; scores++; }
+      const c = Array.isArray(v.c) ? [...new Set(v.c.filter(i => Number.isInteger(i) && i >= 0 && i < 50))] : null;
+      if (!S.scores[k] || S.scores[k].at < at) { S.scores[k] = c ? { p: +v.p, max: +v.max, at, c } : { p: +v.p, max: +v.max, at }; scores++; }
     }
     const seen = new Set(S.history.map(e => e.k + '@' + e.at));
     for (const e of Array.isArray(st.history) ? st.history : []) {
@@ -1834,8 +2034,10 @@ details.how>p{margin-top:6px}
     for (const [k, m] of Object.entries(st.sims || {})) {
       if (!SIM_KEY.test(k) || !m || num(m.start) == null || S.sims[k]) continue;
       const res = m.result && { total: num(m.result.total) || 0, totalMax: num(m.result.totalMax) || 0, assessed: num(m.result.assessed) || 0 };
+      // time per task (ms, exam report): task numbers are short strings, values within one day
+      const spent = plainObj(m.spent) ? Object.fromEntries(Object.entries(m.spent).filter(([n, v]) => n.length <= 12 && num(v) > 0).slice(0, 50).map(([n, v]) => [n, Math.min(+v, 864e5)])) : null;
       S.sims[k] = { start: +m.start, paused: num(m.paused) || 0, pauseAt: num(m.pauseAt), submitted: num(m.submitted),
-        chosen: (Array.isArray(m.chosen) ? m.chosen : []).filter(n => typeof n === 'string').slice(0, 50), ...(res ? { result: res } : {}) };
+        chosen: (Array.isArray(m.chosen) ? m.chosen : []).filter(n => typeof n === 'string').slice(0, 50), ...(res ? { result: res } : {}), ...(spent ? { spent } : {}) };
     }
     return scores;
   }

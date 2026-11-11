@@ -14,6 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MATH_RE = re.compile(r"\$\$[\s\S]+?\$\$|(?<!\\)\$[^$\n]+?(?<!\\)\$")
 CHECKS = {"hvp", "laskettu", "hvp+laskettu", "malli", "ei"}
 MAX_PROMPT = 900  # long prompts are a sign of copied task text
+MAX_RUBRIC_ROWS, MAX_RUBRIC_TEXT = 12, 200  # optional per-unit grading rows (rubric), the site's own wording
 
 
 def tutka_subjects(html=None):
@@ -51,6 +52,9 @@ def iter_texts(task):
                 yield f"{w} {k}", u[k]
         for i, h in enumerate(u.get("hints") or []):
             yield f"{w} vihje {i + 1}", h
+        rubric = u.get("rubric")
+        for i, r in enumerate(rubric if isinstance(rubric, list) else []):
+            yield f"{w} rubric[{i}]", r.get("text") if isinstance(r, dict) else None
 
 
 def check_text(err, where, s):
@@ -63,6 +67,33 @@ def check_text(err, where, s):
         err(f"{where}: pariton $-merkki")
     if re.search(r"\\(href|url|class|style|cssId|data|require)\b", s):   # TeX commands that emit links/attributes
         err(f"{where}: kielletty TeX-komento (\\href, \\class, \\style …)")
+
+
+def check_rubric(err, w, u):
+    """Optional `rubric`: 2..MAX_RUBRIC_ROWS rows {text, points}, whole points that add up to the unit's points.
+    The page sums the ticked rows into the self-assessment; the texts go through check_text via iter_texts."""
+    if "rubric" not in u:
+        return
+    r = u["rubric"]
+    if not isinstance(r, list) or not 2 <= len(r) <= MAX_RUBRIC_ROWS:
+        err(f"{w}: rubric pitää olla lista, jossa on 2–{MAX_RUBRIC_ROWS} riviä")
+        return
+    if not u.get("solution"):
+        err(f"{w}: rubric ilman malliratkaisua (arviointi aukeaa vasta ratkaisun kanssa)")
+    total = 0
+    for i, row in enumerate(r):
+        if not isinstance(row, dict) or set(row) - {"text", "points"}:
+            err(f"{w} rubric[{i}]: rivi on muotoa {{text, points}}")
+            continue
+        p = row.get("points")
+        if not isinstance(p, int) or isinstance(p, bool) or p <= 0:
+            err(f"{w} rubric[{i}]: points pitää olla positiivinen kokonaisluku")
+            continue
+        total += p
+        if isinstance(row.get("text"), str) and len(row["text"]) > MAX_RUBRIC_TEXT:
+            err(f"{w} rubric[{i}]: text yli {MAX_RUBRIC_TEXT} merkkiä")
+    if total != u.get("points"):
+        err(f"{w}: rubric-rivien pisteet {total} ≠ yksikön pisteet {u.get('points')}")
 
 
 def check_urls(err, obj, where):
@@ -148,6 +179,7 @@ def validate(path, tutka):
                 err(f"{w}: prompt yli {MAX_PROMPT} merkkiä – kirjoita lyhyemmin omin sanoin")
             if u.get("check") not in CHECKS:
                 err(f"{w}: check pitää olla jokin {sorted(CHECKS)}")
+            check_rubric(err, w, u)
         if meta and meta.get("points") is not None and abs(total - meta["points"]) > 1e-9:
             err(f"tehtävä {n}: yksiköiden pisteet {total} ≠ tehtävän pisteet {meta['points']}")
         for where, text in iter_texts(t):
@@ -170,6 +202,9 @@ def check_exams(tutka):
             datetime.date.fromisoformat(v)
         except (TypeError, ValueError):
             errors.append(f"yo-tutka.html EXAMS: {k}: virheellinen päivä {v!r}")
+    page = re.search(r"const EXAMS = (\{[^}]*\});", (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8"))
+    if not page or json.loads(page.group(1)) != exams:
+        errors.append("yo-harjoittelu.html EXAMS ei vastaa yo-tutka.html:n EXAMS-taulua: päivitä molemmat samalla kertaa")
     if not errors and all(datetime.date.fromisoformat(v) < datetime.date.today() for v in exams.values()):
         print("varoitus: yo-tutka.html EXAMS: kaikki koepäivät ovat menneet, päivitä seuraavan kauden päivät")
     return errors
@@ -253,6 +288,26 @@ assert.equal(pikaLive({ at: 1000 }, 1000 + 2 * 36e5 - 1), true);
 assert.equal(pikaLive({ at: 1000 }, 1000 + 2 * 36e5), false);
 assert.equal(pikaLive({ a: 'x' }, Date.now()), false);
 assert.equal(pikaLive(undefined, 0), false);
+// daysUntil: calendar days to an ISO date from a local midnight; past or invalid dates give null
+const mid = new Date('2026-11-11T00:00').getTime();
+assert.equal(daysUntil('2026-11-11', mid), 0);
+assert.equal(daysUntil('2026-11-12', mid), 1);
+assert.equal(daysUntil('2027-03-22', mid), 131);
+assert.equal(daysUntil('2026-11-10', mid), null);
+assert.equal(daysUntil(undefined, mid), null);
+assert.equal(daysUntil('2027-13-45', mid), null);
+// partsBySubject: distinct parts per day since the start, summed per subject
+const h0 = new Date('2026-11-09T10:00').getTime(), h1 = new Date('2026-11-10T10:00').getTime();
+const hist = [{ k: 'kemia|2025S|1|a', at: h0 - 864e5 }, { k: 'kemia|2025S|1|a', at: h0 }, { k: 'kemia|2025S|1|a', at: h0 + 60e3 },
+  { k: 'kemia|2025S|1|a', at: h1 }, { k: 'englanti|2025S|2|_', at: h1 }];
+assert.deepEqual([...partsBySubject(hist, new Date('2026-11-09T00:00').getTime())], [['kemia', 2], ['englanti', 1]]);
+assert.equal(partsBySubject([], 0).size, 0);
+// weakTopics: exam report, assessed parts only; weakest share first, then most points lost; topics without losses dropped
+const wt = weakTopics([{ topics: ['a', 'b'], p: 2, max: 6 }, { topics: ['b', 'c'], p: 6, max: 6 }, { topics: ['d'], p: 0, max: 0 },
+  { topics: ['e'], p: 1, max: 3 }, { p: 0, max: 4 }]);
+assert.deepEqual(wt.map(x => x.id), ['a', 'e', 'b']);
+assert.deepEqual(wt[2], { id: 'b', p: 8, max: 12 });
+assert.deepEqual(weakTopics([]), []);
 """
 
 
