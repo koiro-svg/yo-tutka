@@ -221,6 +221,16 @@ dl.facts dd{margin:0;color:var(--ink-2)}
 .chart .front{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:5 4}
 .chart .goodline{stroke:var(--warn);stroke-width:1.5;stroke-dasharray:5 4}
 .chart .info{font-size:13px;color:var(--ink-2);min-height:1.5em}
+/* ai-F4: monthly cost calculator above "Hinta & nopeus" */
+.calc .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.calc label{display:grid;gap:6px;font-size:14px;color:var(--ink-2)}
+.calc label b{color:var(--ink);font-family:var(--font-mono)}
+.calc input[type=range]{width:100%;margin:0;accent-color:var(--accent)}
+.calc ol.rank li{grid-template-columns:22px minmax(0,1fr) auto}
+.calc ol.rank .nm{white-space:normal}
+.calc ol.rank li.fr .nm{color:var(--ink);font-weight:600}
+.calc ol.rank .sc{font-size:13px;color:var(--ink)}
+.calc .chip{margin-left:6px;vertical-align:middle}
 
 /* Compare */
 .cmpbar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:calc(100vw - 24px);padding:10px 14px;border-radius:var(--radius-l);background:var(--surface-2);border:1px solid var(--accent);box-shadow:var(--shadow-pop)}
@@ -274,6 +284,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   .card .meta a,.links a,.tile a{padding-block:12px}
   .news a{display:inline-block;padding-block:12px}
   .crumb{padding-block:13px}
+  .calc .kt-tab,.calc input[type=range]{min-height:44px}
 }
 </style>
 </head>
@@ -442,7 +453,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   // Per-tab conveniences that survive a reload (the phone drops background tabs): compare picks, task, budget.
   const store = {
     get(){ try { return JSON.parse(sessionStorage.getItem('ai-ui')) || {}; } catch (e) { return {}; } },
-    set(){ try { sessionStorage.setItem('ai-ui', JSON.stringify({cmp: ui.cmp, task: ui.task, budget: ui.budget})); } catch (e) { /* private mode */ } },
+    set(){ try { sessionStorage.setItem('ai-ui', JSON.stringify({cmp: ui.cmp, task: ui.task, budget: ui.budget, calc: ui.calc})); } catch (e) { /* private mode */ } },
   };
   const mins = m => m < 60 ? Math.round(m) + ' min' : comma(m / 60, 1).replace(',0', '') + ' h';
   // Date-only strings would parse as UTC midnight and show a day early west of UTC.
@@ -458,7 +469,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   let data = null, agents = null, tools = null;
   let derived = {};   // per data load: scatter points, agent rankings, news (the data never changes after loading)
   const failed = {models:false, agents:false, tools:false};
-  const ui = {tab:'mallit', group:'all', area:'all', kind:'all', fi:false, q:'', open:new Set(), cmp:[], showCmp:false, task:null, budget:'best'};
+  const ui = {tab:'mallit', group:'all', area:'all', kind:'all', fi:false, q:'', open:new Set(), cmp:[], showCmp:false, task:null, budget:'best', calc:{mode:'tok', tok:4, task:4}};
   const catOf = id => (data && data.categories[id]) || {items: []};
 
   function fmt(v, cat){
@@ -592,6 +603,52 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       extra: (X, Y, W, L, R) => `<line class="goodline" x1="${L}" x2="${W - R}" y1="${f1(Y(g))}" y2="${f1(Y(g))}"/><text class="tick" x="${W - R}" y="${f1(Y(g) - 5)}" text-anchor="end">${GOOD_PCT} % kärjestä</text>`});
   }
 
+  // ai-F4: what a month costs at the visitor's volume. Models: blended price × million tokens; agents: cost per task × tasks.
+  // Volumes are log steps (slider index in ui.calc); the efficiency frontier is the same rule as the scatter's.
+  const CALC_TOK = [0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000, 3000, 10000], CALC_TASK = [1, 3, 10, 30, 100, 300, 1000, 3000, 10000];
+  const tokLabel = v => v < 1 ? (v * 1e6).toLocaleString('fi-FI') : v < 1000 ? v + ' milj.' : v / 1000 + ' mrd.';
+  const monthly = v => (v < 10 ? comma(v, 2) : Math.round(v).toLocaleString('fi-FI')) + ' $';
+  function frontier(list, cost, score){
+    let top = -Infinity;
+    return new Set([...list].sort((a, b) => cost(a) - cost(b) || score(b) - score(a)).filter(p => score(p) > top && (top = score(p), true)).map(p => p.name));
+  }
+  const calcLabel = () => ui.calc.mode === 'task' ? `${CALC_TASK[ui.calc.task].toLocaleString('fi-FI')} tehtävää` : `${tokLabel(CALC_TOK[ui.calc.tok])} tokenia`;
+  function calcBody(){
+    const agentsMode = ui.calc.mode === 'task', steps = agentsMode ? CALC_TASK : CALC_TOK, i = ui.calc[ui.calc.mode], label = calcLabel();
+    const modes = `<div class="row" role="group" aria-label="Laske">${pressBtn('calc', 'tok', !agentsMode, 'Mallit (tokenit)')}${pressBtn('calc', 'task', agentsMode, 'Koodausagentit (tehtävät)')}</div>`;
+    const range = `<label for="calc-r">${agentsMode ? 'Tehtäviä' : 'Tokenia'} kuukaudessa: <b id="calc-v">${esc(label)}</b>
+      <input type="range" id="calc-r" min="0" max="${steps.length - 1}" step="1" value="${i}" aria-valuetext="${esc(label)}"></label>`;
+    return modes + range + `<div id="calc-out">${calcOut()}</div>`;
+  }
+  function calcOut(){
+    const agentsMode = ui.calc.mode === 'task';
+    let rows, note;
+    if (agentsMode) {
+      if (!agents) return pending('agents', 'Koodausagenttien tietoja ei saatu ladattua.');
+      const n = CALC_TASK[ui.calc.task], pts = derived.agents.measured.filter(a => a.aa.costPerTask > 0);
+      const front = frontier(pts, a => a.aa.costPerTask, a => a.aa.index);
+      rows = pts.map(a => ({name: a.name, sub: `indeksi ${Math.round(a.aa.index)} · ${perTask(a)}`, cost: a.aa.costPerTask * n, fr: front.has(a.name)}));
+      note = 'API-kustannus tehtävää kohden Artificial Analysisin koodaustehtävistä – omat tehtäväsi voivat olla isompia tai pienempiä. Ei sisällä kuukausimaksuja.';
+    } else {
+      const n = CALC_TOK[ui.calc.tok], {pts, front} = derived.scatter;
+      rows = pts.map(p => ({name: p.name, sub: `${p.creator} · älykkyys ${comma(p.intelligence, 1)} · ${usd(p.price)} / 1M`, cost: p.price * n, fr: front.has(p.name)}));
+      note = 'Hinta = sekahinta ($ / miljoona tokenia, 3:1 syöte:tuotos). Ei sisällä kuukausimaksuja eikä alennuksia.';
+    }
+    if (!rows.length) return '<p class="empty">Ei hintatietoja vielä.</p>';
+    rows.sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name, 'fi'));
+    const li = rows.map((r, k) => `<li${r.fr ? ' class="fr"' : ''}><span class="n">${k + 1}</span><span class="nm">${esc(r.name)}${r.fr ? '<span class="chip best">Tehokkuusraja</span>' : ''} <small>${esc(r.sub)}</small></span><span class="sc">${monthly(r.cost)}</span></li>`).join('');
+    return `<ol class="rank" aria-label="Kuukausihinta halvimmasta kalleimpaan">${li}</ol>
+      <p class="info small muted">Tehokkuusraja = yksikään halvempi ei ole parempi. ${esc(note)}</p>`;
+  }
+  const calcHtml = () => `<section class="panel calc" id="laskuri" aria-labelledby="calc-h"><h3 id="calc-h">Mitä kuukausi maksaa?</h3>${calcBody()}</section>`;
+  function paintCalc(focusMode){
+    const el = $('#laskuri');
+    if (!el) return;
+    el.innerHTML = `<h3 id="calc-h">Mitä kuukausi maksaa?</h3>${calcBody()}`;
+    if (focusMode) { const b = el.querySelector(`[data-calc="${ui.calc.mode}"]`); if (b) b.focus({preventScroll: true}); }
+    store.set();
+  }
+
   // ---- Derived once per data load ----
   function deriveModels(){
     const best = new Map();
@@ -636,7 +693,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (!data) return pending('models', 'Mallidataa ei saatu ladattua. Yritä hetken päästä uudelleen.');
     const cats = visibleCats();
     const groups = MODEL_GROUPS.map(g => { const cs = cats.filter(c => c.group === g.id);
-      return cs.length ? `<section class="group" id="${g.id}"><h2>${esc(g.name)}${linkBtn(g.id)}</h2><div class="cards">${cs.map(m => card(m)).join('')}</div></section>` : ''; }).join('');
+      return cs.length ? `${g.id === 'hinta' && !ui.q ? calcHtml() : ''}<section class="group" id="${g.id}"><h2>${esc(g.name)}${linkBtn(g.id)}</h2><div class="cards">${cs.map(m => card(m)).join('')}</div></section>` : ''; }).join('');
     const filters = `<nav class="filters" aria-label="Suodata mallien ryhmä">${[{id:'all', name:'Kaikki'}, ...MODEL_GROUPS].map(g => pressBtn('group', g.id, ui.group === g.id, g.name)).join('')}</nav>`;
     const chart = !ui.q && ['all', 'teksti', 'hinta'].includes(ui.group) ? scatterHtml() : '';
     return `<div class="group">${filters}${chart}${groups || `<p class="empty"><span>Ei osumia malleista.</span>${elsewhere()}</p>`}</div>`;
@@ -965,6 +1022,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     else if (d.kind) { if (d.kind !== ui.kind) { ui.kind = d.kind; history.pushState(null, '', urlFor(location.hash.slice(1))); render(); } }
     else if (d.task) { ui.task = ui.task === d.task ? null : d.task; paintAsk(); }
     else if (d.budget) { ui.budget = d.budget; paintAsk(); }
+    else if (d.calc) { if (d.calc !== ui.calc.mode) { ui.calc.mode = d.calc; paintCalc(true); } }
     else if (d.more) {   // in place: one card opens, nothing else is rebuilt
       const open = !ui.open.has(d.more), c = document.getElementById(d.more);
       open ? ui.open.add(d.more) : ui.open.delete(d.more);
@@ -1004,6 +1062,15 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     fromUrl();
   });
   document.addEventListener('change', e => { if (e.target.id === 'area-sel') setArea(e.target.value); });
+  // The slider repaints only the list and its own label, so it keeps focus and the drag.
+  document.addEventListener('input', e => {
+    if (e.target.id !== 'calc-r') return;
+    ui.calc[ui.calc.mode] = +e.target.value;
+    $('#calc-v').textContent = calcLabel();
+    e.target.setAttribute('aria-valuetext', calcLabel());
+    $('#calc-out').innerHTML = calcOut();
+    store.set();
+  });
   // Tabs: arrow keys move between them (roving tabindex).
   $('#tabs').addEventListener('keydown', e => {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
@@ -1031,6 +1098,11 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const task = qs.has('task') ? qs.get('task') : s.task, budget = qs.has('task') ? qs.get('budget') : s.budget;
     if (TASKS.some(t => t.id === task)) ui.task = task;
     if (budget === 'cheap') ui.budget = 'cheap';
+    // ai-F4: a tab stored by an older page has no calc; out-of-range steps fall back to the defaults.
+    const c = s.calc && typeof s.calc === 'object' ? s.calc : {}, step = (v, max) => Number.isInteger(v) && v >= 0 && v < max;
+    if (c.mode === 'task') ui.calc.mode = 'task';
+    if (step(c.tok, CALC_TOK.length)) ui.calc.tok = c.tok;
+    if (step(c.task, CALC_TASK.length)) ui.calc.task = c.task;
     const cmp = qs.has('cmp') ? cmpFromQs(qs.get('cmp')) : s.cmp;
     if (Array.isArray(cmp)) for (const c of cmp) {
       if (c && (c.kind === 'model' || c.kind === 'agent') && typeof c.name === 'string' && c.name && c.name.length <= 80 && !c.name.includes('|')
