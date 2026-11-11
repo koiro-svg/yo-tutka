@@ -126,6 +126,7 @@ a{color:var(--accent)}
 .pills small{color:var(--ink-3);font-family:var(--font-mono);font-size:11px;margin-left:6px}
 .chg{display:grid;gap:4px;list-style:none;margin:0;padding:0;color:var(--ink-2)}
 h2.split{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+h2.split .acts{display:flex;gap:8px;flex-wrap:wrap}
 
 /* Search + tabs */
 .searchbar{display:grid;gap:12px;position:sticky;top:0;z-index:5;background:var(--bg);padding-block:10px;margin-block:-10px;border-bottom:1px solid var(--line)}
@@ -199,6 +200,7 @@ dl.facts dd{margin:0;color:var(--ink-2)}
 .card .meta a{margin-left:auto;text-decoration:none;font-weight:600}
 .fi-hyvä{color:var(--ok)}.fi-kohtalainen{color:var(--warn)}.fi-heikko{color:#E58E4E}
 .notes{display:grid;gap:6px;font-size:14px;scroll-margin-top:120px}
+#compare{scroll-margin-top:120px}  /* below the sticky search bar (Vertaa, shared ?open=1 links) */
 .notes ul{margin:0;padding-left:18px;display:grid;gap:4px;color:var(--ink-2)}
 .notes time{font-family:var(--font-mono);font-size:12px;color:var(--ink-3);margin-right:6px}
 
@@ -760,7 +762,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     const models = ui.cmp.filter(c => c.kind === 'model').map(c => c.name), ags = ui.cmp.filter(c => c.kind === 'agent').map(c => c.name);
     const table = (first, cols, rows) => `<table class="cmpt"><thead><tr><th>${first}</th>${cols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, ...cells]) =>
       `<tr><td>${esc(label)}</td>${cells.map((x, i) => `<td data-label="${esc(cols[i])}">${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-    let html = `<div class="group"><h2 id="cmp-h" class="split">Vertailu<button type="button" class="kt-btn sm" data-act="cmp-close">Sulje</button></h2>`;
+    let html = `<div class="group"><h2 id="cmp-h" class="split">Vertailu<span class="acts"><button type="button" class="kt-btn sm" data-act="cmp-share">Kopioi linkki</button><button type="button" class="kt-btn sm" data-act="cmp-close">Sulje</button></span></h2>`;
     if (models.length && data) {
       const rows = CATS.map(c => { const cat = catOf(c.id), its = cat.items;
         return [c.title, ...models.map(n => { const i = its.findIndex(it => it.name === n); return i < 0 ? '–' : `${i + 1}. · ${fmt(its[i].score, cat)}`; })]; })
@@ -786,6 +788,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     // The fixed bar must never hide the page's last rows: the bottom padding follows its height.
     document.body.style.paddingBottom = ui.cmp.length ? Math.max(90, $('#cmpbar').offsetHeight + 40) + 'px' : '';
     store.set();
+    syncUrl();
   }
 
   // ---- Data state (julkinen-16) ----
@@ -852,6 +855,7 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (html.includes('class="tiles"')) same = answerHtml(ui.budget === 'cheap' ? 'best' : 'cheap') === html;
     $('#budget-note').hidden = !same;
     store.set();
+    syncUrl();
   }
 
   // ---- URL: /ai?q=…&kind=…#<tab>[/<sub>] or #<card id>; /ai-tyokalut redirects to /ai?tab=tyokalut (the #hash survives) ----
@@ -904,10 +908,29 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     if (el.matches('.card, .notes')) { el.classList.remove('kt-flash'); void el.offsetWidth; el.classList.add('kt-flash'); }
   }
   // julkinen-15: the search and the type filter live in the query, so a link keeps them and Back undoes them.
+  // ai-F1: the compare picks, the open table, the task and its budget are in the query too, so the address is a shareable
+  // view (?cmp=Claude+Opus+5.5|a:Codex&open=1&task=…&budget=cheap). They are state, not navigation: syncUrl replaces the
+  // current entry, and Back/forward (fromUrl) never reads them, only the start does.
+  const qv = s => encodeURIComponent(s).replace(/%20/g, '+').replace(/%3A/g, ':').replace(/%7C/g, '|');
+  const shareQs = (open = ui.showCmp) => [
+    ui.cmp.length && 'cmp=' + qv(ui.cmp.map(c => (c.kind === 'agent' ? 'a:' : '') + c.name).join('|')),
+    open && ui.cmp.length >= 2 && 'open=1',
+    ui.task && 'task=' + encodeURIComponent(ui.task),
+    ui.task && ui.budget === 'cheap' && 'budget=cheap'];
+  const SHARE_KEYS = /^(cmp|open|task|budget)=/;
+  const cmpFromQs = s => s.split('|').map(t => t.startsWith('a:') ? {kind: 'agent', name: t.slice(2)} : {kind: 'model', name: t});
   const urlFor = hash => {
-    const qs = [ui.q && 'q=' + encodeURIComponent(ui.q), ui.kind !== 'all' && 'kind=' + encodeURIComponent(ui.kind)].filter(Boolean).join('&');
+    const qs = [ui.q && 'q=' + encodeURIComponent(ui.q), ui.kind !== 'all' && 'kind=' + encodeURIComponent(ui.kind), ...shareQs()].filter(Boolean).join('&');
     return `${location.pathname}${qs ? '?' + qs : ''}${hash ? '#' + hash : ''}`;
   };
+  // Rewrites only the share keys: q and kind stay as the history has them (a search being typed is not committed yet).
+  let urlReady = false;
+  function syncUrl(){
+    if (!urlReady) return;
+    const keep = location.search.slice(1).split('&').filter(p => p && !SHARE_KEYS.test(p));
+    const qs = [...keep, ...shareQs()].filter(Boolean).join('&'), u = `${location.pathname}${qs ? '?' + qs : ''}${location.hash}`;
+    if (u !== location.pathname + location.search + location.hash) history.replaceState(history.state, '', u);
+  }
   const nav = (base, sub) => history.pushState(null, '', urlFor(sub && sub !== 'all' ? `${base}/${sub}` : base));
 
   // ---- Events ----
@@ -951,6 +974,12 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
     else if (d.act === 'cmp-open') { ui.showCmp = true; paintCompare(); $('#compare').scrollIntoView({block: 'start'}); }
     else if (d.act === 'cmp-close') { ui.showCmp = false; paintCompare(); }
     else if (d.act === 'cmp-clear') { ui.cmp = []; ui.showCmp = false; paintCompare(); }
+    else if (d.act === 'cmp-share') {   // the view as a link: picks, open table, task and budget (no search, no tab)
+      const url = `${location.origin}/ai?${shareQs(true).filter(Boolean).join('&')}`;
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(() => { b.textContent = 'Linkki kopioitu ✓'; },
+        () => { b.textContent = 'Kopioi osoiteriviltä'; })
+        .then(() => setTimeout(() => { if (b.isConnected) b.textContent = 'Kopioi linkki'; }, 2000));
+    }
     else if (d.act === 'retry') { loadAll(Object.keys(failed).filter(k => failed[k])); render(); }
     else if (d.link) {
       const url = `${location.origin}/ai#${d.link}`;
@@ -988,15 +1017,25 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
   $('#tabs').innerHTML = TABS.map(t => `<button type="button" role="tab" class="kt-tab" id="tb-${t.id}" data-tab="${t.id}" aria-controls="tab-${t.id}">${t.name}<span class="n"></span></button>`).join('');
   $('#tasks').innerHTML = TASKS.map(t => pressBtn('task', t.id, false, t.label)).join('');
   lastW = chartW();
+  // A shared link (ai-F1) wins over this tab's own picks, key by key: ?cmp= sets the compare, ?task= the task and its budget.
+  // Names are only shape-checked here; loadAll drops the ones the data does not have.
   {
-    const s = store.get();
-    if (TASKS.some(t => t.id === s.task)) ui.task = s.task;
-    if (s.budget === 'cheap') ui.budget = 'cheap';
-    if (Array.isArray(s.cmp)) ui.cmp = s.cmp.filter(c => c && (c.kind === 'model' || c.kind === 'agent') && typeof c.name === 'string' && c.name.length <= 80).slice(0, 3).map(c => ({kind: c.kind, name: c.name}));
+    const s = store.get(), qs = new URLSearchParams(location.search);
+    const task = qs.has('task') ? qs.get('task') : s.task, budget = qs.has('task') ? qs.get('budget') : s.budget;
+    if (TASKS.some(t => t.id === task)) ui.task = task;
+    if (budget === 'cheap') ui.budget = 'cheap';
+    const cmp = qs.has('cmp') ? cmpFromQs(qs.get('cmp')) : s.cmp;
+    if (Array.isArray(cmp)) for (const c of cmp) {
+      if (c && (c.kind === 'model' || c.kind === 'agent') && typeof c.name === 'string' && c.name && c.name.length <= 80 && !c.name.includes('|')
+        && !ui.cmp.some(x => x.kind === c.kind && x.name === c.name) && ui.cmp.length < 3) ui.cmp.push({kind: c.kind, name: c.name});
+    }
+    ui.showCmp = qs.get('open') === '1' && ui.cmp.length >= 2;
   }
   fromUrl();
   // The old ?tab= from the /ai-tyokalut redirect is folded into the hash.
   if (new URLSearchParams(location.search).has('tab')) history.replaceState(null, '', urlFor(location.hash.slice(1) || (ui.tab === 'mallit' ? '' : ui.tab)));
+  urlReady = true;
+  syncUrl();
   const getJson = u => fetch(u, {cache: 'no-cache'}).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
   const SOURCES = {
     models: ['/data/ai-models.json', d => { data = d; deriveModels(); }],
@@ -1013,7 +1052,11 @@ footer ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
       if (ui.cmp.length !== n) paintCompare();
     });
   }
-  loadAll(Object.keys(SOURCES)).then(() => { if (location.hash) fromUrl(); });
+  // A shared comparison opens at its table, unless a #card link or the visitor's own scrolling came first.
+  loadAll(Object.keys(SOURCES)).then(() => {
+    if (location.hash) fromUrl();
+    else if (ui.showCmp && ui.cmp.length >= 2 && scrollY < 40) $('#compare').scrollIntoView({block: 'start'});
+  });
 })();
 </script>
 </body>
