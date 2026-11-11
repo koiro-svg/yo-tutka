@@ -199,6 +199,8 @@ a{color:var(--accent)}
 .pick b{font-size:15px;line-height:1.3}
 .pick small{font:500 11px var(--font-mono);color:var(--ink-3)}
 .startbar .start{margin-top:0}
+.solo{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.solo .muted{margin-top:6px}
 @media (pointer:coarse){
   .kt-btn,.kt-tab{min-height:44px}
   .kt-btn.sm{padding-inline:14px}
@@ -255,6 +257,8 @@ const T = {
     parallelInfo: 'Jokaisella on oma lista. Eniten oikein voittaa, tasatilanteessa se, joka sai viimeisen vastauksensa aiemmin.',
     raceInfo: 'Yhteinen lista: kun joku ehtii ensin, vastaus on hänen eikä kelpaa enää muille.',
     time: 'Aika', mul: { 0.5: 'Lyhyt', 1: 'Normaali', 2: 'Pitkä' }, quiz: 'Visa',
+    practice: 'Harjoittele yksin', practiceInfo: 'Ilman huonetta ja nimimerkkiä. Toimii ilman verkkoa, kun sivu on ladattu.',
+    soloTitle: 'Harjoittelu', soloInfo: 'Pelaat yksin tässä selaimessa: mitään ei lähetetä, ja ennätykset tallentuvat vain tänne.', pickQuiz: 'Vaihda visa',
     start: 'Aloita peli', solo: 'Harjoittele yksin', waitHost: n => `Odotetaan, että ${n} aloittaa pelin.`,
     typeHere: 'Kirjoita vastaus', giveUp: 'Luovuta', sure: 'Varmasti?', out: 'Luovutit. Odotetaan muita.', spectate: 'Peli on kesken, seuraat sivusta.',
     taken: n => `${n} ehti ensin`, already: 'Tämä on jo listalla',
@@ -282,6 +286,8 @@ const T = {
     parallelInfo: 'Everyone has their own list. Most correct wins; on a tie, whoever got their last answer earlier.',
     raceInfo: 'One shared list: whoever gets an answer first owns it and nobody else can use it.',
     time: 'Time', mul: { 0.5: 'Short', 1: 'Normal', 2: 'Long' }, quiz: 'Quiz',
+    practice: 'Practice alone', practiceInfo: 'No room and no nickname. Works offline once the page has loaded.',
+    soloTitle: 'Practice', soloInfo: 'You play alone in this browser: nothing is sent, and best results are saved only here.', pickQuiz: 'Pick another quiz',
     start: 'Start game', solo: 'Practice alone', waitHost: n => `Waiting for ${n} to start the game.`,
     typeHere: 'Type an answer', giveUp: 'Give up', sure: 'Sure?', out: 'You gave up. Waiting for the others.', spectate: 'A game is running, you are watching.',
     taken: n => `${n} got there first`, already: 'Already on the list',
@@ -468,6 +474,23 @@ async function joinRoom(code, created) {
   if (!created) R.aloneT = setTimeout(() => { if (R && R.players.length <= 1 && !G) { R.alone = true; paintPlayers(); } }, 3000);
 }
 
+// Practice alone: a room with no channel. send() is a no-op without R.ch and I am the host, so the game runs the same
+// code as a room but needs no network, no nickname and no Realtime quota. The chosen settings survive a reload of the tab.
+const SOLO_HASH = 'harjoittele', SOLO_KEY = 'visa-solo';
+async function startSolo() {
+  const saved = readJson('sessionStorage', SOLO_KEY);
+  R = { code: SOLO_HASH, solo: true, ch: null, players: [{ id: MY_ID, name: cleanName(P.nick) || t('you'), joined: 0 }], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
+  G = null;
+  render();
+  try { await packsReady; } catch {
+    R = null; homeError = 'noData'; history.replaceState(null, '', location.pathname); render(); return;
+  }
+  if (!R?.solo) return;
+  if (saved && validSettings({ ...saved, mode: 'parallel' })) R.settings = { quiz: saved.quiz, mode: 'parallel', mul: saved.mul };
+  paintSettings();
+  restoreGame();
+}
+
 // The host is the earliest `joined`. A newcomer always ranks after everyone present, so a device with a wrong clock can't
 // take over the room; the value is kept for the tab so that a reload keeps the rank.
 function track(ch) {
@@ -535,9 +558,11 @@ function onPresence() {
 }
 
 function route() {
-  const code = parseCode(location.hash);
+  const solo = location.hash.slice(1) === SOLO_HASH;
+  const code = solo ? SOLO_HASH : parseCode(location.hash);
   if (R && R.code === code) return;
   if (R) leaveRoom();
+  if (solo) { pendingCode = null; startSolo(); return; }
   if (!code) { pendingCode = null; render(); return; }
   if (!cleanName(P.nick)) { pendingCode = code; render(); return; }
   pendingCode = null;
@@ -955,7 +980,7 @@ function startGame() {
   const s = R.settings;
   const msg = { seq: Date.now(), quiz: s.quiz, mode: s.mode, mul: s.mul, players: R.players.map(p => ({ id: p.id, name: p.name })), elapsed: -COUNTDOWN_MS };
   send('start', msg);
-  sb.rpc('visa_count_play', { q: s.quiz }).then(() => {}, () => {});   // anonymous play count for Suosituimmat
+  if (!R.solo) sb.rpc('visa_count_play', { q: s.quiz }).then(() => {}, () => {});   // anonymous play count for Suosituimmat
   beginGame(msg);
   // Nothing else repairs a lost start: a guest without G would ignore the whole game.
   for (const wait of [800, 2000]) setTimeout(() => { if (G?.seq === msg.seq && !G.over) send('snap', snapshot()); }, wait);
@@ -964,6 +989,7 @@ function startGame() {
 function setSettings(patch) {
   if (!isHost()) return;
   R.settings = { ...R.settings, ...patch };
+  if (R.solo) writeStr('sessionStorage', SOLO_KEY, JSON.stringify(R.settings));
   send('settings', { s: R.settings });
   paintSettings();
 }
@@ -1005,7 +1031,8 @@ function renderHome() {
     : h('div', { class: 'stack' },
         h('div', { class: 'row' }, h('button', { class: 'kt-btn primary', text: t('create'), onclick: create })),
         h('p', { class: 'muted', text: t('or') }),
-        h('div', { class: 'row' }, code, h('button', { class: 'kt-btn', text: t('join'), onclick: join })));
+        h('div', { class: 'row' }, code, h('button', { class: 'kt-btn', text: t('join'), onclick: join })),
+        h('div', { class: 'solo' }, h('a', { class: 'kt-btn', href: `#${SOLO_HASH}`, text: t('practice') }), h('p', { class: 'muted', text: t('practiceInfo') })));
   const rivals = Object.values(P.h2h);
   const bests = DATA.quizzes.filter(q => P.best[q.id]);
   app.replaceChildren(
@@ -1024,6 +1051,21 @@ function renderHome() {
 }
 
 function renderLobby() {
+  if (R.solo) {
+    V.settings = h('section', { class: 'card wide' });
+    app.replaceChildren(
+      topBar(),
+      h('h1', { text: t('title') }),
+      h('div', { class: 'cols' },
+        h('section', { class: 'card' },
+          h('h2', { text: t('soloTitle') }),
+          h('p', { class: 'muted', text: t('soloInfo') }),
+          h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'kt-btn sm', text: t('leave'), onclick: () => { location.hash = ''; } }))),
+        V.settings),
+      foot());
+    paintSettings();
+    return;
+  }
   const link = `${location.origin}${location.pathname}#${R.code}`;
   const copy = h('button', { class: 'kt-btn sm', text: t('copy'), onclick: async () => {
     try { await navigator.clipboard.writeText(link); copy.textContent = t('copied'); setTimeout(() => { copy.textContent = t('copy'); }, 1500); }
@@ -1083,11 +1125,11 @@ function paintSettings() {
     }
     const setFilter = patch => { Object.assign(R, patch, { showAll: false }); paintSettings(); };
     const tab = (key, label, on, fn) => h('button', { class: 'kt-tab', 'data-k': key, 'aria-pressed': String(on), text: label, onclick: fn });
-    V.settings.replaceChildren(
+    fill(V.settings,
       h('h2', { text: t('settings') }),
-      h('div', { class: 'lbl', text: t('mode') }),
-      h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
-      h('p', { class: 'muted', style: 'margin-top:6px', text: info }),
+      !R.solo && h('div', { class: 'lbl', text: t('mode') }),
+      !R.solo && h('div', { class: 'kt-tabs' }, MODES.map(m => tab(`m-${m}`, t(m), s.mode === m, () => setSettings({ mode: m })))),
+      !R.solo && h('p', { class: 'muted', style: 'margin-top:6px', text: info }),
       h('div', { class: 'lbl', text: t('time') }),
       h('div', { class: 'kt-tabs' }, MULS.map(x => tab(`x-${x}`, `${T[P.lang].mul[x]} · ${minutes(q.t * x)}`, s.mul === x, () => setSettings({ mul: x })))),
       h('div', { class: 'lbl', text: t('quiz') }),
@@ -1100,7 +1142,7 @@ function paintSettings() {
       h('div', { class: 'kt-tabs filters' }, ['', ...Object.keys(T[P.lang].fmt)].map(f => tab(`f-${f}`, f ? T[P.lang].fmt[f] : t('all'), R.fmtFilter === f, () => setFilter({ fmtFilter: f })))),
       V.quizList = h('div', {}),
       h('div', { class: 'startbar' },
-        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: `${T[P.lang].fmt[fmtOf(q)]} · ${t(s.mode)} · ${minutes(q.t * s.mul)}` })),
+        h('div', { class: 'pick' }, h('b', { text: quizName(q) }), h('small', { text: [T[P.lang].fmt[fmtOf(q)], !R.solo && t(s.mode), minutes(q.t * s.mul)].filter(Boolean).join(' · ') })),
         h('button', { class: 'kt-btn primary start', 'data-k': 'start', text: R.players.length > 1 ? t('start') : t('solo'), onclick: startGame })));
     paintQuizList();
   });
@@ -1363,7 +1405,7 @@ function renderResults() {
           h('td', { text: `${r.n}/${G.items.length}` }), h('td', { text: `${t('lastAt')} ${clock(r.t)}` }))))),
         single && h('p', { class: 'muted', style: 'margin-top:10px', text: t('h2h', single.name, single.w, single.l, single.d) }),
         V.actions = h('div', { class: 'row', style: 'margin-top:14px' })),
-      chatBox()),
+      !R.solo && chatBox()),
     h('h2', { style: 'margin-top:22px', text: t('answers') }),
     grid,
     foot());
@@ -1376,7 +1418,7 @@ function paintActions() {
   if (!V.actions) return;
   V.actions.replaceChildren(...[
     isHost() && h('button', { class: 'kt-btn primary', text: t('rematch'), onclick: startGame }),
-    h('button', { class: 'kt-btn', text: t('lobby'), onclick: () => { G = null; render(); } }),
+    h('button', { class: 'kt-btn', text: R.solo ? t('pickQuiz') : t('lobby'), onclick: () => { G = null; render(); } }),
   ].filter(Boolean));
 }
 
@@ -1406,7 +1448,7 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
     }
     if (V.opts && digit) V.opts[Number(e.key) - 1]?.click();
   });
-  if (parseCode(location.hash)) route(); else render();
+  if (parseCode(location.hash) || location.hash.slice(1) === SOLO_HASH) route(); else render();
 }).catch(() => { app.replaceChildren(h('p', { class: 'err', text: t('noData') })); });
 })();
 </script>
