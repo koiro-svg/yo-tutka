@@ -12,6 +12,7 @@ import json, pathlib, re, subprocess, sys, datetime, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "ai-tools.json"
+MODELS = ROOT / "data" / "ai-models.json"
 AGENTS = ROOT / "data" / "coding-agents.json"
 LIVE = "https://koirosvg.com/"
 KINDS = {"avustaa", "automatisoi"}
@@ -233,6 +234,92 @@ def is_free(price):
     return bool(FREE_RE.match(str(price or "").strip()))
 
 
+def tool_free(t):
+    """ai.html's toolFree(): the tool's own `free` flag wins, the price text is the fallback."""
+    return t["free"] if isinstance(t.get("free"), bool) else is_free(t.get("price"))
+
+
+def check_free(d):
+    """Warnings (never errors) for the optional `free` flag: wrong type, or a flag the price text contradicts."""
+    warnings = []
+    for a in d["areas"]:
+        for t in a["tools"]:
+            n, f, price = t["name"], t.get("free"), str(t.get("price", ""))
+            if f is None:
+                continue
+            if not isinstance(f, bool):
+                warnings.append(f"{a['id']}/{n}: free must be true/false (ignored, the page reads the price text)")
+            elif f and not re.search(r"ilmai|(?<![\d,.])0 [€$]", price, re.I):
+                warnings.append(f"{a['id']}/{n}: free=true but the price text names no free tier ({price!r})")
+            elif not f and is_free(price):
+                warnings.append(f"{a['id']}/{n}: free=false but the price starts with a free tier ({price!r})")
+    return warnings
+
+
+# A model name in a tool's name: a family ("GPT Image", "Kling") followed by a version ("2.5", "v4").
+VERSION_RE = re.compile(r"^(.*?[a-z].*?)[\s-]+v?(\d+(?:\.\d+)*)(?![\d.])", re.I)
+
+
+def version_key(v):
+    return tuple(int(x) for x in v.split("."))
+
+
+def family(name):
+    """(family, version) of a model name, e.g. 'GPT Image 2.6 Sunburst' -> ('gpt image', (2, 6)); None without a version."""
+    m = VERSION_RE.match(name.strip())
+    if not m:
+        return None
+    fam = re.sub(r"[\s-]+", " ", m.group(1)).strip().lower()
+    return (fam, version_key(m.group(2))) if fam else None
+
+
+def check_versions(d, models):
+    """Warn (never fail) when a tool's name names an older version of a model family the rankings already list.
+
+    Example: tool "GPT Image 2.5 (ChatGPT)" while ai-models.json ranks "GPT Image 2.6 Sunburst"."""
+    newest = {}
+    for c in (models.get("categories") or {}).values():
+        for it in c.get("items") or []:
+            fv = family(str(it.get("name", "")))
+            if fv and (fv[0] not in newest or fv[1] > newest[fv[0]][0]):
+                newest[fv[0]] = (fv[1], it["name"])
+    warnings = []
+    for a in d["areas"]:
+        for t in a["tools"]:
+            name = re.sub(r"[\s-]+", " ", t["name"]).lower()
+            for fam, (ver, model) in newest.items():
+                for m in re.finditer(r"(?<![a-z0-9])" + re.escape(fam) + r" v?(\d+(?:\.\d+)*)(?![\d.])", name):
+                    if version_key(m.group(1)) < ver:
+                        warnings.append(f"{a['id']}/{t['name']}: names {fam} {m.group(1)}, the rankings already list {model!r}")
+    return warnings
+
+
+def load_models():
+    """ai-models.json for the version check, or None (the check is advisory, so a broken file only warns)."""
+    try:
+        return json.loads(MODELS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
+def check_history():
+    """data/ai-history.json (update_models.py, ai-F3): warnings only, the page skips bad rows and works without the file."""
+    path = MODELS.parent / "ai-history.json"
+    if not path.exists():
+        return ["data/ai-history.json missing: the models tab shows no rank changes"]
+    try:
+        days = json.loads(path.read_text(encoding="utf-8"))["days"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return ["data/ai-history.json unreadable: the models tab shows no rank changes"]
+    bad = [d for d in days if not (isinstance(d, dict) and isinstance(d.get("date"), str)
+                                   and re.fullmatch(r"\d{4}-\d\d-\d\d", d["date"]) and isinstance(d.get("top"), dict))]
+    dates = [d["date"] for d in days if d not in bad]
+    out = [f"data/ai-history.json: {len(bad)} malformed day(s) (the page skips them)"] if bad else []
+    if dates != sorted(set(dates)):
+        out.append("data/ai-history.json: days must be unique and oldest first")
+    return out
+
+
 def check_page(d, errors):
     """ai.html's "Mitä haluat tehdä?" wiring against the data, and guards for logic fixed on 10.11.2026.
 
@@ -265,7 +352,21 @@ def check_page(d, errors):
     for price, want in cases.items():
         if is_free(price) != want:
             errors.append(f"is_free({price!r}) should be {want}")
-    return warnings
+    if "area.tools.find(toolFree)" not in page:
+        errors.append("ai.html: answerHtml() must pick the free alternative with toolFree() (the `free` flag before the price text)")
+    vcases = {("GPT Image 2.5 (ChatGPT)", "GPT Image 2.6 Sunburst"): True, ("Kling 4.0", "Kling 3.0 Omni"): False,
+              ("ChatGPT", "GPT-6.1 Sol"): False, ("Veo 3.1 / Flow", "Veo 3.2"): True, ("Suno v5", "Suno v6-mini"): True}
+    for (tool, model), want in vcases.items():
+        got = check_versions({"areas": [{"id": "x", "tools": [{"name": tool}]}]},
+                             {"categories": {"c": {"items": [{"name": model}]}}})
+        if bool(got) != want:
+            errors.append(f"check_versions({tool!r} vs {model!r}) should {'' if want else 'not '}warn")
+    models = load_models()
+    if models is None:
+        warnings.append("data/ai-models.json unreadable: tool names were not checked against the rankings")
+    else:
+        warnings += check_versions(d, models)
+    return warnings + check_free(d) + check_history()
 
 
 def main():
@@ -287,7 +388,7 @@ def main():
     n = sum(len(a["tools"]) for a in d["areas"])
     print(f"OK: {len(d['areas'])} areas, {n} tools, {len(d['changes'])} changes, updated {d['updated']}")
     print(f"OK: {len(g['agents'])} coding agents, updated {g['updated']}")
-    free = sum(1 for a in d["areas"] if any(is_free(t["price"]) for t in a["tools"]))
+    free = sum(1 for a in d["areas"] if any(tool_free(t) for t in a["tools"]))
     print(f"OK: ai.html tasks match the data ({free}/{len(d['areas'])} areas have a free tool)")
 
 

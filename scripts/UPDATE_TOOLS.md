@@ -32,11 +32,25 @@ good run if nothing changed in the world.
    - Exactly one `pick: true` per area. Change the pick only with strong evidence.
    - `kind`: `automatisoi` = runs work by itself once set up, `avustaa` = helps you do it.
    - `fi`: `hyvä` | `kohtalainen` | `heikko` | `?` (Finnish-language quality; `?` if unknown).
+     The page's "Suomi: hyvä" filter (`?fi=hyva`) shows only `hyvä` tools, so give `hyvä` only when
+     the interface and the output both work well in Finnish; when unsure, use `kohtalainen` or `?`.
    - Prices: current list price, short, e.g. `Ilmainen · Pro 20 $/kk`. No time-limited
      campaign prices. If sources disagree, give a range with `~`.
      Start the price with `Ilmainen` only when the tool has a real free tier: the page's
      "Ilmainen vaihtoehto" reads exactly that (`isFree` in `ai.html`). A trial is written
      `Ilmainen kokeilu · …` or `7 vrk ilmainen kokeilu · …`, never plain `Ilmainen · …`.
+   - `free`: `true` when the tool has a real, lasting free tier (usable without paying, not a
+     trial), otherwise `false`. Every tool has it; keep it in step with `price` whenever you
+     change either one. The page's "Ilmainen vaihtoehto" reads `free` first (`toolFree` in
+     `ai.html`) and the price text only when `free` is missing. The validator warns (does not
+     fail) when `free: true` but the price names no free tier, or `free: false` but the price
+     starts with `Ilmainen`: fix whichever is wrong.
+   - Model versions in tool names: if a tool's `name` names a model version (e.g.
+     `GPT Image 2.5 (ChatGPT)`) and `data/ai-models.json` already ranks a newer version of the
+     same model, the validator prints a warning. Check whether the tool now runs the newer
+     version and, if a source confirms it, update the name (and `why`) to it. If the tool really
+     still uses the older one, leave it. Never edit `data/ai-models.json` (a separate workflow
+     owns it).
      The page also names a tool for some tasks (`TASKS` … `tool:'ElevenLabs'`); if you rename
      or remove such a tool the validator prints a warning and the page falls back to the pick.
    - `url`: the tool's official https page. No affiliate or tracking parameters.
