@@ -172,7 +172,8 @@ a{color:var(--accent)}
 .cells.flags{grid-template-columns:repeat(auto-fill,minmax(min(100%,110px),1fr))}
 .cells.choice{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .prompt{flex:1 1 130px;font:600 18px/1.25 var(--font-display);text-align:center}
-.map svg{display:block;width:100%;height:auto;max-height:min(70vh,760px);touch-action:none;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
+.map svg{display:block;width:100%;height:auto;max-height:min(70vh,760px);touch-action:pan-y;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-m);margin-top:12px}
+.map svg.zoom{touch-action:none} /* zoomed: one finger pans the map; whole map: a swipe is the page's own native scroll */
 .map g path,.map g circle{fill:var(--line);stroke:var(--ink-3);stroke-width:.7;vector-effect:non-scaling-stroke}
 .map g.bg path,.map g.bg circle{fill:var(--surface);stroke:var(--line)}
 .map g.t{cursor:pointer}
@@ -501,6 +502,14 @@ function buildItems(q) {
     ? pool.map(c => ({ fi: c.fi, en: c.en, hint: null, group: group(c), iso: c.id }))
     : pool.map(c => ({ fi: c.capFi, en: c.capEn, hint: { fi: c.fi[0], en: c.en[0] }, group: group(c) }));
 }
+// How many items a quiz has, without building them (review 11.11.2026: the browser's rows and missFor built every quiz's
+// whole item list on each keystroke and presence change). Remembered per quiz object.
+const itemCounts = new WeakMap();
+function itemCount(q) {
+  let n = itemCounts.get(q);
+  if (n == null) itemCounts.set(q, n = q.items ? q.items.length : buildItems(q).length);
+  return n;
+}
 const getJson = url => fetch(url).then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
 function loadMap() {
   if (!mapLoad) mapLoad = getJson('/data/visa-map.json').then(d => { MAP = d; if (G && G.fmt === 'map') render(); }).catch(() => { mapLoad = null; if (G?.fmt === 'map' && !G.over) setTimeout(loadMap, MAP_RETRY_MS); });
@@ -653,10 +662,14 @@ async function startSolo() {
 }
 
 // The quiz of the day into the solo settings at normal time; 'start' (the card's Play) also starts it. True when started.
+// #paiva/<quiz id> (a friend's challenge, review 11.11.2026) names the quiz itself, so the friend plays the quiz the
+// share text names even after midnight or a deploy that reshuffled the pool; it counts as the day's result only when it
+// is also today's quiz (record()). The card's Play passes the quiz the card shows.
 const DAILY_HASH = 'paiva';
-let pendingDaily = null;   // null | 'pick' | 'start'
+let pendingDaily = null;   // null | {how: 'pick' | 'start', id: a quiz id or null = today's}
 function applyDaily() {
-  const how = pendingDaily, id = dailyId(dayKey(Date.now()));
+  const pd = pendingDaily, id = pd?.id && QUIZ.has(pd.id) ? pd.id : dailyId(dayKey(Date.now()));
+  const how = pd?.how;
   pendingDaily = null;
   if (!id || !R?.solo) return false;
   setSettings({ quiz: id, mul: 1 });
@@ -744,10 +757,20 @@ function onPresence() {
 function route() {
   // #paiva (the quiz of the day's link) is practice alone with the day's quiz chosen; the address becomes #harjoittele
   // so that a reload keeps the solo settings. An older page reads #paiva as no code and shows its home.
-  if (location.hash.slice(1) === DAILY_HASH) { pendingDaily = pendingDaily || 'pick'; history.replaceState(null, '', `#${SOLO_HASH}`); }
+  const dh = location.hash.slice(1);
+  if (dh === DAILY_HASH || dh.startsWith(`${DAILY_HASH}/`)) {
+    let id = null;
+    try { id = decodeURIComponent(dh.slice(DAILY_HASH.length + 1)) || null; } catch { /* a broken link: today's quiz */ }
+    pendingDaily = pendingDaily || { how: 'pick', id };
+    history.replaceState(null, '', `#${SOLO_HASH}`);
+  }
   const solo = location.hash.slice(1) === SOLO_HASH;
   const code = solo ? SOLO_HASH : parseCode(location.hash);
-  if (R && R.code === code) { if (R.solo && pendingDaily && !G && packsState === 'ok') applyDaily(); return; }
+  if (R && R.code === code) {
+    // A game or its results on screen: the link is not kept for later (it would replace his saved quiz much later).
+    if (R.solo && pendingDaily) { if (!G && packsState === 'ok') applyDaily(); else if (G) pendingDaily = null; }
+    return;
+  }
   if (R) leaveRoom();
   if (solo) { pendingCode = null; startSolo(); return; }
   if (!code) { pendingCode = null; render(); return; }
@@ -1078,7 +1101,9 @@ function finish(delay) {
   setTimeout(() => {
     if (G !== game || G.over) return;
     const msg = { seq: G.seq, res: tally(), c: G.mode === 'race' ? claimList() : null };
-    applyEnd(msg);   // first: it scores the match, which then travels with the result
+    // First: it scores the match, which then travels with the result. Whatever applyEnd's own drawing or saving does,
+    // the guests still get the result (review 11.11.2026: an exception here used to cancel the broadcast and its retries).
+    try { applyEnd(msg); } catch (e) { console.error('[visa] end', e); }
     if (R.last?.mt) msg.mt = R.last.mt;
     send('end', msg);
     for (const wait of [1000, 3000]) setTimeout(() => send('end', msg), wait);   // broadcasts can get lost
@@ -1164,7 +1189,7 @@ function rememberMissed(me) {
 // The stored review list of a quiz, or [] when there is none or the quiz has changed since.
 function missFor(id) {
   const m = P.miss[id], q = QUIZ.get(id);
-  return m && q && buildItems(q).length === m.n ? m.i : [];
+  return m && q && itemCount(q) === m.n ? m.i : [];
 }
 // The quiz's time shared out per item, rounded up to 5 s, never below REVIEW_MIN_S or above the full time.
 const reviewSeconds = (q, mul, k, n) => Math.min(q.t * mul, Math.max(REVIEW_MIN_S, Math.ceil(q.t * mul * k / n / 5) * 5));
@@ -1341,7 +1366,7 @@ function quizRow(x, where) {
   const challenge = () => { if (!V.needNick()) return; pendingRoomQuiz = x.id; createdCode = randomId(4, CODE_ALPHABET); location.hash = createdCode; };
   return h('li', { class: 'qrow' },
     h('div', { class: 'qtext' }, h('b', { text: name }),
-      h('small', { text: [DATA.cats[x.cat]?.[P.lang], T[P.lang].fmt[fmtOf(x)], buildItems(x).length, minutes(x.t)].filter(v => v != null && v !== '').join(' · ') })),
+      h('small', { text: [DATA.cats[x.cat]?.[P.lang], T[P.lang].fmt[fmtOf(x)], itemCount(x), minutes(x.t)].filter(v => v != null && v !== '').join(' · ') })),
     h('div', { class: 'qbest' + (b ? '' : ' none') }, h('div', { class: 'meter', 'aria-hidden': 'true' }, h('i', { style: `width:${pct}%` })),
       h('span', { text: b ? t('bestIs', b.n, b.total) : t('noBest') })),
     h('div', { class: 'row' },
@@ -1360,9 +1385,9 @@ function paintDaily() {
     return;
   }
   const streak = dailyStreak(), share = dailyShare(key, q, !!rec);
-  const play = h('button', { class: 'kt-btn' + (rec ? '' : ' primary'), text: t(rec ? 'dailyAgain' : 'dailyPlay'), onclick: () => { pendingDaily = 'start'; location.hash = DAILY_HASH; } });
+  const play = h('button', { class: 'kt-btn' + (rec ? '' : ' primary'), text: t(rec ? 'dailyAgain' : 'dailyPlay'), onclick: () => { pendingDaily = { how: 'start', id: q.id }; location.hash = DAILY_HASH; } });
   fill(V.daily, head,
-    h('p', { class: 'dayquiz' }, h('b', { text: quizName(q) }), h('span', { class: 'muted', text: t('dailyMeta', buildItems(q).length, minutes(q.t)) })),
+    h('p', { class: 'dayquiz' }, h('b', { text: quizName(q) }), h('span', { class: 'muted', text: t('dailyMeta', itemCount(q), minutes(q.t)) })),
     rec && h('p', { class: 'daymine', text: t('dailyMine', rec.n, rec.total, clock(rec.t)) }),
     streak > 1 && h('p', { class: 'muted', text: t('dailyStreak', streak) }),
     h('div', { class: 'row' }, rec ? [share.btn, play] : [play, share.btn]),
@@ -1373,7 +1398,7 @@ function paintDaily() {
 // "Challenge a friend": the system share sheet where there is one, else the clipboard, else a field to copy by hand.
 function dailyShare(key, q, primary) {
   const rec = P.day[key];
-  const url = `${location.origin}${location.pathname}#${DAILY_HASH}`;
+  const url = `${location.origin}${location.pathname}#${DAILY_HASH}/${encodeURIComponent(q.id)}`;
   const text = rec ? t('dailyShare', dayLabel(key), quizName(q), rec.n, rec.total) : t('dailyShareNew', dayLabel(key), quizName(q));
   const field = h('input', { class: 'kt-input dayfield', readonly: true, value: `${text} ${url}`, hidden: true, 'aria-label': t('dailyChallenge') });
   const btn = h('button', { class: 'kt-btn' + (primary ? ' primary' : ''), text: t('dailyChallenge'), onclick: async () => {
@@ -1521,7 +1546,7 @@ function paintQuizList() {
   fill(V.quizList,
     list.length ? h('div', { class: 'quizzes' }, shown.map(x =>
       h('button', { class: 'kt-btn quiz', 'data-k': `q-${x.id}`, 'aria-pressed': String(x.id === selected), onclick: () => setSettings({ quiz: x.id }) },
-        h('b', { text: quizName(x) }), h('small', { text: `${T[P.lang].fmt[fmtOf(x)]} · ${buildItems(x).length} · ${minutes(x.t)}` }))))
+        h('b', { text: quizName(x) }), h('small', { text: `${T[P.lang].fmt[fmtOf(x)]} · ${itemCount(x)} · ${minutes(x.t)}` }))))
       : h('p', { class: 'muted', text: t('noResults') }),
     list.length > shown.length && h('button', { class: 'kt-btn', style: 'margin-top:8px', text: t('showAll', list.length), onclick: () => { R.showAll = true; paintQuizList(); } }));
 }
@@ -1635,9 +1660,9 @@ function buildMap() {
   };
   setZoom(null);
 
-  // Pointer gestures on the map only (touch-action:none): one finger or the mouse drags a zoomed map, two fingers pinch.
-  // On the whole map one finger scrolls the page instead, so a swipe over the map still moves the page. A gesture that
-  // moved never ends in a tap: the click right after it is ignored.
+  // Pointer gestures on the map only: one finger or the mouse drags a zoomed map (touch-action:none on svg.zoom), two
+  // fingers pinch. On the whole map (touch-action:pan-y) a vertical swipe is the browser's own scroll, with momentum and
+  // scroll chaining (review 11.11.2026: a hand-made scrollBy stopped dead). A gesture that moved never ends in a tap.
   const pts = new Map();
   let moved = false, quietUntil = 0, pinch = null;
   const spread = () => { const [a, b] = [...pts.values()]; return [Math.hypot(a.x - b.x, a.y - b.y), (a.x + b.x) / 2, (a.y + b.y) / 2]; };
@@ -1667,12 +1692,7 @@ function buildMap() {
       return;
     }
     if (!moved && Math.hypot(e.clientX - p.sx, e.clientY - p.sy) < MAP_DRAG_PX) return;
-    if (!zoom) {
-      if (p.type !== 'touch') return;   // a mouse drag over the whole map is still a click
-      moved = true;
-      scrollBy(0, -dy);
-      return;
-    }
+    if (!zoom) return;   // the whole map: the browser scrolls the page (touch), a mouse drag is still a click
     if (!moved) { moved = true; try { svg.setPointerCapture(e.pointerId); } catch {} }
     const at = toView(e.clientX, e.clientY);
     if (at) { auto = false; panBy(-dx * at[2], -dy * at[2]); }
@@ -1685,15 +1705,18 @@ function buildMap() {
   };
   svg.addEventListener('pointerup', lift);
   svg.addEventListener('pointercancel', lift);
-  // The wheel (and a trackpad pinch, which arrives as Ctrl+wheel) zooms at the cursor. When the map cannot zoom further
-  // that way the plain wheel is left to the page, so scrolling down past an unzoomed map still scrolls.
+  // A trackpad pinch (it arrives as Ctrl+wheel) or ⌘/Ctrl + wheel zooms at the cursor. The plain wheel always belongs
+  // to the page (review 11.11.2026: zooming on it trapped the page scroll over a map that fills 70 % of the screen);
+  // the + / − buttons and the keyboard zoom too.
   svg.addEventListener('wheel', e => {
+    if (!e.ctrlKey && !e.metaKey) return;
     const at = toView(e.clientX, e.clientY);
     if (!at) return;
     const step = e.deltaY * (e.deltaMode === 1 ? 33 : e.deltaMode === 2 ? 400 : 1);
     const f = clamp(Math.exp(-step * (e.ctrlKey ? .01 : .002)), .5, 2);
     auto = false;
-    if (zoomAt(f, at[0], at[1]) || e.ctrlKey) e.preventDefault();
+    zoomAt(f, at[0], at[1]);
+    e.preventDefault(); // never the browser's own page zoom while the pointer is over the map
   }, { passive: false });
   // Keyboard: the map is one tab stop; + and − zoom, arrows move a zoomed map, 0 shows the whole map.
   svg.addEventListener('keydown', e => {

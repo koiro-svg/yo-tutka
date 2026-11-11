@@ -600,6 +600,12 @@ details.how>p{margin-top:6px}
   // "Clear this browser" sets this: from then on nothing is written back (a late save would restore the wiped data).
   let wiped = false;
   const persistLocal = () => { if (wiped) return; dayMemo = null; try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) {} };
+  /* The last opened task ("Jatka siitä mihin jäit") has its own key, never S (review 11.11.2026): it is written on every
+     task open, and a write to LS makes every other tab reload its state (loadState swaps S.sims), which orphaned a
+     simulation running there (its time per task and its hand-in were lost). This key is on this device only. */
+  const LS_LAST = 'yo-practice-last';
+  const lastOpened = () => { try { const v = JSON.parse(localStorage.getItem(LS_LAST) || 'null'); return plainObj(v) ? v : null; } catch (e) { return null; } };
+  const rememberOpened = (v) => { if (wiped) return; try { localStorage.setItem(LS_LAST, JSON.stringify(v)); } catch (e) {} };
   let onPersist = null;          // set by the account module: schedules a sync when signed in
   // The YO bar shows how many reviews are due (rule: window.yoIsDue, owned by the bar).
   const publishDue = () => { let n = 0; for (const r of Object.values(S.review)) if (window.yoIsDue(r)) n++; document.documentElement.dataset.yoDue = n; };
@@ -1389,7 +1395,7 @@ details.how>p{margin-top:6px}
     });
     // the last opened task and the task of the newest answer (newer first, the same task once)
     const newest = answers.reduce((b, e) => !b || e[1].at > b[1].at ? e : b, null);
-    const last = S.ui.last, cand = [];
+    const last = lastOpened(), cand = [];
     if (plainObj(last) && typeof last.a === 'string' && typeof last.k === 'string' && typeof last.n === 'string' && Number.isFinite(last.at))
       cand.push({ a: last.a, k: last.k, n: last.n, u: typeof last.u === 'string' ? last.u : '', at: last.at, label: 'Viimeksi avattu' });
     if (newest) cand.push({ ...parseKey(newest[0]), at: newest[1].at, label: 'Viimeksi kirjoitettu' });
@@ -1637,7 +1643,7 @@ details.how>p{margin-top:6px}
   async function taskView(a, k, n, unitId) {
     const s = subj(a), session = sessionOf(a, k), task = taskOf(a, k, n);
     if (!task) { setView(masthead('', 'Tehtävää ei löytynyt') + '<p><a href="#/">Takaisin</a></p>'); return; }
-    S.ui.last = { a, k, n, u: unitId || '', at: Date.now() }; persistLocal();   // "Jatka siitä mihin jäit" (this device only)
+    rememberOpened({ a, k, n, u: unitId || '', at: Date.now() });   // "Jatka siitä mihin jäit" (this device only, its own key)
     const title = esc(`${task.n}. ${task.title}`);
     const signal = setView(masthead('', title) + '<p class="muted">Ladataan tehtävää…</p>');
     const content = await getContent(a, k);
@@ -2331,10 +2337,10 @@ details.how>p{margin-top:6px}
     wiped = true; onPersist = null; onAnswerSaved = null;
     clearTimeout(stateTimer); clearTimeout(answerTimer);
     for (const store of ['localStorage', 'sessionStorage']) {
-      try { const st = window[store]; for (const k of Object.keys(st)) if (k === LS || k.startsWith(AUTH_KEY)) st.removeItem(k); } catch (e) {}
+      try { const st = window[store]; for (const k of Object.keys(st)) if (k === LS || k === LS_LAST || k.startsWith(AUTH_KEY)) st.removeItem(k); } catch (e) {}
     }
     await idb.wipe();
-    try { for (const k of Object.keys(localStorage)) if (k === LS || k.startsWith(AUTH_KEY)) localStorage.removeItem(k); } catch (e) {}
+    try { for (const k of Object.keys(localStorage)) if (k === LS || k === LS_LAST || k.startsWith(AUTH_KEY)) localStorage.removeItem(k); } catch (e) {}
     delete document.documentElement.dataset.yoDue;
     location.replace(location.pathname);   // no hash: a real navigation, so no view code runs on the old state
   }

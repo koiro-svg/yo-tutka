@@ -336,7 +336,9 @@ def check_page_wipe():
     IndexedDB database has to be added to wipeBrowser() (and to this list) in the same change."""
     html = (ROOT / "yo-harjoittelu.html").read_text(encoding="utf-8")
     errors = []
-    known = {"LS", "AUTH_KEY", "k"}
+    known = {"LS", "LS_LAST", "AUTH_KEY", "k"}   # LS_LAST: the last opened task (resume card), its own key
+    if "k === LS_LAST" not in html:
+        errors.append("yo-harjoittelu.html: wipeBrowser() ei tyhjennä avainta LS_LAST")
     for m in re.finditer(r"(?:localStorage|sessionStorage)\.(?:setItem|getItem|removeItem)\(\s*([^,)]+)", html):
         arg = m.group(1).strip()
         if arg not in known and arg != "'yo-practice'":

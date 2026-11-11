@@ -19,17 +19,37 @@ const PAGES = [
 ];
 
 // Visa: visa.html has no deep link to a single quiz (its #hash is a room code), so a quiz hit opens the lobby, whose own
-// search finds the quiz by the same title. All packs or nothing: a failed pack makes the whole source fail (retried).
+// search finds the quiz by the same title. All packs or nothing. The quiz titles are their own index (review 11.11.2026):
+// about 750 kB of packs must never hold up the AI and YO hits (a search waits for them at most VISA_WAIT_MS), and a
+// failed pack is tried again after VISA_RETRY_MS, not on every keystroke.
 const VISA_FORMAT = {flags: 'liput', map: 'kartta', choice: 'monivalinta'};
 const visa = () => getJson('/data/visa.json').then(d =>
   Promise.all((d.packs || []).map(n => getJson(`/data/visa/${enc(n)}.json`))).then(ps => ({cats: d.cats || {}, quizzes: [...(d.quizzes || []), ...ps.flatMap(p => p.quizzes || [])]})));
 
+const VISA_WAIT_MS = 1500, VISA_RETRY_MS = 30000;
+let visaRows = null, visaJob = null, visaFailAt = 0;
+function visaIndex(){
+  if (visaRows) return Promise.resolve(visaRows);
+  if (!visaJob && Date.now() - visaFailAt >= VISA_RETRY_MS) {
+    visaJob = visa().then(vz => {
+      const rows = [];
+      for (const x of vz.quizzes) {
+        const title = x.title?.fi, cat = vz.cats[x.cat]?.fi || '';
+        if (typeof title !== 'string' || !title) continue;
+        rows.push({kind: 'Visa', title, sub: ['Visakaksintaisto', cat, VISA_FORMAT[x.format]].filter(Boolean).join(' · '), href: '/visa', text: norm(`${title} ${cat}`), key: norm(title)});
+      }
+      return (visaRows = rows);
+    }, () => { visaFailAt = Date.now(); return null; }).finally(() => { visaJob = null; });
+  }
+  return visaJob || Promise.resolve(null);
+}
+
 let index = null;
 async function build(models, tools){
   const ai = () => getJson('/data/ai-models.json'), tl = () => getJson('/data/ai-tools.json');
-  const parts = await Promise.all([models ? models.catch(ai) : ai(), getJson('/data/coding-agents.json'), tools ? tools.catch(tl) : tl(), getJson('/data/yo-topics.json'), visa()].map(p => p.catch(() => null)));
+  const parts = await Promise.all([models ? models.catch(ai) : ai(), getJson('/data/coding-agents.json'), tools ? tools.catch(tl) : tl(), getJson('/data/yo-topics.json')].map(p => p.catch(() => null)));
   if (parts.includes(null)) index = null;   // a source that failed (network) is fetched again on the next search
-  const [m, a, t, yo, vz] = parts;
+  const [m, a, t, yo] = parts;
   const out = PAGES.map(x => ({...x}));
   out.partial = parts.includes(null);   // hitsHtml: "no data" is not "no hits"
   if (m) {
@@ -52,11 +72,6 @@ async function build(models, tools){
     out.push({kind: 'YO-harjoittelu', title: s.name, sub: 'Harjoittele tehtäviä: vihjeet, malliratkaisut ja koesimulaatio', href: `/yo-harjoittelu#/${enc(s.id)}`, text: `${s.name} harjoittelu harjoittele harjoitustehtävät tehtävät koesimulaatio`});
     for (const x of s.topics || []) out.push({kind: 'YO-aihe', title: x.name, sub: `${s.name} · ${x.description}`, href: `/yo-tutka#${enc(s.id)}/${enc(x.id)}`, text: `${x.name} ${x.description} ${s.name}`});
   }
-  if (vz) for (const x of vz.quizzes) {
-    const title = x.title?.fi, cat = vz.cats[x.cat]?.fi || '';
-    if (typeof title !== 'string' || !title) continue;
-    out.push({kind: 'Visa', title, sub: ['Visakaksintaisto', cat, VISA_FORMAT[x.format]].filter(Boolean).join(' · '), href: '/visa', text: `${title} ${cat}`});
-  }
   for (const x of out) { x.text = norm(x.text); x.key = norm(x.title); }
   return out;
 }
@@ -66,9 +81,11 @@ async function build(models, tools){
 export async function search(q, models, tools){
   const v = norm(q.trim());
   if (!v) return [];
-  const all = await (index ||= build(models, tools));
+  const wait = new Promise(r => setTimeout(() => r(null), VISA_WAIT_MS));
+  const [base, vz] = await Promise.all([(index ||= build(models, tools)), Promise.race([visaIndex(), wait])]);
+  const all = vz ? base.concat(vz) : base;
   const found = all.filter(x => x.text.includes(v)).sort((x, y) => y.key.startsWith(v) - x.key.startsWith(v)).slice(0, 8);
-  found.partial = all.partial;
+  found.partial = base.partial;
   return found;
 }
 
