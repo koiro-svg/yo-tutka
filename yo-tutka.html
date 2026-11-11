@@ -235,6 +235,11 @@ details.sess>summary .meta{font-weight:400;font-size:13px;color:var(--ink-3);mar
 .next .nm{font-weight:700}
 .next .ms{font-family:var(--font-mono);font-size:12px;color:var(--ink-3)}
 .next .go{margin-left:auto;display:flex;flex-wrap:wrap;gap:2px 12px;justify-content:flex-end}
+.late{display:inline-block;margin-left:6px;border-radius:4px;padding:0 5px;font:600 11px/1.6 var(--font-mono);color:var(--autumn);border:1px solid currentColor;vertical-align:1px;white-space:nowrap}
+.late[hidden]{display:none}
+.late-box{margin-top:10px;padding-top:8px;border-top:1px solid var(--line-2)}
+.late-h{margin:0 0 2px;font-size:14px;font-weight:600;color:var(--ink-2)}
+.late-h .late{margin:0 6px 0 0}
 .next a{font-size:13px;font-weight:700;text-decoration:none;overflow-wrap:anywhere}
 .method{font-size:14px;color:var(--ink-2);max-width:78ch}
 .method summary{cursor:pointer;font-weight:700;color:var(--ink)}
@@ -323,6 +328,8 @@ details.desc>p{margin-top:6px}
 .next li::before{content:counter(nx);font:600 12px var(--font-mono);color:var(--ink-3);min-width:1.2em}
 .next li:first-child .nm{font-size:16px}
 .next li:first-child::before{color:var(--accent)}
+.late-list li::before,.late-list li:first-child::before{content:'•';color:var(--autumn)}
+.late-list li:first-child .nm{font-size:inherit}
 .tiles{background-image:var(--kt-sheen);box-shadow:var(--kt-elev-1)}
 .subjects button[aria-pressed="true"]{box-shadow:0 0 0 1px var(--ink),0 8px 22px -10px var(--kt-tone)}
 .subjects button:not([aria-pressed="true"]),details.sess{background-image:var(--kt-sheen)}
@@ -478,6 +485,7 @@ h1{font-weight:800;letter-spacing:-.02em}
       <li><b>Kerroilla</b> = monellako tutkintokerralla aihe esiintyi vähintään kerran.</li>
       <li><b>Osuus</b> = aiheen tehtävien osuus kaikista tehtävistä.</li>
       <li><b>Todennäköisyys</b> = arvio, että seuraavassa kokeessa on vähintään yksi tämän aiheen tehtävä. Lasketaan esiintymiskerroista Jeffreysin priorilla: <code>(Σ w·esiintyi + 0,5) / (Σ w + 1)</code>. Painotetussa tilassa tuoreemmat kerrat painavat enemmän (<code>w = 0,85^ikä</code>, ikä = montako kertaa sitten), tasaisessa kaikki painavat saman verran. Kausipainotuksessa seuraavan kokeen kauden (kevät tai syksy) kerrat saavat lisäksi painon 1,5 (<code>w = 1,5 · 0,85^ikä</code>), koska osa aiheista on tullut lähes vain keväisin tai syksyisin. Kumpaakin kautta on aineissa vain 5–6 kertaa, joten kausiero voi olla sattumaa: vertaa tilaa tasaiseen ennen kuin jätät aiheen vähemmälle.</li>
+      <li><b>Myöhässä</b> = aihe esiintyi vähintään 60 %:lla tutkintokerroista (vähintään 5 kertaa dataa, painotuksesta riippumatta), mutta puuttui yhdestä tai kahdesta viimeisimmästä kokeesta. Se ei tarkoita, että aihe on nyt varmasti tulossa: kokeet eivät kierrätä aiheita vuorojärjestyksessä. Sitä useammin puuttunut aihe ei ole enää myöhässä vaan ehkä harvinaistumassa.</li>
       <li><b>Odotettu määrä</b> = painotettu keskiarvo aiheen tehtävämäärästä per koe.</li>
       <li><b>Pisteitä / koe</b> = samalla painotuksella laskettu keskiarvo siitä, montako pistettä aiheen tehtävistä on kokeessa tarjolla. Kahden aiheen tehtävän pisteet jaetaan aiheille tasan, joten 20 pisteen esseetehtävä painaa enemmän kuin 2 pisteen monivalinta. Valinnaisten tehtävien pisteet lasketaan mukaan, vaikka vastaat vain osaan. <i>Harjoittele seuraavaksi</i> -lista järjestää aiheet näin: <code>todennäköisyys × pisteet kokeessa, kun aihe on mukana × (1 − oma osaaminen)</code>.</li>
       <li>Tutkintokerrat, joiden tehtävälistaa ei löytynyt, jätetään laskuista pois. "Ei vahvistettu" tarkoittaa, että lista on koottu toissijaisista lähteistä tai muistinvaraisesti. Valinnalla <i>Vain vahvistetut kerrat</i> nekin voi jättää pois.</li>
@@ -510,6 +518,9 @@ h1{font-weight:800;letter-spacing:-.02em}
   const WEIGHTINGS = ['recent','season','even'];   // an unknown stored value (edited, newer page) falls back to 'recent'
   const SEASON_W = 1.5;   // yo-tutka-F1: extra weight of the sessions in the next exam's season
   const TREND = 0.10;   // julkinen-21: recent-weighted vs even probability gap that earns an arrow
+  // yo-tutka-F6 "myöhässä": a regular topic (even rate >= LATE_RATE over >= LATE_MIN_N sessions) missing from the newest 1..LATE_GAP sessions.
+  const LATE_RATE = 0.6, LATE_MIN_N = 5, LATE_GAP = 2;
+  const missedWord = g => g===1 ? 'puuttui viimeisimmästä kokeesta' : `puuttui ${g} viimeisimmästä kokeesta`;
 
   const state = { subject: (DATA[0]||{}).id, weighting:'recent', verifiedOnly:false, topic:null, query:'', sort:'p', sortDir:-1, allTopics:false, open:new Set(), closed:new Set() };
   try{ const saved = JSON.parse(localStorage.getItem('yo-tutka')||'{}'); if(saved.subject && DATA.some(s=>s.id===saved.subject)) state.subject=saved.subject; if(WEIGHTINGS.includes(saved.weighting)) state.weighting=saved.weighting; if(typeof saved.verifiedOnly==='boolean') state.verifiedOnly=saved.verifiedOnly; }catch(e){}
@@ -565,13 +576,16 @@ h1{font-weight:800;letter-spacing:-.02em}
       let last=null, streak=0;
       for(let i=n-1;i>=0;i--) if(e.counts[i]>0){ last=ss[i]; break; }
       for(let i=n-1;i>=0&&e.counts[i]>0;i--) streak++;
+      let gap=0; for(let i=n-1;i>=0&&!e.counts[i];i--) gap++;
+      const late = n>=LATE_MIN_N && sessionsHit/n>=LATE_RATE && gap>=1 && gap<=LATE_GAP;
       // The arrow compares the raw rates: the two smoothed estimates carry priors of different strength (Σw ≈ 5.5 vs n).
       const trend = n ? appeared.reduce((a,x,i)=>a+wR[i]*x,0)/WR - sessionsHit/n : 0;
-      return { id, name: topicName(s,id), counts:e.counts, cells:e.cells, total, sessionsHit, p: recent?pR:pE, trend, expected, pts, ptsAsked, last, streak, share: totalTasks? total/totalTasks : 0 };
+      return { id, name: topicName(s,id), counts:e.counts, cells:e.cells, total, sessionsHit, p: recent?pR:pE, trend, expected, pts, ptsAsked, last, streak, gap, late, share: totalTasks? total/totalTasks : 0 };
     });
     const types = [...typeCount].map(([id,c])=>({ id, name:typeName(s,id), count:c, share: totalTasks? c/totalTasks:0 })).filter(t=>t.count>0).sort((a,b)=>b.count-a.count);
     const ranked = topics.filter(t=>t.total>0).sort((a,b)=>b.p-a.p);
-    const out = { ss, n, totalTasks, hasPts, topics, ranked, types, maxCell: Math.max(1,...topics.flatMap(t=>t.counts)) };
+    const late = topics.filter(t=>t.late).sort((a,b)=>b.sessionsHit-a.sessionsHit||a.gap-b.gap||b.p-a.p);
+    const out = { ss, n, totalTasks, hasPts, topics, ranked, late, types, maxCell: Math.max(1,...topics.flatMap(t=>t.counts)) };
     statsCache.set(key, out);
     return out;
   }
@@ -658,7 +672,7 @@ h1{font-weight:800;letter-spacing:-.02em}
     const sea = k => { const ix = st.ss.map((x,i)=>x.id.slice(-1)===k?i:-1).filter(i=>i>=0); return {n:ix.length, hit:ix.filter(i=>t.counts[i]>0).length}; };
     const spr = sea('K'), aut = sea('S');
     const season = spr.n>=2 && aut.n>=2 && Math.abs(spr.hit/spr.n - aut.hit/aut.n) >= 0.5 ? ` Keväisin ${spr.hit}/${spr.n}, syksyisin ${aut.hit}/${aut.n} kerralla.` : '';
-    const why = `Esiintyi ${t.sessionsHit}/${st.n} kerralla${t.streak>=2?`, ${t.streak} viimeisintä peräkkäin`:''}${t.last?`, viimeksi ${esc(t.last.label.toLowerCase())}`:''}.`;
+    const why = `Esiintyi ${t.sessionsHit}/${st.n} kerralla${t.streak>=2?`, ${t.streak} viimeisintä peräkkäin`:''}${t.last?`, viimeksi ${esc(t.last.label.toLowerCase())}`:''}.${t.late?` Myöhässä: yleensä kysytty, mutta ${missedWord(t.gap)}.`:''}`;
     return `<tr class="info"><td colspan="8"><div class="infop">
       ${desc?`<p>${esc(desc)}</p>`:''}
       <div class="ibars" aria-hidden="true">${bars}</div>
@@ -724,6 +738,11 @@ h1{font-weight:800;letter-spacing:-.02em}
         <section class="sec">
           <div class="sec-head"><h3>Harjoittele seuraavaksi</h3><span class="hint">${nuAny?(st.hasPts?'todennäköisyys × pisteet × heikko oma osaaminen':'todennäköinen aihe × heikko oma osaaminen'):(st.hasPts?'todennäköisyys × pisteet':'todennäköisimmät aiheet')+(location.protocol==='file:'?'':' · arvioi itsesi harjoittelussa, niin lista huomioi osaamisesi')}</span></div>
           <ul class="next" id="nextList"></ul>
+          <div class="late-box">
+            <h4 class="late-h"><span class="late">myöhässä</span> Yleensä kysytty, puuttui viime kerroilla</h4>
+            <ul class="next late-list" id="lateList"></ul>
+            <p class="empty" id="lateEmpty" hidden></p>
+          </div>
         </section>
         <div id="radarBox"></div>
         <div class="grid2">
@@ -766,6 +785,14 @@ h1{font-weight:800;letter-spacing:-.02em}
     $('#nextList').innerHTML = st.ranked.map(t=>{ const mast=mastOf(ps,t.id); return {t, mast, m:ps.topics.get(t.id), prio:t.p*(st.hasPts?t.ptsAsked:1)*(1-(mast==null?0.5:mast))}; })
       .sort((a,b)=>b.prio-a.prio||b.t.p-a.t.p).slice(0,5)
       .map(r=>`<li><span class="nm">${esc(r.t.name)}</span><span class="pp ${pClass(r.t.p)}" title="${pWord(r.t.p)}">${fmtPct(r.t.p)}</span><span class="ms">${st.hasPts?`<span title="pisteitä kokeessa, kun aihe on mukana">${Math.round(r.t.ptsAsked)} p</span> · `:''}${r.mast==null?'ei harjoiteltu':'osaat '+Math.round(r.mast*100)+' % · '+r.m.tasks+' teht.'}</span><span class="go">${pracLinks(s, r.t.id, taskFor(r.t.id, ps.byTask, st))}</span></li>`).join('');
+    paintLate();
+  }
+  // yo-tutka-F6: regular topics that skipped the newest 1-2 exams (even rate, so the weighting does not change the list).
+  function paintLate(){
+    const {s, st, ps} = cur, list = $('#lateList'), empty = $('#lateEmpty');
+    list.innerHTML = st.late.map(t=>`<li><span class="nm">${esc(t.name)}</span><span class="pp ${pClass(t.p)}" title="${pWord(t.p)}">${fmtPct(t.p)}</span><span class="ms">${t.sessionsHit}/${st.n} kertaa · ${missedWord(t.gap)}</span><span class="go">${pracLinks(s, t.id, taskFor(t.id, ps.byTask, st))}</span></li>`).join('');
+    empty.hidden = st.late.length>0;
+    empty.textContent = st.n<LATE_MIN_N ? `Liian vähän tutkintokertoja (${st.n}) myöhässä olevien aiheiden arvioon.` : 'Ei myöhässä olevia aiheita: yksikään säännöllisesti kysytty aihe ei ole jäänyt pois yhdestä tai kahdesta viimeisimmästä kokeesta.';
   }
   // Everything that depends on the weighting and "Vain vahvistetut" (julkinen-23): updated in place, so the sessions (and
   // which are open), the scroll position and the focus stay, and the bars animate to their new width.
@@ -792,13 +819,14 @@ h1{font-weight:800;letter-spacing:-.02em}
   function topicRow(t){
     const tr = document.createElement('tr');
     tr.dataset.topic = t.id;
-    tr.innerHTML = `<td class="name"><button type="button" class="tname" data-topic="${esc(t.id)}">${esc(t.name)}</button></td><td class="num"><span class="bar"></span><span class="v"></span></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"><span class="tw"></span><span class="pbar" aria-hidden="true"><i></i></span><span class="pp"></span></td><td></td>`;
+    tr.innerHTML = `<td class="name"><button type="button" class="tname" data-topic="${esc(t.id)}">${esc(t.name)}</button><span class="late" hidden>myöhässä</span></td><td class="num"><span class="bar"></span><span class="v"></span></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num"><span class="tw"></span><span class="pbar" aria-hidden="true"><i></i></span><span class="pp"></span></td><td></td>`;
     return tr;
   }
   function fillRow(tr, t, i, maxTotal){
     const c = tr.cells, on = state.topic===t.id, pp = c[6].querySelector('.pp');
     tr.className = (on ? 'sel' : '') + (i>=5 && !on ? ' more' : '');
     c[0].querySelector('.tname').setAttribute('aria-expanded', on);
+    { const b = c[0].querySelector('.late'); b.hidden = !t.late; b.title = t.late ? `Kysytty ${t.sessionsHit}/${cur.st.n} kerralla, mutta ${missedWord(t.gap)}` : ''; }
     c[1].querySelector('.bar').style.width = Math.round(t.total/maxTotal*60)+'px';
     c[1].querySelector('.v').textContent = t.total;
     c[2].textContent = `${t.sessionsHit}/${cur.st.n}`;
