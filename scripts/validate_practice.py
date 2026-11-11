@@ -270,6 +270,12 @@ const hist = [{ k: 'kemia|2025S|1|a', at: h0 - 864e5 }, { k: 'kemia|2025S|1|a', 
   { k: 'kemia|2025S|1|a', at: h1 }, { k: 'englanti|2025S|2|_', at: h1 }];
 assert.deepEqual([...partsBySubject(hist, new Date('2026-11-09T00:00').getTime())], [['kemia', 2], ['englanti', 1]]);
 assert.equal(partsBySubject([], 0).size, 0);
+// weakTopics: exam report, assessed parts only; weakest share first, then most points lost; topics without losses dropped
+const wt = weakTopics([{ topics: ['a', 'b'], p: 2, max: 6 }, { topics: ['b', 'c'], p: 6, max: 6 }, { topics: ['d'], p: 0, max: 0 },
+  { topics: ['e'], p: 1, max: 3 }, { p: 0, max: 4 }]);
+assert.deepEqual(wt.map(x => x.id), ['a', 'e', 'b']);
+assert.deepEqual(wt[2], { id: 'b', p: 8, max: 12 });
+assert.deepEqual(weakTopics([]), []);
 """
 
 

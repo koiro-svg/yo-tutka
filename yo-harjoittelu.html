@@ -275,6 +275,11 @@ body.tools-on .simbar{top:calc(var(--toolbar-h,0px) + 4px)}
 .simwarn{flex-basis:100%;font-size:14px;color:var(--warn)}
 .section{display:grid;gap:10px}
 .section>header{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.simrep{margin:12px 0}
+.simrep .srow{display:grid;gap:4px;padding:8px 0;border-top:1px solid var(--line-2)}
+.simrep .srow .meter{grid-template-columns:56px minmax(0,1fr) 64px}
+@media (min-width:760px){.simrep .srow{grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));align-items:center;gap:6px 18px}}
+.simrep h3{margin-top:12px}
 details.simtask{border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 details.simtask[data-chosen="1"]{border-color:var(--accent)}
 details.simtask>summary{cursor:pointer;padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
@@ -567,6 +572,16 @@ details.how>p{margin-top:6px}
       seen.add(id); const a = e.k.split('|')[0]; out.set(a, (out.get(a) || 0) + 1);
     }
     return out;
+  }
+  // Exam report: topics of the assessed tasks, weakest first (share of points, then points lost); only topics that lost points.
+  // rows: [{ topics: [id], p, max }] where max counts assessed parts only.
+  function weakTopics(rows) {
+    const acc = new Map();
+    for (const r of rows) {
+      if (!(r.max > 0)) continue;
+      for (const id of r.topics || []) { const x = acc.get(id) || { id, p: 0, max: 0 }; x.p += r.p; x.max += r.max; acc.set(id, x); }
+    }
+    return Array.from(acc.values()).filter(x => x.p < x.max).sort((x, y) => x.p / x.max - y.p / y.max || (y.max - y.p) - (x.max - x.p) || (x.id < y.id ? -1 : 1));
   }
   /* pure:end */
   const loadState = raw => { try { const o = JSON.parse(raw || '{}'); if (plainObj(o)) Object.assign(S, o); } catch (e) {} normalizeSave(S); dayMemo = null; };
@@ -1706,6 +1721,33 @@ details.how>p{margin-top:6px}
         : `<span class="muted small">${g ? 'Arvosana lasketaan kummankin kokeen yhteispisteistä, joten arviota ei näytetä.' : 'Tämän kerran pisterajoja ei ole vielä taulukossa, joten arvosana-arviota ei näytetä.'}</span>`; };
     const countedNow = countedTasks(sections, chosen);
     if (done) { sim.result = tot; persist(); }   // shown in the progress view
+    // Report after hand-in: minutes and points per task (chosen ones, plus others that were open ≥ 1 min) and the weakest topics.
+    const fmtMin = ms => ms < 6e4 ? (ms > 0 ? '< 1 min' : '0 min') : `${Math.round(ms / 6e4)} min`;
+    const reportHtml = () => {
+      const spent = plainObj(sim.spent) ? sim.spent : null, time = n => spent ? Math.max(0, +spent[n] || 0) : 0;
+      const rows = sections.flatMap(x => x.tasks).filter(n => chosen.has(n) || time(n) >= 6e4).map(n => {
+        const t = taskOf(a, k, n); if (!t) return null;
+        let p = 0, max = 0, amax = 0, assessed = 0, units = 0;
+        for (const u of unitsFor(content, t).units) { units++; max += u.points; const v = S.scores[ukey(a, k, t.n, u.id)]; if (v && v.at >= sim.start) { p += v.p; amax += u.points; assessed++; } }
+        return { n, t, ms: time(n), p, max, amax, assessed, units };
+      }).filter(Boolean);
+      if (!rows.length) return '';
+      const maxMs = Math.max(...rows.map(r => r.ms), 1), onTasks = rows.reduce((s, r) => s + r.ms, 0) + Object.keys(spent || {}).filter(n => !rows.some(r => r.n === n)).reduce((s, n) => s + time(n), 0);
+      const used = minutes * 6e4 - remaining();
+      const meter = (label, frac, cls, v) => `<div class="meter"><span class="muted small">${label}</span><div class="track"><div class="fill ${cls}" style="width:${Math.round(Math.min(1, Math.max(0, frac)) * 100)}%"></div></div><span class="v">${v}</span></div>`;
+      const weak = weakTopics(rows.filter(r => chosen.has(r.n)).map(r => ({ topics: r.t.topics, p: r.p, max: r.amax }))).slice(0, 3);
+      const anyAssessed = rows.some(r => r.assessed);
+      return `<section class="card simrep" aria-labelledby="simrep-h"><h2 id="simrep-h">Loppuraportti</h2>
+        <p class="muted small">${spent ? `Aika kirjattiin sille tehtävälle, jonka avasit viimeksi ja joka oli auki kellon käydessä. Tehtävissä ${fmtMin(onTasks)}, muu aika (ei tehtävää auki, tauko pois lukien) ${fmtMin(Math.max(0, used - onTasks))}.`
+          : 'Tässä yrityksessä ajankäyttöä ei kirjattu, joten näet vain pisteet.'}</p>
+        <div class="srows">${rows.map(r => `<div class="srow"><div class="sname"><b>${esc(r.t.n)}. ${esc(r.t.title)}</b>${chosen.has(r.n) ? (countedNow.has(r.n) ? '' : ' <span class="chip bad">ei lasketa</span>') : ' <span class="chip">ei valittu</span>'}${chosen.has(r.n) && r.assessed < r.units ? ` <span class="muted small">· ${r.assessed ? `arvioitu ${r.assessed}/${r.units} kohtaa` : 'arvioimatta'}</span>` : ''}</div>
+          ${spent ? meter('Aika', r.ms / maxMs, '', fmtMin(r.ms)) : ''}
+          ${chosen.has(r.n) ? meter('Pisteet', r.max ? r.p / r.max : 0, r.assessed ? scoreCls(r.amax ? r.p / r.amax : 0) : '', r.assessed ? `${r.p}/${r.max}` : '–') : ''}</div>`).join('')}</div>
+        <h3>Kerrattavat aiheet</h3>
+        ${weak.length ? `<ul class="list">${weak.map(w => `<li><b>${esc(topicName(s, w.id))}</b><span class="muted small">${w.p}/${w.max} p (${Math.round(w.p / w.max * 100)} %)</span><a class="btn" href="#/pika/${encodeURIComponent(a)}/${encodeURIComponent(w.id)}">Pikatesti</a></li>`).join('')}</ul>`
+          : `<p class="muted small">${anyAssessed ? 'Arvioiduissa tehtävissä ei menetetty pisteitä yhdessäkään aiheessa.' : 'Arvioi tehtäviä, niin näet aiheet, joissa pisteitä jäi saamatta.'}</p>`}
+      </section>`;
+    };
     const simTask = n => {
       const t = taskOf(a, k, n), on = chosen.has(n);
       if (!t || (done && !on)) return '';
@@ -1720,7 +1762,7 @@ details.how>p{margin-top:6px}
         <button type="button" class="btn ghost" id="simReset">${done ? 'Uusi yritys' : 'Keskeytä'}</button>
         ${done ? '' : '<span class="simwarn" id="simWarn" role="status" hidden></span>'}
       </div>
-      ${done ? `<p id="simGrade">${gradeHtml(tot)}</p><p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet ja arvosana-arvio päivittyvät jokaisen arvion jälkeen.</p>`
+      ${done ? `<p id="simGrade">${gradeHtml(tot)}</p><p class="muted">Avaa tehtävä, katso malliratkaisu ja arvioi pisteesi. Kokonaispisteet ja arvosana-arvio päivittyvät jokaisen arvion jälkeen.</p><div id="simReport">${reportHtml()}</div>`
         : `<p class="warnbox" id="pauseNote" ${sim.pauseAt ? '' : 'hidden'}>Tauko. Kello on pysähtynyt.</p>`}
       ${sections.map((x, si) => `<section class="section">
         <header><h2>${esc(x.title)}</h2><span class="muted">vastaa ${x.answer}/${x.tasks.length}${x.note ? ' · ' + esc(x.note) : ''}</span><span class="chip" data-count="${si}"></span></header>
@@ -1754,11 +1796,30 @@ details.how>p{margin-top:6px}
       simView(a, k, g);
     });
     if (done) {
-      app.addEventListener('yo:score', () => { const x = totals(); sim.result = x; persist(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; $('#simGrade').innerHTML = gradeHtml(x); }, { signal });
+      app.addEventListener('yo:score', () => { const x = totals(); sim.result = x; persist(); $('#simTotal').textContent = `${x.total} / ${x.totalMax} p`; $('#simAssessed').textContent = `arvioitu ${x.assessed} kohdasta`; $('#simGrade').innerHTML = gradeHtml(x); $('#simReport').innerHTML = reportHtml(); }, { signal });
       return;
     }
     const unpause = t => { if (sim.pauseAt) { sim.paused += t - sim.pauseAt; sim.pauseAt = null; } };
-    const submit = (at = Date.now()) => { sim.submitted = at; unpause(at); persist(); simView(a, k, g); window.scrollTo(0, 0); };
+    // Time per task for the report: running seconds go to the task opened last that is still open, while the page is visible.
+    // One step is capped at 5 s (a sleeping laptop or a throttled tab does not credit its gap); saved locally every 15 s.
+    const openOrder = [];
+    let lastTick = Date.now(), unsaved = 0, visible = !document.hidden;
+    const credit = (now = Date.now()) => {
+      const dt = Math.min(now - lastTick, 5e3), n = openOrder[openOrder.length - 1]; lastTick = now;
+      if (sim !== S.sims[sk] || sim.pauseAt || sim.submitted || n == null || !visible || !(dt > 0)) return;
+      if (!plainObj(sim.spent)) sim.spent = {};
+      sim.spent[n] = (+sim.spent[n] || 0) + dt; unsaved += dt;
+      if (unsaved >= 15e3) { unsaved = 0; persistLocal(); }
+    };
+    $$('details.simtask', app).forEach(d => d.addEventListener('toggle', () => {
+      credit(); const i = openOrder.indexOf(d.dataset.n); if (i >= 0) openOrder.splice(i, 1);
+      if (d.open) openOrder.push(d.dataset.n);
+    }));
+    const flush = () => { credit(); unsaved = 0; persistLocal(); };
+    document.addEventListener('visibilitychange', () => { credit(); visible = !document.hidden; if (!visible) flush(); }, { signal });
+    window.addEventListener('pagehide', flush, { signal });
+    signal.addEventListener('abort', flush);
+    const submit = (at = Date.now()) => { credit(); sim.submitted = at; unpause(at); persist(); simView(a, k, g); window.scrollTo(0, 0); };
     // Too many or too few picks: say so before the second click (the hand-in still goes through, as on paper).
     disarmSubmit = armConfirm($('#simSubmit'), () => {
       const off = sections.map(x => ({ x, c: x.tasks.filter(n => chosen.has(n)).length })).filter(o => o.c !== o.x.answer);
@@ -1769,8 +1830,9 @@ details.how>p{margin-top:6px}
       return off.length ? 'Palauta silti' : 'Varmasti? Palauta';
     }, () => submit());
     const clock = $('#clock'), pauseBtn = $('#simPause');
-    const tick = () => { const r = remaining(); clock.textContent = fmt(r); clock.classList.toggle('low', r < 15 * 6e4); if (r <= 0 && !sim.pauseAt) submit(sim.start + sim.paused + minutes * 6e4); };
+    const tick = () => { credit(); const r = remaining(); clock.textContent = fmt(r); clock.classList.toggle('low', r < 15 * 6e4); if (r <= 0 && !sim.pauseAt) submit(sim.start + sim.paused + minutes * 6e4); };
     pauseBtn.onclick = () => {
+      credit();
       if (sim.pauseAt) unpause(Date.now()); else sim.pauseAt = Date.now();
       persist(); pauseBtn.textContent = sim.pauseAt ? 'Jatka' : 'Tauko'; $('#pauseNote').hidden = !sim.pauseAt; tick();
     };
@@ -1940,8 +2002,10 @@ details.how>p{margin-top:6px}
     for (const [k, m] of Object.entries(st.sims || {})) {
       if (!SIM_KEY.test(k) || !m || num(m.start) == null || S.sims[k]) continue;
       const res = m.result && { total: num(m.result.total) || 0, totalMax: num(m.result.totalMax) || 0, assessed: num(m.result.assessed) || 0 };
+      // time per task (ms, exam report): task numbers are short strings, values within one day
+      const spent = plainObj(m.spent) ? Object.fromEntries(Object.entries(m.spent).filter(([n, v]) => n.length <= 12 && num(v) > 0).slice(0, 50).map(([n, v]) => [n, Math.min(+v, 864e5)])) : null;
       S.sims[k] = { start: +m.start, paused: num(m.paused) || 0, pauseAt: num(m.pauseAt), submitted: num(m.submitted),
-        chosen: (Array.isArray(m.chosen) ? m.chosen : []).filter(n => typeof n === 'string').slice(0, 50), ...(res ? { result: res } : {}) };
+        chosen: (Array.isArray(m.chosen) ? m.chosen : []).filter(n => typeof n === 'string').slice(0, 50), ...(res ? { result: res } : {}), ...(spent ? { spent } : {}) };
     }
     return scores;
   }
