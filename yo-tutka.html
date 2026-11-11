@@ -131,6 +131,7 @@ button,select,input{font:inherit;color:inherit}
 .chip.dim{opacity:.55;text-decoration:line-through}
 .controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:14px}
 .controls label{display:inline-flex;align-items:center;gap:6px}
+.controls select{max-width:100%}
 .controls select,.controls input[type=search]{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:6px 9px}
 .controls label{flex-wrap:wrap;max-width:100%}
 .controls input[type=search]{min-width:min(200px,100%);max-width:100%}
@@ -475,7 +476,7 @@ h1{font-weight:800;letter-spacing:-.02em}
       <li><b>Tehtäviä</b> = montako tehtävää (tai kokeen osiota) on tägätty aihealueella kaikilla mukana olevilla tutkintokerroilla. Yhdellä tehtävällä voi olla kaksi aihetta.</li>
       <li><b>Kerroilla</b> = monellako tutkintokerralla aihe esiintyi vähintään kerran.</li>
       <li><b>Osuus</b> = aiheen tehtävien osuus kaikista tehtävistä.</li>
-      <li><b>Todennäköisyys</b> = arvio, että seuraavassa kokeessa on vähintään yksi tämän aiheen tehtävä. Lasketaan esiintymiskerroista Jeffreysin priorilla: <code>(Σ w·esiintyi + 0,5) / (Σ w + 1)</code>. Painotetussa tilassa tuoreemmat kerrat painavat enemmän (<code>w = 0,85^ikä</code>, ikä = montako kertaa sitten), tasaisessa kaikki painavat saman verran.</li>
+      <li><b>Todennäköisyys</b> = arvio, että seuraavassa kokeessa on vähintään yksi tämän aiheen tehtävä. Lasketaan esiintymiskerroista Jeffreysin priorilla: <code>(Σ w·esiintyi + 0,5) / (Σ w + 1)</code>. Painotetussa tilassa tuoreemmat kerrat painavat enemmän (<code>w = 0,85^ikä</code>, ikä = montako kertaa sitten), tasaisessa kaikki painavat saman verran. Kausipainotuksessa seuraavan kokeen kauden (kevät tai syksy) kerrat saavat lisäksi painon 1,5 (<code>w = 1,5 · 0,85^ikä</code>), koska osa aiheista on tullut lähes vain keväisin tai syksyisin. Kumpaakin kautta on aineissa vain 5–6 kertaa, joten kausiero voi olla sattumaa: vertaa tilaa tasaiseen ennen kuin jätät aiheen vähemmälle.</li>
       <li><b>Odotettu määrä</b> = painotettu keskiarvo aiheen tehtävämäärästä per koe.</li>
       <li>Tutkintokerrat, joiden tehtävälistaa ei löytynyt, jätetään laskuista pois. "Ei vahvistettu" tarkoittaa, että lista on koottu toissijaisista lähteistä tai muistinvaraisesti. Valinnalla <i>Vain vahvistetut kerrat</i> nekin voi jättää pois.</li>
       <li>Arvio on tilastollinen: se ei tiedä, mitä YTL:n tehtävänlaatijat ajattelevat, eikä opetussuunnitelman (LOPS2021) painotusmuutoksia. Käytä sitä kertauksen priorisointiin, ei poissulkemiseen.</li>
@@ -504,10 +505,12 @@ h1{font-weight:800;letter-spacing:-.02em}
   const EXAMS = {"aidinkieli":"2027-03-16", "englanti":"2027-03-22", "pitka-matematiikka":"2027-03-24", "fysiikka":"2027-03-30", "biologia":"2027-03-30", "kemia":"2027-04-02"};
   const NARROW = matchMedia('(max-width:560px)');   // the radar's phone layout (numbered spokes + name list)
   const WIDE = matchMedia('(min-width:900px)');     // room for longer names around the radar
+  const WEIGHTINGS = ['recent','season','even'];   // an unknown stored value (edited, newer page) falls back to 'recent'
+  const SEASON_W = 1.5;   // yo-tutka-F1: extra weight of the sessions in the next exam's season
   const TREND = 0.10;   // julkinen-21: recent-weighted vs even probability gap that earns an arrow
 
   const state = { subject: (DATA[0]||{}).id, weighting:'recent', verifiedOnly:false, topic:null, query:'', sort:'p', sortDir:-1, allTopics:false, open:new Set(), closed:new Set() };
-  try{ const saved = JSON.parse(localStorage.getItem('yo-tutka')||'{}'); if(saved.subject && DATA.some(s=>s.id===saved.subject)) state.subject=saved.subject; if(saved.weighting) state.weighting=saved.weighting; if(typeof saved.verifiedOnly==='boolean') state.verifiedOnly=saved.verifiedOnly; }catch(e){}
+  try{ const saved = JSON.parse(localStorage.getItem('yo-tutka')||'{}'); if(saved.subject && DATA.some(s=>s.id===saved.subject)) state.subject=saved.subject; if(WEIGHTINGS.includes(saved.weighting)) state.weighting=saved.weighting; if(typeof saved.verifiedOnly==='boolean') state.verifiedOnly=saved.verifiedOnly; }catch(e){}
   const persist = ()=>{ try{ localStorage.setItem('yo-tutka', JSON.stringify({subject:state.subject, weighting:state.weighting, verifiedOnly:state.verifiedOnly})); }catch(e){} };
 
   const subj = () => DATA.find(s=>s.id===state.subject) || DATA[0];
@@ -520,14 +523,28 @@ h1{font-weight:800;letter-spacing:-.02em}
   function topicName(s,id){ const t=topicOf(s,id); return t? t.name : id; }
   function typeName(s,id){ const t=(s.taskTypes||[]).find(t=>t.id===id); return t? t.name : (id||'–'); }
 
+  // yo-tutka-F1: the season of the subject's next exam ('K' spring, 'S' autumn): its date in EXAMS while it is ahead,
+  // else the season after the newest session (the exams alternate).
+  function nextSeason(s){
+    const d = EXAMS[s.id], days = examDays(s);
+    if(d && days>=0) return +d.slice(5,7)<=6 ? 'K' : 'S';
+    const last = orderedSessions(s).slice(-1)[0];
+    return last && last.id.slice(-1)==='K' ? 'S' : 'K';
+  }
+  const seasonWord = k => k==='K' ? 'kevään' : 'syksyn';
+  const weightingLabel = (s,w) => w==='even' ? 'kaikki kerrat tasan' : w==='season' ? `tuoreimmat ja ${seasonWord(nextSeason(s))} kerrat painotettuina` : 'tuoreimmat kerrat painotettuina';
+
   /* One pass over the active sessions: per topic the counts and task lists per session, the recent-weighted and even
      probabilities, the trend (the gap of the raw weighted and even rates) and the ranking. Cached per subject, weighting and verifiedOnly. */
   const statsCache = new Map();
   function stats(s){
     const key = `${s.id}|${state.weighting}|${state.verifiedOnly}`;
     if(statsCache.has(key)) return statsCache.get(key);
-    const ss = activeSessions(s), n = ss.length, recent = state.weighting==='recent';
+    const ss = activeSessions(s), n = ss.length, recent = state.weighting!=='even';
     const wR = ss.map((_,i)=>Math.pow(0.85, n-1-i)), WR = sum(wR);
+    // 'season' also multiplies the sessions of the next exam's season by SEASON_W; the trend arrow keeps using wR.
+    const season = state.weighting==='season' ? nextSeason(s) : null;
+    const w = season ? wR.map((x,i)=>ss[i].id.slice(-1)===season ? x*SEASON_W : x) : wR, W = sum(w);
     const totalTasks = sum(ss.map(x=>x.tasks.length));
     const per = new Map(), entry = id => { if(!per.has(id)) per.set(id, {counts:new Array(n).fill(0), cells:Array.from({length:n},()=>[])}); return per.get(id); };
     (s.topics||[]).forEach(t=>entry(t.id));
@@ -535,8 +552,8 @@ h1{font-weight:800;letter-spacing:-.02em}
     ss.forEach((x,i)=>x.tasks.forEach(t=>{ (t.topics||[]).forEach(id=>{ const e=entry(id); e.counts[i]++; e.cells[i].push(t); }); if(t.type) typeCount.set(t.type,(typeCount.get(t.type)||0)+1); }));
     const topics = [...per].map(([id,e])=>{
       const appeared = e.counts.map(c=>c>0?1:0), total = sum(e.counts), sessionsHit = sum(appeared);
-      const pR = n ? (appeared.reduce((a,x,i)=>a+wR[i]*x,0)+0.5)/(WR+1) : 0.5, pE = n ? (sessionsHit+0.5)/(n+1) : 0.5;
-      const expected = !n ? 0 : recent ? e.counts.reduce((a,c,i)=>a+wR[i]*c,0)/WR : total/n;
+      const pR = n ? (appeared.reduce((a,x,i)=>a+w[i]*x,0)+0.5)/(W+1) : 0.5, pE = n ? (sessionsHit+0.5)/(n+1) : 0.5;
+      const expected = !n ? 0 : recent ? e.counts.reduce((a,c,i)=>a+w[i]*c,0)/W : total/n;
       let last=null, streak=0;
       for(let i=n-1;i>=0;i--) if(e.counts[i]>0){ last=ss[i]; break; }
       for(let i=n-1;i>=0&&e.counts[i]>0;i--) streak++;
@@ -688,8 +705,7 @@ h1{font-weight:800;letter-spacing:-.02em}
         <div class="controls">
           <label>Painotus
             <select id="weighting">
-              <option value="recent" ${state.weighting==='recent'?'selected':''}>tuoreimmat kerrat painotettuina</option>
-              <option value="even" ${state.weighting==='even'?'selected':''}>kaikki kerrat tasan</option>
+              ${WEIGHTINGS.map(w=>`<option value="${w}" ${state.weighting===w?'selected':''}>${esc(weightingLabel(s,w))}</option>`).join('')}
             </select></label>
           ${unverified.length?`<label><input type="checkbox" id="verifiedOnly" ${state.verifiedOnly?'checked':''}> Vain vahvistetut kerrat</label>`:''}
           <label>Hae tehtävistä <input type="search" id="query" value="${esc(state.query)}" placeholder="esim. derivaatta, ilmasto…"></label>
@@ -901,7 +917,7 @@ h1{font-weight:800;letter-spacing:-.02em}
   // julkinen-24: a printable review list of the subject's likeliest topics with own mastery and a box to tick.
   function printList(){
     const {s, st, ps} = cur;
-    $('#printlist').innerHTML = `<h1>Kertauslista: ${esc(s.name)}</h1><p>YO-tutka · ${new Date().toLocaleDateString('fi-FI')} · todennäköisyys ${state.weighting==='recent'?'tuoreimmat kerrat painotettuina':'kaikki kerrat tasan'}${examText(s)?' · '+esc(examText(s)):''}</p>
+    $('#printlist').innerHTML = `<h1>Kertauslista: ${esc(s.name)}</h1><p>YO-tutka · ${new Date().toLocaleDateString('fi-FI')} · todennäköisyys ${esc(weightingLabel(s,state.weighting))}${examText(s)?' · '+esc(examText(s)):''}</p>
       <table><thead><tr><th></th><th>Aihe</th><th>Todennäköisyys</th><th>Oma osaaminen</th></tr></thead><tbody>${st.ranked.map(t=>{ const m=mastOf(ps,t.id); return `<tr><td class="box">☐</td><td>${esc(t.name)}</td><td>${fmtPct(t.p)} · ${pWord(t.p)}</td><td>${m==null?'–':fmtPct(m)}</td></tr>`; }).join('')}</tbody></table>
       <p class="small">koirosvg.com/yo-tutka#${esc(s.id)}</p>`;
     document.documentElement.classList.add('print-list');
