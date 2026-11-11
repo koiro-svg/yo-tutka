@@ -209,6 +209,19 @@ a{color:var(--accent)}
 .dayfield,.row .dayfield{width:100%;flex-basis:100%}
 .daynote{margin-top:6px;color:var(--ink-2)}
 .solo .muted{margin-top:6px}
+.browse h3{margin:18px 0 8px}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:6px}
+.topic{display:grid;gap:1px;padding:8px 12px;text-align:left;align-content:center}
+.topic b{font-size:14px;line-height:1.3}
+.topic small,.qtext small{font:500 11px var(--font-mono);color:var(--ink-3)}
+.topic[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.qrows{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:8px}
+.qrow{display:grid;gap:8px;align-content:space-between;min-width:0;padding:10px 12px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-m)}
+.qtext{display:grid;gap:1px}
+.qtext b{font-size:15px;line-height:1.3}
+.qbest{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;font:500 12px var(--font-mono);color:var(--ink-2)}
+.qbest .meter{--c:var(--accent)}
+.qbest.none{color:var(--ink-3)}
 @media (pointer:coarse){
   .kt-btn,.kt-tab{min-height:44px}
   .kt-btn.sm{padding-inline:14px}
@@ -241,7 +254,7 @@ const SB_JS = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/u
 const SB_SRI = 'sha384-Rj26LVGvoeRVR6+mwQmFfcR3QOBEwT+ZmuCWpuiqeTzJpCs0ER4ITAWGb4Hiy3Ok';
 
 const STORE_KEY = 'visa-v1';
-const DAY_KEEP = 120, MISS_KEEP = 250, MISS_QUIZZES = 30, REVIEW_MIN_S = 30;   // missed items per quiz, quizzes remembered, shortest review
+const LAST_KEEP = 8, BROWSE_LIMIT = 24, BROWSE_LIMIT_PHONE = 10, DAY_KEEP = 120, MISS_KEEP = 250, MISS_QUIZZES = 30, REVIEW_MIN_S = 30;   // missed items per quiz, quizzes remembered, shortest review
 const MAX_PLAYERS = 8, NAME_MAX = 20, CHAT_MAX = 200, CHAT_KEEP = 12, SEEN_KEEP = 40;
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const COUNTDOWN_MS = 3000, HOLD_MS = 700, RETRY_MS = 1200, REPAIR_MS = 3000, IDLE_REPAIR_MS = 15000;
@@ -286,6 +299,9 @@ const T = {
     dailyLoading: 'Ladataan päivän visaa…', dailyFail: 'Päivän visaa ei saatu ladattua. Lataa sivu uudelleen.',
     dailySaved: (n, total) => `Päivän visan tulos tallennettu: ${n}/${total}.`, dailyKept: (n, total) => `Päivän visan tuloksesi on jo tallessa (${n}/${total}); uusinta ei muuta sitä.`,
     dailyShare: (d, q, n, total) => `Päivän visa ${d}: ${q} – sain ${n}/${total}. Pystytkö parempaan?`, dailyShareNew: (d, q) => `Päivän visa ${d}: ${q}. Pelataanko?`,
+    browse: 'Kaikki visat', browseCount: n => `${n} visaa`, browseLoading: 'Ladataan loput visat…', browseFail: 'Osa visoista ei latautunut. Lataa sivu uudelleen.',
+    topics: 'Aiheet', formats: 'Muoto', recent: 'Viimeksi pelatut', played: n => `pelattu ${n}`, noBest: 'ei ennätystä',
+    playSolo: 'Pelaa', challenge: 'Haasta', playSoloFor: n => `Pelaa yksin: ${n}`, challengeFor: n => `Haasta: luo huone visalla ${n}`,
   },
   en: {
     back: '← koirosvg.com', title: 'Quiz Duel',
@@ -321,6 +337,9 @@ const T = {
     dailyLoading: 'Loading the quiz of the day…', dailyFail: 'The quiz of the day did not load. Reload the page.',
     dailySaved: (n, total) => `Quiz of the day result saved: ${n}/${total}.`, dailyKept: (n, total) => `Your quiz of the day result is already saved (${n}/${total}); a replay does not change it.`,
     dailyShare: (d, q, n, total) => `Quiz of the day ${d}: ${q} – I got ${n}/${total}. Can you beat it?`, dailyShareNew: (d, q) => `Quiz of the day ${d}: ${q}. Want to play?`,
+    browse: 'All quizzes', browseCount: n => `${n} quizzes`, browseLoading: 'Loading the rest of the quizzes…', browseFail: 'Some quizzes did not load. Reload the page.',
+    topics: 'Topics', formats: 'Format', recent: 'Recently played', played: n => `played ${n}`, noBest: 'no best yet',
+    playSolo: 'Play', challenge: 'Challenge', playSoloFor: n => `Play alone: ${n}`, challengeFor: n => `Challenge: create a room with ${n}`,
   },
 };
 
@@ -356,6 +375,8 @@ P.miss = Object.fromEntries(Object.entries(plainObj(P.miss) ? P.miss : {}).filte
 // day: Helsinki date 'YYYY-MM-DD' → { q: quiz id, n, t, total } of the first counted game of that day's quiz (F6)
 P.day = Object.fromEntries(Object.entries(plainObj(P.day) ? P.day : {}).filter(([k, d]) => /^\d{4}-\d{2}-\d{2}$/.test(k) && plainObj(d) && typeof d.q === 'string' && count(d.n) && count(d.t) && count(d.total))
   .map(([k, d]) => [k, { q: d.q, n: d.n, t: d.t, total: d.total }]).sort(([a], [b]) => a < b ? 1 : -1).slice(0, DAY_KEEP));
+// last: quiz ids of my latest games, newest first (F2). An older page keeps the field as it is and never reads it.
+P.last = Array.isArray(P.last) ? [...new Set(P.last.filter(x => typeof x === 'string' && x.length <= 80))].slice(0, LAST_KEEP) : [];
 const save = () => writeStr('localStorage', STORE_KEY, JSON.stringify(P));
 
 function randomId(len, alphabet) {
@@ -493,13 +514,16 @@ function send(type, payload) {
 }
 
 async function joinRoom(code, created) {
-  R = { code, ch: null, players: [], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
+  const preset = created ? pendingRoomQuiz : null;   // the home browser's Challenge: my new room starts with that quiz
+  pendingRoomQuiz = null;
+  R = { code, ch: null, players: [], settings: { quiz: QUIZ.has(preset) ? preset : DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
   try { await packsReady; } catch {
     R = null; homeError = 'noData'; history.replaceState(null, '', location.pathname); render(); return;
   }
   if (R?.code !== code) return;
+  if (preset && QUIZ.has(preset)) R.settings = { ...R.settings, quiz: preset };
   paintSettings();
   let client;
   try { client = await getClient(); } catch {
@@ -534,7 +558,8 @@ async function joinRoom(code, created) {
 // code as a room but needs no network, no nickname and no Realtime quota. The chosen settings survive a reload of the tab.
 const SOLO_HASH = 'harjoittele', SOLO_KEY = 'visa-solo';
 async function startSolo() {
-  const saved = readJson('sessionStorage', SOLO_KEY);
+  const saved = readJson('sessionStorage', SOLO_KEY), play = pendingPlay;
+  pendingPlay = null;
   R = { code: SOLO_HASH, solo: true, ch: null, players: [{ id: MY_ID, name: cleanName(P.nick) || t('you'), joined: 0 }], settings: { quiz: DATA.quizzes[0].id, mode: 'parallel', mul: 1 }, chat: [], connected: false, alone: false, cat: '', fmtFilter: '', search: '', showAll: false };
   G = null;
   render();
@@ -544,6 +569,7 @@ async function startSolo() {
   if (!R?.solo) return;
   if (saved && validSettings({ ...saved, mode: 'parallel' })) R.settings = { quiz: saved.quiz, mode: 'parallel', mul: saved.mul };
   if (pendingDaily && applyDaily()) return;
+  if (play && QUIZ.has(play)) { setSettings({ quiz: play, mul: 1 }); startGame(); return; }   // the home browser's Play
   const review = pendingReview;
   pendingReview = null;
   if (review && QUIZ.has(review) && missFor(review).length) { setSettings({ quiz: review }); startGame(missFor(review)); return; }
@@ -1013,6 +1039,7 @@ function record() {
   if (G.spectator || P.seen.includes(G.seq)) return;
   const me = G.results.find(r => r.id === MY_ID);
   if (!me) return;
+  P.last = [G.quiz.id, ...P.last.filter(id => id !== G.quiz.id)].slice(0, LAST_KEEP);
   if (!G.provisional) P.seen = [...P.seen, G.seq].slice(-SEEN_KEEP);
   for (const r of G.provisional ? [] : G.results) {
     if (r.id === MY_ID) continue;
@@ -1139,7 +1166,7 @@ function renderHome() {
   const err = h('p', { class: 'err', role: 'alert', text: homeError ? t(homeError) : '' });
   homeError = null;
   const nick = h('input', { class: 'kt-input', maxlength: NAME_MAX, placeholder: t('nickPh'), 'aria-label': t('nick'), autocomplete: 'off', value: P.nick, oninput: e => { P.nick = e.target.value; save(); } });
-  const needNick = () => { if (cleanName(P.nick)) return true; err.textContent = t('nickNeeded'); nick.focus(); return false; };
+  const needNick = V.needNick = () => { if (cleanName(P.nick)) return true; err.textContent = t('nickNeeded'); nick.focus(); return false; };
   const create = () => { if (!needNick()) return; createdCode = randomId(4, CODE_ALPHABET); location.hash = createdCode; };
   const join = () => {
     if (!needNick()) return;
@@ -1169,9 +1196,63 @@ function renderHome() {
         rivals.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('vs') }), h('ul', { class: 'stats' }, rivals.map(r =>
           h('li', {}, h('span', { text: r.name }), h('span', { text: `${r.w}–${r.l}` + (r.d ? ` (${r.d})` : '') }))))),
         bests.length > 0 && h('div', {}, h('div', { class: 'lbl', text: t('best') }), h('ul', { class: 'stats' }, bests.map(q =>
-          h('li', {}, h('span', { text: quizName(q) }), h('span', { text: `${P.best[q.id].n}/${P.best[q.id].total}` }))))))),
+          h('li', {}, h('span', { text: quizName(q) }), h('span', { text: `${P.best[q.id].n}/${P.best[q.id].total}` })))))),
+      V.browse = h('section', { class: 'card wide browse', 'aria-labelledby': 'browse-h' })),
     foot());
   paintDaily();
+  paintBrowse();
+}
+
+// ---- home quiz browser (F2): every quiz by topic and format with my best, played alone at once or as a new room ----
+const B = { cat: '', fmt: '', q: '', all: false };   // the browser's filters, kept for the visit
+let pendingPlay = null;       // quiz id: startSolo starts it straight away
+let pendingRoomQuiz = null;   // quiz id: the room I create next starts with it chosen
+function paintBrowse() {
+  if (!V.browse) return;
+  keepFocus(V.browse, () => {
+    const set = patch => { Object.assign(B, patch, { all: false }); paintBrowse(); };
+    const fmtNames = T[P.lang].fmt, mine = new Set([...Object.keys(P.best), ...P.last]);
+    const meta = (list, played) => [t('browseCount', list.length), played > 0 && t('played', played)].filter(Boolean).join(' · ');
+    const topic = (c, label) => {
+      const list = DATA.quizzes.filter(x => !c || x.cat === c);
+      return h('button', { class: 'kt-btn topic', 'data-k': `bc-${c}`, 'aria-pressed': String(B.cat === c), onclick: () => set({ cat: c }) },
+        h('b', { text: label }), h('small', { text: meta(list, list.filter(x => mine.has(x.id)).length) }));
+    };
+    const inCat = DATA.quizzes.filter(x => !B.cat || x.cat === B.cat);
+    const fmts = Object.keys(fmtNames).filter(f => f === B.fmt || inCat.some(x => fmtOf(x) === f));
+    const q = norm(B.q), list = inCat.filter(x => (!B.fmt || fmtOf(x) === B.fmt) && (!q || searchText(x).includes(q)));
+    const limit = matchMedia('(max-width:600px)').matches ? BROWSE_LIMIT_PHONE : BROWSE_LIMIT, shown = B.all ? list : list.slice(0, limit);
+    const recent = !B.cat && !B.fmt && !q ? P.last.map(id => QUIZ.get(id)).filter(Boolean) : [];
+    fill(V.browse,
+      h('div', { class: 'dayhead' }, h('h2', { id: 'browse-h', text: t('browse') }), h('span', { class: 'kt-status', text: t('browseCount', DATA.quizzes.length) })),
+      packsState !== 'ok' && h('p', { class: packsState === 'fail' ? 'err' : 'muted', role: packsState === 'fail' ? 'alert' : null, text: t(packsState === 'fail' ? 'browseFail' : 'browseLoading') }),
+      h('div', { class: 'row filters' }, h('input', { class: 'kt-input', type: 'search', 'data-k': 'bsearch', placeholder: t('search'), 'aria-label': t('search'), autocomplete: 'off', value: B.q,
+        oninput: e => { B.q = e.target.value; B.all = false; paintBrowse(); } })),
+      h('div', { class: 'lbl', text: t('topics') }),
+      h('div', { class: 'topics', role: 'group', 'aria-label': t('topics') }, topic('', t('all')), Object.entries(DATA.cats).map(([c, n]) => topic(c, n[P.lang]))),
+      h('div', { class: 'lbl', text: t('formats') }),
+      h('div', { class: 'kt-tabs filters', role: 'group', 'aria-label': t('formats') }, ['', ...fmts].map(f => h('button', { class: 'kt-tab', 'data-k': `bf-${f}`, 'aria-pressed': String(B.fmt === f), onclick: () => set({ fmt: f }) },
+        f ? fmtNames[f] : t('all'), h('span', { class: 'n', text: String(f ? inCat.filter(x => fmtOf(x) === f).length : inCat.length) })))),
+      recent.length > 0 && h('h3', { text: t('recent') }),
+      recent.length > 0 && h('ul', { class: 'qrows' }, recent.map(x => quizRow(x, 'r'))),
+      recent.length > 0 && h('h3', { text: B.cat ? DATA.cats[B.cat][P.lang] : t('all') }),
+      list.length ? h('ul', { class: 'qrows' }, shown.map(x => quizRow(x, 'l'))) : h('p', { class: 'muted', text: t('noResults') }),
+      list.length > shown.length && h('button', { class: 'kt-btn', 'data-k': 'ball', style: 'margin-top:10px', text: t('showAll', list.length), onclick: () => { B.all = true; paintBrowse(); } }));
+  });
+}
+// One quiz of the browser: name, topic and format, my best as a bar, Play alone and Challenge (a new room with it chosen).
+function quizRow(x, where) {
+  const b = P.best[x.id], name = quizName(x), pct = b && b.total ? Math.min(100, Math.round(b.n / b.total * 100)) : 0;
+  const play = () => { pendingPlay = x.id; location.hash = SOLO_HASH; };
+  const challenge = () => { if (!V.needNick()) return; pendingRoomQuiz = x.id; createdCode = randomId(4, CODE_ALPHABET); location.hash = createdCode; };
+  return h('li', { class: 'qrow' },
+    h('div', { class: 'qtext' }, h('b', { text: name }),
+      h('small', { text: [DATA.cats[x.cat]?.[P.lang], T[P.lang].fmt[fmtOf(x)], buildItems(x).length, minutes(x.t)].filter(v => v != null && v !== '').join(' · ') })),
+    h('div', { class: 'qbest' + (b ? '' : ' none') }, h('div', { class: 'meter', 'aria-hidden': 'true' }, h('i', { style: `width:${pct}%` })),
+      h('span', { text: b ? t('bestIs', b.n, b.total) : t('noBest') })),
+    h('div', { class: 'row' },
+      h('button', { class: 'kt-btn sm primary', 'data-k': `p${where}-${x.id}`, 'aria-label': t('playSoloFor', name), text: t('playSolo'), onclick: play }),
+      h('button', { class: 'kt-btn sm', 'data-k': `c${where}-${x.id}`, 'aria-label': t('challengeFor', name), text: t('challenge'), onclick: challenge })));
 }
 
 // The home card of the quiz of the day. Its own paint: the packs (and so the day's pick) arrive after the home screen.
@@ -1607,9 +1688,9 @@ Promise.all([getJson('/data/visa.json'), new Promise(done => setTimeout(done, TA
     for (const q of packs.flatMap(x => x.quizzes)) { d.quizzes.push(q); QUIZ.set(q.id, q); }
     packsState = 'ok';
     if (!R && Object.keys(P.best).length) render();   // best scores can be for pack quizzes
-    else paintDaily();
+    else { paintDaily(); paintBrowse(); }
   });
-  packsReady.catch(() => { packsState = 'fail'; paintDaily(); });   // a room reports it in joinRoom
+  packsReady.catch(() => { packsState = 'fail'; paintDaily(); paintBrowse(); });   // a room reports it in joinRoom
   setInterval(tick, 100);
   addEventListener('hashchange', route);
   addEventListener('pagehide', storeGame);
