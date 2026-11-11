@@ -169,7 +169,7 @@ footer a:hover{color:var(--accent)}
     </div>
   </header>
   <div class="search" role="search">
-    <input class="kt-input" id="q" type="search" placeholder="Hae työkaluista, malleista ja YO-aiheista" aria-label="Hae koko sivustosta" autocomplete="off">
+    <input class="kt-input" id="q" type="search" placeholder="Hae työkaluista, malleista, YO-aiheista ja visoista" aria-label="Hae koko sivustosta" autocomplete="off">
     <kbd aria-hidden="true">/</kbd>
   </div>
   <ul class="kt-hits" id="hits" aria-live="polite" hidden></ul>
@@ -349,7 +349,7 @@ footer a:hover{color:var(--accent)}
     }
   } catch (e) { /* storage blocked: the card stays as it is */ }
 
-  // ---- julkinen-6: site search (AI data and YO topics), shared with the YO bar: site-search.js is loaded on the first
+  // ---- julkinen-6: site search (AI data, YO topics and practice, Visa quizzes: koti-F3), shared with the YO bar: site-search.js is loaded on the first
   // keystroke and fetches its data on the first search. "/" or ⌘K focuses the field.
   let mod = null;
   const q = $('#q'), hits = $('#hits');
