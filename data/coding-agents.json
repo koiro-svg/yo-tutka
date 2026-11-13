@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-11-11T04:29:00Z",
+ "updated": "2026-11-13T05:10:00Z",
  "source": "https://artificialanalysis.ai/agents/coding-agents",
  "indexName": "Coding Agent Index v2.0",
  "indexEvals": "FrontierCode v1.1, Terminal-Bench 4.0 ja SWE-Atlas-QnA-AA",
@@ -40,16 +40,16 @@
    ],
    "openSource": false,
    "repo": null,
-   "models": "Gemini 3.8/3.7/3.6 Flash ja 3.1 Pro sekä GPT-OSS-120b; Ultra: myös Gemini 4 Argon; Pro/Ultra: myös Claude Sonnet 5.5 ja Opus 5.5",
+   "models": "Gemini 4 Carbon (Ultra) tai Hydrogen+Orchestrator (Pro/Ultra); myös Argon, 3.8/3.7/3.6 Flash, 3.1 Pro, GPT-OSS-120b; Pro/Ultra: Sonnet 5.5 ja Opus 5.5",
    "price": "Ilmainen perusrajoin · Google AI Pro 22,99 €/kk · Ultra 99,99–229,99 €/kk (Suomen hinnat)",
    "aa": {
-    "index": 33,
-    "model": "Gemini 3.8 Flash (high), Antigravity SDK",
-    "costPerTask": 2.51,
-    "minutesPerTask": 13.1
+    "index": 59,
+    "model": "Gemini 4 Carbon (high), Antigravity CLI",
+    "costPerTask": 7.74,
+    "minutesPerTask": 29.8
    },
    "bestFor": "Kun haluat aloittaa ilmaiseksi ja käyttää samaa agenttia editorissa, työpöytäsovelluksessa ja päätteessä.",
-   "why": "Korvasi Gemini CLI:n kuluttajakäytössä 18.6.2026. Gemini 4 Argon tuli Antigravityyn 13.10.2026, mutta vain AI Ultra -tilaajille, ei Prolle. AA:n uudessa Coding Agent Index v2.0:ssa (23.10.2026) kaikille avoimella 3.8 Flash -mallilla mitattu tulos on 33; Argon-asetusta AA ei ole vielä mitannut uudella testisarjalla."
+   "why": "Korvasi Gemini CLI:n kuluttajakäytössä 18.6.2026. Google julkaisi Gemini 4 Carbonin 10.11.2026 (vain AI Ultra, mukana /swarm-moniagenttitila) ja Hydrogenin + Orchestrator-tilan 12.11.2026 Pro:lle ja Ultralle. AA:n Coding Agent Index v2.0:ssa paras mitattu asetus nousi lokakuun Flash-tuloksesta (33) Carboniin: index 59, noin 7,74 dollarilla ja 30 minuutissa tehtävää kohden; Hydrogenia AA ei ole vielä mitannut."
   },
   {
    "name": "Codex",

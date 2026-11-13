@@ -1,6 +1,6 @@
 {
  "revision": 1,
- "updated": "2026-11-11T04:29:00Z",
+ "updated": "2026-11-13T05:10:00Z",
  "starter": [
   {
    "role": "Yleisavustaja",
@@ -168,7 +168,7 @@
      "kind": "avustaa",
      "bestFor": "Tutkimusnäytön tarkistaminen, esim. terveys-, hyvinvointi- tai tuoteväitteet.",
      "why": "Hakee vain vertaisarvioiduista tutkimuksista ja näyttää, mihin suuntaan näyttö kallistuu. Syvempiin kirjallisuuskatsauksiin Elicit (Pro ~49 $/kk).",
-     "price": "Ilmainen · Pro ~10 $/kk",
+     "price": "Ilmainen · Pro 12 $/kk · Deep 45 $/kk",
      "free": true,
      "fi": "kohtalainen",
      "pick": false
@@ -339,12 +339,12 @@
      "pick": true
     },
     {
-     "name": "GPT Image 2.5 (ChatGPT)",
+     "name": "GPT Image 2.6 (ChatGPT)",
      "vendor": "OpenAI",
      "url": "https://chatgpt.com",
      "kind": "avustaa",
      "bestFor": "Kuvat, joissa on paljon luettavaa tekstiä: julisteet, infografiikat ja hinnastot.",
-     "why": "Tekstin renderöinti on alan tarkinta, ja se noudattaa monimutkaisia asetteluohjeita hyvin. OpenAI julkaisi ChatGPT Images 2.5:n 8.9.2026; rinnalla kaksi API-mallia, Flare (nopeampi) ja Sunburst (tarkempi muokkaus).",
+     "why": "Tekstin renderöinti on alan tarkinta, ja se noudattaa monimutkaisia asetteluohjeita hyvin. OpenAI päivitti ChatGPT Imagesin versioon 2.6 4.11.2026: gif-animaatioiden luonti, uudelleenkäytettävät viitekuvat ja noin 50 % nopeampi generointi; rinnalla kaksi API-mallia, Flare (nopeampi) ja Sunburst (tarkempi muokkaus).",
      "price": "Ilmainen (rajattu) · Plus ~20 $/kk",
      "free": true,
      "fi": "kohtalainen",
@@ -794,8 +794,8 @@
      "url": "https://github.com/anthropics/claude-for-legal",
      "kind": "avustaa",
      "bestFor": "Pienyrittäjän sopimuskatselmointi, NDA-triage ja vastaukset ilman erillistä legal-ohjelmistoa.",
-     "why": "Claude for Legal (julkaistu 12.5.2026) tuo 12 erikoisalan pluginia (mm. sopimukset, työsuhteet, tietosuoja) ja yli 20 integraatiota (iManage, DocuSign, LexisNexis, Westlaw ym.) omaa playbookia vasten. Pluginin koodi on avoin (GitHub, Apache 2.0), mutta käyttö vaatii erillisen lisämaksun Claude-tilauksen päälle. Suomenkieliset sopimukset sujuvat hyvin.",
-     "price": "Claude Pro 20 $/kk + Claude for Legal -lisä ~20 $/käyttäjä/kk",
+     "why": "Claude for Legal (julkaistu 12.5.2026) tuo 12 erikoisalan pluginia (mm. sopimukset, työsuhteet, tietosuoja) ja yli 20 integraatiota (iManage, DocuSign, LexisNexis, Westlaw ym.) omaa playbookia vasten. Pluginit ovat ilmaisia ja avoimen lähdekoodin (Apache 2.0) lisäosia Claude Cowork -tilaan, ei erillinen maksullinen tuote. Suomenkieliset sopimukset sujuvat hyvin.",
+     "price": "Sisältyy Claude Pro -tilaukseen (20 $/kk) ja ylempiin (lakipluginit ilmaisia)",
      "free": false,
      "fi": "hyvä",
      "pick": true
@@ -874,7 +874,7 @@
      "kind": "automatisoi",
      "bestFor": "Alle 50 hengen yritys, joka rekrytoi säännöllisesti ja haluaa läpinäkyvän hinnan.",
      "why": "Neljä AI-rekrytointiagenttia (haku, seulonta, viestintä, työpaikkakuvaus) sai yleisen saatavuuden 14.9.2026. Ne etsivät ja seulovat ehdokkaita Workablen tietokannasta ja keskustelevat hakijoiden kanssa.",
-     "price": "Standard ~299 $/kk · agenttikrediitit erikseen (3 000 ilmaista/kk)",
+     "price": "Standard ~299 $/kk · agenttikrediitit erikseen (3 000 ilmaista kertaluonteisesti)",
      "free": false,
      "fi": "kohtalainen",
      "pick": false
@@ -1078,6 +1078,18 @@
  ],
  "changes": [
   {
+   "date": "2026-11-13",
+   "text": "OpenAI päivitti ChatGPT Imagesin versioon 2.6 4.11.2026: gif-animaatiot, uudelleenkäytettävät viitekuvat ja noin 50 % nopeampi generointi."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Korjattu: Claude for Legal -pluginit ovat ilmaisia ja avoimen lähdekoodin lisäosia Claude-tilaukseen, ei erillinen ~20 $/käyttäjä/kk -lisämaksu kuten aiemmin merkittiin."
+  },
+  {
+   "date": "2026-11-13",
+   "text": "Consensus poisti Premium-tason ja hinnoitteli uudelleen: Pro 12 $/kk, uusi Deep-taso 45 $/kk."
+  },
+  {
    "date": "2026-11-11",
    "text": "Anthropic nimesi Claude Max -tasot uudelleen 30.10.2026: entinen Max 20x on nyt Ultra (200 $/kk) ja entinen Max 5x on nyt Max (100 $/kk); hinnat pysyivät samoina."
   },
@@ -1144,18 +1156,6 @@
   {
    "date": "2026-10-11",
    "text": "Salesforce päätti Finin (ent. Intercom) oston 10.9.2026, aiempaa aikataulua nopeammin; hinnoittelu pysyi samana."
-  },
-  {
-   "date": "2026-10-11",
-   "text": "Korjattu: HubSpotin Starter-tason hinta on 20 $/paikka/kk (uusille asiakkaille alk. 7–10 $), ei 15 $ kuten aiemmin merkittiin."
-  },
-  {
-   "date": "2026-10-11",
-   "text": "Korjattu: Julius AI:n Plus-taso on 20 $/kk, ei 35 $/kk kuten 3.10. virheellisesti merkittiin; ilmaistaso on nyt krediittiperusteinen."
-  },
-  {
-   "date": "2026-10-11",
-   "text": "Canva poisti Leonardo-kuvageneraattorin Business-tilauksesta 30.9.2026; se on nyt erillinen tilaus."
   }
  ]
 }
