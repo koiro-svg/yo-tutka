@@ -37,12 +37,18 @@ export const FLAG_TEXT = {
   gravity: 'Lantion lentorata ei vastaa painovoimaa – tarkista pituus asetuksista tai kuvauskulma.',
   slowed: 'Hyppy kesti epäuskottavan kauan – video on todennäköisesti hidastettu. Valitse hidastuskerroin.',
   ground: 'Alastulo eri korkeudelle kuin ponnistus (liikuit kameraa kohti/poispäin tai laskeuduit korokkeelle) – tulos epävarma.',
+  contact: 'Maakontaktia ei saatu mitattua pudotuksen ja ponnistuksen välissä – kuvaa suuremmalla kuvataajuudella.',
+  noDrop: 'Pudotusta laatikolta ei nähty ennen ponnistusta – tämä ei ollut pudotushyppy. Aloita laatikon päältä koko vartalo kuvassa.',
+  longContact: 'Kontakti yli 0,45 s – hyppy oli enemmän kyykkyhyppy kuin reaktiivinen pudotushyppy. Ponnista heti, lyhyellä kontaktilla.',
+  contactFps: 'Kontaktiaika on epätarkka tällä kuvataajuudella – tarkka RSI vaatii hidastetun videon (120–240 fps).',
+  twoFeet: 'Molemmat jalat olivat maassa ponnistuksessa – tämä ei ollut yhden jalan hyppy.',
+  otherLeg: 'Ponnistus näytti tapahtuvan toisella jalalla kuin valitsit – tarkista valittu jalka.',
 };
 /** Flags that make a result unusable rather than merely uncertain: never saved to history.
  *  ('count' = a horizontal attempt with fewer bounds than its event: it isn't that event.) */
-export const BLOCKING_FLAGS = new Set(['slowed', 'count']);
+export const BLOCKING_FLAGS = new Set(['slowed', 'count', 'noDrop', 'twoFeet', 'contact']);
 /** Flags that only say "less precise": the ± already covers them, so they don't block records. */
-export const INFO_FLAGS = new Set(['uncalibrated']);
+export const INFO_FLAGS = new Set(['uncalibrated', 'contactFps']);
 export const isSaveable = r => !r.flags.some(f => BLOCKING_FLAGS.has(f));
 
 // ---------- flight-time physics (shared by automatic and manual measurement) ----------
@@ -56,6 +62,14 @@ export const heightFromFlight = T => (G * T * T / 8) * 100;
  *  came out below the test suite's own measured error. */
 export const flightErrCm = (T, fps, noiseCm = 0) =>
   fps > 0 ? Math.hypot((G * T / 4) * (0.45 / fps) * 100, 0.7 * noiseCm, 0.5) : NaN;
+
+/** Ground-contact time error (ms): two edges at ~0.45 frame each, plus a 4 ms floor (the landing
+ *  edge of a drop is fitted on a fast fall, the takeoff edge on a fast rise). */
+export const contactErrMs = fps => (fps > 0 ? Math.hypot(Math.SQRT2 * 0.45 / fps * 1000, 4) : NaN);
+/** Reactive strength index: jump height (m) / ground-contact time (s). */
+export const rsiOf = (heightCm, contactMs) => (heightCm / 100) / (contactMs / 1000);
+/** How far before the takeoff a drop jump's contact and fall are searched (s); the video's fine pass covers this too. */
+export const DROP_LOOKBACK_S = 1.0;
 
 /** A wrong time base scales the hip arc's apparent gravity by 1/k², so g from the jumps tells how
  *  much a clip is slowed down. Returns the likely factor among 1/2/4/8 when it differs from the
@@ -131,11 +145,12 @@ export function frameFeatures(lm, w, h) {
   ) / torso;
   // Per-foot points for side-view distance work: [x, y] or null when that point isn't visible.
   const pt = i => (vis(i) ? [x(i), y(i)] : null);
-  const sides = [[P.L_HEEL, P.L_TOE], [P.R_HEEL, P.R_TOE]].map(([hi, ti]) => {
+  const sides = [['L', P.L_HEEL, P.L_TOE], ['R', P.R_HEEL, P.R_TOE]].map(([side, hi, ti]) => {
     const heel = pt(hi), toe = pt(ti);
-    return heel || toe ? { heel, toe } : null;
+    return heel || toe ? { side, heel, toe } : null;
   }).filter(Boolean);
   // Highest estimated fingertip (touch height).
+  const sideFoot = side => { const sd = sides.find(x => x.side === side); return sd ? Math.max(sd.heel ? sd.heel[1] : -Infinity, sd.toe ? sd.toe[1] : -Infinity) : null; };
   let tip = null;
   for (const [wi, ii] of [[P.L_WR, P.L_INDEX], [P.R_WR, P.R_INDEX]]) {
     if (!vis(wi) || !vis(ii)) continue;
@@ -148,11 +163,42 @@ export function frameFeatures(lm, w, h) {
     hipX,
     eye: (y(P.L_EYE) + y(P.R_EYE)) / 2,
     leg: (y(P.L_ANK) + y(P.R_ANK)) / 2 - hip,
+    legMax: Math.max(y(P.L_ANK), y(P.R_ANK)) - hip,     // the extended leg (single-leg jumps)
+    footL: sideFoot('L'),
+    footR: sideFoot('R'),
+    // Both wrists above the eyes: the hands-up start/stop signal (see HandSignal).
+    armsUp: vis(P.L_WR) && vis(P.R_WR) && Math.max(y(P.L_WR), y(P.R_WR)) < (y(P.L_EYE) + y(P.R_EYE)) / 2,
     wrist: wristOff,
     sides,
     tip,
   };
 }
+
+// ---------- outlier rejection ----------
+
+/** Single-frame (or two-frame) foot outliers: one landmark jumping below the floor for a frame or
+ *  two. The lowest foot point is a max over four landmarks, so one bad point pulls it down, and a
+ *  handful of them in the detector's window moved the ground line ~10 cm (false takeoffs, 50 cm
+ *  errors — test row 13). A sample lower than BOTH neighbours by > 2 % of standing height can't be
+ *  a foot: the feet never dip below the floor and come back within 1–2 frames. Only downward spikes
+ *  are cleaned: an upward one is the apex of a flight. Call after pushing sample i; it corrects
+ *  i−1 (and i−2) in place via `fc`, never the features object. */
+export function despikeFoot(s, i) {
+  const fo = k => (s[k] && s[k].f ? s[k].fc ?? s[k].f.foot : null);
+  const cur = fo(i);
+  if (cur == null) return;
+  const d = 0.02 * Math.max(1, s[i].f.foot - s[i].f.eye);
+  for (const w of [1, 2]) {
+    const before = fo(i - w - 1);
+    if (before == null) continue;
+    let all = true;
+    for (let k = i - w; k < i; k++) { const v = fo(k); if (v == null || v - Math.max(before, cur) <= d) all = false; }
+    if (!all) continue;
+    for (let k = i - w; k < i; k++) s[k].fc = before + (cur - before) * (k - (i - w - 1)) / (w + 1);
+    return;
+  }
+}
+const footOf = smp => smp.fc ?? smp.f.foot;
 
 // ---------- edge refinement ----------
 
@@ -176,7 +222,7 @@ const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
 /** Measure one jump from a sample series. iUp = first clearly airborne sample,
  *  iDown = first clearly landed sample (from JumpDetector). */
-export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref = null, scale: scaleHint = NaN, checkArms = false, maxFlight = MAX_FLIGHT_S } = {}) {
+export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref = null, scale: scaleHint = NaN, checkArms = false, maxFlight = MAX_FLIGHT_S, drop = false, single = null } = {}) {
   const has = k => k >= 0 && k < s.length && s[k].f;
   const between = (a, b, all = false) => {
     const out = [];
@@ -199,7 +245,7 @@ export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref
   // samples are contacts (run-up strides are airborne); using it directly would bias the ground
   // ~1.3σ low and stretch every flight.
   const groundOf = idx => {
-    const v = idx.map(k => s[k].f.foot), p90 = quantile(v, 0.9);
+    const v = idx.map(k => footOf(s[k])), p90 = quantile(v, 0.9);
     const contact = v.filter(x => x > p90 - 3 * cmPx);
     return { g: median(contact), contact };
   };
@@ -215,8 +261,8 @@ export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref
   const dtMed = median(span.slice(1).map((t, i) => t - span[i])) || 1 / 30;
   const fitSpan = Math.max(EDGE_FIT_S, 2.2 * dtMed);    // ≥ 3 samples at low frame rates
 
-  const eUp = k => gPre - s[k].f.foot;
-  const eDn = k => gPost - s[k].f.foot;
+  const eUp = k => gPre - footOf(s[k]);
+  const eDn = k => gPost - footOf(s[k]);
 
   // Takeoff: first clearly airborne sample j, fitted forward; clamped between the last sample that
   // still reads grounded and j.
@@ -261,8 +307,59 @@ export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref
   const expected = Math.max(1, Math.floor(T * fps));
   if (flightIdx.length < 0.75 * expected) flags.push('feetHidden');
 
-  // Leg shortening at touchdown vs. at takeoff → tucked legs inflate flight time.
-  if (s[last].f.leg < 0.88 * Math.max(s[j].f.leg, ref ? ref.leg : 0)) flags.push('kneesBent');
+  // Leg shortening at touchdown vs. at takeoff → tucked legs inflate flight time. On one leg the
+  // other one is carried bent the whole time, so the longer (stance) leg is compared instead.
+  const legOf = k => (single ? s[k].f.legMax : s[k].f.leg);
+  if (legOf(last) < 0.88 * Math.max(legOf(j), ref && !single ? ref.leg : 0)) flags.push('kneesBent');
+
+  // Single-leg: in the last 0.3 s on the ground the chosen foot must be the low one and the other
+  // off the floor (median difference ≥ 5 cm). Both down = not a single-leg jump; the other foot down = the
+  // other leg (or a left/right swap in the pose model) — shown, never counted as clean.
+  if (single) {
+    const diffs = between(T0 - 0.3, T0 - 0.02).map(k => {
+      const a = single === 'L' ? s[k].f.footL : s[k].f.footR, b = single === 'L' ? s[k].f.footR : s[k].f.footL;
+      return a != null && b != null ? (a - b) / cmPx : null;
+    }).filter(v => v != null);
+    if (diffs.length >= 3) {
+      const d = median(diffs);
+      if (Math.abs(d) < 5) flags.push('twoFeet');
+      else if (d < 0) flags.push('otherLeg');
+    }
+  }
+
+  // Drop jump: the contact before the takeoff began with a landing from a box. Its edge is fitted
+  // like a flight edge (the falling feet approaching the floor), on the takeoff's ground line.
+  let contactMs = NaN, contactErr = NaN, rsi = NaN, rsiErr = NaN, dropCm = NaN;
+  if (drop) {
+    let c0 = k0;                                           // first sample of the ground contact
+    while (c0 > 0 && (!s[c0 - 1].f || eUp(c0 - 1) <= AIR) && s[c0 - 1].t > T0 - DROP_LOOKBACK_S) c0--;
+    let a1 = c0 - 1;                                       // last clearly airborne sample of the fall
+    while (a1 > 0 && !s[a1].f) a1--;
+    if (a1 < 0 || !s[a1].f || eUp(a1) <= AIR || T0 - s[c0].t > 0.9) flags.push('noDrop');
+    else {
+      const pts = [];
+      for (let k = a1; k >= 0 && s[k].t >= s[a1].t - fitSpan; k--) if (s[k].f && eUp(k) > 0) pts.unshift({ t: s[k].t, e: eUp(k) });
+      let g0 = c0;
+      while (g0 < k0 && (!s[g0].f || eUp(g0) > GROUNDED)) g0++;
+      const fit = edgeTime(pts, gPx, -1);
+      const Tc = fit == null ? (s[a1].t + s[g0].t) / 2 : clamp(fit, s[a1].t, s[g0].t);
+      const rate = fps || 1 / dtMed;
+      contactMs = (T0 - Tc) * 1000;
+      contactErr = contactErrMs(rate);
+      // a reactive contact lasts ≥ ~100 ms; under 60 ms the two edges collapsed onto one sample (no contact seen)
+      if (contactMs < 60) { flags.push('contact'); contactMs = NaN; }
+      else {
+        rsi = rsiOf(heightCm, contactMs);
+        rsiErr = rsi * Math.hypot(errCm / heightCm, contactErr / contactMs);
+      }
+      // Box height: the still feet before the fall (stature scale, so only an approximate label).
+      const box = between(Tc - 2.5, Tc - 0.35).map(k => footOf(s[k]));
+      const boxLvl = box.length >= 5 ? median(box) : NaN;
+      if (Number.isFinite(boxLvl) && gPre - boxLvl > 10 * cmPx) dropCm = (gPre - boxLvl) / cmPx;
+      if (contactMs > 450) flags.push('longContact');
+      if (rate < 90) flags.push('contactFps');
+    }
+  }
 
   if (checkArms) {
     const armIdx = between(T0 - 0.6, T1);
@@ -307,7 +404,7 @@ export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref
 
   return {
     ok: true, heightCm, flightMs: T * 1000, errCm, fps, t0: T0, t1: T1,
-    hipRiseCm, hipTakeoffCm, impliedG, flags, chart,
+    hipRiseCm, hipTakeoffCm, impliedG, flags, chart, contactMs, contactErrMs: contactErr, rsi, rsiErr, dropCm,
   };
 }
 
@@ -320,8 +417,8 @@ export function measureJump(s, iUp, iDown, { statureCm = DEFAULT_STATURE_CM, ref
  *  jump in footage that is slowed down but read as real time (an 8× slow-mo small hop rises 5 cm
  *  in ~0.2 s of clip time). */
 export class JumpDetector {
-  constructor({ statureCm = DEFAULT_STATURE_CM, requireReady = false, maxFlight = MAX_FLIGHT_S, timeout = null, riseWindow = 0.2, keepAll = false, checkArms = false } = {}) {
-    Object.assign(this, { statureCm, requireReady, maxFlight, timeout: timeout ?? maxFlight + 0.5, riseWindow, keepAll, checkArms });
+  constructor({ statureCm = DEFAULT_STATURE_CM, requireReady = false, maxFlight = MAX_FLIGHT_S, timeout = null, riseWindow = 0.2, keepAll = false, checkArms = false, drop = false, single = null } = {}) {
+    Object.assign(this, { statureCm, requireReady, maxFlight, timeout: timeout ?? maxFlight + 0.5, riseWindow, keepAll, checkArms, drop, single });
     this.samples = [];
     this.state = 'search';          // search → ready → air → post → (search | ready)
     this.ref = null;                // last standing reference {t, hip, scale, leg}
@@ -349,6 +446,7 @@ export class JumpDetector {
     if (s.length && t <= s[s.length - 1].t) return null;   // duplicate / out-of-order frame
     s.push({ t, f });
     const i = s.length - 1;
+    despikeFoot(s, i);
     if (this.state === 'air') return this._inAir(i);
     if (this.state === 'post') return this._post(i);
 
@@ -363,23 +461,23 @@ export class JumpDetector {
 
     const win = this._window(idx, 1.0);
     if (win.length < 4) return null;
-    this.ground = quantile(win.map(w => w.f.foot), 0.9);
+    this.ground = quantile(win.map(footOf), 0.9);
     // Scale = standing height over the last 3 s: a squat must not shrink the thresholds.
-    const scale = quantile(this._window(idx, 3.0).map(w => w.f.foot - w.f.eye), 0.9);
+    const scale = quantile(this._window(idx, 3.0).map(w => footOf(w) - w.f.eye), 0.9);
     const cmPx = cmPxFromScale(scale, this.statureCm);
 
     let ev = null;
     const st = this._window(idx, 0.5);
     if (st.length >= 5 && t - st[st.length - 1].t >= 0.4) {
       const range = arr => Math.max(...arr) - Math.min(...arr);
-      if (range(st.map(w => w.f.foot)) < 3 * cmPx && range(st.map(w => w.f.hip)) < 4 * cmPx) {
+      if (range(st.map(footOf)) < 3 * cmPx && range(st.map(w => w.f.hip)) < 4 * cmPx) {
         // Standing reference = a still window in upright posture. A held squat (squat jump) is
         // still too; its hip sits lower relative to the eyes, and that ratio doesn't depend on
         // camera distance, unlike any pixel height.
-        const ratio = median(st.map(w => (w.f.foot - w.f.hip) / (w.f.foot - w.f.eye)));
+        const ratio = median(st.map(w => (footOf(w) - w.f.hip) / (footOf(w) - w.f.eye)));
         this.bestRatio = Math.max(this.bestRatio, ratio);
         if (ratio >= 0.95 * this.bestRatio) {
-          this.ref = { t, hip: median(st.map(w => w.f.hip)), scale: median(st.map(w => w.f.foot - w.f.eye)), leg: median(st.map(w => w.f.leg)) };
+          this.ref = { t, hip: median(st.map(w => w.f.hip)), scale: median(st.map(w => footOf(w) - w.f.eye)), leg: median(st.map(w => w.f.leg)) };
         }
         if (this.state === 'search') { this.state = 'ready'; ev = { type: 'ready' }; }
       }
@@ -390,8 +488,8 @@ export class JumpDetector {
     const up = TAKEOFF_CM * cmPx;
     // A takeoff is fast: the feet must also have risen `up` within the last riseWindow. Slow drift
     // of the ground line (walking, shifting the stance, moving in depth) never passes this.
-    const recentLow = Math.max(...this._window(idx, this.riseWindow).map(w => w.f.foot));
-    if (prev && prev.f && this.ground - f.foot > up && this.ground - prev.f.foot > up && recentLow - f.foot > up) {
+    const recentLow = Math.max(...this._window(idx, this.riseWindow).map(footOf));
+    if (prev && prev.f && this.ground - f.foot > up && this.ground - footOf(prev) > up && recentLow - f.foot > up) {
       this.air = { iUp: idx - 1, tUp: prev.t, ground: this.ground, cmPx, scale, peak: 0, pendingDown: null, iDown: null };
       this.state = 'air';
       return { type: 'takeoff' };
@@ -408,21 +506,30 @@ export class JumpDetector {
     const a = this.air, smp = this.samples[i];
     if (smp.t - a.tUp > this.timeout) { this._rest(); return { type: 'reject', reason: 'timeout' }; }
     if (!smp.f) return null;
-    const e = a.ground - smp.f.foot;
-    a.peak = Math.max(a.peak, e);
-    // Landed: back at the takeoff ground, or — when the ground line has moved (stepping in
-    // depth, landing on a box) — the fall has clearly started and then the feet stopped dead.
-    // At the apex the feet are momentarily still too, hence the 30 % descent requirement.
-    let stopped = false;
-    if (a.peak - e > 0.3 * a.peak) {
-      const back = this._window(i, 0.06).filter(w => w !== smp);
-      stopped = back.length > 0 && Math.abs(smp.f.foot - back[back.length - 1].f.foot) < 1.5 * a.cmPx;
-    }
-    if (e < LANDED_CM * a.cmPx || stopped) {
-      if (a.pendingDown != null) { a.iDown = a.pendingDown; this.state = 'post'; return this._post(i); }
-      a.pendingDown = i;
-    } else a.pendingDown = null;
-    return null;
+    a.peak = Math.max(a.peak, a.ground - footOf(smp));
+    if (!this._landedAt(i)) { a.pendingDown = null; return null; }
+    if (a.pendingDown == null) a.pendingDown = i;
+    // Three landed samples in a row, read again now: despikeFoot corrects a 1–2-frame glitch only once the
+    // sample after it arrives, so two glitched frames at floor level in mid-flight read "landed" until then.
+    const run = [];
+    for (let k = i; k >= a.pendingDown && run.length < 3; k--) if (this.samples[k].f) run.push(k);
+    if (run.length < 3) return null;
+    if (!run.every(k => this._landedAt(k))) { a.pendingDown = i; return null; }
+    a.iDown = run[2]; this.state = 'post';
+    return this._post(i);
+  }
+
+  /** Landed: back at the takeoff ground, or — when the ground line has moved (stepping in depth, landing on a box) — the
+   *  fall has clearly started and then the feet stopped dead. At the apex the feet are momentarily still too, hence the
+   *  30 % descent requirement. */
+  _landedAt(k) {
+    const a = this.air, smp = this.samples[k];
+    if (!smp || !smp.f) return false;
+    const e = a.ground - footOf(smp);
+    if (e < LANDED_CM * a.cmPx) return true;
+    if (!(a.peak - e > 0.3 * a.peak)) return false;
+    const back = this._window(k, 0.06).filter(w => w !== smp);
+    return back.length > 0 && Math.abs(footOf(smp) - footOf(back[back.length - 1])) < 1.5 * a.cmPx;
   }
 
   _post(i) {
@@ -445,10 +552,11 @@ export class JumpDetector {
     // before toe-off). A longer window can still hold an earlier, closer camera position; a
     // shorter one may be all squat. The standing reference counts only if it matches (±10 %):
     // same distance and really upright.
-    const recent = s.filter(x => x.f && x.t >= tUp - 0.8 && x.t <= tUp).map(x => x.f.foot - x.f.eye);
+    const recent = s.filter(x => x.f && x.t >= tUp - 0.8 && x.t <= tUp).map(x => footOf(x) - x.f.eye);
     const scale = recent.length >= 3 ? quantile(recent, 0.9) : a.scale;
-    const ref = r && tUp - r.t < 20 && Math.abs(r.scale / scale - 1) < 0.1 ? r : null;
-    const result = measureJump(s, a.iUp, a.iDown, { statureCm: this.statureCm, ref, scale, checkArms: this.checkArms, maxFlight: this.maxFlight });
+    // A drop jump's standing reference is on the box: its hip is a box height off the floor.
+    const ref = !this.drop && r && tUp - r.t < 20 && Math.abs(r.scale / scale - 1) < 0.1 ? r : null;
+    const result = measureJump(s, a.iUp, a.iDown, { statureCm: this.statureCm, ref, scale, checkArms: this.checkArms, maxFlight: this.maxFlight, drop: this.drop, single: this.single });
     this._rest();
     return result.ok ? { type: 'jump', result } : { type: 'reject', reason: result.reason, result };
   }
@@ -465,4 +573,33 @@ export function findJumps(samples, opts = {}) {
   const ev = det.flush();
   if (ev && ev.type === 'jump') jumps.push({ ...ev.result, samples: det.samples });
   return jumps;
+}
+
+// ---------- hands-up signal ----------
+
+/** Both hands held above the head for `hold` s while standing still = a start/stop command for a
+ *  series, so the athlete never has to walk back to the phone. Arm swings and touch-height reaches
+ *  pass above the head for < 0.6 s and with the feet moving, so they never fire. push() returns
+ *  true once per hold; the arms must come down (0.3 s) before it can fire again. */
+export class HandSignal {
+  constructor({ hold = 1.0 } = {}) { this.hold = hold; this.since = null; this.armed = true; this.downSince = null; this.feet = []; }
+  push(t, f) {
+    if (!f) { this.since = null; return false; }
+    if (!f.armsUp) {
+      this.since = null;
+      if (this.downSince == null) this.downSince = t;
+      if (t - this.downSince >= 0.3) this.armed = true;
+      this.feet = [];
+      return false;
+    }
+    this.downSince = null;
+    if (this.since == null) this.since = t;
+    this.feet.push({ t, y: f.foot, scale: f.foot - f.eye });
+    this.feet = this.feet.filter(p => p.t >= t - this.hold);
+    if (!this.armed || t - this.since < this.hold) return false;
+    const ys = this.feet.map(p => p.y), sc = median(this.feet.map(p => p.scale));
+    if (Math.max(...ys) - Math.min(...ys) > 0.03 * sc) return false;      // ~5 cm: feet still
+    this.armed = false;
+    return true;
+  }
 }

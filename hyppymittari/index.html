@@ -91,6 +91,7 @@
     font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .05em; font-size: 15px; }
   .groups button[aria-pressed="true"] { background: var(--tartan); color: #fff; }
   .types.single { display: none; }
+  .side-bar { display: flex; align-items: center; gap: 10px; margin: -2px 0 10px; font-size: 13px; color: var(--chalk); font-weight: 650; }
 
   /* calibration */
   .calib .cal-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0 4px; }
@@ -377,6 +378,82 @@
   @media (pointer: coarse) {
     select, input[type="number"], input[type="text"], .note-edit input, .calib .cal-cm input, .goal-row input { font-size: 16px; }
   }
+  /* ---------- 14.11.2026: depth, new cards, wide layout ---------- */
+  header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--tartan) 18%, var(--tartan) 82%, transparent); opacity: .55; }
+  @media (max-width: 719px) { header { position: relative; } }
+  .seg button[aria-pressed="true"] { box-shadow: 0 1px 6px rgba(0, 0, 0, .35); }
+  /* empty viewfinder: two floodlights and the track in perspective */
+  .stage-empty { background:
+      radial-gradient(40% 30% at 8% 0%, rgba(255, 244, 214, .16), transparent 70%),
+      radial-gradient(40% 30% at 92% 0%, rgba(255, 244, 214, .16), transparent 70%),
+      radial-gradient(90% 60% at 50% 35%, #1f232b, #08090b); overflow: hidden; }
+  .stage-empty::before { content: ""; position: absolute; left: -30%; right: -30%; bottom: -8%; height: 34%; z-index: -1;
+    background: repeating-linear-gradient(90deg, rgba(241, 242, 244, .5) 0 2px, transparent 2px 12.5%), linear-gradient(180deg, #7d2c1b, #a63a22);
+    transform: perspective(240px) rotateX(58deg); transform-origin: bottom; opacity: .55;
+    -webkit-mask: linear-gradient(transparent, #000 45%); mask: linear-gradient(transparent, #000 45%); }
+  .stage-empty > div { position: relative; }
+  /* history */
+  .sum { overflow: hidden; }
+  .sum.on { background: linear-gradient(180deg, rgba(217, 80, 47, .12), transparent 70%), var(--infield); }
+  .sum .spark { display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; min-height: 30px; margin: 2px 0; }
+  .sum .spark svg { flex: 1 1 64px; max-width: 120px; min-width: 0; height: 28px; }
+  .sum .spark .delta { flex: none; }
+  .delta { font: 700 11.5px var(--mono); color: var(--chalk); white-space: nowrap; }
+  .delta.up { color: var(--good); } .delta.down { color: var(--bad); }
+  .hist li.day { display: flex; justify-content: space-between; gap: 10px; padding: 14px 0 4px; border-top: 0; font: 12px var(--mono); color: var(--chalk); }
+  .hist li.day b { font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .06em; font-size: 13px; color: var(--lane); }
+  .hist li.day + li { border-top: 0; }
+  .hist li.pr { background: linear-gradient(90deg, rgba(255, 178, 30, .09), transparent 70%); box-shadow: inset 3px 0 0 var(--led); padding-left: 10px; border-radius: 4px; }
+  .hist li.pr .h { color: var(--led); text-shadow: 0 0 12px rgba(255, 178, 30, .35); }
+  .empty-card { text-align: center; padding: 28px 18px; }
+  .empty-card .scene { width: min(70%, 240px); height: auto; margin-bottom: 8px; }
+  .empty-card h3 { font-size: 24px; margin: 0 0 6px; }
+  .empty-card p { max-width: 42ch; margin: 0 auto 16px; }
+  .lr { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0 6px; }
+  .lr > div { background: var(--infield-2); border-radius: 12px; padding: 8px 10px; display: grid; }
+  .lr span { font-size: 12px; } .lr b { font-family: var(--display); font-weight: 800; font-stretch: condensed; font-size: 22px; font-variant-numeric: tabular-nums; }
+  .lsi-weeks { display: flex; gap: 6px; align-items: flex-end; height: 92px; margin: 12px 0 4px; }
+  .lsi-weeks > div { flex: 1; display: grid; grid-template-rows: 1fr auto auto; justify-items: center; height: 100%; font: 11px var(--mono); color: var(--chalk); }
+  .lsi-weeks i { align-self: end; width: 70%; max-width: 34px; border-radius: 4px 4px 2px 2px; background: var(--chalk); }
+  .lsi-weeks b { color: var(--lane); }
+  .z-go i { background: var(--good); } .z-mid i { background: var(--mid); } .z-low i { background: var(--bad); }
+  td.z-go { color: var(--good); } td.z-mid { color: var(--mid); } td.z-low { color: var(--bad); }
+  .cmp.wk th, .cmp.wk td { width: auto; font-variant-numeric: tabular-nums; }
+  .cmp.wk th span { font: 11px var(--mono); }
+  .chart .draw { stroke-dasharray: 1; animation: draw .9s ease-out both; }
+  @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  .metric .v small { font: 600 12px var(--mono); }
+  /* clip player */
+  .clip-dlg { width: min(560px, calc(100vw - 24px)); }
+  .clip-dlg .trend-head { margin-bottom: 10px; }
+  .clip-dlg h2 { margin: 0; font-size: 18px; }
+  .clip-stage { max-height: 62dvh; margin-bottom: 10px; }
+  /* video: three steps before a clip is chosen */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 0 0 12px; padding: 0; list-style: none; counter-reset: st; }
+  .steps li { counter-increment: st; background: var(--infield); border: 1px solid var(--rail); border-radius: var(--radius); padding: 14px; font-size: 13.5px; color: var(--chalk); }
+  .steps li::before { content: counter(st); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; margin-bottom: 8px;
+    background: var(--tartan); color: #fff; font: 800 16px var(--display); }
+  .steps li b { display: block; color: var(--lane); font-size: 14.5px; margin-bottom: 2px; }
+  /* help as sections */
+  .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; align-items: start; }
+  .help-grid .card { margin: 0; }
+  details.card > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px; min-height: 28px;
+    font-family: var(--display); font-weight: 800; font-stretch: condensed; text-transform: uppercase; letter-spacing: .05em; font-size: 16px; }
+  details.card > summary::-webkit-details-marker { display: none; }
+  details.card > summary svg { width: 24px; height: 24px; flex: none; color: var(--tartan); }
+  details.card > summary::after { content: "+"; margin-left: auto; color: var(--chalk); font: 700 20px var(--mono); }
+  details.card[open] > summary::after { content: "–"; }
+  details.card[open] > summary { margin-bottom: 8px; }
+  .help-grid .wide { grid-column: 1 / -1; }
+  /* wide screens: two columns (viewfinder | series, result, session · trend | list) */
+  .cols > .col { min-width: 0; }
+  @media (min-width: 1100px) {
+    .wrap, .tabs { max-width: 1180px; }
+    .cols { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+    .live-cols { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+    .live-cols .stage { max-height: 74dvh; }
+  }
   [hidden] { display: none !important; }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -403,6 +480,7 @@
     <div id="typeBar">
       <div class="groups" id="groups" role="group" aria-label="Laji"></div>
       <div class="types" id="types" role="group" aria-label="Hyppytyyppi"></div>
+      <div class="side-bar" id="sideBar" hidden><span>Jalka</span><div class="seg" role="group" aria-label="Ponnistusjalka"><button type="button" data-side="L">Vasen</button><button type="button" data-side="R">Oikea</button></div></div>
       <div class="type-hint" id="typeHint"></div>
     </div>
   </div>
@@ -422,6 +500,7 @@
       <button type="button" class="tip-open" id="statureTipOpen"><b>Aseta pituutesi</b> – saat myös lantion nousun ja painovoimatarkistuksen.</button>
       <button type="button" class="tip-x" id="statureTipClose" aria-label="Sulje vinkki">×</button>
     </div>
+    <div class="cols live-cols"><div class="col">
     <div class="stage" id="liveStage">
       <video id="cam" playsinline muted autoplay></video>
       <canvas id="camOverlay"></canvas>
@@ -430,7 +509,7 @@
       <div class="fps-tag" id="liveFps" hidden></div>
       <div class="big" id="liveBig" hidden><div id="liveBoard"></div><div class="s"></div></div>
       <div class="series-tag" id="seriesTag" hidden></div>
-      <div class="rest" id="restTag" hidden><div><div class="l">Palautus</div><div class="c" id="restCount"></div><div class="l" id="restNext"></div></div></div>
+      <div class="rest" id="restTag" hidden><div><div class="l" id="restLabel">Palautus</div><div class="c" id="restCount"></div><div class="l" id="restNext"></div></div></div>
       <div class="remote-panel" id="remotePanel"><div id="remoteBoard"></div><div class="rp-stats" id="remoteStats"></div></div>
       <button class="remote-close" id="remoteClose" aria-label="Sulje kaukonäyttö">✕</button>
       <div class="stage-empty" id="liveEmpty">
@@ -455,6 +534,7 @@
       <button class="btn" id="remoteBtn">Kaukonäyttö</button>
       <span class="muted small" id="liveInfo"></span>
     </div>
+    </div><div class="col">
     <div class="card" id="seriesCard">
       <h2>Sarja</h2>
       <div class="row">
@@ -462,9 +542,11 @@
           <select id="serN"><option>3</option><option>5</option><option>6</option><option>8</option><option>10</option></select></label>
         <label class="field inline">Palautus
           <select id="serRest"><option value="0">ei ajastinta</option><option value="30">30 s</option><option value="45">45 s</option><option value="60">60 s</option><option value="90">90 s</option><option value="120">2 min</option><option value="180">3 min</option></select></label>
+        <label class="field inline">Aloitus
+          <select id="serMode"><option value="now">heti</option><option value="timer">10 s ajastin</option><option value="hand">käsimerkki</option></select></label>
         <button class="btn primary" id="serStart">Aloita sarja</button>
       </div>
-      <p class="muted small" id="serInfo">Iso laskuri kuvassa ja ääni laskee palautuksen – puhelimeen ei tarvitse koskea sarjan aikana.</p>
+      <p class="muted small" id="serInfo">Iso laskuri kuvassa ja ääni laskee palautuksen – puhelimeen ei tarvitse koskea sarjan aikana. Käsimerkki: nosta molemmat kädet pään yläpuolelle sekunniksi seisten – sarja alkaa, ja sama merkki lopettaa sen.</p>
       <div id="serSum"></div>
     </div>
     <div class="card calib" id="liveCalib" hidden></div>
@@ -474,10 +556,17 @@
       <div id="sessionVire"></div>
       <ul class="hist" id="sessionList"></ul>
     </div>
+    </div></div>
   </section>
 
   <!-- VIDEO -->
   <section id="tab-video" hidden>
+    <div class="cols"><div class="col">
+    <ol class="steps" id="vidSteps">
+      <li><b>Kuvaa slow-mo</b>Puhelin jalustalle, koko vartalo kuvaan. 120–240 fps antaa tarkimman lentoajan ja kontaktiajan.</li>
+      <li><b>Valitse video</b>Alta. Kuvataajuus ja hidastus tunnistetaan, tarvittaessa voit valita ne itse.</li>
+      <li><b>Tarkista ruudut</b>Irtoamis- ja alastuloruutu näkyvät kuvaajassa ja aikajanalla – voit merkitä ne myös käsin.</li>
+    </ol>
     <div class="card">
       <div class="row">
         <label class="btn primary" for="vidFile">Valitse video</label>
@@ -538,16 +627,35 @@
         </div>
       </div>
     </div>
+    </div><div class="col">
     <div class="card calib" id="videoCalib" hidden></div>
     <div id="vidResults"></div>
+    </div></div>
   </section>
 
   <!-- HISTORY -->
   <section id="tab-history" hidden>
+    <div class="card empty-card" id="histEmpty" hidden>
+      <svg class="scene" viewBox="0 0 220 90" fill="none" stroke-linecap="round" aria-hidden="true">
+        <rect x="20" y="14" width="180" height="56" rx="8" fill="var(--board-bg)" stroke="var(--board-edge)"/>
+        <g fill="var(--led)" opacity=".18"><circle cx="58" cy="42" r="14"/><circle cx="110" cy="42" r="14"/><circle cx="162" cy="42" r="14"/></g>
+        <g stroke="var(--led)" stroke-width="5" opacity=".9"><path d="M48 42h20M100 42h20M152 42h20"/></g>
+        <path d="M10 84h200" stroke="var(--tartan)" stroke-width="3"/>
+      </svg>
+      <h3 class="display" id="histEmptyTitle">Ei vielä tuloksia</h3>
+      <p class="muted" id="histEmptyText">Hyppää ensimmäinen tulos kameralla tai analysoi video – kehitys, ennätykset ja viikkoraportti näkyvät täällä.</p>
+      <button class="btn primary" id="histEmptyGo">Hyppää ensimmäinen tulos</button>
+    </div>
     <div class="summary" id="summary"></div>
-    <div class="card" id="trendCard"></div>
-    <div class="card" id="cmpCard" hidden></div>
-    <div class="card">
+    <div class="cols">
+      <div class="col">
+        <div class="card" id="trendCard"></div>
+        <div class="card" id="asymCard" hidden></div>
+        <div class="card" id="weekCard" hidden></div>
+        <div class="card" id="cmpCard" hidden></div>
+      </div>
+      <div class="col">
+    <div class="card" id="histListCard">
       <div class="trend-head"><h2 id="histTitle">Hypyt</h2><button class="btn sm" id="cmpBtn" aria-pressed="false">Vertaa kahta</button></div>
       <ul class="hist" id="histList"></ul>
     </div>
@@ -562,65 +670,107 @@
         <button class="btn danger ghost" id="clearAll">Tyhjennä historia</button>
       </div>
     </div>
+      </div>
+    </div>
   </section>
 
   <!-- HELP -->
   <section id="tab-help" class="help" hidden>
-    <div class="card">
-      <h2>Näin mittaat</h2>
+    <div class="help-grid">
+    <details class="card wide" open>
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>Näin mittaat</summary>
       <ol>
-        <li><b>Kamera paikoilleen.</b> Puhelin lattialle, tuolille tai jalustalle 2–3 m päähän. Koko vartalo – myös jalkaterät – pitää näkyä koko ajan, myös hypyn huipulla. Kameran korkeus mieluiten lantion tai polven tasolla.</li>
-        <li><b>Valitse hyppytyyppi</b> yläpalkista ja paina <i>Käynnistä kamera</i>.</li>
+        <li><b>Kamera paikoilleen.</b> Puhelin lattialle, tuolille tai jalustalle 2–3 m päähän. Koko vartalo – myös jalkaterät – pitää näkyä koko ajan, myös hypyn huipulla. Kameran korkeus mieluiten lantion tai polven tasolla, puhelin suorassa.</li>
+        <li><b>Valitse laji ja hyppytyyppi</b> yläpalkista ja paina <i>Käynnistä kamera</i>.</li>
         <li><b>Seiso hetki paikallaan</b>, kunnes kuvan yläreunaan syttyy punainen <i>Valmis – hyppää!</i> (vauhdillisessa hypyssä seisomista ei tarvita).</li>
         <li><b>Hyppää.</b> Tulos näkyy ruudulla ja luetaan ääneen. Jokainen hyppy tallentuu historiaan.</li>
       </ol>
-      <h3>Tärkein tekniikkavinkki</h3>
-      <p>Pidä jalat suorina ilmassa ja <b>laskeudu päkiöille suorin polvin</b>. Mittaus perustuu lentoaikaan – jos koukistat polvet ennen maahantuloa, lentoaika venyy ja tulos näyttää todellista suuremmalta. Sovellus varoittaa, jos huomaa tämän.</p>
-      <h3>Miten mittaus toimii</h3>
+      <p><b>Tärkein tekniikkavinkki:</b> pidä jalat suorina ilmassa ja <b>laskeudu päkiöille suorin polvin</b>. Mittaus perustuu lentoaikaan – jos koukistat polvet ennen maahantuloa, lentoaika venyy ja tulos näyttää todellista suuremmalta. Sovellus varoittaa, jos huomaa tämän.</p>
+    </details>
+    <details class="card">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19h16"/><path d="M5 15l4-4 3 3 6-7"/></svg>Miten mittaus toimii</summary>
       <ul>
-        <li><b>Lentoaika</b> (päätulos): sovellus tunnistaa hetken, jolloin jalkaterät irtoavat maasta ja palaavat takaisin, ja laskee korkeuden kaavalla h = g·t²/8. Sama menetelmä kuin tutkimuksissa validoidussa My Jump -sovelluksessa – kalibrointia ei tarvita.</li>
-        <li><b>Lantion nousu</b> (tarkistus): lantion korkein kohta verrattuna seisoma-asentoon. Vaatii pituutesi asetuksista. Luku on yleensä lentoaikatulosta suurempi, koska se sisältää myös varpaille nousun ennen irtoamista – lähempänä seinään kurottamalla mitattua "vertikaalia".</li>
-        <li><b>Painovoimatarkistus</b>: lantion lentoradasta laskettu g. Jos se on lähellä 9,8 m/s², sekä ajoitus että mittakaava ovat kunnossa.</li>
+        <li><b>Lentoaika</b> (päätulos): hetki, jolloin jalkaterät irtoavat maasta ja palaavat, tarkennetaan ruutujen väliin, ja korkeus lasketaan kaavalla h = g·t²/8. Sama menetelmä kuin tutkimuksissa validoidussa My Jump -sovelluksessa – kalibrointia ei tarvita.</li>
+        <li><b>Lantion nousu</b> (tarkistus): lantion korkein kohta verrattuna seisoma-asentoon. Vaatii pituutesi asetuksista. Yleensä lentoaikatulosta suurempi, koska se sisältää varpaille nousun.</li>
+        <li><b>Painovoimatarkistus</b>: lantion lentoradasta laskettu g. Lähellä 9,8 m/s² = ajoitus ja mittakaava kunnossa.</li>
+        <li><b>Häiriöiden suodatus</b>: yksittäinen virheellisesti tunnistettu ruutu (esim. jalkapiste hyppää hetkeksi) ohitetaan, eikä se siirrä maan tasoa.</li>
       </ul>
-      <h3>Tarkkuus</h3>
+    </details>
+    <details class="card">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Tarkkuus</summary>
       <ul>
-        <li>30 fps: noin ±2–3 cm · 60 fps: noin ±1–2 cm · slow-mo 240 fps: noin ±0,5–1 cm.</li>
+        <li>Pystyhyppy: 30 fps noin ±2–3 cm · 60 fps ±1–2 cm · slow-mo 240 fps ±0,5–1 cm.</li>
         <li>Jokaisen tuloksen perässä näkyy arvioitu virhemarginaali ja todellinen kuvataajuus.</li>
-        <li>Tarkin tapa: kuvaa hyppy puhelimen <b>slow-mo</b>-tilassa ja analysoi se <i>Video</i>-välilehdellä. Siellä voit myös tarkistaa irtoamis- ja alastuloruudun itse ja merkitä ne käsin.</li>
+        <li>Kameratila käyttää tunnistusmallin ajallista seurantaa. Tarkin tapa on kuvata hyppy <b>slow-mo</b>-tilassa ja analysoida se <i>Video</i>-välilehdellä, jossa jokainen ruutu tunnistetaan erikseen ja ruudut voi tarkistaa ja merkitä käsin.</li>
       </ul>
-      <h3>Hyppytyypit</h3>
+    </details>
+    <details class="card">
+      <summary>__PICTO_cmj__Hyppytyypit</summary>
       <ul>
         <li><b>Kädet lanteilla</b> (CMJ): nopea kyykistys ja hyppy, kädet koko ajan lanteilla. Standardi jalkojen räjähtävyyden mittari.</li>
-        <li><b>Käsien kanssa</b>: kuten edellä, mutta käsien heilautuksella. Tyypillisesti 10–15 % korkeampi.</li>
+        <li><b>Käsien kanssa</b>: käsien heilautuksella. Tyypillisesti 10–15 % korkeampi.</li>
         <li><b>Kyykkyhyppy</b> (SJ): pysähdy kyykkyyn noin 2 sekunniksi ja hyppää ilman vastaliikettä.</li>
-        <li><b>Vauhdilla</b>: vauhdinotto ja hyppy. Kuvaa sivulta niin, että juokset kameran editse – ei kohti kameraa.</li>
+        <li><b>Vauhdilla</b>: kuvaa sivulta niin, että juokset kameran editse – ei kohti kameraa.</li>
       </ul>
-      <h3>Kosketuskorkeus – yltääkö käsi donkkiin?</h3>
+    </details>
+    <details class="card">
+      <summary>__PICTO_dj__Pudotushyppy ja RSI</summary>
+      <ul>
+        <li>Seiso laatikolla (30–40 cm), astu alas – älä hyppää ylös – ja ponnista heti maasta mahdollisimman korkealle mahdollisimman lyhyellä kontaktilla. Koko vartalo ja laatikko kuvaan, kamera edestä.</li>
+        <li><b>RSI</b> = hypyn korkeus (m) / kontaktiaika (s). Mitä suurempi, sitä reaktiivisempi. Kontakti yli 0,45 s merkitään – silloin hyppy oli enemmän kyykkyhyppy.</li>
+        <li>Kontaktiaika mitataan kahdesta reunasta, joten 30–60 fps:n kameralla se on noin ±10–20 ms. Tarkka RSI: kuvaa slow-mo (120–240 fps) ja analysoi <i>Video</i>-välilehdellä.</li>
+        <li>Pudotuskorkeus arvioidaan pituutesi perusteella – se on suuntaa-antava.</li>
+      </ul>
+    </details>
+    <details class="card">
+      <summary>__PICTO_v1__Yhden jalan hypyt ja puoliero</summary>
+      <ul>
+        <li>Valitse <i>Yksi jalka</i> (pystyhyppy) tai <i>1-jalan loikka / kolmiloikka</i> (pituus) ja jalka <i>Vasen / Oikea</i>.</li>
+        <li>Pystyhypyssä ponnista valitulla jalalla, toinen jalka koukussa irti maasta. Jos molemmat jalat ovat maassa ponnistuksessa, tulosta ei tallenneta; jos ponnistus näyttää tapahtuvan toisella jalalla, tulos merkitään.</li>
+        <li><b>Puoliero</b> (Historia): LSI = heikomman jalan paras / vahvemman jalan paras. Vihreä ≥ 90 %, keltainen 85–90 %, punainen alle 85 %. Viikkokohtainen LSI näyttää, kaventuuko ero.</li>
+      </ul>
+    </details>
+    <details class="card">
+      <summary>__PICTO_reach__Kosketuskorkeus</summary>
       <ul>
         <li><b>Kuvaa sivulta</b>, puhelin vaakatasossa jalustalla noin 4–6 m päässä. Koko hyppy ja kurotus pitää näkyä.</li>
-        <li><b>Kalibroi:</b> paina <i>Lattia</i> ja napauta lattiaa hyppypaikan kohdalla, paina <i>Viite</i> ja napauta kohtaa, jonka korkeuden tiedät – esimerkiksi renkaan yläreuna (305 cm). Hienosäädä suurennoksella. Viitteen pitää olla samassa tasossa kuin hyppy: kun hyppäät renkaalle, rengas on.</li>
-        <li>Sovellus etsii sormenpäiden korkeimman kohdan. Malli tunnistaa rystyset, ja sormenpäät arvioidaan kämmenen suunnasta – tarkkuus noin ±4–5 cm. Donkkaukseen tarvitaan yleensä kämmen noin 15–20 cm renkaan yläpuolelle.</li>
+        <li><b>Kalibroi:</b> paina <i>Lattia</i> ja napauta lattiaa hyppypaikan kohdalla, paina <i>Viite</i> ja napauta kohtaa, jonka korkeuden tiedät – esimerkiksi renkaan yläreuna (305 cm). Hienosäädä suurennoksella. Viitteen pitää olla samassa tasossa kuin hyppy.</li>
+        <li>Malli tunnistaa rystyset, ja sormenpäät arvioidaan kämmenen suunnasta – tarkkuus noin ±4–5 cm. Donkkaukseen tarvitaan yleensä kämmen noin 15–20 cm renkaan yläpuolelle.</li>
       </ul>
-      <h3>Vauhditon pituus, kolmiloikka ja viisiloikka</h3>
+    </details>
+    <details class="card">
+      <summary>__PICTO_s3__Pituus, kolmi- ja viisiloikka</summary>
       <ul>
         <li><b>Kuvaa sivulta kohtisuoraan hyppysuuntaan</b>, puhelin paikallaan. Koko suoritus ponnistuksesta alastuloon pitää näkyä – viisiloikassa noin 15 m, joten mene kauas tai käytä laajakulmaa (0,5×).</li>
-        <li><b>Kalibroi:</b> laita lattialle kaksi merkkiä hyppysuuntaan tunnetun matkan päähän (teippi tai kartio), esim. ponnistusviiva ja 3 m. Mitä pidempi väli, sitä tarkempi tulos – viisiloikassa mieluiten 10 m. Merkitse ne kuvaan <i>Piste A</i> ja <i>Piste B</i>.</li>
-        <li>Tulos mitataan ponnistuksen varpaista alastulon takimmaiseen kantapäähän, kuten tuomari mittaa. Loikat näytetään erikseen. Jos kaadut taaksepäin käsille, sitä ei huomata – tarkista alastuloruudusta.</li>
-        <li>Tarkkuus kalibroituna noin ±4 cm (vauhditon pituus) – ±6 cm (viisiloikka).</li>
+        <li><b>Kalibroi:</b> kaksi merkkiä lattialle hyppysuuntaan tunnetun matkan päähän (esim. ponnistusviiva ja 3 m) ja merkitse ne kuvaan <i>Piste A</i> ja <i>Piste B</i>. Mitä pidempi väli, sitä tarkempi tulos. Pieni kameran kallistus ei haittaa.</li>
+        <li>Tulos mitataan ponnistuksen varpaista alastulon takimmaiseen kantapäähän, kuten tuomari mittaa. Tarkkuus kalibroituna noin ±4 cm (vauhditon pituus) – ±6 cm (viisiloikka).</li>
       </ul>
-      <h3>Sarja ja kaukonäyttö</h3>
+    </details>
+    <details class="card">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 11V5.5a1.5 1.5 0 0 1 3 0V11M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M7 11V9.5a1.5 1.5 0 0 0-3 0V14a7 7 0 0 0 7 7h1a6 6 0 0 0 6-6v-5a1.5 1.5 0 0 0-3 0"/></svg>Sarja, käsimerkki ja kaukonäyttö</summary>
       <ul>
-        <li><b>Sarja:</b> valitse hyppyjen määrä ja palautus ja paina <i>Aloita sarja</i>. Kuvassa näkyy iso laskuri (esim. 3/5) ja sarjan paras, ääni laskee palautuksen ja sanoo <i>valmis</i>. Lopuksi näet parhaan, keskiarvon ja eron ennätykseen.</li>
-        <li><b>Kaukonäyttö</b> näyttää kamerakuvan ja viimeisen tuloksen niin isona, että sen lukee 3–6 m päästä. Tulos ei katoa ennen seuraavaa hyppyä.</li>
-        <li><b>Päivän vire</b> (pystyhypyt): kun tänään on vähintään kolme hyppyä, päivän parasta verrataan neljän viikon päiväparhaiden keskiarvoon. Vihreä ≥ 97 %, keltainen 93–97 %, punainen alle 93 % – selvästi tavallista heikompi tulos voi kertoa väsymyksestä.</li>
+        <li><b>Sarja:</b> valitse hyppyjen määrä ja palautus. Kuvassa näkyy iso laskuri, ääni laskee palautuksen ja sanoo <i>valmis</i>. Lopuksi paras, keskiarvo ja ero ennätykseen.</li>
+        <li><b>Aloitus:</b> <i>heti</i>, <i>10 s ajastin</i> (ehdit asettua paikallesi – sinä aikana tehtyjä hyppyjä ei lasketa) tai <i>käsimerkki</i>: seiso kuvassa ja nosta molemmat kädet pään yläpuolelle sekunniksi. Sama merkki lopettaa sarjan, ja seuraavan voi aloittaa taas merkillä – puhelimeen ei tarvitse koskea.</li>
+        <li><b>Kaukonäyttö</b> näyttää kamerakuvan ja viimeisen tuloksen niin isona, että sen lukee 3–6 m päästä.</li>
+        <li><b>Videoleike:</b> kameratila pitää muistissa muutaman viime sekunnin. Jokaisesta tuloksesta jää leike (▶), jonka voi katsoa hidastettuna luurangon kanssa ja jakaa. Leikkeet katoavat, kun suljet sivun. Voit poistaa toiminnon asetuksista.</li>
       </ul>
-      <h3>Tulokset talteen</h3>
+    </details>
+    <details class="card">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Kehitys, vire ja viikkoraportti</summary>
       <ul>
-        <li><b>Vie varmuuskopio</b> (Historia) tallentaa kaikki tulokset JSON-tiedostoon. <i>Tuo varmuuskopio</i> yhdistää ne toisen laitteen tuloksiin ilman tuplia – esim. puhelimelta Macille.</li>
-        <li><b>Asenna</b> kotivalikkoon (Safari: Jaa → Lisää Koti-valikkoon), niin sovellus aukeaa koko ruudulle ja toimii myös ilman verkkoa, kun olet avannut sen kerran verkossa. Videoanalyysin tarkka malli tallentuu laitteelle, kun käytät videota kerran.</li>
+        <li><b>Päivän vire</b> (pystyhypyt): kun tänään on vähintään kolme hyppyä, päivän parasta verrataan neljän viikon päiväparhaiden keskiarvoon. Vihreä ≥ 97 %, keltainen 93–97 %, punainen alle 93 %.</li>
+        <li><b>Viikkoraportti</b> (Historia): viikon paras, keskiarvo, määrä ja taso edellisiin viikkoihin, ja sen voi jakaa kuvana.</li>
+        <li>Ennätykseksi ja kehitykseen lasketaan vain tulokset, joissa ei ole huomautusta.</li>
       </ul>
-      <h3>Yksityisyys</h3>
-      <p>Kaikki laskenta tapahtuu omalla laitteellasi. Kuvaa tai videota ei lähetetä minnekään, ja historia tallentuu vain tämän selaimen muistiin. Jakokuva syntyy laitteella, eikä mitään lähetetä ennen kuin itse jaat sen.</p>
+    </details>
+    <details class="card">
+      <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Tulokset talteen ja yksityisyys</summary>
+      <ul>
+        <li><b>Vie varmuuskopio</b> (Historia) tallentaa kaikki tulokset JSON-tiedostoon. <i>Tuo varmuuskopio</i> yhdistää ne toisen laitteen tuloksiin ilman tuplia.</li>
+        <li><b>Asenna</b> kotivalikkoon (Safari: Jaa → Lisää Koti-valikkoon), niin sovellus toimii myös ilman verkkoa, kun olet avannut sen kerran verkossa. Videoanalyysin tarkka malli tallentuu laitteelle, kun käytät videota kerran.</li>
+        <li>Kaikki laskenta tapahtuu omalla laitteellasi. Kuvaa tai videota ei lähetetä minnekään, ja historia tallentuu vain tämän selaimen muistiin. Jakokuva ja -video syntyvät laitteella, eikä mitään lähetetä ennen kuin itse jaat.</li>
+      </ul>
+    </details>
     </div>
   </section>
 </main>
@@ -638,6 +788,7 @@
   </label>
   <label class="toggle"><span>Lue tulos ääneen</span><input type="checkbox" id="setSpeech"></label>
   <label class="toggle"><span>Äänimerkki kun valmis</span><input type="checkbox" id="setBeep"></label>
+  <label class="toggle"><span>Videoleike tuloksista (kamera, vain muistiin)</span><input type="checkbox" id="setClips"></label>
   <label class="field">Korin korkeus (cm) – kosketuskorkeuden vertailu
     <input type="number" id="setRim" min="150" max="400" step="1" inputmode="numeric">
   </label>
@@ -645,6 +796,20 @@
   <div class="row" style="justify-content:flex-end;margin-top:8px">
     <button class="btn primary" id="settingsClose">Valmis</button>
   </div>
+</dialog>
+
+<dialog id="clipDlg" class="clip-dlg" aria-label="Videoleike">
+  <div class="trend-head"><h2 id="clipTitle">Leike</h2><button class="icon-btn" id="clipClose" aria-label="Sulje">✕</button></div>
+  <div class="stage clip-stage" id="clipStage">
+    <video id="clipVid" playsinline muted></video>
+    <canvas id="clipOverlay"></canvas>
+  </div>
+  <div class="row">
+    <div class="seg" id="clipRate" role="group" aria-label="Toistonopeus"><button type="button" data-rate="0.25" aria-pressed="true">0,25×</button><button type="button" data-rate="0.5" aria-pressed="false">0,5×</button><button type="button" data-rate="1" aria-pressed="false">1×</button></div>
+    <button class="btn sm" id="clipSkel" aria-pressed="true">Luuranko</button>
+    <button class="btn sm primary" id="clipShare">Jaa video</button>
+  </div>
+  <p class="muted small" id="clipInfo">Leike on vain tämän session muistissa. Jakoon tehdään erillinen tiedosto pelkästä hypystä (luurangon kanssa, jos se on päällä).</p>
 </dialog>
 
 <div class="toast" id="toast" role="status" hidden></div>
@@ -664,7 +829,7 @@
 import { FilesetResolver, PoseLandmarker } from './vendor/mediapipe/vision_bundle.mjs';
 import {
   JumpDetector, findJumps, frameFeatures, quantile, FLAG_TEXT, P, DEFAULT_STATURE_CM, MIN_FLIGHT_S, MAX_FLIGHT_S,
-  heightFromFlight, flightErrCm, slowdownFactor, isSaveable, INFO_FLAGS,
+  heightFromFlight, flightErrCm, slowdownFactor, isSaveable, INFO_FLAGS, HandSignal, DROP_LOOKBACK_S,
 } from './jump-analysis.js';
 import { measureReach, findReaches, measureDistances, DistanceTracker, REACH_FLAG_TEXT, DIST_FLAG_TEXT, verticalScale, floorScale } from './reach-distance.js';
 
@@ -684,11 +849,23 @@ const TYPES = [
   { id: 'cmja', group: 'vert', name: 'Käsien kanssa', hint: 'Vastaliikehyppy käsien heilautuksella.' },
   { id: 'sj', group: 'vert', name: 'Kyykkyhyppy', hint: 'Pysähdy kyykkyyn ~2 s ja hyppää ilman vastaliikettä.' },
   { id: 'run', group: 'vert', name: 'Vauhdilla', hint: 'Vauhdinotto kameran editse sivuttain, ei kohti kameraa.', runUp: true, readyText: 'Valmis – ota vauhtia ja hyppää' },
+  { id: 'dj', group: 'vert', name: 'Pudotushyppy', drop: true, hint: 'Laatikolta (30–40 cm) pudottautuminen ja heti ylös mahdollisimman lyhyellä kontaktilla. Tulos: korkeus, kontaktiaika ja RSI. Tarkka kontaktiaika vaatii slow-mo-videon.', readyText: 'Valmis – pudottaudu ja ponnista' },
+  { id: 'v1l', group: 'vert', pair: 'v1', side: 'L', chip: 'Yksi jalka', name: 'Yksi jalka · vasen', checkArms: true, hint: 'Vastaliikehyppy vasemmalla jalalla, kädet lanteilla, toinen jalka koukussa irti maasta. Kamera edestä.' },
+  { id: 'v1r', group: 'vert', pair: 'v1', side: 'R', chip: 'Yksi jalka', name: 'Yksi jalka · oikea', checkArms: true, hint: 'Vastaliikehyppy oikealla jalalla, kädet lanteilla, toinen jalka koukussa irti maasta. Kamera edestä.' },
   { id: 'reach', group: 'reach', name: 'Kosketuskorkeus', hint: 'Mihin sormet yltävät – paikaltaan tai vauhdista. Kuvaa sivulta ja kalibroi alla.', runUp: true, readyText: 'Valmis – hyppää ja kurota' },
   { id: 'slj', group: 'dist', name: 'Vauhditon pituus', flights: 1, hint: 'Tasaponnistus paikaltaan. Kuvaa sivulta kohtisuoraan hyppysuuntaan ja kalibroi alla.', readyText: 'Valmis – ponnista' },
   { id: 's3', group: 'dist', name: 'Kolmiloikka', flights: 3, hint: 'Vauhditon kolmiloikka. Kuvaa sivulta niin, että koko matka näkyy, ja kalibroi alla.', readyText: 'Valmis – loikkaa' },
   { id: 's5', group: 'dist', name: 'Viisiloikka', flights: 5, hint: 'Viisi loikkaa paikaltaan. Kuvaa kaukaa sivulta (~15 m näkyviin) ja kalibroi alla.', readyText: 'Valmis – loikkaa' },
+  { id: 'h1l', group: 'dist', pair: 'h1', side: 'L', chip: '1-jalan loikka', name: '1-jalan loikka · vasen', flights: 1, hint: 'Loikka vasemmalta jalalta ja alastulo samalle jalalle (single hop). Kuvaa sivulta ja kalibroi alla.', readyText: 'Valmis – loikkaa' },
+  { id: 'h1r', group: 'dist', pair: 'h1', side: 'R', chip: '1-jalan loikka', name: '1-jalan loikka · oikea', flights: 1, hint: 'Loikka oikealta jalalta ja alastulo samalle jalalle (single hop). Kuvaa sivulta ja kalibroi alla.', readyText: 'Valmis – loikkaa' },
+  { id: 'h3l', group: 'dist', pair: 'h3', side: 'L', chip: '1-jalan kolmiloikka', name: '1-jalan kolmiloikka · vasen', flights: 3, hint: 'Kolme peräkkäistä loikkaa vasemmalla jalalla (triple hop). Kuvaa sivulta ja kalibroi alla.', readyText: 'Valmis – loikkaa' },
+  { id: 'h3r', group: 'dist', pair: 'h3', side: 'R', chip: '1-jalan kolmiloikka', name: '1-jalan kolmiloikka · oikea', flights: 3, hint: 'Kolme peräkkäistä loikkaa oikealla jalalla (triple hop). Kuvaa sivulta ja kalibroi alla.', readyText: 'Valmis – loikkaa' },
 ];
+const SIDE_NAME = { L: 'vasen', R: 'oikea' };
+/** The type id of a single-leg pair for one side: pairType('v1', 'R') → 'v1r'. */
+const pairType = (pair, side) => TYPES.find(x => x.pair === pair && x.side === side).id;
+/** Detector options of a type — the same for the live camera and the video analysis. */
+const detOpts = t => ({ checkArms: !!t.checkArms, drop: !!t.drop, single: t.group === 'vert' ? t.side || null : null });
 const typeOf = id => TYPES.find(t => t.id === id) || { id, name: id, group: 'vert' };
 const typeName = id => typeOf(id).name;
 const kindOf = id => typeOf(id).group;
@@ -698,7 +875,7 @@ const valueCm = r => r[groupOf(r.kind || 'vert').key];
 const fmtVal = (type, cm) => { const g = groupOf(kindOf(type)); return `${fmt(cm * g.scale, g.digits)}\u00a0${g.unit}`; };
 const flagText = (kind, f) => groupOf(kind).flags[f] || FLAG_TEXT[f] || f;
 const STORE_KEY = 'hyppymittari.v1';
-const DEFAULTS = { statureCm: null, liveModel: 'lite', camera: 'user', speech: true, beep: true, rimCm: 305, seriesN: 5, seriesRest: 60 };
+const DEFAULTS = { statureCm: null, liveModel: 'lite', camera: 'user', speech: true, beep: true, rimCm: 305, seriesN: 5, seriesRest: 60, seriesStart: 'now', clips: true };
 
 function loadStore() {
   try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch { return {}; }
@@ -881,7 +1058,12 @@ const PICTO = {
   slj: PICTO_SVG('<circle cx="15" cy="5.5" r="2.3" fill="currentColor" stroke="none"/><path d="M14 8.5l-3.5 5M13.5 9.5l-6-1M10.5 13.5l5 1.5 2.5 3.5M10.5 13.5l4 3 1.5 3.5M3 21h18"/>'),
   s3: PICTO_SVG('<circle cx="13" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M12.5 7l-1.5 6M12.5 8.5l4 .5M12.5 8.5l-3.5 2.5M11 13l4.5 1 1.5 4.5M11 13l-3.5 3-3.5-1M4 21h2M10 21h2M17 21h2"/>'),
   s5: PICTO_SVG('<circle cx="13" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M12.5 7l-1.5 6M12.5 8.5l4 .5M12.5 8.5l-3.5 2.5M11 13l4.5 1 1.5 4.5M11 13l-3.5 3-3.5-1M2 21h1.5M6 21h1.5M10 21h1.5M14 21h1.5M18 21h1.5"/>'),
+  dj: PICTO_SVG('<path d="M2 21h20M3 21v-6h6v6" stroke-width="1.8"/><circle cx="16" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M16 7.5v5.5M16 8.5l-3-3M16 8.5l3-3M16 13l-2 4M16 13l2 4M10 11l2.5 2" stroke-width="2"/>'),
+  v1: PICTO_SVG('<circle cx="11" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M11 7.5v6.5M11 8.5l-3.5 2 2 2.5M11 8.5l3.5 2-2 2.5M11 14l-.5 7M11 14l4.5 2-1 3.5"/>'),
+  h1: PICTO_SVG('<circle cx="15" cy="5" r="2.3" fill="currentColor" stroke="none"/><path d="M14 8l-3 5M13.5 9l-5-1M11 13l5 2 2 3M11 13l-3.5 1.5 0 3M3 21h3M18 21h3"/>'),
+  h3: PICTO_SVG('<circle cx="14" cy="4" r="2.3" fill="currentColor" stroke="none"/><path d="M13.5 7l-2 5.5M13.5 8.5l4 1M13.5 8.5l-4 2M11.5 12.5l4.5 2 1 4M11.5 12.5l-3.5 1.5 0 3M3 21h2M10 21h2M18 21h2"/>'),
 };
+const pictoOf = id => PICTO[id] || PICTO[typeOf(id).pair] || '';
 
 // ---------- drawing ----------
 const LIMBS = [[11, 13], [13, 15], [12, 14], [14, 16], [23, 25], [25, 27], [24, 26], [26, 28],
@@ -947,7 +1129,11 @@ function drawPose(ctx, lm, W, H, groundY = NaN, footY = NaN, tip = null) {
 // ---------- charts ----------
 let chartSeq = 0;
 // Chart viewBox width ≈ its rendered width, so 11px labels stay 11px on a phone as on a laptop.
-const chartWidth = () => Math.max(300, Math.min(700, document.querySelector('main').clientWidth - 62));
+// Charts size their viewBox to the column they render in (two columns from 1100 px).
+const chartWidth = () => {
+  const w = document.querySelector('main').clientWidth - 32, col = matchMedia('(min-width: 1100px)').matches ? (w - 16) / 2 : w;
+  return Math.max(300, Math.min(700, col - 30));
+};
 /** Horizontal grid lines + y labels every `step` between lo and hi (solid at 0). */
 function yGrid(y, lo, hi, step, m, W) {
   const d = step >= 1 ? 0 : step >= 0.1 ? 1 : 2;
@@ -1035,6 +1221,8 @@ function jumpChart(result, { onPick } = {}) {
 
 /** Results over calendar time (erilliset-3): each day's best clean result as a dot, a rolling mean of the last
  *  5 training days as the line, flagged results hollow, the goal dashed. The record dot (bestOf) is LED amber. */
+/** A round axis step (1, 2, 5 × 10ⁿ) of at least `raw`. */
+const niceStep = raw => { const mag = 10 ** Math.floor(Math.log10(raw || 1)); return [1, 2, 5, 10].map(f => f * mag).find(x => x >= raw) || mag * 10; };
 let histRange = 90;   // days shown; 0 = everything
 const RANGES = [[30, '30 pv'], [90, '3 kk'], [365, 'vuosi'], [0, 'kaikki']];
 function trendChart(jumps, type) {
@@ -1056,8 +1244,7 @@ function trendChart(jumps, type) {
   const goal = db.settings.goals[type];
   const vals = clean.map(e => e.best.cm * k).concat(days.flatMap(e => e.flagged.map(j => j.cm * k)), goal ? [goal * k] : []);
   const span = Math.max(...vals) - Math.min(...vals) || Math.max(...vals) * 0.1 || 1;
-  const raw = span / 3, mag = 10 ** Math.floor(Math.log10(raw));
-  const step = [1, 2, 5, 10].map(f => f * mag).find(x => x >= raw);
+  const step = niceStep(span / 3);
   const lo = Math.floor(Math.min(...vals) / step) * step - step, hi = Math.ceil(Math.max(...vals) / step) * step + step;
   const x0 = histRange ? since : days[0].d;
   const x = d => m.l + (end === x0 ? 0.5 : (d - x0) / (end - x0)) * (W - m.l - m.r);
@@ -1065,13 +1252,20 @@ function trendChart(jumps, type) {
   const rec = bestOf(jumps), recDay = rec && clean.find(e => e.best.id === rec.id);   // highlighted when its day is shown
   const date = d => new Date(d).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric' });
   const line = roll.map((v, i) => `${i ? 'L' : 'M'}${x(clean[i].d).toFixed(1)},${y(v * k).toFixed(1)}`).join('');
+  const base = (H - m.b).toFixed(1), gid = `tg${++chartSeq}`;
+  const area = clean.length > 1 ? `${line}L${x(clean[clean.length - 1].d).toFixed(1)},${base}L${x(clean[0].d).toFixed(1)},${base}Z` : '';
   const wrap = chartShell(`
     <div class="legend"><span><i style="background:var(--foot);height:8px;width:8px;border-radius:50%"></i>päivän paras</span><span><i style="background:var(--foot)"></i>liukuva ka. (5 treenipv)</span>${days.some(e => e.flagged.length) ? '<span>○ huomautettu</span>' : ''}</div>
     <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(typeName(type))}: päivän parhaat tulokset ajan mittaan">
+      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.foot}" stop-opacity=".32"/><stop offset="1" stop-color="${C.foot}" stop-opacity="0"/></linearGradient>
+        <filter id="${gid}g" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="3"/></filter></defs>
       ${yGrid(y, lo, hi, step, m, W)}
+      ${goal && y(goal * k) > m.t ? `<rect x="${m.l}" y="${m.t}" width="${W - m.l - m.r}" height="${(y(goal * k) - m.t).toFixed(1)}" fill="${C.led}" opacity=".06"/>` : ''}
+      ${area ? `<path d="${area}" fill="url(#${gid})"/>` : ''}
       ${goal ? `<line x1="${m.l}" x2="${W - m.r}" y1="${y(goal * k)}" y2="${y(goal * k)}" stroke="${C.text}" stroke-width="1.5" stroke-dasharray="6 5" opacity=".75"/>
         <text x="${W - m.r}" y="${y(goal * k) - 6}" text-anchor="end" fill="${C.text}" font-size="11">tavoite ${fmt(goal * k, digits)}</text>` : ''}
-      ${clean.length > 1 ? `<path d="${line}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round" opacity=".85"/>` : ''}
+      ${clean.length > 1 ? `<path class="draw" pathLength="1" d="${line}" fill="none" stroke="${C.foot}" stroke-width="2.2" stroke-linejoin="round" opacity=".9"/>` : ''}
+      ${recDay ? `<circle cx="${x(recDay.d)}" cy="${y(recDay.best.cm * k)}" r="9" fill="${C.led}" opacity=".6" filter="url(#${gid}g)"/>` : ''}
       ${days.flatMap(e => e.flagged.map(j => `<circle cx="${x(e.d)}" cy="${y(j.cm * k)}" r="3.5" fill="${C.panel}" stroke="${C.muted}" stroke-width="1.5"/>`)).join('')}
       ${clean.map(e => `<circle cx="${x(e.d)}" cy="${y(e.best.cm * k)}" r="${e === recDay ? 6 : 4}" fill="${e === recDay ? C.led : C.foot}" stroke="${C.panel}" stroke-width="2"/>`).join('')}
       ${recDay ? `<text x="${x(recDay.d)}" y="${y(recDay.best.cm * k) - 11}" text-anchor="middle" fill="${C.text}" font-size="12" font-weight="700">${fmt(recDay.best.cm * k, digits)}</text>` : ''}
@@ -1101,7 +1295,11 @@ function resultCard(r, { extra = '' } = {}) {
   const flags = r.flags.map(f => `<li>${esc(FLAG_TEXT[f] || f)}</li>`);
   const gOk = Number.isFinite(r.impliedG) && !r.flags.includes('gravity') && !r.flags.includes('slowed');
   if (gOk && db.settings.statureCm) flags.push(`<li class="ok">Painovoimatarkistus ${fmt(r.impliedG)} m/s² – ajoitus ja mittakaava kunnossa.</li>`);
-  const hipTxt = db.settings.statureCm
+  const dj = Number.isFinite(r.contactMs);
+  const djTxt = dj ? `<div class="metric"><div class="k">RSI (korkeus / kontakti)</div><div class="v">${fmt(r.rsi, 2)} <small class="muted">±${fmt(r.rsiErr, 2)}</small></div></div>
+       <div class="metric"><div class="k">Kontaktiaika</div><div class="v">${Math.round(r.contactMs)} ms <small class="muted">±${Math.round(r.contactErrMs)}</small></div></div>
+       ${Number.isFinite(r.dropCm) ? `<div class="metric"><div class="k">Pudotuskorkeus (arvio)</div><div class="v">≈ ${fmt(Math.round(r.dropCm / 5) * 5, 0)} cm</div></div>` : ''}` : '';
+  const hipTxt = dj ? '' : db.settings.statureCm
     ? `<div class="metric"><div class="k">Lantion nousu seisonnasta</div><div class="v">${Number.isFinite(r.hipRiseCm) ? fmt(r.hipRiseCm) + ' cm' : '–'}</div></div>
        <div class="metric"><div class="k">Painovoimatarkistus</div><div class="v">${Number.isFinite(r.impliedG) ? fmt(r.impliedG) + ' m/s²' : '–'}</div></div>`
     : `<div class="metric"><div class="k">Lantion nousu</div><div class="v small muted">Aseta pituus asetuksista</div></div>`;
@@ -1114,7 +1312,7 @@ function resultCard(r, { extra = '' } = {}) {
       <div class="row">${extra}</div>
     </div>
     <div class="metrics">
-      ${hipTxt}
+      ${djTxt}${hipTxt}
     </div>
     ${flags.length ? `<ul class="flags">${flags.join('')}</ul>` : ''}`;
   return card;
@@ -1224,10 +1422,13 @@ const marginOf = rec => rec.cm - (+rec.rimCm || db.settings.rimCm);
 const phasesText = phases => phases.map(p => fmt(+p * groupOf('dist').scale, groupOf('dist').digits)).join(' + ');
 const subLine = r => (r.kind === 'reach' ? rimText(r.marginCm)
   : r.kind === 'dist' ? (r.phases.length > 1 ? phasesText(r.phases) + ' m' : `±${fmt(r.errCm, 0)} cm`)
-    : `lentoaika ${Math.round(r.flightMs)} ms`);
-const speechFor = r => (r.kind === 'reach'
+    : Number.isFinite(r.contactMs) ? `RSI ${fmt(r.rsi, 2)} · kontakti ${Math.round(r.contactMs)} ms`
+      : `lentoaika ${Math.round(r.flightMs)} ms`);
+/** Spoken result; single-leg types say the leg first, a drop jump adds its RSI. */
+const speechFor = (r, type = db.type) => (typeOf(type).side ? SIDE_NAME[typeOf(type).side] + ', ' : '') + (r.kind === 'reach'
   ? `${Math.round(r.touchCm)} senttiä, ${Math.round(Math.abs(r.marginCm))} ${r.marginCm >= 0 ? 'yli renkaan' : 'renkaaseen'}`
-  : r.kind === 'dist' ? `${fmt(r.distCm / 100, 2)} metriä` : `${Math.round(r.heightCm)} senttiä`);
+  : r.kind === 'dist' ? `${fmt(r.distCm / 100, 2)} metriä`
+    : `${Math.round(r.heightCm)} senttiä${Number.isFinite(r.rsi) ? `, RSI ${fmt(r.rsi, 1)}` : ''}`);
 
 const r1 = x => (Number.isFinite(x) ? Math.round(x * 10) / 10 : null);
 function toRecord(r, src, type = db.type) {
@@ -1240,6 +1441,11 @@ function toRecord(r, src, type = db.type) {
   };
   if (r.kind === 'dist') rec.phases = r.phases.map(r1);
   if (r.kind === 'reach') { rec.jumpCm = r1(r.jumpCm); rec.rimCm = r.targetCm; }
+  if (Number.isFinite(r.contactMs)) {   // drop jump
+    rec.contactMs = Math.round(r.contactMs); rec.rsi = Math.round(r.rsi * 100) / 100;
+    rec.contactErr = Math.round(r.contactErrMs);
+    if (Number.isFinite(r.dropCm)) rec.dropCm = Math.round(r.dropCm);
+  }
   return rec;
 }
 const byAt = (a, b) => (a.at < b.at ? -1 : a.at > b.at ? 1 : 0);   // ISO timestamps sort as strings
@@ -1247,6 +1453,8 @@ const jumpsOf = type => db.jumps.filter(j => j.type === type).sort(byAt);
 /** Quality flags only — "uncalibrated" just widens the ± and doesn't disqualify a result. */
 const qualityFlags = j => j.flags.filter(f => !INFO_FLAGS.has(f));
 const cleanOf = js => js.filter(j => !qualityFlags(j).length);
+/** Best RSI of drop-jump records, or null when none has one. */
+const bestRsi = js => { const v = js.map(j => j.rsi).filter(x => x != null && Number.isFinite(+x)).map(Number); return v.length ? Math.max(...v) : null; };
 /** A record is a jump without quality flags: flagged jumps never count as a personal best. */
 const bestOf = js => cleanOf(js).reduce((a, j) => (!a || j.cm > a.cm ? j : a), null);
 /** The record a result is compared against: the best clean result of its type other than itself. */
@@ -1372,14 +1580,21 @@ tabBtns.forEach((b, i) => {
 
 // Last chosen type per group, so switching groups back and forth keeps the variant.
 const lastOfGroup = {};
+// Left/right pairs (single-leg types) show as one chip plus a Vasen/Oikea switch; the last side is kept per pair.
+const lastSide = {};
 function renderTypes() {
-  const g = kindOf(db.type);
+  const g = kindOf(db.type), cur = typeOf(db.type);
   lastOfGroup[g] = db.type;
+  if (cur.pair) lastSide[cur.pair] = cur.side;
   $('groups').innerHTML = GROUPS.map(x => `<button data-group="${x.id}" aria-pressed="${x.id === g}">${x.name}</button>`).join('');
-  const inGroup = TYPES.filter(t => t.group === g);
+  const inGroup = TYPES.filter(t => t.group === g && (!t.pair || t.side === 'L'));
   $('types').classList.toggle('single', inGroup.length < 2);
-  $('types').innerHTML = inGroup.map(t => `<button class="chip" data-type="${t.id}" aria-pressed="${t.id === db.type}">${PICTO[t.id] || ''}${t.name}</button>`).join('');
-  $('typeHint').textContent = typeOf(db.type).hint;
+  $('types').innerHTML = inGroup.map(t => (t.pair
+    ? `<button class="chip" data-pair="${t.pair}" aria-pressed="${cur.pair === t.pair}">${pictoOf(t.id)}${t.chip}</button>`
+    : `<button class="chip" data-type="${t.id}" aria-pressed="${t.id === db.type}">${pictoOf(t.id)}${t.name}</button>`)).join('');
+  $('sideBar').hidden = !cur.pair;
+  $('sideBar').querySelectorAll('[data-side]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.side === cur.side)));
+  $('typeHint').textContent = cur.hint;
 }
 function setType(id) {
   if (id === db.type) return;
@@ -1394,7 +1609,13 @@ function setType(id) {
 }
 $('types').addEventListener('click', ev => {
   const b = ev.target.closest('[data-type]');
-  if (b) setType(b.dataset.type);
+  if (b) { setType(b.dataset.type); return; }
+  const pair = ev.target.closest('[data-pair]')?.dataset.pair;
+  if (pair) setType(pairType(pair, lastSide[pair] || 'L'));
+});
+$('sideBar').addEventListener('click', ev => {
+  const side = ev.target.closest('[data-side]')?.dataset.side, t = typeOf(db.type);
+  if (side && t.pair) setType(pairType(t.pair, side));
 });
 $('groups').addEventListener('click', ev => {
   const g = ev.target.closest('[data-group]')?.dataset.group;
@@ -1553,7 +1774,8 @@ for (const stage of ['live', 'video']) {
 // ---------- LIVE ----------
 const cam = $('cam'), camOverlay = $('camOverlay'), camCtx = camOverlay.getContext('2d');
 // startSeq: bumped by stopLive, so a start still awaiting the model/camera knows it was cancelled.
-const live = { running: false, starting: false, startSeq: 0, stream: null, lmk: null, det: null, timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity, wakeLock: null, bigTimer: null, session: [] };
+const live = { running: false, starting: false, startSeq: 0, stream: null, lmk: null, det: null, timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity, wakeLock: null, bigTimer: null, session: [],
+  hand: null, lmBuf: [], offs: [] };
 // Camera setup advice for the empty viewfinder, per group.
 const EMPTY = {
   vert: ['Puhelin 2–3 metrin päähän', $('liveEmptyText').textContent],
@@ -1569,7 +1791,7 @@ function renderEmpty() {
 function newDetector() {
   const t = typeOf(db.type);
   if (t.group === 'dist') return new DistanceTracker({ expected: t.flights, cal: calPx('live', 'dist'), statureCm: stature() });
-  return new JumpDetector({ statureCm: stature(), requireReady: !t.runUp, checkArms: !!t.checkArms });
+  return new JumpDetector({ statureCm: stature(), requireReady: !t.runUp, ...detOpts(t) });
 }
 
 function cameraError(e) {
@@ -1636,9 +1858,11 @@ async function openCamera() {
   $('liveStatus').hidden = $('liveFps').hidden = false;
   const s = live.stream.getVideoTracks()[0]?.getSettings?.() || {};
   $('liveInfo').textContent = `${cam.videoWidth}×${cam.videoHeight}${s.frameRate ? ` · kamera ${Math.round(s.frameRate)} fps` : ''}`;
-  Object.assign(live, { running: true, det: newDetector(), timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity });
+  Object.assign(live, { running: true, det: newDetector(), timeSrc: null, lastT: -Infinity, lastVT: -1, frames: [], fpsShownAt: -Infinity,
+    hand: new HandSignal(), lmBuf: [], offs: [] });
   requestWakeLock();
   scheduleLiveFrame();
+  startRecorders();
   return true;
 }
 
@@ -1648,8 +1872,10 @@ function stopLive(endSeries = true) {
   live.startSeq++;          // cancels a start that is still awaiting the model or the camera
   live.running = false;
   $('startCam').disabled = false;
+  stopRecorders();
   live.stream?.getTracks().forEach(t => t.stop());
   live.stream = null;
+  if (series.waiting) { series.waiting = false; paintSeries(); }
   cam.srcObject = null;
   live.wakeLock?.release?.().catch(() => {});
   live.wakeLock = null;
@@ -1713,6 +1939,8 @@ function onLiveFrame(now, meta) {
   try { lm = firstPose(live.lmk.detectForVideo(cam, performance.now())); }
   catch (e) { console.error(e); return; }
   const f = lm ? frameFeatures(lm, W, H) : null;
+  noteFrame(t, lm);
+  if (db.settings.seriesStart === 'hand' && live.hand.push(t, f)) onHandSignal();
   const ev = live.det.push(t, f);
   const st = live.det.status();
   const kind = kindOf(db.type);
@@ -1738,6 +1966,8 @@ function setLiveStatus(st, lm, f) {
   if (st === 'air') { text = 'Ilmassa…'; cls = 'air'; }
   else if (!lm) { text = 'Asetu kuvaan – koko vartalo näkyviin'; cls = 'warn'; }
   else if (!f) { text = 'Jalkaterät eivät näy – siirry kauemmas'; cls = 'warn'; }
+  else if (series.waiting) text = 'Kädet ylös 1 s – sarja alkaa';
+  else if (series.on && series.startCd) text = 'Asetu paikallesi…';
   else if (st === 'settle') text = 'Seiso hetki paikallaan…';
   else { text = typeOf(db.type).readyText || 'Valmis – hyppää!'; cls = 'ready'; }
   if (el.textContent !== text) { el.textContent = text; el.className = 'pill ' + cls; }
@@ -1757,8 +1987,10 @@ function onLiveEvent(ev) {
 }
 
 function showLiveResult(r) {
+  if (series.on && series.startCd) return;   // a jump during the start countdown (walking into place) is not part of it
   const saveable = isSaveable(r);
   const rec = toRecord(r, 'live');
+  captureClip(rec.id, r);
   // Spoken before the save: the save may end a series, whose summary is queued after this, not cut off by it.
   const pr = saveable && isRecord(rec);
   speak(speechFor(r) + (pr ? ', uusi ennätys' : ''));
@@ -1769,14 +2001,17 @@ function showLiveResult(r) {
   big.hidden = false; big.style.opacity = 1;
   clearTimeout(live.bigTimer);
   live.bigTimer = setTimeout(() => { big.style.opacity = 0; live.bigTimer = setTimeout(() => (big.hidden = true), 400); }, 6000);
-  $('liveResult').replaceChildren(resultCardFor(r, { extra: saveable ? `<button class="btn sm" data-share="${rec.id}">Jaa</button><button class="btn sm ghost" data-del="${rec.id}">Hylkää</button>` : '' }));
+  $('liveResult').replaceChildren(resultCardFor(r, { extra: `<button class="btn sm" data-clip="${rec.id}" hidden>▶ Leike</button>`
+    + (saveable ? `<button class="btn sm" data-share="${rec.id}">Jaa</button><button class="btn sm ghost" data-del="${rec.id}">Hylkää</button>` : '') }));
   jumpsChanged();
 }
 
 // ---------- series mode (erilliset-1): counter on the stage, spoken rest countdown, summary ----------
 // done: the series' saved results (kept after the end for the summary); ended: the summary is showing.
 // gen: bumped by every start, so an undo restores a result only into the series it was removed from.
-const series = { on: false, ended: false, type: null, done: [], restEnd: 0, timer: null, said: null, gen: 0 };
+// waiting: started in hand-signal mode, the camera runs and the series begins on the signal;
+// startCd: the 10 s start countdown is running (results are ignored until it ends).
+const series = { on: false, ended: false, type: null, done: [], restEnd: 0, timer: null, said: null, gen: 0, waiting: false, startCd: false };
 const speakVal = (type, cm) => (kindOf(type) === 'dist' ? `${fmt(cm / 100, 2)} metriä` : `${Math.round(cm)} senttiä`);
 const fmtDiff = (type, d) => `${d >= 0 ? '+' : '−'}${fmtVal(type, Math.abs(d))}`;
 const mean = xs => xs.reduce((a, x) => a + x, 0) / xs.length;
@@ -1787,18 +2022,37 @@ function seriesStats() {
   const before = bestOf(jumpsOf(series.type).filter(j => !d.includes(j)));
   return { n: d.length, best: Math.max(...pool.map(j => j.cm)), avg: mean(pool.map(j => j.cm)), prev: before ? before.cm : null };
 }
-function seriesStart() {
+/** Start a series. In hand-signal mode the button only arms it (camera on, waiting); the signal (fromSignal) starts it. */
+function seriesStart(fromSignal = false) {
   unlockAudio();
-  Object.assign(series, { on: true, ended: false, type: db.type, done: [], restEnd: 0, said: null, gen: series.gen + 1 });
-  const gen = series.gen;
-  if (!live.running) startLive().then(ok => {
-    if (ok || !series.on || series.gen !== gen) return;
-    series.on = false;   // no camera, no series (the reason is already on the stage)
+  const mode = db.settings.seriesStart;
+  if (mode === 'hand' && !fromSignal) {
+    Object.assign(series, { waiting: true, ended: false, gen: series.gen + 1 });
+    ensureCamera(series.gen, () => series.waiting, () => { series.waiting = false; });
+    speak('Nosta molemmat kädet pään yläpuolelle sekunniksi, kun olet valmis.');
     paintSeries();
-  });
+    return;
+  }
+  Object.assign(series, { on: true, waiting: false, startCd: false, ended: false, type: db.type, done: [], restEnd: 0, said: null, gen: series.gen + 1 });
+  ensureCamera(series.gen, () => series.on, () => { series.on = false; });
   const n = db.settings.seriesN;
-  speak(`Sarja alkaa: ${n} ${kindOf(db.type) === 'dist' ? 'suoritusta' : 'hyppyä'}.`);
+  speak(`Sarja alkaa: ${n} ${kindOf(db.type) === 'dist' ? 'suoritusta' : 'hyppyä'}.${mode === 'timer' ? ' Kymmenen sekuntia.' : ''}`);
+  if (mode === 'timer') { series.startCd = true; startRest(10); }
   paintSeries();
+}
+/** Camera on for a series; if it fails, `cancel` undoes the series state (the reason is already on the stage). */
+function ensureCamera(gen, still, cancel) {
+  if (live.running) return;
+  startLive().then(ok => {
+    if (ok || !still() || series.gen !== gen) return;
+    cancel(); paintSeries();
+  });
+}
+/** Both hands up for a second: starts a series when none runs, ends the running one. */
+function onHandSignal() {
+  beep(990, 160);
+  if (series.on) seriesEnd();
+  else seriesStart(true);
 }
 function seriesAdd(rec) {
   if (!series.on || rec.type !== series.type) return;
@@ -1806,9 +2060,10 @@ function seriesAdd(rec) {
   if (series.done.length >= db.settings.seriesN) seriesEnd();
   else if (db.settings.seriesRest > 0) startRest();
 }
-function startRest() {
+function startRest(secs = db.settings.seriesRest) {
   clearInterval(series.timer);
-  series.restEnd = Date.now() + db.settings.seriesRest * 1000;
+  series.restEnd = Date.now() + secs * 1000;
+  $('restLabel').textContent = series.startCd ? 'Aloitus' : 'Palautus';
   series.said = null;
   series.timer = setInterval(tickRest, 250);
   tickRest();
@@ -1817,6 +2072,8 @@ function tickRest() {
   const left = Math.ceil((series.restEnd - Date.now()) / 1000);
   if (left <= 0) {
     clearInterval(series.timer); series.timer = null; series.restEnd = 0;
+    // end of the start countdown: a fresh detector, so walking into place never becomes a standing reference
+    if (series.startCd) { series.startCd = false; if (live.running) live.det = newDetector(); }
     beep(1320, 220);
     speak(`Valmis. ${kindOf(series.type) === 'dist' ? 'Suoritus' : 'Hyppy'} ${series.done.length + 1}.`);
     paintSeries();
@@ -1825,14 +2082,15 @@ function tickRest() {
   if (series.said === left) return;   // the DOM changes once a second
   series.said = left;
   // the result was just spoken: the first call-out comes at 30 s (only when the rest is longer) or 10 s
-  if ((left === 30 && db.settings.seriesRest > 30) || left === 10) speak(`${left} sekuntia`);
+  if (!series.startCd && ((left === 30 && db.settings.seriesRest > 30) || left === 10)) speak(`${left} sekuntia`);
   else if (left <= 3) beep(660, 90);
   $('restCount').textContent = `${Math.floor(left / 60)}:${String(left % 60).padStart(2, '0')}`;
   $('restNext').textContent = `seuraava ${series.done.length + 1}/${db.settings.seriesN}`;
   $('restTag').hidden = false;
 }
 function seriesEnd() {
-  clearInterval(series.timer); series.timer = null; series.restEnd = 0;
+  clearInterval(series.timer); series.timer = null; series.restEnd = 0; series.startCd = false;
+  if (series.waiting) { series.waiting = false; paintSeries(); return; }
   if (!series.on) return;
   series.on = false;
   const st = seriesStats();
@@ -1842,13 +2100,15 @@ function seriesEnd() {
 }
 function paintSeries() {
   const on = series.on, N = db.settings.seriesN, type = series.type, st = seriesStats();
-  $('serStart').textContent = on ? 'Lopeta sarja' : 'Aloita sarja';
-  $('serStart').classList.toggle('primary', !on);
-  $('serN').disabled = $('serRest').disabled = on;
-  $('seriesTag').hidden = !on;
-  if (on) $('seriesTag').innerHTML = `<div class="n">${series.done.length}/${N}</div><div class="m">${st ? 'paras ' + esc(fmtVal(type, st.best)) : 'sarja käynnissä'}</div>`;
+  const waiting = series.waiting;
+  $('serStart').textContent = on ? 'Lopeta sarja' : waiting ? 'Peru' : 'Aloita sarja';
+  $('serStart').classList.toggle('primary', !on && !waiting);
+  $('serN').disabled = $('serRest').disabled = $('serMode').disabled = on || waiting;
+  $('seriesTag').hidden = !on && !waiting;
+  if (waiting) $('seriesTag').innerHTML = `<div class="n">✋</div><div class="m">kädet ylös 1 s</div>`;
+  else if (on) $('seriesTag').innerHTML = `<div class="n">${series.done.length}/${N}</div><div class="m">${st ? 'paras ' + esc(fmtVal(type, st.best)) : 'sarja käynnissä'}</div>`;
   if (!series.restEnd) $('restTag').hidden = true;
-  $('serSum').innerHTML = on ? `<p class="muted small">${esc(typeName(type))}: ${series.done.length}/${N} tehty${db.settings.seriesRest ? ` · palautus ${db.settings.seriesRest} s` : ''}.</p>`
+  $('serSum').innerHTML = waiting ? `<p class="muted small">Odottaa käsimerkkiä: seiso kuvassa ja nosta molemmat kädet pään yläpuolelle sekunniksi.</p>` : on ? `<p class="muted small">${esc(typeName(type))}: ${series.done.length}/${N} tehty${db.settings.seriesRest ? ` · palautus ${db.settings.seriesRest} s` : ''}.</p>`
     : series.ended && st ? `<div class="metrics">
       <div class="metric"><div class="k">Sarja (${st.n})</div><div class="v">paras ${esc(fmtVal(type, st.best))}</div></div>
       <div class="metric"><div class="k">Keskiarvo</div><div class="v">${esc(fmtVal(type, st.avg))}</div></div>
@@ -1860,7 +2120,9 @@ $('serN').value = String(db.settings.seriesN);
 $('serRest').value = String(db.settings.seriesRest);
 $('serN').addEventListener('change', () => { db.settings.seriesN = +$('serN').value; save(); });
 $('serRest').addEventListener('change', () => { db.settings.seriesRest = +$('serRest').value; save(); });
-$('serStart').addEventListener('click', () => (series.on ? seriesEnd() : seriesStart()));
+$('serMode').value = db.settings.seriesStart;
+$('serMode').addEventListener('change', () => { db.settings.seriesStart = $('serMode').value; save(); });
+$('serStart').addEventListener('click', () => (series.on || series.waiting ? seriesEnd() : seriesStart()));
 
 // ---------- remote display (erilliset-2): the result readable from 3–6 m, until the next jump ----------
 const remoteOn = () => document.body.classList.contains('remote');
@@ -1900,29 +2162,224 @@ $('remoteClose').addEventListener('click', ev => { ev.stopPropagation(); setRemo
 document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && remoteOn()) setRemote(false); });
 document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && remoteOn()) setRemote(false); });
 const showLiveJump = showLiveResult;   // name kept for the ?debug hook
+
+// ---------- clips: the last seconds of the camera, kept in memory for each live result ----------
+// A main MediaRecorder runs CLIP.seg-long segments back to back; a bridge recorder runs CLIP.bridge s on both sides of
+// each restart, so the last ≥ CLIP.bridge seconds are always inside one file while a second encoder runs only ~40 % of
+// the time (the phone also runs the pose model). A single recorder can't be cut from the middle: only its first chunk
+// has the container header. A result stops the recorder that covers it and keeps its file; the landmarks of the same
+// seconds are kept too, so the clip plays with the skeleton. Nothing is written to storage or sent anywhere.
+const CLIP = { seg: 15000, bridge: 3000, keep: 6 };
+const clips = new Map();        // rec id → { url, blob, from, to, tBase, lm: [{t, lm}], mirror, name }
+const recs = { list: [], mime: undefined, seq: 0 };
+const clipMime = () => ['video/mp4;codecs=avc1', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm']
+  .find(m => MediaRecorder.isTypeSupported?.(m)) || '';
+const clipsOn = () => db.settings.clips && typeof MediaRecorder !== 'undefined' && !!live.stream;
+/** Per frame (clips on): landmarks for clip playback and the lag between analysis time and performance.now. */
+function noteFrame(t, lm) {
+  if (!clipsOn()) return;
+  live.offs.push(performance.now() / 1000 - t);
+  if (live.offs.length > 90) live.offs.shift();
+  if (lm) live.lmBuf.push({ t, lm });
+  while (live.lmBuf.length && live.lmBuf[0].t < t - 12) live.lmBuf.shift();
+}
+/** analysis time → performance.now seconds: capture time already is that clock; otherwise the smallest recent lag. */
+const clockOff = () => (live.timeSrc === 'capture' ? 0 : live.offs.length ? Math.min(...live.offs) : NaN);
+function startRecorders() {
+  if (!clipsOn()) return;
+  recs.mime ??= clipMime();
+  startMain(++recs.seq);
+}
+function newRecorder(seq, ms, onStop = null) {
+  if (!clipsOn() || seq !== recs.seq) return null;
+  const r = { mr: null, start: 0, chunks: [], timer: 0, bridgeT: 0, want: null };
+  try { r.mr = new MediaRecorder(live.stream, { ...(recs.mime ? { mimeType: recs.mime } : {}), videoBitsPerSecond: 1_500_000 }); }
+  catch (e) { console.warn('Videoleike ei käytössä', e); return null; }
+  r.mr.ondataavailable = e => { if (e.data.size) r.chunks.push(e.data); };
+  r.mr.onstop = () => {
+    clearTimeout(r.bridgeT);
+    recs.list = recs.list.filter(x => x !== r);
+    if (r.want) r.want(new Blob(r.chunks, { type: r.mr.mimeType || recs.mime || 'video/webm' }));
+    if (seq === recs.seq && live.running) onStop?.();
+  };
+  try { r.mr.start(); } catch (e) { console.warn(e); return null; }
+  r.start = performance.now() / 1000;
+  r.timer = setTimeout(() => { if (r.mr.state === 'recording' && !r.want) r.mr.stop(); }, ms);
+  recs.list.push(r);
+  return r;
+}
+function startMain(seq) {
+  const r = newRecorder(seq, CLIP.seg, () => startMain(seq));
+  if (r) r.bridgeT = setTimeout(() => newRecorder(seq, 2 * CLIP.bridge), CLIP.seg - CLIP.bridge);
+}
+function stopRecorders() {
+  recs.seq++;
+  // a clip still waiting for its delayed stop is kept (its file just ends a little earlier)
+  for (const r of recs.list) { clearTimeout(r.timer); clearTimeout(r.bridgeT); try { if (r.mr.state !== 'inactive') r.mr.stop(); } catch { /* gone */ } }
+  recs.list = [];
+}
+/** Keep the seconds around a live result (t0 − 0.7 s … t1 + 0.7 s) as a clip for that result id. */
+function captureClip(id, r) {
+  const off = clockOff();
+  if (!clipsOn() || !Number.isFinite(r.t0) || !Number.isFinite(off)) return;
+  const t1 = Number.isFinite(r.t1) ? r.t1 : r.t0;
+  const from = r.t0 - 0.7 + off, to = t1 + 0.7 + off, now = performance.now() / 1000;
+  // the most recently started recorder that was already running at `from`
+  const cand = recs.list.filter(x => x.mr.state === 'recording' && !x.want && x.start <= from).sort((a, b) => b.start - a.start)[0];
+  if (!cand) return;
+  clearTimeout(cand.timer); clearTimeout(cand.bridgeT);
+  const lm = live.lmBuf.filter(x => x.t >= r.t0 - 0.9 && x.t <= t1 + 0.9), mirror = db.settings.camera === 'user';
+  cand.want = blob => {
+    const ext = /mp4/.test(blob.type) ? 'mp4' : 'webm';
+    clips.set(id, { url: URL.createObjectURL(blob), blob, from: from - cand.start, to: to - cand.start, tBase: cand.start - off, lm, mirror,
+      name: `hyppy-${localDay(new Date())}-${id.slice(-4)}.${ext}` });
+    // keep the newest CLIP.keep clips, records first
+    if (clips.size > CLIP.keep) {
+      const isRec = x => { const j = db.jumps.find(y => y.id === x); return !!j && isRecord(j); };
+      const ids = [...clips.keys()], drop = ids.find(x => x !== id && !isRec(x)) || ids[0];
+      URL.revokeObjectURL(clips.get(drop).url); clips.delete(drop);
+    }
+    document.querySelectorAll(`[data-clip="${CSS.escape(id)}"]`).forEach(b => (b.hidden = false));
+    renderSession();
+  };
+  setTimeout(() => { try { if (cand.mr.state === 'recording') cand.mr.stop(); } catch { /* stopped */ } }, Math.max(0, (to - now) * 1000));
+}
+
+// clip player: loops the jump slowly with the skeleton drawn from the landmarks kept for it
+const clipVid = $('clipVid'), clipCv = $('clipOverlay'), clipCtx = clipCv.getContext('2d');
+const cp = { clip: null, rate: 0.25, skel: true, seq: 0 };
+async function openClip(id) {
+  const c = clips.get(id);
+  if (!c) return;
+  cp.clip = c; const seq = ++cp.seq;
+  $('clipShare').textContent = c.trim && c.trimSkel === cp.skel ? 'Jaa video (valmis)' : 'Jaa video';
+  const j = db.jumps.find(x => x.id === id) || live.session.find(x => x.id === id);
+  $('clipTitle').textContent = j ? `${typeName(j.type)} · ${fmtVal(j.type, j.cm)}` : 'Leike';
+  $('clipStage').classList.toggle('mirror', c.mirror);
+  clipVid.src = c.url;
+  $('clipDlg').showModal();
+  await new Promise(r => { clipVid.addEventListener('loadedmetadata', r, { once: true }); setTimeout(r, 3000); });
+  if (seq !== cp.seq) return;
+  // MediaRecorder WebM has no duration: seeking far ahead makes the browser scan it once, then seeks work
+  if (!Number.isFinite(clipVid.duration)) {
+    clipVid.currentTime = 1e6;
+    await new Promise(r => { clipVid.addEventListener('durationchange', r, { once: true }); setTimeout(r, 1500); });
+  }
+  const w = clipVid.videoWidth || 640, h = clipVid.videoHeight || 480;
+  sizeStage($('clipStage'), clipCv, w, h);
+  clipVid.playbackRate = cp.rate;
+  clipVid.currentTime = Math.max(0, c.from);
+  try { await clipVid.play(); } catch { /* muted autoplay */ }
+  clipFrame(seq);
+}
+function clipFrame(seq) {
+  if (seq !== cp.seq || !$('clipDlg').open) return;
+  const c = cp.clip, mt = clipVid.currentTime;
+  if (mt > c.to || clipVid.ended) { clipVid.currentTime = Math.max(0, c.from); clipVid.play().catch(() => {}); }
+  clipCtx.clearRect(0, 0, clipCv.width, clipCv.height);
+  if (cp.skel && c.lm.length) {
+    const t = mt + c.tBase;
+    const near = c.lm.reduce((a, b) => (Math.abs(b.t - t) < Math.abs(a.t - t) ? b : a));
+    if (Math.abs(near.t - t) < 0.1) drawPose(clipCtx, near.lm, clipCv.width, clipCv.height);
+  }
+  if (clipVid.requestVideoFrameCallback) clipVid.requestVideoFrameCallback(() => clipFrame(seq));
+  else requestAnimationFrame(() => clipFrame(seq));
+}
+// a loop end at the file's end gets no frame callback after it: restart from the ended event (like replay)
+clipVid.addEventListener('ended', () => {
+  if (!cp.clip || !$('clipDlg').open) return;
+  const seq = ++cp.seq;
+  clipVid.currentTime = Math.max(0, cp.clip.from);
+  clipVid.play().then(() => clipFrame(seq)).catch(() => {});
+});
+$('clipClose').addEventListener('click', () => $('clipDlg').close());
+$('clipDlg').addEventListener('close', () => { cp.seq++; clipVid.pause(); clipVid.removeAttribute('src'); clipVid.load(); });
+$('clipRate').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-rate]');
+  if (!b) return;
+  cp.rate = +b.dataset.rate; clipVid.playbackRate = cp.rate;
+  $('clipRate').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+});
+$('clipSkel').addEventListener('click', () => {
+  cp.skel = !cp.skel; $('clipSkel').setAttribute('aria-pressed', String(cp.skel));
+  $('clipShare').textContent = cp.clip?.trim && cp.clip.trimSkel === cp.skel ? 'Jaa video (valmis)' : 'Jaa video';
+});
+// Sharing sends only the jump window (from…to), re-recorded from the player with the skeleton if it is on — never the
+// whole recorder segment, which also holds the seconds before it that were never shown. Re-recording is async, so the
+// first tap prepares the file and a second tap shares it (Web Share needs a fresh tap).
+$('clipShare').addEventListener('click', async () => {
+  const c = cp.clip;
+  if (!c) return;
+  if (c.trim && c.trimSkel === cp.skel) { shareBlob(c.trim, c.name, 'Video ladattu.'); return; }
+  const btn = $('clipShare');
+  btn.disabled = true; btn.textContent = 'Valmistellaan…';
+  try {
+    c.trim = await trimClip(c, cp.skel); c.trimSkel = cp.skel;
+    c.name = c.name.replace(/\.\w+$/, /mp4/.test(c.trim.type) ? '.mp4' : '.webm');
+    btn.textContent = 'Jaa video (valmis)';
+  } catch (e) { console.warn(e); toast('Videon valmistelu epäonnistui.'); btn.textContent = 'Jaa video'; }
+  finally { btn.disabled = false; }
+});
+/** The clip's jump window as its own file: played once at 1× onto a canvas (mirrored like on screen) and recorded. */
+async function trimClip(c, skel) {
+  const v = document.createElement('video');
+  v.muted = true; v.playsInline = true; v.src = c.url;
+  await new Promise((ok, no) => { v.onloadedmetadata = ok; v.onerror = no; });
+  if (!Number.isFinite(v.duration)) { v.currentTime = 1e6; await new Promise(r => { v.ondurationchange = r; setTimeout(r, 1500); }); }
+  const cv = document.createElement('canvas'), ctx = cv.getContext('2d'), sk = document.createElement('canvas');
+  cv.width = sk.width = v.videoWidth || 640; cv.height = sk.height = v.videoHeight || 480;
+  v.currentTime = Math.max(0, c.from);
+  await new Promise(r => { v.onseeked = r; setTimeout(r, 1500); });
+  const mr = new MediaRecorder(cv.captureStream(30), { ...(recs.mime ? { mimeType: recs.mime } : {}), videoBitsPerSecond: 2_500_000 });
+  const chunks = [];
+  mr.ondataavailable = e => { if (e.data.size) chunks.push(e.data); };
+  const done = new Promise(r => { mr.onstop = r; });
+  mr.start();
+  await v.play();
+  await new Promise(resolve => {
+    const draw = () => {
+      ctx.save();
+      if (c.mirror) { ctx.translate(cv.width, 0); ctx.scale(-1, 1); }
+      ctx.drawImage(v, 0, 0, cv.width, cv.height);
+      if (skel && c.lm.length) {
+        const t = v.currentTime + c.tBase, near = c.lm.reduce((a, b) => (Math.abs(b.t - t) < Math.abs(a.t - t) ? b : a));
+        if (Math.abs(near.t - t) < 0.1) { drawPose(sk.getContext('2d'), near.lm, sk.width, sk.height); ctx.drawImage(sk, 0, 0); }
+      }
+      ctx.restore();
+      if (v.currentTime >= c.to || v.ended) { v.pause(); resolve(); } else requestAnimationFrame(draw);
+    };
+    draw();
+  });
+  mr.stop(); await done;
+  return new Blob(chunks, { type: mr.mimeType || recs.mime || 'video/webm' });
+}
+document.addEventListener('click', ev => {
+  const b = ev.target.closest('[data-clip]');
+  if (b && !b.closest('#clipDlg')) openClip(b.dataset.clip);
+});
 listActions($('liveResult'), () => $('liveResult').replaceChildren());
 
-function jumpRow(j, { showType = false, best = false, share = false, pick = null } = {}) {   // pick: 'A' | 'B' | '' (unpicked) | null (off)
+function jumpRow(j, { showType = false, best = false, share = false, pick = null, clip = false } = {}) {   // pick: 'A' | 'B' | '' (unpicked) | null (off)
   const kind = kindOf(j.type);
   const warn = j.flags.length ? `<span class="badge w" title="${esc(j.flags.map(f => flagText(kind, f)).join(' '))}">huom.</span>` : '';
   const detail = kind === 'dist'
     ? `${Array.isArray(j.phases) && j.phases.length > 1 ? phasesText(j.phases) + ' m · ' : ''}±${fmt(j.err, 0)} cm`
     : kind === 'reach'
       ? `${rimText(marginOf(j))} · ±${fmt(j.err, 0)}${j.jumpCm != null ? ` · hyppy ${fmt(+j.jumpCm)} cm` : ''}`
-      : `${fmt(+j.ms, 0)} ms · ±${fmt(j.err)} · ${fmt(+j.fps, 0)} fps${j.hipCm != null ? ` · lantio ${fmt(+j.hipCm)} cm` : ''}`;
+      : `${j.rsi != null ? `RSI ${fmt(+j.rsi, 2)} · kontakti ${fmt(+j.contactMs, 0)} ms · ` : ''}${fmt(+j.ms, 0)} ms · ±${fmt(j.err)} · ${fmt(+j.fps, 0)} fps${j.hipCm != null ? ` · lantio ${fmt(+j.hipCm)} cm` : ''}`;
   const note = (j.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('') + (j.note ? esc(j.note) : '');
   const id = esc(j.id);
-  return `<li>
+  return `<li${best ? ' class="pr"' : ''}>
     <div><div><span class="h">${fmtVal(j.type, j.cm)}</span> ${best ? '<span class="badge pr">ennätys</span>' : ''} ${warn}</div>
       <div class="d">${fmtWhen(j.at)}${showType ? ' · ' + esc(typeName(j.type)) : ''} · ${detail} · ${j.src === 'video' ? 'video' : 'kamera'}</div>
       ${note ? `<div class="note">${note}</div>` : ''}</div>
-    <div class="acts">${pick != null ? `<button class="x pick" data-pick="${id}" aria-pressed="${!!pick}" aria-label="Valitse vertailuun">${pick || '○'}</button>` : ''}${share ? `<button class="x" data-share="${id}" aria-label="Jaa kuvana">⤴</button>` : ''}<button class="x" data-note="${id}" aria-label="Muistiinpano ja tunnisteet">✎</button><button class="x" data-del="${id}" aria-label="Poista">✕</button></div>
+    <div class="acts">${clip ? `<button class="x" data-clip="${id}" aria-label="Toista videoleike">▶</button>` : ''}${pick != null ? `<button class="x pick" data-pick="${id}" aria-pressed="${!!pick}" aria-label="Valitse vertailuun">${pick || '○'}</button>` : ''}${share ? `<button class="x" data-share="${id}" aria-label="Jaa kuvana">⤴</button>` : ''}<button class="x" data-note="${id}" aria-label="Muistiinpano ja tunnisteet">✎</button><button class="x" data-del="${id}" aria-label="Poista">✕</button></div>
   </li>`;
 }
 function renderSession() {
   $('sessionCard').hidden = !live.session.length;
   $('sessionVire').innerHTML = live.session.length ? vireHtml(db.type) : '';
-  $('sessionList').innerHTML = live.session.map(j => jumpRow(j, { showType: true })).join('');
+  $('sessionList').innerHTML = live.session.map(j => jumpRow(j, { showType: true, clip: clips.has(j.id) })).join('');
 }
 listActions($('sessionList'));
 
@@ -1946,8 +2403,10 @@ function readiness(type) {
   if (today.length < VIRE.minToday) return { wait: `Päivän vire näkyy, kun tänään on vähintään ${VIRE.minToday} hyppyä (nyt ${today.length}).` };
   if (best.size < VIRE.minDays) return { wait: `Päivän vire näkyy, kun neljän viikon sisällä on vähintään ${VIRE.minDays} aiempaa treenipäivää.` };
   const base = mean([...best.values()]), pct = Math.max(...today) / base * 100;
-  return { pct, base, days: best.size, zone: pct >= VIRE.go ? 'go' : pct >= VIRE.mid ? 'mid' : 'low' };
+  return { pct, base, days: best.size, zone: zoneOf(pct, VIRE) };
 }
+/** 'go' | 'mid' | 'low' against thresholds {go, mid} (readiness VIRE, limb symmetry LSI). */
+const zoneOf = (v, T) => (v >= T.go ? 'go' : v >= T.mid ? 'mid' : 'low');
 const ZONE_TEXT = { go: 'Hyvä vire', mid: 'Tavallista heikompi', low: 'Selvästi heikompi – kevennä?' };
 const virePos = pct => Math.max(0, Math.min(100, (pct - VIRE.lo) / (VIRE.hi - VIRE.lo) * 100));
 function vireHtml(type) {
@@ -2007,6 +2466,7 @@ $('vidFile').addEventListener('change', async () => {
   $('vidResults').replaceChildren(); $('manualOut').replaceChildren(); $('vidMarks').replaceChildren();
   $('vidName').textContent = file.name;
   $('vidPlayer').hidden = false;   // a display:none <video> may not start loading
+  $('vidSteps').hidden = true;
   vid.src = vs.url;
   try {
     await new Promise((res, rej) => { vid.onloadeddata = res; vid.onerror = () => rej(vid.error); });
@@ -2196,7 +2656,7 @@ async function analyzeVideo() {
     };
     const t = typeOf(db.type), kind = t.group;
     // Video may be slowed down but read as real time: allow long flights and slow rises.
-    const opts = { statureCm: stature(), checkArms: !!t.checkArms, timeout: 12, riseWindow: 0.6 };
+    const opts = { statureCm: stature(), timeout: 12, riseWindow: 0.6, ...detOpts(t) };
     const sorted = () => [...frames.values()].sort((a, b) => a.t - b.t);
     const run = () => (kind === 'dist'
       ? measureDistances(sorted(), { cal: calPx('video', 'dist'), expected: t.flights, statureCm: stature() }).filter(r => r.ok)
@@ -2222,7 +2682,8 @@ async function analyzeVideo() {
     if (stride > 1 && jumps.length && kind !== 'dist') {
       const fine = [];
       for (const j of jumps) {
-        for (let i = Math.floor((j.t0 - 0.3) * realFps); i <= Math.ceil((j.t1 + 0.3) * realFps); i++) fine.push(i);
+        // a drop jump's contact and the fall before it come before the takeoff: refine those too
+        for (let i = Math.floor((j.t0 - (t.drop ? DROP_LOOKBACK_S + 0.1 : 0.3)) * realFps); i <= Math.ceil((j.t1 + 0.3) * realFps); i++) fine.push(i);
       }
       await grabAll(fine, 60, 100, 'Tarkennetaan irtoamista ja alastuloa…');
       jumps = run();
@@ -2468,17 +2929,28 @@ function renderHistory() {
   const type = curHistType();
   const group = TYPES.filter(t => t.group === kindOf(type));
   const lists = Object.fromEntries(group.map(t => [t.id, jumpsOf(t.id)]));
+  const empty = group.every(t => !lists[t.id].length);
+  $('histEmpty').hidden = !empty;
+  $('summary').hidden = $('tab-history').querySelector('.cols').hidden = empty;
+  if (empty) {
+    $('histEmptyTitle').textContent = `Ei vielä tuloksia: ${groupOf(kindOf(type)).name.toLowerCase()}`;
+    paintStore();
+    return;
+  }
   const byType = group.map(t => {
     const js = lists[t.id], clean = cleanOf(js);
     const last5 = (clean.length ? clean : js).slice(-5);
     const avg = last5.length ? mean(last5.map(j => j.cm)) : NaN;
-    return { t, n: js.length, best: bestOf(js)?.cm ?? NaN, avg, goal: db.settings.goals[t.id] };
+    const rsiBest = t.drop ? bestRsi(clean) : null;
+    return { t, n: js.length, best: bestOf(js)?.cm ?? NaN, avg, goal: db.settings.goals[t.id], clean, rsiBest };
   });
-  $('summary').innerHTML = byType.map(({ t, n, best, avg, goal }) => `
-    <button class="sum" data-htype="${t.id}" aria-pressed="${t.id === type}">
-      <div class="t">${PICTO[t.id] || ''}${t.name}</div>
+  $('summary').innerHTML = byType.map(({ t, n, best, avg, goal, clean, rsiBest }) => `
+    <button class="sum${t.id === type ? ' on' : ''}" data-htype="${t.id}" aria-pressed="${t.id === type}">
+      <div class="t">${pictoOf(t.id)}${t.name}</div>
       <div class="best">${Number.isFinite(best) ? fmtVal(t.id, best).replace(/\u00a0(cm|m)$/, '<small> $1</small>') : '–'}</div>
+      ${sparkline(t.id, clean)}
       <div class="meta">${n ? `ka. 5 viim. ${fmtVal(t.id, avg)} · ${n} ${n === 1 ? 'tulos' : 'tulosta'}` : 'ei tuloksia'}</div>
+      ${rsiBest != null ? `<div class="meta">paras RSI ${fmt(rsiBest, 2)}</div>` : ''}
       ${goal ? `<div class="goalbar"><i style="width:${Math.min(100, (best || 0) / goal * 100).toFixed(0)}%"></i></div>
         <div class="meta">tavoite ${fmtVal(t.id, goal)} · ${Number.isFinite(best) ? fmt(best / goal * 100, 0) + '\u00a0%' : '–'}</div>` : ''}
     </button>`).join('');
@@ -2503,11 +2975,28 @@ function renderHistory() {
   // newest first; a long list starts with the newest HIST_FIRST rows (plus any picked for the comparison)
   const all = js.slice().reverse(), cut = !histAll && all.length > HIST_FIRST + 5;
   const shown = cut ? all.filter((j, i) => i < HIST_FIRST || (cmp && cmp.includes(j.id))) : all;
+  // day headers: date, results that day, the day's best (over all of the day's rows, not just the shown ones)
+  const dayInfo = new Map();
+  for (const j of js) {
+    const d = localDay(new Date(j.at)), e = dayInfo.get(d) || { n: 0, best: null };
+    e.n++; if (!qualityFlags(j).length && (!e.best || j.cm > e.best)) e.best = j.cm;
+    dayInfo.set(d, e);
+  }
+  let lastDay = null;
+  const withDays = j => {
+    const d = localDay(new Date(j.at)), e = dayInfo.get(d);
+    const head = d === lastDay ? '' : `<li class="day"><b>${new Date(j.at).toLocaleDateString('fi-FI', { weekday: 'short', day: 'numeric', month: 'numeric' })}</b>
+      <span>${e.n} ${e.n === 1 ? 'tulos' : 'tulosta'}${e.best != null ? ` · paras ${fmtVal(type, e.best)}` : ''}</span></li>`;
+    lastDay = d;
+    return head + jumpRow(j, { best: j.id === bestId, share: true, pick: pickOf(j) });
+  };
   $('histList').innerHTML = js.length
-    ? shown.map(j => jumpRow(j, { best: j.id === bestId, share: true, pick: pickOf(j) })).join('')
+    ? shown.map(withDays).join('')
       + (cut ? `<li class="more"><button type="button" class="btn sm" id="histMore">Näytä kaikki (${all.length})</button></li>` : '')
     : '<li class="muted">Ei vielä tuloksia.</li>';
   renderCompare(type, js);
+  renderAsym(type);
+  renderWeeks(type, js);
   paintStore();
 }
 /** Two results side by side with the difference B − A (erilliset-10). */
@@ -2526,6 +3015,7 @@ function renderCompare(type, js) {
   const rows = [
     ['Tulos', fmtVal(type, a.cm), fmtVal(type, b.cm), fmtDiff(type, b.cm - a.cm)],
     ...(kind === 'vert' ? [numRow('Lentoaika', 'ms', 0, ' ms'), numRow('Lantion nousu', 'hipCm', 1, ' cm')] : []),
+    ...(typeOf(type).drop ? [numRow('RSI', 'rsi', 2, ''), numRow('Kontaktiaika', 'contactMs', 0, ' ms')] : []),
     ...(kind === 'reach' ? [numRow('Hypyn korkeus', 'jumpCm', 1, ' cm')] : []),
     ...(kind === 'dist' ? [txtRow('Loikat', j => phasesText(j.phases || []) || '–')] : []),
     txtRow('Virhemarginaali', j => '±' + num(j.err, kind === 'vert' ? 1 : 0, ' cm')),
@@ -2539,6 +3029,117 @@ function renderCompare(type, js) {
     ${rows.map(([k, va, vb, d]) => `<tr><th>${k}</th><td>${esc(va)}</td><td>${esc(vb)}</td><td class="d">${esc(d)}</td></tr>`).join('')}</tbody></table>`;
 }
 $('cmpBtn').addEventListener('click', () => { cmp = cmp ? null : []; renderHistory(); });
+$('histEmptyGo').addEventListener('click', () => { showTab('live'); window.scrollTo(0, 0); });
+
+/** Last 10 clean results as a line, with the change of the last 3 vs the 3 before them. */
+function sparkline(type, clean) {
+  const v = clean.slice(-10).map(j => j.cm);
+  if (v.length < 2) return '<div class="spark"></div>';
+  const W = 120, H = 28, lo = Math.min(...v), hi = Math.max(...v), sp = hi - lo || 1;
+  const xy = v.map((c, i) => [i / (v.length - 1) * (W - 6) + 3, H - 4 - (c - lo) / sp * (H - 8)]), [lx, ly] = xy[xy.length - 1];
+  const pts = xy.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`);
+  let delta = '';
+  if (v.length >= 6) {
+    const d = mean(v.slice(-3)) - mean(v.slice(-6, -3)), g = groupOf(kindOf(type));
+    const small = Math.abs(d * g.scale) < 0.5 / 10 ** g.digits;
+    delta = `<span class="delta ${small ? '' : d > 0 ? 'up' : 'down'}">${small ? '→' : d > 0 ? '↑' : '↓'} ${esc(fmtVal(type, Math.abs(d)))}</span>`;
+  }
+  return `<div class="spark"><svg viewBox="0 0 ${W} ${H}" aria-hidden="true"><polyline points="${pts.join(' ')}" fill="none" stroke="${C.foot}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="3" fill="${C.led}"/></svg>${delta}</div>`;
+}
+
+// ---------- weeks (ISO, Monday first): weekly report + left/right asymmetry by week ----------
+/** Monday 00:00 (local) of the week of time t. */
+const weekStart = t => { const d = new Date(dayStart(t)); d.setDate(d.getDate() - (d.getDay() + 6) % 7); return d.getTime(); };
+/** ISO week number of the week starting at Monday ws. */
+function isoWeek(ws) {
+  const th = new Date(ws); th.setDate(th.getDate() + 3);              // Thursday decides the ISO year
+  const jan4 = new Date(th.getFullYear(), 0, 4);
+  return 1 + Math.round(((th - weekStart(jan4.getTime())) / DAY - 3) / 7);
+}
+const weekLabel = ws => { const e = new Date(ws + 6 * DAY + 3600e3); return `${new Date(ws).getDate()}.${new Date(ws).getMonth() + 1}.–${e.getDate()}.${e.getMonth() + 1}.`; };
+/** Per week (newest last): best and mean of the clean results, count of all results. */
+function weeksOf(js, n = 10) {
+  const now = weekStart(Date.now()), map = new Map();
+  for (const j of js) {
+    const ws = weekStart(Date.parse(j.at));
+    if (ws < now - (n - 1) * 7 * DAY - 3600e3 * 2) continue;
+    const e = map.get(ws) || { ws, n: 0, clean: [] };
+    e.n++; if (!qualityFlags(j).length) e.clean.push(j);
+    map.set(ws, e);
+  }
+  return [...map.values()].sort((a, b) => a.ws - b.ws).map(e => ({
+    ...e, best: e.clean.length ? Math.max(...e.clean.map(j => j.cm)) : null, avg: e.clean.length ? mean(e.clean.map(j => j.cm)) : null,
+    rsi: bestRsi(e.clean),
+  }));
+}
+function renderWeeks(type, js) {
+  const card = $('weekCard'), weeks = weeksOf(js);
+  card.hidden = !weeks.length;
+  if (!weeks.length) return;
+  const g = groupOf(kindOf(type)), k = g.scale, withBest = weeks.filter(w => w.best != null);
+  // level = week best vs the mean of the up to 4 previous weeks' bests (needs ≥ 2 of them)
+  const level = w => {
+    const prev = withBest.filter(x => x.ws < w.ws).slice(-4);
+    return w.best != null && prev.length >= 2 ? w.best / mean(prev.map(x => x.best)) * 100 : null;
+  };
+  const W = chartWidth(), H = 150, m = { l: 40, r: 10, t: 14, b: 30 };
+  const vals = withBest.flatMap(w => [w.best * k, w.avg * k]);
+  const hi0 = vals.length ? Math.max(...vals) : 1, lo0 = vals.length ? Math.min(...vals) : 0;
+  const pad = (hi0 - lo0) * 0.25 || hi0 * 0.05 || 1, lo = Math.max(0, lo0 - pad), hi = hi0 + pad * 0.6;
+  const bw = (W - m.l - m.r) / weeks.length, y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
+  const gid = `wkg${++chartSeq}`;
+  const bars = weeks.map((w, i) => {
+    const cx = m.l + bw * (i + 0.5);
+    return (w.best != null ? `<rect x="${(cx - bw * 0.32).toFixed(1)}" y="${y(w.best * k).toFixed(1)}" width="${(bw * 0.64).toFixed(1)}" height="${(H - m.b - y(w.best * k)).toFixed(1)}" rx="4" fill="url(#${gid})"/>
+      <circle cx="${cx.toFixed(1)}" cy="${y(w.avg * k).toFixed(1)}" r="3.5" fill="${C.text}"/>` : '')
+      + `<text x="${cx.toFixed(1)}" y="${H - 14}" text-anchor="middle" fill="${C.muted}" font-size="10.5">vk ${isoWeek(w.ws)}</text>
+      <text x="${cx.toFixed(1)}" y="${H - 2}" text-anchor="middle" fill="${C.muted}" font-size="10">${w.n}×</text>`;
+  }).join('');
+  const hasRsi = weeks.some(x => x.rsi != null);
+  const rows = weeks.slice().reverse().map(w => {
+    const lv = level(w);
+    return `<tr><th>vk ${isoWeek(w.ws)}<span class="muted"> ${weekLabel(w.ws)}</span></th><td>${w.best != null ? esc(fmtVal(type, w.best)) : '–'}</td>
+      <td>${w.avg != null ? esc(fmtVal(type, w.avg)) : '–'}</td><td>${w.n}</td>
+      <td class="${lv == null ? '' : 'z-' + zoneOf(lv, VIRE)}">${lv == null ? '–' : fmt(lv, 0) + '\u00a0%'}</td>${hasRsi ? `<td>${w.rsi != null ? fmt(w.rsi, 2) : '–'}</td>` : ''}</tr>`;
+  }).join('');
+  card.innerHTML = `<div class="trend-head"><h2>Viikkoraportti</h2><button class="btn sm" id="weekShare">Jaa kuvana</button></div>
+    <div class="chart"><div class="legend"><span><i style="background:var(--led);height:8px"></i>viikon paras</span><span><i style="background:var(--lane);height:6px;width:6px;border-radius:50%"></i>keskiarvo</span><span>n× = tuloksia</span></div>
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(typeName(type))}: viikon paras ja keskiarvo ${weeks.length} viikolta">
+      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.led}"/><stop offset="1" stop-color="${C.led}" stop-opacity=".25"/></linearGradient></defs>
+      ${yGrid(y, lo, hi, niceStep((hi - lo) / 3), m, W)}${bars}</svg></div>
+    <table class="cmp wk"><thead><tr><th>Viikko</th><th>Paras</th><th>Ka.</th><th>n</th><th title="Viikon paras vs. 4 edellisen viikon parhaiden ka.">Taso</th>${hasRsi ? '<th>RSI</th>' : ''}</tr></thead><tbody>${rows}</tbody></table>
+    <p class="muted small">Taso = viikon paras verrattuna neljän edellisen viikon parhaiden keskiarvoon (vihreä ≥ ${VIRE.go} %, keltainen ≥ ${VIRE.mid} %). Vain huomautuksettomat tulokset.</p>`;
+  $('weekShare').onclick = () => shareWeeks(type, weeks, level);
+}
+
+/** Left vs right of a single-leg pair: limb symmetry index (weaker / stronger) now and per week. */
+const LSI = { go: 90, mid: 85 };
+function renderAsym(type) {
+  const card = $('asymCard'), t = typeOf(type);
+  card.hidden = !t.pair;
+  if (!t.pair) return;
+  const [L, R] = ['L', 'R'].map(sd => pairType(t.pair, sd));
+  const since = new Date(Date.now() - VIRE.days * DAY).toISOString();
+  const best = (id, recent) => bestOf(jumpsOf(id).filter(j => !recent || j.at >= since));
+  let recent = true, bl = best(L, true), br = best(R, true);
+  if (!bl || !br) { recent = false; bl = best(L); br = best(R); }
+  if (!bl || !br) {
+    card.innerHTML = `<h2>Puoliero – ${esc(t.chip)}</h2><p class="muted small">Puoliero näkyy, kun molemmilta jaloilta on huomautukseton tulos (nyt: vasen ${bl ? '✓' : '–'}, oikea ${br ? '✓' : '–'}).</p>`;
+    return;
+  }
+  const lsiOf = (a, b) => Math.min(a, b) / Math.max(a, b) * 100;
+  const lsi = lsiOf(bl.cm, br.cm), weak = bl.cm < br.cm ? 'vasen' : bl.cm > br.cm ? 'oikea' : null;
+  const zone = zoneOf(lsi, LSI);
+  const wl = weeksOf(jumpsOf(L), 8), wr = weeksOf(jumpsOf(R), 8);
+  const weekly = wl.filter(a => a.best != null).map(a => { const b = wr.find(x => x.ws === a.ws && x.best != null); return b ? { ws: a.ws, lsi: lsiOf(a.best, b.best) } : null; }).filter(Boolean);
+  card.innerHTML = `<h2>Puoliero – ${esc(t.chip)}</h2>
+    <div class="vire ${zone}"><div class="vk"><b>LSI ${fmt(lsi, 0)}\u00a0%</b><span>${zone === 'go' ? 'Tasapainossa' : zone === 'mid' ? 'Pieni ero' : 'Selvä ero'}${weak ? ` – ${weak} heikompi` : ''}</span></div>
+      <div class="lr"><div><span class="muted">Vasen</span><b>${esc(fmtVal(L, bl.cm))}</b></div><div><span class="muted">Oikea</span><b>${esc(fmtVal(R, br.cm))}</b></div><div><span class="muted">Ero</span><b>${esc(fmtVal(L, Math.abs(bl.cm - br.cm)))}</b></div></div>
+      <div class="vs muted">${recent ? 'Parhaat 4 viikon ajalta' : 'Kaikkien aikojen parhaat (4 viikon ajalta ei kummaltakin)'} · LSI = heikompi / vahvempi. Tavoite ≥ ${LSI.go} %.</div></div>
+    ${weekly.length ? `<div class="lsi-weeks">${weekly.map(w => `<div class="z-${zoneOf(w.lsi, LSI)}"><i style="height:${Math.max(8, (w.lsi - 70) / 30 * 100).toFixed(0)}%"></i><b>${fmt(w.lsi, 0)}</b><span>vk ${isoWeek(w.ws)}</span></div>`).join('')}</div>
+      <p class="muted small">Viikkojen LSI niiltä viikoilta, joilla on tulos molemmilta jaloilta.</p>` : ''}`;
+}
 // sane goals per group, in cm: a typo or the wrong unit (248 in a metre field) would flatten the trend chart
 const GOAL_CM = { vert: [5, 150], reach: [150, 400], dist: [50, 2500] };
 const goalOk = (type, cm) => { const [lo, hi] = GOAL_CM[kindOf(type)] || [0, Infinity]; return cm >= lo && cm <= hi; };
@@ -2575,9 +3176,9 @@ listActions($('histList'));
 const asText = t => (/^[=+\-@\t\r]/.test(t) ? "'" + t : t);
 $('exportCsv').addEventListener('click', () => {
   const n = x => (x == null || !Number.isFinite(x) ? '' : String(x).replace('.', ','));
-  const rows = [['aika', 'laji', 'tulos_cm', 'loikat_cm', 'lentoaika_ms', 'virhe_cm', 'lantio_cm', 'hyppy_cm', 'fps', 'lahde', 'huomiot', 'tunnisteet', 'muistiinpano']]
+  const rows = [['aika', 'laji', 'tulos_cm', 'loikat_cm', 'lentoaika_ms', 'virhe_cm', 'lantio_cm', 'hyppy_cm', 'kontakti_ms', 'rsi', 'pudotus_cm', 'fps', 'lahde', 'huomiot', 'tunnisteet', 'muistiinpano']]
     .concat(db.jumps.map(j => [j.at, typeName(j.type), n(j.cm), (j.phases || []).map(n).join(' + '), j.ms ?? '', n(j.err), n(j.hipCm),
-      n(j.jumpCm), j.fps, j.src, j.flags.join(' '), (j.tags || []).join(' '), asText(j.note || '')]));
+      n(j.jumpCm), j.contactMs ?? '', n(j.rsi), j.dropCm ?? '', j.fps, j.src, j.flags.join(' '), (j.tags || []).join(' '), asText(j.note || '')]));
   const csv = '﻿' + rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(';')).join('\n');
   download(new Blob([csv], { type: 'text/csv;charset=utf-8' }), `hypyt-${localDay(new Date())}.csv`);
 });
@@ -2628,6 +3229,10 @@ function cleanRecord(j) {
   if (Array.isArray(j.phases)) rec.phases = j.phases.map(numOrNull).filter(v => v != null).slice(0, 5);
   if (j.jumpCm != null) rec.jumpCm = numOrNull(j.jumpCm);
   if (j.rimCm != null) rec.rimCm = numOrNull(j.rimCm);
+  for (const [k, lo, hi] of [['contactMs', 30, 2000], ['rsi', 0, 10], ['contactErr', 0, 500], ['dropCm', 0, 200]]) {
+    const v = numOrNull(j[k]);
+    if (v != null && v >= lo && v <= hi) rec[k] = v;
+  }
   if (typeof j.note === 'string' && j.note.trim()) rec.note = j.note.trim().slice(0, 140);
   if (Array.isArray(j.tags)) { const t = j.tags.filter(x => TAGS.includes(x)); if (t.length) rec.tags = t; }
   return rec;
@@ -2683,24 +3288,14 @@ function drawBoard(ctx, value, g, cx, top, maxW) {
 }
 /** rec: a stored or not-yet-stored record; lm: the skeleton at the peak (video results), frame size W×H. */
 async function shareImage(rec, lm = null, W = vid.videoWidth, H = vid.videoHeight) {
-  const kind = kindOf(rec.type), g = groupOf(kind), cv = document.createElement('canvas');
-  cv.width = 1080; cv.height = 1920;
-  const ctx = cv.getContext('2d');
-  const bg = ctx.createRadialGradient(540, -200, 50, 540, 300, 1700);
-  bg.addColorStop(0, C.nightHi); bg.addColorStop(1, C.night);
-  ctx.fillStyle = bg; ctx.fillRect(0, 0, 1080, 1920);
-  ctx.font = `800 66px ${FONT.display}`;
-  const w1 = ctx.measureText('HYPPY').width, w2 = ctx.measureText('MITTARI').width, bx = 540 - (w1 + w2) / 2;
-  ctx.textAlign = 'left'; ctx.fillStyle = C.text; ctx.fillText('HYPPY', bx, 170);
-  ctx.fillStyle = C.accent; ctx.fillText('MITTARI', bx + w1, 170);
-  ctx.textAlign = 'center';
+  const kind = kindOf(rec.type), g = groupOf(kind), { cv, ctx } = shareFrame();
   ctx.fillStyle = C.text; ctx.font = `700 52px ${FONT.body}`; ctx.fillText(typeName(rec.type), 540, 300);
   ctx.fillStyle = C.muted; ctx.font = `500 36px ${FONT.mono}`;
   ctx.fillText(new Date(rec.at).toLocaleDateString('fi-FI', { day: 'numeric', month: 'numeric', year: 'numeric' }), 540, 360);
   let y = drawBoard(ctx, rec.cm * g.scale, g, 540, 420, 980) + 80;
   const detail = kind === 'reach' ? rimText(marginOf(rec))
     : kind === 'dist' ? (rec.phases && rec.phases.length > 1 ? phasesText(rec.phases) + ' m' : '')
-      : rec.ms ? `lentoaika ${Math.round(rec.ms)} ms` : '';
+      : rec.rsi != null ? `RSI ${fmt(+rec.rsi, 2)} · kontakti ${Math.round(rec.contactMs)} ms` : rec.ms ? `lentoaika ${Math.round(rec.ms)} ms` : '';
   ctx.fillStyle = C.text; ctx.font = `600 40px ${FONT.mono}`;
   ctx.fillText([rec.err != null ? `±${fmt(rec.err, kind === 'vert' ? 1 : 0)} cm` : '', detail].filter(Boolean).join(' · '), 540, y);
   const pb = prevBest(rec);
@@ -2721,20 +3316,77 @@ async function shareImage(rec, lm = null, W = vid.videoWidth, H = vid.videoHeigh
     ctx.fillStyle = C.foot;
     for (const i of [P.L_HEEL, P.R_HEEL, P.L_TOE, P.R_TOE]) { const q = pt(i); ctx.beginPath(); ctx.arc(q[0], q[1], 14, 0, Math.PI * 2); ctx.fill(); }
   }
+  return shareCanvas(cv, `hyppy-${localDay(new Date(rec.at))}.jpg`);
+}
+/** Shared look of every share image: night gradient, the HYPPYMITTARI word mark, a track-red line and the address. */
+function shareFrame() {
+  const cv = document.createElement('canvas');
+  cv.width = 1080; cv.height = 1920;
+  const ctx = cv.getContext('2d');
+  const bg = ctx.createRadialGradient(540, -200, 50, 540, 300, 1700);
+  bg.addColorStop(0, C.nightHi); bg.addColorStop(1, C.night);
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, 1080, 1920);
+  ctx.font = `800 66px ${FONT.display}`;
+  const w1 = ctx.measureText('HYPPY').width, w2 = ctx.measureText('MITTARI').width, bx = 540 - (w1 + w2) / 2;
+  ctx.textAlign = 'left'; ctx.fillStyle = C.text; ctx.fillText('HYPPY', bx, 170);
+  ctx.fillStyle = C.accent; ctx.fillText('MITTARI', bx + w1, 170);
+  ctx.textAlign = 'center';
   ctx.fillStyle = C.accent; ctx.fillRect(0, 1760, 1080, 12);
   ctx.fillStyle = C.muted; ctx.font = `500 34px ${FONT.mono}`; ctx.fillText('koirosvg.com/hyppymittari', 540, 1860);
-  // Synchronous encode (toDataURL) so share() still runs inside the tap's user activation; JPEG: the image is opaque,
-  // and it encodes several times faster than PNG on a phone.
+  return { cv, ctx };
+}
+/** Synchronous encode (toDataURL) so share() still runs inside the tap's user activation; JPEG: the image is opaque,
+ *  and it encodes several times faster than PNG on a phone. Web Share with a file, else a download. */
+async function shareCanvas(cv, name) {
   const b64 = cv.toDataURL('image/jpeg', 0.92).split(',')[1];
   const bytes = Uint8Array.fromBase64 ? Uint8Array.fromBase64(b64) : Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-  const name = `hyppy-${localDay(new Date(rec.at))}.jpg`, blob = new Blob([bytes], { type: 'image/jpeg' });
-  const file = new File([blob], name, { type: 'image/jpeg' });
+  const blob = new Blob([bytes], { type: 'image/jpeg' });
+  return shareBlob(blob, name, 'Kuva ladattu.');
+}
+async function shareBlob(blob, name, doneMsg) {
+  const file = new File([blob], name, { type: blob.type });
   if (navigator.canShare?.({ files: [file] })) {
     try { await navigator.share({ files: [file], title: 'Hyppymittari' }); return; }
     catch (e) { if (e.name === 'AbortError') return; }
   }
   download(blob, name);
-  toast('Kuva ladattu.');
+  toast(doneMsg);
+}
+/** Weekly report as a share image: bars of the weekly bests with means, the newest week's numbers on top. */
+function shareWeeks(type, weeks, level) {
+  const { cv, ctx } = shareFrame(), g = groupOf(kindOf(type)), k = g.scale;
+  ctx.fillStyle = C.text; ctx.font = `700 52px ${FONT.body}`; ctx.fillText(typeName(type), 540, 300);
+  ctx.fillStyle = C.muted; ctx.font = `500 36px ${FONT.mono}`; ctx.fillText('VIIKKORAPORTTI', 540, 360);
+  const last = weeks[weeks.length - 1];
+  ctx.fillStyle = C.text; ctx.font = `800 64px ${FONT.display}`;
+  ctx.fillText(`VK ${isoWeek(last.ws)} · ${weekLabel(last.ws)}`, 540, 480);
+  const stat = [['PARAS', last.best != null ? fmtVal(type, last.best) : '–'], ['KA.', last.avg != null ? fmtVal(type, last.avg) : '–'], ['TULOKSIA', String(last.n)]];
+  stat.forEach(([l, v], i) => {
+    const x = 200 + i * 340;
+    ctx.fillStyle = C.muted; ctx.font = `600 30px ${FONT.mono}`; ctx.fillText(l, x, 570);
+    ctx.fillStyle = C.led; ctx.font = `800 70px ${FONT.display}`; ctx.fillText(v, x, 650);
+  });
+  const lv = level(last);
+  if (lv != null) { ctx.fillStyle = C.text; ctx.font = `600 36px ${FONT.mono}`; ctx.fillText(`taso ${fmt(lv, 0)} % edellisistä viikoista`, 540, 730); }
+  const withBest = weeks.filter(w => w.best != null);
+  if (withBest.length) {
+    const top = 820, bottom = 1600, left = 120, right = 960, vals = withBest.flatMap(w => [w.best * k, w.avg * k]);
+    const hi = Math.max(...vals) * 1.04, lo = Math.max(0, Math.min(...vals) - (hi - Math.min(...vals)) * 0.4);
+    const bw = (right - left) / weeks.length, y = v => bottom - (v - lo) / (hi - lo || 1) * (bottom - top);
+    weeks.forEach((w, i) => {
+      const cx = left + bw * (i + 0.5);
+      if (w.best != null) {
+        const gr = ctx.createLinearGradient(0, y(w.best * k), 0, bottom);
+        gr.addColorStop(0, C.led); gr.addColorStop(1, C.led + '40');
+        ctx.fillStyle = gr; ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(cx - bw * 0.32, y(w.best * k), bw * 0.64, bottom - y(w.best * k), 10); else ctx.rect(cx - bw * 0.32, y(w.best * k), bw * 0.64, bottom - y(w.best * k));
+        ctx.fill();
+        ctx.fillStyle = C.text; ctx.beginPath(); ctx.arc(cx, y(w.avg * k), 10, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.fillStyle = C.muted; ctx.font = `600 26px ${FONT.mono}`; ctx.fillText(`vk${isoWeek(w.ws)}`, cx, bottom + 44);
+    });
+  }
+  return shareCanvas(cv, `hyppy-viikot-${localDay(new Date())}.jpg`);
 }
 
 // ---------- settings ----------
@@ -2743,6 +3395,7 @@ $('settingsBtn').addEventListener('click', () => {
   $('setModel').value = db.settings.liveModel;
   $('setSpeech').checked = db.settings.speech;
   $('setBeep').checked = db.settings.beep;
+  $('setClips').checked = db.settings.clips;
   $('setRim').value = db.settings.rimCm;
   $('settings').showModal();
 });
@@ -2759,17 +3412,22 @@ $('settings').addEventListener('close', () => {
     liveModel: $('setModel').value,
     speech: $('setSpeech').checked,
     beep: $('setBeep').checked,
+    clips: $('setClips').checked,
     rimCm: rimOk ? +rimRaw : db.settings.rimCm,
   });
   save();
   paintStatureTip();
   if (live.running) {
     if (modelChanged) { stopLive(false); startLive(); } else live.det = newDetector();
+    if (db.settings.clips && !recs.list.length) startRecorders();
+    else if (!db.settings.clips) stopRecorders();
   }
 });
 
 // ---------- boot ----------
 renderTypes();
+// help section icons are the jump-type pictograms
+document.querySelectorAll('#tab-help summary').forEach(sm => { sm.innerHTML = sm.innerHTML.replace(/__PICTO_(\w+)__/, (_, id) => pictoOf(id)); });
 renderCalib('live'); renderCalib('video'); renderEmpty();
 $('manualRow').hidden = $('manualOut').hidden = kindOf(db.type) !== 'vert';
 paintStatureTip();
@@ -2788,7 +3446,8 @@ getLandmarker('live', db.settings.liveModel).catch(e => console.warn('Mallin esi
 // ?debug exposes internals to the console (used to drive tests with recorded/synthetic samples).
 if (new URLSearchParams(location.search).has('debug')) {
   window.__hyppy = { db, live, vs, findJumps, showLiveJump, renderHistory, setType, calPx, series, seriesStart, seriesEnd, setRemote,
-    readiness, renderVideoResults, nearestFrame, startReplay, stopReplay, shareImage, showTab, frameFeatures };
+    readiness, renderVideoResults, nearestFrame, startReplay, stopReplay, shareImage, showTab, frameFeatures,
+    startLive, stopLive, onHandSignal, clips, recs, openClip };
 }
 </script>
 </body>

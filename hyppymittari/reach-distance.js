@@ -71,7 +71,14 @@ export function measureReach(samples, jump, { cal = null, statureCm = DEFAULT_ST
   // Rough top = max of a 3-sample running median (one misplaced hand can't set the record), then a
   // parabola over ±0.1 s around it: the maximum of many noisy samples is biased upward, and the
   // fingertip extrapolation roughly doubles the landmark noise.
-  const h = win.map(s => toCm(s.f.tip));
+  // Single-frame glitches (a hand point jumping 40 px) are replaced by their neighbours' median
+  // before anything else: the parabola below would otherwise lean on them (9 cm, test suite).
+  const raw = win.map(s => toCm(s.f.tip));
+  const h = raw.map((v, i) => {
+    if (i === 0 || i === raw.length - 1) return v;
+    const m = median([raw[i - 1], v, raw[i + 1]]);
+    return Math.abs(v - m) > 8 ? m : v;   // glitches are ~15 cm; a quick slap's real apex cusp stays (< 8 cm per frame)
+  });
   let best = -Infinity, bi = 0;
   for (let i = 1; i < h.length - 1; i++) {
     const m = median([h[i - 1], h[i], h[i + 1]]);
@@ -121,7 +128,7 @@ const FOOT_CM = 25;               // heel–toe distance when one of the two isn
 /** Scale + jump direction from the calibration (or stature), and the floor line fitted to the
  *  athlete's own ground contacts. The tapped line itself is not used for heights: a few pixels of
  *  tap error tilt it, and extrapolated 7 m down the runway that hid single-leg contacts. */
-function geometry(samples, cal, statureCm) {
+function geometry(samples, cal, statureCm, clean) {
   const fs = floorScale(cal);
   const fb = fs ? null : fallbackScale(samples, statureCm);
   const pxPerCm = fs ? fs.pxPerCm : fb.pxPerCm;
@@ -132,11 +139,16 @@ function geometry(samples, cal, statureCm) {
   for (const s of samples) {
     if (!s.f || !s.f.sides) continue;
     let lp = null;
-    for (const sd of s.f.sides) for (const q of [sd.toe, sd.heel]) if (q && (!lp || q[1] > lp[1])) lp = q;
+    for (const sd of clean.get(s) || s.f.sides) for (const q of [sd.toe, sd.heel]) if (q && (!lp || q[1] > lp[1])) lp = q;
     if (lp) lows.push(lp);
   }
-  let alpha = quantile(lows.map(q => q[1]), 0.8), beta = 0;
-  for (let it = 0; it < 4; it++) {
+  // Start from the floor's direction: the calibration taps lie on it (only its slope is used — a few
+  // px of tap error barely tilt it), else the lower envelope of the lowest points per x band. A
+  // level start line missed every contact past the first metre once the camera was rolled 4°.
+  let beta = fs ? fs.u[1] / fs.u[0] : envelopeSlope(lows);
+  if (!Number.isFinite(beta)) beta = 0;
+  let alpha = quantile(lows.map(q => q[1] - beta * q[0]), 0.8);
+  for (let it = 0; it < 6; it++) {
     const on = lows.filter(q => alpha + beta * q[0] - q[1] < CONTACT_CM * pxPerCm);
     if (on.length < 5) break;
     const mx = on.reduce((a, q) => a + q[0], 0) / on.length, my = on.reduce((a, q) => a + q[1], 0) / on.length;
@@ -151,12 +163,60 @@ function geometry(samples, cal, statureCm) {
   };
 }
 
+/** Single-frame landmark glitches: a foot point whose y is off from BOTH neighbours (same side,
+ *  same point, adjacent frames) by > 2 % of standing height (~3.5 cm, the despikeFoot rule; a contact
+ *  lasts ≥ 3 frames, so a real 1-frame excursion that big doesn't occur), same direction, takes their mean. A foot point
+ *  can't leave and come back in one frame; left in, one glitch moved a takeoff toe or landing heel
+ *  (and split or merged contacts): 20 cm errors on the triple jump (test suite). */
+function cleanSides(samples) {
+  const fs = samples.filter(s => s.f && s.f.sides);
+  const get = (i, side, k) => { const sd = fs[i] && fs[i].f.sides.find(x => x.side === side); return sd ? sd[k] : null; };
+  const out = new Map();
+  for (let i = 0; i < fs.length; i++) {
+    const sides = fs[i].f.sides.map(sd => {
+      const thr = 0.02 * Math.max(1, fs[i].f.foot - fs[i].f.eye);
+      const fix = k => {
+        const p = sd[k], a = get(i - 1, sd.side, k), b = get(i + 1, sd.side, k);
+        if (!p || !a || !b) return p;
+        const da = p[1] - a[1], db = p[1] - b[1];
+        return Math.sign(da) === Math.sign(db) && Math.min(Math.abs(da), Math.abs(db)) > thr ? [p[0], (a[1] + b[1]) / 2] : p;
+      };
+      return { ...sd, heel: fix('heel'), toe: fix('toe') };
+    });
+    out.set(fs[i], sides);
+  }
+  return out;
+}
+
+/** Slope of the floor from the lowest point in each x band (Theil–Sen over the band maxima). */
+function envelopeSlope(lows) {
+  if (lows.length < 10) return 0;
+  const xs = lows.map(q => q[0]), lo = Math.min(...xs), hi = Math.max(...xs);
+  if (hi - lo < 50) return 0;
+  const n = 8, bands = Array.from({ length: n }, () => null);
+  for (const q of lows) {
+    const b = Math.min(n - 1, Math.floor((q[0] - lo) / (hi - lo) * n));
+    if (!bands[b] || q[1] > bands[b][1]) bands[b] = q;
+  }
+  // The floor is the supporting line under the band maxima (image y grows down): of the pairs with no band point below
+  // their line, the widest one. Bands crossed only in flight hold airborne feet (an arch) and never support it.
+  const pts = bands.filter(Boolean);
+  let best = null;
+  for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+    const dx = pts[j][0] - pts[i][0];
+    if (Math.abs(dx) < 20) continue;
+    const b = (pts[j][1] - pts[i][1]) / dx;
+    if (pts.every(q => q[1] <= pts[i][1] + b * (q[0] - pts[i][0]) + 3) && (!best || Math.abs(dx) > best.dx)) best = { b, dx: Math.abs(dx) };
+  }
+  return best ? best.b : 0;
+}
+
 /** Per-frame rows: each visible foot's toe/heel position along the line and height (cm). */
-function footRows(samples, geo) {
+function footRows(samples, geo, clean) {
   const rows = [];
   for (const s of samples) {
     if (!s.f || !s.f.sides || !s.f.sides.length) continue;
-    const sides = s.f.sides.map(sd => {
+    const sides = (clean.get(s) || s.f.sides).map(sd => {
       const toe = sd.toe && { s: geo.along(sd.toe), h: geo.height(sd.toe) };
       const heel = sd.heel && { s: geo.along(sd.heel), h: geo.height(sd.heel) };
       return { toe, heel, low: Math.min(toe ? toe.h : Infinity, heel ? heel.h : Infinity) };
@@ -172,8 +232,9 @@ const contactFeet = (row, base) => row.sides.filter(sd => sd.low - base < CONTAC
 /** Every attempt (a run of flights separated by short contacts) in a sample series.
  *  expected: number of flights the event has (1 long jump, 3 triple, 5 five bounds). */
 export function measureDistances(samples, { cal = null, expected = 1, statureCm = DEFAULT_STATURE_CM } = {}) {
-  const geo = geometry(samples, cal, statureCm);
-  const rows = footRows(samples, geo);
+  const clean = cleanSides(samples);
+  const geo = geometry(samples, cal, statureCm, clean);
+  const rows = footRows(samples, geo, clean);
   if (rows.length < 5) return [];
   // The foot landmarks sit a little above the floor even when standing: the 20th percentile of the
   // lowest point is that contact level (contacts dominate any clip that starts and ends standing).
