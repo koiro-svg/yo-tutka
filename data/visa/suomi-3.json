@@ -1,0 +1,6630 @@
+{
+ "quizzes": [
+  {
+   "id": "suomi-3-kunnat-a-o",
+   "cat": "suomi",
+   "t": 190,
+   "title": {
+    "fi": "Nimeä Suomen kunta jokaisella alkukirjaimella (308 kuntaa, 2026)",
+    "en": "Name a Finnish municipality for every first letter (308 municipalities, 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Akaa",
+      "Alajärvi",
+      "Alavieska",
+      "Alavus",
+      "Asikkala",
+      "Askola",
+      "Aura"
+     ],
+     "en": [
+      "Akaa",
+      "Alajärvi",
+      "Alavieska",
+      "Alavus",
+      "Asikkala",
+      "Askola",
+      "Aura"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Brändö"
+     ],
+     "en": [
+      "Brändö"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Eckerö",
+      "Enonkoski",
+      "Enontekiö",
+      "Espoo",
+      "Eura",
+      "Eurajoki",
+      "Evijärvi"
+     ],
+     "en": [
+      "Eckerö",
+      "Enonkoski",
+      "Enontekiö",
+      "Espoo",
+      "Eura",
+      "Eurajoki",
+      "Evijärvi"
+     ],
+     "h": "E"
+    },
+    {
+     "fi": [
+      "Finström",
+      "Forssa",
+      "Föglö"
+     ],
+     "en": [
+      "Finström",
+      "Forssa",
+      "Föglö"
+     ],
+     "h": "F"
+    },
+    {
+     "fi": [
+      "Geta"
+     ],
+     "en": [
+      "Geta"
+     ],
+     "h": "G"
+    },
+    {
+     "fi": [
+      "Haapajärvi",
+      "Haapavesi",
+      "Hailuoto",
+      "Halsua",
+      "Hamina",
+      "Hammarland",
+      "Hankasalmi",
+      "Hanko",
+      "Harjavalta",
+      "Hartola",
+      "Hattula",
+      "Hausjärvi",
+      "Heinola",
+      "Heinävesi",
+      "Helsinki",
+      "Hirvensalmi",
+      "Hollola",
+      "Huittinen",
+      "Humppila",
+      "Hyrynsalmi",
+      "Hyvinkää",
+      "Hämeenkyrö",
+      "Hämeenlinna"
+     ],
+     "en": [
+      "Haapajärvi",
+      "Haapavesi",
+      "Hailuoto",
+      "Halsua",
+      "Hamina",
+      "Hammarland",
+      "Hankasalmi",
+      "Hanko",
+      "Harjavalta",
+      "Hartola",
+      "Hattula",
+      "Hausjärvi",
+      "Heinola",
+      "Heinävesi",
+      "Helsinki",
+      "Hirvensalmi",
+      "Hollola",
+      "Huittinen",
+      "Humppila",
+      "Hyrynsalmi",
+      "Hyvinkää",
+      "Hämeenkyrö",
+      "Hämeenlinna"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Ii",
+      "Iisalmi",
+      "Iitti",
+      "Ikaalinen",
+      "Ilmajoki",
+      "Ilomantsi",
+      "Imatra",
+      "Inari",
+      "Inkoo",
+      "Isojoki",
+      "Isokyrö"
+     ],
+     "en": [
+      "Ii",
+      "Iisalmi",
+      "Iitti",
+      "Ikaalinen",
+      "Ilmajoki",
+      "Ilomantsi",
+      "Imatra",
+      "Inari",
+      "Inkoo",
+      "Isojoki",
+      "Isokyrö"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Janakkala",
+      "Joensuu",
+      "Jokioinen",
+      "Jomala",
+      "Joroinen",
+      "Joutsa",
+      "Juuka",
+      "Juupajoki",
+      "Juva",
+      "Jyväskylä",
+      "Jämijärvi",
+      "Jämsä",
+      "Järvenpää"
+     ],
+     "en": [
+      "Janakkala",
+      "Joensuu",
+      "Jokioinen",
+      "Jomala",
+      "Joroinen",
+      "Joutsa",
+      "Juuka",
+      "Juupajoki",
+      "Juva",
+      "Jyväskylä",
+      "Jämijärvi",
+      "Jämsä",
+      "Järvenpää"
+     ],
+     "h": "J"
+    },
+    {
+     "fi": [
+      "Kaarina",
+      "Kaavi",
+      "Kajaani",
+      "Kalajoki",
+      "Kangasala",
+      "Kangasniemi",
+      "Kankaanpää",
+      "Kannonkoski",
+      "Kannus",
+      "Karijoki",
+      "Karkkila",
+      "Karstula",
+      "Karvia",
+      "Kaskinen",
+      "Kauhajoki",
+      "Kauhava",
+      "Kauniainen",
+      "Kaustinen",
+      "Keitele",
+      "Kemi",
+      "Kemijärvi",
+      "Keminmaa",
+      "Kemiönsaari",
+      "Kempele",
+      "Kerava",
+      "Keuruu",
+      "Kihniö",
+      "Kinnula",
+      "Kirkkonummi",
+      "Kitee",
+      "Kittilä",
+      "Kiuruvesi",
+      "Kivijärvi",
+      "Kokemäki",
+      "Kokkola",
+      "Kolari",
+      "Konnevesi",
+      "Kontiolahti",
+      "Korsnäs",
+      "Koski Tl",
+      "Koski",
+      "Kotka",
+      "Kouvola",
+      "Kristiinankaupunki",
+      "Kruunupyy",
+      "Kuhmo",
+      "Kuhmoinen",
+      "Kumlinge",
+      "Kuopio",
+      "Kuortane",
+      "Kurikka",
+      "Kustavi",
+      "Kuusamo",
+      "Kyyjärvi",
+      "Kärkölä",
+      "Kärsämäki",
+      "Kökar"
+     ],
+     "en": [
+      "Kaarina",
+      "Kaavi",
+      "Kajaani",
+      "Kalajoki",
+      "Kangasala",
+      "Kangasniemi",
+      "Kankaanpää",
+      "Kannonkoski",
+      "Kannus",
+      "Karijoki",
+      "Karkkila",
+      "Karstula",
+      "Karvia",
+      "Kaskinen",
+      "Kauhajoki",
+      "Kauhava",
+      "Kauniainen",
+      "Kaustinen",
+      "Keitele",
+      "Kemi",
+      "Kemijärvi",
+      "Keminmaa",
+      "Kemiönsaari",
+      "Kempele",
+      "Kerava",
+      "Keuruu",
+      "Kihniö",
+      "Kinnula",
+      "Kirkkonummi",
+      "Kitee",
+      "Kittilä",
+      "Kiuruvesi",
+      "Kivijärvi",
+      "Kokemäki",
+      "Kokkola",
+      "Kolari",
+      "Konnevesi",
+      "Kontiolahti",
+      "Korsnäs",
+      "Koski Tl",
+      "Koski",
+      "Kotka",
+      "Kouvola",
+      "Kristiinankaupunki",
+      "Kruunupyy",
+      "Kuhmo",
+      "Kuhmoinen",
+      "Kumlinge",
+      "Kuopio",
+      "Kuortane",
+      "Kurikka",
+      "Kustavi",
+      "Kuusamo",
+      "Kyyjärvi",
+      "Kärkölä",
+      "Kärsämäki",
+      "Kökar"
+     ],
+     "h": "K"
+    },
+    {
+     "fi": [
+      "Lahti",
+      "Laihia",
+      "Laitila",
+      "Lapinjärvi",
+      "Lapinlahti",
+      "Lappajärvi",
+      "Lappeenranta",
+      "Lapua",
+      "Laukaa",
+      "Lemi",
+      "Lemland",
+      "Lempäälä",
+      "Leppävirta",
+      "Lestijärvi",
+      "Lieksa",
+      "Lieto",
+      "Liminka",
+      "Liperi",
+      "Lohja",
+      "Loimaa",
+      "Loppi",
+      "Loviisa",
+      "Luhanka",
+      "Lumijoki",
+      "Lumparland",
+      "Luoto",
+      "Luumäki"
+     ],
+     "en": [
+      "Lahti",
+      "Laihia",
+      "Laitila",
+      "Lapinjärvi",
+      "Lapinlahti",
+      "Lappajärvi",
+      "Lappeenranta",
+      "Lapua",
+      "Laukaa",
+      "Lemi",
+      "Lemland",
+      "Lempäälä",
+      "Leppävirta",
+      "Lestijärvi",
+      "Lieksa",
+      "Lieto",
+      "Liminka",
+      "Liperi",
+      "Lohja",
+      "Loimaa",
+      "Loppi",
+      "Loviisa",
+      "Luhanka",
+      "Lumijoki",
+      "Lumparland",
+      "Luoto",
+      "Luumäki"
+     ],
+     "h": "L"
+    },
+    {
+     "fi": [
+      "Maalahti",
+      "Maarianhamina",
+      "Marttila",
+      "Masku",
+      "Merijärvi",
+      "Merikarvia",
+      "Miehikkälä",
+      "Mikkeli",
+      "Muhos",
+      "Multia",
+      "Muonio",
+      "Mustasaari",
+      "Muurame",
+      "Mynämäki",
+      "Myrskylä",
+      "Mäntsälä",
+      "Mänttä-Vilppula",
+      "Mänttä",
+      "Mäntyharju"
+     ],
+     "en": [
+      "Maalahti",
+      "Maarianhamina",
+      "Marttila",
+      "Masku",
+      "Merijärvi",
+      "Merikarvia",
+      "Miehikkälä",
+      "Mikkeli",
+      "Muhos",
+      "Multia",
+      "Muonio",
+      "Mustasaari",
+      "Muurame",
+      "Mynämäki",
+      "Myrskylä",
+      "Mäntsälä",
+      "Mänttä-Vilppula",
+      "Mänttä",
+      "Mäntyharju"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "Naantali",
+      "Nakkila",
+      "Nivala",
+      "Nokia",
+      "Nousiainen",
+      "Nurmes",
+      "Nurmijärvi",
+      "Närpiö"
+     ],
+     "en": [
+      "Naantali",
+      "Nakkila",
+      "Nivala",
+      "Nokia",
+      "Nousiainen",
+      "Nurmes",
+      "Nurmijärvi",
+      "Närpiö"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Orimattila",
+      "Oripää",
+      "Orivesi",
+      "Oulainen",
+      "Oulu",
+      "Outokumpu"
+     ],
+     "en": [
+      "Orimattila",
+      "Oripää",
+      "Orivesi",
+      "Oulainen",
+      "Oulu",
+      "Outokumpu"
+     ],
+     "h": "O"
+    },
+    {
+     "fi": [
+      "Padasjoki",
+      "Paimio",
+      "Paltamo",
+      "Parainen",
+      "Parikkala",
+      "Parkano",
+      "Pedersöre",
+      "Pelkosenniemi",
+      "Pello",
+      "Perho",
+      "Petäjävesi",
+      "Pieksämäki",
+      "Pielavesi",
+      "Pietarsaari",
+      "Pihtipudas",
+      "Pirkkala",
+      "Polvijärvi",
+      "Pomarkku",
+      "Pori",
+      "Pornainen",
+      "Porvoo",
+      "Posio",
+      "Pudasjärvi",
+      "Pukkila",
+      "Punkalaidun",
+      "Puolanka",
+      "Puumala",
+      "Pyhtää",
+      "Pyhäjoki",
+      "Pyhäjärvi",
+      "Pyhäntä",
+      "Pyhäranta",
+      "Pälkäne",
+      "Pöytyä"
+     ],
+     "en": [
+      "Padasjoki",
+      "Paimio",
+      "Paltamo",
+      "Parainen",
+      "Parikkala",
+      "Parkano",
+      "Pedersöre",
+      "Pelkosenniemi",
+      "Pello",
+      "Perho",
+      "Petäjävesi",
+      "Pieksämäki",
+      "Pielavesi",
+      "Pietarsaari",
+      "Pihtipudas",
+      "Pirkkala",
+      "Polvijärvi",
+      "Pomarkku",
+      "Pori",
+      "Pornainen",
+      "Porvoo",
+      "Posio",
+      "Pudasjärvi",
+      "Pukkila",
+      "Punkalaidun",
+      "Puolanka",
+      "Puumala",
+      "Pyhtää",
+      "Pyhäjoki",
+      "Pyhäjärvi",
+      "Pyhäntä",
+      "Pyhäranta",
+      "Pälkäne",
+      "Pöytyä"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Raahe",
+      "Raasepori",
+      "Raisio",
+      "Rantasalmi",
+      "Ranua",
+      "Rauma",
+      "Rautalampi",
+      "Rautavaara",
+      "Rautjärvi",
+      "Reisjärvi",
+      "Riihimäki",
+      "Ristijärvi",
+      "Rovaniemi",
+      "Ruokolahti",
+      "Ruovesi",
+      "Rusko",
+      "Rääkkylä"
+     ],
+     "en": [
+      "Raahe",
+      "Raasepori",
+      "Raisio",
+      "Rantasalmi",
+      "Ranua",
+      "Rauma",
+      "Rautalampi",
+      "Rautavaara",
+      "Rautjärvi",
+      "Reisjärvi",
+      "Riihimäki",
+      "Ristijärvi",
+      "Rovaniemi",
+      "Ruokolahti",
+      "Ruovesi",
+      "Rusko",
+      "Rääkkylä"
+     ],
+     "h": "R"
+    },
+    {
+     "fi": [
+      "Saarijärvi",
+      "Salla",
+      "Salo",
+      "Saltvik",
+      "Sastamala",
+      "Sauvo",
+      "Savitaipale",
+      "Savonlinna",
+      "Savukoski",
+      "Seinäjoki",
+      "Sievi",
+      "Siikainen",
+      "Siikajoki",
+      "Siikalatva",
+      "Siilinjärvi",
+      "Simo",
+      "Sipoo",
+      "Siuntio",
+      "Sodankylä",
+      "Soini",
+      "Somero",
+      "Sonkajärvi",
+      "Sotkamo",
+      "Sottunga",
+      "Sulkava",
+      "Sund",
+      "Suomussalmi",
+      "Suonenjoki",
+      "Sysmä",
+      "Säkylä"
+     ],
+     "en": [
+      "Saarijärvi",
+      "Salla",
+      "Salo",
+      "Saltvik",
+      "Sastamala",
+      "Sauvo",
+      "Savitaipale",
+      "Savonlinna",
+      "Savukoski",
+      "Seinäjoki",
+      "Sievi",
+      "Siikainen",
+      "Siikajoki",
+      "Siikalatva",
+      "Siilinjärvi",
+      "Simo",
+      "Sipoo",
+      "Siuntio",
+      "Sodankylä",
+      "Soini",
+      "Somero",
+      "Sonkajärvi",
+      "Sotkamo",
+      "Sottunga",
+      "Sulkava",
+      "Sund",
+      "Suomussalmi",
+      "Suonenjoki",
+      "Sysmä",
+      "Säkylä"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Taipalsaari",
+      "Taivalkoski",
+      "Taivassalo",
+      "Tammela",
+      "Tampere",
+      "Tervo",
+      "Tervola",
+      "Teuva",
+      "Tohmajärvi",
+      "Toholampi",
+      "Toivakka",
+      "Tornio",
+      "Turku",
+      "Tuusniemi",
+      "Tuusula",
+      "Tyrnävä"
+     ],
+     "en": [
+      "Taipalsaari",
+      "Taivalkoski",
+      "Taivassalo",
+      "Tammela",
+      "Tampere",
+      "Tervo",
+      "Tervola",
+      "Teuva",
+      "Tohmajärvi",
+      "Toholampi",
+      "Toivakka",
+      "Tornio",
+      "Turku",
+      "Tuusniemi",
+      "Tuusula",
+      "Tyrnävä"
+     ],
+     "h": "T"
+    },
+    {
+     "fi": [
+      "Ulvila",
+      "Urjala",
+      "Utajärvi",
+      "Utsjoki",
+      "Uurainen",
+      "Uusikaarlepyy",
+      "Uusikaupunki"
+     ],
+     "en": [
+      "Ulvila",
+      "Urjala",
+      "Utajärvi",
+      "Utsjoki",
+      "Uurainen",
+      "Uusikaarlepyy",
+      "Uusikaupunki"
+     ],
+     "h": "U"
+    },
+    {
+     "fi": [
+      "Vaala",
+      "Vaasa",
+      "Valkeakoski",
+      "Vantaa",
+      "Varkaus",
+      "Vehmaa",
+      "Vesanto",
+      "Vesilahti",
+      "Veteli",
+      "Vieremä",
+      "Vihti",
+      "Viitasaari",
+      "Vimpeli",
+      "Virolahti",
+      "Virrat",
+      "Vårdö",
+      "Vöyri"
+     ],
+     "en": [
+      "Vaala",
+      "Vaasa",
+      "Valkeakoski",
+      "Vantaa",
+      "Varkaus",
+      "Vehmaa",
+      "Vesanto",
+      "Vesilahti",
+      "Veteli",
+      "Vieremä",
+      "Vihti",
+      "Viitasaari",
+      "Vimpeli",
+      "Virolahti",
+      "Virrat",
+      "Vårdö",
+      "Vöyri"
+     ],
+     "h": "V"
+    },
+    {
+     "fi": [
+      "Ylitornio",
+      "Ylivieska",
+      "Ylöjärvi",
+      "Ypäjä"
+     ],
+     "en": [
+      "Ylitornio",
+      "Ylivieska",
+      "Ylöjärvi",
+      "Ypäjä"
+     ],
+     "h": "Y"
+    },
+    {
+     "fi": [
+      "Ähtäri",
+      "Äänekoski"
+     ],
+     "en": [
+      "Ähtäri",
+      "Äänekoski"
+     ],
+     "h": "Ä"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-kuntien-paatteet",
+   "cat": "suomi",
+   "t": 115,
+   "title": {
+    "fi": "Nimeä kunta, jonka nimi päättyy annettuun loppuun (308 kuntaa, 2026)",
+    "en": "Name a municipality whose name ends with the given ending (308 municipalities, 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Loppu",
+    "en": "Ending"
+   },
+   "items": [
+    {
+     "fi": [
+      "Eurajoki",
+      "Ilmajoki",
+      "Isojoki",
+      "Juupajoki",
+      "Kalajoki",
+      "Karijoki",
+      "Kauhajoki",
+      "Lumijoki",
+      "Padasjoki",
+      "Pyhäjoki",
+      "Seinäjoki",
+      "Siikajoki",
+      "Suonenjoki",
+      "Utsjoki"
+     ],
+     "en": [
+      "Eurajoki",
+      "Ilmajoki",
+      "Isojoki",
+      "Juupajoki",
+      "Kalajoki",
+      "Karijoki",
+      "Kauhajoki",
+      "Lumijoki",
+      "Padasjoki",
+      "Pyhäjoki",
+      "Seinäjoki",
+      "Siikajoki",
+      "Suonenjoki",
+      "Utsjoki"
+     ],
+     "h": "-joki"
+    },
+    {
+     "fi": [
+      "Alajärvi",
+      "Evijärvi",
+      "Haapajärvi",
+      "Hausjärvi",
+      "Jämijärvi",
+      "Kemijärvi",
+      "Kivijärvi",
+      "Kyyjärvi",
+      "Lapinjärvi",
+      "Lappajärvi",
+      "Lestijärvi",
+      "Merijärvi",
+      "Nurmijärvi",
+      "Polvijärvi",
+      "Pudasjärvi",
+      "Pyhäjärvi",
+      "Rautjärvi",
+      "Reisjärvi",
+      "Ristijärvi",
+      "Saarijärvi",
+      "Siilinjärvi",
+      "Sonkajärvi",
+      "Tohmajärvi",
+      "Utajärvi",
+      "Ylöjärvi"
+     ],
+     "en": [
+      "Alajärvi",
+      "Evijärvi",
+      "Haapajärvi",
+      "Hausjärvi",
+      "Jämijärvi",
+      "Kemijärvi",
+      "Kivijärvi",
+      "Kyyjärvi",
+      "Lapinjärvi",
+      "Lappajärvi",
+      "Lestijärvi",
+      "Merijärvi",
+      "Nurmijärvi",
+      "Polvijärvi",
+      "Pudasjärvi",
+      "Pyhäjärvi",
+      "Rautjärvi",
+      "Reisjärvi",
+      "Ristijärvi",
+      "Saarijärvi",
+      "Siilinjärvi",
+      "Sonkajärvi",
+      "Tohmajärvi",
+      "Utajärvi",
+      "Ylöjärvi"
+     ],
+     "h": "-järvi"
+    },
+    {
+     "fi": [
+      "Enonkoski",
+      "Kannonkoski",
+      "Savukoski",
+      "Taivalkoski",
+      "Valkeakoski",
+      "Äänekoski"
+     ],
+     "en": [
+      "Enonkoski",
+      "Kannonkoski",
+      "Savukoski",
+      "Taivalkoski",
+      "Valkeakoski",
+      "Äänekoski"
+     ],
+     "h": "-koski"
+    },
+    {
+     "fi": [
+      "Kontiolahti",
+      "Lahti",
+      "Lapinlahti",
+      "Maalahti",
+      "Ruokolahti",
+      "Vesilahti",
+      "Virolahti"
+     ],
+     "en": [
+      "Kontiolahti",
+      "Lahti",
+      "Lapinlahti",
+      "Maalahti",
+      "Ruokolahti",
+      "Vesilahti",
+      "Virolahti"
+     ],
+     "h": "-lahti"
+    },
+    {
+     "fi": [
+      "Kangasniemi",
+      "Pelkosenniemi",
+      "Rovaniemi",
+      "Tuusniemi"
+     ],
+     "en": [
+      "Kangasniemi",
+      "Pelkosenniemi",
+      "Rovaniemi",
+      "Tuusniemi"
+     ],
+     "h": "-niemi"
+    },
+    {
+     "fi": [
+      "Kemiönsaari",
+      "Mustasaari",
+      "Pietarsaari",
+      "Taipalsaari",
+      "Viitasaari"
+     ],
+     "en": [
+      "Kemiönsaari",
+      "Mustasaari",
+      "Pietarsaari",
+      "Taipalsaari",
+      "Viitasaari"
+     ],
+     "h": "-saari"
+    },
+    {
+     "fi": [
+      "Haapavesi",
+      "Heinävesi",
+      "Kiuruvesi",
+      "Konnevesi",
+      "Orivesi",
+      "Petäjävesi",
+      "Pielavesi",
+      "Ruovesi"
+     ],
+     "en": [
+      "Haapavesi",
+      "Heinävesi",
+      "Kiuruvesi",
+      "Konnevesi",
+      "Orivesi",
+      "Petäjävesi",
+      "Pielavesi",
+      "Ruovesi"
+     ],
+     "h": "-vesi"
+    },
+    {
+     "fi": [
+      "Kokemäki",
+      "Kärsämäki",
+      "Luumäki",
+      "Mynämäki",
+      "Pieksämäki",
+      "Riihimäki"
+     ],
+     "en": [
+      "Kokemäki",
+      "Kärsämäki",
+      "Luumäki",
+      "Mynämäki",
+      "Pieksämäki",
+      "Riihimäki"
+     ],
+     "h": "-mäki"
+    },
+    {
+     "fi": [
+      "Hankasalmi",
+      "Hirvensalmi",
+      "Hyrynsalmi",
+      "Iisalmi",
+      "Rantasalmi",
+      "Suomussalmi"
+     ],
+     "en": [
+      "Hankasalmi",
+      "Hirvensalmi",
+      "Hyrynsalmi",
+      "Iisalmi",
+      "Rantasalmi",
+      "Suomussalmi"
+     ],
+     "h": "-salmi"
+    },
+    {
+     "fi": [
+      "Jyväskylä",
+      "Myrskylä",
+      "Rääkkylä",
+      "Sodankylä",
+      "Säkylä"
+     ],
+     "en": [
+      "Jyväskylä",
+      "Myrskylä",
+      "Rääkkylä",
+      "Sodankylä",
+      "Säkylä"
+     ],
+     "h": "-kylä"
+    },
+    {
+     "fi": [
+      "Järvenpää",
+      "Kankaanpää",
+      "Oripää"
+     ],
+     "en": [
+      "Järvenpää",
+      "Kankaanpää",
+      "Oripää"
+     ],
+     "h": "-pää"
+    },
+    {
+     "fi": [
+      "Huittinen",
+      "Ikaalinen",
+      "Jokioinen",
+      "Joroinen",
+      "Kaskinen",
+      "Kauniainen",
+      "Kaustinen",
+      "Kuhmoinen",
+      "Nousiainen",
+      "Oulainen",
+      "Parainen",
+      "Pornainen",
+      "Siikainen",
+      "Uurainen"
+     ],
+     "en": [
+      "Huittinen",
+      "Ikaalinen",
+      "Jokioinen",
+      "Joroinen",
+      "Kaskinen",
+      "Kauniainen",
+      "Kaustinen",
+      "Kuhmoinen",
+      "Nousiainen",
+      "Oulainen",
+      "Parainen",
+      "Pornainen",
+      "Siikainen",
+      "Uurainen"
+     ],
+     "h": "-nen"
+    },
+    {
+     "fi": [
+      "Keminmaa",
+      "Loimaa",
+      "Vehmaa"
+     ],
+     "en": [
+      "Keminmaa",
+      "Loimaa",
+      "Vehmaa"
+     ],
+     "h": "-maa"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-kaupungit-kirjaimista",
+   "cat": "suomi",
+   "t": 200,
+   "title": {
+    "fi": "Tunnista 25 suurta suomalaista kaupunkia nimen 2. ja 3. kirjaimesta (2026)",
+    "en": "Identify 25 large Finnish cities from the 2nd and 3rd letter of the name (2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjaimet",
+    "en": "Letters"
+   },
+   "items": [
+    {
+     "fi": [
+      "Helsinki"
+     ],
+     "en": [
+      "Helsinki"
+     ],
+     "h": "_el_____"
+    },
+    {
+     "fi": [
+      "Espoo"
+     ],
+     "en": [
+      "Espoo"
+     ],
+     "h": "_sp__"
+    },
+    {
+     "fi": [
+      "Oulu"
+     ],
+     "en": [
+      "Oulu"
+     ],
+     "h": "_ul_"
+    },
+    {
+     "fi": [
+      "Turku"
+     ],
+     "en": [
+      "Turku"
+     ],
+     "h": "_ur__"
+    },
+    {
+     "fi": [
+      "Jyväskylä"
+     ],
+     "en": [
+      "Jyväskylä"
+     ],
+     "h": "_yv______"
+    },
+    {
+     "fi": [
+      "Lahti"
+     ],
+     "en": [
+      "Lahti"
+     ],
+     "h": "_ah__"
+    },
+    {
+     "fi": [
+      "Pori"
+     ],
+     "en": [
+      "Pori"
+     ],
+     "h": "_or_"
+    },
+    {
+     "fi": [
+      "Joensuu"
+     ],
+     "en": [
+      "Joensuu"
+     ],
+     "h": "_oe____"
+    },
+    {
+     "fi": [
+      "Kouvola"
+     ],
+     "en": [
+      "Kouvola"
+     ],
+     "h": "_ou____"
+    },
+    {
+     "fi": [
+      "Lappeenranta"
+     ],
+     "en": [
+      "Lappeenranta"
+     ],
+     "h": "_ap_________"
+    },
+    {
+     "fi": [
+      "Hämeenlinna"
+     ],
+     "en": [
+      "Hämeenlinna"
+     ],
+     "h": "_äm________"
+    },
+    {
+     "fi": [
+      "Rovaniemi"
+     ],
+     "en": [
+      "Rovaniemi"
+     ],
+     "h": "_ov______"
+    },
+    {
+     "fi": [
+      "Mikkeli"
+     ],
+     "en": [
+      "Mikkeli"
+     ],
+     "h": "_ik____"
+    },
+    {
+     "fi": [
+      "Salo"
+     ],
+     "en": [
+      "Salo"
+     ],
+     "h": "_al_"
+    },
+    {
+     "fi": [
+      "Kotka"
+     ],
+     "en": [
+      "Kotka"
+     ],
+     "h": "_ot__"
+    },
+    {
+     "fi": [
+      "Kokkola"
+     ],
+     "en": [
+      "Kokkola"
+     ],
+     "h": "_ok____"
+    },
+    {
+     "fi": [
+      "Hyvinkää"
+     ],
+     "en": [
+      "Hyvinkää"
+     ],
+     "h": "_yv_____"
+    },
+    {
+     "fi": [
+      "Lohja"
+     ],
+     "en": [
+      "Lohja"
+     ],
+     "h": "_oh__"
+    },
+    {
+     "fi": [
+      "Kerava"
+     ],
+     "en": [
+      "Kerava"
+     ],
+     "h": "_er___"
+    },
+    {
+     "fi": [
+      "Kaarina"
+     ],
+     "en": [
+      "Kaarina"
+     ],
+     "h": "_aa____"
+    },
+    {
+     "fi": [
+      "Nokia"
+     ],
+     "en": [
+      "Nokia"
+     ],
+     "h": "_ok__"
+    },
+    {
+     "fi": [
+      "Kajaani"
+     ],
+     "en": [
+      "Kajaani"
+     ],
+     "h": "_aj____"
+    },
+    {
+     "fi": [
+      "Ylöjärvi"
+     ],
+     "en": [
+      "Ylöjärvi"
+     ],
+     "h": "_lö_____"
+    },
+    {
+     "fi": [
+      "Savonlinna"
+     ],
+     "en": [
+      "Savonlinna"
+     ],
+     "h": "_av_______"
+    },
+    {
+     "fi": [
+      "Imatra"
+     ],
+     "en": [
+      "Imatra"
+     ],
+     "h": "_ma___"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-yksi-vokaali",
+   "cat": "suomi",
+   "t": 140,
+   "title": {
+    "fi": "Kunnat, joiden nimessä on vain yhtä vokaalikirjainta (esim. Vantaa, 2026)",
+    "en": "Municipalities whose name uses only one vowel letter (e.g. Vantaa, 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vokaali",
+    "en": "Vowel"
+   },
+   "items": [
+    {
+     "fi": [
+      "Akaa"
+     ],
+     "en": [
+      "Akaa"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Hammarland"
+     ],
+     "en": [
+      "Hammarland"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Harjavalta"
+     ],
+     "en": [
+      "Harjavalta"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Janakkala"
+     ],
+     "en": [
+      "Janakkala"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Kangasala"
+     ],
+     "en": [
+      "Kangasala"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Salla"
+     ],
+     "en": [
+      "Salla"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Sastamala"
+     ],
+     "en": [
+      "Sastamala"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Vaala"
+     ],
+     "en": [
+      "Vaala"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Vaasa"
+     ],
+     "en": [
+      "Vaasa"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Vantaa"
+     ],
+     "en": [
+      "Vantaa"
+     ],
+     "h": "a"
+    },
+    {
+     "fi": [
+      "Kempele"
+     ],
+     "en": [
+      "Kempele"
+     ],
+     "h": "e"
+    },
+    {
+     "fi": [
+      "Ii"
+     ],
+     "en": [
+      "Ii"
+     ],
+     "h": "i"
+    },
+    {
+     "fi": [
+      "Iitti"
+     ],
+     "en": [
+      "Iitti"
+     ],
+     "h": "i"
+    },
+    {
+     "fi": [
+      "Vihti"
+     ],
+     "en": [
+      "Vihti"
+     ],
+     "h": "i"
+    },
+    {
+     "fi": [
+      "Porvoo"
+     ],
+     "en": [
+      "Porvoo"
+     ],
+     "h": "o"
+    },
+    {
+     "fi": [
+      "Sund"
+     ],
+     "en": [
+      "Sund"
+     ],
+     "h": "u"
+    },
+    {
+     "fi": [
+      "Turku"
+     ],
+     "en": [
+      "Turku"
+     ],
+     "h": "u"
+    },
+    {
+     "fi": [
+      "Jämsä"
+     ],
+     "en": [
+      "Jämsä"
+     ],
+     "h": "ä"
+    },
+    {
+     "fi": [
+      "Mäntsälä"
+     ],
+     "en": [
+      "Mäntsälä"
+     ],
+     "h": "ä"
+    },
+    {
+     "fi": [
+      "Föglö"
+     ],
+     "en": [
+      "Föglö"
+     ],
+     "h": "ö"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-lyhyet-nimet",
+   "cat": "suomi",
+   "t": 90,
+   "title": {
+    "fi": "Kunnat, joiden nimessä on enintään neljä kirjainta (2026)",
+    "en": "Municipalities with names of four letters or fewer (2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Hint"
+   },
+   "items": [
+    {
+     "fi": [
+      "Ii"
+     ],
+     "en": [
+      "Ii"
+     ],
+     "h": "I_"
+    },
+    {
+     "fi": [
+      "Akaa"
+     ],
+     "en": [
+      "Akaa"
+     ],
+     "h": "A___"
+    },
+    {
+     "fi": [
+      "Aura"
+     ],
+     "en": [
+      "Aura"
+     ],
+     "h": "A___"
+    },
+    {
+     "fi": [
+      "Eura"
+     ],
+     "en": [
+      "Eura"
+     ],
+     "h": "E___"
+    },
+    {
+     "fi": [
+      "Geta"
+     ],
+     "en": [
+      "Geta"
+     ],
+     "h": "G___"
+    },
+    {
+     "fi": [
+      "Juva"
+     ],
+     "en": [
+      "Juva"
+     ],
+     "h": "J___"
+    },
+    {
+     "fi": [
+      "Kemi"
+     ],
+     "en": [
+      "Kemi"
+     ],
+     "h": "K___"
+    },
+    {
+     "fi": [
+      "Lemi"
+     ],
+     "en": [
+      "Lemi"
+     ],
+     "h": "L___"
+    },
+    {
+     "fi": [
+      "Oulu"
+     ],
+     "en": [
+      "Oulu"
+     ],
+     "h": "O___"
+    },
+    {
+     "fi": [
+      "Pori"
+     ],
+     "en": [
+      "Pori"
+     ],
+     "h": "P___"
+    },
+    {
+     "fi": [
+      "Salo"
+     ],
+     "en": [
+      "Salo"
+     ],
+     "h": "S___"
+    },
+    {
+     "fi": [
+      "Simo"
+     ],
+     "en": [
+      "Simo"
+     ],
+     "h": "S___"
+    },
+    {
+     "fi": [
+      "Sund"
+     ],
+     "en": [
+      "Sund"
+     ],
+     "h": "S___"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-sama-alku-ja-loppu",
+   "cat": "suomi",
+   "t": 90,
+   "title": {
+    "fi": "Kunnat, joiden nimi alkaa ja päättyy samaan kirjaimeen (2026)",
+    "en": "Municipalities whose name begins and ends with the same letter (2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Akaa"
+     ],
+     "en": [
+      "Akaa"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Alavieska"
+     ],
+     "en": [
+      "Alavieska"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Asikkala"
+     ],
+     "en": [
+      "Asikkala"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Askola"
+     ],
+     "en": [
+      "Askola"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Aura"
+     ],
+     "en": [
+      "Aura"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Ii"
+     ],
+     "en": [
+      "Ii"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Iisalmi"
+     ],
+     "en": [
+      "Iisalmi"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Iitti"
+     ],
+     "en": [
+      "Iitti"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Ilmajoki"
+     ],
+     "en": [
+      "Ilmajoki"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Ilomantsi"
+     ],
+     "en": [
+      "Ilomantsi"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Inari"
+     ],
+     "en": [
+      "Inari"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Isojoki"
+     ],
+     "en": [
+      "Isojoki"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Nousiainen"
+     ],
+     "en": [
+      "Nousiainen"
+     ],
+     "h": "N"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-maakunnat-alle-espoon",
+   "cat": "suomi",
+   "t": 105,
+   "title": {
+    "fi": "Maakunnat, joissa asuu vähemmän ihmisiä kuin Espoossa (väkiluku 31.12.2025)",
+    "en": "Regions with fewer inhabitants than the city of Espoo (population 31 Dec 2025)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Keski-Suomi"
+     ],
+     "en": [
+      "Central Finland",
+      "Keski-Suomi"
+     ]
+    },
+    {
+     "fi": [
+      "Pohjois-Savo"
+     ],
+     "en": [
+      "North Savo",
+      "Pohjois-Savo"
+     ]
+    },
+    {
+     "fi": [
+      "Satakunta"
+     ],
+     "en": [
+      "Satakunta"
+     ]
+    },
+    {
+     "fi": [
+      "Päijät-Häme"
+     ],
+     "en": [
+      "Päijät-Häme"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Pohjanmaa"
+     ],
+     "en": [
+      "South Ostrobothnia",
+      "Etelä-Pohjanmaa"
+     ]
+    },
+    {
+     "fi": [
+      "Pohjanmaa"
+     ],
+     "en": [
+      "Ostrobothnia",
+      "Pohjanmaa"
+     ]
+    },
+    {
+     "fi": [
+      "Lappi"
+     ],
+     "en": [
+      "Lapland",
+      "Lappland",
+      "Lappi"
+     ]
+    },
+    {
+     "fi": [
+      "Kanta-Häme"
+     ],
+     "en": [
+      "Kanta-Häme"
+     ]
+    },
+    {
+     "fi": [
+      "Pohjois-Karjala"
+     ],
+     "en": [
+      "North Karelia",
+      "Pohjois-Karjala"
+     ]
+    },
+    {
+     "fi": [
+      "Kymenlaakso"
+     ],
+     "en": [
+      "Kymenlaakso"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Savo"
+     ],
+     "en": [
+      "South Savo",
+      "Etelä-Savo"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Karjala"
+     ],
+     "en": [
+      "South Karelia",
+      "Etelä-Karjala"
+     ]
+    },
+    {
+     "fi": [
+      "Kainuu"
+     ],
+     "en": [
+      "Kainuu"
+     ]
+    },
+    {
+     "fi": [
+      "Keski-Pohjanmaa"
+     ],
+     "en": [
+      "Central Ostrobothnia",
+      "Keski-Pohjanmaa"
+     ]
+    },
+    {
+     "fi": [
+      "Ahvenanmaa"
+     ],
+     "en": [
+      "Åland",
+      "Aland",
+      "Åland Islands",
+      "Ahvenanmaa"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-pienimmat-pinta-alat",
+   "cat": "suomi",
+   "t": 70,
+   "title": {
+    "fi": "Suomen 10 pinta-alaltaan pienintä kuntaa (maa- ja sisävesialue, merialueet pois, 2026)",
+    "en": "The 10 smallest Finnish municipalities by area (land and inland water, sea excluded, 2026)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kauniainen"
+     ],
+     "en": [
+      "Kauniainen"
+     ]
+    },
+    {
+     "fi": [
+      "Kaskinen"
+     ],
+     "en": [
+      "Kaskinen"
+     ]
+    },
+    {
+     "fi": [
+      "Maarianhamina"
+     ],
+     "en": [
+      "Maarianhamina"
+     ]
+    },
+    {
+     "fi": [
+      "Sottunga"
+     ],
+     "en": [
+      "Sottunga"
+     ]
+    },
+    {
+     "fi": [
+      "Kerava"
+     ],
+     "en": [
+      "Kerava"
+     ]
+    },
+    {
+     "fi": [
+      "Lumparland"
+     ],
+     "en": [
+      "Lumparland"
+     ]
+    },
+    {
+     "fi": [
+      "Järvenpää"
+     ],
+     "en": [
+      "Järvenpää"
+     ]
+    },
+    {
+     "fi": [
+      "Raisio"
+     ],
+     "en": [
+      "Raisio"
+     ]
+    },
+    {
+     "fi": [
+      "Kökar"
+     ],
+     "en": [
+      "Kökar"
+     ]
+    },
+    {
+     "fi": [
+      "Geta"
+     ],
+     "en": [
+      "Geta"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-pienimmat-kunnat",
+   "cat": "suomi",
+   "t": 70,
+   "title": {
+    "fi": "Manner-Suomen 10 väkiluvultaan pienintä kuntaa (31.12.2025)",
+    "en": "The 10 least populous municipalities of mainland Finland (31 Dec 2025)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Lestijärvi"
+     ],
+     "en": [
+      "Lestijärvi"
+     ]
+    },
+    {
+     "fi": [
+      "Luhanka"
+     ],
+     "en": [
+      "Luhanka"
+     ]
+    },
+    {
+     "fi": [
+      "Hailuoto"
+     ],
+     "en": [
+      "Hailuoto"
+     ]
+    },
+    {
+     "fi": [
+      "Pelkosenniemi"
+     ],
+     "en": [
+      "Pelkosenniemi"
+     ]
+    },
+    {
+     "fi": [
+      "Kustavi"
+     ],
+     "en": [
+      "Kustavi"
+     ]
+    },
+    {
+     "fi": [
+      "Savukoski"
+     ],
+     "en": [
+      "Savukoski"
+     ]
+    },
+    {
+     "fi": [
+      "Halsua"
+     ],
+     "en": [
+      "Halsua"
+     ]
+    },
+    {
+     "fi": [
+      "Kivijärvi"
+     ],
+     "en": [
+      "Kivijärvi"
+     ]
+    },
+    {
+     "fi": [
+      "Merijärvi"
+     ],
+     "en": [
+      "Merijärvi"
+     ]
+    },
+    {
+     "fi": [
+      "Utsjoki"
+     ],
+     "en": [
+      "Utsjoki"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-harvaan-asutut",
+   "cat": "suomi",
+   "t": 70,
+   "title": {
+    "fi": "Kunnat, joissa asuu alle yksi ihminen maaneliökilometriä kohden (väkiluku 31.12.2025)",
+    "en": "Municipalities with fewer than one inhabitant per km² of land (population 31 Dec 2025)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Savukoski"
+     ],
+     "en": [
+      "Savukoski"
+     ]
+    },
+    {
+     "fi": [
+      "Utsjoki"
+     ],
+     "en": [
+      "Utsjoki"
+     ]
+    },
+    {
+     "fi": [
+      "Enontekiö"
+     ],
+     "en": [
+      "Enontekiö"
+     ]
+    },
+    {
+     "fi": [
+      "Inari"
+     ],
+     "en": [
+      "Inari"
+     ]
+    },
+    {
+     "fi": [
+      "Pelkosenniemi"
+     ],
+     "en": [
+      "Pelkosenniemi"
+     ]
+    },
+    {
+     "fi": [
+      "Salla"
+     ],
+     "en": [
+      "Salla"
+     ]
+    },
+    {
+     "fi": [
+      "Sodankylä"
+     ],
+     "en": [
+      "Sodankylä"
+     ]
+    },
+    {
+     "fi": [
+      "Kittilä"
+     ],
+     "en": [
+      "Kittilä"
+     ]
+    },
+    {
+     "fi": [
+      "Posio"
+     ],
+     "en": [
+      "Posio"
+     ]
+    },
+    {
+     "fi": [
+      "Puolanka"
+     ],
+     "en": [
+      "Puolanka"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-maakunta-pikkukunnista",
+   "cat": "suomi",
+   "t": 145,
+   "title": {
+    "fi": "Mikä Manner-Suomen maakunta? Vihjeenä sen kolme väkiluvultaan pienintä kuntaa (31.12.2025)",
+    "en": "Which mainland Finnish region? The clue is its three least populous municipalities (31 Dec 2025)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kunnat",
+    "en": "Municipalities"
+   },
+   "items": [
+    {
+     "fi": [
+      "Uusimaa"
+     ],
+     "en": [
+      "Uusimaa"
+     ],
+     "h": "Myrskylä, Pukkila, Lapinjärvi"
+    },
+    {
+     "fi": [
+      "Varsinais-Suomi"
+     ],
+     "en": [
+      "Southwest Finland",
+      "Finland Proper",
+      "Varsinais-Suomi"
+     ],
+     "h": "Kustavi, Oripää, Taivassalo"
+    },
+    {
+     "fi": [
+      "Satakunta"
+     ],
+     "en": [
+      "Satakunta"
+     ],
+     "h": "Siikainen, Jämijärvi, Pomarkku"
+    },
+    {
+     "fi": [
+      "Kanta-Häme"
+     ],
+     "en": [
+      "Kanta-Häme"
+     ],
+     "h": "Humppila, Ypäjä, Jokioinen"
+    },
+    {
+     "fi": [
+      "Pirkanmaa"
+     ],
+     "en": [
+      "Pirkanmaa"
+     ],
+     "h": "Juupajoki, Kihniö, Kuhmoinen"
+    },
+    {
+     "fi": [
+      "Päijät-Häme"
+     ],
+     "en": [
+      "Päijät-Häme"
+     ],
+     "h": "Hartola, Padasjoki, Sysmä"
+    },
+    {
+     "fi": [
+      "Kymenlaakso"
+     ],
+     "en": [
+      "Kymenlaakso"
+     ],
+     "h": "Miehikkälä, Virolahti, Pyhtää"
+    },
+    {
+     "fi": [
+      "Etelä-Karjala"
+     ],
+     "en": [
+      "South Karelia",
+      "Etelä-Karjala"
+     ],
+     "h": "Lemi, Rautjärvi, Savitaipale"
+    },
+    {
+     "fi": [
+      "Etelä-Savo"
+     ],
+     "en": [
+      "South Savo",
+      "Etelä-Savo"
+     ],
+     "h": "Enonkoski, Hirvensalmi, Puumala"
+    },
+    {
+     "fi": [
+      "Pohjois-Savo"
+     ],
+     "en": [
+      "North Savo",
+      "Pohjois-Savo"
+     ],
+     "h": "Tervo, Rautavaara, Vesanto"
+    },
+    {
+     "fi": [
+      "Pohjois-Karjala"
+     ],
+     "en": [
+      "North Karelia",
+      "Pohjois-Karjala"
+     ],
+     "h": "Rääkkylä, Heinävesi, Tohmajärvi"
+    },
+    {
+     "fi": [
+      "Keski-Suomi"
+     ],
+     "en": [
+      "Central Finland",
+      "Keski-Suomi"
+     ],
+     "h": "Luhanka, Kivijärvi, Kyyjärvi"
+    },
+    {
+     "fi": [
+      "Etelä-Pohjanmaa"
+     ],
+     "en": [
+      "South Ostrobothnia",
+      "Etelä-Pohjanmaa"
+     ],
+     "h": "Karijoki, Isojoki, Soini"
+    },
+    {
+     "fi": [
+      "Pohjanmaa"
+     ],
+     "en": [
+      "Ostrobothnia",
+      "Pohjanmaa"
+     ],
+     "h": "Kaskinen, Korsnäs, Maalahti"
+    },
+    {
+     "fi": [
+      "Keski-Pohjanmaa"
+     ],
+     "en": [
+      "Central Ostrobothnia",
+      "Keski-Pohjanmaa"
+     ],
+     "h": "Lestijärvi, Halsua, Perho"
+    },
+    {
+     "fi": [
+      "Pohjois-Pohjanmaa"
+     ],
+     "en": [
+      "North Ostrobothnia",
+      "Pohjois-Pohjanmaa"
+     ],
+     "h": "Hailuoto, Merijärvi, Pyhäntä"
+    },
+    {
+     "fi": [
+      "Kainuu"
+     ],
+     "en": [
+      "Kainuu"
+     ],
+     "h": "Ristijärvi, Hyrynsalmi, Puolanka"
+    },
+    {
+     "fi": [
+      "Lappi"
+     ],
+     "en": [
+      "Lapland",
+      "Lappland",
+      "Lappi"
+     ],
+     "h": "Pelkosenniemi, Savukoski, Utsjoki"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-rajakunnat",
+   "cat": "suomi",
+   "t": 180,
+   "title": {
+    "fi": "Kunnat, joilla on maaraja Venäjän, Ruotsin tai Norjan kanssa (2026)",
+    "en": "Municipalities with a land border with Russia, Sweden or Norway (2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Naapurimaa",
+    "en": "Neighbour"
+   },
+   "items": [
+    {
+     "fi": [
+      "Virolahti"
+     ],
+     "en": [
+      "Virolahti"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Miehikkälä"
+     ],
+     "en": [
+      "Miehikkälä"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Lappeenranta"
+     ],
+     "en": [
+      "Lappeenranta"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Imatra"
+     ],
+     "en": [
+      "Imatra"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Ruokolahti"
+     ],
+     "en": [
+      "Ruokolahti"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Rautjärvi"
+     ],
+     "en": [
+      "Rautjärvi"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Parikkala"
+     ],
+     "en": [
+      "Parikkala"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Kitee"
+     ],
+     "en": [
+      "Kitee"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Tohmajärvi"
+     ],
+     "en": [
+      "Tohmajärvi"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Joensuu"
+     ],
+     "en": [
+      "Joensuu"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Ilomantsi"
+     ],
+     "en": [
+      "Ilomantsi"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Lieksa"
+     ],
+     "en": [
+      "Lieksa"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Kuhmo"
+     ],
+     "en": [
+      "Kuhmo"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Suomussalmi"
+     ],
+     "en": [
+      "Suomussalmi"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Kuusamo"
+     ],
+     "en": [
+      "Kuusamo"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Salla"
+     ],
+     "en": [
+      "Salla"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Savukoski"
+     ],
+     "en": [
+      "Savukoski"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Sodankylä"
+     ],
+     "en": [
+      "Sodankylä"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Inari"
+     ],
+     "en": [
+      "Inari"
+     ],
+     "h": {
+      "fi": "Norja ja Venäjä",
+      "en": "Norway and Russia"
+     }
+    },
+    {
+     "fi": [
+      "Utsjoki"
+     ],
+     "en": [
+      "Utsjoki"
+     ],
+     "h": {
+      "fi": "Norja",
+      "en": "Norway"
+     }
+    },
+    {
+     "fi": [
+      "Enontekiö"
+     ],
+     "en": [
+      "Enontekiö"
+     ],
+     "h": {
+      "fi": "Ruotsi ja Norja",
+      "en": "Sweden and Norway"
+     }
+    },
+    {
+     "fi": [
+      "Muonio"
+     ],
+     "en": [
+      "Muonio"
+     ],
+     "h": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     }
+    },
+    {
+     "fi": [
+      "Kolari"
+     ],
+     "en": [
+      "Kolari"
+     ],
+     "h": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     }
+    },
+    {
+     "fi": [
+      "Pello"
+     ],
+     "en": [
+      "Pello"
+     ],
+     "h": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     }
+    },
+    {
+     "fi": [
+      "Ylitornio"
+     ],
+     "en": [
+      "Ylitornio"
+     ],
+     "h": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     }
+    },
+    {
+     "fi": [
+      "Tornio"
+     ],
+     "en": [
+      "Tornio"
+     ],
+     "h": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-ruotsinkieliset-nimet",
+   "cat": "suomi",
+   "t": 280,
+   "title": {
+    "fi": "Kunnat ruotsinkielisestä nimestä: kirjoita suomenkielinen nimi (40)",
+    "en": "Finnish municipalities from their Swedish name: give the Finnish name (40)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ruotsiksi",
+    "en": "In Swedish"
+   },
+   "items": [
+    {
+     "fi": [
+      "Helsinki"
+     ],
+     "en": [
+      "Helsinki"
+     ],
+     "h": "Helsingfors"
+    },
+    {
+     "fi": [
+      "Turku"
+     ],
+     "en": [
+      "Turku"
+     ],
+     "h": "Åbo"
+    },
+    {
+     "fi": [
+      "Tampere"
+     ],
+     "en": [
+      "Tampere"
+     ],
+     "h": "Tammerfors"
+    },
+    {
+     "fi": [
+      "Oulu"
+     ],
+     "en": [
+      "Oulu"
+     ],
+     "h": "Uleåborg"
+    },
+    {
+     "fi": [
+      "Espoo"
+     ],
+     "en": [
+      "Espoo"
+     ],
+     "h": "Esbo"
+    },
+    {
+     "fi": [
+      "Vantaa"
+     ],
+     "en": [
+      "Vantaa"
+     ],
+     "h": "Vanda"
+    },
+    {
+     "fi": [
+      "Pori"
+     ],
+     "en": [
+      "Pori"
+     ],
+     "h": "Björneborg"
+    },
+    {
+     "fi": [
+      "Lappeenranta"
+     ],
+     "en": [
+      "Lappeenranta"
+     ],
+     "h": "Villmanstrand"
+    },
+    {
+     "fi": [
+      "Hämeenlinna"
+     ],
+     "en": [
+      "Hämeenlinna"
+     ],
+     "h": "Tavastehus"
+    },
+    {
+     "fi": [
+      "Savonlinna"
+     ],
+     "en": [
+      "Savonlinna"
+     ],
+     "h": "Nyslott"
+    },
+    {
+     "fi": [
+      "Porvoo"
+     ],
+     "en": [
+      "Porvoo"
+     ],
+     "h": "Borgå"
+    },
+    {
+     "fi": [
+      "Pietarsaari"
+     ],
+     "en": [
+      "Pietarsaari"
+     ],
+     "h": "Jakobstad"
+    },
+    {
+     "fi": [
+      "Kokkola"
+     ],
+     "en": [
+      "Kokkola"
+     ],
+     "h": "Karleby"
+    },
+    {
+     "fi": [
+      "Uusikaarlepyy"
+     ],
+     "en": [
+      "Uusikaarlepyy"
+     ],
+     "h": "Nykarleby"
+    },
+    {
+     "fi": [
+      "Kristiinankaupunki"
+     ],
+     "en": [
+      "Kristiinankaupunki"
+     ],
+     "h": "Kristinestad"
+    },
+    {
+     "fi": [
+      "Raahe"
+     ],
+     "en": [
+      "Raahe"
+     ],
+     "h": "Brahestad"
+    },
+    {
+     "fi": [
+      "Uusikaupunki"
+     ],
+     "en": [
+      "Uusikaupunki"
+     ],
+     "h": "Nystad"
+    },
+    {
+     "fi": [
+      "Hamina"
+     ],
+     "en": [
+      "Hamina"
+     ],
+     "h": "Fredrikshamn"
+    },
+    {
+     "fi": [
+      "Raasepori"
+     ],
+     "en": [
+      "Raasepori"
+     ],
+     "h": "Raseborg"
+    },
+    {
+     "fi": [
+      "Kirkkonummi"
+     ],
+     "en": [
+      "Kirkkonummi"
+     ],
+     "h": "Kyrkslätt"
+    },
+    {
+     "fi": [
+      "Kauniainen"
+     ],
+     "en": [
+      "Kauniainen"
+     ],
+     "h": "Grankulla"
+    },
+    {
+     "fi": [
+      "Järvenpää"
+     ],
+     "en": [
+      "Järvenpää"
+     ],
+     "h": "Träskända"
+    },
+    {
+     "fi": [
+      "Kerava"
+     ],
+     "en": [
+      "Kerava"
+     ],
+     "h": "Kervo"
+    },
+    {
+     "fi": [
+      "Hyvinkää"
+     ],
+     "en": [
+      "Hyvinkää"
+     ],
+     "h": "Hyvinge"
+    },
+    {
+     "fi": [
+      "Tuusula"
+     ],
+     "en": [
+      "Tuusula"
+     ],
+     "h": "Tusby"
+    },
+    {
+     "fi": [
+      "Lohja"
+     ],
+     "en": [
+      "Lohja"
+     ],
+     "h": "Lojo"
+    },
+    {
+     "fi": [
+      "Naantali"
+     ],
+     "en": [
+      "Naantali"
+     ],
+     "h": "Nådendal"
+    },
+    {
+     "fi": [
+      "Kaarina"
+     ],
+     "en": [
+      "Kaarina"
+     ],
+     "h": "S:t Karins"
+    },
+    {
+     "fi": [
+      "Rauma"
+     ],
+     "en": [
+      "Rauma"
+     ],
+     "h": "Raumo"
+    },
+    {
+     "fi": [
+      "Mustasaari"
+     ],
+     "en": [
+      "Mustasaari"
+     ],
+     "h": "Korsholm"
+    },
+    {
+     "fi": [
+      "Luoto"
+     ],
+     "en": [
+      "Luoto"
+     ],
+     "h": "Larsmo"
+    },
+    {
+     "fi": [
+      "Lahti"
+     ],
+     "en": [
+      "Lahti"
+     ],
+     "h": "Lahtis"
+    },
+    {
+     "fi": [
+      "Mikkeli"
+     ],
+     "en": [
+      "Mikkeli"
+     ],
+     "h": "S:t Michel"
+    },
+    {
+     "fi": [
+      "Kajaani"
+     ],
+     "en": [
+      "Kajaani"
+     ],
+     "h": "Kajana"
+    },
+    {
+     "fi": [
+      "Iisalmi"
+     ],
+     "en": [
+      "Iisalmi"
+     ],
+     "h": "Idensalmi"
+    },
+    {
+     "fi": [
+      "Kokemäki"
+     ],
+     "en": [
+      "Kokemäki"
+     ],
+     "h": "Kumo"
+    },
+    {
+     "fi": [
+      "Mynämäki"
+     ],
+     "en": [
+      "Mynämäki"
+     ],
+     "h": "Virmo"
+    },
+    {
+     "fi": [
+      "Ikaalinen"
+     ],
+     "en": [
+      "Ikaalinen"
+     ],
+     "h": "Ikalis"
+    },
+    {
+     "fi": [
+      "Isokyrö"
+     ],
+     "en": [
+      "Isokyrö"
+     ],
+     "h": "Storkyro"
+    },
+    {
+     "fi": [
+      "Pornainen"
+     ],
+     "en": [
+      "Pornainen"
+     ],
+     "h": "Borgnäs"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-missa-muodot",
+   "cat": "suomi",
+   "t": 210,
+   "title": {
+    "fi": "Missä? Kirjoita kunnan nimi muodossa ”missä” (Kotuksen suositus, 30 kuntaa)",
+    "en": "Where? Write the Finnish “in/at” (locative) form of each municipality (Kotus recommendation, 30)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kunta",
+    "en": "Municipality"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tampereella"
+     ],
+     "en": [
+      "Tampereella"
+     ],
+     "h": "Tampere"
+    },
+    {
+     "fi": [
+      "Lahdessa"
+     ],
+     "en": [
+      "Lahdessa"
+     ],
+     "h": "Lahti"
+    },
+    {
+     "fi": [
+      "Hangossa"
+     ],
+     "en": [
+      "Hangossa"
+     ],
+     "h": "Hanko"
+    },
+    {
+     "fi": [
+      "Raumalla"
+     ],
+     "en": [
+      "Raumalla"
+     ],
+     "h": "Rauma"
+    },
+    {
+     "fi": [
+      "Imatralla"
+     ],
+     "en": [
+      "Imatralla"
+     ],
+     "h": "Imatra"
+    },
+    {
+     "fi": [
+      "Vantaalla"
+     ],
+     "en": [
+      "Vantaalla"
+     ],
+     "h": "Vantaa"
+    },
+    {
+     "fi": [
+      "Kiteellä"
+     ],
+     "en": [
+      "Kiteellä"
+     ],
+     "h": "Kitee"
+    },
+    {
+     "fi": [
+      "Iissä"
+     ],
+     "en": [
+      "Iissä"
+     ],
+     "h": "Ii"
+    },
+    {
+     "fi": [
+      "Liedossa"
+     ],
+     "en": [
+      "Liedossa"
+     ],
+     "h": "Lieto"
+    },
+    {
+     "fi": [
+      "Akaassa"
+     ],
+     "en": [
+      "Akaassa"
+     ],
+     "h": "Akaa"
+    },
+    {
+     "fi": [
+      "Juvalla"
+     ],
+     "en": [
+      "Juvalla"
+     ],
+     "h": "Juva"
+    },
+    {
+     "fi": [
+      "Loimaalla"
+     ],
+     "en": [
+      "Loimaalla"
+     ],
+     "h": "Loimaa"
+    },
+    {
+     "fi": [
+      "Pyhtäällä"
+     ],
+     "en": [
+      "Pyhtäällä"
+     ],
+     "h": "Pyhtää"
+    },
+    {
+     "fi": [
+      "Hyvinkäällä"
+     ],
+     "en": [
+      "Hyvinkäällä"
+     ],
+     "h": "Hyvinkää"
+    },
+    {
+     "fi": [
+      "Kangasalla"
+     ],
+     "en": [
+      "Kangasalla"
+     ],
+     "h": "Kangasala"
+    },
+    {
+     "fi": [
+      "Enontekiöllä"
+     ],
+     "en": [
+      "Enontekiöllä"
+     ],
+     "h": "Enontekiö"
+    },
+    {
+     "fi": [
+      "Posiolla"
+     ],
+     "en": [
+      "Posiolla"
+     ],
+     "h": "Posio"
+    },
+    {
+     "fi": [
+      "Seinäjoella"
+     ],
+     "en": [
+      "Seinäjoella"
+     ],
+     "h": "Seinäjoki"
+    },
+    {
+     "fi": [
+      "Ruovedellä"
+     ],
+     "en": [
+      "Ruovedellä"
+     ],
+     "h": "Ruovesi"
+    },
+    {
+     "fi": [
+      "Varkaudessa"
+     ],
+     "en": [
+      "Varkaudessa"
+     ],
+     "h": "Varkaus"
+    },
+    {
+     "fi": [
+      "Alavudella"
+     ],
+     "en": [
+      "Alavudella"
+     ],
+     "h": "Alavus"
+    },
+    {
+     "fi": [
+      "Nurmeksessa"
+     ],
+     "en": [
+      "Nurmeksessa"
+     ],
+     "h": "Nurmes"
+    },
+    {
+     "fi": [
+      "Outokummussa"
+     ],
+     "en": [
+      "Outokummussa"
+     ],
+     "h": "Outokumpu"
+    },
+    {
+     "fi": [
+      "Kempeleessä"
+     ],
+     "en": [
+      "Kempeleessä"
+     ],
+     "h": "Kempele"
+    },
+    {
+     "fi": [
+      "Kauniaisissa"
+     ],
+     "en": [
+      "Kauniaisissa"
+     ],
+     "h": "Kauniainen"
+    },
+    {
+     "fi": [
+      "Ikaalisissa"
+     ],
+     "en": [
+      "Ikaalisissa"
+     ],
+     "h": "Ikaalinen"
+    },
+    {
+     "fi": [
+      "Huittisissa"
+     ],
+     "en": [
+      "Huittisissa"
+     ],
+     "h": "Huittinen"
+    },
+    {
+     "fi": [
+      "Kaskisissa",
+      "Kaskisessa"
+     ],
+     "en": [
+      "Kaskisissa",
+      "Kaskisessa"
+     ],
+     "h": "Kaskinen"
+    },
+    {
+     "fi": [
+      "Uudessakaupungissa"
+     ],
+     "en": [
+      "Uudessakaupungissa"
+     ],
+     "h": "Uusikaupunki"
+    },
+    {
+     "fi": [
+      "Virroilla"
+     ],
+     "en": [
+      "Virroilla"
+     ],
+     "h": "Virrat"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-jokisuut",
+   "cat": "suomi",
+   "t": 140,
+   "title": {
+    "fi": "Missä kunnassa joki laskee mereen? (kuntajako 2026)",
+    "en": "In which municipality does the river reach the sea? (2026 municipalities)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Joki",
+    "en": "River"
+   },
+   "items": [
+    {
+     "fi": [
+      "Turku"
+     ],
+     "en": [
+      "Turku"
+     ],
+     "h": "Aurajoki"
+    },
+    {
+     "fi": [
+      "Pori"
+     ],
+     "en": [
+      "Pori"
+     ],
+     "h": "Kokemäenjoki"
+    },
+    {
+     "fi": [
+      "Oulu"
+     ],
+     "en": [
+      "Oulu"
+     ],
+     "h": "Oulujoki"
+    },
+    {
+     "fi": [
+      "Kemi",
+      "Keminmaa"
+     ],
+     "en": [
+      "Kemi",
+      "Keminmaa"
+     ],
+     "h": "Kemijoki"
+    },
+    {
+     "fi": [
+      "Tornio",
+      "Haaparanta"
+     ],
+     "en": [
+      "Tornio",
+      "Haaparanta"
+     ],
+     "h": "Tornionjoki"
+    },
+    {
+     "fi": [
+      "Helsinki"
+     ],
+     "en": [
+      "Helsinki"
+     ],
+     "h": "Vantaanjoki"
+    },
+    {
+     "fi": [
+      "Porvoo"
+     ],
+     "en": [
+      "Porvoo"
+     ],
+     "h": "Porvoonjoki"
+    },
+    {
+     "fi": [
+      "Kotka",
+      "Pyhtää",
+      "Loviisa"
+     ],
+     "en": [
+      "Kotka",
+      "Pyhtää",
+      "Loviisa"
+     ],
+     "h": "Kymijoki"
+    },
+    {
+     "fi": [
+      "Ii"
+     ],
+     "en": [
+      "Ii"
+     ],
+     "h": "Iijoki"
+    },
+    {
+     "fi": [
+      "Simo"
+     ],
+     "en": [
+      "Simo"
+     ],
+     "h": "Simojoki"
+    },
+    {
+     "fi": [
+      "Kalajoki"
+     ],
+     "en": [
+      "Kalajoki"
+     ],
+     "h": "Kalajoki"
+    },
+    {
+     "fi": [
+      "Pyhäjoki"
+     ],
+     "en": [
+      "Pyhäjoki"
+     ],
+     "h": "Pyhäjoki"
+    },
+    {
+     "fi": [
+      "Siikajoki"
+     ],
+     "en": [
+      "Siikajoki"
+     ],
+     "h": "Siikajoki"
+    },
+    {
+     "fi": [
+      "Salo"
+     ],
+     "en": [
+      "Salo"
+     ],
+     "h": "Uskelanjoki"
+    },
+    {
+     "fi": [
+      "Mustasaari"
+     ],
+     "en": [
+      "Mustasaari"
+     ],
+     "h": "Kyrönjoki"
+    },
+    {
+     "fi": [
+      "Kokkola"
+     ],
+     "en": [
+      "Kokkola"
+     ],
+     "h": "Perhonjoki"
+    },
+    {
+     "fi": [
+      "Uusikaarlepyy"
+     ],
+     "en": [
+      "Uusikaarlepyy"
+     ],
+     "h": "Lapuanjoki"
+    },
+    {
+     "fi": [
+      "Raasepori"
+     ],
+     "en": [
+      "Raasepori"
+     ],
+     "h": "Karjaanjoki"
+    },
+    {
+     "fi": [
+      "Mynämäki"
+     ],
+     "en": [
+      "Mynämäki"
+     ],
+     "h": "Mynäjoki"
+    },
+    {
+     "fi": [
+      "Närpiö"
+     ],
+     "en": [
+      "Närpiö",
+      "Närpes"
+     ],
+     "h": "Närpiönjoki"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-kuntarebus",
+   "cat": "suomi",
+   "t": 250,
+   "title": {
+    "fi": "Kuntarebus: arvaa kunta sen nimen osista (28)",
+    "en": "Municipality rebus: guess the municipality from the parts of its name (28)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kontiolahti"
+     ],
+     "en": [
+      "Kontiolahti"
+     ],
+     "h": {
+      "fi": "karhun vanha nimi + merenpoukama",
+      "en": "old word for bear + bay"
+     }
+    },
+    {
+     "fi": [
+      "Outokumpu"
+     ],
+     "en": [
+      "Outokumpu"
+     ],
+     "h": {
+      "fi": "kummallinen + kukkula",
+      "en": "strange + hillock"
+     }
+    },
+    {
+     "fi": [
+      "Polvijärvi"
+     ],
+     "en": [
+      "Polvijärvi"
+     ],
+     "h": {
+      "fi": "jalan nivel + järvi",
+      "en": "leg joint + lake"
+     }
+    },
+    {
+     "fi": [
+      "Luumäki"
+     ],
+     "en": [
+      "Luumäki"
+     ],
+     "h": {
+      "fi": "luurangon osa + mäki",
+      "en": "piece of skeleton + hill"
+     }
+    },
+    {
+     "fi": [
+      "Virolahti"
+     ],
+     "en": [
+      "Virolahti"
+     ],
+     "h": {
+      "fi": "Eestinmaa + merenpoukama",
+      "en": "Estonia (in Finnish) + bay"
+     }
+    },
+    {
+     "fi": [
+      "Siilinjärvi"
+     ],
+     "en": [
+      "Siilinjärvi"
+     ],
+     "h": {
+      "fi": "piikikäs nisäkäs + järvi",
+      "en": "spiny mammal + lake"
+     }
+    },
+    {
+     "fi": [
+      "Kirkkonummi"
+     ],
+     "en": [
+      "Kirkkonummi"
+     ],
+     "h": {
+      "fi": "temppeli + kanervakangas",
+      "en": "church + heath"
+     }
+    },
+    {
+     "fi": [
+      "Mustasaari"
+     ],
+     "en": [
+      "Mustasaari"
+     ],
+     "h": {
+      "fi": "tumma väri + saari",
+      "en": "dark colour + island"
+     }
+    },
+    {
+     "fi": [
+      "Järvenpää"
+     ],
+     "en": [
+      "Järvenpää"
+     ],
+     "h": {
+      "fi": "järvi + kallo",
+      "en": "lake + head"
+     }
+    },
+    {
+     "fi": [
+      "Suomussalmi"
+     ],
+     "en": [
+      "Suomussalmi"
+     ],
+     "h": {
+      "fi": "kalan iholevy + kapea vesiväylä",
+      "en": "fish scale + strait"
+     }
+    },
+    {
+     "fi": [
+      "Seinäjoki"
+     ],
+     "en": [
+      "Seinäjoki"
+     ],
+     "h": {
+      "fi": "huoneen pystypinta + joki",
+      "en": "wall + river"
+     }
+    },
+    {
+     "fi": [
+      "Savukoski"
+     ],
+     "en": [
+      "Savukoski"
+     ],
+     "h": {
+      "fi": "nuotion huuru + kuohuva virta",
+      "en": "smoke + rapids"
+     }
+    },
+    {
+     "fi": [
+      "Valkeakoski"
+     ],
+     "en": [
+      "Valkeakoski"
+     ],
+     "h": {
+      "fi": "lumen väri + kuohuva virta",
+      "en": "white + rapids"
+     }
+    },
+    {
+     "fi": [
+      "Ruokolahti"
+     ],
+     "en": [
+      "Ruokolahti"
+     ],
+     "h": {
+      "fi": "rantakaisla + merenpoukama",
+      "en": "reed + bay"
+     }
+    },
+    {
+     "fi": [
+      "Savitaipale"
+     ],
+     "en": [
+      "Savitaipale"
+     ],
+     "h": {
+      "fi": "keramiikan maalaji + kannas",
+      "en": "clay + portage"
+     }
+    },
+    {
+     "fi": [
+      "Riihimäki"
+     ],
+     "en": [
+      "Riihimäki"
+     ],
+     "h": {
+      "fi": "viljan kuivatusrakennus + mäki",
+      "en": "threshing barn + hill"
+     }
+    },
+    {
+     "fi": [
+      "Nurmijärvi"
+     ],
+     "en": [
+      "Nurmijärvi"
+     ],
+     "h": {
+      "fi": "ruohokenttä + järvi",
+      "en": "lawn + lake"
+     }
+    },
+    {
+     "fi": [
+      "Heinävesi"
+     ],
+     "en": [
+      "Heinävesi"
+     ],
+     "h": {
+      "fi": "kuivattu rehu + vesi",
+      "en": "hay + water"
+     }
+    },
+    {
+     "fi": [
+      "Kannonkoski"
+     ],
+     "en": [
+      "Kannonkoski"
+     ],
+     "h": {
+      "fi": "kaadetun puun tynkä + koski",
+      "en": "tree stump + rapids"
+     }
+    },
+    {
+     "fi": [
+      "Varkaus"
+     ],
+     "en": [
+      "Varkaus"
+     ],
+     "h": {
+      "fi": "rikos, jossa viedään toisen omaisuutta",
+      "en": "the crime of taking someone else’s property"
+     }
+    },
+    {
+     "fi": [
+      "Kotka"
+     ],
+     "en": [
+      "Kotka"
+     ],
+     "h": {
+      "fi": "suuri petolintu",
+      "en": "large bird of prey"
+     }
+    },
+    {
+     "fi": [
+      "Kolari"
+     ],
+     "en": [
+      "Kolari"
+     ],
+     "h": {
+      "fi": "liikenneonnettomuus",
+      "en": "car crash"
+     }
+    },
+    {
+     "fi": [
+      "Rautavaara"
+     ],
+     "en": [
+      "Rautavaara"
+     ],
+     "h": {
+      "fi": "metalli Fe + metsäinen kumpare",
+      "en": "iron + wooded hill"
+     }
+    },
+    {
+     "fi": [
+      "Ristijärvi"
+     ],
+     "en": [
+      "Ristijärvi"
+     ],
+     "h": {
+      "fi": "kristinuskon tunnus + järvi",
+      "en": "Christian symbol + lake"
+     }
+    },
+    {
+     "fi": [
+      "Kärsämäki"
+     ],
+     "en": [
+      "Kärsämäki"
+     ],
+     "h": {
+      "fi": "sian kuono + mäki",
+      "en": "pig’s snout + hill"
+     }
+    },
+    {
+     "fi": [
+      "Puumala"
+     ],
+     "en": [
+      "Puumala"
+     ],
+     "h": {
+      "fi": "amerikkalainen kissapeto + -la",
+      "en": "American big cat + -la"
+     }
+    },
+    {
+     "fi": [
+      "Hirvensalmi"
+     ],
+     "en": [
+      "Hirvensalmi"
+     ],
+     "h": {
+      "fi": "Suomen suurimman hirvieläimen (gen.) + salmi",
+      "en": "Finland’s largest deer’s + strait"
+     }
+    },
+    {
+     "fi": [
+      "Orivesi"
+     ],
+     "en": [
+      "Orivesi"
+     ],
+     "h": {
+      "fi": "hevosuros + vesi",
+      "en": "stallion + water"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-kunta-vihjeesta",
+   "cat": "suomi",
+   "t": 250,
+   "title": {
+    "fi": "Tunnista suomalainen kunta alkukirjaimesta ja vihjeestä (28)",
+    "en": "Identify the Finnish municipality from its first letter and a clue (28)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Rovaniemi"
+     ],
+     "en": [
+      "Rovaniemi"
+     ],
+     "h": {
+      "fi": "R – Joulupukin pajakylä napapiirillä",
+      "en": "R – Santa Claus Village on the Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Savonlinna"
+     ],
+     "en": [
+      "Savonlinna"
+     ],
+     "h": {
+      "fi": "S – Oopperajuhlat keskiaikaisessa linnassa",
+      "en": "S – Opera festival in a medieval castle"
+     }
+    },
+    {
+     "fi": [
+      "Pori"
+     ],
+     "en": [
+      "Pori"
+     ],
+     "h": {
+      "fi": "P – Jazzfestivaali Kirjurinluodossa",
+      "en": "P – Jazz festival on Kirjurinluoto island"
+     }
+    },
+    {
+     "fi": [
+      "Naantali"
+     ],
+     "en": [
+      "Naantali"
+     ],
+     "h": {
+      "fi": "N – Muumimaailma ja presidentin kesäasunto",
+      "en": "N – Moominworld and the president’s summer residence"
+     }
+    },
+    {
+     "fi": [
+      "Hanko"
+     ],
+     "en": [
+      "Hanko"
+     ],
+     "h": {
+      "fi": "H – Manner-Suomen eteläisin kaupunki",
+      "en": "H – Southernmost town of mainland Finland"
+     }
+    },
+    {
+     "fi": [
+      "Kemi"
+     ],
+     "en": [
+      "Kemi"
+     ],
+     "h": {
+      "fi": "K – Lumilinna ja jäänmurtaja Sampo",
+      "en": "K – SnowCastle and the icebreaker Sampo"
+     }
+    },
+    {
+     "fi": [
+      "Tornio"
+     ],
+     "en": [
+      "Tornio"
+     ],
+     "h": {
+      "fi": "T – Kävele rajan yli Haaparantaan",
+      "en": "T – Walk across the border to Haparanda"
+     }
+    },
+    {
+     "fi": [
+      "Lahti"
+     ],
+     "en": [
+      "Lahti"
+     ],
+     "h": {
+      "fi": "L – Salpausselän kisat ja hyppyrimäet",
+      "en": "L – Salpausselkä Games and ski jumps"
+     }
+    },
+    {
+     "fi": [
+      "Kuopio"
+     ],
+     "en": [
+      "Kuopio"
+     ],
+     "h": {
+      "fi": "K – Puijon torni ja kalakukko",
+      "en": "K – Puijo tower and kalakukko fish pie"
+     }
+    },
+    {
+     "fi": [
+      "Jyväskylä"
+     ],
+     "en": [
+      "Jyväskylä"
+     ],
+     "h": {
+      "fi": "J – Alvar Aallon kaupunki ja MM-rallin keskus",
+      "en": "J – Alvar Aalto’s city and home of Rally Finland"
+     }
+    },
+    {
+     "fi": [
+      "Hämeenlinna"
+     ],
+     "en": [
+      "Hämeenlinna"
+     ],
+     "h": {
+      "fi": "H – Jean Sibeliuksen syntymäkaupunki",
+      "en": "H – Birthplace of Jean Sibelius"
+     }
+    },
+    {
+     "fi": [
+      "Porvoo"
+     ],
+     "en": [
+      "Porvoo"
+     ],
+     "h": {
+      "fi": "P – Punaiset rantamakasiinit ja Runebergin koti",
+      "en": "P – Red riverside storehouses and Runeberg’s home"
+     }
+    },
+    {
+     "fi": [
+      "Rauma"
+     ],
+     "en": [
+      "Rauma"
+     ],
+     "h": {
+      "fi": "R – Unescon puukaupunki ja nypläyspitsi",
+      "en": "R – UNESCO wooden old town and bobbin lace"
+     }
+    },
+    {
+     "fi": [
+      "Hamina"
+     ],
+     "en": [
+      "Hamina"
+     ],
+     "h": {
+      "fi": "H – Ympyränmuotoinen asemakaava ja Tattoo",
+      "en": "H – Circular town plan and a military tattoo"
+     }
+    },
+    {
+     "fi": [
+      "Kotka"
+     ],
+     "en": [
+      "Kotka"
+     ],
+     "h": {
+      "fi": "K – Merikeskus Vellamo ja Maretarium",
+      "en": "K – Maritime Centre Vellamo and Maretarium"
+     }
+    },
+    {
+     "fi": [
+      "Seinäjoki"
+     ],
+     "en": [
+      "Seinäjoki"
+     ],
+     "h": {
+      "fi": "S – Provinssi-festivaali ja Lakeuden Risti",
+      "en": "S – Provinssi festival and the Cross of the Plains"
+     }
+    },
+    {
+     "fi": [
+      "Joensuu"
+     ],
+     "en": [
+      "Joensuu"
+     ],
+     "h": {
+      "fi": "J – Ilosaarirock",
+      "en": "J – Ilosaarirock festival"
+     }
+    },
+    {
+     "fi": [
+      "Oulu"
+     ],
+     "en": [
+      "Oulu"
+     ],
+     "h": {
+      "fi": "O – Euroopan kulttuuripääkaupunki 2026",
+      "en": "O – European Capital of Culture 2026"
+     }
+    },
+    {
+     "fi": [
+      "Tampere"
+     ],
+     "en": [
+      "Tampere"
+     ],
+     "h": {
+      "fi": "T – Näsinneula ja Särkänniemi",
+      "en": "T – Näsinneula tower and Särkänniemi park"
+     }
+    },
+    {
+     "fi": [
+      "Vaasa"
+     ],
+     "en": [
+      "Vaasa"
+     ],
+     "h": {
+      "fi": "V – Merenkurkun saaristo ja valkoisen senaatin kaupunki 1918",
+      "en": "V – Kvarken archipelago and seat of the 1918 Senate"
+     }
+    },
+    {
+     "fi": [
+      "Mikkeli"
+     ],
+     "en": [
+      "Mikkeli"
+     ],
+     "h": {
+      "fi": "M – Mannerheimin päämaja sotien aikana",
+      "en": "M – Mannerheim’s headquarters in the wars"
+     }
+    },
+    {
+     "fi": [
+      "Lappeenranta"
+     ],
+     "en": [
+      "Lappeenranta"
+     ],
+     "h": {
+      "fi": "L – Saimaan eteläranta ja kesän hiekkalinna",
+      "en": "L – South shore of Saimaa and a summer sandcastle"
+     }
+    },
+    {
+     "fi": [
+      "Eurajoki"
+     ],
+     "en": [
+      "Eurajoki"
+     ],
+     "h": {
+      "fi": "E – Olkiluodon ydinvoimala",
+      "en": "E – Olkiluoto nuclear power plant"
+     }
+    },
+    {
+     "fi": [
+      "Sodankylä"
+     ],
+     "en": [
+      "Sodankylä"
+     ],
+     "h": {
+      "fi": "S – Midnight Sun -elokuvafestivaali",
+      "en": "S – Midnight Sun Film Festival"
+     }
+    },
+    {
+     "fi": [
+      "Kuhmo"
+     ],
+     "en": [
+      "Kuhmo"
+     ],
+     "h": {
+      "fi": "K – Kamarimusiikkifestivaali Kainuussa",
+      "en": "K – Chamber music festival in Kainuu"
+     }
+    },
+    {
+     "fi": [
+      "Nokia"
+     ],
+     "en": [
+      "Nokia"
+     ],
+     "h": {
+      "fi": "N – Kumisaappaat ja puhelinyhtiön nimi",
+      "en": "N – Rubber boots and a phone company’s name"
+     }
+    },
+    {
+     "fi": [
+      "Inari"
+     ],
+     "en": [
+      "Inari"
+     ],
+     "h": {
+      "fi": "I – Saamelaismuseo Siida ja Saamelaiskäräjät",
+      "en": "I – Sámi museum Siida and the Sámi Parliament"
+     }
+    },
+    {
+     "fi": [
+      "Mänttä-Vilppula",
+      "Mänttä"
+     ],
+     "en": [
+      "Mänttä-Vilppula",
+      "Mänttä"
+     ],
+     "h": {
+      "fi": "M – Serlachius-museot",
+      "en": "M – The Serlachius museums"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-viranomaiset",
+   "cat": "suomi",
+   "t": 235,
+   "title": {
+    "fi": "Suomen viranomaiset tehtävästä tunnistettuna (tilanne 2026)",
+    "en": "Finnish government agencies identified by their task (2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Tehtävä",
+    "en": "Task"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kela",
+      "Kansaneläkelaitos"
+     ],
+     "en": [
+      "Kela",
+      "Social Insurance Institution"
+     ],
+     "h": {
+      "fi": "Maksaa lapsilisät, opintotuen ja kansaneläkkeet",
+      "en": "Pays child benefits, student aid and national pensions"
+     }
+    },
+    {
+     "fi": [
+      "Säteilyturvakeskus",
+      "STUK"
+     ],
+     "en": [
+      "STUK",
+      "Radiation and Nuclear Safety Authority",
+      "Säteilyturvakeskus"
+     ],
+     "h": {
+      "fi": "Valvoo ydinvoimaloita ja säteilyn käyttöä",
+      "en": "Supervises nuclear plants and the use of radiation"
+     }
+    },
+    {
+     "fi": [
+      "Traficom",
+      "Liikenne- ja viestintävirasto"
+     ],
+     "en": [
+      "Traficom",
+      "Transport and Communications Agency"
+     ],
+     "h": {
+      "fi": "Rekisteröi ajoneuvot ja valvoo tietoliikennettä",
+      "en": "Registers vehicles and oversees telecoms"
+     }
+    },
+    {
+     "fi": [
+      "Fimea",
+      "Lääkealan turvallisuus- ja kehittämiskeskus"
+     ],
+     "en": [
+      "Fimea",
+      "Finnish Medicines Agency"
+     ],
+     "h": {
+      "fi": "Myöntää lääkkeiden myyntiluvat",
+      "en": "Grants marketing authorisations for medicines"
+     }
+    },
+    {
+     "fi": [
+      "Tukes",
+      "Turvallisuus- ja kemikaalivirasto"
+     ],
+     "en": [
+      "Tukes",
+      "Safety and Chemicals Agency"
+     ],
+     "h": {
+      "fi": "Valvoo kemikaaleja, ilotulitteita ja kuluttajatuotteiden turvallisuutta",
+      "en": "Oversees chemicals, fireworks and consumer product safety"
+     }
+    },
+    {
+     "fi": [
+      "THL",
+      "Terveyden ja hyvinvoinnin laitos"
+     ],
+     "en": [
+      "THL",
+      "Institute for Health and Welfare"
+     ],
+     "h": {
+      "fi": "Seuraa tartuntatauteja ja kansanterveyttä",
+      "en": "Monitors infectious diseases and public health"
+     }
+    },
+    {
+     "fi": [
+      "Migri",
+      "Maahanmuuttovirasto"
+     ],
+     "en": [
+      "Migri",
+      "Finnish Immigration Service"
+     ],
+     "h": {
+      "fi": "Ratkaisee oleskelulupa- ja turvapaikkahakemukset",
+      "en": "Decides residence permit and asylum applications"
+     }
+    },
+    {
+     "fi": [
+      "Supo",
+      "Suojelupoliisi"
+     ],
+     "en": [
+      "Supo",
+      "Finnish Security and Intelligence Service",
+      "Suojelupoliisi"
+     ],
+     "h": {
+      "fi": "Torjuu vakoilua ja terrorismia",
+      "en": "Counters espionage and terrorism"
+     }
+    },
+    {
+     "fi": [
+      "KRP",
+      "Keskusrikospoliisi"
+     ],
+     "en": [
+      "KRP",
+      "National Bureau of Investigation",
+      "NBI"
+     ],
+     "h": {
+      "fi": "Tutkii vakavaa ja järjestäytynyttä rikollisuutta",
+      "en": "Investigates serious and organised crime"
+     }
+    },
+    {
+     "fi": [
+      "Verohallinto",
+      "Vero",
+      "Verottaja"
+     ],
+     "en": [
+      "Finnish Tax Administration",
+      "Verohallinto",
+      "Vero",
+      "Tax Administration"
+     ],
+     "h": {
+      "fi": "Lähettää esitäytetyn veroehdotuksen",
+      "en": "Sends out the pre-completed tax return"
+     }
+    },
+    {
+     "fi": [
+      "Ilmatieteen laitos",
+      "IL"
+     ],
+     "en": [
+      "Finnish Meteorological Institute",
+      "FMI",
+      "Ilmatieteen laitos"
+     ],
+     "h": {
+      "fi": "Antaa sää- ja myrskyvaroitukset",
+      "en": "Issues weather and storm warnings"
+     }
+    },
+    {
+     "fi": [
+      "Geologian tutkimuskeskus",
+      "GTK"
+     ],
+     "en": [
+      "Geological Survey of Finland",
+      "GTK"
+     ],
+     "h": {
+      "fi": "Tutkii kallioperää ja malmivaroja",
+      "en": "Studies bedrock and ore deposits"
+     }
+    },
+    {
+     "fi": [
+      "Maanmittauslaitos",
+      "MML"
+     ],
+     "en": [
+      "National Land Survey",
+      "Maanmittauslaitos",
+      "MML"
+     ],
+     "h": {
+      "fi": "Tekee kartat ja kirjaa kiinteistökaupat",
+      "en": "Makes maps and registers property deals"
+     }
+    },
+    {
+     "fi": [
+      "Patentti- ja rekisterihallitus",
+      "PRH"
+     ],
+     "en": [
+      "Finnish Patent and Registration Office",
+      "PRH"
+     ],
+     "h": {
+      "fi": "Pitää kaupparekisteriä ja myöntää patentit",
+      "en": "Keeps the trade register and grants patents"
+     }
+    },
+    {
+     "fi": [
+      "Digi- ja väestötietovirasto",
+      "DVV"
+     ],
+     "en": [
+      "Digital and Population Data Services Agency",
+      "DVV"
+     ],
+     "h": {
+      "fi": "Ylläpitää väestötietojärjestelmää",
+      "en": "Maintains the population information system"
+     }
+    },
+    {
+     "fi": [
+      "Opetushallitus",
+      "OPH"
+     ],
+     "en": [
+      "Finnish National Agency for Education",
+      "Opetushallitus",
+      "OPH"
+     ],
+     "h": {
+      "fi": "Laatii opetussuunnitelmien perusteet",
+      "en": "Draws up the national core curricula"
+     }
+    },
+    {
+     "fi": [
+      "Ruokavirasto"
+     ],
+     "en": [
+      "Finnish Food Authority",
+      "Ruokavirasto"
+     ],
+     "h": {
+      "fi": "Valvoo elintarviketurvallisuutta ja eläintauteja",
+      "en": "Supervises food safety and animal diseases"
+     }
+    },
+    {
+     "fi": [
+      "Luonnonvarakeskus",
+      "Luke"
+     ],
+     "en": [
+      "Natural Resources Institute Finland",
+      "Luke"
+     ],
+     "h": {
+      "fi": "Tutkii metsiä, kalakantoja ja maataloutta",
+      "en": "Researches forests, fish stocks and farming"
+     }
+    },
+    {
+     "fi": [
+      "Finanssivalvonta",
+      "Fiva"
+     ],
+     "en": [
+      "Financial Supervisory Authority",
+      "Fiva",
+      "FIN-FSA"
+     ],
+     "h": {
+      "fi": "Valvoo pankkeja ja vakuutusyhtiöitä",
+      "en": "Supervises banks and insurers"
+     }
+    },
+    {
+     "fi": [
+      "Kilpailu- ja kuluttajavirasto",
+      "KKV"
+     ],
+     "en": [
+      "Finnish Competition and Consumer Authority",
+      "KKV"
+     ],
+     "h": {
+      "fi": "Valvoo kilpailua ja kuluttajansuojaa",
+      "en": "Oversees competition and consumer protection"
+     }
+    },
+    {
+     "fi": [
+      "Väylävirasto"
+     ],
+     "en": [
+      "Finnish Transport Infrastructure Agency",
+      "Väylävirasto"
+     ],
+     "h": {
+      "fi": "Vastaa valtion teistä, radoista ja vesiväylistä",
+      "en": "Runs state roads, railways and waterways"
+     }
+    },
+    {
+     "fi": [
+      "Metsähallitus"
+     ],
+     "en": [
+      "Metsähallitus",
+      "Parks & Wildlife Finland"
+     ],
+     "h": {
+      "fi": "Hoitaa valtion maita ja kansallispuistoja",
+      "en": "Manages state land and national parks"
+     }
+    },
+    {
+     "fi": [
+      "Tilastokeskus"
+     ],
+     "en": [
+      "Statistics Finland",
+      "Tilastokeskus"
+     ],
+     "h": {
+      "fi": "Laskee virallisen väkiluvun ja inflaation",
+      "en": "Publishes the official population and inflation figures"
+     }
+    },
+    {
+     "fi": [
+      "Rajavartiolaitos",
+      "RVL"
+     ],
+     "en": [
+      "Finnish Border Guard",
+      "Border Guard",
+      "Rajavartiolaitos"
+     ],
+     "h": {
+      "fi": "Valvoo rajoja ja johtaa meripelastusta",
+      "en": "Guards the borders and leads sea rescue"
+     }
+    },
+    {
+     "fi": [
+      "Hätäkeskuslaitos"
+     ],
+     "en": [
+      "Emergency Response Centre Agency",
+      "Hätäkeskuslaitos",
+      "ERC"
+     ],
+     "h": {
+      "fi": "Vastaa hätänumeroon 112",
+      "en": "Answers the emergency number 112"
+     }
+    },
+    {
+     "fi": [
+      "Lupa- ja valvontavirasto"
+     ],
+     "en": [
+      "Finnish Supervisory Agency",
+      "Permit and Supervision Agency",
+      "Lupa- ja valvontavirasto"
+     ],
+     "h": {
+      "fi": "Aloitti 2026 aluehallintovirastojen ja Valviran tilalle",
+      "en": "Started in 2026, replacing the regional state agencies and Valvira"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-tuplanimiset-elaimet",
+   "cat": "suomi",
+   "t": 240,
+   "title": {
+    "fi": "Suomen eläimet, joiden tieteellinen nimi on tuplanimi: tunnista latinasta (30)",
+    "en": "Finnish animals with a doubled scientific name: identify them from the Latin (30)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Tieteellinen nimi",
+    "en": "Scientific name"
+   },
+   "items": [
+    {
+     "fi": [
+      "Ilves"
+     ],
+     "en": [
+      "Eurasian lynx",
+      "Lynx",
+      "Ilves"
+     ],
+     "h": "Lynx lynx"
+    },
+    {
+     "fi": [
+      "Hirvi"
+     ],
+     "en": [
+      "Moose",
+      "Elk",
+      "Hirvi"
+     ],
+     "h": "Alces alces"
+    },
+    {
+     "fi": [
+      "Ahma"
+     ],
+     "en": [
+      "Wolverine",
+      "Ahma"
+     ],
+     "h": "Gulo gulo"
+    },
+    {
+     "fi": [
+      "Kettu"
+     ],
+     "en": [
+      "Red fox",
+      "Fox",
+      "Kettu"
+     ],
+     "h": "Vulpes vulpes"
+    },
+    {
+     "fi": [
+      "Mäyrä"
+     ],
+     "en": [
+      "Badger",
+      "European badger",
+      "Mäyrä"
+     ],
+     "h": "Meles meles"
+    },
+    {
+     "fi": [
+      "Näätä"
+     ],
+     "en": [
+      "Pine marten",
+      "Marten",
+      "Näätä"
+     ],
+     "h": "Martes martes"
+    },
+    {
+     "fi": [
+      "Saukko"
+     ],
+     "en": [
+      "Otter",
+      "Eurasian otter",
+      "Saukko"
+     ],
+     "h": "Lutra lutra"
+    },
+    {
+     "fi": [
+      "Tunturisopuli"
+     ],
+     "en": [
+      "Norway lemming",
+      "Lemming",
+      "Tunturisopuli"
+     ],
+     "h": "Lemmus lemmus"
+    },
+    {
+     "fi": [
+      "Metsäkauris"
+     ],
+     "en": [
+      "Roe deer",
+      "Metsäkauris"
+     ],
+     "h": "Capreolus capreolus"
+    },
+    {
+     "fi": [
+      "Kuusipeura"
+     ],
+     "en": [
+      "Fallow deer",
+      "Kuusipeura"
+     ],
+     "h": "Dama dama"
+    },
+    {
+     "fi": [
+      "Mustarotta"
+     ],
+     "en": [
+      "Black rat",
+      "Mustarotta"
+     ],
+     "h": "Rattus rattus"
+    },
+    {
+     "fi": [
+      "Huuhkaja"
+     ],
+     "en": [
+      "Eurasian eagle-owl",
+      "Eagle owl",
+      "Eagle-owl",
+      "Huuhkaja"
+     ],
+     "h": "Bubo bubo"
+    },
+    {
+     "fi": [
+      "Harakka"
+     ],
+     "en": [
+      "Magpie",
+      "Eurasian magpie",
+      "Harakka"
+     ],
+     "h": "Pica pica"
+    },
+    {
+     "fi": [
+      "Kurki"
+     ],
+     "en": [
+      "Common crane",
+      "Crane",
+      "Kurki"
+     ],
+     "h": "Grus grus"
+    },
+    {
+     "fi": [
+      "Laulujoutsen"
+     ],
+     "en": [
+      "Whooper swan",
+      "Laulujoutsen"
+     ],
+     "h": "Cygnus cygnus"
+    },
+    {
+     "fi": [
+      "Merihanhi"
+     ],
+     "en": [
+      "Greylag goose",
+      "Merihanhi"
+     ],
+     "h": "Anser anser"
+    },
+    {
+     "fi": [
+      "Ruisrääkkä"
+     ],
+     "en": [
+      "Corn crake",
+      "Corncrake",
+      "Ruisrääkkä"
+     ],
+     "h": "Crex crex"
+    },
+    {
+     "fi": [
+      "Punatulkku"
+     ],
+     "en": [
+      "Eurasian bullfinch",
+      "Bullfinch",
+      "Punatulkku"
+     ],
+     "h": "Pyrrhula pyrrhula"
+    },
+    {
+     "fi": [
+      "Riekko"
+     ],
+     "en": [
+      "Willow ptarmigan",
+      "Willow grouse",
+      "Riekko"
+     ],
+     "h": "Lagopus lagopus"
+    },
+    {
+     "fi": [
+      "Hippiäinen"
+     ],
+     "en": [
+      "Goldcrest",
+      "Hippiäinen"
+     ],
+     "h": "Regulus regulus"
+    },
+    {
+     "fi": [
+      "Peukaloinen"
+     ],
+     "en": [
+      "Wren",
+      "Eurasian wren",
+      "Peukaloinen"
+     ],
+     "h": "Troglodytes troglodytes"
+    },
+    {
+     "fi": [
+      "Kuhankeittäjä"
+     ],
+     "en": [
+      "Golden oriole",
+      "Kuhankeittäjä"
+     ],
+     "h": "Oriolus oriolus"
+    },
+    {
+     "fi": [
+      "Kattohaikara"
+     ],
+     "en": [
+      "White stork",
+      "Kattohaikara"
+     ],
+     "h": "Ciconia ciconia"
+    },
+    {
+     "fi": [
+      "Taivaanvuohi"
+     ],
+     "en": [
+      "Common snipe",
+      "Snipe",
+      "Taivaanvuohi"
+     ],
+     "h": "Gallinago gallinago"
+    },
+    {
+     "fi": [
+      "Törmäpääsky"
+     ],
+     "en": [
+      "Sand martin",
+      "Bank swallow",
+      "Törmäpääsky"
+     ],
+     "h": "Riparia riparia"
+    },
+    {
+     "fi": [
+      "Leppälintu"
+     ],
+     "en": [
+      "Common redstart",
+      "Redstart",
+      "Leppälintu"
+     ],
+     "h": "Phoenicurus phoenicurus"
+    },
+    {
+     "fi": [
+      "Kivitasku"
+     ],
+     "en": [
+      "Northern wheatear",
+      "Wheatear",
+      "Kivitasku"
+     ],
+     "h": "Oenanthe oenanthe"
+    },
+    {
+     "fi": [
+      "Rupikonna"
+     ],
+     "en": [
+      "Common toad",
+      "Toad",
+      "Rupikonna"
+     ],
+     "h": "Bufo bufo"
+    },
+    {
+     "fi": [
+      "Suutari"
+     ],
+     "en": [
+      "Tench",
+      "Suutari"
+     ],
+     "h": "Tinca tinca"
+    },
+    {
+     "fi": [
+      "Ankerias"
+     ],
+     "en": [
+      "European eel",
+      "Eel",
+      "Ankerias"
+     ],
+     "h": "Anguilla anguilla"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-ruotsin-luontosanat",
+   "cat": "suomi",
+   "t": 185,
+   "title": {
+    "fi": "Ruotsin luontosanat suomeksi (31)",
+    "en": "Swedish nature words: translate them (31)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ruotsiksi",
+    "en": "In Swedish"
+   },
+   "items": [
+    {
+     "fi": [
+      "metsä"
+     ],
+     "en": [
+      "forest",
+      "metsä"
+     ],
+     "h": "skog"
+    },
+    {
+     "fi": [
+      "järvi"
+     ],
+     "en": [
+      "lake",
+      "järvi"
+     ],
+     "h": "sjö"
+    },
+    {
+     "fi": [
+      "joki"
+     ],
+     "en": [
+      "river",
+      "joki"
+     ],
+     "h": "älv"
+    },
+    {
+     "fi": [
+      "vuori"
+     ],
+     "en": [
+      "mountain",
+      "vuori"
+     ],
+     "h": "berg"
+    },
+    {
+     "fi": [
+      "saari"
+     ],
+     "en": [
+      "island",
+      "saari"
+     ],
+     "h": "ö"
+    },
+    {
+     "fi": [
+      "meri"
+     ],
+     "en": [
+      "sea",
+      "meri"
+     ],
+     "h": "hav"
+    },
+    {
+     "fi": [
+      "ranta"
+     ],
+     "en": [
+      "shore",
+      "ranta"
+     ],
+     "h": "strand"
+    },
+    {
+     "fi": [
+      "suo"
+     ],
+     "en": [
+      "bog",
+      "suo"
+     ],
+     "h": "myr"
+    },
+    {
+     "fi": [
+      "pelto"
+     ],
+     "en": [
+      "field",
+      "pelto"
+     ],
+     "h": "åker"
+    },
+    {
+     "fi": [
+      "kivi"
+     ],
+     "en": [
+      "stone",
+      "kivi"
+     ],
+     "h": "sten"
+    },
+    {
+     "fi": [
+      "lumi"
+     ],
+     "en": [
+      "snow",
+      "lumi"
+     ],
+     "h": "snö"
+    },
+    {
+     "fi": [
+      "jää"
+     ],
+     "en": [
+      "ice",
+      "jää"
+     ],
+     "h": "is"
+    },
+    {
+     "fi": [
+      "sade"
+     ],
+     "en": [
+      "rain",
+      "sade"
+     ],
+     "h": "regn"
+    },
+    {
+     "fi": [
+      "tuuli"
+     ],
+     "en": [
+      "wind",
+      "tuuli"
+     ],
+     "h": "vind"
+    },
+    {
+     "fi": [
+      "ukkonen"
+     ],
+     "en": [
+      "thunder",
+      "ukkonen"
+     ],
+     "h": "åska"
+    },
+    {
+     "fi": [
+      "pilvi"
+     ],
+     "en": [
+      "cloud",
+      "pilvi"
+     ],
+     "h": "moln"
+    },
+    {
+     "fi": [
+      "taivas"
+     ],
+     "en": [
+      "sky",
+      "taivas"
+     ],
+     "h": "himmel"
+    },
+    {
+     "fi": [
+      "tähti"
+     ],
+     "en": [
+      "star",
+      "tähti"
+     ],
+     "h": "stjärna"
+    },
+    {
+     "fi": [
+      "kuu"
+     ],
+     "en": [
+      "moon",
+      "kuu"
+     ],
+     "h": "måne"
+    },
+    {
+     "fi": [
+      "kuusi"
+     ],
+     "en": [
+      "spruce",
+      "kuusi"
+     ],
+     "h": "gran"
+    },
+    {
+     "fi": [
+      "mänty"
+     ],
+     "en": [
+      "pine",
+      "mänty",
+      "pine tree"
+     ],
+     "h": "tall"
+    },
+    {
+     "fi": [
+      "koivu"
+     ],
+     "en": [
+      "birch",
+      "koivu"
+     ],
+     "h": "björk"
+    },
+    {
+     "fi": [
+      "sieni"
+     ],
+     "en": [
+      "mushroom",
+      "sieni"
+     ],
+     "h": "svamp"
+    },
+    {
+     "fi": [
+      "lintu"
+     ],
+     "en": [
+      "bird",
+      "lintu"
+     ],
+     "h": "fågel"
+    },
+    {
+     "fi": [
+      "hirvi"
+     ],
+     "en": [
+      "moose",
+      "hirvi",
+      "elk"
+     ],
+     "h": "älg"
+    },
+    {
+     "fi": [
+      "karhu"
+     ],
+     "en": [
+      "bear",
+      "karhu"
+     ],
+     "h": "björn"
+    },
+    {
+     "fi": [
+      "kettu"
+     ],
+     "en": [
+      "fox",
+      "kettu"
+     ],
+     "h": "räv"
+    },
+    {
+     "fi": [
+      "susi"
+     ],
+     "en": [
+      "wolf",
+      "susi"
+     ],
+     "h": "varg"
+    },
+    {
+     "fi": [
+      "orava"
+     ],
+     "en": [
+      "squirrel",
+      "orava"
+     ],
+     "h": "ekorre"
+    },
+    {
+     "fi": [
+      "hauki"
+     ],
+     "en": [
+      "pike",
+      "hauki"
+     ],
+     "h": "gädda"
+    },
+    {
+     "fi": [
+      "ahven"
+     ],
+     "en": [
+      "perch",
+      "ahven"
+     ],
+     "h": "abborre"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-sijamuodot",
+   "cat": "suomi",
+   "t": 105,
+   "title": {
+    "fi": "Suomen kielen 15 sijamuotoa: tunnista sija esimerkistä",
+    "en": "The 15 Finnish grammatical cases: identify the case from an example"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Esimerkki",
+    "en": "Example"
+   },
+   "items": [
+    {
+     "fi": [
+      "nominatiivi"
+     ],
+     "en": [
+      "nominative",
+      "nominatiivi"
+     ],
+     "h": "talo"
+    },
+    {
+     "fi": [
+      "genetiivi"
+     ],
+     "en": [
+      "genitive",
+      "genetiivi"
+     ],
+     "h": "talon"
+    },
+    {
+     "fi": [
+      "akkusatiivi"
+     ],
+     "en": [
+      "accusative",
+      "akkusatiivi"
+     ],
+     "h": "hänet"
+    },
+    {
+     "fi": [
+      "partitiivi"
+     ],
+     "en": [
+      "partitive",
+      "partitiivi"
+     ],
+     "h": "taloa"
+    },
+    {
+     "fi": [
+      "essiivi"
+     ],
+     "en": [
+      "essive",
+      "essiivi"
+     ],
+     "h": "talona"
+    },
+    {
+     "fi": [
+      "translatiivi"
+     ],
+     "en": [
+      "translative",
+      "translatiivi"
+     ],
+     "h": "taloksi"
+    },
+    {
+     "fi": [
+      "inessiivi"
+     ],
+     "en": [
+      "inessive",
+      "inessiivi"
+     ],
+     "h": "talossa"
+    },
+    {
+     "fi": [
+      "elatiivi"
+     ],
+     "en": [
+      "elative",
+      "elatiivi"
+     ],
+     "h": "talosta"
+    },
+    {
+     "fi": [
+      "illatiivi"
+     ],
+     "en": [
+      "illative",
+      "illatiivi"
+     ],
+     "h": "taloon"
+    },
+    {
+     "fi": [
+      "adessiivi"
+     ],
+     "en": [
+      "adessive",
+      "adessiivi"
+     ],
+     "h": "talolla"
+    },
+    {
+     "fi": [
+      "ablatiivi"
+     ],
+     "en": [
+      "ablative",
+      "ablatiivi"
+     ],
+     "h": "talolta"
+    },
+    {
+     "fi": [
+      "allatiivi"
+     ],
+     "en": [
+      "allative",
+      "allatiivi"
+     ],
+     "h": "talolle"
+    },
+    {
+     "fi": [
+      "abessiivi"
+     ],
+     "en": [
+      "abessive",
+      "abessiivi"
+     ],
+     "h": "talotta"
+    },
+    {
+     "fi": [
+      "komitatiivi"
+     ],
+     "en": [
+      "comitative",
+      "komitatiivi"
+     ],
+     "h": "taloineen"
+    },
+    {
+     "fi": [
+      "instruktiivi"
+     ],
+     "en": [
+      "instructive",
+      "instruktiivi"
+     ],
+     "h": "omin käsin"
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-saa-ja-luontoennatykset",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Suomen sää- ja luontoennätykset (Ilmatieteen laitoksen tilastot, 2026)",
+    "en": "Finnish weather and nature records (Finnish Meteorological Institute, 2026)"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Missä kunnassa mitattiin Suomen virallinen pakkasennätys −51,5 °C vuonna 1999?",
+      "en": "In which municipality was Finland’s official cold record of −51.5 °C measured in 1999?"
+     },
+     "ok": {
+      "fi": "Kittilä",
+      "en": "Kittilä"
+     },
+     "no": [
+      {
+       "fi": "Salla",
+       "en": "Salla"
+      },
+      {
+       "fi": "Inari",
+       "en": "Inari"
+      },
+      {
+       "fi": "Enontekiö",
+       "en": "Enontekiö"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Suomen virallinen lämpöennätys (Liperi, 29.7.2010)?",
+      "en": "What is Finland’s official heat record (Liperi, 29 July 2010)?"
+     },
+     "ok": {
+      "fi": "37,2 °C",
+      "en": "37.2 °C"
+     },
+     "no": [
+      {
+       "fi": "34,8 °C",
+       "en": "34.8 °C"
+      },
+      {
+       "fi": "35,9 °C",
+       "en": "35.9 °C"
+      },
+      {
+       "fi": "39,1 °C",
+       "en": "39.1 °C"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kylässä mitattiin Suomen lumensyvyysennätys 190 cm vuonna 1997?",
+      "en": "In which village was Finland’s snow depth record of 190 cm measured in 1997?"
+     },
+     "ok": {
+      "fi": "Kilpisjärvi",
+      "en": "Kilpisjärvi"
+     },
+     "no": [
+      {
+       "fi": "Saariselkä",
+       "en": "Saariselkä"
+      },
+      {
+       "fi": "Nuorgam",
+       "en": "Nuorgam"
+      },
+      {
+       "fi": "Hetta",
+       "en": "Hetta"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa satoi Suomen ennätykselliset 198 mm yhdessä vuorokaudessa vuonna 1944?",
+      "en": "Where did a Finnish record 198 mm of rain fall in one day in 1944?"
+     },
+     "ok": {
+      "fi": "Espoossa",
+      "en": "Espoo"
+     },
+     "no": [
+      {
+       "fi": "Kuopiossa",
+       "en": "Kuopio"
+      },
+      {
+       "fi": "Oulussa",
+       "en": "Oulu"
+      },
+      {
+       "fi": "Vaasassa",
+       "en": "Vaasa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä luodolla mitattiin Suomen kovin keskituuli 33,5 m/s marraskuussa 2024?",
+      "en": "On which skerry was Finland’s strongest mean wind of 33.5 m/s measured in November 2024?"
+     },
+     "ok": {
+      "fi": "Kylmäpihlaja (Rauma)",
+      "en": "Kylmäpihlaja (Rauma)"
+     },
+     "no": [
+      {
+       "fi": "Bogskär",
+       "en": "Bogskär"
+      },
+      {
+       "fi": "Märket",
+       "en": "Märket"
+      },
+      {
+       "fi": "Utö",
+       "en": "Utö"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä mitattiin Suomen kylmin kuukauden keskilämpötila −29,7 °C (tammikuu 1985)?",
+      "en": "Where was Finland’s coldest monthly mean of −29.7 °C recorded (January 1985)?"
+     },
+     "ok": {
+      "fi": "Kuusamossa",
+      "en": "Kuusamo"
+     },
+     "no": [
+      {
+       "fi": "Sodankylässä",
+       "en": "Sodankylä"
+      },
+      {
+       "fi": "Utsjoella",
+       "en": "Utsjoki"
+      },
+      {
+       "fi": "Muoniossa",
+       "en": "Muonio"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kunnassa mitattiin Suomen suurin vuoden sademäärä, 1 242 mm vuonna 2015?",
+      "en": "Which municipality recorded Finland’s highest annual precipitation, 1,242 mm in 2015?"
+     },
+     "ok": {
+      "fi": "Puolanka",
+      "en": "Puolanka"
+     },
+     "no": [
+      {
+       "fi": "Hanko",
+       "en": "Hanko"
+      },
+      {
+       "fi": "Kittilä",
+       "en": "Kittilä"
+      },
+      {
+       "fi": "Lieksa",
+       "en": "Lieksa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Noin kuinka monta vuorokautta aurinko on Nuorgamissa kesällä yhtäjaksoisesti laskematta?",
+      "en": "For about how many days in a row does the sun stay above the horizon in Nuorgam in summer?"
+     },
+     "ok": {
+      "fi": "Noin 75",
+      "en": "About 75"
+     },
+     "no": [
+      {
+       "fi": "Noin 30",
+       "en": "About 30"
+      },
+      {
+       "fi": "Noin 50",
+       "en": "About 50"
+      },
+      {
+       "fi": "Noin 105",
+       "en": "About 105"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Noin kuinka monta saarta Suomen meri- ja sisävesialueilla on?",
+      "en": "About how many islands are there in Finland’s sea and inland waters?"
+     },
+     "ok": {
+      "fi": "Noin 180 000",
+      "en": "About 180,000"
+     },
+     "no": [
+      {
+       "fi": "Noin 18 000",
+       "en": "About 18,000"
+      },
+      {
+       "fi": "Noin 60 000",
+       "en": "About 60,000"
+      },
+      {
+       "fi": "Noin 1,2 miljoonaa",
+       "en": "About 1.2 million"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka suuri osa Suomen maapinta-alasta on metsää?",
+      "en": "How much of Finland’s land area is forest?"
+     },
+     "ok": {
+      "fi": "Noin kolme neljäsosaa",
+      "en": "About three quarters"
+     },
+     "no": [
+      {
+       "fi": "Noin neljäsosa",
+       "en": "About a quarter"
+      },
+      {
+       "fi": "Noin puolet",
+       "en": "About half"
+      },
+      {
+       "fi": "Yli 90 prosenttia",
+       "en": "Over 90 per cent"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka paljon Suomen maapinta-ala kasvaa vuosittain maankohoamisen takia?",
+      "en": "How much does Finland’s land area grow each year because of post-glacial uplift?"
+     },
+     "ok": {
+      "fi": "Noin 7 km²",
+      "en": "About 7 km²"
+     },
+     "no": [
+      {
+       "fi": "Noin 0,1 km²",
+       "en": "About 0.1 km²"
+      },
+      {
+       "fi": "Noin 70 km²",
+       "en": "About 70 km²"
+      },
+      {
+       "fi": "Noin 700 km²",
+       "en": "About 700 km²"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kunnassa sijaitsee Suomen ja EU:n manneralueen itäisin piste?",
+      "en": "In which municipality is the easternmost point of Finland and of the EU mainland?"
+     },
+     "ok": {
+      "fi": "Ilomantsissa",
+      "en": "Ilomantsi"
+     },
+     "no": [
+      {
+       "fi": "Lieksassa",
+       "en": "Lieksa"
+      },
+      {
+       "fi": "Kuhmossa",
+       "en": "Kuhmo"
+      },
+      {
+       "fi": "Virolahdella",
+       "en": "Virolahti"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka pitkä on Suomen ja Venäjän välinen raja virallisesti?",
+      "en": "How long is the official Finland–Russia border?"
+     },
+     "ok": {
+      "fi": "Noin 1 340 km",
+      "en": "About 1,340 km"
+     },
+     "no": [
+      {
+       "fi": "Noin 830 km",
+       "en": "About 830 km"
+      },
+      {
+       "fi": "Noin 2 100 km",
+       "en": "About 2,100 km"
+      },
+      {
+       "fi": "Noin 3 000 km",
+       "en": "About 3,000 km"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-stadin-slangi",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "Stadin slangi ja puhekieli: mitä sana tarkoittaa?",
+    "en": "Helsinki slang and colloquial Finnish: what does the word mean?"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mitä on ”spora”?",
+      "en": "What is a “spora”?"
+     },
+     "ok": {
+      "fi": "Raitiovaunu",
+      "en": "Tram"
+     },
+     "no": [
+      {
+       "fi": "Polkupyörä",
+       "en": "Bicycle"
+      },
+      {
+       "fi": "Lautta",
+       "en": "Ferry"
+      },
+      {
+       "fi": "Taksi",
+       "en": "Taxi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”dösä”?",
+      "en": "What is a “dösä”?"
+     },
+     "ok": {
+      "fi": "Bussi",
+      "en": "Bus"
+     },
+     "no": [
+      {
+       "fi": "Juna",
+       "en": "Train"
+      },
+      {
+       "fi": "Mopo",
+       "en": "Moped"
+      },
+      {
+       "fi": "Kuorma-auto",
+       "en": "Lorry"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minne mennään, kun mennään ”himaan”?",
+      "en": "Where do you go when you go “himaan”?"
+     },
+     "ok": {
+      "fi": "Kotiin",
+      "en": "Home"
+     },
+     "no": [
+      {
+       "fi": "Kouluun",
+       "en": "To school"
+      },
+      {
+       "fi": "Töihin",
+       "en": "To work"
+      },
+      {
+       "fi": "Kauppaan",
+       "en": "To the shop"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka on ”mutsi”?",
+      "en": "Who is “mutsi”?"
+     },
+     "ok": {
+      "fi": "Äiti",
+      "en": "Mother"
+     },
+     "no": [
+      {
+       "fi": "Isoäiti",
+       "en": "Grandmother"
+      },
+      {
+       "fi": "Sisko",
+       "en": "Sister"
+      },
+      {
+       "fi": "Opettaja",
+       "en": "Teacher"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka on ”broidi”?",
+      "en": "Who is a “broidi”?"
+     },
+     "ok": {
+      "fi": "Veli",
+      "en": "Brother"
+     },
+     "no": [
+      {
+       "fi": "Isä",
+       "en": "Father"
+      },
+      {
+       "fi": "Serkku",
+       "en": "Cousin"
+      },
+      {
+       "fi": "Naapuri",
+       "en": "Neighbour"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”fillari”?",
+      "en": "What is a “fillari”?"
+     },
+     "ok": {
+      "fi": "Polkupyörä",
+      "en": "Bicycle"
+     },
+     "no": [
+      {
+       "fi": "Moottoripyörä",
+       "en": "Motorbike"
+      },
+      {
+       "fi": "Potkulauta",
+       "en": "Kick scooter"
+      },
+      {
+       "fi": "Rullaluistin",
+       "en": "Roller skate"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä tarkoittaa ”snadi”?",
+      "en": "What does “snadi” mean?"
+     },
+     "ok": {
+      "fi": "Pieni",
+      "en": "Small"
+     },
+     "no": [
+      {
+       "fi": "Iso",
+       "en": "Big"
+      },
+      {
+       "fi": "Nopea",
+       "en": "Fast"
+      },
+      {
+       "fi": "Vanha",
+       "en": "Old"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”lafka”?",
+      "en": "What is a “lafka”?"
+     },
+     "ok": {
+      "fi": "Yritys",
+      "en": "Company"
+     },
+     "no": [
+      {
+       "fi": "Kahvila",
+       "en": "Café"
+      },
+      {
+       "fi": "Kirkko",
+       "en": "Church"
+      },
+      {
+       "fi": "Uimahalli",
+       "en": "Swimming hall"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä tarkoittaa ”lande”?",
+      "en": "What does “lande” mean?"
+     },
+     "ok": {
+      "fi": "Maaseutu",
+      "en": "Countryside"
+     },
+     "no": [
+      {
+       "fi": "Ulkomaat",
+       "en": "Abroad"
+      },
+      {
+       "fi": "Keskusta",
+       "en": "City centre"
+      },
+      {
+       "fi": "Saaristo",
+       "en": "Archipelago"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”mesta”?",
+      "en": "What is a “mesta”?"
+     },
+     "ok": {
+      "fi": "Paikka",
+      "en": "Place"
+     },
+     "no": [
+      {
+       "fi": "Juhla",
+       "en": "Party"
+      },
+      {
+       "fi": "Ystävä",
+       "en": "Friend"
+      },
+      {
+       "fi": "Raha",
+       "en": "Money"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”snagari”?",
+      "en": "What is a “snagari”?"
+     },
+     "ok": {
+      "fi": "Grillikioski",
+      "en": "Snack kiosk"
+     },
+     "no": [
+      {
+       "fi": "Uimaranta",
+       "en": "Beach"
+      },
+      {
+       "fi": "Kirjasto",
+       "en": "Library"
+      },
+      {
+       "fi": "Kuntosali",
+       "en": "Gym"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä tekee se, joka ”dallaa”?",
+      "en": "What does someone do when they “dallaa”?"
+     },
+     "ok": {
+      "fi": "Kävelee",
+      "en": "Walks"
+     },
+     "no": [
+      {
+       "fi": "Nukkuu",
+       "en": "Sleeps"
+      },
+      {
+       "fi": "Syö",
+       "en": "Eats"
+      },
+      {
+       "fi": "Laulaa",
+       "en": "Sings"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä tarkoittaa ”bonjata”?",
+      "en": "What does “bonjata” mean?"
+     },
+     "ok": {
+      "fi": "Ymmärtää",
+      "en": "To understand"
+     },
+     "no": [
+      {
+       "fi": "Tervehtiä",
+       "en": "To greet"
+      },
+      {
+       "fi": "Juosta",
+       "en": "To run"
+      },
+      {
+       "fi": "Varastaa",
+       "en": "To steal"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä tarkoittaa ”tsiigata”?",
+      "en": "What does “tsiigata” mean?"
+     },
+     "ok": {
+      "fi": "Katsoa",
+      "en": "To look"
+     },
+     "no": [
+      {
+       "fi": "Tupakoida",
+       "en": "To smoke"
+      },
+      {
+       "fi": "Uida",
+       "en": "To swim"
+      },
+      {
+       "fi": "Huutaa",
+       "en": "To shout"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”fyrkka”?",
+      "en": "What is “fyrkka”?"
+     },
+     "ok": {
+      "fi": "Raha",
+      "en": "Money"
+     },
+     "no": [
+      {
+       "fi": "Ruoka",
+       "en": "Food"
+      },
+      {
+       "fi": "Olut",
+       "en": "Beer"
+      },
+      {
+       "fi": "Vaate",
+       "en": "Clothing"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä tekee se, joka ”skrinnaa”?",
+      "en": "What does someone do when they “skrinnaa”?"
+     },
+     "ok": {
+      "fi": "Luistelee",
+      "en": "Skates"
+     },
+     "no": [
+      {
+       "fi": "Hiihtää",
+       "en": "Skis"
+      },
+      {
+       "fi": "Pyöräilee",
+       "en": "Cycles"
+      },
+      {
+       "fi": "Soutaa",
+       "en": "Rows"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä on ”skole”?",
+      "en": "What is “skole”?"
+     },
+     "ok": {
+      "fi": "Koulu",
+      "en": "School"
+     },
+     "no": [
+      {
+       "fi": "Kirkko",
+       "en": "Church"
+      },
+      {
+       "fi": "Sairaala",
+       "en": "Hospital"
+      },
+      {
+       "fi": "Satama",
+       "en": "Harbour"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-3-suomen-kieli",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Suomen kieli ja Suomen kielet",
+    "en": "The Finnish language and the languages of Finland"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mihin kielikuntaan suomi kuuluu?",
+      "en": "Which language family does Finnish belong to?"
+     },
+     "ok": {
+      "fi": "Uralilaiseen",
+      "en": "Uralic"
+     },
+     "no": [
+      {
+       "fi": "Indoeurooppalaiseen",
+       "en": "Indo-European"
+      },
+      {
+       "fi": "Turkkilaiseen",
+       "en": "Turkic"
+      },
+      {
+       "fi": "Germaaniseen",
+       "en": "Germanic"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on suomen tavoin itämerensuomalainen kieli?",
+      "en": "Which of these is, like Finnish, a Finnic language?"
+     },
+     "ok": {
+      "fi": "Viro",
+      "en": "Estonian"
+     },
+     "no": [
+      {
+       "fi": "Unkari",
+       "en": "Hungarian"
+      },
+      {
+       "fi": "Latvia",
+       "en": "Latvian"
+      },
+      {
+       "fi": "Liettua",
+       "en": "Lithuanian"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta vokaalia suomen kielessä on?",
+      "en": "How many vowels does Finnish have?"
+     },
+     "ok": {
+      "fi": "8",
+      "en": "8"
+     },
+     "no": [
+      {
+       "fi": "6",
+       "en": "6"
+      },
+      {
+       "fi": "7",
+       "en": "7"
+      },
+      {
+       "fi": "9",
+       "en": "9"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta kirjainta suomen aakkosissa tavallisesti luetaan olevan?",
+      "en": "How many letters are usually counted in the Finnish alphabet?"
+     },
+     "ok": {
+      "fi": "29",
+      "en": "29"
+     },
+     "no": [
+      {
+       "fi": "26",
+       "en": "26"
+      },
+      {
+       "fi": "28",
+       "en": "28"
+      },
+      {
+       "fi": "33",
+       "en": "33"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä suomen lähikieltä puhutaan Tornionjokilaaksossa Ruotsin puolella?",
+      "en": "Which language close to Finnish is spoken in the Swedish part of the Torne Valley?"
+     },
+     "ok": {
+      "fi": "Meänkieltä",
+      "en": "Meänkieli"
+     },
+     "no": [
+      {
+       "fi": "Kveeniä",
+       "en": "Kven"
+      },
+      {
+       "fi": "Karjalaa",
+       "en": "Karelian"
+      },
+      {
+       "fi": "Vepsää",
+       "en": "Veps"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa kveenin kieli on virallinen vähemmistökieli?",
+      "en": "In which country is Kven an official minority language?"
+     },
+     "ok": {
+      "fi": "Norjassa",
+      "en": "Norway"
+     },
+     "no": [
+      {
+       "fi": "Ruotsissa",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Venäjällä",
+       "en": "Russia"
+      },
+      {
+       "fi": "Virossa",
+       "en": "Estonia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka suuri osa Suomen asukkaista puhui suomea äidinkielenään vuoden 2023 lopussa?",
+      "en": "What share of Finland’s residents spoke Finnish as their mother tongue at the end of 2023?"
+     },
+     "ok": {
+      "fi": "Noin 85 %",
+      "en": "About 85%"
+     },
+     "no": [
+      {
+       "fi": "Noin 70 %",
+       "en": "About 70%"
+      },
+      {
+       "fi": "Noin 93 %",
+       "en": "About 93%"
+      },
+      {
+       "fi": "Noin 98 %",
+       "en": "About 98%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä saamen kielistä EI ole Suomessa puhuttu saamen kieli?",
+      "en": "Which of these Sámi languages is NOT one spoken in Finland?"
+     },
+     "ok": {
+      "fi": "Luulajansaame",
+      "en": "Lule Sámi"
+     },
+     "no": [
+      {
+       "fi": "Pohjoissaame",
+       "en": "Northern Sámi"
+      },
+      {
+       "fi": "Inarinsaame",
+       "en": "Inari Sámi"
+      },
+      {
+       "fi": "Koltansaame",
+       "en": "Skolt Sámi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitkä ovat Suomen perustuslain mukaan maan kansalliskielet?",
+      "en": "According to the Constitution, which are Finland’s national languages?"
+     },
+     "ok": {
+      "fi": "Suomi ja ruotsi",
+      "en": "Finnish and Swedish"
+     },
+     "no": [
+      {
+       "fi": "Suomi ja saame",
+       "en": "Finnish and Sámi"
+      },
+      {
+       "fi": "Suomi, ruotsi ja saame",
+       "en": "Finnish, Swedish and Sámi"
+      },
+      {
+       "fi": "Vain suomi",
+       "en": "Finnish only"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä vietetään Mikael Agricolan päivää eli suomen kielen päivää?",
+      "en": "On which day is Mikael Agricola Day, the day of the Finnish language, celebrated?"
+     },
+     "ok": {
+      "fi": "9. huhtikuuta",
+      "en": "9 April"
+     },
+     "no": [
+      {
+       "fi": "28. helmikuuta",
+       "en": "28 February"
+      },
+      {
+       "fi": "12. toukokuuta",
+       "en": "12 May"
+      },
+      {
+       "fi": "6. marraskuuta",
+       "en": "6 November"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä vietetään ruotsalaisuuden päivää?",
+      "en": "On which day is Finnish Swedish Heritage Day celebrated?"
+     },
+     "ok": {
+      "fi": "6. marraskuuta",
+      "en": "6 November"
+     },
+     "no": [
+      {
+       "fi": "9. huhtikuuta",
+       "en": "9 April"
+      },
+      {
+       "fi": "24. kesäkuuta",
+       "en": "24 June"
+      },
+      {
+       "fi": "10. lokakuuta",
+       "en": "10 October"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä vietetään saamelaisten kansallispäivää?",
+      "en": "On which day is Sámi National Day celebrated?"
+     },
+     "ok": {
+      "fi": "6. helmikuuta",
+      "en": "6 February"
+     },
+     "no": [
+      {
+       "fi": "6. joulukuuta",
+       "en": "6 December"
+      },
+      {
+       "fi": "21. maaliskuuta",
+       "en": "21 March"
+      },
+      {
+       "fi": "1. toukokuuta",
+       "en": "1 May"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä ilmiö saa sanomaan ”talossa” mutta ”kylässä”?",
+      "en": "Which phenomenon makes Finnish say “talossa” but “kylässä”?"
+     },
+     "ok": {
+      "fi": "Vokaalisointu",
+      "en": "Vowel harmony"
+     },
+     "no": [
+      {
+       "fi": "Astevaihtelu",
+       "en": "Consonant gradation"
+      },
+      {
+       "fi": "Loppukahdennus",
+       "en": "Final gemination"
+      },
+      {
+       "fi": "Diftongi",
+       "en": "Diphthong"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä ilmiö näkyy sanaparissa ”katu – kadulla”?",
+      "en": "Which phenomenon is seen in the pair “katu – kadulla”?"
+     },
+     "ok": {
+      "fi": "Astevaihtelu",
+      "en": "Consonant gradation"
+     },
+     "no": [
+      {
+       "fi": "Vokaalisointu",
+       "en": "Vowel harmony"
+      },
+      {
+       "fi": "Loppukahdennus",
+       "en": "Final gemination"
+      },
+      {
+       "fi": "Assimilaatio",
+       "en": "Assimilation"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

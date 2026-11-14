@@ -1,0 +1,9568 @@
+{
+ "quizzes": [
+  {
+   "id": "valinta-3-1950-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 192,
+   "title": {
+    "fi": "Maailma 1950-luvulla",
+    "en": "The world in the 1950s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minä vuonna Elisabet II kruunattiin?",
+      "en": "In which year was Elizabeth II crowned?"
+     },
+     "ok": {
+      "fi": "1953",
+      "en": "1953"
+     },
+     "no": [
+      {
+       "fi": "1947",
+       "en": "1947"
+      },
+      {
+       "fi": "1952",
+       "en": "1952"
+      },
+      {
+       "fi": "1957",
+       "en": "1957"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Ketkä nousivat ensimmäisinä Mount Everestin huipulle vuonna 1953?",
+      "en": "Who were the first to reach the summit of Mount Everest in 1953?"
+     },
+     "ok": {
+      "fi": "Edmund Hillary ja Tenzing Norgay",
+      "en": "Edmund Hillary and Tenzing Norgay"
+     },
+     "no": [
+      {
+       "fi": "George Mallory ja Andrew Irvine",
+       "en": "George Mallory and Andrew Irvine"
+      },
+      {
+       "fi": "Reinhold Messner ja Peter Habeler",
+       "en": "Reinhold Messner and Peter Habeler"
+      },
+      {
+       "fi": "Maurice Herzog ja Louis Lachenal",
+       "en": "Maurice Herzog and Louis Lachenal"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä sota päättyi aselepoon vuonna 1953?",
+      "en": "Which war ended in an armistice in 1953?"
+     },
+     "ok": {
+      "fi": "Korean sota",
+      "en": "The Korean War"
+     },
+     "no": [
+      {
+       "fi": "Vietnamin sota",
+       "en": "The Vietnam War"
+      },
+      {
+       "fi": "Suezin kriisi",
+       "en": "The Suez Crisis"
+      },
+      {
+       "fi": "Algerian sota",
+       "en": "The Algerian War"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä sopimus perusti Euroopan talousyhteisön vuonna 1957?",
+      "en": "Which treaty founded the European Economic Community in 1957?"
+     },
+     "ok": {
+      "fi": "Rooman sopimus",
+      "en": "The Treaty of Rome"
+     },
+     "no": [
+      {
+       "fi": "Maastrichtin sopimus",
+       "en": "The Maastricht Treaty"
+      },
+      {
+       "fi": "Lissabonin sopimus",
+       "en": "The Treaty of Lisbon"
+      },
+      {
+       "fi": "Schengenin sopimus",
+       "en": "The Schengen Agreement"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka kieltäytyi luovuttamasta bussipaikkaansa valkoiselle matkustajalle Montgomeryssä vuonna 1955?",
+      "en": "Who refused to give up her bus seat to a white passenger in Montgomery in 1955?"
+     },
+     "ok": {
+      "fi": "Rosa Parks",
+      "en": "Rosa Parks"
+     },
+     "no": [
+      {
+       "fi": "Harriet Tubman",
+       "en": "Harriet Tubman"
+      },
+      {
+       "fi": "Coretta Scott King",
+       "en": "Coretta Scott King"
+      },
+      {
+       "fi": "Maya Angelou",
+       "en": "Maya Angelou"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Neuvostoliiton johtaja tuomitsi Stalinin henkilökultin niin sanotussa salaisessa puheessa vuonna 1956?",
+      "en": "Which Soviet leader denounced Stalin's personality cult in the \"Secret Speech\" of 1956?"
+     },
+     "ok": {
+      "fi": "Nikita Hruštšov",
+      "en": "Nikita Khrushchev"
+     },
+     "no": [
+      {
+       "fi": "Georgi Malenkov",
+       "en": "Georgy Malenkov"
+      },
+      {
+       "fi": "Leonid Brežnev",
+       "en": "Leonid Brezhnev"
+      },
+      {
+       "fi": "Vjatšeslav Molotov",
+       "en": "Vyacheslav Molotov"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin Sun Records -studiossa Elvis Presley teki ensimmäiset levytyksensä?",
+      "en": "In which city's Sun Records studio did Elvis Presley make his first recordings?"
+     },
+     "ok": {
+      "fi": "Memphis",
+      "en": "Memphis"
+     },
+     "no": [
+      {
+       "fi": "Nashville",
+       "en": "Nashville"
+      },
+      {
+       "fi": "New Orleans",
+       "en": "New Orleans"
+      },
+      {
+       "fi": "Chicago",
+       "en": "Chicago"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Disneyland avattiin Kaliforniassa?",
+      "en": "In which year did Disneyland open in California?"
+     },
+     "ok": {
+      "fi": "1955",
+      "en": "1955"
+     },
+     "no": [
+      {
+       "fi": "1937",
+       "en": "1937"
+      },
+      {
+       "fi": "1971",
+       "en": "1971"
+      },
+      {
+       "fi": "1983",
+       "en": "1983"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka johti Ghanan itsenäisyyteen vuonna 1957?",
+      "en": "Who led Ghana to independence in 1957?"
+     },
+     "ok": {
+      "fi": "Kwame Nkrumah",
+      "en": "Kwame Nkrumah"
+     },
+     "no": [
+      {
+       "fi": "Jomo Kenyatta",
+       "en": "Jomo Kenyatta"
+      },
+      {
+       "fi": "Julius Nyerere",
+       "en": "Julius Nyerere"
+      },
+      {
+       "fi": "Patrice Lumumba",
+       "en": "Patrice Lumumba"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen kehittämä poliorokote otettiin laajaan käyttöön Yhdysvalloissa vuonna 1955?",
+      "en": "Whose polio vaccine went into wide use in the United States in 1955?"
+     },
+     "ok": {
+      "fi": "Jonas Salk",
+      "en": "Jonas Salk"
+     },
+     "no": [
+      {
+       "fi": "Edward Jenner",
+       "en": "Edward Jenner"
+      },
+      {
+       "fi": "Alexander Fleming",
+       "en": "Alexander Fleming"
+      },
+      {
+       "fi": "Louis Pasteur",
+       "en": "Louis Pasteur"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä nukke tuli myyntiin vuonna 1959?",
+      "en": "Which doll went on sale in 1959?"
+     },
+     "ok": {
+      "fi": "Barbie",
+      "en": "Barbie"
+     },
+     "no": [
+      {
+       "fi": "Sindy",
+       "en": "Sindy"
+      },
+      {
+       "fi": "Bratz",
+       "en": "Bratz"
+      },
+      {
+       "fi": "Cabbage Patch",
+       "en": "Cabbage Patch"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Alaskasta ja Havaijista tuli Yhdysvaltain osavaltioita?",
+      "en": "In which year did Alaska and Hawaii become US states?"
+     },
+     "ok": {
+      "fi": "1959",
+      "en": "1959"
+     },
+     "no": [
+      {
+       "fi": "1867",
+       "en": "1867"
+      },
+      {
+       "fi": "1912",
+       "en": "1912"
+      },
+      {
+       "fi": "1945",
+       "en": "1945"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka ohjasi elokuvan Seitsemän samuraita (1954)?",
+      "en": "Who directed Seven Samurai (1954)?"
+     },
+     "ok": {
+      "fi": "Akira Kurosawa",
+      "en": "Akira Kurosawa"
+     },
+     "no": [
+      {
+       "fi": "Yasujirō Ozu",
+       "en": "Yasujirō Ozu"
+      },
+      {
+       "fi": "Hayao Miyazaki",
+       "en": "Hayao Miyazaki"
+      },
+      {
+       "fi": "Kenji Mizoguchi",
+       "en": "Kenji Mizoguchi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka kirjoitti romaanin Sieppari ruispellossa (1951)?",
+      "en": "Who wrote The Catcher in the Rye (1951)?"
+     },
+     "ok": {
+      "fi": "J. D. Salinger",
+      "en": "J. D. Salinger"
+     },
+     "no": [
+      {
+       "fi": "Jack Kerouac",
+       "en": "Jack Kerouac"
+      },
+      {
+       "fi": "Ernest Hemingway",
+       "en": "Ernest Hemingway"
+      },
+      {
+       "fi": "Truman Capote",
+       "en": "Truman Capote"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa räjäytti maailman ensimmäisen vetypommin vuonna 1952?",
+      "en": "Which country detonated the world's first hydrogen bomb in 1952?"
+     },
+     "ok": {
+      "fi": "Yhdysvallat",
+      "en": "The United States"
+     },
+     "no": [
+      {
+       "fi": "Neuvostoliitto",
+       "en": "The Soviet Union"
+      },
+      {
+       "fi": "Iso-Britannia",
+       "en": "The United Kingdom"
+      },
+      {
+       "fi": "Ranska",
+       "en": "France"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa käytiin vuoden 1956 Melbournen olympialaisten ratsastuskilpailut karanteenisääntöjen vuoksi?",
+      "en": "Where were the equestrian events of the 1956 Melbourne Olympics held because of quarantine rules?"
+     },
+     "ok": {
+      "fi": "Tukholmassa",
+      "en": "Stockholm"
+     },
+     "no": [
+      {
+       "fi": "Helsingissä",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Lontoossa",
+       "en": "London"
+      },
+      {
+       "fi": "Sydneyssä",
+       "en": "Sydney"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-1970-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 192,
+   "title": {
+    "fi": "Maailma 1970-luvulla",
+    "en": "The world in the 1970s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä sota laukaisi vuoden 1973 öljykriisin?",
+      "en": "Which war triggered the 1973 oil crisis?"
+     },
+     "ok": {
+      "fi": "Jom kippur -sota",
+      "en": "The Yom Kippur War"
+     },
+     "no": [
+      {
+       "fi": "Kuuden päivän sota",
+       "en": "The Six-Day War"
+      },
+      {
+       "fi": "Iranin ja Irakin sota",
+       "en": "The Iran–Iraq War"
+      },
+      {
+       "fi": "Persianlahden sota",
+       "en": "The Gulf War"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka nousi Iranin johtoon vuoden 1979 vallankumouksessa?",
+      "en": "Who came to lead Iran in the 1979 revolution?"
+     },
+     "ok": {
+      "fi": "Ajatollah Khomeini",
+      "en": "Ayatollah Khomeini"
+     },
+     "no": [
+      {
+       "fi": "Šaahi Mohammad Reza Pahlavi",
+       "en": "Shah Mohammad Reza Pahlavi"
+      },
+      {
+       "fi": "Saddam Hussein",
+       "en": "Saddam Hussein"
+      },
+      {
+       "fi": "Mohammad Mosaddegh",
+       "en": "Mohammad Mosaddegh"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka valittiin vuonna 1978 ensimmäiseksi puolalaiseksi paaviksi?",
+      "en": "Who was elected the first Polish pope in 1978?"
+     },
+     "ok": {
+      "fi": "Johannes Paavali II",
+      "en": "John Paul II"
+     },
+     "no": [
+      {
+       "fi": "Paavali VI",
+       "en": "Paul VI"
+      },
+      {
+       "fi": "Johannes Paavali I",
+       "en": "John Paul I"
+      },
+      {
+       "fi": "Benedictus XVI",
+       "en": "Benedict XVI"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka johti punakhmerien hallintoa Kambodžassa vuosina 1975–1979?",
+      "en": "Who led the Khmer Rouge regime in Cambodia in 1975–1979?"
+     },
+     "ok": {
+      "fi": "Pol Pot",
+      "en": "Pol Pot"
+     },
+     "no": [
+      {
+       "fi": "Ho Tši Minh",
+       "en": "Ho Chi Minh"
+      },
+      {
+       "fi": "Norodom Sihanouk",
+       "en": "Norodom Sihanouk"
+      },
+      {
+       "fi": "Lon Nol",
+       "en": "Lon Nol"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin olympialaisia varjosti terrori-isku vuonna 1972?",
+      "en": "Which city's Olympics were overshadowed by a terrorist attack in 1972?"
+     },
+     "ok": {
+      "fi": "München",
+      "en": "Munich"
+     },
+     "no": [
+      {
+       "fi": "Montreal",
+       "en": "Montreal"
+      },
+      {
+       "fi": "México",
+       "en": "Mexico City"
+      },
+      {
+       "fi": "Moskova",
+       "en": "Moscow"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä ruotsalainen yhtye voitti Euroviisut vuonna 1974?",
+      "en": "Which Swedish group won Eurovision in 1974?"
+     },
+     "ok": {
+      "fi": "ABBA",
+      "en": "ABBA"
+     },
+     "no": [
+      {
+       "fi": "Roxette",
+       "en": "Roxette"
+      },
+      {
+       "fi": "Ace of Base",
+       "en": "Ace of Base"
+      },
+      {
+       "fi": "Europe",
+       "en": "Europe"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Yhdistynyt kuningaskunta, Tanska ja Irlanti liittyivät Euroopan yhteisöihin?",
+      "en": "In which year did the UK, Denmark and Ireland join the European Communities?"
+     },
+     "ok": {
+      "fi": "1973",
+      "en": "1973"
+     },
+     "no": [
+      {
+       "fi": "1957",
+       "en": "1957"
+      },
+      {
+       "fi": "1981",
+       "en": "1981"
+      },
+      {
+       "fi": "1995",
+       "en": "1995"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Espanjan diktaattori kuoli vuonna 1975?",
+      "en": "Which Spanish dictator died in 1975?"
+     },
+     "ok": {
+      "fi": "Francisco Franco",
+      "en": "Francisco Franco"
+     },
+     "no": [
+      {
+       "fi": "António de Oliveira Salazar",
+       "en": "António de Oliveira Salazar"
+      },
+      {
+       "fi": "Augusto Pinochet",
+       "en": "Augusto Pinochet"
+      },
+      {
+       "fi": "Benito Mussolini",
+       "en": "Benito Mussolini"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio itsenäistyi Pakistanista vuonna 1971?",
+      "en": "Which state broke away from Pakistan in 1971?"
+     },
+     "ok": {
+      "fi": "Bangladesh",
+      "en": "Bangladesh"
+     },
+     "no": [
+      {
+       "fi": "Sri Lanka",
+       "en": "Sri Lanka"
+      },
+      {
+       "fi": "Nepal",
+       "en": "Nepal"
+      },
+      {
+       "fi": "Bhutan",
+       "en": "Bhutan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Chilen presidentti kuoli vuoden 1973 sotilasvallankaappauksessa?",
+      "en": "Which Chilean president died during the 1973 military coup?"
+     },
+     "ok": {
+      "fi": "Salvador Allende",
+      "en": "Salvador Allende"
+     },
+     "no": [
+      {
+       "fi": "Augusto Pinochet",
+       "en": "Augusto Pinochet"
+      },
+      {
+       "fi": "Juan Perón",
+       "en": "Juan Perón"
+      },
+      {
+       "fi": "Che Guevara",
+       "en": "Che Guevara"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä yhtiön Walkman-kasettisoitin tuli myyntiin vuonna 1979?",
+      "en": "Which company's Walkman cassette player went on sale in 1979?"
+     },
+     "ok": {
+      "fi": "Sony",
+      "en": "Sony"
+     },
+     "no": [
+      {
+       "fi": "Panasonic",
+       "en": "Panasonic"
+      },
+      {
+       "fi": "Philips",
+       "en": "Philips"
+      },
+      {
+       "fi": "Nokia",
+       "en": "Nokia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Yhdysvaltain presidentti teki historiallisen vierailun Kiinaan vuonna 1972?",
+      "en": "Which US president made a historic visit to China in 1972?"
+     },
+     "ok": {
+      "fi": "Richard Nixon",
+      "en": "Richard Nixon"
+     },
+     "no": [
+      {
+       "fi": "Jimmy Carter",
+       "en": "Jimmy Carter"
+      },
+      {
+       "fi": "Gerald Ford",
+       "en": "Gerald Ford"
+      },
+      {
+       "fi": "Lyndon B. Johnson",
+       "en": "Lyndon B. Johnson"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Neuvostoliitto hyökkäsi Afganistaniin?",
+      "en": "In which year did the Soviet Union invade Afghanistan?"
+     },
+     "ok": {
+      "fi": "1979",
+      "en": "1979"
+     },
+     "no": [
+      {
+       "fi": "1968",
+       "en": "1968"
+      },
+      {
+       "fi": "1975",
+       "en": "1975"
+      },
+      {
+       "fi": "1985",
+       "en": "1985"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä yhdysvaltalaisessa ydinvoimalassa sattui osittainen sydämen sulaminen vuonna 1979?",
+      "en": "Which US nuclear plant suffered a partial meltdown in 1979?"
+     },
+     "ok": {
+      "fi": "Three Mile Island",
+      "en": "Three Mile Island"
+     },
+     "no": [
+      {
+       "fi": "Tšernobyl",
+       "en": "Chernobyl"
+      },
+      {
+       "fi": "Fukushima",
+       "en": "Fukushima"
+      },
+      {
+       "fi": "Windscale",
+       "en": "Windscale"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Egyptin presidentti allekirjoitti Camp Davidin sopimukset Israelin kanssa vuonna 1978?",
+      "en": "Which Egyptian president signed the Camp David Accords with Israel in 1978?"
+     },
+     "ok": {
+      "fi": "Anwar Sadat",
+      "en": "Anwar Sadat"
+     },
+     "no": [
+      {
+       "fi": "Gamal Abdel Nasser",
+       "en": "Gamal Abdel Nasser"
+      },
+      {
+       "fi": "Hosni Mubarak",
+       "en": "Hosni Mubarak"
+      },
+      {
+       "fi": "Muammar Gaddafi",
+       "en": "Muammar Gaddafi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Apple perustettiin?",
+      "en": "In which year was Apple founded?"
+     },
+     "ok": {
+      "fi": "1976",
+      "en": "1976"
+     },
+     "no": [
+      {
+       "fi": "1971",
+       "en": "1971"
+      },
+      {
+       "fi": "1981",
+       "en": "1981"
+      },
+      {
+       "fi": "1984",
+       "en": "1984"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-1980-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "Maailma 1980-luvulla",
+    "en": "The world in the 1980s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuka nousi Neuvostoliiton johtoon vuonna 1985?",
+      "en": "Who became leader of the Soviet Union in 1985?"
+     },
+     "ok": {
+      "fi": "Mihail Gorbatšov",
+      "en": "Mikhail Gorbachev"
+     },
+     "no": [
+      {
+       "fi": "Juri Andropov",
+       "en": "Yuri Andropov"
+      },
+      {
+       "fi": "Konstantin Tšernenko",
+       "en": "Konstantin Chernenko"
+      },
+      {
+       "fi": "Boris Jeltsin",
+       "en": "Boris Yeltsin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Tšernobylin ydinvoimalaonnettomuus sattui?",
+      "en": "In which year did the Chernobyl nuclear disaster happen?"
+     },
+     "ok": {
+      "fi": "1986",
+      "en": "1986"
+     },
+     "no": [
+      {
+       "fi": "1979",
+       "en": "1979"
+      },
+      {
+       "fi": "1984",
+       "en": "1984"
+      },
+      {
+       "fi": "1991",
+       "en": "1991"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä avaruussukkula tuhoutui pian laukaisun jälkeen tammikuussa 1986?",
+      "en": "Which space shuttle broke apart shortly after launch in January 1986?"
+     },
+     "ok": {
+      "fi": "Challenger",
+      "en": "Challenger"
+     },
+     "no": [
+      {
+       "fi": "Columbia",
+       "en": "Columbia"
+      },
+      {
+       "fi": "Discovery",
+       "en": "Discovery"
+      },
+      {
+       "fi": "Atlantis",
+       "en": "Atlantis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka johti puolalaista Solidaarisuus-ammattiliittoa?",
+      "en": "Who led the Polish trade union Solidarity?"
+     },
+     "ok": {
+      "fi": "Lech Wałęsa",
+      "en": "Lech Wałęsa"
+     },
+     "no": [
+      {
+       "fi": "Wojciech Jaruzelski",
+       "en": "Wojciech Jaruzelski"
+      },
+      {
+       "fi": "Tadeusz Mazowiecki",
+       "en": "Tadeusz Mazowiecki"
+      },
+      {
+       "fi": "Karol Wojtyła",
+       "en": "Karol Wojtyła"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maiden välillä käytiin sota vuosina 1980–1988?",
+      "en": "Which countries fought a war in 1980–1988?"
+     },
+     "ok": {
+      "fi": "Iranin ja Irakin",
+      "en": "Iran and Iraq"
+     },
+     "no": [
+      {
+       "fi": "Irakin ja Kuwaitin",
+       "en": "Iraq and Kuwait"
+      },
+      {
+       "fi": "Iranin ja Afganistanin",
+       "en": "Iran and Afghanistan"
+      },
+      {
+       "fi": "Syyrian ja Turkin",
+       "en": "Syria and Turkey"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä saariston vuoksi Argentiina ja Yhdistynyt kuningaskunta sotivat vuonna 1982?",
+      "en": "Over which islands did Argentina and the United Kingdom fight in 1982?"
+     },
+     "ok": {
+      "fi": "Falklandinsaarten",
+      "en": "The Falkland Islands"
+     },
+     "no": [
+      {
+       "fi": "Galápagossaarten",
+       "en": "The Galápagos Islands"
+      },
+      {
+       "fi": "Kanariansaarten",
+       "en": "The Canary Islands"
+      },
+      {
+       "fi": "Bermudan",
+       "en": "Bermuda"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka Intian pääministeri murhattiin vuonna 1984?",
+      "en": "Which Indian prime minister was assassinated in 1984?"
+     },
+     "ok": {
+      "fi": "Indira Gandhi",
+      "en": "Indira Gandhi"
+     },
+     "no": [
+      {
+       "fi": "Benazir Bhutto",
+       "en": "Benazir Bhutto"
+      },
+      {
+       "fi": "Sirimavo Bandaranaike",
+       "en": "Sirimavo Bandaranaike"
+      },
+      {
+       "fi": "Golda Meir",
+       "en": "Golda Meir"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä yhtiön Game Boy julkaistiin vuonna 1989?",
+      "en": "Which company released the Game Boy in 1989?"
+     },
+     "ok": {
+      "fi": "Nintendo",
+      "en": "Nintendo"
+     },
+     "no": [
+      {
+       "fi": "Sega",
+       "en": "Sega"
+      },
+      {
+       "fi": "Sony",
+       "en": "Sony"
+      },
+      {
+       "fi": "Atari",
+       "en": "Atari"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Microsoft julkaisi ensimmäisen Windows-version?",
+      "en": "In which year did Microsoft release the first version of Windows?"
+     },
+     "ok": {
+      "fi": "1985",
+      "en": "1985"
+     },
+     "no": [
+      {
+       "fi": "1975",
+       "en": "1975"
+      },
+      {
+       "fi": "1990",
+       "en": "1990"
+      },
+      {
+       "fi": "1995",
+       "en": "1995"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin kesäolympialaisia monet länsimaat boikotoivat vuonna 1980?",
+      "en": "Which city's Summer Olympics did many Western countries boycott in 1980?"
+     },
+     "ok": {
+      "fi": "Moskovan",
+      "en": "Moscow"
+     },
+     "no": [
+      {
+       "fi": "Los Angelesin",
+       "en": "Los Angeles"
+      },
+      {
+       "fi": "Soulin",
+       "en": "Seoul"
+      },
+      {
+       "fi": "Montrealin",
+       "en": "Montreal"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Live Aid -konsertit järjestettiin vuonna 1985 Lontoossa ja missä muussa kaupungissa?",
+      "en": "The Live Aid concerts of 1985 were held in London and which other city?"
+     },
+     "ok": {
+      "fi": "Philadelphia",
+      "en": "Philadelphia"
+     },
+     "no": [
+      {
+       "fi": "New York",
+       "en": "New York"
+      },
+      {
+       "fi": "Los Angeles",
+       "en": "Los Angeles"
+      },
+      {
+       "fi": "Chicago",
+       "en": "Chicago"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Yhdysvaltain presidentti vuosina 1981–1989?",
+      "en": "Who was US president from 1981 to 1989?"
+     },
+     "ok": {
+      "fi": "Ronald Reagan",
+      "en": "Ronald Reagan"
+     },
+     "no": [
+      {
+       "fi": "Jimmy Carter",
+       "en": "Jimmy Carter"
+      },
+      {
+       "fi": "George H. W. Bush",
+       "en": "George H. W. Bush"
+      },
+      {
+       "fi": "Gerald Ford",
+       "en": "Gerald Ford"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mistä maasta Rubikin kuutio on kotoisin?",
+      "en": "Which country does the Rubik's Cube come from?"
+     },
+     "ok": {
+      "fi": "Unkarista",
+      "en": "Hungary"
+     },
+     "no": [
+      {
+       "fi": "Japanista",
+       "en": "Japan"
+      },
+      {
+       "fi": "Tšekkoslovakiasta",
+       "en": "Czechoslovakia"
+      },
+      {
+       "fi": "Itävallasta",
+       "en": "Austria"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä taudin ensimmäiset tapaukset raportoitiin Yhdysvalloissa vuonna 1981?",
+      "en": "Which disease had its first cases reported in the United States in 1981?"
+     },
+     "ok": {
+      "fi": "AIDS",
+      "en": "AIDS"
+     },
+     "no": [
+      {
+       "fi": "SARS",
+       "en": "SARS"
+      },
+      {
+       "fi": "Ebola",
+       "en": "Ebola"
+      },
+      {
+       "fi": "Lintuinfluenssa",
+       "en": "Bird flu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna prinssi Charles ja Diana Spencer menivät naimisiin?",
+      "en": "In which year did Prince Charles and Diana Spencer marry?"
+     },
+     "ok": {
+      "fi": "1981",
+      "en": "1981"
+     },
+     "no": [
+      {
+       "fi": "1977",
+       "en": "1977"
+      },
+      {
+       "fi": "1985",
+       "en": "1985"
+      },
+      {
+       "fi": "1990",
+       "en": "1990"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä osavaltion rannikolla Exxon Valdez -tankkeri aiheutti öljyonnettomuuden vuonna 1989?",
+      "en": "Off which US state did the Exxon Valdez tanker cause an oil spill in 1989?"
+     },
+     "ok": {
+      "fi": "Alaska",
+      "en": "Alaska"
+     },
+     "no": [
+      {
+       "fi": "Louisiana",
+       "en": "Louisiana"
+      },
+      {
+       "fi": "Texas",
+       "en": "Texas"
+      },
+      {
+       "fi": "Kalifornia",
+       "en": "California"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna ilmestyi Michael Jacksonin Thriller, kaikkien aikojen myydyimmäksi arvioitu albumi?",
+      "en": "In which year was Michael Jackson's Thriller, estimated as the best-selling album ever, released?"
+     },
+     "ok": {
+      "fi": "1982",
+      "en": "1982"
+     },
+     "no": [
+      {
+       "fi": "1979",
+       "en": "1979"
+      },
+      {
+       "fi": "1985",
+       "en": "1985"
+      },
+      {
+       "fi": "1987",
+       "en": "1987"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-1990-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "Maailma 1990-luvulla",
+    "en": "The world in the 1990s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minä vuonna Saksa yhdistyi?",
+      "en": "In which year was Germany reunified?"
+     },
+     "ok": {
+      "fi": "1990",
+      "en": "1990"
+     },
+     "no": [
+      {
+       "fi": "1989",
+       "en": "1989"
+      },
+      {
+       "fi": "1991",
+       "en": "1991"
+      },
+      {
+       "fi": "1993",
+       "en": "1993"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan Irak miehitti elokuussa 1990?",
+      "en": "Which country did Iraq occupy in August 1990?"
+     },
+     "ok": {
+      "fi": "Kuwaitin",
+      "en": "Kuwait"
+     },
+     "no": [
+      {
+       "fi": "Saudi-Arabian",
+       "en": "Saudi Arabia"
+      },
+      {
+       "fi": "Iranin",
+       "en": "Iran"
+      },
+      {
+       "fi": "Jordanian",
+       "en": "Jordan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio jakautui rauhanomaisesti kahtia vuoden 1993 alussa?",
+      "en": "Which state split peacefully in two at the start of 1993?"
+     },
+     "ok": {
+      "fi": "Tšekkoslovakia",
+      "en": "Czechoslovakia"
+     },
+     "no": [
+      {
+       "fi": "Jugoslavia",
+       "en": "Yugoslavia"
+      },
+      {
+       "fi": "Sudan",
+       "en": "Sudan"
+      },
+      {
+       "fi": "Belgia",
+       "en": "Belgium"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta vuotta Nelson Mandela oli vangittuna ennen vapautumistaan vuonna 1990?",
+      "en": "How many years had Nelson Mandela been imprisoned before his release in 1990?"
+     },
+     "ok": {
+      "fi": "27 vuotta",
+      "en": "27 years"
+     },
+     "no": [
+      {
+       "fi": "10 vuotta",
+       "en": "10 years"
+      },
+      {
+       "fi": "18 vuotta",
+       "en": "18 years"
+      },
+      {
+       "fi": "35 vuotta",
+       "en": "35 years"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa surmattiin vuonna 1994 arviolta 800 000 ihmistä noin sadassa päivässä?",
+      "en": "In which country were an estimated 800,000 people killed in about 100 days in 1994?"
+     },
+     "ok": {
+      "fi": "Ruandassa",
+      "en": "Rwanda"
+     },
+     "no": [
+      {
+       "fi": "Somaliassa",
+       "en": "Somalia"
+      },
+      {
+       "fi": "Keniassa",
+       "en": "Kenya"
+      },
+      {
+       "fi": "Liberiassa",
+       "en": "Liberia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä sopimus perusti Euroopan unionin (voimaan 1993)?",
+      "en": "Which treaty created the European Union (in force 1993)?"
+     },
+     "ok": {
+      "fi": "Maastrichtin sopimus",
+      "en": "The Maastricht Treaty"
+     },
+     "no": [
+      {
+       "fi": "Rooman sopimus",
+       "en": "The Treaty of Rome"
+      },
+      {
+       "fi": "Amsterdamin sopimus",
+       "en": "The Treaty of Amsterdam"
+      },
+      {
+       "fi": "Nizzan sopimus",
+       "en": "The Treaty of Nice"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli vuonna 1996 syntyneen, aikuisen solusta kloonatun lampaan nimi?",
+      "en": "What was the name of the sheep cloned from an adult cell, born in 1996?"
+     },
+     "ok": {
+      "fi": "Dolly",
+      "en": "Dolly"
+     },
+     "no": [
+      {
+       "fi": "Molly",
+       "en": "Molly"
+      },
+      {
+       "fi": "Shaun",
+       "en": "Shaun"
+      },
+      {
+       "fi": "Bella",
+       "en": "Bella"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä alueen Yhdistynyt kuningaskunta luovutti Kiinalle vuonna 1997?",
+      "en": "Which territory did the United Kingdom hand over to China in 1997?"
+     },
+     "ok": {
+      "fi": "Hongkongin",
+      "en": "Hong Kong"
+     },
+     "no": [
+      {
+       "fi": "Macaon",
+       "en": "Macau"
+      },
+      {
+       "fi": "Taiwanin",
+       "en": "Taiwan"
+      },
+      {
+       "fi": "Singaporen",
+       "en": "Singapore"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä hakukone perustettiin vuonna 1998?",
+      "en": "Which search engine was founded in 1998?"
+     },
+     "ok": {
+      "fi": "Google",
+      "en": "Google"
+     },
+     "no": [
+      {
+       "fi": "Yahoo",
+       "en": "Yahoo"
+      },
+      {
+       "fi": "AltaVista",
+       "en": "AltaVista"
+      },
+      {
+       "fi": "Bing",
+       "en": "Bing"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kaupungin piiritys kesti vuodesta 1992 vuoteen 1996?",
+      "en": "Which city was under siege from 1992 to 1996?"
+     },
+     "ok": {
+      "fi": "Sarajevo",
+      "en": "Sarajevo"
+     },
+     "no": [
+      {
+       "fi": "Vukovar",
+       "en": "Vukovar"
+      },
+      {
+       "fi": "Belgrad",
+       "en": "Belgrade"
+      },
+      {
+       "fi": "Zagreb",
+       "en": "Zagreb"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Venäjän federaation ensimmäinen presidentti?",
+      "en": "Who was the first president of the Russian Federation?"
+     },
+     "ok": {
+      "fi": "Boris Jeltsin",
+      "en": "Boris Yeltsin"
+     },
+     "no": [
+      {
+       "fi": "Mihail Gorbatšov",
+       "en": "Mikhail Gorbachev"
+      },
+      {
+       "fi": "Vladimir Putin",
+       "en": "Vladimir Putin"
+      },
+      {
+       "fi": "Dmitri Medvedev",
+       "en": "Dmitry Medvedev"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Kanaalitunneli avattiin Ranskan ja Britannian välille?",
+      "en": "In which year did the Channel Tunnel open between France and Britain?"
+     },
+     "ok": {
+      "fi": "1994",
+      "en": "1994"
+     },
+     "no": [
+      {
+       "fi": "1985",
+       "en": "1985"
+      },
+      {
+       "fi": "1999",
+       "en": "1999"
+      },
+      {
+       "fi": "2004",
+       "en": "2004"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä vuoden 1997 elokuva voitti 11 Oscaria?",
+      "en": "Which 1997 film won 11 Oscars?"
+     },
+     "ok": {
+      "fi": "Titanic",
+      "en": "Titanic"
+     },
+     "no": [
+      {
+       "fi": "Forrest Gump",
+       "en": "Forrest Gump"
+      },
+      {
+       "fi": "Schindlerin lista",
+       "en": "Schindler's List"
+      },
+      {
+       "fi": "Englantilainen potilas",
+       "en": "The English Patient"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka shakin maailmanmestari hävisi ottelun IBM:n Deep Blue -tietokoneelle vuonna 1997?",
+      "en": "Which world chess champion lost a match to IBM's Deep Blue in 1997?"
+     },
+     "ok": {
+      "fi": "Garri Kasparov",
+      "en": "Garry Kasparov"
+     },
+     "no": [
+      {
+       "fi": "Anatoli Karpov",
+       "en": "Anatoli Karpov"
+      },
+      {
+       "fi": "Bobby Fischer",
+       "en": "Bobby Fischer"
+      },
+      {
+       "fi": "Magnus Carlsen",
+       "en": "Magnus Carlsen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa voitti jalkapallon MM-kisat kotikentällään vuonna 1998?",
+      "en": "Which country won the 1998 football World Cup at home?"
+     },
+     "ok": {
+      "fi": "Ranska",
+      "en": "France"
+     },
+     "no": [
+      {
+       "fi": "Brasilia",
+       "en": "Brazil"
+      },
+      {
+       "fi": "Italia",
+       "en": "Italy"
+      },
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä Japanin kaupungissa hyväksyttiin ilmastopöytäkirja vuonna 1997?",
+      "en": "In which Japanese city was the climate protocol adopted in 1997?"
+     },
+     "ok": {
+      "fi": "Kiotossa",
+      "en": "Kyoto"
+     },
+     "no": [
+      {
+       "fi": "Tokiossa",
+       "en": "Tokyo"
+      },
+      {
+       "fi": "Osakassa",
+       "en": "Osaka"
+      },
+      {
+       "fi": "Hiroshimassa",
+       "en": "Hiroshima"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa prinsessa Diana kuoli auto-onnettomuudessa vuonna 1997?",
+      "en": "In which city did Princess Diana die in a car crash in 1997?"
+     },
+     "ok": {
+      "fi": "Pariisissa",
+      "en": "Paris"
+     },
+     "no": [
+      {
+       "fi": "Lontoossa",
+       "en": "London"
+      },
+      {
+       "fi": "Monacossa",
+       "en": "Monaco"
+      },
+      {
+       "fi": "Roomassa",
+       "en": "Rome"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-2000-luku",
+   "cat": "yleis",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "2000-luvun ensimmäinen vuosikymmen (2000–2009)",
+    "en": "The 2000s decade (2000–2009)"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minä vuonna ensimmäinen iPhone esiteltiin?",
+      "en": "In which year was the first iPhone unveiled?"
+     },
+     "ok": {
+      "fi": "2007",
+      "en": "2007"
+     },
+     "no": [
+      {
+       "fi": "2004",
+       "en": "2004"
+      },
+      {
+       "fi": "2009",
+       "en": "2009"
+      },
+      {
+       "fi": "2010",
+       "en": "2010"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä yhteisöpalvelu perustettiin Harvardin yliopistossa vuonna 2004?",
+      "en": "Which social network was founded at Harvard in 2004?"
+     },
+     "ok": {
+      "fi": "Facebook",
+      "en": "Facebook"
+     },
+     "no": [
+      {
+       "fi": "MySpace",
+       "en": "MySpace"
+      },
+      {
+       "fi": "Twitter",
+       "en": "Twitter"
+      },
+      {
+       "fi": "LinkedIn",
+       "en": "LinkedIn"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä yhdysvaltalainen investointipankki kaatui syyskuussa 2008?",
+      "en": "Which US investment bank collapsed in September 2008?"
+     },
+     "ok": {
+      "fi": "Lehman Brothers",
+      "en": "Lehman Brothers"
+     },
+     "no": [
+      {
+       "fi": "Goldman Sachs",
+       "en": "Goldman Sachs"
+      },
+      {
+       "fi": "JPMorgan",
+       "en": "JPMorgan"
+      },
+      {
+       "fi": "Morgan Stanley",
+       "en": "Morgan Stanley"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä saaren edustalla tapahtunut maanjäristys aiheutti Intian valtameren tsunamin tapaninpäivänä 2004?",
+      "en": "Off which island did the earthquake that caused the Boxing Day 2004 Indian Ocean tsunami occur?"
+     },
+     "ok": {
+      "fi": "Sumatran",
+      "en": "Sumatra"
+     },
+     "no": [
+      {
+       "fi": "Jaavan",
+       "en": "Java"
+      },
+      {
+       "fi": "Sri Lankan",
+       "en": "Sri Lanka"
+      },
+      {
+       "fi": "Phuketin",
+       "en": "Phuket"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä osavaltiossa Barack Obama syntyi?",
+      "en": "In which US state was Barack Obama born?"
+     },
+     "ok": {
+      "fi": "Havaijilla",
+      "en": "Hawaii"
+     },
+     "no": [
+      {
+       "fi": "Illinoisissa",
+       "en": "Illinois"
+      },
+      {
+       "fi": "Kaliforniassa",
+       "en": "California"
+      },
+      {
+       "fi": "New Yorkissa",
+       "en": "New York"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä menetti planeetan asemansa vuonna 2006?",
+      "en": "What lost its status as a planet in 2006?"
+     },
+     "ok": {
+      "fi": "Pluto",
+      "en": "Pluto"
+     },
+     "no": [
+      {
+       "fi": "Eris",
+       "en": "Eris"
+      },
+      {
+       "fi": "Sedna",
+       "en": "Sedna"
+      },
+      {
+       "fi": "Haumea",
+       "en": "Haumea"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Concorde teki viimeiset matkustajalentonsa?",
+      "en": "In which year did Concorde make its last passenger flights?"
+     },
+     "ok": {
+      "fi": "2003",
+      "en": "2003"
+     },
+     "no": [
+      {
+       "fi": "1996",
+       "en": "1996"
+      },
+      {
+       "fi": "2000",
+       "en": "2000"
+      },
+      {
+       "fi": "2010",
+       "en": "2010"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Wikipedia perustettiin?",
+      "en": "In which year was Wikipedia founded?"
+     },
+     "ok": {
+      "fi": "2001",
+      "en": "2001"
+     },
+     "no": [
+      {
+       "fi": "1995",
+       "en": "1995"
+      },
+      {
+       "fi": "1998",
+       "en": "1998"
+      },
+      {
+       "fi": "2005",
+       "en": "2005"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa pidettiin kesäolympialaiset vuonna 2004?",
+      "en": "Which city hosted the 2004 Summer Olympics?"
+     },
+     "ok": {
+      "fi": "Ateenassa",
+      "en": "Athens"
+     },
+     "no": [
+      {
+       "fi": "Sydneyssä",
+       "en": "Sydney"
+      },
+      {
+       "fi": "Pekingissä",
+       "en": "Beijing"
+      },
+      {
+       "fi": "Lontoossa",
+       "en": "London"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä hurrikaani tulvi New Orleansin vuonna 2005?",
+      "en": "Which hurricane flooded New Orleans in 2005?"
+     },
+     "ok": {
+      "fi": "Katrina",
+      "en": "Katrina"
+     },
+     "no": [
+      {
+       "fi": "Sandy",
+       "en": "Sandy"
+      },
+      {
+       "fi": "Andrew",
+       "en": "Andrew"
+      },
+      {
+       "fi": "Harvey",
+       "en": "Harvey"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä vuonna 2005 perustettu videopalvelu myytiin Googlelle vuonna 2006?",
+      "en": "Which video service, founded in 2005, was sold to Google in 2006?"
+     },
+     "ok": {
+      "fi": "YouTube",
+      "en": "YouTube"
+     },
+     "no": [
+      {
+       "fi": "Vimeo",
+       "en": "Vimeo"
+      },
+      {
+       "fi": "Netflix",
+       "en": "Netflix"
+      },
+      {
+       "fi": "Dailymotion",
+       "en": "Dailymotion"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä vuonna 2004 EU:hun liittyneistä maista otti euron käyttöön ensimmäisenä (2007)?",
+      "en": "Which of the countries that joined the EU in 2004 adopted the euro first (2007)?"
+     },
+     "ok": {
+      "fi": "Slovenia",
+      "en": "Slovenia"
+     },
+     "no": [
+      {
+       "fi": "Viro",
+       "en": "Estonia"
+      },
+      {
+       "fi": "Slovakia",
+       "en": "Slovakia"
+      },
+      {
+       "fi": "Malta",
+       "en": "Malta"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta uutta jäsenmaata liittyi EU:hun 1.5.2004?",
+      "en": "How many new member states joined the EU on 1 May 2004?"
+     },
+     "ok": {
+      "fi": "10",
+      "en": "10"
+     },
+     "no": [
+      {
+       "fi": "5",
+       "en": "5"
+      },
+      {
+       "fi": "8",
+       "en": "8"
+      },
+      {
+       "fi": "12",
+       "en": "12"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka paavi kuoli vuonna 2005?",
+      "en": "Which pope died in 2005?"
+     },
+     "ok": {
+      "fi": "Johannes Paavali II",
+      "en": "John Paul II"
+     },
+     "no": [
+      {
+       "fi": "Benedictus XVI",
+       "en": "Benedict XVI"
+      },
+      {
+       "fi": "Paavali VI",
+       "en": "Paul VI"
+      },
+      {
+       "fi": "Franciscus",
+       "en": "Francis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä ruotsalainen musiikin suoratoistopalvelu käynnistyi vuonna 2008?",
+      "en": "Which Swedish music streaming service launched in 2008?"
+     },
+     "ok": {
+      "fi": "Spotify",
+      "en": "Spotify"
+     },
+     "no": [
+      {
+       "fi": "Deezer",
+       "en": "Deezer"
+      },
+      {
+       "fi": "Tidal",
+       "en": "Tidal"
+      },
+      {
+       "fi": "Napster",
+       "en": "Napster"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä influenssavirus aiheutti vuoden 2009 sikainfluenssapandemian?",
+      "en": "Which influenza virus caused the 2009 swine flu pandemic?"
+     },
+     "ok": {
+      "fi": "H1N1",
+      "en": "H1N1"
+     },
+     "no": [
+      {
+       "fi": "H5N1",
+       "en": "H5N1"
+      },
+      {
+       "fi": "H3N2",
+       "en": "H3N2"
+      },
+      {
+       "fi": "H7N9",
+       "en": "H7N9"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa voitti jalkapallon MM-kisat vuonna 2006?",
+      "en": "Which country won the 2006 football World Cup?"
+     },
+     "ok": {
+      "fi": "Italia",
+      "en": "Italy"
+     },
+     "no": [
+      {
+       "fi": "Ranska",
+       "en": "France"
+      },
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Brasilia",
+       "en": "Brazil"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-2010-luku",
+   "cat": "yleis",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "2010-luku (2010–2019)",
+    "en": "The 2010s (2010–2019)"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minkä tulivuoren purkaus pysäytti suuren osan Euroopan lentoliikenteestä keväällä 2010?",
+      "en": "Which volcano's eruption grounded much of European air traffic in spring 2010?"
+     },
+     "ok": {
+      "fi": "Eyjafjallajökull",
+      "en": "Eyjafjallajökull"
+     },
+     "no": [
+      {
+       "fi": "Hekla",
+       "en": "Hekla"
+      },
+      {
+       "fi": "Katla",
+       "en": "Katla"
+      },
+      {
+       "fi": "Etna",
+       "en": "Etna"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kansannousujen aalto alkoi Tunisiasta vuodenvaihteessa 2010–2011?",
+      "en": "Which wave of uprisings began in Tunisia around the turn of 2010–2011?"
+     },
+     "ok": {
+      "fi": "Arabikevät",
+      "en": "The Arab Spring"
+     },
+     "no": [
+      {
+       "fi": "Oranssi vallankumous",
+       "en": "The Orange Revolution"
+      },
+      {
+       "fi": "Ruusuvallankumous",
+       "en": "The Rose Revolution"
+      },
+      {
+       "fi": "Samettivallankumous",
+       "en": "The Velvet Revolution"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Fukushiman ydinvoimalaonnettomuus tapahtui?",
+      "en": "In which year did the Fukushima nuclear disaster happen?"
+     },
+     "ok": {
+      "fi": "2011",
+      "en": "2011"
+     },
+     "no": [
+      {
+       "fi": "2008",
+       "en": "2008"
+      },
+      {
+       "fi": "2014",
+       "en": "2014"
+      },
+      {
+       "fi": "2016",
+       "en": "2016"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka suuri osa äänestäjistä kannatti EU-eroa Yhdistyneen kuningaskunnan kansanäänestyksessä 2016?",
+      "en": "What share of voters backed leaving the EU in the UK referendum of 2016?"
+     },
+     "ok": {
+      "fi": "51,9 %",
+      "en": "51.9%"
+     },
+     "no": [
+      {
+       "fi": "48,1 %",
+       "en": "48.1%"
+      },
+      {
+       "fi": "55,3 %",
+       "en": "55.3%"
+      },
+      {
+       "fi": "60,2 %",
+       "en": "60.2%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Venäjä liitti Krimin niemimaan itseensä?",
+      "en": "In which year did Russia annex the Crimean peninsula?"
+     },
+     "ok": {
+      "fi": "2014",
+      "en": "2014"
+     },
+     "no": [
+      {
+       "fi": "2008",
+       "en": "2008"
+      },
+      {
+       "fi": "2012",
+       "en": "2012"
+      },
+      {
+       "fi": "2022",
+       "en": "2022"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka valittiin paaviksi vuonna 2013?",
+      "en": "Who was elected pope in 2013?"
+     },
+     "ok": {
+      "fi": "Franciscus",
+      "en": "Francis"
+     },
+     "no": [
+      {
+       "fi": "Benedictus XVI",
+       "en": "Benedict XVI"
+      },
+      {
+       "fi": "Johannes Paavali II",
+       "en": "John Paul II"
+      },
+      {
+       "fi": "Leo XIV",
+       "en": "Leo XIV"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Pariisin ilmastosopimus hyväksyttiin?",
+      "en": "In which year was the Paris climate agreement adopted?"
+     },
+     "ok": {
+      "fi": "2015",
+      "en": "2015"
+     },
+     "no": [
+      {
+       "fi": "2009",
+       "en": "2009"
+      },
+      {
+       "fi": "2012",
+       "en": "2012"
+      },
+      {
+       "fi": "2019",
+       "en": "2019"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä pariisilaisen katedraalin katto ja torni tuhoutuivat tulipalossa vuonna 2019?",
+      "en": "Which Paris cathedral lost its roof and spire in a fire in 2019?"
+     },
+     "ok": {
+      "fi": "Notre-Dame",
+      "en": "Notre-Dame"
+     },
+     "no": [
+      {
+       "fi": "Sacré-Cœur",
+       "en": "Sacré-Cœur"
+      },
+      {
+       "fi": "Saint-Denis",
+       "en": "Saint-Denis"
+      },
+      {
+       "fi": "Sainte-Chapelle",
+       "en": "Sainte-Chapelle"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa voitti Brasilian 7–1 jalkapallon MM-välierässä vuonna 2014?",
+      "en": "Which country beat Brazil 7–1 in the 2014 World Cup semi-final?"
+     },
+     "ok": {
+      "fi": "Saksa",
+      "en": "Germany"
+     },
+     "no": [
+      {
+       "fi": "Argentiina",
+       "en": "Argentina"
+      },
+      {
+       "fi": "Alankomaat",
+       "en": "Netherlands"
+      },
+      {
+       "fi": "Espanja",
+       "en": "Spain"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka ruotsalainen nuori aloitti ilmastokoululakkonsa vuonna 2018?",
+      "en": "Which young Swede began her school strike for the climate in 2018?"
+     },
+     "ok": {
+      "fi": "Greta Thunberg",
+      "en": "Greta Thunberg"
+     },
+     "no": [
+      {
+       "fi": "Malala Yousafzai",
+       "en": "Malala Yousafzai"
+      },
+      {
+       "fi": "Vanessa Nakate",
+       "en": "Vanessa Nakate"
+      },
+      {
+       "fi": "Luisa Neubauer",
+       "en": "Luisa Neubauer"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka sai Nobelin rauhanpalkinnon 17-vuotiaana vuonna 2014?",
+      "en": "Who received the Nobel Peace Prize at 17 in 2014?"
+     },
+     "ok": {
+      "fi": "Malala Yousafzai",
+      "en": "Malala Yousafzai"
+     },
+     "no": [
+      {
+       "fi": "Greta Thunberg",
+       "en": "Greta Thunberg"
+      },
+      {
+       "fi": "Nadia Murad",
+       "en": "Nadia Murad"
+      },
+      {
+       "fi": "Leymah Gbowee",
+       "en": "Leymah Gbowee"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Instagram julkaistiin?",
+      "en": "In which year was Instagram launched?"
+     },
+     "ok": {
+      "fi": "2010",
+      "en": "2010"
+     },
+     "no": [
+      {
+       "fi": "2006",
+       "en": "2006"
+      },
+      {
+       "fi": "2013",
+       "en": "2013"
+      },
+      {
+       "fi": "2016",
+       "en": "2016"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen kuninkaalliset häät katsottiin ympäri maailmaa huhtikuussa 2011?",
+      "en": "Whose royal wedding was watched around the world in April 2011?"
+     },
+     "ok": {
+      "fi": "Prinssi Williamin ja Catherine Middletonin",
+      "en": "Prince William and Catherine Middleton"
+     },
+     "no": [
+      {
+       "fi": "Prinssi Harryn ja Meghan Marklen",
+       "en": "Prince Harry and Meghan Markle"
+      },
+      {
+       "fi": "Prinssi Charlesin ja Camilla Parker Bowlesin",
+       "en": "Prince Charles and Camilla Parker Bowles"
+      },
+      {
+       "fi": "Kruununprinsessa Victorian ja Daniel Westlingin",
+       "en": "Crown Princess Victoria and Daniel Westling"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä vuonna 2011 itsenäistynyt valtio on YK:n uusin jäsen?",
+      "en": "Which state, independent since 2011, is the newest UN member?"
+     },
+     "ok": {
+      "fi": "Etelä-Sudan",
+      "en": "South Sudan"
+     },
+     "no": [
+      {
+       "fi": "Kosovo",
+       "en": "Kosovo"
+      },
+      {
+       "fi": "Itä-Timor",
+       "en": "East Timor"
+      },
+      {
+       "fi": "Montenegro",
+       "en": "Montenegro"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä mobiilipeli sai kesällä 2016 miljoonat pelaajat kaduille?",
+      "en": "Which mobile game sent millions of players onto the streets in summer 2016?"
+     },
+     "ok": {
+      "fi": "Pokémon Go",
+      "en": "Pokémon Go"
+     },
+     "no": [
+      {
+       "fi": "Angry Birds 2",
+       "en": "Angry Birds 2"
+      },
+      {
+       "fi": "Clash Royale",
+       "en": "Clash Royale"
+      },
+      {
+       "fi": "Candy Crush Saga",
+       "en": "Candy Crush Saga"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa pidettiin talviolympialaiset vuonna 2014?",
+      "en": "Which country hosted the 2014 Winter Olympics?"
+     },
+     "ok": {
+      "fi": "Venäjällä",
+      "en": "Russia"
+     },
+     "no": [
+      {
+       "fi": "Etelä-Koreassa",
+       "en": "South Korea"
+      },
+      {
+       "fi": "Kanadassa",
+       "en": "Canada"
+      },
+      {
+       "fi": "Kiinassa",
+       "en": "China"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Apple julkaisi ensimmäisen iPadin?",
+      "en": "In which year did Apple release the first iPad?"
+     },
+     "ok": {
+      "fi": "2010",
+      "en": "2010"
+     },
+     "no": [
+      {
+       "fi": "2007",
+       "en": "2007"
+      },
+      {
+       "fi": "2012",
+       "en": "2012"
+      },
+      {
+       "fi": "2014",
+       "en": "2014"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-mika-ensin",
+   "cat": "historia",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Mikä tapahtui ensin? Historian yllättävät aikajärjestykset",
+    "en": "What came first? Surprising orders in history"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä näistä on vanhin?",
+      "en": "Which of these is the oldest?"
+     },
+     "ok": {
+      "fi": "Opetus Oxfordin yliopistossa alkoi",
+      "en": "Teaching began at Oxford University"
+     },
+     "no": [
+      {
+       "fi": "Atsteekit perustivat Tenochtitlánin",
+       "en": "The Aztecs founded Tenochtitlán"
+      },
+      {
+       "fi": "Inkat rakensivat Machu Picchun",
+       "en": "The Incas built Machu Picchu"
+      },
+      {
+       "fi": "Kolumbus saapui Amerikkaan",
+       "en": "Columbus reached the Americas"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on ajallisesti lähimpänä Kleopatran kuolemaa (30 eaa.)?",
+      "en": "Which of these is closest in time to the death of Cleopatra (30 BC)?"
+     },
+     "ok": {
+      "fi": "Ensimmäinen kuuhunlasku (1969)",
+      "en": "The first Moon landing (1969)"
+     },
+     "no": [
+      {
+       "fi": "Gizan suuren pyramidin rakentaminen",
+       "en": "The building of the Great Pyramid of Giza"
+      },
+      {
+       "fi": "Stonehengen kivikehän pystytys",
+       "en": "The raising of the Stonehenge stone circle"
+      },
+      {
+       "fi": "Nuolenpääkirjoituksen synty Mesopotamiassa",
+       "en": "The birth of cuneiform writing in Mesopotamia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä tapahtui viimeisenä?",
+      "en": "Which of these happened last?"
+     },
+     "ok": {
+      "fi": "Viimeiset mammutit kuolivat sukupuuttoon",
+      "en": "The last mammoths died out"
+     },
+     "no": [
+      {
+       "fi": "Gizan suuri pyramidi valmistui",
+       "en": "The Great Pyramid of Giza was completed"
+      },
+      {
+       "fi": "Stonehengen ensimmäinen vaihe rakennettiin",
+       "en": "The first phase of Stonehenge was built"
+      },
+      {
+       "fi": "Sumerilaiset kehittivät nuolenpääkirjoituksen",
+       "en": "The Sumerians developed cuneiform"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä tapahtui viimeisenä?",
+      "en": "Which of these happened last?"
+     },
+     "ok": {
+      "fi": "Ranskan viimeinen giljotiiniteloitus",
+      "en": "France's last guillotine execution"
+     },
+     "no": [
+      {
+       "fi": "Tähtien sota -elokuvan ensi-ilta",
+       "en": "The premiere of the first Star Wars film"
+      },
+      {
+       "fi": "Applen perustaminen",
+       "en": "The founding of Apple"
+      },
+      {
+       "fi": "Elvis Presleyn kuolema",
+       "en": "Elvis Presley's death"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä näistä maista naiset saivat äänioikeuden valtiollisissa vaaleissa ensimmäisenä?",
+      "en": "In which of these countries did women first get the vote in national elections?"
+     },
+     "ok": {
+      "fi": "Uudessa-Seelannissa",
+      "en": "New Zealand"
+     },
+     "no": [
+      {
+       "fi": "Suomessa",
+       "en": "Finland"
+      },
+      {
+       "fi": "Norjassa",
+       "en": "Norway"
+      },
+      {
+       "fi": "Australiassa",
+       "en": "Australia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä valtioista itsenäistyi ensimmäisenä?",
+      "en": "Which of these states became independent first?"
+     },
+     "ok": {
+      "fi": "Norja",
+      "en": "Norway"
+     },
+     "no": [
+      {
+       "fi": "Suomi",
+       "en": "Finland"
+      },
+      {
+       "fi": "Islanti",
+       "en": "Iceland"
+      },
+      {
+       "fi": "Irlanti",
+       "en": "Ireland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on vanhin?",
+      "en": "Which of these is the oldest?"
+     },
+     "ok": {
+      "fi": "Harvardin yliopiston perustaminen",
+      "en": "The founding of Harvard University"
+     },
+     "no": [
+      {
+       "fi": "Isaac Newtonin syntymä",
+       "en": "Isaac Newton's birth"
+      },
+      {
+       "fi": "Taj Mahalin valmistuminen",
+       "en": "The completion of the Taj Mahal"
+      },
+      {
+       "fi": "Pietarin kaupungin perustaminen",
+       "en": "The founding of Saint Petersburg"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä dinosauruksista eli ensimmäisenä?",
+      "en": "Which of these dinosaurs lived first?"
+     },
+     "ok": {
+      "fi": "Stegosaurus",
+      "en": "Stegosaurus"
+     },
+     "no": [
+      {
+       "fi": "Tyrannosaurus",
+       "en": "Tyrannosaurus"
+      },
+      {
+       "fi": "Triceratops",
+       "en": "Triceratops"
+      },
+      {
+       "fi": "Velociraptor",
+       "en": "Velociraptor"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä suomalaisista rakennuksista on vanhin?",
+      "en": "Which of these Finnish buildings is the oldest?"
+     },
+     "ok": {
+      "fi": "Turun linna",
+      "en": "Turku Castle"
+     },
+     "no": [
+      {
+       "fi": "Olavinlinna",
+       "en": "Olavinlinna"
+      },
+      {
+       "fi": "Suomenlinna",
+       "en": "Suomenlinna"
+      },
+      {
+       "fi": "Helsingin tuomiokirkko",
+       "en": "Helsinki Cathedral"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä perustettiin ensimmäisenä?",
+      "en": "Which of these was founded first?"
+     },
+     "ok": {
+      "fi": "Google",
+      "en": "Google"
+     },
+     "no": [
+      {
+       "fi": "Wikipedia",
+       "en": "Wikipedia"
+      },
+      {
+       "fi": "Facebook",
+       "en": "Facebook"
+      },
+      {
+       "fi": "YouTube",
+       "en": "YouTube"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä tapahtui ensimmäisenä?",
+      "en": "Which of these happened first?"
+     },
+     "ok": {
+      "fi": "Yhdysvaltain itsenäisyysjulistus",
+      "en": "The US Declaration of Independence"
+     },
+     "no": [
+      {
+       "fi": "Ranskan vallankumous",
+       "en": "The French Revolution"
+      },
+      {
+       "fi": "Suomen sota",
+       "en": "The Finnish War"
+      },
+      {
+       "fi": "Napoleonin kruunaus keisariksi",
+       "en": "Napoleon's coronation as emperor"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä tapahtui ensimmäisenä?",
+      "en": "Which of these happened first?"
+     },
+     "ok": {
+      "fi": "Lincolnin murha",
+      "en": "Lincoln's assassination"
+     },
+     "no": [
+      {
+       "fi": "Suezin kanavan avaaminen",
+       "en": "The opening of the Suez Canal"
+      },
+      {
+       "fi": "Saksan keisarikunnan perustaminen",
+       "en": "The founding of the German Empire"
+      },
+      {
+       "fi": "Puhelimen patentointi",
+       "en": "The patenting of the telephone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä rakennuksista valmistui ensimmäisenä?",
+      "en": "Which of these buildings was completed first?"
+     },
+     "ok": {
+      "fi": "Colosseum",
+      "en": "The Colosseum"
+     },
+     "no": [
+      {
+       "fi": "Hagia Sofia",
+       "en": "Hagia Sophia"
+      },
+      {
+       "fi": "Notre-Dame de Paris",
+       "en": "Notre-Dame de Paris"
+      },
+      {
+       "fi": "Pisan kalteva torni",
+       "en": "The Leaning Tower of Pisa"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-kaupunkien-vanhat-nimet",
+   "cat": "historia",
+   "format": "choice",
+   "t": 228,
+   "title": {
+    "fi": "Kaupunki ennen ja nyt: entiset nimet",
+    "en": "Cities then and now: former names"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin aiemmin nimellä Konstantinopoli?",
+      "en": "Which city was formerly known as Constantinople?"
+     },
+     "ok": {
+      "fi": "Istanbul",
+      "en": "Istanbul"
+     },
+     "no": [
+      {
+       "fi": "Ateena",
+       "en": "Athens"
+      },
+      {
+       "fi": "Ankara",
+       "en": "Ankara"
+      },
+      {
+       "fi": "Izmir",
+       "en": "Izmir"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin vuosina 1924–1991 nimellä Leningrad?",
+      "en": "Which city was called Leningrad in 1924–1991?"
+     },
+     "ok": {
+      "fi": "Pietari",
+      "en": "Saint Petersburg"
+     },
+     "no": [
+      {
+       "fi": "Moskova",
+       "en": "Moscow"
+      },
+      {
+       "fi": "Volgograd",
+       "en": "Volgograd"
+      },
+      {
+       "fi": "Kaliningrad",
+       "en": "Kaliningrad"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin vuosina 1925–1961 nimellä Stalingrad?",
+      "en": "Which city was called Stalingrad in 1925–1961?"
+     },
+     "ok": {
+      "fi": "Volgograd",
+      "en": "Volgograd"
+     },
+     "no": [
+      {
+       "fi": "Donetsk",
+       "en": "Donetsk"
+      },
+      {
+       "fi": "Pietari",
+       "en": "Saint Petersburg"
+      },
+      {
+       "fi": "Samara",
+       "en": "Samara"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin aiemmin nimellä Saigon?",
+      "en": "Which city was formerly known as Saigon?"
+     },
+     "ok": {
+      "fi": "Ho Chi Minhin kaupunki",
+      "en": "Ho Chi Minh City"
+     },
+     "no": [
+      {
+       "fi": "Hanoi",
+       "en": "Hanoi"
+      },
+      {
+       "fi": "Phnom Penh",
+       "en": "Phnom Penh"
+      },
+      {
+       "fi": "Da Nang",
+       "en": "Da Nang"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pääkaupunki tunnettiin vuoteen 1924 nimellä Kristiania?",
+      "en": "Which capital was known as Kristiania until 1924?"
+     },
+     "ok": {
+      "fi": "Oslo",
+      "en": "Oslo"
+     },
+     "no": [
+      {
+       "fi": "Bergen",
+       "en": "Bergen"
+      },
+      {
+       "fi": "Kristiansand",
+       "en": "Kristiansand"
+      },
+      {
+       "fi": "Trondheim",
+       "en": "Trondheim"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin siirtomaa-aikana nimellä Batavia?",
+      "en": "Which city was known as Batavia in colonial times?"
+     },
+     "ok": {
+      "fi": "Jakarta",
+      "en": "Jakarta"
+     },
+     "no": [
+      {
+       "fi": "Surabaya",
+       "en": "Surabaya"
+      },
+      {
+       "fi": "Kuala Lumpur",
+       "en": "Kuala Lumpur"
+      },
+      {
+       "fi": "Manila",
+       "en": "Manila"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin vuoteen 1868 nimellä Edo?",
+      "en": "Which city was known as Edo until 1868?"
+     },
+     "ok": {
+      "fi": "Tokio",
+      "en": "Tokyo"
+     },
+     "no": [
+      {
+       "fi": "Kioto",
+       "en": "Kyoto"
+      },
+      {
+       "fi": "Osaka",
+       "en": "Osaka"
+      },
+      {
+       "fi": "Nara",
+       "en": "Nara"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin vuoteen 1995 virallisesti nimellä Bombay?",
+      "en": "Which city was officially called Bombay until 1995?"
+     },
+     "ok": {
+      "fi": "Mumbai",
+      "en": "Mumbai"
+     },
+     "no": [
+      {
+       "fi": "Chennai",
+       "en": "Chennai"
+      },
+      {
+       "fi": "Kolkata",
+       "en": "Kolkata"
+      },
+      {
+       "fi": "Bengaluru",
+       "en": "Bengaluru"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin vuoteen 1946 nimellä Königsberg?",
+      "en": "Which city was known as Königsberg until 1946?"
+     },
+     "ok": {
+      "fi": "Kaliningrad",
+      "en": "Kaliningrad"
+     },
+     "no": [
+      {
+       "fi": "Gdańsk",
+       "en": "Gdańsk"
+      },
+      {
+       "fi": "Klaipėda",
+       "en": "Klaipėda"
+      },
+      {
+       "fi": "Riika",
+       "en": "Riga"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pääkaupunki tunnettiin siirtomaa-aikana nimellä Léopoldville?",
+      "en": "Which capital was known as Léopoldville in colonial times?"
+     },
+     "ok": {
+      "fi": "Kinshasa",
+      "en": "Kinshasa"
+     },
+     "no": [
+      {
+       "fi": "Brazzaville",
+       "en": "Brazzaville"
+      },
+      {
+       "fi": "Kisangani",
+       "en": "Kisangani"
+      },
+      {
+       "fi": "Lubumbashi",
+       "en": "Lubumbashi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin saksaksi ja ruotsiksi nimellä Reval?",
+      "en": "Which city was known in German and Swedish as Reval?"
+     },
+     "ok": {
+      "fi": "Tallinna",
+      "en": "Tallinn"
+     },
+     "no": [
+      {
+       "fi": "Tartu",
+       "en": "Tartu"
+      },
+      {
+       "fi": "Riika",
+       "en": "Riga"
+      },
+      {
+       "fi": "Pärnu",
+       "en": "Pärnu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pääkaupunki tunnettiin vuoteen 1982 nimellä Salisbury?",
+      "en": "Which capital was called Salisbury until 1982?"
+     },
+     "ok": {
+      "fi": "Harare",
+      "en": "Harare"
+     },
+     "no": [
+      {
+       "fi": "Lusaka",
+       "en": "Lusaka"
+      },
+      {
+       "fi": "Bulawayo",
+       "en": "Bulawayo"
+      },
+      {
+       "fi": "Gaborone",
+       "en": "Gaborone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin aiemmin nimellä Rangoon?",
+      "en": "Which city was formerly known as Rangoon?"
+     },
+     "ok": {
+      "fi": "Yangon",
+      "en": "Yangon"
+     },
+     "no": [
+      {
+       "fi": "Mandalay",
+       "en": "Mandalay"
+      },
+      {
+       "fi": "Naypyidaw",
+       "en": "Naypyidaw"
+      },
+      {
+       "fi": "Bangkok",
+       "en": "Bangkok"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin saksaksi ja ruotsiksi nimellä Dorpat?",
+      "en": "Which city was known in German and Swedish as Dorpat?"
+     },
+     "ok": {
+      "fi": "Tartu",
+      "en": "Tartu"
+     },
+     "no": [
+      {
+       "fi": "Narva",
+       "en": "Narva"
+      },
+      {
+       "fi": "Pärnu",
+       "en": "Pärnu"
+      },
+      {
+       "fi": "Daugavpils",
+       "en": "Daugavpils"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pääkaupunki on tunnettu muun muassa nimillä Akmola ja Tselinograd?",
+      "en": "Which capital has also been known as Akmola and Tselinograd?"
+     },
+     "ok": {
+      "fi": "Astana",
+      "en": "Astana"
+     },
+     "no": [
+      {
+       "fi": "Almaty",
+       "en": "Almaty"
+      },
+      {
+       "fi": "Taškent",
+       "en": "Tashkent"
+      },
+      {
+       "fi": "Biškek",
+       "en": "Bishkek"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin saksaksi nimellä Breslau?",
+      "en": "Which city was known in German as Breslau?"
+     },
+     "ok": {
+      "fi": "Wrocław",
+      "en": "Wrocław"
+     },
+     "no": [
+      {
+       "fi": "Poznań",
+       "en": "Poznań"
+      },
+      {
+       "fi": "Krakova",
+       "en": "Kraków"
+      },
+      {
+       "fi": "Szczecin",
+       "en": "Szczecin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pääkaupunki tunnettiin vuoteen 1976 nimellä Lourenço Marques?",
+      "en": "Which capital was called Lourenço Marques until 1976?"
+     },
+     "ok": {
+      "fi": "Maputo",
+      "en": "Maputo"
+     },
+     "no": [
+      {
+       "fi": "Luanda",
+       "en": "Luanda"
+      },
+      {
+       "fi": "Beira",
+       "en": "Beira"
+      },
+      {
+       "fi": "Dar es Salaam",
+       "en": "Dar es Salaam"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki tunnettiin vuosina 1932–1990 nimellä Gorki?",
+      "en": "Which city was called Gorky in 1932–1990?"
+     },
+     "ok": {
+      "fi": "Nižni Novgorod",
+      "en": "Nizhny Novgorod"
+     },
+     "no": [
+      {
+       "fi": "Samara",
+       "en": "Samara"
+      },
+      {
+       "fi": "Jekaterinburg",
+       "en": "Yekaterinburg"
+      },
+      {
+       "fi": "Tver",
+       "en": "Tver"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä suomalainen kaupunki tunnettiin vuosina 1855–1917 nimellä Nikolainkaupunki?",
+      "en": "Which Finnish town was called Nikolainkaupunki (Nikolaistad) in 1855–1917?"
+     },
+     "ok": {
+      "fi": "Vaasa",
+      "en": "Vaasa"
+     },
+     "no": [
+      {
+       "fi": "Kokkola",
+       "en": "Kokkola"
+      },
+      {
+       "fi": "Oulu",
+       "en": "Oulu"
+      },
+      {
+       "fi": "Joensuu",
+       "en": "Joensuu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-myytit-ja-yllatykset",
+   "cat": "historia",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Historian myytit ja yllätykset",
+    "en": "Myths and surprises of history"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuinka pitkä Napoleon oli nykyisten arvioiden mukaan?",
+      "en": "How tall was Napoleon according to modern estimates?"
+     },
+     "ok": {
+      "fi": "Noin 169 cm",
+      "en": "About 169 cm"
+     },
+     "no": [
+      {
+       "fi": "Noin 152 cm",
+       "en": "About 152 cm"
+      },
+      {
+       "fi": "Noin 185 cm",
+       "en": "About 185 cm"
+      },
+      {
+       "fi": "Noin 195 cm",
+       "en": "About 195 cm"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä viikinkeihin liitetty mielikuva on syntynyt vasta 1800-luvulla eikä perustu löytöihin?",
+      "en": "Which popular image of the Vikings only arose in the 1800s and is not based on finds?"
+     },
+     "ok": {
+      "fi": "Sarvikypärät",
+      "en": "Horned helmets"
+     },
+     "no": [
+      {
+       "fi": "Pitkälaivat",
+       "en": "Longships"
+      },
+      {
+       "fi": "Kauppamatkat Konstantinopoliin",
+       "en": "Trading trips to Constantinople"
+      },
+      {
+       "fi": "Riimukirjoitus",
+       "en": "Runic writing"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä Kristoffer Kolumbus luuli olevansa saapuessaan Karibialle vuonna 1492?",
+      "en": "Where did Christopher Columbus think he was when he reached the Caribbean in 1492?"
+     },
+     "ok": {
+      "fi": "Aasiassa",
+      "en": "Asia"
+     },
+     "no": [
+      {
+       "fi": "Afrikassa",
+       "en": "Africa"
+      },
+      {
+       "fi": "Grönlannissa",
+       "en": "Greenland"
+      },
+      {
+       "fi": "Atlantiksella",
+       "en": "Atlantis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta vuotta satavuotinen sota kesti?",
+      "en": "How many years did the Hundred Years' War last?"
+     },
+     "ok": {
+      "fi": "116",
+      "en": "116"
+     },
+     "no": [
+      {
+       "fi": "99",
+       "en": "99"
+      },
+      {
+       "fi": "100",
+       "en": "100"
+      },
+      {
+       "fi": "130",
+       "en": "130"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä kuukautena Venäjän lokakuun vallankumous tapahtui nykyisen (gregoriaanisen) kalenterin mukaan?",
+      "en": "In which month did the Russian October Revolution happen by the modern (Gregorian) calendar?"
+     },
+     "ok": {
+      "fi": "Marraskuussa",
+      "en": "November"
+     },
+     "no": [
+      {
+       "fi": "Lokakuussa",
+       "en": "October"
+      },
+      {
+       "fi": "Syyskuussa",
+       "en": "September"
+      },
+      {
+       "fi": "Joulukuussa",
+       "en": "December"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka kauan Yhdistyneen kuningaskunnan ja Sansibarin sota vuonna 1896 kesti?",
+      "en": "How long did the Anglo-Zanzibar War of 1896 last?"
+     },
+     "ok": {
+      "fi": "Alle tunnin",
+      "en": "Under an hour"
+     },
+     "no": [
+      {
+       "fi": "Noin vuorokauden",
+       "en": "About a day"
+      },
+      {
+       "fi": "Noin neljä päivää",
+       "en": "About four days"
+      },
+      {
+       "fi": "Noin kolme kuukautta",
+       "en": "About three months"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä materiaalia George Washingtonin tekohampaissa EI myytin vastaisesti ollut?",
+      "en": "Contrary to the myth, which material was NOT used in George Washington's dentures?"
+     },
+     "ok": {
+      "fi": "Puuta",
+      "en": "Wood"
+     },
+     "no": [
+      {
+       "fi": "Norsunluuta",
+       "en": "Ivory"
+      },
+      {
+       "fi": "Ihmisen hampaita",
+       "en": "Human teeth"
+      },
+      {
+       "fi": "Metallia",
+       "en": "Metal"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä syntyperää Egyptin kuningatar Kleopatra VII:n suku oli?",
+      "en": "What was the ancestry of Queen Cleopatra VII's dynasty?"
+     },
+     "ok": {
+      "fi": "Makedonialaiskreikkalaista",
+      "en": "Macedonian Greek"
+     },
+     "no": [
+      {
+       "fi": "Egyptiläistä",
+       "en": "Egyptian"
+      },
+      {
+       "fi": "Roomalaista",
+       "en": "Roman"
+      },
+      {
+       "fi": "Persialaista",
+       "en": "Persian"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka eurooppalainen saapui Pohjois-Amerikkaan noin vuonna 1000, lähes 500 vuotta ennen Kolumbusta?",
+      "en": "Which European reached North America around the year 1000, almost 500 years before Columbus?"
+     },
+     "ok": {
+      "fi": "Leif Eriksson",
+      "en": "Leif Erikson"
+     },
+     "no": [
+      {
+       "fi": "Amerigo Vespucci",
+       "en": "Amerigo Vespucci"
+      },
+      {
+       "fi": "John Cabot",
+       "en": "John Cabot"
+      },
+      {
+       "fi": "Marco Polo",
+       "en": "Marco Polo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta päivää oli helmikuussa 1712 Ruotsin valtakunnassa (myös Suomessa) käytetyssä kalenterissa?",
+      "en": "How many days did February 1712 have in the calendar used in Sweden (and Finland)?"
+     },
+     "ok": {
+      "fi": "30",
+      "en": "30"
+     },
+     "no": [
+      {
+       "fi": "28",
+       "en": "28"
+      },
+      {
+       "fi": "29",
+       "en": "29"
+      },
+      {
+       "fi": "31",
+       "en": "31"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mistä tulppaanit tuotiin Länsi-Eurooppaan 1500-luvulla?",
+      "en": "Where were tulips brought to Western Europe from in the 1500s?"
+     },
+     "ok": {
+      "fi": "Osmanien valtakunnasta",
+      "en": "The Ottoman Empire"
+     },
+     "no": [
+      {
+       "fi": "Kiinasta",
+       "en": "China"
+      },
+      {
+       "fi": "Intiasta",
+       "en": "India"
+      },
+      {
+       "fi": "Meksikosta",
+       "en": "Mexico"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka vanha faarao Tutankhamon oli kuollessaan?",
+      "en": "How old was the pharaoh Tutankhamun when he died?"
+     },
+     "ok": {
+      "fi": "Noin 18–19-vuotias",
+      "en": "About 18–19"
+     },
+     "no": [
+      {
+       "fi": "Noin 8-vuotias",
+       "en": "About 8"
+      },
+      {
+       "fi": "Noin 35-vuotias",
+       "en": "About 35"
+      },
+      {
+       "fi": "Noin 60-vuotias",
+       "en": "About 60"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki oli Japanin keisarillinen pääkaupunki yli tuhat vuotta ennen Tokiota?",
+      "en": "Which city was Japan's imperial capital for over a thousand years before Tokyo?"
+     },
+     "ok": {
+      "fi": "Kioto",
+      "en": "Kyoto"
+     },
+     "no": [
+      {
+       "fi": "Osaka",
+       "en": "Osaka"
+      },
+      {
+       "fi": "Nara",
+       "en": "Nara"
+      },
+      {
+       "fi": "Kamakura",
+       "en": "Kamakura"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä Afrikan maassa on enemmän muinaisia pyramideja kuin Egyptissä?",
+      "en": "Which African country has more ancient pyramids than Egypt?"
+     },
+     "ok": {
+      "fi": "Sudanissa",
+      "en": "Sudan"
+     },
+     "no": [
+      {
+       "fi": "Etiopiassa",
+       "en": "Ethiopia"
+      },
+      {
+       "fi": "Marokossa",
+       "en": "Morocco"
+      },
+      {
+       "fi": "Keniassa",
+       "en": "Kenya"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka kauan Itä-Rooma (Bysantti) kesti Länsi-Rooman kukistumisen (476) jälkeen?",
+      "en": "How long did the Eastern Roman (Byzantine) Empire last after the fall of the West (476)?"
+     },
+     "ok": {
+      "fi": "Lähes 1000 vuotta",
+      "en": "Almost 1,000 years"
+     },
+     "no": [
+      {
+       "fi": "Noin 100 vuotta",
+       "en": "About 100 years"
+      },
+      {
+       "fi": "Noin 300 vuotta",
+       "en": "About 300 years"
+      },
+      {
+       "fi": "Noin 600 vuotta",
+       "en": "About 600 years"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-mika-vanhin",
+   "cat": "yleis",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Mikä on vanhin? Keksinnöt, yritykset ja ilmiöt",
+    "en": "Which is oldest? Inventions, companies and things"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä näistä yrityksistä on vanhin?",
+      "en": "Which of these companies is the oldest?"
+     },
+     "ok": {
+      "fi": "Nokia",
+      "en": "Nokia"
+     },
+     "no": [
+      {
+       "fi": "Nintendo",
+       "en": "Nintendo"
+      },
+      {
+       "fi": "Harley-Davidson",
+       "en": "Harley-Davidson"
+      },
+      {
+       "fi": "IKEA",
+       "en": "IKEA"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä keksittiin ensimmäisenä?",
+      "en": "Which of these was invented first?"
+     },
+     "ok": {
+      "fi": "Faksi",
+      "en": "The fax machine"
+     },
+     "no": [
+      {
+       "fi": "Puhelin",
+       "en": "The telephone"
+      },
+      {
+       "fi": "Bensiiniauto",
+       "en": "The petrol car"
+      },
+      {
+       "fi": "Radio",
+       "en": "The radio"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä keksittiin ensimmäisenä?",
+      "en": "Which of these was invented first?"
+     },
+     "ok": {
+      "fi": "Säilyketölkki",
+      "en": "The tin can"
+     },
+     "no": [
+      {
+       "fi": "Tölkinavaaja",
+       "en": "The can opener"
+      },
+      {
+       "fi": "Valokuva",
+       "en": "The photograph"
+      },
+      {
+       "fi": "Puhelin",
+       "en": "The telephone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä tuotemerkeistä on vanhin?",
+      "en": "Which of these brands is the oldest?"
+     },
+     "ok": {
+      "fi": "Levi's",
+      "en": "Levi's"
+     },
+     "no": [
+      {
+       "fi": "Converse",
+       "en": "Converse"
+      },
+      {
+       "fi": "Adidas",
+       "en": "Adidas"
+      },
+      {
+       "fi": "Nike",
+       "en": "Nike"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä yrityksistä on vanhin?",
+      "en": "Which of these companies is the oldest?"
+     },
+     "ok": {
+      "fi": "Fiskars",
+      "en": "Fiskars"
+     },
+     "no": [
+      {
+       "fi": "Fazer",
+       "en": "Fazer"
+      },
+      {
+       "fi": "LEGO",
+       "en": "LEGO"
+      },
+      {
+       "fi": "Marimekko",
+       "en": "Marimekko"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä videopeleistä julkaistiin ensimmäisenä?",
+      "en": "Which of these video games was released first?"
+     },
+     "ok": {
+      "fi": "Pong",
+      "en": "Pong"
+     },
+     "no": [
+      {
+       "fi": "Pac-Man",
+       "en": "Pac-Man"
+      },
+      {
+       "fi": "Tetris",
+       "en": "Tetris"
+      },
+      {
+       "fi": "Super Mario Bros.",
+       "en": "Super Mario Bros."
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä keksittiin ensimmäisenä?",
+      "en": "Which of these was invented first?"
+     },
+     "ok": {
+      "fi": "Höyryveturi",
+      "en": "The steam locomotive"
+     },
+     "no": [
+      {
+       "fi": "Polkupyörän esi-isä potkupyörä",
+       "en": "The draisine (forerunner of the bicycle)"
+      },
+      {
+       "fi": "Valokuva",
+       "en": "The photograph"
+      },
+      {
+       "fi": "Puhelin",
+       "en": "The telephone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä sarjakuvahahmoista on vanhin?",
+      "en": "Which of these cartoon characters is the oldest?"
+     },
+     "ok": {
+      "fi": "Mikki Hiiri",
+      "en": "Mickey Mouse"
+     },
+     "no": [
+      {
+       "fi": "Tintti",
+       "en": "Tintin"
+      },
+      {
+       "fi": "Aku Ankka",
+       "en": "Donald Duck"
+      },
+      {
+       "fi": "Muumipeikko",
+       "en": "Moomintroll"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä rakennelmista valmistui ensimmäisenä?",
+      "en": "Which of these structures was completed first?"
+     },
+     "ok": {
+      "fi": "Big Benin kellotorni",
+      "en": "The Big Ben clock tower"
+     },
+     "no": [
+      {
+       "fi": "Vapaudenpatsas",
+       "en": "The Statue of Liberty"
+      },
+      {
+       "fi": "Eiffel-torni",
+       "en": "The Eiffel Tower"
+      },
+      {
+       "fi": "Golden Gate -silta",
+       "en": "The Golden Gate Bridge"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitkä näistä ilmestyivät maapallolle ensimmäisinä?",
+      "en": "Which of these appeared on Earth first?"
+     },
+     "ok": {
+      "fi": "Hait",
+      "en": "Sharks"
+     },
+     "no": [
+      {
+       "fi": "Puut",
+       "en": "Trees"
+      },
+      {
+       "fi": "Dinosaurukset",
+       "en": "Dinosaurs"
+      },
+      {
+       "fi": "Kukkakasvit",
+       "en": "Flowering plants"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä otettiin käyttöön ensimmäisenä?",
+      "en": "Which of these came first?"
+     },
+     "ok": {
+      "fi": "Sähköposti",
+      "en": "Email"
+     },
+     "no": [
+      {
+       "fi": "Kännykkäpuhelu",
+       "en": "A handheld mobile phone call"
+      },
+      {
+       "fi": "World Wide Web",
+       "en": "The World Wide Web"
+      },
+      {
+       "fi": "Tekstiviesti",
+       "en": "The text message"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kirjoista ilmestyi ensimmäisenä?",
+      "en": "Which of these books was published first?"
+     },
+     "ok": {
+      "fi": "Hobitti",
+      "en": "The Hobbit"
+     },
+     "no": [
+      {
+       "fi": "Taru sormusten herrasta",
+       "en": "The Lord of the Rings"
+      },
+      {
+       "fi": "Velho ja leijona",
+       "en": "The Lion, the Witch and the Wardrobe"
+      },
+      {
+       "fi": "Harry Potter ja viisasten kivi",
+       "en": "Harry Potter and the Philosopher's Stone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä virvoitusjuomista on vanhin?",
+      "en": "Which of these soft drinks is the oldest?"
+     },
+     "ok": {
+      "fi": "Coca-Cola",
+      "en": "Coca-Cola"
+     },
+     "no": [
+      {
+       "fi": "Pepsi",
+       "en": "Pepsi"
+      },
+      {
+       "fi": "Fanta",
+       "en": "Fanta"
+      },
+      {
+       "fi": "Sprite",
+       "en": "Sprite"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-ruotsin-ansat",
+   "cat": "yleis",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "Ruotsin sanojen ansat: mitä sana tarkoittaa?",
+    "en": "Swedish false friends: what does the word mean?"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana glass tarkoittaa?",
+      "en": "What does the Swedish word \"glass\" mean?"
+     },
+     "ok": {
+      "fi": "Jäätelö",
+      "en": "Ice cream"
+     },
+     "no": [
+      {
+       "fi": "Lasi",
+       "en": "Glass"
+      },
+      {
+       "fi": "Kulho",
+       "en": "Bowl"
+      },
+      {
+       "fi": "Kivi",
+       "en": "Stone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana rolig tarkoittaa?",
+      "en": "What does the Swedish word \"rolig\" mean?"
+     },
+     "ok": {
+      "fi": "Hauska",
+      "en": "Fun"
+     },
+     "no": [
+      {
+       "fi": "Rauhallinen",
+       "en": "Calm"
+      },
+      {
+       "fi": "Pyöreä",
+       "en": "Round"
+      },
+      {
+       "fi": "Kovaääninen",
+       "en": "Loud"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana semester tarkoittaa?",
+      "en": "What does the Swedish word \"semester\" mean?"
+     },
+     "ok": {
+      "fi": "Loma",
+      "en": "Holiday"
+     },
+     "no": [
+      {
+       "fi": "Lukukausi",
+       "en": "Term"
+      },
+      {
+       "fi": "Viikko",
+       "en": "Week"
+      },
+      {
+       "fi": "Juhla",
+       "en": "Party"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana barn tarkoittaa?",
+      "en": "What does the Swedish word \"barn\" mean?"
+     },
+     "ok": {
+      "fi": "Lapsi",
+      "en": "Child"
+     },
+     "no": [
+      {
+       "fi": "Lato",
+       "en": "Barn"
+      },
+      {
+       "fi": "Karhu",
+       "en": "Bear"
+      },
+      {
+       "fi": "Tynnyri",
+       "en": "Barrel"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana rar tarkoittaa?",
+      "en": "What does the Swedish word \"rar\" mean?"
+     },
+     "ok": {
+      "fi": "Suloinen, kiltti",
+      "en": "Sweet, kind"
+     },
+     "no": [
+      {
+       "fi": "Rauhallinen",
+       "en": "Calm"
+      },
+      {
+       "fi": "Raaka",
+       "en": "Raw"
+      },
+      {
+       "fi": "Vihainen",
+       "en": "Angry"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana öken tarkoittaa?",
+      "en": "What does the Swedish word \"öken\" mean?"
+     },
+     "ok": {
+      "fi": "Aavikko",
+      "en": "Desert"
+     },
+     "no": [
+      {
+       "fi": "Härkä",
+       "en": "Ox"
+      },
+      {
+       "fi": "Uuni",
+       "en": "Oven"
+      },
+      {
+       "fi": "Saari",
+       "en": "Island"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana ful tarkoittaa?",
+      "en": "What does the Swedish word \"ful\" mean?"
+     },
+     "ok": {
+      "fi": "Ruma",
+      "en": "Ugly"
+     },
+     "no": [
+      {
+       "fi": "Täysi",
+       "en": "Full"
+      },
+      {
+       "fi": "Hölmö",
+       "en": "Foolish"
+      },
+      {
+       "fi": "Kaunis",
+       "en": "Beautiful"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana rädd tarkoittaa?",
+      "en": "What does the Swedish word \"rädd\" mean?"
+     },
+     "ok": {
+      "fi": "Peloissaan",
+      "en": "Afraid"
+     },
+     "no": [
+      {
+       "fi": "Punainen",
+       "en": "Red"
+      },
+      {
+       "fi": "Valmis",
+       "en": "Ready"
+      },
+      {
+       "fi": "Pelastettu",
+       "en": "Rescued"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana frukost tarkoittaa?",
+      "en": "What does the Swedish word \"frukost\" mean?"
+     },
+     "ok": {
+      "fi": "Aamiainen",
+      "en": "Breakfast"
+     },
+     "no": [
+      {
+       "fi": "Hedelmä",
+       "en": "Fruit"
+      },
+      {
+       "fi": "Pakkanen",
+       "en": "Frost"
+      },
+      {
+       "fi": "Juusto",
+       "en": "Cheese"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana bra tarkoittaa?",
+      "en": "What does the Swedish word \"bra\" mean?"
+     },
+     "ok": {
+      "fi": "Hyvä",
+      "en": "Good"
+     },
+     "no": [
+      {
+       "fi": "Rintaliivit",
+       "en": "Bra"
+      },
+      {
+       "fi": "Rohkea",
+       "en": "Brave"
+      },
+      {
+       "fi": "Leipä",
+       "en": "Bread"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana hav tarkoittaa?",
+      "en": "What does the Swedish word \"hav\" mean?"
+     },
+     "ok": {
+      "fi": "Meri",
+      "en": "Sea"
+     },
+     "no": [
+      {
+       "fi": "Satama",
+       "en": "Harbour"
+      },
+      {
+       "fi": "Puolikas",
+       "en": "Half"
+      },
+      {
+       "fi": "Kaura",
+       "en": "Oats"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana sko tarkoittaa?",
+      "en": "What does the Swedish word \"sko\" mean?"
+     },
+     "ok": {
+      "fi": "Kenkä",
+      "en": "Shoe"
+     },
+     "no": [
+      {
+       "fi": "Koulu",
+       "en": "School"
+      },
+      {
+       "fi": "Metsä",
+       "en": "Forest"
+      },
+      {
+       "fi": "Lusikka",
+       "en": "Spoon"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana snäll tarkoittaa?",
+      "en": "What does the Swedish word \"snäll\" mean?"
+     },
+     "ok": {
+      "fi": "Kiltti",
+      "en": "Kind"
+     },
+     "no": [
+      {
+       "fi": "Nopea",
+       "en": "Fast"
+      },
+      {
+       "fi": "Lumi",
+       "en": "Snow"
+      },
+      {
+       "fi": "Etana",
+       "en": "Snail"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana ost tarkoittaa?",
+      "en": "What does the Swedish word \"ost\" mean?"
+     },
+     "ok": {
+      "fi": "Juusto",
+      "en": "Cheese"
+     },
+     "no": [
+      {
+       "fi": "Itä",
+       "en": "East"
+      },
+      {
+       "fi": "Liha",
+       "en": "Meat"
+      },
+      {
+       "fi": "Leipä",
+       "en": "Bread"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana kul tarkoittaa?",
+      "en": "What does the Swedish word \"kul\" mean?"
+     },
+     "ok": {
+      "fi": "Hauska",
+      "en": "Fun"
+     },
+     "no": [
+      {
+       "fi": "Kylmä",
+       "en": "Cold"
+      },
+      {
+       "fi": "Pallo",
+       "en": "Ball"
+      },
+      {
+       "fi": "Kaali",
+       "en": "Cabbage"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana sjuk tarkoittaa?",
+      "en": "What does the Swedish word \"sjuk\" mean?"
+     },
+     "ok": {
+      "fi": "Sairas",
+      "en": "Ill"
+     },
+     "no": [
+      {
+       "fi": "Seitsemän",
+       "en": "Seven"
+      },
+      {
+       "fi": "Järvi",
+       "en": "Lake"
+      },
+      {
+       "fi": "Laulaa",
+       "en": "To sing"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä ruotsin sana trött tarkoittaa?",
+      "en": "What does the Swedish word \"trött\" mean?"
+     },
+     "ok": {
+      "fi": "Väsynyt",
+      "en": "Tired"
+     },
+     "no": [
+      {
+       "fi": "Luotettava",
+       "en": "Trustworthy"
+      },
+      {
+       "fi": "Totuus",
+       "en": "Truth"
+      },
+      {
+       "fi": "Kolmas",
+       "en": "Third"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-saksan-ansat",
+   "cat": "yleis",
+   "format": "choice",
+   "t": 204,
+   "title": {
+    "fi": "Saksan sanojen ansat: mitä sana tarkoittaa?",
+    "en": "German false friends: what does the word mean?"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mitä saksan sana Gift tarkoittaa?",
+      "en": "What does the German word \"Gift\" mean?"
+     },
+     "ok": {
+      "fi": "Myrkky",
+      "en": "Poison"
+     },
+     "no": [
+      {
+       "fi": "Lahja",
+       "en": "Gift"
+      },
+      {
+       "fi": "Kirje",
+       "en": "Letter"
+      },
+      {
+       "fi": "Kulta",
+       "en": "Gold"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Handy tarkoittaa?",
+      "en": "What does the German word \"Handy\" mean?"
+     },
+     "ok": {
+      "fi": "Kännykkä",
+      "en": "Mobile phone"
+     },
+     "no": [
+      {
+       "fi": "Kätevä",
+       "en": "Handy"
+      },
+      {
+       "fi": "Käsine",
+       "en": "Glove"
+      },
+      {
+       "fi": "Käsilaukku",
+       "en": "Handbag"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Chef tarkoittaa?",
+      "en": "What does the German word \"Chef\" mean?"
+     },
+     "ok": {
+      "fi": "Pomo, esimies",
+      "en": "Boss"
+     },
+     "no": [
+      {
+       "fi": "Kokki",
+       "en": "Chef"
+      },
+      {
+       "fi": "Tarjoilija",
+       "en": "Waiter"
+      },
+      {
+       "fi": "Kuningas",
+       "en": "King"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan verbi bekommen tarkoittaa?",
+      "en": "What does the German verb \"bekommen\" mean?"
+     },
+     "ok": {
+      "fi": "Saada",
+      "en": "To get"
+     },
+     "no": [
+      {
+       "fi": "Tulla joksikin",
+       "en": "To become"
+      },
+      {
+       "fi": "Maksaa",
+       "en": "To pay"
+      },
+      {
+       "fi": "Tulla takaisin",
+       "en": "To come back"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Rat tarkoittaa?",
+      "en": "What does the German word \"Rat\" mean?"
+     },
+     "ok": {
+      "fi": "Neuvo",
+      "en": "Advice"
+     },
+     "no": [
+      {
+       "fi": "Rotta",
+       "en": "Rat"
+      },
+      {
+       "fi": "Pyörä",
+       "en": "Wheel"
+      },
+      {
+       "fi": "Arvoitus",
+       "en": "Riddle"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Kind tarkoittaa?",
+      "en": "What does the German word \"Kind\" mean?"
+     },
+     "ok": {
+      "fi": "Lapsi",
+      "en": "Child"
+     },
+     "no": [
+      {
+       "fi": "Ystävällinen",
+       "en": "Kind"
+      },
+      {
+       "fi": "Laji",
+       "en": "Sort"
+      },
+      {
+       "fi": "Kuningas",
+       "en": "King"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana bald tarkoittaa?",
+      "en": "What does the German word \"bald\" mean?"
+     },
+     "ok": {
+      "fi": "Pian",
+      "en": "Soon"
+     },
+     "no": [
+      {
+       "fi": "Kalju",
+       "en": "Bald"
+      },
+      {
+       "fi": "Rohkea",
+       "en": "Bold"
+      },
+      {
+       "fi": "Kylpy",
+       "en": "Bath"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Brief tarkoittaa?",
+      "en": "What does the German word \"Brief\" mean?"
+     },
+     "ok": {
+      "fi": "Kirje",
+      "en": "Letter"
+     },
+     "no": [
+      {
+       "fi": "Lyhyt",
+       "en": "Brief"
+      },
+      {
+       "fi": "Lompakko",
+       "en": "Wallet"
+      },
+      {
+       "fi": "Silta",
+       "en": "Bridge"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Kissen tarkoittaa?",
+      "en": "What does the German word \"Kissen\" mean?"
+     },
+     "ok": {
+      "fi": "Tyyny",
+      "en": "Pillow"
+     },
+     "no": [
+      {
+       "fi": "Suudelma",
+       "en": "Kiss"
+      },
+      {
+       "fi": "Kissa",
+       "en": "Cat"
+      },
+      {
+       "fi": "Arkku",
+       "en": "Chest"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Taste tarkoittaa?",
+      "en": "What does the German word \"Taste\" mean?"
+     },
+     "ok": {
+      "fi": "Näppäin",
+      "en": "Key (on a keyboard)"
+     },
+     "no": [
+      {
+       "fi": "Maku",
+       "en": "Taste"
+      },
+      {
+       "fi": "Tasku",
+       "en": "Pocket"
+      },
+      {
+       "fi": "Kuppi",
+       "en": "Cup"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana also tarkoittaa?",
+      "en": "What does the German word \"also\" mean?"
+     },
+     "ok": {
+      "fi": "Siis",
+      "en": "So, therefore"
+     },
+     "no": [
+      {
+       "fi": "Myös",
+       "en": "Also"
+      },
+      {
+       "fi": "Aina",
+       "en": "Always"
+      },
+      {
+       "fi": "Ehkä",
+       "en": "Maybe"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Wand tarkoittaa?",
+      "en": "What does the German word \"Wand\" mean?"
+     },
+     "ok": {
+      "fi": "Seinä",
+      "en": "Wall"
+     },
+     "no": [
+      {
+       "fi": "Taikasauva",
+       "en": "Wand"
+      },
+      {
+       "fi": "Vaellus",
+       "en": "Hike"
+      },
+      {
+       "fi": "Tuuli",
+       "en": "Wind"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Hut tarkoittaa?",
+      "en": "What does the German word \"Hut\" mean?"
+     },
+     "ok": {
+      "fi": "Hattu",
+      "en": "Hat"
+     },
+     "no": [
+      {
+       "fi": "Maja",
+       "en": "Hut"
+      },
+      {
+       "fi": "Kuuma",
+       "en": "Hot"
+      },
+      {
+       "fi": "Hyvä",
+       "en": "Good"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan luku eine Billion tarkoittaa?",
+      "en": "What does the German number \"eine Billion\" mean?"
+     },
+     "ok": {
+      "fi": "Biljoona (10¹²)",
+      "en": "A trillion (10¹²)"
+     },
+     "no": [
+      {
+       "fi": "Miljardi (10⁹)",
+       "en": "A billion (10⁹)"
+      },
+      {
+       "fi": "Miljoona (10⁶)",
+       "en": "A million (10⁶)"
+      },
+      {
+       "fi": "Triljoona (10¹⁸)",
+       "en": "A quintillion (10¹⁸)"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Bad tarkoittaa?",
+      "en": "What does the German word \"Bad\" mean?"
+     },
+     "ok": {
+      "fi": "Kylpyhuone",
+      "en": "Bathroom"
+     },
+     "no": [
+      {
+       "fi": "Paha",
+       "en": "Bad"
+      },
+      {
+       "fi": "Sänky",
+       "en": "Bed"
+      },
+      {
+       "fi": "Pyörä",
+       "en": "Bicycle"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan verbi spenden tarkoittaa?",
+      "en": "What does the German verb \"spenden\" mean?"
+     },
+     "ok": {
+      "fi": "Lahjoittaa",
+      "en": "To donate"
+     },
+     "no": [
+      {
+       "fi": "Kuluttaa rahaa",
+       "en": "To spend money"
+      },
+      {
+       "fi": "Viettää aikaa",
+       "en": "To spend time"
+      },
+      {
+       "fi": "Säästää",
+       "en": "To save"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä saksan sana Gymnasium tarkoittaa?",
+      "en": "What does the German word \"Gymnasium\" mean?"
+     },
+     "ok": {
+      "fi": "Lukio",
+      "en": "Upper secondary school"
+     },
+     "no": [
+      {
+       "fi": "Kuntosali",
+       "en": "Gym"
+      },
+      {
+       "fi": "Urheiluhalli",
+       "en": "Sports hall"
+      },
+      {
+       "fi": "Yliopisto",
+       "en": "University"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-mika-suurin",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 144,
+   "title": {
+    "fi": "Mikä on suurin? Yllättävät pinta-alavertailut",
+    "en": "Which is biggest? Surprising area comparisons"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Saksa",
+      "en": "Germany"
+     },
+     "no": [
+      {
+       "fi": "Suomi",
+       "en": "Finland"
+      },
+      {
+       "fi": "Italia",
+       "en": "Italy"
+      },
+      {
+       "fi": "Puola",
+       "en": "Poland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Japani",
+      "en": "Japan"
+     },
+     "no": [
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Suomi",
+       "en": "Finland"
+      },
+      {
+       "fi": "Iso-Britannia",
+       "en": "United Kingdom"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurempi kuin Grönlanti?",
+      "en": "Which of these is larger in area than Greenland?"
+     },
+     "ok": {
+      "fi": "Kongon demokraattinen tasavalta",
+      "en": "DR Congo"
+     },
+     "no": [
+      {
+       "fi": "Meksiko",
+       "en": "Mexico"
+      },
+      {
+       "fi": "Indonesia",
+       "en": "Indonesia"
+      },
+      {
+       "fi": "Iran",
+       "en": "Iran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Kalifornia",
+      "en": "California"
+     },
+     "no": [
+      {
+       "fi": "Japani",
+       "en": "Japan"
+      },
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Suomi",
+       "en": "Finland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Brasilia",
+      "en": "Brazil"
+     },
+     "no": [
+      {
+       "fi": "Australia",
+       "en": "Australia"
+      },
+      {
+       "fi": "Yhdysvaltain 48 yhtenäistä osavaltiota",
+       "en": "The 48 contiguous US states"
+      },
+      {
+       "fi": "Euroopan unioni",
+       "en": "The European Union"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     },
+     "no": [
+      {
+       "fi": "Japani",
+       "en": "Japan"
+      },
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Norja",
+       "en": "Norway"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Turkki",
+      "en": "Turkey"
+     },
+     "no": [
+      {
+       "fi": "Ukraina",
+       "en": "Ukraine"
+      },
+      {
+       "fi": "Espanja",
+       "en": "Spain"
+      },
+      {
+       "fi": "Ruotsi",
+       "en": "Sweden"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Venäjän Sahan tasavalta (Jakutia)",
+      "en": "Russia's Sakha Republic (Yakutia)"
+     },
+     "no": [
+      {
+       "fi": "Argentiina",
+       "en": "Argentina"
+      },
+      {
+       "fi": "Kazakstan",
+       "en": "Kazakhstan"
+      },
+      {
+       "fi": "Algeria",
+       "en": "Algeria"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Lapin maakunta",
+      "en": "Finnish Lapland"
+     },
+     "no": [
+      {
+       "fi": "Itävalta",
+       "en": "Austria"
+      },
+      {
+       "fi": "Tšekki",
+       "en": "Czechia"
+      },
+      {
+       "fi": "Irlanti",
+       "en": "Ireland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Texas",
+      "en": "Texas"
+     },
+     "no": [
+      {
+       "fi": "Ukraina",
+       "en": "Ukraine"
+      },
+      {
+       "fi": "Espanja",
+       "en": "Spain"
+      },
+      {
+       "fi": "Ruotsi",
+       "en": "Sweden"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan pienin?",
+      "en": "Which of these has the smallest area?"
+     },
+     "ok": {
+      "fi": "Belgia",
+      "en": "Belgium"
+     },
+     "no": [
+      {
+       "fi": "Alankomaat",
+       "en": "Netherlands"
+      },
+      {
+       "fi": "Sveitsi",
+       "en": "Switzerland"
+      },
+      {
+       "fi": "Tanska (ilman Grönlantia ja Färsaaria)",
+       "en": "Denmark (without Greenland and the Faroes)"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on pinta-alaltaan suurin?",
+      "en": "Which of these has the largest area?"
+     },
+     "ok": {
+      "fi": "Australia",
+      "en": "Australia"
+     },
+     "no": [
+      {
+       "fi": "Intia",
+       "en": "India"
+      },
+      {
+       "fi": "Argentiina",
+       "en": "Argentina"
+      },
+      {
+       "fi": "Euroopan unioni",
+       "en": "The European Union"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-vakirikkain",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Mikä on väkirikkain? Yllättävät väkilukuvertailut (tilanne 2026)",
+    "en": "Which has the most people? Surprising population comparisons (2026)"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Bangladesh",
+      "en": "Bangladesh"
+     },
+     "no": [
+      {
+       "fi": "Venäjä",
+       "en": "Russia"
+      },
+      {
+       "fi": "Meksiko",
+       "en": "Mexico"
+      },
+      {
+       "fi": "Japani",
+       "en": "Japan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Pakistan",
+      "en": "Pakistan"
+     },
+     "no": [
+      {
+       "fi": "Nigeria",
+       "en": "Nigeria"
+      },
+      {
+       "fi": "Brasilia",
+       "en": "Brazil"
+      },
+      {
+       "fi": "Venäjä",
+       "en": "Russia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Kongon demokraattinen tasavalta",
+      "en": "DR Congo"
+     },
+     "no": [
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Ranska",
+       "en": "France"
+      },
+      {
+       "fi": "Iso-Britannia",
+       "en": "United Kingdom"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Etiopia",
+      "en": "Ethiopia"
+     },
+     "no": [
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Turkki",
+       "en": "Turkey"
+      },
+      {
+       "fi": "Iran",
+       "en": "Iran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Egypti",
+      "en": "Egypt"
+     },
+     "no": [
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Turkki",
+       "en": "Turkey"
+      },
+      {
+       "fi": "Iran",
+       "en": "Iran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä on suurin väkiluku?",
+      "en": "Which of these has the largest population?"
+     },
+     "ok": {
+      "fi": "Kanada",
+      "en": "Canada"
+     },
+     "no": [
+      {
+       "fi": "Kalifornia",
+       "en": "California"
+      },
+      {
+       "fi": "Puola",
+       "en": "Poland"
+      },
+      {
+       "fi": "Australia",
+       "en": "Australia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä Pohjoismaista on suurin väkiluku?",
+      "en": "Which of these Nordic countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Tanska",
+      "en": "Denmark"
+     },
+     "no": [
+      {
+       "fi": "Suomi",
+       "en": "Finland"
+      },
+      {
+       "fi": "Norja",
+       "en": "Norway"
+      },
+      {
+       "fi": "Islanti",
+       "en": "Iceland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Australia",
+      "en": "Australia"
+     },
+     "no": [
+      {
+       "fi": "Alankomaat",
+       "en": "Netherlands"
+      },
+      {
+       "fi": "Romania",
+       "en": "Romania"
+      },
+      {
+       "fi": "Chile",
+       "en": "Chile"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Liettua",
+      "en": "Lithuania"
+     },
+     "no": [
+      {
+       "fi": "Latvia",
+       "en": "Latvia"
+      },
+      {
+       "fi": "Viro",
+       "en": "Estonia"
+      },
+      {
+       "fi": "Slovenia",
+       "en": "Slovenia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Luxemburg",
+      "en": "Luxembourg"
+     },
+     "no": [
+      {
+       "fi": "Malta",
+       "en": "Malta"
+      },
+      {
+       "fi": "Islanti",
+       "en": "Iceland"
+      },
+      {
+       "fi": "Andorra",
+       "en": "Andorra"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Yhdysvallat",
+      "en": "United States"
+     },
+     "no": [
+      {
+       "fi": "Indonesia",
+       "en": "Indonesia"
+      },
+      {
+       "fi": "Pakistan",
+       "en": "Pakistan"
+      },
+      {
+       "fi": "Brasilia",
+       "en": "Brazil"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä kaupungeista on suurin väkiluku (kunta)?",
+      "en": "Which of these cities has the largest population (municipality)?"
+     },
+     "ok": {
+      "fi": "Tukholma",
+      "en": "Stockholm"
+     },
+     "no": [
+      {
+       "fi": "Oslo",
+       "en": "Oslo"
+      },
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Kööpenhamina",
+       "en": "Copenhagen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä näistä maista on suurin väkiluku?",
+      "en": "Which of these countries has the largest population?"
+     },
+     "ok": {
+      "fi": "Japani",
+      "en": "Japan"
+     },
+     "no": [
+      {
+       "fi": "Filippiinit",
+       "en": "Philippines"
+      },
+      {
+       "fi": "Vietnam",
+       "en": "Vietnam"
+      },
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-pohjoisempana",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Mikä on pohjoisempana? Leveyspiirien yllätykset",
+    "en": "Which is further north? Surprises of latitude"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Lontoo",
+      "en": "London"
+     },
+     "no": [
+      {
+       "fi": "Calgary",
+       "en": "Calgary"
+      },
+      {
+       "fi": "Pariisi",
+       "en": "Paris"
+      },
+      {
+       "fi": "Seattle",
+       "en": "Seattle"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Rooma",
+      "en": "Rome"
+     },
+     "no": [
+      {
+       "fi": "New York",
+       "en": "New York"
+      },
+      {
+       "fi": "Madrid",
+       "en": "Madrid"
+      },
+      {
+       "fi": "Peking",
+       "en": "Beijing"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Helsinki",
+      "en": "Helsinki"
+     },
+     "no": [
+      {
+       "fi": "Pietari",
+       "en": "Saint Petersburg"
+      },
+      {
+       "fi": "Oslo",
+       "en": "Oslo"
+      },
+      {
+       "fi": "Tallinna",
+       "en": "Tallinn"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Oulu",
+      "en": "Oulu"
+     },
+     "no": [
+      {
+       "fi": "Fairbanks",
+       "en": "Fairbanks"
+      },
+      {
+       "fi": "Reykjavík",
+       "en": "Reykjavik"
+      },
+      {
+       "fi": "Nuuk",
+       "en": "Nuuk"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on eteläisimpänä?",
+      "en": "Which of these cities is furthest south?"
+     },
+     "ok": {
+      "fi": "Delhi",
+      "en": "Delhi"
+     },
+     "no": [
+      {
+       "fi": "Kairo",
+       "en": "Cairo"
+      },
+      {
+       "fi": "New Orleans",
+       "en": "New Orleans"
+      },
+      {
+       "fi": "Shanghai",
+       "en": "Shanghai"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Venetsia",
+      "en": "Venice"
+     },
+     "no": [
+      {
+       "fi": "Toronto",
+       "en": "Toronto"
+      },
+      {
+       "fi": "Bordeaux",
+       "en": "Bordeaux"
+      },
+      {
+       "fi": "Boston",
+       "en": "Boston"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Ateena",
+      "en": "Athens"
+     },
+     "no": [
+      {
+       "fi": "San Francisco",
+       "en": "San Francisco"
+      },
+      {
+       "fi": "Soul",
+       "en": "Seoul"
+      },
+      {
+       "fi": "Tokio",
+       "en": "Tokyo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Anchorage",
+      "en": "Anchorage"
+     },
+     "no": [
+      {
+       "fi": "Bergen",
+       "en": "Bergen"
+      },
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Tukholma",
+       "en": "Stockholm"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on pohjoisimpana?",
+      "en": "Which of these cities is furthest north?"
+     },
+     "ok": {
+      "fi": "Berliini",
+      "en": "Berlin"
+     },
+     "no": [
+      {
+       "fi": "Amsterdam",
+       "en": "Amsterdam"
+      },
+      {
+       "fi": "Varsova",
+       "en": "Warsaw"
+      },
+      {
+       "fi": "Lontoo",
+       "en": "London"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on eteläisimpänä?",
+      "en": "Which of these cities is furthest south?"
+     },
+     "ok": {
+      "fi": "Buenos Aires",
+      "en": "Buenos Aires"
+     },
+     "no": [
+      {
+       "fi": "Kapkaupunki",
+       "en": "Cape Town"
+      },
+      {
+       "fi": "Sydney",
+       "en": "Sydney"
+      },
+      {
+       "fi": "Santiago de Chile",
+       "en": "Santiago de Chile"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä pääkaupungeista on lähimpänä päiväntasaajaa?",
+      "en": "Which of these capitals is closest to the equator?"
+     },
+     "ok": {
+      "fi": "Quito",
+      "en": "Quito"
+     },
+     "no": [
+      {
+       "fi": "Kampala",
+       "en": "Kampala"
+      },
+      {
+       "fi": "Singapore",
+       "en": "Singapore"
+      },
+      {
+       "fi": "Nairobi",
+       "en": "Nairobi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on idempänä?",
+      "en": "Which of these cities is furthest east?"
+     },
+     "ok": {
+      "fi": "Helsinki",
+      "en": "Helsinki"
+     },
+     "no": [
+      {
+       "fi": "Ateena",
+       "en": "Athens"
+      },
+      {
+       "fi": "Varsova",
+       "en": "Warsaw"
+      },
+      {
+       "fi": "Belgrad",
+       "en": "Belgrade"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kaupungeista on lännempänä?",
+      "en": "Which of these cities is furthest west?"
+     },
+     "ok": {
+      "fi": "Reno",
+      "en": "Reno"
+     },
+     "no": [
+      {
+       "fi": "Los Angeles",
+       "en": "Los Angeles"
+      },
+      {
+       "fi": "San Diego",
+       "en": "San Diego"
+      },
+      {
+       "fi": "Las Vegas",
+       "en": "Las Vegas"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-suurin-ei-paakaupunki",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 216,
+   "title": {
+    "fi": "Ei pääkaupunki: maan suurin kaupunki",
+    "en": "Not the capital: the largest city of a country"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä on Kanadan suurin kaupunki?",
+      "en": "What is Canada's largest city?"
+     },
+     "ok": {
+      "fi": "Toronto",
+      "en": "Toronto"
+     },
+     "no": [
+      {
+       "fi": "Ottawa",
+       "en": "Ottawa"
+      },
+      {
+       "fi": "Montreal",
+       "en": "Montreal"
+      },
+      {
+       "fi": "Vancouver",
+       "en": "Vancouver"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Turkin suurin kaupunki?",
+      "en": "What is Turkey's largest city?"
+     },
+     "ok": {
+      "fi": "Istanbul",
+      "en": "Istanbul"
+     },
+     "no": [
+      {
+       "fi": "Ankara",
+       "en": "Ankara"
+      },
+      {
+       "fi": "Izmir",
+       "en": "Izmir"
+      },
+      {
+       "fi": "Bursa",
+       "en": "Bursa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Sveitsin suurin kaupunki?",
+      "en": "What is Switzerland's largest city?"
+     },
+     "ok": {
+      "fi": "Zürich",
+      "en": "Zurich"
+     },
+     "no": [
+      {
+       "fi": "Bern",
+       "en": "Bern"
+      },
+      {
+       "fi": "Geneve",
+       "en": "Geneva"
+      },
+      {
+       "fi": "Basel",
+       "en": "Basel"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Kazakstanin suurin kaupunki?",
+      "en": "What is Kazakhstan's largest city?"
+     },
+     "ok": {
+      "fi": "Almaty",
+      "en": "Almaty"
+     },
+     "no": [
+      {
+       "fi": "Astana",
+       "en": "Astana"
+      },
+      {
+       "fi": "Šymkent",
+       "en": "Shymkent"
+      },
+      {
+       "fi": "Karaganda",
+       "en": "Karaganda"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Bolivian suurin kaupunki?",
+      "en": "What is Bolivia's largest city?"
+     },
+     "ok": {
+      "fi": "Santa Cruz de la Sierra",
+      "en": "Santa Cruz de la Sierra"
+     },
+     "no": [
+      {
+       "fi": "La Paz",
+       "en": "La Paz"
+      },
+      {
+       "fi": "Sucre",
+       "en": "Sucre"
+      },
+      {
+       "fi": "Cochabamba",
+       "en": "Cochabamba"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Tansanian suurin kaupunki?",
+      "en": "What is Tanzania's largest city?"
+     },
+     "ok": {
+      "fi": "Dar es Salaam",
+      "en": "Dar es Salaam"
+     },
+     "no": [
+      {
+       "fi": "Dodoma",
+       "en": "Dodoma"
+      },
+      {
+       "fi": "Arusha",
+       "en": "Arusha"
+      },
+      {
+       "fi": "Mwanza",
+       "en": "Mwanza"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Norsunluurannikon suurin kaupunki?",
+      "en": "What is Côte d'Ivoire's largest city?"
+     },
+     "ok": {
+      "fi": "Abidjan",
+      "en": "Abidjan"
+     },
+     "no": [
+      {
+       "fi": "Yamoussoukro",
+       "en": "Yamoussoukro"
+      },
+      {
+       "fi": "Bouaké",
+       "en": "Bouaké"
+      },
+      {
+       "fi": "San-Pédro",
+       "en": "San-Pédro"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Myanmarin suurin kaupunki?",
+      "en": "What is Myanmar's largest city?"
+     },
+     "ok": {
+      "fi": "Yangon",
+      "en": "Yangon"
+     },
+     "no": [
+      {
+       "fi": "Naypyidaw",
+       "en": "Naypyidaw"
+      },
+      {
+       "fi": "Mandalay",
+       "en": "Mandalay"
+      },
+      {
+       "fi": "Bago",
+       "en": "Bago"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Nigerian suurin kaupunki?",
+      "en": "What is Nigeria's largest city?"
+     },
+     "ok": {
+      "fi": "Lagos",
+      "en": "Lagos"
+     },
+     "no": [
+      {
+       "fi": "Abuja",
+       "en": "Abuja"
+      },
+      {
+       "fi": "Ibadan",
+       "en": "Ibadan"
+      },
+      {
+       "fi": "Port Harcourt",
+       "en": "Port Harcourt"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Uuden-Seelannin suurin kaupunki?",
+      "en": "What is New Zealand's largest city?"
+     },
+     "ok": {
+      "fi": "Auckland",
+      "en": "Auckland"
+     },
+     "no": [
+      {
+       "fi": "Wellington",
+       "en": "Wellington"
+      },
+      {
+       "fi": "Christchurch",
+       "en": "Christchurch"
+      },
+      {
+       "fi": "Hamilton",
+       "en": "Hamilton"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Marokon suurin kaupunki?",
+      "en": "What is Morocco's largest city?"
+     },
+     "ok": {
+      "fi": "Casablanca",
+      "en": "Casablanca"
+     },
+     "no": [
+      {
+       "fi": "Rabat",
+       "en": "Rabat"
+      },
+      {
+       "fi": "Marrakech",
+       "en": "Marrakech"
+      },
+      {
+       "fi": "Fès",
+       "en": "Fès"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Vietnamin suurin kaupunki?",
+      "en": "What is Vietnam's largest city?"
+     },
+     "ok": {
+      "fi": "Ho Chi Minhin kaupunki",
+      "en": "Ho Chi Minh City"
+     },
+     "no": [
+      {
+       "fi": "Hanoi",
+       "en": "Hanoi"
+      },
+      {
+       "fi": "Da Nang",
+       "en": "Da Nang"
+      },
+      {
+       "fi": "Hai Phong",
+       "en": "Hai Phong"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Pakistanin suurin kaupunki?",
+      "en": "What is Pakistan's largest city?"
+     },
+     "ok": {
+      "fi": "Karachi",
+      "en": "Karachi"
+     },
+     "no": [
+      {
+       "fi": "Islamabad",
+       "en": "Islamabad"
+      },
+      {
+       "fi": "Lahore",
+       "en": "Lahore"
+      },
+      {
+       "fi": "Rawalpindi",
+       "en": "Rawalpindi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Skotlannin suurin kaupunki?",
+      "en": "What is Scotland's largest city?"
+     },
+     "ok": {
+      "fi": "Glasgow",
+      "en": "Glasgow"
+     },
+     "no": [
+      {
+       "fi": "Edinburgh",
+       "en": "Edinburgh"
+      },
+      {
+       "fi": "Aberdeen",
+       "en": "Aberdeen"
+      },
+      {
+       "fi": "Dundee",
+       "en": "Dundee"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Belizen suurin kaupunki?",
+      "en": "What is Belize's largest city?"
+     },
+     "ok": {
+      "fi": "Belize City",
+      "en": "Belize City"
+     },
+     "no": [
+      {
+       "fi": "Belmopan",
+       "en": "Belmopan"
+      },
+      {
+       "fi": "San Ignacio",
+       "en": "San Ignacio"
+      },
+      {
+       "fi": "Orange Walk",
+       "en": "Orange Walk"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Burundin suurin kaupunki?",
+      "en": "What is Burundi's largest city?"
+     },
+     "ok": {
+      "fi": "Bujumbura",
+      "en": "Bujumbura"
+     },
+     "no": [
+      {
+       "fi": "Gitega",
+       "en": "Gitega"
+      },
+      {
+       "fi": "Ngozi",
+       "en": "Ngozi"
+      },
+      {
+       "fi": "Kigali",
+       "en": "Kigali"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Liechtensteinin väkirikkain kunta (2025)?",
+      "en": "What is Liechtenstein's most populous municipality (2025)?"
+     },
+     "ok": {
+      "fi": "Schaan",
+      "en": "Schaan"
+     },
+     "no": [
+      {
+       "fi": "Vaduz",
+       "en": "Vaduz"
+      },
+      {
+       "fi": "Triesen",
+       "en": "Triesen"
+      },
+      {
+       "fi": "Balzers",
+       "en": "Balzers"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Brasilian suurin kaupunki?",
+      "en": "What is Brazil's largest city?"
+     },
+     "ok": {
+      "fi": "São Paulo",
+      "en": "São Paulo"
+     },
+     "no": [
+      {
+       "fi": "Brasília",
+       "en": "Brasília"
+      },
+      {
+       "fi": "Rio de Janeiro",
+       "en": "Rio de Janeiro"
+      },
+      {
+       "fi": "Salvador",
+       "en": "Salvador"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-maiden-nimet",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 216,
+   "title": {
+    "fi": "Mistä nimi tulee? Valtioiden nimien alkuperä",
+    "en": "Where does the name come from? Origins of country names"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kenen mukaan Bolivia on nimetty?",
+      "en": "Who is Bolivia named after?"
+     },
+     "ok": {
+      "fi": "Simón Bolívar",
+      "en": "Simón Bolívar"
+     },
+     "no": [
+      {
+       "fi": "Kristoffer Kolumbus",
+       "en": "Christopher Columbus"
+      },
+      {
+       "fi": "José de San Martín",
+       "en": "José de San Martín"
+      },
+      {
+       "fi": "Amerigo Vespucci",
+       "en": "Amerigo Vespucci"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen mukaan Kolumbia on nimetty?",
+      "en": "Who is Colombia named after?"
+     },
+     "ok": {
+      "fi": "Kristoffer Kolumbus",
+      "en": "Christopher Columbus"
+     },
+     "no": [
+      {
+       "fi": "Simón Bolívar",
+       "en": "Simón Bolívar"
+      },
+      {
+       "fi": "Amerigo Vespucci",
+       "en": "Amerigo Vespucci"
+      },
+      {
+       "fi": "Ferdinand Magellan",
+       "en": "Ferdinand Magellan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen mukaan Filippiinit on nimetty?",
+      "en": "Who are the Philippines named after?"
+     },
+     "ok": {
+      "fi": "Espanjan kuningas Filip II",
+      "en": "King Philip II of Spain"
+     },
+     "no": [
+      {
+       "fi": "Apostoli Filippus",
+       "en": "The apostle Philip"
+      },
+      {
+       "fi": "Ranskan kuningas Filip IV",
+       "en": "King Philip IV of France"
+      },
+      {
+       "fi": "Makedonian kuningas Filippos II",
+       "en": "King Philip II of Macedon"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Venezuelan nimi tarkoittaa?",
+      "en": "What does the name Venezuela mean?"
+     },
+     "ok": {
+      "fi": "Pieni Venetsia",
+      "en": "Little Venice"
+     },
+     "no": [
+      {
+       "fi": "Vihreä maa",
+       "en": "Green land"
+      },
+      {
+       "fi": "Joen maa",
+       "en": "Land of the river"
+      },
+      {
+       "fi": "Kultainen rannikko",
+       "en": "Golden coast"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin Argentiinan nimi viittaa?",
+      "en": "What does the name Argentina refer to?"
+     },
+     "ok": {
+      "fi": "Hopeaan",
+      "en": "Silver"
+     },
+     "no": [
+      {
+       "fi": "Kultaan",
+       "en": "Gold"
+      },
+      {
+       "fi": "Kupariin",
+       "en": "Copper"
+      },
+      {
+       "fi": "Smaragdeihin",
+       "en": "Emeralds"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin Saudi-Arabian nimi viittaa?",
+      "en": "What does the name Saudi Arabia refer to?"
+     },
+     "ok": {
+      "fi": "Hallitsijasukuun",
+      "en": "The ruling dynasty"
+     },
+     "no": [
+      {
+       "fi": "Aavikkoon",
+       "en": "The desert"
+      },
+      {
+       "fi": "Pyhään kaupunkiin",
+       "en": "A holy city"
+      },
+      {
+       "fi": "Öljyyn",
+       "en": "Oil"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenen mukaan Mauritius on nimetty?",
+      "en": "Who is Mauritius named after?"
+     },
+     "ok": {
+      "fi": "Hollantilainen Maurits Nassaulainen",
+      "en": "Maurice of Nassau"
+     },
+     "no": [
+      {
+       "fi": "Portugalin kuningas Manuel I",
+       "en": "King Manuel I of Portugal"
+      },
+      {
+       "fi": "Ranskan kuningas Ludvig XIV",
+       "en": "King Louis XIV of France"
+      },
+      {
+       "fi": "Rooman keisari Marcus Aurelius",
+       "en": "Emperor Marcus Aurelius"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä eläimiä Kamerunin nimi (portugalin camarões) tarkoittaa?",
+      "en": "Which animals does the name Cameroon (Portuguese camarões) refer to?"
+     },
+     "ok": {
+      "fi": "Katkarapuja",
+      "en": "Shrimps"
+     },
+     "no": [
+      {
+       "fi": "Leijonia",
+       "en": "Lions"
+      },
+      {
+       "fi": "Krokotiileja",
+       "en": "Crocodiles"
+      },
+      {
+       "fi": "Norsuja",
+       "en": "Elephants"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Sierra Leonen nimi tarkoittaa?",
+      "en": "What does the name Sierra Leone mean?"
+     },
+     "ok": {
+      "fi": "Leijonavuoret",
+      "en": "Lion mountains"
+     },
+     "no": [
+      {
+       "fi": "Kultainen rannikko",
+       "en": "Golden coast"
+      },
+      {
+       "fi": "Vapaa maa",
+       "en": "Free land"
+      },
+      {
+       "fi": "Valkoinen vuori",
+       "en": "White mountain"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin Liberian nimi viittaa?",
+      "en": "What does the name Liberia refer to?"
+     },
+     "ok": {
+      "fi": "Vapauteen",
+      "en": "Freedom"
+     },
+     "no": [
+      {
+       "fi": "Rauhaan",
+       "en": "Peace"
+      },
+      {
+       "fi": "Jumalaan",
+       "en": "God"
+      },
+      {
+       "fi": "Kuninkaaseen",
+       "en": "A king"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä latinasta tuleva nimi Australia tarkoittaa?",
+      "en": "What does the Latin-derived name Australia mean?"
+     },
+     "ok": {
+      "fi": "Eteläinen maa",
+      "en": "Southern land"
+     },
+     "no": [
+      {
+       "fi": "Uusi maa",
+       "en": "New land"
+      },
+      {
+       "fi": "Kuiva maa",
+       "en": "Dry land"
+      },
+      {
+       "fi": "Suuri saari",
+       "en": "Great island"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Pakistanin nimen tausta?",
+      "en": "What is the origin of the name Pakistan?"
+     },
+     "ok": {
+      "fi": "Alueiden nimistä koottu lyhenne",
+      "en": "An acronym of regional names"
+     },
+     "no": [
+      {
+       "fi": "Pyhän joen nimi",
+       "en": "The name of a holy river"
+      },
+      {
+       "fi": "Kuninkaan nimi",
+       "en": "A king's name"
+      },
+      {
+       "fi": "Vuoren nimi",
+       "en": "The name of a mountain"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä dynastian nimestä sana Kiina (China) on todennäköisesti peräisin?",
+      "en": "Which dynasty is the word China most likely derived from?"
+     },
+     "ok": {
+      "fi": "Qin",
+      "en": "Qin"
+     },
+     "no": [
+      {
+       "fi": "Han",
+       "en": "Han"
+      },
+      {
+       "fi": "Ming",
+       "en": "Ming"
+      },
+      {
+       "fi": "Tang",
+       "en": "Tang"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Kanadan nimen taustalla oleva irokeesisana kanata tarkoittaa?",
+      "en": "What does the Iroquoian word kanata, behind the name Canada, mean?"
+     },
+     "ok": {
+      "fi": "Kylä",
+      "en": "Village"
+     },
+     "no": [
+      {
+       "fi": "Suuri järvi",
+       "en": "Great lake"
+      },
+      {
+       "fi": "Kylmä maa",
+       "en": "Cold land"
+      },
+      {
+       "fi": "Majava",
+       "en": "Beaver"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Montenegro tarkoittaa?",
+      "en": "What does Montenegro mean?"
+     },
+     "ok": {
+      "fi": "Musta vuori",
+      "en": "Black mountain"
+     },
+     "no": [
+      {
+       "fi": "Vihreä vuori",
+       "en": "Green mountain"
+      },
+      {
+       "fi": "Valkoinen kaupunki",
+       "en": "White city"
+      },
+      {
+       "fi": "Uusi vuori",
+       "en": "New mountain"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä espanjan sana honduras, josta Honduras on saanut nimensä, tarkoittaa?",
+      "en": "What does the Spanish word honduras, which gave Honduras its name, mean?"
+     },
+     "ok": {
+      "fi": "Syvyyksiä",
+      "en": "Depths"
+     },
+     "no": [
+      {
+       "fi": "Vuoria",
+       "en": "Mountains"
+      },
+      {
+       "fi": "Viidakoita",
+       "en": "Jungles"
+      },
+      {
+       "fi": "Saaria",
+       "en": "Islands"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä portugalista tuleva nimi Barbados tarkoittaa?",
+      "en": "What does the Portuguese-derived name Barbados mean?"
+     },
+     "ok": {
+      "fi": "Parrakkaat",
+      "en": "The bearded ones"
+     },
+     "no": [
+      {
+       "fi": "Kalastajat",
+       "en": "The fishermen"
+      },
+      {
+       "fi": "Kalliot",
+       "en": "The cliffs"
+      },
+      {
+       "fi": "Merirosvot",
+       "en": "The pirates"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Ecuadorin nimi tarkoittaa?",
+      "en": "What does the name Ecuador mean?"
+     },
+     "ok": {
+      "fi": "Päiväntasaaja",
+      "en": "Equator"
+     },
+     "no": [
+      {
+       "fi": "Tulivuori",
+       "en": "Volcano"
+      },
+      {
+       "fi": "Korkea maa",
+       "en": "High land"
+      },
+      {
+       "fi": "Kultainen joki",
+       "en": "Golden river"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-rajat-ja-naapurit",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Rajat ja naapurit: maantieteen yllätykset",
+    "en": "Borders and neighbours: geography surprises"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minkä maan kanssa Ranskalla on pisin maaraja?",
+      "en": "With which country does France have its longest land border?"
+     },
+     "ok": {
+      "fi": "Brasilian",
+      "en": "Brazil"
+     },
+     "no": [
+      {
+       "fi": "Espanjan",
+       "en": "Spain"
+      },
+      {
+       "fi": "Belgian",
+       "en": "Belgium"
+      },
+      {
+       "fi": "Sveitsin",
+       "en": "Switzerland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Euroopan maa on kaksinkertainen sisämaavaltio eli sen kaikki naapurit ovat sisämaavaltioita?",
+      "en": "Which European country is doubly landlocked, surrounded only by landlocked countries?"
+     },
+     "ok": {
+      "fi": "Liechtenstein",
+      "en": "Liechtenstein"
+     },
+     "no": [
+      {
+       "fi": "Sveitsi",
+       "en": "Switzerland"
+      },
+      {
+       "fi": "Itävalta",
+       "en": "Austria"
+      },
+      {
+       "fi": "Andorra",
+       "en": "Andorra"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan kanssa Tanskalla on Saksan lisäksi maaraja Hans-saaren jakamisesta vuonna 2022 sovitun sopimuksen jälkeen?",
+      "en": "Since the 2022 deal to split Hans Island, which country besides Germany shares a land border with Denmark?"
+     },
+     "ok": {
+      "fi": "Kanadan",
+      "en": "Canada"
+     },
+     "no": [
+      {
+       "fi": "Ruotsin",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Norjan",
+       "en": "Norway"
+      },
+      {
+       "fi": "Islannin",
+       "en": "Iceland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä kahdella maalla on eniten maarajanaapureita (14 kummallakin)?",
+      "en": "Which two countries have the most land neighbours (14 each)?"
+     },
+     "ok": {
+      "fi": "Kiinalla ja Venäjällä",
+      "en": "China and Russia"
+     },
+     "no": [
+      {
+       "fi": "Kiinalla ja Brasilialla",
+       "en": "China and Brazil"
+      },
+      {
+       "fi": "Venäjällä ja Saksalla",
+       "en": "Russia and Germany"
+      },
+      {
+       "fi": "Brasilialla ja Saksalla",
+       "en": "Brazil and Germany"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä Afrikan maan kanssa Espanjalla on maaraja?",
+      "en": "Which African country shares a land border with Spain?"
+     },
+     "ok": {
+      "fi": "Marokon",
+      "en": "Morocco"
+     },
+     "no": [
+      {
+       "fi": "Algerian",
+       "en": "Algeria"
+      },
+      {
+       "fi": "Tunisian",
+       "en": "Tunisia"
+      },
+      {
+       "fi": "Mauritanian",
+       "en": "Mauritania"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitkä kaksi Etelä-Amerikan maata eivät rajoitu Brasiliaan?",
+      "en": "Which two South American countries do not border Brazil?"
+     },
+     "ok": {
+      "fi": "Chile ja Ecuador",
+      "en": "Chile and Ecuador"
+     },
+     "no": [
+      {
+       "fi": "Chile ja Argentiina",
+       "en": "Chile and Argentina"
+      },
+      {
+       "fi": "Ecuador ja Peru",
+       "en": "Ecuador and Peru"
+      },
+      {
+       "fi": "Uruguay ja Paraguay",
+       "en": "Uruguay and Paraguay"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on ainoa maa, jolla on rannikkoa sekä Kaspianmerellä että Persianlahdella?",
+      "en": "Which is the only country with coasts on both the Caspian Sea and the Persian Gulf?"
+     },
+     "ok": {
+      "fi": "Iran",
+      "en": "Iran"
+     },
+     "no": [
+      {
+       "fi": "Irak",
+       "en": "Iraq"
+      },
+      {
+       "fi": "Turkmenistan",
+       "en": "Turkmenistan"
+      },
+      {
+       "fi": "Saudi-Arabia",
+       "en": "Saudi Arabia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa ympäröi Gambiaa kaikilta puolilta maalla?",
+      "en": "Which country surrounds The Gambia on all land sides?"
+     },
+     "ok": {
+      "fi": "Senegal",
+      "en": "Senegal"
+     },
+     "no": [
+      {
+       "fi": "Guinea",
+       "en": "Guinea"
+      },
+      {
+       "fi": "Mali",
+       "en": "Mali"
+      },
+      {
+       "fi": "Mauritania",
+       "en": "Mauritania"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kahden valtion välinen raja on maailman pisin?",
+      "en": "Which two countries share the longest border in the world?"
+     },
+     "ok": {
+      "fi": "Kanadan ja Yhdysvaltain",
+      "en": "Canada and the United States"
+     },
+     "no": [
+      {
+       "fi": "Venäjän ja Kazakstanin",
+       "en": "Russia and Kazakhstan"
+      },
+      {
+       "fi": "Argentiinan ja Chilen",
+       "en": "Argentina and Chile"
+      },
+      {
+       "fi": "Kiinan ja Mongolian",
+       "en": "China and Mongolia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monen maan kanssa Pohjois-Korealla on maaraja?",
+      "en": "With how many countries does North Korea share a land border?"
+     },
+     "ok": {
+      "fi": "3",
+      "en": "3"
+     },
+     "no": [
+      {
+       "fi": "1",
+       "en": "1"
+      },
+      {
+       "fi": "2",
+       "en": "2"
+      },
+      {
+       "fi": "4",
+       "en": "4"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kahden EU-maan välissä Venäjän Kaliningradin alue sijaitsee?",
+      "en": "Between which two EU countries does Russia's Kaliningrad region lie?"
+     },
+     "ok": {
+      "fi": "Puolan ja Liettuan",
+      "en": "Poland and Lithuania"
+     },
+     "no": [
+      {
+       "fi": "Latvian ja Liettuan",
+       "en": "Latvia and Lithuania"
+      },
+      {
+       "fi": "Viron ja Latvian",
+       "en": "Estonia and Latvia"
+      },
+      {
+       "fi": "Puolan ja Saksan",
+       "en": "Poland and Germany"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa sijaitsee Etelä-Afrikan ja Mosambikin välissä ilman rannikkoa?",
+      "en": "Which landlocked country lies between South Africa and Mozambique?"
+     },
+     "ok": {
+      "fi": "Eswatini",
+      "en": "Eswatini"
+     },
+     "no": [
+      {
+       "fi": "Lesotho",
+       "en": "Lesotho"
+      },
+      {
+       "fi": "Malawi",
+       "en": "Malawi"
+      },
+      {
+       "fi": "Botswana",
+       "en": "Botswana"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on ainoa maa, jolla on rannikkoa sekä Mustallamerellä että Kaspianmerellä?",
+      "en": "Which is the only country with coasts on both the Black Sea and the Caspian Sea?"
+     },
+     "ok": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     },
+     "no": [
+      {
+       "fi": "Turkki",
+       "en": "Turkey"
+      },
+      {
+       "fi": "Georgia",
+       "en": "Georgia"
+      },
+      {
+       "fi": "Azerbaidžan",
+       "en": "Azerbaijan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa rajoittuu vain Ranskaan ja Espanjaan?",
+      "en": "Which country borders only France and Spain?"
+     },
+     "ok": {
+      "fi": "Andorra",
+      "en": "Andorra"
+     },
+     "no": [
+      {
+       "fi": "Monaco",
+       "en": "Monaco"
+      },
+      {
+       "fi": "Portugali",
+       "en": "Portugal"
+      },
+      {
+       "fi": "San Marino",
+       "en": "San Marino"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kääpiövaltio on San Marinon lisäksi kokonaan Italian ympäröimä?",
+      "en": "Which microstate besides San Marino is completely surrounded by Italy?"
+     },
+     "ok": {
+      "fi": "Vatikaanivaltio",
+      "en": "Vatican City"
+     },
+     "no": [
+      {
+       "fi": "Monaco",
+       "en": "Monaco"
+      },
+      {
+       "fi": "Malta",
+       "en": "Malta"
+      },
+      {
+       "fi": "Liechtenstein",
+       "en": "Liechtenstein"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-euroopan-aaripaat",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Euroopan ja EU:n ääripäät",
+    "en": "Extremes of Europe and the EU"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä on Euroopan pohjoisin itsenäisen valtion pääkaupunki?",
+      "en": "Which is the northernmost capital of a sovereign state in Europe?"
+     },
+     "ok": {
+      "fi": "Reykjavík",
+      "en": "Reykjavik"
+     },
+     "no": [
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Oslo",
+       "en": "Oslo"
+      },
+      {
+       "fi": "Tallinna",
+       "en": "Tallinn"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU-maiden eteläisin pääkaupunki?",
+      "en": "Which is the southernmost capital in the EU?"
+     },
+     "ok": {
+      "fi": "Nikosia",
+      "en": "Nicosia"
+     },
+     "no": [
+      {
+       "fi": "Valletta",
+       "en": "Valletta"
+      },
+      {
+       "fi": "Ateena",
+       "en": "Athens"
+      },
+      {
+       "fi": "Lissabon",
+       "en": "Lisbon"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU-maiden itäisin pääkaupunki?",
+      "en": "Which is the easternmost capital in the EU?"
+     },
+     "ok": {
+      "fi": "Nikosia",
+      "en": "Nicosia"
+     },
+     "no": [
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Bukarest",
+       "en": "Bucharest"
+      },
+      {
+       "fi": "Sofia",
+       "en": "Sofia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU-maiden läntisin pääkaupunki?",
+      "en": "Which is the westernmost capital in the EU?"
+     },
+     "ok": {
+      "fi": "Lissabon",
+      "en": "Lisbon"
+     },
+     "no": [
+      {
+       "fi": "Dublin",
+       "en": "Dublin"
+      },
+      {
+       "fi": "Madrid",
+       "en": "Madrid"
+      },
+      {
+       "fi": "Pariisi",
+       "en": "Paris"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Euroopan korkeimmalla sijaitseva pääkaupunki?",
+      "en": "Which is the highest capital in Europe?"
+     },
+     "ok": {
+      "fi": "Andorra la Vella",
+      "en": "Andorra la Vella"
+     },
+     "no": [
+      {
+       "fi": "Madrid",
+       "en": "Madrid"
+      },
+      {
+       "fi": "Bern",
+       "en": "Bern"
+      },
+      {
+       "fi": "Vaduz",
+       "en": "Vaduz"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU-maiden korkeimmalla sijaitseva pääkaupunki?",
+      "en": "Which is the highest capital in the EU?"
+     },
+     "ok": {
+      "fi": "Madrid",
+      "en": "Madrid"
+     },
+     "no": [
+      {
+       "fi": "Wien",
+       "en": "Vienna"
+      },
+      {
+       "fi": "Sofia",
+       "en": "Sofia"
+      },
+      {
+       "fi": "Ljubljana",
+       "en": "Ljubljana"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on pinta-alaltaan EU:n pienin jäsenmaa?",
+      "en": "Which is the smallest EU member state by area?"
+     },
+     "ok": {
+      "fi": "Malta",
+      "en": "Malta"
+     },
+     "no": [
+      {
+       "fi": "Luxemburg",
+       "en": "Luxembourg"
+      },
+      {
+       "fi": "Kypros",
+       "en": "Cyprus"
+      },
+      {
+       "fi": "Slovenia",
+       "en": "Slovenia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU:n väkirikkain kaupunki (kaupungin hallinnollisilla rajoilla)?",
+      "en": "Which is the most populous city in the EU (within city limits)?"
+     },
+     "ok": {
+      "fi": "Berliini",
+      "en": "Berlin"
+     },
+     "no": [
+      {
+       "fi": "Pariisi",
+       "en": "Paris"
+      },
+      {
+       "fi": "Madrid",
+       "en": "Madrid"
+      },
+      {
+       "fi": "Rooma",
+       "en": "Rome"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Euroopan suurin järvi?",
+      "en": "Which is the largest lake in Europe?"
+     },
+     "ok": {
+      "fi": "Laatokka",
+      "en": "Lake Ladoga"
+     },
+     "no": [
+      {
+       "fi": "Äänisjärvi",
+       "en": "Lake Onega"
+      },
+      {
+       "fi": "Vänern",
+       "en": "Lake Vänern"
+      },
+      {
+       "fi": "Saimaa",
+       "en": "Lake Saimaa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU:n suurin järvi?",
+      "en": "Which is the largest lake in the EU?"
+     },
+     "ok": {
+      "fi": "Vänern",
+      "en": "Lake Vänern"
+     },
+     "no": [
+      {
+       "fi": "Saimaa",
+       "en": "Lake Saimaa"
+      },
+      {
+       "fi": "Päijänne",
+       "en": "Lake Päijänne"
+      },
+      {
+       "fi": "Balaton",
+       "en": "Lake Balaton"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan alueella on Manner-EU:n pohjoisin kohta?",
+      "en": "In which country is the northernmost point of the EU mainland?"
+     },
+     "ok": {
+      "fi": "Suomen",
+      "en": "Finland"
+     },
+     "no": [
+      {
+       "fi": "Ruotsin",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Viron",
+       "en": "Estonia"
+      },
+      {
+       "fi": "Tanskan",
+       "en": "Denmark"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Euroopan syvin järvi?",
+      "en": "Which is the deepest lake in Europe?"
+     },
+     "ok": {
+      "fi": "Hornindalsvatnet",
+      "en": "Hornindalsvatnet"
+     },
+     "no": [
+      {
+       "fi": "Laatokka",
+       "en": "Lake Ladoga"
+      },
+      {
+       "fi": "Genevenjärvi",
+       "en": "Lake Geneva"
+      },
+      {
+       "fi": "Comojärvi",
+       "en": "Lake Como"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU:n tiheimmin asuttu jäsenmaa?",
+      "en": "Which is the most densely populated EU member state?"
+     },
+     "ok": {
+      "fi": "Malta",
+      "en": "Malta"
+     },
+     "no": [
+      {
+       "fi": "Alankomaat",
+       "en": "Netherlands"
+      },
+      {
+       "fi": "Belgia",
+       "en": "Belgium"
+      },
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on EU:n harvimmin asuttu jäsenmaa?",
+      "en": "Which is the most sparsely populated EU member state?"
+     },
+     "ok": {
+      "fi": "Suomi",
+      "en": "Finland"
+     },
+     "no": [
+      {
+       "fi": "Ruotsi",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Viro",
+       "en": "Estonia"
+      },
+      {
+       "fi": "Latvia",
+       "en": "Latvia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä EU-maassa metsän osuus maapinta-alasta on suurin?",
+      "en": "Which EU country has the largest share of its land covered by forest?"
+     },
+     "ok": {
+      "fi": "Suomessa",
+      "en": "Finland"
+     },
+     "no": [
+      {
+       "fi": "Ruotsissa",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Itävallassa",
+       "en": "Austria"
+      },
+      {
+       "fi": "Virossa",
+       "en": "Estonia"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-aikavyohykkeet",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Kello on paljon? Aikavyöhykkeiden yllätykset",
+    "en": "What time is it? Surprises of time zones"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Millä maalla on eniten aikavyöhykkeitä, kun merentakaiset alueet lasketaan mukaan?",
+      "en": "Which country has the most time zones, counting overseas territories?"
+     },
+     "ok": {
+      "fi": "Ranskalla",
+      "en": "France"
+     },
+     "no": [
+      {
+       "fi": "Venäjällä",
+       "en": "Russia"
+      },
+      {
+       "fi": "Yhdysvalloilla",
+       "en": "United States"
+      },
+      {
+       "fi": "Yhdistyneellä kuningaskunnalla",
+       "en": "United Kingdom"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta virallista aikavyöhykettä Kiinassa on?",
+      "en": "How many official time zones does China have?"
+     },
+     "ok": {
+      "fi": "1",
+      "en": "1"
+     },
+     "no": [
+      {
+       "fi": "3",
+       "en": "3"
+      },
+      {
+       "fi": "4",
+       "en": "4"
+      },
+      {
+       "fi": "5",
+       "en": "5"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta aikavyöhykettä Venäjällä on?",
+      "en": "How many time zones does Russia have?"
+     },
+     "ok": {
+      "fi": "11",
+      "en": "11"
+     },
+     "no": [
+      {
+       "fi": "7",
+       "en": "7"
+      },
+      {
+       "fi": "9",
+       "en": "9"
+      },
+      {
+       "fi": "13",
+       "en": "13"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan virallinen aika poikkeaa UTC:stä 5 tuntia 45 minuuttia?",
+      "en": "Which country's official time is UTC+5:45?"
+     },
+     "ok": {
+      "fi": "Nepalin",
+      "en": "Nepal"
+     },
+     "no": [
+      {
+       "fi": "Intian",
+       "en": "India"
+      },
+      {
+       "fi": "Bhutanin",
+       "en": "Bhutan"
+      },
+      {
+       "fi": "Afganistanin",
+       "en": "Afghanistan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio jätti kokonaan väliin päivän 30.12.2011 siirtyessään päivämäärärajan toiselle puolelle?",
+      "en": "Which country skipped 30 December 2011 entirely when it moved across the date line?"
+     },
+     "ok": {
+      "fi": "Samoa",
+      "en": "Samoa"
+     },
+     "no": [
+      {
+       "fi": "Tonga",
+       "en": "Tonga"
+      },
+      {
+       "fi": "Fidži",
+       "en": "Fiji"
+      },
+      {
+       "fi": "Kiribati",
+       "en": "Kiribati"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa uusi vuosi alkaa ensimmäisenä (UTC+14)?",
+      "en": "In which country does the new year begin first (UTC+14)?"
+     },
+     "ok": {
+      "fi": "Kiribatissa",
+      "en": "Kiribati"
+     },
+     "no": [
+      {
+       "fi": "Uudessa-Seelannissa",
+       "en": "New Zealand"
+      },
+      {
+       "fi": "Japanissa",
+       "en": "Japan"
+      },
+      {
+       "fi": "Australiassa",
+       "en": "Australia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä aikaa Islanti käyttää ympäri vuoden?",
+      "en": "Which time does Iceland use all year round?"
+     },
+     "ok": {
+      "fi": "Greenwichin aikaa (UTC±0)",
+      "en": "Greenwich time (UTC±0)"
+     },
+     "no": [
+      {
+       "fi": "Tunnin Greenwichin aikaa edellä",
+       "en": "One hour ahead of Greenwich"
+      },
+      {
+       "fi": "Tunnin Greenwichin aikaa jäljessä",
+       "en": "One hour behind Greenwich"
+      },
+      {
+       "fi": "Kaksi tuntia Greenwichin aikaa jäljessä",
+       "en": "Two hours behind Greenwich"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä aikavyöhykkeen aikaa Manner-Espanja käyttää läntisestä sijainnistaan huolimatta?",
+      "en": "Which time zone does mainland Spain use despite its western location?"
+     },
+     "ok": {
+      "fi": "Keski-Euroopan aikaa",
+      "en": "Central European Time"
+     },
+     "no": [
+      {
+       "fi": "Länsi-Euroopan aikaa",
+       "en": "Western European Time"
+      },
+      {
+       "fi": "Itä-Euroopan aikaa",
+       "en": "Eastern European Time"
+      },
+      {
+       "fi": "Atlantin aikaa",
+       "en": "Atlantic Time"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Intian virallinen aika?",
+      "en": "What is the official time in India?"
+     },
+     "ok": {
+      "fi": "UTC+5:30",
+      "en": "UTC+5:30"
+     },
+     "no": [
+      {
+       "fi": "UTC+5",
+       "en": "UTC+5"
+      },
+      {
+       "fi": "UTC+6",
+       "en": "UTC+6"
+      },
+      {
+       "fi": "UTC+5:45",
+       "en": "UTC+5:45"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä maista on samassa aikavyöhykkeessä kuin Suomi?",
+      "en": "Which of these countries is in the same time zone as Finland?"
+     },
+     "ok": {
+      "fi": "Viro",
+      "en": "Estonia"
+     },
+     "no": [
+      {
+       "fi": "Ruotsi",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Norja",
+       "en": "Norway"
+      },
+      {
+       "fi": "Puola",
+       "en": "Poland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kahden naapurimaan rajalla kellonaika muuttuu peräti 3,5 tuntia?",
+      "en": "At which border between neighbouring countries does the clock change by 3.5 hours?"
+     },
+     "ok": {
+      "fi": "Afganistanin ja Kiinan",
+      "en": "Afghanistan and China"
+     },
+     "no": [
+      {
+       "fi": "Venäjän ja Kiinan",
+       "en": "Russia and China"
+      },
+      {
+       "fi": "Intian ja Kiinan",
+       "en": "India and China"
+      },
+      {
+       "fi": "Mongolian ja Venäjän",
+       "en": "Mongolia and Russia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Suomessa siirryttiin ensimmäisen kerran jokavuotiseen kesäaikaan?",
+      "en": "In which year did Finland adopt annual daylight saving time?"
+     },
+     "ok": {
+      "fi": "1981",
+      "en": "1981"
+     },
+     "no": [
+      {
+       "fi": "1942",
+       "en": "1942"
+      },
+      {
+       "fi": "1968",
+       "en": "1968"
+      },
+      {
+       "fi": "1995",
+       "en": "1995"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä Yhdysvaltain osavaltiossa ei Havaijin lisäksi pääosin käytetä kesäaikaa?",
+      "en": "Besides Hawaii, which US state mostly does not observe daylight saving time?"
+     },
+     "ok": {
+      "fi": "Arizona",
+      "en": "Arizona"
+     },
+     "no": [
+      {
+       "fi": "Alaska",
+       "en": "Alaska"
+      },
+      {
+       "fi": "Nevada",
+       "en": "Nevada"
+      },
+      {
+       "fi": "Utah",
+       "en": "Utah"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Lontoon kaupunginosa antoi nimensä nollameridiaanille ja GMT-ajalle?",
+      "en": "Which London district gave its name to the prime meridian and GMT?"
+     },
+     "ok": {
+      "fi": "Greenwich",
+      "en": "Greenwich"
+     },
+     "no": [
+      {
+       "fi": "Westminster",
+       "en": "Westminster"
+      },
+      {
+       "fi": "Camden",
+       "en": "Camden"
+      },
+      {
+       "fi": "Kensington",
+       "en": "Kensington"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-suomen-ensimmaiset",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Suomen ensimmäiset",
+    "en": "Finland's firsts"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minkä kaupunkien välille Suomen ensimmäinen rautatie avattiin vuonna 1862?",
+      "en": "Between which towns did Finland's first railway open in 1862?"
+     },
+     "ok": {
+      "fi": "Helsinki–Hämeenlinna",
+      "en": "Helsinki–Hämeenlinna"
+     },
+     "no": [
+      {
+       "fi": "Helsinki–Turku",
+       "en": "Helsinki–Turku"
+      },
+      {
+       "fi": "Turku–Tampere",
+       "en": "Turku–Tampere"
+      },
+      {
+       "fi": "Helsinki–Pietari",
+       "en": "Helsinki–St Petersburg"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin kaupunkiin Suomen ensimmäinen yliopisto perustettiin vuonna 1640?",
+      "en": "In which town was Finland's first university founded in 1640?"
+     },
+     "ok": {
+      "fi": "Turku",
+      "en": "Turku"
+     },
+     "no": [
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Viipuri",
+       "en": "Vyborg"
+      },
+      {
+       "fi": "Porvoo",
+       "en": "Porvoo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli ensimmäinen suomenkielinen painettu kirja?",
+      "en": "What was the first printed book in Finnish?"
+     },
+     "ok": {
+      "fi": "Abckiria",
+      "en": "Abckiria"
+     },
+     "no": [
+      {
+       "fi": "Rucouskiria",
+       "en": "Rucouskiria"
+      },
+      {
+       "fi": "Se Wsi Testamenti",
+       "en": "Se Wsi Testamenti"
+      },
+      {
+       "fi": "Kalevala",
+       "en": "Kalevala"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta naista valittiin eduskuntaan ensimmäisissä vaaleissa vuonna 1907?",
+      "en": "How many women were elected to parliament in the first election of 1907?"
+     },
+     "ok": {
+      "fi": "19",
+      "en": "19"
+     },
+     "no": [
+      {
+       "fi": "5",
+       "en": "5"
+      },
+      {
+       "fi": "12",
+       "en": "12"
+      },
+      {
+       "fi": "40",
+       "en": "40"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti Suomen ensimmäisen olympiakullan vuonna 1908?",
+      "en": "Who won Finland's first Olympic gold in 1908?"
+     },
+     "ok": {
+      "fi": "Verner Weckman",
+      "en": "Verner Weckman"
+     },
+     "no": [
+      {
+       "fi": "Hannes Kolehmainen",
+       "en": "Hannes Kolehmainen"
+      },
+      {
+       "fi": "Paavo Nurmi",
+       "en": "Paavo Nurmi"
+      },
+      {
+       "fi": "Ville Ritola",
+       "en": "Ville Ritola"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka soitti maailman ensimmäisen GSM-puhelun Suomessa vuonna 1991?",
+      "en": "Who made the world's first GSM call in Finland in 1991?"
+     },
+     "ok": {
+      "fi": "Harri Holkeri",
+      "en": "Harri Holkeri"
+     },
+     "no": [
+      {
+       "fi": "Mauno Koivisto",
+       "en": "Mauno Koivisto"
+      },
+      {
+       "fi": "Esko Aho",
+       "en": "Esko Aho"
+      },
+      {
+       "fi": "Paavo Lipponen",
+       "en": "Paavo Lipponen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Yleisradio aloitti säännölliset televisiolähetykset?",
+      "en": "In which year did Yleisradio (Yle) begin regular television broadcasts?"
+     },
+     "ok": {
+      "fi": "1958",
+      "en": "1958"
+     },
+     "no": [
+      {
+       "fi": "1948",
+       "en": "1948"
+      },
+      {
+       "fi": "1952",
+       "en": "1952"
+      },
+      {
+       "fi": "1965",
+       "en": "1965"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Suomen evankelis-luterilaisen kirkon ensimmäinen naispiispa (2010)?",
+      "en": "Who was the first female bishop of the Evangelical Lutheran Church of Finland (2010)?"
+     },
+     "ok": {
+      "fi": "Irja Askola",
+      "en": "Irja Askola"
+     },
+     "no": [
+      {
+       "fi": "Elisabeth Rehn",
+       "en": "Elisabeth Rehn"
+      },
+      {
+       "fi": "Riitta Uosukainen",
+       "en": "Riitta Uosukainen"
+      },
+      {
+       "fi": "Minna Canth",
+       "en": "Minna Canth"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Helsingin metro aloitti matkustajaliikenteen?",
+      "en": "In which year did the Helsinki Metro open to passengers?"
+     },
+     "ok": {
+      "fi": "1982",
+      "en": "1982"
+     },
+     "no": [
+      {
+       "fi": "1966",
+       "en": "1966"
+      },
+      {
+       "fi": "1971",
+       "en": "1971"
+      },
+      {
+       "fi": "1990",
+       "en": "1990"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä kielellä Suomen ensimmäinen sanomalehti ilmestyi Turussa vuonna 1771?",
+      "en": "In which language was Finland's first newspaper published in Turku in 1771?"
+     },
+     "ok": {
+      "fi": "Ruotsiksi",
+      "en": "Swedish"
+     },
+     "no": [
+      {
+       "fi": "Suomeksi",
+       "en": "Finnish"
+      },
+      {
+       "fi": "Latinaksi",
+       "en": "Latin"
+      },
+      {
+       "fi": "Saksaksi",
+       "en": "German"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Suomen ensimmäinen naisministeri (1926)?",
+      "en": "Who was Finland's first female cabinet minister (1926)?"
+     },
+     "ok": {
+      "fi": "Miina Sillanpää",
+      "en": "Miina Sillanpää"
+     },
+     "no": [
+      {
+       "fi": "Minna Canth",
+       "en": "Minna Canth"
+      },
+      {
+       "fi": "Hella Wuolijoki",
+       "en": "Hella Wuolijoki"
+      },
+      {
+       "fi": "Lucina Hagman",
+       "en": "Lucina Hagman"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli ensimmäinen suomalainen Formula 1 -maailmanmestari?",
+      "en": "Who was the first Finnish Formula One world champion?"
+     },
+     "ok": {
+      "fi": "Keke Rosberg",
+      "en": "Keke Rosberg"
+     },
+     "no": [
+      {
+       "fi": "Mika Häkkinen",
+       "en": "Mika Häkkinen"
+      },
+      {
+       "fi": "Kimi Räikkönen",
+       "en": "Kimi Räikkönen"
+      },
+      {
+       "fi": "Leo Kinnunen",
+       "en": "Leo Kinnunen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa syttyivät Pohjoismaiden ensimmäiset sähkövalot Finlaysonin tehtaalla vuonna 1882?",
+      "en": "In which city were the first electric lights in the Nordic countries lit at the Finlayson mill in 1882?"
+     },
+     "ok": {
+      "fi": "Tampere",
+      "en": "Tampere"
+     },
+     "no": [
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Turku",
+       "en": "Turku"
+      },
+      {
+       "fi": "Viipuri",
+       "en": "Vyborg"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna pidettiin Suomen ensimmäiset yleiseen ja yhtäläiseen äänioikeuteen perustuneet eduskuntavaalit?",
+      "en": "In which year were the first Finnish parliamentary elections with universal and equal suffrage held?"
+     },
+     "ok": {
+      "fi": "1907",
+      "en": "1907"
+     },
+     "no": [
+      {
+       "fi": "1863",
+       "en": "1863"
+      },
+      {
+       "fi": "1906",
+       "en": "1906"
+      },
+      {
+       "fi": "1917",
+       "en": "1917"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli ensimmäinen suomenkielinen romaani (1870)?",
+      "en": "What was the first novel written in Finnish (1870)?"
+     },
+     "ok": {
+      "fi": "Seitsemän veljestä",
+      "en": "Seven Brothers"
+     },
+     "no": [
+      {
+       "fi": "Tuntematon sotilas",
+       "en": "The Unknown Soldier"
+      },
+      {
+       "fi": "Sinuhe egyptiläinen",
+       "en": "The Egyptian"
+      },
+      {
+       "fi": "Rautatie",
+       "en": "Rautatie"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-suomi-1990-luvulla",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Suomi 1990-luvulla",
+    "en": "Finland in the 1990s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mitä markalle tehtiin syyskuussa 1992?",
+      "en": "What happened to the markka in September 1992?"
+     },
+     "ok": {
+      "fi": "Se päästettiin kellumaan",
+      "en": "It was allowed to float"
+     },
+     "no": [
+      {
+       "fi": "Se korvattiin eurolla",
+       "en": "It was replaced by the euro"
+      },
+      {
+       "fi": "Se sidottiin dollariin",
+       "en": "It was pegged to the dollar"
+      },
+      {
+       "fi": "Se revalvoitiin",
+       "en": "It was revalued"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenet Martti Ahtisaari voitti vuoden 1994 presidentinvaalin toisella kierroksella?",
+      "en": "Whom did Martti Ahtisaari beat in the second round of the 1994 presidential election?"
+     },
+     "ok": {
+      "fi": "Elisabeth Rehn",
+      "en": "Elisabeth Rehn"
+     },
+     "no": [
+      {
+       "fi": "Paavo Väyrynen",
+       "en": "Paavo Väyrynen"
+      },
+      {
+       "fi": "Tarja Halonen",
+       "en": "Tarja Halonen"
+      },
+      {
+       "fi": "Keijo Korhonen",
+       "en": "Keijo Korhonen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Suomen pääministeri vuosina 1995–2003?",
+      "en": "Who was prime minister of Finland in 1995–2003?"
+     },
+     "ok": {
+      "fi": "Paavo Lipponen",
+      "en": "Paavo Lipponen"
+     },
+     "no": [
+      {
+       "fi": "Esko Aho",
+       "en": "Esko Aho"
+      },
+      {
+       "fi": "Harri Holkeri",
+       "en": "Harri Holkeri"
+      },
+      {
+       "fi": "Matti Vanhanen",
+       "en": "Matti Vanhanen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka suuri osa äänestäneistä kannatti EU-jäsenyyttä vuoden 1994 kansanäänestyksessä?",
+      "en": "What share of voters backed EU membership in the 1994 referendum?"
+     },
+     "ok": {
+      "fi": "56,9 %",
+      "en": "56.9%"
+     },
+     "no": [
+      {
+       "fi": "50,4 %",
+       "en": "50.4%"
+      },
+      {
+       "fi": "64,2 %",
+       "en": "64.2%"
+      },
+      {
+       "fi": "73,0 %",
+       "en": "73.0%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Suomi toimi ensimmäistä kertaa EU:n neuvoston puheenjohtajamaana?",
+      "en": "In which year did Finland first hold the presidency of the Council of the EU?"
+     },
+     "ok": {
+      "fi": "1999",
+      "en": "1999"
+     },
+     "no": [
+      {
+       "fi": "1995",
+       "en": "1995"
+      },
+      {
+       "fi": "2002",
+       "en": "2002"
+      },
+      {
+       "fi": "2006",
+       "en": "2006"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Nokia nousi maailman suurimmaksi matkapuhelinvalmistajaksi?",
+      "en": "In which year did Nokia become the world's largest mobile phone maker?"
+     },
+     "ok": {
+      "fi": "1998",
+      "en": "1998"
+     },
+     "no": [
+      {
+       "fi": "1992",
+       "en": "1992"
+      },
+      {
+       "fi": "2002",
+       "en": "2002"
+      },
+      {
+       "fi": "2005",
+       "en": "2005"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuosina Mika Häkkinen voitti Formula 1:n maailmanmestaruuden?",
+      "en": "In which years did Mika Häkkinen win the Formula One world championship?"
+     },
+     "ok": {
+      "fi": "1998 ja 1999",
+      "en": "1998 and 1999"
+     },
+     "no": [
+      {
+       "fi": "1997 ja 1998",
+       "en": "1997 and 1998"
+      },
+      {
+       "fi": "1999 ja 2000",
+       "en": "1999 and 2000"
+      },
+      {
+       "fi": "2000 ja 2001",
+       "en": "2000 and 2001"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Linus Torvalds julkaisi Linux-ytimen ensimmäisen version?",
+      "en": "In which year did Linus Torvalds release the first version of the Linux kernel?"
+     },
+     "ok": {
+      "fi": "1991",
+      "en": "1991"
+     },
+     "no": [
+      {
+       "fi": "1985",
+       "en": "1985"
+      },
+      {
+       "fi": "1995",
+       "en": "1995"
+      },
+      {
+       "fi": "1999",
+       "en": "1999"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä matkustaja-autolautta upposi Itämerellä syyskuussa 1994?",
+      "en": "Which passenger car ferry sank in the Baltic Sea in September 1994?"
+     },
+     "ok": {
+      "fi": "M/S Estonia",
+      "en": "MS Estonia"
+     },
+     "no": [
+      {
+       "fi": "M/S Silja Europa",
+       "en": "MS Silja Europa"
+      },
+      {
+       "fi": "M/S Herald of Free Enterprise",
+       "en": "MS Herald of Free Enterprise"
+      },
+      {
+       "fi": "M/S Jan Heweliusz",
+       "en": "MS Jan Heweliusz"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä vuonna 1999 alkanut tv-sarja on Suomen pitkäikäisin draamasarja?",
+      "en": "Which TV series, begun in 1999, is Finland's longest-running drama series?"
+     },
+     "ok": {
+      "fi": "Salatut elämät",
+      "en": "Salatut elämät"
+     },
+     "no": [
+      {
+       "fi": "Kotikatu",
+       "en": "Kotikatu"
+      },
+      {
+       "fi": "Uusi päivä",
+       "en": "Uusi päivä"
+      },
+      {
+       "fi": "Pasila",
+       "en": "Pasila"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä pankin Suomen Pankki otti haltuunsa syyskuussa 1991 pankkikriisin alkaessa?",
+      "en": "Which bank did the Bank of Finland take over in September 1991 as the banking crisis began?"
+     },
+     "ok": {
+      "fi": "Skopbank",
+      "en": "Skopbank"
+     },
+     "no": [
+      {
+       "fi": "Kansallis-Osake-Pankki",
+       "en": "Kansallis-Osake-Pankki"
+      },
+      {
+       "fi": "Postipankki",
+       "en": "Postipankki"
+      },
+      {
+       "fi": "Okobank",
+       "en": "Okobank"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Remedy Entertainmentin ensimmäinen peli (1996)?",
+      "en": "What was Remedy Entertainment's first game (1996)?"
+     },
+     "ok": {
+      "fi": "Death Rally",
+      "en": "Death Rally"
+     },
+     "no": [
+      {
+       "fi": "Max Payne",
+       "en": "Max Payne"
+      },
+      {
+       "fi": "Alan Wake",
+       "en": "Alan Wake"
+      },
+      {
+       "fi": "Control",
+       "en": "Control"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Helsingin nykytaiteen museo avattiin vuonna 1998?",
+      "en": "Which Helsinki museum of contemporary art opened in 1998?"
+     },
+     "ok": {
+      "fi": "Kiasma",
+      "en": "Kiasma"
+     },
+     "no": [
+      {
+       "fi": "Ateneum",
+       "en": "Ateneum"
+      },
+      {
+       "fi": "Amos Rex",
+       "en": "Amos Rex"
+      },
+      {
+       "fi": "Sinebrychoffin taidemuseo",
+       "en": "Sinebrychoff Art Museum"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Suomessa pidettiin ensimmäiset europarlamenttivaalit?",
+      "en": "In which year did Finland hold its first European Parliament election?"
+     },
+     "ok": {
+      "fi": "1996",
+      "en": "1996"
+     },
+     "no": [
+      {
+       "fi": "1994",
+       "en": "1994"
+      },
+      {
+       "fi": "1995",
+       "en": "1995"
+      },
+      {
+       "fi": "1999",
+       "en": "1999"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Suomen presidentti 1990-luvun alussa?",
+      "en": "Who was president of Finland in the early 1990s?"
+     },
+     "ok": {
+      "fi": "Mauno Koivisto",
+      "en": "Mauno Koivisto"
+     },
+     "no": [
+      {
+       "fi": "Urho Kekkonen",
+       "en": "Urho Kekkonen"
+      },
+      {
+       "fi": "Martti Ahtisaari",
+       "en": "Martti Ahtisaari"
+      },
+      {
+       "fi": "Tarja Halonen",
+       "en": "Tarja Halonen"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-suomi-1950-luvulla",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 144,
+   "title": {
+    "fi": "Suomi 1950-luvulla",
+    "en": "Finland in the 1950s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minkä kilpailun Armi Kuusela voitti vuonna 1952?",
+      "en": "Which contest did Armi Kuusela win in 1952?"
+     },
+     "ok": {
+      "fi": "Miss Universumin",
+      "en": "Miss Universe"
+     },
+     "no": [
+      {
+       "fi": "Miss Maailman",
+       "en": "Miss World"
+      },
+      {
+       "fi": "Miss Euroopan",
+       "en": "Miss Europe"
+      },
+      {
+       "fi": "Miss Skandinavian",
+       "en": "Miss Scandinavia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Suomi maksoi viimeisen sotakorvauserän Neuvostoliitolle?",
+      "en": "In which year did Finland deliver its last war reparations to the Soviet Union?"
+     },
+     "ok": {
+      "fi": "1952",
+      "en": "1952"
+     },
+     "no": [
+      {
+       "fi": "1948",
+       "en": "1948"
+      },
+      {
+       "fi": "1956",
+       "en": "1956"
+      },
+      {
+       "fi": "1960",
+       "en": "1960"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Neuvostoliitolle vuokrattu alue palautettiin Suomelle vuonna 1956?",
+      "en": "Which area leased to the Soviet Union was returned to Finland in 1956?"
+     },
+     "ok": {
+      "fi": "Porkkala",
+      "en": "Porkkala"
+     },
+     "no": [
+      {
+       "fi": "Hanko",
+       "en": "Hanko"
+      },
+      {
+       "fi": "Petsamo",
+       "en": "Petsamo"
+      },
+      {
+       "fi": "Karjalan kannas",
+       "en": "The Karelian Isthmus"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Suomi liittyi Yhdistyneisiin kansakuntiin?",
+      "en": "In which year did Finland join the United Nations?"
+     },
+     "ok": {
+      "fi": "1955",
+      "en": "1955"
+     },
+     "no": [
+      {
+       "fi": "1945",
+       "en": "1945"
+      },
+      {
+       "fi": "1947",
+       "en": "1947"
+      },
+      {
+       "fi": "1961",
+       "en": "1961"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka ohjasi Tuntemattoman sotilaan ensimmäisen elokuvaversion (1955)?",
+      "en": "Who directed the first film version of The Unknown Soldier (1955)?"
+     },
+     "ok": {
+      "fi": "Edvin Laine",
+      "en": "Edvin Laine"
+     },
+     "no": [
+      {
+       "fi": "Rauni Mollberg",
+       "en": "Rauni Mollberg"
+      },
+      {
+       "fi": "Aku Louhimies",
+       "en": "Aku Louhimies"
+      },
+      {
+       "fi": "Aki Kaurismäki",
+       "en": "Aki Kaurismäki"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Suomessa oli maaliskuussa lähes kolme viikkoa kestänyt yleislakko?",
+      "en": "In which year did Finland have a general strike lasting almost three weeks in March?"
+     },
+     "ok": {
+      "fi": "1956",
+      "en": "1956"
+     },
+     "no": [
+      {
+       "fi": "1949",
+       "en": "1949"
+      },
+      {
+       "fi": "1962",
+       "en": "1962"
+      },
+      {
+       "fi": "1971",
+       "en": "1971"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenet Urho Kekkonen voitti vuoden 1956 presidentinvaalissa valitsijamiesäänin 151–149?",
+      "en": "Whom did Urho Kekkonen beat 151–149 in the electoral college in 1956?"
+     },
+     "ok": {
+      "fi": "K.-A. Fagerholm",
+      "en": "K.-A. Fagerholm"
+     },
+     "no": [
+      {
+       "fi": "J. K. Paasikivi",
+       "en": "J. K. Paasikivi"
+      },
+      {
+       "fi": "Väinö Tanner",
+       "en": "Väinö Tanner"
+      },
+      {
+       "fi": "Sakari Tuomioja",
+       "en": "Sakari Tuomioja"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka juoksulegenda sytytti Helsingin olympialaisten tulen stadionin tornissa Paavo Nurmen jälkeen vuonna 1952?",
+      "en": "Which running legend lit the Olympic flame in the stadium tower after Paavo Nurmi in Helsinki in 1952?"
+     },
+     "ok": {
+      "fi": "Hannes Kolehmainen",
+      "en": "Hannes Kolehmainen"
+     },
+     "no": [
+      {
+       "fi": "Lasse Virén",
+       "en": "Lasse Virén"
+      },
+      {
+       "fi": "Ville Ritola",
+       "en": "Ville Ritola"
+      },
+      {
+       "fi": "Volmari Iso-Hollo",
+       "en": "Volmari Iso-Hollo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan sanomalehdessä Tove Janssonin Muumi-sarjakuva alkoi ilmestyä vuonna 1954?",
+      "en": "In which country's newspaper did Tove Jansson's Moomin comic strip begin in 1954?"
+     },
+     "ok": {
+      "fi": "Yhdistyneen kuningaskunnan",
+      "en": "United Kingdom"
+     },
+     "no": [
+      {
+       "fi": "Ruotsin",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Yhdysvaltain",
+       "en": "United States"
+      },
+      {
+       "fi": "Suomen",
+       "en": "Finland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä lentoasema otettiin käyttöön vuonna 1952 Helsingin olympialaisia varten?",
+      "en": "Which airport opened in 1952 for the Helsinki Olympics?"
+     },
+     "ok": {
+      "fi": "Seutulan lentoasema (nyk. Helsinki-Vantaa)",
+      "en": "Seutula (now Helsinki-Vantaa)"
+     },
+     "no": [
+      {
+       "fi": "Malmin lentoasema",
+       "en": "Malmi Airport"
+      },
+      {
+       "fi": "Pirkkalan lentoasema",
+       "en": "Pirkkala Airport"
+      },
+      {
+       "fi": "Turun lentoasema",
+       "en": "Turku Airport"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Suomen presidentti vuosina 1946–1956?",
+      "en": "Who was president of Finland in 1946–1956?"
+     },
+     "ok": {
+      "fi": "J. K. Paasikivi",
+      "en": "J. K. Paasikivi"
+     },
+     "no": [
+      {
+       "fi": "C. G. E. Mannerheim",
+       "en": "C. G. E. Mannerheim"
+      },
+      {
+       "fi": "Urho Kekkonen",
+       "en": "Urho Kekkonen"
+      },
+      {
+       "fi": "Risto Ryti",
+       "en": "Risto Ryti"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä Jean Sibelius kuoli vuonna 1957?",
+      "en": "Where did Jean Sibelius die in 1957?"
+     },
+     "ok": {
+      "fi": "Järvenpäässä",
+      "en": "Järvenpää"
+     },
+     "no": [
+      {
+       "fi": "Helsingissä",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Hämeenlinnassa",
+       "en": "Hämeenlinna"
+      },
+      {
+       "fi": "Turussa",
+       "en": "Turku"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-suomi-luvuin",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Suomi luvuin: yllättävät tilastot",
+    "en": "Finland in numbers: surprising statistics"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuinka monta vähintään 5 aarin järveä Suomessa on?",
+      "en": "How many lakes of at least 5 ares (500 m²) are there in Finland?"
+     },
+     "ok": {
+      "fi": "Noin 188 000",
+      "en": "About 188,000"
+     },
+     "no": [
+      {
+       "fi": "Noin 56 000",
+       "en": "About 56,000"
+      },
+      {
+       "fi": "Noin 20 000",
+       "en": "About 20,000"
+      },
+      {
+       "fi": "Noin miljoona",
+       "en": "About a million"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta saunaa Suomessa arvioidaan olevan?",
+      "en": "How many saunas are there estimated to be in Finland?"
+     },
+     "ok": {
+      "fi": "Noin 3 miljoonaa",
+      "en": "About 3 million"
+     },
+     "no": [
+      {
+       "fi": "Noin 300 000",
+       "en": "About 300,000"
+      },
+      {
+       "fi": "Noin miljoona",
+       "en": "About 1 million"
+      },
+      {
+       "fi": "Noin 10 miljoonaa",
+       "en": "About 10 million"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka paljon maa kohoaa vuodessa Merenkurkun alueella?",
+      "en": "How much does the land rise each year in the Kvarken area?"
+     },
+     "ok": {
+      "fi": "Noin 8 mm",
+      "en": "About 8 mm"
+     },
+     "no": [
+      {
+       "fi": "Noin 1 mm",
+       "en": "About 1 mm"
+      },
+      {
+       "fi": "Noin 5 cm",
+       "en": "About 5 cm"
+      },
+      {
+       "fi": "Noin 30 cm",
+       "en": "About 30 cm"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka pitkä on Suomen ja Venäjän välinen maaraja?",
+      "en": "How long is the land border between Finland and Russia?"
+     },
+     "ok": {
+      "fi": "Noin 1 340 km",
+      "en": "About 1,340 km"
+     },
+     "no": [
+      {
+       "fi": "Noin 600 km",
+       "en": "About 600 km"
+      },
+      {
+       "fi": "Noin 2 400 km",
+       "en": "About 2,400 km"
+      },
+      {
+       "fi": "Noin 4 000 km",
+       "en": "About 4,000 km"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä maalla on saarilaskennan mukaan eniten saaria maailmassa?",
+      "en": "According to island counts, which country has the most islands in the world?"
+     },
+     "ok": {
+      "fi": "Ruotsilla",
+      "en": "Sweden"
+     },
+     "no": [
+      {
+       "fi": "Suomella",
+       "en": "Finland"
+      },
+      {
+       "fi": "Norjalla",
+       "en": "Norway"
+      },
+      {
+       "fi": "Indonesialla",
+       "en": "Indonesia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa on Haltin varsinainen huippu?",
+      "en": "In which country is the actual summit of Halti?"
+     },
+     "ok": {
+      "fi": "Norjassa",
+      "en": "Norway"
+     },
+     "no": [
+      {
+       "fi": "Suomessa",
+       "en": "Finland"
+      },
+      {
+       "fi": "Ruotsissa",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Venäjällä",
+       "en": "Russia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Suomen virallinen lämpöennätys (Liperi, 2010)?",
+      "en": "What is Finland's official heat record (Liperi, 2010)?"
+     },
+     "ok": {
+      "fi": "37,2 °C",
+      "en": "37.2 °C"
+     },
+     "no": [
+      {
+       "fi": "33,6 °C",
+       "en": "33.6 °C"
+      },
+      {
+       "fi": "35,0 °C",
+       "en": "35.0 °C"
+      },
+      {
+       "fi": "40,1 °C",
+       "en": "40.1 °C"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Suomen virallinen pakkasennätys (Kittilä, 1999)?",
+      "en": "What is Finland's official cold record (Kittilä, 1999)?"
+     },
+     "ok": {
+      "fi": "−51,5 °C",
+      "en": "−51.5 °C"
+     },
+     "no": [
+      {
+       "fi": "−45,0 °C",
+       "en": "−45.0 °C"
+      },
+      {
+       "fi": "−57,0 °C",
+       "en": "−57.0 °C"
+      },
+      {
+       "fi": "−62,0 °C",
+       "en": "−62.0 °C"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta kesämökkiä Suomessa on?",
+      "en": "How many summer cottages are there in Finland?"
+     },
+     "ok": {
+      "fi": "Noin 500 000",
+      "en": "About 500,000"
+     },
+     "no": [
+      {
+       "fi": "Noin 50 000",
+       "en": "About 50,000"
+      },
+      {
+       "fi": "Noin 150 000",
+       "en": "About 150,000"
+      },
+      {
+       "fi": "Noin 2 miljoonaa",
+       "en": "About 2 million"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka kauan aurinko on kesällä laskematta Utsjoella?",
+      "en": "For how long does the sun stay above the horizon in summer in Utsjoki?"
+     },
+     "ok": {
+      "fi": "Noin 70 vuorokautta",
+      "en": "About 70 days"
+     },
+     "no": [
+      {
+       "fi": "Noin 10 vuorokautta",
+       "en": "About 10 days"
+      },
+      {
+       "fi": "Noin 30 vuorokautta",
+       "en": "About 30 days"
+      },
+      {
+       "fi": "Noin 120 vuorokautta",
+       "en": "About 120 days"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka suuri osa Suomen kokonaispinta-alasta on sisävesiä?",
+      "en": "What share of Finland's total area is inland water?"
+     },
+     "ok": {
+      "fi": "Noin 10 %",
+      "en": "About 10%"
+     },
+     "no": [
+      {
+       "fi": "Noin 2 %",
+       "en": "About 2%"
+      },
+      {
+       "fi": "Noin 25 %",
+       "en": "About 25%"
+      },
+      {
+       "fi": "Noin 40 %",
+       "en": "About 40%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monta asukasta Ahvenanmaalla on?",
+      "en": "How many people live in Åland?"
+     },
+     "ok": {
+      "fi": "Noin 30 000",
+      "en": "About 30,000"
+     },
+     "no": [
+      {
+       "fi": "Noin 3 000",
+       "en": "About 3,000"
+      },
+      {
+       "fi": "Noin 100 000",
+       "en": "About 100,000"
+      },
+      {
+       "fi": "Noin 300 000",
+       "en": "About 300,000"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka pitkä Suomi on etelästä pohjoiseen?",
+      "en": "How long is Finland from south to north?"
+     },
+     "ok": {
+      "fi": "Noin 1 160 km",
+      "en": "About 1,160 km"
+     },
+     "no": [
+      {
+       "fi": "Noin 600 km",
+       "en": "About 600 km"
+      },
+      {
+       "fi": "Noin 850 km",
+       "en": "About 850 km"
+      },
+      {
+       "fi": "Noin 2 000 km",
+       "en": "About 2,000 km"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "valinta-3-ruotsinkieliset-nimet",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 228,
+   "title": {
+    "fi": "Suomen kaupunkien ruotsinkieliset nimet",
+    "en": "Swedish names of Finnish towns"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Uleåborg?",
+      "en": "Which town is called Uleåborg in Swedish?"
+     },
+     "ok": {
+      "fi": "Oulu",
+      "en": "Oulu"
+     },
+     "no": [
+      {
+       "fi": "Ulvila",
+       "en": "Ulvila"
+      },
+      {
+       "fi": "Uusikaupunki",
+       "en": "Uusikaupunki"
+      },
+      {
+       "fi": "Kokkola",
+       "en": "Kokkola"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Björneborg?",
+      "en": "Which town is called Björneborg in Swedish?"
+     },
+     "ok": {
+      "fi": "Pori",
+      "en": "Pori"
+     },
+     "no": [
+      {
+       "fi": "Porvoo",
+       "en": "Porvoo"
+      },
+      {
+       "fi": "Kokkola",
+       "en": "Kokkola"
+      },
+      {
+       "fi": "Kajaani",
+       "en": "Kajaani"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Tavastehus?",
+      "en": "Which town is called Tavastehus in Swedish?"
+     },
+     "ok": {
+      "fi": "Hämeenlinna",
+      "en": "Hämeenlinna"
+     },
+     "no": [
+      {
+       "fi": "Tampere",
+       "en": "Tampere"
+      },
+      {
+       "fi": "Hamina",
+       "en": "Hamina"
+      },
+      {
+       "fi": "Heinola",
+       "en": "Heinola"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Karleby?",
+      "en": "Which town is called Karleby in Swedish?"
+     },
+     "ok": {
+      "fi": "Kokkola",
+      "en": "Kokkola"
+     },
+     "no": [
+      {
+       "fi": "Kaarina",
+       "en": "Kaarina"
+      },
+      {
+       "fi": "Kristiinankaupunki",
+       "en": "Kristiinankaupunki"
+      },
+      {
+       "fi": "Kotka",
+       "en": "Kotka"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Jakobstad?",
+      "en": "Which town is called Jakobstad in Swedish?"
+     },
+     "ok": {
+      "fi": "Pietarsaari",
+      "en": "Pietarsaari"
+     },
+     "no": [
+      {
+       "fi": "Jyväskylä",
+       "en": "Jyväskylä"
+      },
+      {
+       "fi": "Uusikaarlepyy",
+       "en": "Uusikaarlepyy"
+      },
+      {
+       "fi": "Raahe",
+       "en": "Raahe"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Nystad?",
+      "en": "Which town is called Nystad in Swedish?"
+     },
+     "ok": {
+      "fi": "Uusikaupunki",
+      "en": "Uusikaupunki"
+     },
+     "no": [
+      {
+       "fi": "Uusikaarlepyy",
+       "en": "Uusikaarlepyy"
+      },
+      {
+       "fi": "Naantali",
+       "en": "Naantali"
+      },
+      {
+       "fi": "Savonlinna",
+       "en": "Savonlinna"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Brahestad?",
+      "en": "Which town is called Brahestad in Swedish?"
+     },
+     "ok": {
+      "fi": "Raahe",
+      "en": "Raahe"
+     },
+     "no": [
+      {
+       "fi": "Pietarsaari",
+       "en": "Pietarsaari"
+      },
+      {
+       "fi": "Kristiinankaupunki",
+       "en": "Kristiinankaupunki"
+      },
+      {
+       "fi": "Rauma",
+       "en": "Rauma"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Fredrikshamn?",
+      "en": "Which town is called Fredrikshamn in Swedish?"
+     },
+     "ok": {
+      "fi": "Hamina",
+      "en": "Hamina"
+     },
+     "no": [
+      {
+       "fi": "Kotka",
+       "en": "Kotka"
+      },
+      {
+       "fi": "Loviisa",
+       "en": "Loviisa"
+      },
+      {
+       "fi": "Hanko",
+       "en": "Hanko"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Villmanstrand?",
+      "en": "Which town is called Villmanstrand in Swedish?"
+     },
+     "ok": {
+      "fi": "Lappeenranta",
+      "en": "Lappeenranta"
+     },
+     "no": [
+      {
+       "fi": "Lahti",
+       "en": "Lahti"
+      },
+      {
+       "fi": "Savonlinna",
+       "en": "Savonlinna"
+      },
+      {
+       "fi": "Mikkeli",
+       "en": "Mikkeli"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Nyslott?",
+      "en": "Which town is called Nyslott in Swedish?"
+     },
+     "ok": {
+      "fi": "Savonlinna",
+      "en": "Savonlinna"
+     },
+     "no": [
+      {
+       "fi": "Uusikaupunki",
+       "en": "Uusikaupunki"
+      },
+      {
+       "fi": "Lappeenranta",
+       "en": "Lappeenranta"
+      },
+      {
+       "fi": "Naantali",
+       "en": "Naantali"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi S:t Michel?",
+      "en": "Which town is called S:t Michel in Swedish?"
+     },
+     "ok": {
+      "fi": "Mikkeli",
+      "en": "Mikkeli"
+     },
+     "no": [
+      {
+       "fi": "Kaarina",
+       "en": "Kaarina"
+      },
+      {
+       "fi": "Pietarsaari",
+       "en": "Pietarsaari"
+      },
+      {
+       "fi": "Joensuu",
+       "en": "Joensuu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä paikka on ruotsiksi Ekenäs?",
+      "en": "Which place is called Ekenäs in Swedish?"
+     },
+     "ok": {
+      "fi": "Tammisaari",
+      "en": "Tammisaari"
+     },
+     "no": [
+      {
+       "fi": "Tammela",
+       "en": "Tammela"
+      },
+      {
+       "fi": "Kemiö",
+       "en": "Kemiö"
+      },
+      {
+       "fi": "Kirkkonummi",
+       "en": "Kirkkonummi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Borgå?",
+      "en": "Which town is called Borgå in Swedish?"
+     },
+     "ok": {
+      "fi": "Porvoo",
+      "en": "Porvoo"
+     },
+     "no": [
+      {
+       "fi": "Pori",
+       "en": "Pori"
+      },
+      {
+       "fi": "Pornainen",
+       "en": "Pornainen"
+      },
+      {
+       "fi": "Parainen",
+       "en": "Parainen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Träskända?",
+      "en": "Which town is called Träskända in Swedish?"
+     },
+     "ok": {
+      "fi": "Järvenpää",
+      "en": "Järvenpää"
+     },
+     "no": [
+      {
+       "fi": "Kerava",
+       "en": "Kerava"
+      },
+      {
+       "fi": "Tuusula",
+       "en": "Tuusula"
+      },
+      {
+       "fi": "Hyvinkää",
+       "en": "Hyvinkää"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Grankulla?",
+      "en": "Which town is called Grankulla in Swedish?"
+     },
+     "ok": {
+      "fi": "Kauniainen",
+      "en": "Kauniainen"
+     },
+     "no": [
+      {
+       "fi": "Kuusamo",
+       "en": "Kuusamo"
+      },
+      {
+       "fi": "Kaarina",
+       "en": "Kaarina"
+      },
+      {
+       "fi": "Kirkkonummi",
+       "en": "Kirkkonummi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Idensalmi?",
+      "en": "Which town is called Idensalmi in Swedish?"
+     },
+     "ok": {
+      "fi": "Iisalmi",
+      "en": "Iisalmi"
+     },
+     "no": [
+      {
+       "fi": "Ii",
+       "en": "Ii"
+      },
+      {
+       "fi": "Imatra",
+       "en": "Imatra"
+      },
+      {
+       "fi": "Isokyrö",
+       "en": "Isokyrö"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Nådendal?",
+      "en": "Which town is called Nådendal in Swedish?"
+     },
+     "ok": {
+      "fi": "Naantali",
+      "en": "Naantali"
+     },
+     "no": [
+      {
+       "fi": "Nauvo",
+       "en": "Nauvo"
+      },
+      {
+       "fi": "Uusikaupunki",
+       "en": "Uusikaupunki"
+      },
+      {
+       "fi": "Kemiönsaari",
+       "en": "Kemiönsaari"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Nykarleby?",
+      "en": "Which town is called Nykarleby in Swedish?"
+     },
+     "ok": {
+      "fi": "Uusikaarlepyy",
+      "en": "Uusikaarlepyy"
+     },
+     "no": [
+      {
+       "fi": "Uusikaupunki",
+       "en": "Uusikaupunki"
+      },
+      {
+       "fi": "Kokkola",
+       "en": "Kokkola"
+      },
+      {
+       "fi": "Kristiinankaupunki",
+       "en": "Kristiinankaupunki"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki on ruotsiksi Tammerfors?",
+      "en": "Which town is called Tammerfors in Swedish?"
+     },
+     "ok": {
+      "fi": "Tampere",
+      "en": "Tampere"
+     },
+     "no": [
+      {
+       "fi": "Tammisaari",
+       "en": "Tammisaari"
+      },
+      {
+       "fi": "Tornio",
+       "en": "Tornio"
+      },
+      {
+       "fi": "Turku",
+       "en": "Turku"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

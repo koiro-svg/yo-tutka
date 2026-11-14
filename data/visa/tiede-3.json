@@ -1,0 +1,6370 @@
+{
+ "quizzes": [
+  {
+   "id": "tiede-3-alkuaineet-paikat",
+   "cat": "tiede",
+   "t": 210,
+   "title": {
+    "fi": "30 paikan mukaan nimettyä alkuainetta (vihjeenä paikka)",
+    "en": "30 chemical elements named after a place (the place is the clue)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Paikka",
+    "en": "Place"
+   },
+   "items": [
+    {
+     "fi": [
+      "Magnesium"
+     ],
+     "en": [
+      "Magnesium"
+     ],
+     "h": {
+      "fi": "Magnesia (Kreikka)",
+      "en": "Magnesia (Greece)"
+     }
+    },
+    {
+     "fi": [
+      "Kupari"
+     ],
+     "en": [
+      "Copper"
+     ],
+     "h": {
+      "fi": "Kypros",
+      "en": "Cyprus"
+     }
+    },
+    {
+     "fi": [
+      "Mangaani"
+     ],
+     "en": [
+      "Manganese"
+     ],
+     "h": {
+      "fi": "Magnesia (Kreikka)",
+      "en": "Magnesia (Greece)"
+     }
+    },
+    {
+     "fi": [
+      "Skandium"
+     ],
+     "en": [
+      "Scandium"
+     ],
+     "h": {
+      "fi": "Skandinavia",
+      "en": "Scandinavia"
+     }
+    },
+    {
+     "fi": [
+      "Gallium"
+     ],
+     "en": [
+      "Gallium"
+     ],
+     "h": {
+      "fi": "Gallia (muinainen Ranska)",
+      "en": "Gaul (ancient France)"
+     }
+    },
+    {
+     "fi": [
+      "Germanium"
+     ],
+     "en": [
+      "Germanium"
+     ],
+     "h": {
+      "fi": "Saksa",
+      "en": "Germany"
+     }
+    },
+    {
+     "fi": [
+      "Strontium"
+     ],
+     "en": [
+      "Strontium"
+     ],
+     "h": {
+      "fi": "Strontian (Skotlanti)",
+      "en": "Strontian (Scotland)"
+     }
+    },
+    {
+     "fi": [
+      "Yttrium"
+     ],
+     "en": [
+      "Yttrium"
+     ],
+     "h": {
+      "fi": "Ytterby (Ruotsi)",
+      "en": "Ytterby (Sweden)"
+     }
+    },
+    {
+     "fi": [
+      "Terbium"
+     ],
+     "en": [
+      "Terbium"
+     ],
+     "h": {
+      "fi": "Ytterby (Ruotsi)",
+      "en": "Ytterby (Sweden)"
+     }
+    },
+    {
+     "fi": [
+      "Erbium"
+     ],
+     "en": [
+      "Erbium"
+     ],
+     "h": {
+      "fi": "Ytterby (Ruotsi)",
+      "en": "Ytterby (Sweden)"
+     }
+    },
+    {
+     "fi": [
+      "Ytterbium"
+     ],
+     "en": [
+      "Ytterbium"
+     ],
+     "h": {
+      "fi": "Ytterby (Ruotsi)",
+      "en": "Ytterby (Sweden)"
+     }
+    },
+    {
+     "fi": [
+      "Tulium"
+     ],
+     "en": [
+      "Thulium"
+     ],
+     "h": {
+      "fi": "Thule (myyttinen pohjoinen maa)",
+      "en": "Thule (mythical northern land)"
+     }
+    },
+    {
+     "fi": [
+      "Holmium"
+     ],
+     "en": [
+      "Holmium"
+     ],
+     "h": {
+      "fi": "Tukholma",
+      "en": "Stockholm"
+     }
+    },
+    {
+     "fi": [
+      "Hafnium"
+     ],
+     "en": [
+      "Hafnium"
+     ],
+     "h": {
+      "fi": "Kööpenhamina",
+      "en": "Copenhagen"
+     }
+    },
+    {
+     "fi": [
+      "Lutetium"
+     ],
+     "en": [
+      "Lutetium"
+     ],
+     "h": {
+      "fi": "Pariisi",
+      "en": "Paris"
+     }
+    },
+    {
+     "fi": [
+      "Renium"
+     ],
+     "en": [
+      "Rhenium"
+     ],
+     "h": {
+      "fi": "Rein-joki",
+      "en": "River Rhine"
+     }
+    },
+    {
+     "fi": [
+      "Rutenium"
+     ],
+     "en": [
+      "Ruthenium"
+     ],
+     "h": {
+      "fi": "Ruthenia (Venäjä)",
+      "en": "Ruthenia (Russia)"
+     }
+    },
+    {
+     "fi": [
+      "Polonium"
+     ],
+     "en": [
+      "Polonium"
+     ],
+     "h": {
+      "fi": "Puola",
+      "en": "Poland"
+     }
+    },
+    {
+     "fi": [
+      "Frankium"
+     ],
+     "en": [
+      "Francium"
+     ],
+     "h": {
+      "fi": "Ranska",
+      "en": "France"
+     }
+    },
+    {
+     "fi": [
+      "Europium"
+     ],
+     "en": [
+      "Europium"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "Amerikium"
+     ],
+     "en": [
+      "Americium"
+     ],
+     "h": {
+      "fi": "Amerikka",
+      "en": "The Americas"
+     }
+    },
+    {
+     "fi": [
+      "Berkelium"
+     ],
+     "en": [
+      "Berkelium"
+     ],
+     "h": {
+      "fi": "Berkeley (Kalifornia)",
+      "en": "Berkeley (California)"
+     }
+    },
+    {
+     "fi": [
+      "Kalifornium"
+     ],
+     "en": [
+      "Californium"
+     ],
+     "h": {
+      "fi": "Kalifornia",
+      "en": "California"
+     }
+    },
+    {
+     "fi": [
+      "Dubnium"
+     ],
+     "en": [
+      "Dubnium"
+     ],
+     "h": {
+      "fi": "Dubna (Venäjä)",
+      "en": "Dubna (Russia)"
+     }
+    },
+    {
+     "fi": [
+      "Hassium"
+     ],
+     "en": [
+      "Hassium"
+     ],
+     "h": {
+      "fi": "Hessen (Saksa)",
+      "en": "Hesse (Germany)"
+     }
+    },
+    {
+     "fi": [
+      "Darmstadtium"
+     ],
+     "en": [
+      "Darmstadtium"
+     ],
+     "h": {
+      "fi": "Darmstadt (Saksa)",
+      "en": "Darmstadt (Germany)"
+     }
+    },
+    {
+     "fi": [
+      "Nihonium"
+     ],
+     "en": [
+      "Nihonium"
+     ],
+     "h": {
+      "fi": "Japani (japaniksi Nihon)",
+      "en": "Japan (Nihon in Japanese)"
+     }
+    },
+    {
+     "fi": [
+      "Moskovium"
+     ],
+     "en": [
+      "Moscovium"
+     ],
+     "h": {
+      "fi": "Moskova",
+      "en": "Moscow"
+     }
+    },
+    {
+     "fi": [
+      "Livermorium"
+     ],
+     "en": [
+      "Livermorium"
+     ],
+     "h": {
+      "fi": "Livermore (Kalifornia)",
+      "en": "Livermore (California)"
+     }
+    },
+    {
+     "fi": [
+      "Tennessiini"
+     ],
+     "en": [
+      "Tennessine"
+     ],
+     "h": {
+      "fi": "Tennessee",
+      "en": "Tennessee"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-alkuaineet-henkilot",
+   "cat": "tiede",
+   "t": 144,
+   "title": {
+    "fi": "Henkilön mukaan nimetyt 16 alkuainetta (vihjeenä henkilön kuvaus)",
+    "en": "16 chemical elements named after a person (the clue describes the person)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kuka",
+    "en": "Who"
+   },
+   "items": [
+    {
+     "fi": [
+      "Gadolinium"
+     ],
+     "en": [
+      "Gadolinium"
+     ],
+     "h": {
+      "fi": "Suomalainen kemisti, joka löysi yttriumin oksidin Ytterbyn kivestä",
+      "en": "Finnish chemist who found yttria in a mineral from Ytterby"
+     }
+    },
+    {
+     "fi": [
+      "Samarium"
+     ],
+     "en": [
+      "Samarium"
+     ],
+     "h": {
+      "fi": "Venäläinen kaivosupseeri, mineraali samarskiitin kaima",
+      "en": "Russian mining officer after whom the mineral samarskite was named"
+     }
+    },
+    {
+     "fi": [
+      "Curium"
+     ],
+     "en": [
+      "Curium"
+     ],
+     "h": {
+      "fi": "Pariisissa työskennellyt radioaktiivisuuden tutkijapariskunta",
+      "en": "Married couple in Paris who pioneered radioactivity research"
+     }
+    },
+    {
+     "fi": [
+      "Einsteinium"
+     ],
+     "en": [
+      "Einsteinium"
+     ],
+     "h": {
+      "fi": "Suhteellisuusteorian kehittäjä",
+      "en": "Developer of the theory of relativity"
+     }
+    },
+    {
+     "fi": [
+      "Fermium"
+     ],
+     "en": [
+      "Fermium"
+     ],
+     "h": {
+      "fi": "Italialainen, joka käynnisti ensimmäisen ydinreaktorin Chicagossa 1942",
+      "en": "Italian who started the first nuclear reactor in Chicago in 1942"
+     }
+    },
+    {
+     "fi": [
+      "Mendelevium"
+     ],
+     "en": [
+      "Mendelevium"
+     ],
+     "h": {
+      "fi": "Venäläinen jaksollisen järjestelmän laatija",
+      "en": "Russian creator of the periodic table"
+     }
+    },
+    {
+     "fi": [
+      "Nobelium"
+     ],
+     "en": [
+      "Nobelium"
+     ],
+     "h": {
+      "fi": "Dynamiitin keksijä ja palkintojen lahjoittaja",
+      "en": "Inventor of dynamite who funded famous prizes"
+     }
+    },
+    {
+     "fi": [
+      "Lawrencium"
+     ],
+     "en": [
+      "Lawrencium"
+     ],
+     "h": {
+      "fi": "Syklotronin keksijä",
+      "en": "Inventor of the cyclotron"
+     }
+    },
+    {
+     "fi": [
+      "Rutherfordium"
+     ],
+     "en": [
+      "Rutherfordium"
+     ],
+     "h": {
+      "fi": "Uusiseelantilainen, joka löysi atomiytimen",
+      "en": "New Zealander who discovered the atomic nucleus"
+     }
+    },
+    {
+     "fi": [
+      "Seaborgium"
+     ],
+     "en": [
+      "Seaborgium"
+     ],
+     "h": {
+      "fi": "Yhdysvaltalainen, joka oli mukana löytämässä plutoniumin",
+      "en": "American co-discoverer of plutonium"
+     }
+    },
+    {
+     "fi": [
+      "Bohrium"
+     ],
+     "en": [
+      "Bohrium"
+     ],
+     "h": {
+      "fi": "Tanskalainen, joka kehitti atomimallin elektronikuorineen",
+      "en": "Dane who devised the atom model with electron shells"
+     }
+    },
+    {
+     "fi": [
+      "Meitnerium"
+     ],
+     "en": [
+      "Meitnerium"
+     ],
+     "h": {
+      "fi": "Itävaltalainen fyysikko, joka selitti ydinfission",
+      "en": "Austrian physicist who explained nuclear fission"
+     }
+    },
+    {
+     "fi": [
+      "Röntgenium"
+     ],
+     "en": [
+      "Roentgenium",
+      "Röntgenium"
+     ],
+     "h": {
+      "fi": "Saksalainen, joka löysi X-säteet 1895",
+      "en": "German who discovered X-rays in 1895"
+     }
+    },
+    {
+     "fi": [
+      "Kopernikium"
+     ],
+     "en": [
+      "Copernicium"
+     ],
+     "h": {
+      "fi": "Puolalainen tähtitieteilijä, aurinkokeskisen mallin esittäjä",
+      "en": "Polish astronomer who proposed the heliocentric model"
+     }
+    },
+    {
+     "fi": [
+      "Flerovium"
+     ],
+     "en": [
+      "Flerovium"
+     ],
+     "h": {
+      "fi": "Neuvostofyysikko, Dubnan ydinreaktiolaboratorion perustaja",
+      "en": "Soviet physicist who founded the nuclear reactions lab in Dubna"
+     }
+    },
+    {
+     "fi": [
+      "Oganesson"
+     ],
+     "en": [
+      "Oganesson"
+     ],
+     "h": {
+      "fi": "Armenialais-venäläinen superraskaiden alkuaineiden tutkija",
+      "en": "Armenian-Russian researcher of superheavy elements"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-merkit-a-z",
+   "cat": "tiede",
+   "t": 216,
+   "title": {
+    "fi": "Nimeä alkuaine, jonka kemiallinen merkki alkaa kirjaimella… (24 kirjainta A–Z)",
+    "en": "Name an element whose chemical symbol starts with the letter… (24 letters A–Z)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Aktinium",
+      "Hopea",
+      "Alumiini",
+      "Amerikium",
+      "Argon",
+      "Arseeni",
+      "Astatiini",
+      "Kulta"
+     ],
+     "en": [
+      "Actinium",
+      "Silver",
+      "Aluminium",
+      "Aluminum",
+      "Americium",
+      "Argon",
+      "Arsenic",
+      "Astatine",
+      "Gold"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Boori",
+      "Barium",
+      "Beryllium",
+      "Bohrium",
+      "Vismutti",
+      "Berkelium",
+      "Bromi"
+     ],
+     "en": [
+      "Boron",
+      "Barium",
+      "Beryllium",
+      "Bohrium",
+      "Bismuth",
+      "Berkelium",
+      "Bromine"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Hiili",
+      "Kalsium",
+      "Kadmium",
+      "Cerium",
+      "Kalifornium",
+      "Kloori",
+      "Curium",
+      "Kopernikium",
+      "Koboltti",
+      "Kromi",
+      "Cesium",
+      "Kupari"
+     ],
+     "en": [
+      "Carbon",
+      "Calcium",
+      "Cadmium",
+      "Cerium",
+      "Californium",
+      "Chlorine",
+      "Curium",
+      "Copernicium",
+      "Cobalt",
+      "Chromium",
+      "Caesium",
+      "Cesium",
+      "Copper"
+     ],
+     "h": "C"
+    },
+    {
+     "fi": [
+      "Dubnium",
+      "Darmstadtium",
+      "Dysprosium"
+     ],
+     "en": [
+      "Dubnium",
+      "Darmstadtium",
+      "Dysprosium"
+     ],
+     "h": "D"
+    },
+    {
+     "fi": [
+      "Erbium",
+      "Einsteinium",
+      "Europium"
+     ],
+     "en": [
+      "Erbium",
+      "Einsteinium",
+      "Europium"
+     ],
+     "h": "E"
+    },
+    {
+     "fi": [
+      "Fluori",
+      "Rauta",
+      "Flerovium",
+      "Fermium",
+      "Frankium"
+     ],
+     "en": [
+      "Fluorine",
+      "Iron",
+      "Flerovium",
+      "Fermium",
+      "Francium"
+     ],
+     "h": "F"
+    },
+    {
+     "fi": [
+      "Gallium",
+      "Gadolinium",
+      "Germanium"
+     ],
+     "en": [
+      "Gallium",
+      "Gadolinium",
+      "Germanium"
+     ],
+     "h": "G"
+    },
+    {
+     "fi": [
+      "Vety",
+      "Helium",
+      "Hafnium",
+      "Elohopea",
+      "Holmium",
+      "Hassium"
+     ],
+     "en": [
+      "Hydrogen",
+      "Helium",
+      "Hafnium",
+      "Mercury",
+      "Holmium",
+      "Hassium"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Jodi",
+      "Indium",
+      "Iridium"
+     ],
+     "en": [
+      "Iodine",
+      "Indium",
+      "Iridium"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Kalium",
+      "Krypton"
+     ],
+     "en": [
+      "Potassium",
+      "Krypton"
+     ],
+     "h": "K"
+    },
+    {
+     "fi": [
+      "Lantaani",
+      "Litium",
+      "Lawrencium",
+      "Lutetium",
+      "Livermorium"
+     ],
+     "en": [
+      "Lanthanum",
+      "Lithium",
+      "Lawrencium",
+      "Lutetium",
+      "Livermorium"
+     ],
+     "h": "L"
+    },
+    {
+     "fi": [
+      "Moskovium",
+      "Mendelevium",
+      "Magnesium",
+      "Mangaani",
+      "Molybdeeni",
+      "Meitnerium"
+     ],
+     "en": [
+      "Moscovium",
+      "Mendelevium",
+      "Magnesium",
+      "Manganese",
+      "Molybdenum",
+      "Meitnerium"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "Typpi",
+      "Natrium",
+      "Niobium",
+      "Neodyymi",
+      "Neon",
+      "Nihonium",
+      "Nikkeli",
+      "Nobelium",
+      "Neptunium"
+     ],
+     "en": [
+      "Nitrogen",
+      "Sodium",
+      "Niobium",
+      "Neodymium",
+      "Neon",
+      "Nihonium",
+      "Nickel",
+      "Nobelium",
+      "Neptunium"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Happi",
+      "Oganesson",
+      "Osmium"
+     ],
+     "en": [
+      "Oxygen",
+      "Oganesson",
+      "Osmium"
+     ],
+     "h": "O"
+    },
+    {
+     "fi": [
+      "Fosfori",
+      "Protaktinium",
+      "Lyijy",
+      "Palladium",
+      "Prometium",
+      "Polonium",
+      "Praseodyymi",
+      "Platina",
+      "Plutonium"
+     ],
+     "en": [
+      "Phosphorus",
+      "Protactinium",
+      "Lead",
+      "Palladium",
+      "Promethium",
+      "Polonium",
+      "Praseodymium",
+      "Platinum",
+      "Plutonium"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Radium",
+      "Rubidium",
+      "Renium",
+      "Rutherfordium",
+      "Röntgenium",
+      "Rodium",
+      "Radon",
+      "Rutenium"
+     ],
+     "en": [
+      "Radium",
+      "Rubidium",
+      "Rhenium",
+      "Rutherfordium",
+      "Roentgenium",
+      "Röntgenium",
+      "Rhodium",
+      "Radon",
+      "Ruthenium"
+     ],
+     "h": "R"
+    },
+    {
+     "fi": [
+      "Rikki",
+      "Antimoni",
+      "Skandium",
+      "Seleeni",
+      "Seaborgium",
+      "Pii",
+      "Samarium",
+      "Tina",
+      "Strontium"
+     ],
+     "en": [
+      "Sulfur",
+      "Sulphur",
+      "Antimony",
+      "Scandium",
+      "Selenium",
+      "Seaborgium",
+      "Silicon",
+      "Samarium",
+      "Tin",
+      "Strontium"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Tantaali",
+      "Terbium",
+      "Teknetium",
+      "Telluuri",
+      "Torium",
+      "Titaani",
+      "Tallium",
+      "Tulium",
+      "Tennessiini"
+     ],
+     "en": [
+      "Tantalum",
+      "Terbium",
+      "Technetium",
+      "Tellurium",
+      "Thorium",
+      "Titanium",
+      "Thallium",
+      "Thulium",
+      "Tennessine"
+     ],
+     "h": "T"
+    },
+    {
+     "fi": [
+      "Uraani"
+     ],
+     "en": [
+      "Uranium"
+     ],
+     "h": "U"
+    },
+    {
+     "fi": [
+      "Vanadiini"
+     ],
+     "en": [
+      "Vanadium"
+     ],
+     "h": "V"
+    },
+    {
+     "fi": [
+      "Volframi"
+     ],
+     "en": [
+      "Tungsten",
+      "Wolfram"
+     ],
+     "h": "W"
+    },
+    {
+     "fi": [
+      "Ksenon"
+     ],
+     "en": [
+      "Xenon"
+     ],
+     "h": "X"
+    },
+    {
+     "fi": [
+      "Yttrium",
+      "Ytterbium"
+     ],
+     "en": [
+      "Yttrium",
+      "Ytterbium"
+     ],
+     "h": "Y"
+    },
+    {
+     "fi": [
+      "Sinkki",
+      "Zirkonium"
+     ],
+     "en": [
+      "Zinc",
+      "Zirconium"
+     ],
+     "h": "Z"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-ryhmat",
+   "cat": "tiede",
+   "t": 144,
+   "title": {
+    "fi": "Yksi alkuaine jokaisesta jaksollisen järjestelmän ryhmästä 1–18 (ryhmässä 3 käyvät myös La ja Ac)",
+    "en": "One element from each periodic table group 1–18 (La and Ac also accepted for group 3)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ryhmä",
+    "en": "Group"
+   },
+   "items": [
+    {
+     "fi": [
+      "Vety",
+      "Litium",
+      "Natrium",
+      "Kalium",
+      "Rubidium",
+      "Cesium",
+      "Frankium"
+     ],
+     "en": [
+      "Hydrogen",
+      "Lithium",
+      "Sodium",
+      "Potassium",
+      "Rubidium",
+      "Caesium",
+      "Cesium",
+      "Francium"
+     ],
+     "h": {
+      "fi": "Ryhmä 1",
+      "en": "Group 1"
+     }
+    },
+    {
+     "fi": [
+      "Beryllium",
+      "Magnesium",
+      "Kalsium",
+      "Strontium",
+      "Barium",
+      "Radium"
+     ],
+     "en": [
+      "Beryllium",
+      "Magnesium",
+      "Calcium",
+      "Strontium",
+      "Barium",
+      "Radium"
+     ],
+     "h": {
+      "fi": "Ryhmä 2",
+      "en": "Group 2"
+     }
+    },
+    {
+     "fi": [
+      "Skandium",
+      "Yttrium",
+      "Lantaani",
+      "Lutetium",
+      "Aktinium",
+      "Lawrencium"
+     ],
+     "en": [
+      "Scandium",
+      "Yttrium",
+      "Lanthanum",
+      "Lutetium",
+      "Actinium",
+      "Lawrencium"
+     ],
+     "h": {
+      "fi": "Ryhmä 3",
+      "en": "Group 3"
+     }
+    },
+    {
+     "fi": [
+      "Titaani",
+      "Zirkonium",
+      "Hafnium",
+      "Rutherfordium"
+     ],
+     "en": [
+      "Titanium",
+      "Zirconium",
+      "Hafnium",
+      "Rutherfordium"
+     ],
+     "h": {
+      "fi": "Ryhmä 4",
+      "en": "Group 4"
+     }
+    },
+    {
+     "fi": [
+      "Vanadiini",
+      "Niobium",
+      "Tantaali",
+      "Dubnium"
+     ],
+     "en": [
+      "Vanadium",
+      "Niobium",
+      "Tantalum",
+      "Dubnium"
+     ],
+     "h": {
+      "fi": "Ryhmä 5",
+      "en": "Group 5"
+     }
+    },
+    {
+     "fi": [
+      "Kromi",
+      "Molybdeeni",
+      "Volframi",
+      "Seaborgium"
+     ],
+     "en": [
+      "Chromium",
+      "Molybdenum",
+      "Tungsten",
+      "Wolfram",
+      "Seaborgium"
+     ],
+     "h": {
+      "fi": "Ryhmä 6",
+      "en": "Group 6"
+     }
+    },
+    {
+     "fi": [
+      "Mangaani",
+      "Teknetium",
+      "Renium",
+      "Bohrium"
+     ],
+     "en": [
+      "Manganese",
+      "Technetium",
+      "Rhenium",
+      "Bohrium"
+     ],
+     "h": {
+      "fi": "Ryhmä 7",
+      "en": "Group 7"
+     }
+    },
+    {
+     "fi": [
+      "Rauta",
+      "Rutenium",
+      "Osmium",
+      "Hassium"
+     ],
+     "en": [
+      "Iron",
+      "Ruthenium",
+      "Osmium",
+      "Hassium"
+     ],
+     "h": {
+      "fi": "Ryhmä 8",
+      "en": "Group 8"
+     }
+    },
+    {
+     "fi": [
+      "Koboltti",
+      "Rodium",
+      "Iridium",
+      "Meitnerium"
+     ],
+     "en": [
+      "Cobalt",
+      "Rhodium",
+      "Iridium",
+      "Meitnerium"
+     ],
+     "h": {
+      "fi": "Ryhmä 9",
+      "en": "Group 9"
+     }
+    },
+    {
+     "fi": [
+      "Nikkeli",
+      "Palladium",
+      "Platina",
+      "Darmstadtium"
+     ],
+     "en": [
+      "Nickel",
+      "Palladium",
+      "Platinum",
+      "Darmstadtium"
+     ],
+     "h": {
+      "fi": "Ryhmä 10",
+      "en": "Group 10"
+     }
+    },
+    {
+     "fi": [
+      "Kupari",
+      "Hopea",
+      "Kulta",
+      "Röntgenium"
+     ],
+     "en": [
+      "Copper",
+      "Silver",
+      "Gold",
+      "Roentgenium",
+      "Röntgenium"
+     ],
+     "h": {
+      "fi": "Ryhmä 11",
+      "en": "Group 11"
+     }
+    },
+    {
+     "fi": [
+      "Sinkki",
+      "Kadmium",
+      "Elohopea",
+      "Kopernikium"
+     ],
+     "en": [
+      "Zinc",
+      "Cadmium",
+      "Mercury",
+      "Copernicium"
+     ],
+     "h": {
+      "fi": "Ryhmä 12",
+      "en": "Group 12"
+     }
+    },
+    {
+     "fi": [
+      "Boori",
+      "Alumiini",
+      "Gallium",
+      "Indium",
+      "Tallium",
+      "Nihonium"
+     ],
+     "en": [
+      "Boron",
+      "Aluminium",
+      "Aluminum",
+      "Gallium",
+      "Indium",
+      "Thallium",
+      "Nihonium"
+     ],
+     "h": {
+      "fi": "Ryhmä 13",
+      "en": "Group 13"
+     }
+    },
+    {
+     "fi": [
+      "Hiili",
+      "Pii",
+      "Germanium",
+      "Tina",
+      "Lyijy",
+      "Flerovium"
+     ],
+     "en": [
+      "Carbon",
+      "Silicon",
+      "Germanium",
+      "Tin",
+      "Lead",
+      "Flerovium"
+     ],
+     "h": {
+      "fi": "Ryhmä 14",
+      "en": "Group 14"
+     }
+    },
+    {
+     "fi": [
+      "Typpi",
+      "Fosfori",
+      "Arseeni",
+      "Antimoni",
+      "Vismutti",
+      "Moskovium"
+     ],
+     "en": [
+      "Nitrogen",
+      "Phosphorus",
+      "Arsenic",
+      "Antimony",
+      "Bismuth",
+      "Moscovium"
+     ],
+     "h": {
+      "fi": "Ryhmä 15",
+      "en": "Group 15"
+     }
+    },
+    {
+     "fi": [
+      "Happi",
+      "Rikki",
+      "Seleeni",
+      "Telluuri",
+      "Polonium",
+      "Livermorium"
+     ],
+     "en": [
+      "Oxygen",
+      "Sulfur",
+      "Sulphur",
+      "Selenium",
+      "Tellurium",
+      "Polonium",
+      "Livermorium"
+     ],
+     "h": {
+      "fi": "Ryhmä 16",
+      "en": "Group 16"
+     }
+    },
+    {
+     "fi": [
+      "Fluori",
+      "Kloori",
+      "Bromi",
+      "Jodi",
+      "Astatiini",
+      "Tennessiini"
+     ],
+     "en": [
+      "Fluorine",
+      "Chlorine",
+      "Bromine",
+      "Iodine",
+      "Astatine",
+      "Tennessine"
+     ],
+     "h": {
+      "fi": "Ryhmä 17",
+      "en": "Group 17"
+     }
+    },
+    {
+     "fi": [
+      "Helium",
+      "Neon",
+      "Argon",
+      "Krypton",
+      "Ksenon",
+      "Radon",
+      "Oganesson"
+     ],
+     "en": [
+      "Helium",
+      "Neon",
+      "Argon",
+      "Krypton",
+      "Xenon",
+      "Radon",
+      "Oganesson"
+     ],
+     "h": {
+      "fi": "Ryhmä 18",
+      "en": "Group 18"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-alkuaineet-ruotsiksi",
+   "cat": "tiede",
+   "t": 84,
+   "title": {
+    "fi": "Ruotsin kielen alkuaineet: 12 alkuainetta ruotsinkielisen nimen perusteella",
+    "en": "12 chemical elements from their Swedish names"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ruotsiksi",
+    "en": "In Swedish"
+   },
+   "items": [
+    {
+     "fi": [
+      "Vety"
+     ],
+     "en": [
+      "Hydrogen"
+     ],
+     "h": "väte"
+    },
+    {
+     "fi": [
+      "Happi"
+     ],
+     "en": [
+      "Oxygen"
+     ],
+     "h": "syre"
+    },
+    {
+     "fi": [
+      "Typpi"
+     ],
+     "en": [
+      "Nitrogen"
+     ],
+     "h": "kväve"
+    },
+    {
+     "fi": [
+      "Hiili"
+     ],
+     "en": [
+      "Carbon"
+     ],
+     "h": "kol"
+    },
+    {
+     "fi": [
+      "Rikki"
+     ],
+     "en": [
+      "Sulfur",
+      "Sulphur"
+     ],
+     "h": "svavel"
+    },
+    {
+     "fi": [
+      "Pii"
+     ],
+     "en": [
+      "Silicon"
+     ],
+     "h": "kisel"
+    },
+    {
+     "fi": [
+      "Rauta"
+     ],
+     "en": [
+      "Iron"
+     ],
+     "h": "järn"
+    },
+    {
+     "fi": [
+      "Kupari"
+     ],
+     "en": [
+      "Copper"
+     ],
+     "h": "koppar"
+    },
+    {
+     "fi": [
+      "Kulta"
+     ],
+     "en": [
+      "Gold"
+     ],
+     "h": "guld"
+    },
+    {
+     "fi": [
+      "Tina"
+     ],
+     "en": [
+      "Tin"
+     ],
+     "h": "tenn"
+    },
+    {
+     "fi": [
+      "Lyijy"
+     ],
+     "en": [
+      "Lead"
+     ],
+     "h": "bly"
+    },
+    {
+     "fi": [
+      "Elohopea"
+     ],
+     "en": [
+      "Mercury"
+     ],
+     "h": "kvicksilver"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-kehon-alkuaineet",
+   "cat": "tiede",
+   "t": 45,
+   "title": {
+    "fi": "Ihmiskehon 6 yleisintä alkuainetta massaosuuden mukaan",
+    "en": "The 6 most abundant elements in the human body by mass"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sija",
+    "en": "Rank"
+   },
+   "items": [
+    {
+     "fi": [
+      "Happi"
+     ],
+     "en": [
+      "Oxygen"
+     ],
+     "h": "1"
+    },
+    {
+     "fi": [
+      "Hiili"
+     ],
+     "en": [
+      "Carbon"
+     ],
+     "h": "2"
+    },
+    {
+     "fi": [
+      "Vety"
+     ],
+     "en": [
+      "Hydrogen"
+     ],
+     "h": "3"
+    },
+    {
+     "fi": [
+      "Typpi"
+     ],
+     "en": [
+      "Nitrogen"
+     ],
+     "h": "4"
+    },
+    {
+     "fi": [
+      "Kalsium"
+     ],
+     "en": [
+      "Calcium"
+     ],
+     "h": "5"
+    },
+    {
+     "fi": [
+      "Fosfori"
+     ],
+     "en": [
+      "Phosphorus"
+     ],
+     "h": "6"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-elainten-ennatykset",
+   "cat": "tiede",
+   "t": 136,
+   "title": {
+    "fi": "Eläinkunnan 17 ennätystä: tunnista eläin vihjeestä",
+    "en": "17 animal-kingdom records: identify the animal from the clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Holkeri",
+      "Grönlanninhai"
+     ],
+     "en": [
+      "Greenland shark"
+     ],
+     "h": {
+      "fi": "Pitkäikäisin selkärankainen: voi elää satoja vuosia",
+      "en": "Longest-lived vertebrate: can live for centuries"
+     }
+    },
+    {
+     "fi": [
+      "Kapybara",
+      "Vesisika"
+     ],
+     "en": [
+      "Capybara"
+     ],
+     "h": {
+      "fi": "Maailman suurin jyrsijä",
+      "en": "World's largest rodent"
+     }
+    },
+    {
+     "fi": [
+      "Mehiläiskolibri"
+     ],
+     "en": [
+      "Bee hummingbird"
+     ],
+     "h": {
+      "fi": "Maailman pienin lintu",
+      "en": "World's smallest bird"
+     }
+    },
+    {
+     "fi": [
+      "Verkkopyton",
+      "Verkkopytoni"
+     ],
+     "en": [
+      "Reticulated python"
+     ],
+     "h": {
+      "fi": "Maailman pisin käärmelaji",
+      "en": "World's longest snake"
+     }
+    },
+    {
+     "fi": [
+      "Suistokrokotiili"
+     ],
+     "en": [
+      "Saltwater crocodile",
+      "Estuarine crocodile"
+     ],
+     "h": {
+      "fi": "Maailman suurin elävä matelija",
+      "en": "World's largest living reptile"
+     }
+    },
+    {
+     "fi": [
+      "Kaskelotti"
+     ],
+     "en": [
+      "Sperm whale"
+     ],
+     "h": {
+      "fi": "Maailman äänekkäin eläin: naksaukset jopa 236 dB",
+      "en": "Loudest animal: clicks up to 236 dB"
+     }
+    },
+    {
+     "fi": [
+      "Kiinanjättisalamanteri",
+      "Kiinanjättiläissalamanteri",
+      "Jättisalamanteri",
+      "Jättiläissalamanteri"
+     ],
+     "en": [
+      "Chinese giant salamander",
+      "Giant salamander"
+     ],
+     "h": {
+      "fi": "Suurin elävä sammakkoeläin: Kiinan virtojen ___",
+      "en": "Largest living amphibian, from Chinese rivers"
+     }
+    },
+    {
+     "fi": [
+      "Lapintiira"
+     ],
+     "en": [
+      "Arctic tern"
+     ],
+     "h": {
+      "fi": "Pisin vuosittainen muuttomatka: napa-alueelta toiselle",
+      "en": "Longest yearly migration: from pole to pole"
+     }
+    },
+    {
+     "fi": [
+      "Jääkarhu"
+     ],
+     "en": [
+      "Polar bear"
+     ],
+     "h": {
+      "fi": "Suurin maalla elävä petoeläin",
+      "en": "Largest land carnivore"
+     }
+    },
+    {
+     "fi": [
+      "Norsu",
+      "Afrikannorsu",
+      "Aasiannorsu"
+     ],
+     "en": [
+      "Elephant",
+      "African elephant",
+      "Asian elephant"
+     ],
+     "h": {
+      "fi": "Nisäkkäiden pisin tiineys: lähes 2 vuotta",
+      "en": "Longest mammal pregnancy: almost 2 years"
+     }
+    },
+    {
+     "fi": [
+      "Möhkäkala",
+      "Mola"
+     ],
+     "en": [
+      "Ocean sunfish",
+      "Sunfish",
+      "Mola"
+     ],
+     "h": {
+      "fi": "Maailman painavimmat luukalat",
+      "en": "World's heaviest bony fishes"
+     }
+    },
+    {
+     "fi": [
+      "Tuhatjalkainen"
+     ],
+     "en": [
+      "Millipede"
+     ],
+     "h": {
+      "fi": "Eniten jalkoja: yhdellä yksilöllä 1 306",
+      "en": "Most legs: one individual had 1,306"
+     }
+    },
+    {
+     "fi": [
+      "Keisaripingviini"
+     ],
+     "en": [
+      "Emperor penguin"
+     ],
+     "h": {
+      "fi": "Suurin elävä pingviinilaji",
+      "en": "Largest living penguin"
+     }
+    },
+    {
+     "fi": [
+      "Hirvi"
+     ],
+     "en": [
+      "Moose",
+      "Elk"
+     ],
+     "h": {
+      "fi": "Suurin hirvieläin",
+      "en": "Largest member of the deer family"
+     }
+    },
+    {
+     "fi": [
+      "Visentti",
+      "Euroopanbiisoni",
+      "Biisoni"
+     ],
+     "en": [
+      "Wisent",
+      "European bison",
+      "Bison"
+     ],
+     "h": {
+      "fi": "Euroopan painavin luonnonvarainen maaeläin",
+      "en": "Europe's heaviest wild land animal"
+     }
+    },
+    {
+     "fi": [
+      "Kirahvi"
+     ],
+     "en": [
+      "Giraffe"
+     ],
+     "h": {
+      "fi": "Maailman korkein eläin",
+      "en": "World's tallest animal"
+     }
+    },
+    {
+     "fi": [
+      "Huuhkaja"
+     ],
+     "en": [
+      "Eurasian eagle-owl",
+      "Eagle-owl",
+      "Eagle owl"
+     ],
+     "h": {
+      "fi": "Suomen painavin pöllö",
+      "en": "Finland's heaviest owl"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-kasvien-ennatykset",
+   "cat": "tiede",
+   "t": 80,
+   "title": {
+    "fi": "Kasvi- ja sienikunnan 10 ennätystä: tunnista laji vihjeestä",
+    "en": "10 plant and fungus records: identify the species from the clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Punapuu",
+      "Jättiläispunapuu",
+      "Kalifornianpunapuu",
+      "Lännenpunapuu",
+      "Rannikkosekvoia"
+     ],
+     "en": [
+      "Coast redwood",
+      "Redwood"
+     ],
+     "h": {
+      "fi": "Maailman korkein puulaji: Hyperion n. 116 m",
+      "en": "World's tallest tree species: Hyperion about 116 m"
+     }
+    },
+    {
+     "fi": [
+      "Mammuttipetäjä",
+      "Jättisekvoia",
+      "Mammuttipuu"
+     ],
+     "en": [
+      "Giant sequoia",
+      "Sierra redwood"
+     ],
+     "h": {
+      "fi": "Tilavuudeltaan suurin puu: Kenraali Sherman",
+      "en": "Largest tree by volume: General Sherman"
+     }
+    },
+    {
+     "fi": [
+      "Okakäpymänty"
+     ],
+     "en": [
+      "Great Basin bristlecone pine",
+      "Bristlecone pine"
+     ],
+     "h": {
+      "fi": "Mänty, jonka vanhimmat yksilöt ovat yli 4 800-vuotiaita",
+      "en": "Pine whose oldest trees are over 4,800 years old"
+     }
+    },
+    {
+     "fi": [
+      "Rafflesia",
+      "Rafflesia arnoldii"
+     ],
+     "en": [
+      "Rafflesia",
+      "Corpse lily"
+     ],
+     "h": {
+      "fi": "Suurin yksittäinen kukka, haisee mädältä lihalta",
+      "en": "Largest single flower, smells of rotting meat"
+     }
+    },
+    {
+     "fi": [
+      "Seychellienpalmu",
+      "Merikookos"
+     ],
+     "en": [
+      "Coco de mer",
+      "Sea coconut",
+      "Double coconut"
+     ],
+     "h": {
+      "fi": "Kasvikunnan suurin siemen",
+      "en": "Largest seed in the plant kingdom"
+     }
+    },
+    {
+     "fi": [
+      "Jättipökkövehka",
+      "Titaanivehka"
+     ],
+     "en": [
+      "Titan arum"
+     ],
+     "h": {
+      "fi": "Suurin haarautumaton kukinto, n. 3 m",
+      "en": "Largest unbranched inflorescence, about 3 m"
+     }
+    },
+    {
+     "fi": [
+      "Mäntymesisieni",
+      "Mesisieni"
+     ],
+     "en": [
+      "Honey fungus",
+      "Armillaria ostoyae",
+      "Humongous fungus"
+     ],
+     "h": {
+      "fi": "Oregonin yli 8 km²:n rihmasto, ehkä maailman suurin eliö",
+      "en": "Oregon mycelium over 8 km², maybe the largest organism"
+     }
+    },
+    {
+     "fi": [
+      "Vesilinssi",
+      "Wolffia"
+     ],
+     "en": [
+      "Watermeal",
+      "Wolffia"
+     ],
+     "h": {
+      "fi": "Kukkivista kasveista pienimpiä, kelluu veden pinnalla",
+      "en": "Among the smallest flowering plants, floats on water"
+     }
+    },
+    {
+     "fi": [
+      "Bambu"
+     ],
+     "en": [
+      "Bamboo"
+     ],
+     "h": {
+      "fi": "Nopeimmin kasvava kasvi: jopa lähes metri päivässä",
+      "en": "Fastest-growing plant: nearly a metre a day"
+     }
+    },
+    {
+     "fi": [
+      "Kärpäsloukku",
+      "Venuksenkärpäsloukku"
+     ],
+     "en": [
+      "Venus flytrap",
+      "Venus fly trap"
+     ],
+     "h": {
+      "fi": "Lihansyöjäkasvi, jonka lehti napsahtaa kiinni saaliin ympärille",
+      "en": "Carnivorous plant whose leaf snaps shut on prey"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-nisakkaat-kirjaimet",
+   "cat": "tiede",
+   "t": 182,
+   "title": {
+    "fi": "26 nisäkästä: vihjeenä nimen 2. ja 3. kirjain (ja pituus)",
+    "en": "26 mammals: the 2nd and 3rd letters (and length) are given"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjaimet",
+    "en": "Letters"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kirahvi"
+     ],
+     "en": [
+      "Giraffe"
+     ],
+     "h": {
+      "fi": "_ir____",
+      "en": "_ir____"
+     }
+    },
+    {
+     "fi": [
+      "Sarvikuono"
+     ],
+     "en": [
+      "Rhino",
+      "Rhinoceros"
+     ],
+     "h": {
+      "fi": "_ar_______",
+      "en": "_hi__"
+     }
+    },
+    {
+     "fi": [
+      "Virtahepo"
+     ],
+     "en": [
+      "Hippopotamus",
+      "Hippo"
+     ],
+     "h": {
+      "fi": "_ir______",
+      "en": "_ip_________"
+     }
+    },
+    {
+     "fi": [
+      "Gepardi"
+     ],
+     "en": [
+      "Cheetah"
+     ],
+     "h": {
+      "fi": "_ep____",
+      "en": "_he____"
+     }
+    },
+    {
+     "fi": [
+      "Jaguaari"
+     ],
+     "en": [
+      "Jaguar"
+     ],
+     "h": {
+      "fi": "_ag_____",
+      "en": "_ag___"
+     }
+    },
+    {
+     "fi": [
+      "Ilves"
+     ],
+     "en": [
+      "Lynx"
+     ],
+     "h": {
+      "fi": "_lv__",
+      "en": "_yn_"
+     }
+    },
+    {
+     "fi": [
+      "Ahma"
+     ],
+     "en": [
+      "Wolverine"
+     ],
+     "h": {
+      "fi": "_hm_",
+      "en": "_ol______"
+     }
+    },
+    {
+     "fi": [
+      "Mäyrä"
+     ],
+     "en": [
+      "Badger"
+     ],
+     "h": {
+      "fi": "_äy__",
+      "en": "_ad___"
+     }
+    },
+    {
+     "fi": [
+      "Saukko"
+     ],
+     "en": [
+      "Otter"
+     ],
+     "h": {
+      "fi": "_au___",
+      "en": "_tt__"
+     }
+    },
+    {
+     "fi": [
+      "Majava"
+     ],
+     "en": [
+      "Beaver"
+     ],
+     "h": {
+      "fi": "_aj___",
+      "en": "_ea___"
+     }
+    },
+    {
+     "fi": [
+      "Siili"
+     ],
+     "en": [
+      "Hedgehog"
+     ],
+     "h": {
+      "fi": "_ii__",
+      "en": "_ed_____"
+     }
+    },
+    {
+     "fi": [
+      "Kenguru"
+     ],
+     "en": [
+      "Kangaroo"
+     ],
+     "h": {
+      "fi": "_en____",
+      "en": "_an_____"
+     }
+    },
+    {
+     "fi": [
+      "Vompatti"
+     ],
+     "en": [
+      "Wombat"
+     ],
+     "h": {
+      "fi": "_om_____",
+      "en": "_om___"
+     }
+    },
+    {
+     "fi": [
+      "Nokkaeläin"
+     ],
+     "en": [
+      "Platypus"
+     ],
+     "h": {
+      "fi": "_ok_______",
+      "en": "_la_____"
+     }
+    },
+    {
+     "fi": [
+      "Laiskiainen"
+     ],
+     "en": [
+      "Sloth"
+     ],
+     "h": {
+      "fi": "_ai________",
+      "en": "_lo__"
+     }
+    },
+    {
+     "fi": [
+      "Vyötiäinen"
+     ],
+     "en": [
+      "Armadillo"
+     ],
+     "h": {
+      "fi": "_yö_______",
+      "en": "_rm______"
+     }
+    },
+    {
+     "fi": [
+      "Tapiiri"
+     ],
+     "en": [
+      "Tapir"
+     ],
+     "h": {
+      "fi": "_ap____",
+      "en": "_ap__"
+     }
+    },
+    {
+     "fi": [
+      "Kameli"
+     ],
+     "en": [
+      "Camel"
+     ],
+     "h": {
+      "fi": "_am___",
+      "en": "_am__"
+     }
+    },
+    {
+     "fi": [
+      "Alpakka"
+     ],
+     "en": [
+      "Alpaca"
+     ],
+     "h": {
+      "fi": "_lp____",
+      "en": "_lp___"
+     }
+    },
+    {
+     "fi": [
+      "Simpanssi"
+     ],
+     "en": [
+      "Chimpanzee",
+      "Chimp"
+     ],
+     "h": {
+      "fi": "_im______",
+      "en": "_hi_______"
+     }
+    },
+    {
+     "fi": [
+      "Oranki",
+      "Orankiutan"
+     ],
+     "en": [
+      "Orangutan",
+      "Orangutang"
+     ],
+     "h": {
+      "fi": "_ra___",
+      "en": "_ra______"
+     }
+    },
+    {
+     "fi": [
+      "Mursu"
+     ],
+     "en": [
+      "Walrus"
+     ],
+     "h": {
+      "fi": "_ur__",
+      "en": "_al___"
+     }
+    },
+    {
+     "fi": [
+      "Delfiini"
+     ],
+     "en": [
+      "Dolphin"
+     ],
+     "h": {
+      "fi": "_el_____",
+      "en": "_ol____"
+     }
+    },
+    {
+     "fi": [
+      "Leijona"
+     ],
+     "en": [
+      "Lion"
+     ],
+     "h": {
+      "fi": "_ei____",
+      "en": "_io_"
+     }
+    },
+    {
+     "fi": [
+      "Hyeena"
+     ],
+     "en": [
+      "Hyena",
+      "Hyaena"
+     ],
+     "h": {
+      "fi": "_ye___",
+      "en": "_ye__"
+     }
+    },
+    {
+     "fi": [
+      "Surikaatti"
+     ],
+     "en": [
+      "Meerkat"
+     ],
+     "h": {
+      "fi": "_ur_______",
+      "en": "_ee____"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-elimet-alkukirjaimet",
+   "cat": "tiede",
+   "t": 98,
+   "title": {
+    "fi": "14 sisäelintä: vihjeenä kolme ensimmäistä kirjainta ja tehtävä",
+    "en": "14 internal organs: the first three letters and the job are given"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Sappirakko"
+     ],
+     "en": [
+      "Gallbladder"
+     ],
+     "h": {
+      "fi": "Sap… varastoi maksan tuottamaa sappea",
+      "en": "Gal… stores bile made by the liver"
+     }
+    },
+    {
+     "fi": [
+      "Haima"
+     ],
+     "en": [
+      "Pancreas"
+     ],
+     "h": {
+      "fi": "Hai… erittää ruoansulatusentsyymejä ja insuliinia",
+      "en": "Pan… secretes digestive enzymes and insulin"
+     }
+    },
+    {
+     "fi": [
+      "Perna"
+     ],
+     "en": [
+      "Spleen"
+     ],
+     "h": {
+      "fi": "Per… suodattaa verta ja hajottaa vanhoja punasoluja",
+      "en": "Spl… filters blood, breaks down old red cells"
+     }
+    },
+    {
+     "fi": [
+      "Munuainen"
+     ],
+     "en": [
+      "Kidney"
+     ],
+     "h": {
+      "fi": "Mun… suodattaa verestä virtsan",
+      "en": "Kid… filters urine out of the blood"
+     }
+    },
+    {
+     "fi": [
+      "Maksa"
+     ],
+     "en": [
+      "Liver"
+     ],
+     "h": {
+      "fi": "Mak… varastoi glykogeenia ja muuntaa myrkkyjä",
+      "en": "Liv… stores glycogen and breaks down toxins"
+     }
+    },
+    {
+     "fi": [
+      "Keuhko"
+     ],
+     "en": [
+      "Lung"
+     ],
+     "h": {
+      "fi": "Keu… happi verenkiertoon, hiilidioksidi ulos",
+      "en": "Lun… oxygen in, carbon dioxide out"
+     }
+    },
+    {
+     "fi": [
+      "Mahalaukku"
+     ],
+     "en": [
+      "Stomach"
+     ],
+     "h": {
+      "fi": "Mah… hapan pussi, jossa proteiinien pilkkominen alkaa",
+      "en": "Sto… acidic sac where protein digestion begins"
+     }
+    },
+    {
+     "fi": [
+      "Ohutsuoli"
+     ],
+     "en": [
+      "Small intestine"
+     ],
+     "h": {
+      "fi": "Ohu… suurin osa ravinteista imeytyy täällä",
+      "en": "Sma… where most nutrients are absorbed"
+     }
+    },
+    {
+     "fi": [
+      "Paksusuoli"
+     ],
+     "en": [
+      "Large intestine",
+      "Colon"
+     ],
+     "h": {
+      "fi": "Pak… imee vettä ennen ulostamista",
+      "en": "Lar… absorbs water before defecation"
+     }
+    },
+    {
+     "fi": [
+      "Umpilisäke"
+     ],
+     "en": [
+      "Appendix"
+     ],
+     "h": {
+      "fi": "Ump… pieni umpipussi, jonka tulehdus leikataan usein",
+      "en": "App… small pouch often removed when inflamed"
+     }
+    },
+    {
+     "fi": [
+      "Ruokatorvi"
+     ],
+     "en": [
+      "Oesophagus",
+      "Esophagus"
+     ],
+     "h": {
+      "fi": "Ruo… kuljettaa ruoan nielusta mahaan",
+      "en": "Oes… carries food from throat to stomach"
+     }
+    },
+    {
+     "fi": [
+      "Henkitorvi"
+     ],
+     "en": [
+      "Trachea",
+      "Windpipe"
+     ],
+     "h": {
+      "fi": "Hen… rustorenkaiden tukema ilmaputki",
+      "en": "Tra… airway held open by cartilage rings"
+     }
+    },
+    {
+     "fi": [
+      "Kurkunpää"
+     ],
+     "en": [
+      "Larynx",
+      "Voice box"
+     ],
+     "h": {
+      "fi": "Kur… äänihuulten paikka",
+      "en": "Lar… houses the vocal cords"
+     }
+    },
+    {
+     "fi": [
+      "Virtsarakko"
+     ],
+     "en": [
+      "Urinary bladder",
+      "Bladder"
+     ],
+     "h": {
+      "fi": "Vir… varastoi virtsaa",
+      "en": "Uri… stores urine"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-samaa-lajia",
+   "cat": "tiede",
+   "t": 182,
+   "title": {
+    "fi": "Yksi laji, monta vihannesta: 26 viljelymuotoa (vihjeenä tieteellinen lajinimi)",
+    "en": "One species, many vegetables: 26 cultivated forms (the scientific species name is the clue)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Laji",
+    "en": "Species"
+   },
+   "items": [
+    {
+     "fi": [
+      "Keräkaali",
+      "Valkokaali",
+      "Kaali"
+     ],
+     "en": [
+      "Cabbage",
+      "White cabbage"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Punakaali"
+     ],
+     "en": [
+      "Red cabbage"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Kurttukaali",
+      "Savoijinkaali"
+     ],
+     "en": [
+      "Savoy cabbage"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Lehtikaali"
+     ],
+     "en": [
+      "Kale"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Kukkakaali"
+     ],
+     "en": [
+      "Cauliflower"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Parsakaali",
+      "Brokkoli"
+     ],
+     "en": [
+      "Broccoli"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Romanesco",
+      "Romanescokaali"
+     ],
+     "en": [
+      "Romanesco",
+      "Romanesco broccoli"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Ruusukaali"
+     ],
+     "en": [
+      "Brussels sprouts",
+      "Brussels sprout"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Kyssäkaali"
+     ],
+     "en": [
+      "Kohlrabi"
+     ],
+     "h": "Brassica oleracea"
+    },
+    {
+     "fi": [
+      "Nauris"
+     ],
+     "en": [
+      "Turnip"
+     ],
+     "h": "Brassica rapa"
+    },
+    {
+     "fi": [
+      "Kiinankaali"
+     ],
+     "en": [
+      "Napa cabbage",
+      "Chinese cabbage"
+     ],
+     "h": "Brassica rapa"
+    },
+    {
+     "fi": [
+      "Paksoi",
+      "Pak choi"
+     ],
+     "en": [
+      "Bok choy",
+      "Pak choy"
+     ],
+     "h": "Brassica rapa"
+    },
+    {
+     "fi": [
+      "Rypsi"
+     ],
+     "en": [
+      "Turnip rape",
+      "Field mustard"
+     ],
+     "h": "Brassica rapa"
+    },
+    {
+     "fi": [
+      "Punajuuri"
+     ],
+     "en": [
+      "Beetroot",
+      "Beet"
+     ],
+     "h": "Beta vulgaris"
+    },
+    {
+     "fi": [
+      "Sokerijuurikas"
+     ],
+     "en": [
+      "Sugar beet"
+     ],
+     "h": "Beta vulgaris"
+    },
+    {
+     "fi": [
+      "Mangoldi",
+      "Lehtimangoldi"
+     ],
+     "en": [
+      "Chard",
+      "Swiss chard"
+     ],
+     "h": "Beta vulgaris"
+    },
+    {
+     "fi": [
+      "Rehujuurikas"
+     ],
+     "en": [
+      "Mangelwurzel",
+      "Fodder beet",
+      "Mangold"
+     ],
+     "h": "Beta vulgaris"
+    },
+    {
+     "fi": [
+      "Kesäkurpitsa",
+      "Zucchini"
+     ],
+     "en": [
+      "Courgette",
+      "Zucchini"
+     ],
+     "h": "Cucurbita pepo"
+    },
+    {
+     "fi": [
+      "Patissoni"
+     ],
+     "en": [
+      "Pattypan squash",
+      "Pattypan"
+     ],
+     "h": "Cucurbita pepo"
+    },
+    {
+     "fi": [
+      "Spagettikurpitsa"
+     ],
+     "en": [
+      "Spaghetti squash"
+     ],
+     "h": "Cucurbita pepo"
+    },
+    {
+     "fi": [
+      "Paprika"
+     ],
+     "en": [
+      "Bell pepper",
+      "Sweet pepper"
+     ],
+     "h": "Capsicum annuum"
+    },
+    {
+     "fi": [
+      "Jalapeño"
+     ],
+     "en": [
+      "Jalapeño"
+     ],
+     "h": "Capsicum annuum"
+    },
+    {
+     "fi": [
+      "Cayennepippuri",
+      "Cayenne"
+     ],
+     "en": [
+      "Cayenne pepper",
+      "Cayenne"
+     ],
+     "h": "Capsicum annuum"
+    },
+    {
+     "fi": [
+      "Poblano"
+     ],
+     "en": [
+      "Poblano"
+     ],
+     "h": "Capsicum annuum"
+    },
+    {
+     "fi": [
+      "Ruokasipuli",
+      "Sipuli"
+     ],
+     "en": [
+      "Onion"
+     ],
+     "h": "Allium cepa"
+    },
+    {
+     "fi": [
+      "Salottisipuli",
+      "Salotti"
+     ],
+     "en": [
+      "Shallot"
+     ],
+     "h": "Allium cepa"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-ruotsi-elaimet",
+   "cat": "tiede",
+   "t": 240,
+   "title": {
+    "fi": "Ruotsin kielen eläinsanat: 40 eläintä suomeksi",
+    "en": "Swedish animal words: 40 animals (answer in English)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ruotsiksi",
+    "en": "In Swedish"
+   },
+   "items": [
+    {
+     "fi": [
+      "Hirvi"
+     ],
+     "en": [
+      "Moose",
+      "Elk"
+     ],
+     "h": "älg"
+    },
+    {
+     "fi": [
+      "Kettu"
+     ],
+     "en": [
+      "Fox"
+     ],
+     "h": "räv"
+    },
+    {
+     "fi": [
+      "Susi"
+     ],
+     "en": [
+      "Wolf"
+     ],
+     "h": "varg"
+    },
+    {
+     "fi": [
+      "Karhu"
+     ],
+     "en": [
+      "Bear"
+     ],
+     "h": "björn"
+    },
+    {
+     "fi": [
+      "Orava"
+     ],
+     "en": [
+      "Squirrel"
+     ],
+     "h": "ekorre"
+    },
+    {
+     "fi": [
+      "Siili"
+     ],
+     "en": [
+      "Hedgehog"
+     ],
+     "h": "igelkott"
+    },
+    {
+     "fi": [
+      "Ilves"
+     ],
+     "en": [
+      "Lynx"
+     ],
+     "h": "lodjur"
+    },
+    {
+     "fi": [
+      "Ahma"
+     ],
+     "en": [
+      "Wolverine"
+     ],
+     "h": "järv"
+    },
+    {
+     "fi": [
+      "Saukko"
+     ],
+     "en": [
+      "Otter"
+     ],
+     "h": "utter"
+    },
+    {
+     "fi": [
+      "Mäyrä"
+     ],
+     "en": [
+      "Badger"
+     ],
+     "h": "grävling"
+    },
+    {
+     "fi": [
+      "Majava"
+     ],
+     "en": [
+      "Beaver"
+     ],
+     "h": "bäver"
+    },
+    {
+     "fi": [
+      "Lumikko"
+     ],
+     "en": [
+      "Weasel"
+     ],
+     "h": "vessla"
+    },
+    {
+     "fi": [
+      "Poro"
+     ],
+     "en": [
+      "Reindeer"
+     ],
+     "h": "ren"
+    },
+    {
+     "fi": [
+      "Metsäkauris"
+     ],
+     "en": [
+      "Roe deer"
+     ],
+     "h": "rådjur"
+    },
+    {
+     "fi": [
+      "Lepakko"
+     ],
+     "en": [
+      "Bat"
+     ],
+     "h": "fladdermus"
+    },
+    {
+     "fi": [
+      "Hylje"
+     ],
+     "en": [
+      "Seal"
+     ],
+     "h": "säl"
+    },
+    {
+     "fi": [
+      "Valas"
+     ],
+     "en": [
+      "Whale"
+     ],
+     "h": "val"
+    },
+    {
+     "fi": [
+      "Pöllö"
+     ],
+     "en": [
+      "Owl"
+     ],
+     "h": "uggla"
+    },
+    {
+     "fi": [
+      "Kotka"
+     ],
+     "en": [
+      "Eagle"
+     ],
+     "h": "örn"
+    },
+    {
+     "fi": [
+      "Kurki"
+     ],
+     "en": [
+      "Crane"
+     ],
+     "h": "trana"
+    },
+    {
+     "fi": [
+      "Joutsen"
+     ],
+     "en": [
+      "Swan"
+     ],
+     "h": "svan"
+    },
+    {
+     "fi": [
+      "Hanhi"
+     ],
+     "en": [
+      "Goose"
+     ],
+     "h": "gås"
+    },
+    {
+     "fi": [
+      "Lokki"
+     ],
+     "en": [
+      "Gull",
+      "Seagull"
+     ],
+     "h": "mås"
+    },
+    {
+     "fi": [
+      "Varis"
+     ],
+     "en": [
+      "Crow"
+     ],
+     "h": "kråka"
+    },
+    {
+     "fi": [
+      "Harakka"
+     ],
+     "en": [
+      "Magpie"
+     ],
+     "h": "skata"
+    },
+    {
+     "fi": [
+      "Käki"
+     ],
+     "en": [
+      "Cuckoo"
+     ],
+     "h": "gök"
+    },
+    {
+     "fi": [
+      "Tikka"
+     ],
+     "en": [
+      "Woodpecker"
+     ],
+     "h": "hackspett"
+    },
+    {
+     "fi": [
+      "Varpunen"
+     ],
+     "en": [
+      "Sparrow"
+     ],
+     "h": "sparv"
+    },
+    {
+     "fi": [
+      "Pääsky",
+      "Pääskynen"
+     ],
+     "en": [
+      "Swallow"
+     ],
+     "h": "svala"
+    },
+    {
+     "fi": [
+      "Sammakko"
+     ],
+     "en": [
+      "Frog"
+     ],
+     "h": "groda"
+    },
+    {
+     "fi": [
+      "Rupikonna",
+      "Konna"
+     ],
+     "en": [
+      "Toad"
+     ],
+     "h": "padda"
+    },
+    {
+     "fi": [
+      "Käärme"
+     ],
+     "en": [
+      "Snake"
+     ],
+     "h": "orm"
+    },
+    {
+     "fi": [
+      "Hauki"
+     ],
+     "en": [
+      "Pike"
+     ],
+     "h": "gädda"
+    },
+    {
+     "fi": [
+      "Ahven"
+     ],
+     "en": [
+      "Perch"
+     ],
+     "h": "abborre"
+    },
+    {
+     "fi": [
+      "Lohi"
+     ],
+     "en": [
+      "Salmon"
+     ],
+     "h": "lax"
+    },
+    {
+     "fi": [
+      "Ankerias"
+     ],
+     "en": [
+      "Eel"
+     ],
+     "h": "ål"
+    },
+    {
+     "fi": [
+      "Perhonen"
+     ],
+     "en": [
+      "Butterfly"
+     ],
+     "h": "fjäril"
+    },
+    {
+     "fi": [
+      "Muurahainen"
+     ],
+     "en": [
+      "Ant"
+     ],
+     "h": "myra"
+    },
+    {
+     "fi": [
+      "Ampiainen"
+     ],
+     "en": [
+      "Wasp"
+     ],
+     "h": "geting"
+    },
+    {
+     "fi": [
+      "Hämähäkki"
+     ],
+     "en": [
+      "Spider"
+     ],
+     "h": "spindel"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-saksa-keho",
+   "cat": "tiede",
+   "t": 204,
+   "title": {
+    "fi": "Saksan tunnilta biologiaan: 34 kehonosaa suomeksi",
+    "en": "German body words: 34 body parts (answer in English)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Saksaksi",
+    "en": "In German"
+   },
+   "items": [
+    {
+     "fi": [
+      "Pää"
+     ],
+     "en": [
+      "Head"
+     ],
+     "h": "der Kopf"
+    },
+    {
+     "fi": [
+      "Silmä"
+     ],
+     "en": [
+      "Eye"
+     ],
+     "h": "das Auge"
+    },
+    {
+     "fi": [
+      "Korva"
+     ],
+     "en": [
+      "Ear"
+     ],
+     "h": "das Ohr"
+    },
+    {
+     "fi": [
+      "Nenä"
+     ],
+     "en": [
+      "Nose"
+     ],
+     "h": "die Nase"
+    },
+    {
+     "fi": [
+      "Suu"
+     ],
+     "en": [
+      "Mouth"
+     ],
+     "h": "der Mund"
+    },
+    {
+     "fi": [
+      "Hammas"
+     ],
+     "en": [
+      "Tooth"
+     ],
+     "h": "der Zahn"
+    },
+    {
+     "fi": [
+      "Kieli"
+     ],
+     "en": [
+      "Tongue"
+     ],
+     "h": "die Zunge"
+    },
+    {
+     "fi": [
+      "Huuli"
+     ],
+     "en": [
+      "Lip"
+     ],
+     "h": "die Lippe"
+    },
+    {
+     "fi": [
+      "Otsa"
+     ],
+     "en": [
+      "Forehead"
+     ],
+     "h": "die Stirn"
+    },
+    {
+     "fi": [
+      "Poski"
+     ],
+     "en": [
+      "Cheek"
+     ],
+     "h": "die Wange"
+    },
+    {
+     "fi": [
+      "Leuka"
+     ],
+     "en": [
+      "Chin"
+     ],
+     "h": "das Kinn"
+    },
+    {
+     "fi": [
+      "Kaula"
+     ],
+     "en": [
+      "Neck",
+      "Throat"
+     ],
+     "h": "der Hals"
+    },
+    {
+     "fi": [
+      "Olkapää"
+     ],
+     "en": [
+      "Shoulder"
+     ],
+     "h": "die Schulter"
+    },
+    {
+     "fi": [
+      "Kyynärpää"
+     ],
+     "en": [
+      "Elbow"
+     ],
+     "h": "der Ellbogen"
+    },
+    {
+     "fi": [
+      "Peukalo"
+     ],
+     "en": [
+      "Thumb"
+     ],
+     "h": "der Daumen"
+    },
+    {
+     "fi": [
+      "Rinta",
+      "Rintakehä"
+     ],
+     "en": [
+      "Chest",
+      "Breast"
+     ],
+     "h": "die Brust"
+    },
+    {
+     "fi": [
+      "Vatsa",
+      "Maha"
+     ],
+     "en": [
+      "Belly",
+      "Abdomen",
+      "Tummy"
+     ],
+     "h": "der Bauch"
+    },
+    {
+     "fi": [
+      "Selkä"
+     ],
+     "en": [
+      "Back"
+     ],
+     "h": "der Rücken"
+    },
+    {
+     "fi": [
+      "Jalka",
+      "Sääri"
+     ],
+     "en": [
+      "Leg"
+     ],
+     "h": "das Bein"
+    },
+    {
+     "fi": [
+      "Polvi"
+     ],
+     "en": [
+      "Knee"
+     ],
+     "h": "das Knie"
+    },
+    {
+     "fi": [
+      "Jalkaterä"
+     ],
+     "en": [
+      "Foot"
+     ],
+     "h": "der Fuß"
+    },
+    {
+     "fi": [
+      "Kantapää"
+     ],
+     "en": [
+      "Heel"
+     ],
+     "h": "die Ferse"
+    },
+    {
+     "fi": [
+      "Varvas"
+     ],
+     "en": [
+      "Toe"
+     ],
+     "h": "die Zehe"
+    },
+    {
+     "fi": [
+      "Sydän"
+     ],
+     "en": [
+      "Heart"
+     ],
+     "h": "das Herz"
+    },
+    {
+     "fi": [
+      "Keuhko"
+     ],
+     "en": [
+      "Lung"
+     ],
+     "h": "die Lunge"
+    },
+    {
+     "fi": [
+      "Maksa"
+     ],
+     "en": [
+      "Liver"
+     ],
+     "h": "die Leber"
+    },
+    {
+     "fi": [
+      "Munuainen"
+     ],
+     "en": [
+      "Kidney"
+     ],
+     "h": "die Niere"
+    },
+    {
+     "fi": [
+      "Mahalaukku"
+     ],
+     "en": [
+      "Stomach"
+     ],
+     "h": "der Magen"
+    },
+    {
+     "fi": [
+      "Aivot",
+      "Aivo"
+     ],
+     "en": [
+      "Brain"
+     ],
+     "h": "das Gehirn"
+    },
+    {
+     "fi": [
+      "Iho"
+     ],
+     "en": [
+      "Skin"
+     ],
+     "h": "die Haut"
+    },
+    {
+     "fi": [
+      "Luu"
+     ],
+     "en": [
+      "Bone"
+     ],
+     "h": "der Knochen"
+    },
+    {
+     "fi": [
+      "Veri"
+     ],
+     "en": [
+      "Blood"
+     ],
+     "h": "das Blut"
+    },
+    {
+     "fi": [
+      "Hius",
+      "Hiukset",
+      "Tukka"
+     ],
+     "en": [
+      "Hair"
+     ],
+     "h": "das Haar"
+    },
+    {
+     "fi": [
+      "Kynsi"
+     ],
+     "en": [
+      "Nail",
+      "Fingernail"
+     ],
+     "h": "der Nagel"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-luut-latinaksi",
+   "cat": "tiede",
+   "t": 175,
+   "title": {
+    "fi": "Lääkärin latinaa: 25 luuta latinankielisen nimen perusteella",
+    "en": "Doctor's Latin: 25 bones from their Latin names (answer with the everyday English name)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Latinaksi",
+    "en": "In Latin"
+   },
+   "items": [
+    {
+     "fi": [
+      "Reisiluu"
+     ],
+     "en": [
+      "Thighbone",
+      "Thigh bone"
+     ],
+     "h": "Femur"
+    },
+    {
+     "fi": [
+      "Sääriluu"
+     ],
+     "en": [
+      "Shinbone",
+      "Shin bone"
+     ],
+     "h": "Tibia"
+    },
+    {
+     "fi": [
+      "Pohjeluu"
+     ],
+     "en": [
+      "Calf bone"
+     ],
+     "h": "Fibula"
+    },
+    {
+     "fi": [
+      "Olkaluu"
+     ],
+     "en": [
+      "Upper arm bone"
+     ],
+     "h": "Humerus"
+    },
+    {
+     "fi": [
+      "Polvilumpio"
+     ],
+     "en": [
+      "Kneecap",
+      "Knee cap"
+     ],
+     "h": "Patella"
+    },
+    {
+     "fi": [
+      "Solisluu"
+     ],
+     "en": [
+      "Collarbone",
+      "Collar bone"
+     ],
+     "h": "Clavicula"
+    },
+    {
+     "fi": [
+      "Lapaluu"
+     ],
+     "en": [
+      "Shoulder blade"
+     ],
+     "h": "Scapula"
+    },
+    {
+     "fi": [
+      "Rintalasta"
+     ],
+     "en": [
+      "Breastbone",
+      "Breast bone"
+     ],
+     "h": "Sternum"
+    },
+    {
+     "fi": [
+      "Kylkiluu"
+     ],
+     "en": [
+      "Rib"
+     ],
+     "h": "Costa"
+    },
+    {
+     "fi": [
+      "Alaleukaluu",
+      "Alaleuka"
+     ],
+     "en": [
+      "Lower jaw",
+      "Jawbone",
+      "Lower jawbone"
+     ],
+     "h": "Mandibula"
+    },
+    {
+     "fi": [
+      "Yläleukaluu",
+      "Yläleuka"
+     ],
+     "en": [
+      "Upper jaw",
+      "Upper jawbone"
+     ],
+     "h": "Maxilla"
+    },
+    {
+     "fi": [
+      "Häntäluu"
+     ],
+     "en": [
+      "Tailbone",
+      "Tail bone"
+     ],
+     "h": "Os coccygis"
+    },
+    {
+     "fi": [
+      "Kantaluu"
+     ],
+     "en": [
+      "Heel bone"
+     ],
+     "h": "Calcaneus"
+    },
+    {
+     "fi": [
+      "Telaluu"
+     ],
+     "en": [
+      "Ankle bone",
+      "Anklebone"
+     ],
+     "h": "Talus"
+    },
+    {
+     "fi": [
+      "Kallo"
+     ],
+     "en": [
+      "Skull"
+     ],
+     "h": "Cranium"
+    },
+    {
+     "fi": [
+      "Otsaluu"
+     ],
+     "en": [
+      "Frontal bone",
+      "Forehead bone"
+     ],
+     "h": "Os frontale"
+    },
+    {
+     "fi": [
+      "Takaraivoluu"
+     ],
+     "en": [
+      "Occipital bone"
+     ],
+     "h": "Os occipitale"
+    },
+    {
+     "fi": [
+      "Ohimoluu"
+     ],
+     "en": [
+      "Temporal bone"
+     ],
+     "h": "Os temporale"
+    },
+    {
+     "fi": [
+      "Poskiluu"
+     ],
+     "en": [
+      "Cheekbone",
+      "Cheek bone"
+     ],
+     "h": "Os zygomaticum"
+    },
+    {
+     "fi": [
+      "Nenäluu"
+     ],
+     "en": [
+      "Nasal bone"
+     ],
+     "h": "Os nasale"
+    },
+    {
+     "fi": [
+      "Kieliluu"
+     ],
+     "en": [
+      "Hyoid bone",
+      "Hyoid"
+     ],
+     "h": "Os hyoideum"
+    },
+    {
+     "fi": [
+      "Häpyluu"
+     ],
+     "en": [
+      "Pubic bone"
+     ],
+     "h": "Os pubis"
+    },
+    {
+     "fi": [
+      "Jalustin"
+     ],
+     "en": [
+      "Stirrup"
+     ],
+     "h": "Stapes"
+    },
+    {
+     "fi": [
+      "Vasara"
+     ],
+     "en": [
+      "Hammer"
+     ],
+     "h": "Malleus"
+    },
+    {
+     "fi": [
+      "Alasin"
+     ],
+     "en": [
+      "Anvil"
+     ],
+     "h": "Incus"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-englannin-elainsanat",
+   "cat": "tiede",
+   "t": 217,
+   "title": {
+    "fi": "Englannin eläinsanasto: 31 poikasen tai joukon nimeä (vastaa eläin)",
+    "en": "English animal vocabulary: 31 names for young or groups (answer the animal)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sana",
+    "en": "Word"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kenguru",
+      "Koala",
+      "Vompatti",
+      "Pussieläin"
+     ],
+     "en": [
+      "Kangaroo",
+      "Marsupial",
+      "Wallaby",
+      "Koala",
+      "Wombat"
+     ],
+     "h": {
+      "fi": "joey (poikanen)",
+      "en": "joey (young)"
+     }
+    },
+    {
+     "fi": [
+      "Joutsen"
+     ],
+     "en": [
+      "Swan"
+     ],
+     "h": {
+      "fi": "cygnet (poikanen)",
+      "en": "cygnet (young)"
+     }
+    },
+    {
+     "fi": [
+      "Hanhi"
+     ],
+     "en": [
+      "Goose"
+     ],
+     "h": {
+      "fi": "gosling (poikanen)",
+      "en": "gosling (young)"
+     }
+    },
+    {
+     "fi": [
+      "Jänis",
+      "Rusakko",
+      "Metsäjänis"
+     ],
+     "en": [
+      "Hare"
+     ],
+     "h": {
+      "fi": "leveret (poikanen)",
+      "en": "leveret (young)"
+     }
+    },
+    {
+     "fi": [
+      "Vuohi",
+      "Kili"
+     ],
+     "en": [
+      "Goat"
+     ],
+     "h": {
+      "fi": "kid (poikanen)",
+      "en": "kid (young)"
+     }
+    },
+    {
+     "fi": [
+      "Hevonen",
+      "Varsa"
+     ],
+     "en": [
+      "Horse"
+     ],
+     "h": {
+      "fi": "foal (poikanen)",
+      "en": "foal (young)"
+     }
+    },
+    {
+     "fi": [
+      "Peura",
+      "Kauris"
+     ],
+     "en": [
+      "Deer"
+     ],
+     "h": {
+      "fi": "fawn (poikanen)",
+      "en": "fawn (young)"
+     }
+    },
+    {
+     "fi": [
+      "Kotka"
+     ],
+     "en": [
+      "Eagle"
+     ],
+     "h": {
+      "fi": "eaglet (poikanen)",
+      "en": "eaglet (young)"
+     }
+    },
+    {
+     "fi": [
+      "Sammakko",
+      "Nuijapää",
+      "Konna",
+      "Rupikonna"
+     ],
+     "en": [
+      "Frog",
+      "Toad"
+     ],
+     "h": {
+      "fi": "tadpole (poikanen)",
+      "en": "tadpole (young)"
+     }
+    },
+    {
+     "fi": [
+      "Ankerias"
+     ],
+     "en": [
+      "Eel"
+     ],
+     "h": {
+      "fi": "elver (poikanen)",
+      "en": "elver (young)"
+     }
+    },
+    {
+     "fi": [
+      "Laama",
+      "Alpakka"
+     ],
+     "en": [
+      "Llama",
+      "Alpaca"
+     ],
+     "h": {
+      "fi": "cria (poikanen)",
+      "en": "cria (young)"
+     }
+    },
+    {
+     "fi": [
+      "Kyyhky",
+      "Kyyhkynen"
+     ],
+     "en": [
+      "Pigeon",
+      "Dove"
+     ],
+     "h": {
+      "fi": "squab (poikanen)",
+      "en": "squab (young)"
+     }
+    },
+    {
+     "fi": [
+      "Kalkkuna"
+     ],
+     "en": [
+      "Turkey"
+     ],
+     "h": {
+      "fi": "poult (poikanen)",
+      "en": "poult (young)"
+     }
+    },
+    {
+     "fi": [
+      "Siili"
+     ],
+     "en": [
+      "Hedgehog"
+     ],
+     "h": {
+      "fi": "hoglet (poikanen)",
+      "en": "hoglet (young)"
+     }
+    },
+    {
+     "fi": [
+      "Lohi"
+     ],
+     "en": [
+      "Salmon"
+     ],
+     "h": {
+      "fi": "parr (poikanen)",
+      "en": "parr (young)"
+     }
+    },
+    {
+     "fi": [
+      "Varis"
+     ],
+     "en": [
+      "Crow"
+     ],
+     "h": {
+      "fi": "a murder of … (parvi)",
+      "en": "a murder of …"
+     }
+    },
+    {
+     "fi": [
+      "Leijona"
+     ],
+     "en": [
+      "Lion"
+     ],
+     "h": {
+      "fi": "a pride of … (lauma)",
+      "en": "a pride of …"
+     }
+    },
+    {
+     "fi": [
+      "Sarvikuono"
+     ],
+     "en": [
+      "Rhinoceros",
+      "Rhino"
+     ],
+     "h": {
+      "fi": "a crash of … (lauma)",
+      "en": "a crash of …"
+     }
+    },
+    {
+     "fi": [
+      "Kirahvi"
+     ],
+     "en": [
+      "Giraffe"
+     ],
+     "h": {
+      "fi": "a tower of … (lauma)",
+      "en": "a tower of …"
+     }
+    },
+    {
+     "fi": [
+      "Seepra"
+     ],
+     "en": [
+      "Zebra"
+     ],
+     "h": {
+      "fi": "a dazzle of … (lauma)",
+      "en": "a dazzle of …"
+     }
+    },
+    {
+     "fi": [
+      "Virtahepo"
+     ],
+     "en": [
+      "Hippopotamus",
+      "Hippo"
+     ],
+     "h": {
+      "fi": "a bloat of … (lauma)",
+      "en": "a bloat of …"
+     }
+    },
+    {
+     "fi": [
+      "Kottarainen"
+     ],
+     "en": [
+      "Starling"
+     ],
+     "h": {
+      "fi": "a murmuration of … (parvi)",
+      "en": "a murmuration of …"
+     }
+    },
+    {
+     "fi": [
+      "Korppi"
+     ],
+     "en": [
+      "Raven"
+     ],
+     "h": {
+      "fi": "a unkindness of … (parvi)",
+      "en": "a unkindness of …"
+     }
+    },
+    {
+     "fi": [
+      "Fretti"
+     ],
+     "en": [
+      "Ferret"
+     ],
+     "h": {
+      "fi": "a business of … (joukko)",
+      "en": "a business of …"
+     }
+    },
+    {
+     "fi": [
+      "Kettu"
+     ],
+     "en": [
+      "Fox"
+     ],
+     "h": {
+      "fi": "a skulk of … (joukko)",
+      "en": "a skulk of …"
+     }
+    },
+    {
+     "fi": [
+      "Mäyrä"
+     ],
+     "en": [
+      "Badger"
+     ],
+     "h": {
+      "fi": "a cete of … (joukko)",
+      "en": "a cete of …"
+     }
+    },
+    {
+     "fi": [
+      "Piikkisika"
+     ],
+     "en": [
+      "Porcupine"
+     ],
+     "h": {
+      "fi": "a prickle of … (joukko)",
+      "en": "a prickle of …"
+     }
+    },
+    {
+     "fi": [
+      "Flamingo"
+     ],
+     "en": [
+      "Flamingo"
+     ],
+     "h": {
+      "fi": "a flamboyance of … (parvi)",
+      "en": "a flamboyance of …"
+     }
+    },
+    {
+     "fi": [
+      "Tikli"
+     ],
+     "en": [
+      "Goldfinch"
+     ],
+     "h": {
+      "fi": "a charm of … (parvi)",
+      "en": "a charm of …"
+     }
+    },
+    {
+     "fi": [
+      "Pöllö"
+     ],
+     "en": [
+      "Owl"
+     ],
+     "h": {
+      "fi": "a parliament of … (parvi)",
+      "en": "a parliament of …"
+     }
+    },
+    {
+     "fi": [
+      "Susi"
+     ],
+     "en": [
+      "Wolf"
+     ],
+     "h": {
+      "fi": "a pack of … (lauma)",
+      "en": "a pack of …"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-suomen-matelijat-sammakot",
+   "cat": "tiede",
+   "t": 80,
+   "title": {
+    "fi": "Suomen 5 matelijaa ja 5 alkuperäistä sammakkoeläintä: tunnista vihjeestä",
+    "en": "Finland's 5 reptiles and 5 native amphibians: identify from the clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kyy",
+      "Kyykäärme"
+     ],
+     "en": [
+      "Common European adder",
+      "Adder",
+      "Common viper"
+     ],
+     "h": {
+      "fi": "Suomen ainoa myrkkykäärme, selässä sahalaitakuvio",
+      "en": "Finland's only venomous snake, zigzag on its back"
+     }
+    },
+    {
+     "fi": [
+      "Rantakäärme"
+     ],
+     "en": [
+      "Grass snake"
+     ],
+     "h": {
+      "fi": "Käärme, jolla on keltaiset laikut pään takana",
+      "en": "Snake with yellow patches behind the head"
+     }
+    },
+    {
+     "fi": [
+      "Kangaskäärme"
+     ],
+     "en": [
+      "Smooth snake"
+     ],
+     "h": {
+      "fi": "Harvinainen käärme, Suomessa vain Ahvenanmaalla",
+      "en": "Rare snake, in Finland only on Åland"
+     }
+    },
+    {
+     "fi": [
+      "Vaskitsa"
+     ],
+     "en": [
+      "Slow worm",
+      "Slowworm"
+     ],
+     "h": {
+      "fi": "Jalaton lisko, jota luullaan usein käärmeeksi",
+      "en": "Legless lizard often mistaken for a snake"
+     }
+    },
+    {
+     "fi": [
+      "Sisilisko"
+     ],
+     "en": [
+      "Viviparous lizard",
+      "Common lizard"
+     ],
+     "h": {
+      "fi": "Jalallinen lisko, joka synnyttää eläviä poikasia",
+      "en": "Lizard with legs that gives birth to live young"
+     }
+    },
+    {
+     "fi": [
+      "Rupikonna",
+      "Konna"
+     ],
+     "en": [
+      "Common toad",
+      "Toad"
+     ],
+     "h": {
+      "fi": "Syylänäköinen, kömpelösti kävelevä sammakkoeläin",
+      "en": "Warty amphibian that walks rather than hops"
+     }
+    },
+    {
+     "fi": [
+      "Sammakko",
+      "Tavallinen sammakko",
+      "Ruskosammakko"
+     ],
+     "en": [
+      "Common frog"
+     ],
+     "h": {
+      "fi": "Suomen yleisin sammakkoeläin, Rana temporaria",
+      "en": "Finland's commonest amphibian, Rana temporaria"
+     }
+    },
+    {
+     "fi": [
+      "Viitasammakko"
+     ],
+     "en": [
+      "Moor frog"
+     ],
+     "h": {
+      "fi": "Koiras muuttuu kutuaikaan siniseksi",
+      "en": "Males turn blue in the breeding season"
+     }
+    },
+    {
+     "fi": [
+      "Rupilisko"
+     ],
+     "en": [
+      "Great crested newt",
+      "Northern crested newt"
+     ],
+     "h": {
+      "fi": "Isompi vesilisko, koiraalla korkea sahalaitainen harja",
+      "en": "Larger newt, male has a tall jagged crest"
+     }
+    },
+    {
+     "fi": [
+      "Vesilisko"
+     ],
+     "en": [
+      "Smooth newt",
+      "Common newt"
+     ],
+     "h": {
+      "fi": "Pienempi ja yleisempi Suomen kahdesta vesiliskosta",
+      "en": "Smaller and commoner of Finland's two newts"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-mista-kasvista",
+   "cat": "tiede",
+   "t": 140,
+   "title": {
+    "fi": "Mistä kasvista? 20 tuotetta, lääkettä ja juomaa",
+    "en": "Which plant? 20 products, medicines and drinks"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Tuote",
+    "en": "Product"
+   },
+   "items": [
+    {
+     "fi": [
+      "Soija",
+      "Soijapapu"
+     ],
+     "en": [
+      "Soybean",
+      "Soya bean",
+      "Soy"
+     ],
+     "h": {
+      "fi": "Tofu",
+      "en": "Tofu"
+     }
+    },
+    {
+     "fi": [
+      "Kaakaopuu",
+      "Kaakao"
+     ],
+     "en": [
+      "Cacao",
+      "Cacao tree",
+      "Cocoa tree"
+     ],
+     "h": {
+      "fi": "Suklaa",
+      "en": "Chocolate"
+     }
+    },
+    {
+     "fi": [
+      "Agave",
+      "Sinisagave",
+      "Tequila-agave"
+     ],
+     "en": [
+      "Agave",
+      "Blue agave"
+     ],
+     "h": {
+      "fi": "Tequila",
+      "en": "Tequila"
+     }
+    },
+    {
+     "fi": [
+      "Kumipuu",
+      "Parakumipuu"
+     ],
+     "en": [
+      "Rubber tree",
+      "Para rubber tree"
+     ],
+     "h": {
+      "fi": "Luonnonkumi",
+      "en": "Natural rubber"
+     }
+    },
+    {
+     "fi": [
+      "Pellava"
+     ],
+     "en": [
+      "Flax"
+     ],
+     "h": {
+      "fi": "Liinakangas ja linoleumin öljy",
+      "en": "Linen cloth and linoleum oil"
+     }
+    },
+    {
+     "fi": [
+      "Korkkitammi"
+     ],
+     "en": [
+      "Cork oak"
+     ],
+     "h": {
+      "fi": "Viinipullon korkki",
+      "en": "Wine bottle cork"
+     }
+    },
+    {
+     "fi": [
+      "Kiinapuu",
+      "Kiinapuut"
+     ],
+     "en": [
+      "Cinchona",
+      "Quinine tree"
+     ],
+     "h": {
+      "fi": "Kiniini, vanha malarialääke",
+      "en": "Quinine, an old malaria drug"
+     }
+    },
+    {
+     "fi": [
+      "Mesiangervo"
+     ],
+     "en": [
+      "Meadowsweet"
+     ],
+     "h": {
+      "fi": "Aspiriini sai nimensä sen vanhasta sukunimestä Spiraea",
+      "en": "Aspirin is named after its old genus Spiraea"
+     }
+    },
+    {
+     "fi": [
+      "Oopiumunikko",
+      "Unikko"
+     ],
+     "en": [
+      "Opium poppy",
+      "Poppy"
+     ],
+     "h": {
+      "fi": "Morfiini",
+      "en": "Morphine"
+     }
+    },
+    {
+     "fi": [
+      "Sormustinkukka",
+      "Villasormustinkukka"
+     ],
+     "en": [
+      "Foxglove",
+      "Digitalis"
+     ],
+     "h": {
+      "fi": "Digoksiini, sydänlääke",
+      "en": "Digoxin, a heart drug"
+     }
+    },
+    {
+     "fi": [
+      "Marjakuusi",
+      "Lännenmarjakuusi"
+     ],
+     "en": [
+      "Yew",
+      "Pacific yew"
+     ],
+     "h": {
+      "fi": "Paklitakseli (Taxol), syöpälääke",
+      "en": "Paclitaxel (Taxol), a cancer drug"
+     }
+    },
+    {
+     "fi": [
+      "Maniokki",
+      "Kassava"
+     ],
+     "en": [
+      "Cassava",
+      "Manioc"
+     ],
+     "h": {
+      "fi": "Tapioka",
+      "en": "Tapioca"
+     }
+    },
+    {
+     "fi": [
+      "Humala"
+     ],
+     "en": [
+      "Hops",
+      "Hop"
+     ],
+     "h": {
+      "fi": "Oluen katkeruus",
+      "en": "The bitterness of beer"
+     }
+    },
+    {
+     "fi": [
+      "Sokerivaahtera",
+      "Vaahtera"
+     ],
+     "en": [
+      "Sugar maple",
+      "Maple"
+     ],
+     "h": {
+      "fi": "Vaahterasiirappi",
+      "en": "Maple syrup"
+     }
+    },
+    {
+     "fi": [
+      "Akaasia"
+     ],
+     "en": [
+      "Acacia"
+     ],
+     "h": {
+      "fi": "Arabikumi",
+      "en": "Gum arabic"
+     }
+    },
+    {
+     "fi": [
+      "Myrkkykoiso",
+      "Belladonna"
+     ],
+     "en": [
+      "Deadly nightshade",
+      "Belladonna"
+     ],
+     "h": {
+      "fi": "Atropiini",
+      "en": "Atropine"
+     }
+    },
+    {
+     "fi": [
+      "Kataja"
+     ],
+     "en": [
+      "Juniper"
+     ],
+     "h": {
+      "fi": "Ginin pääaromi",
+      "en": "The main flavour of gin"
+     }
+    },
+    {
+     "fi": [
+      "Sokeriruoko"
+     ],
+     "en": [
+      "Sugarcane",
+      "Sugar cane"
+     ],
+     "h": {
+      "fi": "Rommi",
+      "en": "Rum"
+     }
+    },
+    {
+     "fi": [
+      "Riisi"
+     ],
+     "en": [
+      "Rice"
+     ],
+     "h": {
+      "fi": "Sake",
+      "en": "Sake"
+     }
+    },
+    {
+     "fi": [
+      "Maustekrassi",
+      "Japaninpiparjuuri",
+      "Maustelituyrtti"
+     ],
+     "en": [
+      "Japanese horseradish",
+      "Wasabia japonica"
+     ],
+     "h": {
+      "fi": "Aito wasabi",
+      "en": "Real wasabi"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-kaksi-elainta-nimessa",
+   "cat": "tiede",
+   "t": 112,
+   "title": {
+    "fi": "Kaksi eläintä yhdessä nimessä: 14 lajia, joiden suomenkielisessä nimessä on kaksi eläintä",
+    "en": "14 species whose Finnish name contains two animals (answer in Finnish or English)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Muurahaiskarhu"
+     ],
+     "en": [
+      "Giant anteater",
+      "Anteater"
+     ],
+     "h": {
+      "fi": "Etelä-Amerikan nisäkäs, joka nuolee termiittejä",
+      "en": "South American mammal that licks up termites"
+     }
+    },
+    {
+     "fi": [
+      "Hiirihaukka"
+     ],
+     "en": [
+      "Common buzzard",
+      "Buzzard"
+     ],
+     "h": {
+      "fi": "Yleinen petolintu, joka saalistaa myyriä pelloilla",
+      "en": "Common raptor that hunts voles over fields"
+     }
+    },
+    {
+     "fi": [
+      "Kanahaukka"
+     ],
+     "en": [
+      "Northern goshawk",
+      "Goshawk"
+     ],
+     "h": {
+      "fi": "Metsien vahva petolintu, voi viedä kotitilan kanoja",
+      "en": "Strong forest raptor that may take farm chickens"
+     }
+    },
+    {
+     "fi": [
+      "Mehiläishaukka"
+     ],
+     "en": [
+      "European honey buzzard",
+      "Honey buzzard"
+     ],
+     "h": {
+      "fi": "Petolintu, joka kaivaa esiin ampiaisten pesiä",
+      "en": "Raptor that digs up wasp nests"
+     }
+    },
+    {
+     "fi": [
+      "Kalasääski"
+     ],
+     "en": [
+      "Osprey"
+     ],
+     "h": {
+      "fi": "Petolintu, joka syöksyy veteen kalan perään",
+      "en": "Raptor that plunges into water for fish"
+     }
+    },
+    {
+     "fi": [
+      "Kalatiira"
+     ],
+     "en": [
+      "Common tern"
+     ],
+     "h": {
+      "fi": "Tiira, jonka punaisen nokan kärki on musta",
+      "en": "Tern with a black tip on its red bill"
+     }
+    },
+    {
+     "fi": [
+      "Hevosmuurahainen"
+     ],
+     "en": [
+      "Carpenter ant"
+     ],
+     "h": {
+      "fi": "Suomen suurin muurahainen, kovertaa puuta",
+      "en": "Finland's largest ant, tunnels into wood"
+     }
+    },
+    {
+     "fi": [
+      "Hirvikärpänen"
+     ],
+     "en": [
+      "Deer ked"
+     ],
+     "h": {
+      "fi": "Syksyllä hiuksiin takertuva, siipensä pudottava loinen",
+      "en": "Autumn parasite that sheds its wings in your hair"
+     }
+    },
+    {
+     "fi": [
+      "Seeprakala"
+     ],
+     "en": [
+      "Zebrafish"
+     ],
+     "h": {
+      "fi": "Raidallinen akvaariokala, suosittu koe-eläin",
+      "en": "Striped aquarium fish, a popular lab animal"
+     }
+    },
+    {
+     "fi": [
+      "Papukaijakala"
+     ],
+     "en": [
+      "Parrotfish"
+     ],
+     "h": {
+      "fi": "Korallikala, jonka nokkamainen suu jauhaa korallia",
+      "en": "Reef fish whose beak-like mouth grinds coral"
+     }
+    },
+    {
+     "fi": [
+      "Leopardihylje"
+     ],
+     "en": [
+      "Leopard seal"
+     ],
+     "h": {
+      "fi": "Etelämantereen täplikäs hylje, joka saalistaa pingviinejä",
+      "en": "Spotted Antarctic seal that hunts penguins"
+     }
+    },
+    {
+     "fi": [
+      "Kissahai"
+     ],
+     "en": [
+      "Catshark"
+     ],
+     "h": {
+      "fi": "Pieni pohjahai, munakotelo on \"merenneidon kukkaro\"",
+      "en": "Small bottom shark, its egg case is a 'mermaid's purse'"
+     }
+    },
+    {
+     "fi": [
+      "Käärmekotka"
+     ],
+     "en": [
+      "Short-toed snake eagle",
+      "Snake eagle"
+     ],
+     "h": {
+      "fi": "Petolintu, joka elää lähes pelkästään matelijoista",
+      "en": "Raptor that lives almost entirely on reptiles"
+     }
+    },
+    {
+     "fi": [
+      "Kotkarausku"
+     ],
+     "en": [
+      "Eagle ray"
+     ],
+     "h": {
+      "fi": "Rausku, joka \"lentää\" vedessä siipimäisillä evillään",
+      "en": "Ray that 'flies' through water on wing-like fins"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-maakuntakukat",
+   "cat": "tiede",
+   "t": 168,
+   "title": {
+    "fi": "Suomen maakuntakukat (21, Suomen Kotien Kukkasrahaston luettelo; mukana Itä-Uusimaa sekä Hämeen alueet)",
+    "en": "Finland's 21 regional flowers (incl. former Itä-Uusimaa and Häme's sub-regions)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Maakunta",
+    "en": "Region"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kevätesikko"
+     ],
+     "en": [
+      "Cowslip"
+     ],
+     "h": "Ahvenanmaa"
+    },
+    {
+     "fi": [
+      "Tammi",
+      "Metsätammi"
+     ],
+     "en": [
+      "Oak",
+      "English oak"
+     ],
+     "h": "Varsinais-Suomi"
+    },
+    {
+     "fi": [
+      "Valkovuokko"
+     ],
+     "en": [
+      "Wood anemone"
+     ],
+     "h": "Uusimaa"
+    },
+    {
+     "fi": [
+      "Leskenlehti"
+     ],
+     "en": [
+      "Coltsfoot"
+     ],
+     "h": "Itä-Uusimaa"
+    },
+    {
+     "fi": [
+      "Kurjenmiekka"
+     ],
+     "en": [
+      "Yellow iris",
+      "Yellow flag"
+     ],
+     "h": "Kymenlaakso"
+    },
+    {
+     "fi": [
+      "Kangasvuokko"
+     ],
+     "en": [
+      "Spring pasqueflower"
+     ],
+     "h": "Etelä-Karjala"
+    },
+    {
+     "fi": [
+      "Tyrni"
+     ],
+     "en": [
+      "Sea buckthorn"
+     ],
+     "h": "Satakunta"
+    },
+    {
+     "fi": [
+      "Sinivuokko"
+     ],
+     "en": [
+      "Hepatica",
+      "Liverleaf"
+     ],
+     "h": "Häme"
+    },
+    {
+     "fi": [
+      "Hämeenkylmänkukka"
+     ],
+     "en": [
+      "Eastern pasqueflower"
+     ],
+     "h": "Kanta-Häme"
+    },
+    {
+     "fi": [
+      "Ruiskaunokki"
+     ],
+     "en": [
+      "Cornflower"
+     ],
+     "h": "Päijät-Häme"
+    },
+    {
+     "fi": [
+      "Tuomi"
+     ],
+     "en": [
+      "Bird cherry"
+     ],
+     "h": "Pirkanmaa"
+    },
+    {
+     "fi": [
+      "Pohjanlumme"
+     ],
+     "en": [
+      "Northern white water lily",
+      "White water lily"
+     ],
+     "h": "Etelä-Savo"
+    },
+    {
+     "fi": [
+      "Päivänkakkara"
+     ],
+     "en": [
+      "Oxeye daisy",
+      "Ox-eye daisy"
+     ],
+     "h": "Keski-Suomi"
+    },
+    {
+     "fi": [
+      "Maitohorsma"
+     ],
+     "en": [
+      "Fireweed",
+      "Rosebay willowherb"
+     ],
+     "h": "Etelä-Pohjanmaa"
+    },
+    {
+     "fi": [
+      "Mesiangervo"
+     ],
+     "en": [
+      "Meadowsweet"
+     ],
+     "h": "Pohjanmaa"
+    },
+    {
+     "fi": [
+      "Kissankello"
+     ],
+     "en": [
+      "Harebell"
+     ],
+     "h": "Keski-Pohjanmaa"
+    },
+    {
+     "fi": [
+      "Kotipihlaja",
+      "Pihlaja"
+     ],
+     "en": [
+      "Rowan",
+      "Mountain ash"
+     ],
+     "h": "Pohjois-Savo"
+    },
+    {
+     "fi": [
+      "Karjalanruusu"
+     ],
+     "en": [
+      "Prickly rose"
+     ],
+     "h": "Pohjois-Karjala"
+    },
+    {
+     "fi": [
+      "Suopursu"
+     ],
+     "en": [
+      "Marsh Labrador tea",
+      "Labrador tea"
+     ],
+     "h": "Pohjois-Pohjanmaa"
+    },
+    {
+     "fi": [
+      "Kanerva"
+     ],
+     "en": [
+      "Heather"
+     ],
+     "h": "Kainuu"
+    },
+    {
+     "fi": [
+      "Kullero"
+     ],
+     "en": [
+      "Globeflower"
+     ],
+     "h": "Lappi"
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-hormonit",
+   "cat": "tiede",
+   "t": 105,
+   "title": {
+    "fi": "Mikä elin erittää? 15 hormonia ja niiden pääasiallinen lähde",
+    "en": "Which organ secretes it? 15 hormones and their main source"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hormoni",
+    "en": "Hormone"
+   },
+   "items": [
+    {
+     "fi": [
+      "Haima"
+     ],
+     "en": [
+      "Pancreas"
+     ],
+     "h": {
+      "fi": "Insuliini",
+      "en": "Insulin"
+     }
+    },
+    {
+     "fi": [
+      "Kilpirauhanen"
+     ],
+     "en": [
+      "Thyroid",
+      "Thyroid gland"
+     ],
+     "h": {
+      "fi": "Tyroksiini",
+      "en": "Thyroxine"
+     }
+    },
+    {
+     "fi": [
+      "Lisämunuainen"
+     ],
+     "en": [
+      "Adrenal gland",
+      "Adrenal"
+     ],
+     "h": {
+      "fi": "Adrenaliini",
+      "en": "Adrenaline"
+     }
+    },
+    {
+     "fi": [
+      "Käpyrauhanen"
+     ],
+     "en": [
+      "Pineal gland",
+      "Pineal"
+     ],
+     "h": {
+      "fi": "Melatoniini",
+      "en": "Melatonin"
+     }
+    },
+    {
+     "fi": [
+      "Aivolisäke"
+     ],
+     "en": [
+      "Pituitary gland",
+      "Pituitary"
+     ],
+     "h": {
+      "fi": "Kasvuhormoni",
+      "en": "Growth hormone"
+     }
+    },
+    {
+     "fi": [
+      "Kives",
+      "Kivekset"
+     ],
+     "en": [
+      "Testis",
+      "Testicle",
+      "Testes"
+     ],
+     "h": {
+      "fi": "Testosteroni",
+      "en": "Testosterone"
+     }
+    },
+    {
+     "fi": [
+      "Munasarja",
+      "Munasarjat"
+     ],
+     "en": [
+      "Ovary",
+      "Ovaries"
+     ],
+     "h": {
+      "fi": "Estrogeeni",
+      "en": "Oestrogen"
+     }
+    },
+    {
+     "fi": [
+      "Lisäkilpirauhanen",
+      "Lisäkilpirauhaset"
+     ],
+     "en": [
+      "Parathyroid gland",
+      "Parathyroid"
+     ],
+     "h": {
+      "fi": "Parathormoni",
+      "en": "Parathyroid hormone"
+     }
+    },
+    {
+     "fi": [
+      "Kateenkorva"
+     ],
+     "en": [
+      "Thymus"
+     ],
+     "h": {
+      "fi": "Tymosiini",
+      "en": "Thymosin"
+     }
+    },
+    {
+     "fi": [
+      "Munuainen",
+      "Munuaiset"
+     ],
+     "en": [
+      "Kidney",
+      "Kidneys"
+     ],
+     "h": {
+      "fi": "Erytropoietiini (EPO)",
+      "en": "Erythropoietin (EPO)"
+     }
+    },
+    {
+     "fi": [
+      "Rasvakudos",
+      "Rasva"
+     ],
+     "en": [
+      "Adipose tissue",
+      "Fat tissue",
+      "Body fat"
+     ],
+     "h": {
+      "fi": "Leptiini",
+      "en": "Leptin"
+     }
+    },
+    {
+     "fi": [
+      "Mahalaukku",
+      "Maha"
+     ],
+     "en": [
+      "Stomach"
+     ],
+     "h": {
+      "fi": "Greliini, \"nälkähormoni\"",
+      "en": "Ghrelin, the 'hunger hormone'"
+     }
+    },
+    {
+     "fi": [
+      "Istukka"
+     ],
+     "en": [
+      "Placenta"
+     ],
+     "h": {
+      "fi": "Istukkagonadotropiini (hCG)",
+      "en": "Human chorionic gonadotropin (hCG)"
+     }
+    },
+    {
+     "fi": [
+      "Sydän"
+     ],
+     "en": [
+      "Heart"
+     ],
+     "h": {
+      "fi": "Eteispeptidi (ANP)",
+      "en": "Atrial natriuretic peptide (ANP)"
+     }
+    },
+    {
+     "fi": [
+      "Ohutsuoli",
+      "Pohjukaissuoli"
+     ],
+     "en": [
+      "Small intestine",
+      "Duodenum"
+     ],
+     "h": {
+      "fi": "Sekretiini",
+      "en": "Secretin"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-urheilijan-lihakset",
+   "cat": "tiede",
+   "t": 120,
+   "title": {
+    "fi": "Juoksijan ja punnertajan lihakset: 15 lihasta vihjeestä",
+    "en": "A sprinter's and lifter's muscles: 15 muscles from the clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Nelipäinen reisilihas",
+      "Etureisi"
+     ],
+     "en": [
+      "Quadriceps",
+      "Quadriceps femoris",
+      "Quads"
+     ],
+     "h": {
+      "fi": "Reiden etuosa, ojentaa polven ponnistuksessa",
+      "en": "Front of the thigh, straightens the knee"
+     }
+    },
+    {
+     "fi": [
+      "Kaksipäinen reisilihas"
+     ],
+     "en": [
+      "Biceps femoris"
+     ],
+     "h": {
+      "fi": "Takareiden ulompi lihas, pikajuoksijan tavallinen revähdyskohta",
+      "en": "Outer hamstring, a sprinter's common strain"
+     }
+    },
+    {
+     "fi": [
+      "Iso pakaralihas",
+      "Pakaralihas"
+     ],
+     "en": [
+      "Gluteus maximus",
+      "Glute"
+     ],
+     "h": {
+      "fi": "Kehon suurin lihas, ojentaa lonkan",
+      "en": "Largest muscle in the body, extends the hip"
+     }
+    },
+    {
+     "fi": [
+      "Kaksoiskantalihas"
+     ],
+     "en": [
+      "Gastrocnemius"
+     ],
+     "h": {
+      "fi": "Pohkeen pinnallinen kaksipäinen lihas",
+      "en": "Two-headed surface muscle of the calf"
+     }
+    },
+    {
+     "fi": [
+      "Leveä kantalihas"
+     ],
+     "en": [
+      "Soleus"
+     ],
+     "h": {
+      "fi": "Pohkeen syvä lihas kaksoiskantalihaksen alla",
+      "en": "Deep calf muscle beneath the gastrocnemius"
+     }
+    },
+    {
+     "fi": [
+      "Suoliluu-lannelihas",
+      "Lonkankoukistaja"
+     ],
+     "en": [
+      "Iliopsoas",
+      "Hip flexor"
+     ],
+     "h": {
+      "fi": "Lonkan pääkoukistaja, nostaa polven juoksussa",
+      "en": "Main hip flexor, lifts the knee when running"
+     }
+    },
+    {
+     "fi": [
+      "Etummainen säärilihas"
+     ],
+     "en": [
+      "Tibialis anterior"
+     ],
+     "h": {
+      "fi": "Säären etuosa, nostaa jalkaterän kärkeä",
+      "en": "Front of the shin, lifts the toes"
+     }
+    },
+    {
+     "fi": [
+      "Räätälinlihas"
+     ],
+     "en": [
+      "Sartorius"
+     ],
+     "h": {
+      "fi": "Kulkee vinosti lonkasta polven sisäpuolelle",
+      "en": "Runs diagonally from hip to inner knee"
+     }
+    },
+    {
+     "fi": [
+      "Suora vatsalihas"
+     ],
+     "en": [
+      "Rectus abdominis",
+      "Six-pack"
+     ],
+     "h": {
+      "fi": "\"Six-pack\": vatsan etuosan pystysuora lihas",
+      "en": "The 'six-pack' at the front of the belly"
+     }
+    },
+    {
+     "fi": [
+      "Leveä selkälihas"
+     ],
+     "en": [
+      "Latissimus dorsi",
+      "Lats"
+     ],
+     "h": {
+      "fi": "Leuanvedon päälihas selässä",
+      "en": "Main back muscle in pull-ups"
+     }
+    },
+    {
+     "fi": [
+      "Iso rintalihas"
+     ],
+     "en": [
+      "Pectoralis major",
+      "Pecs"
+     ],
+     "h": {
+      "fi": "Penkkipunnerruksen päälihas",
+      "en": "Main muscle in the bench press"
+     }
+    },
+    {
+     "fi": [
+      "Hartialihas"
+     ],
+     "en": [
+      "Deltoid",
+      "Deltoids"
+     ],
+     "h": {
+      "fi": "Olkapään pyöreä lihas, nostaa käsivarren sivulle",
+      "en": "Rounded shoulder muscle, lifts the arm sideways"
+     }
+    },
+    {
+     "fi": [
+      "Kaksipäinen olkalihas",
+      "Hauis"
+     ],
+     "en": [
+      "Biceps",
+      "Biceps brachii"
+     ],
+     "h": {
+      "fi": "Koukistaa kyynärpään",
+      "en": "Bends the elbow"
+     }
+    },
+    {
+     "fi": [
+      "Kolmipäinen olkalihas",
+      "Ojentaja"
+     ],
+     "en": [
+      "Triceps",
+      "Triceps brachii"
+     ],
+     "h": {
+      "fi": "Ojentaa kyynärpään",
+      "en": "Straightens the elbow"
+     }
+    },
+    {
+     "fi": [
+      "Epäkäslihas"
+     ],
+     "en": [
+      "Trapezius",
+      "Traps"
+     ],
+     "h": {
+      "fi": "Niskan ja hartioiden vinoneliön muotoinen lihas",
+      "en": "Diamond-shaped muscle of the neck and shoulders"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-laaketieteen-lapimurrot",
+   "cat": "tiede",
+   "t": 136,
+   "title": {
+    "fi": "Lääketieteen 17 läpimurtoa 1543–1978: kuka teki?",
+    "en": "17 medical breakthroughs 1543–1978: who did it?"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Läpimurto",
+    "en": "Breakthrough"
+   },
+   "items": [
+    {
+     "fi": [
+      "Andreas Vesalius",
+      "Vesalius"
+     ],
+     "en": [
+      "Andreas Vesalius",
+      "Vesalius"
+     ],
+     "h": {
+      "fi": "Ihmisen anatomian kuvateos De humani corporis fabrica, 1543",
+      "en": "Anatomy book De humani corporis fabrica, 1543"
+     }
+    },
+    {
+     "fi": [
+      "William Harvey",
+      "Harvey"
+     ],
+     "en": [
+      "William Harvey",
+      "Harvey"
+     ],
+     "h": {
+      "fi": "Kuvasi veren kiertävän sydämen pumppaamana, 1628",
+      "en": "Showed that the heart pumps blood in a circuit, 1628"
+     }
+    },
+    {
+     "fi": [
+      "René Laennec",
+      "Laennec"
+     ],
+     "en": [
+      "René Laennec",
+      "Laennec"
+     ],
+     "h": {
+      "fi": "Stetoskooppi, 1816",
+      "en": "The stethoscope, 1816"
+     }
+    },
+    {
+     "fi": [
+      "Ignaz Semmelweis",
+      "Semmelweis"
+     ],
+     "en": [
+      "Ignaz Semmelweis",
+      "Semmelweis"
+     ],
+     "h": {
+      "fi": "Käsienpesu synnytysosastolla, 1847",
+      "en": "Hand-washing on a maternity ward, 1847"
+     }
+    },
+    {
+     "fi": [
+      "John Snow",
+      "Snow"
+     ],
+     "en": [
+      "John Snow",
+      "Snow"
+     ],
+     "h": {
+      "fi": "Jäljitti Lontoon koleran vesipumppuun, 1854",
+      "en": "Traced a London cholera outbreak to a pump, 1854"
+     }
+    },
+    {
+     "fi": [
+      "Joseph Lister",
+      "Lister"
+     ],
+     "en": [
+      "Joseph Lister",
+      "Lister"
+     ],
+     "h": {
+      "fi": "Antiseptinen kirurgia karbolihapolla, 1867",
+      "en": "Antiseptic surgery with carbolic acid, 1867"
+     }
+    },
+    {
+     "fi": [
+      "Robert Koch",
+      "Koch"
+     ],
+     "en": [
+      "Robert Koch",
+      "Koch"
+     ],
+     "h": {
+      "fi": "Tuberkuloosibakteerin löytö, 1882",
+      "en": "Discovery of the tuberculosis bacterium, 1882"
+     }
+    },
+    {
+     "fi": [
+      "Louis Pasteur",
+      "Pasteur"
+     ],
+     "en": [
+      "Louis Pasteur",
+      "Pasteur"
+     ],
+     "h": {
+      "fi": "Raivotautirokote ihmiselle, 1885",
+      "en": "Rabies vaccine given to a human, 1885"
+     }
+    },
+    {
+     "fi": [
+      "Wilhelm Röntgen",
+      "Röntgen",
+      "Wilhelm Conrad Röntgen"
+     ],
+     "en": [
+      "Wilhelm Roentgen",
+      "Roentgen"
+     ],
+     "h": {
+      "fi": "Röntgensäteet, 1895",
+      "en": "X-rays, 1895"
+     }
+    },
+    {
+     "fi": [
+      "Karl Landsteiner",
+      "Landsteiner"
+     ],
+     "en": [
+      "Karl Landsteiner",
+      "Landsteiner"
+     ],
+     "h": {
+      "fi": "ABO-veriryhmät, 1901",
+      "en": "ABO blood groups, 1901"
+     }
+    },
+    {
+     "fi": [
+      "Willem Einthoven",
+      "Einthoven"
+     ],
+     "en": [
+      "Willem Einthoven",
+      "Einthoven"
+     ],
+     "h": {
+      "fi": "Käyttökelpoinen sydänsähkökäyrä (EKG), 1900-luvun alku",
+      "en": "The first practical electrocardiogram (ECG), early 1900s"
+     }
+    },
+    {
+     "fi": [
+      "Alois Alzheimer",
+      "Alzheimer"
+     ],
+     "en": [
+      "Alois Alzheimer",
+      "Alzheimer"
+     ],
+     "h": {
+      "fi": "Kuvasi hänen mukaansa nimetyn muistisairauden, 1906",
+      "en": "Described the dementia named after him, 1906"
+     }
+    },
+    {
+     "fi": [
+      "Paul Ehrlich",
+      "Ehrlich"
+     ],
+     "en": [
+      "Paul Ehrlich",
+      "Ehrlich"
+     ],
+     "h": {
+      "fi": "Salvarsan, ensimmäinen kuppalääke, 1910",
+      "en": "Salvarsan, the first syphilis drug, 1910"
+     }
+    },
+    {
+     "fi": [
+      "Frederick Banting",
+      "Banting",
+      "Charles Best",
+      "Best"
+     ],
+     "en": [
+      "Frederick Banting",
+      "Banting",
+      "Charles Best",
+      "Best"
+     ],
+     "h": {
+      "fi": "Insuliinin eristäminen diabeteksen hoitoon, 1921–1922",
+      "en": "Isolating insulin to treat diabetes, 1921–1922"
+     }
+    },
+    {
+     "fi": [
+      "Jonas Salk",
+      "Salk"
+     ],
+     "en": [
+      "Jonas Salk",
+      "Salk"
+     ],
+     "h": {
+      "fi": "Pistettävä poliorokote, 1955",
+      "en": "Injectable polio vaccine, 1955"
+     }
+    },
+    {
+     "fi": [
+      "Christiaan Barnard",
+      "Barnard"
+     ],
+     "en": [
+      "Christiaan Barnard",
+      "Barnard"
+     ],
+     "h": {
+      "fi": "Ensimmäinen ihmisen sydämensiirto, 1967",
+      "en": "First human heart transplant, 1967"
+     }
+    },
+    {
+     "fi": [
+      "Robert Edwards",
+      "Edwards",
+      "Patrick Steptoe",
+      "Steptoe"
+     ],
+     "en": [
+      "Robert Edwards",
+      "Edwards",
+      "Patrick Steptoe",
+      "Steptoe"
+     ],
+     "h": {
+      "fi": "Ensimmäinen koeputkilapsi, 1978",
+      "en": "The first IVF baby, 1978"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-yllattavat-sukulaiset",
+   "cat": "tiede",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Yllättävät sukulaiset: kuka on kenenkin lähisukua?",
+    "en": "Surprising relatives: who is closely related to whom?"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä näistä on norsun lähin sukulainen?",
+      "en": "Which of these is the elephant's closest relative?"
+     },
+     "ok": {
+      "fi": "Manaatti",
+      "en": "Manatee"
+     },
+     "no": [
+      {
+       "fi": "Sarvikuono",
+       "en": "Rhinoceros"
+      },
+      {
+       "fi": "Virtahepo",
+       "en": "Hippopotamus"
+      },
+      {
+       "fi": "Kirahvi",
+       "en": "Giraffe"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on valaiden lähin elävä sukulainen?",
+      "en": "What is the closest living relative of whales?"
+     },
+     "ok": {
+      "fi": "Virtahepo",
+      "en": "Hippopotamus"
+     },
+     "no": [
+      {
+       "fi": "Hylje",
+       "en": "Seal"
+      },
+      {
+       "fi": "Mursu",
+       "en": "Walrus"
+      },
+      {
+       "fi": "Saukko",
+       "en": "Otter"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitkä ovat lintujen lähimmät elävät sukulaiset?",
+      "en": "What are the closest living relatives of birds?"
+     },
+     "ok": {
+      "fi": "Krokotiilieläimet",
+      "en": "Crocodilians"
+     },
+     "no": [
+      {
+       "fi": "Kilpikonnat",
+       "en": "Turtles"
+      },
+      {
+       "fi": "Liskot",
+       "en": "Lizards"
+      },
+      {
+       "fi": "Lepakot",
+       "en": "Bats"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on kirahvin lähin elävä sukulainen?",
+      "en": "What is the giraffe's closest living relative?"
+     },
+     "ok": {
+      "fi": "Okapi",
+      "en": "Okapi"
+     },
+     "no": [
+      {
+       "fi": "Kameli",
+       "en": "Camel"
+      },
+      {
+       "fi": "Seepra",
+       "en": "Zebra"
+      },
+      {
+       "fi": "Laama",
+       "en": "Llama"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä kuuluu samaan lahkoon kuin hevonen?",
+      "en": "Which of these belongs to the same order as the horse?"
+     },
+     "ok": {
+      "fi": "Tapiiri",
+      "en": "Tapir"
+     },
+     "no": [
+      {
+       "fi": "Lehmä",
+       "en": "Cow"
+      },
+      {
+       "fi": "Kameli",
+       "en": "Camel"
+      },
+      {
+       "fi": "Virtahepo",
+       "en": "Hippopotamus"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin heimoon isopanda kuuluu?",
+      "en": "Which family does the giant panda belong to?"
+     },
+     "ok": {
+      "fi": "Karhut",
+      "en": "Bears"
+     },
+     "no": [
+      {
+       "fi": "Pesukarhut",
+       "en": "Raccoons"
+      },
+      {
+       "fi": "Näätäeläimet",
+       "en": "Mustelids"
+      },
+      {
+       "fi": "Kissaeläimet",
+       "en": "Cats"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on koalan lähin elävä sukulainen?",
+      "en": "What is the koala's closest living relative?"
+     },
+     "ok": {
+      "fi": "Vompatti",
+      "en": "Wombat"
+     },
+     "no": [
+      {
+       "fi": "Kenguru",
+       "en": "Kangaroo"
+      },
+      {
+       "fi": "Laiskiainen",
+       "en": "Sloth"
+      },
+      {
+       "fi": "Karhu",
+       "en": "Bear"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mille näistä ryhmistä hyeena on lähintä sukua?",
+      "en": "To which of these groups is the hyena most closely related?"
+     },
+     "ok": {
+      "fi": "Kissaeläimille",
+      "en": "Cats"
+     },
+     "no": [
+      {
+       "fi": "Koiraeläimille",
+       "en": "Dogs"
+      },
+      {
+       "fi": "Karhuille",
+       "en": "Bears"
+      },
+      {
+       "fi": "Näätäeläimille",
+       "en": "Mustelids"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mille näistä mustekala on lähintä sukua?",
+      "en": "To which of these is the octopus most closely related?"
+     },
+     "ok": {
+      "fi": "Etanalle",
+      "en": "Snail"
+     },
+     "no": [
+      {
+       "fi": "Kalalle",
+       "en": "Fish"
+      },
+      {
+       "fi": "Meduusalle",
+       "en": "Jellyfish"
+      },
+      {
+       "fi": "Meritähdelle",
+       "en": "Starfish"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on lähintä sukua ihmiselle?",
+      "en": "Which of these is most closely related to humans?"
+     },
+     "ok": {
+      "fi": "Meritähti",
+      "en": "Starfish"
+     },
+     "no": [
+      {
+       "fi": "Mustekala",
+       "en": "Octopus"
+      },
+      {
+       "fi": "Mehiläinen",
+       "en": "Honeybee"
+      },
+      {
+       "fi": "Meduusa",
+       "en": "Jellyfish"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä eliöryhmä on lähintä sukua sienille?",
+      "en": "Which group of organisms is most closely related to fungi?"
+     },
+     "ok": {
+      "fi": "Eläimet",
+      "en": "Animals"
+     },
+     "no": [
+      {
+       "fi": "Kasvit",
+       "en": "Plants"
+      },
+      {
+       "fi": "Viherlevät",
+       "en": "Green algae"
+      },
+      {
+       "fi": "Bakteerit",
+       "en": "Bacteria"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on hämähäkkieläin?",
+      "en": "Which of these is an arachnid?"
+     },
+     "ok": {
+      "fi": "Punkki",
+      "en": "Tick"
+     },
+     "no": [
+      {
+       "fi": "Sokeritoukka",
+       "en": "Silverfish"
+      },
+      {
+       "fi": "Tuhatjalkainen",
+       "en": "Millipede"
+      },
+      {
+       "fi": "Rapu",
+       "en": "Crayfish"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä on ruusukasvi?",
+      "en": "Which of these belongs to the rose family?"
+     },
+     "ok": {
+      "fi": "Mansikka",
+      "en": "Strawberry"
+     },
+     "no": [
+      {
+       "fi": "Mustikka",
+       "en": "Blueberry"
+      },
+      {
+       "fi": "Viinirypäle",
+       "en": "Grape"
+      },
+      {
+       "fi": "Banaani",
+       "en": "Banana"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Tomaatti, peruna ja munakoiso kuuluvat samaan heimoon. Mihin?",
+      "en": "Tomato, potato and aubergine share a family. Which?"
+     },
+     "ok": {
+      "fi": "Koisokasvit",
+      "en": "Nightshades"
+     },
+     "no": [
+      {
+       "fi": "Kurkkukasvit",
+       "en": "Gourds"
+      },
+      {
+       "fi": "Ristikukkaiset",
+       "en": "Cabbage family"
+      },
+      {
+       "fi": "Heinäkasvit",
+       "en": "Grasses"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tiede-3-biologia-2010-luku",
+   "cat": "tiede",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Biologia ja lääketiede 2010-luvulla (2010–2019)",
+    "en": "Biology and medicine in the 2010s (2010–2019)"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Ketkä kehittivät CRISPR-Cas9-geenisakset (julkaisu 2012, kemian Nobel 2020)?",
+      "en": "Who developed the CRISPR-Cas9 gene scissors (paper 2012, Chemistry Nobel 2020)?"
+     },
+     "ok": {
+      "fi": "Jennifer Doudna ja Emmanuelle Charpentier",
+      "en": "Jennifer Doudna and Emmanuelle Charpentier"
+     },
+     "no": [
+      {
+       "fi": "Craig Venter ja Francis Collins",
+       "en": "Craig Venter and Francis Collins"
+      },
+      {
+       "fi": "Shinya Yamanaka ja John Gurdon",
+       "en": "Shinya Yamanaka and John Gurdon"
+      },
+      {
+       "fi": "Katalin Karikó ja Drew Weissman",
+       "en": "Katalin Karikó and Drew Weissman"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa maistettiin julkisesti ensimmäinen laboratoriossa kasvatettu hampurilaispihvi 2013?",
+      "en": "In which city was the first lab-grown burger tasted in public in 2013?"
+     },
+     "ok": {
+      "fi": "Lontoo",
+      "en": "London"
+     },
+     "no": [
+      {
+       "fi": "Tokio",
+       "en": "Tokyo"
+      },
+      {
+       "fi": "San Francisco",
+       "en": "San Francisco"
+      },
+      {
+       "fi": "Tukholma",
+       "en": "Stockholm"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä tauti aiheutti suuren epidemian Länsi-Afrikassa 2014–2016?",
+      "en": "Which disease caused a major epidemic in West Africa in 2014–2016?"
+     },
+     "ok": {
+      "fi": "Ebola",
+      "en": "Ebola"
+     },
+     "no": [
+      {
+       "fi": "Kolera",
+       "en": "Cholera"
+      },
+      {
+       "fi": "MERS",
+       "en": "MERS"
+      },
+      {
+       "fi": "Keltakuume",
+       "en": "Yellow fever"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä hyttysten levittämän viruksen takia WHO julisti kansainvälisen terveyshätätilan helmikuussa 2016?",
+      "en": "Which mosquito-borne virus led WHO to declare a global health emergency in February 2016?"
+     },
+     "ok": {
+      "fi": "Zikavirus",
+      "en": "Zika virus"
+     },
+     "no": [
+      {
+       "fi": "Denguevirus",
+       "en": "Dengue virus"
+      },
+      {
+       "fi": "Länsi-Niilin virus",
+       "en": "West Nile virus"
+      },
+      {
+       "fi": "Chikungunyavirus",
+       "en": "Chikungunya virus"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Tu Youyou sai 2015 lääketieteen Nobelin lääkkeestä, jolla hoidetaan…",
+      "en": "Tu Youyou won the 2015 Medicine Nobel for a drug that treats…"
+     },
+     "ok": {
+      "fi": "malariaa",
+      "en": "malaria"
+     },
+     "no": [
+      {
+       "fi": "tuberkuloosia",
+       "en": "tuberculosis"
+      },
+      {
+       "fi": "HI-virusta",
+       "en": "HIV"
+      },
+      {
+       "fi": "isorokkoa",
+       "en": "smallpox"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Yoshinori Ohsumi sai 2016 Nobelin tutkimuksista, jotka koskivat…",
+      "en": "Yoshinori Ohsumi won the 2016 Nobel for research on…"
+     },
+     "ok": {
+      "fi": "autofagiaa eli solun itsensä syömistä",
+      "en": "autophagy, cells digesting their own parts"
+     },
+     "no": [
+      {
+       "fi": "vuorokausirytmiä",
+       "en": "the circadian clock"
+      },
+      {
+       "fi": "kantasoluja",
+       "en": "stem cells"
+      },
+      {
+       "fi": "telomeereja",
+       "en": "telomeres"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Vuoden 2017 lääketieteen Nobel myönnettiin…",
+      "en": "The 2017 Medicine Nobel was awarded for…"
+     },
+     "ok": {
+      "fi": "vuorokausirytmin molekyylimekanismeista",
+      "en": "the molecular mechanisms of the circadian rhythm"
+     },
+     "no": [
+      {
+       "fi": "syövän immunoterapiasta",
+       "en": "cancer immunotherapy"
+      },
+      {
+       "fi": "hepatiitti C -viruksen löydöstä",
+       "en": "discovering hepatitis C"
+      },
+      {
+       "fi": "hapen aistimisesta soluissa",
+       "en": "how cells sense oxygen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Maaliskuussa 2018 kuoli lajinsa viimeinen koiras, Sudan. Mikä eläin?",
+      "en": "In March 2018 Sudan, the last male of his kind, died. What animal?"
+     },
+     "ok": {
+      "fi": "Pohjoinen valkosarvikuono",
+      "en": "Northern white rhinoceros"
+     },
+     "no": [
+      {
+       "fi": "Sumatransarvikuono",
+       "en": "Sumatran rhinoceros"
+      },
+      {
+       "fi": "Jaavansarvikuono",
+       "en": "Javan rhinoceros"
+      },
+      {
+       "fi": "Mustasarvikuono",
+       "en": "Black rhinoceros"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Yksinäinen George, lajinsa viimeinen, kuoli 2012. Mikä eläin hän oli?",
+      "en": "Lonesome George, the last of his kind, died in 2012. What was he?"
+     },
+     "ok": {
+      "fi": "Galápagosinjättiläiskilpikonna",
+      "en": "Galápagos giant tortoise"
+     },
+     "no": [
+      {
+       "fi": "Gorilla",
+       "en": "Gorilla"
+      },
+      {
+       "fi": "Kondori",
+       "en": "Condor"
+      },
+      {
+       "fi": "Krokotiili",
+       "en": "Crocodile"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä uusi ihmislaji kuvattiin 2015 Etelä-Afrikan Rising Star -luolasta?",
+      "en": "Which new human species was described in 2015 from the Rising Star cave in South Africa?"
+     },
+     "ok": {
+      "fi": "Homo naledi",
+      "en": "Homo naledi"
+     },
+     "no": [
+      {
+       "fi": "Homo floresiensis",
+       "en": "Homo floresiensis"
+      },
+      {
+       "fi": "Homo habilis",
+       "en": "Homo habilis"
+      },
+      {
+       "fi": "Homo heidelbergensis",
+       "en": "Homo heidelbergensis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa syntyivät 2018 ensimmäiset geenimuokatut vauvat?",
+      "en": "In which country were the first gene-edited babies born in 2018?"
+     },
+     "ok": {
+      "fi": "Kiina",
+      "en": "China"
+     },
+     "no": [
+      {
+       "fi": "Yhdysvallat",
+       "en": "United States"
+      },
+      {
+       "fi": "Venäjä",
+       "en": "Russia"
+      },
+      {
+       "fi": "Etelä-Korea",
+       "en": "South Korea"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Bramble Cayn melomys julistettiin 2016 kuolleeksi sukupuuttoon ilmastonmuutoksen takia. Mikä se oli?",
+      "en": "The Bramble Cay melomys was declared extinct in 2016 due to climate change. What was it?"
+     },
+     "ok": {
+      "fi": "Jyrsijä",
+      "en": "A rodent"
+     },
+     "no": [
+      {
+       "fi": "Lepakko",
+       "en": "A bat"
+      },
+      {
+       "fi": "Pussieläin",
+       "en": "A marsupial"
+      },
+      {
+       "fi": "Sammakko",
+       "en": "A frog"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa uusi koronavirustauti COVID-19 havaittiin joulukuussa 2019?",
+      "en": "In which city was COVID-19 first identified in December 2019?"
+     },
+     "ok": {
+      "fi": "Wuhan",
+      "en": "Wuhan"
+     },
+     "no": [
+      {
+       "fi": "Peking",
+       "en": "Beijing"
+      },
+      {
+       "fi": "Hongkong",
+       "en": "Hong Kong"
+      },
+      {
+       "fi": "Shanghai",
+       "en": "Shanghai"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

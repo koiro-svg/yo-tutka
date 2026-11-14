@@ -1,0 +1,7079 @@
+{
+ "quizzes": [
+  {
+   "id": "historia-4-entiset-valtiot",
+   "cat": "historia",
+   "t": 160,
+   "title": {
+    "fi": "Kadonneet valtiot 1800–2006: tunnista vihjeestä",
+    "en": "Vanished states 1800–2006: identify from the clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Itävalta-Unkari",
+      "Itävalta–Unkari"
+     ],
+     "en": [
+      "Austria-Hungary",
+      "Austro-Hungarian Empire"
+     ],
+     "h": {
+      "fi": "Kaksoismonarkia, jota hallittiin Wienistä ja Budapestista; hajosi 1918",
+      "en": "Dual monarchy ruled from Vienna and Budapest; broke up in 1918"
+     }
+    },
+    {
+     "fi": [
+      "Jugoslavia",
+      "Sosialistinen liittotasavalta Jugoslavia"
+     ],
+     "en": [
+      "Yugoslavia",
+      "SFR Yugoslavia"
+     ],
+     "h": {
+      "fi": "Titon liittovaltio Balkanilla; hajoaminen alkoi 1991",
+      "en": "Tito's Balkan federation; its break-up began in 1991"
+     }
+    },
+    {
+     "fi": [
+      "Tšekkoslovakia",
+      "Tsekkoslovakia",
+      "Tshekkoslovakia"
+     ],
+     "en": [
+      "Czechoslovakia"
+     ],
+     "h": {
+      "fi": "Jakautui rauhanomaisesti kahtia 1.1.1993",
+      "en": "Split peacefully in two on 1 January 1993"
+     }
+    },
+    {
+     "fi": [
+      "Itä-Saksa",
+      "DDR",
+      "Saksan demokraattinen tasavalta"
+     ],
+     "en": [
+      "East Germany",
+      "GDR",
+      "German Democratic Republic"
+     ],
+     "h": {
+      "fi": "Berliinin muurin rakentanut valtio; yhdistyi länteen 1990",
+      "en": "Built the Berlin Wall; merged with the West in 1990"
+     }
+    },
+    {
+     "fi": [
+      "Osmanien valtakunta",
+      "Ottomaanien valtakunta",
+      "Osmanivaltakunta",
+      "Osmanien imperiumi"
+     ],
+     "en": [
+      "Ottoman Empire",
+      "Ottomans"
+     ],
+     "h": {
+      "fi": "Sulttaanien imperiumi; sulttaanikunta lakkautettiin 1922",
+      "en": "The sultans' empire; the sultanate was abolished in 1922"
+     }
+    },
+    {
+     "fi": [
+      "Preussi"
+     ],
+     "en": [
+      "Prussia"
+     ],
+     "h": {
+      "fi": "Hohenzollernien valtio Berliinin ympärillä; lakkautettiin virallisesti 1947",
+      "en": "Hohenzollern state centred on Berlin; formally abolished in 1947"
+     }
+    },
+    {
+     "fi": [
+      "Etelä-Vietnam",
+      "Vietnamin tasavalta"
+     ],
+     "en": [
+      "South Vietnam",
+      "Republic of Vietnam"
+     ],
+     "h": {
+      "fi": "Pääkaupunki Saigon; valtio kaatui huhtikuussa 1975",
+      "en": "Capital Saigon; fell in April 1975"
+     }
+    },
+    {
+     "fi": [
+      "Yhdistynyt arabitasavalta",
+      "Arabitasavalta"
+     ],
+     "en": [
+      "United Arab Republic",
+      "UAR"
+     ],
+     "h": {
+      "fi": "Egyptin ja Syyrian yhteinen valtio 1958–1961",
+      "en": "Joint state of Egypt and Syria, 1958–1961"
+     }
+    },
+    {
+     "fi": [
+      "Suur-Kolumbia",
+      "Gran Colombia"
+     ],
+     "en": [
+      "Gran Colombia",
+      "Great Colombia"
+     ],
+     "h": {
+      "fi": "Bolívarin valtio 1819–1831: Kolumbia, Venezuela, Ecuador",
+      "en": "Bolívar's state 1819–1831: Colombia, Venezuela, Ecuador"
+     }
+    },
+    {
+     "fi": [
+      "Biafra",
+      "Biafran tasavalta"
+     ],
+     "en": [
+      "Biafra",
+      "Republic of Biafra"
+     ],
+     "h": {
+      "fi": "Nigeriasta irtautunut valtio 1967–1970",
+      "en": "Breakaway state from Nigeria, 1967–1970"
+     }
+    },
+    {
+     "fi": [
+      "Texasin tasavalta",
+      "Texas"
+     ],
+     "en": [
+      "Republic of Texas",
+      "Texas"
+     ],
+     "h": {
+      "fi": "Meksikosta irtautunut tasavalta 1836–1845, liittyi USA:han",
+      "en": "Broke from Mexico 1836, joined the USA in 1845"
+     }
+    },
+    {
+     "fi": [
+      "Havaijin kuningaskunta",
+      "Havaiji"
+     ],
+     "en": [
+      "Kingdom of Hawaii",
+      "Hawaii",
+      "Hawaiian Kingdom"
+     ],
+     "h": {
+      "fi": "Tyynenmeren saarikuningaskunta, jonka kuningatar syrjäytettiin 1893",
+      "en": "Pacific island kingdom whose queen was overthrown in 1893"
+     }
+    },
+    {
+     "fi": [
+      "Oranjen vapaavaltio",
+      "Oranje"
+     ],
+     "en": [
+      "Orange Free State"
+     ],
+     "h": {
+      "fi": "Buurien tasavalta, pääkaupunki Bloemfontein, 1854–1902",
+      "en": "Boer republic with Bloemfontein as capital, 1854–1902"
+     }
+    },
+    {
+     "fi": [
+      "Danzigin vapaakaupunki",
+      "Danzig"
+     ],
+     "en": [
+      "Free City of Danzig",
+      "Danzig"
+     ],
+     "h": {
+      "fi": "Kansainliiton suojelema kaupunkivaltio 1920–1939",
+      "en": "City-state under League of Nations protection, 1920–1939"
+     }
+    },
+    {
+     "fi": [
+      "Mandžukuo",
+      "Mandzukuo",
+      "Manchukuo",
+      "Mantšukuo"
+     ],
+     "en": [
+      "Manchukuo"
+     ],
+     "h": {
+      "fi": "Japanin nukkevaltio Koillis-Kiinassa 1932–1945",
+      "en": "Japanese puppet state in north-east China, 1932–1945"
+     }
+    },
+    {
+     "fi": [
+      "Sikkim"
+     ],
+     "en": [
+      "Sikkim"
+     ],
+     "h": {
+      "fi": "Himalajan kuningaskunta, joka liitettiin Intiaan 1975",
+      "en": "Himalayan kingdom merged into India in 1975"
+     }
+    },
+    {
+     "fi": [
+      "Newfoundland"
+     ],
+     "en": [
+      "Newfoundland",
+      "Dominion of Newfoundland"
+     ],
+     "h": {
+      "fi": "Brittiläinen dominio, joka liittyi Kanadaan 1949",
+      "en": "British dominion that joined Canada in 1949"
+     }
+    },
+    {
+     "fi": [
+      "Amerikan konfederaatio",
+      "Konfederaatio",
+      "Etelävaltiot",
+      "Amerikan konfederaatiovaltiot"
+     ],
+     "en": [
+      "Confederate States of America",
+      "Confederacy",
+      "Confederate States",
+      "CSA"
+     ],
+     "h": {
+      "fi": "Yhdysvaltain eteläosavaltioiden valtio 1861–1865",
+      "en": "State formed by the southern US states, 1861–1865"
+     }
+    },
+    {
+     "fi": [
+      "Serbia ja Montenegro"
+     ],
+     "en": [
+      "Serbia and Montenegro"
+     ],
+     "h": {
+      "fi": "Kahden Balkanin tasavallan valtioliitto 2003–2006",
+      "en": "Union of two Balkan republics, 2003–2006"
+     }
+    },
+    {
+     "fi": [
+      "Kahden Sisilian kuningaskunta",
+      "Kaksi Sisiliaa"
+     ],
+     "en": [
+      "Kingdom of the Two Sicilies",
+      "Two Sicilies"
+     ],
+     "h": {
+      "fi": "Napolin hallitsema kuningaskunta, liitettiin Italiaan 1861",
+      "en": "Kingdom ruled from Naples, absorbed into Italy in 1861"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-vanhat-maiden-nimet",
+   "cat": "historia",
+   "t": 180,
+   "title": {
+    "fi": "Maan vanha nimi: mikä valtio nyt? (nimenmuutokset ja itsenäistymiset 1900–2018)",
+    "en": "A country's old name: which state is it now? (renamings and independence 1900–2018)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vanha nimi",
+    "en": "Old name"
+   },
+   "items": [
+    {
+     "fi": [
+      "Sri Lanka"
+     ],
+     "en": [
+      "Sri Lanka"
+     ],
+     "h": {
+      "fi": "Ceylon",
+      "en": "Ceylon"
+     }
+    },
+    {
+     "fi": [
+      "Thaimaa"
+     ],
+     "en": [
+      "Thailand"
+     ],
+     "h": {
+      "fi": "Siam",
+      "en": "Siam"
+     }
+    },
+    {
+     "fi": [
+      "Myanmar"
+     ],
+     "en": [
+      "Myanmar"
+     ],
+     "h": {
+      "fi": "Burma",
+      "en": "Burma"
+     }
+    },
+    {
+     "fi": [
+      "Kongon demokraattinen tasavalta",
+      "Kongo-Kinshasa",
+      "KDT",
+      "Kongon dt"
+     ],
+     "en": [
+      "Democratic Republic of the Congo",
+      "DR Congo",
+      "DRC",
+      "Congo-Kinshasa"
+     ],
+     "h": {
+      "fi": "Zaire",
+      "en": "Zaire"
+     }
+    },
+    {
+     "fi": [
+      "Benin"
+     ],
+     "en": [
+      "Benin"
+     ],
+     "h": {
+      "fi": "Dahomey",
+      "en": "Dahomey"
+     }
+    },
+    {
+     "fi": [
+      "Burkina Faso"
+     ],
+     "en": [
+      "Burkina Faso"
+     ],
+     "h": {
+      "fi": "Ylä-Volta",
+      "en": "Upper Volta"
+     }
+    },
+    {
+     "fi": [
+      "Ghana"
+     ],
+     "en": [
+      "Ghana"
+     ],
+     "h": {
+      "fi": "Kultarannikko",
+      "en": "Gold Coast"
+     }
+    },
+    {
+     "fi": [
+      "Zimbabwe"
+     ],
+     "en": [
+      "Zimbabwe"
+     ],
+     "h": {
+      "fi": "Rhodesia (Etelä-Rhodesia)",
+      "en": "Rhodesia (Southern Rhodesia)"
+     }
+    },
+    {
+     "fi": [
+      "Sambia",
+      "Zambia"
+     ],
+     "en": [
+      "Zambia"
+     ],
+     "h": {
+      "fi": "Pohjois-Rhodesia",
+      "en": "Northern Rhodesia"
+     }
+    },
+    {
+     "fi": [
+      "Malawi"
+     ],
+     "en": [
+      "Malawi"
+     ],
+     "h": {
+      "fi": "Njassamaa",
+      "en": "Nyasaland"
+     }
+    },
+    {
+     "fi": [
+      "Botswana"
+     ],
+     "en": [
+      "Botswana"
+     ],
+     "h": {
+      "fi": "Betšuanamaa",
+      "en": "Bechuanaland"
+     }
+    },
+    {
+     "fi": [
+      "Lesotho"
+     ],
+     "en": [
+      "Lesotho"
+     ],
+     "h": {
+      "fi": "Basutomaa",
+      "en": "Basutoland"
+     }
+    },
+    {
+     "fi": [
+      "Iran"
+     ],
+     "en": [
+      "Iran"
+     ],
+     "h": {
+      "fi": "Persia",
+      "en": "Persia"
+     }
+    },
+    {
+     "fi": [
+      "Kambodža",
+      "Kambodza",
+      "Kambodsha"
+     ],
+     "en": [
+      "Cambodia"
+     ],
+     "h": {
+      "fi": "Kamputsea",
+      "en": "Kampuchea"
+     }
+    },
+    {
+     "fi": [
+      "Indonesia"
+     ],
+     "en": [
+      "Indonesia"
+     ],
+     "h": {
+      "fi": "Alankomaiden Itä-Intia",
+      "en": "Dutch East Indies"
+     }
+    },
+    {
+     "fi": [
+      "Belize"
+     ],
+     "en": [
+      "Belize"
+     ],
+     "h": {
+      "fi": "Brittiläinen Honduras",
+      "en": "British Honduras"
+     }
+    },
+    {
+     "fi": [
+      "Suriname"
+     ],
+     "en": [
+      "Suriname",
+      "Surinam"
+     ],
+     "h": {
+      "fi": "Alankomaiden Guayana",
+      "en": "Dutch Guiana"
+     }
+    },
+    {
+     "fi": [
+      "Bangladesh"
+     ],
+     "en": [
+      "Bangladesh"
+     ],
+     "h": {
+      "fi": "Itä-Pakistan",
+      "en": "East Pakistan"
+     }
+    },
+    {
+     "fi": [
+      "Eswatini"
+     ],
+     "en": [
+      "Eswatini"
+     ],
+     "h": {
+      "fi": "Swazimaa (nimi vaihtui 2018)",
+      "en": "Swaziland (renamed in 2018)"
+     }
+    },
+    {
+     "fi": [
+      "Vanuatu"
+     ],
+     "en": [
+      "Vanuatu"
+     ],
+     "h": {
+      "fi": "Uudet-Hebridit",
+      "en": "New Hebrides"
+     }
+    },
+    {
+     "fi": [
+      "Tuvalu"
+     ],
+     "en": [
+      "Tuvalu"
+     ],
+     "h": {
+      "fi": "Ellicensaaret",
+      "en": "Ellice Islands"
+     }
+    },
+    {
+     "fi": [
+      "Päiväntasaajan Guinea"
+     ],
+     "en": [
+      "Equatorial Guinea"
+     ],
+     "h": {
+      "fi": "Espanjan Guinea",
+      "en": "Spanish Guinea"
+     }
+    },
+    {
+     "fi": [
+      "Mali"
+     ],
+     "en": [
+      "Mali"
+     ],
+     "h": {
+      "fi": "Ranskan Sudan",
+      "en": "French Sudan"
+     }
+    },
+    {
+     "fi": [
+      "Keski-Afrikan tasavalta",
+      "KAT"
+     ],
+     "en": [
+      "Central African Republic",
+      "CAR"
+     ],
+     "h": {
+      "fi": "Ubangi-Šari",
+      "en": "Ubangi-Shari"
+     }
+    },
+    {
+     "fi": [
+      "Namibia"
+     ],
+     "en": [
+      "Namibia"
+     ],
+     "h": {
+      "fi": "Lounais-Afrikka",
+      "en": "South West Africa"
+     }
+    },
+    {
+     "fi": [
+      "Jordania"
+     ],
+     "en": [
+      "Jordan"
+     ],
+     "h": {
+      "fi": "Transjordania",
+      "en": "Transjordan"
+     }
+    },
+    {
+     "fi": [
+      "Samoa"
+     ],
+     "en": [
+      "Samoa"
+     ],
+     "h": {
+      "fi": "Länsi-Samoa",
+      "en": "Western Samoa"
+     }
+    },
+    {
+     "fi": [
+      "Guinea-Bissau"
+     ],
+     "en": [
+      "Guinea-Bissau"
+     ],
+     "h": {
+      "fi": "Portugalin Guinea",
+      "en": "Portuguese Guinea"
+     }
+    },
+    {
+     "fi": [
+      "Djibouti"
+     ],
+     "en": [
+      "Djibouti"
+     ],
+     "h": {
+      "fi": "Ranskan afarien ja issojen alue",
+      "en": "French Territory of the Afars and the Issas"
+     }
+    },
+    {
+     "fi": [
+      "Oman"
+     ],
+     "en": [
+      "Oman"
+     ],
+     "h": {
+      "fi": "Masqat ja Oman",
+      "en": "Muscat and Oman"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-henkilokaupungit",
+   "cat": "historia",
+   "t": 190,
+   "title": {
+    "fi": "Henkilön mukaan nimetty kaupunki: mikä on sen nykyinen nimi? (nimet käytössä 1900–2022)",
+    "en": "City once named after a person: what is it called today? (names used 1900–2022)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Entinen nimi",
+    "en": "Former name"
+   },
+   "items": [
+    {
+     "fi": [
+      "Pietari",
+      "Sankt-Peterburg",
+      "Pietarsburg"
+     ],
+     "en": [
+      "Saint Petersburg",
+      "St Petersburg",
+      "Sankt Peterburg"
+     ],
+     "h": {
+      "fi": "Leningrad",
+      "en": "Leningrad"
+     }
+    },
+    {
+     "fi": [
+      "Volgograd"
+     ],
+     "en": [
+      "Volgograd"
+     ],
+     "h": {
+      "fi": "Stalingrad",
+      "en": "Stalingrad"
+     }
+    },
+    {
+     "fi": [
+      "Chemnitz"
+     ],
+     "en": [
+      "Chemnitz"
+     ],
+     "h": {
+      "fi": "Karl-Marx-Stadt",
+      "en": "Karl-Marx-Stadt"
+     }
+    },
+    {
+     "fi": [
+      "Dušanbe",
+      "Dusanbe",
+      "Dushanbe"
+     ],
+     "en": [
+      "Dushanbe"
+     ],
+     "h": {
+      "fi": "Stalinabad",
+      "en": "Stalinabad"
+     }
+    },
+    {
+     "fi": [
+      "Biškek",
+      "Biskek",
+      "Bishkek"
+     ],
+     "en": [
+      "Bishkek"
+     ],
+     "h": {
+      "fi": "Frunze",
+      "en": "Frunze"
+     }
+    },
+    {
+     "fi": [
+      "Podgorica"
+     ],
+     "en": [
+      "Podgorica"
+     ],
+     "h": {
+      "fi": "Titograd",
+      "en": "Titograd"
+     }
+    },
+    {
+     "fi": [
+      "Zlín"
+     ],
+     "en": [
+      "Zlín"
+     ],
+     "h": {
+      "fi": "Gottwaldov",
+      "en": "Gottwaldov"
+     }
+    },
+    {
+     "fi": [
+      "Donetsk"
+     ],
+     "en": [
+      "Donetsk"
+     ],
+     "h": {
+      "fi": "Stalino",
+      "en": "Stalino"
+     }
+    },
+    {
+     "fi": [
+      "Jekaterinburg",
+      "Yekaterinburg",
+      "Ekaterinburg"
+     ],
+     "en": [
+      "Yekaterinburg",
+      "Ekaterinburg"
+     ],
+     "h": {
+      "fi": "Sverdlovsk",
+      "en": "Sverdlovsk"
+     }
+    },
+    {
+     "fi": [
+      "Samara"
+     ],
+     "en": [
+      "Samara"
+     ],
+     "h": {
+      "fi": "Kuibyšev",
+      "en": "Kuybyshev"
+     }
+    },
+    {
+     "fi": [
+      "Perm"
+     ],
+     "en": [
+      "Perm"
+     ],
+     "h": {
+      "fi": "Molotov",
+      "en": "Molotov"
+     }
+    },
+    {
+     "fi": [
+      "Mariupol"
+     ],
+     "en": [
+      "Mariupol"
+     ],
+     "h": {
+      "fi": "Ždanov",
+      "en": "Zhdanov"
+     }
+    },
+    {
+     "fi": [
+      "Santo Domingo"
+     ],
+     "en": [
+      "Santo Domingo"
+     ],
+     "h": {
+      "fi": "Ciudad Trujillo",
+      "en": "Ciudad Trujillo"
+     }
+    },
+    {
+     "fi": [
+      "Kinshasa"
+     ],
+     "en": [
+      "Kinshasa"
+     ],
+     "h": {
+      "fi": "Léopoldville",
+      "en": "Léopoldville"
+     }
+    },
+    {
+     "fi": [
+      "Kisangani"
+     ],
+     "en": [
+      "Kisangani"
+     ],
+     "h": {
+      "fi": "Stanleyville",
+      "en": "Stanleyville"
+     }
+    },
+    {
+     "fi": [
+      "Harare"
+     ],
+     "en": [
+      "Harare"
+     ],
+     "h": {
+      "fi": "Salisbury",
+      "en": "Salisbury"
+     }
+    },
+    {
+     "fi": [
+      "Tver"
+     ],
+     "en": [
+      "Tver"
+     ],
+     "h": {
+      "fi": "Kalinin",
+      "en": "Kalinin"
+     }
+    },
+    {
+     "fi": [
+      "Nižni Novgorod",
+      "Nizni Novgorod",
+      "Nizhny Novgorod",
+      "Nižnij Novgorod"
+     ],
+     "en": [
+      "Nizhny Novgorod"
+     ],
+     "h": {
+      "fi": "Gorki",
+      "en": "Gorky"
+     }
+    },
+    {
+     "fi": [
+      "Astana"
+     ],
+     "en": [
+      "Astana"
+     ],
+     "h": {
+      "fi": "Nur-Sultan",
+      "en": "Nur-Sultan"
+     }
+    },
+    {
+     "fi": [
+      "Eisenhüttenstadt"
+     ],
+     "en": [
+      "Eisenhüttenstadt"
+     ],
+     "h": {
+      "fi": "Stalinstadt",
+      "en": "Stalinstadt"
+     }
+    },
+    {
+     "fi": [
+      "Gəncə",
+      "Gandža",
+      "Gandza",
+      "Ganja",
+      "Gyandzha"
+     ],
+     "en": [
+      "Ganja",
+      "Gəncə"
+     ],
+     "h": {
+      "fi": "Kirovabad",
+      "en": "Kirovabad"
+     }
+    },
+    {
+     "fi": [
+      "Luhansk",
+      "Lugansk"
+     ],
+     "en": [
+      "Luhansk",
+      "Lugansk"
+     ],
+     "h": {
+      "fi": "Vorošilovgrad",
+      "en": "Voroshilovgrad"
+     }
+    },
+    {
+     "fi": [
+      "Vladikavkaz"
+     ],
+     "en": [
+      "Vladikavkaz"
+     ],
+     "h": {
+      "fi": "Ordžonikidze",
+      "en": "Ordzhonikidze"
+     }
+    },
+    {
+     "fi": [
+      "Gjumri",
+      "Gyumri"
+     ],
+     "en": [
+      "Gyumri"
+     ],
+     "h": {
+      "fi": "Leninakan",
+      "en": "Leninakan"
+     }
+    },
+    {
+     "fi": [
+      "Kropyvnytskyi",
+      "Kropyvnytskyj",
+      "Kropivnitski"
+     ],
+     "en": [
+      "Kropyvnytskyi"
+     ],
+     "h": {
+      "fi": "Kirovohrad",
+      "en": "Kirovohrad"
+     }
+    },
+    {
+     "fi": [
+      "Dnipro",
+      "Dnepr"
+     ],
+     "en": [
+      "Dnipro"
+     ],
+     "h": {
+      "fi": "Dnipropetrovsk",
+      "en": "Dnipropetrovsk"
+     }
+    },
+    {
+     "fi": [
+      "Varna"
+     ],
+     "en": [
+      "Varna"
+     ],
+     "h": {
+      "fi": "Stalin (Bulgaria)",
+      "en": "Stalin (Bulgaria)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-nimetty-heidan-mukaansa",
+   "cat": "historia",
+   "t": 175,
+   "title": {
+    "fi": "Mikä asia nimettiin heidän mukaansa? 1800–1900-luvun henkilöt",
+    "en": "What was named after them? People of the 19th and 20th centuries"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Henkilö",
+    "en": "Person"
+   },
+   "items": [
+    {
+     "fi": [
+      "boikotti",
+      "boikotoida"
+     ],
+     "en": [
+      "boycott"
+     ],
+     "h": {
+      "fi": "Charles Boycott, irlantilainen tilanhoitaja 1880",
+      "en": "Charles Boycott, Irish land agent, 1880"
+     }
+    },
+    {
+     "fi": [
+      "Molotovin cocktail",
+      "polttopullo",
+      "molotovin koktaili",
+      "molotov"
+     ],
+     "en": [
+      "Molotov cocktail",
+      "petrol bomb"
+     ],
+     "h": {
+      "fi": "Vjatšeslav Molotov (nimen keksivät suomalaiset 1939)",
+      "en": "Vyacheslav Molotov (name coined by Finns in 1939)"
+     }
+    },
+    {
+     "fi": [
+      "quisling",
+      "kvisling",
+      "maanpetturi"
+     ],
+     "en": [
+      "quisling",
+      "traitor"
+     ],
+     "h": {
+      "fi": "Vidkun Quisling, norjalainen yhteistyöpoliitikko",
+      "en": "Vidkun Quisling, Norwegian collaborator"
+     }
+    },
+    {
+     "fi": [
+      "zeppeliini",
+      "ilmalaiva"
+     ],
+     "en": [
+      "zeppelin",
+      "airship"
+     ],
+     "h": {
+      "fi": "Ferdinand von Zeppelin",
+      "en": "Ferdinand von Zeppelin"
+     }
+    },
+    {
+     "fi": [
+      "dieselmoottori",
+      "diesel",
+      "dieselöljy"
+     ],
+     "en": [
+      "diesel engine",
+      "diesel",
+      "diesel fuel"
+     ],
+     "h": {
+      "fi": "Rudolf Diesel",
+      "en": "Rudolf Diesel"
+     }
+    },
+    {
+     "fi": [
+      "saksofoni",
+      "saksofooni",
+      "saksi"
+     ],
+     "en": [
+      "saxophone",
+      "sax"
+     ],
+     "h": {
+      "fi": "Adolphe Sax",
+      "en": "Adolphe Sax"
+     }
+    },
+    {
+     "fi": [
+      "pistekirjoitus",
+      "braille",
+      "braillekirjoitus"
+     ],
+     "en": [
+      "braille"
+     ],
+     "h": {
+      "fi": "Louis Braille",
+      "en": "Louis Braille"
+     }
+    },
+    {
+     "fi": [
+      "bunsenpoltin",
+      "bunsenlamppu"
+     ],
+     "en": [
+      "Bunsen burner"
+     ],
+     "h": {
+      "fi": "Robert Bunsen",
+      "en": "Robert Bunsen"
+     }
+    },
+    {
+     "fi": [
+      "pastörointi",
+      "pastorointi",
+      "pastöroida"
+     ],
+     "en": [
+      "pasteurisation",
+      "pasteurization",
+      "pasteurise",
+      "pasteurize"
+     ],
+     "h": {
+      "fi": "Louis Pasteur",
+      "en": "Louis Pasteur"
+     }
+    },
+    {
+     "fi": [
+      "röntgen",
+      "röntgensäde",
+      "röntgensäteet",
+      "röntgenkuva",
+      "röntgenium"
+     ],
+     "en": [
+      "roentgen",
+      "röntgen",
+      "roentgenium",
+      "Röntgen rays"
+     ],
+     "h": {
+      "fi": "Wilhelm Röntgen",
+      "en": "Wilhelm Röntgen"
+     }
+    },
+    {
+     "fi": [
+      "nalle",
+      "teddykarhu",
+      "nallekarhu",
+      "teddy"
+     ],
+     "en": [
+      "teddy bear",
+      "teddy"
+     ],
+     "h": {
+      "fi": "Theodore \"Teddy\" Roosevelt",
+      "en": "Theodore \"Teddy\" Roosevelt"
+     }
+    },
+    {
+     "fi": [
+      "pavlova",
+      "pavlova-kakku",
+      "marenkikakku"
+     ],
+     "en": [
+      "pavlova"
+     ],
+     "h": {
+      "fi": "Anna Pavlova, venäläinen ballerina",
+      "en": "Anna Pavlova, Russian ballerina"
+     }
+    },
+    {
+     "fi": [
+      "raglanhiha",
+      "raglan"
+     ],
+     "en": [
+      "raglan sleeve",
+      "raglan"
+     ],
+     "h": {
+      "fi": "Lordi Raglan, Krimin sodan komentaja",
+      "en": "Lord Raglan, Crimean War commander"
+     }
+    },
+    {
+     "fi": [
+      "kumisaappaat",
+      "wellingtonit",
+      "kumisaapas",
+      "saappaat"
+     ],
+     "en": [
+      "wellington boots",
+      "wellingtons",
+      "wellies",
+      "rubber boots"
+     ],
+     "h": {
+      "fi": "Wellingtonin herttua, Waterloon voittaja",
+      "en": "Duke of Wellington, victor of Waterloo"
+     }
+    },
+    {
+     "fi": [
+      "neuletakki",
+      "cardigan",
+      "villatakki",
+      "kardigaani"
+     ],
+     "en": [
+      "cardigan"
+     ],
+     "h": {
+      "fi": "Cardiganin jaarli, Krimin sodan upseeri",
+      "en": "Earl of Cardigan, Crimean War officer"
+     }
+    },
+    {
+     "fi": [
+      "maailmanpyörä",
+      "ferrisinpyörä"
+     ],
+     "en": [
+      "Ferris wheel",
+      "big wheel"
+     ],
+     "h": {
+      "fi": "George Ferris, Chicagon maailmannäyttely 1893",
+      "en": "George Ferris, Chicago World’s Fair 1893"
+     }
+    },
+    {
+     "fi": [
+      "kuulakärkikynä",
+      "biro",
+      "kuulakynä"
+     ],
+     "en": [
+      "ballpoint pen",
+      "biro",
+      "ballpoint"
+     ],
+     "h": {
+      "fi": "László Bíró",
+      "en": "László Bíró"
+     }
+    },
+    {
+     "fi": [
+      "Tupperware",
+      "tupperware-astia",
+      "muovirasia"
+     ],
+     "en": [
+      "Tupperware"
+     ],
+     "h": {
+      "fi": "Earl Tupper",
+      "en": "Earl Tupper"
+     }
+    },
+    {
+     "fi": [
+      "Caesar-salaatti",
+      "caesarsalaatti",
+      "caesar"
+     ],
+     "en": [
+      "Caesar salad",
+      "Caesar"
+     ],
+     "h": {
+      "fi": "Caesar Cardini, ravintoloitsija Tijuanassa",
+      "en": "Caesar Cardini, restaurateur in Tijuana"
+     }
+    },
+    {
+     "fi": [
+      "nachot",
+      "nachos",
+      "nacho"
+     ],
+     "en": [
+      "nachos",
+      "nacho"
+     ],
+     "h": {
+      "fi": "Ignacio \"Nacho\" Anaya, 1943",
+      "en": "Ignacio \"Nacho\" Anaya, 1943"
+     }
+    },
+    {
+     "fi": [
+      "trikoot",
+      "trikoo",
+      "voimistelupuku",
+      "leotard"
+     ],
+     "en": [
+      "leotard"
+     ],
+     "h": {
+      "fi": "Jules Léotard, ranskalainen trapetsitaiteilija",
+      "en": "Jules Léotard, French trapeze artist"
+     }
+    },
+    {
+     "fi": [
+      "Melba-persikka",
+      "persikka Melba",
+      "peach melba",
+      "melbapaahtoleipä",
+      "melba"
+     ],
+     "en": [
+      "peach Melba",
+      "Melba toast",
+      "Melba"
+     ],
+     "h": {
+      "fi": "Nellie Melba, australialainen oopperalaulaja",
+      "en": "Nellie Melba, Australian opera singer"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-ww2-operaatiot",
+   "cat": "historia",
+   "t": 155,
+   "title": {
+    "fi": "Toisen maailmansodan operaatiot: mihin ne kohdistuivat?",
+    "en": "Second World War operations: where did they take place?"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Operaatio",
+    "en": "Operation"
+   },
+   "items": [
+    {
+     "fi": [
+      "Neuvostoliitto",
+      "NL",
+      "Venäjä"
+     ],
+     "en": [
+      "Soviet Union",
+      "USSR",
+      "Russia"
+     ],
+     "h": {
+      "fi": "Barbarossa 1941",
+      "en": "Barbarossa 1941"
+     }
+    },
+    {
+     "fi": [
+      "Normandia"
+     ],
+     "en": [
+      "Normandy"
+     ],
+     "h": {
+      "fi": "Overlord 1944",
+      "en": "Overlord 1944"
+     }
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti",
+      "Arnhem"
+     ],
+     "en": [
+      "Netherlands",
+      "Holland",
+      "Arnhem"
+     ],
+     "h": {
+      "fi": "Market Garden 1944",
+      "en": "Market Garden 1944"
+     }
+    },
+    {
+     "fi": [
+      "Pohjois-Afrikka",
+      "Marokko",
+      "Algeria",
+      "Ranskan Pohjois-Afrikka"
+     ],
+     "en": [
+      "North Africa",
+      "Morocco",
+      "Algeria",
+      "French North Africa"
+     ],
+     "h": {
+      "fi": "Torch 1942",
+      "en": "Torch 1942"
+     }
+    },
+    {
+     "fi": [
+      "Sisilia"
+     ],
+     "en": [
+      "Sicily"
+     ],
+     "h": {
+      "fi": "Husky 1943",
+      "en": "Husky 1943"
+     }
+    },
+    {
+     "fi": [
+      "Britannia",
+      "Iso-Britannia",
+      "Englanti"
+     ],
+     "en": [
+      "Britain",
+      "Great Britain",
+      "England",
+      "United Kingdom",
+      "UK"
+     ],
+     "h": {
+      "fi": "Merileijona (Seelöwe), suunniteltu 1940",
+      "en": "Sea Lion (Seelöwe), planned 1940"
+     }
+    },
+    {
+     "fi": [
+      "Norja",
+      "Tanska",
+      "Norja ja Tanska",
+      "Tanska ja Norja"
+     ],
+     "en": [
+      "Norway",
+      "Denmark",
+      "Norway and Denmark",
+      "Denmark and Norway"
+     ],
+     "h": {
+      "fi": "Weserübung 1940",
+      "en": "Weserübung 1940"
+     }
+    },
+    {
+     "fi": [
+      "Dunkerque",
+      "Dunkirk",
+      "Dünkirchen"
+     ],
+     "en": [
+      "Dunkirk",
+      "Dunkerque"
+     ],
+     "h": {
+      "fi": "Dynamo 1940 (evakuointi)",
+      "en": "Dynamo 1940 (evacuation)"
+     }
+    },
+    {
+     "fi": [
+      "Salerno"
+     ],
+     "en": [
+      "Salerno"
+     ],
+     "h": {
+      "fi": "Avalanche 1943",
+      "en": "Avalanche 1943"
+     }
+    },
+    {
+     "fi": [
+      "Etelä-Ranska",
+      "Provence"
+     ],
+     "en": [
+      "Southern France",
+      "Provence",
+      "South of France"
+     ],
+     "h": {
+      "fi": "Dragoon 1944",
+      "en": "Dragoon 1944"
+     }
+    },
+    {
+     "fi": [
+      "Valko-Venäjä",
+      "Valkovenäjä",
+      "Belarus"
+     ],
+     "en": [
+      "Belarus",
+      "Byelorussia",
+      "Belorussia"
+     ],
+     "h": {
+      "fi": "Bagration 1944",
+      "en": "Bagration 1944"
+     }
+    },
+    {
+     "fi": [
+      "Kursk"
+     ],
+     "en": [
+      "Kursk"
+     ],
+     "h": {
+      "fi": "Zitadelle (Linnoitus) 1943",
+      "en": "Citadel (Zitadelle) 1943"
+     }
+    },
+    {
+     "fi": [
+      "Guadalcanal",
+      "Salomonsaaret"
+     ],
+     "en": [
+      "Guadalcanal",
+      "Solomon Islands"
+     ],
+     "h": {
+      "fi": "Watchtower 1942",
+      "en": "Watchtower 1942"
+     }
+    },
+    {
+     "fi": [
+      "Japani"
+     ],
+     "en": [
+      "Japan"
+     ],
+     "h": {
+      "fi": "Downfall, suunniteltu 1945",
+      "en": "Downfall, planned 1945"
+     }
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ],
+     "h": {
+      "fi": "Fall Weiss 1939",
+      "en": "Fall Weiss (Case White) 1939"
+     }
+    },
+    {
+     "fi": [
+      "Stalingrad",
+      "Volgograd"
+     ],
+     "en": [
+      "Stalingrad",
+      "Volgograd"
+     ],
+     "h": {
+      "fi": "Uranus 1942",
+      "en": "Uranus 1942"
+     }
+    },
+    {
+     "fi": [
+      "Anzio"
+     ],
+     "en": [
+      "Anzio"
+     ],
+     "h": {
+      "fi": "Shingle 1944",
+      "en": "Shingle 1944"
+     }
+    },
+    {
+     "fi": [
+      "Malta"
+     ],
+     "en": [
+      "Malta"
+     ],
+     "h": {
+      "fi": "Pedestal 1942 (saattue)",
+      "en": "Pedestal 1942 (convoy)"
+     }
+    },
+    {
+     "fi": [
+      "Okinawa"
+     ],
+     "en": [
+      "Okinawa"
+     ],
+     "h": {
+      "fi": "Iceberg 1945",
+      "en": "Iceberg 1945"
+     }
+    },
+    {
+     "fi": [
+      "Iwo Jima",
+      "Iwojima",
+      "Iwo To"
+     ],
+     "en": [
+      "Iwo Jima"
+     ],
+     "h": {
+      "fi": "Detachment 1945",
+      "en": "Detachment 1945"
+     }
+    },
+    {
+     "fi": [
+      "El Alamein",
+      "Egypti"
+     ],
+     "en": [
+      "El Alamein",
+      "Egypt"
+     ],
+     "h": {
+      "fi": "Lightfoot 1942",
+      "en": "Lightfoot 1942"
+     }
+    },
+    {
+     "fi": [
+      "Murmansk",
+      "Muurmanski"
+     ],
+     "en": [
+      "Murmansk"
+     ],
+     "h": {
+      "fi": "Silberfuchs (Hopeakettu) 1941 Suomen Lapista",
+      "en": "Silver Fox (Silberfuchs) 1941 from Finnish Lapland"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-ww2-kirjaimet",
+   "cat": "historia",
+   "t": 190,
+   "title": {
+    "fi": "Toisen maailmansodan johtajat ja komentajat: tunnetun nimen ensimmäinen ja viimeinen kirjain (de Gaulle = DEGAULLE)",
+    "en": "Second World War leaders and commanders: first and last letter of the best-known name (de Gaulle = DEGAULLE)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjaimet",
+    "en": "Letters"
+   },
+   "items": [
+    {
+     "fi": [
+      "Churchill",
+      "Winston Churchill"
+     ],
+     "en": [
+      "Churchill",
+      "Winston Churchill"
+     ],
+     "h": "C_______L"
+    },
+    {
+     "fi": [
+      "Roosevelt",
+      "Franklin D. Roosevelt",
+      "Franklin Roosevelt"
+     ],
+     "en": [
+      "Roosevelt",
+      "Franklin D. Roosevelt",
+      "Franklin Roosevelt"
+     ],
+     "h": "R_______T"
+    },
+    {
+     "fi": [
+      "Stalin",
+      "Josif Stalin",
+      "Joseph Stalin"
+     ],
+     "en": [
+      "Stalin",
+      "Josif Stalin",
+      "Joseph Stalin"
+     ],
+     "h": "S____N"
+    },
+    {
+     "fi": [
+      "Hitler",
+      "Adolf Hitler"
+     ],
+     "en": [
+      "Hitler",
+      "Adolf Hitler"
+     ],
+     "h": "H____R"
+    },
+    {
+     "fi": [
+      "Mussolini",
+      "Benito Mussolini"
+     ],
+     "en": [
+      "Mussolini",
+      "Benito Mussolini"
+     ],
+     "h": "M_______I"
+    },
+    {
+     "fi": [
+      "Hirohito"
+     ],
+     "en": [
+      "Hirohito"
+     ],
+     "h": "H______O"
+    },
+    {
+     "fi": [
+      "Mannerheim",
+      "C. G. E. Mannerheim",
+      "Gustaf Mannerheim"
+     ],
+     "en": [
+      "Mannerheim",
+      "C. G. E. Mannerheim",
+      "Gustaf Mannerheim"
+     ],
+     "h": "M________M"
+    },
+    {
+     "fi": [
+      "Ryti",
+      "Risto Ryti"
+     ],
+     "en": [
+      "Ryti",
+      "Risto Ryti"
+     ],
+     "h": "R__I"
+    },
+    {
+     "fi": [
+      "Eisenhower",
+      "Dwight Eisenhower"
+     ],
+     "en": [
+      "Eisenhower",
+      "Dwight Eisenhower"
+     ],
+     "h": "E________R"
+    },
+    {
+     "fi": [
+      "Montgomery",
+      "Bernard Montgomery"
+     ],
+     "en": [
+      "Montgomery",
+      "Bernard Montgomery"
+     ],
+     "h": "M________Y"
+    },
+    {
+     "fi": [
+      "Rommel",
+      "Erwin Rommel"
+     ],
+     "en": [
+      "Rommel",
+      "Erwin Rommel"
+     ],
+     "h": "R____L"
+    },
+    {
+     "fi": [
+      "Truman",
+      "Harry Truman"
+     ],
+     "en": [
+      "Truman",
+      "Harry Truman"
+     ],
+     "h": "T____N"
+    },
+    {
+     "fi": [
+      "Attlee",
+      "Clement Attlee"
+     ],
+     "en": [
+      "Attlee",
+      "Clement Attlee"
+     ],
+     "h": "A____E"
+    },
+    {
+     "fi": [
+      "Chamberlain",
+      "Neville Chamberlain"
+     ],
+     "en": [
+      "Chamberlain",
+      "Neville Chamberlain"
+     ],
+     "h": "C_________N"
+    },
+    {
+     "fi": [
+      "Pétain",
+      "Philippe Pétain"
+     ],
+     "en": [
+      "Pétain",
+      "Philippe Pétain"
+     ],
+     "h": "P____N"
+    },
+    {
+     "fi": [
+      "Quisling",
+      "Vidkun Quisling"
+     ],
+     "en": [
+      "Quisling",
+      "Vidkun Quisling"
+     ],
+     "h": "Q______G"
+    },
+    {
+     "fi": [
+      "Tito",
+      "Josip Broz Tito"
+     ],
+     "en": [
+      "Tito",
+      "Josip Broz Tito"
+     ],
+     "h": "T__O"
+    },
+    {
+     "fi": [
+      "Franco",
+      "Francisco Franco"
+     ],
+     "en": [
+      "Franco",
+      "Francisco Franco"
+     ],
+     "h": "F____O"
+    },
+    {
+     "fi": [
+      "Horthy",
+      "Miklós Horthy"
+     ],
+     "en": [
+      "Horthy",
+      "Miklós Horthy"
+     ],
+     "h": "H____Y"
+    },
+    {
+     "fi": [
+      "Yamamoto",
+      "Isoroku Yamamoto"
+     ],
+     "en": [
+      "Yamamoto",
+      "Isoroku Yamamoto"
+     ],
+     "h": "Y______O"
+    },
+    {
+     "fi": [
+      "Nimitz",
+      "Chester Nimitz"
+     ],
+     "en": [
+      "Nimitz",
+      "Chester Nimitz"
+     ],
+     "h": "N____Z"
+    },
+    {
+     "fi": [
+      "Himmler",
+      "Heinrich Himmler"
+     ],
+     "en": [
+      "Himmler",
+      "Heinrich Himmler"
+     ],
+     "h": "H_____R"
+    },
+    {
+     "fi": [
+      "Molotov",
+      "Vjatšeslav Molotov",
+      "Vyacheslav Molotov"
+     ],
+     "en": [
+      "Molotov",
+      "Vjatšeslav Molotov",
+      "Vyacheslav Molotov"
+     ],
+     "h": "M_____V"
+    },
+    {
+     "fi": [
+      "MacArthur",
+      "Douglas MacArthur"
+     ],
+     "en": [
+      "MacArthur",
+      "Douglas MacArthur"
+     ],
+     "h": "M_______R"
+    },
+    {
+     "fi": [
+      "Ribbentrop",
+      "Joachim von Ribbentrop",
+      "von Ribbentrop"
+     ],
+     "en": [
+      "Ribbentrop",
+      "Joachim von Ribbentrop",
+      "von Ribbentrop"
+     ],
+     "h": "R________P"
+    },
+    {
+     "fi": [
+      "de Gaulle",
+      "Charles de Gaulle",
+      "Gaulle"
+     ],
+     "en": [
+      "de Gaulle",
+      "Charles de Gaulle",
+      "Gaulle"
+     ],
+     "h": "D______E"
+    },
+    {
+     "fi": [
+      "Göring",
+      "Goering",
+      "Hermann Göring"
+     ],
+     "en": [
+      "Göring",
+      "Goering",
+      "Hermann Göring"
+     ],
+     "h": "G____G"
+    }
+   ]
+  },
+  {
+   "id": "historia-4-nobel-rauha-az",
+   "cat": "historia",
+   "t": 190,
+   "title": {
+    "fi": "Nobelin rauhanpalkinto A–Ö: nimeä yksi palkittu henkilö jokaiselle sukunimen alkukirjaimelle (1901–2026)",
+    "en": "Nobel Peace Prize A–Z: name one laureate (a person) for each surname initial (1901–2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Addams",
+      "Jane Addams",
+      "Angell",
+      "Norman Angell",
+      "Annan",
+      "Kofi Annan",
+      "Arafat",
+      "Jasser Arafat",
+      "Yasser Arafat",
+      "Arias",
+      "Óscar Arias",
+      "Arnoldson",
+      "Klas Pontus Arnoldson",
+      "Asser",
+      "Tobias Asser",
+      "Ahtisaari",
+      "Martti Ahtisaari",
+      "Abiy Ahmed",
+      "Abiy",
+      "Aung San Suu Kyi",
+      "Suu Kyi"
+     ],
+     "en": [
+      "Addams",
+      "Jane Addams",
+      "Angell",
+      "Norman Angell",
+      "Annan",
+      "Kofi Annan",
+      "Arafat",
+      "Jasser Arafat",
+      "Yasser Arafat",
+      "Arias",
+      "Óscar Arias",
+      "Arnoldson",
+      "Klas Pontus Arnoldson",
+      "Asser",
+      "Tobias Asser",
+      "Ahtisaari",
+      "Martti Ahtisaari",
+      "Abiy Ahmed",
+      "Abiy",
+      "Aung San Suu Kyi",
+      "Suu Kyi"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Bajer",
+      "Fredrik Bajer",
+      "Balch",
+      "Emily Greene Balch",
+      "Beernaert",
+      "Auguste Beernaert",
+      "Begin",
+      "Menachem Begin",
+      "Belo",
+      "Carlos Belo",
+      "Carlos Filipe Ximenes Belo",
+      "Bialiatski",
+      "Ales Bialiatski",
+      "Ales Bjaljatski",
+      "Borlaug",
+      "Norman Borlaug",
+      "Bourgeois",
+      "Léon Bourgeois",
+      "Boyd Orr",
+      "John Boyd Orr",
+      "Brandt",
+      "Willy Brandt",
+      "Branting",
+      "Hjalmar Branting",
+      "Briand",
+      "Aristide Briand",
+      "Buisson",
+      "Ferdinand Buisson",
+      "Bunche",
+      "Ralph Bunche",
+      "Butler",
+      "Nicholas Murray Butler"
+     ],
+     "en": [
+      "Bajer",
+      "Fredrik Bajer",
+      "Balch",
+      "Emily Greene Balch",
+      "Beernaert",
+      "Auguste Beernaert",
+      "Begin",
+      "Menachem Begin",
+      "Belo",
+      "Carlos Belo",
+      "Carlos Filipe Ximenes Belo",
+      "Bialiatski",
+      "Ales Bialiatski",
+      "Ales Bjaljatski",
+      "Borlaug",
+      "Norman Borlaug",
+      "Bourgeois",
+      "Léon Bourgeois",
+      "Boyd Orr",
+      "John Boyd Orr",
+      "Brandt",
+      "Willy Brandt",
+      "Branting",
+      "Hjalmar Branting",
+      "Briand",
+      "Aristide Briand",
+      "Buisson",
+      "Ferdinand Buisson",
+      "Bunche",
+      "Ralph Bunche",
+      "Butler",
+      "Nicholas Murray Butler"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Carter",
+      "Jimmy Carter",
+      "Cassin",
+      "René Cassin",
+      "Cecil",
+      "Robert Cecil",
+      "Chamberlain",
+      "Austen Chamberlain",
+      "Corrigan",
+      "Mairead Corrigan",
+      "Corrigan Maguire",
+      "Mairead Corrigan Maguire",
+      "Cremer",
+      "Randal Cremer",
+      "William Randal Cremer"
+     ],
+     "en": [
+      "Carter",
+      "Jimmy Carter",
+      "Cassin",
+      "René Cassin",
+      "Cecil",
+      "Robert Cecil",
+      "Chamberlain",
+      "Austen Chamberlain",
+      "Corrigan",
+      "Mairead Corrigan",
+      "Corrigan Maguire",
+      "Mairead Corrigan Maguire",
+      "Cremer",
+      "Randal Cremer",
+      "William Randal Cremer"
+     ],
+     "h": "C"
+    },
+    {
+     "fi": [
+      "Dawes",
+      "Charles Dawes",
+      "Dunant",
+      "Henry Dunant",
+      "Ducommun",
+      "Élie Ducommun",
+      "de Klerk",
+      "F. W. de Klerk",
+      "Frederik de Klerk",
+      "d'Estournelles de Constant",
+      "Estournelles de Constant"
+     ],
+     "en": [
+      "Dawes",
+      "Charles Dawes",
+      "Dunant",
+      "Henry Dunant",
+      "Ducommun",
+      "Élie Ducommun",
+      "de Klerk",
+      "F. W. de Klerk",
+      "Frederik de Klerk",
+      "d'Estournelles de Constant",
+      "Estournelles de Constant"
+     ],
+     "h": "D"
+    },
+    {
+     "fi": [
+      "Ebadi",
+      "Shirin Ebadi",
+      "ElBaradei",
+      "Mohamed ElBaradei"
+     ],
+     "en": [
+      "Ebadi",
+      "Shirin Ebadi",
+      "ElBaradei",
+      "Mohamed ElBaradei"
+     ],
+     "h": "E"
+    },
+    {
+     "fi": [
+      "Fried",
+      "Alfred Fried",
+      "Alfred Hermann Fried"
+     ],
+     "en": [
+      "Fried",
+      "Alfred Fried",
+      "Alfred Hermann Fried"
+     ],
+     "h": "F"
+    },
+    {
+     "fi": [
+      "García Robles",
+      "Alfonso García Robles",
+      "Gbowee",
+      "Leymah Gbowee",
+      "Gobat",
+      "Charles Albert Gobat",
+      "Albert Gobat",
+      "Gorbatšov",
+      "Gorbachev",
+      "Mihail Gorbatšov",
+      "Mikhail Gorbachev",
+      "Gorbatsov",
+      "Gore",
+      "Al Gore"
+     ],
+     "en": [
+      "García Robles",
+      "Alfonso García Robles",
+      "Gbowee",
+      "Leymah Gbowee",
+      "Gobat",
+      "Charles Albert Gobat",
+      "Albert Gobat",
+      "Gorbatšov",
+      "Gorbachev",
+      "Mihail Gorbatšov",
+      "Mikhail Gorbachev",
+      "Gorbatsov",
+      "Gore",
+      "Al Gore"
+     ],
+     "h": "G"
+    },
+    {
+     "fi": [
+      "Hammarskjöld",
+      "Dag Hammarskjöld",
+      "Henderson",
+      "Arthur Henderson",
+      "Hull",
+      "Cordell Hull",
+      "Hume",
+      "John Hume"
+     ],
+     "en": [
+      "Hammarskjöld",
+      "Dag Hammarskjöld",
+      "Henderson",
+      "Arthur Henderson",
+      "Hull",
+      "Cordell Hull",
+      "Hume",
+      "John Hume"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Johnson Sirleaf",
+      "Ellen Johnson Sirleaf",
+      "Sirleaf",
+      "Jouhaux",
+      "Léon Jouhaux"
+     ],
+     "en": [
+      "Johnson Sirleaf",
+      "Ellen Johnson Sirleaf",
+      "Sirleaf",
+      "Jouhaux",
+      "Léon Jouhaux"
+     ],
+     "h": "J"
+    },
+    {
+     "fi": [
+      "Karman",
+      "Tawakkol Karman",
+      "Kellogg",
+      "Frank Kellogg",
+      "Frank B. Kellogg",
+      "King",
+      "Martin Luther King",
+      "Martin Luther King Jr.",
+      "Kim Dae-jung",
+      "Kim",
+      "Kissinger",
+      "Henry Kissinger"
+     ],
+     "en": [
+      "Karman",
+      "Tawakkol Karman",
+      "Kellogg",
+      "Frank Kellogg",
+      "Frank B. Kellogg",
+      "King",
+      "Martin Luther King",
+      "Martin Luther King Jr.",
+      "Kim Dae-jung",
+      "Kim",
+      "Kissinger",
+      "Henry Kissinger"
+     ],
+     "h": "K"
+    },
+    {
+     "fi": [
+      "La Fontaine",
+      "Henri La Fontaine",
+      "Lange",
+      "Christian Lange",
+      "Le Duc Tho",
+      "Lê Đức Thọ",
+      "Liu Xiaobo",
+      "Liu",
+      "Luthuli",
+      "Albert Luthuli",
+      "Lutuli"
+     ],
+     "en": [
+      "La Fontaine",
+      "Henri La Fontaine",
+      "Lange",
+      "Christian Lange",
+      "Le Duc Tho",
+      "Lê Đức Thọ",
+      "Liu Xiaobo",
+      "Liu",
+      "Luthuli",
+      "Albert Luthuli",
+      "Lutuli"
+     ],
+     "h": "L"
+    },
+    {
+     "fi": [
+      "Maathai",
+      "Wangari Maathai",
+      "MacBride",
+      "Seán MacBride",
+      "Machado",
+      "María Corina Machado",
+      "Mandela",
+      "Nelson Mandela",
+      "Marshall",
+      "George Marshall",
+      "Menchú",
+      "Rigoberta Menchú",
+      "Mohammadi",
+      "Narges Mohammadi",
+      "Moneta",
+      "Ernesto Teodoro Moneta",
+      "Mott",
+      "John Mott",
+      "Mukwege",
+      "Denis Mukwege",
+      "Muratov",
+      "Dmitri Muratov",
+      "Dmitry Muratov",
+      "Murad",
+      "Nadia Murad",
+      "Myrdal",
+      "Alva Myrdal"
+     ],
+     "en": [
+      "Maathai",
+      "Wangari Maathai",
+      "MacBride",
+      "Seán MacBride",
+      "Machado",
+      "María Corina Machado",
+      "Mandela",
+      "Nelson Mandela",
+      "Marshall",
+      "George Marshall",
+      "Menchú",
+      "Rigoberta Menchú",
+      "Mohammadi",
+      "Narges Mohammadi",
+      "Moneta",
+      "Ernesto Teodoro Moneta",
+      "Mott",
+      "John Mott",
+      "Mukwege",
+      "Denis Mukwege",
+      "Muratov",
+      "Dmitri Muratov",
+      "Dmitry Muratov",
+      "Murad",
+      "Nadia Murad",
+      "Myrdal",
+      "Alva Myrdal"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "Nansen",
+      "Fridtjof Nansen",
+      "Noel-Baker",
+      "Philip Noel-Baker"
+     ],
+     "en": [
+      "Nansen",
+      "Fridtjof Nansen",
+      "Noel-Baker",
+      "Philip Noel-Baker"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Obama",
+      "Barack Obama",
+      "Ossietzky",
+      "von Ossietzky",
+      "Carl von Ossietzky"
+     ],
+     "en": [
+      "Obama",
+      "Barack Obama",
+      "Ossietzky",
+      "von Ossietzky",
+      "Carl von Ossietzky"
+     ],
+     "h": "O"
+    },
+    {
+     "fi": [
+      "Passy",
+      "Frédéric Passy",
+      "Pauling",
+      "Linus Pauling",
+      "Pearson",
+      "Lester Pearson",
+      "Lester B. Pearson",
+      "Peres",
+      "Shimon Peres",
+      "Pérez Esquivel",
+      "Adolfo Pérez Esquivel",
+      "Esquivel",
+      "Pire",
+      "Dominique Pire",
+      "Pillay",
+      "Navi Pillay"
+     ],
+     "en": [
+      "Passy",
+      "Frédéric Passy",
+      "Pauling",
+      "Linus Pauling",
+      "Pearson",
+      "Lester Pearson",
+      "Lester B. Pearson",
+      "Peres",
+      "Shimon Peres",
+      "Pérez Esquivel",
+      "Adolfo Pérez Esquivel",
+      "Esquivel",
+      "Pire",
+      "Dominique Pire",
+      "Pillay",
+      "Navi Pillay"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Quidde",
+      "Ludwig Quidde"
+     ],
+     "en": [
+      "Quidde",
+      "Ludwig Quidde"
+     ],
+     "h": "Q"
+    },
+    {
+     "fi": [
+      "Rabin",
+      "Jitzhak Rabin",
+      "Yitzhak Rabin",
+      "Ramos-Horta",
+      "José Ramos-Horta",
+      "Renault",
+      "Louis Renault",
+      "Ressa",
+      "Maria Ressa",
+      "Roosevelt",
+      "Theodore Roosevelt",
+      "Root",
+      "Elihu Root",
+      "Rotblat",
+      "Joseph Rotblat"
+     ],
+     "en": [
+      "Rabin",
+      "Jitzhak Rabin",
+      "Yitzhak Rabin",
+      "Ramos-Horta",
+      "José Ramos-Horta",
+      "Renault",
+      "Louis Renault",
+      "Ressa",
+      "Maria Ressa",
+      "Roosevelt",
+      "Theodore Roosevelt",
+      "Root",
+      "Elihu Root",
+      "Rotblat",
+      "Joseph Rotblat"
+     ],
+     "h": "R"
+    },
+    {
+     "fi": [
+      "Saavedra Lamas",
+      "Carlos Saavedra Lamas",
+      "Sadat",
+      "Anwar Sadat",
+      "Saharov",
+      "Sakharov",
+      "Andrei Saharov",
+      "Andrei Sakharov",
+      "Santos",
+      "Juan Manuel Santos",
+      "Satō",
+      "Eisaku Satō",
+      "Satyarthi",
+      "Kailash Satyarthi",
+      "Schweitzer",
+      "Albert Schweitzer",
+      "Söderblom",
+      "Nathan Söderblom",
+      "Stresemann",
+      "Gustav Stresemann",
+      "Suttner",
+      "von Suttner",
+      "Bertha von Suttner"
+     ],
+     "en": [
+      "Saavedra Lamas",
+      "Carlos Saavedra Lamas",
+      "Sadat",
+      "Anwar Sadat",
+      "Saharov",
+      "Sakharov",
+      "Andrei Saharov",
+      "Andrei Sakharov",
+      "Santos",
+      "Juan Manuel Santos",
+      "Satō",
+      "Eisaku Satō",
+      "Satyarthi",
+      "Kailash Satyarthi",
+      "Schweitzer",
+      "Albert Schweitzer",
+      "Söderblom",
+      "Nathan Söderblom",
+      "Stresemann",
+      "Gustav Stresemann",
+      "Suttner",
+      "von Suttner",
+      "Bertha von Suttner"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Trimble",
+      "David Trimble",
+      "Tutu",
+      "Desmond Tutu"
+     ],
+     "en": [
+      "Trimble",
+      "David Trimble",
+      "Tutu",
+      "Desmond Tutu"
+     ],
+     "h": "T"
+    },
+    {
+     "fi": [
+      "Wałęsa",
+      "Walesa",
+      "Lech Wałęsa",
+      "Wiesel",
+      "Elie Wiesel",
+      "Williams",
+      "Jody Williams",
+      "Betty Williams",
+      "Wilson",
+      "Woodrow Wilson"
+     ],
+     "en": [
+      "Wałęsa",
+      "Walesa",
+      "Lech Wałęsa",
+      "Wiesel",
+      "Elie Wiesel",
+      "Williams",
+      "Jody Williams",
+      "Betty Williams",
+      "Wilson",
+      "Woodrow Wilson"
+     ],
+     "h": "W"
+    },
+    {
+     "fi": [
+      "Yousafzai",
+      "Malala",
+      "Malala Yousafzai",
+      "Yunus",
+      "Muhammad Yunus"
+     ],
+     "en": [
+      "Yousafzai",
+      "Malala",
+      "Malala Yousafzai",
+      "Yunus",
+      "Muhammad Yunus"
+     ],
+     "h": "Y"
+    }
+   ]
+  },
+  {
+   "id": "historia-4-hajonneet-liitot",
+   "cat": "historia",
+   "t": 105,
+   "title": {
+    "fi": "Hajonneet valtioliitot 1814–1992: nimeä yksi nykyinen itsenäinen valtio, joka kuului liittoon",
+    "en": "Dissolved unions 1814–1992: name one present-day independent state that was part of the union"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Valtioliitto",
+    "en": "Union"
+   },
+   "items": [
+    {
+     "fi": [
+      "Slovenia",
+      "Kroatia",
+      "Bosnia ja Hertsegovina",
+      "Bosnia",
+      "Serbia",
+      "Montenegro",
+      "Pohjois-Makedonia",
+      "Makedonia",
+      "Kosovo"
+     ],
+     "en": [
+      "Slovenia",
+      "Croatia",
+      "Bosnia and Herzegovina",
+      "Serbia",
+      "Montenegro",
+      "North Macedonia",
+      "Macedonia",
+      "Kosovo"
+     ],
+     "h": {
+      "fi": "Jugoslavia 1945–1992",
+      "en": "Yugoslavia 1945–1992"
+     }
+    },
+    {
+     "fi": [
+      "Tšekki",
+      "Tsekki",
+      "Slovakia"
+     ],
+     "en": [
+      "Czech Republic",
+      "Czechia",
+      "Slovakia"
+     ],
+     "h": {
+      "fi": "Tšekkoslovakia 1918–1992",
+      "en": "Czechoslovakia 1918–1992"
+     }
+    },
+    {
+     "fi": [
+      "Venäjä",
+      "Ukraina",
+      "Valko-Venäjä",
+      "Moldova",
+      "Viro",
+      "Latvia",
+      "Liettua",
+      "Georgia",
+      "Armenia",
+      "Azerbaidžan",
+      "Azerbaidzan",
+      "Kazakstan",
+      "Uzbekistan",
+      "Turkmenistan",
+      "Kirgisia",
+      "Tadžikistan",
+      "Tadzikistan"
+     ],
+     "en": [
+      "Russia",
+      "Ukraine",
+      "Belarus",
+      "Estonia",
+      "Lithuania",
+      "Azerbaijan",
+      "Kazakhstan",
+      "Kyrgyzstan",
+      "Tajikistan"
+     ],
+     "h": {
+      "fi": "Neuvostoliitto 1922–1991",
+      "en": "Soviet Union 1922–1991"
+     }
+    },
+    {
+     "fi": [
+      "Kolumbia",
+      "Venezuela",
+      "Ecuador",
+      "Panama"
+     ],
+     "en": [
+      "Colombia"
+     ],
+     "h": {
+      "fi": "Suur-Kolumbia 1819–1831",
+      "en": "Gran Colombia 1819–1831"
+     }
+    },
+    {
+     "fi": [
+      "Guatemala",
+      "Honduras",
+      "El Salvador",
+      "Nicaragua",
+      "Costa Rica"
+     ],
+     "en": [
+      "Guatemala"
+     ],
+     "h": {
+      "fi": "Keski-Amerikan liittotasavalta 1823–1841",
+      "en": "Federal Republic of Central America 1823–1841"
+     }
+    },
+    {
+     "fi": [
+      "Vietnam",
+      "Laos",
+      "Kambodža",
+      "Kambodza"
+     ],
+     "en": [
+      "Cambodia"
+     ],
+     "h": {
+      "fi": "Ranskan Indokiina 1887–1954",
+      "en": "French Indochina 1887–1954"
+     }
+    },
+    {
+     "fi": [
+      "Zimbabwe",
+      "Sambia",
+      "Zambia",
+      "Malawi"
+     ],
+     "en": [
+      "Zimbabwe"
+     ],
+     "h": {
+      "fi": "Rhodesian ja Njassamaan federaatio 1953–1963",
+      "en": "Federation of Rhodesia and Nyasaland 1953–1963"
+     }
+    },
+    {
+     "fi": [
+      "Mali",
+      "Senegal"
+     ],
+     "en": [
+      "Mali"
+     ],
+     "h": {
+      "fi": "Malin federaatio 1959–1960",
+      "en": "Mali Federation 1959–1960"
+     }
+    },
+    {
+     "fi": [
+      "Egypti",
+      "Syyria"
+     ],
+     "en": [
+      "Egypt",
+      "Syria"
+     ],
+     "h": {
+      "fi": "Yhdistynyt arabitasavalta 1958–1961",
+      "en": "United Arab Republic 1958–1961"
+     }
+    },
+    {
+     "fi": [
+      "Ruotsi",
+      "Norja"
+     ],
+     "en": [
+      "Sweden",
+      "Norway"
+     ],
+     "h": {
+      "fi": "Ruotsi-Norja 1814–1905",
+      "en": "Sweden–Norway 1814–1905"
+     }
+    },
+    {
+     "fi": [
+      "Tanska",
+      "Islanti"
+     ],
+     "en": [
+      "Denmark",
+      "Iceland"
+     ],
+     "h": {
+      "fi": "Tanska-Islanti (personaaliunioni) 1918–1944",
+      "en": "Denmark–Iceland (personal union) 1918–1944"
+     }
+    },
+    {
+     "fi": [
+      "Jamaika",
+      "Trinidad ja Tobago",
+      "Trinidad",
+      "Barbados",
+      "Grenada",
+      "Saint Lucia",
+      "Saint Vincent ja Grenadiinit",
+      "Saint Vincent",
+      "Dominica",
+      "Antigua ja Barbuda",
+      "Antigua",
+      "Saint Kitts ja Nevis",
+      "Saint Kitts"
+     ],
+     "en": [
+      "Jamaica",
+      "Trinidad and Tobago",
+      "Saint Vincent and the Grenadines",
+      "Antigua and Barbuda",
+      "Saint Kitts and Nevis",
+      "St Kitts",
+      "St Lucia",
+      "St Vincent"
+     ],
+     "h": {
+      "fi": "Länsi-Intian federaatio 1958–1962",
+      "en": "West Indies Federation 1958–1962"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-entiset-paakaupungit",
+   "cat": "historia",
+   "t": 130,
+   "title": {
+    "fi": "Entinen pääkaupunki: minkä valtion? (pääkaupunki vaihtui 1800–2005)",
+    "en": "Former capital: of which country? (capital moved 1800–2005)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Entinen pääkaupunki",
+    "en": "Former capital"
+   },
+   "items": [
+    {
+     "fi": [
+      "Suomi"
+     ],
+     "en": [
+      "Finland"
+     ],
+     "h": {
+      "fi": "Turku (vuoteen 1812)",
+      "en": "Turku (until 1812)"
+     }
+    },
+    {
+     "fi": [
+      "Venäjä"
+     ],
+     "en": [
+      "Russia"
+     ],
+     "h": {
+      "fi": "Pietari (vuoteen 1918)",
+      "en": "Saint Petersburg (until 1918)"
+     }
+    },
+    {
+     "fi": [
+      "Turkki",
+      "Osmanien valtakunta"
+     ],
+     "en": [
+      "Turkey",
+      "Türkiye",
+      "Ottoman Empire"
+     ],
+     "h": {
+      "fi": "Istanbul (vuoteen 1923)",
+      "en": "Istanbul (until 1923)"
+     }
+    },
+    {
+     "fi": [
+      "Saksa",
+      "Länsi-Saksa"
+     ],
+     "en": [
+      "Germany",
+      "West Germany"
+     ],
+     "h": {
+      "fi": "Bonn (1949–1990)",
+      "en": "Bonn (1949–1990)"
+     }
+    },
+    {
+     "fi": [
+      "Kreikka"
+     ],
+     "en": [
+      "Greece"
+     ],
+     "h": {
+      "fi": "Nafplio (vuoteen 1834)",
+      "en": "Nafplio (until 1834)"
+     }
+    },
+    {
+     "fi": [
+      "Italia"
+     ],
+     "en": [
+      "Italy"
+     ],
+     "h": {
+      "fi": "Torino (1861–1865)",
+      "en": "Turin (1861–1865)"
+     }
+    },
+    {
+     "fi": [
+      "Liettua"
+     ],
+     "en": [
+      "Lithuania"
+     ],
+     "h": {
+      "fi": "Kaunas (väliaikainen 1920–1939)",
+      "en": "Kaunas (temporary, 1920–1939)"
+     }
+    },
+    {
+     "fi": [
+      "Montenegro"
+     ],
+     "en": [
+      "Montenegro"
+     ],
+     "h": {
+      "fi": "Cetinje (vuoteen 1918)",
+      "en": "Cetinje (until 1918)"
+     }
+    },
+    {
+     "fi": [
+      "Brasilia"
+     ],
+     "en": [
+      "Brazil"
+     ],
+     "h": {
+      "fi": "Rio de Janeiro (vuoteen 1960)",
+      "en": "Rio de Janeiro (until 1960)"
+     }
+    },
+    {
+     "fi": [
+      "Australia"
+     ],
+     "en": [
+      "Australia"
+     ],
+     "h": {
+      "fi": "Melbourne (1901–1927)",
+      "en": "Melbourne (1901–1927)"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Seelanti"
+     ],
+     "en": [
+      "New Zealand"
+     ],
+     "h": {
+      "fi": "Auckland (1841–1865)",
+      "en": "Auckland (1841–1865)"
+     }
+    },
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "Amerikka"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "US",
+      "America"
+     ],
+     "h": {
+      "fi": "Philadelphia (1790–1800)",
+      "en": "Philadelphia (1790–1800)"
+     }
+    },
+    {
+     "fi": [
+      "Japani"
+     ],
+     "en": [
+      "Japan"
+     ],
+     "h": {
+      "fi": "Kioto (vuoteen 1869)",
+      "en": "Kyoto (until 1869)"
+     }
+    },
+    {
+     "fi": [
+      "Intia"
+     ],
+     "en": [
+      "India"
+     ],
+     "h": {
+      "fi": "Kalkutta (vuoteen 1911)",
+      "en": "Calcutta (until 1911)"
+     }
+    },
+    {
+     "fi": [
+      "Pakistan"
+     ],
+     "en": [
+      "Pakistan"
+     ],
+     "h": {
+      "fi": "Karachi (1947–1959)",
+      "en": "Karachi (1947–1959)"
+     }
+    },
+    {
+     "fi": [
+      "Kazakstan"
+     ],
+     "en": [
+      "Kazakhstan"
+     ],
+     "h": {
+      "fi": "Almaty (vuoteen 1997)",
+      "en": "Almaty (until 1997)"
+     }
+    },
+    {
+     "fi": [
+      "Myanmar",
+      "Burma"
+     ],
+     "en": [
+      "Myanmar",
+      "Burma"
+     ],
+     "h": {
+      "fi": "Yangon (vuoteen 2005)",
+      "en": "Yangon (until 2005)"
+     }
+    },
+    {
+     "fi": [
+      "Nigeria"
+     ],
+     "en": [
+      "Nigeria"
+     ],
+     "h": {
+      "fi": "Lagos (vuoteen 1991)",
+      "en": "Lagos (until 1991)"
+     }
+    },
+    {
+     "fi": [
+      "Malawi"
+     ],
+     "en": [
+      "Malawi"
+     ],
+     "h": {
+      "fi": "Zomba (vuoteen 1975)",
+      "en": "Zomba (until 1975)"
+     }
+    },
+    {
+     "fi": [
+      "Norsunluurannikko"
+     ],
+     "en": [
+      "Ivory Coast",
+      "Côte d'Ivoire"
+     ],
+     "h": {
+      "fi": "Abidjan (vuoteen 1983)",
+      "en": "Abidjan (until 1983)"
+     }
+    },
+    {
+     "fi": [
+      "Belize"
+     ],
+     "en": [
+      "Belize"
+     ],
+     "h": {
+      "fi": "Belize City (vuoteen 1970)",
+      "en": "Belize City (until 1970)"
+     }
+    },
+    {
+     "fi": [
+      "Filippiinit"
+     ],
+     "en": [
+      "Philippines"
+     ],
+     "h": {
+      "fi": "Quezon City (1948–1976)",
+      "en": "Quezon City (1948–1976)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-monarkit-1900",
+   "cat": "historia",
+   "t": 160,
+   "title": {
+    "fi": "Pro: Euroopan valtioiden hallitsijat 1.1.1900 (20 monarkiaa; ei Andorran ruhtinaita eikä Saksan osavaltioita)",
+    "en": "Pro: Reigning monarchs of European states on 1 January 1900 (20 monarchies; excluding Andorra and the German states)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Valtio",
+    "en": "State"
+   },
+   "items": [
+    {
+     "fi": [
+      "Viktoria",
+      "kuningatar Viktoria"
+     ],
+     "en": [
+      "Victoria",
+      "Queen Victoria"
+     ],
+     "h": {
+      "fi": "Iso-Britannia",
+      "en": "United Kingdom"
+     }
+    },
+    {
+     "fi": [
+      "Vilhelm II",
+      "Wilhelm II",
+      "Vilhelm",
+      "Wilhelm"
+     ],
+     "en": [
+      "Wilhelm II",
+      "William II",
+      "Kaiser Wilhelm"
+     ],
+     "h": {
+      "fi": "Saksan keisarikunta",
+      "en": "German Empire"
+     }
+    },
+    {
+     "fi": [
+      "Nikolai II"
+     ],
+     "en": [
+      "Nicholas II"
+     ],
+     "h": {
+      "fi": "Venäjä",
+      "en": "Russia"
+     }
+    },
+    {
+     "fi": [
+      "Frans Joosef",
+      "Frans Joosef I",
+      "Franz Joseph",
+      "Franz Joseph I",
+      "Franz Josef"
+     ],
+     "en": [
+      "Franz Joseph",
+      "Franz Joseph I",
+      "Francis Joseph"
+     ],
+     "h": {
+      "fi": "Itävalta-Unkari",
+      "en": "Austria-Hungary"
+     }
+    },
+    {
+     "fi": [
+      "Umberto I",
+      "Umberto"
+     ],
+     "en": [
+      "Umberto I",
+      "Umberto"
+     ],
+     "h": {
+      "fi": "Italia",
+      "en": "Italy"
+     }
+    },
+    {
+     "fi": [
+      "Alfonso XIII",
+      "Alfonso"
+     ],
+     "en": [
+      "Alfonso XIII",
+      "Alfonso"
+     ],
+     "h": {
+      "fi": "Espanja",
+      "en": "Spain"
+     }
+    },
+    {
+     "fi": [
+      "Carlos I",
+      "Carlos"
+     ],
+     "en": [
+      "Carlos I",
+      "Charles I of Portugal"
+     ],
+     "h": {
+      "fi": "Portugali",
+      "en": "Portugal"
+     }
+    },
+    {
+     "fi": [
+      "Vilhelmiina",
+      "Wilhelmina"
+     ],
+     "en": [
+      "Wilhelmina"
+     ],
+     "h": {
+      "fi": "Alankomaat",
+      "en": "Netherlands"
+     }
+    },
+    {
+     "fi": [
+      "Leopold II",
+      "Leopold"
+     ],
+     "en": [
+      "Leopold II",
+      "Leopold"
+     ],
+     "h": {
+      "fi": "Belgia",
+      "en": "Belgium"
+     }
+    },
+    {
+     "fi": [
+      "Adolf",
+      "Adolphe",
+      "Adolf I"
+     ],
+     "en": [
+      "Adolphe",
+      "Adolf"
+     ],
+     "h": {
+      "fi": "Luxemburg",
+      "en": "Luxembourg"
+     }
+    },
+    {
+     "fi": [
+      "Kristian IX",
+      "Christian IX",
+      "Kristian",
+      "Christian"
+     ],
+     "en": [
+      "Christian IX",
+      "Christian"
+     ],
+     "h": {
+      "fi": "Tanska",
+      "en": "Denmark"
+     }
+    },
+    {
+     "fi": [
+      "Oskar II",
+      "Oscar II",
+      "Oskar",
+      "Oscar"
+     ],
+     "en": [
+      "Oscar II",
+      "Oscar"
+     ],
+     "h": {
+      "fi": "Ruotsi ja Norja",
+      "en": "Sweden and Norway"
+     }
+    },
+    {
+     "fi": [
+      "Yrjö I",
+      "Georg I",
+      "Geórgios I",
+      "Georgios I"
+     ],
+     "en": [
+      "George I",
+      "George I of Greece"
+     ],
+     "h": {
+      "fi": "Kreikka",
+      "en": "Greece"
+     }
+    },
+    {
+     "fi": [
+      "Carol I",
+      "Carol",
+      "Kaarle I"
+     ],
+     "en": [
+      "Carol I",
+      "Carol"
+     ],
+     "h": {
+      "fi": "Romania",
+      "en": "Romania"
+     }
+    },
+    {
+     "fi": [
+      "Aleksanteri Obrenović",
+      "Aleksandar Obrenović",
+      "Aleksanteri I",
+      "Obrenović",
+      "Aleksanteri"
+     ],
+     "en": [
+      "Alexander Obrenović",
+      "Alexander I of Serbia",
+      "Alexander"
+     ],
+     "h": {
+      "fi": "Serbia",
+      "en": "Serbia"
+     }
+    },
+    {
+     "fi": [
+      "Nikola I",
+      "Nikola",
+      "Nikola Petrović"
+     ],
+     "en": [
+      "Nicholas I of Montenegro",
+      "Nikola I",
+      "Nikola"
+     ],
+     "h": {
+      "fi": "Montenegro",
+      "en": "Montenegro"
+     }
+    },
+    {
+     "fi": [
+      "Ferdinand",
+      "Ferdinand I"
+     ],
+     "en": [
+      "Ferdinand",
+      "Ferdinand I"
+     ],
+     "h": {
+      "fi": "Bulgaria (ruhtinaskunta)",
+      "en": "Bulgaria (principality)"
+     }
+    },
+    {
+     "fi": [
+      "Abdülhamid II",
+      "Abdul Hamid II",
+      "Abdülhamid",
+      "Abdul Hamid"
+     ],
+     "en": [
+      "Abdul Hamid II",
+      "Abdülhamid II",
+      "Abdul Hamid"
+     ],
+     "h": {
+      "fi": "Osmanien valtakunta",
+      "en": "Ottoman Empire"
+     }
+    },
+    {
+     "fi": [
+      "Albert I",
+      "Albert"
+     ],
+     "en": [
+      "Albert I",
+      "Albert"
+     ],
+     "h": {
+      "fi": "Monaco",
+      "en": "Monaco"
+     }
+    },
+    {
+     "fi": [
+      "Johann II",
+      "Johann",
+      "Juhana II"
+     ],
+     "en": [
+      "Johann II",
+      "John II",
+      "Johann"
+     ],
+     "h": {
+      "fi": "Liechtenstein",
+      "en": "Liechtenstein"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-kaatuneet-monarkiat",
+   "cat": "historia",
+   "t": 120,
+   "title": {
+    "fi": "Euroopan valtiot, joissa monarkia päättyi 1900–1999 (vihjeenä vuosi; mukana myös myöhemmin palautetut; ei nukkevaltioita eikä 1918 toteutumattomia kuningaskuntia)",
+    "en": "European states whose monarchy ended 1900–1999 (hint: year; includes later restorations; excludes puppet states and the unrealised kingdoms of 1918)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vuosi",
+    "en": "Year"
+   },
+   "items": [
+    {
+     "fi": [
+      "Portugali"
+     ],
+     "en": [
+      "Portugal"
+     ],
+     "h": "1910"
+    },
+    {
+     "fi": [
+      "Venäjä",
+      "Venäjän keisarikunta"
+     ],
+     "en": [
+      "Russia",
+      "Russian Empire"
+     ],
+     "h": "1917"
+    },
+    {
+     "fi": [
+      "Saksa",
+      "Saksan keisarikunta"
+     ],
+     "en": [
+      "Germany",
+      "German Empire"
+     ],
+     "h": "1918"
+    },
+    {
+     "fi": [
+      "Itävalta",
+      "Itävalta-Unkari"
+     ],
+     "en": [
+      "Austria",
+      "Austria-Hungary"
+     ],
+     "h": "1918"
+    },
+    {
+     "fi": [
+      "Montenegro"
+     ],
+     "en": [
+      "Montenegro"
+     ],
+     "h": "1918"
+    },
+    {
+     "fi": [
+      "Osmanien valtakunta",
+      "Turkki",
+      "Ottomaanien valtakunta"
+     ],
+     "en": [
+      "Ottoman Empire",
+      "Turkey"
+     ],
+     "h": "1922"
+    },
+    {
+     "fi": [
+      "Espanja"
+     ],
+     "en": [
+      "Spain"
+     ],
+     "h": "1931"
+    },
+    {
+     "fi": [
+      "Islanti"
+     ],
+     "en": [
+      "Iceland"
+     ],
+     "h": "1944"
+    },
+    {
+     "fi": [
+      "Jugoslavia"
+     ],
+     "en": [
+      "Yugoslavia"
+     ],
+     "h": "1945"
+    },
+    {
+     "fi": [
+      "Unkari"
+     ],
+     "en": [
+      "Hungary"
+     ],
+     "h": "1946"
+    },
+    {
+     "fi": [
+      "Italia"
+     ],
+     "en": [
+      "Italy"
+     ],
+     "h": "1946"
+    },
+    {
+     "fi": [
+      "Bulgaria"
+     ],
+     "en": [
+      "Bulgaria"
+     ],
+     "h": "1946"
+    },
+    {
+     "fi": [
+      "Albania"
+     ],
+     "en": [
+      "Albania"
+     ],
+     "h": "1946"
+    },
+    {
+     "fi": [
+      "Romania"
+     ],
+     "en": [
+      "Romania"
+     ],
+     "h": "1947"
+    },
+    {
+     "fi": [
+      "Irlanti"
+     ],
+     "en": [
+      "Ireland"
+     ],
+     "h": "1949"
+    },
+    {
+     "fi": [
+      "Kreikka"
+     ],
+     "en": [
+      "Greece"
+     ],
+     "h": "1973"
+    },
+    {
+     "fi": [
+      "Malta"
+     ],
+     "en": [
+      "Malta"
+     ],
+     "h": "1974"
+    }
+   ]
+  },
+  {
+   "id": "historia-4-sanasto-en-fi",
+   "cat": "historia",
+   "t": 155,
+   "title": {
+    "fi": "Historian sanastoa: käännä englanninkielinen termi suomeksi",
+    "en": "History vocabulary: translate the English term into Finnish (answers in Finnish)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Englanniksi",
+    "en": "In English"
+   },
+   "items": [
+    {
+     "fi": [
+      "rautaesirippu"
+     ],
+     "en": [
+      "rautaesirippu"
+     ],
+     "h": "Iron Curtain"
+    },
+    {
+     "fi": [
+      "kylmä sota"
+     ],
+     "en": [
+      "kylmä sota"
+     ],
+     "h": "Cold War"
+    },
+    {
+     "fi": [
+      "kilpavarustelu",
+      "asevarustelukilpailu",
+      "varustelukilpailu"
+     ],
+     "en": [
+      "kilpavarustelu",
+      "asevarustelukilpailu",
+      "varustelukilpailu"
+     ],
+     "h": "arms race"
+    },
+    {
+     "fi": [
+      "teollinen vallankumous"
+     ],
+     "en": [
+      "teollinen vallankumous"
+     ],
+     "h": "Industrial Revolution"
+    },
+    {
+     "fi": [
+      "kultakuume",
+      "kultaryntäys"
+     ],
+     "en": [
+      "kultakuume",
+      "kultaryntäys"
+     ],
+     "h": "gold rush"
+    },
+    {
+     "fi": [
+      "suuri lama",
+      "pula-aika",
+      "lama",
+      "1930-luvun lama"
+     ],
+     "en": [
+      "suuri lama",
+      "pula-aika",
+      "lama",
+      "1930-luvun lama"
+     ],
+     "h": "Great Depression"
+    },
+    {
+     "fi": [
+      "kieltolaki"
+     ],
+     "en": [
+      "kieltolaki"
+     ],
+     "h": "Prohibition"
+    },
+    {
+     "fi": [
+      "sisällissota"
+     ],
+     "en": [
+      "sisällissota"
+     ],
+     "h": "civil war"
+    },
+    {
+     "fi": [
+      "aselepo"
+     ],
+     "en": [
+      "aselepo"
+     ],
+     "h": "armistice"
+    },
+    {
+     "fi": [
+      "tulitauko"
+     ],
+     "en": [
+      "tulitauko"
+     ],
+     "h": "ceasefire"
+    },
+    {
+     "fi": [
+      "maaorjuus"
+     ],
+     "en": [
+      "maaorjuus"
+     ],
+     "h": "serfdom"
+    },
+    {
+     "fi": [
+      "äänioikeus"
+     ],
+     "en": [
+      "äänioikeus"
+     ],
+     "h": "suffrage"
+    },
+    {
+     "fi": [
+      "juoksuhautasota",
+      "asemasota"
+     ],
+     "en": [
+      "juoksuhautasota",
+      "asemasota"
+     ],
+     "h": "trench warfare"
+    },
+    {
+     "fi": [
+      "ilmasilta"
+     ],
+     "en": [
+      "ilmasilta"
+     ],
+     "h": "airlift"
+    },
+    {
+     "fi": [
+      "liennytys"
+     ],
+     "en": [
+      "liennytys"
+     ],
+     "h": "détente"
+    },
+    {
+     "fi": [
+      "vallankaappaus",
+      "kaappaus"
+     ],
+     "en": [
+      "vallankaappaus",
+      "kaappaus"
+     ],
+     "h": "coup d'état"
+    },
+    {
+     "fi": [
+      "kruunusta luopuminen",
+      "luopuminen kruunusta",
+      "luopuminen vallasta",
+      "vallasta luopuminen"
+     ],
+     "en": [
+      "kruunusta luopuminen",
+      "luopuminen kruunusta",
+      "luopuminen vallasta",
+      "vallasta luopuminen"
+     ],
+     "h": "abdication"
+    },
+    {
+     "fi": [
+      "sotakorvaukset",
+      "sotakorvaus"
+     ],
+     "en": [
+      "sotakorvaukset",
+      "sotakorvaus"
+     ],
+     "h": "war reparations"
+    },
+    {
+     "fi": [
+      "säännöstely",
+      "kortitus"
+     ],
+     "en": [
+      "säännöstely",
+      "kortitus"
+     ],
+     "h": "rationing"
+    },
+    {
+     "fi": [
+      "evakko",
+      "evakot",
+      "siirtoväki"
+     ],
+     "en": [
+      "evakko",
+      "evakot",
+      "siirtoväki"
+     ],
+     "h": "evacuee"
+    },
+    {
+     "fi": [
+      "kotirintama"
+     ],
+     "en": [
+      "kotirintama"
+     ],
+     "h": "home front"
+    },
+    {
+     "fi": [
+      "supervalta"
+     ],
+     "en": [
+      "supervalta"
+     ],
+     "h": "superpower"
+    },
+    {
+     "fi": [
+      "vastarintaliike"
+     ],
+     "en": [
+      "vastarintaliike"
+     ],
+     "h": "resistance movement"
+    },
+    {
+     "fi": [
+      "asevelvollisuus"
+     ],
+     "en": [
+      "asevelvollisuus"
+     ],
+     "h": "conscription"
+    },
+    {
+     "fi": [
+      "sotalapsi",
+      "sotalapset"
+     ],
+     "en": [
+      "sotalapsi",
+      "sotalapset"
+     ],
+     "h": "war child"
+    },
+    {
+     "fi": [
+      "kansanmurha",
+      "joukkotuhonta"
+     ],
+     "en": [
+      "kansanmurha",
+      "joukkotuhonta"
+     ],
+     "h": "genocide"
+    }
+   ]
+  },
+  {
+   "id": "historia-4-vuodet-1800",
+   "cat": "historia",
+   "t": 140,
+   "title": {
+    "fi": "Arvaa vuosi: 1800-luvun tapahtumat",
+    "en": "Guess the year: events of the 19th century"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Tapahtuma",
+    "en": "Event"
+   },
+   "items": [
+    {
+     "fi": [
+      "1804"
+     ],
+     "en": [
+      "1804"
+     ],
+     "h": {
+      "fi": "Napoleon kruunataan keisariksi",
+      "en": "Napoleon is crowned emperor"
+     }
+    },
+    {
+     "fi": [
+      "1809"
+     ],
+     "en": [
+      "1809"
+     ],
+     "h": {
+      "fi": "Porvoon valtiopäivät; Suomi liitetään Venäjään",
+      "en": "Diet of Porvoo; Finland joins the Russian Empire"
+     }
+    },
+    {
+     "fi": [
+      "1812"
+     ],
+     "en": [
+      "1812"
+     ],
+     "h": {
+      "fi": "Napoleonin armeija marssii Moskovaan",
+      "en": "Napoleon's army marches into Moscow"
+     }
+    },
+    {
+     "fi": [
+      "1815"
+     ],
+     "en": [
+      "1815"
+     ],
+     "h": {
+      "fi": "Waterloon taistelu",
+      "en": "Battle of Waterloo"
+     }
+    },
+    {
+     "fi": [
+      "1825"
+     ],
+     "en": [
+      "1825"
+     ],
+     "h": {
+      "fi": "Stockton–Darlington-rautatie avataan",
+      "en": "Stockton and Darlington Railway opens"
+     }
+    },
+    {
+     "fi": [
+      "1830"
+     ],
+     "en": [
+      "1830"
+     ],
+     "h": {
+      "fi": "Heinäkuun vallankumous Pariisissa",
+      "en": "July Revolution in Paris"
+     }
+    },
+    {
+     "fi": [
+      "1835"
+     ],
+     "en": [
+      "1835"
+     ],
+     "h": {
+      "fi": "Kalevalan ensimmäinen laitos ilmestyy",
+      "en": "First edition of the Kalevala is published"
+     }
+    },
+    {
+     "fi": [
+      "1848"
+     ],
+     "en": [
+      "1848"
+     ],
+     "h": {
+      "fi": "Kommunistinen manifesti; vallankumousten vuosi",
+      "en": "Communist Manifesto; year of revolutions"
+     }
+    },
+    {
+     "fi": [
+      "1851"
+     ],
+     "en": [
+      "1851"
+     ],
+     "h": {
+      "fi": "Suuri maailmannäyttely Lontoon Kristallipalatsissa",
+      "en": "Great Exhibition in the Crystal Palace, London"
+     }
+    },
+    {
+     "fi": [
+      "1859"
+     ],
+     "en": [
+      "1859"
+     ],
+     "h": {
+      "fi": "Darwinin Lajien synty julkaistaan",
+      "en": "Darwin's On the Origin of Species is published"
+     }
+    },
+    {
+     "fi": [
+      "1861"
+     ],
+     "en": [
+      "1861"
+     ],
+     "h": {
+      "fi": "Venäjä vapauttaa maaorjat",
+      "en": "Russia emancipates the serfs"
+     }
+    },
+    {
+     "fi": [
+      "1863"
+     ],
+     "en": [
+      "1863"
+     ],
+     "h": {
+      "fi": "Kieliasetus: suomesta virallinen kieli ajan mittaan",
+      "en": "Language Decree raises Finnish to an official language over time"
+     }
+    },
+    {
+     "fi": [
+      "1865"
+     ],
+     "en": [
+      "1865"
+     ],
+     "h": {
+      "fi": "Abraham Lincoln murhataan",
+      "en": "Abraham Lincoln is assassinated"
+     }
+    },
+    {
+     "fi": [
+      "1867"
+     ],
+     "en": [
+      "1867"
+     ],
+     "h": {
+      "fi": "Yhdysvallat ostaa Alaskan",
+      "en": "The United States buys Alaska"
+     }
+    },
+    {
+     "fi": [
+      "1869"
+     ],
+     "en": [
+      "1869"
+     ],
+     "h": {
+      "fi": "Suezin kanava avataan",
+      "en": "The Suez Canal opens"
+     }
+    },
+    {
+     "fi": [
+      "1871"
+     ],
+     "en": [
+      "1871"
+     ],
+     "h": {
+      "fi": "Saksan keisarikunta julistetaan Versailles’ssa",
+      "en": "German Empire proclaimed at Versailles"
+     }
+    },
+    {
+     "fi": [
+      "1876"
+     ],
+     "en": [
+      "1876"
+     ],
+     "h": {
+      "fi": "Bell patentoi puhelimen",
+      "en": "Bell patents the telephone"
+     }
+    },
+    {
+     "fi": [
+      "1883"
+     ],
+     "en": [
+      "1883"
+     ],
+     "h": {
+      "fi": "Krakataun purkaus",
+      "en": "Eruption of Krakatoa"
+     }
+    },
+    {
+     "fi": [
+      "1886"
+     ],
+     "en": [
+      "1886"
+     ],
+     "h": {
+      "fi": "Vapaudenpatsas vihitään New Yorkissa",
+      "en": "Statue of Liberty dedicated in New York"
+     }
+    },
+    {
+     "fi": [
+      "1889"
+     ],
+     "en": [
+      "1889"
+     ],
+     "h": {
+      "fi": "Eiffel-torni valmistuu maailmannäyttelyyn",
+      "en": "Eiffel Tower completed for the World’s Fair"
+     }
+    },
+    {
+     "fi": [
+      "1893"
+     ],
+     "en": [
+      "1893"
+     ],
+     "h": {
+      "fi": "Uusi-Seelanti antaa naisille äänioikeuden",
+      "en": "New Zealand gives women the vote"
+     }
+    },
+    {
+     "fi": [
+      "1895"
+     ],
+     "en": [
+      "1895"
+     ],
+     "h": {
+      "fi": "Röntgen löytää röntgensäteet",
+      "en": "Röntgen discovers X-rays"
+     }
+    },
+    {
+     "fi": [
+      "1896"
+     ],
+     "en": [
+      "1896"
+     ],
+     "h": {
+      "fi": "Ensimmäiset nykyaikaiset olympialaiset Ateenassa",
+      "en": "First modern Olympics in Athens"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-vuodet-1900",
+   "cat": "historia",
+   "t": 150,
+   "title": {
+    "fi": "Arvaa vuosi: 1900-luvun käännekohdat",
+    "en": "Guess the year: turning points of the 20th century"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Tapahtuma",
+    "en": "Event"
+   },
+   "items": [
+    {
+     "fi": [
+      "1905"
+     ],
+     "en": [
+      "1905"
+     ],
+     "h": {
+      "fi": "Norja eroaa unionista Ruotsin kanssa",
+      "en": "Norway leaves the union with Sweden"
+     }
+    },
+    {
+     "fi": [
+      "1906"
+     ],
+     "en": [
+      "1906"
+     ],
+     "h": {
+      "fi": "Suomen naiset saavat äänioikeuden ja vaalikelpoisuuden",
+      "en": "Finnish women get the vote and the right to stand"
+     }
+    },
+    {
+     "fi": [
+      "1912"
+     ],
+     "en": [
+      "1912"
+     ],
+     "h": {
+      "fi": "Titanic uppoaa",
+      "en": "The Titanic sinks"
+     }
+    },
+    {
+     "fi": [
+      "1914"
+     ],
+     "en": [
+      "1914"
+     ],
+     "h": {
+      "fi": "Arkkiherttua Franz Ferdinand murhataan Sarajevossa",
+      "en": "Archduke Franz Ferdinand assassinated in Sarajevo"
+     }
+    },
+    {
+     "fi": [
+      "1917"
+     ],
+     "en": [
+      "1917"
+     ],
+     "h": {
+      "fi": "Suomi julistautuu itsenäiseksi",
+      "en": "Finland declares independence"
+     }
+    },
+    {
+     "fi": [
+      "1918"
+     ],
+     "en": [
+      "1918"
+     ],
+     "h": {
+      "fi": "Ensimmäinen maailmansota päättyy aselepoon",
+      "en": "The First World War ends in an armistice"
+     }
+    },
+    {
+     "fi": [
+      "1929"
+     ],
+     "en": [
+      "1929"
+     ],
+     "h": {
+      "fi": "Wall Streetin pörssiromahdus",
+      "en": "Wall Street Crash"
+     }
+    },
+    {
+     "fi": [
+      "1933"
+     ],
+     "en": [
+      "1933"
+     ],
+     "h": {
+      "fi": "Hitler nimitetään valtakunnankansleriksi",
+      "en": "Hitler appointed Chancellor"
+     }
+    },
+    {
+     "fi": [
+      "1939"
+     ],
+     "en": [
+      "1939"
+     ],
+     "h": {
+      "fi": "Talvisota alkaa",
+      "en": "The Winter War begins"
+     }
+    },
+    {
+     "fi": [
+      "1945"
+     ],
+     "en": [
+      "1945"
+     ],
+     "h": {
+      "fi": "Yhdistyneet kansakunnat perustetaan",
+      "en": "The United Nations is founded"
+     }
+    },
+    {
+     "fi": [
+      "1948"
+     ],
+     "en": [
+      "1948"
+     ],
+     "h": {
+      "fi": "Mahatma Gandhi murhataan",
+      "en": "Mahatma Gandhi is assassinated"
+     }
+    },
+    {
+     "fi": [
+      "1949"
+     ],
+     "en": [
+      "1949"
+     ],
+     "h": {
+      "fi": "Nato perustetaan",
+      "en": "NATO is founded"
+     }
+    },
+    {
+     "fi": [
+      "1952"
+     ],
+     "en": [
+      "1952"
+     ],
+     "h": {
+      "fi": "Helsingin olympialaiset",
+      "en": "Helsinki Olympics"
+     }
+    },
+    {
+     "fi": [
+      "1953"
+     ],
+     "en": [
+      "1953"
+     ],
+     "h": {
+      "fi": "Hillary ja Norgay valloittavat Everestin",
+      "en": "Hillary and Norgay summit Everest"
+     }
+    },
+    {
+     "fi": [
+      "1957"
+     ],
+     "en": [
+      "1957"
+     ],
+     "h": {
+      "fi": "Sputnik 1 laukaistaan",
+      "en": "Sputnik 1 is launched"
+     }
+    },
+    {
+     "fi": [
+      "1961"
+     ],
+     "en": [
+      "1961"
+     ],
+     "h": {
+      "fi": "Berliinin muuri rakennetaan",
+      "en": "The Berlin Wall is built"
+     }
+    },
+    {
+     "fi": [
+      "1962"
+     ],
+     "en": [
+      "1962"
+     ],
+     "h": {
+      "fi": "Kuuban ohjuskriisi",
+      "en": "Cuban Missile Crisis"
+     }
+    },
+    {
+     "fi": [
+      "1963"
+     ],
+     "en": [
+      "1963"
+     ],
+     "h": {
+      "fi": "John F. Kennedy murhataan Dallasissa",
+      "en": "John F. Kennedy assassinated in Dallas"
+     }
+    },
+    {
+     "fi": [
+      "1969"
+     ],
+     "en": [
+      "1969"
+     ],
+     "h": {
+      "fi": "Apollo 11 laskeutuu Kuuhun",
+      "en": "Apollo 11 lands on the Moon"
+     }
+    },
+    {
+     "fi": [
+      "1975"
+     ],
+     "en": [
+      "1975"
+     ],
+     "h": {
+      "fi": "ETYK-huippukokous Helsingissä",
+      "en": "CSCE summit in Helsinki"
+     }
+    },
+    {
+     "fi": [
+      "1986"
+     ],
+     "en": [
+      "1986"
+     ],
+     "h": {
+      "fi": "Tšernobylin ydinvoimalaonnettomuus",
+      "en": "Chernobyl nuclear disaster"
+     }
+    },
+    {
+     "fi": [
+      "1989"
+     ],
+     "en": [
+      "1989"
+     ],
+     "h": {
+      "fi": "Berliinin muuri murtuu",
+      "en": "The Berlin Wall falls"
+     }
+    },
+    {
+     "fi": [
+      "1991"
+     ],
+     "en": [
+      "1991"
+     ],
+     "h": {
+      "fi": "Neuvostoliitto hajoaa",
+      "en": "The Soviet Union dissolves"
+     }
+    },
+    {
+     "fi": [
+      "1994"
+     ],
+     "en": [
+      "1994"
+     ],
+     "h": {
+      "fi": "Nelson Mandelasta Etelä-Afrikan presidentti",
+      "en": "Nelson Mandela becomes president of South Africa"
+     }
+    },
+    {
+     "fi": [
+      "1995"
+     ],
+     "en": [
+      "1995"
+     ],
+     "h": {
+      "fi": "Suomi liittyy Euroopan unioniin",
+      "en": "Finland joins the European Union"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-kuka-johtaja",
+   "cat": "historia",
+   "t": 175,
+   "title": {
+    "fi": "Kuka johtaja? Tunnista 1800–1900-luvun valtiomies vihjeestä",
+    "en": "Which leader? Identify the 19th–20th century statesman from the clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Simón Bolívar",
+      "Bolívar"
+     ],
+     "en": [
+      "Simón Bolívar",
+      "Bolívar"
+     ],
+     "h": {
+      "fi": "Vapauttaja, jonka mukaan on nimetty kokonainen valtio",
+      "en": "Liberator who has a whole country named after him"
+     }
+    },
+    {
+     "fi": [
+      "Otto von Bismarck",
+      "Bismarck"
+     ],
+     "en": [
+      "Otto von Bismarck",
+      "Bismarck"
+     ],
+     "h": {
+      "fi": "Rautakansleri, joka yhdisti Saksan 1871",
+      "en": "The Iron Chancellor who unified Germany in 1871"
+     }
+    },
+    {
+     "fi": [
+      "Giuseppe Garibaldi",
+      "Garibaldi"
+     ],
+     "en": [
+      "Giuseppe Garibaldi",
+      "Garibaldi"
+     ],
+     "h": {
+      "fi": "Punapaitojen johtaja Italian yhdistymisessä",
+      "en": "Leader of the Redshirts in Italy's unification"
+     }
+    },
+    {
+     "fi": [
+      "Abraham Lincoln",
+      "Lincoln"
+     ],
+     "en": [
+      "Abraham Lincoln",
+      "Lincoln"
+     ],
+     "h": {
+      "fi": "Johti pohjoisvaltioita sisällissodassa, ammuttiin teatterissa",
+      "en": "Led the Union in the Civil War, shot in a theatre"
+     }
+    },
+    {
+     "fi": [
+      "Aleksanteri II",
+      "Aleksanteri",
+      "Alexander II"
+     ],
+     "en": [
+      "Aleksanteri II",
+      "Aleksanteri",
+      "Alexander II"
+     ],
+     "h": {
+      "fi": "Tsaari, joka vapautti maaorjat; patsas Senaatintorilla",
+      "en": "Tsar who freed the serfs; statue on Senate Square"
+     }
+    },
+    {
+     "fi": [
+      "Napoleon III",
+      "Louis Napoléon",
+      "Louis-Napoléon Bonaparte"
+     ],
+     "en": [
+      "Napoleon III",
+      "Louis Napoléon",
+      "Louis-Napoléon Bonaparte"
+     ],
+     "h": {
+      "fi": "Ensimmäisen keisarin veljenpoika, Ranskan keisari 1852–1870",
+      "en": "Nephew of the first emperor, Emperor of France 1852–1870"
+     }
+    },
+    {
+     "fi": [
+      "Kaarle XIV Juhana",
+      "Karl XIV Johan",
+      "Bernadotte",
+      "Jean-Baptiste Bernadotte",
+      "Charles XIV John"
+     ],
+     "en": [
+      "Kaarle XIV Juhana",
+      "Karl XIV Johan",
+      "Bernadotte",
+      "Jean-Baptiste Bernadotte",
+      "Charles XIV John"
+     ],
+     "h": {
+      "fi": "Napoleonin marsalkka, josta tuli Ruotsin kuningas",
+      "en": "Napoleon's marshal who became King of Sweden"
+     }
+    },
+    {
+     "fi": [
+      "Mustafa Kemal Atatürk",
+      "Atatürk",
+      "Mustafa Kemal"
+     ],
+     "en": [
+      "Mustafa Kemal Atatürk",
+      "Atatürk",
+      "Mustafa Kemal"
+     ],
+     "h": {
+      "fi": "Turkin tasavallan perustaja; sukunimi = \"turkkilaisten isä\"",
+      "en": "Founder of the Turkish Republic; surname means \"father of the Turks\""
+     }
+    },
+    {
+     "fi": [
+      "Lenin",
+      "Vladimir Lenin",
+      "Vladimir Uljanov"
+     ],
+     "en": [
+      "Lenin",
+      "Vladimir Lenin",
+      "Vladimir Uljanov"
+     ],
+     "h": {
+      "fi": "Bolševikkien johtaja, joka saapui Pietariin junalla Suomen kautta 1917",
+      "en": "Bolshevik leader who reached Petrograd by train via Finland in 1917"
+     }
+    },
+    {
+     "fi": [
+      "Mahatma Gandhi",
+      "Gandhi",
+      "Mohandas Gandhi"
+     ],
+     "en": [
+      "Mahatma Gandhi",
+      "Gandhi",
+      "Mohandas Gandhi"
+     ],
+     "h": {
+      "fi": "Väkivallattoman vastarinnan johtaja ja suolamarssi 1930",
+      "en": "Leader of non-violent resistance and the 1930 Salt March"
+     }
+    },
+    {
+     "fi": [
+      "Mao Zedong",
+      "Mao",
+      "Mao Tse-tung"
+     ],
+     "en": [
+      "Mao Zedong",
+      "Mao",
+      "Mao Tse-tung"
+     ],
+     "h": {
+      "fi": "Johti Pitkää marssia ja julisti kansantasavallan 1949",
+      "en": "Led the Long March and proclaimed the People’s Republic in 1949"
+     }
+    },
+    {
+     "fi": [
+      "Charles de Gaulle",
+      "de Gaulle"
+     ],
+     "en": [
+      "Charles de Gaulle",
+      "de Gaulle"
+     ],
+     "h": {
+      "fi": "Vapaan Ranskan johtaja Lontoossa, viidennen tasavallan perustaja",
+      "en": "Led Free France from London, founded the Fifth Republic"
+     }
+    },
+    {
+     "fi": [
+      "Nelson Mandela",
+      "Mandela"
+     ],
+     "en": [
+      "Nelson Mandela",
+      "Mandela"
+     ],
+     "h": {
+      "fi": "27 vuotta vankilassa, sitten presidentiksi 1994",
+      "en": "27 years in prison, then president in 1994"
+     }
+    },
+    {
+     "fi": [
+      "Fidel Castro",
+      "Castro"
+     ],
+     "en": [
+      "Fidel Castro",
+      "Castro"
+     ],
+     "h": {
+      "fi": "Johti sissit Havannaan tammikuussa 1959",
+      "en": "Led the guerrillas into Havana in January 1959"
+     }
+    },
+    {
+     "fi": [
+      "Urho Kekkonen",
+      "Kekkonen"
+     ],
+     "en": [
+      "Urho Kekkonen",
+      "Kekkonen"
+     ],
+     "h": {
+      "fi": "Suomen pisimpään istunut presidentti 1956–1982",
+      "en": "Finland's longest-serving president, 1956–1982"
+     }
+    },
+    {
+     "fi": [
+      "J. K. Paasikivi",
+      "Paasikivi",
+      "Juho Kusti Paasikivi"
+     ],
+     "en": [
+      "J. K. Paasikivi",
+      "Paasikivi",
+      "Juho Kusti Paasikivi"
+     ],
+     "h": {
+      "fi": "Presidentti, jonka nimeä kantaa Suomen sodanjälkeinen ulkopoliittinen linja",
+      "en": "President whose name was given to Finland's post-war foreign policy line"
+     }
+    },
+    {
+     "fi": [
+      "Margaret Thatcher",
+      "Thatcher"
+     ],
+     "en": [
+      "Margaret Thatcher",
+      "Thatcher"
+     ],
+     "h": {
+      "fi": "Rautarouva, Britannian ensimmäinen naispääministeri",
+      "en": "The Iron Lady, Britain's first female prime minister"
+     }
+    },
+    {
+     "fi": [
+      "Haile Selassie",
+      "Haile Selassie I",
+      "Ras Tafari"
+     ],
+     "en": [
+      "Haile Selassie",
+      "Haile Selassie I",
+      "Ras Tafari"
+     ],
+     "h": {
+      "fi": "Etiopian viimeinen keisari, rastafarien kunnioittama",
+      "en": "Last Emperor of Ethiopia, revered by Rastafarians"
+     }
+    },
+    {
+     "fi": [
+      "Ho Tši Minh",
+      "Ho Chi Minh",
+      "Ho Tsi Minh"
+     ],
+     "en": [
+      "Ho Tši Minh",
+      "Ho Chi Minh",
+      "Ho Tsi Minh"
+     ],
+     "h": {
+      "fi": "Vietnamin itsenäisyysjohtaja; Saigon nimettiin hänen mukaansa",
+      "en": "Vietnamese independence leader; Saigon was renamed after him"
+     }
+    },
+    {
+     "fi": [
+      "Josip Broz Tito",
+      "Tito"
+     ],
+     "en": [
+      "Josip Broz Tito",
+      "Tito"
+     ],
+     "h": {
+      "fi": "Jugoslavian johtaja, joka sanoi ei Stalinille 1948",
+      "en": "Yugoslav leader who broke with Stalin in 1948"
+     }
+    },
+    {
+     "fi": [
+      "Golda Meir",
+      "Meir"
+     ],
+     "en": [
+      "Golda Meir",
+      "Meir"
+     ],
+     "h": {
+      "fi": "Israelin ensimmäinen naispääministeri 1969",
+      "en": "Israel's first female prime minister, 1969"
+     }
+    },
+    {
+     "fi": [
+      "Jomo Kenyatta",
+      "Kenyatta"
+     ],
+     "en": [
+      "Jomo Kenyatta",
+      "Kenyatta"
+     ],
+     "h": {
+      "fi": "Kenian ensimmäinen presidentti",
+      "en": "First president of Kenya"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-usa-virassa-kuolleet",
+   "cat": "historia",
+   "t": 65,
+   "title": {
+    "fi": "Yhdysvaltain kahdeksan virassa kuollutta presidenttiä (1841–1963; vihjeenä kuolinvuosi)",
+    "en": "The eight US presidents who died in office (1841–1963; hint: year of death)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kuolinvuosi",
+    "en": "Year of death"
+   },
+   "items": [
+    {
+     "fi": [
+      "William Henry Harrison",
+      "Harrison",
+      "William Harrison"
+     ],
+     "en": [
+      "William Henry Harrison",
+      "Harrison",
+      "William Harrison"
+     ],
+     "h": "1841"
+    },
+    {
+     "fi": [
+      "Zachary Taylor",
+      "Taylor"
+     ],
+     "en": [
+      "Zachary Taylor",
+      "Taylor"
+     ],
+     "h": "1850"
+    },
+    {
+     "fi": [
+      "Abraham Lincoln",
+      "Lincoln"
+     ],
+     "en": [
+      "Abraham Lincoln",
+      "Lincoln"
+     ],
+     "h": "1865"
+    },
+    {
+     "fi": [
+      "James Garfield",
+      "Garfield",
+      "James A. Garfield"
+     ],
+     "en": [
+      "James Garfield",
+      "Garfield",
+      "James A. Garfield"
+     ],
+     "h": "1881"
+    },
+    {
+     "fi": [
+      "William McKinley",
+      "McKinley"
+     ],
+     "en": [
+      "William McKinley",
+      "McKinley"
+     ],
+     "h": "1901"
+    },
+    {
+     "fi": [
+      "Warren Harding",
+      "Harding",
+      "Warren G. Harding"
+     ],
+     "en": [
+      "Warren Harding",
+      "Harding",
+      "Warren G. Harding"
+     ],
+     "h": "1923"
+    },
+    {
+     "fi": [
+      "Franklin D. Roosevelt",
+      "Roosevelt",
+      "Franklin Roosevelt",
+      "FDR"
+     ],
+     "en": [
+      "Franklin D. Roosevelt",
+      "Roosevelt",
+      "Franklin Roosevelt",
+      "FDR"
+     ],
+     "h": "1945"
+    },
+    {
+     "fi": [
+      "John F. Kennedy",
+      "Kennedy",
+      "JFK"
+     ],
+     "en": [
+      "John F. Kennedy",
+      "Kennedy",
+      "JFK"
+     ],
+     "h": "1963"
+    }
+   ]
+  },
+  {
+   "id": "historia-4-pohjoismaiden-pisimmat-kaudet",
+   "cat": "historia",
+   "t": 90,
+   "title": {
+    "fi": "Ruotsin, Tanskan ja Norjan 10 pisimpään hallinnutta monarkkia, jotka nousivat valtaistuimelle 1800–2026 (tilanne 11/2026)",
+    "en": "The 10 longest-reigning monarchs of Sweden, Denmark and Norway who acceded 1800–2026 (as of 11/2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sija ja kausi",
+    "en": "Rank and reign"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kaarle XVI Kustaa",
+      "Carl XVI Gustaf",
+      "Kaarle Kustaa",
+      "Carl Gustaf"
+     ],
+     "en": [
+      "Carl XVI Gustaf",
+      "Charles XVI Gustaf"
+     ],
+     "h": {
+      "fi": "1. Ruotsi, 1973–",
+      "en": "1. Sweden, 1973–"
+     }
+    },
+    {
+     "fi": [
+      "Margareeta II",
+      "Margrethe II",
+      "Margareeta",
+      "Margrethe"
+     ],
+     "en": [
+      "Margrethe II",
+      "Margrethe"
+     ],
+     "h": {
+      "fi": "2. Tanska, 1972–2024",
+      "en": "2. Denmark, 1972–2024"
+     }
+    },
+    {
+     "fi": [
+      "Haakon VII",
+      "Haakon"
+     ],
+     "en": [
+      "Haakon VII",
+      "Haakon"
+     ],
+     "h": {
+      "fi": "3. Norja, 1905–1957",
+      "en": "3. Norway, 1905–1957"
+     }
+    },
+    {
+     "fi": [
+      "Kustaa V",
+      "Gustaf V"
+     ],
+     "en": [
+      "Gustaf V",
+      "Gustav V"
+     ],
+     "h": {
+      "fi": "4. Ruotsi, 1907–1950",
+      "en": "4. Sweden, 1907–1950"
+     }
+    },
+    {
+     "fi": [
+      "Kristian IX",
+      "Christian IX"
+     ],
+     "en": [
+      "Christian IX"
+     ],
+     "h": {
+      "fi": "5. Tanska, 1863–1906",
+      "en": "5. Denmark, 1863–1906"
+     }
+    },
+    {
+     "fi": [
+      "Harald V",
+      "Harald"
+     ],
+     "en": [
+      "Harald V",
+      "Harald"
+     ],
+     "h": {
+      "fi": "6. Norja, 1991–2026",
+      "en": "6. Norway, 1991–2026"
+     }
+    },
+    {
+     "fi": [
+      "Oskar II",
+      "Oscar II",
+      "Oskar",
+      "Oscar"
+     ],
+     "en": [
+      "Oscar II",
+      "Oscar"
+     ],
+     "h": {
+      "fi": "7. Ruotsi (ja Norja), 1872–1907",
+      "en": "7. Sweden (and Norway), 1872–1907"
+     }
+    },
+    {
+     "fi": [
+      "Kristian X",
+      "Christian X"
+     ],
+     "en": [
+      "Christian X"
+     ],
+     "h": {
+      "fi": "8. Tanska, 1912–1947",
+      "en": "8. Denmark, 1912–1947"
+     }
+    },
+    {
+     "fi": [
+      "Olav V",
+      "Olav"
+     ],
+     "en": [
+      "Olav V",
+      "Olaf V",
+      "Olav"
+     ],
+     "h": {
+      "fi": "9. Norja, 1957–1991",
+      "en": "9. Norway, 1957–1991"
+     }
+    },
+    {
+     "fi": [
+      "Fredrik VI",
+      "Frederik VI"
+     ],
+     "en": [
+      "Frederick VI",
+      "Frederik VI"
+     ],
+     "h": {
+      "fi": "10. Tanska, 1808–1839",
+      "en": "10. Denmark, 1808–1839"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-rauhansopimukset",
+   "cat": "historia",
+   "t": 180,
+   "title": {
+    "fi": "Minkä sodan sopimus päätti? Rauhansopimukset ja aselevot 1809–1995",
+    "en": "Which war did it end? Peace treaties and armistices 1809–1995"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sopimus",
+    "en": "Treaty"
+   },
+   "items": [
+    {
+     "fi": [
+      "Suomen sota"
+     ],
+     "en": [
+      "Finnish War"
+     ],
+     "h": {
+      "fi": "Haminan rauha 1809",
+      "en": "Treaty of Fredrikshamn 1809"
+     }
+    },
+    {
+     "fi": [
+      "Vuoden 1812 sota",
+      "1812 sota",
+      "Britannian ja Yhdysvaltain sota"
+     ],
+     "en": [
+      "War of 1812"
+     ],
+     "h": {
+      "fi": "Gentin rauha 1814",
+      "en": "Treaty of Ghent 1814"
+     }
+    },
+    {
+     "fi": [
+      "Ensimmäinen oopiumisota",
+      "Oopiumisota"
+     ],
+     "en": [
+      "First Opium War",
+      "Opium War"
+     ],
+     "h": {
+      "fi": "Nankingin sopimus 1842",
+      "en": "Treaty of Nanking 1842"
+     }
+    },
+    {
+     "fi": [
+      "Meksikon ja Yhdysvaltain sota",
+      "Meksikon–Yhdysvaltain sota",
+      "Meksikon sota",
+      "Yhdysvaltain ja Meksikon sota"
+     ],
+     "en": [
+      "Mexican–American War",
+      "Mexican War"
+     ],
+     "h": {
+      "fi": "Guadalupe Hidalgon rauha 1848",
+      "en": "Treaty of Guadalupe Hidalgo 1848"
+     }
+    },
+    {
+     "fi": [
+      "Krimin sota",
+      "Krim"
+     ],
+     "en": [
+      "Crimean War"
+     ],
+     "h": {
+      "fi": "Pariisin rauha 1856",
+      "en": "Treaty of Paris 1856"
+     }
+    },
+    {
+     "fi": [
+      "Preussin ja Itävallan sota",
+      "Preussin–Itävallan sota",
+      "Saksan sota",
+      "Seitsemän viikon sota",
+      "Itävallan ja Preussin sota"
+     ],
+     "en": [
+      "Austro-Prussian War",
+      "Seven Weeks' War"
+     ],
+     "h": {
+      "fi": "Prahan rauha 1866",
+      "en": "Peace of Prague 1866"
+     }
+    },
+    {
+     "fi": [
+      "Ranskan ja Preussin sota",
+      "Ranskan–Preussin sota",
+      "Saksan–Ranskan sota",
+      "Preussin ja Ranskan sota"
+     ],
+     "en": [
+      "Franco-Prussian War"
+     ],
+     "h": {
+      "fi": "Frankfurtin rauha 1871",
+      "en": "Treaty of Frankfurt 1871"
+     }
+    },
+    {
+     "fi": [
+      "Tyynenmeren sota",
+      "Salpietarisota"
+     ],
+     "en": [
+      "War of the Pacific",
+      "Saltpeter War"
+     ],
+     "h": {
+      "fi": "Ancónin sopimus 1883",
+      "en": "Treaty of Ancón 1883"
+     }
+    },
+    {
+     "fi": [
+      "Ensimmäinen Kiinan–Japanin sota",
+      "Kiinan ja Japanin sota",
+      "Kiinan–Japanin sota"
+     ],
+     "en": [
+      "First Sino-Japanese War",
+      "Sino-Japanese War"
+     ],
+     "h": {
+      "fi": "Shimonosekin rauha 1895",
+      "en": "Treaty of Shimonoseki 1895"
+     }
+    },
+    {
+     "fi": [
+      "Espanjan ja Yhdysvaltain sota",
+      "Espanjan–Yhdysvaltain sota",
+      "Yhdysvaltain ja Espanjan sota"
+     ],
+     "en": [
+      "Spanish–American War"
+     ],
+     "h": {
+      "fi": "Pariisin rauha 1898",
+      "en": "Treaty of Paris 1898"
+     }
+    },
+    {
+     "fi": [
+      "Toinen buurisota",
+      "Buurisota",
+      "Buurisodat"
+     ],
+     "en": [
+      "Second Boer War",
+      "Boer War"
+     ],
+     "h": {
+      "fi": "Vereenigingin rauha 1902",
+      "en": "Treaty of Vereeniging 1902"
+     }
+    },
+    {
+     "fi": [
+      "Venäjän ja Japanin sota",
+      "Venäjän–Japanin sota",
+      "Japanin ja Venäjän sota"
+     ],
+     "en": [
+      "Russo-Japanese War"
+     ],
+     "h": {
+      "fi": "Portsmouthin rauha 1905",
+      "en": "Treaty of Portsmouth 1905"
+     }
+    },
+    {
+     "fi": [
+      "Ensimmäinen maailmansota",
+      "1. maailmansota",
+      "Suuri sota"
+     ],
+     "en": [
+      "First World War",
+      "World War I",
+      "WWI",
+      "Great War",
+      "World War One"
+     ],
+     "h": {
+      "fi": "Versailles’n rauha 1919",
+      "en": "Treaty of Versailles 1919"
+     }
+    },
+    {
+     "fi": [
+      "Puolan ja Neuvosto-Venäjän sota",
+      "Puolan–Neuvosto-Venäjän sota",
+      "Puolan–Neuvostoliiton sota",
+      "Puolan ja Neuvostoliiton sota"
+     ],
+     "en": [
+      "Polish–Soviet War",
+      "Polish-Bolshevik War"
+     ],
+     "h": {
+      "fi": "Riian rauha 1921",
+      "en": "Peace of Riga 1921"
+     }
+    },
+    {
+     "fi": [
+      "Talvisota"
+     ],
+     "en": [
+      "Winter War"
+     ],
+     "h": {
+      "fi": "Moskovan rauha 1940",
+      "en": "Moscow Peace Treaty 1940"
+     }
+    },
+    {
+     "fi": [
+      "Jatkosota",
+      "Toinen maailmansota",
+      "2. maailmansota"
+     ],
+     "en": [
+      "Continuation War",
+      "Second World War",
+      "World War II",
+      "WWII"
+     ],
+     "h": {
+      "fi": "Pariisin rauha 1947 (Suomi)",
+      "en": "Paris Peace Treaty 1947 (Finland)"
+     }
+    },
+    {
+     "fi": [
+      "Korean sota"
+     ],
+     "en": [
+      "Korean War"
+     ],
+     "h": {
+      "fi": "Panmunjomin aseleposopimus 1953",
+      "en": "Korean Armistice Agreement 1953"
+     }
+    },
+    {
+     "fi": [
+      "Indokiinan sota",
+      "Ensimmäinen Indokiinan sota"
+     ],
+     "en": [
+      "First Indochina War",
+      "Indochina War"
+     ],
+     "h": {
+      "fi": "Geneven sopimukset 1954",
+      "en": "Geneva Accords 1954"
+     }
+    },
+    {
+     "fi": [
+      "Algerian sota",
+      "Algerian itsenäisyyssota",
+      "Algerian vapaussota"
+     ],
+     "en": [
+      "Algerian War",
+      "Algerian War of Independence"
+     ],
+     "h": {
+      "fi": "Évianin sopimukset 1962",
+      "en": "Évian Accords 1962"
+     }
+    },
+    {
+     "fi": [
+      "Bosnian sota",
+      "Bosnian sisällissota"
+     ],
+     "en": [
+      "Bosnian War"
+     ],
+     "h": {
+      "fi": "Daytonin sopimus 1995",
+      "en": "Dayton Agreement 1995"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-perutut-olympialaiset",
+   "cat": "historia",
+   "t": 65,
+   "title": {
+    "fi": "Sotien vuoksi peruttujen olympialaisten isäntäkaupungit 1916–1944 (myös korvaajiksi valitut)",
+    "en": "Host cities of the Olympic Games cancelled by war, 1916–1944 (including replacement hosts)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kisat",
+    "en": "Games"
+   },
+   "items": [
+    {
+     "fi": [
+      "Berliini"
+     ],
+     "en": [
+      "Berlin"
+     ],
+     "h": {
+      "fi": "1916 kesä",
+      "en": "1916 Summer"
+     }
+    },
+    {
+     "fi": [
+      "Tokio"
+     ],
+     "en": [
+      "Tokyo"
+     ],
+     "h": {
+      "fi": "1940 kesä (alkuperäinen)",
+      "en": "1940 Summer (original)"
+     }
+    },
+    {
+     "fi": [
+      "Helsinki"
+     ],
+     "en": [
+      "Helsinki"
+     ],
+     "h": {
+      "fi": "1940 kesä (korvaaja)",
+      "en": "1940 Summer (replacement)"
+     }
+    },
+    {
+     "fi": [
+      "Sapporo"
+     ],
+     "en": [
+      "Sapporo"
+     ],
+     "h": {
+      "fi": "1940 talvi (alkuperäinen)",
+      "en": "1940 Winter (original)"
+     }
+    },
+    {
+     "fi": [
+      "St. Moritz",
+      "Sankt Moritz"
+     ],
+     "en": [
+      "St. Moritz",
+      "Saint Moritz"
+     ],
+     "h": {
+      "fi": "1940 talvi (1. korvaaja)",
+      "en": "1940 Winter (1st replacement)"
+     }
+    },
+    {
+     "fi": [
+      "Garmisch-Partenkirchen",
+      "Garmisch"
+     ],
+     "en": [
+      "Garmisch-Partenkirchen",
+      "Garmisch"
+     ],
+     "h": {
+      "fi": "1940 talvi (2. korvaaja)",
+      "en": "1940 Winter (2nd replacement)"
+     }
+    },
+    {
+     "fi": [
+      "Lontoo"
+     ],
+     "en": [
+      "London"
+     ],
+     "h": {
+      "fi": "1944 kesä",
+      "en": "1944 Summer"
+     }
+    },
+    {
+     "fi": [
+      "Cortina d'Ampezzo",
+      "Cortina"
+     ],
+     "en": [
+      "Cortina d'Ampezzo",
+      "Cortina"
+     ],
+     "h": {
+      "fi": "1944 talvi",
+      "en": "1944 Winter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "historia-4-1920-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "1920-luku: jazzia, kieltolakia ja uusia valtioita",
+    "en": "The 1920s: jazz, prohibition and new states"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kenen faaraon lähes koskematon hauta löydettiin 1922?",
+      "en": "Whose nearly intact pharaoh's tomb was found in 1922?"
+     },
+     "ok": {
+      "fi": "Tutankhamonin",
+      "en": "Tutankhamun"
+     },
+     "no": [
+      {
+       "fi": "Ramses II:n",
+       "en": "Ramesses II"
+      },
+      {
+       "fi": "Kheopsin",
+       "en": "Khufu"
+      },
+      {
+       "fi": "Seti I:n",
+       "en": "Seti I"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka lensi ensimmäisenä yksin ja välilaskuitta Atlantin yli 1927?",
+      "en": "Who made the first solo non-stop flight across the Atlantic in 1927?"
+     },
+     "ok": {
+      "fi": "Charles Lindbergh",
+      "en": "Charles Lindbergh"
+     },
+     "no": [
+      {
+       "fi": "Amelia Earhart",
+       "en": "Amelia Earhart"
+      },
+      {
+       "fi": "Roald Amundsen",
+       "en": "Roald Amundsen"
+      },
+      {
+       "fi": "Louis Blériot",
+       "en": "Louis Blériot"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä pidettiin ensimmäiset talviolympialaiset 1924?",
+      "en": "Where were the first Winter Olympics held in 1924?"
+     },
+     "ok": {
+      "fi": "Chamonix’ssa",
+      "en": "Chamonix"
+     },
+     "no": [
+      {
+       "fi": "St. Moritzissa",
+       "en": "St. Moritz"
+      },
+      {
+       "fi": "Oslossa",
+       "en": "Oslo"
+      },
+      {
+       "fi": "Lake Placidissa",
+       "en": "Lake Placid"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Neuvostoliiton johtaja kuoli tammikuussa 1924?",
+      "en": "Which Soviet leader died in January 1924?"
+     },
+     "ok": {
+      "fi": "Lenin",
+      "en": "Lenin"
+     },
+     "no": [
+      {
+       "fi": "Trotski",
+       "en": "Trotsky"
+      },
+      {
+       "fi": "Stalin",
+       "en": "Stalin"
+      },
+      {
+       "fi": "Kerenski",
+       "en": "Kerensky"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka havaitsi penisilliinin vuonna 1928?",
+      "en": "Who discovered penicillin in 1928?"
+     },
+     "ok": {
+      "fi": "Alexander Fleming",
+      "en": "Alexander Fleming"
+     },
+     "no": [
+      {
+       "fi": "Louis Pasteur",
+       "en": "Louis Pasteur"
+      },
+      {
+       "fi": "Robert Koch",
+       "en": "Robert Koch"
+      },
+      {
+       "fi": "Marie Curie",
+       "en": "Marie Curie"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti viisi olympiakultaa Pariisissa 1924?",
+      "en": "Who won five Olympic golds in Paris in 1924?"
+     },
+     "ok": {
+      "fi": "Paavo Nurmi",
+      "en": "Paavo Nurmi"
+     },
+     "no": [
+      {
+       "fi": "Ville Ritola",
+       "en": "Ville Ritola"
+      },
+      {
+       "fi": "Hannes Kolehmainen",
+       "en": "Hannes Kolehmainen"
+      },
+      {
+       "fi": "Johnny Weissmuller",
+       "en": "Johnny Weissmuller"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Suomen laki oli voimassa 1919–1932?",
+      "en": "Which Finnish law was in force from 1919 to 1932?"
+     },
+     "ok": {
+      "fi": "Kieltolaki",
+      "en": "Prohibition of alcohol"
+     },
+     "no": [
+      {
+       "fi": "Oppivelvollisuuslaki",
+       "en": "Compulsory education act"
+      },
+      {
+       "fi": "Torpparilaki",
+       "en": "Crofters' act"
+      },
+      {
+       "fi": "Kielilaki",
+       "en": "Language act"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka johti fasistien marssia Roomaan 1922?",
+      "en": "Who led the fascist March on Rome in 1922?"
+     },
+     "ok": {
+      "fi": "Benito Mussolini",
+      "en": "Benito Mussolini"
+     },
+     "no": [
+      {
+       "fi": "Gabriele D’Annunzio",
+       "en": "Gabriele D’Annunzio"
+      },
+      {
+       "fi": "Francisco Franco",
+       "en": "Francisco Franco"
+      },
+      {
+       "fi": "Vittorio Emanuele III",
+       "en": "Victor Emmanuel III"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä tasavalta julistettiin 1923 pääkaupunkinaan Ankara?",
+      "en": "Which republic was proclaimed in 1923 with Ankara as its capital?"
+     },
+     "ok": {
+      "fi": "Turkki",
+      "en": "Turkey"
+     },
+     "no": [
+      {
+       "fi": "Irak",
+       "en": "Iraq"
+      },
+      {
+       "fi": "Syyria",
+       "en": "Syria"
+      },
+      {
+       "fi": "Persia",
+       "en": "Persia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli ensimmäinen pitkä elokuva, jossa oli synkronoitua puhetta (1927)?",
+      "en": "Which was the first feature film with synchronised dialogue (1927)?"
+     },
+     "ok": {
+      "fi": "Jazzlaulaja",
+      "en": "The Jazz Singer"
+     },
+     "no": [
+      {
+       "fi": "Metropolis",
+       "en": "Metropolis"
+      },
+      {
+       "fi": "Kultakuume",
+       "en": "The Gold Rush"
+      },
+      {
+       "fi": "Nosferatu",
+       "en": "Nosferatu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä 1928 ensi-iltansa saanut ääniä sisältänyt piirretty teki Mikki Hiirestä tähden?",
+      "en": "Which 1928 cartoon with synchronised sound made Mickey Mouse a star?"
+     },
+     "ok": {
+      "fi": "Steamboat Willie",
+      "en": "Steamboat Willie"
+     },
+     "no": [
+      {
+       "fi": "Lumikki ja seitsemän kääpiötä",
+       "en": "Snow White and the Seven Dwarfs"
+      },
+      {
+       "fi": "Fantasia",
+       "en": "Fantasia"
+      },
+      {
+       "fi": "Kolme pientä porsasta",
+       "en": "Three Little Pigs"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Kansainliitto päätti Ahvenanmaasta 1921?",
+      "en": "What did the League of Nations decide about Åland in 1921?"
+     },
+     "ok": {
+      "fi": "Saaret kuuluvat Suomelle",
+      "en": "The islands belong to Finland"
+     },
+     "no": [
+      {
+       "fi": "Saaret liitetään Ruotsiin",
+       "en": "The islands join Sweden"
+      },
+      {
+       "fi": "Saaret itsenäistyvät",
+       "en": "The islands become independent"
+      },
+      {
+       "fi": "Saaret jaetaan kahtia",
+       "en": "The islands are split in two"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka esitteli toimivan television Lontoossa tammikuussa 1926?",
+      "en": "Who demonstrated a working television in London in January 1926?"
+     },
+     "ok": {
+      "fi": "John Logie Baird",
+      "en": "John Logie Baird"
+     },
+     "no": [
+      {
+       "fi": "Guglielmo Marconi",
+       "en": "Guglielmo Marconi"
+      },
+      {
+       "fi": "Nikola Tesla",
+       "en": "Nikola Tesla"
+      },
+      {
+       "fi": "Thomas Edison",
+       "en": "Thomas Edison"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna New Yorkin pörssiromahdus alkoi?",
+      "en": "In which year did the Wall Street Crash begin?"
+     },
+     "ok": {
+      "fi": "1929",
+      "en": "1929"
+     },
+     "no": [
+      {
+       "fi": "1925",
+       "en": "1925"
+      },
+      {
+       "fi": "1927",
+       "en": "1927"
+      },
+      {
+       "fi": "1931",
+       "en": "1931"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-4-1960-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "1960-luku: muureja, vallankumouksia ja kuukausia ennen Kuuta",
+    "en": "The 1960s: walls, revolutions and the road to the Moon"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuka oli Suomen presidentti koko 1960-luvun?",
+      "en": "Who was President of Finland throughout the 1960s?"
+     },
+     "ok": {
+      "fi": "Urho Kekkonen",
+      "en": "Urho Kekkonen"
+     },
+     "no": [
+      {
+       "fi": "J. K. Paasikivi",
+       "en": "J. K. Paasikivi"
+      },
+      {
+       "fi": "Mauno Koivisto",
+       "en": "Mauno Koivisto"
+      },
+      {
+       "fi": "Risto Ryti",
+       "en": "Risto Ryti"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kriisi kiristi Suomen ja Neuvostoliiton suhteita syksyllä 1961?",
+      "en": "Which crisis strained Finnish–Soviet relations in autumn 1961?"
+     },
+     "ok": {
+      "fi": "Noottikriisi",
+      "en": "Note Crisis"
+     },
+     "no": [
+      {
+       "fi": "Yöpakkaset",
+       "en": "Night Frost Crisis"
+      },
+      {
+       "fi": "Porkkalan palautus",
+       "en": "Return of Porkkala"
+      },
+      {
+       "fi": "Saimaan kanavan vuokrasopimus",
+       "en": "Saimaa Canal lease treaty"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mistä maasta Kongo itsenäistyi vuonna 1960?",
+      "en": "From which country did Congo gain independence in 1960?"
+     },
+     "ok": {
+      "fi": "Belgiasta",
+      "en": "Belgium"
+     },
+     "no": [
+      {
+       "fi": "Ranskasta",
+       "en": "France"
+      },
+      {
+       "fi": "Portugalista",
+       "en": "Portugal"
+      },
+      {
+       "fi": "Britanniasta",
+       "en": "Britain"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Neuvostoliiton johtaja syrjäytettiin lokakuussa 1964?",
+      "en": "Which Soviet leader was ousted in October 1964?"
+     },
+     "ok": {
+      "fi": "Nikita Hruštšov",
+      "en": "Nikita Khrushchev"
+     },
+     "no": [
+      {
+       "fi": "Leonid Brežnev",
+       "en": "Leonid Brezhnev"
+      },
+      {
+       "fi": "Georgi Malenkov",
+       "en": "Georgy Malenkov"
+      },
+      {
+       "fi": "Aleksei Kosygin",
+       "en": "Alexei Kosygin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kaupunki järjesti 1964 ensimmäiset Aasian kesäolympialaiset?",
+      "en": "Which city hosted the first Summer Olympics in Asia in 1964?"
+     },
+     "ok": {
+      "fi": "Tokio",
+      "en": "Tokyo"
+     },
+     "no": [
+      {
+       "fi": "Soul",
+       "en": "Seoul"
+      },
+      {
+       "fi": "Peking",
+       "en": "Beijing"
+      },
+      {
+       "fi": "Manila",
+       "en": "Manila"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa kulttuurivallankumous alkoi 1966?",
+      "en": "In which country did the Cultural Revolution begin in 1966?"
+     },
+     "ok": {
+      "fi": "Kiinassa",
+      "en": "China"
+     },
+     "no": [
+      {
+       "fi": "Kuubassa",
+       "en": "Cuba"
+      },
+      {
+       "fi": "Vietnamissa",
+       "en": "Vietnam"
+      },
+      {
+       "fi": "Albaniassa",
+       "en": "Albania"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitkä joukot kukistivat Prahan kevään elokuussa 1968?",
+      "en": "Whose troops crushed the Prague Spring in August 1968?"
+     },
+     "ok": {
+      "fi": "Varsovan liiton",
+      "en": "The Warsaw Pact"
+     },
+     "no": [
+      {
+       "fi": "Naton",
+       "en": "NATO"
+      },
+      {
+       "fi": "YK:n",
+       "en": "The UN"
+      },
+      {
+       "fi": "Jugoslavian",
+       "en": "Yugoslavia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä maa siirtyi vasemmanpuoleisesta oikeanpuoleiseen liikenteeseen 1967?",
+      "en": "Which country switched from left- to right-hand traffic in 1967?"
+     },
+     "ok": {
+      "fi": "Ruotsi",
+      "en": "Sweden"
+     },
+     "no": [
+      {
+       "fi": "Norja",
+       "en": "Norway"
+      },
+      {
+       "fi": "Tanska",
+       "en": "Denmark"
+      },
+      {
+       "fi": "Viro",
+       "en": "Estonia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka teki ensimmäisen ihmisen sydämensiirron Kapkaupungissa 1967?",
+      "en": "Who performed the first human heart transplant in Cape Town in 1967?"
+     },
+     "ok": {
+      "fi": "Christiaan Barnard",
+      "en": "Christiaan Barnard"
+     },
+     "no": [
+      {
+       "fi": "Michael DeBakey",
+       "en": "Michael DeBakey"
+      },
+      {
+       "fi": "Denton Cooley",
+       "en": "Denton Cooley"
+      },
+      {
+       "fi": "Norman Shumway",
+       "en": "Norman Shumway"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Ketä vastaan Israel kävi kuuden päivän sodan 1967?",
+      "en": "Whom did Israel fight in the Six-Day War of 1967?"
+     },
+     "ok": {
+      "fi": "Egyptiä, Syyriaa ja Jordaniaa",
+      "en": "Egypt, Syria and Jordan"
+     },
+     "no": [
+      {
+       "fi": "Irania ja Irakia",
+       "en": "Iran and Iraq"
+      },
+      {
+       "fi": "Libanonia ja Turkkia",
+       "en": "Lebanon and Turkey"
+      },
+      {
+       "fi": "Saudi-Arabiaa ja Jemeniä",
+       "en": "Saudi Arabia and Yemen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka piti \"I have a dream\" -puheen Washingtonissa 1963?",
+      "en": "Who gave the \"I have a dream\" speech in Washington in 1963?"
+     },
+     "ok": {
+      "fi": "Martin Luther King",
+      "en": "Martin Luther King"
+     },
+     "no": [
+      {
+       "fi": "Malcolm X",
+       "en": "Malcolm X"
+      },
+      {
+       "fi": "John F. Kennedy",
+       "en": "John F. Kennedy"
+      },
+      {
+       "fi": "Rosa Parks",
+       "en": "Rosa Parks"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa Beatles sai alkunsa?",
+      "en": "In which city did the Beatles form?"
+     },
+     "ok": {
+      "fi": "Liverpoolissa",
+      "en": "Liverpool"
+     },
+     "no": [
+      {
+       "fi": "Manchesterissa",
+       "en": "Manchester"
+      },
+      {
+       "fi": "Lontoossa",
+       "en": "London"
+      },
+      {
+       "fi": "Birminghamissa",
+       "en": "Birmingham"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa presidentti Kennedy ammuttiin marraskuussa 1963?",
+      "en": "In which city was President Kennedy shot in November 1963?"
+     },
+     "ok": {
+      "fi": "Dallasissa",
+      "en": "Dallas"
+     },
+     "no": [
+      {
+       "fi": "Houstonissa",
+       "en": "Houston"
+      },
+      {
+       "fi": "Chicagossa",
+       "en": "Chicago"
+      },
+      {
+       "fi": "Los Angelesissa",
+       "en": "Los Angeles"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Afrikan maa itsenäistyi Isosta-Britanniasta 1963 Jomo Kenyattan johdolla?",
+      "en": "Which African country won independence from Britain in 1963 under Jomo Kenyatta?"
+     },
+     "ok": {
+      "fi": "Kenia",
+      "en": "Kenya"
+     },
+     "no": [
+      {
+       "fi": "Tansania",
+       "en": "Tanzania"
+      },
+      {
+       "fi": "Uganda",
+       "en": "Uganda"
+      },
+      {
+       "fi": "Nigeria",
+       "en": "Nigeria"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-4-1980-luku",
+   "cat": "historia",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "1980-luku: Solidaarisuudesta Baltian ketjuun",
+    "en": "The 1980s: from Solidarity to the Baltic Way"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minkä puolalaisen ammattiliiton johtaja Lech Wałęsa oli?",
+      "en": "Which Polish trade union did Lech Wałęsa lead?"
+     },
+     "ok": {
+      "fi": "Solidaarisuus",
+      "en": "Solidarity"
+     },
+     "no": [
+      {
+       "fi": "Vapaus",
+       "en": "Freedom"
+      },
+      {
+       "fi": "Yhtenäisyys",
+       "en": "Unity"
+      },
+      {
+       "fi": "Työn liitto",
+       "en": "Labour Union"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka valittiin Suomen presidentiksi tammikuussa 1982?",
+      "en": "Who was elected President of Finland in January 1982?"
+     },
+     "ok": {
+      "fi": "Mauno Koivisto",
+      "en": "Mauno Koivisto"
+     },
+     "no": [
+      {
+       "fi": "Kalevi Sorsa",
+       "en": "Kalevi Sorsa"
+      },
+      {
+       "fi": "Martti Ahtisaari",
+       "en": "Martti Ahtisaari"
+      },
+      {
+       "fi": "Harri Holkeri",
+       "en": "Harri Holkeri"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mistä saarista Britannia ja Argentiina sotivat 1982?",
+      "en": "Over which islands did Britain and Argentina fight in 1982?"
+     },
+     "ok": {
+      "fi": "Falklandinsaarista",
+      "en": "The Falkland Islands"
+     },
+     "no": [
+      {
+       "fi": "Galápagossaarista",
+       "en": "The Galápagos Islands"
+      },
+      {
+       "fi": "Tulimaasta",
+       "en": "Tierra del Fuego"
+      },
+      {
+       "fi": "Etelä-Shetlandinsaarista",
+       "en": "The South Shetland Islands"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka suomalainen voitti Formula 1:n maailmanmestaruuden 1982?",
+      "en": "Which Finn won the Formula One world championship in 1982?"
+     },
+     "ok": {
+      "fi": "Keke Rosberg",
+      "en": "Keke Rosberg"
+     },
+     "no": [
+      {
+       "fi": "Mika Häkkinen",
+       "en": "Mika Häkkinen"
+      },
+      {
+       "fi": "Leo Kinnunen",
+       "en": "Leo Kinnunen"
+      },
+      {
+       "fi": "JJ Lehto",
+       "en": "JJ Lehto"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä yhtiö toi Macintosh-tietokoneen markkinoille 1984?",
+      "en": "Which company launched the Macintosh computer in 1984?"
+     },
+     "ok": {
+      "fi": "Apple",
+      "en": "Apple"
+     },
+     "no": [
+      {
+       "fi": "IBM",
+       "en": "IBM"
+      },
+      {
+       "fi": "Commodore",
+       "en": "Commodore"
+      },
+      {
+       "fi": "Atari",
+       "en": "Atari"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka järjesti Live Aid -konsertit 1985 (yhdessä Midge Uren kanssa)?",
+      "en": "Who organised the Live Aid concerts in 1985 (with Midge Ure)?"
+     },
+     "ok": {
+      "fi": "Bob Geldof",
+      "en": "Bob Geldof"
+     },
+     "no": [
+      {
+       "fi": "Bono",
+       "en": "Bono"
+      },
+      {
+       "fi": "Freddie Mercury",
+       "en": "Freddie Mercury"
+      },
+      {
+       "fi": "Sting",
+       "en": "Sting"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä avaruussukkula tuhoutui pian laukaisun jälkeen tammikuussa 1986?",
+      "en": "Which space shuttle broke apart shortly after launch in January 1986?"
+     },
+     "ok": {
+      "fi": "Challenger",
+      "en": "Challenger"
+     },
+     "no": [
+      {
+       "fi": "Columbia",
+       "en": "Columbia"
+      },
+      {
+       "fi": "Discovery",
+       "en": "Discovery"
+      },
+      {
+       "fi": "Atlantis",
+       "en": "Atlantis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä nykyisessä maassa Tšernobylin ydinvoimala sijaitsee?",
+      "en": "In which present-day country is the Chernobyl power plant?"
+     },
+     "ok": {
+      "fi": "Ukrainassa",
+      "en": "Ukraine"
+     },
+     "no": [
+      {
+       "fi": "Valko-Venäjällä",
+       "en": "Belarus"
+      },
+      {
+       "fi": "Venäjällä",
+       "en": "Russia"
+      },
+      {
+       "fi": "Moldovassa",
+       "en": "Moldova"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Ketkä allekirjoittivat keskimatkan ydinaseet kieltävän INF-sopimuksen 1987?",
+      "en": "Who signed the INF Treaty on intermediate-range nuclear forces in 1987?"
+     },
+     "ok": {
+      "fi": "Reagan ja Gorbatšov",
+      "en": "Reagan and Gorbachev"
+     },
+     "no": [
+      {
+       "fi": "Carter ja Brežnev",
+       "en": "Carter and Brezhnev"
+      },
+      {
+       "fi": "Bush ja Jeltsin",
+       "en": "Bush and Yeltsin"
+      },
+      {
+       "fi": "Nixon ja Brežnev",
+       "en": "Nixon and Brezhnev"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mistä maasta Neuvostoliitto veti joukkonsa pois helmikuussa 1989?",
+      "en": "From which country did the Soviet Union withdraw its troops in February 1989?"
+     },
+     "ok": {
+      "fi": "Afganistanista",
+      "en": "Afghanistan"
+     },
+     "no": [
+      {
+       "fi": "Unkarista",
+       "en": "Hungary"
+      },
+      {
+       "fi": "Mongoliasta",
+       "en": "Mongolia"
+      },
+      {
+       "fi": "Kuubasta",
+       "en": "Cuba"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Baltian ketju elokuussa 1989?",
+      "en": "What was the Baltic Way in August 1989?"
+     },
+     "ok": {
+      "fi": "Ihmisketju Tallinnasta Riian kautta Vilnaan",
+      "en": "A human chain from Tallinn via Riga to Vilnius"
+     },
+     "no": [
+      {
+       "fi": "Rautatie Baltian pääkaupunkien välillä",
+       "en": "A railway between the Baltic capitals"
+      },
+      {
+       "fi": "Kaasuputki Itämeren poikki",
+       "en": "A gas pipeline across the Baltic Sea"
+      },
+      {
+       "fi": "Purjehduskilpailu Itämerellä",
+       "en": "A sailing race on the Baltic Sea"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa Nicolae Ceaușescu syöstiin vallasta joulukuussa 1989?",
+      "en": "In which country was Nicolae Ceaușescu overthrown in December 1989?"
+     },
+     "ok": {
+      "fi": "Romaniassa",
+      "en": "Romania"
+     },
+     "no": [
+      {
+       "fi": "Bulgariassa",
+       "en": "Bulgaria"
+      },
+      {
+       "fi": "Albaniassa",
+       "en": "Albania"
+      },
+      {
+       "fi": "Unkarissa",
+       "en": "Hungary"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Yhdysvaltain presidentti 1981–1989?",
+      "en": "Who was President of the United States from 1981 to 1989?"
+     },
+     "ok": {
+      "fi": "Ronald Reagan",
+      "en": "Ronald Reagan"
+     },
+     "no": [
+      {
+       "fi": "Jimmy Carter",
+       "en": "Jimmy Carter"
+      },
+      {
+       "fi": "George H. W. Bush",
+       "en": "George H. W. Bush"
+      },
+      {
+       "fi": "Gerald Ford",
+       "en": "Gerald Ford"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Britannian pääministeri koko 1980-luvun?",
+      "en": "Who was British prime minister throughout the 1980s?"
+     },
+     "ok": {
+      "fi": "Margaret Thatcher",
+      "en": "Margaret Thatcher"
+     },
+     "no": [
+      {
+       "fi": "John Major",
+       "en": "John Major"
+      },
+      {
+       "fi": "James Callaghan",
+       "en": "James Callaghan"
+      },
+      {
+       "fi": "Edward Heath",
+       "en": "Edward Heath"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "historia-4-oudot-faktat",
+   "cat": "historia",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Historian oudot sattumat 1800–2000",
+    "en": "Strange but true: history 1800–2000"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuinka kauan kesti Britannian ja Sansibarin sota 1896?",
+      "en": "How long did the Anglo-Zanzibar War of 1896 last?"
+     },
+     "ok": {
+      "fi": "Alle tunnin",
+      "en": "Under an hour"
+     },
+     "no": [
+      {
+       "fi": "Kuusi tuntia",
+       "en": "Six hours"
+      },
+      {
+       "fi": "Kolme päivää",
+       "en": "Three days"
+      },
+      {
+       "fi": "Kaksi viikkoa",
+       "en": "Two weeks"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Ketkä kaksi syntyivät samana päivänä 12.2.1809?",
+      "en": "Which two were born on the same day, 12 February 1809?"
+     },
+     "ok": {
+      "fi": "Abraham Lincoln ja Charles Darwin",
+      "en": "Abraham Lincoln and Charles Darwin"
+     },
+     "no": [
+      {
+       "fi": "Napoleon ja Beethoven",
+       "en": "Napoleon and Beethoven"
+      },
+      {
+       "fi": "Karl Marx ja Friedrich Engels",
+       "en": "Karl Marx and Friedrich Engels"
+      },
+      {
+       "fi": "J. L. Runeberg ja Elias Lönnrot",
+       "en": "J. L. Runeberg and Elias Lönnrot"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä eläimiä vastaan Australian armeija \"sotki\" 1932?",
+      "en": "Which animals did the Australian army fight in 1932?"
+     },
+     "ok": {
+      "fi": "Emuja",
+      "en": "Emus"
+     },
+     "no": [
+      {
+       "fi": "Kenguruita",
+       "en": "Kangaroos"
+      },
+      {
+       "fi": "Kaneja",
+       "en": "Rabbits"
+      },
+      {
+       "fi": "Krokotiileja",
+       "en": "Crocodiles"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä juoma kehitettiin Saksassa 1940, kun Coca-Colan siirappia ei saatu?",
+      "en": "Which drink was created in Germany in 1940 when Coca-Cola syrup ran out?"
+     },
+     "ok": {
+      "fi": "Fanta",
+      "en": "Fanta"
+     },
+     "no": [
+      {
+       "fi": "Sprite",
+       "en": "Sprite"
+      },
+      {
+       "fi": "Pepsi",
+       "en": "Pepsi"
+      },
+      {
+       "fi": "Schweppes",
+       "en": "Schweppes"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka japanilainen upseeri jatkoi sotaa Filippiinien viidakossa vuoteen 1974?",
+      "en": "Which Japanese officer kept fighting in the Philippine jungle until 1974?"
+     },
+     "ok": {
+      "fi": "Hiroo Onoda",
+      "en": "Hiroo Onoda"
+     },
+     "no": [
+      {
+       "fi": "Isoroku Yamamoto",
+       "en": "Isoroku Yamamoto"
+      },
+      {
+       "fi": "Hideki Tojo",
+       "en": "Hideki Tojo"
+      },
+      {
+       "fi": "Yukio Mishima",
+       "en": "Yukio Mishima"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Albert Einsteinille tarjottiin 1952?",
+      "en": "What was Albert Einstein offered in 1952?"
+     },
+     "ok": {
+      "fi": "Israelin presidentin virkaa",
+      "en": "The presidency of Israel"
+     },
+     "no": [
+      {
+       "fi": "Yhdysvaltain senaattorin paikkaa",
+       "en": "A US Senate seat"
+      },
+      {
+       "fi": "Saksan liittokanslerin virkaa",
+       "en": "The German chancellorship"
+      },
+      {
+       "fi": "YK:n pääsihteerin virkaa",
+       "en": "The post of UN Secretary-General"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli ainoa uhri Yhdysvaltain ja Britannian \"sikasodassa\" 1859?",
+      "en": "What was the only casualty of the 1859 \"Pig War\" between the US and Britain?"
+     },
+     "ok": {
+      "fi": "Sika",
+      "en": "A pig"
+     },
+     "no": [
+      {
+       "fi": "Lehmä",
+       "en": "A cow"
+      },
+      {
+       "fi": "Hevonen",
+       "en": "A horse"
+      },
+      {
+       "fi": "Koira",
+       "en": "A dog"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä suomalaiset kutsuivat talvisodassa \"Molotovin leipäkoreiksi\"?",
+      "en": "What did Finns call \"Molotov bread baskets\" in the Winter War?"
+     },
+     "ok": {
+      "fi": "Neuvostoliiton rypälepommeja",
+      "en": "Soviet cluster bombs"
+     },
+     "no": [
+      {
+       "fi": "Ruoka-apupaketteja",
+       "en": "Food aid parcels"
+      },
+      {
+       "fi": "Propagandalehtisiä",
+       "en": "Propaganda leaflets"
+      },
+      {
+       "fi": "Panssarivaunuja",
+       "en": "Tanks"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä olympialaisissa maratonin maaliin ensin tullut oli kulkenut osan matkasta autolla?",
+      "en": "At which Olympics had the first marathon finisher ridden part of the way in a car?"
+     },
+     "ok": {
+      "fi": "St. Louis 1904",
+      "en": "St. Louis 1904"
+     },
+     "no": [
+      {
+       "fi": "Ateena 1896",
+       "en": "Athens 1896"
+      },
+      {
+       "fi": "Pariisi 1900",
+       "en": "Paris 1900"
+      },
+      {
+       "fi": "Lontoo 1908",
+       "en": "London 1908"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä tulva iski Bostoniin tammikuussa 1919?",
+      "en": "What kind of flood hit Boston in January 1919?"
+     },
+     "ok": {
+      "fi": "Melassitulva",
+      "en": "A molasses flood"
+     },
+     "no": [
+      {
+       "fi": "Oluttulva",
+       "en": "A beer flood"
+      },
+      {
+       "fi": "Maitotulva",
+       "en": "A milk flood"
+      },
+      {
+       "fi": "Viskitulva",
+       "en": "A whisky flood"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pakotti Lontoon rakentamaan uuden viemäriverkon 1858 jälkeen?",
+      "en": "What forced London to build a new sewer system after 1858?"
+     },
+     "ok": {
+      "fi": "Thamesin \"suuri löyhkä\"",
+      "en": "The Thames' Great Stink"
+     },
+     "no": [
+      {
+       "fi": "Suuri tulipalo",
+       "en": "A great fire"
+      },
+      {
+       "fi": "Ruttoepidemia",
+       "en": "A plague epidemic"
+      },
+      {
+       "fi": "Kuninkaan määräys",
+       "en": "A king's decree"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Paljonko Yhdysvallat maksoi Venäjälle Alaskasta 1867?",
+      "en": "How much did the United States pay Russia for Alaska in 1867?"
+     },
+     "ok": {
+      "fi": "7,2 miljoonaa dollaria",
+      "en": "7.2 million dollars"
+     },
+     "no": [
+      {
+       "fi": "150 000 dollaria",
+       "en": "150,000 dollars"
+      },
+      {
+       "fi": "45 miljoonaa dollaria",
+       "en": "45 million dollars"
+      },
+      {
+       "fi": "300 miljoonaa dollaria",
+       "en": "300 million dollars"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitkä maat kävivät \"jalkapallosodan\" 1969?",
+      "en": "Which countries fought the \"Football War\" of 1969?"
+     },
+     "ok": {
+      "fi": "Honduras ja El Salvador",
+      "en": "Honduras and El Salvador"
+     },
+     "no": [
+      {
+       "fi": "Brasilia ja Argentiina",
+       "en": "Brazil and Argentina"
+      },
+      {
+       "fi": "Uruguay ja Paraguay",
+       "en": "Uruguay and Paraguay"
+      },
+      {
+       "fi": "Chile ja Peru",
+       "en": "Chile and Peru"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Turun Akatemialle tapahtui Turun palon 1827 jälkeen?",
+      "en": "What happened to the Royal Academy of Turku after the Great Fire of 1827?"
+     },
+     "ok": {
+      "fi": "Se siirrettiin Helsinkiin",
+      "en": "It was moved to Helsinki"
+     },
+     "no": [
+      {
+       "fi": "Se lakkautettiin",
+       "en": "It was closed down"
+      },
+      {
+       "fi": "Se siirrettiin Tukholmaan",
+       "en": "It was moved to Stockholm"
+      },
+      {
+       "fi": "Se yhdistettiin Uppsalan yliopistoon",
+       "en": "It merged with Uppsala University"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4850 @@
+{
+ "quizzes": [
+  {
+   "id": "suomi-4-elokuvat-vastakohtina",
+   "cat": "suomi",
+   "t": 130,
+   "title": {
+    "fi": "Suomalaiset elokuvat vastakohtina: mikä on oikea nimi?",
+    "en": "Finnish films as opposites: what is the real title?"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vastakohta",
+    "en": "Opposite"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tuntematon sotilas"
+     ],
+     "en": [
+      "The Unknown Soldier",
+      "Unknown Soldier",
+      "Tuntematon sotilas"
+     ],
+     "h": {
+      "fi": "Tunnettu siviili",
+      "en": "The Known Civilian"
+     }
+    },
+    {
+     "fi": [
+      "Talvisota"
+     ],
+     "en": [
+      "The Winter War",
+      "Winter War",
+      "Talvisota"
+     ],
+     "h": {
+      "fi": "Kesärauha",
+      "en": "The Summer Peace"
+     }
+    },
+    {
+     "fi": [
+      "Komisario Palmun erehdys"
+     ],
+     "en": [
+      "Inspector Palmu's Mistake",
+      "Inspector Palmu's Error",
+      "Komisario Palmun erehdys"
+     ],
+     "h": {
+      "fi": "Konstaapeli Palmun onnistuminen",
+      "en": "Constable Palmu's Success"
+     }
+    },
+    {
+     "fi": [
+      "Täällä Pohjantähden alla"
+     ],
+     "en": [
+      "Here, Beneath the North Star",
+      "Here Beneath the North Star",
+      "Täällä Pohjantähden alla"
+     ],
+     "h": {
+      "fi": "Tuolla Etelän ristin päällä",
+      "en": "There, Above the Southern Cross"
+     }
+    },
+    {
+     "fi": [
+      "Mies vailla menneisyyttä"
+     ],
+     "en": [
+      "The Man Without a Past",
+      "Man Without a Past",
+      "Mies vailla menneisyyttä"
+     ],
+     "h": {
+      "fi": "Nainen, jolla on menneisyys",
+      "en": "The Woman With a Past"
+     }
+    },
+    {
+     "fi": [
+      "Kauas pilvet karkaavat"
+     ],
+     "en": [
+      "Drifting Clouds",
+      "Kauas pilvet karkaavat"
+     ],
+     "h": {
+      "fi": "Lähelle sumut saapuvat",
+      "en": "Near, the Fogs Arrive"
+     }
+    },
+    {
+     "fi": [
+      "Napapiirin sankarit"
+     ],
+     "en": [
+      "Lapland Odyssey",
+      "Napapiirin sankarit"
+     ],
+     "h": {
+      "fi": "Päiväntasaajan pelkurit",
+      "en": "Cowards of the Equator"
+     }
+    },
+    {
+     "fi": [
+      "Kuolleet lehdet"
+     ],
+     "en": [
+      "Fallen Leaves",
+      "Kuolleet lehdet"
+     ],
+     "h": {
+      "fi": "Elävät oksat",
+      "en": "Living Branches"
+     }
+    },
+    {
+     "fi": [
+      "Paha maa"
+     ],
+     "en": [
+      "Frozen Land",
+      "Paha maa"
+     ],
+     "h": {
+      "fi": "Hyvä taivas",
+      "en": "Good Heaven"
+     }
+    },
+    {
+     "fi": [
+      "Pahat pojat"
+     ],
+     "en": [
+      "Bad Boys",
+      "Pahat pojat"
+     ],
+     "h": {
+      "fi": "Kiltit tytöt",
+      "en": "Good Girls"
+     }
+    },
+    {
+     "fi": [
+      "Valkoinen peura"
+     ],
+     "en": [
+      "The White Reindeer",
+      "White Reindeer",
+      "Valkoinen peura"
+     ],
+     "h": {
+      "fi": "Musta susi",
+      "en": "The Black Wolf"
+     }
+    },
+    {
+     "fi": [
+      "Musta jää"
+     ],
+     "en": [
+      "Black Ice",
+      "Musta jää"
+     ],
+     "h": {
+      "fi": "Valkoinen tuli",
+      "en": "White Fire"
+     }
+    },
+    {
+     "fi": [
+      "Mielensäpahoittaja"
+     ],
+     "en": [
+      "The Grump",
+      "Mielensäpahoittaja"
+     ],
+     "h": {
+      "fi": "Ilahduttaja",
+      "en": "The Delighter"
+     }
+    },
+    {
+     "fi": [
+      "Hymyilevä mies"
+     ],
+     "en": [
+      "The Happiest Day in the Life of Olli Mäki",
+      "Hymyilevä mies",
+      "The Smiling Man"
+     ],
+     "h": {
+      "fi": "Itkevä nainen",
+      "en": "The Crying Woman"
+     }
+    },
+    {
+     "fi": [
+      "Sisu"
+     ],
+     "en": [
+      "Sisu"
+     ],
+     "h": {
+      "fi": "Periksianto",
+      "en": "Giving Up"
+     }
+    },
+    {
+     "fi": [
+      "Äideistä parhain"
+     ],
+     "en": [
+      "Mother of Mine",
+      "Äideistä parhain"
+     ],
+     "h": {
+      "fi": "Isistä huonoin",
+      "en": "The Worst of Fathers"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-romaanit-lakonisesti",
+   "cat": "suomi",
+   "t": 125,
+   "title": {
+    "fi": "Suomalaiset romaanit lakonisesti: tunnista kirja",
+    "en": "Finnish novels, deadpan: name the book"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Juoni",
+    "en": "Plot"
+   },
+   "items": [
+    {
+     "fi": [
+      "Seitsemän veljestä"
+     ],
+     "en": [
+      "Seven Brothers",
+      "Seitsemän veljestä"
+     ],
+     "h": {
+      "fi": "Seitsemän sisarusta pakenee aakkosia metsään",
+      "en": "Seven siblings flee the alphabet into the forest"
+     }
+    },
+    {
+     "fi": [
+      "Sinuhe egyptiläinen",
+      "Sinuhe"
+     ],
+     "en": [
+      "The Egyptian",
+      "Sinuhe the Egyptian",
+      "Sinuhe"
+     ],
+     "h": {
+      "fi": "Faaraon lääkäri muistelee pettymyksiään",
+      "en": "A pharaoh's physician recalls his disappointments"
+     }
+    },
+    {
+     "fi": [
+      "Jäniksen vuosi"
+     ],
+     "en": [
+      "The Year of the Hare",
+      "Year of the Hare",
+      "Jäniksen vuosi"
+     ],
+     "h": {
+      "fi": "Toimittaja jättää kaiken, kun auto osuu jänikseen",
+      "en": "A journalist leaves it all after his car hits a hare"
+     }
+    },
+    {
+     "fi": [
+      "Tuntematon sotilas"
+     ],
+     "en": [
+      "The Unknown Soldier",
+      "Unknown Soldier",
+      "Tuntematon sotilas"
+     ],
+     "h": {
+      "fi": "Konekiväärikomppania marssii itään ja takaisin",
+      "en": "A machine-gun company marches east and back"
+     }
+    },
+    {
+     "fi": [
+      "Täällä Pohjantähden alla"
+     ],
+     "en": [
+      "Under the North Star",
+      "Here, Beneath the North Star",
+      "Täällä Pohjantähden alla"
+     ],
+     "h": {
+      "fi": "Torpparisuku kolmessa osassa, sisällissota keskellä",
+      "en": "A crofter family in three volumes, a civil war in the middle"
+     }
+    },
+    {
+     "fi": [
+      "Puhdistus"
+     ],
+     "en": [
+      "Purge",
+      "Puhdistus"
+     ],
+     "h": {
+      "fi": "Virolainen vanha nainen löytää pihaltaan paenneen tytön",
+      "en": "An old Estonian woman finds a runaway girl in her yard"
+     }
+    },
+    {
+     "fi": [
+      "Hytti nro 6",
+      "Hytti numero 6"
+     ],
+     "en": [
+      "Compartment No. 6",
+      "Compartment Number 6",
+      "Hytti nro 6"
+     ],
+     "h": {
+      "fi": "Opiskelija jakaa junahytin venäläismiehen kanssa kohti Mongoliaa",
+      "en": "A student shares a train compartment with a Russian man to Mongolia"
+     }
+    },
+    {
+     "fi": [
+      "Mielensäpahoittaja"
+     ],
+     "en": [
+      "The Grump",
+      "Mielensäpahoittaja"
+     ],
+     "h": {
+      "fi": "Vanha isäntä valittaa nykymenosta",
+      "en": "An old farmer complains about modern life"
+     }
+    },
+    {
+     "fi": [
+      "Rautatie"
+     ],
+     "en": [
+      "The Railroad",
+      "The Railway",
+      "Rautatie"
+     ],
+     "h": {
+      "fi": "Mökin pariskunta lähtee katsomaan höyryhevosta",
+      "en": "A cottage couple sets off to see the iron horse"
+     }
+    },
+    {
+     "fi": [
+      "Kesäkirja"
+     ],
+     "en": [
+      "The Summer Book",
+      "Summer Book",
+      "Kesäkirja"
+     ],
+     "h": {
+      "fi": "Isoäiti ja lapsenlapsi viettävät kesää saaressa",
+      "en": "A grandmother and granddaughter spend a summer on an island"
+     }
+    },
+    {
+     "fi": [
+      "Tummien perhosten koti"
+     ],
+     "en": [
+      "The Home of Dark Butterflies",
+      "Home of Dark Butterflies",
+      "Tummien perhosten koti"
+     ],
+     "h": {
+      "fi": "Poika lähetetään saarella sijaitsevaan poikakotiin",
+      "en": "A boy is sent to a boys' home on an island"
+     }
+    },
+    {
+     "fi": [
+      "Kätilö"
+     ],
+     "en": [
+      "The Midwife",
+      "Midwife",
+      "Kätilö"
+     ],
+     "h": {
+      "fi": "Lappilainen kätilö rakastuu SS-upseeriin",
+      "en": "A Lapland midwife falls for an SS officer"
+     }
+    },
+    {
+     "fi": [
+      "Juha"
+     ],
+     "en": [
+      "Juha"
+     ],
+     "h": {
+      "fi": "Vanhan miehen nuori vaimo karkaa kulkukauppiaan matkaan",
+      "en": "An old man's young wife runs off with a travelling peddler"
+     }
+    },
+    {
+     "fi": [
+      "Juoksuhaudantie"
+     ],
+     "en": [
+      "Trench Road",
+      "Juoksuhaudantie"
+     ],
+     "h": {
+      "fi": "Mies yrittää ostaa omakotitalon saadakseen perheensä takaisin",
+      "en": "A man tries to buy a house to win his family back"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-artistit-vihjeesta",
+   "cat": "suomi",
+   "t": 170,
+   "title": {
+    "fi": "Suomalainen artisti tai yhtye vihjeestä",
+    "en": "Finnish artist or band from a clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Lordi"
+     ],
+     "en": [
+      "Lordi"
+     ],
+     "h": {
+      "fi": "Hirviöasuinen hard rock -yhtye, Euroviisuvoittaja 2006",
+      "en": "Monster-masked hard rock band, Eurovision winner 2006"
+     }
+    },
+    {
+     "fi": [
+      "Käärijä"
+     ],
+     "en": [
+      "Käärijä"
+     ],
+     "h": {
+      "fi": "Vihreät hihat, Cha Cha Cha, Euroviisujen kakkonen 2023",
+      "en": "Green sleeves, Cha Cha Cha, Eurovision runner-up 2023"
+     }
+    },
+    {
+     "fi": [
+      "Darude"
+     ],
+     "en": [
+      "Darude"
+     ],
+     "h": {
+      "fi": "Trance-maailmanhitti Sandstorm",
+      "en": "Worldwide trance hit Sandstorm"
+     }
+    },
+    {
+     "fi": [
+      "Bomfunk MC's",
+      "Bomfunk"
+     ],
+     "en": [
+      "Bomfunk MC's",
+      "Bomfunk"
+     ],
+     "h": {
+      "fi": "Freestyler, Euroopan listaykkönen (Eurochart-vuosilista) 2000",
+      "en": "Freestyler, No. 1 on the 2000 Eurochart year-end chart"
+     }
+    },
+    {
+     "fi": [
+      "Nightwish"
+     ],
+     "en": [
+      "Nightwish"
+     ],
+     "h": {
+      "fi": "Sinfonista metallia Kiteeltä, Tuomas Holopainen",
+      "en": "Symphonic metal from Kitee, Tuomas Holopainen"
+     }
+    },
+    {
+     "fi": [
+      "Apocalyptica"
+     ],
+     "en": [
+      "Apocalyptica"
+     ],
+     "h": {
+      "fi": "Sellot soivat, alussa Metallican kappaleita",
+      "en": "Cellos play, at first Metallica songs"
+     }
+    },
+    {
+     "fi": [
+      "HIM"
+     ],
+     "en": [
+      "HIM"
+     ],
+     "h": {
+      "fi": "Ville Valon yhtye, tunnuksena heartagram",
+      "en": "Ville Valo's band, symbol the heartagram"
+     }
+    },
+    {
+     "fi": [
+      "The Rasmus",
+      "Rasmus"
+     ],
+     "en": [
+      "The Rasmus",
+      "Rasmus"
+     ],
+     "h": {
+      "fi": "In the Shadows -hitti, Euroviisuissa 2022",
+      "en": "Hit In the Shadows, at Eurovision 2022"
+     }
+    },
+    {
+     "fi": [
+      "Children of Bodom",
+      "Bodom"
+     ],
+     "en": [
+      "Children of Bodom",
+      "Bodom"
+     ],
+     "h": {
+      "fi": "Espoolainen äärimetalliyhtye, Alexi Laiho",
+      "en": "Extreme metal band from Espoo, Alexi Laiho"
+     }
+    },
+    {
+     "fi": [
+      "Hanoi Rocks"
+     ],
+     "en": [
+      "Hanoi Rocks"
+     ],
+     "h": {
+      "fi": "Michael Monroen ja Andy McCoyn glam rock -yhtye",
+      "en": "Glam rock band of Michael Monroe and Andy McCoy"
+     }
+    },
+    {
+     "fi": [
+      "Leningrad Cowboys"
+     ],
+     "en": [
+      "Leningrad Cowboys"
+     ],
+     "h": {
+      "fi": "Hiussarvet ja yhtä pitkät kengät, Kaurismäen elokuvissa",
+      "en": "Quiff horns and equally long shoes, in Kaurismäki films"
+     }
+    },
+    {
+     "fi": [
+      "Eppu Normaali",
+      "Eput"
+     ],
+     "en": [
+      "Eppu Normaali"
+     ],
+     "h": {
+      "fi": "Vuonna 1976 perustettu rock-yhtye, laulaja Martti Syrjä",
+      "en": "Rock band founded in 1976, singer Martti Syrjä"
+     }
+    },
+    {
+     "fi": [
+      "Popeda"
+     ],
+     "en": [
+      "Popeda"
+     ],
+     "h": {
+      "fi": "Tamperelainen rock-yhtye (1977), laulaja Pate Mustajärvi",
+      "en": "Tampere rock band (1977), singer Pate Mustajärvi"
+     }
+    },
+    {
+     "fi": [
+      "Tapio Rautavaara",
+      "Rautavaara"
+     ],
+     "en": [
+      "Tapio Rautavaara",
+      "Rautavaara"
+     ],
+     "h": {
+      "fi": "Keihään olympiavoittaja 1948, sitten laulaja",
+      "en": "Olympic javelin champion 1948, then a singer"
+     }
+    },
+    {
+     "fi": [
+      "Irwin Goodman",
+      "Irwin"
+     ],
+     "en": [
+      "Irwin Goodman",
+      "Irwin"
+     ],
+     "h": {
+      "fi": "Kappaleet Ei tippa tapa ja Raha ratkaisee (1966)",
+      "en": "Songs Ei tippa tapa and Raha ratkaisee (1966)"
+     }
+    },
+    {
+     "fi": [
+      "Erika Vikman",
+      "Vikman"
+     ],
+     "en": [
+      "Erika Vikman",
+      "Vikman"
+     ],
+     "h": {
+      "fi": "Tangokuningatar 2016, Cicciolina ja Ich komme",
+      "en": "Tango queen 2016, Cicciolina and Ich komme"
+     }
+    },
+    {
+     "fi": [
+      "Robin",
+      "Robin Packalen"
+     ],
+     "en": [
+      "Robin",
+      "Robin Packalen"
+     ],
+     "h": {
+      "fi": "Esikoissingle Frontside Ollie (2012)",
+      "en": "Debut single Frontside Ollie (2012)"
+     }
+    },
+    {
+     "fi": [
+      "Cheek",
+      "Jare Tiihonen"
+     ],
+     "en": [
+      "Cheek",
+      "Jare Tiihonen"
+     ],
+     "h": {
+      "fi": "Uransa lopettanut räppäri: Sun täytyy, Liekeissä",
+      "en": "Retired rapper: Sun täytyy, Liekeissä"
+     }
+    },
+    {
+     "fi": [
+      "Haloo Helsinki!",
+      "Haloo Helsinki"
+     ],
+     "en": [
+      "Haloo Helsinki!"
+     ],
+     "h": {
+      "fi": "Yhtye (2006): Maailman toisella puolen, Vapaus käteen jää",
+      "en": "Band (2006): Maailman toisella puolen, Vapaus käteen jää"
+     }
+    },
+    {
+     "fi": [
+      "Sunrise Avenue"
+     ],
+     "en": [
+      "Sunrise Avenue"
+     ],
+     "h": {
+      "fi": "Samu Haberin poprock-yhtye",
+      "en": "Samu Haber's pop rock band"
+     }
+    },
+    {
+     "fi": [
+      "Dingo"
+     ],
+     "en": [
+      "Dingo"
+     ],
+     "h": {
+      "fi": "Porilainen yhtye: Autiotalo ja Levoton Tuhkimo",
+      "en": "Band from Pori: Autiotalo and Levoton Tuhkimo"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-brandit-vihjeesta",
+   "cat": "suomi",
+   "t": 140,
+   "title": {
+    "fi": "Suomalainen yritys tai tuotemerkki vihjeestä",
+    "en": "Finnish company or brand from a clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Fazer"
+     ],
+     "en": [
+      "Fazer"
+     ],
+     "h": {
+      "fi": "Sinikääreinen maitosuklaa",
+      "en": "Milk chocolate in a blue wrapper"
+     }
+    },
+    {
+     "fi": [
+      "Marimekko"
+     ],
+     "en": [
+      "Marimekko"
+     ],
+     "h": {
+      "fi": "Armi ja Viljo Ratian kuositalo (1951)",
+      "en": "Armi and Viljo Ratia's print house (1951)"
+     }
+    },
+    {
+     "fi": [
+      "Iittala"
+     ],
+     "en": [
+      "Iittala"
+     ],
+     "h": {
+      "fi": "Aalto-maljakko ja Ultima Thule -lasit",
+      "en": "The Aalto vase and Ultima Thule glasses"
+     }
+    },
+    {
+     "fi": [
+      "Nokia"
+     ],
+     "en": [
+      "Nokia"
+     ],
+     "h": {
+      "fi": "Kumisaappaista ja kaapeleista matkapuhelimiin",
+      "en": "From rubber boots and cables to mobile phones"
+     }
+    },
+    {
+     "fi": [
+      "Kone"
+     ],
+     "en": [
+      "Kone"
+     ],
+     "h": {
+      "fi": "Hissit ja liukuportaat",
+      "en": "Elevators and escalators"
+     }
+    },
+    {
+     "fi": [
+      "Rapala"
+     ],
+     "en": [
+      "Rapala"
+     ],
+     "h": {
+      "fi": "Lauri Rapalan uistimet",
+      "en": "Lauri Rapala's fishing lures"
+     }
+    },
+    {
+     "fi": [
+      "Nokian Renkaat",
+      "Nokian Tyres",
+      "Nokian"
+     ],
+     "en": [
+      "Nokian Tyres",
+      "Nokian Renkaat",
+      "Nokian"
+     ],
+     "h": {
+      "fi": "Hakkapeliitta-talvirenkaat",
+      "en": "Hakkapeliitta winter tyres"
+     }
+    },
+    {
+     "fi": [
+      "Hartwall"
+     ],
+     "en": [
+      "Hartwall"
+     ],
+     "h": {
+      "fi": "Original Long Drink eli lonkero ja Jaffa",
+      "en": "Original Long Drink and Jaffa"
+     }
+    },
+    {
+     "fi": [
+      "Paulig"
+     ],
+     "en": [
+      "Paulig"
+     ],
+     "h": {
+      "fi": "Juhla Mokka -kahvi",
+      "en": "Juhla Mokka coffee"
+     }
+    },
+    {
+     "fi": [
+      "Artek"
+     ],
+     "en": [
+      "Artek"
+     ],
+     "h": {
+      "fi": "Aaltojen ja Maire Gullichsenin huonekaluyhtiö (1935)",
+      "en": "Furniture company of the Aaltos and Maire Gullichsen (1935)"
+     }
+    },
+    {
+     "fi": [
+      "Oura"
+     ],
+     "en": [
+      "Oura"
+     ],
+     "h": {
+      "fi": "Unta mittaava sormus",
+      "en": "A ring that tracks sleep"
+     }
+    },
+    {
+     "fi": [
+      "Wolt"
+     ],
+     "en": [
+      "Wolt"
+     ],
+     "h": {
+      "fi": "Ruokaa kotiovelle, perustettu 2014",
+      "en": "Food to your door, founded 2014"
+     }
+    },
+    {
+     "fi": [
+      "Suunto"
+     ],
+     "en": [
+      "Suunto"
+     ],
+     "h": {
+      "fi": "Kompassit, sukellustietokoneet ja urheilukellot",
+      "en": "Compasses, dive computers and sports watches"
+     }
+    },
+    {
+     "fi": [
+      "Valtra"
+     ],
+     "en": [
+      "Valtra"
+     ],
+     "h": {
+      "fi": "Traktorit, ennen nimellä Valmet",
+      "en": "Tractors, formerly under the Valmet name"
+     }
+    },
+    {
+     "fi": [
+      "Ponsse"
+     ],
+     "en": [
+      "Ponsse"
+     ],
+     "h": {
+      "fi": "Metsäkoneet Vieremältä",
+      "en": "Forest machines from Vieremä"
+     }
+    },
+    {
+     "fi": [
+      "Finlayson"
+     ],
+     "en": [
+      "Finlayson"
+     ],
+     "h": {
+      "fi": "Tampereen puuvillatehdas (1820), lakanat ja pyyhkeet",
+      "en": "Tampere cotton mill (1820), sheets and towels"
+     }
+    },
+    {
+     "fi": [
+      "Arabia"
+     ],
+     "en": [
+      "Arabia"
+     ],
+     "h": {
+      "fi": "Helsingin posliinitehdas ja muumimukit",
+      "en": "Helsinki porcelain factory and Moomin mugs"
+     }
+    },
+    {
+     "fi": [
+      "Kalevala Koru",
+      "Kalevala"
+     ],
+     "en": [
+      "Kalevala Koru",
+      "Kalevala Jewelry",
+      "Kalevala"
+     ],
+     "h": {
+      "fi": "Muinaislöydöistä innoitetut korut",
+      "en": "Jewellery inspired by ancient finds"
+     }
+    },
+    {
+     "fi": [
+      "Helkama"
+     ],
+     "en": [
+      "Helkama"
+     ],
+     "h": {
+      "fi": "Jopo-polkupyörä",
+      "en": "The Jopo bicycle"
+     }
+    },
+    {
+     "fi": [
+      "Wärtsilä"
+     ],
+     "en": [
+      "Wärtsilä",
+      "Wartsila"
+     ],
+     "h": {
+      "fi": "Laivojen moottorit ja voimalat",
+      "en": "Ship engines and power plants"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-muumit-ruotsiksi",
+   "cat": "suomi",
+   "t": 135,
+   "title": {
+    "fi": "Muumihahmot alkuperäisestä ruotsinkielisestä nimestä",
+    "en": "Moomin characters from their original Swedish names"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ruotsiksi",
+    "en": "In Swedish"
+   },
+   "items": [
+    {
+     "fi": [
+      "Muumipeikko",
+      "Muumi"
+     ],
+     "en": [
+      "Moomintroll",
+      "Moomin"
+     ],
+     "h": "Mumintrollet"
+    },
+    {
+     "fi": [
+      "Muumimamma"
+     ],
+     "en": [
+      "Moominmamma",
+      "Moominmama"
+     ],
+     "h": "Muminmamman"
+    },
+    {
+     "fi": [
+      "Muumipappa"
+     ],
+     "en": [
+      "Moominpappa",
+      "Moominpapa"
+     ],
+     "h": "Muminpappan"
+    },
+    {
+     "fi": [
+      "Pikku Myy",
+      "Myy"
+     ],
+     "en": [
+      "Little My",
+      "My"
+     ],
+     "h": "Lilla My"
+    },
+    {
+     "fi": [
+      "Niiskuneiti"
+     ],
+     "en": [
+      "Snorkmaiden",
+      "Snork Maiden"
+     ],
+     "h": "Snorkfröken"
+    },
+    {
+     "fi": [
+      "Niisku"
+     ],
+     "en": [
+      "Snork"
+     ],
+     "h": "Snorken"
+    },
+    {
+     "fi": [
+      "Nipsu"
+     ],
+     "en": [
+      "Sniff"
+     ],
+     "h": "Sniff"
+    },
+    {
+     "fi": [
+      "Nuuskamuikkunen"
+     ],
+     "en": [
+      "Snufkin"
+     ],
+     "h": "Snusmumriken"
+    },
+    {
+     "fi": [
+      "Hemuli"
+     ],
+     "en": [
+      "Hemulen",
+      "Hemul"
+     ],
+     "h": "Hemulen"
+    },
+    {
+     "fi": [
+      "Mörkö"
+     ],
+     "en": [
+      "The Groke",
+      "Groke"
+     ],
+     "h": "Mårran"
+    },
+    {
+     "fi": [
+      "Tuutikki"
+     ],
+     "en": [
+      "Too-ticky"
+     ],
+     "h": "Too-ticki"
+    },
+    {
+     "fi": [
+      "Hattivatit",
+      "Hattivatti"
+     ],
+     "en": [
+      "Hattifatteners",
+      "Hattifattener"
+     ],
+     "h": "Hattifnattarna"
+    },
+    {
+     "fi": [
+      "Tiuhti ja Viuhti"
+     ],
+     "en": [
+      "Thingumy and Bob"
+     ],
+     "h": "Tofslan och Vifslan"
+    },
+    {
+     "fi": [
+      "Piisamirotta"
+     ],
+     "en": [
+      "The Muskrat",
+      "Muskrat"
+     ],
+     "h": "Bisamråttan"
+    },
+    {
+     "fi": [
+      "Vilijonkka"
+     ],
+     "en": [
+      "The Fillyjonk",
+      "Fillyjonk"
+     ],
+     "h": "Filifjonkan"
+    },
+    {
+     "fi": [
+      "Mymmeli"
+     ],
+     "en": [
+      "The Mymble",
+      "Mymble"
+     ],
+     "h": "Mymlan"
+    },
+    {
+     "fi": [
+      "Juksu"
+     ],
+     "en": [
+      "The Joxter",
+      "Joxter"
+     ],
+     "h": "Joxaren"
+    },
+    {
+     "fi": [
+      "Homssu"
+     ],
+     "en": [
+      "Whomper"
+     ],
+     "h": "Homsan"
+    },
+    {
+     "fi": [
+      "Hosuli"
+     ],
+     "en": [
+      "The Muddler",
+      "Muddler"
+     ],
+     "h": "Rådd-djuret"
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-kalevalan-nimet-nykyaan",
+   "cat": "suomi",
+   "t": 95,
+   "title": {
+    "fi": "Kalevalan nimet nykypäivän Suomessa: mikä nimi?",
+    "en": "Kalevala names in today's Finland: which name?"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Nykyään",
+    "en": "Today"
+   },
+   "items": [
+    {
+     "fi": [
+      "Ilmarinen"
+     ],
+     "en": [
+      "Ilmarinen"
+     ],
+     "h": {
+      "fi": "Työeläkevakuutusyhtiö (perustettu 1961)",
+      "en": "Earnings-related pension insurer (founded 1961)"
+     }
+    },
+    {
+     "fi": [
+      "Lemminkäinen"
+     ],
+     "en": [
+      "Lemminkäinen"
+     ],
+     "h": {
+      "fi": "Rakennusyhtiö, joka sulautui YIT:hen 2018",
+      "en": "Construction company merged into YIT in 2018"
+     }
+    },
+    {
+     "fi": [
+      "Väinämöinen"
+     ],
+     "en": [
+      "Väinämöinen"
+     ],
+     "h": {
+      "fi": "Panssarilaiva, joka luovutettiin sodan jälkeen Neuvostoliitolle",
+      "en": "Coastal defence ship handed to the USSR after the war"
+     }
+    },
+    {
+     "fi": [
+      "Sampo"
+     ],
+     "en": [
+      "Sampo"
+     ],
+     "h": {
+      "fi": "Kemin matkailujäänmurtaja",
+      "en": "The tourist icebreaker of Kemi"
+     }
+    },
+    {
+     "fi": [
+      "Pohjola"
+     ],
+     "en": [
+      "Pohjola"
+     ],
+     "h": {
+      "fi": "OP-ryhmän vakuutusyhtiö (perustettu 1891)",
+      "en": "OP Group's insurance company (founded 1891)"
+     }
+    },
+    {
+     "fi": [
+      "Kaleva"
+     ],
+     "en": [
+      "Kaleva"
+     ],
+     "h": {
+      "fi": "Oulussa ilmestyvä sanomalehti (1899)",
+      "en": "Newspaper published in Oulu (1899)"
+     }
+    },
+    {
+     "fi": [
+      "Tapiola"
+     ],
+     "en": [
+      "Tapiola"
+     ],
+     "h": {
+      "fi": "Sibeliuksen sävelruno (1926) ja Espoon kaupunginosa",
+      "en": "Sibelius tone poem (1926) and a district of Espoo"
+     }
+    },
+    {
+     "fi": [
+      "Kullervo"
+     ],
+     "en": [
+      "Kullervo"
+     ],
+     "h": {
+      "fi": "Sibeliuksen Kalevala-sinfonia (kantaesitys 1892)",
+      "en": "Sibelius's Kalevala symphony (premiered 1892)"
+     }
+    },
+    {
+     "fi": [
+      "Aino"
+     ],
+     "en": [
+      "Aino"
+     ],
+     "h": {
+      "fi": "Gallen-Kallelan triptyykki (1891)",
+      "en": "Gallen-Kallela's triptych (1891)"
+     }
+    },
+    {
+     "fi": [
+      "Louhi"
+     ],
+     "en": [
+      "Louhi"
+     ],
+     "h": {
+      "fi": "Merivoimien miinalaiva 1918–1945",
+      "en": "Finnish Navy minelayer 1918–1945"
+     }
+    },
+    {
+     "fi": [
+      "Pellervo",
+      "Sampsa Pellervoinen"
+     ],
+     "en": [
+      "Pellervo",
+      "Sampsa Pellervoinen"
+     ],
+     "h": {
+      "fi": "Osuustoiminnan keskusjärjestö (1899)",
+      "en": "Central organisation of co-operatives (1899)"
+     }
+    },
+    {
+     "fi": [
+      "Otso"
+     ],
+     "en": [
+      "Otso"
+     ],
+     "h": {
+      "fi": "Jäänmurtaja (1986), sisaralus Kontio",
+      "en": "Icebreaker (1986), sister ship Kontio"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-kenen-mukaan-nimetty",
+   "cat": "suomi",
+   "t": 110,
+   "title": {
+    "fi": "Kenen mukaan nimetty? 14 nimeä Suomesta ja suomalaisilta",
+    "en": "Named after whom? 14 names from Finland and Finns"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Nimetty",
+    "en": "Named"
+   },
+   "items": [
+    {
+     "fi": [
+      "Johan Gadolin",
+      "Gadolin"
+     ],
+     "en": [
+      "Johan Gadolin",
+      "Gadolin"
+     ],
+     "h": {
+      "fi": "Alkuaine gadolinium",
+      "en": "The element gadolinium"
+     }
+    },
+    {
+     "fi": [
+      "Linus Torvalds",
+      "Torvalds",
+      "Linus"
+     ],
+     "en": [
+      "Linus Torvalds",
+      "Torvalds",
+      "Linus"
+     ],
+     "h": {
+      "fi": "Käyttöjärjestelmän ydin Linux",
+      "en": "The Linux kernel"
+     }
+    },
+    {
+     "fi": [
+      "Vjatšeslav Molotov",
+      "Molotov",
+      "Vjateslav Molotov"
+     ],
+     "en": [
+      "Vyacheslav Molotov",
+      "Molotov"
+     ],
+     "h": {
+      "fi": "Talvisodan polttopullo",
+      "en": "The Winter War petrol bomb"
+     }
+    },
+    {
+     "fi": [
+      "J. L. Runeberg",
+      "Johan Ludvig Runeberg",
+      "Runeberg"
+     ],
+     "en": [
+      "J. L. Runeberg",
+      "Johan Ludvig Runeberg",
+      "Runeberg"
+     ],
+     "h": {
+      "fi": "Helmikuun torttu",
+      "en": "The February tart"
+     }
+    },
+    {
+     "fi": [
+      "Alvar Aalto",
+      "Aalto"
+     ],
+     "en": [
+      "Alvar Aalto",
+      "Aalto"
+     ],
+     "h": {
+      "fi": "Espoon yliopisto (2010)",
+      "en": "University in Espoo (2010)"
+     }
+    },
+    {
+     "fi": [
+      "Urho Kekkonen",
+      "Kekkonen",
+      "UKK"
+     ],
+     "en": [
+      "Urho Kekkonen",
+      "Kekkonen",
+      "UKK"
+     ],
+     "h": {
+      "fi": "Lapin kansallispuisto",
+      "en": "A national park in Lapland"
+     }
+    },
+    {
+     "fi": [
+      "Jean Sibelius",
+      "Sibelius"
+     ],
+     "en": [
+      "Jean Sibelius",
+      "Sibelius"
+     ],
+     "h": {
+      "fi": "Musiikkiyliopisto Helsingissä",
+      "en": "Music university in Helsinki"
+     }
+    },
+    {
+     "fi": [
+      "C. G. E. Mannerheim",
+      "Mannerheim",
+      "Gustaf Mannerheim"
+     ],
+     "en": [
+      "C. G. E. Mannerheim",
+      "Mannerheim",
+      "Gustaf Mannerheim"
+     ],
+     "h": {
+      "fi": "Helsingin pääkatu",
+      "en": "Helsinki's main street"
+     }
+    },
+    {
+     "fi": [
+      "Paavo Nurmi",
+      "Nurmi"
+     ],
+     "en": [
+      "Paavo Nurmi",
+      "Nurmi"
+     ],
+     "h": {
+      "fi": "Turun yleisurheilukisat",
+      "en": "Athletics meeting in Turku"
+     }
+    },
+    {
+     "fi": [
+      "A. E. Nordenskiöld",
+      "Adolf Erik Nordenskiöld",
+      "Nordenskiöld"
+     ],
+     "en": [
+      "A. E. Nordenskiöld",
+      "Adolf Erik Nordenskiöld",
+      "Nordenskiöld"
+     ],
+     "h": {
+      "fi": "Saaristo Karanmeressä",
+      "en": "An archipelago in the Kara Sea"
+     }
+    },
+    {
+     "fi": [
+      "Jacob De la Gardie",
+      "De la Gardie",
+      "Jaakko De la Gardie"
+     ],
+     "en": [
+      "Jacob De la Gardie",
+      "De la Gardie"
+     ],
+     "h": {
+      "fi": "Pietarsaari (ruots. Jakobstad)",
+      "en": "Pietarsaari (Swedish Jakobstad)"
+     }
+    },
+    {
+     "fi": [
+      "Kuningatar Kristiina",
+      "Kristiina",
+      "Christina"
+     ],
+     "en": [
+      "Queen Christina",
+      "Christina",
+      "Kristina"
+     ],
+     "h": {
+      "fi": "Kristiinankaupunki",
+      "en": "Kristinestad"
+     }
+    },
+    {
+     "fi": [
+      "Lovisa Ulrika",
+      "Loviisa Ulriikka",
+      "Lovisa"
+     ],
+     "en": [
+      "Louisa Ulrika",
+      "Lovisa Ulrika",
+      "Lovisa"
+     ],
+     "h": {
+      "fi": "Loviisa",
+      "en": "Loviisa"
+     }
+    },
+    {
+     "fi": [
+      "Fredrik I",
+      "Fredrik",
+      "Fredrik Ensimmäinen"
+     ],
+     "en": [
+      "Frederick I",
+      "Frederick",
+      "Fredrik I"
+     ],
+     "h": {
+      "fi": "Hamina (ruots. Fredrikshamn)",
+      "en": "Hamina (Swedish Fredrikshamn)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-yhtyeet-ilman-vokaaleja",
+   "cat": "suomi",
+   "t": 210,
+   "title": {
+    "fi": "Suomalaiset yhtyeet ilman vokaaleja (myös y on vokaali)",
+    "en": "Finnish bands without vowels (y counts as a vowel)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Konsonantit",
+    "en": "Consonants"
+   },
+   "items": [
+    {
+     "fi": [
+      "Nightwish"
+     ],
+     "en": [
+      "Nightwish"
+     ],
+     "h": "NGHTWSH"
+    },
+    {
+     "fi": [
+      "Apocalyptica"
+     ],
+     "en": [
+      "Apocalyptica"
+     ],
+     "h": "PCLPTC"
+    },
+    {
+     "fi": [
+      "Lordi"
+     ],
+     "en": [
+      "Lordi"
+     ],
+     "h": "LRD"
+    },
+    {
+     "fi": [
+      "The Rasmus",
+      "Rasmus"
+     ],
+     "en": [
+      "The Rasmus",
+      "Rasmus"
+     ],
+     "h": "TH RSMS"
+    },
+    {
+     "fi": [
+      "Sunrise Avenue"
+     ],
+     "en": [
+      "Sunrise Avenue"
+     ],
+     "h": "SNRS VN"
+    },
+    {
+     "fi": [
+      "Popeda"
+     ],
+     "en": [
+      "Popeda"
+     ],
+     "h": "PPD"
+    },
+    {
+     "fi": [
+      "Eppu Normaali"
+     ],
+     "en": [
+      "Eppu Normaali"
+     ],
+     "h": "PP NRML"
+    },
+    {
+     "fi": [
+      "Dingo"
+     ],
+     "en": [
+      "Dingo"
+     ],
+     "h": "DNG"
+    },
+    {
+     "fi": [
+      "Hanoi Rocks"
+     ],
+     "en": [
+      "Hanoi Rocks"
+     ],
+     "h": "HN RCKS"
+    },
+    {
+     "fi": [
+      "Children of Bodom"
+     ],
+     "en": [
+      "Children of Bodom"
+     ],
+     "h": "CHLDRN F BDM"
+    },
+    {
+     "fi": [
+      "Stratovarius"
+     ],
+     "en": [
+      "Stratovarius"
+     ],
+     "h": "STRTVRS"
+    },
+    {
+     "fi": [
+      "Amorphis"
+     ],
+     "en": [
+      "Amorphis"
+     ],
+     "h": "MRPHS"
+    },
+    {
+     "fi": [
+      "Haloo Helsinki!"
+     ],
+     "en": [
+      "Haloo Helsinki!"
+     ],
+     "h": "HL HLSNK!"
+    },
+    {
+     "fi": [
+      "Leevi and the Leavings"
+     ],
+     "en": [
+      "Leevi and the Leavings"
+     ],
+     "h": "LV ND TH LVNGS"
+    },
+    {
+     "fi": [
+      "Kolmas Nainen"
+     ],
+     "en": [
+      "Kolmas Nainen"
+     ],
+     "h": "KLMS NNN"
+    },
+    {
+     "fi": [
+      "Zen Café",
+      "Zen Cafe"
+     ],
+     "en": [
+      "Zen Café",
+      "Zen Cafe"
+     ],
+     "h": "ZN CF"
+    },
+    {
+     "fi": [
+      "Uniklubi"
+     ],
+     "en": [
+      "Uniklubi"
+     ],
+     "h": "NKLB"
+    },
+    {
+     "fi": [
+      "Mokoma"
+     ],
+     "en": [
+      "Mokoma"
+     ],
+     "h": "MKM"
+    },
+    {
+     "fi": [
+      "Teräsbetoni"
+     ],
+     "en": [
+      "Teräsbetoni"
+     ],
+     "h": "TRSBTN"
+    },
+    {
+     "fi": [
+      "Kotiteollisuus"
+     ],
+     "en": [
+      "Kotiteollisuus"
+     ],
+     "h": "KTTLLSS"
+    },
+    {
+     "fi": [
+      "Klamydia"
+     ],
+     "en": [
+      "Klamydia"
+     ],
+     "h": "KLMD"
+    },
+    {
+     "fi": [
+      "Hurriganes"
+     ],
+     "en": [
+      "Hurriganes"
+     ],
+     "h": "HRRGNS"
+    },
+    {
+     "fi": [
+      "Eläkeläiset"
+     ],
+     "en": [
+      "Eläkeläiset"
+     ],
+     "h": "LKLST"
+    },
+    {
+     "fi": [
+      "Battle Beast"
+     ],
+     "en": [
+      "Battle Beast"
+     ],
+     "h": "BTTL BST"
+    },
+    {
+     "fi": [
+      "Turmion Kätilöt"
+     ],
+     "en": [
+      "Turmion Kätilöt"
+     ],
+     "h": "TRMN KTLT"
+    },
+    {
+     "fi": [
+      "Poets of the Fall"
+     ],
+     "en": [
+      "Poets of the Fall"
+     ],
+     "h": "PTS F TH FLL"
+    },
+    {
+     "fi": [
+      "Ensiferum"
+     ],
+     "en": [
+      "Ensiferum"
+     ],
+     "h": "NSFRM"
+    },
+    {
+     "fi": [
+      "HIM"
+     ],
+     "en": [
+      "HIM"
+     ],
+     "h": "HM"
+    },
+    {
+     "fi": [
+      "Sentenced"
+     ],
+     "en": [
+      "Sentenced"
+     ],
+     "h": "SNTNCD"
+    },
+    {
+     "fi": [
+      "Negative"
+     ],
+     "en": [
+      "Negative"
+     ],
+     "h": "NGTV"
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-ruoka-a-o",
+   "cat": "suomi",
+   "t": 85,
+   "title": {
+    "fi": "Suomalainen ruokapöytä A–Ö: kirjain ja vihje",
+    "en": "The Finnish table A–Ö: letter and clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Aurajuusto",
+      "Aura"
+     ],
+     "en": [
+      "Aura cheese",
+      "Aurajuusto",
+      "Aura"
+     ],
+     "h": {
+      "fi": "A – suomalainen sinihomejuusto",
+      "en": "A – Finnish blue cheese"
+     }
+    },
+    {
+     "fi": [
+      "Glögi"
+     ],
+     "en": [
+      "Glögi",
+      "Glögg",
+      "Mulled wine"
+     ],
+     "h": {
+      "fi": "G – joulun kuuma mausteinen juoma",
+      "en": "G – hot spiced Christmas drink"
+     }
+    },
+    {
+     "fi": [
+      "Hernekeitto",
+      "Hernari"
+     ],
+     "en": [
+      "Pea soup",
+      "Hernekeitto"
+     ],
+     "h": {
+      "fi": "H – torstain keitto, jälkiruokana pannukakkua",
+      "en": "H – Thursday soup, pancake for dessert"
+     }
+    },
+    {
+     "fi": [
+      "Joulutorttu",
+      "Tähtitorttu"
+     ],
+     "en": [
+      "Christmas tart",
+      "Joulutorttu",
+      "Star tart"
+     ],
+     "h": {
+      "fi": "J – tähdenmuotoinen luumuhillotorttu",
+      "en": "J – star-shaped prune jam pastry"
+     }
+    },
+    {
+     "fi": [
+      "Karjalanpiirakka",
+      "Karjalanpiirakat"
+     ],
+     "en": [
+      "Karelian pie",
+      "Karelian pasty",
+      "Karjalanpiirakka"
+     ],
+     "h": {
+      "fi": "K – ruiskuoreen riisipuuroa, päälle munavoita",
+      "en": "K – rice porridge in a rye crust, egg butter on top"
+     }
+    },
+    {
+     "fi": [
+      "Leipäjuusto",
+      "Juustoleipä"
+     ],
+     "en": [
+      "Bread cheese",
+      "Squeaky cheese",
+      "Leipäjuusto"
+     ],
+     "h": {
+      "fi": "L – narskuva juusto lakkahillon kanssa",
+      "en": "L – squeaky cheese with cloudberry jam"
+     }
+    },
+    {
+     "fi": [
+      "Mämmi"
+     ],
+     "en": [
+      "Mämmi"
+     ],
+     "h": {
+      "fi": "M – pääsiäisen tumma ruismallasjälkiruoka",
+      "en": "M – dark Easter rye malt pudding"
+     }
+    },
+    {
+     "fi": [
+      "Pasha",
+      "Paskha"
+     ],
+     "en": [
+      "Pasha",
+      "Paskha"
+     ],
+     "h": {
+      "fi": "P – pääsiäisen rahkajälkiruoka ortodoksisesta perinteestä",
+      "en": "P – Orthodox Easter quark dessert"
+     }
+    },
+    {
+     "fi": [
+      "Ruisleipä",
+      "Ruisleipää"
+     ],
+     "en": [
+      "Rye bread",
+      "Ruisleipä"
+     ],
+     "h": {
+      "fi": "R – Suomen kansallisruoka äänestyksessä 2017",
+      "en": "R – voted Finland's national dish in 2017"
+     }
+    },
+    {
+     "fi": [
+      "Salmiakki"
+     ],
+     "en": [
+      "Salmiakki",
+      "Salty liquorice",
+      "Salmiak"
+     ],
+     "h": {
+      "fi": "S – ammoniumkloridilla maustettu musta makeinen",
+      "en": "S – black sweet flavoured with ammonium chloride"
+     }
+    },
+    {
+     "fi": [
+      "Tippaleipä",
+      "Tippaleivät"
+     ],
+     "en": [
+      "Tippaleipä",
+      "Funnel cake"
+     ],
+     "h": {
+      "fi": "T – vapun friteerattu leivonnainen",
+      "en": "T – deep-fried May Day pastry"
+     }
+    },
+    {
+     "fi": [
+      "Vispipuuro"
+     ],
+     "en": [
+      "Whipped porridge",
+      "Vispipuuro",
+      "Whipped lingonberry porridge"
+     ],
+     "h": {
+      "fi": "V – puolukalla vatkattu mannapuuro",
+      "en": "V – semolina porridge whipped with lingonberries"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-nimea-yksi",
+   "cat": "suomi",
+   "t": 125,
+   "title": {
+    "fi": "Nimeä yksi: suomalaisia pikkujoukkoja (tilanne 11/2026)",
+    "en": "Name one: small Finnish sets (as of 11/2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Joukko",
+    "en": "Set"
+   },
+   "items": [
+    {
+     "fi": [
+      "Juhani",
+      "Tuomas",
+      "Aapo",
+      "Simeoni",
+      "Timo",
+      "Lauri",
+      "Eero"
+     ],
+     "en": [
+      "Juhani",
+      "Tuomas",
+      "Aapo",
+      "Simeoni",
+      "Timo",
+      "Lauri",
+      "Eero"
+     ],
+     "h": {
+      "fi": "Jukolan veljes (Seitsemän veljestä)",
+      "en": "A Jukola brother (Seven Brothers)"
+     }
+    },
+    {
+     "fi": [
+      "Väinämöinen",
+      "Ilmarinen",
+      "Lemminkäinen"
+     ],
+     "en": [
+      "Väinämöinen",
+      "Ilmarinen",
+      "Lemminkäinen"
+     ],
+     "h": {
+      "fi": "Sammon ryöstöretken kolme sankaria",
+      "en": "The three heroes who steal the Sampo"
+     }
+    },
+    {
+     "fi": [
+      "Keke Rosberg",
+      "Rosberg",
+      "Mika Häkkinen",
+      "Häkkinen",
+      "Kimi Räikkönen",
+      "Räikkönen"
+     ],
+     "en": [
+      "Keke Rosberg",
+      "Rosberg",
+      "Mika Häkkinen",
+      "Häkkinen",
+      "Kimi Räikkönen",
+      "Räikkönen"
+     ],
+     "h": {
+      "fi": "Suomalainen F1-maailmanmestari (1950–2025)",
+      "en": "Finnish F1 world champion (1950–2025)"
+     }
+    },
+    {
+     "fi": [
+      "Ari Vatanen",
+      "Vatanen",
+      "Hannu Mikkola",
+      "Mikkola",
+      "Timo Salonen",
+      "Salonen",
+      "Juha Kankkunen",
+      "Kankkunen",
+      "Tommi Mäkinen",
+      "Mäkinen",
+      "Marcus Grönholm",
+      "Grönholm",
+      "Kalle Rovanperä",
+      "Rovanperä"
+     ],
+     "en": [
+      "Ari Vatanen",
+      "Vatanen",
+      "Hannu Mikkola",
+      "Mikkola",
+      "Timo Salonen",
+      "Salonen",
+      "Juha Kankkunen",
+      "Kankkunen",
+      "Tommi Mäkinen",
+      "Mäkinen",
+      "Marcus Grönholm",
+      "Grönholm",
+      "Kalle Rovanperä",
+      "Rovanperä"
+     ],
+     "h": {
+      "fi": "Suomalainen rallin kuljettajamaailmanmestari (1979–2025)",
+      "en": "Finnish World Rally drivers' champion (1979–2025)"
+     }
+    },
+    {
+     "fi": [
+      "1995",
+      "2011",
+      "2019",
+      "2022",
+      "2026"
+     ],
+     "en": [
+      "1995",
+      "2011",
+      "2019",
+      "2022",
+      "2026"
+     ],
+     "h": {
+      "fi": "Vuosi, jona Leijonat voitti miesten MM-kullan",
+      "en": "A year Finland won the men's ice hockey world title"
+     }
+    },
+    {
+     "fi": [
+      "Anneli Jäätteenmäki",
+      "Jäätteenmäki",
+      "Mari Kiviniemi",
+      "Kiviniemi",
+      "Sanna Marin",
+      "Marin"
+     ],
+     "en": [
+      "Anneli Jäätteenmäki",
+      "Jäätteenmäki",
+      "Mari Kiviniemi",
+      "Kiviniemi",
+      "Sanna Marin",
+      "Marin"
+     ],
+     "h": {
+      "fi": "Suomen naispääministeri",
+      "en": "A female prime minister of Finland"
+     }
+    },
+    {
+     "fi": [
+      "Armi Kuusela",
+      "Kuusela",
+      "Anne Pohtamo",
+      "Pohtamo"
+     ],
+     "en": [
+      "Armi Kuusela",
+      "Kuusela",
+      "Anne Pohtamo",
+      "Pohtamo"
+     ],
+     "h": {
+      "fi": "Suomalainen Miss Universum",
+      "en": "A Finnish Miss Universe"
+     }
+    },
+    {
+     "fi": [
+      "Edvin Laine",
+      "Laine",
+      "Rauni Mollberg",
+      "Mollberg",
+      "Aku Louhimies",
+      "Louhimies"
+     ],
+     "en": [
+      "Edvin Laine",
+      "Laine",
+      "Rauni Mollberg",
+      "Mollberg",
+      "Aku Louhimies",
+      "Louhimies"
+     ],
+     "h": {
+      "fi": "Tuntematon sotilas -elokuvan ohjaaja (1955, 1985, 2017)",
+      "en": "Director of an Unknown Soldier film (1955, 1985, 2017)"
+     }
+    },
+    {
+     "fi": [
+      "Aki Kaurismäki",
+      "Mika Kaurismäki",
+      "Kaurismäki"
+     ],
+     "en": [
+      "Aki Kaurismäki",
+      "Mika Kaurismäki",
+      "Kaurismäki"
+     ],
+     "h": {
+      "fi": "Ohjaajaveljekset Kaurismäki",
+      "en": "The Kaurismäki director brothers"
+     }
+    },
+    {
+     "fi": [
+      "Muumipeikko",
+      "Muumimamma",
+      "Muumipappa"
+     ],
+     "en": [
+      "Moomintroll",
+      "Moominmamma",
+      "Moominpappa"
+     ],
+     "h": {
+      "fi": "Muumiperheen vanhemmat tai poika",
+      "en": "A Moomin parent or their son"
+     }
+    },
+    {
+     "fi": [
+      "Miikka Kiprusoff",
+      "Kiprusoff",
+      "Tuukka Rask",
+      "Rask",
+      "Pekka Rinne",
+      "Rinne"
+     ],
+     "en": [
+      "Miikka Kiprusoff",
+      "Kiprusoff",
+      "Tuukka Rask",
+      "Rask",
+      "Pekka Rinne",
+      "Rinne"
+     ],
+     "h": {
+      "fi": "Suomalainen NHL:n Vezina-palkinnon voittaja (–2025)",
+      "en": "A Finnish Vezina Trophy winner (to 2025)"
+     }
+    },
+    {
+     "fi": [
+      "Martti Ahtisaari",
+      "Ahtisaari"
+     ],
+     "en": [
+      "Martti Ahtisaari",
+      "Ahtisaari"
+     ],
+     "h": {
+      "fi": "Suomalainen Nobelin rauhanpalkinnon saaja",
+      "en": "The Finnish Nobel Peace Prize laureate"
+     }
+    },
+    {
+     "fi": [
+      "Joel Pohjanpalo",
+      "Pohjanpalo"
+     ],
+     "en": [
+      "Joel Pohjanpalo",
+      "Pohjanpalo"
+     ],
+     "h": {
+      "fi": "Suomen ainoa maalintekijä miesten EM-kisoissa 2021",
+      "en": "Finland's only scorer at the men's Euro 2020 (2021)"
+     }
+    },
+    {
+     "fi": [
+      "Lordi"
+     ],
+     "en": [
+      "Lordi"
+     ],
+     "h": {
+      "fi": "Suomen ainoa Euroviisuvoittaja",
+      "en": "Finland's only Eurovision winner"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-kolme-olympiakultaa",
+   "cat": "suomi",
+   "t": 110,
+   "title": {
+    "fi": "Suomalaiset, joilla on vähintään kolme olympiakultaa (1908–2026)",
+    "en": "Finns with at least three Olympic gold medals (1908–2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kultia – laji",
+    "en": "Golds – sport"
+   },
+   "items": [
+    {
+     "fi": [
+      "Paavo Nurmi",
+      "Nurmi"
+     ],
+     "en": [
+      "Paavo Nurmi",
+      "Nurmi"
+     ],
+     "h": {
+      "fi": "9 – yleisurheilu",
+      "en": "9 – athletics"
+     }
+    },
+    {
+     "fi": [
+      "Ville Ritola",
+      "Ritola"
+     ],
+     "en": [
+      "Ville Ritola",
+      "Ritola"
+     ],
+     "h": {
+      "fi": "5 – yleisurheilu",
+      "en": "5 – athletics"
+     }
+    },
+    {
+     "fi": [
+      "Clas Thunberg",
+      "Thunberg"
+     ],
+     "en": [
+      "Clas Thunberg",
+      "Thunberg"
+     ],
+     "h": {
+      "fi": "5 – pikaluistelu",
+      "en": "5 – speed skating"
+     }
+    },
+    {
+     "fi": [
+      "Hannes Kolehmainen",
+      "Kolehmainen"
+     ],
+     "en": [
+      "Hannes Kolehmainen",
+      "Kolehmainen"
+     ],
+     "h": {
+      "fi": "4 – yleisurheilu",
+      "en": "4 – athletics"
+     }
+    },
+    {
+     "fi": [
+      "Matti Nykänen",
+      "Nykänen"
+     ],
+     "en": [
+      "Matti Nykänen",
+      "Nykänen"
+     ],
+     "h": {
+      "fi": "4 – mäkihyppy",
+      "en": "4 – ski jumping"
+     }
+    },
+    {
+     "fi": [
+      "Lasse Virén",
+      "Virén"
+     ],
+     "en": [
+      "Lasse Virén",
+      "Virén"
+     ],
+     "h": {
+      "fi": "4 – yleisurheilu",
+      "en": "4 – athletics"
+     }
+    },
+    {
+     "fi": [
+      "Veikko Hakulinen",
+      "Hakulinen"
+     ],
+     "en": [
+      "Veikko Hakulinen",
+      "Hakulinen"
+     ],
+     "h": {
+      "fi": "3 – hiihto (1952–1960)",
+      "en": "3 – cross-country skiing (1952–1960)"
+     }
+    },
+    {
+     "fi": [
+      "Eero Mäntyranta",
+      "Mäntyranta"
+     ],
+     "en": [
+      "Eero Mäntyranta",
+      "Mäntyranta"
+     ],
+     "h": {
+      "fi": "3 – hiihto (1960–1964)",
+      "en": "3 – cross-country skiing (1960–1964)"
+     }
+    },
+    {
+     "fi": [
+      "Samppa Lajunen",
+      "Lajunen"
+     ],
+     "en": [
+      "Samppa Lajunen",
+      "Lajunen"
+     ],
+     "h": {
+      "fi": "3 – yhdistetty",
+      "en": "3 – Nordic combined"
+     }
+    },
+    {
+     "fi": [
+      "Veikko Huhtanen",
+      "Huhtanen"
+     ],
+     "en": [
+      "Veikko Huhtanen",
+      "Huhtanen"
+     ],
+     "h": {
+      "fi": "3 – voimistelu (moniottelu 1948)",
+      "en": "3 – gymnastics (all-around 1948)"
+     }
+    },
+    {
+     "fi": [
+      "Paavo Aaltonen",
+      "Aaltonen"
+     ],
+     "en": [
+      "Paavo Aaltonen",
+      "Aaltonen"
+     ],
+     "h": {
+      "fi": "3 – voimistelu (hyppy 1948)",
+      "en": "3 – gymnastics (vault 1948)"
+     }
+    },
+    {
+     "fi": [
+      "Iivo Niskanen",
+      "Niskanen"
+     ],
+     "en": [
+      "Iivo Niskanen",
+      "Niskanen"
+     ],
+     "h": {
+      "fi": "3 – hiihto (2014–2022)",
+      "en": "3 – cross-country skiing (2014–2022)"
+     }
+    },
+    {
+     "fi": [
+      "Marja-Liisa Kirvesniemi",
+      "Marja-Liisa Hämäläinen",
+      "Kirvesniemi",
+      "Hämäläinen"
+     ],
+     "en": [
+      "Marja-Liisa Kirvesniemi",
+      "Marja-Liisa Hämäläinen",
+      "Kirvesniemi",
+      "Hämäläinen"
+     ],
+     "h": {
+      "fi": "3 – hiihto (kaikki 1984)",
+      "en": "3 – cross-country skiing (all 1984)"
+     }
+    },
+    {
+     "fi": [
+      "Pertti Karppinen",
+      "Karppinen"
+     ],
+     "en": [
+      "Pertti Karppinen",
+      "Karppinen"
+     ],
+     "h": {
+      "fi": "3 – soutu",
+      "en": "3 – rowing"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-yksilokullat-1996-2026",
+   "cat": "suomi",
+   "t": 65,
+   "title": {
+    "fi": "Suomalaiset henkilökohtaisen lajin olympiavoittajat 1996–2026 (kesä ja talvi)",
+    "en": "Finnish individual Olympic champions 1996–2026 (summer and winter)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kisat – laji",
+    "en": "Games – event"
+   },
+   "items": [
+    {
+     "fi": [
+      "Heli Rantanen",
+      "Rantanen"
+     ],
+     "en": [
+      "Heli Rantanen",
+      "Rantanen"
+     ],
+     "h": {
+      "fi": "1996 – keihäänheitto",
+      "en": "1996 – javelin"
+     }
+    },
+    {
+     "fi": [
+      "Mika Myllylä",
+      "Myllylä"
+     ],
+     "en": [
+      "Mika Myllylä",
+      "Myllylä"
+     ],
+     "h": {
+      "fi": "1998 – 30 km hiihto",
+      "en": "1998 – 30 km cross-country"
+     }
+    },
+    {
+     "fi": [
+      "Jani Soininen",
+      "Soininen"
+     ],
+     "en": [
+      "Jani Soininen",
+      "Soininen"
+     ],
+     "h": {
+      "fi": "1998 – normaalimäki",
+      "en": "1998 – normal hill"
+     }
+    },
+    {
+     "fi": [
+      "Arsi Harju",
+      "Harju"
+     ],
+     "en": [
+      "Arsi Harju",
+      "Harju"
+     ],
+     "h": {
+      "fi": "2000 – kuulantyöntö",
+      "en": "2000 – shot put"
+     }
+    },
+    {
+     "fi": [
+      "Janne Lahtela",
+      "Lahtela"
+     ],
+     "en": [
+      "Janne Lahtela",
+      "Lahtela"
+     ],
+     "h": {
+      "fi": "2002 – kumparelasku",
+      "en": "2002 – moguls"
+     }
+    },
+    {
+     "fi": [
+      "Samppa Lajunen",
+      "Lajunen"
+     ],
+     "en": [
+      "Samppa Lajunen",
+      "Lajunen"
+     ],
+     "h": {
+      "fi": "2002 – yhdistetty (kaksi yksilökultaa)",
+      "en": "2002 – Nordic combined (two individual golds)"
+     }
+    },
+    {
+     "fi": [
+      "Satu Mäkelä-Nummela",
+      "Mäkelä-Nummela"
+     ],
+     "en": [
+      "Satu Mäkelä-Nummela",
+      "Mäkelä-Nummela"
+     ],
+     "h": {
+      "fi": "2008 – trap-ammunta",
+      "en": "2008 – trap shooting"
+     }
+    },
+    {
+     "fi": [
+      "Iivo Niskanen",
+      "Niskanen"
+     ],
+     "en": [
+      "Iivo Niskanen",
+      "Niskanen"
+     ],
+     "h": {
+      "fi": "2018 ja 2022 – hiihto",
+      "en": "2018 and 2022 – cross-country"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-presidentit-paaministereina",
+   "cat": "suomi",
+   "t": 65,
+   "title": {
+    "fi": "Suomen presidentit, jotka olivat aiemmin pääministereitä (1919–2026)",
+    "en": "Presidents of Finland who had earlier been prime minister (1919–2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "P. E. Svinhufvud",
+      "Pehr Evind Svinhufvud",
+      "Svinhufvud"
+     ],
+     "en": [
+      "P. E. Svinhufvud",
+      "Pehr Evind Svinhufvud",
+      "Svinhufvud"
+     ],
+     "h": {
+      "fi": "Pääministerinä 1917–1918 ja 1930–1931",
+      "en": "Prime minister 1917–1918 and 1930–1931"
+     }
+    },
+    {
+     "fi": [
+      "Kyösti Kallio",
+      "Kallio"
+     ],
+     "en": [
+      "Kyösti Kallio",
+      "Kallio"
+     ],
+     "h": {
+      "fi": "Pääministerinä neljästi 1922–1937",
+      "en": "Prime minister four times 1922–1937"
+     }
+    },
+    {
+     "fi": [
+      "Risto Ryti",
+      "Ryti"
+     ],
+     "en": [
+      "Risto Ryti",
+      "Ryti"
+     ],
+     "h": {
+      "fi": "Pääministerinä 1939–1940",
+      "en": "Prime minister 1939–1940"
+     }
+    },
+    {
+     "fi": [
+      "J. K. Paasikivi",
+      "Juho Kusti Paasikivi",
+      "Paasikivi"
+     ],
+     "en": [
+      "J. K. Paasikivi",
+      "Juho Kusti Paasikivi",
+      "Paasikivi"
+     ],
+     "h": {
+      "fi": "Pääministerinä 1918 ja 1944–1946",
+      "en": "Prime minister 1918 and 1944–1946"
+     }
+    },
+    {
+     "fi": [
+      "Urho Kekkonen",
+      "Kekkonen"
+     ],
+     "en": [
+      "Urho Kekkonen",
+      "Kekkonen"
+     ],
+     "h": {
+      "fi": "Pääministerinä 1950–1953 ja 1954–1956",
+      "en": "Prime minister 1950–1953 and 1954–1956"
+     }
+    },
+    {
+     "fi": [
+      "Mauno Koivisto",
+      "Koivisto"
+     ],
+     "en": [
+      "Mauno Koivisto",
+      "Koivisto"
+     ],
+     "h": {
+      "fi": "Pääministerinä 1968–1970 ja 1979–1982",
+      "en": "Prime minister 1968–1970 and 1979–1982"
+     }
+    },
+    {
+     "fi": [
+      "Alexander Stubb",
+      "Stubb"
+     ],
+     "en": [
+      "Alexander Stubb",
+      "Stubb"
+     ],
+     "h": {
+      "fi": "Pääministerinä 2014–2015",
+      "en": "Prime minister 2014–2015"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-hahmo-ja-nayttelija",
+   "cat": "suomi",
+   "t": 120,
+   "title": {
+    "fi": "Kuka näytteli? 15 suomalaista elokuvahahmoa",
+    "en": "Who played them? 15 Finnish film characters"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Hahmo",
+    "en": "Character"
+   },
+   "items": [
+    {
+     "fi": [
+      "Vesa-Matti Loiri",
+      "Loiri",
+      "Vesku"
+     ],
+     "en": [
+      "Vesa-Matti Loiri",
+      "Loiri"
+     ],
+     "h": {
+      "fi": "Uuno Turhapuro",
+      "en": "Uuno Turhapuro"
+     }
+    },
+    {
+     "fi": [
+      "Spede Pasanen",
+      "Pertti Pasanen",
+      "Spede",
+      "Pasanen"
+     ],
+     "en": [
+      "Spede Pasanen",
+      "Pertti Pasanen",
+      "Spede",
+      "Pasanen"
+     ],
+     "h": {
+      "fi": "Härski Hartikainen",
+      "en": "Härski Hartikainen"
+     }
+    },
+    {
+     "fi": [
+      "Simo Salminen",
+      "Salminen"
+     ],
+     "en": [
+      "Simo Salminen",
+      "Salminen"
+     ],
+     "h": {
+      "fi": "Sörsselssön",
+      "en": "Sörsselssön"
+     }
+    },
+    {
+     "fi": [
+      "Esa Pakarinen",
+      "Pakarinen"
+     ],
+     "en": [
+      "Esa Pakarinen",
+      "Pakarinen"
+     ],
+     "h": {
+      "fi": "Pekka Puupää (1953–1960)",
+      "en": "Pekka Puupää (1953–1960)"
+     }
+    },
+    {
+     "fi": [
+      "Masa Niemi",
+      "Niemi"
+     ],
+     "en": [
+      "Masa Niemi",
+      "Niemi"
+     ],
+     "h": {
+      "fi": "Pätkä (1953–1960)",
+      "en": "Pätkä (1953–1960)"
+     }
+    },
+    {
+     "fi": [
+      "Siiri Angerkoski",
+      "Angerkoski"
+     ],
+     "en": [
+      "Siiri Angerkoski",
+      "Angerkoski"
+     ],
+     "h": {
+      "fi": "Justiina (1953–1960)",
+      "en": "Justiina (1953–1960)"
+     }
+    },
+    {
+     "fi": [
+      "Joel Rinne",
+      "Rinne"
+     ],
+     "en": [
+      "Joel Rinne",
+      "Rinne"
+     ],
+     "h": {
+      "fi": "Komisario Palmu (1960–1969)",
+      "en": "Inspector Palmu (1960–1969)"
+     }
+    },
+    {
+     "fi": [
+      "Aarno Sulkanen",
+      "Sulkanen"
+     ],
+     "en": [
+      "Aarno Sulkanen",
+      "Sulkanen"
+     ],
+     "h": {
+      "fi": "Akseli Koskela (Täällä Pohjantähden alla, 1968)",
+      "en": "Akseli Koskela (Here, Beneath the North Star, 1968)"
+     }
+    },
+    {
+     "fi": [
+      "Eero Aho",
+      "Aho"
+     ],
+     "en": [
+      "Eero Aho",
+      "Aho"
+     ],
+     "h": {
+      "fi": "Antero Rokka (Tuntematon sotilas, 2017)",
+      "en": "Antero Rokka (The Unknown Soldier, 2017)"
+     }
+    },
+    {
+     "fi": [
+      "Jussi Vatanen",
+      "Vatanen"
+     ],
+     "en": [
+      "Jussi Vatanen",
+      "Vatanen"
+     ],
+     "h": {
+      "fi": "Janne (Napapiirin sankarit, 2010)",
+      "en": "Janne (Lapland Odyssey, 2010)"
+     }
+    },
+    {
+     "fi": [
+      "Jarkko Lahti",
+      "Lahti"
+     ],
+     "en": [
+      "Jarkko Lahti",
+      "Lahti"
+     ],
+     "h": {
+      "fi": "Olli Mäki (Hymyilevä mies, 2016)",
+      "en": "Olli Mäki (2016)"
+     }
+    },
+    {
+     "fi": [
+      "Pekka Strang",
+      "Strang"
+     ],
+     "en": [
+      "Pekka Strang",
+      "Strang"
+     ],
+     "h": {
+      "fi": "Touko Laaksonen (Tom of Finland, 2017)",
+      "en": "Touko Laaksonen (Tom of Finland, 2017)"
+     }
+    },
+    {
+     "fi": [
+      "Antti Litja",
+      "Litja"
+     ],
+     "en": [
+      "Antti Litja",
+      "Litja"
+     ],
+     "h": {
+      "fi": "Mielensäpahoittaja (2014)",
+      "en": "The Grump (2014)"
+     }
+    },
+    {
+     "fi": [
+      "Alma Pöysti",
+      "Pöysti"
+     ],
+     "en": [
+      "Alma Pöysti",
+      "Pöysti"
+     ],
+     "h": {
+      "fi": "Tove Jansson (Tove, 2020)",
+      "en": "Tove Jansson (Tove, 2020)"
+     }
+    },
+    {
+     "fi": [
+      "Juha Veijonen",
+      "Veijonen"
+     ],
+     "en": [
+      "Juha Veijonen",
+      "Veijonen"
+     ],
+     "h": {
+      "fi": "Jussi Vares (Vares – yksityisetsivä, 2004)",
+      "en": "Jussi Vares (Vares: Private Eye, 2004)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-tv-sarjat-vihjeesta",
+   "cat": "suomi",
+   "t": 95,
+   "title": {
+    "fi": "Suomalainen tv-ohjelma vihjeestä",
+    "en": "Finnish TV show from a clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Salatut elämät",
+      "Salkkarit"
+     ],
+     "en": [
+      "Salatut elämät",
+      "Salkkarit"
+     ],
+     "h": {
+      "fi": "Pihlajakadun saippuasarja vuodesta 1999",
+      "en": "Pihlajakatu soap opera since 1999"
+     }
+    },
+    {
+     "fi": [
+      "Kotikatu"
+     ],
+     "en": [
+      "Kotikatu"
+     ],
+     "h": {
+      "fi": "Ylen helsinkiläisperheiden draama 1995–2012",
+      "en": "Yle drama about Helsinki families 1995–2012"
+     }
+    },
+    {
+     "fi": [
+      "Putous"
+     ],
+     "en": [
+      "Putous"
+     ],
+     "h": {
+      "fi": "Sketsihahmojen kilpailu MTV3:lla",
+      "en": "Sketch character contest on MTV3"
+     }
+    },
+    {
+     "fi": [
+      "Vain elämää"
+     ],
+     "en": [
+      "Vain elämää"
+     ],
+     "h": {
+      "fi": "Artistit esittävät toistensa kappaleita (Nelonen)",
+      "en": "Artists perform each other's songs (Nelonen)"
+     }
+    },
+    {
+     "fi": [
+      "Pikku Kakkonen"
+     ],
+     "en": [
+      "Pikku Kakkonen"
+     ],
+     "h": {
+      "fi": "Ylen lastenohjelma vuodesta 1977",
+      "en": "Yle children's programme since 1977"
+     }
+    },
+    {
+     "fi": [
+      "Uutisvuoto"
+     ],
+     "en": [
+      "Uutisvuoto"
+     ],
+     "h": {
+      "fi": "Viikon uutisia ruotiva paneelivisa (1998–2019)",
+      "en": "Panel quiz picking apart the week's news (1998–2019)"
+     }
+    },
+    {
+     "fi": [
+      "Sorjonen"
+     ],
+     "en": [
+      "Sorjonen",
+      "Bordertown"
+     ],
+     "h": {
+      "fi": "KRP:n tutkija muuttaa Lappeenrantaan",
+      "en": "A police investigator moves to Lappeenranta"
+     }
+    },
+    {
+     "fi": [
+      "Karppi"
+     ],
+     "en": [
+      "Karppi",
+      "Deadwind"
+     ],
+     "h": {
+      "fi": "Pihla Viitala rikostutkijana, englanniksi Deadwind",
+      "en": "Pihla Viitala as a detective, Deadwind in English"
+     }
+    },
+    {
+     "fi": [
+      "Ivalo"
+     ],
+     "en": [
+      "Ivalo",
+      "Arctic Circle"
+     ],
+     "h": {
+      "fi": "Lappiin sijoittuva rikossarja, englanniksi Arctic Circle",
+      "en": "Lapland crime series, Arctic Circle in English"
+     }
+    },
+    {
+     "fi": [
+      "Syke"
+     ],
+     "en": [
+      "Syke",
+      "Nurses"
+     ],
+     "h": {
+      "fi": "Sairaalan traumaosaston hoitajat (2014–)",
+      "en": "Nurses on a hospital trauma ward (2014–)"
+     }
+    },
+    {
+     "fi": [
+      "Pasila"
+     ],
+     "en": [
+      "Pasila"
+     ],
+     "h": {
+      "fi": "Animoitu satiiri poliisien arjesta 2007–2013",
+      "en": "Animated satire on police life 2007–2013"
+     }
+    },
+    {
+     "fi": [
+      "Speden Spelit"
+     ],
+     "en": [
+      "Speden Spelit"
+     ],
+     "h": {
+      "fi": "Spede Pasasen kilpailuohjelma 1988–2002",
+      "en": "Spede Pasanen's game show 1988–2002"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-sarjakuvien-tekijat",
+   "cat": "suomi",
+   "t": 65,
+   "title": {
+    "fi": "Kuka piirsi? 8 suomalaista sarjakuvaa",
+    "en": "Who drew it? 8 Finnish comics"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sarjakuva",
+    "en": "Comic"
+   },
+   "items": [
+    {
+     "fi": [
+      "Pertti Jarla",
+      "Jarla"
+     ],
+     "en": [
+      "Pertti Jarla",
+      "Jarla"
+     ],
+     "h": "Fingerpori"
+    },
+    {
+     "fi": [
+      "Ilkka Heilä",
+      "Heilä"
+     ],
+     "en": [
+      "Ilkka Heilä",
+      "Heilä"
+     ],
+     "h": "B. Virtanen"
+    },
+    {
+     "fi": [
+      "Jarkko Vehniäinen",
+      "Vehniäinen"
+     ],
+     "en": [
+      "Jarkko Vehniäinen",
+      "Vehniäinen"
+     ],
+     "h": "Kamala luonto"
+    },
+    {
+     "fi": [
+      "Milla Paloniemi",
+      "Paloniemi"
+     ],
+     "en": [
+      "Milla Paloniemi",
+      "Paloniemi"
+     ],
+     "h": {
+      "fi": "Kiroileva siili",
+      "en": "Kiroileva siili (The Swearing Hedgehog)"
+     }
+    },
+    {
+     "fi": [
+      "Tarmo Koivisto",
+      "Koivisto"
+     ],
+     "en": [
+      "Tarmo Koivisto",
+      "Koivisto"
+     ],
+     "h": "Mämmilä"
+    },
+    {
+     "fi": [
+      "Ola Fogelberg",
+      "Fogelberg",
+      "Fogeli"
+     ],
+     "en": [
+      "Ola Fogelberg",
+      "Fogelberg"
+     ],
+     "h": "Pekka Puupää"
+    },
+    {
+     "fi": [
+      "Juba Tuomola",
+      "Jussi Tuomola",
+      "Juba",
+      "Tuomola"
+     ],
+     "en": [
+      "Juba Tuomola",
+      "Jussi Tuomola",
+      "Juba",
+      "Tuomola"
+     ],
+     "h": "Viivi ja Wagner"
+    },
+    {
+     "fi": [
+      "Tove Jansson",
+      "Jansson"
+     ],
+     "en": [
+      "Tove Jansson",
+      "Jansson"
+     ],
+     "h": {
+      "fi": "Muumipeikko-sarjakuva (1954–)",
+      "en": "Moomin comic strip (1954–)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-kirjailijat-kirjaimista",
+   "cat": "suomi",
+   "t": 150,
+   "title": {
+    "fi": "Suomalaiset kirjailijat sukunimen 2. ja 3. kirjaimesta (vihjeenä myös syntymävuosi)",
+    "en": "Finnish writers from the 2nd and 3rd letters of the surname (birth year given)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sukunimi (synt.)",
+    "en": "Surname (born)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Elias Lönnrot",
+      "Lönnrot"
+     ],
+     "en": [
+      "Elias Lönnrot",
+      "Lönnrot"
+     ],
+     "h": "_ön____ (1802)"
+    },
+    {
+     "fi": [
+      "J. L. Runeberg",
+      "Runeberg"
+     ],
+     "en": [
+      "J. L. Runeberg",
+      "Runeberg"
+     ],
+     "h": "_un_____ (1804)"
+    },
+    {
+     "fi": [
+      "Zacharias Topelius",
+      "Topelius"
+     ],
+     "en": [
+      "Zacharias Topelius",
+      "Topelius"
+     ],
+     "h": "_op_____ (1818)"
+    },
+    {
+     "fi": [
+      "Aleksis Kivi",
+      "Kivi"
+     ],
+     "en": [
+      "Aleksis Kivi",
+      "Kivi"
+     ],
+     "h": "_iv_ (1834)"
+    },
+    {
+     "fi": [
+      "Minna Canth",
+      "Canth"
+     ],
+     "en": [
+      "Minna Canth",
+      "Canth"
+     ],
+     "h": "_an__ (1844)"
+    },
+    {
+     "fi": [
+      "Juhani Aho",
+      "Aho"
+     ],
+     "en": [
+      "Juhani Aho",
+      "Aho"
+     ],
+     "h": "_ho (1861)"
+    },
+    {
+     "fi": [
+      "Eino Leino",
+      "Leino"
+     ],
+     "en": [
+      "Eino Leino",
+      "Leino"
+     ],
+     "h": "_ei__ (1878)"
+    },
+    {
+     "fi": [
+      "F. E. Sillanpää",
+      "Sillanpää"
+     ],
+     "en": [
+      "F. E. Sillanpää",
+      "Sillanpää"
+     ],
+     "h": "_il______ (1888)"
+    },
+    {
+     "fi": [
+      "Pentti Haanpää",
+      "Haanpää"
+     ],
+     "en": [
+      "Pentti Haanpää",
+      "Haanpää"
+     ],
+     "h": "_aa____ (1905)"
+    },
+    {
+     "fi": [
+      "Mika Waltari",
+      "Waltari"
+     ],
+     "en": [
+      "Mika Waltari",
+      "Waltari"
+     ],
+     "h": "_al____ (1908)"
+    },
+    {
+     "fi": [
+      "Tove Jansson",
+      "Jansson"
+     ],
+     "en": [
+      "Tove Jansson",
+      "Jansson"
+     ],
+     "h": "_an____ (1914)"
+    },
+    {
+     "fi": [
+      "Väinö Linna",
+      "Linna"
+     ],
+     "en": [
+      "Väinö Linna",
+      "Linna"
+     ],
+     "h": "_in__ (1920)"
+    },
+    {
+     "fi": [
+      "Arto Paasilinna",
+      "Paasilinna"
+     ],
+     "en": [
+      "Arto Paasilinna",
+      "Paasilinna"
+     ],
+     "h": "_aa_______ (1942)"
+    },
+    {
+     "fi": [
+      "Leena Lander",
+      "Lander"
+     ],
+     "en": [
+      "Leena Lander",
+      "Lander"
+     ],
+     "h": "_an___ (1955)"
+    },
+    {
+     "fi": [
+      "Rosa Liksom",
+      "Liksom"
+     ],
+     "en": [
+      "Rosa Liksom",
+      "Liksom"
+     ],
+     "h": "_ik___ (1958)"
+    },
+    {
+     "fi": [
+      "Kari Hotakainen",
+      "Hotakainen"
+     ],
+     "en": [
+      "Kari Hotakainen",
+      "Hotakainen"
+     ],
+     "h": "_ot_______ (1964)"
+    },
+    {
+     "fi": [
+      "Tuomas Kyrö",
+      "Kyrö"
+     ],
+     "en": [
+      "Tuomas Kyrö",
+      "Kyrö"
+     ],
+     "h": "_yr_ (1974)"
+    },
+    {
+     "fi": [
+      "Sofi Oksanen",
+      "Oksanen"
+     ],
+     "en": [
+      "Sofi Oksanen",
+      "Oksanen"
+     ],
+     "h": "_ks____ (1977)"
+    },
+    {
+     "fi": [
+      "Katja Kettu",
+      "Kettu"
+     ],
+     "en": [
+      "Katja Kettu",
+      "Kettu"
+     ],
+     "h": "_et__ (1978)"
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-1970-luku",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 156,
+   "title": {
+    "fi": "Suomi 1970-luvulla",
+    "en": "Finland in the 1970s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Minä vuonna Alvar Aallon Finlandia-talo valmistui?",
+      "en": "In which year was Alvar Aalto's Finlandia Hall completed?"
+     },
+     "ok": {
+      "fi": "1971",
+      "en": "1971"
+     },
+     "no": [
+      {
+       "fi": "1962",
+       "en": "1962"
+      },
+      {
+       "fi": "1967",
+       "en": "1967"
+      },
+      {
+       "fi": "1979",
+       "en": "1979"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Pekka Vasala voitti Münchenin olympialaisissa 1972?",
+      "en": "What did Pekka Vasala win at the 1972 Munich Olympics?"
+     },
+     "ok": {
+      "fi": "1500 metrin kullan",
+      "en": "The 1500 m gold"
+     },
+     "no": [
+      {
+       "fi": "5000 metrin kullan",
+       "en": "The 5000 m gold"
+      },
+      {
+       "fi": "Maratonin kullan",
+       "en": "The marathon gold"
+      },
+      {
+       "fi": "3000 metrin esteiden kullan",
+       "en": "The 3000 m steeplechase gold"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä vuonna 1973 säädetty poikkeuslaki teki?",
+      "en": "What did the 1973 exceptive law do?"
+     },
+     "ok": {
+      "fi": "Jatkoi Kekkosen presidenttikautta vuoteen 1978",
+      "en": "Extended Kekkonen's term to 1978"
+     },
+     "no": [
+      {
+       "fi": "Lakkautti läänit",
+       "en": "Abolished the provinces"
+      },
+      {
+       "fi": "Perusti Suomen Pankin",
+       "en": "Founded the Bank of Finland"
+      },
+      {
+       "fi": "Siirsi pääkaupungin",
+       "en": "Moved the capital"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä kanssa Suomi solmi vapaakauppasopimuksen vuonna 1973?",
+      "en": "With whom did Finland sign a free trade agreement in 1973?"
+     },
+     "ok": {
+      "fi": "Euroopan talousyhteisön (ETY)",
+      "en": "The European Economic Community (EEC)"
+     },
+     "no": [
+      {
+       "fi": "Neuvostoliiton",
+       "en": "The Soviet Union"
+      },
+      {
+       "fi": "Yhdysvaltain",
+       "en": "The United States"
+      },
+      {
+       "fi": "Japanin",
+       "en": "Japan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna ensimmäinen Uuno Turhapuro -elokuva sai ensi-iltansa?",
+      "en": "In which year did the first Uuno Turhapuro film premiere?"
+     },
+     "ok": {
+      "fi": "1973",
+      "en": "1973"
+     },
+     "no": [
+      {
+       "fi": "1968",
+       "en": "1968"
+      },
+      {
+       "fi": "1977",
+       "en": "1977"
+      },
+      {
+       "fi": "1981",
+       "en": "1981"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä rakennuksessa ETYK:n huippukokous pidettiin Helsingissä 1975?",
+      "en": "In which building was the 1975 CSCE summit held in Helsinki?"
+     },
+     "ok": {
+      "fi": "Finlandia-talo",
+      "en": "Finlandia-talo"
+     },
+     "no": [
+      {
+       "fi": "Eduskuntatalo",
+       "en": "Eduskuntatalo"
+      },
+      {
+       "fi": "Presidentinlinna",
+       "en": "Presidentinlinna"
+      },
+      {
+       "fi": "Kulttuuritalo",
+       "en": "Kulttuuritalo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka suomalainen valittiin Miss Universumiksi 1975?",
+      "en": "Which Finn was crowned Miss Universe in 1975?"
+     },
+     "ok": {
+      "fi": "Anne Pohtamo",
+      "en": "Anne Pohtamo"
+     },
+     "no": [
+      {
+       "fi": "Armi Kuusela",
+       "en": "Armi Kuusela"
+      },
+      {
+       "fi": "Lenita Airisto",
+       "en": "Lenita Airisto"
+      },
+      {
+       "fi": "Virpi Miettinen",
+       "en": "Virpi Miettinen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Monenneksi Lasse Virén sijoittui maratonilla Montrealissa 1976 voitettuaan 5000 ja 10 000 m?",
+      "en": "Where did Lasse Virén place in the 1976 marathon after winning the 5000 and 10,000 m?"
+     },
+     "ok": {
+      "fi": "5.",
+      "en": "5."
+     },
+     "no": [
+      {
+       "fi": "1.",
+       "en": "1."
+      },
+      {
+       "fi": "2.",
+       "en": "2."
+      },
+      {
+       "fi": "Keskeytti",
+       "en": "Keskeytti"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti naisten 5 km:n olympiakullan Innsbruckissa 1976?",
+      "en": "Who won the women's 5 km Olympic gold at Innsbruck 1976?"
+     },
+     "ok": {
+      "fi": "Helena Takalo",
+      "en": "Helena Takalo"
+     },
+     "no": [
+      {
+       "fi": "Hilkka Riihivuori",
+       "en": "Hilkka Riihivuori"
+      },
+      {
+       "fi": "Marja-Liisa Hämäläinen",
+       "en": "Marja-Liisa Hämäläinen"
+      },
+      {
+       "fi": "Marjo Matikainen",
+       "en": "Marjo Matikainen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä yhtye perustettiin Ylöjärvellä vuonna 1976?",
+      "en": "Which band was founded in Ylöjärvi in 1976?"
+     },
+     "ok": {
+      "fi": "Eppu Normaali",
+      "en": "Eppu Normaali"
+     },
+     "no": [
+      {
+       "fi": "Popeda",
+       "en": "Popeda"
+      },
+      {
+       "fi": "Hanoi Rocks",
+       "en": "Hanoi Rocks"
+      },
+      {
+       "fi": "Dingo",
+       "en": "Dingo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Ylen Pikku Kakkonen lähetettiin ensimmäisen kerran?",
+      "en": "In which year was Yle's Pikku Kakkonen first broadcast?"
+     },
+     "ok": {
+      "fi": "1977",
+      "en": "1977"
+     },
+     "no": [
+      {
+       "fi": "1965",
+       "en": "1965"
+      },
+      {
+       "fi": "1971",
+       "en": "1971"
+      },
+      {
+       "fi": "1983",
+       "en": "1983"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä kaupungissa Suomen ensimmäinen ydinvoimala aloitti 1977?",
+      "en": "In which town did Finland's first nuclear power plant start in 1977?"
+     },
+     "ok": {
+      "fi": "Loviisa",
+      "en": "Loviisa"
+     },
+     "no": [
+      {
+       "fi": "Eurajoki",
+       "en": "Eurajoki"
+      },
+      {
+       "fi": "Pyhäjoki",
+       "en": "Pyhäjoki"
+      },
+      {
+       "fi": "Kotka",
+       "en": "Kotka"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Hanoi Rocks perustettiin?",
+      "en": "In which year was Hanoi Rocks founded?"
+     },
+     "ok": {
+      "fi": "1979",
+      "en": "1979"
+     },
+     "no": [
+      {
+       "fi": "1972",
+       "en": "1972"
+      },
+      {
+       "fi": "1983",
+       "en": "1983"
+      },
+      {
+       "fi": "1987",
+       "en": "1987"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-1980-luku",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 144,
+   "title": {
+    "fi": "Suomi 1980-luvulla",
+    "en": "Finland in the 1980s"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä kaupunki isännöi ensimmäisiä yleisurheilun MM-kisoja 1983?",
+      "en": "Which city hosted the first World Athletics Championships in 1983?"
+     },
+     "ok": {
+      "fi": "Helsinki",
+      "en": "Helsinki"
+     },
+     "no": [
+      {
+       "fi": "Rooma",
+       "en": "Rooma"
+      },
+      {
+       "fi": "Tukholma",
+       "en": "Tukholma"
+      },
+      {
+       "fi": "Los Angeles",
+       "en": "Los Angeles"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti keihäänheiton maailmanmestaruuden Helsingissä 1983 viimeisellä heitollaan?",
+      "en": "Who won the 1983 world javelin title in Helsinki with her last throw?"
+     },
+     "ok": {
+      "fi": "Tiina Lillak",
+      "en": "Tiina Lillak"
+     },
+     "no": [
+      {
+       "fi": "Heli Rantanen",
+       "en": "Heli Rantanen"
+      },
+      {
+       "fi": "Fatima Whitbread",
+       "en": "Fatima Whitbread"
+      },
+      {
+       "fi": "Tessa Sanderson",
+       "en": "Tessa Sanderson"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Montako kultaa Marja-Liisa Hämäläinen hiihti Sarajevon olympialaisissa 1984?",
+      "en": "How many golds did Marja-Liisa Hämäläinen win at the 1984 Sarajevo Olympics?"
+     },
+     "ok": {
+      "fi": "3",
+      "en": "3"
+     },
+     "no": [
+      {
+       "fi": "1",
+       "en": "1"
+      },
+      {
+       "fi": "2",
+       "en": "2"
+      },
+      {
+       "fi": "4",
+       "en": "4"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenet jäsenistään Hanoi Rocks menetti auto-onnettomuudessa joulukuussa 1984?",
+      "en": "Which band member did Hanoi Rocks lose in a car crash in December 1984?"
+     },
+     "ok": {
+      "fi": "Rumpali Razzlen",
+      "en": "Drummer Razzle"
+     },
+     "no": [
+      {
+       "fi": "Laulaja Michael Monroen",
+       "en": "Singer Michael Monroe"
+      },
+      {
+       "fi": "Kitaristi Andy McCoyn",
+       "en": "Guitarist Andy McCoy"
+      },
+      {
+       "fi": "Basisti Sam Yaffan",
+       "en": "Bassist Sam Yaffa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä porilaisyhtyeen ympärille syntyi 1980-luvun puolivälissä Dingomania?",
+      "en": "Which band from Pori caused Dingomania in the mid-1980s?"
+     },
+     "ok": {
+      "fi": "Dingo",
+      "en": "Dingo"
+     },
+     "no": [
+      {
+       "fi": "Eppu Normaali",
+       "en": "Eppu Normaali"
+      },
+      {
+       "fi": "Popeda",
+       "en": "Popeda"
+      },
+      {
+       "fi": "Yö",
+       "en": "Yö"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Finlandia-kirjallisuuspalkinto perustettiin?",
+      "en": "In which year was the Finlandia literature prize founded?"
+     },
+     "ok": {
+      "fi": "1984",
+      "en": "1984"
+     },
+     "no": [
+      {
+       "fi": "1970",
+       "en": "1970"
+      },
+      {
+       "fi": "1990",
+       "en": "1990"
+      },
+      {
+       "fi": "1995",
+       "en": "1995"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä televisiokanava aloitti Suomessa vuonna 1986?",
+      "en": "Which TV channel began broadcasting in Finland in 1986?"
+     },
+     "ok": {
+      "fi": "Kolmoskanava",
+      "en": "Kolmoskanava"
+     },
+     "no": [
+      {
+       "fi": "Nelonen",
+       "en": "Nelonen"
+      },
+      {
+       "fi": "MTV3",
+       "en": "MTV3"
+      },
+      {
+       "fi": "Sub",
+       "en": "Sub"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Nokian NMT-puhelin päätyi 1987 Mihail Gorbatšovin käteen kuuluisassa kuvassa?",
+      "en": "Which Nokia NMT phone appeared in Mikhail Gorbachev's hand in a famous 1987 photo?"
+     },
+     "ok": {
+      "fi": "Mobira Cityman",
+      "en": "Mobira Cityman"
+     },
+     "no": [
+      {
+       "fi": "Nokia 2110",
+       "en": "Nokia 2110"
+      },
+      {
+       "fi": "Mobira Talkman",
+       "en": "Mobira Talkman"
+      },
+      {
+       "fi": "Nokia 3310",
+       "en": "Nokia 3310"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka muodosti vuonna 1987 kokoomuksen ja SDP:n hallituksen?",
+      "en": "Who formed the National Coalition–SDP government in 1987?"
+     },
+     "ok": {
+      "fi": "Harri Holkeri",
+      "en": "Harri Holkeri"
+     },
+     "no": [
+      {
+       "fi": "Kalevi Sorsa",
+       "en": "Kalevi Sorsa"
+      },
+      {
+       "fi": "Esko Aho",
+       "en": "Esko Aho"
+      },
+      {
+       "fi": "Paavo Lipponen",
+       "en": "Paavo Lipponen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti naisten 5 km:n olympiakullan Calgaryssa 1988?",
+      "en": "Who won the women's 5 km Olympic gold in Calgary 1988?"
+     },
+     "ok": {
+      "fi": "Marjo Matikainen",
+      "en": "Marjo Matikainen"
+     },
+     "no": [
+      {
+       "fi": "Marja-Liisa Kirvesniemi",
+       "en": "Marja-Liisa Kirvesniemi"
+      },
+      {
+       "fi": "Pirkko Määttä",
+       "en": "Pirkko Määttä"
+      },
+      {
+       "fi": "Helena Takalo",
+       "en": "Helena Takalo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Montako olympiakultaa Matti Nykänen voitti Calgaryssa 1988?",
+      "en": "How many Olympic golds did Matti Nykänen win in Calgary in 1988?"
+     },
+     "ok": {
+      "fi": "3",
+      "en": "3"
+     },
+     "no": [
+      {
+       "fi": "1",
+       "en": "1"
+      },
+      {
+       "fi": "2",
+       "en": "2"
+      },
+      {
+       "fi": "4",
+       "en": "4"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä mitalin Leijonat voitti Calgaryn olympialaisissa 1988?",
+      "en": "Which medal did Finland's men's ice hockey team win at Calgary 1988?"
+     },
+     "ok": {
+      "fi": "Hopean",
+      "en": "Silver"
+     },
+     "no": [
+      {
+       "fi": "Kullan",
+       "en": "Gold"
+      },
+      {
+       "fi": "Pronssin",
+       "en": "Bronze"
+      },
+      {
+       "fi": "Ei mitalia",
+       "en": "No medal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-2000-2009",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 144,
+   "title": {
+    "fi": "Suomi 2000–2009",
+    "en": "Finland 2000–2009"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kenet Tarja Halonen voitti presidentinvaalin toisella kierroksella 2000?",
+      "en": "Whom did Tarja Halonen beat in the 2000 presidential run-off?"
+     },
+     "ok": {
+      "fi": "Esko Aho",
+      "en": "Esko Aho"
+     },
+     "no": [
+      {
+       "fi": "Sauli Niinistö",
+       "en": "Sauli Niinistö"
+      },
+      {
+       "fi": "Riitta Uosukainen",
+       "en": "Riitta Uosukainen"
+      },
+      {
+       "fi": "Elisabeth Rehn",
+       "en": "Elisabeth Rehn"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kenet Halonen voitti toisella kierroksella 2006?",
+      "en": "Whom did Halonen beat in the 2006 run-off?"
+     },
+     "ok": {
+      "fi": "Sauli Niinistö",
+      "en": "Sauli Niinistö"
+     },
+     "no": [
+      {
+       "fi": "Esko Aho",
+       "en": "Esko Aho"
+      },
+      {
+       "fi": "Matti Vanhanen",
+       "en": "Matti Vanhanen"
+      },
+      {
+       "fi": "Heidi Hautala",
+       "en": "Heidi Hautala"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Helsingin erityisasema vuonna 2000?",
+      "en": "What special title did Helsinki hold in 2000?"
+     },
+     "ok": {
+      "fi": "Euroopan kulttuuripääkaupunki",
+      "en": "European Capital of Culture"
+     },
+     "no": [
+      {
+       "fi": "Olympiakaupunki",
+       "en": "Olympic host city"
+      },
+      {
+       "fi": "Euroopan vihreä pääkaupunki",
+       "en": "European Green Capital"
+      },
+      {
+       "fi": "Maailman designpääkaupunki",
+       "en": "World Design Capital"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Nokia 3310 julkaistiin?",
+      "en": "In which year was the Nokia 3310 released?"
+     },
+     "ok": {
+      "fi": "2000",
+      "en": "2000"
+     },
+     "no": [
+      {
+       "fi": "1996",
+       "en": "1996"
+      },
+      {
+       "fi": "2003",
+       "en": "2003"
+      },
+      {
+       "fi": "2006",
+       "en": "2006"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka kauan Anneli Jäätteenmäki oli pääministerinä vuonna 2003?",
+      "en": "How long was Anneli Jäätteenmäki prime minister in 2003?"
+     },
+     "ok": {
+      "fi": "Noin kaksi kuukautta",
+      "en": "About two months"
+     },
+     "no": [
+      {
+       "fi": "Noin kaksi viikkoa",
+       "en": "About two weeks"
+      },
+      {
+       "fi": "Noin vuoden",
+       "en": "About a year"
+      },
+      {
+       "fi": "Koko vaalikauden",
+       "en": "The whole term"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli Suomen pääministeri vuosina 2003–2010?",
+      "en": "Who was Prime Minister of Finland from 2003 to 2010?"
+     },
+     "ok": {
+      "fi": "Matti Vanhanen",
+      "en": "Matti Vanhanen"
+     },
+     "no": [
+      {
+       "fi": "Paavo Lipponen",
+       "en": "Paavo Lipponen"
+      },
+      {
+       "fi": "Jyrki Katainen",
+       "en": "Jyrki Katainen"
+      },
+      {
+       "fi": "Mari Kiviniemi",
+       "en": "Mari Kiviniemi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti Suomen ensimmäisen Idols-kilpailun vuonna 2004?",
+      "en": "Who won the first Finnish Idols in 2004?"
+     },
+     "ok": {
+      "fi": "Hanna Pakarinen",
+      "en": "Hanna Pakarinen"
+     },
+     "no": [
+      {
+       "fi": "Antti Tuisku",
+       "en": "Antti Tuisku"
+      },
+      {
+       "fi": "Jani Wickholm",
+       "en": "Jani Wickholm"
+      },
+      {
+       "fi": "Ani Lehtinen",
+       "en": "Ani Lehtinen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä kappaleella Lordi voitti Euroviisut 2006?",
+      "en": "With which song did Lordi win Eurovision 2006?"
+     },
+     "ok": {
+      "fi": "Hard Rock Hallelujah",
+      "en": "Hard Rock Hallelujah"
+     },
+     "no": [
+      {
+       "fi": "Devil Is a Loser",
+       "en": "Devil Is a Loser"
+      },
+      {
+       "fi": "Would You Love a Monsterman?",
+       "en": "Would You Love a Monsterman?"
+      },
+      {
+       "fi": "Blood Red Sandman",
+       "en": "Blood Red Sandman"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä hallissa Helsingin Euroviisut järjestettiin 2007?",
+      "en": "In which arena was Eurovision 2007 held in Helsinki?"
+     },
+     "ok": {
+      "fi": "Hartwall Areena",
+      "en": "Hartwall Areena"
+     },
+     "no": [
+      {
+       "fi": "Helsingin jäähalli",
+       "en": "Helsingin jäähalli"
+      },
+      {
+       "fi": "Messukeskus",
+       "en": "Messukeskus"
+      },
+      {
+       "fi": "Olympiastadion",
+       "en": "Olympiastadion"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä Suomen televisiossa tapahtui 1.9.2007?",
+      "en": "What happened on Finnish television on 1 September 2007?"
+     },
+     "ok": {
+      "fi": "Analogiset lähetykset päättyivät",
+      "en": "Analogue broadcasts ended"
+     },
+     "no": [
+      {
+       "fi": "Teräväpiirto alkoi",
+       "en": "HD broadcasts began"
+      },
+      {
+       "fi": "MTV3 aloitti",
+       "en": "MTV3 started"
+      },
+      {
+       "fi": "Tv-lupa poistui",
+       "en": "The TV licence was abolished"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna ensimmäinen Angry Birds -peli julkaistiin?",
+      "en": "In which year was the first Angry Birds game released?"
+     },
+     "ok": {
+      "fi": "2009",
+      "en": "2009"
+     },
+     "no": [
+      {
+       "fi": "2005",
+       "en": "2005"
+      },
+      {
+       "fi": "2007",
+       "en": "2007"
+      },
+      {
+       "fi": "2012",
+       "en": "2012"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka suomalainen voitti F1-maailmanmestaruuden 2007?",
+      "en": "Which Finn won the 2007 F1 world championship?"
+     },
+     "ok": {
+      "fi": "Kimi Räikkönen",
+      "en": "Kimi Räikkönen"
+     },
+     "no": [
+      {
+       "fi": "Heikki Kovalainen",
+       "en": "Heikki Kovalainen"
+      },
+      {
+       "fi": "Mika Häkkinen",
+       "en": "Mika Häkkinen"
+      },
+      {
+       "fi": "Valtteri Bottas",
+       "en": "Valtteri Bottas"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "suomi-4-urheilun-hetket",
+   "cat": "suomi",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Suomalaisen urheilun suuret hetket 1972–2026",
+    "en": "Great moments in Finnish sport 1972–2026"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mitä Lasse Virénille tapahtui olympialaisten 10 000 metrillä 1972?",
+      "en": "What happened to Lasse Virén in the 1972 Olympic 10,000 m?"
+     },
+     "ok": {
+      "fi": "Kaatui, mutta voitti maailmanennätyksellä",
+      "en": "He fell but won in world-record time"
+     },
+     "no": [
+      {
+       "fi": "Kaatui ja keskeytti",
+       "en": "He fell and dropped out"
+      },
+      {
+       "fi": "Voitti, mutta hylättiin",
+       "en": "He won but was disqualified"
+      },
+      {
+       "fi": "Hävisi maalikamerassa",
+       "en": "He lost in a photo finish"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka teki Leijonien ainoan maalin, kun Suomi voitti 2026 MM-finaalin jatkoajalla?",
+      "en": "Who scored the only goal when Finland won the 2026 world final in overtime?"
+     },
+     "ok": {
+      "fi": "Konsta Helenius",
+      "en": "Konsta Helenius"
+     },
+     "no": [
+      {
+       "fi": "Mikael Granlund",
+       "en": "Mikael Granlund"
+      },
+      {
+       "fi": "Sebastian Aho",
+       "en": "Sebastian Aho"
+      },
+      {
+       "fi": "Patrik Laine",
+       "en": "Patrik Laine"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Ketä vastaan Suomi pelasi jääkiekon MM-finaalin 2026?",
+      "en": "Whom did Finland face in the 2026 ice hockey world final?"
+     },
+     "ok": {
+      "fi": "Sveitsiä",
+      "en": "Switzerland"
+     },
+     "no": [
+      {
+       "fi": "Ruotsia",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Kanadaa",
+       "en": "Canada"
+      },
+      {
+       "fi": "Tšekkiä",
+       "en": "Czechia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka monen pisteen erolla Kimi Räikkönen voitti F1-mestaruuden 2007?",
+      "en": "By how many points did Kimi Räikkönen win the 2007 F1 title?"
+     },
+     "ok": {
+      "fi": "1",
+      "en": "1"
+     },
+     "no": [
+      {
+       "fi": "3",
+       "en": "3"
+      },
+      {
+       "fi": "7",
+       "en": "7"
+      },
+      {
+       "fi": "12",
+       "en": "12"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä aine paljastui Lahden 2001 MM-hiihtojen dopingskandaalissa?",
+      "en": "Which substance was exposed in the 2001 Lahti doping scandal?"
+     },
+     "ok": {
+      "fi": "Plasmanlaajentaja HES (Hemohes)",
+      "en": "Plasma expander HES (Hemohes)"
+     },
+     "no": [
+      {
+       "fi": "EPO",
+       "en": "EPO"
+      },
+      {
+       "fi": "Nandroloni",
+       "en": "Nandrolone"
+      },
+      {
+       "fi": "Meldonium",
+       "en": "Meldonium"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka teki Suomen maalin EM-kisojen 2021 ottelussa Tanskaa vastaan?",
+      "en": "Who scored for Finland against Denmark at Euro 2020 (2021)?"
+     },
+     "ok": {
+      "fi": "Joel Pohjanpalo",
+      "en": "Joel Pohjanpalo"
+     },
+     "no": [
+      {
+       "fi": "Teemu Pukki",
+       "en": "Teemu Pukki"
+      },
+      {
+       "fi": "Glen Kamara",
+       "en": "Glen Kamara"
+      },
+      {
+       "fi": "Robin Lod",
+       "en": "Robin Lod"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Ketä vastaan Leijonat voitti olympiafinaalin Pekingissä 2022?",
+      "en": "Whom did Finland beat in the 2022 Olympic ice hockey final in Beijing?"
+     },
+     "ok": {
+      "fi": "Venäjän olympiakomiteaa",
+      "en": "The Russian Olympic Committee"
+     },
+     "no": [
+      {
+       "fi": "Kanadaa",
+       "en": "Canada"
+      },
+      {
+       "fi": "Ruotsia",
+       "en": "Sweden"
+      },
+      {
+       "fi": "Slovakiaa",
+       "en": "Slovakia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka voitti Suomen viimeisimmän kesäolympiakullan (tilanne 2026)?",
+      "en": "Who won Finland's most recent Summer Olympic gold (as of 2026)?"
+     },
+     "ok": {
+      "fi": "Satu Mäkelä-Nummela",
+      "en": "Satu Mäkelä-Nummela"
+     },
+     "no": [
+      {
+       "fi": "Tero Pitkämäki",
+       "en": "Tero Pitkämäki"
+      },
+      {
+       "fi": "Arsi Harju",
+       "en": "Arsi Harju"
+      },
+      {
+       "fi": "Mira Potkonen",
+       "en": "Mira Potkonen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä lajissa Satu Mäkelä-Nummela voitti olympiakultaa 2008?",
+      "en": "In which event did Satu Mäkelä-Nummela win Olympic gold in 2008?"
+     },
+     "ok": {
+      "fi": "Trap-ammunta",
+      "en": "Trap shooting"
+     },
+     "no": [
+      {
+       "fi": "Keihäänheitto",
+       "en": "Javelin"
+      },
+      {
+       "fi": "Purjehdus",
+       "en": "Sailing"
+      },
+      {
+       "fi": "Melonta",
+       "en": "Canoeing"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä ennätyksen Teemu Selänne teki NHL-tulokkaana kaudella 1992–93?",
+      "en": "What record did Teemu Selänne set as an NHL rookie in 1992–93?"
+     },
+     "ok": {
+      "fi": "76 maalia",
+      "en": "76 goals"
+     },
+     "no": [
+      {
+       "fi": "50 maalia",
+       "en": "50 goals"
+      },
+      {
+       "fi": "100 pistettä",
+       "en": "100 points"
+      },
+      {
+       "fi": "15 voittomaalia",
+       "en": "15 game winners"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka oli ensimmäinen suomalainen NBA:n All-Star-ottelussa (2023)?",
+      "en": "Who was the first Finn in the NBA All-Star Game (2023)?"
+     },
+     "ok": {
+      "fi": "Lauri Markkanen",
+      "en": "Lauri Markkanen"
+     },
+     "no": [
+      {
+       "fi": "Hanno Möttölä",
+       "en": "Hanno Möttölä"
+      },
+      {
+       "fi": "Petteri Koponen",
+       "en": "Petteri Koponen"
+      },
+      {
+       "fi": "Sasu Salin",
+       "en": "Sasu Salin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Montako kertaa Kaisa Mäkäräinen voitti ampumahiihdon maailmancupin?",
+      "en": "How many times did Kaisa Mäkäräinen win the biathlon World Cup overall?"
+     },
+     "ok": {
+      "fi": "3",
+      "en": "3"
+     },
+     "no": [
+      {
+       "fi": "1",
+       "en": "1"
+      },
+      {
+       "fi": "2",
+       "en": "2"
+      },
+      {
+       "fi": "5",
+       "en": "5"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä Tero Pitkämäki voitti keihäänheiton maailmanmestaruuden 2007?",
+      "en": "Where did Tero Pitkämäki win the 2007 world javelin title?"
+     },
+     "ok": {
+      "fi": "Osaka",
+      "en": "Osaka"
+     },
+     "no": [
+      {
+       "fi": "Helsinki",
+       "en": "Helsinki"
+      },
+      {
+       "fi": "Berliini",
+       "en": "Berliini"
+      },
+      {
+       "fi": "Daegu",
+       "en": "Daegu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka on nuorin rallin maailmanmestari (2022)?",
+      "en": "Who is the youngest World Rally champion (2022)?"
+     },
+     "ok": {
+      "fi": "Kalle Rovanperä",
+      "en": "Kalle Rovanperä"
+     },
+     "no": [
+      {
+       "fi": "Tommi Mäkinen",
+       "en": "Tommi Mäkinen"
+      },
+      {
+       "fi": "Esapekka Lappi",
+       "en": "Esapekka Lappi"
+      },
+      {
+       "fi": "Marcus Grönholm",
+       "en": "Marcus Grönholm"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä matkan Iivo Niskanen voitti Pyeongchangin olympialaisissa 2018?",
+      "en": "Which race did Iivo Niskanen win at the 2018 Pyeongchang Olympics?"
+     },
+     "ok": {
+      "fi": "50 km (perinteinen)",
+      "en": "50 km (classic)"
+     },
+     "no": [
+      {
+       "fi": "15 km (vapaa)",
+       "en": "15 km (free)"
+      },
+      {
+       "fi": "Sprintti",
+       "en": "Sprint"
+      },
+      {
+       "fi": "Yhdistelmähiihto",
+       "en": "Skiathlon"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

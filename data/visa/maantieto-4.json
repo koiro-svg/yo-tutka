@@ -1,0 +1,5517 @@
+{
+ "quizzes": [
+  {
+   "id": "maantieto-4-saarivaltiot-a-o",
+   "cat": "maantieto",
+   "t": 128,
+   "title": {
+    "fi": "Saarivaltiot A–Ö: yksi jokaiselle alkukirjaimelle (YK:n jäsenmaat, joiden koko alue on saarilla; Australia on manner)",
+    "en": "Island countries A–Z by Finnish initial: one per letter (UN members lying wholly on islands; Australia is a continent)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Antigua ja Barbuda",
+      "Antigua"
+     ],
+     "en": [
+      "Antigua and Barbuda",
+      "Antigua"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Bahama",
+      "Bahamasaaret",
+      "Bahamas",
+      "Bahrain",
+      "Barbados",
+      "Brunei"
+     ],
+     "en": [
+      "The Bahamas",
+      "Bahamas",
+      "Bahrain",
+      "Barbados",
+      "Brunei"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Dominica",
+      "Dominikaaninen tasavalta"
+     ],
+     "en": [
+      "Dominica",
+      "Dominican Republic"
+     ],
+     "h": "D"
+    },
+    {
+     "fi": [
+      "Fidži",
+      "Fidzi",
+      "Filippiinit"
+     ],
+     "en": [
+      "Fiji",
+      "Philippines"
+     ],
+     "h": {
+      "fi": "F",
+      "en": "F (Finnish name; English: F/P)"
+     }
+    },
+    {
+     "fi": [
+      "Grenada"
+     ],
+     "en": [
+      "Grenada"
+     ],
+     "h": "G"
+    },
+    {
+     "fi": [
+      "Haiti"
+     ],
+     "en": [
+      "Haiti"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Itä-Timor",
+      "Timor-Leste",
+      "Islanti",
+      "Indonesia",
+      "Irlanti",
+      "Yhdistynyt kuningaskunta",
+      "Iso-Britannia",
+      "Britannia"
+     ],
+     "en": [
+      "East Timor",
+      "Timor-Leste",
+      "Iceland",
+      "Indonesia",
+      "Ireland",
+      "United Kingdom",
+      "UK",
+      "Great Britain",
+      "Britain"
+     ],
+     "h": {
+      "fi": "I",
+      "en": "I (Finnish name; English: E/I/U)"
+     }
+    },
+    {
+     "fi": [
+      "Jamaika",
+      "Japani"
+     ],
+     "en": [
+      "Jamaica",
+      "Japan"
+     ],
+     "h": "J"
+    },
+    {
+     "fi": [
+      "Kap Verde",
+      "Komorit",
+      "Kuuba",
+      "Kypros",
+      "Kiribati"
+     ],
+     "en": [
+      "Cape Verde",
+      "Cabo Verde",
+      "Comoros",
+      "Cuba",
+      "Cyprus",
+      "Kiribati"
+     ],
+     "h": {
+      "fi": "K",
+      "en": "K (Finnish name; English: C/K)"
+     }
+    },
+    {
+     "fi": [
+      "Madagaskar",
+      "Malediivit",
+      "Malta",
+      "Marshallinsaaret",
+      "Mauritius",
+      "Mikronesia"
+     ],
+     "en": [
+      "Madagascar",
+      "Maldives",
+      "Malta",
+      "Marshall Islands",
+      "Mauritius",
+      "Micronesia"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "Nauru"
+     ],
+     "en": [
+      "Nauru"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Palau",
+      "Papua-Uusi-Guinea"
+     ],
+     "en": [
+      "Palau",
+      "Papua New Guinea"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Saint Kitts ja Nevis",
+      "Saint Kitts",
+      "St. Kitts",
+      "Saint Lucia",
+      "St. Lucia",
+      "Saint Vincent ja Grenadiinit",
+      "Saint Vincent",
+      "St. Vincent",
+      "Samoa",
+      "São Tomé ja Príncipe",
+      "Sao Tome",
+      "Seychellit",
+      "Singapore",
+      "Salomonsaaret",
+      "Sri Lanka"
+     ],
+     "en": [
+      "Saint Kitts and Nevis",
+      "Saint Kitts",
+      "St. Kitts",
+      "Saint Lucia",
+      "St. Lucia",
+      "Saint Vincent and the Grenadines",
+      "Saint Vincent",
+      "St. Vincent",
+      "Samoa",
+      "São Tomé and Príncipe",
+      "Sao Tome",
+      "Seychelles",
+      "Singapore",
+      "Solomon Islands",
+      "Sri Lanka"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Tonga",
+      "Trinidad ja Tobago",
+      "Trinidad",
+      "Tuvalu"
+     ],
+     "en": [
+      "Tonga",
+      "Trinidad and Tobago",
+      "Trinidad",
+      "Tuvalu"
+     ],
+     "h": "T"
+    },
+    {
+     "fi": [
+      "Uusi-Seelanti"
+     ],
+     "en": [
+      "New Zealand"
+     ],
+     "h": {
+      "fi": "U",
+      "en": "U (Finnish name; English: N)"
+     }
+    },
+    {
+     "fi": [
+      "Vanuatu"
+     ],
+     "en": [
+      "Vanuatu"
+     ],
+     "h": "V"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-matalimmat-huiput",
+   "cat": "maantieto",
+   "t": 64,
+   "title": {
+    "fi": "Matalat maat: YK:n jäsenmaat, joiden korkein kohta on alle 120 m (vihjeenä korkein kohta)",
+    "en": "Flat countries: UN members whose highest point is below 120 m (clue: the highest point)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Korkein kohta",
+    "en": "Highest point"
+   },
+   "items": [
+    {
+     "fi": [
+      "Malediivit"
+     ],
+     "en": [
+      "Maldives"
+     ],
+     "h": "5 m"
+    },
+    {
+     "fi": [
+      "Tuvalu"
+     ],
+     "en": [
+      "Tuvalu"
+     ],
+     "h": "5 m"
+    },
+    {
+     "fi": [
+      "Marshallinsaaret"
+     ],
+     "en": [
+      "Marshall Islands"
+     ],
+     "h": "10 m"
+    },
+    {
+     "fi": [
+      "Gambia"
+     ],
+     "en": [
+      "Gambia",
+      "The Gambia"
+     ],
+     "h": "51 m"
+    },
+    {
+     "fi": [
+      "Bahama",
+      "Bahamasaaret",
+      "Bahamas"
+     ],
+     "en": [
+      "The Bahamas",
+      "Bahamas"
+     ],
+     "h": "63 m"
+    },
+    {
+     "fi": [
+      "Nauru"
+     ],
+     "en": [
+      "Nauru"
+     ],
+     "h": "65 m"
+    },
+    {
+     "fi": [
+      "Kiribati"
+     ],
+     "en": [
+      "Kiribati"
+     ],
+     "h": "81 m"
+    },
+    {
+     "fi": [
+      "Qatar"
+     ],
+     "en": [
+      "Qatar"
+     ],
+     "h": "103 m"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-paivantasaajan-naapurit",
+   "cat": "maantieto",
+   "t": 161,
+   "title": {
+    "fi": "Päiväntasaajan naapurit: YK:n jäsenmaat, joilla on maaraja päiväntasaajan halkaisemaan valtioon mutta joiden läpi päiväntasaaja ei itse kulje (merentakaiset alueet eivät lasketa)",
+    "en": "Equator neighbours: UN members sharing a land border with a country the equator crosses, but not crossed by it themselves (overseas territories excluded)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Päiväntasaajan Guinea"
+     ],
+     "en": [
+      "Equatorial Guinea"
+     ]
+    },
+    {
+     "fi": [
+      "Kamerun"
+     ],
+     "en": [
+      "Cameroon"
+     ]
+    },
+    {
+     "fi": [
+      "Keski-Afrikan tasavalta"
+     ],
+     "en": [
+      "Central African Republic",
+      "CAR"
+     ]
+    },
+    {
+     "fi": [
+      "Angola"
+     ],
+     "en": [
+      "Angola"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Sudan"
+     ],
+     "en": [
+      "South Sudan"
+     ]
+    },
+    {
+     "fi": [
+      "Ruanda"
+     ],
+     "en": [
+      "Rwanda"
+     ]
+    },
+    {
+     "fi": [
+      "Burundi"
+     ],
+     "en": [
+      "Burundi"
+     ]
+    },
+    {
+     "fi": [
+      "Tansania"
+     ],
+     "en": [
+      "Tanzania"
+     ]
+    },
+    {
+     "fi": [
+      "Sambia"
+     ],
+     "en": [
+      "Zambia"
+     ]
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ]
+    },
+    {
+     "fi": [
+      "Djibouti"
+     ],
+     "en": [
+      "Djibouti"
+     ]
+    },
+    {
+     "fi": [
+      "Malesia"
+     ],
+     "en": [
+      "Malaysia"
+     ]
+    },
+    {
+     "fi": [
+      "Papua-Uusi-Guinea"
+     ],
+     "en": [
+      "Papua New Guinea"
+     ]
+    },
+    {
+     "fi": [
+      "Itä-Timor",
+      "Timor-Leste"
+     ],
+     "en": [
+      "East Timor",
+      "Timor-Leste"
+     ]
+    },
+    {
+     "fi": [
+      "Peru"
+     ],
+     "en": [
+      "Peru"
+     ]
+    },
+    {
+     "fi": [
+      "Venezuela"
+     ],
+     "en": [
+      "Venezuela"
+     ]
+    },
+    {
+     "fi": [
+      "Panama"
+     ],
+     "en": [
+      "Panama"
+     ]
+    },
+    {
+     "fi": [
+      "Guyana"
+     ],
+     "en": [
+      "Guyana"
+     ]
+    },
+    {
+     "fi": [
+      "Suriname"
+     ],
+     "en": [
+      "Suriname"
+     ]
+    },
+    {
+     "fi": [
+      "Bolivia"
+     ],
+     "en": [
+      "Bolivia"
+     ]
+    },
+    {
+     "fi": [
+      "Paraguay"
+     ],
+     "en": [
+      "Paraguay"
+     ]
+    },
+    {
+     "fi": [
+      "Argentiina"
+     ],
+     "en": [
+      "Argentina"
+     ]
+    },
+    {
+     "fi": [
+      "Uruguay"
+     ],
+     "en": [
+      "Uruguay"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-vain-a-vokaali",
+   "cat": "maantieto",
+   "t": 96,
+   "title": {
+    "fi": "Valtiot, joiden suomenkielisessä nimessä ainoa vokaali on A (12)",
+    "en": "Countries whose Finnish name has A as its only vowel (12; e.g. Tanska = Denmark)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ]
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ]
+    },
+    {
+     "fi": [
+      "Saksa"
+     ],
+     "en": [
+      "Germany"
+     ]
+    },
+    {
+     "fi": [
+      "Malta"
+     ],
+     "en": [
+      "Malta"
+     ]
+    },
+    {
+     "fi": [
+      "Kazakstan"
+     ],
+     "en": [
+      "Kazakhstan"
+     ]
+    },
+    {
+     "fi": [
+      "Qatar"
+     ],
+     "en": [
+      "Qatar"
+     ]
+    },
+    {
+     "fi": [
+      "Tšad",
+      "Tsad"
+     ],
+     "en": [
+      "Chad"
+     ]
+    },
+    {
+     "fi": [
+      "Ghana"
+     ],
+     "en": [
+      "Ghana"
+     ]
+    },
+    {
+     "fi": [
+      "Madagaskar"
+     ],
+     "en": [
+      "Madagascar"
+     ]
+    },
+    {
+     "fi": [
+      "Bahama",
+      "Bahamasaaret",
+      "Bahamas"
+     ],
+     "en": [
+      "The Bahamas",
+      "Bahamas"
+     ]
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ]
+    },
+    {
+     "fi": [
+      "Panama"
+     ],
+     "en": [
+      "Panama"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-amerikka-2-3-kirjain",
+   "cat": "maantieto",
+   "t": 245,
+   "title": {
+    "fi": "Amerikan 35 valtiota toisesta ja kolmannesta kirjaimesta",
+    "en": "The 35 countries of the Americas from their 2nd and 3rd letters"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Antigua ja Barbuda",
+      "Antigua"
+     ],
+     "en": [
+      "Antigua and Barbuda",
+      "Antigua"
+     ],
+     "h": {
+      "fi": "_NT____ __ _______",
+      "en": "_NT____ ___ _______"
+     }
+    },
+    {
+     "fi": [
+      "Argentiina"
+     ],
+     "en": [
+      "Argentina"
+     ],
+     "h": {
+      "fi": "_RG_______",
+      "en": "_RG______"
+     }
+    },
+    {
+     "fi": [
+      "Bahama",
+      "Bahamasaaret",
+      "Bahamas"
+     ],
+     "en": [
+      "The Bahamas",
+      "Bahamas"
+     ],
+     "h": {
+      "fi": "_AH___",
+      "en": "_AH____"
+     }
+    },
+    {
+     "fi": [
+      "Barbados"
+     ],
+     "en": [
+      "Barbados"
+     ],
+     "h": "_AR_____"
+    },
+    {
+     "fi": [
+      "Belize"
+     ],
+     "en": [
+      "Belize"
+     ],
+     "h": "_EL___"
+    },
+    {
+     "fi": [
+      "Bolivia"
+     ],
+     "en": [
+      "Bolivia"
+     ],
+     "h": "_OL____"
+    },
+    {
+     "fi": [
+      "Brasilia"
+     ],
+     "en": [
+      "Brazil"
+     ],
+     "h": {
+      "fi": "_RA_____",
+      "en": "_RA___"
+     }
+    },
+    {
+     "fi": [
+      "Chile"
+     ],
+     "en": [
+      "Chile"
+     ],
+     "h": "_HI__"
+    },
+    {
+     "fi": [
+      "Costa Rica"
+     ],
+     "en": [
+      "Costa Rica"
+     ],
+     "h": "_OS__ ____"
+    },
+    {
+     "fi": [
+      "Dominica"
+     ],
+     "en": [
+      "Dominica"
+     ],
+     "h": "_OM_____"
+    },
+    {
+     "fi": [
+      "Dominikaaninen tasavalta"
+     ],
+     "en": [
+      "Dominican Republic"
+     ],
+     "h": {
+      "fi": "_OM___________ _________",
+      "en": "_OM______ ________"
+     }
+    },
+    {
+     "fi": [
+      "Ecuador"
+     ],
+     "en": [
+      "Ecuador"
+     ],
+     "h": "_CU____"
+    },
+    {
+     "fi": [
+      "El Salvador"
+     ],
+     "en": [
+      "El Salvador"
+     ],
+     "h": "_L ________"
+    },
+    {
+     "fi": [
+      "Grenada"
+     ],
+     "en": [
+      "Grenada"
+     ],
+     "h": "_RE____"
+    },
+    {
+     "fi": [
+      "Guatemala"
+     ],
+     "en": [
+      "Guatemala"
+     ],
+     "h": "_UA______"
+    },
+    {
+     "fi": [
+      "Guyana"
+     ],
+     "en": [
+      "Guyana"
+     ],
+     "h": "_UY___"
+    },
+    {
+     "fi": [
+      "Haiti"
+     ],
+     "en": [
+      "Haiti"
+     ],
+     "h": "_AI__"
+    },
+    {
+     "fi": [
+      "Honduras"
+     ],
+     "en": [
+      "Honduras"
+     ],
+     "h": "_ON_____"
+    },
+    {
+     "fi": [
+      "Jamaika"
+     ],
+     "en": [
+      "Jamaica"
+     ],
+     "h": "_AM____"
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ],
+     "h": "_AN___"
+    },
+    {
+     "fi": [
+      "Kolumbia"
+     ],
+     "en": [
+      "Colombia"
+     ],
+     "h": "_OL_____"
+    },
+    {
+     "fi": [
+      "Kuuba"
+     ],
+     "en": [
+      "Cuba"
+     ],
+     "h": {
+      "fi": "_UU__",
+      "en": "_UB_"
+     }
+    },
+    {
+     "fi": [
+      "Meksiko"
+     ],
+     "en": [
+      "Mexico"
+     ],
+     "h": {
+      "fi": "_EK____",
+      "en": "_EX___"
+     }
+    },
+    {
+     "fi": [
+      "Nicaragua"
+     ],
+     "en": [
+      "Nicaragua"
+     ],
+     "h": "_IC______"
+    },
+    {
+     "fi": [
+      "Panama"
+     ],
+     "en": [
+      "Panama"
+     ],
+     "h": "_AN___"
+    },
+    {
+     "fi": [
+      "Paraguay"
+     ],
+     "en": [
+      "Paraguay"
+     ],
+     "h": "_AR_____"
+    },
+    {
+     "fi": [
+      "Peru"
+     ],
+     "en": [
+      "Peru"
+     ],
+     "h": "_ER_"
+    },
+    {
+     "fi": [
+      "Saint Kitts ja Nevis",
+      "Saint Kitts",
+      "St. Kitts"
+     ],
+     "en": [
+      "Saint Kitts and Nevis",
+      "Saint Kitts",
+      "St. Kitts"
+     ],
+     "h": {
+      "fi": "_AI__ _____ __ _____",
+      "en": "_AI__ _____ ___ _____"
+     }
+    },
+    {
+     "fi": [
+      "Saint Lucia",
+      "St. Lucia"
+     ],
+     "en": [
+      "Saint Lucia",
+      "St. Lucia"
+     ],
+     "h": "_AI__ _____"
+    },
+    {
+     "fi": [
+      "Saint Vincent ja Grenadiinit",
+      "Saint Vincent",
+      "St. Vincent"
+     ],
+     "en": [
+      "Saint Vincent and the Grenadines",
+      "Saint Vincent",
+      "St. Vincent"
+     ],
+     "h": {
+      "fi": "_AI__ _______ __ ___________",
+      "en": "_AI__ _______ ___ ___ __________"
+     }
+    },
+    {
+     "fi": [
+      "Suriname"
+     ],
+     "en": [
+      "Suriname"
+     ],
+     "h": "_UR_____"
+    },
+    {
+     "fi": [
+      "Trinidad ja Tobago",
+      "Trinidad"
+     ],
+     "en": [
+      "Trinidad and Tobago",
+      "Trinidad"
+     ],
+     "h": {
+      "fi": "_RI_____ __ ______",
+      "en": "_RI_____ ___ ______"
+     }
+    },
+    {
+     "fi": [
+      "Uruguay"
+     ],
+     "en": [
+      "Uruguay"
+     ],
+     "h": "_RU____"
+    },
+    {
+     "fi": [
+      "Venezuela"
+     ],
+     "en": [
+      "Venezuela"
+     ],
+     "h": "_EN______"
+    },
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "Amerikka"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "US",
+      "America"
+     ],
+     "h": {
+      "fi": "_HD________",
+      "en": "_NI___ ______"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-aasia-ilman-vokaaleja",
+   "cat": "maantieto",
+   "t": 322,
+   "title": {
+    "fi": "Aasian 46 YK:n jäsenmaata ilman vokaaleja (Turkki ja Kaukasian maat mukana, Kypros ja Venäjä eivät; vihjeestä on poistettu a, e, i, o, u, y, ä ja ö)",
+    "en": "Asia's 46 UN member states without vowels (Turkey and the Caucasus included, Cyprus and Russia not; the clue is the name with a, e, i, o, u and y removed)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Afganistan"
+     ],
+     "en": [
+      "Afghanistan"
+     ],
+     "h": {
+      "fi": "FGNSTN",
+      "en": "FGHNSTN"
+     }
+    },
+    {
+     "fi": [
+      "Arabiemiirikunnat",
+      "Yhdistyneet arabiemiirikunnat"
+     ],
+     "en": [
+      "United Arab Emirates",
+      "UAE"
+     ],
+     "h": {
+      "fi": "RBMRKNNT",
+      "en": "NTD RB MRTS"
+     }
+    },
+    {
+     "fi": [
+      "Armenia"
+     ],
+     "en": [
+      "Armenia"
+     ],
+     "h": "RMN"
+    },
+    {
+     "fi": [
+      "Azerbaidžan",
+      "Azerbaidzan",
+      "Azerbaidsan"
+     ],
+     "en": [
+      "Azerbaijan"
+     ],
+     "h": {
+      "fi": "ZRBDŽN",
+      "en": "ZRBJN"
+     }
+    },
+    {
+     "fi": [
+      "Bahrain"
+     ],
+     "en": [
+      "Bahrain"
+     ],
+     "h": "BHRN"
+    },
+    {
+     "fi": [
+      "Bangladesh"
+     ],
+     "en": [
+      "Bangladesh"
+     ],
+     "h": "BNGLDSH"
+    },
+    {
+     "fi": [
+      "Bhutan"
+     ],
+     "en": [
+      "Bhutan"
+     ],
+     "h": "BHTN"
+    },
+    {
+     "fi": [
+      "Brunei"
+     ],
+     "en": [
+      "Brunei"
+     ],
+     "h": "BRN"
+    },
+    {
+     "fi": [
+      "Etelä-Korea"
+     ],
+     "en": [
+      "South Korea"
+     ],
+     "h": {
+      "fi": "TL-KR",
+      "en": "STH KR"
+     }
+    },
+    {
+     "fi": [
+      "Filippiinit"
+     ],
+     "en": [
+      "Philippines"
+     ],
+     "h": {
+      "fi": "FLPPNT",
+      "en": "PHLPPNS"
+     }
+    },
+    {
+     "fi": [
+      "Georgia"
+     ],
+     "en": [
+      "Georgia"
+     ],
+     "h": "GRG"
+    },
+    {
+     "fi": [
+      "Indonesia"
+     ],
+     "en": [
+      "Indonesia"
+     ],
+     "h": "NDNS"
+    },
+    {
+     "fi": [
+      "Intia"
+     ],
+     "en": [
+      "India"
+     ],
+     "h": {
+      "fi": "NT",
+      "en": "ND"
+     }
+    },
+    {
+     "fi": [
+      "Irak"
+     ],
+     "en": [
+      "Iraq"
+     ],
+     "h": {
+      "fi": "RK",
+      "en": "RQ"
+     }
+    },
+    {
+     "fi": [
+      "Iran"
+     ],
+     "en": [
+      "Iran"
+     ],
+     "h": "RN"
+    },
+    {
+     "fi": [
+      "Israel"
+     ],
+     "en": [
+      "Israel"
+     ],
+     "h": "SRL"
+    },
+    {
+     "fi": [
+      "Itä-Timor",
+      "Timor-Leste"
+     ],
+     "en": [
+      "East Timor",
+      "Timor-Leste"
+     ],
+     "h": {
+      "fi": "T-TMR",
+      "en": "ST TMR"
+     }
+    },
+    {
+     "fi": [
+      "Japani"
+     ],
+     "en": [
+      "Japan"
+     ],
+     "h": "JPN"
+    },
+    {
+     "fi": [
+      "Jemen"
+     ],
+     "en": [
+      "Yemen"
+     ],
+     "h": {
+      "fi": "JMN",
+      "en": "MN"
+     }
+    },
+    {
+     "fi": [
+      "Jordania"
+     ],
+     "en": [
+      "Jordan"
+     ],
+     "h": "JRDN"
+    },
+    {
+     "fi": [
+      "Kambodža",
+      "Kambodza"
+     ],
+     "en": [
+      "Cambodia"
+     ],
+     "h": {
+      "fi": "KMBDŽ",
+      "en": "CMBD"
+     }
+    },
+    {
+     "fi": [
+      "Kazakstan"
+     ],
+     "en": [
+      "Kazakhstan"
+     ],
+     "h": {
+      "fi": "KZKSTN",
+      "en": "KZKHSTN"
+     }
+    },
+    {
+     "fi": [
+      "Kiina"
+     ],
+     "en": [
+      "China"
+     ],
+     "h": {
+      "fi": "KN",
+      "en": "CHN"
+     }
+    },
+    {
+     "fi": [
+      "Kirgisia",
+      "Kirgisistan"
+     ],
+     "en": [
+      "Kyrgyzstan"
+     ],
+     "h": {
+      "fi": "KRGS",
+      "en": "KRGZSTN"
+     }
+    },
+    {
+     "fi": [
+      "Kuwait"
+     ],
+     "en": [
+      "Kuwait"
+     ],
+     "h": "KWT"
+    },
+    {
+     "fi": [
+      "Laos"
+     ],
+     "en": [
+      "Laos"
+     ],
+     "h": "LS"
+    },
+    {
+     "fi": [
+      "Libanon"
+     ],
+     "en": [
+      "Lebanon"
+     ],
+     "h": "LBNN"
+    },
+    {
+     "fi": [
+      "Malediivit"
+     ],
+     "en": [
+      "Maldives"
+     ],
+     "h": {
+      "fi": "MLDVT",
+      "en": "MLDVS"
+     }
+    },
+    {
+     "fi": [
+      "Malesia"
+     ],
+     "en": [
+      "Malaysia"
+     ],
+     "h": "MLS"
+    },
+    {
+     "fi": [
+      "Mongolia"
+     ],
+     "en": [
+      "Mongolia"
+     ],
+     "h": "MNGL"
+    },
+    {
+     "fi": [
+      "Myanmar",
+      "Burma"
+     ],
+     "en": [
+      "Myanmar",
+      "Burma"
+     ],
+     "h": "MNMR"
+    },
+    {
+     "fi": [
+      "Nepal"
+     ],
+     "en": [
+      "Nepal"
+     ],
+     "h": "NPL"
+    },
+    {
+     "fi": [
+      "Oman"
+     ],
+     "en": [
+      "Oman"
+     ],
+     "h": "MN"
+    },
+    {
+     "fi": [
+      "Pakistan"
+     ],
+     "en": [
+      "Pakistan"
+     ],
+     "h": "PKSTN"
+    },
+    {
+     "fi": [
+      "Pohjois-Korea"
+     ],
+     "en": [
+      "North Korea"
+     ],
+     "h": {
+      "fi": "PHJS-KR",
+      "en": "NRTH KR"
+     }
+    },
+    {
+     "fi": [
+      "Qatar"
+     ],
+     "en": [
+      "Qatar"
+     ],
+     "h": "QTR"
+    },
+    {
+     "fi": [
+      "Saudi-Arabia",
+      "Saudi Arabia"
+     ],
+     "en": [
+      "Saudi Arabia"
+     ],
+     "h": {
+      "fi": "SD-RB",
+      "en": "SD RB"
+     }
+    },
+    {
+     "fi": [
+      "Singapore"
+     ],
+     "en": [
+      "Singapore"
+     ],
+     "h": "SNGPR"
+    },
+    {
+     "fi": [
+      "Sri Lanka"
+     ],
+     "en": [
+      "Sri Lanka"
+     ],
+     "h": "SR LNK"
+    },
+    {
+     "fi": [
+      "Syyria"
+     ],
+     "en": [
+      "Syria"
+     ],
+     "h": "SR"
+    },
+    {
+     "fi": [
+      "Tadžikistan",
+      "Tadzikistan",
+      "Tadsikistan"
+     ],
+     "en": [
+      "Tajikistan"
+     ],
+     "h": {
+      "fi": "TDŽKSTN",
+      "en": "TJKSTN"
+     }
+    },
+    {
+     "fi": [
+      "Thaimaa"
+     ],
+     "en": [
+      "Thailand"
+     ],
+     "h": {
+      "fi": "THM",
+      "en": "THLND"
+     }
+    },
+    {
+     "fi": [
+      "Turkki"
+     ],
+     "en": [
+      "Turkey",
+      "Türkiye"
+     ],
+     "h": {
+      "fi": "TRKK",
+      "en": "TRK"
+     }
+    },
+    {
+     "fi": [
+      "Turkmenistan"
+     ],
+     "en": [
+      "Turkmenistan"
+     ],
+     "h": "TRKMNSTN"
+    },
+    {
+     "fi": [
+      "Uzbekistan"
+     ],
+     "en": [
+      "Uzbekistan"
+     ],
+     "h": "ZBKSTN"
+    },
+    {
+     "fi": [
+      "Vietnam"
+     ],
+     "en": [
+      "Vietnam"
+     ],
+     "h": "VTNM"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-kaupungit-kolme-kirjainta",
+   "cat": "maantieto",
+   "t": 182,
+   "title": {
+    "fi": "26 Aasian, Amerikan ja Oseanian kaupunkia kolmesta ensimmäisestä kirjaimesta (vihjeenä myös maa; aina maan suurin näin alkava kaupunki)",
+    "en": "26 cities of Asia, the Americas and Oceania from their first three letters (country given; always the largest city there with that start)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Osaka"
+     ],
+     "en": [
+      "Osaka"
+     ],
+     "h": {
+      "fi": "Osa… (Japani)",
+      "en": "Osa… (Japan)"
+     }
+    },
+    {
+     "fi": [
+      "Yokohama"
+     ],
+     "en": [
+      "Yokohama"
+     ],
+     "h": {
+      "fi": "Yok… (Japani)",
+      "en": "Yok… (Japan)"
+     }
+    },
+    {
+     "fi": [
+      "Busan"
+     ],
+     "en": [
+      "Busan"
+     ],
+     "h": {
+      "fi": "Bus… (Etelä-Korea)",
+      "en": "Bus… (South Korea)"
+     }
+    },
+    {
+     "fi": [
+      "Kaohsiung"
+     ],
+     "en": [
+      "Kaohsiung"
+     ],
+     "h": "Kao… (Taiwan)"
+    },
+    {
+     "fi": [
+      "Chengdu"
+     ],
+     "en": [
+      "Chengdu"
+     ],
+     "h": {
+      "fi": "Che… (Kiina)",
+      "en": "Che… (China)"
+     }
+    },
+    {
+     "fi": [
+      "Hanoi"
+     ],
+     "en": [
+      "Hanoi"
+     ],
+     "h": "Han… (Vietnam)"
+    },
+    {
+     "fi": [
+      "Surabaya"
+     ],
+     "en": [
+      "Surabaya"
+     ],
+     "h": "Sur… (Indonesia)"
+    },
+    {
+     "fi": [
+      "Dhaka"
+     ],
+     "en": [
+      "Dhaka"
+     ],
+     "h": "Dha… (Bangladesh)"
+    },
+    {
+     "fi": [
+      "Karachi"
+     ],
+     "en": [
+      "Karachi"
+     ],
+     "h": "Kar… (Pakistan)"
+    },
+    {
+     "fi": [
+      "Lahore"
+     ],
+     "en": [
+      "Lahore"
+     ],
+     "h": "Lah… (Pakistan)"
+    },
+    {
+     "fi": [
+      "Teheran"
+     ],
+     "en": [
+      "Tehran"
+     ],
+     "h": "Teh… (Iran)"
+    },
+    {
+     "fi": [
+      "Bagdad"
+     ],
+     "en": [
+      "Baghdad"
+     ],
+     "h": {
+      "fi": "Bag… (Irak)",
+      "en": "Bag… (Iraq)"
+     }
+    },
+    {
+     "fi": [
+      "Tel Aviv"
+     ],
+     "en": [
+      "Tel Aviv"
+     ],
+     "h": "Tel… (Israel)"
+    },
+    {
+     "fi": [
+      "Damaskos"
+     ],
+     "en": [
+      "Damascus"
+     ],
+     "h": {
+      "fi": "Dam… (Syyria)",
+      "en": "Dam… (Syria)"
+     }
+    },
+    {
+     "fi": [
+      "Seattle"
+     ],
+     "en": [
+      "Seattle"
+     ],
+     "h": {
+      "fi": "Sea… (Yhdysvallat)",
+      "en": "Sea… (United States)"
+     }
+    },
+    {
+     "fi": [
+      "Houston"
+     ],
+     "en": [
+      "Houston"
+     ],
+     "h": {
+      "fi": "Hou… (Yhdysvallat)",
+      "en": "Hou… (United States)"
+     }
+    },
+    {
+     "fi": [
+      "Miami"
+     ],
+     "en": [
+      "Miami"
+     ],
+     "h": {
+      "fi": "Mia… (Yhdysvallat)",
+      "en": "Mia… (United States)"
+     }
+    },
+    {
+     "fi": [
+      "Philadelphia"
+     ],
+     "en": [
+      "Philadelphia"
+     ],
+     "h": {
+      "fi": "Phi… (Yhdysvallat)",
+      "en": "Phi… (United States)"
+     }
+    },
+    {
+     "fi": [
+      "Detroit"
+     ],
+     "en": [
+      "Detroit"
+     ],
+     "h": {
+      "fi": "Det… (Yhdysvallat)",
+      "en": "Det… (United States)"
+     }
+    },
+    {
+     "fi": [
+      "Denver"
+     ],
+     "en": [
+      "Denver"
+     ],
+     "h": {
+      "fi": "Den… (Yhdysvallat)",
+      "en": "Den… (United States)"
+     }
+    },
+    {
+     "fi": [
+      "Calgary"
+     ],
+     "en": [
+      "Calgary"
+     ],
+     "h": {
+      "fi": "Cal… (Kanada)",
+      "en": "Cal… (Canada)"
+     }
+    },
+    {
+     "fi": [
+      "Winnipeg"
+     ],
+     "en": [
+      "Winnipeg"
+     ],
+     "h": {
+      "fi": "Win… (Kanada)",
+      "en": "Win… (Canada)"
+     }
+    },
+    {
+     "fi": [
+      "Monterrey"
+     ],
+     "en": [
+      "Monterrey"
+     ],
+     "h": {
+      "fi": "Mon… (Meksiko)",
+      "en": "Mon… (Mexico)"
+     }
+    },
+    {
+     "fi": [
+      "Guadalajara"
+     ],
+     "en": [
+      "Guadalajara"
+     ],
+     "h": {
+      "fi": "Gua… (Meksiko)",
+      "en": "Gua… (Mexico)"
+     }
+    },
+    {
+     "fi": [
+      "Medellín"
+     ],
+     "en": [
+      "Medellín"
+     ],
+     "h": {
+      "fi": "Med… (Kolumbia)",
+      "en": "Med… (Colombia)"
+     }
+    },
+    {
+     "fi": [
+      "Perth"
+     ],
+     "en": [
+      "Perth"
+     ],
+     "h": "Per… (Australia)"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-kaupungit-vihjeesta",
+   "cat": "maantieto",
+   "t": 176,
+   "title": {
+    "fi": "22 Aasian, Amerikan ja Oseanian kaupunkia: alkukirjain ja vihje",
+    "en": "22 cities of Asia, the Americas and Oceania: first letter and a clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Rio de Janeiro"
+     ],
+     "en": [
+      "Rio de Janeiro",
+      "Rio"
+     ],
+     "h": {
+      "fi": "R – Kristus-patsas katsoo sen ylle vuorelta",
+      "en": "R – Christ statue watches over it from a peak"
+     }
+    },
+    {
+     "fi": [
+      "Kioto",
+      "Kyoto"
+     ],
+     "en": [
+      "Kyoto"
+     ],
+     "h": {
+      "fi": "K – Japanin keisarillinen pääkaupunki yli tuhat vuotta",
+      "en": "K – Japan's imperial capital for over 1000 years"
+     }
+    },
+    {
+     "fi": [
+      "Hiroshima"
+     ],
+     "en": [
+      "Hiroshima"
+     ],
+     "h": {
+      "fi": "H – ensimmäinen kaupunki, johon pudotettiin atomipommi",
+      "en": "H – first city hit by an atomic bomb"
+     }
+    },
+    {
+     "fi": [
+      "Dubai"
+     ],
+     "en": [
+      "Dubai"
+     ],
+     "h": {
+      "fi": "D – emiirikunta, jossa seisoo Burj Khalifa",
+      "en": "D – emirate home to the Burj Khalifa"
+     }
+    },
+    {
+     "fi": [
+      "Mekka",
+      "Mecca"
+     ],
+     "en": [
+      "Mecca",
+      "Makkah"
+     ],
+     "h": {
+      "fi": "M – islamin pyhin kaupunki",
+      "en": "M – holiest city of Islam"
+     }
+    },
+    {
+     "fi": [
+      "Agra"
+     ],
+     "en": [
+      "Agra"
+     ],
+     "h": {
+      "fi": "A – Intian kaupunki, jossa on Taj Mahal",
+      "en": "A – Indian city of the Taj Mahal"
+     }
+    },
+    {
+     "fi": [
+      "Bangkok"
+     ],
+     "en": [
+      "Bangkok"
+     ],
+     "h": {
+      "fi": "B – pääkaupunki, jonka koko virallinen nimi on maailman pisin",
+      "en": "B – capital whose full ceremonial name is the longest"
+     }
+    },
+    {
+     "fi": [
+      "Varanasi",
+      "Benares"
+     ],
+     "en": [
+      "Varanasi",
+      "Benares"
+     ],
+     "h": {
+      "fi": "V – hindujen pyhä kaupunki Gangesin rannalla",
+      "en": "V – Hindu holy city on the Ganges"
+     }
+    },
+    {
+     "fi": [
+      "Kathmandu",
+      "Katmandu"
+     ],
+     "en": [
+      "Kathmandu"
+     ],
+     "h": {
+      "fi": "K – Himalajan juurella, Everest-retkien lähtöpaikka",
+      "en": "K – Himalayan capital where Everest trips begin"
+     }
+    },
+    {
+     "fi": [
+      "Petra"
+     ],
+     "en": [
+      "Petra"
+     ],
+     "h": {
+      "fi": "P – nabatealaisten kallioon hakattu kaupunki Jordaniassa",
+      "en": "P – rock-cut Nabataean city in Jordan"
+     }
+    },
+    {
+     "fi": [
+      "Sydney"
+     ],
+     "en": [
+      "Sydney"
+     ],
+     "h": {
+      "fi": "S – Australian kaupunki, jossa simpukkaooppera ja satamasilta",
+      "en": "S – Australian city with the shell-roofed opera and Harbour Bridge"
+     }
+    },
+    {
+     "fi": [
+      "Auckland"
+     ],
+     "en": [
+      "Auckland"
+     ],
+     "h": {
+      "fi": "A – Uuden-Seelannin suurin kaupunki, \"purjeiden kaupunki\"",
+      "en": "A – New Zealand's largest city, 'City of Sails'"
+     }
+    },
+    {
+     "fi": [
+      "Chicago"
+     ],
+     "en": [
+      "Chicago"
+     ],
+     "h": {
+      "fi": "C – tuulinen kaupunki Michiganjärven rannalla",
+      "en": "C – the Windy City on Lake Michigan"
+     }
+    },
+    {
+     "fi": [
+      "Las Vegas",
+      "Vegas"
+     ],
+     "en": [
+      "Las Vegas",
+      "Vegas"
+     ],
+     "h": {
+      "fi": "L – kasinokaupunki Nevadan aavikolla",
+      "en": "L – casino city in the Nevada desert"
+     }
+    },
+    {
+     "fi": [
+      "New Orleans"
+     ],
+     "en": [
+      "New Orleans"
+     ],
+     "h": {
+      "fi": "N – jazzin kehto Mississippin suistossa",
+      "en": "N – cradle of jazz near the Mississippi delta"
+     }
+    },
+    {
+     "fi": [
+      "Vancouver"
+     ],
+     "en": [
+      "Vancouver"
+     ],
+     "h": {
+      "fi": "V – Kanadan länsirannikko, talviolympialaiset 2010",
+      "en": "V – Canada's west coast, 2010 Winter Olympics"
+     }
+    },
+    {
+     "fi": [
+      "Toronto"
+     ],
+     "en": [
+      "Toronto"
+     ],
+     "h": {
+      "fi": "T – Kanadan suurin kaupunki, CN Tower",
+      "en": "T – Canada's largest city, CN Tower"
+     }
+    },
+    {
+     "fi": [
+      "Havanna",
+      "Havana"
+     ],
+     "en": [
+      "Havana"
+     ],
+     "h": {
+      "fi": "H – vanhat jenkkiautot ja Malecón-rantakatu",
+      "en": "H – vintage American cars and the Malecón"
+     }
+    },
+    {
+     "fi": [
+      "Cusco",
+      "Cuzco"
+     ],
+     "en": [
+      "Cusco",
+      "Cuzco"
+     ],
+     "h": {
+      "fi": "C – inkavaltakunnan pääkaupunki Andeilla",
+      "en": "C – capital of the Inca Empire in the Andes"
+     }
+    },
+    {
+     "fi": [
+      "Manaus"
+     ],
+     "en": [
+      "Manaus"
+     ],
+     "h": {
+      "fi": "M – Amazonin sademetsän keskellä, oma oopperatalo",
+      "en": "M – in the middle of the Amazon, has an opera house"
+     }
+    },
+    {
+     "fi": [
+      "Brasília"
+     ],
+     "en": [
+      "Brasília"
+     ],
+     "h": {
+      "fi": "B – pääkaupunki, jonka asemakaava on lentokoneen muotoinen",
+      "en": "B – capital laid out in the shape of an aeroplane"
+     }
+    },
+    {
+     "fi": [
+      "Quito"
+     ],
+     "en": [
+      "Quito"
+     ],
+     "h": {
+      "fi": "Q – Andien pääkaupunki aivan päiväntasaajan tuntumassa",
+      "en": "Q – Andean capital right next to the equator"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-nimetty-ihmisen-mukaan",
+   "cat": "maantieto",
+   "t": 176,
+   "title": {
+    "fi": "Nimetty ihmisen mukaan: 22 paikkaa Amerikassa, Aasiassa ja Oseaniassa (vihjeenä henkilö)",
+    "en": "Named after a person: 22 places in the Americas, Asia and Oceania (clue: the person)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kenen mukaan",
+    "en": "Named after"
+   },
+   "items": [
+    {
+     "fi": [
+      "Bolivia"
+     ],
+     "en": [
+      "Bolivia"
+     ],
+     "h": {
+      "fi": "Vapaustaistelija Simón Bolívar (valtio)",
+      "en": "Liberator Simón Bolívar (country)"
+     }
+    },
+    {
+     "fi": [
+      "Kolumbia"
+     ],
+     "en": [
+      "Colombia"
+     ],
+     "h": {
+      "fi": "Kristoffer Kolumbus (valtio)",
+      "en": "Christopher Columbus (country)"
+     }
+    },
+    {
+     "fi": [
+      "Filippiinit"
+     ],
+     "en": [
+      "Philippines"
+     ],
+     "h": {
+      "fi": "Espanjan kuningas Filip II (valtio)",
+      "en": "King Philip II of Spain (country)"
+     }
+    },
+    {
+     "fi": [
+      "Saudi-Arabia",
+      "Saudi Arabia"
+     ],
+     "en": [
+      "Saudi Arabia"
+     ],
+     "h": {
+      "fi": "Saudin hallitsijasuku (valtio)",
+      "en": "The House of Saud (country)"
+     }
+    },
+    {
+     "fi": [
+      "Marshallinsaaret"
+     ],
+     "en": [
+      "Marshall Islands"
+     ],
+     "h": {
+      "fi": "Brittikapteeni John Marshall (valtio)",
+      "en": "British captain John Marshall (country)"
+     }
+    },
+    {
+     "fi": [
+      "Amerikka"
+     ],
+     "en": [
+      "America",
+      "Americas"
+     ],
+     "h": {
+      "fi": "Löytöretkeilijä Amerigo Vespucci (maanosa)",
+      "en": "Explorer Amerigo Vespucci (continent)"
+     }
+    },
+    {
+     "fi": [
+      "Cookinsaaret"
+     ],
+     "en": [
+      "Cook Islands"
+     ],
+     "h": {
+      "fi": "Kapteeni James Cook (saariryhmä)",
+      "en": "Captain James Cook (island group)"
+     }
+    },
+    {
+     "fi": [
+      "Tasmania"
+     ],
+     "en": [
+      "Tasmania"
+     ],
+     "h": {
+      "fi": "Abel Tasman (saari)",
+      "en": "Abel Tasman (island)"
+     }
+    },
+    {
+     "fi": [
+      "Mount Everest",
+      "Everest"
+     ],
+     "en": [
+      "Mount Everest",
+      "Everest"
+     ],
+     "h": {
+      "fi": "Kartoittaja George Everest (vuori)",
+      "en": "Surveyor George Everest (mountain)"
+     }
+    },
+    {
+     "fi": [
+      "Beringinsalmi",
+      "Bering"
+     ],
+     "en": [
+      "Bering Strait",
+      "Bering"
+     ],
+     "h": {
+      "fi": "Vitus Bering (salmi)",
+      "en": "Vitus Bering (strait)"
+     }
+    },
+    {
+     "fi": [
+      "Magalhãesinsalmi",
+      "Magellaninsalmi"
+     ],
+     "en": [
+      "Strait of Magellan",
+      "Magellan Strait"
+     ],
+     "h": {
+      "fi": "Ferdinand Magellan (salmi)",
+      "en": "Ferdinand Magellan (strait)"
+     }
+    },
+    {
+     "fi": [
+      "Draken salmi",
+      "Drakensalmi"
+     ],
+     "en": [
+      "Drake Passage"
+     ],
+     "h": {
+      "fi": "Francis Drake (merialue)",
+      "en": "Francis Drake (sea passage)"
+     }
+    },
+    {
+     "fi": [
+      "Hudsoninlahti",
+      "Hudson"
+     ],
+     "en": [
+      "Hudson Bay",
+      "Hudson"
+     ],
+     "h": {
+      "fi": "Henry Hudson (lahti)",
+      "en": "Henry Hudson (bay)"
+     }
+    },
+    {
+     "fi": [
+      "Vancouver"
+     ],
+     "en": [
+      "Vancouver"
+     ],
+     "h": {
+      "fi": "George Vancouver (kaupunki)",
+      "en": "George Vancouver (city)"
+     }
+    },
+    {
+     "fi": [
+      "Washington",
+      "Washington D.C."
+     ],
+     "en": [
+      "Washington",
+      "Washington, D.C."
+     ],
+     "h": {
+      "fi": "George Washington (pääkaupunki)",
+      "en": "George Washington (capital)"
+     }
+    },
+    {
+     "fi": [
+      "Pennsylvania"
+     ],
+     "en": [
+      "Pennsylvania"
+     ],
+     "h": {
+      "fi": "Amiraali William Penn (osavaltio)",
+      "en": "Admiral Sir William Penn (state)"
+     }
+    },
+    {
+     "fi": [
+      "Louisiana"
+     ],
+     "en": [
+      "Louisiana"
+     ],
+     "h": {
+      "fi": "Ranskan kuningas Ludvig XIV (osavaltio)",
+      "en": "King Louis XIV of France (state)"
+     }
+    },
+    {
+     "fi": [
+      "Virginia"
+     ],
+     "en": [
+      "Virginia"
+     ],
+     "h": {
+      "fi": "Elisabet I, \"neitsytkuningatar\" (osavaltio)",
+      "en": "Elizabeth I, the Virgin Queen (state)"
+     }
+    },
+    {
+     "fi": [
+      "Wellington"
+     ],
+     "en": [
+      "Wellington"
+     ],
+     "h": {
+      "fi": "Wellingtonin herttua (pääkaupunki)",
+      "en": "The Duke of Wellington (capital)"
+     }
+    },
+    {
+     "fi": [
+      "Adelaide"
+     ],
+     "en": [
+      "Adelaide"
+     ],
+     "h": {
+      "fi": "Kuningatar Adelaide (kaupunki)",
+      "en": "Queen Adelaide (city)"
+     }
+    },
+    {
+     "fi": [
+      "Brisbane"
+     ],
+     "en": [
+      "Brisbane"
+     ],
+     "h": {
+      "fi": "Kuvernööri Thomas Brisbane (kaupunki)",
+      "en": "Governor Thomas Brisbane (city)"
+     }
+    },
+    {
+     "fi": [
+      "Darwin"
+     ],
+     "en": [
+      "Darwin"
+     ],
+     "h": {
+      "fi": "Luonnontieteilijä Charles Darwin (kaupunki)",
+      "en": "Naturalist Charles Darwin (city)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-uudet-paikat",
+   "cat": "maantieto",
+   "t": 104,
+   "title": {
+    "fi": "Vanhan paikan mukaan nimetyt \"uudet\" paikat Amerikassa ja Oseaniassa (vihjeenä alkuperäinen paikka)",
+    "en": "\"New\" places in the Americas and Oceania named after an older place (clue: the original place)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Alkuperä",
+    "en": "Named after"
+   },
+   "items": [
+    {
+     "fi": [
+      "Uusi-Seelanti"
+     ],
+     "en": [
+      "New Zealand"
+     ],
+     "h": {
+      "fi": "Seelanti (Alankomaiden maakunta)",
+      "en": "Zeeland (Dutch province)"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Kaledonia"
+     ],
+     "en": [
+      "New Caledonia"
+     ],
+     "h": {
+      "fi": "Kaledonia (Skotlannin latinankielinen nimi)",
+      "en": "Caledonia (Latin name of Scotland)"
+     }
+    },
+    {
+     "fi": [
+      "Nova Scotia",
+      "Uusi-Skotlanti"
+     ],
+     "en": [
+      "Nova Scotia"
+     ],
+     "h": {
+      "fi": "Skotlanti",
+      "en": "Scotland"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Etelä-Wales",
+      "New South Wales"
+     ],
+     "en": [
+      "New South Wales"
+     ],
+     "h": "Wales"
+    },
+    {
+     "fi": [
+      "New Jersey"
+     ],
+     "en": [
+      "New Jersey"
+     ],
+     "h": {
+      "fi": "Jersey (Kanaalisaari)",
+      "en": "Jersey (Channel Island)"
+     }
+    },
+    {
+     "fi": [
+      "New Hampshire"
+     ],
+     "en": [
+      "New Hampshire"
+     ],
+     "h": {
+      "fi": "Hampshire (Englannin kreivikunta)",
+      "en": "Hampshire (English county)"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Englanti",
+      "New England"
+     ],
+     "en": [
+      "New England"
+     ],
+     "h": {
+      "fi": "Englanti",
+      "en": "England"
+     }
+    },
+    {
+     "fi": [
+      "New Mexico",
+      "Uusi-Meksiko"
+     ],
+     "en": [
+      "New Mexico"
+     ],
+     "h": {
+      "fi": "Meksiko",
+      "en": "Mexico"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Guinea",
+      "New Guinea"
+     ],
+     "en": [
+      "New Guinea"
+     ],
+     "h": {
+      "fi": "Guinea (Länsi-Afrikan rannikko)",
+      "en": "Guinea (West African coast)"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Britannia"
+     ],
+     "en": [
+      "New Britain"
+     ],
+     "h": {
+      "fi": "Britannia",
+      "en": "Britain"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Irlanti"
+     ],
+     "en": [
+      "New Ireland"
+     ],
+     "h": {
+      "fi": "Irlanti",
+      "en": "Ireland"
+     }
+    },
+    {
+     "fi": [
+      "New Plymouth"
+     ],
+     "en": [
+      "New Plymouth"
+     ],
+     "h": {
+      "fi": "Plymouth (Englannin satamakaupunki)",
+      "en": "Plymouth (English port)"
+     }
+    },
+    {
+     "fi": [
+      "New London"
+     ],
+     "en": [
+      "New London"
+     ],
+     "h": {
+      "fi": "Lontoo",
+      "en": "London"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-vanhat-nimet",
+   "cat": "maantieto",
+   "t": 77,
+   "title": {
+    "fi": "Entinen nimi → nykyinen: 11 valtiota ja kaupunkia Aasiassa, Amerikassa ja Oseaniassa",
+    "en": "Old name → today: 11 countries and cities in Asia, the Americas and Oceania"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Entinen nimi",
+    "en": "Former name"
+   },
+   "items": [
+    {
+     "fi": [
+      "Taiwan"
+     ],
+     "en": [
+      "Taiwan"
+     ],
+     "h": "Formosa"
+    },
+    {
+     "fi": [
+      "Guyana"
+     ],
+     "en": [
+      "Guyana"
+     ],
+     "h": {
+      "fi": "Brittiläinen Guayana",
+      "en": "British Guiana"
+     }
+    },
+    {
+     "fi": [
+      "Kiribati"
+     ],
+     "en": [
+      "Kiribati"
+     ],
+     "h": {
+      "fi": "Gilbertinsaaret",
+      "en": "Gilbert Islands"
+     }
+    },
+    {
+     "fi": [
+      "Ho Chi Minhin kaupunki",
+      "Ho Chi Minh",
+      "Ho Chi Minh City",
+      "Hồ Chí Minh"
+     ],
+     "en": [
+      "Ho Chi Minh City",
+      "Ho Chi Minh"
+     ],
+     "h": "Saigon"
+    },
+    {
+     "fi": [
+      "Mumbai"
+     ],
+     "en": [
+      "Mumbai"
+     ],
+     "h": "Bombay"
+    },
+    {
+     "fi": [
+      "Chennai"
+     ],
+     "en": [
+      "Chennai"
+     ],
+     "h": "Madras"
+    },
+    {
+     "fi": [
+      "Kolkata"
+     ],
+     "en": [
+      "Kolkata"
+     ],
+     "h": {
+      "fi": "Kalkutta",
+      "en": "Calcutta"
+     }
+    },
+    {
+     "fi": [
+      "Jakarta"
+     ],
+     "en": [
+      "Jakarta"
+     ],
+     "h": "Batavia"
+    },
+    {
+     "fi": [
+      "Astana"
+     ],
+     "en": [
+      "Astana"
+     ],
+     "h": "Nur-Sultan (2019–2022)"
+    },
+    {
+     "fi": [
+      "Ottawa"
+     ],
+     "en": [
+      "Ottawa"
+     ],
+     "h": "Bytown"
+    },
+    {
+     "fi": [
+      "San Francisco"
+     ],
+     "en": [
+      "San Francisco"
+     ],
+     "h": "Yerba Buena"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-kaantopiiri-napapiiri",
+   "cat": "maantieto",
+   "t": 126,
+   "title": {
+    "fi": "Valtiot, joiden maa-alueen halki kulkee Kauriin kääntöpiiri tai pohjoinen napapiiri (Grönlanti lasketaan Tanskaan)",
+    "en": "Countries whose land is crossed by the Tropic of Capricorn or the Arctic Circle (Greenland counts as Denmark)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Viiva",
+    "en": "Line"
+   },
+   "items": [
+    {
+     "fi": [
+      "Namibia"
+     ],
+     "en": [
+      "Namibia"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Botswana"
+     ],
+     "en": [
+      "Botswana"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Etelä-Afrikka"
+     ],
+     "en": [
+      "South Africa"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Mosambik"
+     ],
+     "en": [
+      "Mozambique"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Madagaskar"
+     ],
+     "en": [
+      "Madagascar"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Australia"
+     ],
+     "en": [
+      "Australia"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Chile"
+     ],
+     "en": [
+      "Chile"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Argentiina"
+     ],
+     "en": [
+      "Argentina"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Paraguay"
+     ],
+     "en": [
+      "Paraguay"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Brasilia"
+     ],
+     "en": [
+      "Brazil"
+     ],
+     "h": {
+      "fi": "Kauriin kääntöpiiri",
+      "en": "Tropic of Capricorn"
+     }
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Ruotsi"
+     ],
+     "en": [
+      "Sweden"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Suomi"
+     ],
+     "en": [
+      "Finland"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Venäjä"
+     ],
+     "en": [
+      "Russia"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "Amerikka"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "US",
+      "America"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Tanska",
+      "Grönlanti"
+     ],
+     "en": [
+      "Denmark",
+      "Greenland"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    },
+    {
+     "fi": [
+      "Islanti"
+     ],
+     "en": [
+      "Iceland"
+     ],
+     "h": {
+      "fi": "Pohjoinen napapiiri",
+      "en": "Arctic Circle"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-vuoristojen-valtiot",
+   "cat": "maantieto",
+   "t": 81,
+   "title": {
+    "fi": "Nimeä yksi valtio, jonka alueelle vuoristo ulottuu (9 vuoristoa)",
+    "en": "Name one country each mountain range reaches into (9 ranges)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vuoristo",
+    "en": "Range"
+   },
+   "items": [
+    {
+     "fi": [
+      "Argentiina",
+      "Bolivia",
+      "Chile",
+      "Kolumbia",
+      "Ecuador",
+      "Peru",
+      "Venezuela"
+     ],
+     "en": [
+      "Argentina",
+      "Bolivia",
+      "Chile",
+      "Colombia",
+      "Ecuador",
+      "Peru",
+      "Venezuela"
+     ],
+     "h": {
+      "fi": "Andit",
+      "en": "Andes"
+     }
+    },
+    {
+     "fi": [
+      "Nepal",
+      "Intia",
+      "Kiina",
+      "Bhutan",
+      "Pakistan"
+     ],
+     "en": [
+      "Nepal",
+      "India",
+      "China",
+      "Bhutan",
+      "Pakistan"
+     ],
+     "h": {
+      "fi": "Himalaja",
+      "en": "Himalayas"
+     }
+    },
+    {
+     "fi": [
+      "Kanada",
+      "Yhdysvallat",
+      "USA",
+      "Amerikka"
+     ],
+     "en": [
+      "Canada",
+      "United States",
+      "USA",
+      "US",
+      "America"
+     ],
+     "h": {
+      "fi": "Kalliovuoret",
+      "en": "Rocky Mountains"
+     }
+    },
+    {
+     "fi": [
+      "Venäjä",
+      "Kazakstan"
+     ],
+     "en": [
+      "Russia",
+      "Kazakhstan"
+     ],
+     "h": {
+      "fi": "Ural",
+      "en": "Ural Mountains"
+     }
+    },
+    {
+     "fi": [
+      "Itävalta",
+      "Ranska",
+      "Saksa",
+      "Italia",
+      "Liechtenstein",
+      "Monaco",
+      "Slovenia",
+      "Sveitsi"
+     ],
+     "en": [
+      "Austria",
+      "France",
+      "Germany",
+      "Italy",
+      "Liechtenstein",
+      "Monaco",
+      "Slovenia",
+      "Switzerland"
+     ],
+     "h": {
+      "fi": "Alpit",
+      "en": "Alps"
+     }
+    },
+    {
+     "fi": [
+      "Norja",
+      "Ruotsi",
+      "Suomi"
+     ],
+     "en": [
+      "Norway",
+      "Sweden",
+      "Finland"
+     ],
+     "h": {
+      "fi": "Skandit",
+      "en": "Scandinavian Mountains"
+     }
+    },
+    {
+     "fi": [
+      "Marokko",
+      "Algeria",
+      "Tunisia"
+     ],
+     "en": [
+      "Morocco",
+      "Algeria",
+      "Tunisia"
+     ],
+     "h": {
+      "fi": "Atlasvuoret",
+      "en": "Atlas Mountains"
+     }
+    },
+    {
+     "fi": [
+      "Australia"
+     ],
+     "en": [
+      "Australia"
+     ],
+     "h": {
+      "fi": "Australian Kordillieerit (Great Dividing Range)",
+      "en": "Great Dividing Range"
+     }
+    },
+    {
+     "fi": [
+      "Uusi-Seelanti"
+     ],
+     "en": [
+      "New Zealand"
+     ],
+     "h": {
+      "fi": "Eteläiset Alpit",
+      "en": "Southern Alps"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-vakirikkaimmat-saaret",
+   "cat": "maantieto",
+   "t": 63,
+   "title": {
+    "fi": "Maailman 7 väkirikkainta saarta (Wikipedia 2026)",
+    "en": "The world's 7 most populous islands (Wikipedia 2026)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Jaava",
+      "Java"
+     ],
+     "en": [
+      "Java"
+     ]
+    },
+    {
+     "fi": [
+      "Honshū",
+      "Honshu"
+     ],
+     "en": [
+      "Honshu"
+     ]
+    },
+    {
+     "fi": [
+      "Iso-Britannia"
+     ],
+     "en": [
+      "Great Britain"
+     ]
+    },
+    {
+     "fi": [
+      "Luzon"
+     ],
+     "en": [
+      "Luzon"
+     ]
+    },
+    {
+     "fi": [
+      "Sumatra"
+     ],
+     "en": [
+      "Sumatra"
+     ]
+    },
+    {
+     "fi": [
+      "Madagaskar"
+     ],
+     "en": [
+      "Madagascar"
+     ]
+    },
+    {
+     "fi": [
+      "Mindanao"
+     ],
+     "en": [
+      "Mindanao"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-korkeat-paakaupungit",
+   "cat": "maantieto",
+   "t": 72,
+   "title": {
+    "fi": "Ilmanalaa: pääkaupungit yli 2000 metrin korkeudessa (Bolivialla kaksi; vihjeenä korkeus)",
+    "en": "Thin air: capitals above 2,000 m (Bolivia has two; clue: elevation)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Korkeus",
+    "en": "Elevation"
+   },
+   "items": [
+    {
+     "fi": [
+      "La Paz"
+     ],
+     "en": [
+      "La Paz"
+     ],
+     "h": "3640 m"
+    },
+    {
+     "fi": [
+      "Quito"
+     ],
+     "en": [
+      "Quito"
+     ],
+     "h": "2850 m"
+    },
+    {
+     "fi": [
+      "Sucre"
+     ],
+     "en": [
+      "Sucre"
+     ],
+     "h": "2790 m"
+    },
+    {
+     "fi": [
+      "Bogotá"
+     ],
+     "en": [
+      "Bogotá"
+     ],
+     "h": "2625 m"
+    },
+    {
+     "fi": [
+      "Addis Abeba",
+      "Addis Ababa"
+     ],
+     "en": [
+      "Addis Ababa"
+     ],
+     "h": "2355 m"
+    },
+    {
+     "fi": [
+      "Thimphu"
+     ],
+     "en": [
+      "Thimphu"
+     ],
+     "h": "2334 m"
+    },
+    {
+     "fi": [
+      "Asmara"
+     ],
+     "en": [
+      "Asmara"
+     ],
+     "h": "2325 m"
+    },
+    {
+     "fi": [
+      "Sanaa",
+      "Sana'a"
+     ],
+     "en": [
+      "Sana'a",
+      "Sanaa"
+     ],
+     "h": "2250 m"
+    },
+    {
+     "fi": [
+      "Méxicon kaupunki",
+      "Mexico City",
+      "México"
+     ],
+     "en": [
+      "Mexico City"
+     ],
+     "h": "2240 m"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-etelaisimmat-paakaupungit",
+   "cat": "maantieto",
+   "t": 64,
+   "title": {
+    "fi": "Maailman 8 eteläisintä pääkaupunkia (itsenäiset valtiot; Etelä-Afrikan kolme pääkaupunkia lasketaan erikseen)",
+    "en": "The world's 8 southernmost capitals (sovereign states; South Africa's three capitals count separately)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Leveyspiiri",
+    "en": "Latitude"
+   },
+   "items": [
+    {
+     "fi": [
+      "Wellington"
+     ],
+     "en": [
+      "Wellington"
+     ],
+     "h": "41° 17′ S"
+    },
+    {
+     "fi": [
+      "Canberra"
+     ],
+     "en": [
+      "Canberra"
+     ],
+     "h": "35° 17′ S"
+    },
+    {
+     "fi": [
+      "Montevideo"
+     ],
+     "en": [
+      "Montevideo"
+     ],
+     "h": "34° 53′ S"
+    },
+    {
+     "fi": [
+      "Buenos Aires"
+     ],
+     "en": [
+      "Buenos Aires"
+     ],
+     "h": "34° 36′ S"
+    },
+    {
+     "fi": [
+      "Kapkaupunki",
+      "Cape Town"
+     ],
+     "en": [
+      "Cape Town"
+     ],
+     "h": "33° 55′ S"
+    },
+    {
+     "fi": [
+      "Santiago",
+      "Santiago de Chile"
+     ],
+     "en": [
+      "Santiago"
+     ],
+     "h": "33° 27′ S"
+    },
+    {
+     "fi": [
+      "Maseru"
+     ],
+     "en": [
+      "Maseru"
+     ],
+     "h": "29° 19′ S"
+    },
+    {
+     "fi": [
+      "Bloemfontein"
+     ],
+     "en": [
+      "Bloemfontein"
+     ],
+     "h": "29° 07′ S"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-nimien-merkitykset",
+   "cat": "maantieto",
+   "t": 232,
+   "title": {
+    "fi": "Mitä nimi tarkoittaa? 29 paikkaa Amerikassa, Aasiassa ja Oseaniassa (vihjeenä nimen merkitys)",
+    "en": "What does the name mean? 29 places in the Americas, Asia and Oceania (clue: the meaning)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Merkitys",
+    "en": "Meaning"
+   },
+   "items": [
+    {
+     "fi": [
+      "Buenos Aires"
+     ],
+     "en": [
+      "Buenos Aires"
+     ],
+     "h": {
+      "fi": "Hyvät tuulet (espanja)",
+      "en": "Good winds (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Costa Rica"
+     ],
+     "en": [
+      "Costa Rica"
+     ],
+     "h": {
+      "fi": "Rikas rannikko (espanja)",
+      "en": "Rich coast (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Puerto Rico"
+     ],
+     "en": [
+      "Puerto Rico"
+     ],
+     "h": {
+      "fi": "Rikas satama (espanja)",
+      "en": "Rich port (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "El Salvador"
+     ],
+     "en": [
+      "El Salvador"
+     ],
+     "h": {
+      "fi": "Vapahtaja (espanja)",
+      "en": "The Saviour (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Ecuador"
+     ],
+     "en": [
+      "Ecuador"
+     ],
+     "h": {
+      "fi": "Päiväntasaaja (espanja)",
+      "en": "Equator (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Honduras"
+     ],
+     "en": [
+      "Honduras"
+     ],
+     "h": {
+      "fi": "Syvyydet (espanja)",
+      "en": "Depths (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Venezuela"
+     ],
+     "en": [
+      "Venezuela"
+     ],
+     "h": {
+      "fi": "Pikku-Venetsia (espanja)",
+      "en": "Little Venice (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Argentiina"
+     ],
+     "en": [
+      "Argentina"
+     ],
+     "h": {
+      "fi": "Hopea (latina)",
+      "en": "Silver (Latin)"
+     }
+    },
+    {
+     "fi": [
+      "Rio de Janeiro",
+      "Rio"
+     ],
+     "en": [
+      "Rio de Janeiro"
+     ],
+     "h": {
+      "fi": "Tammikuun joki (portugali)",
+      "en": "River of January (Portuguese)"
+     }
+    },
+    {
+     "fi": [
+      "Los Angeles"
+     ],
+     "en": [
+      "Los Angeles"
+     ],
+     "h": {
+      "fi": "Enkelit (espanja)",
+      "en": "The Angels (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Las Vegas"
+     ],
+     "en": [
+      "Las Vegas"
+     ],
+     "h": {
+      "fi": "Niityt (espanja)",
+      "en": "The Meadows (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Nevada"
+     ],
+     "en": [
+      "Nevada"
+     ],
+     "h": {
+      "fi": "Lumipeitteinen (espanja)",
+      "en": "Snow-covered (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Colorado"
+     ],
+     "en": [
+      "Colorado"
+     ],
+     "h": {
+      "fi": "Punertava (espanja)",
+      "en": "Reddish (Spanish)"
+     }
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ],
+     "h": {
+      "fi": "Kylä (irokeesikieli)",
+      "en": "Village (Iroquoian)"
+     }
+    },
+    {
+     "fi": [
+      "Mississippi"
+     ],
+     "en": [
+      "Mississippi"
+     ],
+     "h": {
+      "fi": "Suuri joki (odžibwe)",
+      "en": "Great river (Ojibwe)"
+     }
+    },
+    {
+     "fi": [
+      "Singapore"
+     ],
+     "en": [
+      "Singapore"
+     ],
+     "h": {
+      "fi": "Leijonakaupunki (sanskrit)",
+      "en": "Lion city (Sanskrit)"
+     }
+    },
+    {
+     "fi": [
+      "Kuala Lumpur"
+     ],
+     "en": [
+      "Kuala Lumpur"
+     ],
+     "h": {
+      "fi": "Mutainen jokien yhtymäkohta (malaiji)",
+      "en": "Muddy confluence (Malay)"
+     }
+    },
+    {
+     "fi": [
+      "Peking",
+      "Beijing"
+     ],
+     "en": [
+      "Beijing",
+      "Peking"
+     ],
+     "h": {
+      "fi": "Pohjoinen pääkaupunki (kiina)",
+      "en": "Northern capital (Chinese)"
+     }
+    },
+    {
+     "fi": [
+      "Nanjing",
+      "Nanking"
+     ],
+     "en": [
+      "Nanjing",
+      "Nanking"
+     ],
+     "h": {
+      "fi": "Eteläinen pääkaupunki (kiina)",
+      "en": "Southern capital (Chinese)"
+     }
+    },
+    {
+     "fi": [
+      "Tokio",
+      "Tokyo"
+     ],
+     "en": [
+      "Tokyo"
+     ],
+     "h": {
+      "fi": "Itäinen pääkaupunki (japani)",
+      "en": "Eastern capital (Japanese)"
+     }
+    },
+    {
+     "fi": [
+      "Hongkong",
+      "Hong Kong"
+     ],
+     "en": [
+      "Hong Kong"
+     ],
+     "h": {
+      "fi": "Tuoksuva satama (kiina)",
+      "en": "Fragrant harbour (Chinese)"
+     }
+    },
+    {
+     "fi": [
+      "Soul",
+      "Seoul"
+     ],
+     "en": [
+      "Seoul"
+     ],
+     "h": {
+      "fi": "Pääkaupunki (korea)",
+      "en": "Capital city (Korean)"
+     }
+    },
+    {
+     "fi": [
+      "Yangon",
+      "Rangoon"
+     ],
+     "en": [
+      "Yangon",
+      "Rangoon"
+     ],
+     "h": {
+      "fi": "Riidan loppu (burma)",
+      "en": "End of strife (Burmese)"
+     }
+    },
+    {
+     "fi": [
+      "Ulaanbaatar",
+      "Ulan Bator"
+     ],
+     "en": [
+      "Ulaanbaatar",
+      "Ulan Bator"
+     ],
+     "h": {
+      "fi": "Punainen sankari (mongoli)",
+      "en": "Red hero (Mongolian)"
+     }
+    },
+    {
+     "fi": [
+      "Himalaja",
+      "Himalaya"
+     ],
+     "en": [
+      "Himalayas",
+      "Himalaya"
+     ],
+     "h": {
+      "fi": "Lumen asuinsija (sanskrit)",
+      "en": "Abode of snow (Sanskrit)"
+     }
+    },
+    {
+     "fi": [
+      "Indonesia"
+     ],
+     "en": [
+      "Indonesia"
+     ],
+     "h": {
+      "fi": "Intian saaret (kreikka)",
+      "en": "Indian islands (Greek)"
+     }
+    },
+    {
+     "fi": [
+      "Polynesia"
+     ],
+     "en": [
+      "Polynesia"
+     ],
+     "h": {
+      "fi": "Monet saaret (kreikka)",
+      "en": "Many islands (Greek)"
+     }
+    },
+    {
+     "fi": [
+      "Melanesia"
+     ],
+     "en": [
+      "Melanesia"
+     ],
+     "h": {
+      "fi": "Mustat saaret (kreikka)",
+      "en": "Black islands (Greek)"
+     }
+    },
+    {
+     "fi": [
+      "Australia"
+     ],
+     "en": [
+      "Australia"
+     ],
+     "h": {
+      "fi": "Eteläinen (latina)",
+      "en": "Southern (Latin)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-postilyhenteet",
+   "cat": "maantieto",
+   "t": 217,
+   "title": {
+    "fi": "Pro: Yhdysvaltain osavaltiot postilyhenteestä – vain ne, joiden lyhenne ei ole nimen kaksi ensimmäistä kirjainta",
+    "en": "Pro: US states from their postal code – only those whose code is not the first two letters of the name"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Lyhenne",
+    "en": "Code"
+   },
+   "items": [
+    {
+     "fi": [
+      "Alaska"
+     ],
+     "en": [
+      "Alaska"
+     ],
+     "h": "AK"
+    },
+    {
+     "fi": [
+      "Arizona"
+     ],
+     "en": [
+      "Arizona"
+     ],
+     "h": "AZ"
+    },
+    {
+     "fi": [
+      "Connecticut"
+     ],
+     "en": [
+      "Connecticut"
+     ],
+     "h": "CT"
+    },
+    {
+     "fi": [
+      "Georgia"
+     ],
+     "en": [
+      "Georgia"
+     ],
+     "h": "GA"
+    },
+    {
+     "fi": [
+      "Havaiji",
+      "Hawaii"
+     ],
+     "en": [
+      "Hawaii"
+     ],
+     "h": "HI"
+    },
+    {
+     "fi": [
+      "Iowa"
+     ],
+     "en": [
+      "Iowa"
+     ],
+     "h": "IA"
+    },
+    {
+     "fi": [
+      "Kansas"
+     ],
+     "en": [
+      "Kansas"
+     ],
+     "h": "KS"
+    },
+    {
+     "fi": [
+      "Kentucky"
+     ],
+     "en": [
+      "Kentucky"
+     ],
+     "h": "KY"
+    },
+    {
+     "fi": [
+      "Louisiana"
+     ],
+     "en": [
+      "Louisiana"
+     ],
+     "h": "LA"
+    },
+    {
+     "fi": [
+      "Maryland"
+     ],
+     "en": [
+      "Maryland"
+     ],
+     "h": "MD"
+    },
+    {
+     "fi": [
+      "Maine"
+     ],
+     "en": [
+      "Maine"
+     ],
+     "h": "ME"
+    },
+    {
+     "fi": [
+      "Minnesota"
+     ],
+     "en": [
+      "Minnesota"
+     ],
+     "h": "MN"
+    },
+    {
+     "fi": [
+      "Missouri"
+     ],
+     "en": [
+      "Missouri"
+     ],
+     "h": "MO"
+    },
+    {
+     "fi": [
+      "Mississippi"
+     ],
+     "en": [
+      "Mississippi"
+     ],
+     "h": "MS"
+    },
+    {
+     "fi": [
+      "Montana"
+     ],
+     "en": [
+      "Montana"
+     ],
+     "h": "MT"
+    },
+    {
+     "fi": [
+      "Pohjois-Carolina",
+      "North Carolina"
+     ],
+     "en": [
+      "North Carolina"
+     ],
+     "h": "NC"
+    },
+    {
+     "fi": [
+      "Pohjois-Dakota",
+      "North Dakota"
+     ],
+     "en": [
+      "North Dakota"
+     ],
+     "h": "ND"
+    },
+    {
+     "fi": [
+      "New Hampshire"
+     ],
+     "en": [
+      "New Hampshire"
+     ],
+     "h": "NH"
+    },
+    {
+     "fi": [
+      "New Jersey"
+     ],
+     "en": [
+      "New Jersey"
+     ],
+     "h": "NJ"
+    },
+    {
+     "fi": [
+      "New Mexico"
+     ],
+     "en": [
+      "New Mexico"
+     ],
+     "h": "NM"
+    },
+    {
+     "fi": [
+      "Nevada"
+     ],
+     "en": [
+      "Nevada"
+     ],
+     "h": "NV"
+    },
+    {
+     "fi": [
+      "New York"
+     ],
+     "en": [
+      "New York"
+     ],
+     "h": "NY"
+    },
+    {
+     "fi": [
+      "Pennsylvania"
+     ],
+     "en": [
+      "Pennsylvania"
+     ],
+     "h": "PA"
+    },
+    {
+     "fi": [
+      "Rhode Island"
+     ],
+     "en": [
+      "Rhode Island"
+     ],
+     "h": "RI"
+    },
+    {
+     "fi": [
+      "Etelä-Carolina",
+      "South Carolina"
+     ],
+     "en": [
+      "South Carolina"
+     ],
+     "h": "SC"
+    },
+    {
+     "fi": [
+      "Etelä-Dakota",
+      "South Dakota"
+     ],
+     "en": [
+      "South Dakota"
+     ],
+     "h": "SD"
+    },
+    {
+     "fi": [
+      "Tennessee"
+     ],
+     "en": [
+      "Tennessee"
+     ],
+     "h": "TN"
+    },
+    {
+     "fi": [
+      "Texas"
+     ],
+     "en": [
+      "Texas"
+     ],
+     "h": "TX"
+    },
+    {
+     "fi": [
+      "Virginia"
+     ],
+     "en": [
+      "Virginia"
+     ],
+     "h": "VA"
+    },
+    {
+     "fi": [
+      "Vermont"
+     ],
+     "en": [
+      "Vermont"
+     ],
+     "h": "VT"
+    },
+    {
+     "fi": [
+      "Länsi-Virginia",
+      "West Virginia"
+     ],
+     "en": [
+      "West Virginia"
+     ],
+     "h": "WV"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-kesa-ja-talvikisat",
+   "cat": "maantieto",
+   "t": 72,
+   "title": {
+    "fi": "Maat, jotka ovat isännöineet sekä kesä- että talviolympialaiset (1896–2026; Neuvostoliitto lasketaan Venäjäksi)",
+    "en": "Countries that have hosted both Summer and Winter Olympics (1896–2026; the Soviet Union counts as Russia)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "Amerikka"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "US",
+      "America"
+     ]
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ]
+    },
+    {
+     "fi": [
+      "Saksa"
+     ],
+     "en": [
+      "Germany"
+     ]
+    },
+    {
+     "fi": [
+      "Italia"
+     ],
+     "en": [
+      "Italy"
+     ]
+    },
+    {
+     "fi": [
+      "Japani"
+     ],
+     "en": [
+      "Japan"
+     ]
+    },
+    {
+     "fi": [
+      "Kanada"
+     ],
+     "en": [
+      "Canada"
+     ]
+    },
+    {
+     "fi": [
+      "Venäjä",
+      "Neuvostoliitto"
+     ],
+     "en": [
+      "Russia",
+      "Soviet Union",
+      "USSR"
+     ]
+    },
+    {
+     "fi": [
+      "Kiina"
+     ],
+     "en": [
+      "China"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Korea"
+     ],
+     "en": [
+      "South Korea"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-maraton-majorit",
+   "cat": "maantieto",
+   "t": 56,
+   "title": {
+    "fi": "World Marathon Majors -sarjan 7 kaupunkia (2026)",
+    "en": "The 7 cities of the World Marathon Majors (2026)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tokio",
+      "Tokyo"
+     ],
+     "en": [
+      "Tokyo"
+     ]
+    },
+    {
+     "fi": [
+      "Boston"
+     ],
+     "en": [
+      "Boston"
+     ]
+    },
+    {
+     "fi": [
+      "Lontoo"
+     ],
+     "en": [
+      "London"
+     ]
+    },
+    {
+     "fi": [
+      "Berliini"
+     ],
+     "en": [
+      "Berlin"
+     ]
+    },
+    {
+     "fi": [
+      "Chicago"
+     ],
+     "en": [
+      "Chicago"
+     ]
+    },
+    {
+     "fi": [
+      "New York"
+     ],
+     "en": [
+      "New York"
+     ]
+    },
+    {
+     "fi": [
+      "Sydney"
+     ],
+     "en": [
+      "Sydney"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-etelamannersopimus",
+   "cat": "maantieto",
+   "t": 84,
+   "title": {
+    "fi": "Etelämannersopimuksen 12 alkuperäistä allekirjoittajaa (1959; Neuvostoliitto = Venäjä)",
+    "en": "The 12 original signatories of the Antarctic Treaty (1959; Soviet Union = Russia)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Argentiina"
+     ],
+     "en": [
+      "Argentina"
+     ]
+    },
+    {
+     "fi": [
+      "Australia"
+     ],
+     "en": [
+      "Australia"
+     ]
+    },
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ]
+    },
+    {
+     "fi": [
+      "Chile"
+     ],
+     "en": [
+      "Chile"
+     ]
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ]
+    },
+    {
+     "fi": [
+      "Japani"
+     ],
+     "en": [
+      "Japan"
+     ]
+    },
+    {
+     "fi": [
+      "Uusi-Seelanti"
+     ],
+     "en": [
+      "New Zealand"
+     ]
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Afrikka"
+     ],
+     "en": [
+      "South Africa"
+     ]
+    },
+    {
+     "fi": [
+      "Venäjä",
+      "Neuvostoliitto"
+     ],
+     "en": [
+      "Russia",
+      "Soviet Union",
+      "USSR"
+     ]
+    },
+    {
+     "fi": [
+      "Yhdistynyt kuningaskunta",
+      "Iso-Britannia",
+      "Britannia"
+     ],
+     "en": [
+      "United Kingdom",
+      "UK",
+      "Great Britain",
+      "Britain"
+     ]
+    },
+    {
+     "fi": [
+      "Yhdysvallat",
+      "USA",
+      "Amerikka"
+     ],
+     "en": [
+      "United States",
+      "USA",
+      "US",
+      "America"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-suurimmat-sisamaavaltiot",
+   "cat": "maantieto",
+   "t": 64,
+   "title": {
+    "fi": "Maailman 8 pinta-alaltaan suurinta sisämaavaltiota",
+    "en": "The world's 8 largest landlocked countries by area"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kazakstan"
+     ],
+     "en": [
+      "Kazakhstan"
+     ]
+    },
+    {
+     "fi": [
+      "Mongolia"
+     ],
+     "en": [
+      "Mongolia"
+     ]
+    },
+    {
+     "fi": [
+      "Tšad",
+      "Tsad"
+     ],
+     "en": [
+      "Chad"
+     ]
+    },
+    {
+     "fi": [
+      "Niger"
+     ],
+     "en": [
+      "Niger"
+     ]
+    },
+    {
+     "fi": [
+      "Mali"
+     ],
+     "en": [
+      "Mali"
+     ]
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ]
+    },
+    {
+     "fi": [
+      "Bolivia"
+     ],
+     "en": [
+      "Bolivia"
+     ]
+    },
+    {
+     "fi": [
+      "Sambia"
+     ],
+     "en": [
+      "Zambia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-etelamanner",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 180,
+   "title": {
+    "fi": "Etelämanner: tutkijat, asemat ja ennätykset",
+    "en": "Antarctica: explorers, stations and records"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Kuka johti ensimmäistä retkikuntaa, joka saavutti etelänavan?",
+      "en": "Who led the first expedition to reach the South Pole?"
+     },
+     "ok": {
+      "fi": "Roald Amundsen",
+      "en": "Roald Amundsen"
+     },
+     "no": [
+      {
+       "fi": "Robert Falcon Scott",
+       "en": "Robert Falcon Scott"
+      },
+      {
+       "fi": "Ernest Shackleton",
+       "en": "Ernest Shackleton"
+      },
+      {
+       "fi": "Fridtjof Nansen",
+       "en": "Fridtjof Nansen"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna etelänapa saavutettiin ensimmäisen kerran?",
+      "en": "In which year was the South Pole first reached?"
+     },
+     "ok": {
+      "fi": "1911",
+      "en": "1911"
+     },
+     "no": [
+      {
+       "fi": "1909",
+       "en": "1909"
+      },
+      {
+       "fi": "1914",
+       "en": "1914"
+      },
+      {
+       "fi": "1928",
+       "en": "1928"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka saapui etelänavalle noin viisi viikkoa ensimmäisen retkikunnan jälkeen ja menehtyi paluumatkalla?",
+      "en": "Who reached the South Pole about five weeks after the first party and died on the way back?"
+     },
+     "ok": {
+      "fi": "Robert Falcon Scott",
+      "en": "Robert Falcon Scott"
+     },
+     "no": [
+      {
+       "fi": "Ernest Shackleton",
+       "en": "Ernest Shackleton"
+      },
+      {
+       "fi": "Douglas Mawson",
+       "en": "Douglas Mawson"
+      },
+      {
+       "fi": "Richard Byrd",
+       "en": "Richard Byrd"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Etelämantereen korkein vuori?",
+      "en": "What is Antarctica's highest mountain?"
+     },
+     "ok": {
+      "fi": "Vinson Massif",
+      "en": "Vinson Massif"
+     },
+     "no": [
+      {
+       "fi": "Mount Erebus",
+       "en": "Mount Erebus"
+      },
+      {
+       "fi": "Mount Kirkpatrick",
+       "en": "Mount Kirkpatrick"
+      },
+      {
+       "fi": "Mount Terror",
+       "en": "Mount Terror"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä asemalla mitattiin maan pinnan alin luotettavasti mitattu ilman lämpötila, −89,2 °C (1983)?",
+      "en": "At which station was −89.2 °C (1983), the lowest reliably measured surface air temperature, recorded?"
+     },
+     "ok": {
+      "fi": "Vostok",
+      "en": "Vostok"
+     },
+     "no": [
+      {
+       "fi": "McMurdo",
+       "en": "McMurdo"
+      },
+      {
+       "fi": "Amundsen–Scott",
+       "en": "Amundsen–Scott"
+      },
+      {
+       "fi": "Mirny",
+       "en": "Mirny"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Etelämannersopimus allekirjoitettiin?",
+      "en": "In which year was the Antarctic Treaty signed?"
+     },
+     "ok": {
+      "fi": "1959",
+      "en": "1959"
+     },
+     "no": [
+      {
+       "fi": "1945",
+       "en": "1945"
+      },
+      {
+       "fi": "1972",
+       "en": "1972"
+      },
+      {
+       "fi": "1991",
+       "en": "1991"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Suomen tutkimusaseman nimi Etelämantereella?",
+      "en": "What is the name of Finland's research station in Antarctica?"
+     },
+     "ok": {
+      "fi": "Aboa",
+      "en": "Aboa"
+     },
+     "no": [
+      {
+       "fi": "Fennia",
+       "en": "Fennia"
+      },
+      {
+       "fi": "Wasa",
+       "en": "Wasa"
+      },
+      {
+       "fi": "Kalevala",
+       "en": "Kalevala"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Rossinsaarella oleva Etelämantereen tunnetuin toimiva tulivuori?",
+      "en": "What is the famous active volcano on Ross Island?"
+     },
+     "ok": {
+      "fi": "Mount Erebus",
+      "en": "Mount Erebus"
+     },
+     "no": [
+      {
+       "fi": "Mount Vinson",
+       "en": "Mount Vinson"
+      },
+      {
+       "fi": "Mount Sidley",
+       "en": "Mount Sidley"
+      },
+      {
+       "fi": "Deception Island",
+       "en": "Deception Island"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Etelämantereen suurin jäähylly?",
+      "en": "What is Antarctica's largest ice shelf?"
+     },
+     "ok": {
+      "fi": "Rossin jäähylly",
+      "en": "Ross Ice Shelf"
+     },
+     "no": [
+      {
+       "fi": "Larsenin jäähylly",
+       "en": "Larsen Ice Shelf"
+      },
+      {
+       "fi": "Filchnerin jäähylly",
+       "en": "Filchner Ice Shelf"
+      },
+      {
+       "fi": "Ameryn jäähylly",
+       "en": "Amery Ice Shelf"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä merialue erottaa Etelä-Amerikan ja Etelämantereen?",
+      "en": "Which body of water separates South America from Antarctica?"
+     },
+     "ok": {
+      "fi": "Draken salmi",
+      "en": "Drake Passage"
+     },
+     "no": [
+      {
+       "fi": "Magalhãesinsalmi",
+       "en": "Strait of Magellan"
+      },
+      {
+       "fi": "Beaglen kanaali",
+       "en": "Beagle Channel"
+      },
+      {
+       "fi": "Weddellinmeri",
+       "en": "Weddell Sea"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Etelämantereen suurin tutkimusasema (Yhdysvallat)?",
+      "en": "What is the largest research station in Antarctica (United States)?"
+     },
+     "ok": {
+      "fi": "McMurdo",
+      "en": "McMurdo"
+     },
+     "no": [
+      {
+       "fi": "Palmer",
+       "en": "Palmer"
+      },
+      {
+       "fi": "Byrd",
+       "en": "Byrd"
+      },
+      {
+       "fi": "Halley",
+       "en": "Halley"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä pingviinilaji pesii Etelämantereen talven pimeydessä?",
+      "en": "Which penguin breeds through the dark Antarctic winter?"
+     },
+     "ok": {
+      "fi": "Keisaripingviini",
+      "en": "Emperor penguin"
+     },
+     "no": [
+      {
+       "fi": "Kuningaspingviini",
+       "en": "King penguin"
+      },
+      {
+       "fi": "Jääpingviini",
+       "en": "Adélie penguin"
+      },
+      {
+       "fi": "Myssypingviini",
+       "en": "Chinstrap penguin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio esittää aluevaatimuksen suurimpaan osaan Etelämannerta?",
+      "en": "Which country claims the largest share of Antarctica?"
+     },
+     "ok": {
+      "fi": "Australia",
+      "en": "Australia"
+     },
+     "no": [
+      {
+       "fi": "Norja",
+       "en": "Norway"
+      },
+      {
+       "fi": "Argentiina",
+       "en": "Argentina"
+      },
+      {
+       "fi": "Iso-Britannia",
+       "en": "United Kingdom"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Norjan aluevaatimuksen nimi Etelämantereella?",
+      "en": "What is Norway's Antarctic claim called?"
+     },
+     "ok": {
+      "fi": "Kuningatar Maudin maa",
+      "en": "Queen Maud Land"
+     },
+     "no": [
+      {
+       "fi": "Grahaminmaa",
+       "en": "Graham Land"
+      },
+      {
+       "fi": "Marie Byrdin maa",
+       "en": "Marie Byrd Land"
+      },
+      {
+       "fi": "Viktorian maa",
+       "en": "Victoria Land"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan aikaa etelänavan Amundsen–Scott-asemalla käytetään?",
+      "en": "Whose time zone does the Amundsen–Scott South Pole Station use?"
+     },
+     "ok": {
+      "fi": "Uuden-Seelannin",
+      "en": "New Zealand's"
+     },
+     "no": [
+      {
+       "fi": "Chilen",
+       "en": "Chile's"
+      },
+      {
+       "fi": "Australian",
+       "en": "Australia's"
+      },
+      {
+       "fi": "UTC:n (Greenwich)",
+       "en": "UTC (Greenwich)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-aikavyohykkeet",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Aikavyöhykkeet ja päivämääräraja",
+    "en": "Time zones and the date line"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mikä valtio ottaa ensimmäisenä vastaan uuden vuoden (aikavyöhyke UTC+14)?",
+      "en": "Which country is first to see the New Year (UTC+14)?"
+     },
+     "ok": {
+      "fi": "Kiribati",
+      "en": "Kiribati"
+     },
+     "no": [
+      {
+       "fi": "Uusi-Seelanti",
+       "en": "New Zealand"
+      },
+      {
+       "fi": "Tonga",
+       "en": "Tonga"
+      },
+      {
+       "fi": "Fidži",
+       "en": "Fiji"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä päivämäärän Samoa hyppäsi kokonaan yli siirtyessään päivämäärärajan toiselle puolelle vuonna 2011?",
+      "en": "Which date did Samoa skip entirely when it moved across the date line in 2011?"
+     },
+     "ok": {
+      "fi": "30. joulukuuta",
+      "en": "30 December"
+     },
+     "no": [
+      {
+       "fi": "31. joulukuuta",
+       "en": "31 December"
+      },
+      {
+       "fi": "29. helmikuuta",
+       "en": "29 February"
+      },
+      {
+       "fi": "1. tammikuuta",
+       "en": "1 January"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Montako virallista aikavyöhykettä Kiinalla on?",
+      "en": "How many official time zones does China use?"
+     },
+     "ok": {
+      "fi": "1",
+      "en": "1"
+     },
+     "no": [
+      {
+       "fi": "3",
+       "en": "3"
+      },
+      {
+       "fi": "5",
+       "en": "5"
+      },
+      {
+       "fi": "7",
+       "en": "7"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Intian aikavyöhyke?",
+      "en": "What is India's time zone?"
+     },
+     "ok": {
+      "fi": "UTC+5.30",
+      "en": "UTC+5:30"
+     },
+     "no": [
+      {
+       "fi": "UTC+5",
+       "en": "UTC+5"
+      },
+      {
+       "fi": "UTC+6",
+       "en": "UTC+6"
+      },
+      {
+       "fi": "UTC+4.30",
+       "en": "UTC+4:30"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä maassa on käytössä aikavyöhyke UTC+5.45?",
+      "en": "Which country uses UTC+5:45?"
+     },
+     "ok": {
+      "fi": "Nepal",
+      "en": "Nepal"
+     },
+     "no": [
+      {
+       "fi": "Bhutan",
+       "en": "Bhutan"
+      },
+      {
+       "fi": "Sri Lanka",
+       "en": "Sri Lanka"
+      },
+      {
+       "fi": "Myanmar",
+       "en": "Myanmar"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä valtiolla on merentakaiset alueet mukaan lukien eniten aikavyöhykkeitä?",
+      "en": "Which country has the most time zones, overseas territories included?"
+     },
+     "ok": {
+      "fi": "Ranska",
+      "en": "France"
+     },
+     "no": [
+      {
+       "fi": "Venäjä",
+       "en": "Russia"
+      },
+      {
+       "fi": "Yhdysvallat",
+       "en": "United States"
+      },
+      {
+       "fi": "Kiina",
+       "en": "China"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Montako aikavyöhykettä Venäjällä on?",
+      "en": "How many time zones does Russia have?"
+     },
+     "ok": {
+      "fi": "11",
+      "en": "11"
+     },
+     "no": [
+      {
+       "fi": "7",
+       "en": "7"
+      },
+      {
+       "fi": "9",
+       "en": "9"
+      },
+      {
+       "fi": "13",
+       "en": "13"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä pituuspiiriä kansainvälinen päivämääräraja pääosin seuraa?",
+      "en": "Which meridian does the International Date Line mostly follow?"
+     },
+     "ok": {
+      "fi": "180°",
+      "en": "180°"
+     },
+     "no": [
+      {
+       "fi": "0°",
+       "en": "0°"
+      },
+      {
+       "fi": "90° W",
+       "en": "90° W"
+      },
+      {
+       "fi": "150° E",
+       "en": "150° E"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä päivämäärälle tapahtuu, kun ylität päivämäärärajan Amerikasta Aasian suuntaan eli länteen?",
+      "en": "What happens to the date when you cross the date line westward, from America towards Asia?"
+     },
+     "ok": {
+      "fi": "Se siirtyy päivällä eteenpäin",
+      "en": "It moves one day forward"
+     },
+     "no": [
+      {
+       "fi": "Se siirtyy päivällä taaksepäin",
+       "en": "It moves one day back"
+      },
+      {
+       "fi": "Se pysyy samana",
+       "en": "It stays the same"
+      },
+      {
+       "fi": "Kello siirtyy tunnin",
+       "en": "The clock moves one hour"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna kansainvälinen meridiaanikonferenssi valitsi Greenwichin nollameridiaaniksi?",
+      "en": "In which year did the International Meridian Conference choose Greenwich as the prime meridian?"
+     },
+     "ok": {
+      "fi": "1884",
+      "en": "1884"
+     },
+     "no": [
+      {
+       "fi": "1851",
+       "en": "1851"
+      },
+      {
+       "fi": "1900",
+       "en": "1900"
+      },
+      {
+       "fi": "1919",
+       "en": "1919"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä on käytössä poikkeuksellinen aikavyöhyke UTC+12.45?",
+      "en": "Where is the unusual time zone UTC+12:45 used?"
+     },
+     "ok": {
+      "fi": "Chathamsaarilla",
+      "en": "Chatham Islands"
+     },
+     "no": [
+      {
+       "fi": "Tongalla",
+       "en": "Tonga"
+      },
+      {
+       "fi": "Norfolkinsaarella",
+       "en": "Norfolk Island"
+      },
+      {
+       "fi": "Havaijilla",
+       "en": "Hawaii"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä näistä Euroopan maista on Greenwichin pituuspiirillä mutta käyttää Keski-Euroopan aikaa?",
+      "en": "Which of these European countries lies on the Greenwich meridian but uses Central European Time?"
+     },
+     "ok": {
+      "fi": "Espanja",
+      "en": "Spain"
+     },
+     "no": [
+      {
+       "fi": "Portugali",
+       "en": "Portugal"
+      },
+      {
+       "fi": "Irlanti",
+       "en": "Ireland"
+      },
+      {
+       "fi": "Islanti",
+       "en": "Iceland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on Suomen talviaika suhteessa UTC:hen?",
+      "en": "What is Finland's winter (standard) time relative to UTC?"
+     },
+     "ok": {
+      "fi": "UTC+2",
+      "en": "UTC+2"
+     },
+     "no": [
+      {
+       "fi": "UTC+1",
+       "en": "UTC+1"
+      },
+      {
+       "fi": "UTC+3",
+       "en": "UTC+3"
+      },
+      {
+       "fi": "UTC+0",
+       "en": "UTC+0"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Pohjoismaa käyttää ympäri vuoden UTC-aikaa ilman kesäaikaa?",
+      "en": "Which Nordic country uses UTC all year with no daylight saving time?"
+     },
+     "ok": {
+      "fi": "Islanti",
+      "en": "Iceland"
+     },
+     "no": [
+      {
+       "fi": "Norja",
+       "en": "Norway"
+      },
+      {
+       "fi": "Tanska",
+       "en": "Denmark"
+      },
+      {
+       "fi": "Ruotsi",
+       "en": "Sweden"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-4-valtameret",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 168,
+   "title": {
+    "fi": "Valtameret: syvänteet, virrat ja ääripisteet",
+    "en": "Oceans: trenches, currents and extremes"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Missä valtameressä on Point Nemo, kauimpana mantereista oleva meren kohta?",
+      "en": "In which ocean is Point Nemo, the spot farthest from any land?"
+     },
+     "ok": {
+      "fi": "Tyynessä valtameressä",
+      "en": "Pacific Ocean"
+     },
+     "no": [
+      {
+       "fi": "Intian valtameressä",
+       "en": "Indian Ocean"
+      },
+      {
+       "fi": "Atlantissa",
+       "en": "Atlantic Ocean"
+      },
+      {
+       "fi": "Eteläisessä jäämeressä",
+       "en": "Southern Ocean"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Millä merellä ei ole lainkaan maarantaa?",
+      "en": "Which sea has no land coastline at all?"
+     },
+     "ok": {
+      "fi": "Sargassomerellä",
+      "en": "Sargasso Sea"
+     },
+     "no": [
+      {
+       "fi": "Korallimerellä",
+       "en": "Coral Sea"
+      },
+      {
+       "fi": "Tasmaninmerellä",
+       "en": "Tasman Sea"
+      },
+      {
+       "fi": "Weddellinmerellä",
+       "en": "Weddell Sea"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä on Atlantin syvin kohta?",
+      "en": "Where is the deepest point of the Atlantic?"
+     },
+     "ok": {
+      "fi": "Puerto Ricon haudassa",
+      "en": "Puerto Rico Trench"
+     },
+     "no": [
+      {
+       "fi": "Etelä-Sandwichin haudassa",
+       "en": "South Sandwich Trench"
+      },
+      {
+       "fi": "Romanchen haudassa",
+       "en": "Romanche Trench"
+      },
+      {
+       "fi": "Keski-Atlantin selänteellä",
+       "en": "Mid-Atlantic Ridge"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Missä on Intian valtameren syvin kohta?",
+      "en": "Where is the deepest point of the Indian Ocean?"
+     },
+     "ok": {
+      "fi": "Jaavan haudassa",
+      "en": "Java Trench"
+     },
+     "no": [
+      {
+       "fi": "Mariaanien haudassa",
+       "en": "Mariana Trench"
+      },
+      {
+       "fi": "Tongan haudassa",
+       "en": "Tonga Trench"
+      },
+      {
+       "fi": "Kermadecin haudassa",
+       "en": "Kermadec Trench"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio nousee merenpinnan yläpuolelle Keski-Atlantin selänteen päällä?",
+      "en": "Which country rises above sea level on top of the Mid-Atlantic Ridge?"
+     },
+     "ok": {
+      "fi": "Islanti",
+      "en": "Iceland"
+     },
+     "no": [
+      {
+       "fi": "Irlanti",
+       "en": "Ireland"
+      },
+      {
+       "fi": "Kap Verde",
+       "en": "Cape Verde"
+      },
+      {
+       "fi": "Färsaaret",
+       "en": "Faroe Islands"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna ihmiset sukelsivat ensimmäisen kerran Mariaanien haudan pohjaan (Challenger Deep)?",
+      "en": "In which year did humans first descend to the Challenger Deep?"
+     },
+     "ok": {
+      "fi": "1960",
+      "en": "1960"
+     },
+     "no": [
+      {
+       "fi": "1934",
+       "en": "1934"
+      },
+      {
+       "fi": "1969",
+       "en": "1969"
+      },
+      {
+       "fi": "1985",
+       "en": "1985"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuka teki ensimmäisen yksinsukelluksen Challenger Deepiin vuonna 2012?",
+      "en": "Who made the first solo dive to the Challenger Deep in 2012?"
+     },
+     "ok": {
+      "fi": "James Cameron",
+      "en": "James Cameron"
+     },
+     "no": [
+      {
+       "fi": "Jacques Cousteau",
+       "en": "Jacques Cousteau"
+      },
+      {
+       "fi": "Richard Branson",
+       "en": "Richard Branson"
+      },
+      {
+       "fi": "Robert Ballard",
+       "en": "Robert Ballard"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä merivirta lämmittää Pohjois-Euroopan ilmastoa?",
+      "en": "Which current warms Northern Europe's climate?"
+     },
+     "ok": {
+      "fi": "Golfvirta",
+      "en": "Gulf Stream"
+     },
+     "no": [
+      {
+       "fi": "Humboldtin virta",
+       "en": "Humboldt Current"
+      },
+      {
+       "fi": "Kuroshio",
+       "en": "Kuroshio"
+      },
+      {
+       "fi": "Labradorin virta",
+       "en": "Labrador Current"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä kylmä merivirta kulkee Perun ja Chilen rannikolla?",
+      "en": "Which cold current runs along the coasts of Peru and Chile?"
+     },
+     "ok": {
+      "fi": "Humboldtin virta",
+      "en": "Humboldt Current"
+     },
+     "no": [
+      {
+       "fi": "Benguelan virta",
+       "en": "Benguela Current"
+      },
+      {
+       "fi": "Kalifornian virta",
+       "en": "California Current"
+      },
+      {
+       "fi": "Golfvirta",
+       "en": "Gulf Stream"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mitä espanjan sana El Niño tarkoittaa?",
+      "en": "What does the Spanish name El Niño mean?"
+     },
+     "ok": {
+      "fi": "Poikalapsi (Jeesus-lapsi)",
+      "en": "The boy (the Christ child)"
+     },
+     "no": [
+      {
+       "fi": "Lämmin tuuli",
+       "en": "The warm wind"
+      },
+      {
+       "fi": "Pieni myrsky",
+       "en": "The little storm"
+      },
+      {
+       "fi": "Kultainen meri",
+       "en": "The golden sea"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Kuinka suuren osan maapallon pinnasta valtameret peittävät?",
+      "en": "How much of Earth's surface do the oceans cover?"
+     },
+     "ok": {
+      "fi": "Noin 71 %",
+      "en": "About 71%"
+     },
+     "no": [
+      {
+       "fi": "Noin 51 %",
+       "en": "About 51%"
+      },
+      {
+       "fi": "Noin 61 %",
+       "en": "About 61%"
+      },
+      {
+       "fi": "Noin 81 %",
+       "en": "About 81%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mistä kielestä sana tsunami on peräisin?",
+      "en": "Which language does the word tsunami come from?"
+     },
+     "ok": {
+      "fi": "Japanista",
+      "en": "Japanese"
+     },
+     "no": [
+      {
+       "fi": "Indonesiasta",
+       "en": "Indonesian"
+      },
+      {
+       "fi": "Havaijista",
+       "en": "Hawaiian"
+      },
+      {
+       "fi": "Kiinasta",
+       "en": "Chinese"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä valtion rannikolla on maailman suurin koralliriuttajärjestelmä Iso valliriutta?",
+      "en": "Off which country is the Great Barrier Reef, the largest coral reef system?"
+     },
+     "ok": {
+      "fi": "Australian",
+      "en": "Australia"
+     },
+     "no": [
+      {
+       "fi": "Indonesian",
+       "en": "Indonesia"
+      },
+      {
+       "fi": "Filippiinien",
+       "en": "Philippines"
+      },
+      {
+       "fi": "Fidžin",
+       "en": "Fiji"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä järjestö tunnusti Eteläisen jäämeren viidenneksi valtamereksi karttoihinsa vuonna 2021?",
+      "en": "Which organisation recognised the Southern Ocean as the fifth ocean on its maps in 2021?"
+     },
+     "ok": {
+      "fi": "National Geographic",
+      "en": "National Geographic"
+     },
+     "no": [
+      {
+       "fi": "YK",
+       "en": "United Nations"
+      },
+      {
+       "fi": "NASA",
+       "en": "NASA"
+      },
+      {
+       "fi": "Unesco",
+       "en": "UNESCO"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,945 @@
+{
+ "quizzes": [
+  {
+   "id": "kartat-1-ei-a",
+   "cat": "maat",
+   "ans": "name",
+   "t": 210,
+   "title": {
+    "fi": "Maat, joiden suomenkielisessä nimessä ei ole a-kirjainta",
+    "en": "Countries with no letter A in their Finnish name"
+   },
+   "ids": [
+    "CY",
+    "CZ",
+    "EE",
+    "FI",
+    "XK",
+    "LI",
+    "LU",
+    "ME",
+    "SE",
+    "CH",
+    "BN",
+    "PH",
+    "TR",
+    "YE",
+    "BJ",
+    "BI",
+    "KM",
+    "DJ",
+    "EG",
+    "LS",
+    "NE",
+    "SC",
+    "TG",
+    "BZ",
+    "MX",
+    "CL",
+    "PE",
+    "FJ",
+    "RU",
+    "TL"
+   ]
+  },
+  {
+   "id": "kartat-1-alku-loppu",
+   "cat": "maat",
+   "ans": "name",
+   "t": 88,
+   "title": {
+    "fi": "Maat, joiden suomenkielinen nimi alkaa ja loppuu samaan kirjaimeen",
+    "en": "Countries whose Finnish name starts and ends with the same letter"
+   },
+   "ids": [
+    "AL",
+    "AD",
+    "IS",
+    "IE",
+    "AM",
+    "DZ",
+    "AO",
+    "AG",
+    "KN",
+    "AR",
+    "AU"
+   ]
+  },
+  {
+   "id": "kartat-1-nelikirjaimiset",
+   "cat": "maat",
+   "ans": "name",
+   "t": 63,
+   "title": {
+    "fi": "Nelikirjaimiset maat (suomeksi)",
+    "en": "Countries with four letters in Finnish"
+   },
+   "ids": [
+    "EE",
+    "IR",
+    "IQ",
+    "LA",
+    "OM",
+    "TD",
+    "ML",
+    "TG",
+    "PE"
+   ]
+  },
+  {
+   "id": "kartat-1-viisikirjaimiset",
+   "cat": "maat",
+   "ans": "name",
+   "t": 175,
+   "title": {
+    "fi": "Viisikirjaimiset maat (suomeksi)",
+    "en": "Countries with five letters in Finnish"
+   },
+   "ids": [
+    "FI",
+    "DE",
+    "MT",
+    "NO",
+    "PL",
+    "CN",
+    "IN",
+    "NP",
+    "QA",
+    "YE",
+    "BJ",
+    "GA",
+    "GH",
+    "KE",
+    "LY",
+    "NE",
+    "SD",
+    "CU",
+    "HT",
+    "CL",
+    "FJ",
+    "NR",
+    "PW",
+    "WS",
+    "TO"
+   ]
+  },
+  {
+   "id": "kartat-1-pk-sisalla",
+   "cat": "maat",
+   "ans": "name",
+   "t": 128,
+   "title": {
+    "fi": "Maat, joiden nimi ja pääkaupunki ovat sisäkkäin (suomeksi, esim. Tunisia – Tunis)",
+    "en": "Countries whose name and capital contain one another (in Finnish, e.g. Tunisia – Tunis)"
+   },
+   "ids": [
+    "AD",
+    "LU",
+    "MC",
+    "SM",
+    "VA",
+    "KW",
+    "MV",
+    "SG",
+    "DZ",
+    "DJ",
+    "GW",
+    "ST",
+    "TN",
+    "GT",
+    "PA",
+    "BR"
+   ]
+  },
+  {
+   "id": "kartat-1-yksi-naapuri",
+   "cat": "maat",
+   "ans": "name",
+   "t": 120,
+   "title": {
+    "fi": "15 maata, joilla on maarajaa vain yhden valtion kanssa (merentakaisia alueita ei lasketa; Hans-saaren raja lasketaan)",
+    "en": "15 countries with exactly one land neighbour (overseas territories not counted; the Hans Island border counts)"
+   },
+   "ids": [
+    "BN",
+    "DO",
+    "TL",
+    "GM",
+    "HT",
+    "IE",
+    "LS",
+    "MC",
+    "PG",
+    "PT",
+    "QA",
+    "SM",
+    "KR",
+    "GB",
+    "VA"
+   ]
+  },
+  {
+   "id": "kartat-1-sisamaa",
+   "cat": "maat",
+   "ans": "name",
+   "t": 270,
+   "title": {
+    "fi": "Sisämaavaltiot: 45 maata ilman merenrantaa (Kaspianmeren rantavaltiot lasketaan sisämaaksi)",
+    "en": "Landlocked countries: all 45 (Caspian Sea states count as landlocked)"
+   },
+   "ids": [
+    "AD",
+    "AT",
+    "BY",
+    "CZ",
+    "HU",
+    "XK",
+    "LI",
+    "LU",
+    "MK",
+    "MD",
+    "SM",
+    "RS",
+    "SK",
+    "CH",
+    "VA",
+    "AF",
+    "AM",
+    "AZ",
+    "BT",
+    "KZ",
+    "KG",
+    "LA",
+    "MN",
+    "NP",
+    "TJ",
+    "TM",
+    "UZ",
+    "BW",
+    "BF",
+    "BI",
+    "CF",
+    "TD",
+    "SZ",
+    "ET",
+    "LS",
+    "MW",
+    "ML",
+    "NE",
+    "RW",
+    "SS",
+    "UG",
+    "ZM",
+    "ZW",
+    "BO",
+    "PY"
+   ]
+  },
+  {
+   "id": "kartat-1-sisamaa-kartta",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 270,
+   "title": {
+    "fi": "Sisämaavaltiot kartalla (45 maata)",
+    "en": "Landlocked countries on the map (45)"
+   },
+   "ids": [
+    "AD",
+    "AT",
+    "BY",
+    "CZ",
+    "HU",
+    "XK",
+    "LI",
+    "LU",
+    "MK",
+    "MD",
+    "SM",
+    "RS",
+    "SK",
+    "CH",
+    "VA",
+    "AF",
+    "AM",
+    "AZ",
+    "BT",
+    "KZ",
+    "KG",
+    "LA",
+    "MN",
+    "NP",
+    "TJ",
+    "TM",
+    "UZ",
+    "BW",
+    "BF",
+    "BI",
+    "CF",
+    "TD",
+    "SZ",
+    "ET",
+    "LS",
+    "MW",
+    "ML",
+    "NE",
+    "RW",
+    "SS",
+    "UG",
+    "ZM",
+    "ZW",
+    "BO",
+    "PY"
+   ]
+  },
+  {
+   "id": "kartat-1-paivantasaaja",
+   "cat": "maat",
+   "ans": "name",
+   "t": 104,
+   "title": {
+    "fi": "Päiväntasaajan halki: 13 maata, joiden alueen tai aluevesien läpi se kulkee",
+    "en": "Across the equator: the 13 countries whose land or territorial waters it crosses"
+   },
+   "ids": [
+    "EC",
+    "CO",
+    "BR",
+    "ST",
+    "GA",
+    "CG",
+    "CD",
+    "UG",
+    "KE",
+    "SO",
+    "MV",
+    "ID",
+    "KI"
+   ]
+  },
+  {
+   "id": "kartat-1-paivantasaaja-kartta",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 91,
+   "title": {
+    "fi": "Päiväntasaajan 13 maata kartalla",
+    "en": "The 13 equator countries on the map"
+   },
+   "ids": [
+    "EC",
+    "CO",
+    "BR",
+    "ST",
+    "GA",
+    "CG",
+    "CD",
+    "UG",
+    "KE",
+    "SO",
+    "MV",
+    "ID",
+    "KI"
+   ]
+  },
+  {
+   "id": "kartat-1-kravun-kaantopiiri",
+   "cat": "maat",
+   "ans": "name",
+   "t": 128,
+   "title": {
+    "fi": "Kravun kääntöpiiri: 16 valtiota, joiden maa-alueen se halkaisee (Länsi-Saharaa ei lasketa)",
+    "en": "Tropic of Cancer: the 16 states whose land it crosses (Western Sahara not counted)"
+   },
+   "ids": [
+    "MX",
+    "BS",
+    "MR",
+    "ML",
+    "DZ",
+    "NE",
+    "LY",
+    "EG",
+    "SA",
+    "AE",
+    "OM",
+    "IN",
+    "BD",
+    "MM",
+    "CN",
+    "TW"
+   ]
+  },
+  {
+   "id": "kartat-1-kauriin-kaantopiiri",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 70,
+   "title": {
+    "fi": "Kauriin kääntöpiirin halkaisemat 10 maata kartalla (maa-alue)",
+    "en": "The 10 countries the Tropic of Capricorn crosses on land, on the map"
+   },
+   "ids": [
+    "CL",
+    "AR",
+    "PY",
+    "BR",
+    "NA",
+    "BW",
+    "ZA",
+    "MZ",
+    "MG",
+    "AU"
+   ]
+  },
+  {
+   "id": "kartat-1-kesaolympiamaat",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 114,
+   "title": {
+    "fi": "Kesäolympialaisten isäntämaat 1896–2024 kartalla (Neuvostoliitto = Venäjä, Länsi-Saksa = Saksa)",
+    "en": "Summer Olympic host countries 1896–2024 on the map (USSR = Russia, West Germany = Germany)"
+   },
+   "ids": [
+    "GR",
+    "FR",
+    "US",
+    "GB",
+    "SE",
+    "BE",
+    "NL",
+    "DE",
+    "FI",
+    "AU",
+    "IT",
+    "JP",
+    "MX",
+    "CA",
+    "RU",
+    "KR",
+    "ES",
+    "CN",
+    "BR"
+   ]
+  },
+  {
+   "id": "kartat-1-mm-voittajat",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 56,
+   "title": {
+    "fi": "Jalkapallon miesten MM-kultaa 1930–2022 voittaneet maat kartalla (Englanti = Iso-Britannia)",
+    "en": "Men's football World Cup winners 1930–2022 on the map (England = United Kingdom)"
+   },
+   "ids": [
+    "BR",
+    "DE",
+    "IT",
+    "AR",
+    "FR",
+    "UY",
+    "GB",
+    "ES"
+   ]
+  },
+  {
+   "id": "kartat-1-arabiliitto",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 132,
+   "title": {
+    "fi": "Arabiliiton 22 jäsentä kartalla (2025)",
+    "en": "The 22 members of the Arab League on the map (2025)"
+   },
+   "ids": [
+    "DZ",
+    "BH",
+    "KM",
+    "DJ",
+    "EG",
+    "IQ",
+    "JO",
+    "KW",
+    "LB",
+    "LY",
+    "MR",
+    "MA",
+    "OM",
+    "PS",
+    "QA",
+    "SA",
+    "SO",
+    "SD",
+    "SY",
+    "TN",
+    "AE",
+    "YE"
+   ]
+  },
+  {
+   "id": "kartat-1-portugali-kieli",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 63,
+   "title": {
+    "fi": "Maat, joissa portugali on virallinen kieli, kartalla",
+    "en": "Countries with Portuguese as an official language, on the map"
+   },
+   "ids": [
+    "PT",
+    "BR",
+    "AO",
+    "MZ",
+    "CV",
+    "GW",
+    "ST",
+    "TL",
+    "GQ"
+   ]
+  },
+  {
+   "id": "kartat-1-espanja-kieli",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 120,
+   "title": {
+    "fi": "Maat, joissa espanja on virallinen tai de facto virallinen kieli, kartalla",
+    "en": "Countries with Spanish as an official or de facto official language, on the map"
+   },
+   "ids": [
+    "ES",
+    "MX",
+    "GT",
+    "HN",
+    "SV",
+    "NI",
+    "CR",
+    "PA",
+    "CU",
+    "DO",
+    "CO",
+    "VE",
+    "EC",
+    "PE",
+    "BO",
+    "PY",
+    "CL",
+    "AR",
+    "UY",
+    "GQ"
+   ]
+  },
+  {
+   "id": "kartat-1-saksan-naapurit",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 63,
+   "title": {
+    "fi": "Saksan 9 rajanaapuria kartalla",
+    "en": "Germany's 9 neighbours on the map"
+   },
+   "ids": [
+    "DK",
+    "PL",
+    "CZ",
+    "AT",
+    "CH",
+    "FR",
+    "LU",
+    "BE",
+    "NL"
+   ]
+  },
+  {
+   "id": "kartat-1-brasilian-naapurit",
+   "cat": "maat",
+   "ans": "name",
+   "t": 72,
+   "title": {
+    "fi": "Etelä-Amerikan 9 itsenäistä valtiota, joilla on maaraja Brasilian kanssa",
+    "en": "The 9 South American states that share a land border with Brazil"
+   },
+   "ids": [
+    "AR",
+    "BO",
+    "CO",
+    "GY",
+    "PY",
+    "PE",
+    "SR",
+    "UY",
+    "VE"
+   ]
+  },
+  {
+   "id": "kartat-1-jugoslavia",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 56,
+   "title": {
+    "fi": "Entisen Jugoslavian 7 valtiota kartalla",
+    "en": "The 7 states of former Yugoslavia on the map"
+   },
+   "ids": [
+    "SI",
+    "HR",
+    "BA",
+    "RS",
+    "ME",
+    "MK",
+    "XK"
+   ]
+  },
+  {
+   "id": "kartat-1-neuvostotasavallat-kartta",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 90,
+   "title": {
+    "fi": "Entiset neuvostotasavallat kartalla (15 nykyistä valtiota)",
+    "en": "Former Soviet republics on the map (15 states today)"
+   },
+   "ids": [
+    "RU",
+    "UA",
+    "BY",
+    "MD",
+    "EE",
+    "LV",
+    "LT",
+    "GE",
+    "AM",
+    "AZ",
+    "KZ",
+    "UZ",
+    "TM",
+    "KG",
+    "TJ"
+   ]
+  },
+  {
+   "id": "kartat-1-g7",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 49,
+   "title": {
+    "fi": "G7-maat kartalla",
+    "en": "G7 countries on the map"
+   },
+   "ids": [
+    "CA",
+    "FR",
+    "DE",
+    "IT",
+    "JP",
+    "GB",
+    "US"
+   ]
+  },
+  {
+   "id": "kartat-1-pienvaltiot",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 63,
+   "title": {
+    "fi": "Euroopan 7 pinta-alaltaan pienintä valtiota kartalla",
+    "en": "Europe's 7 smallest states by area, on the map"
+   },
+   "ids": [
+    "VA",
+    "MC",
+    "SM",
+    "LI",
+    "MT",
+    "AD",
+    "LU"
+   ]
+  },
+  {
+   "id": "kartat-1-karibia-kartta",
+   "cat": "kartat",
+   "format": "map",
+   "ans": "name",
+   "t": 104,
+   "title": {
+    "fi": "Karibian 13 saarivaltiota kartalla",
+    "en": "The 13 Caribbean island states on the map"
+   },
+   "ids": [
+    "AG",
+    "BS",
+    "BB",
+    "CU",
+    "DM",
+    "DO",
+    "GD",
+    "HT",
+    "JM",
+    "KN",
+    "LC",
+    "VC",
+    "TT"
+   ]
+  },
+  {
+   "id": "kartat-1-karibia-liput",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 104,
+   "title": {
+    "fi": "Karibian 13 saarivaltion liput",
+    "en": "Flags of the 13 Caribbean island states"
+   },
+   "ids": [
+    "AG",
+    "BS",
+    "BB",
+    "CU",
+    "DM",
+    "DO",
+    "GD",
+    "HT",
+    "JM",
+    "KN",
+    "LC",
+    "VC",
+    "TT"
+   ]
+  },
+  {
+   "id": "kartat-1-ristiliput",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 126,
+   "title": {
+    "fi": "Liput, joissa on suora tai vino risti (myös Union Jack; vaakunoiden ja tunnusten ristejä ei lasketa)",
+    "en": "Flags with an upright or diagonal cross (Union Jack included; crosses inside coats of arms or emblems not counted)"
+   },
+   "ids": [
+    "DK",
+    "FI",
+    "IS",
+    "NO",
+    "SE",
+    "CH",
+    "GE",
+    "GR",
+    "TO",
+    "DO",
+    "GB",
+    "AU",
+    "NZ",
+    "TV",
+    "FJ",
+    "JM",
+    "BI",
+    "DM"
+   ]
+  },
+  {
+   "id": "kartat-1-puolikuuliput",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 98,
+   "title": {
+    "fi": "Liput, joissa on puolikuu (vaakunan tai tunnuksen osana olevaa ei lasketa)",
+    "en": "Flags with a crescent (not counting one that is part of a coat of arms or emblem)"
+   },
+   "ids": [
+    "TR",
+    "TN",
+    "DZ",
+    "LY",
+    "PK",
+    "MY",
+    "SG",
+    "MV",
+    "AZ",
+    "UZ",
+    "TM",
+    "MR",
+    "KM",
+    "NP"
+   ]
+  },
+  {
+   "id": "kartat-1-afrikan-tahdet",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 156,
+   "title": {
+    "fi": "Afrikan maiden liput, joissa on tähti",
+    "en": "African flags with a star"
+   },
+   "ids": [
+    "GH",
+    "SN",
+    "CM",
+    "GW",
+    "CV",
+    "ST",
+    "DJ",
+    "SO",
+    "BF",
+    "TG",
+    "LR",
+    "MR",
+    "ET",
+    "MA",
+    "CD",
+    "DZ",
+    "TN",
+    "LY",
+    "ZW",
+    "MZ",
+    "AO",
+    "BI",
+    "CF",
+    "KM",
+    "SS",
+    "GQ"
+   ]
+  },
+  {
+   "id": "kartat-1-pystyraidat",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 77,
+   "title": {
+    "fi": "Pystyraitaiset kolmiraitaliput, joissa ei ole tunnusta",
+    "en": "Plain vertical three-stripe flags"
+   },
+   "ids": [
+    "FR",
+    "IT",
+    "IE",
+    "BE",
+    "RO",
+    "TD",
+    "ML",
+    "GN",
+    "CI",
+    "NG",
+    "PE"
+   ]
+  },
+  {
+   "id": "kartat-1-vaakaraidat",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 105,
+   "title": {
+    "fi": "Vaakaraitaiset kolmiraitaliput, joissa ei ole tunnusta",
+    "en": "Plain horizontal three-stripe flags"
+   },
+   "ids": [
+    "DE",
+    "NL",
+    "LU",
+    "RU",
+    "AT",
+    "HU",
+    "BG",
+    "LT",
+    "EE",
+    "YE",
+    "AM",
+    "SL",
+    "GA",
+    "LV",
+    "CO"
+   ]
+  },
+  {
+   "id": "kartat-1-punavalkoiset",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 112,
+   "title": {
+    "fi": "Pelkästään punaiset ja valkoiset liput",
+    "en": "Flags in only red and white"
+   },
+   "ids": [
+    "PL",
+    "ID",
+    "MC",
+    "AT",
+    "LV",
+    "DK",
+    "CH",
+    "JP",
+    "CA",
+    "TO",
+    "GE",
+    "BH",
+    "TN",
+    "TR",
+    "SG",
+    "PE"
+   ]
+  },
+  {
+   "id": "kartat-1-union-jack",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 50,
+   "title": {
+    "fi": "Liput, joissa on Union Jack",
+    "en": "Flags with the Union Jack"
+   },
+   "ids": [
+    "GB",
+    "AU",
+    "NZ",
+    "TV",
+    "FJ"
+   ]
+  },
+  {
+   "id": "kartat-1-asean",
+   "cat": "liput",
+   "format": "flags",
+   "ans": "name",
+   "t": 88,
+   "title": {
+    "fi": "ASEANin 11 jäsenmaan liput (2025)",
+    "en": "Flags of the 11 ASEAN members (2025)"
+   },
+   "ids": [
+    "BN",
+    "KH",
+    "ID",
+    "LA",
+    "MY",
+    "MM",
+    "PH",
+    "SG",
+    "TH",
+    "VN",
+    "TL"
+   ]
+  }
+ ]
+}

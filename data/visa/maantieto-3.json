@@ -1,0 +1,5982 @@
+{
+ "quizzes": [
+  {
+   "id": "maantieto-3-matalat-huiput",
+   "cat": "maantieto",
+   "t": 75,
+   "title": {
+    "fi": "Euroopan valtiot, joiden korkein kohta on alle 500 m (merentakaisia alueita, kuten Karibian Alankomaita, ei lasketa)",
+    "en": "European countries whose highest point is below 500 m (overseas territories such as the Caribbean Netherlands excluded)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Korkein kohta",
+    "en": "Highest point"
+   },
+   "items": [
+    {
+     "fi": [
+      "Vatikaani",
+      "Vatikaanivaltio"
+     ],
+     "en": [
+      "Vatican City",
+      "Vatican"
+     ],
+     "h": "75 m"
+    },
+    {
+     "fi": [
+      "Monaco"
+     ],
+     "en": [
+      "Monaco"
+     ],
+     "h": "162 m"
+    },
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ],
+     "h": "171 m"
+    },
+    {
+     "fi": [
+      "Malta"
+     ],
+     "en": [
+      "Malta"
+     ],
+     "h": "253 m"
+    },
+    {
+     "fi": [
+      "Liettua"
+     ],
+     "en": [
+      "Lithuania"
+     ],
+     "h": "294 m"
+    },
+    {
+     "fi": [
+      "Latvia"
+     ],
+     "en": [
+      "Latvia"
+     ],
+     "h": "312 m"
+    },
+    {
+     "fi": [
+      "Viro",
+      "Eesti"
+     ],
+     "en": [
+      "Estonia"
+     ],
+     "h": "318 m"
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti"
+     ],
+     "en": [
+      "Netherlands",
+      "Holland"
+     ],
+     "h": "322 m"
+    },
+    {
+     "fi": [
+      "Valko-Venäjä",
+      "Valkovenäjä"
+     ],
+     "en": [
+      "Belarus"
+     ],
+     "h": "345 m"
+    },
+    {
+     "fi": [
+      "Moldova"
+     ],
+     "en": [
+      "Moldova"
+     ],
+     "h": "430 m"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-kahden-rajan-paassa-itavallasta",
+   "cat": "maantieto",
+   "t": 90,
+   "title": {
+    "fi": "Tasan kahden maarajan päässä Itävallasta: Itävallan naapurien naapurit, jotka eivät itse rajaudu Itävaltaan (12)",
+    "en": "Two land borders from Austria: neighbours of Austria's neighbours that do not border Austria themselves (12)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ]
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ]
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti"
+     ],
+     "en": [
+      "Netherlands",
+      "Holland"
+     ]
+    },
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ]
+    },
+    {
+     "fi": [
+      "Luxemburg"
+     ],
+     "en": [
+      "Luxembourg"
+     ]
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ]
+    },
+    {
+     "fi": [
+      "Ukraina"
+     ],
+     "en": [
+      "Ukraine"
+     ]
+    },
+    {
+     "fi": [
+      "Romania"
+     ],
+     "en": [
+      "Romania"
+     ]
+    },
+    {
+     "fi": [
+      "Serbia"
+     ],
+     "en": [
+      "Serbia"
+     ]
+    },
+    {
+     "fi": [
+      "Kroatia"
+     ],
+     "en": [
+      "Croatia"
+     ]
+    },
+    {
+     "fi": [
+      "San Marino"
+     ],
+     "en": [
+      "San Marino"
+     ]
+    },
+    {
+     "fi": [
+      "Vatikaani",
+      "Vatikaanivaltio"
+     ],
+     "en": [
+      "Vatican City",
+      "Vatican"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-yksi-naapuri",
+   "cat": "maantieto",
+   "t": 70,
+   "title": {
+    "fi": "Euroopan ja Afrikan valtiot, joilla on vain yksi maarajanaapuri (Grönlantia ym. merentakaisia alueita ja tukikohta-alueita ei lasketa)",
+    "en": "European and African countries with exactly one land neighbour (Greenland and other overseas territories and base areas not counted)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Portugali"
+     ],
+     "en": [
+      "Portugal"
+     ]
+    },
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ]
+    },
+    {
+     "fi": [
+      "Irlanti"
+     ],
+     "en": [
+      "Ireland"
+     ]
+    },
+    {
+     "fi": [
+      "Yhdistynyt kuningaskunta",
+      "Iso-Britannia",
+      "Britannia"
+     ],
+     "en": [
+      "United Kingdom",
+      "UK",
+      "Great Britain",
+      "Britain"
+     ]
+    },
+    {
+     "fi": [
+      "Monaco"
+     ],
+     "en": [
+      "Monaco"
+     ]
+    },
+    {
+     "fi": [
+      "San Marino"
+     ],
+     "en": [
+      "San Marino"
+     ]
+    },
+    {
+     "fi": [
+      "Vatikaani",
+      "Vatikaanivaltio"
+     ],
+     "en": [
+      "Vatican City",
+      "Vatican"
+     ]
+    },
+    {
+     "fi": [
+      "Lesotho"
+     ],
+     "en": [
+      "Lesotho"
+     ]
+    },
+    {
+     "fi": [
+      "Gambia"
+     ],
+     "en": [
+      "Gambia",
+      "The Gambia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-pohjoisimmat-paakaupungit",
+   "cat": "maantieto",
+   "t": 100,
+   "title": {
+    "fi": "Euroopan valtioiden 15 pohjoisinta pääkaupunkia (vihjeenä leveysaste)",
+    "en": "The 15 northernmost capitals of European countries (hint: latitude)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Leveysaste",
+    "en": "Latitude"
+   },
+   "items": [
+    {
+     "fi": [
+      "Reykjavík",
+      "Reikjavik"
+     ],
+     "en": [
+      "Reykjavik"
+     ],
+     "h": {
+      "fi": "64,1° N",
+      "en": "64.1° N"
+     }
+    },
+    {
+     "fi": [
+      "Helsinki"
+     ],
+     "en": [
+      "Helsinki"
+     ],
+     "h": {
+      "fi": "60,2° N",
+      "en": "60.2° N"
+     }
+    },
+    {
+     "fi": [
+      "Oslo"
+     ],
+     "en": [
+      "Oslo"
+     ],
+     "h": {
+      "fi": "59,9° N",
+      "en": "59.9° N"
+     }
+    },
+    {
+     "fi": [
+      "Tallinna"
+     ],
+     "en": [
+      "Tallinn"
+     ],
+     "h": {
+      "fi": "59,4° N",
+      "en": "59.4° N"
+     }
+    },
+    {
+     "fi": [
+      "Tukholma"
+     ],
+     "en": [
+      "Stockholm"
+     ],
+     "h": {
+      "fi": "59,3° N",
+      "en": "59.3° N"
+     }
+    },
+    {
+     "fi": [
+      "Riika"
+     ],
+     "en": [
+      "Riga"
+     ],
+     "h": {
+      "fi": "56,9° N",
+      "en": "56.9° N"
+     }
+    },
+    {
+     "fi": [
+      "Moskova"
+     ],
+     "en": [
+      "Moscow"
+     ],
+     "h": {
+      "fi": "55,8° N",
+      "en": "55.8° N"
+     }
+    },
+    {
+     "fi": [
+      "Kööpenhamina"
+     ],
+     "en": [
+      "Copenhagen"
+     ],
+     "h": {
+      "fi": "55,7° N",
+      "en": "55.7° N"
+     }
+    },
+    {
+     "fi": [
+      "Vilna",
+      "Vilnius"
+     ],
+     "en": [
+      "Vilnius"
+     ],
+     "h": {
+      "fi": "54,7° N",
+      "en": "54.7° N"
+     }
+    },
+    {
+     "fi": [
+      "Minsk"
+     ],
+     "en": [
+      "Minsk"
+     ],
+     "h": {
+      "fi": "53,9° N",
+      "en": "53.9° N"
+     }
+    },
+    {
+     "fi": [
+      "Dublin"
+     ],
+     "en": [
+      "Dublin"
+     ],
+     "h": {
+      "fi": "53,3° N",
+      "en": "53.3° N"
+     }
+    },
+    {
+     "fi": [
+      "Berliini"
+     ],
+     "en": [
+      "Berlin"
+     ],
+     "h": {
+      "fi": "52,5° N",
+      "en": "52.5° N"
+     }
+    },
+    {
+     "fi": [
+      "Amsterdam"
+     ],
+     "en": [
+      "Amsterdam"
+     ],
+     "h": {
+      "fi": "52,4° N",
+      "en": "52.4° N"
+     }
+    },
+    {
+     "fi": [
+      "Varsova"
+     ],
+     "en": [
+      "Warsaw"
+     ],
+     "h": {
+      "fi": "52,2° N",
+      "en": "52.2° N"
+     }
+    },
+    {
+     "fi": [
+      "Lontoo"
+     ],
+     "en": [
+      "London"
+     ],
+     "h": {
+      "fi": "51,5° N",
+      "en": "51.5° N"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-suomea-suuremmat-afrikassa",
+   "cat": "maantieto",
+   "t": 190,
+   "title": {
+    "fi": "Afrikan valtiot, jotka ovat pinta-alaltaan Suomea suurempia (27, Länsi-Saharaa ei lasketa Marokkoon)",
+    "en": "African countries larger in area than Finland (27, Western Sahara not counted as Morocco)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Sija",
+    "en": "Rank"
+   },
+   "items": [
+    {
+     "fi": [
+      "Algeria"
+     ],
+     "en": [
+      "Algeria"
+     ],
+     "h": "1"
+    },
+    {
+     "fi": [
+      "Kongon demokraattinen tasavalta",
+      "Kongo-Kinshasa",
+      "KDT",
+      "DR Kongo"
+     ],
+     "en": [
+      "Democratic Republic of the Congo",
+      "DR Congo",
+      "DRC",
+      "Congo-Kinshasa"
+     ],
+     "h": "2"
+    },
+    {
+     "fi": [
+      "Sudan"
+     ],
+     "en": [
+      "Sudan"
+     ],
+     "h": "3"
+    },
+    {
+     "fi": [
+      "Libya"
+     ],
+     "en": [
+      "Libya"
+     ],
+     "h": "4"
+    },
+    {
+     "fi": [
+      "Tšad",
+      "Tsad"
+     ],
+     "en": [
+      "Chad"
+     ],
+     "h": "5"
+    },
+    {
+     "fi": [
+      "Niger"
+     ],
+     "en": [
+      "Niger"
+     ],
+     "h": "6"
+    },
+    {
+     "fi": [
+      "Angola"
+     ],
+     "en": [
+      "Angola"
+     ],
+     "h": "7"
+    },
+    {
+     "fi": [
+      "Mali"
+     ],
+     "en": [
+      "Mali"
+     ],
+     "h": "8"
+    },
+    {
+     "fi": [
+      "Etelä-Afrikka"
+     ],
+     "en": [
+      "South Africa"
+     ],
+     "h": "9"
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ],
+     "h": "10"
+    },
+    {
+     "fi": [
+      "Mauritania"
+     ],
+     "en": [
+      "Mauritania"
+     ],
+     "h": "11"
+    },
+    {
+     "fi": [
+      "Egypti"
+     ],
+     "en": [
+      "Egypt"
+     ],
+     "h": "12"
+    },
+    {
+     "fi": [
+      "Tansania"
+     ],
+     "en": [
+      "Tanzania"
+     ],
+     "h": "13"
+    },
+    {
+     "fi": [
+      "Nigeria"
+     ],
+     "en": [
+      "Nigeria"
+     ],
+     "h": "14"
+    },
+    {
+     "fi": [
+      "Namibia"
+     ],
+     "en": [
+      "Namibia"
+     ],
+     "h": "15"
+    },
+    {
+     "fi": [
+      "Mosambik"
+     ],
+     "en": [
+      "Mozambique"
+     ],
+     "h": "16"
+    },
+    {
+     "fi": [
+      "Sambia"
+     ],
+     "en": [
+      "Zambia"
+     ],
+     "h": "17"
+    },
+    {
+     "fi": [
+      "Etelä-Sudan"
+     ],
+     "en": [
+      "South Sudan"
+     ],
+     "h": "18"
+    },
+    {
+     "fi": [
+      "Somalia"
+     ],
+     "en": [
+      "Somalia"
+     ],
+     "h": "19"
+    },
+    {
+     "fi": [
+      "Keski-Afrikan tasavalta"
+     ],
+     "en": [
+      "Central African Republic",
+      "CAR"
+     ],
+     "h": "20"
+    },
+    {
+     "fi": [
+      "Madagaskar"
+     ],
+     "en": [
+      "Madagascar"
+     ],
+     "h": "21"
+    },
+    {
+     "fi": [
+      "Botswana"
+     ],
+     "en": [
+      "Botswana"
+     ],
+     "h": "22"
+    },
+    {
+     "fi": [
+      "Kenia"
+     ],
+     "en": [
+      "Kenya"
+     ],
+     "h": "23"
+    },
+    {
+     "fi": [
+      "Kamerun"
+     ],
+     "en": [
+      "Cameroon"
+     ],
+     "h": "24"
+    },
+    {
+     "fi": [
+      "Marokko"
+     ],
+     "en": [
+      "Morocco"
+     ],
+     "h": "25"
+    },
+    {
+     "fi": [
+      "Zimbabwe"
+     ],
+     "en": [
+      "Zimbabwe"
+     ],
+     "h": "26"
+    },
+    {
+     "fi": [
+      "Kongon tasavalta",
+      "Kongo",
+      "Kongo-Brazzaville"
+     ],
+     "en": [
+      "Republic of the Congo",
+      "Congo",
+      "Congo-Brazzaville"
+     ],
+     "h": "27"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-ahvenanmaata-pienemmat",
+   "cat": "maantieto",
+   "t": 60,
+   "title": {
+    "fi": "Euroopan ja Afrikan valtiot, jotka ovat pinta-alaltaan pienempiä kuin Ahvenanmaan maa-ala (1 556 km²)",
+    "en": "European and African countries smaller in area than the land area of Åland (1,556 km²)"
+   },
+   "items": [
+    {
+     "fi": [
+      "Vatikaani",
+      "Vatikaanivaltio"
+     ],
+     "en": [
+      "Vatican City",
+      "Vatican"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "Monaco"
+     ],
+     "en": [
+      "Monaco"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "San Marino"
+     ],
+     "en": [
+      "San Marino"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "Liechtenstein"
+     ],
+     "en": [
+      "Liechtenstein"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "Malta"
+     ],
+     "en": [
+      "Malta"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "Andorra"
+     ],
+     "en": [
+      "Andorra"
+     ],
+     "h": {
+      "fi": "Eurooppa",
+      "en": "Europe"
+     }
+    },
+    {
+     "fi": [
+      "Seychellit"
+     ],
+     "en": [
+      "Seychelles"
+     ],
+     "h": {
+      "fi": "Afrikka",
+      "en": "Africa"
+     }
+    },
+    {
+     "fi": [
+      "São Tomé ja Príncipe",
+      "Sao Tome"
+     ],
+     "en": [
+      "São Tomé and Príncipe",
+      "Sao Tome"
+     ],
+     "h": {
+      "fi": "Afrikka",
+      "en": "Africa"
+     }
+    }
+   ],
+   "hintLabel": {
+    "fi": "Maanosa",
+    "en": "Continent"
+   }
+  },
+  {
+   "id": "maantieto-3-niilin-valuma-alue",
+   "cat": "maantieto",
+   "t": 80,
+   "title": {
+    "fi": "Niilin valuma-alueen 11 valtiota",
+    "en": "The 11 countries of the Nile basin"
+   },
+   "items": [
+    {
+     "fi": [
+      "Egypti"
+     ],
+     "en": [
+      "Egypt"
+     ]
+    },
+    {
+     "fi": [
+      "Sudan"
+     ],
+     "en": [
+      "Sudan"
+     ]
+    },
+    {
+     "fi": [
+      "Etelä-Sudan"
+     ],
+     "en": [
+      "South Sudan"
+     ]
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ]
+    },
+    {
+     "fi": [
+      "Eritrea"
+     ],
+     "en": [
+      "Eritrea"
+     ]
+    },
+    {
+     "fi": [
+      "Uganda"
+     ],
+     "en": [
+      "Uganda"
+     ]
+    },
+    {
+     "fi": [
+      "Kenia"
+     ],
+     "en": [
+      "Kenya"
+     ]
+    },
+    {
+     "fi": [
+      "Tansania"
+     ],
+     "en": [
+      "Tanzania"
+     ]
+    },
+    {
+     "fi": [
+      "Ruanda"
+     ],
+     "en": [
+      "Rwanda"
+     ]
+    },
+    {
+     "fi": [
+      "Burundi"
+     ],
+     "en": [
+      "Burundi"
+     ]
+    },
+    {
+     "fi": [
+      "Kongon demokraattinen tasavalta",
+      "Kongo-Kinshasa",
+      "KDT",
+      "DR Kongo"
+     ],
+     "en": [
+      "Democratic Republic of the Congo",
+      "DR Congo",
+      "DRC",
+      "Congo-Kinshasa"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-kirjaimet-2-ja-3",
+   "cat": "maantieto",
+   "t": 290,
+   "title": {
+    "fi": "Euroopan 40 maata nimen 2. ja 3. kirjaimen perusteella (ei kuutta mikrovaltiota)",
+    "en": "40 European countries from the 2nd and 3rd letters of the name (six microstates excluded)"
+   },
+   "hintLabel": {
+    "fi": "Kirjaimet",
+    "en": "Letters"
+   },
+   "items": [
+    {
+     "fi": [
+      "Albania"
+     ],
+     "en": [
+      "Albania"
+     ],
+     "h": {
+      "fi": "_lb____",
+      "en": "_lb____"
+     }
+    },
+    {
+     "fi": [
+      "Itävalta"
+     ],
+     "en": [
+      "Austria"
+     ],
+     "h": {
+      "fi": "_tä_____",
+      "en": "_us____"
+     }
+    },
+    {
+     "fi": [
+      "Valko-Venäjä",
+      "Valkovenäjä"
+     ],
+     "en": [
+      "Belarus"
+     ],
+     "h": {
+      "fi": "_al__-______",
+      "en": "_el____"
+     }
+    },
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ],
+     "h": {
+      "fi": "_el___",
+      "en": "_el____"
+     }
+    },
+    {
+     "fi": [
+      "Bosnia ja Hertsegovina",
+      "Bosnia-Hertsegovina",
+      "Bosnia"
+     ],
+     "en": [
+      "Bosnia and Herzegovina",
+      "Bosnia & Herzegovina",
+      "Bosnia"
+     ],
+     "h": {
+      "fi": "_os___ __ ____________",
+      "en": "_os___ ___ ___________"
+     }
+    },
+    {
+     "fi": [
+      "Bulgaria"
+     ],
+     "en": [
+      "Bulgaria"
+     ],
+     "h": {
+      "fi": "_ul_____",
+      "en": "_ul_____"
+     }
+    },
+    {
+     "fi": [
+      "Kroatia"
+     ],
+     "en": [
+      "Croatia"
+     ],
+     "h": {
+      "fi": "_ro____",
+      "en": "_ro____"
+     }
+    },
+    {
+     "fi": [
+      "Kypros"
+     ],
+     "en": [
+      "Cyprus"
+     ],
+     "h": {
+      "fi": "_yp___",
+      "en": "_yp___"
+     }
+    },
+    {
+     "fi": [
+      "Tšekki",
+      "Tsekki",
+      "Tšekin tasavalta"
+     ],
+     "en": [
+      "Czechia",
+      "Czech Republic"
+     ],
+     "h": {
+      "fi": "_še___",
+      "en": "_ze____"
+     }
+    },
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ],
+     "h": {
+      "fi": "_an___",
+      "en": "_en____"
+     }
+    },
+    {
+     "fi": [
+      "Viro",
+      "Eesti"
+     ],
+     "en": [
+      "Estonia"
+     ],
+     "h": {
+      "fi": "_ir_",
+      "en": "_st____"
+     }
+    },
+    {
+     "fi": [
+      "Suomi"
+     ],
+     "en": [
+      "Finland"
+     ],
+     "h": {
+      "fi": "_uo__",
+      "en": "_in____"
+     }
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ],
+     "h": {
+      "fi": "_an___",
+      "en": "_ra___"
+     }
+    },
+    {
+     "fi": [
+      "Saksa"
+     ],
+     "en": [
+      "Germany"
+     ],
+     "h": {
+      "fi": "_ak__",
+      "en": "_er____"
+     }
+    },
+    {
+     "fi": [
+      "Kreikka"
+     ],
+     "en": [
+      "Greece"
+     ],
+     "h": {
+      "fi": "_re____",
+      "en": "_re___"
+     }
+    },
+    {
+     "fi": [
+      "Unkari"
+     ],
+     "en": [
+      "Hungary"
+     ],
+     "h": {
+      "fi": "_nk___",
+      "en": "_un____"
+     }
+    },
+    {
+     "fi": [
+      "Islanti"
+     ],
+     "en": [
+      "Iceland"
+     ],
+     "h": {
+      "fi": "_sl____",
+      "en": "_ce____"
+     }
+    },
+    {
+     "fi": [
+      "Irlanti"
+     ],
+     "en": [
+      "Ireland"
+     ],
+     "h": {
+      "fi": "_rl____",
+      "en": "_re____"
+     }
+    },
+    {
+     "fi": [
+      "Italia"
+     ],
+     "en": [
+      "Italy"
+     ],
+     "h": {
+      "fi": "_ta___",
+      "en": "_ta__"
+     }
+    },
+    {
+     "fi": [
+      "Kosovo"
+     ],
+     "en": [
+      "Kosovo"
+     ],
+     "h": {
+      "fi": "_os___",
+      "en": "_os___"
+     }
+    },
+    {
+     "fi": [
+      "Latvia"
+     ],
+     "en": [
+      "Latvia"
+     ],
+     "h": {
+      "fi": "_at___",
+      "en": "_at___"
+     }
+    },
+    {
+     "fi": [
+      "Liettua"
+     ],
+     "en": [
+      "Lithuania"
+     ],
+     "h": {
+      "fi": "_ie____",
+      "en": "_it______"
+     }
+    },
+    {
+     "fi": [
+      "Luxemburg"
+     ],
+     "en": [
+      "Luxembourg"
+     ],
+     "h": {
+      "fi": "_ux______",
+      "en": "_ux_______"
+     }
+    },
+    {
+     "fi": [
+      "Moldova"
+     ],
+     "en": [
+      "Moldova"
+     ],
+     "h": {
+      "fi": "_ol____",
+      "en": "_ol____"
+     }
+    },
+    {
+     "fi": [
+      "Montenegro"
+     ],
+     "en": [
+      "Montenegro"
+     ],
+     "h": {
+      "fi": "_on_______",
+      "en": "_on_______"
+     }
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti"
+     ],
+     "en": [
+      "Netherlands",
+      "Holland"
+     ],
+     "h": {
+      "fi": "_la_______",
+      "en": "_et________"
+     }
+    },
+    {
+     "fi": [
+      "Pohjois-Makedonia",
+      "Makedonia"
+     ],
+     "en": [
+      "North Macedonia",
+      "Macedonia"
+     ],
+     "h": {
+      "fi": "_oh____-_________",
+      "en": "_or__ _________"
+     }
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ],
+     "h": {
+      "fi": "_or__",
+      "en": "_or___"
+     }
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ],
+     "h": {
+      "fi": "_uo__",
+      "en": "_ol___"
+     }
+    },
+    {
+     "fi": [
+      "Portugali"
+     ],
+     "en": [
+      "Portugal"
+     ],
+     "h": {
+      "fi": "_or______",
+      "en": "_or_____"
+     }
+    },
+    {
+     "fi": [
+      "Romania"
+     ],
+     "en": [
+      "Romania"
+     ],
+     "h": {
+      "fi": "_om____",
+      "en": "_om____"
+     }
+    },
+    {
+     "fi": [
+      "Venäjä"
+     ],
+     "en": [
+      "Russia"
+     ],
+     "h": {
+      "fi": "_en___",
+      "en": "_us___"
+     }
+    },
+    {
+     "fi": [
+      "Serbia"
+     ],
+     "en": [
+      "Serbia"
+     ],
+     "h": {
+      "fi": "_er___",
+      "en": "_er___"
+     }
+    },
+    {
+     "fi": [
+      "Slovakia"
+     ],
+     "en": [
+      "Slovakia"
+     ],
+     "h": {
+      "fi": "_lo_____",
+      "en": "_lo_____"
+     }
+    },
+    {
+     "fi": [
+      "Slovenia"
+     ],
+     "en": [
+      "Slovenia"
+     ],
+     "h": {
+      "fi": "_lo_____",
+      "en": "_lo_____"
+     }
+    },
+    {
+     "fi": [
+      "Espanja"
+     ],
+     "en": [
+      "Spain"
+     ],
+     "h": {
+      "fi": "_sp____",
+      "en": "_pa__"
+     }
+    },
+    {
+     "fi": [
+      "Ruotsi"
+     ],
+     "en": [
+      "Sweden"
+     ],
+     "h": {
+      "fi": "_uo___",
+      "en": "_we___"
+     }
+    },
+    {
+     "fi": [
+      "Sveitsi"
+     ],
+     "en": [
+      "Switzerland"
+     ],
+     "h": {
+      "fi": "_ve____",
+      "en": "_wi________"
+     }
+    },
+    {
+     "fi": [
+      "Ukraina"
+     ],
+     "en": [
+      "Ukraine"
+     ],
+     "h": {
+      "fi": "_kr____",
+      "en": "_kr____"
+     }
+    },
+    {
+     "fi": [
+      "Yhdistynyt kuningaskunta",
+      "Iso-Britannia",
+      "Britannia"
+     ],
+     "en": [
+      "United Kingdom",
+      "UK",
+      "Great Britain",
+      "Britain"
+     ],
+     "h": {
+      "fi": "_hd_______ _____________",
+      "en": "_ni___ _______"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-ia-loppuiset",
+   "cat": "maantieto",
+   "t": 160,
+   "title": {
+    "fi": "Euroopan ja Afrikan 20 maata, joiden nimi päättyy -ia sekä suomeksi että englanniksi (vihjeestä)",
+    "en": "20 European and African countries whose name ends in -ia in both Finnish and English (from a clue)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Albania"
+     ],
+     "en": [
+      "Albania"
+     ],
+     "h": {
+      "fi": "Pääkaupunki Tirana, Adrianmeren rannalla",
+      "en": "Capital Tirana, on the Adriatic"
+     }
+    },
+    {
+     "fi": [
+      "Bulgaria"
+     ],
+     "en": [
+      "Bulgaria"
+     ],
+     "h": {
+      "fi": "Mustanmeren rannalla, kyrillisten aakkosten kotimaa",
+      "en": "Black Sea coast, home of the Cyrillic script"
+     }
+    },
+    {
+     "fi": [
+      "Kroatia"
+     ],
+     "en": [
+      "Croatia"
+     ],
+     "h": {
+      "fi": "Dubrovnik ja yli tuhat saarta",
+      "en": "Dubrovnik and over a thousand islands"
+     }
+    },
+    {
+     "fi": [
+      "Latvia"
+     ],
+     "en": [
+      "Latvia"
+     ],
+     "h": {
+      "fi": "Baltian maista keskimmäinen",
+      "en": "The middle one of the Baltic states"
+     }
+    },
+    {
+     "fi": [
+      "Pohjois-Makedonia",
+      "Makedonia"
+     ],
+     "en": [
+      "North Macedonia",
+      "Macedonia"
+     ],
+     "h": {
+      "fi": "Ohridjärvi, nykyinen nimi käyttöön 2019",
+      "en": "Lake Ohrid, current name adopted in 2019"
+     }
+    },
+    {
+     "fi": [
+      "Romania"
+     ],
+     "en": [
+      "Romania"
+     ],
+     "h": {
+      "fi": "Karpaatit, Transilvania ja Drakula-tarut",
+      "en": "Carpathians, Transylvania and Dracula tales"
+     }
+    },
+    {
+     "fi": [
+      "Serbia"
+     ],
+     "en": [
+      "Serbia"
+     ],
+     "h": {
+      "fi": "Belgrad Tonavan ja Savan yhtymäkohdassa",
+      "en": "Belgrade where the Sava meets the Danube"
+     }
+    },
+    {
+     "fi": [
+      "Slovakia"
+     ],
+     "en": [
+      "Slovakia"
+     ],
+     "h": {
+      "fi": "Erosi Tšekistä 1993",
+      "en": "Split from Czechia in 1993"
+     }
+    },
+    {
+     "fi": [
+      "Slovenia"
+     ],
+     "en": [
+      "Slovenia"
+     ],
+     "h": {
+      "fi": "Triglav ja Bledjärvi, pääkaupunki Ljubljana",
+      "en": "Triglav and Lake Bled, capital Ljubljana"
+     }
+    },
+    {
+     "fi": [
+      "Algeria"
+     ],
+     "en": [
+      "Algeria"
+     ],
+     "h": {
+      "fi": "Afrikan pinta-alaltaan suurin valtio",
+      "en": "Largest country in Africa by area"
+     }
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ],
+     "h": {
+      "fi": "Kahvin alkukoti, Addis Abeba",
+      "en": "Birthplace of coffee, Addis Ababa"
+     }
+    },
+    {
+     "fi": [
+      "Gambia"
+     ],
+     "en": [
+      "Gambia",
+      "The Gambia"
+     ],
+     "h": {
+      "fi": "Kapea maa joen varrella Senegalin sisällä",
+      "en": "Narrow river country inside Senegal"
+     }
+    },
+    {
+     "fi": [
+      "Liberia"
+     ],
+     "en": [
+      "Liberia"
+     ],
+     "h": {
+      "fi": "Vapautettujen orjien perustama, itsenäinen 1847",
+      "en": "Founded by freed slaves, independent 1847"
+     }
+    },
+    {
+     "fi": [
+      "Mauritania"
+     ],
+     "en": [
+      "Mauritania"
+     ],
+     "h": {
+      "fi": "Saharan maa Atlantin rannalla, Nouakchott",
+      "en": "Saharan country on the Atlantic, Nouakchott"
+     }
+    },
+    {
+     "fi": [
+      "Namibia"
+     ],
+     "en": [
+      "Namibia"
+     ],
+     "h": {
+      "fi": "Namibin aavikko ja Etosha",
+      "en": "Namib Desert and Etosha"
+     }
+    },
+    {
+     "fi": [
+      "Nigeria"
+     ],
+     "en": [
+      "Nigeria"
+     ],
+     "h": {
+      "fi": "Afrikan väkirikkain valtio",
+      "en": "Most populous country in Africa"
+     }
+    },
+    {
+     "fi": [
+      "Somalia"
+     ],
+     "en": [
+      "Somalia"
+     ],
+     "h": {
+      "fi": "Afrikan sarven kärki, pisin rannikko mantereella",
+      "en": "Tip of the Horn of Africa, longest mainland coast"
+     }
+    },
+    {
+     "fi": [
+      "Tansania"
+     ],
+     "en": [
+      "Tanzania"
+     ],
+     "h": {
+      "fi": "Kilimanjaro ja Sansibar",
+      "en": "Kilimanjaro and Zanzibar"
+     }
+    },
+    {
+     "fi": [
+      "Tunisia"
+     ],
+     "en": [
+      "Tunisia"
+     ],
+     "h": {
+      "fi": "Karthagon rauniot",
+      "en": "Ruins of Carthage"
+     }
+    },
+    {
+     "fi": [
+      "Sambia"
+     ],
+     "en": [
+      "Zambia"
+     ],
+     "h": {
+      "fi": "Victorian putoukset ja kuparivyöhyke",
+      "en": "Victoria Falls and the Copperbelt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-paakaupungin-alkukirjain",
+   "cat": "maantieto",
+   "t": 120,
+   "title": {
+    "fi": "Nimeä Euroopan maa, jonka pääkaupunki alkaa kirjaimella…",
+    "en": "Name a European country whose capital starts with the letter…"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Pääkaupungin kirjain",
+    "en": "Capital starts with"
+   },
+   "items": [
+    {
+     "fi": [
+      "Andorra",
+      "Kreikka",
+      "Alankomaat",
+      "Hollanti"
+     ],
+     "en": [
+      "Andorra",
+      "Greece",
+      "Netherlands",
+      "Holland"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Belgia",
+      "Saksa",
+      "Unkari",
+      "Romania",
+      "Serbia",
+      "Slovakia",
+      "Sveitsi"
+     ],
+     "en": [
+      "Belgium",
+      "Germany",
+      "Hungary",
+      "Romania",
+      "Serbia",
+      "Slovakia",
+      "Switzerland"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Moldova"
+     ],
+     "en": [
+      "Denmark",
+      "Moldova"
+     ],
+     "h": "C"
+    },
+    {
+     "fi": [
+      "Irlanti"
+     ],
+     "en": [
+      "Ireland"
+     ],
+     "h": "D"
+    },
+    {
+     "fi": [
+      "Suomi"
+     ],
+     "en": [
+      "Finland"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Tanska",
+      "Ukraina"
+     ],
+     "en": [
+      "Ukraine"
+     ],
+     "h": "K"
+    },
+    {
+     "fi": [
+      "Luxemburg",
+      "Portugali",
+      "Slovenia",
+      "Yhdistynyt kuningaskunta",
+      "Iso-Britannia",
+      "Britannia"
+     ],
+     "en": [
+      "Luxembourg",
+      "Portugal",
+      "Slovenia",
+      "United Kingdom",
+      "UK",
+      "Great Britain",
+      "Britain"
+     ],
+     "h": "L"
+    },
+    {
+     "fi": [
+      "Valko-Venäjä",
+      "Valkovenäjä",
+      "Monaco",
+      "Venäjä",
+      "Espanja"
+     ],
+     "en": [
+      "Belarus",
+      "Monaco",
+      "Russia",
+      "Spain"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "Kypros"
+     ],
+     "en": [
+      "Cyprus"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ],
+     "h": "O"
+    },
+    {
+     "fi": [
+      "Tšekki",
+      "Tsekki",
+      "Tšekin tasavalta",
+      "Ranska",
+      "Kosovo",
+      "Montenegro"
+     ],
+     "en": [
+      "Czechia",
+      "Czech Republic",
+      "France",
+      "Kosovo",
+      "Montenegro"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Islanti",
+      "Italia",
+      "Latvia"
+     ],
+     "en": [
+      "Iceland",
+      "Italy",
+      "Latvia"
+     ],
+     "h": "R"
+    },
+    {
+     "fi": [
+      "Bosnia ja Hertsegovina",
+      "Bosnia-Hertsegovina",
+      "Bosnia",
+      "Bulgaria",
+      "Pohjois-Makedonia",
+      "Makedonia",
+      "San Marino"
+     ],
+     "en": [
+      "Bosnia and Herzegovina",
+      "Bosnia & Herzegovina",
+      "Bosnia",
+      "Bulgaria",
+      "North Macedonia",
+      "Macedonia",
+      "San Marino",
+      "Sweden"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Albania",
+      "Viro",
+      "Eesti",
+      "Ruotsi"
+     ],
+     "en": [
+      "Albania",
+      "Estonia"
+     ],
+     "h": "T"
+    },
+    {
+     "fi": [
+      "Liechtenstein",
+      "Liettua",
+      "Malta",
+      "Puola",
+      "Vatikaani",
+      "Vatikaanivaltio"
+     ],
+     "en": [
+      "Austria",
+      "Liechtenstein",
+      "Lithuania",
+      "Malta",
+      "Vatican City",
+      "Vatican"
+     ],
+     "h": "V"
+    },
+    {
+     "fi": [
+      "Itävalta"
+     ],
+     "en": [
+      "Poland"
+     ],
+     "h": "W"
+    },
+    {
+     "fi": [
+      "Kroatia"
+     ],
+     "en": [
+      "Croatia"
+     ],
+     "h": "Z"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-afrikka-vihjeista",
+   "cat": "maantieto",
+   "t": 190,
+   "title": {
+    "fi": "Tunnista 24 Afrikan maata vihjeestä",
+    "en": "Identify 24 African countries from a clue"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tansania"
+     ],
+     "en": [
+      "Tanzania"
+     ],
+     "h": {
+      "fi": "Kilimanjaro, Serengeti ja Sansibar",
+      "en": "Kilimanjaro, Serengeti and Zanzibar"
+     }
+    },
+    {
+     "fi": [
+      "Lesotho"
+     ],
+     "en": [
+      "Lesotho"
+     ],
+     "h": {
+      "fi": "Etelä-Afrikan kokonaan ympäröimä vuoristokuningaskunta",
+      "en": "Mountain kingdom entirely surrounded by South Africa"
+     }
+    },
+    {
+     "fi": [
+      "Egypti"
+     ],
+     "en": [
+      "Egypt"
+     ],
+     "h": {
+      "fi": "Gizan pyramidit ja Suezin kanava",
+      "en": "Pyramids of Giza and the Suez Canal"
+     }
+    },
+    {
+     "fi": [
+      "Mali"
+     ],
+     "en": [
+      "Mali"
+     ],
+     "h": {
+      "fi": "Timbuktu ja Nigerjoen suuri mutka",
+      "en": "Timbuktu and the great bend of the Niger"
+     }
+    },
+    {
+     "fi": [
+      "Madagaskar"
+     ],
+     "en": [
+      "Madagascar"
+     ],
+     "h": {
+      "fi": "Lemurit ja baobabit, maailman 4. suurin saari",
+      "en": "Lemurs and baobabs, world's 4th largest island"
+     }
+    },
+    {
+     "fi": [
+      "Ruanda"
+     ],
+     "en": [
+      "Rwanda"
+     ],
+     "h": {
+      "fi": "Tuhansien kukkuloiden maa, vuorigorillat",
+      "en": "Land of a thousand hills, mountain gorillas"
+     }
+    },
+    {
+     "fi": [
+      "Kenia"
+     ],
+     "en": [
+      "Kenya"
+     ],
+     "h": {
+      "fi": "Masai Mara ja Turkanajärvi",
+      "en": "Maasai Mara and Lake Turkana"
+     }
+    },
+    {
+     "fi": [
+      "Botswana"
+     ],
+     "en": [
+      "Botswana"
+     ],
+     "h": {
+      "fi": "Okavangon suisto ja Kalaharin timantit",
+      "en": "Okavango Delta and Kalahari diamonds"
+     }
+    },
+    {
+     "fi": [
+      "Norsunluurannikko"
+     ],
+     "en": [
+      "Ivory Coast",
+      "Côte d'Ivoire"
+     ],
+     "h": {
+      "fi": "Maailman suurin kaakaon tuottaja, Abidjan",
+      "en": "World's largest cocoa producer, Abidjan"
+     }
+    },
+    {
+     "fi": [
+      "Nigeria"
+     ],
+     "en": [
+      "Nigeria"
+     ],
+     "h": {
+      "fi": "Afrikan väkirikkain maa, Nollywood",
+      "en": "Most populous country in Africa, Nollywood"
+     }
+    },
+    {
+     "fi": [
+      "Tunisia"
+     ],
+     "en": [
+      "Tunisia"
+     ],
+     "h": {
+      "fi": "Karthagon rauniot ja Djerban saari",
+      "en": "Ruins of Carthage and the island of Djerba"
+     }
+    },
+    {
+     "fi": [
+      "Marokko"
+     ],
+     "en": [
+      "Morocco"
+     ],
+     "h": {
+      "fi": "Casablanca, Marrakech ja Atlasvuoret",
+      "en": "Casablanca, Marrakesh and the Atlas Mountains"
+     }
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ],
+     "h": {
+      "fi": "Kahvin alkukoti ja Lalibelan kalliokirkot",
+      "en": "Birthplace of coffee, rock churches of Lalibela"
+     }
+    },
+    {
+     "fi": [
+      "Liberia"
+     ],
+     "en": [
+      "Liberia"
+     ],
+     "h": {
+      "fi": "Vapautettujen orjien perustama, itsenäinen 1847",
+      "en": "Founded by freed slaves, independent 1847"
+     }
+    },
+    {
+     "fi": [
+      "Algeria"
+     ],
+     "en": [
+      "Algeria"
+     ],
+     "h": {
+      "fi": "Afrikan pinta-alaltaan suurin valtio",
+      "en": "Largest country in Africa by area"
+     }
+    },
+    {
+     "fi": [
+      "Etelä-Sudan"
+     ],
+     "en": [
+      "South Sudan"
+     ],
+     "h": {
+      "fi": "YK:n nuorin jäsenvaltio, itsenäinen 2011",
+      "en": "Youngest UN member, independent 2011"
+     }
+    },
+    {
+     "fi": [
+      "Mauritius"
+     ],
+     "en": [
+      "Mauritius"
+     ],
+     "h": {
+      "fi": "Saarivaltio Intian valtameressä, dodon koti",
+      "en": "Indian Ocean island nation, home of the dodo"
+     }
+    },
+    {
+     "fi": [
+      "Kamerun"
+     ],
+     "en": [
+      "Cameroon"
+     ],
+     "h": {
+      "fi": "Lempinimeltään \"Afrikka pienoiskoossa\"",
+      "en": "Nicknamed \"Africa in miniature\""
+     }
+    },
+    {
+     "fi": [
+      "Zimbabwe"
+     ],
+     "en": [
+      "Zimbabwe"
+     ],
+     "h": {
+      "fi": "Suur-Zimbabwen kivikaupungin rauniot",
+      "en": "Stone ruins of Great Zimbabwe"
+     }
+    },
+    {
+     "fi": [
+      "Djibouti"
+     ],
+     "en": [
+      "Djibouti"
+     ],
+     "h": {
+      "fi": "Assaljärvi, Afrikan matalin kohta",
+      "en": "Lake Assal, lowest point in Africa"
+     }
+    },
+    {
+     "fi": [
+      "Ghana"
+     ],
+     "en": [
+      "Ghana"
+     ],
+     "h": {
+      "fi": "Entinen Kultarannikko, itsenäinen 1957",
+      "en": "Former Gold Coast, independent 1957"
+     }
+    },
+    {
+     "fi": [
+      "Senegal"
+     ],
+     "en": [
+      "Senegal"
+     ],
+     "h": {
+      "fi": "Mantereen läntisin kärki on täällä",
+      "en": "Home of the westernmost point of mainland Africa"
+     }
+    },
+    {
+     "fi": [
+      "Etelä-Afrikka"
+     ],
+     "en": [
+      "South Africa"
+     ],
+     "h": {
+      "fi": "Pöytävuori ja Agulhasniemi, mantereen eteläisin kärki",
+      "en": "Table Mountain and Cape Agulhas, the southernmost tip"
+     }
+    },
+    {
+     "fi": [
+      "Sudan"
+     ],
+     "en": [
+      "Sudan"
+     ],
+     "h": {
+      "fi": "Sininen ja Valkoinen Niili yhtyvät, pyramideja enemmän kuin Egyptissä",
+      "en": "Blue and White Nile meet; more pyramids than Egypt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-kaupungit-alkukirjaimesta",
+   "cat": "maantieto",
+   "t": 200,
+   "title": {
+    "fi": "Euroopan kaupungit alkukirjaimesta ja vihjeestä (26, ei valtioiden pääkaupunkeja)",
+    "en": "European cities from the first letter and a clue (26, no national capitals)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Vihje",
+    "en": "Clue"
+   },
+   "items": [
+    {
+     "fi": [
+      "München"
+     ],
+     "en": [
+      "Munich",
+      "München"
+     ],
+     "h": {
+      "fi": "M – Baijerin pääkaupunki, Oktoberfest",
+      "en": "M – capital of Bavaria, Oktoberfest"
+     }
+    },
+    {
+     "fi": [
+      "Barcelona"
+     ],
+     "en": [
+      "Barcelona"
+     ],
+     "h": {
+      "fi": "B – Gaudín Sagrada Família",
+      "en": "B – Gaudí's Sagrada Família"
+     }
+    },
+    {
+     "fi": [
+      "Venetsia",
+      "Venezia"
+     ],
+     "en": [
+      "Venice",
+      "Venezia"
+     ],
+     "h": {
+      "fi": "V – kanavat ja gondolit",
+      "en": "V – canals and gondolas"
+     }
+    },
+    {
+     "fi": [
+      "Firenze"
+     ],
+     "en": [
+      "Florence",
+      "Firenze"
+     ],
+     "h": {
+      "fi": "F – renessanssin kehto, Uffizi",
+      "en": "F – cradle of the Renaissance, the Uffizi"
+     }
+    },
+    {
+     "fi": [
+      "Napoli"
+     ],
+     "en": [
+      "Naples",
+      "Napoli"
+     ],
+     "h": {
+      "fi": "N – Vesuvius vieressä, pizzan kotikaupunki",
+      "en": "N – next to Vesuvius, home of pizza"
+     }
+    },
+    {
+     "fi": [
+      "Pisa"
+     ],
+     "en": [
+      "Pisa"
+     ],
+     "h": {
+      "fi": "P – kalteva torni",
+      "en": "P – the leaning tower"
+     }
+    },
+    {
+     "fi": [
+      "Sevilla"
+     ],
+     "en": [
+      "Seville",
+      "Sevilla"
+     ],
+     "h": {
+      "fi": "S – Andalusian pääkaupunki, flamenco",
+      "en": "S – capital of Andalusia, flamenco"
+     }
+    },
+    {
+     "fi": [
+      "Granada"
+     ],
+     "en": [
+      "Granada"
+     ],
+     "h": {
+      "fi": "G – Alhambran palatsi",
+      "en": "G – the Alhambra palace"
+     }
+    },
+    {
+     "fi": [
+      "Edinburgh"
+     ],
+     "en": [
+      "Edinburgh"
+     ],
+     "h": {
+      "fi": "E – Skotlannin pääkaupunki",
+      "en": "E – capital of Scotland"
+     }
+    },
+    {
+     "fi": [
+      "Liverpool"
+     ],
+     "en": [
+      "Liverpool"
+     ],
+     "h": {
+      "fi": "L – The Beatlesin kotikaupunki",
+      "en": "L – home town of the Beatles"
+     }
+    },
+    {
+     "fi": [
+      "Oxford"
+     ],
+     "en": [
+      "Oxford"
+     ],
+     "h": {
+      "fi": "O – englanninkielisen maailman vanhin yliopisto",
+      "en": "O – oldest university in the English-speaking world"
+     }
+    },
+    {
+     "fi": [
+      "Hampuri",
+      "Hamburg"
+     ],
+     "en": [
+      "Hamburg"
+     ],
+     "h": {
+      "fi": "H – Saksan suurin satama Elben varrella",
+      "en": "H – Germany's largest port, on the Elbe"
+     }
+    },
+    {
+     "fi": [
+      "Salzburg"
+     ],
+     "en": [
+      "Salzburg"
+     ],
+     "h": {
+      "fi": "S – Mozartin syntymäkaupunki",
+      "en": "S – birthplace of Mozart"
+     }
+    },
+    {
+     "fi": [
+      "Göteborg"
+     ],
+     "en": [
+      "Gothenburg",
+      "Göteborg"
+     ],
+     "h": {
+      "fi": "G – Ruotsin toiseksi suurin kaupunki",
+      "en": "G – Sweden's second largest city"
+     }
+    },
+    {
+     "fi": [
+      "Bergen"
+     ],
+     "en": [
+      "Bergen"
+     ],
+     "h": {
+      "fi": "B – Norjan sateinen satamakaupunki, Bryggen",
+      "en": "B – Norway's rainy port city, Bryggen"
+     }
+    },
+    {
+     "fi": [
+      "Tampere"
+     ],
+     "en": [
+      "Tampere"
+     ],
+     "h": {
+      "fi": "T – Pohjoismaiden suurin sisämaakaupunki",
+      "en": "T – largest inland city in the Nordics"
+     }
+    },
+    {
+     "fi": [
+      "Porto"
+     ],
+     "en": [
+      "Porto",
+      "Oporto"
+     ],
+     "h": {
+      "fi": "P – portviinin nimikaupunki",
+      "en": "P – the city that gave port wine its name"
+     }
+    },
+    {
+     "fi": [
+      "Marseille"
+     ],
+     "en": [
+      "Marseille",
+      "Marseilles"
+     ],
+     "h": {
+      "fi": "M – Ranskan vanhin kaupunki, kreikkalaisten perustama",
+      "en": "M – France's oldest city, founded by Greeks"
+     }
+    },
+    {
+     "fi": [
+      "Dubrovnik"
+     ],
+     "en": [
+      "Dubrovnik"
+     ],
+     "h": {
+      "fi": "D – Adrianmeren helmi, kaupunginmuurit",
+      "en": "D – pearl of the Adriatic, city walls"
+     }
+    },
+    {
+     "fi": [
+      "Krakova",
+      "Kraków"
+     ],
+     "en": [
+      "Kraków",
+      "Krakow",
+      "Cracow"
+     ],
+     "h": {
+      "fi": "K – Puolan vanha kuninkaiden kaupunki, Wawel",
+      "en": "K – Poland's old royal city, Wawel"
+     }
+    },
+    {
+     "fi": [
+      "Geneve",
+      "Genève"
+     ],
+     "en": [
+      "Geneva",
+      "Genève"
+     ],
+     "h": {
+      "fi": "G – YK:n Euroopan päämaja ja Punainen Risti",
+      "en": "G – UN European headquarters and the Red Cross"
+     }
+    },
+    {
+     "fi": [
+      "Tartto",
+      "Tartu"
+     ],
+     "en": [
+      "Tartu"
+     ],
+     "h": {
+      "fi": "T – Viron vanhin yliopistokaupunki",
+      "en": "T – Estonia's oldest university town"
+     }
+    },
+    {
+     "fi": [
+      "Antwerpen"
+     ],
+     "en": [
+      "Antwerp",
+      "Antwerpen"
+     ],
+     "h": {
+      "fi": "A – timanttikaupan keskus",
+      "en": "A – centre of the diamond trade"
+     }
+    },
+    {
+     "fi": [
+      "Rotterdam"
+     ],
+     "en": [
+      "Rotterdam"
+     ],
+     "h": {
+      "fi": "R – Euroopan suurin satama",
+      "en": "R – Europe's largest port"
+     }
+    },
+    {
+     "fi": [
+      "Turku"
+     ],
+     "en": [
+      "Turku",
+      "Åbo"
+     ],
+     "h": {
+      "fi": "T – Suomen vanhin kaupunki",
+      "en": "T – Finland's oldest city"
+     }
+    },
+    {
+     "fi": [
+      "Málaga"
+     ],
+     "en": [
+      "Málaga"
+     ],
+     "h": {
+      "fi": "M – Picasson syntymäkaupunki",
+      "en": "M – birthplace of Picasso"
+     }
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-ajoneuvotunnukset",
+   "cat": "maantieto",
+   "t": 290,
+   "title": {
+    "fi": "45 Euroopan maata ajoneuvotunnuksesta (tilanne 2026)",
+    "en": "45 European countries from the vehicle registration code (2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Tunnus",
+    "en": "Code"
+   },
+   "items": [
+    {
+     "fi": [
+      "Itävalta"
+     ],
+     "en": [
+      "Austria"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Saksa"
+     ],
+     "en": [
+      "Germany"
+     ],
+     "h": "D"
+    },
+    {
+     "fi": [
+      "Espanja"
+     ],
+     "en": [
+      "Spain"
+     ],
+     "h": "E"
+    },
+    {
+     "fi": [
+      "Ranska"
+     ],
+     "en": [
+      "France"
+     ],
+     "h": "F"
+    },
+    {
+     "fi": [
+      "Unkari"
+     ],
+     "en": [
+      "Hungary"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Italia"
+     ],
+     "en": [
+      "Italy"
+     ],
+     "h": "I"
+    },
+    {
+     "fi": [
+      "Luxemburg"
+     ],
+     "en": [
+      "Luxembourg"
+     ],
+     "h": "L"
+    },
+    {
+     "fi": [
+      "Malta"
+     ],
+     "en": [
+      "Malta"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Portugali"
+     ],
+     "en": [
+      "Portugal"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Ruotsi"
+     ],
+     "en": [
+      "Sweden"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Vatikaani",
+      "Vatikaanivaltio"
+     ],
+     "en": [
+      "Vatican City",
+      "Vatican"
+     ],
+     "h": "V"
+    },
+    {
+     "fi": [
+      "Albania"
+     ],
+     "en": [
+      "Albania"
+     ],
+     "h": "AL"
+    },
+    {
+     "fi": [
+      "Bulgaria"
+     ],
+     "en": [
+      "Bulgaria"
+     ],
+     "h": "BG"
+    },
+    {
+     "fi": [
+      "Valko-Venäjä",
+      "Valkovenäjä"
+     ],
+     "en": [
+      "Belarus"
+     ],
+     "h": "BY"
+    },
+    {
+     "fi": [
+      "Sveitsi"
+     ],
+     "en": [
+      "Switzerland"
+     ],
+     "h": "CH"
+    },
+    {
+     "fi": [
+      "Kypros"
+     ],
+     "en": [
+      "Cyprus"
+     ],
+     "h": "CY"
+    },
+    {
+     "fi": [
+      "Tšekki",
+      "Tsekki",
+      "Tšekin tasavalta"
+     ],
+     "en": [
+      "Czechia",
+      "Czech Republic"
+     ],
+     "h": "CZ"
+    },
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ],
+     "h": "DK"
+    },
+    {
+     "fi": [
+      "Liechtenstein"
+     ],
+     "en": [
+      "Liechtenstein"
+     ],
+     "h": "FL"
+    },
+    {
+     "fi": [
+      "Kreikka"
+     ],
+     "en": [
+      "Greece"
+     ],
+     "h": "GR"
+    },
+    {
+     "fi": [
+      "Kroatia"
+     ],
+     "en": [
+      "Croatia"
+     ],
+     "h": "HR"
+    },
+    {
+     "fi": [
+      "Islanti"
+     ],
+     "en": [
+      "Iceland"
+     ],
+     "h": "IS"
+    },
+    {
+     "fi": [
+      "Liettua"
+     ],
+     "en": [
+      "Lithuania"
+     ],
+     "h": "LT"
+    },
+    {
+     "fi": [
+      "Latvia"
+     ],
+     "en": [
+      "Latvia"
+     ],
+     "h": "LV"
+    },
+    {
+     "fi": [
+      "Monaco"
+     ],
+     "en": [
+      "Monaco"
+     ],
+     "h": "MC"
+    },
+    {
+     "fi": [
+      "Moldova"
+     ],
+     "en": [
+      "Moldova"
+     ],
+     "h": "MD"
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti"
+     ],
+     "en": [
+      "Netherlands",
+      "Holland"
+     ],
+     "h": "NL"
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ],
+     "h": "PL"
+    },
+    {
+     "fi": [
+      "Romania"
+     ],
+     "en": [
+      "Romania"
+     ],
+     "h": "RO"
+    },
+    {
+     "fi": [
+      "Slovakia"
+     ],
+     "en": [
+      "Slovakia"
+     ],
+     "h": "SK"
+    },
+    {
+     "fi": [
+      "Ukraina"
+     ],
+     "en": [
+      "Ukraine"
+     ],
+     "h": "UA"
+    },
+    {
+     "fi": [
+      "Yhdistynyt kuningaskunta",
+      "Iso-Britannia",
+      "Britannia"
+     ],
+     "en": [
+      "United Kingdom",
+      "Great Britain",
+      "Britain"
+     ],
+     "h": "UK"
+    },
+    {
+     "fi": [
+      "Andorra"
+     ],
+     "en": [
+      "Andorra"
+     ],
+     "h": "AND"
+    },
+    {
+     "fi": [
+      "Bosnia ja Hertsegovina",
+      "Bosnia-Hertsegovina",
+      "Bosnia"
+     ],
+     "en": [
+      "Bosnia and Herzegovina",
+      "Bosnia & Herzegovina",
+      "Bosnia"
+     ],
+     "h": "BIH"
+    },
+    {
+     "fi": [
+      "Viro",
+      "Eesti"
+     ],
+     "en": [
+      "Estonia"
+     ],
+     "h": "EST"
+    },
+    {
+     "fi": [
+      "Irlanti"
+     ],
+     "en": [
+      "Ireland"
+     ],
+     "h": "IRL"
+    },
+    {
+     "fi": [
+      "Montenegro"
+     ],
+     "en": [
+      "Montenegro"
+     ],
+     "h": "MNE"
+    },
+    {
+     "fi": [
+      "Pohjois-Makedonia",
+      "Makedonia"
+     ],
+     "en": [
+      "North Macedonia",
+      "Macedonia"
+     ],
+     "h": "NMK"
+    },
+    {
+     "fi": [
+      "Kosovo"
+     ],
+     "en": [
+      "Kosovo"
+     ],
+     "h": "RKS"
+    },
+    {
+     "fi": [
+      "San Marino"
+     ],
+     "en": [
+      "San Marino"
+     ],
+     "h": "RSM"
+    },
+    {
+     "fi": [
+      "Venäjä"
+     ],
+     "en": [
+      "Russia"
+     ],
+     "h": "RUS"
+    },
+    {
+     "fi": [
+      "Slovenia"
+     ],
+     "en": [
+      "Slovenia"
+     ],
+     "h": "SLO"
+    },
+    {
+     "fi": [
+      "Serbia"
+     ],
+     "en": [
+      "Serbia"
+     ],
+     "h": "SRB"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-lentoasemakoodit",
+   "cat": "maantieto",
+   "t": 230,
+   "title": {
+    "fi": "Mihin kaupunkiin lennät? 35 Euroopan lentoaseman IATA-koodia",
+    "en": "Where are you flying? 35 European airport IATA codes"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Koodi",
+    "en": "Code"
+   },
+   "items": [
+    {
+     "fi": [
+      "Tukholma",
+      "Stockholm"
+     ],
+     "en": [
+      "Stockholm"
+     ],
+     "h": "ARN"
+    },
+    {
+     "fi": [
+      "Reykjavík",
+      "Keflavík"
+     ],
+     "en": [
+      "Reykjavík",
+      "Keflavík"
+     ],
+     "h": "KEF"
+    },
+    {
+     "fi": [
+      "Oslo"
+     ],
+     "en": [
+      "Oslo"
+     ],
+     "h": "OSL"
+    },
+    {
+     "fi": [
+      "Kööpenhamina"
+     ],
+     "en": [
+      "Copenhagen"
+     ],
+     "h": "CPH"
+    },
+    {
+     "fi": [
+      "Tallinna",
+      "Tallinn"
+     ],
+     "en": [
+      "Tallinn"
+     ],
+     "h": "TLL"
+    },
+    {
+     "fi": [
+      "Riika",
+      "Riga"
+     ],
+     "en": [
+      "Riga"
+     ],
+     "h": "RIX"
+    },
+    {
+     "fi": [
+      "Vilna",
+      "Vilnius"
+     ],
+     "en": [
+      "Vilnius"
+     ],
+     "h": "VNO"
+    },
+    {
+     "fi": [
+      "Pariisi"
+     ],
+     "en": [
+      "Paris"
+     ],
+     "h": "CDG"
+    },
+    {
+     "fi": [
+      "Lontoo"
+     ],
+     "en": [
+      "London"
+     ],
+     "h": "LHR"
+    },
+    {
+     "fi": [
+      "Rooma"
+     ],
+     "en": [
+      "Rome"
+     ],
+     "h": "FCO"
+    },
+    {
+     "fi": [
+      "München"
+     ],
+     "en": [
+      "Munich",
+      "München"
+     ],
+     "h": "MUC"
+    },
+    {
+     "fi": [
+      "Frankfurt"
+     ],
+     "en": [
+      "Frankfurt"
+     ],
+     "h": "FRA"
+    },
+    {
+     "fi": [
+      "Amsterdam"
+     ],
+     "en": [
+      "Amsterdam"
+     ],
+     "h": "AMS"
+    },
+    {
+     "fi": [
+      "Bryssel"
+     ],
+     "en": [
+      "Brussels"
+     ],
+     "h": "BRU"
+    },
+    {
+     "fi": [
+      "Zürich"
+     ],
+     "en": [
+      "Zurich"
+     ],
+     "h": "ZRH"
+    },
+    {
+     "fi": [
+      "Geneve"
+     ],
+     "en": [
+      "Geneva"
+     ],
+     "h": "GVA"
+    },
+    {
+     "fi": [
+      "Wien"
+     ],
+     "en": [
+      "Vienna",
+      "Wien"
+     ],
+     "h": "VIE"
+    },
+    {
+     "fi": [
+      "Praha"
+     ],
+     "en": [
+      "Prague"
+     ],
+     "h": "PRG"
+    },
+    {
+     "fi": [
+      "Varsova"
+     ],
+     "en": [
+      "Warsaw"
+     ],
+     "h": "WAW"
+    },
+    {
+     "fi": [
+      "Budapest"
+     ],
+     "en": [
+      "Budapest"
+     ],
+     "h": "BUD"
+    },
+    {
+     "fi": [
+      "Bukarest"
+     ],
+     "en": [
+      "Bucharest"
+     ],
+     "h": "OTP"
+    },
+    {
+     "fi": [
+      "Belgrad"
+     ],
+     "en": [
+      "Belgrade"
+     ],
+     "h": "BEG"
+    },
+    {
+     "fi": [
+      "Ateena"
+     ],
+     "en": [
+      "Athens"
+     ],
+     "h": "ATH"
+    },
+    {
+     "fi": [
+      "Lissabon"
+     ],
+     "en": [
+      "Lisbon"
+     ],
+     "h": "LIS"
+    },
+    {
+     "fi": [
+      "Madrid"
+     ],
+     "en": [
+      "Madrid"
+     ],
+     "h": "MAD"
+    },
+    {
+     "fi": [
+      "Málaga"
+     ],
+     "en": [
+      "Málaga"
+     ],
+     "h": "AGP"
+    },
+    {
+     "fi": [
+      "Palma",
+      "Mallorca",
+      "Palma de Mallorca"
+     ],
+     "en": [
+      "Palma",
+      "Mallorca",
+      "Palma de Mallorca"
+     ],
+     "h": "PMI"
+    },
+    {
+     "fi": [
+      "Milano"
+     ],
+     "en": [
+      "Milan",
+      "Milano"
+     ],
+     "h": "MXP"
+    },
+    {
+     "fi": [
+      "Venetsia",
+      "Venezia"
+     ],
+     "en": [
+      "Venice",
+      "Venezia"
+     ],
+     "h": "VCE"
+    },
+    {
+     "fi": [
+      "Nizza",
+      "Nice"
+     ],
+     "en": [
+      "Nice"
+     ],
+     "h": "NCE"
+    },
+    {
+     "fi": [
+      "Pietari"
+     ],
+     "en": [
+      "Saint Petersburg",
+      "St Petersburg",
+      "St. Petersburg"
+     ],
+     "h": "LED"
+    },
+    {
+     "fi": [
+      "Dublin"
+     ],
+     "en": [
+      "Dublin"
+     ],
+     "h": "DUB"
+    },
+    {
+     "fi": [
+      "Kittilä"
+     ],
+     "en": [
+      "Kittilä"
+     ],
+     "h": "KTT"
+    },
+    {
+     "fi": [
+      "Rovaniemi"
+     ],
+     "en": [
+      "Rovaniemi"
+     ],
+     "h": "RVN"
+    },
+    {
+     "fi": [
+      "Split"
+     ],
+     "en": [
+      "Split"
+     ],
+     "h": "SPU"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-jalkapallostadionit",
+   "cat": "maantieto",
+   "t": 190,
+   "title": {
+    "fi": "Missä kaupungissa? 27 eurooppalaista jalkapallostadionia (nimet 2026)",
+    "en": "Which city? 27 European football stadiums (names as of 2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Stadion",
+    "en": "Stadium"
+   },
+   "items": [
+    {
+     "fi": [
+      "Barcelona"
+     ],
+     "en": [
+      "Barcelona"
+     ],
+     "h": "Camp Nou"
+    },
+    {
+     "fi": [
+      "Madrid"
+     ],
+     "en": [
+      "Madrid"
+     ],
+     "h": "Santiago Bernabéu"
+    },
+    {
+     "fi": [
+      "Liverpool"
+     ],
+     "en": [
+      "Liverpool"
+     ],
+     "h": "Anfield"
+    },
+    {
+     "fi": [
+      "Manchester"
+     ],
+     "en": [
+      "Manchester"
+     ],
+     "h": "Etihad Stadium"
+    },
+    {
+     "fi": [
+      "Milano"
+     ],
+     "en": [
+      "Milan",
+      "Milano"
+     ],
+     "h": "San Siro"
+    },
+    {
+     "fi": [
+      "München"
+     ],
+     "en": [
+      "Munich",
+      "München"
+     ],
+     "h": "Allianz Arena"
+    },
+    {
+     "fi": [
+      "Dortmund"
+     ],
+     "en": [
+      "Dortmund"
+     ],
+     "h": "Signal Iduna Park"
+    },
+    {
+     "fi": [
+      "Pariisi"
+     ],
+     "en": [
+      "Paris"
+     ],
+     "h": "Parc des Princes"
+    },
+    {
+     "fi": [
+      "Lissabon"
+     ],
+     "en": [
+      "Lisbon"
+     ],
+     "h": "Estádio da Luz"
+    },
+    {
+     "fi": [
+      "Porto"
+     ],
+     "en": [
+      "Porto",
+      "Oporto"
+     ],
+     "h": "Estádio do Dragão"
+    },
+    {
+     "fi": [
+      "Amsterdam"
+     ],
+     "en": [
+      "Amsterdam"
+     ],
+     "h": "Johan Cruijff ArenA"
+    },
+    {
+     "fi": [
+      "Rotterdam"
+     ],
+     "en": [
+      "Rotterdam"
+     ],
+     "h": "De Kuip"
+    },
+    {
+     "fi": [
+      "Glasgow"
+     ],
+     "en": [
+      "Glasgow"
+     ],
+     "h": "Celtic Park"
+    },
+    {
+     "fi": [
+      "Torino"
+     ],
+     "en": [
+      "Turin",
+      "Torino"
+     ],
+     "h": "Allianz Stadium"
+    },
+    {
+     "fi": [
+      "Napoli"
+     ],
+     "en": [
+      "Naples",
+      "Napoli"
+     ],
+     "h": "Stadio Diego Armando Maradona"
+    },
+    {
+     "fi": [
+      "Marseille"
+     ],
+     "en": [
+      "Marseille",
+      "Marseilles"
+     ],
+     "h": "Stade Vélodrome"
+    },
+    {
+     "fi": [
+      "Lontoo"
+     ],
+     "en": [
+      "London"
+     ],
+     "h": "Wembley"
+    },
+    {
+     "fi": [
+      "Valencia"
+     ],
+     "en": [
+      "Valencia"
+     ],
+     "h": "Mestalla"
+    },
+    {
+     "fi": [
+      "Sevilla"
+     ],
+     "en": [
+      "Seville",
+      "Sevilla"
+     ],
+     "h": "Ramón Sánchez-Pizjuán"
+    },
+    {
+     "fi": [
+      "Gelsenkirchen"
+     ],
+     "en": [
+      "Gelsenkirchen"
+     ],
+     "h": "Veltins-Arena"
+    },
+    {
+     "fi": [
+      "Kööpenhamina"
+     ],
+     "en": [
+      "Copenhagen"
+     ],
+     "h": "Parken"
+    },
+    {
+     "fi": [
+      "Budapest"
+     ],
+     "en": [
+      "Budapest"
+     ],
+     "h": "Puskás Aréna"
+    },
+    {
+     "fi": [
+      "Eindhoven"
+     ],
+     "en": [
+      "Eindhoven"
+     ],
+     "h": "Philips Stadion"
+    },
+    {
+     "fi": [
+      "Wien"
+     ],
+     "en": [
+      "Vienna",
+      "Wien"
+     ],
+     "h": "Ernst-Happel-Stadion"
+    },
+    {
+     "fi": [
+      "Dublin"
+     ],
+     "en": [
+      "Dublin"
+     ],
+     "h": "Aviva Stadium"
+    },
+    {
+     "fi": [
+      "Bilbao"
+     ],
+     "en": [
+      "Bilbao"
+     ],
+     "h": "San Mamés"
+    },
+    {
+     "fi": [
+      "Hampuri",
+      "Hamburg"
+     ],
+     "en": [
+      "Hamburg"
+     ],
+     "h": "Volksparkstadion"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-kenen-mukaan-nimetty",
+   "cat": "maantieto",
+   "t": 170,
+   "title": {
+    "fi": "Kenen mukaan nimetty? 20 paikkaa Euroopassa ja Afrikassa",
+    "en": "Named after whom? 20 places in Europe and Africa"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Paikka",
+    "en": "Place"
+   },
+   "items": [
+    {
+     "fi": [
+      "Maurits Oranialainen",
+      "Maurits",
+      "Maurits Nassaulainen"
+     ],
+     "en": [
+      "Maurice of Nassau",
+      "Maurice",
+      "Maurits"
+     ],
+     "h": "Mauritius"
+    },
+    {
+     "fi": [
+      "Jean Moreau de Séchelles",
+      "Moreau de Séchelles",
+      "Séchelles"
+     ],
+     "en": [
+      "Jean Moreau de Séchelles",
+      "Moreau de Séchelles",
+      "Séchelles"
+     ],
+     "h": {
+      "fi": "Seychellit",
+      "en": "Seychelles"
+     }
+    },
+    {
+     "fi": [
+      "Tariq ibn Ziyad",
+      "Tariq",
+      "Tarik"
+     ],
+     "en": [
+      "Tariq ibn Ziyad",
+      "Tariq",
+      "Tarik"
+     ],
+     "h": "Gibraltar"
+    },
+    {
+     "fi": [
+      "Aleksanteri Suuri",
+      "Aleksanteri",
+      "Aleksanteri Suuri Makedonialainen"
+     ],
+     "en": [
+      "Alexander the Great",
+      "Alexander"
+     ],
+     "h": {
+      "fi": "Aleksandria",
+      "en": "Alexandria"
+     }
+    },
+    {
+     "fi": [
+      "Kuningatar Victoria",
+      "Victoria",
+      "Viktoria"
+     ],
+     "en": [
+      "Queen Victoria",
+      "Victoria"
+     ],
+     "h": {
+      "fi": "Victoriajärvi",
+      "en": "Lake Victoria"
+     }
+    },
+    {
+     "fi": [
+      "Prinssi Albert",
+      "Albert",
+      "Albert Saksi-Coburg-Gotha"
+     ],
+     "en": [
+      "Prince Albert",
+      "Albert"
+     ],
+     "h": {
+      "fi": "Albertjärvi",
+      "en": "Lake Albert"
+     }
+    },
+    {
+     "fi": [
+      "Pierre Savorgnan de Brazza",
+      "de Brazza",
+      "Brazza",
+      "Savorgnan de Brazza"
+     ],
+     "en": [
+      "Pierre Savorgnan de Brazza",
+      "de Brazza",
+      "Brazza",
+      "Savorgnan de Brazza"
+     ],
+     "h": "Brazzaville"
+    },
+    {
+     "fi": [
+      "Ludvig XV",
+      "Ludvig 15",
+      "Louis XV"
+     ],
+     "en": [
+      "Louis XV",
+      "Louis 15"
+     ],
+     "h": "Port Louis"
+    },
+    {
+     "fi": [
+      "Benjamin D'Urban",
+      "D'Urban"
+     ],
+     "en": [
+      "Benjamin D'Urban",
+      "D'Urban"
+     ],
+     "h": "Durban"
+    },
+    {
+     "fi": [
+      "Lovisa Ulrika",
+      "Loviisa Ulriikka",
+      "Kuningatar Lovisa Ulrika"
+     ],
+     "en": [
+      "Louisa Ulrika",
+      "Lovisa Ulrika",
+      "Queen Louisa Ulrika"
+     ],
+     "h": {
+      "fi": "Loviisa",
+      "en": "Loviisa (Lovisa)"
+     }
+    },
+    {
+     "fi": [
+      "Kuningatar Kristiina",
+      "Kristiina",
+      "Kristina",
+      "Christina"
+     ],
+     "en": [
+      "Queen Christina",
+      "Christina",
+      "Kristina"
+     ],
+     "h": {
+      "fi": "Kristiinankaupunki",
+      "en": "Kristinestad"
+     }
+    },
+    {
+     "fi": [
+      "Pietari Brahe",
+      "Per Brahe",
+      "Brahe"
+     ],
+     "en": [
+      "Per Brahe",
+      "Brahe",
+      "Peter Brahe"
+     ],
+     "h": {
+      "fi": "Raahe",
+      "en": "Raahe (Brahestad)"
+     }
+    },
+    {
+     "fi": [
+      "Mihail Kalinin",
+      "Kalinin"
+     ],
+     "en": [
+      "Mikhail Kalinin",
+      "Kalinin"
+     ],
+     "h": "Kaliningrad"
+    },
+    {
+     "fi": [
+      "Palmiro Togliatti",
+      "Togliatti"
+     ],
+     "en": [
+      "Palmiro Togliatti",
+      "Togliatti"
+     ],
+     "h": {
+      "fi": "Toljatti",
+      "en": "Tolyatti"
+     }
+    },
+    {
+     "fi": [
+      "Augustus",
+      "Keisari Augustus",
+      "Octavianus"
+     ],
+     "en": [
+      "Augustus",
+      "Emperor Augustus",
+      "Caesar Augustus",
+      "Octavian"
+     ],
+     "h": "Zaragoza"
+    },
+    {
+     "fi": [
+      "Filip II Makedonialainen",
+      "Filip II",
+      "Filippos II"
+     ],
+     "en": [
+      "Philip II of Macedon",
+      "Philip II"
+     ],
+     "h": "Plovdiv"
+    },
+    {
+     "fi": [
+      "Hadrianus",
+      "Keisari Hadrianus"
+     ],
+     "en": [
+      "Hadrian",
+      "Emperor Hadrian"
+     ],
+     "h": "Edirne"
+    },
+    {
+     "fi": [
+      "Thessalonike",
+      "Thessalonike Makedonialainen"
+     ],
+     "en": [
+      "Thessalonike",
+      "Thessalonike of Macedon"
+     ],
+     "h": "Thessaloniki"
+    },
+    {
+     "fi": [
+      "Kristian IV",
+      "Christian IV"
+     ],
+     "en": [
+      "Christian IV",
+      "Kristian IV"
+     ],
+     "h": "Kristiansand"
+    },
+    {
+     "fi": [
+      "Vilhelm I",
+      "Wilhelm I",
+      "Keisari Vilhelm I"
+     ],
+     "en": [
+      "Wilhelm I",
+      "William I",
+      "Kaiser Wilhelm I"
+     ],
+     "h": "Wilhelmshaven"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-maat-omalla-kielellaan",
+   "cat": "maantieto",
+   "t": 190,
+   "title": {
+    "fi": "Euroopan ja Afrikan maat omalla kielellään: tunnista 28 maata (latinalaisin kirjaimin)",
+    "en": "European and African countries in their own language: identify 28 (Latin script)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Oma nimi",
+    "en": "Native name"
+   },
+   "items": [
+    {
+     "fi": [
+      "Ruotsi"
+     ],
+     "en": [
+      "Sweden"
+     ],
+     "h": "Sverige"
+    },
+    {
+     "fi": [
+      "Norja"
+     ],
+     "en": [
+      "Norway"
+     ],
+     "h": "Norge"
+    },
+    {
+     "fi": [
+      "Tanska"
+     ],
+     "en": [
+      "Denmark"
+     ],
+     "h": "Danmark"
+    },
+    {
+     "fi": [
+      "Islanti"
+     ],
+     "en": [
+      "Iceland"
+     ],
+     "h": "Ísland"
+    },
+    {
+     "fi": [
+      "Viro"
+     ],
+     "en": [
+      "Estonia"
+     ],
+     "h": "Eesti"
+    },
+    {
+     "fi": [
+      "Liettua"
+     ],
+     "en": [
+      "Lithuania"
+     ],
+     "h": "Lietuva"
+    },
+    {
+     "fi": [
+      "Puola"
+     ],
+     "en": [
+      "Poland"
+     ],
+     "h": "Polska"
+    },
+    {
+     "fi": [
+      "Saksa"
+     ],
+     "en": [
+      "Germany"
+     ],
+     "h": "Deutschland"
+    },
+    {
+     "fi": [
+      "Alankomaat",
+      "Hollanti"
+     ],
+     "en": [
+      "Netherlands",
+      "Holland"
+     ],
+     "h": "Nederland"
+    },
+    {
+     "fi": [
+      "Belgia"
+     ],
+     "en": [
+      "Belgium"
+     ],
+     "h": "België / Belgique"
+    },
+    {
+     "fi": [
+      "Itävalta"
+     ],
+     "en": [
+      "Austria"
+     ],
+     "h": "Österreich"
+    },
+    {
+     "fi": [
+      "Sveitsi"
+     ],
+     "en": [
+      "Switzerland"
+     ],
+     "h": "Schweiz / Suisse / Svizzera"
+    },
+    {
+     "fi": [
+      "Unkari"
+     ],
+     "en": [
+      "Hungary"
+     ],
+     "h": "Magyarország"
+    },
+    {
+     "fi": [
+      "Tšekki",
+      "Tsekki",
+      "Tšekin tasavalta"
+     ],
+     "en": [
+      "Czechia",
+      "Czech Republic"
+     ],
+     "h": "Česko"
+    },
+    {
+     "fi": [
+      "Slovakia"
+     ],
+     "en": [
+      "Slovakia"
+     ],
+     "h": "Slovensko"
+    },
+    {
+     "fi": [
+      "Kroatia"
+     ],
+     "en": [
+      "Croatia"
+     ],
+     "h": "Hrvatska"
+    },
+    {
+     "fi": [
+      "Montenegro"
+     ],
+     "en": [
+      "Montenegro"
+     ],
+     "h": "Crna Gora"
+    },
+    {
+     "fi": [
+      "Albania"
+     ],
+     "en": [
+      "Albania"
+     ],
+     "h": "Shqipëria"
+    },
+    {
+     "fi": [
+      "Kreikka"
+     ],
+     "en": [
+      "Greece"
+     ],
+     "h": "Elláda"
+    },
+    {
+     "fi": [
+      "Espanja"
+     ],
+     "en": [
+      "Spain"
+     ],
+     "h": "España"
+    },
+    {
+     "fi": [
+      "Irlanti"
+     ],
+     "en": [
+      "Ireland"
+     ],
+     "h": "Éire"
+    },
+    {
+     "fi": [
+      "Venäjä"
+     ],
+     "en": [
+      "Russia"
+     ],
+     "h": {
+      "fi": "Rossija",
+      "en": "Rossiya"
+     }
+    },
+    {
+     "fi": [
+      "Pohjois-Makedonia",
+      "Makedonia"
+     ],
+     "en": [
+      "North Macedonia",
+      "Macedonia"
+     ],
+     "h": "Severna Makedonija"
+    },
+    {
+     "fi": [
+      "Egypti"
+     ],
+     "en": [
+      "Egypt"
+     ],
+     "h": "Misr"
+    },
+    {
+     "fi": [
+      "Marokko"
+     ],
+     "en": [
+      "Morocco"
+     ],
+     "h": "Al-Maghrib"
+    },
+    {
+     "fi": [
+      "Algeria"
+     ],
+     "en": [
+      "Algeria"
+     ],
+     "h": "Al-Jazāʾir"
+    },
+    {
+     "fi": [
+      "Etiopia"
+     ],
+     "en": [
+      "Ethiopia"
+     ],
+     "h": "Ityop'ya"
+    },
+    {
+     "fi": [
+      "Eritrea"
+     ],
+     "en": [
+      "Eritrea"
+     ],
+     "h": "Ertra"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-kaupungit-omalla-kielellaan",
+   "cat": "maantieto",
+   "t": 125,
+   "title": {
+    "fi": "Kaupungit paikallisella kielellä: tunnista 18 Euroopan ja Afrikan kaupunkia",
+    "en": "Cities in the local language: identify 18 European and African cities"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Paikallinen nimi",
+    "en": "Local name"
+   },
+   "items": [
+    {
+     "fi": [
+      "Kööpenhamina"
+     ],
+     "en": [
+      "Copenhagen"
+     ],
+     "h": "København"
+    },
+    {
+     "fi": [
+      "Varsova"
+     ],
+     "en": [
+      "Warsaw"
+     ],
+     "h": "Warszawa"
+    },
+    {
+     "fi": [
+      "Lissabon"
+     ],
+     "en": [
+      "Lisbon"
+     ],
+     "h": "Lisboa"
+    },
+    {
+     "fi": [
+      "Haag"
+     ],
+     "en": [
+      "The Hague",
+      "Hague"
+     ],
+     "h": "Den Haag"
+    },
+    {
+     "fi": [
+      "Moskova"
+     ],
+     "en": [
+      "Moscow"
+     ],
+     "h": "Moskva"
+    },
+    {
+     "fi": [
+      "Rooma"
+     ],
+     "en": [
+      "Rome"
+     ],
+     "h": "Roma"
+    },
+    {
+     "fi": [
+      "Venetsia"
+     ],
+     "en": [
+      "Venice"
+     ],
+     "h": "Venezia"
+    },
+    {
+     "fi": [
+      "Bryssel"
+     ],
+     "en": [
+      "Brussels"
+     ],
+     "h": "Bruxelles / Brussel"
+    },
+    {
+     "fi": [
+      "Ateena"
+     ],
+     "en": [
+      "Athens"
+     ],
+     "h": "Athína"
+    },
+    {
+     "fi": [
+      "Bukarest"
+     ],
+     "en": [
+      "Bucharest"
+     ],
+     "h": "București"
+    },
+    {
+     "fi": [
+      "Belgrad"
+     ],
+     "en": [
+      "Belgrade"
+     ],
+     "h": "Beograd"
+    },
+    {
+     "fi": [
+      "Pietari"
+     ],
+     "en": [
+      "Saint Petersburg",
+      "St Petersburg"
+     ],
+     "h": "Sankt-Peterburg"
+    },
+    {
+     "fi": [
+      "Nikosia"
+     ],
+     "en": [
+      "Nicosia"
+     ],
+     "h": "Lefkosía"
+    },
+    {
+     "fi": [
+      "Dublin"
+     ],
+     "en": [
+      "Dublin"
+     ],
+     "h": "Baile Átha Cliath"
+    },
+    {
+     "fi": [
+      "Kairo"
+     ],
+     "en": [
+      "Cairo"
+     ],
+     "h": "Al-Qāhira"
+    },
+    {
+     "fi": [
+      "Aleksandria"
+     ],
+     "en": [
+      "Alexandria"
+     ],
+     "h": "Al-Iskandariyya"
+    },
+    {
+     "fi": [
+      "Tripoli"
+     ],
+     "en": [
+      "Tripoli"
+     ],
+     "h": "Ṭarābulus"
+    },
+    {
+     "fi": [
+      "Kapkaupunki"
+     ],
+     "en": [
+      "Cape Town"
+     ],
+     "h": "Kaapstad"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-ruotsin-paikannimisanat",
+   "cat": "maantieto",
+   "t": 150,
+   "title": {
+    "fi": "Ruotsalaisten paikannimien 25 tavallista osaa suomeksi",
+    "en": "25 common Swedish place-name words in English"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ruotsiksi",
+    "en": "Swedish"
+   },
+   "items": [
+    {
+     "fi": [
+      "järvi"
+     ],
+     "en": [
+      "lake"
+     ],
+     "h": "sjö"
+    },
+    {
+     "fi": [
+      "joki"
+     ],
+     "en": [
+      "river"
+     ],
+     "h": "älv"
+    },
+    {
+     "fi": [
+      "vuori"
+     ],
+     "en": [
+      "mountain"
+     ],
+     "h": "berg"
+    },
+    {
+     "fi": [
+      "saari"
+     ],
+     "en": [
+      "island"
+     ],
+     "h": "ö"
+    },
+    {
+     "fi": [
+      "luoto"
+     ],
+     "en": [
+      "islet",
+      "small island"
+     ],
+     "h": "holme"
+    },
+    {
+     "fi": [
+      "metsä"
+     ],
+     "en": [
+      "forest",
+      "wood",
+      "woods"
+     ],
+     "h": "skog"
+    },
+    {
+     "fi": [
+      "meri"
+     ],
+     "en": [
+      "sea",
+      "ocean"
+     ],
+     "h": "hav"
+    },
+    {
+     "fi": [
+      "tunturi"
+     ],
+     "en": [
+      "fell",
+      "mountain plateau"
+     ],
+     "h": "fjäll"
+    },
+    {
+     "fi": [
+      "laakso"
+     ],
+     "en": [
+      "valley",
+      "dale"
+     ],
+     "h": "dal"
+    },
+    {
+     "fi": [
+      "lahti",
+      "poukama"
+     ],
+     "en": [
+      "bay",
+      "cove",
+      "inlet"
+     ],
+     "h": "vik"
+    },
+    {
+     "fi": [
+      "virta"
+     ],
+     "en": [
+      "stream",
+      "current"
+     ],
+     "h": "ström"
+    },
+    {
+     "fi": [
+      "niemi"
+     ],
+     "en": [
+      "headland",
+      "cape",
+      "point"
+     ],
+     "h": "näs"
+    },
+    {
+     "fi": [
+      "salmi"
+     ],
+     "en": [
+      "strait",
+      "sound"
+     ],
+     "h": "sund"
+    },
+    {
+     "fi": [
+      "suo"
+     ],
+     "en": [
+      "bog",
+      "marsh",
+      "mire"
+     ],
+     "h": "mosse"
+    },
+    {
+     "fi": [
+      "mäki",
+      "rinne"
+     ],
+     "en": [
+      "hill",
+      "slope"
+     ],
+     "h": "backe"
+    },
+    {
+     "fi": [
+      "kylä"
+     ],
+     "en": [
+      "village"
+     ],
+     "h": "by"
+    },
+    {
+     "fi": [
+      "kaupunki"
+     ],
+     "en": [
+      "town",
+      "city"
+     ],
+     "h": "stad"
+    },
+    {
+     "fi": [
+      "harju"
+     ],
+     "en": [
+      "ridge",
+      "esker"
+     ],
+     "h": "ås"
+    },
+    {
+     "fi": [
+      "koski"
+     ],
+     "en": [
+      "rapids"
+     ],
+     "h": "fors"
+    },
+    {
+     "fi": [
+      "satama"
+     ],
+     "en": [
+      "harbour",
+      "harbor",
+      "port"
+     ],
+     "h": "hamn"
+    },
+    {
+     "fi": [
+      "silta"
+     ],
+     "en": [
+      "bridge"
+     ],
+     "h": "bro"
+    },
+    {
+     "fi": [
+      "kirkko"
+     ],
+     "en": [
+      "church"
+     ],
+     "h": "kyrka"
+    },
+    {
+     "fi": [
+      "ranta"
+     ],
+     "en": [
+      "shore",
+      "beach"
+     ],
+     "h": "strand"
+    },
+    {
+     "fi": [
+      "kivi"
+     ],
+     "en": [
+      "stone",
+      "rock"
+     ],
+     "h": "sten"
+    },
+    {
+     "fi": [
+      "lähde"
+     ],
+     "en": [
+      "spring",
+      "source"
+     ],
+     "h": "källa"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-saksan-paikannimisanat",
+   "cat": "maantieto",
+   "t": 150,
+   "title": {
+    "fi": "Mitä saksalainen paikannimi tarkoittaa? 21 nimen osaa suomeksi",
+    "en": "What does the German place name mean? 21 name parts in English"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Saksaksi",
+    "en": "German"
+   },
+   "items": [
+    {
+     "fi": [
+      "vuori",
+      "mäki"
+     ],
+     "en": [
+      "mountain",
+      "hill"
+     ],
+     "h": "-berg (Nürnberg, Heidelberg)"
+    },
+    {
+     "fi": [
+      "linna",
+      "linnoitus"
+     ],
+     "en": [
+      "castle",
+      "fortress",
+      "fort"
+     ],
+     "h": "-burg (Hamburg, Salzburg)"
+    },
+    {
+     "fi": [
+      "kylä"
+     ],
+     "en": [
+      "village"
+     ],
+     "h": "-dorf (Düsseldorf)"
+    },
+    {
+     "fi": [
+      "puro",
+      "oja"
+     ],
+     "en": [
+      "brook",
+      "stream",
+      "creek"
+     ],
+     "h": "-bach (Ansbach)"
+    },
+    {
+     "fi": [
+      "silta"
+     ],
+     "en": [
+      "bridge"
+     ],
+     "h": "-bruck / -brücken (Innsbruck, Saarbrücken)"
+    },
+    {
+     "fi": [
+      "kahlaamo"
+     ],
+     "en": [
+      "ford"
+     ],
+     "h": "-furt (Frankfurt, Erfurt)"
+    },
+    {
+     "fi": [
+      "pelto",
+      "kenttä",
+      "niitty"
+     ],
+     "en": [
+      "field"
+     ],
+     "h": "-feld (Bielefeld)"
+    },
+    {
+     "fi": [
+      "satama"
+     ],
+     "en": [
+      "harbour",
+      "harbor",
+      "port",
+      "haven"
+     ],
+     "h": "-hafen (Ludwigshafen)"
+    },
+    {
+     "fi": [
+      "koti"
+     ],
+     "en": [
+      "home"
+     ],
+     "h": "-heim (Mannheim)"
+    },
+    {
+     "fi": [
+      "kirkko",
+      "kirkot"
+     ],
+     "en": [
+      "church",
+      "churches"
+     ],
+     "h": "-kirchen (Gelsenkirchen)"
+    },
+    {
+     "fi": [
+      "kaupunki"
+     ],
+     "en": [
+      "town",
+      "city"
+     ],
+     "h": "-stadt (Darmstadt)"
+    },
+    {
+     "fi": [
+      "kivi"
+     ],
+     "en": [
+      "stone",
+      "rock"
+     ],
+     "h": "-stein (Liechtenstein)"
+    },
+    {
+     "fi": [
+      "laakso"
+     ],
+     "en": [
+      "valley",
+      "dale"
+     ],
+     "h": "-tal (Wuppertal)"
+    },
+    {
+     "fi": [
+      "metsä"
+     ],
+     "en": [
+      "forest",
+      "wood",
+      "woods"
+     ],
+     "h": "-wald (Schwarzwald)"
+    },
+    {
+     "fi": [
+      "järvi"
+     ],
+     "en": [
+      "lake"
+     ],
+     "h": "-see (Bodensee)"
+    },
+    {
+     "fi": [
+      "kylpylä",
+      "kylpy"
+     ],
+     "en": [
+      "spa",
+      "bath"
+     ],
+     "h": "Bad (Bad Homburg)"
+    },
+    {
+     "fi": [
+      "kaivo",
+      "lähde"
+     ],
+     "en": [
+      "well",
+      "spring",
+      "fountain"
+     ],
+     "h": "-bronn / -brunn (Heilbronn)"
+    },
+    {
+     "fi": [
+      "luostari",
+      "tuomiokirkko"
+     ],
+     "en": [
+      "monastery",
+      "minster",
+      "cathedral"
+     ],
+     "h": "Münster"
+    },
+    {
+     "fi": [
+      "raivio",
+      "aukea"
+     ],
+     "en": [
+      "clearing"
+     ],
+     "h": "-rode / -reuth (Wernigerode, Bayreuth)"
+    },
+    {
+     "fi": [
+      "suola"
+     ],
+     "en": [
+      "salt"
+     ],
+     "h": "Salz- (Salzgitter)"
+    },
+    {
+     "fi": [
+      "mylly"
+     ],
+     "en": [
+      "mill"
+     ],
+     "h": "Mühl- (Mühlhausen)"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-viron-maakunnat",
+   "cat": "maantieto",
+   "t": 105,
+   "title": {
+    "fi": "Viron 15 maakuntaa",
+    "en": "The 15 counties of Estonia"
+   },
+   "items": [
+    {
+     "fi": [
+      "Harjumaa",
+      "Harju"
+     ],
+     "en": [
+      "Harju County",
+      "Harju",
+      "Harjumaa"
+     ]
+    },
+    {
+     "fi": [
+      "Hiidenmaa",
+      "Hiiumaa",
+      "Hiiu"
+     ],
+     "en": [
+      "Hiiu County",
+      "Hiiu",
+      "Hiiumaa"
+     ]
+    },
+    {
+     "fi": [
+      "Itä-Virumaa",
+      "Ida-Virumaa",
+      "Ida-Viru"
+     ],
+     "en": [
+      "Ida-Viru County",
+      "Ida-Viru",
+      "Ida-Virumaa"
+     ]
+    },
+    {
+     "fi": [
+      "Jõgevamaa",
+      "Jõgeva"
+     ],
+     "en": [
+      "Jõgeva County",
+      "Jõgeva",
+      "Jõgevamaa"
+     ]
+    },
+    {
+     "fi": [
+      "Järvamaa",
+      "Järva"
+     ],
+     "en": [
+      "Järva County",
+      "Järva",
+      "Järvamaa"
+     ]
+    },
+    {
+     "fi": [
+      "Länsi-Virumaa",
+      "Lääne-Virumaa",
+      "Lääne-Viru"
+     ],
+     "en": [
+      "Lääne-Viru County",
+      "Lääne-Viru",
+      "Lääne-Virumaa"
+     ]
+    },
+    {
+     "fi": [
+      "Läänemaa",
+      "Lääne"
+     ],
+     "en": [
+      "Lääne County",
+      "Lääne",
+      "Läänemaa"
+     ]
+    },
+    {
+     "fi": [
+      "Põlvamaa",
+      "Põlva"
+     ],
+     "en": [
+      "Põlva County",
+      "Põlva",
+      "Põlvamaa"
+     ]
+    },
+    {
+     "fi": [
+      "Pärnumaa",
+      "Pärnu"
+     ],
+     "en": [
+      "Pärnu County",
+      "Pärnu",
+      "Pärnumaa"
+     ]
+    },
+    {
+     "fi": [
+      "Raplamaa",
+      "Rapla"
+     ],
+     "en": [
+      "Rapla County",
+      "Rapla",
+      "Raplamaa"
+     ]
+    },
+    {
+     "fi": [
+      "Saarenmaa",
+      "Saaremaa",
+      "Saare"
+     ],
+     "en": [
+      "Saare County",
+      "Saare",
+      "Saaremaa"
+     ]
+    },
+    {
+     "fi": [
+      "Tartumaa",
+      "Tartu",
+      "Tartto"
+     ],
+     "en": [
+      "Tartu County",
+      "Tartu",
+      "Tartumaa"
+     ]
+    },
+    {
+     "fi": [
+      "Valgamaa",
+      "Valga"
+     ],
+     "en": [
+      "Valga County",
+      "Valga",
+      "Valgamaa"
+     ]
+    },
+    {
+     "fi": [
+      "Viljandimaa",
+      "Viljandi"
+     ],
+     "en": [
+      "Viljandi County",
+      "Viljandi",
+      "Viljandimaa"
+     ]
+    },
+    {
+     "fi": [
+      "Võrumaa",
+      "Võru"
+     ],
+     "en": [
+      "Võru County",
+      "Võru",
+      "Võrumaa"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-afrikan-mm-maat",
+   "cat": "maantieto",
+   "t": 100,
+   "title": {
+    "fi": "Afrikan maat, jotka ovat pelanneet miesten jalkapallon MM-lopputurnauksessa 1934–2026 (vihjeenä ensimmäinen kerta)",
+    "en": "African countries that have played at a men's FIFA World Cup finals 1934–2026 (hint: first appearance)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Ensimmäinen kerta",
+    "en": "Debut"
+   },
+   "items": [
+    {
+     "fi": [
+      "Egypti"
+     ],
+     "en": [
+      "Egypt"
+     ],
+     "h": "1934"
+    },
+    {
+     "fi": [
+      "Marokko"
+     ],
+     "en": [
+      "Morocco"
+     ],
+     "h": "1970"
+    },
+    {
+     "fi": [
+      "Kongon demokraattinen tasavalta",
+      "Kongo-Kinshasa",
+      "KDT",
+      "DR Kongo",
+      "Zaire"
+     ],
+     "en": [
+      "Democratic Republic of the Congo",
+      "DR Congo",
+      "DRC",
+      "Congo-Kinshasa",
+      "Zaire"
+     ],
+     "h": {
+      "fi": "1974 (Zairena)",
+      "en": "1974 (as Zaire)"
+     }
+    },
+    {
+     "fi": [
+      "Tunisia"
+     ],
+     "en": [
+      "Tunisia"
+     ],
+     "h": "1978"
+    },
+    {
+     "fi": [
+      "Algeria"
+     ],
+     "en": [
+      "Algeria"
+     ],
+     "h": "1982"
+    },
+    {
+     "fi": [
+      "Kamerun"
+     ],
+     "en": [
+      "Cameroon"
+     ],
+     "h": "1982"
+    },
+    {
+     "fi": [
+      "Nigeria"
+     ],
+     "en": [
+      "Nigeria"
+     ],
+     "h": "1994"
+    },
+    {
+     "fi": [
+      "Etelä-Afrikka"
+     ],
+     "en": [
+      "South Africa"
+     ],
+     "h": "1998"
+    },
+    {
+     "fi": [
+      "Senegal"
+     ],
+     "en": [
+      "Senegal"
+     ],
+     "h": "2002"
+    },
+    {
+     "fi": [
+      "Angola"
+     ],
+     "en": [
+      "Angola"
+     ],
+     "h": "2006"
+    },
+    {
+     "fi": [
+      "Ghana"
+     ],
+     "en": [
+      "Ghana"
+     ],
+     "h": "2006"
+    },
+    {
+     "fi": [
+      "Norsunluurannikko"
+     ],
+     "en": [
+      "Ivory Coast",
+      "Côte d'Ivoire"
+     ],
+     "h": "2006"
+    },
+    {
+     "fi": [
+      "Togo"
+     ],
+     "en": [
+      "Togo"
+     ],
+     "h": "2006"
+    },
+    {
+     "fi": [
+      "Kap Verde"
+     ],
+     "en": [
+      "Cape Verde",
+      "Cabo Verde"
+     ],
+     "h": "2026"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-afrikan-paakaupungit-a-z",
+   "cat": "maantieto",
+   "t": 140,
+   "title": {
+    "fi": "Afrikan pääkaupungit A–Z: nimeä yksi jokaiselle kirjaimelle (tilanne 11/2026)",
+    "en": "African capitals A–Z: name one for each letter (as of 11/2026)"
+   },
+   "ordered": true,
+   "hintLabel": {
+    "fi": "Kirjain",
+    "en": "Letter"
+   },
+   "items": [
+    {
+     "fi": [
+      "Abuja",
+      "Accra",
+      "Addis Abeba",
+      "Alger",
+      "Antananarivo",
+      "Asmara"
+     ],
+     "en": [
+      "Abuja",
+      "Accra",
+      "Addis Ababa",
+      "Algiers",
+      "Antananarivo",
+      "Asmara"
+     ],
+     "h": "A"
+    },
+    {
+     "fi": [
+      "Bamako",
+      "Bangui",
+      "Banjul",
+      "Bissau",
+      "Bloemfontein",
+      "Brazzaville"
+     ],
+     "en": [
+      "Bamako",
+      "Bangui",
+      "Banjul",
+      "Bissau",
+      "Bloemfontein",
+      "Brazzaville"
+     ],
+     "h": "B"
+    },
+    {
+     "fi": [
+      "Ciudad de la Paz",
+      "Conakry"
+     ],
+     "en": [
+      "Cairo",
+      "Cape Town",
+      "Ciudad de la Paz",
+      "Conakry"
+     ],
+     "h": "C"
+    },
+    {
+     "fi": [
+      "Dakar",
+      "Djibouti",
+      "Dodoma"
+     ],
+     "en": [
+      "Dakar",
+      "Djibouti",
+      "Dodoma"
+     ],
+     "h": "D"
+    },
+    {
+     "fi": [
+      "Freetown"
+     ],
+     "en": [
+      "Freetown"
+     ],
+     "h": "F"
+    },
+    {
+     "fi": [
+      "Gaborone",
+      "Gitega"
+     ],
+     "en": [
+      "Gaborone",
+      "Gitega"
+     ],
+     "h": "G"
+    },
+    {
+     "fi": [
+      "Harare"
+     ],
+     "en": [
+      "Harare"
+     ],
+     "h": "H"
+    },
+    {
+     "fi": [
+      "Džuba",
+      "Juba"
+     ],
+     "en": [
+      "Juba"
+     ],
+     "h": "J"
+    },
+    {
+     "fi": [
+      "Kairo",
+      "Kampala",
+      "Kapkaupunki",
+      "Khartum",
+      "Kigali",
+      "Kinshasa"
+     ],
+     "en": [
+      "Kampala",
+      "Khartoum",
+      "Kigali",
+      "Kinshasa"
+     ],
+     "h": "K"
+    },
+    {
+     "fi": [
+      "Libreville",
+      "Lilongwe",
+      "Lobamba",
+      "Lomé",
+      "Luanda",
+      "Lusaka"
+     ],
+     "en": [
+      "Libreville",
+      "Lilongwe",
+      "Lobamba",
+      "Lome",
+      "Luanda",
+      "Lusaka"
+     ],
+     "h": "L"
+    },
+    {
+     "fi": [
+      "Maputo",
+      "Maseru",
+      "Mbabane",
+      "Mogadiscio",
+      "Mogadishu",
+      "Monrovia",
+      "Moroni"
+     ],
+     "en": [
+      "Maputo",
+      "Maseru",
+      "Mbabane",
+      "Mogadishu",
+      "Monrovia",
+      "Moroni"
+     ],
+     "h": "M"
+    },
+    {
+     "fi": [
+      "N'Djamena",
+      "Nairobi",
+      "Niamey",
+      "Nouakchott"
+     ],
+     "en": [
+      "N'Djamena",
+      "Nairobi",
+      "Niamey",
+      "Nouakchott"
+     ],
+     "h": "N"
+    },
+    {
+     "fi": [
+      "Ouagadougou"
+     ],
+     "en": [
+      "Ouagadougou"
+     ],
+     "h": "O"
+    },
+    {
+     "fi": [
+      "Port Louis",
+      "Porto-Novo",
+      "Praia",
+      "Pretoria"
+     ],
+     "en": [
+      "Port Louis",
+      "Porto-Novo",
+      "Praia",
+      "Pretoria"
+     ],
+     "h": "P"
+    },
+    {
+     "fi": [
+      "Rabat"
+     ],
+     "en": [
+      "Rabat"
+     ],
+     "h": "R"
+    },
+    {
+     "fi": [
+      "São Tomé"
+     ],
+     "en": [
+      "Sao Tome"
+     ],
+     "h": "S"
+    },
+    {
+     "fi": [
+      "Tripoli",
+      "Tunis"
+     ],
+     "en": [
+      "Tripoli",
+      "Tunis"
+     ],
+     "h": "T"
+    },
+    {
+     "fi": [
+      "Victoria"
+     ],
+     "en": [
+      "Victoria"
+     ],
+     "h": "V"
+    },
+    {
+     "fi": [
+      "Windhoek"
+     ],
+     "en": [
+      "Windhoek"
+     ],
+     "h": "W"
+    },
+    {
+     "fi": [
+      "Yamoussoukro",
+      "Yaoundé"
+     ],
+     "en": [
+      "Yamoussoukro",
+      "Yaounde"
+     ],
+     "h": "Y"
+    }
+   ]
+  },
+  {
+   "id": "maantieto-3-uudet-valtiot-ja-nimet",
+   "cat": "maantieto",
+   "format": "choice",
+   "t": 190,
+   "title": {
+    "fi": "Uudet valtiot, nimet ja pääkaupungit Euroopassa ja Afrikassa 1990–2026",
+    "en": "New states, names and capitals in Europe and Africa 1990–2026"
+   },
+   "items": [
+    {
+     "q": {
+      "fi": "Mistä valtiosta Namibia itsenäistyi vuonna 1990?",
+      "en": "From which country did Namibia gain independence in 1990?"
+     },
+     "ok": {
+      "fi": "Etelä-Afrikka",
+      "en": "South Africa"
+     },
+     "no": [
+      {
+       "fi": "Saksa",
+       "en": "Germany"
+      },
+      {
+       "fi": "Portugali",
+       "en": "Portugal"
+      },
+      {
+       "fi": "Yhdistynyt kuningaskunta",
+       "en": "United Kingdom"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Saksat yhdistyivät?",
+      "en": "In which year was Germany reunified?"
+     },
+     "ok": {
+      "fi": "1990",
+      "en": "1990"
+     },
+     "no": [
+      {
+       "fi": "1989",
+       "en": "1989"
+      },
+      {
+       "fi": "1991",
+       "en": "1991"
+      },
+      {
+       "fi": "1992",
+       "en": "1992"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä valtio itsenäistyi Etiopiasta vuonna 1993?",
+      "en": "Which country became independent from Ethiopia in 1993?"
+     },
+     "ok": {
+      "fi": "Eritrea",
+      "en": "Eritrea"
+     },
+     "no": [
+      {
+       "fi": "Djibouti",
+       "en": "Djibouti"
+      },
+      {
+       "fi": "Etelä-Sudan",
+       "en": "South Sudan"
+      },
+      {
+       "fi": "Somalia",
+       "en": "Somalia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Tšekkoslovakia jakautui kahdeksi valtioksi?",
+      "en": "On which date did Czechoslovakia split into two states?"
+     },
+     "ok": {
+      "fi": "1.1.1993",
+      "en": "1 January 1993"
+     },
+     "no": [
+      {
+       "fi": "17.11.1989",
+       "en": "17 November 1989"
+      },
+      {
+       "fi": "1.1.1991",
+       "en": "1 January 1991"
+      },
+      {
+       "fi": "1.5.2004",
+       "en": "1 May 2004"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Etelä-Afrikassa pidettiin ensimmäiset kaikkien rotujen vapaat vaalit?",
+      "en": "In which year did South Africa hold its first all-race free elections?"
+     },
+     "ok": {
+      "fi": "1994",
+      "en": "1994"
+     },
+     "no": [
+      {
+       "fi": "1990",
+       "en": "1990"
+      },
+      {
+       "fi": "1992",
+       "en": "1992"
+      },
+      {
+       "fi": "1996",
+       "en": "1996"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Kongon demokraattisen tasavallan nimi ennen vuotta 1997?",
+      "en": "What was the Democratic Republic of the Congo called before 1997?"
+     },
+     "ok": {
+      "fi": "Zaire",
+      "en": "Zaire"
+     },
+     "no": [
+      {
+       "fi": "Katanga",
+       "en": "Katanga"
+      },
+      {
+       "fi": "Rhodesia",
+       "en": "Rhodesia"
+      },
+      {
+       "fi": "Dahomey",
+       "en": "Dahomey"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Montenegro itsenäistyi valtioliitosta Serbian kanssa?",
+      "en": "In which year did Montenegro leave its state union with Serbia?"
+     },
+     "ok": {
+      "fi": "2006",
+      "en": "2006"
+     },
+     "no": [
+      {
+       "fi": "1999",
+       "en": "1999"
+      },
+      {
+       "fi": "2003",
+       "en": "2003"
+      },
+      {
+       "fi": "2008",
+       "en": "2008"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Kosovo julistautui itsenäiseksi?",
+      "en": "In which year did Kosovo declare independence?"
+     },
+     "ok": {
+      "fi": "2008",
+      "en": "2008"
+     },
+     "no": [
+      {
+       "fi": "1999",
+       "en": "1999"
+      },
+      {
+       "fi": "2006",
+       "en": "2006"
+      },
+      {
+       "fi": "2012",
+       "en": "2012"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä on YK:n nuorin jäsenvaltio (tilanne 2026)?",
+      "en": "Which is the youngest UN member state (as of 2026)?"
+     },
+     "ok": {
+      "fi": "Etelä-Sudan",
+      "en": "South Sudan"
+     },
+     "no": [
+      {
+       "fi": "Montenegro",
+       "en": "Montenegro"
+      },
+      {
+       "fi": "Eritrea",
+       "en": "Eritrea"
+      },
+      {
+       "fi": "Kosovo",
+       "en": "Kosovo"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä oli Eswatinin nimi ennen vuotta 2018?",
+      "en": "What was Eswatini called before 2018?"
+     },
+     "ok": {
+      "fi": "Swazimaa",
+      "en": "Swaziland"
+     },
+     "no": [
+      {
+       "fi": "Basutomaa",
+       "en": "Basutoland"
+      },
+      {
+       "fi": "Bečuanamaa",
+       "en": "Bechuanaland"
+      },
+      {
+       "fi": "Njassamaa",
+       "en": "Nyasaland"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä vuonna Makedonian nimi muuttui Pohjois-Makedoniaksi?",
+      "en": "In which year was Macedonia renamed North Macedonia?"
+     },
+     "ok": {
+      "fi": "2019",
+      "en": "2019"
+     },
+     "no": [
+      {
+       "fi": "2009",
+       "en": "2009"
+      },
+      {
+       "fi": "2016",
+       "en": "2016"
+      },
+      {
+       "fi": "2022",
+       "en": "2022"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä lyhyen englanninkielisen nimen Tšekki vei YK:n tietokantoihin vuonna 2016?",
+      "en": "Which short English name did the Czech Republic register with the UN in 2016?"
+     },
+     "ok": {
+      "fi": "Czechia",
+      "en": "Czechia"
+     },
+     "no": [
+      {
+       "fi": "Bohemia",
+       "en": "Bohemia"
+      },
+      {
+       "fi": "Czechland",
+       "en": "Czechland"
+      },
+      {
+       "fi": "Cesko",
+       "en": "Cesko"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minkä maan nimi on YK:ssa vuodesta 2013 ollut portugaliksi muodossa Cabo Verde?",
+      "en": "Which country has used the name Cabo Verde at the UN since 2013?"
+     },
+     "ok": {
+      "fi": "Kap Verde",
+      "en": "Cape Verde"
+     },
+     "no": [
+      {
+       "fi": "Guinea-Bissau",
+       "en": "Guinea-Bissau"
+      },
+      {
+       "fi": "São Tomé ja Príncipe",
+       "en": "São Tomé and Príncipe"
+      },
+      {
+       "fi": "Mosambik",
+       "en": "Mozambique"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mikä Afrikan maa julisti tammikuussa 2026 uuden pääkaupungin?",
+      "en": "Which African country proclaimed a new capital in January 2026?"
+     },
+     "ok": {
+      "fi": "Päiväntasaajan Guinea",
+      "en": "Equatorial Guinea"
+     },
+     "no": [
+      {
+       "fi": "Egypti",
+       "en": "Egypt"
+      },
+      {
+       "fi": "Tansania",
+       "en": "Tanzania"
+      },
+      {
+       "fi": "Nigeria",
+       "en": "Nigeria"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Mihin kaupunkiin Burundi siirsi poliittisen pääkaupunkinsa vuonna 2019?",
+      "en": "To which city did Burundi move its political capital in 2019?"
+     },
+     "ok": {
+      "fi": "Gitega",
+      "en": "Gitega"
+     },
+     "no": [
+      {
+       "fi": "Bujumbura",
+       "en": "Bujumbura"
+      },
+      {
+       "fi": "Kigali",
+       "en": "Kigali"
+      },
+      {
+       "fi": "Ngozi",
+       "en": "Ngozi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "fi": "Minä päivänä Yhdistynyt kuningaskunta erosi Euroopan unionista?",
+      "en": "On which date did the United Kingdom leave the European Union?"
+     },
+     "ok": {
+      "fi": "31.1.2020",
+      "en": "31 January 2020"
+     },
+     "no": [
+      {
+       "fi": "23.6.2016",
+       "en": "23 June 2016"
+      },
+      {
+       "fi": "29.3.2019",
+       "en": "29 March 2019"
+      },
+      {
+       "fi": "1.1.2021",
+       "en": "1 January 2021"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
